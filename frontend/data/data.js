@@ -427,119 +427,119 @@ PPGC.register({
 	},
 
 	marks: {
-		shiny: _assetPath("imgs/icons/pokemon_home/shiny.png"),
-		alpha: _assetPath("imgs/icons/pokemon_home/alpha.png"),
-		gigantamax: _assetPath("imgs/icons/pokemon_home/gigantamax.png"),
+		shiny: _assetPath("icons/pokemon_home/shiny.png"),
+		alpha: _assetPath("icons/pokemon_home/alpha.png"),
+		gigantamax: _assetPath("icons/pokemon_home/gigantamax.png"),
 	},
 	marksByGame: {
 		gold: {
-			shiny: _assetPath("imgs/icons/gen2/shiny.png"),
+			shiny: _assetPath("icons/gen2/shiny.png"),
 		},
 		silver: {
-			shiny: _assetPath("imgs/icons/gen2/shiny.png"),
+			shiny: _assetPath("icons/gen2/shiny.png"),
 		},
 		crystal: {
-			shiny: _assetPath("imgs/icons/gen2/shiny.png"),
+			shiny: _assetPath("icons/gen2/shiny.png"),
 		},
 		ruby: {
-			shiny: _assetPath("imgs/icons/gen3/shiny.png"),
+			shiny: _assetPath("icons/gen3/shiny.png"),
 		},
 		sapphire: {
-			shiny: _assetPath("imgs/icons/gen3/shiny.png"),
+			shiny: _assetPath("icons/gen3/shiny.png"),
 		},
 		firered: {
-			shiny: _assetPath("imgs/icons/gen3/shiny.png"),
+			shiny: _assetPath("icons/gen3/shiny.png"),
 		},
 		leafgreen: {
-			shiny: _assetPath("imgs/icons/gen3/shiny.png"),
+			shiny: _assetPath("icons/gen3/shiny.png"),
 		},
 		emerald: {
-			shiny: _assetPath("imgs/icons/gen3/shiny.png"),
+			shiny: _assetPath("icons/gen3/shiny.png"),
 		},
 		diamond: {
-			shiny: _assetPath("imgs/icons/gen4/shiny.png"),
+			shiny: _assetPath("icons/gen4/shiny.png"),
 		},
 		pearl: {
-			shiny: _assetPath("imgs/icons/gen4/shiny.png"),
+			shiny: _assetPath("icons/gen4/shiny.png"),
 		},
 		platinum: {
-			shiny: _assetPath("imgs/icons/gen4/shiny.png"),
+			shiny: _assetPath("icons/gen4/shiny.png"),
 		},
 		heartgold: {
-			shiny: _assetPath("imgs/icons/gen4/shiny.png"),
+			shiny: _assetPath("icons/gen4/shiny.png"),
 		},
 		soulsilver: {
-			shiny: _assetPath("imgs/icons/gen4/shiny.png"),
+			shiny: _assetPath("icons/gen4/shiny.png"),
 		},
 		black: {
-			shiny: _assetPath("imgs/icons/gen5/shiny.png"),
+			shiny: _assetPath("icons/gen5/shiny.png"),
 		},
 		white: {
-			shiny: _assetPath("imgs/icons/gen5/shiny.png"),
+			shiny: _assetPath("icons/gen5/shiny.png"),
 		},
 		black2: {
-			shiny: _assetPath("imgs/icons/gen5/shiny.png"),
+			shiny: _assetPath("icons/gen5/shiny.png"),
 		},
 		white2: {
-			shiny: _assetPath("imgs/icons/gen5/shiny.png"),
+			shiny: _assetPath("icons/gen5/shiny.png"),
 		},
 		x: {
-			shiny: _assetPath("imgs/icons/gen6/shiny.png"),
+			shiny: _assetPath("icons/gen6/shiny.png"),
 		},
 		y: {
-			shiny: _assetPath("imgs/icons/gen6/shiny.png"),
+			shiny: _assetPath("icons/gen6/shiny.png"),
 		},
 		omegaruby: {
-			shiny: _assetPath("imgs/icons/gen6/shiny.png"),
+			shiny: _assetPath("icons/gen6/shiny.png"),
 		},
 		alphasapphire: {
-			shiny: _assetPath("imgs/icons/gen6/shiny.png"),
+			shiny: _assetPath("icons/gen6/shiny.png"),
 		},
 		sun: {
-			shiny: _assetPath("imgs/icons/gen7/shiny2.png"),
+			shiny: _assetPath("icons/gen7/shiny2.png"),
 		},
 		moon: {
-			shiny: _assetPath("imgs/icons/gen7/shiny2.png"),
+			shiny: _assetPath("icons/gen7/shiny2.png"),
 		},
 		ultrasun: {
-			shiny: _assetPath("imgs/icons/gen7/shiny2.png"),
+			shiny: _assetPath("icons/gen7/shiny2.png"),
 		},
 		ultramoon: {
-			shiny: _assetPath("imgs/icons/gen7/shiny2.png"),
+			shiny: _assetPath("icons/gen7/shiny2.png"),
 		},
 		letsgopikachu: {
-			shiny: _assetPath("imgs/icons/gen7/shiny-lgpe.png"),
+			shiny: _assetPath("icons/gen7/shiny-lgpe.png"),
 		},
 		letsgoeevee: {
-			shiny: _assetPath("imgs/icons/gen7/shiny-lgpe.png"),
+			shiny: _assetPath("icons/gen7/shiny-lgpe.png"),
 		},
 		sword: {
-			shiny: _assetPath("imgs/icons/gen8/shiny.png"),
+			shiny: _assetPath("icons/gen8/shiny.png"),
 		},
 		shield: {
-			shiny: _assetPath("imgs/icons/gen8/shiny.png"),
+			shiny: _assetPath("icons/gen8/shiny.png"),
 		},
 		brilliantdiamond: {
-			shiny: _assetPath("imgs/icons/gen8/shiny.png"),
+			shiny: _assetPath("icons/gen8/shiny.png"),
 		},
 		shiningpearl: {
-			shiny: _assetPath("imgs/icons/gen8/shiny.png"),
+			shiny: _assetPath("icons/gen8/shiny.png"),
 		},
 		legendsarceus: {
-			shiny: _assetPath("imgs/icons/gen8/shiny.png"),
+			shiny: _assetPath("icons/gen8/shiny.png"),
 		},
 		scarlet: {
-			shiny: _assetPath("imgs/icons/gen9/shiny.png"),
+			shiny: _assetPath("icons/gen9/shiny.png"),
 		},
 		violet: {
-			shiny: _assetPath("imgs/icons/gen9/shiny.png"),
+			shiny: _assetPath("icons/gen9/shiny.png"),
 		},
 		legendsza: {
-			shiny: _assetPath("imgs/icons/gen9/shiny.png"),
+			shiny: _assetPath("icons/gen9/shiny.png"),
 		},
 		home: {
-			shiny: _assetPath("imgs/icons/pokemon_home/shiny.png"),
-			alpha: _assetPath("imgs/icons/pokemon_home/alpha.png"),
+			shiny: _assetPath("icons/pokemon_home/shiny.png"),
+			alpha: _assetPath("icons/pokemon_home/alpha.png"),
 		},
 	},
 	spacer: {

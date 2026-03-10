@@ -61,7 +61,7 @@ async function main() {
 
 	for (const file of files) {
 		const rel = toPosix(path.relative(ROOT, file));
-		const key = `imgs/${rel}`;
+		const key = `${rel}`;
 		const body = await fs.readFile(file);
 
 		process.stdout.write(`Uploading ${key} ... `);

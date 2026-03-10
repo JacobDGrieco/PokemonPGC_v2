@@ -37,7 +37,7 @@ window._imageByGen = function (type, genKey, name) {
 		default: gen = "";
 	}
 
-	return _assetPath(`imgs/${prefix}/${type}/${gen}/${name}.png`);
+	return _assetPath(`${prefix}/${type}/${gen}/${name}.png`);
 };
 window._imageByGame = function (type, gameKey, name, bwORc) {
 	if (type && type[type.length - 1] !== 's') type = type + 's';
@@ -141,7 +141,7 @@ window._imageByGame = function (type, gameKey, name, bwORc) {
 			game = "";
 	}
 
-	return _assetPath(`imgs/${type}/${game}/${name}.png`);
+	return _assetPath(`${type}/${game}/${name}.png`);
 };
 window._ribbonByGen = function (genKey, name) {
 	let gen = "";
@@ -166,7 +166,7 @@ window._ribbonByGen = function (genKey, name) {
 		default: gen = "";
 	}
 
-	return _assetPath(`imgs/ribbons/${gen}/${name}.png`);
+	return _assetPath(`ribbons/${gen}/${name}.png`);
 };
 
 // For BDSP and LA, add bdsp/ or legendsarceus/ to the name
@@ -196,13 +196,13 @@ window._task = (game, name, ...args) => _imageByGame("tasks", game, name, ...arg
 
 window._badges = function (imgs) {
 	if (!Array.isArray(imgs)) imgs = [imgs]; // allow single string too
-	return imgs.map((name) => _assetPath(`imgs/badges/${name}.png`));
+	return imgs.map((name) => _assetPath(`badges/${name}.png`));
 };
 window._medal = function (type, name) {
-	return _assetPath(`imgs/medals/${type}/${name}.png`);
+	return _assetPath(`medals/${type}/${name}.png`);
 };
 window._typing = function (type) {
-	return _assetPath(`imgs/typings/${type}.png`);
+	return _assetPath(`typings/${type}.png`);
 };
 window._trainerCard = function (gameKey, type, name) {
 	let game = "";
@@ -215,7 +215,7 @@ window._trainerCard = function (gameKey, type, name) {
 		case "shieldct": game = "ct"; break;
 	}
 
-	return _assetPath(`imgs/trainer-cards/${game}/${type}/${name}.png`);
+	return _assetPath(`trainer-cards/${game}/${type}/${name}.png`);
 };
 window._fashionItem = function (gameKey, genderKey, categoryId, name) {
 	let game = "";
@@ -269,13 +269,13 @@ window._fashionItem = function (gameKey, genderKey, categoryId, name) {
 	}
 
 	const gender = (genderKey || "unisex").toLowerCase();
-	return _assetPath(`imgs/fashion/${game}/${gender}/${categoryId}/${name}.png`);
+	return _assetPath(`fashion/${game}/${gender}/${categoryId}/${name}.png`);
 };
 window._curryItem = function (folder, name) {
 	// folder examples: "ingredients", "large", "player"
-	return _assetPath(`imgs/curry/${folder}/${name}.png`);
+	return _assetPath(`curry/${folder}/${name}.png`);
 };
 window._sandwichItem = function (tier, name) {
 	// tier examples: "normal", "great", "ultra", "master"
-	return _assetPath(`imgs/sandwiches/${tier}/${name}.png`);
+	return _assetPath(`sandwiches/${tier}/${name}.png`);
 };

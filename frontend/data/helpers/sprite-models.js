@@ -102,7 +102,7 @@ function resolveGameSpritePathPrefix(gameKey) {
 	}
 }
 window._sprite = function (gen, game, id, form, shiny, frontBack, thumbIcon, animated) {
-	let path = _assetPath(`imgs/sprites/${resolveGameSpritePathPrefix(game)}`);
+	let path = _assetPath(`sprites/${resolveGameSpritePathPrefix(game)}`);
 
 	let folder = "";
 	if (gen === 1) folder += !shiny ? "bw" : "colored";
@@ -124,11 +124,11 @@ window._menuSprite = function (gen, game, id, formKey, type) {
 	const form = formKey ? "-" + formKeyToSuffix(Number(id), formKey) : "";
 
 	if (gen < 2) {
-		return _assetPath(`imgs/sprites/gen${gen}/menu-sprites/${type}.png`);
+		return _assetPath(`sprites/gen${gen}/menu-sprites/${type}.png`);
 	} else if (gen < 6) {
-		return _assetPath(`imgs/sprites/gen${gen}/menu-sprites/${pad4(id)}${form}.png`);
+		return _assetPath(`sprites/gen${gen}/menu-sprites/${pad4(id)}${form}.png`);
 	} else {
-		return _assetPath(`imgs/sprites/${resolveGameSpritePathPrefix(game)}menu-sprites/${pad4(id)}${form}.png`);
+		return _assetPath(`sprites/${resolveGameSpritePathPrefix(game)}menu-sprites/${pad4(id)}${form}.png`);
 	}
 };
 
@@ -167,7 +167,7 @@ window._model = function (gen, gk, id, form, shiny) {
 	const formKey = formKeyToSuffix(Number(id), form);
 	const fileName = formKey ? `${nati}-${formKey}.glb` : `${nati}.glb`;
 
-	return _assetPath(`imgs/sprites/${game}models/${nati}/${fileName}`);
+	return _assetPath(`sprites/${game}models/${nati}/${fileName}`);
 };
 
 window._frontSprite = (gen, game, natiId, form) => _sprite(gen, game, natiId, form, false, false, false, false);

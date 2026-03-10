@@ -147,7 +147,7 @@ The project is heavily data-driven. Basically all content is defined in JS data 
 			id: "legendsza-catching-2-i",
 			text: "AZ's Floette",
 			done: false,
-			img: _assetPath("imgs/sprites/gen9/legendsza/base-icons/670-e.png"),
+			img: _assetPath("sprites/gen9/legendsza/base-icons/670-e.png"),
 			taskSync: ["legendsza-story-2-a", "legendsza-mega-stones-26"],
 			dexSync: [{ game: "legendsza", dexType: "regional", id: 39, form: "Eternal Flower" }],
 		},
@@ -161,7 +161,7 @@ The project is heavily data-driven. Basically all content is defined in JS data 
 {
 	id: "legendsza-upgrades-1-a",
 	text: "Red Canari Plush",
-	img: _assetPath("imgs/items/gen9/legendsza/redcanariplushlv.3.png"),
+	img: _assetPath("items/gen9/legendsza/redcanariplushlv.3.png"),
 	type: "tiered",
 	tiers: [3, 5, 8],
 	currentTier: 0,
@@ -179,19 +179,19 @@ The project is heavily data-driven. Basically all content is defined in JS data 
 {
 	id: 158,
 	name: "Furfrou",
-	img: _assetPath("imgs/sprites/gen9/legendsza/base-icons/676.png"),
-	imgS: _assetPath("imgs/sprites/gen9/legendsza/shiny-icons/676.png"),
+	img: _assetPath("sprites/gen9/legendsza/base-icons/676.png"),
+	imgS: _assetPath("sprites/gen9/legendsza/shiny-icons/676.png"),
 	forms: [
 		{
 			name: "Natural Trim",
-			img: _assetPath("imgs/sprites/gen9/legendsza/base-icons/676.png"),
-			imgS: _assetPath("imgs/sprites/gen9/legendsza/shiny-icons/676.png"),
+			img: _assetPath("sprites/gen9/legendsza/base-icons/676.png"),
+			imgS: _assetPath("sprites/gen9/legendsza/shiny-icons/676.png"),
 		},
 		...,
 		{
 			name: "Pharaoh Trim",
-			img: _assetPath("imgs/sprites/gen9/legendsza/base-icons/676-ph.png"),
-			imgS: _assetPath("imgs/sprites/gen9/legendsza/shiny-icons/676-ph.png"),
+			img: _assetPath("sprites/gen9/legendsza/base-icons/676-ph.png"),
+			imgS: _assetPath("sprites/gen9/legendsza/shiny-icons/676-ph.png"),
 		},
 		],
 },
@@ -209,15 +209,15 @@ The project is heavily data-driven. Basically all content is defined in JS data 
 	eventTitle: "Early Purchase Ralts",
 	region: "Region Free",
 	name: "Ralts",
-	image: _assetPath("imgs/sprites/gen9/legendsza/base-icons/280.png"),
+	image: _assetPath("sprites/gen9/legendsza/base-icons/280.png"),
 	gender: "female",
 	"start-date": "2025-10-16",
 	"end-date": "2026-02-28",
-	ball: { name: "Cherish Ball", img: _assetPath("imgs/balls/gen9/legendsza/pokeball.png") },
+	ball: { name: "Cherish Ball", img: _assetPath("balls/gen9/legendsza/pokeball.png") },
 	level: 6,
 	tid: "",
 	heldItem: [
-		{ name: "Gardevoirite", img: _assetPath("imgs/mega_stones/gardevoirite.png") },
+		{ name: "Gardevoirite", img: _assetPath("mega_stones/gardevoirite.png") },
 	],
 	moves: [
 		{ name: "Disarming Voice", img: "", type: "Fairy" },
@@ -333,7 +333,7 @@ PokemonPGC/
 This is the easiest way to use PokemonPGC for personal tracking.
 
 1. Clone or download the repository.
-2. Ensure the `imgs/` folder contains the required sprites/icons.
+2. Ensure the images folder contains the required sprites/icons.
 3. Open `index.html` in your browser:
    - Double-click it, or
    - Serve the folder with a simple HTTP server (`python -m http.server`, etc.).

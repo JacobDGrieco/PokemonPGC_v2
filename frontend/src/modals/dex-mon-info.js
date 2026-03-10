@@ -140,7 +140,7 @@ export async function renderMonInfoInto({
 	const moves = effectiveInfo?.moves || {};
 	const locations = effectiveInfo?.locations || [];
 	const dexList = window.DATA?.dex?.[gameKey] || [];
-	const homeSprite = natId != null ? _assetPath(`imgs/sprites/pokemon_home/base-front/${pad4(natId)}.png`) : null;
+	const homeSprite = natId != null ? _assetPath(`sprites/pokemon_home/base-front/${pad4(natId)}.png`) : null;
 	const spriteSrc = effectiveInfo?.sprites.front || homeSprite || mon.img || null;
 
 	const renderListRow = (label, valueOrArr) => {
@@ -779,7 +779,7 @@ export async function renderMonInfoInto({
 
 		// Your HOME base sprites folder
 		const homeSprite =
-			natId != null ? _assetPath(`imgs/sprites/pokemon_home/base-front/${pad4(natId)}.png`) : null;
+			natId != null ? _assetPath(`sprites/pokemon_home/base-front/${pad4(natId)}.png`) : null;
 
 		// Priority:
 		// 1) step.sprite override (if evolution data explicitly supplies)
@@ -1014,7 +1014,7 @@ export async function renderMonInfoInto({
 			typeKey = String(move.type).toLowerCase();
 		}
 
-		return _assetPath(`imgs/tms/${genFolder}/${typeKey}.png`);
+		return _assetPath(`tms/${genFolder}/${typeKey}.png`);
 	};
 
 	const renderMoveLine = (m) => {
