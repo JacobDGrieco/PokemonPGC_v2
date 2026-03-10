@@ -4,7 +4,7 @@
 	"type": "module",
 	"main": "api.js",
 	"engines": {
-		"node": ">=20.0.0"
+		"node": "20.x"
 	},
 	"scripts": {
 		"build": "esbuild src/index.js --bundle --format=esm --minify --sourcemap --outfile=dist/bundle.js",
