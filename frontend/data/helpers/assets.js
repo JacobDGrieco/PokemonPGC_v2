@@ -1,4 +1,4 @@
-const RAW_BASE = String(import.meta.env.BLOB_READ_WRITE_TOKEN || "").trim();
+const RAW_BASE = String(import.meta.env.VITE_BLOB_ASSET_BASE_URL || "").trim();
 
 window._assetPath = function _assetPath(path) {
 	const cleanPath = String(path || "").replace(/^\/+/, "");
