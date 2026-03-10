@@ -1,5 +1,5 @@
 export default async function handler(req, res) {
-	const raw = process.env.DATABASE_URL ?? null;
+	const raw = process.env.DB_DATABASE_URL ?? null;
 
 	return res.status(200).json({
 		hasDatabaseUrl: !!raw,

@@ -354,7 +354,7 @@ To enable account login and server-side backups:
    - Create a `.env` file (you can start from `.env.example` if present).
    - Set at least:
      ```dotenv
-     DATABASE_URL="your_database_connection_string_here"
+     DB_DATABASE_URL="your_database_connection_string_here"
      JWT_SECRET="your_long_random_secret_here"
      ```
 
