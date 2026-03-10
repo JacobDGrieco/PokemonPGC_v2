@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { HOME_SPRITE_HEX } from "../../../imgs/sprites/sprite_hex.js";
+import { HOME_SPRITE_HEX } from "./sprite_hex.js";
 
 export function getModelKeyFromGlbUrl(glbUrl) {
 	const u = String(glbUrl || "");
