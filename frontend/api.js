@@ -1,5 +1,5 @@
 // src/api.js
-const API_BASE = "/api"; // backend is serving /api/* from the same origin
+const API_BASE = (globalThis.__API_BASE_URL__ || "").trim() || "/api";
 let loggedInUserId = null;
 
 /**
