@@ -1,0 +1,12 @@
+{
+	"name": "pokemonpgc",
+	"private": true,
+	"version": "1.0.0",
+	"scripts": {
+		"install-all": "npm install --prefix frontend && npm install --prefix backend",
+		"build": "npm run build --prefix frontend",
+		"setup": "npm run setup --prefix backend",
+		"start": "npm run start --prefix backend",
+		"dev": "npm run dev --prefix backend"
+	}
+}

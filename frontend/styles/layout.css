@@ -1,0 +1,314 @@
+/* ===================== Layout variables ===================== */
+
+:root {
+	--header-h: 56px;
+}
+
+/* ===================== App shell grid ===================== */
+
+.app {
+	display: grid;
+	grid-template-columns: 300px 1fr;
+	/* sidebar | main content */
+	height: calc(100vh - var(--header-h));
+	overflow: hidden;
+}
+
+/* ===================== App header (top bar) ===================== */
+
+.app-header {
+	position: sticky;
+	top: 0;
+	z-index: 5;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+
+	padding: 12px 16px;
+	background: #121214;
+	border-bottom: 1px solid #222;
+}
+
+/* App title (clickable "home" link) */
+.app-header h1 {
+	margin: 0;
+	font-size: 18px;
+	cursor: pointer;
+	user-select: none;
+}
+
+.app-header h1:hover {
+	text-decoration: underline;
+	text-underline-offset: 2px;
+}
+
+/* ===================== Main content column ===================== */
+
+.content {
+	padding: 16px;
+	display: grid;
+	gap: 16px;
+
+	min-height: 0;
+	height: 100%;
+	overflow-y: scroll;
+
+	scrollbar-color: var(--sb-thumb) var(--sb-track);
+}
+
+/* Scrollbar overrides within content area */
+.content::-webkit-scrollbar-thumb {
+	background: var(--sb-thumb);
+	border: 2px solid var(--sb-track);
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+	background: var(--sb-thumb-hover);
+}
+
+/* ===================== Breadcrumbs ===================== */
+
+.breadcrumbs {
+	display: flex;
+	gap: 8px;
+	flex-wrap: wrap;
+
+	font-size: 12px;
+	opacity: 0.9;
+}
+
+.breadcrumbs .crumb {
+	background: #1a1a1f;
+	border: 1px solid #2b2b33;
+	padding: 6px 10px;
+	border-radius: 999px;
+}
+
+/* ===================== Overall game summary header ===================== */
+
+/*
+  Special styling for the "Game Summary — All Games" header which
+  reuses the section-hd bar but uses gold for the base progress and a
+  deeper gold overlay for extra credit (>100%).
+*/
+
+.card-hd.section-hd.game-summary-hd::before {
+	background: linear-gradient(90deg, #b8860b, #ffd700);
+	/* base (0–100%) */
+	opacity: 0.28;
+}
+
+/* Extra-credit overlay: uses --extra-progress (0..100) */
+.card-hd.section-hd.game-summary-hd.has-extra::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	width: calc(var(--extra-progress, 0) * 1%);
+	background: linear-gradient(90deg, #5f4300, #b8860b);
+	opacity: 0.5;
+	pointer-events: none;
+	z-index: 0;
+}
+
+/* ===================== Section header progress bar ===================== */
+
+/*
+  Used on section cards:
+    <section class="card">
+      <div class="card-hd section-hd">
+        <h3>Title</h3>
+        <div class="pct">00.00%</div>
+        ...
+      </div>
+      ...
+    </section>
+*/
+
+.card-hd.section-hd {
+	position: relative;
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	/* title | % | button(s) */
+	align-items: center;
+	gap: 12px;
+
+	overflow: hidden;
+	/* keep the fill behind, inside the header */
+	border-radius: var(--radius);
+}
+
+/* Background fill driven by --progress (0..100) from JS */
+.card-hd.section-hd::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	width: calc(var(--progress, 0) * 1%);
+	/* secPct from JS */
+	background: var(--accent, #7fd2ff);
+	/* game accent if set */
+	opacity: 0.22;
+	/* subtle overlay */
+	pointer-events: none;
+	z-index: 0;
+}
+
+/* Ensure header content sits above the fill */
+.card-hd.section-hd>* {
+	position: relative;
+	z-index: 1;
+}
+
+.card-hd.section-hd .pct {
+	text-align: center;
+	font-weight: 600;
+	opacity: 0.95;
+}
+
+/* ===================== Global scrollbars ===================== */
+
+/* Firefox / general */
+* {
+	scrollbar-width: thin;
+	scrollbar-color: var(--sb-thumb) var(--sb-track);
+}
+
+/* WebKit / Chromium */
+*::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+	background: var(--sb-track);
+}
+
+*::-webkit-scrollbar-thumb {
+	background: var(--sb-thumb);
+	border-radius: 10px;
+	border: 2px solid var(--sb-track);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+	background: var(--sb-thumb-hover);
+}
+
+*::-webkit-scrollbar-corner {
+	background: var(--sb-corner);
+}
+
+/* ===================== Global task search ===================== */
+
+.app-header .task-search-wrap {
+	flex: 1 1 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	max-width: 520px;
+	width: 100%;
+	margin: 0 auto;
+	gap: 4px;
+}
+
+.app-header .task-search-input {
+	width: 100%;
+	padding: 4px 8px;
+	border-radius: 999px;
+	border: 1px solid #2a2a33;
+	background: #111114;
+	color: #f5f5f5;
+	font-size: 13px;
+
+	/* Actual typed text stays left-aligned */
+	text-align: left;
+}
+
+/* Placeholder only: centered */
+.app-header .task-search-input::placeholder {
+	color: #777;
+	text-align: center;
+}
+
+.task-search-results {
+	position: absolute;
+	top: calc(100% + 4px);
+	left: 0;
+	right: 0;
+	z-index: 50;
+	display: none;
+	background: #101016;
+	border: 1px solid #2a2a33;
+	border-radius: 8px;
+	box-shadow: 0 8px 18px rgba(0, 0, 0, 0.7);
+	max-height: 430px;
+	overflow-y: hidden;
+}
+
+.task-search-results.is-open {
+	display: block;
+}
+
+.task-search-item {
+	width: 100%;
+	padding: 6px 8px;
+	text-align: left;
+	border: 0;
+	background: transparent;
+	color: inherit;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 8px;
+	cursor: pointer;
+}
+
+.task-search-item:hover,
+.task-search-item:focus-visible {
+	background: #191924;
+	outline: none;
+}
+
+/* Task name: takes remaining space, ellipsized */
+.task-search-item-text {
+	font-size: 13px;
+	flex: 1 1 auto;
+	min-width: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/* Location (game + section): pinned to the right */
+.task-search-item-meta {
+	opacity: 0.7;
+	font-size: 11px;
+	flex-shrink: 0;
+	white-space: nowrap;
+	text-align: right;
+}
+
+/* ===================== Sidebar toggle ===================== */
+.sidebar-toggle {
+	border: 1px solid #2a2a33;
+	background: #111114;
+	color: #eaeaea;
+	border-radius: 8px;
+	/* was 999px */
+	padding: 6px 12px;
+	/* a bit chunkier */
+	font-size: 14px;
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 36px;
+	/* make it a bit more square */
+	min-height: 32px;
+}
+
+.sidebar-toggle:hover {
+	background: #18181c;
+}

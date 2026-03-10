@@ -1,0 +1,21 @@
+{
+	"name": "ppgc-backend",
+	"version": "0.1.0",
+	"main": "src/server.js",
+	"type": "module",
+	"scripts": {
+		"dev": "node src/server.js",
+		"start": "NODE_ENV=production node src/server.js",
+		"setup": "npx prisma migrate deploy"
+	},
+	"dependencies": {
+		"@prisma/client": "^6.19.0",
+		"bcrypt": "^6.0.0",
+		"cookie-session": "^2.0.0",
+		"cors": "^2.8.5",
+		"dotenv": "^16.4.5",
+		"express": "^4.19.2",
+		"pg": "^8.16.3",
+		"prisma": "^6.19.0"
+	}
+}

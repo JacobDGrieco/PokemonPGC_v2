@@ -1,0 +1,441 @@
+/* ===================== Distributions section wrapper + filters ===================== */
+
+.dist-section {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+/* Top bar with the region dropdown */
+.dist-filters-row {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-bottom: 8px;
+}
+
+.dist-filter-label {
+	font-size: 0.9rem;
+	opacity: 0.8;
+}
+
+.dist-filter-select {
+	background: #151519;
+	border: 1px solid var(--card-border, #2b2b2b);
+	color: #fff;
+	border-radius: 8px;
+	padding: 4px 8px;
+	font-size: 0.9rem;
+}
+
+/* ===================== Grid layout ===================== */
+
+/* 3 cards per row on desktop */
+.dist-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 12px;
+}
+
+/* Optional wrapper in case you want to tweak spacing separately */
+.dist-grid-holder {
+	width: 100%;
+}
+
+/* ===================== Card shell ===================== */
+
+.dist-card {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid var(--card-border, #2b2b2b);
+	border-radius: 10px;
+	padding: 10px;
+	background: var(--card-bg, #111);
+	transition:
+		box-shadow 0.15s ease,
+		outline-color 0.15s ease,
+		border-color 0.15s ease;
+}
+
+/* Checked / completed distribution */
+.dist-card.is-done {
+	border-color: #21c277;
+	outline: 2px solid #21c277;
+	box-shadow: 0 0 0 3px rgba(33, 194, 119, 0.18) inset;
+}
+
+/* Event title line at top of card */
+.dist-event-title {
+	width: 100%;
+	text-align: center;
+	font-weight: 700;
+	font-size: 0.95rem;
+	line-height: 1.2;
+	margin: 4px 0 6px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* ===================== Header row (name / dates / badges) ===================== */
+
+.dist-event-row {
+	position: relative;
+	margin: 4px 0 6px;
+	min-height: 1.2em;
+}
+
+.dist-event-title {
+	width: 100%;
+	text-align: center;
+	font-weight: 700;
+	font-size: 0.95rem;
+	line-height: 1.2;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.dist-region-list {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: flex;
+	gap: 4px;
+}
+
+.dist-region-pill {
+	font-size: 10px;
+	padding: 2px 6px;
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.08);
+	border: 1px solid rgba(255, 255, 255, 0.16);
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+	white-space: nowrap;
+}
+
+.dist-hd {
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
+	align-items: center;
+	gap: 8px;
+	margin-bottom: 6px;
+}
+
+.dist-hd-left {
+	justify-self: start;
+}
+
+.dist-hd-center {
+	justify-self: center;
+	text-align: center;
+}
+
+.dist-hd-right {
+	justify-self: end;
+	display: flex;
+	gap: 6px;
+	align-items: center;
+}
+
+/* Name + gender symbols */
+.dist-name {
+	font-weight: 700;
+	display: inline-flex;
+	gap: 6px;
+	align-items: center;
+}
+
+.dist-gender {
+	opacity: 0.85;
+}
+
+/* Date line */
+.dist-dates {
+	font-size: 0.9rem;
+	opacity: 0.9;
+}
+
+/* ===================== Badges (ball + ribbons) ===================== */
+
+.dist-badges {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.dist-badges .badge {
+	width: 22px;
+	height: 22px;
+	object-fit: contain;
+}
+
+.dist-badges .ball {
+	width: 26px;
+	height: 26px;
+}
+
+/* Text badges when no image is provided */
+.dist-badges .ball-label,
+.dist-badges .ribbon-label {
+	font-size: 12px;
+	opacity: 0.85;
+	background: rgba(255, 255, 255, 0.08);
+	border: 1px solid rgba(255, 255, 255, 0.12);
+	padding: 2px 6px;
+	border-radius: 999px;
+}
+
+/* ===================== Body: sprite + specs ===================== */
+
+.dist-body {
+	display: flex;
+	gap: 10px;
+}
+
+/* Left sprite column */
+.dist-img {
+	position: relative;
+	width: 96px;
+	align-self: center;
+	margin: 0% 7%;
+}
+
+.dist-img img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.dist-img .badges.dist-marks {
+	top: -10px;
+	right: -10px;
+}
+
+.dist-img .badges.dist-marks img {
+	width: 20px;
+	height: 20px;
+}
+
+/* Right specs column */
+.dist-specs-wrap {
+	flex: 1;
+	display: grid;
+	grid-template-columns: 1fr auto;
+	gap: 8px;
+}
+
+/* Definition list of properties */
+.dist-specs {
+	margin: 0;
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 6px 10px;
+}
+
+.dist-specs dt {
+	font-size: 11px;
+	opacity: 0.7;
+}
+
+.dist-specs dd {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	gap: 6px;
+	margin: 0;
+	font-size: 13px;
+	padding: 2px 6px;
+	border-radius: 6px;
+}
+
+/* Held item image inside specs */
+.dist-specs .held-item-img {
+	height: 24px;
+	width: 24px;
+	object-fit: contain;
+	vertical-align: middle;
+	margin-top: -2px;
+}
+
+/* ===================== Diamond moves layout ===================== */
+
+/* 4-move diamond (0 = top, 1 = right, 2 = bottom, 3 = left) */
+.dist-moves.diamond {
+	position: relative;
+	height: 120px;
+}
+
+.dist-moves.diamond .mv {
+	position: absolute;
+	width: 30%;
+	height: 44px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 8px;
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	color: white;
+	transform: rotate(45deg);
+}
+
+.dist-moves.diamond .mv img {
+	max-width: 100%;
+	max-height: 100%;
+	display: block;
+}
+
+.dist-moves.diamond .mv .mv-label {
+	font-size: 14px;
+	text-align: center;
+	padding: 4px;
+}
+
+/* Slot positions */
+.dist-moves.diamond .mv:nth-child(1) {
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+.dist-moves.diamond .mv:nth-child(2) {
+	top: 50%;
+	right: 0;
+	transform: translate(0, -50%);
+}
+
+.dist-moves.diamond .mv:nth-child(3) {
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+.dist-moves.diamond .mv:nth-child(4) {
+	top: 50%;
+	left: 0;
+	transform: translate(0, -50%);
+}
+
+/* ===================== Type colors (extend as needed) ===================== */
+
+.mv.type-normal {
+	background: #a8a77a33;
+	border-color: #a8a77a66;
+}
+
+.mv.type-fire {
+	background: #ee813033;
+	border-color: #ee813066;
+}
+
+.mv.type-water {
+	background: #6390f033;
+	border-color: #6390f066;
+}
+
+.mv.type-electric {
+	background: #f7d02c33;
+	border-color: #f7d02c66;
+}
+
+.mv.type-grass {
+	background: #7ac74c33;
+	border-color: #7ac74c66;
+}
+
+.mv.type-ice {
+	background: #96d9d633;
+	border-color: #96d9d666;
+}
+
+.mv.type-fighting {
+	background: #c22e2833;
+	border-color: #c22e2866;
+}
+
+.mv.type-poison {
+	background: #a33ea133;
+	border-color: #a33ea166;
+}
+
+.mv.type-ground {
+	background: #e2bf6533;
+	border-color: #e2bf6566;
+}
+
+.mv.type-flying {
+	background: #a98ff333;
+	border-color: #a98ff366;
+}
+
+.mv.type-psychic {
+	background: #f9558733;
+	border-color: #f9558766;
+}
+
+.mv.type-bug {
+	background: #a6b91a33;
+	border-color: #a6b91a66;
+}
+
+.mv.type-rock {
+	background: #b6a13633;
+	border-color: #b6a13666;
+}
+
+.mv.type-ghost {
+	background: #73579733;
+	border-color: #73579766;
+}
+
+.mv.type-dragon {
+	background: #6f35fc33;
+	border-color: #6f35fc66;
+}
+
+.mv.type-dark {
+	background: #70574633;
+	border-color: #70574666;
+}
+
+.mv.type-steel {
+	background: #b7b7ce33;
+	border-color: #b7b7ce66;
+}
+
+.mv.type-fairy {
+	background: #d685ad33;
+	border-color: #d685ad66;
+}
+
+/* ===================== Details + check button ===================== */
+
+.dist-details {
+	margin-top: 8px;
+}
+
+.dist-details .line {
+	margin: 2px 0;
+	white-space: pre-line;
+	text-align: center;
+}
+
+.dist-details .small {
+	font-size: 12px;
+	opacity: 0.85;
+}
+
+/* Full-width "Check / Uncheck" button at bottom of card */
+.dist-toggle {
+	margin-top: auto;
+	width: 100%;
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.12);
+	background: rgba(255, 255, 255, 0.08);
+	padding: 10px;
+	font-weight: 600;
+	color: #fff;
+}

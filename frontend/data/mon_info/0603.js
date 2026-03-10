@@ -1,0 +1,11 @@
+﻿(() => {
+	const natiId = 603;
+	const nameVal = "Eelektrik";
+	const games = gameSearch("gen5", "gen6", "gen7", "scvi", "lza");
+
+	const monInfoByGame = buildMonInfoByGame(natiId, nameVal, games);
+
+	window.PPGC.register([
+		{ monInfo: monInfoByGame, },
+	]);
+})();

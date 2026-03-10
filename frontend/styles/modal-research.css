@@ -1,0 +1,139 @@
+/* Research modal dialog sizing */
+#researchModal .modal-dialog {
+	width: min(800px, 90vw);
+	max-height: 80vh;
+	height: auto;
+}
+
+#researchModal .modal-bd {
+	display: block;
+	padding: 8px 0 12px 0;
+}
+
+/* ========================================================================== */
+/*  RESEARCH TASKS LAYOUT                                                     */
+/* ========================================================================== */
+
+/* Scrollable container for the research list */
+#researchModal .research-grid {
+	width: 100%;
+	height: 100%;
+	padding: 12px 16px;
+	overflow: auto;
+}
+
+/* Header row: [empty] | Task | tier labels */
+.research-header {
+	display: grid;
+	grid-template-columns: 32px minmax(0, 1fr) auto;
+	column-gap: 12px;
+
+	font-size: 12px;
+	opacity: 0.8;
+
+	margin-bottom: 8px;
+	padding: 4px 6px;
+}
+
+/* Tier label sub-row (numbers 1..N) */
+.research-header .rt-tiers-header {
+	display: flex;
+	gap: 12px;
+	justify-content: flex-start;
+	padding-right: 9px;
+}
+
+.research-header .rt-tiers-header span {
+	min-width: 16px;
+	text-align: center;
+}
+
+/* Vertical list of research tasks */
+.research-list {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+/*
+  Each research task is a 2-row grid:
+    row1: icon | name | tiers (numbers)
+    row2: icon | slider | slider (slider aligned with tiers)
+*/
+.research-task {
+	display: grid;
+	grid-template-columns: 32px minmax(0, 1fr) auto;
+	grid-template-areas:
+		"icon name tiers"
+		"icon slider slider";
+	column-gap: 12px;
+	row-gap: 4px;
+
+	padding: 8px 10px;
+	border-radius: 8px;
+
+	background: #111116;
+	border: 1px solid #24242a;
+}
+
+/* Icon column */
+.research-task .rt-icon {
+	grid-area: icon;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.research-task .rt-icon img.boost-icon {
+	height: 22px;
+	display: block;
+}
+
+/* Task title */
+.research-task .rt-name {
+	grid-area: name;
+	font-size: 13px;
+	align-content: center;
+}
+
+/* Tiers column: number row + slider label */
+.research-task .rt-tiers {
+	grid-area: tiers;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	font-size: 13px;
+}
+
+/* Row of tier numbers inside .rt-tiers */
+.research-task .rt-tiers-spans {
+	display: flex;
+	gap: 12px;
+	justify-content: flex-start;
+}
+
+.research-task .rt-tiers-spans span {
+	flex: 0 0 auto;
+	min-width: 16px;
+	text-align: center;
+	opacity: 0.8;
+}
+
+/* Slider row aligned under tiers */
+.research-task .rt-slider {
+	grid-area: slider;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.research-task .rt-slider input[type="range"] {
+	flex: 1;
+}
+
+/* Small "Tier X/Y" label beside slider */
+.research-task .tier-label {
+	font-size: 11px;
+	opacity: 0.8;
+	white-space: nowrap;
+}

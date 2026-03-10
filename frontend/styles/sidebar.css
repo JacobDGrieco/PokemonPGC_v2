@@ -1,0 +1,202 @@
+/* ===================== Sidebar ===================== */
+.sidebar {
+	background: #111114;
+	border-right: 1px solid #222;
+	box-sizing: border-box;
+	display: grid;
+	grid-template-rows: auto 1fr;
+	position: sticky;
+	top: var(--header-h);
+	height: calc(100vh - var(--header-h));
+	overflow-y: auto;
+	transition:
+		width 0.25s ease-out,
+		padding 0.25s ease-out,
+		margin 0.25s ease-out;
+}
+
+body.sidebar-collapsed .sidebar {
+	width: 0;
+	min-width: 0;
+	padding-left: 0;
+	padding-right: 0;
+	border-right: 0;
+	overflow: hidden;
+}
+
+body.sidebar-collapsed .app {
+	grid-template-columns: 0 1fr;
+}
+
+body.sidebar-collapsed .content {
+	flex: 1 1 auto;
+}
+
+.sidebar-header {
+	position: sticky;
+	top: 0;
+	z-index: 1;
+
+	display: flex;
+	align-items: center;
+	gap: 8px;
+
+	padding: 10px;
+	border-bottom: 1px solid #222;
+	background: #121214;
+}
+
+/* Back button in the sidebar header */
+.back-btn {
+	background: #1b1b1e;
+	border: 1px solid #2b2b33;
+	color: #eaeaea;
+	border-radius: 8px;
+	padding: 6px 10px;
+	cursor: pointer;
+}
+
+/* Current “level” title (Generations / game / sections) */
+.sidebar-title {
+	font-weight: 600;
+	opacity: 0.9;
+}
+
+/* ===================== Directory list (nav items) ===================== */
+
+.dir-list {
+	padding: 8px;
+	display: grid;
+	gap: 6px;
+	overflow: auto;
+}
+
+/* Single row entry (generation, game, or section) */
+.dir-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+
+	padding: 10px 12px;
+	border-radius: 10px;
+
+	border: 1px solid #2b2b33;
+	background: #1a1a1f;
+	cursor: pointer;
+}
+
+.dir-item:hover {
+	background: #22222a;
+}
+
+.dir-item.active {
+	background: #2b2b33;
+}
+
+/* Left label: icon + text */
+.dir-item .label {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.dir-item .label .chip {
+	margin-left: 6px;
+	padding: 2px 6px;
+	border-radius: 999px;
+	font-size: 10px;
+	line-height: 1.2;
+	background: #262630;
+	color: #e5ffe9;
+	opacity: 0.9;
+	white-space: nowrap;
+}
+
+/* Specific style for "Started" games */
+.dir-item .label .chip-started {
+	background: rgba(60, 170, 110, 0.25);
+	border: 1px solid rgba(110, 230, 160, 0.7);
+	color: #baffd2;
+}
+
+/* Small icon “dot” / placeholder before labels */
+.dir-item .icon {
+	width: 18px;
+	text-align: center;
+	opacity: 0.85;
+}
+
+.dir-item .icon.game-icon {
+	width: 96px;
+	height: 96px;
+	border-radius: 999px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	opacity: 1;
+	flex-shrink: 0;
+}
+
+/* ===================== Gen 1 sprite color toggle ===================== */
+
+/*
+  Small toggle in the sidebar header used for Gen 1:
+  “Colors” [switch]
+*/
+
+.sprite-toggle {
+	margin-left: auto;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+
+	font-size: 11px;
+	opacity: 0.9;
+	cursor: pointer;
+}
+
+.sprite-toggle .lbl {
+	opacity: 0.8;
+}
+
+/* Hide the native checkbox; we draw our own switch */
+.sprite-toggle input {
+	position: absolute;
+	opacity: 0;
+	pointer-events: none;
+}
+
+/* Switch track */
+.sprite-toggle .switch {
+	position: relative;
+	flex-shrink: 0;
+
+	width: 32px;
+	height: 16px;
+	border-radius: 999px;
+	background: #2b2b33;
+}
+
+/* Switch knob */
+.sprite-toggle .knob {
+	position: absolute;
+	top: 2px;
+	left: 2px;
+
+	width: 12px;
+	height: 12px;
+	border-radius: 999px;
+	background: #eaeaea;
+
+	transition: transform 0.15s ease-out;
+}
+
+/* Checked state (color sprite mode) */
+.sprite-toggle input:checked+.switch {
+	background: #3a7fe7;
+}
+
+.sprite-toggle input:checked+.switch .knob {
+	transform: translateX(14px);
+}

@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  api:
+    build: ./backend
+    restart: unless-stopped
+    environment:
+      - PORT=3000
+      - SESSION_SECRET=${SESSION_SECRET:-change-me}
+      # Later: DATABASE_URL=...
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app/frontend:ro
+
+  # Uncomment later when we wire in Postgres
+  # db:
+  #   image: postgres:16
+  #   restart: unless-stopped
+  #   environment:
+  #     POSTGRES_USER: ppgc
+  #     POSTGRES_PASSWORD: supersecret
+  #     POSTGRES_DB: ppgc
+  #   volumes:
+  #     - db_data:/var/lib/postgresql/data
+  #   ports:
+  #     - "5432:5432"
+
+# volumes:
+#   db_data:
