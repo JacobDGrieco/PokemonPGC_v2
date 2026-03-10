@@ -1610,7 +1610,7 @@ function renderMonInfoIndexPage(store, els) {
 		card.className = "moninfo-card";
 		card.innerHTML = `
 			<div class="moninfo-card-id">#${pad4(natiId)}</div>
-			<img class="moninfo-card-img" src="${img}" alt="#${natiId} — ${name}">
+			<img class="moninfo-card-img" src="${img}" alt="#${natiId}">
 			<div class="moninfo-card-name">${name}</div>
 		`;
 

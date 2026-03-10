@@ -1,6 +1,6 @@
 const RAW_BASE =
-	typeof globalThis !== "undefined" && globalThis.__BLOB_ASSET_BASE_URL__
-		? String(globalThis.__BLOB_ASSET_BASE_URL__).trim()
+	typeof globalThis !== "undefined" && globalThis.__ASSET_BASE_URL__
+		? String(globalThis.__ASSET_BASE_URL__).trim()
 		: "";
 
 window._assetPath = function _assetPath(path) {
