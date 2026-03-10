@@ -1,7 +1,4 @@
-const RAW_BASE =
-	(typeof window !== "undefined" && window.__BLOB_ASSET_BASE_URL__)
-		? String(window.__BLOB_ASSET_BASE_URL__).trim()
-		: "";
+const RAW_BASE = String(import.meta.env.VITE_BLOB_ASSET_BASE_URL || "").trim();
 
 window._assetPath = function _assetPath(path) {
 	const cleanPath = String(path || "").replace(/^\/+/, "");

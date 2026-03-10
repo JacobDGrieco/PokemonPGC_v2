@@ -1210,7 +1210,7 @@ function renderAccountSaveImportSection(wrap) {
 			card.setAttribute("data-game-key", g.key);
 			card.setAttribute("data-gen-key", genKey);
 
-			const imgPath = `./imgs/game-icons/${g.key}.png`;
+			const imgPath = _assetPath(`imgs/game-icons/${g.key}.png`);
 			const isSupported = SUPPORTED_SAVE_IMPORT_GAMES.has(g.key);
 
 			card.innerHTML = `
@@ -1603,7 +1603,7 @@ function renderMonInfoIndexPage(store, els) {
 
 		const name = String(mon?.name || `#${natiId}`);
 		const p4 = pad4(natiId);
-		const img = _assetPath("imgs/sprites/pokemon_home/base-front/${p4}.png");
+		const img = _assetPath(`imgs/sprites/pokemon_home/base-front/${p4}.png`);
 
 		const card = document.createElement("button");
 		card.type = "button";
@@ -1752,7 +1752,7 @@ async function renderMonInfoPage(store, els) {
 
 			const id = Number(entry.natiId);
 			const name = entry.name || `#${id}`;
-			const sprite = _assetPath("imgs/sprites/pokemon_home/menu_sprites/${pad4(id)}.png"); // menu_sprites
+			const sprite = _assetPath(`imgs/sprites/pokemon_home/menu_sprites/${pad4(id)}.png`); // menu_sprites
 
 			btn.disabled = false;
 			btn.innerHTML = `
@@ -1864,7 +1864,7 @@ async function renderMonInfoPage(store, els) {
 		id: natiId,
 		natiId,
 		name: displayName,
-		img: _assetPath("imgs/sprites/pokemon_home/base-front/${pad4(natiId)}.png"),
+		img: _assetPath(`imgs/sprites/pokemon_home/base-front/${pad4(natiId)}.png`),
 		types: [],
 		baseStats: null,
 	};
@@ -2136,7 +2136,7 @@ export function renderContent(store, els) {
 			// Show progress only if Started; otherwise force 0%.
 			const pctForRing = st.isStarted ? st.pct : 0;
 
-			const imgPath = `../imgs/game-icons/${g.key}.png`;
+			const imgPath = _assetPath(`imgs/game-icons/${g.key}.png`);
 			const r = ring(pctForRing, g.label, { img: imgPath });
 			r.style.setProperty("--accent", g.color || "#7fd2ff");
 			r.style.cursor = "pointer";
@@ -2270,7 +2270,7 @@ export function renderContent(store, els) {
 					gameBox.appendChild(empty);
 				} else {
 					// Use the same per-game image for all section rings in this game
-					const imgPath = `../imgs/game-icons/${g.key}.png`;
+					const imgPath = _assetPath(`imgs/game-icons/${g.key}.png`);
 
 					secs.forEach((sec) => {
 						const pct = _computeSectionPct(sec, g.key, s.genKey, store);
