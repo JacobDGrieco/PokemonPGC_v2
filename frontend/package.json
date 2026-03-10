@@ -7,7 +7,7 @@
 		"node": "20.x"
 	},
 	"scripts": {
-		"build": "esbuild src/index.js --bundle --format=esm --minify --sourcemap --outfile=dist/bundle.js",
+		"build": "node scripts/prepare-public.mjs && esbuild src/index.js --bundle --format=esm --minify --sourcemap --outfile=public/dist/bundle.js",
 		"build:watch": "esbuild src/index.js --bundle --format=esm --sourcemap --outfile=dist/bundle.js --watch",
 		"start": "node server.js",
 		"dev": "nodemon server.js",
