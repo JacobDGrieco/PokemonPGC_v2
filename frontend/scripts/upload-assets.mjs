@@ -1,9 +1,11 @@
+import "dotenv/config";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { put } from "@vercel/blob";
 
 // Put your exact folder here:
-const ROOT = `D:\\Projects\\Coding\\pokemon_pgc\\PokemonPGC\\frontend\\imgs`;
+// const ROOT = `D:\\Projects\\Coding\\pokemon_pgc\\PokemonPGC\\frontend\\imgs`;
+const ROOT = `C:\\Users\\gamin\\Downloads\\imgs`;
 
 async function walk(dir) {
 	const entries = await fs.readdir(dir, { withFileTypes: true });
