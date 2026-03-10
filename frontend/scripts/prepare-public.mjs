@@ -4,6 +4,7 @@ import path from "path";
 const root = process.cwd();
 const publicDir = path.join(root, "public");
 const distDir = path.join(publicDir, "dist");
+const blobBaseUrl = String(process.env.VITE_BLOB_ASSET_BASE_URL || "").trim();
 
 fs.rmSync(publicDir, { recursive: true, force: true });
 fs.mkdirSync(publicDir, { recursive: true });
@@ -37,4 +38,17 @@ for (const item of filesToCopy) {
 	if (fs.existsSync(src)) {
 		copyRecursive(src, path.join(publicDir, item));
 	}
+}
+
+const blobEnvJs = `window.__BLOB_ASSET_BASE_URL__ = ${JSON.stringify(blobBaseUrl)};\n`;
+fs.writeFileSync(path.join(publicDir, "blob-env.js"), blobEnvJs, "utf8");
+
+const publicIndexPath = path.join(publicDir, "index.html");
+if (fs.existsSync(publicIndexPath)) {
+	let html = fs.readFileSync(publicIndexPath, "utf8");
+	html = html.replace(
+		/<script type="module"\s+src="\.\/dist\/bundle\.js"><\/script>/,
+		'<script src="./blob-env.js"></script>\n\t\t<script type="module" src="./dist/bundle.js"></script>'
+	);
+	fs.writeFileSync(publicIndexPath, html, "utf8");
 }
