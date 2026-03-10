@@ -1603,7 +1603,7 @@ function renderMonInfoIndexPage(store, els) {
 
 		const name = String(mon?.name || `#${natiId}`);
 		const p4 = pad4(natiId);
-		const img = `imgs/sprites/pokemon_home/base-front/${p4}.png`;
+		const img = _assetPath("imgs/sprites/pokemon_home/base-front/${p4}.png");
 
 		const card = document.createElement("button");
 		card.type = "button";
@@ -1665,7 +1665,7 @@ async function renderMonInfoPage(store, els) {
 		<div class="page">
 			<div class="moninfo-header">
 				<div class="moninfo-header-left">
-					<img class="moninfo-hero-img" src="imgs/sprites/pokemon_home/base-front/${pad4(natiId)}.png" alt="#${natiId}">
+					<img class="moninfo-hero-img" src=_assetPath("imgs/sprites/pokemon_home/base-front/${pad4(natiId)}.png") alt="#${natiId}">
 					<div>
 						<h2 class="page-title">#${pad4(natiId)} — ${displayName}</h2>
 							<div class="moninfo-subtitle small" id="moninfoSubtitle"></div>
@@ -1752,7 +1752,7 @@ async function renderMonInfoPage(store, els) {
 
 			const id = Number(entry.natiId);
 			const name = entry.name || `#${id}`;
-			const sprite = `imgs/sprites/pokemon_home/menu_sprites/${pad4(id)}.png`; // menu_sprites
+			const sprite = _assetPath("imgs/sprites/pokemon_home/menu_sprites/${pad4(id)}.png"); // menu_sprites
 
 			btn.disabled = false;
 			btn.innerHTML = `
@@ -1864,7 +1864,7 @@ async function renderMonInfoPage(store, els) {
 		id: natiId,
 		natiId,
 		name: displayName,
-		img: `imgs/sprites/pokemon_home/base-front/${pad4(natiId)}.png`,
+		img: _assetPath("imgs/sprites/pokemon_home/base-front/${pad4(natiId)}.png"),
 		types: [],
 		baseStats: null,
 	};

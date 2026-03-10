@@ -158,7 +158,7 @@ export function renderSidebar(store, els, renderAll) {
 		if (elSidebarTitle) elSidebarTitle.textContent = genLabel;
 
 		(window.DATA.games?.[s.genKey] || []).forEach((g) => {
-			const imgPath = `imgs/game-icons/${g.key}.png`;
+			const imgPath = _assetPath("imgs/game-icons/${g.key}.png");
 
 			// Check started status from store
 			const isStarted =

@@ -61,7 +61,7 @@ export function openResearchModal(gameKey, genKey, mon, store) {
 
 	researchTitle.textContent = `Research Tasks — ${mon.name}`;
 
-	const boostIconSrc = "imgs/task-imgs/gen8/legendsarceus/boost.png";
+	const boostIconSrc = _assetPath("imgs/task-imgs/gen8/legendsarceus/boost.png");
 	const MAX_TIERS = 5;
 
 	const recAll =

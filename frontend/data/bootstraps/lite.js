@@ -2,6 +2,7 @@
 
 // Helper files
 import "../helpers/core.js";
+import "../helpers/assets.js";
 import "../helpers/collectibles-ids.js";
 import "../helpers/dex-ids.js";
 import "../helpers/dex-register.js";
