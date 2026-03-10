@@ -12,7 +12,7 @@ _Pokémon Post-Game Checklist, Dex Tracker, and Data Hub_
 
 ## Table of Contents
 
-- [Overview](#overview)
+- [Overviewt](#overview)
 - [Features](#features)
   - [Per-Game Checklists](#per-game-checklists)
   - [Dex Viewer & Forms Layout](#dex-viewer--forms-layout)
