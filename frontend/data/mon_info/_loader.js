@@ -1,48 +1,60 @@
 // src/data/mon_info/_loader.js
+const monInfoModules = import.meta.glob('./*.js');
+const _loaded = new Set();
+
+function pad4(n) {
+	return String(n).padStart(4, '0');
+}
+
 function baseNum(natiId) {
-	const num = parseInt(String(natiId).split("-")[0], 10);
+	const num = parseInt(String(natiId).split('-')[0], 10);
 	return Number.isFinite(num) ? num : null;
 }
 
-export function monInfoUrl(natiId) {
-	const num = parseInt(String(natiId).split("-")[0], 10);
-	if (!Number.isFinite(num)) return null;
+function moduleKeyForBase(num) {
+	return `./${pad4(num)}.js`;
+}
 
-	// _loader.js lives in src/data/mon_info/, so the files are alongside it.
-	return new URL(`../data/mon_info/${pad4(num)}.js`, import.meta.url).href;
+function moduleKeyForForm(num, formKey) {
+	const suffix = window.formKeyToSuffix?.(num, formKey);
+	if (!suffix) return null;
+	return `./${pad4(num)}-${suffix}.js`;
+}
+
+export function monInfoUrl(natiId) {
+	const num = baseNum(natiId);
+	if (num == null) return null;
+	return new URL(moduleKeyForBase(num), import.meta.url).href;
 }
 
 export function monInfoFormUrl(natiId, formKey) {
 	const num = baseNum(natiId);
 	if (num == null || !formKey) return null;
-
-	const suffix = window.formKeyToSuffix(num, formKey);
-	if (!suffix) return null;
-
-	return new URL(`../data/mon_info/${pad4(num)}-${suffix}.js`, import.meta.url).href;
+	const key = moduleKeyForForm(num, formKey);
+	return key ? new URL(key, import.meta.url).href : null;
 }
 
-const _loaded = new Set();
+async function importByKey(key, { optional = false } = {}) {
+	if (!key || _loaded.has(key)) return false;
+	const loader = monInfoModules[key];
+	if (!loader) {
+		if (optional) return false;
+		throw new Error(`Missing mon info module: ${key}`);
+	}
+	await loader();
+	_loaded.add(key);
+	return true;
+}
 
 export async function ensureMonInfoLoaded(natiId, formKey = null) {
-	// always load base
-	const url = monInfoUrl(natiId);
-	if (!url) return false;
+	const num = baseNum(natiId);
+	if (num == null) return false;
 
-	if (!_loaded.has(url)) {
-		await import(url);
-		_loaded.add(url);
-	}
+	await importByKey(moduleKeyForBase(num));
 
-	// optionally load form file (ignore if missing)
-	const fUrl = monInfoFormUrl(natiId, formKey);
-	if (fUrl && !_loaded.has(fUrl)) {
-		try {
-			await import(fUrl);
-			_loaded.add(fUrl);
-		} catch {
-			// no form file exists; that's fine
-		}
+	const formKeyPath = formKey ? moduleKeyForForm(num, formKey) : null;
+	if (formKeyPath) {
+		await importByKey(formKeyPath, { optional: true });
 	}
 
 	return true;

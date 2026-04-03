@@ -1,3 +1,5 @@
+import { ensureDataRoot } from "../runtime/globals.js";
+
 // ui/layoutSwitcher.js
 
 // IMPORTANT: keep these ordered from largest to smallest minWidth
@@ -94,6 +96,7 @@ function applyLayoutForWidth(width, renderAll) {
 	window.PPGC.currentLayoutVariant = chosenName;
 
 	// CRITICAL: this keeps the rest of your code the same.
+	ensureDataRoot();
 	window.DATA.layout = nextLayout;
 
 	if (typeof renderAll === "function") {

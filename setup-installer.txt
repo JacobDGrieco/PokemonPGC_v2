@@ -1,0 +1,17 @@
+1. Build in the dev project (in WSL)
+
+cd /mnt/d/Projects/Coding/pokemon_pgc/PokemonPGC
+npm run install-all
+npm run build
+npm run setup
+
+2. Refresh the release folder on Windows
+Copy the backend and frontend folders to ppgc-release
+
+3. Run prepare-release.bat
+
+4. Run PokemonPGC.bat to test that it works
+
+5. Open Inno Setup, open the PokemonPGC.iss script, and then hit Compile
+
+6. Check the output folder for the .exe file

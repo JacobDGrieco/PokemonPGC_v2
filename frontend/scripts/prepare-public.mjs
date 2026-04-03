@@ -1,3 +1,4 @@
+import "dotenv/config";
 import fs from "fs";
 import path from "path";
 
@@ -5,6 +6,7 @@ const root = process.cwd();
 const publicDir = path.join(root, "public");
 const distDir = path.join(publicDir, "dist");
 const assetBaseUrl = String(process.env.ASSET_BASE_URL || "").trim();
+const apiBaseUrl = String(process.env.API_BASE_URL || "").trim();
 
 fs.rmSync(publicDir, { recursive: true, force: true });
 fs.mkdirSync(publicDir, { recursive: true });
@@ -40,8 +42,11 @@ for (const item of filesToCopy) {
 	}
 }
 
-const assetEnvJs = `window.__ASSET_BASE_URL__ = ${JSON.stringify(assetBaseUrl)};\n`;
-fs.writeFileSync(path.join(publicDir, "asset-env.js"), assetEnvJs, "utf8");
+const envJs = `
+window.__ASSET_BASE_URL__ = ${JSON.stringify(assetBaseUrl)};
+window.__API_BASE_URL__ = ${JSON.stringify(apiBaseUrl)};
+`.trim() + "\n";
+fs.writeFileSync(path.join(publicDir, "asset-env.js"), envJs, "utf8");
 
 const publicIndexPath = path.join(publicDir, "index.html");
 if (fs.existsSync(publicIndexPath)) {

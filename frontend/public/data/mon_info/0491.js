@@ -1,0 +1,9 @@
+﻿(() => {
+	const natiId = 491;
+	const nameVal = "Darkrai";
+	const games = gameSearch("gen4", "gen5", "gen6", "gen7", "bdsp", "la", "scvi", "lza");
+
+	const monInfoByGame = buildMonInfoByGame(natiId, nameVal, games);
+
+	window.PPGC.register([{ monInfo: monInfoByGame, },]);
+})();

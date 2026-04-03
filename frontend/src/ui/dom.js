@@ -12,7 +12,8 @@ export const elements = {
 	elSidebarTitle: document.getElementById("navTitle"),
 	elSidebarList: document.getElementById("sideList"),
 	elBack: document.getElementById("navBack"),
-	elContent: document.getElementById("content"),
+	elContent: document.getElementById("legacy-content-root"),
+	contentShell: document.getElementById("content"),
 	elCrumbs: document.getElementById("crumbs"),
 
 	// Dex modal

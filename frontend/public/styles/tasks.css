@@ -1,0 +1,386 @@
+/* ===================== Section + basic task rows ===================== */
+
+/* Optional wrapper around a section of tasks */
+.section {
+	border: 1px dashed #2a2a30;
+	border-radius: 10px;
+	padding: 10px;
+	display: grid;
+	gap: 10px;
+}
+
+/* Default stacked row style */
+.task-row {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	background: #151518;
+	border: 1px solid #24242a;
+	border-radius: 8px;
+	padding: 8px;
+}
+
+/* Layout wrapper used when rendering with a rowsSpec */
+.task-layout {
+	display: grid;
+	gap: 10px;
+}
+
+/* ===================== Inline row variant ===================== */
+
+/*
+  Inline rows display multiple tasks side–by–side in a single row:
+    .task-row.task-inline
+      .task-item (main or subtask)
+*/
+
+.task-row.task-inline {
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: 1fr;
+	align-items: center;
+	gap: 12px;
+	padding: 12px 8px;
+}
+
+/* Individual task “chip” inside an inline row */
+.task-row.task-inline .task-item {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	min-width: 0;
+	text-align: left;
+}
+
+/* Wrapper for one or more images in a task */
+.task-row.task-inline .task-item-img-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 4px;
+	margin-left: 8px;
+}
+
+/* When images are inline with the label, left-align them */
+.task-row.task-inline .task-item-img-wrap.inline {
+	justify-content: flex-start;
+}
+
+/* Above-label cases: give a little spacing below the images */
+.task-row.task-inline .task-item.is-main.no-children .task-item-img-wrap,
+.task-row.task-inline .task-item.is-subtask .task-item-img-wrap {
+	margin-bottom: 6px;
+}
+
+/* Checkbox + label shell */
+.task-row.task-inline .task-item .task-item-body {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 8px;
+	min-width: 0;
+}
+
+/* Task text truncation */
+.task-row.task-inline .task-item .task-item-text {
+	flex: 0 1 auto;
+	min-width: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 15px;
+}
+
+/* ===================== Main vs subtask + sprite positioning ===================== */
+
+/*
+  We distinguish:
+    .is-main    → top-level tasks
+    .is-subtask → children of a main task
+*/
+
+/* Highlight inline rows that contain subtasks */
+.task-row.task-inline.has-subtasks {
+	padding-left: 25px;
+	border-left: 25px solid var(--accent, #7fd2ff);
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+}
+
+/* --- MAIN task: with children (image inline, left-of text) --- */
+.task-row.task-inline .task-item.is-main.has-children {
+	flex-direction: row;
+	align-items: center;
+	text-align: left;
+}
+
+.task-row.task-inline .task-item.is-main.has-children .task-item-img {
+	max-height: 60px;
+	width: auto;
+	object-fit: contain;
+	margin: 0 8px 0 0;
+	/* image sits to the left of checkbox+label */
+	pointer-events: none;
+}
+
+/* --- MAIN task: no children (image above, centered) --- */
+.task-row.task-inline .task-item.is-main.no-children {
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.task-row.task-inline .task-item.is-main.no-children .task-item-body {
+	justify-content: center;
+}
+
+.task-row.task-inline .task-item.is-main.no-children .task-item-img {
+	display: block;
+	margin: 0 auto 6px auto;
+	max-height: 72px;
+	width: auto;
+	object-fit: contain;
+	pointer-events: none;
+}
+
+/* Neutralize the older generic main-image rule so the above variants win */
+.task-row.task-inline .task-item.is-main .task-item-img {
+	margin-left: 0;
+	/* was previously adding a left margin globally */
+}
+
+/* --- SUBTASK: always image above, centered --- */
+.task-row.task-inline .task-item.is-subtask {
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.task-row.task-inline .task-item.is-subtask .task-item-body {
+	justify-content: center;
+}
+
+.task-row.task-inline .task-item.is-subtask .task-item-img {
+	display: block;
+	margin: 0 auto 6px auto;
+	max-height: 72px;
+	width: auto;
+	object-fit: contain;
+	pointer-events: none;
+}
+
+/* --- MAIN: no children, force inline layout (image left) --- */
+
+.task-row.task-inline .task-item.is-main.no-children.force-inline {
+	flex-direction: row;
+	align-items: center;
+	text-align: left;
+}
+
+.task-row.task-inline .task-item.is-main.no-children.force-inline .task-item-body {
+	justify-content: flex-start;
+}
+
+.task-row.task-inline .task-item.is-main.no-children.force-inline .task-item-img {
+	max-height: 60px;
+	width: auto;
+	object-fit: contain;
+	margin: 0 8px 0 0;
+	/* image sits to the left */
+	pointer-events: none;
+}
+
+/*
+  Only use row layout for force-inline when there is NO slider.
+  If a slider is present, we keep the column layout to avoid breaking tiers.
+*/
+
+.task-row.task-inline .task-item.is-main.no-children.force-inline:not(.has-slider) {
+	flex-direction: row;
+	/* keep original behavior */
+}
+
+.task-row.task-inline .task-item.is-main.no-children.force-inline.has-slider {
+	flex-direction: column;
+	/* stack image, label, then slider */
+	align-items: flex-start;
+	/* left-align instead of center */
+	text-align: left;
+}
+
+.task-row.task-inline .task-item.is-main.no-children.force-inline.has-slider .task-item-img {
+	margin: 0 0 6px 0;
+	/* image above, left-aligned */
+}
+
+.task-row.task-inline .task-item.is-main.no-children.force-inline.has-slider .task-item-body {
+	justify-content: flex-start;
+	/* ensure label/checkbox align left */
+}
+
+/* ===================== Tiered controls ===================== */
+
+/*
+  Tiered tasks have:
+    .tiered            → wrapper
+    .tiered-slider     → <input type="range">
+    .tiered-line       → row that holds the slider
+    .tiered-percent    → "X/Y" indicator
+    .tier-badge        → optional badge for each tier node
+*/
+
+.tiered {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	flex-wrap: wrap;
+}
+
+/* Optional label row inside tiered controls */
+.tiered .task-label {
+	font-weight: 600;
+	flex: 1 1 240px;
+}
+
+/* Slider element */
+.tiered-slider {
+	flex: 1 1 auto;
+	width: auto;
+}
+
+/* Slider thumbs pick up --tier-accent from JS */
+.tiered-slider::-webkit-slider-thumb {
+	background: var(--tier-accent);
+}
+
+.tiered-slider::-moz-range-thumb {
+	background: var(--tier-accent);
+}
+
+/* Row containing the slider (and possible badges) */
+.tiered-line {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	width: 100%;
+}
+
+/* Wrapper for "X/Y" and small badges */
+.tiered-count-wrap {
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+}
+
+/* Row of small tier badges */
+.tiered-badges {
+	display: flex;
+	gap: 0.25rem;
+}
+
+/* Individual tier badge */
+.tier-badge {
+	padding: 0.15rem 0.45rem;
+	border-radius: 999px;
+	font-size: 0.8rem;
+	border: 1px solid var(--border, #ccc);
+	opacity: 0.6;
+}
+
+/* Reached tier badge */
+.tier-badge.reached {
+	opacity: 1;
+	font-weight: 600;
+	border-color: transparent;
+	box-shadow: 0 0 0 1px var(--accent, #6aa0ff) inset;
+}
+
+/* Percent / tier text ("X/Y") */
+.tiered-percent {
+	padding: 0 8px;
+	font-variant-numeric: tabular-nums;
+}
+
+/* Tiered controls when inside a .task-row */
+.task-row .tiered {
+	flex-wrap: wrap;
+	flex: 0 0 100%;
+	width: 100%;
+	margin-top: 6px;
+}
+
+/* Tiered controls when inside inline items */
+.task-row.task-inline .task-item .tiered {
+	flex-wrap: wrap;
+	align-items: flex-start;
+	flex: 0 0 100%;
+	width: 100%;
+	margin-top: 6px;
+}
+
+.task-either {
+	display: flex;
+	gap: .35rem;
+	align-items: center;
+}
+
+.task-either-choice {
+	position: relative;
+	align-items: center;
+	gap: .25rem;
+	padding: .1rem .35rem;
+	border-radius: .4rem;
+}
+
+.task-either-choice.either-active {
+	outline: 2px solid rgba(255, 255, 255, .25);
+}
+
+.task-either-choice.either-disabled {
+	opacity: .35;
+}
+
+.task-either-x {
+	display: none;
+	position: absolute;
+	left: 51%;
+	top: 45%;
+	transform: translate(-50%, -50%);
+	font-weight: 1000;
+	font-size: 1.5rem;
+	line-height: 1;
+	pointer-events: none;
+	white-space: nowrap;
+}
+
+.task-either-choice.either-disabled .task-either-x {
+	display: block;
+}
+
+.task-either-choice.either-disabled:has(> .small:not(:empty)) .task-either-x {
+	font-size: 3rem;
+}
+
+.task-either-choice .small {
+	display: flex;
+	align-items: center;
+}
+
+/* Only affects the "either" stacked layout we add in tasks.js */
+.task-either-wrap {
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.task-either-title {
+	text-align: center;
+	width: 100%;
+}
+
+.task-either-center {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}

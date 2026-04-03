@@ -1,0 +1,183 @@
+@import url('../../styles/backup.css');
+@import url('../../styles/base.css');
+@import url('../../styles/layout.css');
+@import url('../../styles/mon-info.css');
+@import url('../../styles/sidebar.css');
+@import url('../../styles/cards.css');
+@import url('../../styles/distributions.css');
+@import url('../../styles/tasks.css');
+@import url('../../styles/modal-dex.css');
+@import url('../../styles/modal-base.css');
+@import url('../../styles/modal-radial.css');
+@import url('../../styles/modal-research.css');
+@import url('../../styles/modal-typings.css');
+@import url('../../styles/modal-mon-info.css');
+@import url('../../styles/modal-model-viewer.css');
+@import url('../../styles/rings.css');
+@import url('../../styles/games.css');
+@import url('../../styles/tooltip.css');
+@import url('../../styles/auth.css');
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.brand-button {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+}
+
+.react-dir-item {
+  width: 100%;
+  text-align: left;
+  color: inherit;
+  font: inherit;
+}
+
+.react-dir-item:disabled,
+.back-btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.react-content-layer {
+  display: grid;
+  gap: 16px;
+}
+
+.react-content-card {
+  min-width: 0;
+}
+
+.react-ring-stack {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+}
+
+.react-game-start-toggle {
+  min-width: 110px;
+}
+
+.react-loading-state {
+  padding: 16px;
+  opacity: 0.85;
+}
+
+.react-section-body {
+  display: grid;
+  gap: 16px;
+}
+
+.react-section-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.react-section-injected,
+.section-task-mount {
+  min-width: 0;
+}
+
+.react-moninfo-body .mon-info-empty {
+  margin-top: 16px;
+}
+
+.react-evo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.react-evo-path {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.react-evo-link {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.react-evo-node {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.04);
+}
+
+.react-evo-node img {
+  width: 40px;
+  height: 40px;
+  image-rendering: pixelated;
+}
+
+.react-evo-name {
+  font-weight: 600;
+}
+
+.react-moninfo-list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.react-moninfo-list li + li {
+  margin-top: 6px;
+}
+
+.react-moves-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.react-moves-group h4 {
+  margin: 0 0 8px;
+}
+
+.react-moves-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.react-move-chip {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.05);
+  min-width: 120px;
+}
+
+.react-move-chip small {
+  opacity: 0.75;
+}
+
+
+.account-tab-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}

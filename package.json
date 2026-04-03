@@ -1,12 +1,22 @@
 {
-	"name": "pokemonpgc",
-	"private": true,
-	"version": "1.0.0",
-	"scripts": {
-		"install-all": "npm install --prefix frontend && npm install --prefix backend",
-		"build": "npm run build --prefix frontend",
-		"setup": "npm run setup --prefix backend",
-		"start": "npm run start --prefix backend",
-		"dev": "npm run dev --prefix backend"
-	}
+  "name": "pokemonpgc-workspace",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace frontend\" \"npm run dev --workspace backend\"",
+    "build": "npm run build --workspace frontend",
+    "build:frontend": "npm run build --workspace frontend",
+    "build:backend": "npm run build --workspace backend",
+    "start": "npm run start --workspace backend",
+    "postinstall": "npm run postinstall --workspace frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
 }

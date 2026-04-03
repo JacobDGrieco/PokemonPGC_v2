@@ -1,0 +1,236 @@
+/* ===================== Started / unstarted game rings ===================== */
+
+/* Default: treat rings in Game Summary as slightly dim until started */
+#gameRings .ring {
+	transition:
+		opacity 0.15s ease-out,
+		filter 0.15s ease-out,
+		transform 0.12s ease-out;
+}
+
+/* Unstarted games: darker, slightly muted */
+#gameRings .ring:not(.is-started) {
+	opacity: 0.55;
+}
+
+#gameRings .ring:not(.is-started) .ring-box {
+	filter: grayscale(1) brightness(0.5);
+}
+
+/* On hover, still give a bit of feedback even if not started */
+#gameRings .ring:not(.is-started):hover {
+	opacity: 0.8;
+	transform: translateY(-1px);
+}
+
+/* Started games: full brightness */
+#gameRings .ring.is-started {
+	opacity: 1;
+}
+
+#gameRings .ring.is-started .ring-box {
+	filter: none;
+}
+
+/* Start button sizing inside the ring */
+.game-start-toggle {
+	margin-top: 0.35rem;
+	font-size: 11px;
+	padding: 4px 8px;
+}
+
+/* Slight visual difference for pressed/unpressed state */
+.game-start-toggle[aria-pressed="true"] {
+	opacity: 0.95;
+}
+
+.game-start-toggle[aria-pressed="false"] {
+	opacity: 0.75;
+}
+
+/* ===================== Rings containers ===================== */
+
+/* Generic grid of rings (used in many places) */
+.rings {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+	gap: 12px;
+	align-items: start;
+}
+
+/* Special layout for the “Game Summary — All Games” section */
+#gameRings {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 12px 8px;
+}
+
+/* Override for any .rings that is not #gameRings (slightly larger gaps) */
+.rings:not(#gameRings) {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+	gap: 25px 25px;
+	align-items: start;
+}
+
+/* Ring items inside #gameRings (fixed footprint) */
+#gameRings .ring {
+	--ring-size: 100px;
+	flex: 0 0 140px;
+	margin: 6px 0;
+}
+
+/* ===================== Single ring structure ===================== */
+
+.ring {
+	--ring-size: 100px;
+
+	position: relative;
+	display: grid;
+	grid-template-rows: auto auto;
+	/* ring graphic | label */
+	justify-items: center;
+	gap: 8px;
+}
+
+/* Circular SVG container */
+.ring-box {
+	position: relative;
+	width: var(--ring-size);
+	height: var(--ring-size);
+}
+
+/* Shared base for image layers */
+.ring-img {
+	position: absolute;
+	inset: 0;
+	border-radius: 999px;
+	background-image: var(--ring-img);
+	background-size: cover;
+	background-position: center;
+}
+
+/* Always-visible grayscale base layer */
+.ring-img-base {
+	filter: grayscale(1) brightness(0.6);
+}
+
+/*
+ * Color layer:
+ * - Uses a conic-gradient mask to reveal a wedge based on --ring-angle.
+ * - from -90deg so 0deg is at the top; at 50% (180deg) the right half is colored.
+ */
+.ring-img-color {
+	/* Same image as base layer */
+	/* The mask controls how much of this shows */
+	-webkit-mask-image: conic-gradient(from -90deg,
+			#000 0deg,
+			#000 var(--ring-angle, 0deg),
+			transparent var(--ring-angle, 0deg) 360deg);
+	mask-image: conic-gradient(from -90deg,
+			#000 0deg,
+			#000 var(--ring-angle, 0deg),
+			transparent var(--ring-angle, 0deg) 360deg);
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+}
+
+/* Keep SVG + text above the image ring */
+.ring-svg {
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: relative;
+	z-index: 1;
+}
+
+.ring-center {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	pointer-events: none;
+	z-index: 2;
+}
+
+/* Percentage text inside the ring */
+.ring .pct {
+	font-weight: 700;
+	line-height: 1;
+	text-align: center;
+	font-size: clamp(10px, calc(var(--ring-size) * 0.15), 28px);
+	letter-spacing: 0.02em;
+}
+
+/* Label below the ring */
+.ring .label {
+	width: var(--ring-size);
+	text-align: center;
+	white-space: normal;
+	margin: 0;
+}
+
+/* ===================== Extra-credit / >100% styling ===================== */
+
+/* Shimmering golden halo around rings with >100% progress */
+.ring.has-extra .ring-box::after {
+	content: "";
+	position: absolute;
+	inset: -6px;
+	border-radius: 999px;
+	background: conic-gradient(from 0deg,
+			#8a6b00,
+			#d4af37,
+			#fff4b0,
+			#ffd700,
+			#8a6b00);
+	opacity: 0.35;
+	filter: blur(4px);
+	pointer-events: none;
+	animation: ppgc-gold-shimmer 2.8s linear infinite;
+}
+
+/* Gold-colored percentage text when extra credit is present */
+.ring.has-extra .pct {
+	color: #ffd700;
+	text-shadow: 0 0 6px rgba(212, 175, 55, 0.6);
+	font-weight: 700;
+}
+
+/* Small +XX% badge for extra credit */
+.ring .extra-badge {
+	position: absolute;
+	top: -4px;
+	right: -4px;
+	font-size: 11px;
+	line-height: 1;
+	padding: 4px 6px;
+	border-radius: 999px;
+
+	background: linear-gradient(135deg, #7a5a00, #d4af37 55%, #fff4b0);
+	color: #1f1f25;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+	transform: translate(0, 0);
+	pointer-events: none;
+}
+
+/* Halo animation for extra credit */
+@keyframes ppgc-gold-shimmer {
+	0% {
+		filter: blur(4px) brightness(1.0);
+		opacity: 0.30;
+	}
+
+	50% {
+		filter: blur(5px) brightness(1.15);
+		opacity: 0.45;
+	}
+
+	100% {
+		filter: blur(4px) brightness(1.0);
+		opacity: 0.30;
+	}
+}

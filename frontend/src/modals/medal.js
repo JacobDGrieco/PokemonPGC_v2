@@ -1,57 +1,12 @@
 import { save } from "../store.js";
 import { registerKeywordSectionMeter } from "./helpers.js";
-
-function _getGameMedals(gameKey) {
-	const m = window.DATA?.medals?.[gameKey];
-	return m?.sections || [];
-}
-
-function _key(sectionId, medalId) {
-	return `${sectionId}:${medalId}`;
-}
-
-function _getRec(store, gameKey) {
-	if (!store.medalStatus) store.medalStatus = new Map();
-	return store.medalStatus.get(gameKey) || {};
-}
-
-function _setRec(store, gameKey, rec) {
-	if (!store.medalStatus) store.medalStatus = new Map();
-	store.medalStatus.set(gameKey, rec);
-}
-
-function _isChecked(store, gameKey, sectionId, medalId) {
-	const rec = _getRec(store, gameKey);
-	return !!rec[_key(sectionId, medalId)];
-}
-
-function _setChecked(store, gameKey, sectionId, medalId, checked) {
-	const rec = { ..._getRec(store, gameKey) };
-	rec[_key(sectionId, medalId)] = !!checked;
-	_setRec(store, gameKey, rec);
-}
-
-function _sectionProgress(store, gameKey, section) {
-	const items = section.items || [];
-	const total = items.length;
-	let done = 0;
-	for (const it of items) {
-		if (_isChecked(store, gameKey, section.id, it.id)) done++;
-	}
-	return { done, total, pct: total ? (done / total) * 100 : 0 };
-}
-
-export function medalsPctForGame(gameKey, store) {
-	const secs = _getGameMedals(gameKey);
-	let done = 0;
-	let total = 0;
-	for (const sec of secs) {
-		const p = _sectionProgress(store, gameKey, sec);
-		done += p.done;
-		total += p.total;
-	}
-	return total ? (done / total) * 100 : 0;
-}
+import {
+	getGameMedals as _getGameMedals,
+	isMedalChecked as _isChecked,
+	setMedalChecked as _setChecked,
+	sectionProgress as _sectionProgress,
+	medalsPctForGame,
+} from "./medals-core.js";
 
 // Progress ring support when a section is tagged/keyworded "medals"
 registerKeywordSectionMeter({

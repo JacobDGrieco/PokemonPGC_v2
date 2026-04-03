@@ -1,3 +1,5 @@
+import { ensurePpgcRoot } from "./runtime/globals.js";
+
 // history.js
 // Tiny history/router helper for PPGC.
 // Exposes:
@@ -9,7 +11,7 @@
 export function initHistory({ store, renderAll }) {
 	if (!store || !store.state) throw new Error("[history] initHistory requires {store, renderAll}");
 
-	window.PPGC = window.PPGC || {};
+	ensurePpgcRoot();
 
 	// ---------- Helpers ----------
 

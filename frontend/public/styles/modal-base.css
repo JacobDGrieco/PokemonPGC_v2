@@ -1,0 +1,218 @@
+/* ========================================================================== */
+/*  GENERIC OVERLAY + MODAL SHELL                                             */
+/* ========================================================================== */
+
+.modal {
+	position: fixed;
+	inset: 0;
+	display: none;
+	place-items: center;
+	padding: 24px;
+
+	background: rgba(0, 0, 0, 0.6);
+	z-index: 10;
+}
+
+.modal.open {
+	display: grid;
+}
+
+/* ========================================================================== */
+/*  LEGACY SHEET-STYLE MODAL (Dex / Fashion)                                  */
+/* ========================================================================== */
+
+.sheet {
+	width: min(1100px, 96vw);
+	height: 92vh;
+	max-height: 92vh;
+
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	/* body scrolls, header stays fixed */
+
+	background: #111114;
+	border: 1px solid #2a2a2f;
+	border-radius: 16px;
+}
+
+.sheet header {
+	position: sticky;
+	top: 0;
+	z-index: 100;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+
+	padding: 10px 12px;
+	background: #111114;
+	border-bottom: 1px solid #24242a;
+}
+
+.sheet header h2 {
+	margin: 0;
+	font-size: 16px;
+}
+
+.sheet .body {
+	flex: 1;
+	z-index: 101;
+
+	display: grid;
+	gap: 0;
+	padding: 0 0 8px 0;
+
+	overflow: auto;
+}
+
+/* ========================================================================== */
+/*  GENERIC DIALOG-STYLE MODAL                                                */
+/* ========================================================================== */
+
+.modal-dialog {
+	width: min(1200px, 96vw);
+	height: 92vh;
+	max-height: 92vh;
+
+	overflow: auto;
+	background: #111114;
+	border: 1px solid #2a2a2f;
+	border-radius: 16px;
+}
+
+/* Sticky header inside dialog */
+.modal-dialog .modal-hd {
+	position: sticky;
+	top: 0;
+	z-index: 1;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+
+	padding: 10px 12px;
+	background: #111114;
+	border-bottom: 1px solid #24242a;
+}
+
+/* Generic dialog body: center content by default */
+.modal-dialog .modal-bd {
+	min-height: calc(100% - var(--hd, 56px));
+	display: grid;
+	place-content: center;
+	/* center vertically + horizontally */
+	justify-items: center;
+	/* keep items themselves centered */
+	gap: 12px;
+}
+
+/* Close button */
+.modal-close {
+	border: 1px solid #2a2a2f;
+	background: #17171b;
+	border-radius: 8px;
+	padding: 4px 8px;
+	cursor: pointer;
+}
+
+/* Dex modal body uses simple block layout */
+#modal .modal-bd {
+	min-height: auto;
+	display: block;
+	padding: 8px 0 12px 0;
+}
+
+/* Forms modal body: scrollable when needed */
+#formsModal .modal-bd {
+	min-height: auto;
+	display: block;
+	padding: 8px 0 12px 0;
+	overflow-x: hidden;
+}
+
+#formsModal .modal-bd.forms-wheel-scroll {
+	max-height: calc(92vh - var(--hd, 56px));
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+/* Z-order of different modals */
+#modal {
+	z-index: 20;
+}
+
+#monInfoModal,
+#formsModal,
+#fashionModal,
+#medalsModal {
+	z-index: 30;
+}
+
+#researchModal,
+#modelViewerModal {
+	z-index: 40;
+}
+
+/* ========================================================================== */
+/*  Forms modal chip image sizing (Fashion / Curry / Sandwich / Sticker)       */
+/* ========================================================================== */
+
+/* Shared forms chips: force consistent icon sizing via --form-img */
+#formsWheel .form-chip img {
+	width: var(--form-img, var(--ppgc-form-img)) !important;
+	height: var(--form-img, var(--ppgc-form-img)) !important;
+	object-fit: contain;
+	display: block;
+}
+
+/* ========================================================================== */
+/*  FORMS / RESEARCH LAUNCH BUTTONS ON CARDS                                  */
+/* ========================================================================== */
+
+.card .forms-launch,
+.card .research-launch {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 6px 10px;
+
+	border-radius: 10px;
+	border: 1px solid color-mix(in srgb, var(--accent, #6aa6ff) 70%, #000 30%);
+	background: color-mix(in srgb,
+			var(--accent, #6aa6ff) 85%,
+			#000 15%);
+	color: #fff;
+
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 1;
+	cursor: pointer;
+}
+
+.card .forms-launch .dot,
+.card .research-launch .dot {
+	width: 8px;
+	height: 8px;
+	border-radius: 999px;
+	background: #fff;
+	opacity: 0.9;
+}
+
+.card .forms-launch .pill.count,
+.card .research-launch .pill.count {
+	margin-left: 4px;
+	padding: 2px 6px;
+	border-radius: 999px;
+	font-weight: 700;
+
+	background: #111;
+	border: 1px solid color-mix(in srgb, #fff 10%, var(--accent, #6aa6ff) 90%);
+}
+
+/* Fashion modal grid padding */
+#fashionModal .body #fashionGrid {
+	padding: 16px;
+}

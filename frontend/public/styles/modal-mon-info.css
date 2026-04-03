@@ -1,0 +1,976 @@
+/* ========================================================================== */
+/*  MON INFO MODAL: LAYOUT + HEADER                                           */
+/* ========================================================================== */
+
+/* Mon Info modal sizing + scroll behavior */
+#monInfoModal .modal-dialog {
+	width: min(960px, 96vw);
+	/* was 900px */
+	max-height: 82vh;
+	height: auto;
+}
+
+#monInfoModal .modal-bd {
+	display: block;
+	padding: 8px 0 12px 0;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.mon-info-body {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 8px 16px 16px;
+}
+
+/* Header: sprite + name/types + quick stats */
+.mon-info-header {
+	display: flex;
+	align-items: flex-start;
+	gap: 12px;
+	margin-bottom: 8px;
+}
+
+.mon-info-sprite img {
+	width: 80px;
+	height: 80px;
+	object-fit: contain;
+	display: block;
+}
+
+.mon-info-main {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	width: 100%;
+}
+
+.mon-info-topline {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	gap: 24px;
+}
+
+.mon-info-basic {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	min-width: 0;
+}
+
+.mon-info-name {
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.mon-info-types {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	margin-top: 2px;
+}
+
+.mon-info-species {
+	font-size: 12px;
+	opacity: 0.85;
+}
+
+/* Quick stats next to name (Abilities / Egg / Exp / Egg steps) */
+.mon-info-quickstats {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	align-items: flex-start;
+	flex: 0 0 auto;
+	width: auto;
+}
+
+.mon-info-quickstats .mon-info-row {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	margin-bottom: 0;
+}
+
+.mon-info-quickstats .mon-info-row .label {
+	font-size: 11px;
+	opacity: 0.75;
+}
+
+.mon-info-quickstats .mon-info-row .value {
+	font-size: 13px;
+	font-weight: 600;
+	text-align: center;
+}
+
+/* Stacked value style for multi-line rows (e.g., abilities / egg groups) */
+.mon-info-quickstats .mon-info-row .value.value--stacked {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* use flex-start if you prefer left aligned */
+	gap: 2px;
+}
+
+.mon-info-quickstats .mon-info-row .value.value--stacked .value-line {
+	display: block;
+}
+
+/* Generic info card inside mon-info modal */
+.mon-info-block {
+	background: #111116;
+	border: 1px solid #24242a;
+	border-radius: 10px;
+	padding: 12px 10px;
+	font-size: 13px;
+	margin: 4px 0px;
+}
+
+.mon-info-block h3 {
+	margin-top: 4px;
+}
+
+/* Extra padding for the stats block so the diamond isn't clipped */
+.mon-info-block.mon-info-stats {
+	padding-bottom: 14px;
+}
+
+/* Flavor text under header */
+.mon-info-flavor {
+	font-style: italic;
+	opacity: 0.9;
+}
+
+/* Two-column layout: left (type chart + stats) and right (details) */
+.mon-info-layout {
+	display: grid;
+	grid-template-columns: minmax(0, 260px) minmax(0, 1fr);
+	gap: 16px;
+	align-items: flex-start;
+	width: 100%;
+	margin-top: 8px;
+}
+
+.mon-info-col {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+/* Stack columns on smaller screens */
+@media (max-width: 900px) {
+	.mon-info-layout {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* Label/value rows (used in some blocks) */
+.mon-info-row {
+	display: flex;
+	justify-content: space-between;
+	gap: 8px;
+	margin-bottom: 2px;
+}
+
+.mon-info-row .label {
+	font-size: 12px;
+	opacity: 0.8;
+}
+
+.mon-info-row .value {
+	text-align: right;
+}
+
+
+/* ========================================================================== */
+/*  LOCATIONS BLOCK (MON INFO)                                                */
+/* ========================================================================== */
+
+.mon-info-locations-list {
+	list-style: disc;
+	padding-left: 20px;
+	margin: 4px 0 0 0;
+}
+
+.mon-info-locations-list li {
+	margin-bottom: 2px;
+}
+
+
+/* Locations meta grid (Encounter Rarity / Catch Rate) */
+.mon-info-locations-meta {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 10px 14px;
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+
+@media (max-width: 600px) {
+	.mon-info-locations-meta {
+		grid-template-columns: 1fr;
+	}
+}
+
+.mon-info-locations-extra {
+	opacity: 0.85;
+	font-size: 12px;
+}
+
+/* ========================================================================== */
+/*  MOVE POOLS (MON INFO)                                                     */
+/* ========================================================================== */
+
+.mon-info-moves-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 10px;
+	margin-top: 4px;
+}
+
+@media (max-width: 900px) {
+	.mon-info-moves-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 600px) {
+	.mon-info-moves-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+.mon-info-subblock h4 {
+	margin: 0 0 4px 0;
+	font-size: 13px;
+	font-weight: 600;
+}
+
+.mon-info-subblock ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	max-height: 260px;
+	overflow-y: auto;
+}
+
+.mon-info-subblock li {
+	margin-bottom: 2px;
+}
+
+/* Move list rows with a TM icon */
+.mon-info-move {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.mon-info-move-tm-icon {
+	flex: 0 0 auto;
+	width: 24px;
+	height: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.mon-info-move-tm-icon img {
+	max-width: 100%;
+	max-height: 100%;
+	display: block;
+}
+
+.mon-info-move-name {
+	flex: 1 1 auto;
+}
+
+/* Fallback text when no info is available */
+.mon-info-empty {
+	font-size: 13px;
+	opacity: 0.8;
+	padding: 8px 10px;
+}
+
+/* ========================================================================== */
+/*  TYPE CHART (PokémonDB-STYLE TABLE)                                        */
+/* ========================================================================== */
+
+.typechart-scroll {
+	overflow-x: auto;
+	padding-bottom: 4px;
+}
+
+.typechart-matrix {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.typechart-matrix .type-table-pokedex {
+	width: 100%;
+	table-layout: fixed;
+}
+
+.type-table-pokedex {
+	border-collapse: collapse;
+	margin: 0 auto;
+	font-size: 12px;
+}
+
+.type-table-pokedex th,
+.type-table-pokedex td {
+	padding: 4px 6px;
+	text-align: center;
+	border: 1px solid #2a2a2f;
+	min-width: 34px;
+
+	/* keep every box the same vertical size even if the cell is "empty" */
+	height: 26px;
+	line-height: 1;
+}
+
+.type-abbr {
+	display: inline-block;
+	border-radius: 6px;
+	padding: 2px 6px;
+	font-size: 11px;
+	font-weight: 700;
+	color: #fff;
+}
+
+/* Effectiveness backgrounds */
+.type-fx-cell {
+	font-weight: 700;
+}
+
+/* x4 and x2 = green */
+.type-fx-400 {
+	background: #1e7f1e;
+	/* stronger green */
+	color: #fff;
+}
+
+.type-fx-200 {
+	background: #3abf3a;
+	/* lighter green */
+	color: #000;
+}
+
+.type-fx-150 {
+	background: #59ff59;
+	/* in-between green */
+	color: #000;
+}
+
+/* 1x = neutral / hidden */
+.type-fx-100 {
+	background: #222;
+	color: transparent;
+	/* no number shown */
+}
+
+/* below 1 (½x, ¼x) = red */
+.type-fx-50 {
+	background: #d34b4b;
+	color: #fff;
+}
+
+.type-fx-25 {
+	background: #a51f1f;
+	color: #fff;
+}
+
+/* 0x = black */
+.type-fx-0 {
+	background: #000;
+	color: #fff;
+}
+
+/* ========================================================================== */
+/*  BASE STATS RADAR / DIAMOND GRAPH (MON INFO)                               */
+/* ========================================================================== */
+
+.mon-info-stats-graph {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 6px;
+	margin-top: 4px;
+}
+
+.mon-info-stats-radar {
+	width: 100%;
+	height: 275px;
+	display: block;
+}
+
+/* background rings */
+.stat-grid-ring {
+	fill: none;
+	stroke: #33373f;
+	stroke-width: 0.8;
+}
+
+/* filled polygon for this mon's stats */
+.stat-radar-fill {
+	fill: rgba(127, 210, 255, 0.35);
+	stroke: #7fd2ff;
+	stroke-width: 1.2;
+}
+
+/* small dots at each vertex */
+.stat-vertex-dot {
+	fill: #7fd2ff;
+	stroke: #ffffff;
+	stroke-width: 0.5;
+}
+
+/* labels at each outer point (HP / Atk / ...) */
+.stat-label {
+	fill: #cccccc;
+	font-size: 8px;
+	/* slightly smaller to avoid crowding */
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+}
+
+/* stat numbers inside the diamond */
+.stat-value {
+	fill: #ffffff;
+	font-size: 8px;
+	font-weight: 600;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+}
+
+/* base stat total in the center */
+.stat-total {
+	fill: #ffd76a;
+	font-size: 12px;
+	font-weight: 700;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+/* ========================================================================== */
+/*  EXTRA BLOCKS (Completion / Notes)                                         */
+/* ========================================================================== */
+
+.mon-info-notes {
+	margin: 6px 0 0 0;
+	padding-left: 18px;
+	list-style: disc;
+}
+
+.mon-info-notes li {
+	margin-bottom: 2px;
+	opacity: 0.92;
+}
+
+.mon-info-completion {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+}
+
+.mon-info-flag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 3px 8px;
+	border-radius: 999px;
+	font-size: 12px;
+	font-weight: 700;
+	border: 1px solid #2a2a2f;
+	background: #17171d;
+}
+
+.mon-info-flag.is-on {
+	border-color: #2f7a2f;
+	background: rgba(58, 191, 58, 0.18);
+}
+
+.mon-info-flag.is-off {
+	border-color: #7a2f2f;
+	background: rgba(211, 75, 75, 0.18);
+	opacity: 0.9;
+}
+
+/* Completion pills: fill the header-right space */
+.mon-info-completion-grid {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 8px;
+	width: 650px;
+	/* matches your old quickstats width */
+}
+
+@media (max-width: 900px) {
+	.mon-info-completion-grid {
+		width: 100%;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+/* Big pill buttons */
+.mon-info-pill {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+
+	width: 100%;
+	min-height: 40px;
+	padding: 6px 10px;
+
+	border-radius: 999px;
+	border: 1px solid #2a2a2f;
+	background: #17171d;
+
+	font-size: 12px;
+	font-weight: 800;
+	color: #fff;
+
+	cursor: default;
+	user-select: none;
+}
+
+.mon-info-pill .pill-title {
+	line-height: 1;
+}
+
+.mon-info-pill .pill-sub {
+	font-size: 11px;
+	font-weight: 800;
+	opacity: 0.95;
+	padding: 2px 8px;
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.08);
+}
+
+/* Clickability */
+.mon-info-pill.is-clickable {
+	cursor: pointer;
+}
+
+.mon-info-pill:disabled {
+	opacity: 0.55;
+	cursor: not-allowed;
+}
+
+/* States */
+.mon-info-pill.is-green {
+	border-color: #2f7a2f;
+	background: rgba(58, 191, 58, 0.18);
+	color: #fff;
+}
+
+.mon-info-pill.is-red {
+	border-color: #7a2f2f;
+	background: rgba(211, 75, 75, 0.18);
+	color: #fff;
+}
+
+.mon-info-pill.is-gold {
+	border-color: #b58a1b;
+	background: rgba(255, 215, 106, 0.18);
+	color: #fff;
+}
+
+.mon-info-pill.is-off {
+	border-color: #2a2a2f;
+	background: #17171d;
+	color: rgba(255, 255, 255, 0.75);
+}
+
+/* ========================================================================== */
+/*  Dex Status pill backgrounds (replaces "Dex Entry" label)                   */
+/* ========================================================================== */
+
+.mon-info-pill.is-status-unknown {
+	border-color: #000;
+	background: #000;
+	color: #fff;
+}
+
+.mon-info-pill.is-status-seen {
+	border-color: #4a4a4a;
+	background: #4a4a4a;
+	color: #fff;
+}
+
+.mon-info-pill.is-status-caught {
+	border-color: #2f7a2f;
+	background: rgba(58, 191, 58, 0.22);
+	color: #fff;
+}
+
+.mon-info-pill.is-status-shiny {
+	border-color: #b58a1b;
+	background: rgba(255, 215, 106, 0.22);
+	color: #fff;
+}
+
+.mon-info-pill.is-status-alpha {
+	border-color: #2f7a2f;
+	background: linear-gradient(90deg, rgba(58, 191, 58, 0.28), rgba(211, 75, 75, 0.28));
+	color: #fff;
+}
+
+.mon-info-pill.is-status-shinyalpha {
+	border-color: #b58a1b;
+	background: linear-gradient(90deg, rgba(255, 215, 106, 0.28), rgba(211, 75, 75, 0.28));
+	color: #fff;
+}
+
+/* ========================================================================== */
+/*  PROFILE GRID (2 rows x 4 cols)                                            */
+/* ========================================================================== */
+
+.mon-info-profile-grid {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 10px 14px;
+	margin-top: 6px;
+}
+
+@media (max-width: 900px) {
+	.mon-info-profile-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+.mon-info-profile-item {
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
+	min-width: 0;
+	align-items: center;
+	text-align: center;
+}
+
+.mon-info-profile-item .label {
+	font-size: 10px;
+	opacity: 0.75;
+}
+
+.mon-info-profile-item .value {
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 1.1;
+	word-break: break-word;
+}
+
+/* stacked values (Abilities / Egg Groups) */
+.mon-info-profile-item .value.value--stacked {
+	display: flex;
+	flex-direction: column;
+	gap: 1px;
+	align-items: center;
+}
+
+.mon-info-profile-item .value.value--stacked .value-line {
+	display: block;
+	font-weight: 700;
+}
+
+
+
+/* ========================================================================== */
+/*  EVOLUTION (new renderer: linear + split)                                   */
+/* ========================================================================== */
+
+.evo-node {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-width: 90px;
+	text-align: center;
+}
+
+.evo-img {
+	width: 96px;
+	height: 96px;
+	object-fit: contain;
+	display: block;
+}
+
+.evo-name {
+	font-size: 12px;
+	margin-top: 2px;
+}
+
+.evo-link {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2px;
+	min-width: 40px;
+}
+
+.evo-arrow {
+	font-size: 50px;
+	line-height: 0.25;
+	font-weight: 700;
+}
+
+.evo-method {
+	font-size: 11px;
+	opacity: 0.85;
+	text-align: center;
+}
+
+/* Split connector (optional) */
+.evo-branch-connector {
+	font-size: 18px;
+	opacity: 0.85;
+	line-height: 1;
+	min-width: 24px;
+	text-align: center;
+}
+
+
+/* ========================================================================== */
+/*  SPRITES & MODELS GALLERY                                                   */
+/* ========================================================================== */
+
+.mon-info-assets .asset-tabs {
+	display: flex;
+	gap: 8px;
+	margin-top: 6px;
+	margin-bottom: 8px;
+}
+
+.mon-info-assets .asset-tab {
+	border: 1px solid #2a2a2f;
+	background: #17171d;
+	color: rgba(255, 255, 255, 0.9);
+	padding: 6px 10px;
+	border-radius: 999px;
+	font-size: 12px;
+	font-weight: 800;
+	cursor: pointer;
+}
+
+.mon-info-assets .asset-tab.is-active {
+	border-color: #7fd2ff;
+	background: rgba(127, 210, 255, 0.18);
+	color: #fff;
+}
+
+.asset-panels .asset-panel {
+	display: none;
+}
+
+.asset-panels .asset-panel.is-active {
+	display: block;
+}
+
+.asset-grid {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 10px;
+}
+
+@media (max-width: 900px) {
+	.asset-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+.asset-tile {
+	border: 1px solid #24242a;
+	background: #0f0f14;
+	border-radius: 10px;
+	padding: 8px;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	align-items: center;
+	justify-content: center;
+	min-height: 120px;
+	text-align: center;
+}
+
+.asset-tile img {
+	width: 100%;
+	height: 90px;
+	object-fit: contain;
+	display: block;
+}
+
+.asset-tile.is-missing {
+	display: none;
+}
+
+.asset-label {
+	font-size: 11px;
+	font-weight: 800;
+	opacity: 0.9;
+}
+
+.asset-tile--file .asset-file {
+	display: inline-block;
+	font-size: 12px;
+	font-weight: 800;
+	padding: 6px 10px;
+	border-radius: 999px;
+	border: 1px solid #2a2a2f;
+	background: #17171d;
+	color: #fff;
+	text-decoration: none;
+}
+
+.asset-tile--file .asset-filepath {
+	margin-top: 4px;
+	font-size: 10px;
+	opacity: 0.7;
+	word-break: break-all;
+}
+
+.asset-tile--hasviewer {
+	position: relative;
+}
+
+.asset-openviewer {
+	position: absolute;
+	top: 6px;
+	left: 6px;
+
+	border: 1px solid #2a2a2f;
+	background: rgba(23, 23, 29, 0.9);
+	color: #fff;
+
+	padding: 4px 8px;
+	border-radius: 999px;
+	font-size: 11px;
+	font-weight: 800;
+	cursor: pointer;
+}
+
+
+.asset-empty {
+	font-size: 12px;
+	opacity: 0.8;
+	padding: 6px 0;
+}
+
+/* =========================
+   Sprites & Models: bigger tiles
+   (drop-in override)
+   ========================= */
+
+.mon-info-assets .asset-grid {
+	/* slightly wider tiles so images feel bigger */
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+	.mon-info-assets .asset-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+.mon-info-assets .asset-tile {
+	min-height: 165px;
+	padding: 10px;
+}
+
+.mon-info-assets .asset-tile img {
+	height: 125px;
+	/* was 90px */
+}
+
+/* =======================================================
+   EVOLUTION: left trunk + stacked branches (split layout)
+   ======================================================= */
+
+.evo-linear {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+
+.evo-split {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 14px;
+	align-items: center;
+}
+
+.evo-trunk-row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: flex-start;
+	/* keep the base chain on the left */
+	gap: 10px;
+}
+
+.evo-branches-col {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	align-items: flex-start;
+}
+
+.evo-branches-col .evo-branch-row {
+	justify-content: flex-start;
+}
+
+/* Small screens: stack trunk above branches */
+@media (max-width: 700px) {
+	.evo-split {
+		grid-template-columns: 1fr;
+	}
+
+	.evo-branches-col {
+		align-items: center;
+	}
+
+	.evo-branches-col .evo-branch-row {
+		justify-content: center;
+	}
+}
+
+/* ==============================
+   Evolution: center the whole block
+   ============================== */
+
+/* Single-path line: take full width and center contents */
+.evo-linear {
+	width: 100%;
+	justify-content: center;
+	/* you already have this, keep it as the winner */
+}
+
+/* Branch layout: center the whole split (trunk + branches) as a unit */
+.evo-split {
+	width: 100%;
+	justify-content: center;
+	/* centers the grid tracks */
+	grid-template-columns: max-content max-content;
+	/* make the split only as wide as it needs */
+}
+
+/* Keep “trunk on the left” behavior, but center the trunk content within its column */
+.evo-trunk-row {
+	justify-content: center;
+}
+
+/* Optional: if you want each branch row’s content centered within the branches column */
+.evo-branches-col .evo-branch-row {
+	justify-content: center;
+}
+
+.evo-seg {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+/* Optional: keep link tighter */
+.evo-link {
+	min-width: 0;
+}

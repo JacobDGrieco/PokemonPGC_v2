@@ -16,11 +16,15 @@ import {
 } from "./persistence.js";
 import * as api from "../api.js";
 import { initLayoutSwitcher } from "./ui/layoutSwitcher.js";
-import { elements, wireGlobalNav } from "./ui/dom.js";
-import { renderSidebar } from "./ui/sidebar.js";
+import { elements } from "./ui/dom.js";
 import { renderCrumbs } from "./ui/crumbs.js";
-import { renderContent } from "./ui/content.js";
+import { emitPpgcUiSync } from './react-bridge/storeBridge.js';
 import { initHistory } from "./history.js";
+import { ensurePpgcRoot } from "./runtime/globals.js";
+import { installUiGlobals } from "./runtime/uiGlobals.js";
+
+const PPGC = ensurePpgcRoot();
+installUiGlobals();
 
 // ------------------------------------------------------------
 // 3) Rendering
@@ -55,14 +59,14 @@ function resolveGenKeyForGame(gameKey) {
 
 function _getLoadedGensSet() {
 	window.PPGC = window.PPGC || {};
-	if (!window.PPGC._loadedGenData) window.PPGC._loadedGenData = new Set();
-	return window.PPGC._loadedGenData;
+	if (!PPGC._loadedGenData) PPGC._loadedGenData = new Set();
+	return PPGC._loadedGenData;
 }
 
 function _getGenLoadPromises() {
 	window.PPGC = window.PPGC || {};
-	if (!window.PPGC._genLoadPromises) window.PPGC._genLoadPromises = new Map();
-	return window.PPGC._genLoadPromises;
+	if (!PPGC._genLoadPromises) PPGC._genLoadPromises = new Map();
+	return PPGC._genLoadPromises;
 }
 
 async function ensureGenDataLoaded(genKey) {
@@ -157,27 +161,18 @@ function ensureGenDataForState(state) {
  * - Main content panel
  */
 function renderAll() {
-	// Always render sidebar/crumbs (these depend only on bootstrap-lite)
-	renderSidebar(store, elements, renderAll);
+	window.PPGC = window.PPGC || {};
+	PPGC._storeRef = store;
+	PPGC._tasksStoreRef = store.tasksStore;
 	renderCrumbs(store, elements);
 
-	// If we are entering a game/section but its generation data isn't loaded yet,
-	// show a lightweight loading state instead of doing heavy work or crashing.
 	const ready = ensureGenDataForState(store.state);
 	if (!ready) {
-		const label = resolveGameLabel(store.state?.gameKey);
-		if (elements?.content) {
-			elements.content.innerHTML = `
-        <div style="padding:16px; opacity:.85;">
-          Loading <b>${label}</b> data...
-        </div>
-      `;
-		}
+		emitPpgcUiSync({ state: store.state, loading: true });
 		return;
 	}
 
-	// Now safe to render the main content for that route
-	renderContent(store, elements);
+	emitPpgcUiSync({ state: store.state, loading: false });
 }
 initHistory({ store, renderAll });
 
@@ -254,7 +249,7 @@ async function refreshCurrentUser() {
 	currentUserIcon = currentUser?.icon || "default";
 	updateAccountButton();
 	window.PPGC = window.PPGC || {};
-	window.PPGC.currentUser = currentUser;
+	PPGC.currentUser = currentUser;
 }
 
 async function handleLogout() {
@@ -273,7 +268,7 @@ async function handleLogout() {
 	api.setApiCurrentUser(null);
 
 	window.PPGC = window.PPGC || {};
-	window.PPGC.currentUser = currentUser;
+	PPGC.currentUser = currentUser;
 
 	stopServerAutoBackup();
 	window.location.reload();
@@ -370,7 +365,7 @@ function openAuthModal(mode = "login") {
 					api.setApiCurrentUser(currentUser);
 
 					window.PPGC = window.PPGC || {};
-					window.PPGC.currentUser = currentUser;
+					PPGC.currentUser = currentUser;
 
 					if (currentMode === "signup") {
 						// New account: push current game up once so DB has something
@@ -420,6 +415,22 @@ function resolveGameLabel(gameKey) {
 	return gameKey || "Unknown game";
 }
 
+
+function navigateToTask(sectionId, taskId = null) {
+	if (!sectionId) return;
+	const gameKey = (sectionId || '').split('-')[0] || null;
+	if (gameKey) {
+		store.state.gameKey = gameKey;
+	}
+	store.state.sectionId = sectionId;
+	store.state.level = 'section';
+	renderAll();
+	if (!taskId) return;
+	requestAnimationFrame(() => {
+		const target = document.querySelector(`[data-task-id="${CSS.escape(String(taskId))}"]`);
+		target?.scrollIntoView({ block: 'center', behavior: 'smooth' });
+	});
+}
 async function initAuthUI() {
 	const overlay = document.getElementById("ppgc-auth-overlay");
 	const accountBtn = document.getElementById("ppgc-account-button");
@@ -437,12 +448,12 @@ async function initAuthUI() {
 			const s = storeRef?.state;
 			if (s && s.level && s.level !== "account") {
 				// store a shallow clone (enough for your router state)
-				window.PPGC._lastNonAccountState = { ...s };
+				PPGC._lastNonAccountState = { ...s };
 			}
 		} catch { }
 
 		// Use the history router so URL + Back/Forward work
-		window.PPGC.navigateTo("account");
+		PPGC.navigateTo("account");
 	});
 
 	accountMenu.addEventListener("click", (e) => {
@@ -451,7 +462,7 @@ async function initAuthUI() {
 		const action = btn.dataset.action;
 		if (action === "settings") {
 			closeAccountMenu();
-			window.PPGC.navigateTo("account");
+			PPGC.navigateTo("account");
 		} else if (action === "logout") {
 			handleLogout();
 		}
@@ -517,11 +528,10 @@ function runWhenIdle(fn, timeout = 1500) {
 
 	// Expose helpers for other modules to use
 	window.PPGC = window.PPGC || {};
-	window.PPGC.ensureModelViewerLoaded = ensureModelViewerLoaded;
-	window.PPGC.ensureDistributionsLoaded = ensureDistributionsLoaded;
+	PPGC.ensureModelViewerLoaded = ensureModelViewerLoaded;
+	PPGC.ensureDistributionsLoaded = ensureDistributionsLoaded;
 })();
 
-wireGlobalNav(store, elements, renderAll);
 initLayoutSwitcher(renderAll);
 renderAll();
 mountBackupControls();
@@ -564,7 +574,7 @@ window.addEventListener("ppgc:import:done", () => {
 
 	wireOnce(home, () => {
 		// go to the main "All games" page
-		window.PPGC.navigateToState({
+		PPGC.navigateToState({
 			level: "gen",
 			genKey: null,
 			gameKey: null,
@@ -574,7 +584,7 @@ window.addEventListener("ppgc:import:done", () => {
 
 	wireOnce(moninfo, () => {
 		// open the Info/Tools area (default tool = info)
-		window.PPGC.navigateToState({
+		PPGC.navigateToState({
 			level: "tools",
 			toolsKey: "info",
 			genKey: null,
@@ -630,19 +640,20 @@ window.addEventListener("ppgc:import:done", () => {
 
 // Quick access from devtools: PPGC.renderAll()
 window.PPGC = window.PPGC || {};
-window.PPGC.renderAll = renderAll;
-window.PPGC.openAuthModal = openAuthModal;
-window.PPGC.api = api;
-window.PPGC.handleLogout = handleLogout;
-window.PPGC.resolveGameLabel = resolveGameLabel;
-window.PPGC.ensureGenDataLoaded = ensureGenDataLoaded;
-window.PPGC.ensureGenDataLoadedForGame = async function ensureGenDataLoadedForGame(gameKey) {
+PPGC.renderAll = renderAll;
+PPGC.openAuthModal = openAuthModal;
+PPGC.navigateToTask = navigateToTask;
+PPGC.api = api;
+PPGC.handleLogout = handleLogout;
+PPGC.resolveGameLabel = resolveGameLabel;
+PPGC.ensureGenDataLoaded = ensureGenDataLoaded;
+PPGC.ensureGenDataLoadedForGame = async function ensureGenDataLoadedForGame(gameKey) {
 	const genKey = resolveGenKeyForGame(gameKey);
 	if (!genKey) return null;
 	await ensureGenDataLoaded(genKey);
 	return genKey;
 };
-window.PPGC.openMonInfo = async (...args) => {
+PPGC.openMonInfo = async (...args) => {
 	const m = await ensureDexMonInfoLoaded();
 	return m.openMonInfo?.(...args);
 };

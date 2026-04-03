@@ -1,0 +1,162 @@
+/* ========================================================================== */
+/*  FORMS WHEEL (RADIAL FORMS SELECTOR)                                       */
+/* ========================================================================== */
+
+/* Base container: radial by default, grid on very small screens */
+.forms-wheel {
+	--size: 360px;
+	--btn: 40px;
+	--form-img: 18px;
+
+	position: relative;
+	margin: 16px auto;
+	width: var(--size);
+	height: var(--size);
+}
+
+/* Base chip: absolute, sized by JS, layout from JS; visuals styled below */
+.forms-wheel .form-chip {
+	position: absolute;
+	transform: translate(-50%, -50%);
+
+	/* lock chip footprint based on image size (still responsive) */
+	width: calc(var(--form-img) * 1.6);
+	height: calc(var(--form-img) * 1.9);
+	min-width: 0;
+	min-height: 0;
+
+	padding: var(--chip-pad, 10px 12px);
+
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+
+	overflow: visible;
+	cursor: default;
+
+	font-size: 12px;
+	font-weight: 600;
+	text-align: center;
+	line-height: 1;
+}
+
+/* Selected state */
+.forms-wheel .form-chip[aria-checked="true"] {
+	outline: 5px solid #fff;
+	box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.35) inset;
+}
+
+/* Narrow screens: fall back to a tidy grid */
+@media (max-width: 520px) {
+	.forms-wheel {
+		width: 100%;
+		height: auto;
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 8px;
+	}
+
+	.forms-wheel .form-chip {
+		position: static;
+		transform: none;
+		width: 100%;
+		min-height: calc(var(--form-img) + 10px);
+		border-radius: 12px;
+	}
+}
+
+/* ----- RADIAL FORM CHIPS — final visual styling ----- */
+
+.forms-wheel .form-chip {
+	/* Transparent, rectangular chip (neutral background, white border) */
+	background: transparent;
+	border: 3px solid rgba(255, 255, 255, 0.85);
+	border-radius: 12px;
+	padding: 10px 12px;
+
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+	backdrop-filter: none;
+	/* ensure no frosted look */
+}
+
+.forms-wheel .form-chip:hover,
+.forms-wheel .form-chip:focus-visible {
+	border-color: #fff;
+	box-shadow:
+		0 0 0 5px rgba(255, 255, 255, 0.25),
+		0 4px 16px rgba(0, 0, 0, 0.35);
+	outline: none;
+}
+
+/* Inner layout of a chip */
+.forms-wheel .form-chip .chip-row {
+	display: grid;
+	gap: 10px;
+	justify-items: center;
+}
+
+.forms-wheel .form-chip img {
+	width: var(--form-img, 60px);
+	height: var(--form-img, 60px);
+	object-fit: contain;
+	display: block;
+}
+
+/* Sprite-style status filters */
+.forms-wheel .form-chip.status-unknown img {
+	filter: brightness(0);
+}
+
+.forms-wheel .form-chip.status-seen img {
+	filter: grayscale(100%);
+}
+
+.forms-wheel .form-chip.status-normal img {
+	filter: none;
+}
+
+/* Label text */
+.forms-wheel .form-chip .chip-text {
+	font-size: var(--chip-font, 12px);
+	font-weight: 600;
+	color: #fff;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+}
+
+/* Optional small <select> inside a chip */
+.forms-wheel .form-chip select {
+	background: #141417;
+	color: #eaeaea;
+	border: 1px solid #303038;
+	border-radius: 8px;
+	padding: 4px 8px;
+	font-size: 12px;
+}
+
+/* If a form has a non-unknown status, give a stronger border + glow */
+.forms-wheel .form-chip.is-set {
+	border-width: 4px;
+	box-shadow:
+		0 0 0 2px rgba(255, 255, 255, 0.28),
+		0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+/* Tiny badges inside a form chip (e.g., shiny icon, alpha icon) */
+.forms-wheel .form-chip .badges {
+	position: absolute;
+	top: 17%;
+	right: 3%;
+
+	display: inline-flex;
+	flex-direction: column;
+	gap: 4px;
+	pointer-events: none;
+}
+
+.forms-wheel .form-chip .badges img {
+	width: 18px;
+	height: 18px;
+	object-fit: contain;
+	filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.45));
+}

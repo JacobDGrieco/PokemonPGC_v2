@@ -1,0 +1,330 @@
+/* ===================== Card shells & buttons ===================== */
+
+.card {
+	background: #121214;
+	border: 1px solid #222;
+	border-radius: var(--radius);
+	display: flex;
+	flex-direction: column;
+}
+
+.card .card-hd {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+	padding: 10px 12px;
+	border-bottom: 1px solid #222;
+}
+
+.card .card-hd h3 {
+	margin: 0;
+	font-size: 16px;
+}
+
+.card .card-bd {
+	padding: 12px;
+	display: grid;
+	gap: 10px;
+}
+
+/* ========================================================================== */
+/*  Consistent card thumbnails (Fashion / Curry / Sandwich / Sticker)          */
+/* ========================================================================== */
+
+/* Center the thumbnail area and give it a consistent footprint */
+.card .thumb {
+	display: grid;
+	place-items: center;
+	align-items: center;
+	justify-content: center;
+
+	width: var(--ppgc-thumb-box);
+	height: var(--ppgc-thumb-box);
+
+	margin-inline: auto;
+	background: transparent !important;
+	box-shadow: none !important;
+	filter: none !important;
+}
+
+/* Override inline width:100% in some renderers and clamp image size */
+.card .thumb img {
+	width: auto !important;
+	height: auto !important;
+	max-width: var(--ppgc-card-thumb);
+	max-height: var(--ppgc-card-thumb);
+	object-fit: contain;
+	display: block;
+	align-items: center;
+	justify-content: center;
+	background: transparent !important;
+}
+
+.card .thumb .badges {
+	width: 22px;
+}
+
+/* Center the grids inside modal content cards */
+#dexGrid .card .card-bd,
+#fashionGrid .card .card-bd,
+#medalGrid .card .card-bd,
+#curryGrid .card .card-bd,
+#sandwichGrid .card .card-bd,
+#capsuleGrid .card .card-bd {
+	text-align: center;
+}
+
+.button {
+	background: #1b1b1e;
+	border: 1px solid #2e2e33;
+	color: #eaeaea;
+	padding: 8px 12px;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+.button:active {
+	transform: translateY(1px);
+}
+
+.pill {
+	display: inline-block;
+	padding: 3px 8px;
+	border: 1px solid #2e2e33;
+	border-radius: 999px;
+	font-size: 12px;
+	opacity: 0.85;
+}
+
+/* ===================== Shared multi-column grids ===================== */
+.grid {
+	display: grid;
+	gap: var(--gap);
+	grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+}
+
+/* Explicitly include stickers (and keep parity with the others) */
+#stickerGrid {
+	grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+}
+
+/* Any grid of cards inside a modal */
+.modal .cards-grid,
+.modal .card-grid,
+.modal .grid {
+	display: grid;
+	/* if it isn't already */
+	align-items: stretch;
+	/* key: cards stretch to the row’s tallest */
+}
+
+/* Cards fill the row height */
+.modal .cards-grid .card,
+.modal .card-grid .card,
+.modal .grid .card {
+	height: 100%;
+}
+
+/* ===================== Horizontal progress bars ===================== */
+
+/* Base bar */
+.progress {
+	position: relative;
+	height: 8px;
+	background: #1a1a1f;
+	border-radius: 999px;
+	border: 1px solid #2b2b33;
+	overflow: visible;
+	/* allow halo / glow to breathe */
+}
+
+/* Base fill (0–100%) */
+.progress>span.base {
+	display: block;
+	height: 100%;
+	background: var(--accent);
+}
+
+/* Extra fill used for extra credit segments, etc. */
+.progress>span.extra {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	background: #f0c349;
+	pointer-events: none;
+}
+
+/* ===================== Golden halo / extra credit styling ===================== */
+
+/* Container: allow halo to breathe outside the bar */
+.progress {
+	isolation: isolate;
+	/* create a new stacking context */
+}
+
+/* Golden shimmer layer (behind the bar, but visible) */
+.progress.has-extra::after {
+	content: "";
+	position: absolute;
+	inset: -4px;
+	border-radius: 999px;
+	background: conic-gradient(from 0deg,
+			#8a6b00,
+			#d4af37,
+			#fff4b0,
+			#ffd700,
+			#8a6b00);
+	opacity: 0.30;
+	filter: blur(4px);
+	pointer-events: none;
+	animation: ppgc-gold-breathe 2.8s linear infinite;
+	z-index: 0;
+	/* sit behind the bar fills */
+}
+
+/* Ensure fills render above the halo */
+.progress .base,
+.progress .extra {
+	position: relative;
+	z-index: 1;
+}
+
+/* Badge sits on top of everything */
+.progress .extra-badge {
+	position: absolute;
+	top: -16px;
+	right: -4px;
+	font-size: 11px;
+	line-height: 1;
+	padding: 4px 6px;
+	border-radius: 999px;
+	background: linear-gradient(135deg, #7a5a00, #d4af37 55%, #fff4b0);
+	color: #1f1f25;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+	pointer-events: none;
+	z-index: 2;
+}
+
+/* Subtle glow for fully-complete Forms (no +XX%) */
+.progress.is-complete::after {
+	content: "";
+	position: absolute;
+	inset: -3px;
+	border-radius: 999px;
+	background: radial-gradient(closest-side,
+			color-mix(in srgb, var(--accent, #6aa6ff) 70%, #fff 30%),
+			transparent 65%);
+	opacity: 0.22;
+	filter: blur(3px);
+	pointer-events: none;
+	animation: ppgc-gold-breathe 2.8s linear infinite;
+	z-index: 0;
+}
+
+@keyframes ppgc-gold-breathe {
+	0% {
+		filter: blur(4px) brightness(1.0);
+		opacity: 0.28;
+	}
+
+	50% {
+		filter: blur(5px) brightness(1.15);
+		opacity: 0.42;
+	}
+
+	100% {
+		filter: blur(4px) brightness(1.0);
+		opacity: 0.28;
+	}
+}
+
+/* For cards that should have a sticky footer row */
+.card.card--forms-footer {
+	display: flex;
+	flex-direction: column;
+}
+
+/* Make the body take all remaining vertical space */
+.card.card--forms-footer .card-bd {
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 auto;
+	align-items: center;
+	justify-content: center;
+}
+
+/* This row (Forms / Made / Cooked) sits at the bottom */
+.card.card--forms-footer .forms-row {
+	margin-top: auto;
+	/* pushes it to the bottom of card-bd */
+	padding-top: 0.5rem;
+	/* optional little spacing */
+}
+
+/* ===================== Modal cards: equal row height + bottom controls ===================== */
+
+/* In modal grids, make each card a column and let the body fill height */
+.modal #dexGrid .card,
+.modal #fashionGrid .card,
+.modal #medalsGrid .card,
+.modal #curryGrid .card,
+.modal #sandwichGrid .card,
+.modal #stickerGrid .card,
+.modal #capsuleGrid .card {
+	display: flex;
+	/* .card already is, but be explicit */
+	flex-direction: column;
+	height: 100%;
+}
+
+/* Turn the body into a flex column so we can pin the controls to the bottom */
+.modal #dexGrid .card .card-bd,
+.modal #fashionGrid .card .card-bd,
+.modal #medalsGrid .card .card-bd,
+.modal #curryGrid .card .card-bd,
+.modal #sandwichGrid .card .card-bd,
+.modal #stickerGrid .card .card-bd,
+.modal #capsuleGrid .card .card-bd {
+	display: flex;
+	/* override the default grid body */
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	flex: 1 1 auto;
+	/* take remaining height under the thumb/header */
+	text-align: center;
+}
+
+/* Name takes the “middle” space and stays vertically centered */
+.modal #dexGrid .card .name,
+.modal #fashionGrid .card .name,
+.modal #medalsGrid .card .name,
+.modal #curryGrid .card .name,
+.modal #sandwichGrid .card .name,
+.modal #stickerGrid .card .name,
+.modal #capsuleGrid .card .name {
+	flex: 1 1 auto;
+	/* fills the space above controls */
+	display: flex;
+	align-items: center;
+	/* vertical center */
+	justify-content: center;
+	/* horizontal center */
+	width: 100%;
+}
+
+/* The controls row (checkbox label / Forms button) sticks to the bottom */
+.modal #dexGrid .card .row,
+.modal #fashionGrid .card .row,
+.modal #medalsGrid .card .row,
+.modal #curryGrid .card .row,
+.modal #sandwichGrid .card .row,
+.modal #stickerGrid .card .row,
+.modal #capsuleGrid .card .row {
+	margin-top: auto;
+	/* pushes it to bottom of card-bd */
+	width: 100%;
+	justify-content: center;
+}

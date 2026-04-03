@@ -1,0 +1,793 @@
+/* ===============================
+   Model Viewer Modal (cleaned)
+   - Removed duplicate/override blocks
+   - Single source of truth for sizing + layout
+   =============================== */
+
+#modelViewerModal {
+	padding: 12px 24px 24px 24px;
+}
+
+/* Modal sizing: “popup feel” with ~3% margin around edges */
+#modelViewerModal .modal-dialog {
+	width: 98vw;
+	height: 98vh;
+	max-width: 98vw;
+	max-height: 98vh;
+
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+#modelViewerModal .modal-hd {
+	flex: 0 0 auto;
+	padding: 6px 12px;
+	min-height: 0;
+}
+
+#modelViewerModal .modal-hd .modal-title {
+	font-size: 14px;
+	line-height: 1.1;
+}
+
+/* Body fills the remaining space under header */
+#modelViewerModal .modal-bd {
+	flex: 1 1 auto;
+	min-height: 0;
+	/* critical for nested flex/grid to shrink */
+	overflow: hidden;
+	/* viewer manages its own scrolling */
+	padding: 10px;
+
+	/* override any base modal centering rules (if base uses grid) */
+	place-content: unset;
+	justify-items: unset;
+}
+
+#modelViewerBody {
+	height: 100%;
+	min-height: 0;
+	display: flex;
+}
+
+/* ===============================
+   Viewer root layout
+   =============================== */
+
+.ppgc-modelviewer {
+	flex: 1;
+	display: flex;
+	height: 100%;
+	min-height: 0;
+}
+
+/* Header: Animation (1/3) + View (2/3) */
+.ppgc-modelviewer__header {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	gap: 8px;
+	align-items: stretch;
+}
+
+@media (max-width: 900px) {
+	.ppgc-modelviewer__header {
+		grid-template-columns: 1fr;
+	}
+}
+
+.ppgc-modelviewer__group {
+	background: #111116;
+	border: 1px solid #24242a;
+	border-radius: 12px;
+	padding: 8px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+
+	min-height: 0;
+	/* allow inner panels to shrink */
+}
+
+.ppgc-modelviewer__group-title {
+	font-size: 10px;
+	font-weight: 900;
+	letter-spacing: 0.4px;
+	opacity: 0.8;
+	text-transform: uppercase;
+}
+
+.ppgc-modelviewer__row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 6px;
+}
+
+.ppgc-modelviewer__title {
+	font-weight: 700;
+	font-size: 14px;
+}
+
+.ppgc-modelviewer__label {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	font-size: 12px;
+	opacity: 0.95;
+}
+
+.ppgc-modelviewer__check {
+	transform: translateY(1px);
+}
+
+/* ===============================
+   Controls
+   =============================== */
+
+.ppgc-modelviewer__select {
+	min-width: 200px;
+	height: 28px;
+	border-radius: 10px;
+	border: 1px solid #2a2a2f;
+	background: #17171d;
+	color: #fff;
+	font-size: 12px;
+	font-weight: 800;
+	padding: 0 10px;
+}
+
+.ppgc-modelviewer__speed {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	align-items: center;
+	gap: 10px;
+	width: 100%;
+	font-size: 11px;
+	opacity: 0.9;
+}
+
+.ppgc-modelviewer__range {
+	width: 100%;
+}
+
+/* ===============================
+   Canvas area
+   =============================== */
+
+.ppgc-modelviewer__body {
+	position: relative;
+	flex: 1;
+	min-height: 0;
+	overflow: hidden;
+}
+
+.ppgc-modelviewer__canvaswrap {
+	position: absolute;
+	inset: 0;
+}
+
+.ppgc-modelviewer__canvaswrap canvas {
+	width: 100% !important;
+	height: 100% !important;
+	display: block;
+}
+
+.ppgc-modelviewer__status {
+	position: absolute;
+	left: 10px;
+	bottom: 10px;
+	font-size: 12px;
+	padding: 6px 8px;
+	border-radius: 8px;
+	background: rgba(0, 0, 0, 0.55);
+}
+
+/* ===============================
+   Pill buttons (single definition)
+   =============================== */
+
+.ppgc-modelviewer__pill {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+
+	min-height: 28px;
+	padding: 4px 10px;
+
+	border-radius: 999px;
+	border: 1px solid #2a2a2f;
+	background: #17171d;
+
+	font-size: 11px;
+	font-weight: 900;
+	color: #fff;
+
+	cursor: pointer;
+	user-select: none;
+}
+
+.ppgc-modelviewer__pill:disabled {
+	opacity: 0.55;
+	cursor: not-allowed;
+}
+
+/* On/Off states */
+.ppgc-modelviewer__pill.is-on {
+	border-color: #2f7a2f;
+	background: rgba(58, 191, 58, 0.18);
+}
+
+.ppgc-modelviewer__pill.is-off {
+	border-color: #7a2f2f;
+	background: rgba(191, 58, 58, 0.18);
+}
+
+/* Optional stronger play styling */
+.ppgc-modelviewer__pill.is-play.is-on {
+	background: rgba(58, 191, 58, 0.28);
+}
+
+.ppgc-modelviewer__pill.is-play.is-off {
+	background: rgba(191, 58, 58, 0.28);
+}
+
+/* ===============================
+   View button row
+   - wraps cleanly at smaller widths
+   =============================== */
+
+.ppgc-modelviewer__row--view {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.ppgc-modelviewer__row--view .ppgc-modelviewer__pill {
+	flex: 1 1 160px;
+	/* tries to be ~160px, wraps as needed */
+	width: auto;
+}
+
+/* ===============================
+   Help overlay
+   =============================== */
+
+.ppgc-modelviewer__help {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	z-index: 5;
+
+	width: 130px;
+	padding: 10px 8px 8px 8px;
+
+	border-radius: 12px;
+	border: 1px solid #2a2a2f;
+	background: rgba(10, 10, 14, 0.72);
+	backdrop-filter: blur(6px);
+
+	color: #fff;
+	font-size: 10px;
+	line-height: 1.25;
+	user-select: none;
+	pointer-events: none;
+	/* don't block orbit controls */
+}
+
+.ppgc-modelviewer__help-title {
+	font-weight: 900;
+	font-size: 11px;
+	letter-spacing: 0.4px;
+	text-transform: uppercase;
+	opacity: 0.85;
+	margin-bottom: 8px;
+	text-align: center;
+}
+
+.ppgc-modelviewer__help-row {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin: 6px 0;
+	opacity: 0.92;
+}
+
+.ppgc-modelviewer__help-row b {
+	font-weight: 900;
+}
+
+/* Simple CSS “icons” (no external assets) */
+.ppgc-ico {
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	position: relative;
+	opacity: 0.95;
+}
+
+/* Mouse icon */
+.ppgc-ico-mouse::before {
+	content: "";
+	position: absolute;
+	left: 3px;
+	top: 2px;
+	width: 12px;
+	height: 14px;
+	border: 1px solid rgba(255, 255, 255, 0.7);
+	border-radius: 8px;
+}
+
+.ppgc-ico-mouse::after {
+	content: "";
+	position: absolute;
+	left: 8px;
+	top: 4px;
+	width: 2px;
+	height: 5px;
+	background: rgba(255, 255, 255, 0.7);
+	border-radius: 2px;
+}
+
+/* Wheel icon */
+.ppgc-ico-wheel::before {
+	content: "";
+	position: absolute;
+	left: 2px;
+	top: 8px;
+	width: 14px;
+	height: 2px;
+	background: rgba(255, 255, 255, 0.7);
+	border-radius: 2px;
+}
+
+.ppgc-ico-wheel::after {
+	content: "";
+	position: absolute;
+	left: 7px;
+	top: 2px;
+	width: 4px;
+	height: 14px;
+	border: 1px solid rgba(255, 255, 255, 0.7);
+	border-radius: 6px;
+	box-sizing: border-box;
+}
+
+/* Touch icon */
+.ppgc-ico-touch::before {
+	content: "";
+	position: absolute;
+	left: 3px;
+	top: 4px;
+	width: 5px;
+	height: 8px;
+	border: 1px solid rgba(255, 255, 255, 0.7);
+	border-radius: 4px;
+}
+
+.ppgc-ico-touch::after {
+	content: "";
+	position: absolute;
+	left: 10px;
+	top: 2px;
+	width: 5px;
+	height: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.7);
+	border-radius: 4px;
+	opacity: 0.75;
+}
+
+/* Keyboard key icon (keycap style) */
+.ppgc-ico-key {
+	width: 18px;
+	height: 18px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	border: 1px solid rgba(255, 255, 255, 0.7);
+	border-radius: 4px;
+
+	font-size: 10px;
+	font-weight: 900;
+	line-height: 1;
+	color: rgba(255, 255, 255, 0.9);
+
+	box-sizing: border-box;
+}
+
+/* ===============================
+   Tabs (fused tab strip + panel shell)
+   =============================== */
+
+.ppgc-modelviewer__tabs {
+	display: flex;
+	gap: 6px;
+	padding: 6px 8px 0 8px;
+
+	background: #111116;
+	border: 1px solid #24242a;
+	border-bottom: 0;
+	border-radius: 12px 12px 0 0;
+}
+
+.ppgc-modelviewer__tab {
+	flex: 1;
+	height: 30px;
+
+	border: 1px solid #24242a;
+	border-bottom: 0;
+	border-radius: 10px 10px 0 0;
+
+	background: #0f0f14;
+	color: rgba(255, 255, 255, 0.85);
+	font-size: 12px;
+	font-weight: 900;
+
+	cursor: pointer;
+	position: relative;
+	top: 1px;
+	z-index: 1;
+}
+
+.ppgc-modelviewer__tab:not(.is-active) {
+	opacity: 0.5;
+}
+
+.ppgc-modelviewer__tab.is-active {
+	background: #111116;
+	color: #fff;
+	z-index: 3;
+
+	/* hide seam between active tab and panel */
+	box-shadow: 0 2px 0 #111116;
+}
+
+.ppgc-modelviewer__tabpanels {
+	background: #111116;
+	border: 1px solid #24242a;
+	border-top: 0;
+	border-radius: 0 0 12px 12px;
+
+	padding: 10px;
+	margin-top: -1px;
+
+	flex: 1 1 auto;
+	min-height: 0;
+	overflow: hidden;
+}
+
+.ppgc-modelviewer__panel {
+	display: none;
+	padding: 0;
+	background: transparent;
+	border: 0;
+}
+
+.ppgc-modelviewer__panel.is-active {
+	display: block;
+	max-height: 100%;
+	overflow: auto;
+}
+
+/* Panels: consistent button layout */
+.ppgc-modelviewer__panel .ppgc-modelviewer__row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-bottom: 4px;
+}
+
+.ppgc-modelviewer__panel .ppgc-modelviewer__pill {
+	flex: 1 1 160px;
+	width: auto;
+}
+
+/* ===============================
+   Meshes tab UI
+   =============================== */
+
+.ppgc-modelviewer__meshctl {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 10px;
+}
+
+@media (max-width: 900px) {
+	.ppgc-modelviewer__meshctl {
+		grid-template-columns: 1fr;
+	}
+}
+
+.ppgc-modelviewer__meshhead {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	flex-wrap: wrap;
+	margin-bottom: 6px;
+}
+
+.ppgc-modelviewer__checklist {
+	max-height: 220px;
+	overflow: auto;
+	border: 1px solid #24242a;
+	border-radius: 10px;
+	padding: 8px;
+	background: #0f0f14;
+	column-count: 2;
+	column-gap: 12px;
+}
+
+@media (max-width: 900px) {
+	.ppgc-modelviewer__checklist {
+		column-count: 1;
+	}
+}
+
+.ppgc-modelviewer__checkrow {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 6px 6px;
+	border-radius: 8px;
+	width: 100%;
+	break-inside: avoid-column;
+	justify-content: space-between;
+}
+
+.ppgc-modelviewer__checkrow:hover {
+	background: rgba(255, 255, 255, 0.04);
+}
+
+.ppgc-modelviewer__checkrow>span {
+	flex: 1 1 auto;
+	min-width: 0;
+	justify-content: end;
+}
+
+.ppgc-modelviewer__miniwrap {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	margin-left: 8px;
+	flex: 0 0 auto;
+}
+
+.ppgc-modelviewer__color {
+	width: 26px;
+	height: 22px;
+	padding: 0;
+	border: 1px solid #2a2a2f;
+	border-radius: 6px;
+	background: transparent;
+	cursor: pointer;
+}
+
+.ppgc-modelviewer__minireset {
+	height: 22px;
+	padding: 0 8px;
+	border-radius: 999px;
+	border: 1px solid #2a2a2f;
+	background: #17171d;
+	color: #fff;
+	font-size: 10px;
+	font-weight: 900;
+	cursor: pointer;
+}
+
+.ppgc-modelviewer__opacityrow {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 6px 2px 8px;
+}
+
+.ppgc-modelviewer__opacitylabel {
+	font-size: 11px;
+	font-weight: 900;
+	opacity: 0.75;
+	text-transform: uppercase;
+	letter-spacing: 0.3px;
+	white-space: nowrap;
+}
+
+.ppgc-modelviewer__opacityrange {
+	flex: 1;
+	min-width: 120px;
+}
+
+.ppgc-modelviewer__opacityval {
+	width: 46px;
+	text-align: right;
+	font-size: 12px;
+	opacity: 0.8;
+	white-space: nowrap;
+}
+
+
+/* ===============================
+   Overlay dropdown UI (top-left)
+   =============================== */
+
+.ppgc-modelviewer__overlay {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	z-index: 10;
+
+	width: min(720px, calc(100% - 20px));
+	pointer-events: auto;
+}
+
+.ppgc-modelviewer__dropbar {
+	display: flex;
+	gap: 6px;
+	padding: 6px 8px;
+
+	background: rgba(17, 17, 22, 0.78);
+	border: 1px solid #24242a;
+	border-radius: 12px;
+	backdrop-filter: blur(6px);
+}
+
+.ppgc-modelviewer__dropbtn {
+	flex: 1 1 auto;
+	width: auto;
+	height: 30px;
+	padding: 0 12px;
+
+	justify-content: center;
+	text-align: center;
+
+	border: 1px solid #24242a;
+	border-radius: 10px;
+
+	background: #0f0f14;
+	color: rgba(255, 255, 255, 0.85);
+	font-size: 12px;
+	font-weight: 900;
+	cursor: pointer;
+}
+
+.ppgc-modelviewer__dropbtn:not(.is-active) {
+	opacity: 0.65;
+}
+
+.ppgc-modelviewer__dropbtn.is-active {
+	background: #111116;
+	color: #fff;
+	opacity: 1;
+}
+
+.ppgc-modelviewer__dropwrap {
+	margin-top: 8px;
+}
+
+.ppgc-modelviewer__drop {
+	display: none;
+	background: rgba(17, 17, 22, 0.88);
+	border: 1px solid #24242a;
+	border-radius: 12px;
+	padding: 10px;
+	backdrop-filter: blur(6px);
+}
+
+.ppgc-modelviewer__drop.is-open {
+	display: block;
+}
+
+/* Make pills span full width in Viewer + Record dropdowns */
+.ppgc-modelviewer__drop[data-drop-panel="viewer"] .ppgc-modelviewer__row,
+.ppgc-modelviewer__drop[data-drop-panel="record"] .ppgc-modelviewer__row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.ppgc-modelviewer__drop[data-drop-panel="viewer"] .ppgc-modelviewer__pill,
+.ppgc-modelviewer__drop[data-drop-panel="record"] .ppgc-modelviewer__pill {
+	flex: 1 1 160px;
+	width: auto;
+}
+
+/* =========================================================
+   Overlay dropdown panels (top-left)
+   ========================================================= */
+
+/* -----------------------------
+   Viewer + Record: full-width pills
+   ----------------------------- */
+.ppgc-modelviewer__drop[data-drop-panel="viewer"] .ppgc-modelviewer__row,
+.ppgc-modelviewer__drop[data-drop-panel="record"] .ppgc-modelviewer__row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+/* Stretch buttons to fill the row width evenly */
+.ppgc-modelviewer__drop[data-drop-panel="viewer"] .ppgc-modelviewer__pill,
+.ppgc-modelviewer__drop[data-drop-panel="record"] .ppgc-modelviewer__pill {
+	flex: 1 1 160px;
+	width: auto;
+}
+
+/* -----------------------------
+   Assets dropdown layout
+   ----------------------------- */
+
+/* Two-column container: Meshes | Materials */
+.ppgc-modelviewer__drop[data-drop-panel="assets"] .ppgc-modelviewer__meshctl {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 10px;
+
+	/* Keep the entire Assets dropdown constrained */
+	max-height: 60vh;
+	overflow: hidden;
+}
+
+/* Stack to one column on narrow widths */
+@media (max-width: 900px) {
+	.ppgc-modelviewer__drop[data-drop-panel="assets"] .ppgc-modelviewer__meshctl {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* Each column should shrink properly under max-height constraints */
+.ppgc-modelviewer__drop[data-drop-panel="assets"] .ppgc-modelviewer__meshcol {
+	min-height: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+/* -----------------------------
+   Assets lists: "show 5 then scroll"
+   (requires the .ppgc-modelviewer__listbox wrapper in HTML)
+   ----------------------------- */
+
+/* Scroll container for each checklist */
+.ppgc-modelviewer__drop[data-drop-panel="assets"] .ppgc-modelviewer__listbox {
+	border: 1px solid #24242a;
+	border-radius: 10px;
+	background: #0f0f14;
+
+	/* Roughly ~5 rows visible, remainder scrolls */
+	max-height: 200px;
+	overflow: auto;
+
+	/* Important for nested flex/grid shrink behavior */
+	min-height: 0;
+}
+
+/* Checklist becomes content-only (wrapper owns scroll + border) */
+.ppgc-modelviewer__drop[data-drop-panel="assets"] .ppgc-modelviewer__checklist {
+	border: 0;
+	border-radius: 0;
+	padding: 8px;
+	background: transparent;
+
+	/* Keep items in a single column (no newspaper columns) */
+	column-count: 1;
+	column-gap: 0;
+
+	/* Let wrapper handle scrolling */
+	max-height: none;
+	overflow: visible;
+}
+
+/* Each row should behave like a full-width row */
+.ppgc-modelviewer__drop[data-drop-panel="assets"] .ppgc-modelviewer__checkrow {
+	display: flex;
+	width: 100%;
+}
+
+/* ===============================
+   Solo mode (hide UI overlays)
+   =============================== */
+
+.ppgc-modelviewer.is-solo .ppgc-modelviewer__overlay,
+.ppgc-modelviewer.is-solo .ppgc-modelviewer__help {
+	display: none !important;
+}

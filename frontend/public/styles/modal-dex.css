@@ -1,0 +1,159 @@
+.grid {
+	display: grid;
+	gap: var(--gap);
+	padding: 16px;
+}
+
+/* Base: responsive columns for Dex and Fashion */
+#modal #dexGrid.grid,
+#fashionModal #fashionGrid.grid,
+#medalsModal #medalsGrid.grid {
+	display: grid;
+	width: 100%;
+	box-sizing: border-box;
+	grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+	gap: var(--gap, 12px);
+	padding: 16px;
+	align-content: start;
+	align-items: start;
+}
+
+/* Curry & Sandwich grids share the same responsive layout */
+#curryGrid.grid,
+#sandwichGrid.grid,
+#capsuleGrid.grid {
+	display: grid;
+	width: 100%;
+	box-sizing: border-box;
+	grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+	gap: var(--gap, 12px);
+	padding: 16px;
+	align-content: start;
+	align-items: stretch;
+}
+
+.dex-info-btn {
+	position: absolute;
+	top: 4px;
+	left: 6px;
+	border: none;
+	border-radius: 999px;
+	padding: 2px 6px;
+	font-size: 0.75rem;
+	cursor: pointer;
+	background: rgba(0, 0, 0, 0.6);
+	color: #fff;
+}
+
+.dex-webm {
+	background: transparent;
+	display: block;
+}
+
+/* Thumbnail shell for Dex/Fashion/Curry/Sandwich cards */
+.thumb {
+	position: relative;
+	aspect-ratio: 1/1;
+	background: #0f0f11;
+	display: grid;
+	place-items: center;
+	padding: 4px;
+	/* small padding so the image never kisses the edge */
+}
+
+.thumb img {
+	max-width: 100%;
+	max-height: 100%;
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+	display: block;
+}
+
+/* Sprite status filters */
+.thumb.status-unknown img.sprite,
+.thumb.status-unknown video.sprite {
+	filter: brightness(0);
+}
+
+.thumb.status-seen img.sprite,
+.thumb.status-seen video.sprite {
+	filter: grayscale(100%);
+}
+
+.thumb.status-normal img.sprite {
+	filter: none;
+}
+
+@media (min-width: 1600px) {
+
+	#modal #dexGrid.grid,
+	#fashionModal #fashionGrid.grid,
+	#medalsModal #medalsGrid.grid,
+	#curryGrid.grid,
+	#sandwichGrid.grid {
+		grid-template-columns: repeat(6, 1fr);
+	}
+}
+
+/* Badges overlay (Dex / Forms / Research icons) */
+.badges {
+	position: absolute;
+	top: 6px;
+	right: 6px;
+	display: flex;
+	flex-direction: column;
+	/* stack vertically */
+	gap: 6px;
+	pointer-events: none;
+}
+
+.badges img {
+	width: 22px;
+	height: 22px;
+	object-fit: contain;
+	filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.7));
+}
+
+/* Flag dropdown inside Dex / Forms modal */
+.flag-select,
+.dex-scope-select {
+	background: #1b1b1e;
+	color: #eaeaea;
+	border: 1px solid #2e2e33;
+	border-radius: 8px;
+	padding: 6px 10px;
+	font-size: 13px;
+}
+
+/* Dex modal header tweaks */
+#modal .modal-hd {
+	flex-wrap: wrap;
+	/* let things wrap instead of squishing */
+}
+
+/* Two-line title inside the h2 */
+#modal .modal-hd h2 {
+	display: block;
+}
+
+#modal .dex-modal-title-main {
+	display: block;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+#modal .dex-modal-title-scope {
+	display: block;
+	font-size: 13px;
+	opacity: 0.85;
+}
+
+/* Stack Set All + status dropdown vertically, centered */
+#modal .dex-bulk-group {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 4px;
+}

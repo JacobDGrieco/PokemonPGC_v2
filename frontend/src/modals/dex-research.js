@@ -1,5 +1,8 @@
 // dex-research-modal.js
 import { save } from "../store.js";
+import { ensurePpgcRoot } from "../runtime/globals.js";
+
+const PPGC = ensurePpgcRoot();
 
 let _LAST_RESEARCH_CTX = null;
 function _computeResearchTierStats(tasks, rec = {}) {
@@ -35,10 +38,10 @@ function _computeResearchTierStats(tasks, rec = {}) {
 	};
 }
 window.PPGC = window.PPGC || {};
-window.PPGC.computeResearchTierStats = function computeResearchTierStats(tasks, rec) {
+PPGC.computeResearchTierStats = function computeResearchTierStats(tasks, rec) {
 	return _computeResearchTierStats(tasks, rec);
 };
-window.PPGC.getMonResearchTierStats = function getMonResearchTierStats(gameKey, monId, monOrTasks, store) {
+PPGC.getMonResearchTierStats = function getMonResearchTierStats(gameKey, monId, monOrTasks, store) {
 	const tasks = Array.isArray(monOrTasks) ? monOrTasks : (Array.isArray(monOrTasks?.research) ? monOrTasks.research : []);
 	const recAll =
 		store?.dexResearchStatus instanceof Map

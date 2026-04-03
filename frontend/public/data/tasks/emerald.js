@@ -1,0 +1,359 @@
+(() => {
+	const gen = 3;
+	const GAME_KEYS = ["emerald"];
+
+	const baseSprite = (gameKey, natiId) => _frontSprite(gen, gameKey, natiId);
+	const task = (gameKey, name) => _task(gameKey, name);
+	const npc = (gameKey, name) => _npc(gameKey, name);
+	const location = (gameKey, name) => _location(gameKey, name);
+	const heldItem = (name) => _heldItem(gen, name);
+	const keyItem = (name) => _keyItem(gen, name);
+	const decoration = (name) => _decoration(gen, name);
+	const ribbon = (name) => _ribbon(gen, name);
+	const hm = (type) => _hm(gen, type);
+	const tm = (type) => _tm(gen, type);
+
+	const SECTIONS = [
+		{ id: "catching", title: "Gotta Catch 'Em All" },
+		{ id: "story", title: "Main Story" },
+		{ id: "activities", title: "Activities" },
+		{ id: "battle", title: "Battle" },
+		{ id: "upgrades", title: "Upgrades" },
+		{ id: "collectables", title: "Collectables" },
+		{ id: "thms", title: "TMs/HMs" },
+		{ id: "distributions", title: "Distributions" },
+		{ id: "extra-credit", title: "Extra Credit" },
+	];
+
+	const TASKS_BY_SECTION = {
+		"catching": [
+			{
+				id: 1, text: "Catch all the Legendaries", children: [
+					{ id: 1, text: "Catch Kyogre", img: ({ gameKey }) => baseSprite(gameKey, 382), },
+					{ id: 2, text: "Catch Groudon", img: ({ gameKey }) => baseSprite(gameKey, 383), },
+					{ id: 3, text: "Catch Rayquaza", img: ({ gameKey }) => baseSprite(gameKey, 384), },
+					{ id: 4, text: "Catch Regirock", img: ({ gameKey }) => baseSprite(gameKey, 377), },
+					{ id: 5, text: "Catch Regice", img: ({ gameKey }) => baseSprite(gameKey, 378), },
+					{ id: 6, text: "Catch Registeel", img: ({ gameKey }) => baseSprite(gameKey, 379), },
+					{ id: 7, text: "Catch/Trade for Latias", img: ({ gameKey }) => baseSprite(gameKey, 380), }, 	// Need to set to Catch or Trade for games
+					{ id: 8, text: "Catch/Trade for Latios", img: ({ gameKey }) => baseSprite(gameKey, 381), },		// Need to set to Catch or Trade for games
+					{ id: 9, text: "Catch Lugia", img: ({ gameKey }) => baseSprite(gameKey, 249), },
+					{ id: 10, text: "Catch Ho-Oh", img: ({ gameKey }) => baseSprite(gameKey, 250), },
+				],
+			},
+			{
+				id: 2, text: "Obtain all In-Game Gift Pokémon", children: [
+					{
+						id: 1, text: "Lileep / Anorith", img: ({ gameKey }) => task(gameKey, "lileep-anorith"), eithers: {
+							1: { text: "" }, 2: { text: "" },
+						},
+					},
+					{ id: 2, text: "Beldum", img: ({ gameKey }) => baseSprite(gameKey, 374) },
+					{ id: 3, text: "Castform", img: ({ gameKey }) => baseSprite(gameKey, 351) },
+					{ id: 4, text: "Wynaut", img: ({ gameKey }) => baseSprite(gameKey, 360) },
+				],
+			},
+			{
+				id: 3, text: "Complete all In-Game Trades", children: [
+					{ id: 1, text: "Seedot for Ralts", img: ({ gameKey }) => task(gameKey, "seedot-for-ralts") },
+					{ id: 2, text: "Volbeat for Plusle", img: ({ gameKey }) => task(gameKey, "volbeat-for-plusle") },
+					{ id: 3, text: "Bagon for Horsea", img: ({ gameKey }) => task(gameKey, "bagon-for-horsea") },
+					{ id: 4, text: "Skitty for Meowth", img: ({ gameKey }) => task(gameKey, "skitty-for-meowth") },
+				],
+			},
+		],
+		"story": [
+			{ id: 1, text: "Collect all 8 Gym Badges and Defeat the Elite 4", img: () => _badges(["stone", "knuckle", "dynamo", "heat", "balance", "feather", "mind", "rain"]), noCenter: true, },
+		],
+		"activities": [
+			{
+				id: 1, text: "Master all the Contests", noCenter: true, children: [
+					{ id: 1, text: "Beauty Contests", img: () => ribbon("beauty-master"), type: "tiered", tiers: ["Normal", "Super", "Hyper", "Master"], },
+					{ id: 2, text: "Tough Contests", img: () => ribbon("tough-master"), type: "tiered", tiers: ["Normal", "Super", "Hyper", "Master"], },
+					{ id: 3, text: "Cute Contests", img: () => ribbon("cute-master"), type: "tiered", tiers: ["Normal", "Super", "Hyper", "Master"], },
+					{ id: 4, text: "Cool Contests", img: () => ribbon("cool-master"), type: "tiered", tiers: ["Normal", "Super", "Hyper", "Master"], },
+					{ id: 5, text: "Smart Contests", img: () => ribbon("smart-master"), type: "tiered", tiers: ["Normal", "Super", "Hyper", "Master"], },
+				],
+			},
+			{ id: 2, text: "Complete all chambers of the Trick House", type: "tiered", tiers: [range(1, 8)], },
+		],
+		"battle": [
+			{ id: 1, text: "Rematch Steven at Meteor Crater", noCenter: true },
+			{
+				id: 2, text: "Complete all modes of Trainer Hill", children: [
+					{ id: 1, text: "Normal Mode" },
+					{ id: 2, text: "Unique Mode" },
+					{ id: 3, text: "Variety Mode" },
+					{ id: 4, text: "Expert Mode" },
+				],
+			},
+			{
+				id: 3, text: "Complete all the Battle Tents", children: [
+					{ id: 1, text: "Slateport" },
+					{ id: 2, text: "Verdanturf" },
+					{ id: 3, text: "Fallarbor" },
+				],
+			},
+			{
+				id: 4, text: "Obtain all Silver Badges in the Battle Frontier", children: [
+					{ id: 1, text: "Dome" },
+					{ id: 2, text: "Pike" },
+					{ id: 3, text: "Arena" },
+					{ id: 4, text: "Factory" },
+					{ id: 5, text: "Palace" },
+					{ id: 6, text: "Pyramid" },
+					{ id: 7, text: "Tower" },
+				],
+			},
+			{
+				id: 5, text: "Obtain all Silver Badges in the Battle Frontier", children: [
+					{ id: 1, text: "Dome" },
+					{ id: 2, text: "Pike" },
+					{ id: 3, text: "Arena" },
+					{ id: 4, text: "Factory" },
+					{ id: 5, text: "Palace" },
+					{ id: 6, text: "Pyramid" },
+					{ id: 7, text: "Tower" },
+				],
+			},
+		],
+		"upgrades": [
+			{ id: 1, text: "Obtain the National PokeDex", noCenter: true },
+			{
+				id: 2, text: "Obtain the Gold 4-Star Trainer Card", noCenter: true, children: [
+					{ id: 1, text: "Defeat the Elite 4/Champion" },
+					{ id: 2, text: "Win all Master Rank Contests" },
+					{ id: 3, text: "Defeat the 50 trainer challenge in the Battle Tower" },
+					{ id: 4, text: "Complete the Hoenn Regional PokeDex (200)" },
+				],
+			},
+		],
+		"collectables": [
+			{
+				id: 1, text: "Obtain all extra Key Items", children: [
+					{ id: 1, text: "Exp. Share", img: () => heldItem("exp-share") },
+					{ id: 2, text: "Go-Goggles", img: () => keyItem("go-goggles") },
+					{ id: 3, text: "Good Rod", img: () => keyItem("good-rod") },
+					{ id: 4, text: "Item Finder", img: () => keyItem("item-finder") },
+					{ id: 5, text: "Old Rod", img: () => keyItem("old-rod") },
+					{ id: 6, text: "PokeBlock Case", img: () => keyItem("pokeblock-case") },
+					{ id: 7, text: "Soot Sack", img: () => keyItem("soot-sack") },
+					{ id: 8, text: "Super Rod", img: () => keyItem("super-rod") },
+					{ id: 9, text: "Wailmer Pail", img: () => keyItem("wailmer-pail") },
+				],
+			},
+			{
+				id: 2, text: "Obtain all items from collecting soot", children: [
+					{ id: 1, text: "Pretty Chair", img: () => decoration("pretty-chair"), tooltip: "Route 113 (Glass Workshop)\n6000 steps" },
+					{ id: 2, text: "Pretty Desk", img: () => decoration("pretty-desk"), tooltip: "Route 113 (Glass Workshop)\n8000 steps" },
+				],
+			},
+			{ id: 3, text: "Find all hidden items with the Item Finder", img: () => keyItem("item-finder"), noCenter: true, type: "tiered", tiers: [range(1, 97)], },
+			{
+				id: 4, text: "Obtain all Secret Base decorations", children: [
+					{ id: 1, text: "Small Desk", img: () => decoration("small-desk"), tooltip: "Fortree City (desk and chair shop)\n$3000" },
+					{ id: 2, text: "Pokémon Desk", img: () => decoration("pokemon-desk"), tooltip: "Fortree City (desk and chair shop)\n$3000" },
+					{ id: 3, text: "Heavy Desk", img: () => decoration("heavy-desk"), tooltip: "Fortree City (desk and chair shop)\n$6000" },
+					{ id: 4, text: "Ragged Desk", img: () => decoration("ragged-desk"), tooltip: "Fortree City (desk and chair shop)\n$6000" },
+					{ id: 5, text: "Comfort Desk", img: () => decoration("comfort-desk"), tooltip: "Fortree City (desk and chair shop)\n$6000" },
+					{ id: 6, text: "Pretty Desk", img: () => decoration("pretty-desk"), tooltip: "Route 113 (Glass Workshop)\n8000 steps" },
+					{ id: 7, text: "Brick Desk", img: () => decoration("brick-desk"), tooltip: "Fortree City (desk and chair shop)\n$9000" },
+					{ id: 8, text: "Camp Desk", img: () => decoration("camp-desk"), tooltip: "Fortree City (desk and chair shop)\n$9000" },
+					{ id: 9, text: "Hard Desk", img: () => decoration("hard-desk"), tooltip: "Fortree City (desk and chair shop)\n$9000" },
+					{ id: 10, text: "Small Chair", img: () => decoration("small-chair"), tooltip: "Fortree City (desk and chair shop)\n$2000" },
+					{ id: 11, text: "Pokémon Chair", img: () => decoration("pokemon-chair"), tooltip: "Fortree City (desk and chair shop)\n$2000" },
+					{ id: 12, text: "Heavy Chair", img: () => decoration("heavy-chair"), tooltip: "Fortree City (desk and chair shop)\n$2000" },
+					{ id: 13, text: "Pretty Chair", img: () => decoration("pretty-chair"), tooltip: "Route 113 (Glass Workshop)\n6000 steps" },
+					{ id: 14, text: "Comfort Chair", img: () => decoration("comfort-chair"), tooltip: "Fortree City (desk and chair shop)\n$2000" },
+					{ id: 15, text: "Ragged Chair", img: () => decoration("ragged-chair"), tooltip: "Fortree City (desk and chair shop)\n$2000" },
+					{ id: 16, text: "Brick Chair", img: () => decoration("brick-chair"), tooltip: "Fortree City (desk and chair shop)\n$2000" },
+					{ id: 17, text: "Camp Chair", img: () => decoration("camp-chair"), tooltip: "Fortree City (desk and chair shop)\n$2000" },
+					{ id: 18, text: "Hard Chair", img: () => decoration("hard-chair"), tooltip: "Fortree City (desk and chair shop)\n$2000" },
+					{ id: 19, text: "Red Plant", img: () => decoration("red-plant"), tooltip: "Route 104 (Pretty Petal flower shop)\n$3000" },
+					{ id: 20, text: "Tropical Plant", img: () => decoration("tropical-plant"), tooltip: "Route 104 (Pretty Petal flower shop)\n$3000" },
+					{ id: 21, text: "Pretty Flowers", img: () => decoration("pretty-flowers"), tooltip: "Route 104 (Pretty Petal flower shop)\n$3000" },
+					{ id: 22, text: "Colorful Plant", img: () => decoration("colorful-plant"), tooltip: "Route 104 (Pretty Petal flower shop)\n$5000" },
+					{ id: 23, text: "Big Plant", img: () => decoration("big-plant"), tooltip: "Route 104 (Pretty Petal flower shop)\n$5000" },
+					{ id: 24, text: "Gorgeous Plant", img: () => decoration("gorgeous-plant"), tooltip: "Route 104 (Pretty Petal flower shop)\n$5000" },
+					{ id: 25, text: "Red Brick", img: () => decoration("red-brick"), tooltip: "Slateport City (Secret Power Club shop)\n$500" },
+					{ id: 26, text: "Yellow Brick", img: () => decoration("yellow-brick"), tooltip: "Slateport City (Secret Power Club shop)\n$500" },
+					{ id: 27, text: "Blue Brick", img: () => decoration("blue-brick"), tooltip: "Slateport City (Secret Power Club shop)\n$500" },
+					{ id: 28, text: "Red Balloon", img: () => decoration("red-balloon"), tooltip: "Slateport City (Secret Power Club shop)\n$500" },
+					{ id: 29, text: "Blue Balloon", img: () => decoration("blue-balloon"), tooltip: "Slateport City (Secret Power Club shop)\n$500" },
+					{ id: 30, text: "Yellow Balloon", img: () => decoration("yellow-balloon"), tooltip: "Slateport City (Secret Power Club shop)\n$500" },
+					{ id: 31, text: "Red Tent", img: () => decoration("red-tent"), tooltip: "Trick House (after completing all challenges)" },
+					{ id: 32, text: "Blue Tent", img: () => decoration("blue-tent"), tooltip: "Trick House (after completing all challenges)" },
+					{ id: 33, text: "Solid Board", img: () => decoration("solid-board"), tooltip: "Lilycove Department Store (clear-out sale)\n$3000" },
+					{ id: 34, text: "Slide", img: () => decoration("slide"), tooltip: "Lilycove Department Store (clear-out sale)\n$8000" },
+					{ id: 35, text: "Fence Length", img: () => decoration("fence-length"), tooltip: "Lilycove Department Store (clear-out sale)\n$500" },
+					{ id: 36, text: "Fence Width", img: () => decoration("fence-width"), tooltip: "Lilycove Department Store (clear-out sale)\n$500" },
+					{ id: 37, text: "Tire", img: () => decoration("tire"), tooltip: "Lilycove Department Store (clear-out sale)\n$800" },
+					{ id: 38, text: "Stand", img: () => decoration("stand"), tooltip: "Lilycove Department Store (clear-out sale)\n$7000" },
+					{ id: 39, text: "Mud Ball", img: () => decoration("mud-ball"), tooltip: "Lilycove Department Store (clear-out sale)\n$200" },
+					{ id: 40, text: "Breakable Door", img: () => decoration("breakable-door"), tooltip: "Lilycove Department Store (clear-out sale)\n$3000" },
+					{ id: 41, text: "Sand Ornament", img: () => decoration("sand-ornament"), tooltip: "Lilycove Department Store (clear-out sale)\n$3000" },
+					{ id: 42, text: "Silver Shield", img: () => decoration("silver-shield"), tooltip: "Battle Frontier" },
+					{ id: 43, text: "Gold Shield", img: () => decoration("gold-shield"), tooltip: "Battle Frontier" },
+					{ id: 44, text: "Glass Ornament", img: () => decoration("glass-ornament"), tooltip: "Lilycove Museum" },
+					{ id: 45, text: "TV", img: () => decoration("tv"), tooltip: "Lilycove Department Store (clear-out sale)\n$3000" },
+					{ id: 46, text: "Round TV", img: () => decoration("round-tv"), tooltip: "Lilycove Department Store (clear-out sale)\n$4000" },
+					{ id: 47, text: "Cute TV", img: () => decoration("cute-tv"), tooltip: "Lilycove Department Store (clear-out sale)\n$4000" },
+					{ id: 48, text: "Glitter Mat", img: () => decoration("glitter-mat"), tooltip: "Lilycove Department Store\n$2000" },
+					{ id: 49, text: "Jump Mat", img: () => decoration("jump-mat"), tooltip: "Lilycove Department Store\n$2000" },
+					{ id: 50, text: "Spin Mat", img: () => decoration("spin-mat"), tooltip: "Lilycove Department Store\n$2000" },
+					{ id: 51, text: "C Low Note Mat", img: () => decoration("c-low-note-mat"), tooltip: "Slateport City (Secret Power Club shop)\n$500" },
+					{ id: 52, text: "D Note Mat", img: () => decoration("d-note-mat"), tooltip: "Slateport City (Secret Power Club shop)\n$500" },
+					{ id: 53, text: "E Note Mat", img: () => decoration("e-note-mat"), tooltip: "Slateport City (Secret Power Club shop)\n$500" },
+					{ id: 54, text: "F Note Mat", img: () => decoration("f-note-mat"), tooltip: "Slateport City (Secret Power Club shop)\n$500" },
+					{ id: 55, text: "G Note Mat", img: () => decoration("g-note-mat"), tooltip: "Slateport City (Secret Power Club shop)\n$500" },
+					{ id: 56, text: "A Note Mat", img: () => decoration("a-note-mat"), tooltip: "Slateport City (Secret Power Club shop)\n$500" },
+					{ id: 57, text: "B Note Mat", img: () => decoration("b-note-mat"), tooltip: "Slateport City (Secret Power Club shop)\n$500" },
+					{ id: 58, text: "C High Note Mat", img: () => decoration("c-high-note-mat"), tooltip: "Slateport City (Secret Power Club shop)\n$500" },
+					{ id: 59, text: "Surf Mat", img: () => decoration("surf-mat"), tooltip: "Lilycove Department Store\n$4000" },
+					{ id: 60, text: "Thunder Mat", img: () => decoration("thunder-mat"), tooltip: "Lilycove Department Store\n$4000" },
+					{ id: 61, text: "Fire Blast Mat", img: () => decoration("fire-blast-mat"), tooltip: "Lilycove Department Store\n$4000" },
+					{ id: 62, text: "Powder Snow Mat", img: () => decoration("powder-snow-mat"), tooltip: "Lilycove Department Store\n$4000" },
+					{ id: 63, text: "Attract Mat", img: () => decoration("attract-mat"), tooltip: "Lilycove Department Store\n$4000" },
+					{ id: 64, text: "Fissure Mat", img: () => decoration("fissure-mat"), tooltip: "Lilycove Department Store\n$4000" },
+					{ id: 65, text: "Spikes Mat", img: () => decoration("spikes-mat"), tooltip: "Lilycove Department Store\n$4000" },
+					{ id: 66, text: "Ball Poster", img: () => decoration("ball-poster"), tooltip: "Lilycove Department Store\n$1000" },
+					{ id: 67, text: "Green Poster", img: () => decoration("green-poster"), tooltip: "Lilycove Department Store\n$1000" },
+					{ id: 68, text: "Red Poster", img: () => decoration("red-poster"), tooltip: "Lilycove Department Store\n$1000" },
+					{ id: 69, text: "Blue Poster", img: () => decoration("blue-poster"), tooltip: "Lilycove Department Store\n$1000" },
+					{ id: 70, text: "Cute Poster", img: () => decoration("cute-poster"), tooltip: "Lilycove Department Store\n$1000" },
+					{ id: 71, text: "Pika Poster", img: () => decoration("pika-poster"), tooltip: "Lilycove Department Store\n$1500" },
+					{ id: 72, text: "Long Poster", img: () => decoration("long-poster"), tooltip: "Lilycove Department Store\n$1500" },
+					{ id: 73, text: "Sea Poster", img: () => decoration("sea-poster"), tooltip: "Lilycove Department Store\n$1500" },
+					{ id: 74, text: "Sky Poster", img: () => decoration("sky-poster"), tooltip: "Lilycove Department Store\n$1500" },
+					{ id: 75, text: "Kiss Poster", img: () => decoration("kiss-poster"), tooltip: "Battle Frontier\n16 BP" },
+					{ id: 76, text: "Pichu Doll", img: () => decoration("pichu-doll"), tooltip: "Lilycove Department Store\n$3000" },
+					{ id: 77, text: "Pikachu Doll", img: () => decoration("pikachu-doll"), tooltip: "Lilycove Department Store\n$3000" },
+					{ id: 78, text: "Marill Doll", img: () => decoration("marill-doll"), tooltip: "Slateport City (doll shop) / Lilycove Department Store\n$3000" },
+					{ id: 79, text: "Togepi Doll", img: () => decoration("togepi-doll"), tooltip: "Battle Frontier\n48 BP" },
+					{ id: 80, text: "Cyndaquil Doll", img: () => decoration("cyndaquil-doll"), tooltip: "Battle Frontier\n80 BP" },
+					{ id: 81, text: "Chikorita Doll", img: () => decoration("chikorita-doll"), tooltip: "Battle Frontier\n80 BP" },
+					{ id: 82, text: "Totodile Doll", img: () => decoration("totodile-doll"), tooltip: "Battle Frontier\n80 BP" },
+					{ id: 83, text: "Jigglypuff Doll", img: () => decoration("jigglypuff-doll"), tooltip: "Lilycove Department Store\n$3000" },
+					{ id: 84, text: "Meowth Doll", img: () => decoration("meowth-doll"), tooltip: "Battle Frontier\n48 BP" },
+					{ id: 85, text: "Clefairy Doll", img: () => decoration("clefairy-doll"), tooltip: "Battle Frontier\n48 BP" },
+					{ id: 86, text: "Ditto Doll", img: () => decoration("ditto-doll"), tooltip: "Battle Frontier\n48 BP" },
+					{ id: 87, text: "Smoochum Doll", img: () => decoration("smoochum-doll"), tooltip: "Battle Frontier\n32 BP" },
+					{ id: 88, text: "Treecko Doll", img: () => decoration("treecko-doll"), tooltip: "Mauville Game Corner\n1000C" },
+					{ id: 89, text: "Torchic Doll", img: () => decoration("torchic-doll"), tooltip: "Mauville Game Corner\n1000C" },
+					{ id: 90, text: "Mudkip Doll", img: () => decoration("mudkip-doll"), tooltip: "Mauville Game Corner\n1000C" },
+					{ id: 91, text: "Duskull Doll", img: () => decoration("duskull-doll"), tooltip: "Lilycove Department Store\n$3000" },
+					{ id: 92, text: "Wynaut Doll", img: () => decoration("wynaut-doll"), tooltip: "Lilycove Department Store\n$3000" },
+					{ id: 93, text: "Baltoy Doll", img: () => decoration("baltoy-doll"), tooltip: "Lilycove Department Store\n$3000" },
+					{ id: 94, text: "Kecleon Doll", img: () => decoration("kecleon-doll"), tooltip: "Lilycove Department Store\n$3000" },
+					{ id: 95, text: "Azurill Doll", img: () => decoration("azurill-doll"), tooltip: "Slateport City (doll shop) / Lilycove Department Store\n$3000" },
+					{ id: 96, text: "Skitty Doll", img: () => decoration("skitty-doll"), tooltip: "Slateport City (doll shop) / Lilycove Department Store\n$3000" },
+					{ id: 97, text: "Swablu Doll", img: () => decoration("swablu-doll"), tooltip: "Lilycove Department Store\n$3000" },
+					{ id: 98, text: "Gulpin Doll", img: () => decoration("gulpin-doll"), tooltip: "Lilycove Department Store\n$3000" },
+					{ id: 99, text: "Lotad Doll", img: () => decoration("lotad-doll"), tooltip: "Route 114" },
+					{ id: 100, text: "Pika Cushion", img: () => decoration("pika-cushion"), tooltip: "Lilycove Department Store\n$2000" },
+					{ id: 101, text: "Round Cushion", img: () => decoration("round-cushion"), tooltip: "Lilycove Department Store\n$2000" },
+					{ id: 102, text: "Kiss Cushion", img: () => decoration("kiss-cushion"), tooltip: "Battle Frontier\n32 BP" },
+					{ id: 103, text: "Zigzag Cushion", img: () => decoration("zigzag-cushion"), tooltip: "Lilycove Department Store\n$2000" },
+					{ id: 104, text: "Spin Cushion", img: () => decoration("spin-cushion"), tooltip: "Lilycove Department Store\n$2000" },
+					{ id: 105, text: "Diamond Cushion", img: () => decoration("diamond-cushion"), tooltip: "Lilycove Department Store\n$2000" },
+					{ id: 106, text: "Ball Cushion", img: () => decoration("ball-cushion"), tooltip: "Lilycove Department Store\n$2000" },
+					{ id: 107, text: "Grass Cushion", img: () => decoration("grass-cushion"), tooltip: "Lilycove Department Store\n$2000" },
+					{ id: 108, text: "Fire Cushion", img: () => decoration("fire-cushion"), tooltip: "Lilycove Department Store\n$2000" },
+					{ id: 109, text: "Water Cushion", img: () => decoration("water-cushion"), tooltip: "Lilycove Department Store\n$2000" },
+					{ id: 110, text: "Snorlax Doll", img: () => decoration("snorlax-doll"), tooltip: "Battle Frontier\n128 BP" },
+					{ id: 111, text: "Rhydon Doll", img: () => decoration("rhydon-doll"), tooltip: "Lilycove Department Store (clear-out sale)\n$10000" },
+					{ id: 112, text: "Lapras Doll", img: () => decoration("lapras-doll"), tooltip: "Battle Frontier\n128 BP" },
+					{ id: 113, text: "Venusaur Doll", img: () => decoration("venusaur-doll"), tooltip: "Battle Frontier\n256 BP" },
+					{ id: 114, text: "Charizard Doll", img: () => decoration("charizard-doll"), tooltip: "Battle Frontier\n256 BP" },
+					{ id: 115, text: "Blastoise Doll", img: () => decoration("blastoise-doll"), tooltip: "Battle Frontier\n256 BP" },
+					{ id: 116, text: "Wailmer Doll", img: () => decoration("wailmer-doll"), tooltip: "Sootopolis City / Lilycove Department Store (clear-out sale)\n$10000" },
+				],
+			},
+		],
+		"thms": [
+			{
+				id: 1, text: "Collect all HMs", children: [
+					{ id: 1, text: "HM01: Cut", img: () => hm("normal") },
+					{ id: 2, text: "HM02: Fly", img: () => hm("flying") },
+					{ id: 3, text: "HM03: Surf", img: () => hm("water") },
+					{ id: 4, text: "HM04: Strength", img: () => hm("normal") },
+					{ id: 5, text: "HM05: Flash", img: () => hm("normal") },
+					{ id: 6, text: "HM06: Rock Smash", img: () => hm("fighting") },
+					{ id: 7, text: "HM07: Waterfall", img: () => hm("water") },
+					{ id: 8, text: "HM08: Dive", img: () => hm("water") },
+				],
+			},
+			{
+				id: 2, text: "Collect all HMs", children: [
+					{ id: 1, text: "TM 01 - Focus Punch", img: () => tm("fighting") },
+					{ id: 2, text: "TM 02 - Dragon Claw", img: () => tm("dragon") },
+					{ id: 3, text: "TM 03 - Water Pulse", img: () => tm("water") },
+					{ id: 4, text: "TM 04 - Calm Mind", img: () => tm("psychic") },
+					{ id: 5, text: "TM 05 - Roar", img: () => tm("normal") },
+					{ id: 6, text: "TM 06 - Toxic", img: () => tm("poison") },
+					{ id: 7, text: "TM 07 - Hail", img: () => tm("ice") },
+					{ id: 8, text: "TM 08 - Bulk Up", img: () => tm("fighting") },
+					{ id: 9, text: "TM 09 - Bullet Seed", img: () => tm("grass") },
+					{ id: 10, text: "TM 10 - Hidden Power", img: () => tm("normal") },
+					{ id: 11, text: "TM 11 - Sunny Day", img: () => tm("fire") },
+					{ id: 12, text: "TM 12 - Taunt", img: () => tm("dark") },
+					{ id: 13, text: "TM 13 - Ice Beam", img: () => tm("ice") },
+					{ id: 14, text: "TM 14 - Blizzard", img: () => tm("ice") },
+					{ id: 15, text: "TM 15 - Hyper Beam", img: () => tm("normal") },
+					{ id: 16, text: "TM 16 - Light Screen", img: () => tm("psychic") },
+					{ id: 17, text: "TM 17 - Protect", img: () => tm("normal") },
+					{ id: 18, text: "TM 18 - Rain Dance", img: () => tm("water") },
+					{ id: 19, text: "TM 19 - Giga Drain", img: () => tm("grass") },
+					{ id: 20, text: "TM 20 - Safeguard", img: () => tm("normal") },
+					{ id: 21, text: "TM 21 - Frustration", img: () => tm("normal") },
+					{ id: 22, text: "TM 22 - Solar Beam", img: () => tm("grass") },
+					{ id: 23, text: "TM 23 - Iron Tail", img: () => tm("steel") },
+					{ id: 24, text: "TM 24 - Thunderbolt", img: () => tm("electric") },
+					{ id: 25, text: "TM 25 - Thunder", img: () => tm("electric") },
+					{ id: 26, text: "TM 26 - Earthquake", img: () => tm("ground") },
+					{ id: 27, text: "TM 27 - Return", img: () => tm("normal") },
+					{ id: 28, text: "TM 28 - Dig", img: () => tm("ground") },
+					{ id: 29, text: "TM 29 - Psychic", img: () => tm("psychic") },
+					{ id: 30, text: "TM 30 - Shadow Ball", img: () => tm("ghost") },
+					{ id: 31, text: "TM 31 - Brick Break", img: () => tm("fighting") },
+					{ id: 32, text: "TM 32 - Double Team", img: () => tm("normal") },
+					{ id: 33, text: "TM 33 - Reflect", img: () => tm("psychic") },
+					{ id: 34, text: "TM 34 - Shock Wave", img: () => tm("electric") },
+					{ id: 35, text: "TM 35 - Flamethrower", img: () => tm("fire") },
+					{ id: 36, text: "TM 36 - Sludge Bomb", img: () => tm("poison") },
+					{ id: 37, text: "TM 37 - Sandstorm", img: () => tm("rock") },
+					{ id: 38, text: "TM 38 - Fire Blast", img: () => tm("fire") },
+					{ id: 39, text: "TM 39 - Rock Tomb", img: () => tm("rock") },
+					{ id: 40, text: "TM 40 - Aerial Ace", img: () => tm("flying") },
+					{ id: 41, text: "TM 41 - Torment", img: () => tm("dark") },
+					{ id: 42, text: "TM 42 - Facade", img: () => tm("normal") },
+					{ id: 43, text: "TM 43 - Secret Power", img: () => tm("normal") },
+					{ id: 44, text: "TM 44 - Rest", img: () => tm("psychic") },
+					{ id: 45, text: "TM 45 - Attract", img: () => tm("normal") },
+					{ id: 46, text: "TM 46 - Thief", img: () => tm("dark") },
+					{ id: 47, text: "TM 47 - Steel Wing", img: () => tm("steel") },
+					{ id: 48, text: "TM 48 - Skill Swap", img: () => tm("psychic") },
+					{ id: 49, text: "TM 49 - Snatch", img: () => tm("dark") },
+					{ id: 50, text: "TM 50 - Overheat", img: () => tm("fire") },
+				],
+			},
+		],
+		"extra-credit": [
+			{ id: 1, text: "Obtain Jirachi", img: ({ gameKey }) => baseSprite(gameKey, 385), },
+			{ id: 2, text: "Obtain Deoxys", img: ({ gameKey }) => baseSprite(gameKey, 386), },
+			{
+				id: 3, text: "Obtain all Secret Base e-Reader decorations", children: [
+					{ id: 1, text: "Regirock Doll", img: () => decoration("regirock-doll"), tooltip: "Mystery Event (e-Reader)" },
+					{ id: 2, text: "Regice Doll", img: () => decoration("regice-doll"), tooltip: "Mystery Event (e-Reader)" },
+					{ id: 3, text: "Registeel Doll", img: () => decoration("registeel-doll"), tooltip: "Mystery Event (e-Reader)" },
+				]
+			}
+		]
+	};
+
+	window.defineTasksMany(GAME_KEYS, SECTIONS, TASKS_BY_SECTION);
+	try {
+		window.PPGC = window.PPGC || {};
+		window.PPGC._seedTaskRegistry = null;
+	} catch { }
+})();

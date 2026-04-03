@@ -1,3 +1,5 @@
+import { ensureDataRoot, ensurePpgcRoot } from "./runtime/globals.js";
+
 /**
  * Deep-merge plain-object source into target.
  * - Nested plain objects are merged recursively.
@@ -61,8 +63,8 @@ function deepMerge(target, source, path = "DATA") {
  * - DATA: all game/task/dex/etc data, mutated by PPGC.register().
  * - PPGC: config + entry points shared across modules / globals.
  */
-export const DATA = (window.DATA = window.DATA || {});
-export const PPGC = (window.PPGC = window.PPGC || {});
+export const DATA = ensureDataRoot();
+export const PPGC = ensurePpgcRoot();
 
 // Ensure sectionMeters exists so modules can safely push custom meters.
 PPGC.sectionMeters = PPGC.sectionMeters || [];
@@ -77,12 +79,13 @@ PPGC.sectionMeters = PPGC.sectionMeters || [];
  *     sections: { ... },
  *   });
  */
-window.PPGC.register = function (chunk) {
+
+PPGC.register = function (chunk) {
 	if (Array.isArray(chunk)) {
-		for (const part of chunk) deepMerge(window.DATA, part, "DATA");
+		for (const part of chunk) deepMerge(DATA, part, "DATA");
 		return;
 	}
-	deepMerge(window.DATA, chunk, "DATA");
+	deepMerge(DATA, chunk, "DATA");
 };
 
 window.range = function range(start, end, step) {
