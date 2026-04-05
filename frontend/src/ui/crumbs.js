@@ -7,8 +7,12 @@
  *   - "section" → Gen label > Game label > Section title
  */
 export function renderCrumbs(store, els) {
-	const { elCrumbs } = els;
-	const s = store.state;
+	const elCrumbs = els?.elCrumbs;
+	const s = store?.state;
+
+	// In some layouts / bootstrap paths the crumbs container may not exist yet.
+	// Fail safely instead of crashing the whole app.
+	if (!elCrumbs || !s) return;
 
 	// Reset current crumbs
 	elCrumbs.innerHTML = "";
@@ -30,14 +34,14 @@ export function renderCrumbs(store, els) {
 
 	// Gen label (from DATA.tabs)
 	const genLabel =
-		(window.DATA.tabs || []).find((x) => x.key === s.genKey)?.label ||
+		(window.DATA?.tabs || []).find((x) => x.key === s.genKey)?.label ||
 		s.genKey;
 	pushCrumb(genLabel);
 
 	// Game label (from DATA.games)
 	if (s.level !== "gen") {
 		const gameLabel =
-			(window.DATA.games?.[s.genKey] || []).find(
+			(window.DATA?.games?.[s.genKey] || []).find(
 				(x) => x.key === s.gameKey
 			)?.label || s.gameKey;
 		pushCrumb(gameLabel);
@@ -45,7 +49,7 @@ export function renderCrumbs(store, els) {
 
 	// Section title (from sectionsStore)
 	if (s.level === "section") {
-		const sec = (store.sectionsStore.get(s.gameKey) || []).find(
+		const sec = (store?.sectionsStore?.get?.(s.gameKey) || []).find(
 			(x) => x.id === s.sectionId
 		);
 		if (sec) pushCrumb(sec.title);

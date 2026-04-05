@@ -1,47 +1,48 @@
 /**
  * Central DOM references used across the app.
  *
- * All lookups happen once at load time; if you ever render this app into
- * a different container, you may want to re-run these queries.
+ * Uses lazy getters so that getElementById runs when a property is accessed
+ * (inside a function), not at module import time — which would be before
+ * React has rendered the DOM.
  */
 export const elements = {
-	ppgcHomeBtn: document.getElementById("ppgcHomeBtn"),
-	ppgcMonInfoBtn: document.getElementById("ppgcMonInfoBtn"),
+	get ppgcHomeBtn() { return document.getElementById("ppgcHomeBtn"); },
+	get ppgcMonInfoBtn() { return document.getElementById("ppgcMonInfoBtn"); },
 
 	// Shell / layout
-	elSidebarTitle: document.getElementById("navTitle"),
-	elSidebarList: document.getElementById("sideList"),
-	elBack: document.getElementById("navBack"),
-	elContent: document.getElementById("legacy-content-root"),
-	contentShell: document.getElementById("content"),
-	elCrumbs: document.getElementById("crumbs"),
+	get elSidebarTitle() { return document.getElementById("navTitle"); },
+	get elSidebarList() { return document.getElementById("sideList"); },
+	get elBack() { return document.getElementById("navBack"); },
+	get elContent() { return document.getElementById("legacy-content-root"); },
+	get contentShell() { return document.getElementById("content"); },
+	get elCrumbs() { return document.getElementById("crumbs"); },
 
 	// Dex modal
-	modal: document.getElementById("modal"),
-	modalClose: document.getElementById("modalClose"),
-	dexGrid: document.getElementById("dexGrid"),
-	dexSearch: document.getElementById("dexSearch"),
-	dexSelectAll: document.getElementById("dexSelectAll"),
-	dexClearAll: document.getElementById("dexClearAll"),
-	modalTitle: document.getElementById("modalTitle"),
+	get modal() { return document.getElementById("modal"); },
+	get modalClose() { return document.getElementById("modalClose"); },
+	get dexGrid() { return document.getElementById("dexGrid"); },
+	get dexSearch() { return document.getElementById("dexSearch"); },
+	get dexSelectAll() { return document.getElementById("dexSelectAll"); },
+	get dexClearAll() { return document.getElementById("dexClearAll"); },
+	get modalTitle() { return document.getElementById("modalTitle"); },
 
 	// Fashion modal
-	fashionModal: document.getElementById("fashionModal"),
-	fashionModalClose: document.getElementById("fashionModalClose"),
-	fashionGrid: document.getElementById("fashionGrid"),
-	fashionSearch: document.getElementById("fashionSearch"),
-	fashionSelectAll: document.getElementById("fashionSelectAll"),
-	fashionClearAll: document.getElementById("fashionClearAll"),
-	fashionModalTitle: document.getElementById("fashionModalTitle"),
+	get fashionModal() { return document.getElementById("fashionModal"); },
+	get fashionModalClose() { return document.getElementById("fashionModalClose"); },
+	get fashionGrid() { return document.getElementById("fashionGrid"); },
+	get fashionSearch() { return document.getElementById("fashionSearch"); },
+	get fashionSelectAll() { return document.getElementById("fashionSelectAll"); },
+	get fashionClearAll() { return document.getElementById("fashionClearAll"); },
+	get fashionModalTitle() { return document.getElementById("fashionModalTitle"); },
 
 	// Medal modal
-	medalsModal: document.getElementById("medalsModal"),
-	medalsModalClose: document.getElementById("medalsModalClose"),
-	medalsSelectAll: document.getElementById("medalsSelectAll"),
-	medalsClearAll: document.getElementById("medalsClearAll"),
-	medalsGrid: document.getElementById("medalsGrid"),
-	medalsModalTitle: document.getElementById("medalsModalTitle"),
-	medalsSearch: document.getElementById("medalsSearch"),
+	get medalsModal() { return document.getElementById("medalsModal"); },
+	get medalsModalClose() { return document.getElementById("medalsModalClose"); },
+	get medalsSelectAll() { return document.getElementById("medalsSelectAll"); },
+	get medalsClearAll() { return document.getElementById("medalsClearAll"); },
+	get medalsGrid() { return document.getElementById("medalsGrid"); },
+	get medalsModalTitle() { return document.getElementById("medalsModalTitle"); },
+	get medalsSearch() { return document.getElementById("medalsSearch"); },
 };
 
 export function wireGlobalNav(store, els, renderAll) {

@@ -59,22 +59,37 @@ export function buildGenOverview(currentStore = store) {
   const startedMap = state.startedGames || {};
   const games = allGamesList();
 
+  const pctCache = currentStore.state.cachedGamePcts || (currentStore.state.cachedGamePcts = {});
+  let cacheUpdated = false;
+
   const gameStats = games.map(({ genKey, game }) => {
     const sections = ensureSections(game.key);
-    const baseSections = sections.filter((section) => !isExtraCreditSection(section));
-    const extraSections = sections.filter(isExtraCreditSection);
-
-    const basePcts = baseSections.map((section) => computeSectionPct(section, game.key, genKey, currentStore));
-    const baseComplete = basePcts.length > 0 && basePcts.every((pct) => pct >= 100 - 1e-6);
-    const baseAvg = basePcts.length ? basePcts.reduce((a, b) => a + b, 0) / basePcts.length : 0;
 
     let pct;
-    if (!baseComplete) {
-      pct = Math.min(100, baseAvg);
+    if (!sections.length) {
+      // Gen data not loaded yet — use last-known cached value
+      pct = pctCache[game.key] ?? 0;
     } else {
-      const extraPcts = extraSections.map((section) => computeSectionPct(section, game.key, genKey, currentStore));
-      const extraAvg = extraPcts.length ? extraPcts.reduce((a, b) => a + b, 0) / extraPcts.length : 0;
-      pct = 100 + Math.min(100, extraAvg);
+      const baseSections = sections.filter((section) => !isExtraCreditSection(section));
+      const extraSections = sections.filter(isExtraCreditSection);
+
+      const basePcts = baseSections.map((section) => computeSectionPct(section, game.key, genKey, currentStore));
+      const baseComplete = basePcts.length > 0 && basePcts.every((p) => p >= 100 - 1e-6);
+      const baseAvg = basePcts.length ? basePcts.reduce((a, b) => a + b, 0) / basePcts.length : 0;
+
+      if (!baseComplete) {
+        pct = Math.min(100, baseAvg);
+      } else {
+        const extraPcts = extraSections.map((section) => computeSectionPct(section, game.key, genKey, currentStore));
+        const extraAvg = extraPcts.length ? extraPcts.reduce((a, b) => a + b, 0) / extraPcts.length : 0;
+        pct = 100 + Math.min(100, extraAvg);
+      }
+
+      // Update cache so next load shows correct values before data is re-fetched
+      if (pctCache[game.key] !== pct) {
+        pctCache[game.key] = pct;
+        cacheUpdated = true;
+      }
     }
 
     return {
@@ -86,6 +101,8 @@ export function buildGenOverview(currentStore = store) {
       isStarted: !!startedMap[game.key],
     };
   });
+
+  if (cacheUpdated) save();
 
   const aggregateMode = state.gameSummaryAggregateMode === 'started' ? 'started' : 'all';
   const startedStats = gameStats.filter((entry) => entry.isStarted);
