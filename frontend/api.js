@@ -14,6 +14,13 @@ export function setApiCurrentUser(user) {
 	}
 }
 
+async function safeJson(res) {
+	const text = await res.text();
+	if (!text) return { error: `Server error (${res.status})` };
+	try { return JSON.parse(text); }
+	catch { return { error: text.slice(0, 200) || `Server error (${res.status})` }; }
+}
+
 export async function signup(email, password) {
 	const res = await fetch(`${API_BASE}/auth/signup`, {
 		method: "POST",
@@ -21,7 +28,7 @@ export async function signup(email, password) {
 		credentials: "include",
 		body: JSON.stringify({ email, password }),
 	});
-	return res.json();
+	return safeJson(res);
 }
 
 export async function login(email, password) {
@@ -31,7 +38,7 @@ export async function login(email, password) {
 		credentials: "include",
 		body: JSON.stringify({ email, password }),
 	});
-	return res.json();
+	return safeJson(res);
 }
 
 export async function getCurrentUser() {

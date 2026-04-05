@@ -3,7 +3,7 @@ const RAW_BASE =
 		? String(globalThis.__ASSET_BASE_URL__).trim()
 		: "";
 
-window._assetPath = function _assetPath(path) {
+export function _assetPath(path) {
 	const cleanPath = String(path || "").replace(/^\/+/, "");
 	const base = RAW_BASE.replace(/\/+$/, "");
 
@@ -11,4 +11,6 @@ window._assetPath = function _assetPath(path) {
 	if (!base) return `/${cleanPath}`;
 
 	return `${base}/${cleanPath}`;
-};
+}
+
+if (typeof window !== "undefined") window._assetPath = _assetPath;
