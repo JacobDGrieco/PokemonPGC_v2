@@ -1,4 +1,5 @@
 import React, { useMemo } from 'react';
+import { _assetPath } from '../../utils/assetPath.js';
 import { save, store } from '../../store.js';
 import { ensureSections } from '../../react-bridge/taskApi.js';
 import { usePpgcSnapshot } from '../../react-bridge/usePpgcSnapshot.js';

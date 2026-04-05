@@ -21,17 +21,24 @@ export function shouldUseColorSprite(gameKey, gen1SpriteColor = false) {
 
 export function getImageForStatus(it, status, gameKey, gen1SpriteColor = false) {
   const useColor = shouldUseColorSprite(gameKey, gen1SpriteColor);
-  const val = (v) => (typeof v === "function" ? v() : v);
+  // Resolve a possibly-function image value, passing { gameKey } so gen1 sprites pick the right path
+  const resolveImg = (fn) => {
+    if (fn == null) return "";
+    if (typeof fn === "function") {
+      try { return fn({ gameKey }) || ""; } catch { return ""; }
+    }
+    return fn || "";
+  };
 
   if (useColor !== null) {
-    const baseImg = val(resolveMaybeFn(it.img)) || "";
-    const colorImg = val(resolveMaybeFn(it.imgS)) || baseImg;
+    const baseImg = resolveImg(it.img);
+    const colorImg = resolveImg(it.imgS) || baseImg;
     return useColor ? colorImg : baseImg;
   }
 
   const isShiny = status === "shiny" || status === "shiny_alpha" || status === "shinyalpha";
   const primary = isShiny ? (it.imgS ?? it.img) : it.img;
-  return val(resolveMaybeFn(primary)) || "";
+  return resolveImg(primary);
 }
 
 export function speciesAndFormsMatch(entry, speciesFn, formFn) {

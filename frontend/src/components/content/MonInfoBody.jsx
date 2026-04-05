@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { _assetPath } from '../../utils/assetPath.js';
 import { pad4 } from '../../react-bridge/monInfo.js';
 import { resolveMonInfoData } from '../../react-bridge/monInfoData.js';
 
@@ -250,7 +251,7 @@ export function MonInfoBody({ gameKey, mon, formKey, onFormChange }) {
   return (
     <div className="moninfo-body react-moninfo-body">
       <div className="mon-info-header">
-        {data.spriteSrc ? <div className="mon-info-sprite"><img src={data.spriteSrc} alt={displayName} loading="lazy" /></div> : null}
+        {data.spriteSrc ? <div className="mon-info-sprite"><img src={data.spriteSrc} alt={displayName} loading="lazy" onError={(e) => { if (e.target.src !== (window.__PPGC_NO_IMG__ || '/no-image.svg')) e.target.src = window.__PPGC_NO_IMG__ || '/no-image.svg'; }} /></div> : null}
         <div className="mon-info-main">
           <div className="mon-info-topline">
             <div className="mon-info-basic">

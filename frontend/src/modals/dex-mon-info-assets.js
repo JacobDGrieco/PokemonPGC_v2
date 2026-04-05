@@ -118,9 +118,10 @@ export function wireResearchClick({ monInfoBody, canOpenResearch, researchData, 
 }
 
 export function wireModelViewerClick({ monInfoBody, mon } = {}) {
-	if (monInfoBody.dataset.modelViewerWired === "1") return;
-	monInfoBody.dataset.modelViewerWired = "1";
-	monInfoBody.addEventListener("click", async (e) => {
+	if (monInfoBody._modelViewerHandler) {
+		monInfoBody.removeEventListener("click", monInfoBody._modelViewerHandler);
+	}
+	monInfoBody._modelViewerHandler = async (e) => {
 		const btn = e.target?.closest?.("[data-open-modelviewer]");
 		if (!btn) return;
 		const glbUrl = btn.getAttribute("data-model-url");
@@ -137,5 +138,6 @@ export function wireModelViewerClick({ monInfoBody, mon } = {}) {
 		} else {
 			console.warn("PPGC.openModelViewerModal not found (even after load)");
 		}
-	});
+	};
+	monInfoBody.addEventListener("click", monInfoBody._modelViewerHandler);
 }

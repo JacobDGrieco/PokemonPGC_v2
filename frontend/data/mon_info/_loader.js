@@ -50,7 +50,7 @@ export async function ensureMonInfoLoaded(natiId, formKey = null) {
 	const num = baseNum(natiId);
 	if (num == null) return false;
 
-	await importByKey(moduleKeyForBase(num));
+	await importByKey(moduleKeyForBase(num), { optional: true });
 
 	const formKeyPath = formKey ? moduleKeyForForm(num, formKey) : null;
 	if (formKeyPath) {

@@ -29,6 +29,7 @@ function buildSpriteMarkup({ src, name }) {
     src="${src}"
     loading="lazy"
     style="width:132px;height:132px;object-fit:contain;"
+    onerror="if(this.src!==window.__PPGC_NO_IMG__){this.src=window.__PPGC_NO_IMG__||'/no-image.svg';}"
   />`;
 }
 

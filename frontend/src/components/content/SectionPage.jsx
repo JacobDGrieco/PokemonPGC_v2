@@ -186,6 +186,7 @@ export function SectionPage({ state, refreshKey }) {
     });
 
     bootstrapTasksForGame(state.gameKey, store);
+    setSectionVersion((v) => v + 1);
   }, [section, state.gameKey, state.genKey]);
 
   const pct = useMemo(() => {
@@ -224,7 +225,7 @@ export function SectionPage({ state, refreshKey }) {
       </div>
       <div className="card-bd react-section-body">
         <div ref={injectedRef} className="react-section-injected" />
-        <TaskTree sectionId={section.id} refreshKey={refreshKey} onMutate={() => setSectionVersion((value) => value + 1)} />
+        <TaskTree sectionId={section.id} refreshKey={`${refreshKey}:${sectionVersion}`} onMutate={() => setSectionVersion((value) => value + 1)} />
       </div>
     </section>
   );

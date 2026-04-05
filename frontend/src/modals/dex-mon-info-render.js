@@ -1,3 +1,5 @@
+import { _assetPath } from '../utils/assetPath.js';
+
 export function renderListRow(label, valueOrArr) {
 	if (valueOrArr == null) return "";
 
@@ -352,5 +354,5 @@ export function renderProfileHtml({ resolvedInfo = {}, fallbackInfo = {}, abilit
 		renderProfileItem("Gender Ratio", genderRatioText),
 		renderProfileItem("Base Friendship", baseFriendshipProfile),
 	].filter(Boolean).join("");
-	return resolvedInfo ? `<div class="mon-info-block mon-info-profile"><h3>Profile</h3><div class="mon-info-profile-grid">${profileItems}</div></div>` : "";
+	return (resolvedInfo && profileItems) ? `<div class="mon-info-block mon-info-profile"><h3>Profile</h3><div class="mon-info-profile-grid">${profileItems}</div></div>` : "";
 }

@@ -72,7 +72,7 @@ function useTaskTooltip(task, sectionId) {
 
 function TaskSpriteList({ task, sectionId }) {
   const [hidden, setHidden] = useState(() => new Set());
-  const sources = useMemo(() => resolveTaskImageSrcs(task, sectionId) || [], [task, sectionId]);
+  const sources = resolveTaskImageSrcs(task, sectionId) || [];
 
   useEffect(() => {
     setHidden(new Set());
@@ -152,11 +152,10 @@ function EitherChoices({ task, onChange }) {
   );
 }
 
-function TieredControls({ task, sectionId, onInputCommit, onChangeCommit }) {
+function TieredControls({ task, onInputCommit, onChangeCommit }) {
   const meta = getTierMetaForTask(task);
   const steps = meta.steps;
   const value = Math.max(0, Math.min(Number(task.currentTier ?? 0), steps));
-  const accent = getComputedStyle(document.documentElement).getPropertyValue('--accent')?.trim() || '#6aa0ff';
   const display = meta.mode === 'label' ? (value === 0 ? '—' : meta.values[value - 1] || '—') : `${value}/${steps}`;
 
   return (
@@ -171,7 +170,6 @@ function TieredControls({ task, sectionId, onInputCommit, onChangeCommit }) {
             step={1}
             value={value}
             className="tiered-slider"
-            style={{ accentColor: accent, '--tier-accent': accent }}
             onInput={(event) => onInputCommit(Number(event.currentTarget.value))}
             onChange={(event) => onChangeCommit(Number(event.currentTarget.value))}
           />
@@ -257,7 +255,6 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
   const tieredControls = hasSlider ? (
     <TieredControls
       task={task}
-      sectionId={sectionId}
       onInputCommit={handleTierInput}
       onChangeCommit={handleTierCommit}
     />

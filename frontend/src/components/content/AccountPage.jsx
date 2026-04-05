@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
+import { _assetPath } from '../../utils/assetPath.js';
 import { save, store } from '../../store.js';
-import { navigateToState } from '../../react-bridge/navigation.js';
 import {
   backupAllNow,
   chooseBackupFolder,
@@ -10,23 +10,7 @@ import {
   setAutoBackupsEnabled,
 } from '../../persistence.js';
 
-const ACCOUNT_TABS = [
-  { key: 'general', label: 'General' },
-  { key: 'backup', label: 'Backups & Import' },
-  { key: 'import', label: 'Save Data Import' },
-];
-
 const SUPPORTED_SAVE_IMPORT_GAMES = new Set(['red']);
-
-function setAccountTab(tab) {
-  navigateToState({
-    level: 'account',
-    accountTab: tab,
-    genKey: null,
-    gameKey: null,
-    sectionId: null,
-  });
-}
 
 function GeneralTab() {
   const [, forceRefresh] = useState(0);
@@ -482,19 +466,6 @@ export function AccountPage() {
     <div className="account-page react-content-card">
       <div className="account-layout">
         <div className="account-main">
-          <div className="account-tab-row">
-            {ACCOUNT_TABS.map((tab) => (
-              <button
-                key={tab.key}
-                type="button"
-                className={`button ${activeTab === tab.key ? 'primary' : ''}`}
-                onClick={() => setAccountTab(tab.key)}
-              >
-                {tab.label}
-              </button>
-            ))}
-          </div>
-
           {activeTab === 'general' ? <GeneralTab /> : null}
           {activeTab === 'backup' ? <BackupTab /> : null}
           {activeTab === 'import' ? <SaveImportTab /> : null}

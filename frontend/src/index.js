@@ -22,6 +22,7 @@ import { emitPpgcUiSync } from './react-bridge/storeBridge.js';
 import { initHistory } from "./history.js";
 import { ensurePpgcRoot } from "./runtime/globals.js";
 import { installUiGlobals } from "./runtime/uiGlobals.js";
+import { _assetPath } from "./utils/assetPath.js";
 
 const PPGC = ensurePpgcRoot();
 installUiGlobals();
@@ -164,6 +165,7 @@ function renderAll() {
 	window.PPGC = window.PPGC || {};
 	PPGC._storeRef = store;
 	PPGC._tasksStoreRef = store.tasksStore;
+	PPGC.gen1SpriteColor = store.state.gen1SpriteMode === 'color';
 	renderCrumbs(store, elements);
 
 	const ready = ensureGenDataForState(store.state);
@@ -369,22 +371,18 @@ function openAuthModal(mode = "login") {
 
 					if (currentMode === "signup") {
 						// New account: push current game up once so DB has something
-						await initialServerBackup();
+						try { await initialServerBackup(); } catch (e) { console.debug('[auth] initial backup failed (ignored):', e); }
 					} else {
 						// Existing account: pull ALL games down from the cloud
-						await loadAllGames();
+						try { await loadAllGames(); } catch (e) { console.debug('[auth] initial load failed (ignored):', e); }
 					}
 
 					startServerAutoBackup();
 
 					statusEl.textContent = "Success!";
+					window.dispatchEvent(new CustomEvent('ppgc:auth:changed'));
 					closeAuthModal();
 				}
-
-				statusEl.textContent = "Success!";
-				setTimeout(() => {
-					closeAuthModal();
-				}, 600);
 			} catch (err) {
 				console.error(err);
 				statusEl.textContent = "Something went wrong. Try again.";
@@ -432,29 +430,34 @@ function navigateToTask(sectionId, taskId = null) {
 	});
 }
 async function initAuthUI() {
-	const overlay = document.getElementById("ppgc-auth-overlay");
 	const accountBtn = document.getElementById("ppgc-account-button");
 	const accountMenu = document.getElementById("ppgc-account-menu");
-	if (!overlay || !accountBtn || !accountMenu) return;
+	if (!accountBtn || !accountMenu) return;
+
+	// Wire the account button immediately — navigation doesn't need the auth overlay
+	if (!accountBtn._ppgcWired) {
+		accountBtn._ppgcWired = true;
+		accountBtn.addEventListener("click", (e) => {
+			e.stopPropagation();
+			try {
+				const storeRef = window.PPGC?._storeRef;
+				const s = storeRef?.state;
+				if (s && s.level && s.level !== "account") {
+					PPGC._lastNonAccountState = { ...s };
+				}
+			} catch { }
+			PPGC.navigateTo("account");
+		});
+	}
+
+	// Overlay may not be in the DOM yet (React renders async) — retry until it appears
+	const overlay = document.getElementById("ppgc-auth-overlay");
+	if (!overlay) {
+		setTimeout(initAuthUI, 100);
+		return;
+	}
 
 	const closeBtn = overlay.querySelector(".ppgc-auth-close");
-
-	accountBtn.addEventListener("click", (e) => {
-		e.stopPropagation();
-
-		// Save the current route/state so sidebar Back can return here from Account
-		try {
-			const storeRef = window.PPGC?._storeRef;
-			const s = storeRef?.state;
-			if (s && s.level && s.level !== "account") {
-				// store a shallow clone (enough for your router state)
-				PPGC._lastNonAccountState = { ...s };
-			}
-		} catch { }
-
-		// Use the history router so URL + Back/Forward work
-		PPGC.navigateTo("account");
-	});
 
 	accountMenu.addEventListener("click", (e) => {
 		const btn = e.target.closest("button[data-action]");
@@ -532,10 +535,12 @@ function runWhenIdle(fn, timeout = 1500) {
 	PPGC.ensureDistributionsLoaded = ensureDistributionsLoaded;
 })();
 
+window.__PPGC_NO_IMG__ = _assetPath('no-image.svg');
 initLayoutSwitcher(renderAll);
 renderAll();
 mountBackupControls();
-initAuthUI();
+// Defer until after React's initial render has committed the DOM (AuthModal etc.)
+setTimeout(initAuthUI, 0);
 initBackups({ minutes: 5 });
 
 runWhenIdle(() => {

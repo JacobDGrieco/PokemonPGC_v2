@@ -202,6 +202,19 @@ export async function openModelViewerModal({
 		set skeletonOn(v) { skeletonOn = v; },
 	};
 
+	const meshState = new Map(); // uuid -> boolean
+	const matState = new Map();  // material.name -> boolean
+	const meshByUuid = new Map();
+	const matsByName = new Map(); // name -> Set(material instances)
+	const matSaved = new WeakMap(); // material -> original props
+	const meshOverlay = new Map(); // uuid -> "#rrggbb" or null
+	const matOverlay = new Map(); // material.name -> "#rrggbb" or null
+
+	const OVERLAY_STRENGTH_MAT = 0.65; // 0..1
+	const OVERLAY_STRENGTH_MESH = 0.65; // 0..1
+	let meshOverlayOpacity = 0.65; // 0..1
+	let matOverlayOpacity = 0.65; // 0..1
+
 	const animController = createAnimationController({
 		THREE,
 		refs,
@@ -552,20 +565,6 @@ export async function openModelViewerModal({
 
 
 	// --- Rig visualizer (actual bones + joints) ---
-
-
-	const meshState = new Map(); // uuid -> boolean
-	const matState = new Map();  // material.name -> boolean
-	const meshByUuid = new Map();
-	const matsByName = new Map(); // name -> Set(material instances)
-	const matSaved = new WeakMap(); // material -> original props
-	const meshOverlay = new Map(); // uuid -> "#rrggbb" or null
-	const matOverlay = new Map(); // material.name -> "#rrggbb" or null
-
-	const OVERLAY_STRENGTH_MAT = 0.65; // 0..1
-	const OVERLAY_STRENGTH_MESH = 0.65; // 0..1
-	let meshOverlayOpacity = 0.65; // 0..1
-	let matOverlayOpacity = 0.65; // 0..1
 
 
 

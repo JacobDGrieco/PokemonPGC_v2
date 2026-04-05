@@ -97,7 +97,7 @@ export function wireDexModal(store, els) {
 		getDexFormsNode: (gameKey, monId) => _getDexFormsNode(store, gameKey, monId),
 		setDexFormsNode: (gameKey, monId, node) => _setDexFormsNode(store, gameKey, monId, node),
 		applyDexLinksFromForm: (gameKey, monId, formName, status) =>
-			applyDexLinksFromForm(gameKey, monId, formName, status),
+			applyDexLinksFromForm({ sourceGameKey: gameKey, sourceMonId: monId, sourceFormName: formName, status, store, getNatIndexForGame: (k) => getNatIndexForGame(window.PPGC, k) }),
 	});
 
 	// NEW: small helper to batch dex sync work (skip repeated save/render)
@@ -412,7 +412,7 @@ export function wireDexModal(store, els) {
 
 						// Dex ↔ Dex form sync (regional <-> national)
 						try {
-							applyDexLinksFromForm(gameKey, m.id, fname, val);
+							applyDexLinksFromForm({ sourceGameKey: gameKey, sourceMonId: m.id, sourceFormName: fname, status: val, store, getNatIndexForGame: (k) => getNatIndexForGame(window.PPGC, k) });
 						} catch (e) {
 							console.error("applyDexLinksFromForm (bulk) error:", e);
 						}

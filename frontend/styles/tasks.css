@@ -243,19 +243,19 @@
 	flex: 1 1 240px;
 }
 
-/* Slider element */
+/* Slider element — accent-color inherits --accent from the .card ancestor */
 .tiered-slider {
 	flex: 1 1 auto;
 	width: auto;
+	accent-color: var(--accent, #6aa0ff);
 }
 
-/* Slider thumbs pick up --tier-accent from JS */
 .tiered-slider::-webkit-slider-thumb {
-	background: var(--tier-accent);
+	background: var(--accent, #6aa0ff);
 }
 
 .tiered-slider::-moz-range-thumb {
-	background: var(--tier-accent);
+	background: var(--accent, #6aa0ff);
 }
 
 /* Row containing the slider (and possible badges) */

@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
+import { _assetPath } from '../../utils/assetPath.js';
 import { navigateToState } from '../../react-bridge/navigation.js';
 import { buildMonInfoGameOptions, findGameKeysForMonInfoNati, getHomeDexMons, getMonInfoDisplayName, monInfoLabelForGameKey, pad4, pickPreferredGameForMon } from '../../react-bridge/monInfo.js';
 import { MonInfoBody } from './MonInfoBody.jsx';
@@ -62,7 +63,7 @@ export function MonInfoPage({ state, refreshKey }) {
     <div className="page react-moninfo-page">
       <div className="moninfo-header">
         <div className="moninfo-header-left">
-          <img className="moninfo-hero-img" src={_assetPath(`sprites/pokemon_home/base-front/${pad4(natiId)}.png`)} alt={`#${natiId}`} />
+          <img className="moninfo-hero-img" src={_assetPath(`sprites/pokemon_home/base-front/${pad4(natiId)}.png`)} alt={`#${natiId}`} onError={(e) => { if (e.target.src !== (window.__PPGC_NO_IMG__ || '/no-image.svg')) e.target.src = window.__PPGC_NO_IMG__ || '/no-image.svg'; }} />
           <div>
             <h2 className="page-title">#{pad4(natiId)} — {displayName}</h2>
             <div className="moninfo-subtitle small">{selectedGameKey ? monInfoLabelForGameKey(selectedGameKey) : ''}</div>

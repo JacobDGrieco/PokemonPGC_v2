@@ -1,4 +1,5 @@
 import React, { useMemo } from 'react';
+import { _assetPath } from '../../utils/assetPath.js';
 import { navigateToState } from '../../react-bridge/navigation.js';
 import { getHomeDexMons, pad4, pickPreferredGameForMon } from '../../react-bridge/monInfo.js';
 

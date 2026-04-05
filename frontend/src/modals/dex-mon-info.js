@@ -1,3 +1,4 @@
+import { _assetPath } from '../utils/assetPath.js';
 import { resolveMonInfoData } from "./dex-mon-info-data.js";
 import { renderCompletionTopHtml, renderEvolutionHtml, renderEvRadar, renderLocationsHtml, renderMovesHtml, renderNotesHtml, renderProfileHtml, renderStatsRadar, renderTypeChart, renderVariantsHtml } from "./dex-mon-info-render.js";
 import { renderSpritesModels, wireAssetsTabs, wireModelViewerClick, wireResearchClick } from "./dex-mon-info-assets.js";
@@ -260,7 +261,7 @@ const statusFromCard = (() => {
 		<div class="mon-info-topline">
 		  <div class="mon-info-basic">
 			<div class="mon-info-name">
-			  #${String(mon.id).padStart(4, "0")} — ${mon.name}
+			  #${String(natId != null ? natId : (window._dexIdNumber?.(mon.id, mon.localId) ?? '')).padStart(4, "0")} — ${mon.name}
 			</div>
 			<div class="mon-info-types">
 			  ${(types || [])

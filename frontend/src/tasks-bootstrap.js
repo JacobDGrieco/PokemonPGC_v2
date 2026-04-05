@@ -1,6 +1,6 @@
 import { save, uid } from "./store.js";
 
-export function ensureSections(gameKey, PPGC) {
+export function ensureSections(gameKey, PPGC = window.PPGC) {
 	const seed = (window.DATA.sections && window.DATA.sections[gameKey]) || [];
 	if (!PPGC._sectionsStore) PPGC._sectionsStore = new Map();
 	let arr = PPGC._sectionsStore.get(gameKey);

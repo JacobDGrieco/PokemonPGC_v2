@@ -1,3 +1,4 @@
+import { _assetPath } from '../utils/assetPath.js';
 import { ensureMonInfoLoaded } from '../../data/mon_info/_loader.js';
 import { fetchPokeApiMonInfo } from '../services/pokeApi.js';
 

@@ -2,7 +2,7 @@ import { ensureSections, buildTaskIndex, bootstrapTasks } from "./tasks-bootstra
 import { getTierMetaForTask, getTierSteps, formatTierTooltip, isEitherTask, isTieredTask, setDescendantsDone, getEitherChoice, setEitherChoice, eitherSyncView } from "./tasks-modes.js";
 import { unloadSectionTasks, applySyncsFromTask } from "./tasks-sync.js";
 import { ensurePpgcRoot } from "./runtime/globals.js";
-import { hideTooltip } from "./tasks-visuals.js";
+import { hideTooltip, resolveTaskImageSrcs, attachTooltip, resolveAccentForSection } from "./tasks-visuals.js";
 import { renderTaskLayout, renderTaskList, renderTieredControls } from "./tasks-renderers.js";
 import { renderEitherHTML, wireEitherUI } from "./tasks-either.js";
 
@@ -29,6 +29,9 @@ export {
   bootstrapTasks,
   unloadSectionTasks,
   applySyncsFromTask,
+  resolveTaskImageSrcs,
+  attachTooltip,
+  resolveAccentForSection,
 };
 
 PPGC.disableTaskTooltips = function () {

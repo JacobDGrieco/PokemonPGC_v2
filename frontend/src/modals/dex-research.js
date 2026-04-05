@@ -1,4 +1,5 @@
 // dex-research-modal.js
+import { _assetPath } from '../utils/assetPath.js';
 import { save } from "../store.js";
 import { ensurePpgcRoot } from "../runtime/globals.js";
 
