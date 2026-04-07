@@ -7,6 +7,7 @@
 	const npc = (gameKey, name) => _npc(gameKey, name);
 	const location = (gameKey, name) => _location(gameKey, name);
 	const keyItem = (name) => _keyItem(gen, name);
+	const formItem = (name) => _formItem(gen, name);
 	const hm = (type) => _hm(gen, type);
 	const tm = (type) => _tm(gen, type);
 
@@ -18,7 +19,6 @@
 		{ id: "upgrades", title: "Upgrades" },
 		{ id: "collectables", title: "Collectables" },
 		{ id: "thms", title: "TMs/HMs" },
-		{ id: "distributions", title: "Distributions" },
 		{ id: "extra-credit", title: "Extra Credit" },
 	];
 
@@ -29,6 +29,113 @@
 					{ id: 1, text: "Catch/Trade for Reshiram", img: ({ gameKey }) => baseSprite(gameKey, 643) },
 					{ id: 2, text: "Catch/Trade for Zekrom", img: ({ gameKey }) => baseSprite(gameKey, 644) },
 					{ id: 3, text: "Catch Kyurem", img: ({ gameKey }) => baseSprite(gameKey, 646) },
+					{ id: 4, text: "Catch/Trade for Tornadus", img: ({ gameKey }) => baseSprite(gameKey, 641) },
+					{ id: 5, text: "Catch/Trade for Thundurus", img: ({ gameKey }) => baseSprite(gameKey, 642) },
+					{ id: 6, text: "Catch Landorus", img: ({ gameKey }) => baseSprite(gameKey, 645) },
+				],
+			},
+			{
+				id: 2, text: "Obtain all In-Game Gift Pokemon", children: [
+					{ id: 1, text: "Pansage", img: ({ gameKey }) => baseSprite(gameKey, 511) },
+				],
+			},
+			{
+				id: 3, text: "Complete all In-Game Pokemon Trades", children: [
+					{ id: 1, text: "Cottonee for Petilil", img: ({ gameKey }) => task(gameKey, "cottonee-for-petilil") },
+					{ id: 2, text: "Minccino for Basculin", img: ({ gameKey }) => task(gameKey, "minccino-for-basculin") },
+					{ id: 3, text: "Boldore for Emolga", img: ({ gameKey }) => task(gameKey, "boldore-for-emolga") },
+					{ id: 4, text: "Ditto for Rotom", img: ({ gameKey }) => task(gameKey, "ditto-for-rotom") },
+				],
+			},
+		],
+		"story": [
+			{ id: 1, text: "Collect all 8 Gym Badges and Defeat the Elite 4", img: () => _badges(["trio", "basic", "insect", "bolt", "quake", "jet", "freeze", "legend"]), noCenter: true },
+		],
+		"activites": [
+			{
+				id: 1, text: "Find all Team Plasma Sages", children: [
+					{ id: 1, text: "Sage Rood", img: ({ gameKey }) => npc(gameKey, "rood") },
+					{ id: 2, text: "Sage Gorm", img: ({ gameKey }) => npc(gameKey, "gorm") },
+					{ id: 3, text: "Sage Ryoku", img: ({ gameKey }) => npc(gameKey, "ryoku") },
+					{ id: 4, text: "Sage Zinzolin", img: ({ gameKey }) => npc(gameKey, "zinzolin") },
+					{ id: 5, text: "Sage Bronius", img: ({ gameKey }) => npc(gameKey, "bronius") },
+					{ id: 6, text: "Sage Giallo", img: ({ gameKey }) => npc(gameKey, "giallo") },
+				],
+			},
+			{ id: 2, text: "Fill Black City/White Forest with 10 Trainers" },
+			{
+				id: 3, text: "Complete 4 Types of Entralink Missions", children: [
+					{ id: 1, text: "Support Mission" },
+					{ id: 2, text: "Item Mission" },
+					{ id: 3, text: "Rescue Mission" },
+					{ id: 4, text: "Battle Mission" },
+				],
+			},
+		],
+		"battle": [
+			{ id: 1, text: "Battle Cheren in Victory Road (post Elite 4)" },
+			{ id: 2, text: "Battle Bianca in Prof. Juniper's Lab (Saturday Nights)" },
+			{ id: 3, text: "Battle Cynthia in Undella Town (Spring & Summer)" },
+			{ id: 4, text: "Master Rank at Battle Institute Test" },
+			{
+				id: 5, text: "Defeat the Riches Family in Undella Town", children: [
+					{ id: 1, text: "Defeat Draco" },
+					{ id: 2, text: "Defeat Susan & Family" },
+					{ id: 3, text: "Defeat Clairdonna & Family" },
+					{ id: 4, text: "Defeat Zillion & Family" },
+					{ id: 5, text: "Defeat Trish & Family" },
+					{ id: 6, text: "Defeat Miles & the Entire Family" },
+				],
+			},
+			{
+				id: 6, text: "Complete all Battle Subway Lines", children: [
+					{ id: 1, text: "Single" },
+					{ id: 2, text: "Single Super" },
+					{ id: 3, text: "Double" },
+					{ id: 4, text: "Double Super" },
+					{ id: 5, text: "Multi" },
+					{ id: 6, text: "Multi Super" },
+				],
+			},
+		],
+		"upgrades": [
+			{ id: 1, text: "Obtain the National Dex" },
+			{
+				id: 2, text: "Achieve Black Rank/White Rank Trainer Card", children: [
+					{ id: 1, text: "Defeat the Elite Four" },
+					{ id: 2, text: "Collect all the Pokemon Musical Items" },
+					{ id: 3, text: "Obtain all Entralink Powers" },
+					{ id: 4, text: "Get a 49 streak in Single & Double Battle Subway Lines" },
+				],
+			},
+		],
+		"collectables": [
+			{
+				id: 1, text: "Collect all Legendary items", children: [
+					{ id: 1, text: "Burn Drive", img: () => formItem("burn-drive") },
+					{ id: 2, text: "Douse Drive", img: () => formItem("douse-drive") },
+					{ id: 3, text: "Shock Drive", img: () => formItem("shock-drive") },
+					{ id: 4, text: "Chill Drive", img: () => formItem("chill-drive") },
+				],
+			},
+			{
+				id: 2, text: "Collect all 16 Arceus Plates", children: [
+					{ id: 1, text: "Draco Plate", img: () => formItem("draco-plate") },
+					{ id: 2, text: "Dread Plate", img: () => formItem("dread-plate") },
+					{ id: 3, text: "Earth Plate", img: () => formItem("earth-plate") },
+					{ id: 4, text: "Fist Plate", img: () => formItem("fist-plate") },
+					{ id: 5, text: "Flame Plate", img: () => formItem("flame-plate") },
+					{ id: 6, text: "Icicle Plate", img: () => formItem("icicle-plate") },
+					{ id: 7, text: "Insect Plate", img: () => formItem("insect-plate") },
+					{ id: 8, text: "Iron Plate", img: () => formItem("iron-plate") },
+					{ id: 9, text: "Meadow Plate", img: () => formItem("meadow-plate") },
+					{ id: 10, text: "Mind Plate", img: () => formItem("mind-plate") },
+					{ id: 11, text: "Sky Plate", img: () => formItem("sky-plate") },
+					{ id: 12, text: "Splash Plate", img: () => formItem("splash-plate") },
+					{ id: 13, text: "Spooky Plate", img: () => formItem("spooky-plate") },
+					{ id: 14, text: "Stone Plate", img: () => formItem("stone-plate") },
+					{ id: 15, text: "Toxic Plate", img: () => formItem("toxic-plate") },
+					{ id: 16, text: "Zap Plate", img: () => formItem("zap-plate") },
 				],
 			},
 		],
@@ -143,14 +250,36 @@
 				],
 			},
 		],
+		"extra-credit": [
+			{
+				id: 1, text: "Obtain all Event Mythicals", children: [
+					{ id: 1, text: "Victini", img: ({ gameKey }) => baseSprite(gameKey, 494) },
+					{ id: 2, text: "Keldeo", img: ({ gameKey }) => baseSprite(gameKey, 647) },
+					{ id: 3, text: "Meloetta", img: ({ gameKey }) => baseSprite(gameKey, 648) },
+					{ id: 4, text: "Genesect", img: ({ gameKey }) => baseSprite(gameKey, 649) },
+				],
+			},
+		],
 	};
 
 	const TASKS_BY_SECTION_GAME1 = {
 		...TASKS_BY_SECTION,
+		catching: overrideTaskChildTexts(TASKS_BY_SECTION.catching, 1, {
+			1: "Trade for Reshiram",
+			2: "Catch Zekrom",
+			4: "Catch Tornadus",
+			5: "Trade for Thundurus",
+		}),
 	};
 
 	const TASKS_BY_SECTION_GAME2 = {
 		...TASKS_BY_SECTION,
+		catching: overrideTaskChildTexts(TASKS_BY_SECTION.catching, 1, {
+			1: "Catch Reshiram",
+			2: "Trade for Zekrom",
+			4: "Trade for Tornadus",
+			5: "Catch Thundurus",
+		}),
 	};
 
 	window.defineTasksMany(GAME_KEYS[0], SECTIONS, TASKS_BY_SECTION_GAME1);

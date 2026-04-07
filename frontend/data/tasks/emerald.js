@@ -4,8 +4,6 @@
 
 	const baseSprite = (gameKey, natiId) => _frontSprite(gen, gameKey, natiId);
 	const task = (gameKey, name) => _task(gameKey, name);
-	const npc = (gameKey, name) => _npc(gameKey, name);
-	const location = (gameKey, name) => _location(gameKey, name);
 	const heldItem = (name) => _heldItem(gen, name);
 	const keyItem = (name) => _keyItem(gen, name);
 	const decoration = (name) => _decoration(gen, name);
