@@ -2,29 +2,9 @@
 // Helper functions for dex completion percentages (species/forms/research).
 
 // Local copy of normalizeFlag from dex.js – keep in sync if you change it there.
-function normalizeFlag(v) {
-	return String(v || "unknown")
-		.trim()
-		.toLowerCase()
-		.replace(/\s+/g, "_");
-}
-
-// Local copy of isCompletedForGame from dex.js.
-function isCompletedForGame(game, val) {
-	const v = normalizeFlag(val);
-	const comps = (game?.completionFlags || ["caught"]).map(normalizeFlag);
-	return comps.includes(v);
-}
-
-// Local copy of mythical-form helper.
-const _isMythicalForm = (f) => typeof f === "object" && !!f.mythical;
-
-// Local copy of _getDexFormsNode from dex.js.
-function _getDexFormsNode(store, gameKey, monId) {
-	const map = store.dexFormsStatus.get(gameKey) || {};
-	const node = map[monId] || { all: false, forms: {} };
-	return { map, node };
-}
+import { isMythicalForm } from "./dex-config.js";
+import { getDexFormsNode } from "./dex-store.js";
+import { isCompletedForGame, normalizeFlag } from "./helpers.js";
 
 function _tierStatsForMon(tasks, rec = {}) {
 	let totalTiers = 0;
@@ -124,13 +104,13 @@ export function formsPctFor(gameKey, genKey, store) {
 
 	for (const m of speciesWithForms) {
 		const nodeKey = haveNat ? natKey : gameKey;
-		const { node } = _getDexFormsNode(store, nodeKey, m.id);
+		const { node } = getDexFormsNode(store, nodeKey, m.id);
 
 		for (const f of m.forms) {
 			const name = typeof f === "string" ? f : f?.name;
 			if (!name) continue;
 
-			const isExtra = _isMythicalForm(f);
+			const isExtra = isMythicalForm(f);
 			const v = normalizeFlag(node.forms?.[name] || "unknown");
 			const done = isCompletedForGame(game, v);
 

@@ -1,6 +1,4 @@
-import * as Dex from "../modals/dex.js";
 import { dexPctFor as _dexPctFor, dexSummaryCardFor as _dexSummaryCardFor } from "../modals/dex-summary.js";
-import * as Fashion from "../modals/fashion.js";
 import { fashionSummaryCardFor as _fashionSummaryCardFor } from "../modals/fashion-summary.js";
 import * as Distributions from "../modals/distributions.js";
 import * as Curry from "../modals/curry.js";

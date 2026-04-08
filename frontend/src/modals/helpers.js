@@ -125,12 +125,11 @@ export function isCompletedForGame(game, flag) {
 	if (!s || s === "unknown" || s === "seen") return false;
 
 	// Treat all “caught-like” states as complete
-	return (
-		s === "caught" ||
-		s === "alpha" ||
-		s === "shiny" ||
-		s === "shiny_alpha"
-	);
+	const completionFlags = Array.isArray(game?.completionFlags) && game.completionFlags.length
+		? game.completionFlags
+		: ["caught", "alpha", "shiny", "shiny_alpha"];
+
+	return completionFlags.map(normalizeFlag).includes(s);
 }
 
 /**
