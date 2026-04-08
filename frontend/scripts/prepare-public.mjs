@@ -4,13 +4,11 @@ import path from "path";
 
 const root = process.cwd();
 const publicDir = path.join(root, "public");
-const distDir = path.join(publicDir, "dist");
 const assetBaseUrl = String(process.env.ASSET_BASE_URL || "").trim();
 const apiBaseUrl = String(process.env.API_BASE_URL || "").trim();
 
 fs.rmSync(publicDir, { recursive: true, force: true });
 fs.mkdirSync(publicDir, { recursive: true });
-fs.mkdirSync(distDir, { recursive: true });
 
 const copyRecursive = (src, dest) => {
 	const stat = fs.statSync(src);
@@ -27,7 +25,6 @@ const copyRecursive = (src, dest) => {
 };
 
 const filesToCopy = [
-	"index.html",
 	"styles",
 	"src",
 	"data",
@@ -47,13 +44,3 @@ window.__ASSET_BASE_URL__ = ${JSON.stringify(assetBaseUrl)};
 window.__API_BASE_URL__ = ${JSON.stringify(apiBaseUrl)};
 `.trim() + "\n";
 fs.writeFileSync(path.join(publicDir, "asset-env.js"), envJs, "utf8");
-
-const publicIndexPath = path.join(publicDir, "index.html");
-if (fs.existsSync(publicIndexPath)) {
-	let html = fs.readFileSync(publicIndexPath, "utf8");
-	html = html.replace(
-		/<script type="module"\s+src="\.\/dist\/bundle\.js"><\/script>/,
-		'<script src="./asset-env.js"></script>\n\t\t<script type="module" src="./dist/bundle.js"></script>'
-	);
-	fs.writeFileSync(publicIndexPath, html, "utf8");
-}
