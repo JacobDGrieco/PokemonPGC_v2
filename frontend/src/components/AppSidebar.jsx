@@ -124,7 +124,12 @@ export function AppSidebar() {
 				<div id="navTitle" className="sidebar-title">{getSidebarTitle(state)}</div>
 			</div>
 
-			<div id="sideList" className="dir-list react-dir-list">
+			<div
+				id="sideList"
+				className="dir-list react-dir-list"
+				data-item-count={items.length}
+				data-compact-icons={items.length >= 5 ? 'true' : 'false'}
+			>
 				{items.map((item) => (
 					<button key={item.key} type="button" className={`dir-item react-dir-item ${item.active ? 'active' : ''}`} onClick={item.onClick}>
 						<div className="label">
