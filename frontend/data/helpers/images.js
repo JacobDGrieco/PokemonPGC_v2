@@ -2,6 +2,13 @@ import { _assetPath } from './assets.js';
 
 const ITEM = ['apricorns', 'balls', 'berries', 'decorations', 'form-items', 'fossils', 'held-items', 'key-items', 'mails', 'medicines', 'mega-stones', 'partner-gifts', 'stat-items', 'hms', 'tms', 'trs', 'treasures', 'usable-items', 'zcrystals'];
 
+function buildAssetSubpath(...parts) {
+	return parts
+		.map((part) => String(part || '').replace(/^\/+|\/+$/g, ''))
+		.filter(Boolean)
+		.join('/');
+}
+
 function resolveGen1GameVariant(gameKey) {
 	const raw = String(gameKey || '').toLowerCase();
 	if (raw !== 'red' && raw !== 'blue') return raw;
@@ -15,7 +22,7 @@ function resolveGen1GameVariant(gameKey) {
 }
 
 export function _imageByGen(type, genKey, name) {
-	const prefix = ITEM.includes(type) ? 'items/' : '';
+	const prefix = ITEM.includes(type) ? 'items' : '';
 	if (type === 'hms' || type === 'tms' || type === 'trs') type = `thms/${type}`;
 
 	let gen = '';
@@ -36,7 +43,7 @@ export function _imageByGen(type, genKey, name) {
 		case 8:
 			if (type === 'key-items') { gen = 'gen8'; break; }
 			if (type === 'thms/tms' || type === 'thms/hms') { gen = 'gen6-8'; break; }
-			else gen = 'gen4-8/'; break;
+			else gen = 'gen4-8'; break;
 		case 7.5:
 		case '7_2':
 			if (type === 'berries' || type === 'key-items') { gen = 'gen7_2'; break; }
@@ -51,7 +58,7 @@ export function _imageByGen(type, genKey, name) {
 		default: gen = '';
 	}
 
-	return _assetPath(`${prefix}/${type}/${gen}/${name}.png`);
+	return _assetPath(buildAssetSubpath(prefix, type, gen, `${name}.png`));
 }
 
 export function _imageByGame(type, gameKey, name, bwORc) {

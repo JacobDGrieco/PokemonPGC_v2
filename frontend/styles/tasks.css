@@ -56,7 +56,6 @@
 /* Wrapper for one or more images in a task */
 .task-row.task-inline .task-item-img-wrap {
 	display: flex;
-	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
 	gap: 4px;
@@ -65,6 +64,7 @@
 
 /* When images are inline with the label, left-align them */
 .task-row.task-inline .task-item-img-wrap.inline {
+	flex-wrap: wrap;
 	justify-content: flex-start;
 }
 
