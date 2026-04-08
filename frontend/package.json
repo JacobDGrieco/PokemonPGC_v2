@@ -10,7 +10,7 @@
     "dev": "npx vite",
     "dev:client": "npx vite",
     "dev:api": "node ./scripts/api-dev-server.mjs",
-    "build": "npx prisma generate && npx prisma db push && npx vite build",
+    "build": "npx prisma generate && npx prisma db push && npx vite build && node ./scripts/write-dist-env.mjs",
     "preview": "npx vite preview",
     "postinstall": "npx prisma generate",
     "prisma:push": "prisma db push",
