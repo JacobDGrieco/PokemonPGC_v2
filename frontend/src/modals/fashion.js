@@ -5,9 +5,11 @@ import { fashionPctFor, fashionSummaryCardFor, createFashionSummaryUpdater, refr
 import { createApplyFashionSyncForItem, resolveFashionImg } from "./fashion-sync.js";
 import {
 	getGameFashion as _getGameFashion,
+	gameHasGenderedFashion as _gameHasGenderedFashion,
 	getSelectedGenderForGame as _getSelectedGenderForGame,
 	setSelectedGenderForGame as _setSelectedGenderForGame,
 	itemVisibleForGender as _itemVisibleForGender,
+	itemProgressSplit as _itemProgressSplit,
 	getFormsNode as _getFormsNode,
 	setFormsNode as _setFormsNode,
 	fashionPctForGame,
@@ -74,7 +76,7 @@ export function wireFashionModal(store, els) {
 		const { fashionForGame } = store.state;
 
 		// Only show in games that actually have gender-split fashion (X/Y for now)
-		const showToggle = !!fashionForGame && GAMES_WITH_GENDERS.includes(fashionForGame);
+		const showToggle = !!fashionForGame && _gameHasGenderedFashion(fashionForGame);
 
 		fashionGenderToggle.classList.toggle("hidden", !showToggle);
 		if (!showToggle || !input) return;

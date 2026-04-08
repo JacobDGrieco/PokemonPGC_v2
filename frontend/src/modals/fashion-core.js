@@ -4,6 +4,16 @@ export function getGameFashion(gameKey) {
   return window.DATA?.fashion?.[gameKey]?.categories || [];
 }
 
+export function gameHasGenderedFashion(gameKey) {
+  const cats = getGameFashion(gameKey);
+  return cats.some((category) =>
+    (category?.items || []).some((item) => {
+      const gender = String(item?.gender || "").toLowerCase();
+      return gender === "male" || gender === "female";
+    })
+  );
+}
+
 export function getSelectedGenderForGame(store, gameKey) {
   const map = store.state.fashionGenderByGame || {};
   return map?.[gameKey] === "female" ? "female" : "male";

@@ -21,6 +21,18 @@ function _setSelectedGenderForGame(store, gameKey, gender) {
 	save();
 }
 
+function _gameHasGenderedFashion(gameKey) {
+	const categories = _getGameFashion(gameKey);
+	if (!Array.isArray(categories) || !categories.length) return false;
+
+	return categories.some((category) =>
+		(category?.items || []).some((item) => {
+			const gender = String(item?.gender || "").toLowerCase();
+			return gender === "male" || gender === "female";
+		})
+	);
+}
+
 /**
  * Should this fashion item be visible / counted for the current gender?
  * Items can optionally have item.gender: "male" | "female" | "both"
@@ -357,14 +369,13 @@ export function wireFashionModal(store, els) {
  * - Only show for X/Y for now.
  * - Unchecked = male, checked = female.
  */
-	const GAMES_WITH_GENDERS = ["x", "y", "sun", "moon", "ultrasun", "ultramoon", "sword", "shield", "legendsarceus"];
 	function syncFashionGenderToggle() {
 		if (!fashionGenderToggle) return;
 		const input = fashionGenderToggle.querySelector("input");
 		const { fashionForGame } = store.state;
 
-		// Only show in games that actually have gender-split fashion (X/Y for now)
-		const showToggle = !!fashionForGame && GAMES_WITH_GENDERS.includes(fashionForGame);
+		// Only show in games that actually have gender-split fashion
+		const showToggle = !!fashionForGame && _gameHasGenderedFashion(fashionForGame);
 
 		fashionGenderToggle.classList.toggle("hidden", !showToggle);
 		if (!showToggle || !input) return;
