@@ -1,11 +1,16 @@
-﻿(() => {
+import { gameSearch,
+  buildMonInfoByGame,
+} from '../helpers/index.js';
+import { PPGC } from '../../src/registry.js';
+
+(() => {
 	const natiId = 366;
 	const nameVal = "Clamperl";
 	const games = gameSearch("gen3", "gen4", "gen5", "gen6", "gen7", "bdsp");
 
 	const monInfoByGame = buildMonInfoByGame(natiId, nameVal, games);
 
-	window.PPGC.register([
+	PPGC.register([
 		{ monInfo: monInfoByGame, },
 	]);
 })();

@@ -1,3 +1,8 @@
+import { gameSearch,
+  buildMonInfoByGame,
+} from '../helpers/index.js';
+import { PPGC } from '../../src/registry.js';
+
 (() => {
 	const natiId = 671;
 	const form = "white-flower";
@@ -32,7 +37,7 @@
 		])
 	);
 
-	window.PPGC.register({
+	PPGC.register({
 		monInfoForms: monInfoFormsByGame,
 	});
 })();

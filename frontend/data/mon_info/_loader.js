@@ -1,4 +1,6 @@
 // src/data/mon_info/_loader.js
+import { formKeyToSuffix } from '../helpers/index.js';
+
 const monInfoModules = import.meta.glob('./*.js');
 const _loaded = new Set();
 
@@ -16,7 +18,7 @@ function moduleKeyForBase(num) {
 }
 
 function moduleKeyForForm(num, formKey) {
-	const suffix = window.formKeyToSuffix?.(num, formKey);
+	const suffix = formKeyToSuffix(num, formKey);
 	if (!suffix) return null;
 	return `./${pad4(num)}-${suffix}.js`;
 }

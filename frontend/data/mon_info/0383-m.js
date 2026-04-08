@@ -1,3 +1,8 @@
+import { gameSearch,
+  buildMonInfoFormsByGame,
+} from '../helpers/index.js';
+import { PPGC } from '../../src/registry.js';
+
 (() => {
 	const natiId = 383;
 	const form = "primal";
@@ -5,7 +10,7 @@
 
 	const monInfoFormsByGame = buildMonInfoFormsByGame(natiId, form, games);
 
-	window.PPGC.register({
+	PPGC.register({
 		monInfoForms: monInfoFormsByGame,
 	});
 })();
