@@ -1,10 +1,15 @@
+import {
+  _registerDexDataFromBaseDex,
+  dexSprite,
+} from '../helpers/index.js';
+
 (() => {
 	const gen = 5;
 	const GAME_KEYS = ["black-national", "white-national"];
 	const DEX_NAME = "National Dex";
 
-	const baseSprite = (gameKey, natiId) => window.dexSprite(gen, gameKey)(natiId);
-	const shinySprite = (gameKey, natiId) => window.dexSprite(gen, gameKey, { shiny: true })(natiId);
+	const baseSprite = (gameKey, natiId) => dexSprite(gen, gameKey)(natiId);
+	const shinySprite = (gameKey, natiId) => dexSprite(gen, gameKey, { shiny: true })(natiId);
 
 	const BASE_DEX = [
 		{ id: 1, natiId: 1, name: "Bulbasaur", img: ({ gameKey }) => baseSprite(gameKey, 1), imgS: ({ gameKey }) => shinySprite(gameKey, 1), tags: ["starter"], },
@@ -1248,5 +1253,5 @@
 		{ id: 649, natiId: 649, name: "Genesect", img: ({ gameKey }) => baseSprite(gameKey, 649), imgS: ({ gameKey }) => shinySprite(gameKey, 649), maxStatus: "caught", tags: ["mythical"], },
 	];
 
-	window._registerDexDataFromBaseDex({ gen, baseKeys: GAME_KEYS, dexName: DEX_NAME, baseDex: BASE_DEX, });
+	_registerDexDataFromBaseDex({ gen, baseKeys: GAME_KEYS, dexName: DEX_NAME, baseDex: BASE_DEX, });
 })();

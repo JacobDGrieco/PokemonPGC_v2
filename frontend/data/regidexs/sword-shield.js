@@ -1,10 +1,15 @@
+import {
+  _registerDexDataFromBaseDex,
+  dexSprite,
+} from '../helpers/index.js';
+
 (() => {
 	const gen = 8;
 	const GAME_KEYS = ["sword", "shield"];
 	const DEX_NAME = "Galar Dex";
 
-	const baseSprite = (gameKey, natiId) => window.dexSprite(gen, gameKey)(natiId);
-	const shinySprite = (gameKey, natiId) => window.dexSprite(gen, gameKey, { shiny: true })(natiId);
+	const baseSprite = (gameKey, natiId) => dexSprite(gen, gameKey)(natiId);
+	const shinySprite = (gameKey, natiId) => dexSprite(gen, gameKey, { shiny: true })(natiId);
 
 	const BASE_DEX = [
 		{ id: 1, natiId: 810, name: "Grookey", img: ({ gameKey }) => baseSprite(gameKey, 810), imgS: ({ gameKey }) => shinySprite(gameKey, 810), tags: ["starter"], },
@@ -841,5 +846,5 @@
 		{ id: 400, natiId: 890, name: "Eternatus", img: ({ gameKey }) => baseSprite(gameKey, 890), imgS: ({ gameKey }) => shinySprite(gameKey, 890), maxStatus: "caught", tags: ["legendary"], }
 	];
 
-	window._registerDexDataFromBaseDex({ gen, baseKeys: GAME_KEYS, dexName: DEX_NAME, baseDex: BASE_DEX, });
+	_registerDexDataFromBaseDex({ gen, baseKeys: GAME_KEYS, dexName: DEX_NAME, baseDex: BASE_DEX, });
 })();

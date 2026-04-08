@@ -1,10 +1,15 @@
+import {
+  _registerDexDataFromBaseDex,
+  dexSprite,
+} from '../helpers/index.js';
+
 (() => {
 	const gen = 3;
 	const GAME_KEYS = ["firered", "leafgreen"];
 	const DEX_NAME = "Kanto Dex";
 
-	const baseSprite = (gameKey, natiId) => window.dexSprite(gen, gameKey)(natiId);
-	const shinySprite = (gameKey, natiId) => window.dexSprite(gen, gameKey, { shiny: true })(natiId);
+	const baseSprite = (gameKey, natiId) => dexSprite(gen, gameKey)(natiId);
+	const shinySprite = (gameKey, natiId) => dexSprite(gen, gameKey, { shiny: true })(natiId);
 
 	const BASE_DEX = [
 		{ id: 1, natiId: 1, name: "Bulbasaur", img: ({ gameKey }) => baseSprite(gameKey, 1), imgS: ({ gameKey }) => shinySprite(gameKey, 1), tags: ["starter"] },
@@ -160,5 +165,5 @@
 		{ id: 151, natiId: 151, name: "Mew", img: ({ gameKey }) => baseSprite(gameKey, 151), imgS: ({ gameKey }) => shinySprite(gameKey, 151), tags: ["mythical"] },
 	];
 
-	window._registerDexDataFromBaseDex({ gen, baseKeys: GAME_KEYS, dexName: DEX_NAME, baseDex: BASE_DEX, });
+	_registerDexDataFromBaseDex({ gen, baseKeys: GAME_KEYS, dexName: DEX_NAME, baseDex: BASE_DEX, });
 })();

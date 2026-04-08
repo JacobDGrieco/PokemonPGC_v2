@@ -1,4 +1,9 @@
 // --- Curry -----------------------------------------------------------------
+import {
+  defineCurryMany,
+  _curryItem,
+} from '../helpers/index.js';
+
 (() => {
 	const GAME_KEYS = ["sword", "shield"];
 

@@ -1,10 +1,15 @@
+import {
+  _registerDexDataFromBaseDex,
+  dexSprite,
+} from '../helpers/index.js';
+
 (() => {
 	const gen = 6;
 	const GAME_KEYS = ["omegaruby-national", "alphasapphire-national"];
 	const DEX_NAME = "National Dex";
 
-	const baseSprite = (gameKey, natiId) => window.dexSprite(gen, gameKey)(natiId);
-	const shinySprite = (gameKey, natiId) => window.dexSprite(gen, gameKey, { shiny: true })(natiId);
+	const baseSprite = (gameKey, natiId) => dexSprite(gen, gameKey)(natiId);
+	const shinySprite = (gameKey, natiId) => dexSprite(gen, gameKey, { shiny: true })(natiId);
 
 	const BASE_DEX = [
 		{ id: 1, natiId: 1, name: "Bulbasaur", img: ({ gameKey }) => baseSprite(gameKey, 1), imgS: ({ gameKey }) => shinySprite(gameKey, 1), tags: ["starter"], },
@@ -1429,5 +1434,5 @@
 		{ id: 721, natiId: 721, name: "Volcanion", img: ({ gameKey }) => baseSprite(gameKey, 721), imgS: ({ gameKey }) => shinySprite(gameKey, 721), maxStatus: "caught", tags: ["mythical"], }
 	];
 
-	window._registerDexDataFromBaseDex({ gen, baseKeys: GAME_KEYS, dexName: DEX_NAME, baseDex: BASE_DEX, });
+	_registerDexDataFromBaseDex({ gen, baseKeys: GAME_KEYS, dexName: DEX_NAME, baseDex: BASE_DEX, });
 })();

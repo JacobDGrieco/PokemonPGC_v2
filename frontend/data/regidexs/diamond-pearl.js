@@ -1,10 +1,15 @@
+import {
+  _registerDexDataFromBaseDex,
+  dexSprite,
+} from '../helpers/index.js';
+
 (() => {
 	const gen = 4;
 	const GAME_KEYS = ["diamond", "pearl"];
 	const DEX_NAME = "Sinnoh Dex";
 
-	const baseSprite = (gameKey, natiId) => window.dexSprite(gen, gameKey)(natiId);
-	const shinySprite = (gameKey, natiId) => window.dexSprite(gen, gameKey, { shiny: true })(natiId);
+	const baseSprite = (gameKey, natiId) => dexSprite(gen, gameKey)(natiId);
+	const shinySprite = (gameKey, natiId) => dexSprite(gen, gameKey, { shiny: true })(natiId);
 
 	const BASE_DEX = [
 		{ id: 1, natiId: 387, name: "Turtwig", img: ({ gameKey }) => baseSprite(gameKey, 387), imgS: ({ gameKey }) => shinySprite(gameKey, 387), tags: ["starter"] },
@@ -487,5 +492,5 @@
 		{ id: 151, natiId: 490, name: "Manaphy", img: ({ gameKey }) => baseSprite(gameKey, 490), imgS: ({ gameKey }) => shinySprite(gameKey, 490), tags: ["mythical"] }
 	];
 
-	window._registerDexDataFromBaseDex({ gen, baseKeys: GAME_KEYS, dexName: DEX_NAME, baseDex: BASE_DEX, });
+	_registerDexDataFromBaseDex({ gen, baseKeys: GAME_KEYS, dexName: DEX_NAME, baseDex: BASE_DEX, });
 })();

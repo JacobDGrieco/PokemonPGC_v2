@@ -1,3 +1,17 @@
+import {
+  _hm,
+  _keyItem,
+  _megaStone,
+  _tm,
+  _zCrystal,
+  _location,
+  _npc,
+  _task,
+  _typing,
+  _frontSprite,
+  defineTasksMany,
+} from '../helpers/index.js';
+
 (() => {
 	const gen = 7;
 	const GAME_KEYS = ["sun", "moon"];
@@ -263,8 +277,8 @@
 		...TASKS_BY_SECTION,
 	};
 
-	window.defineTasksMany(GAME_KEYS[0], SECTIONS, TASKS_BY_SECTION_GAME1);
-	window.defineTasksMany(GAME_KEYS[1], SECTIONS, TASKS_BY_SECTION_GAME2);
+	defineTasksMany(GAME_KEYS[0], SECTIONS, TASKS_BY_SECTION_GAME1);
+	defineTasksMany(GAME_KEYS[1], SECTIONS, TASKS_BY_SECTION_GAME2);
 	try {
 		window.PPGC = window.PPGC || {};
 		window.PPGC._seedTaskRegistry = null;

@@ -1,3 +1,17 @@
+import {
+  _decoration,
+  _heldItem,
+  _hm,
+  _keyItem,
+  _ribbon,
+  _tm,
+  _task,
+  _badges,
+  _frontSprite,
+  defineTasksMany,
+  range,
+} from '../helpers/index.js';
+
 (() => {
 	const gen = 3;
 	const GAME_KEYS = ["emerald"];
@@ -349,7 +363,7 @@
 		]
 	};
 
-	window.defineTasksMany(GAME_KEYS, SECTIONS, TASKS_BY_SECTION);
+	defineTasksMany(GAME_KEYS, SECTIONS, TASKS_BY_SECTION);
 	try {
 		window.PPGC = window.PPGC || {};
 		window.PPGC._seedTaskRegistry = null;

@@ -1,3 +1,7 @@
+import {
+  defineSyncsMany,
+} from '../helpers/index.js';
+
 window.DATA = window.DATA || {};
 window.DATA.syncs = window.DATA.syncs || {};
 

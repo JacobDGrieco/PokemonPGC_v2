@@ -1,3 +1,9 @@
+import {
+  defineMedalsMany,
+  buildMedalsFor,
+  _medal,
+} from '../helpers/index.js';
+
 (() => {
 	const GAME_KEYS = ["black2", "white2"];
 

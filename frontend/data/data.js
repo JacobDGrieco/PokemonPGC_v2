@@ -1,4 +1,9 @@
 // Top level data setup
+import {
+  _assetPath,
+  spacer,
+} from './helpers/index.js';
+
 PPGC.register({
 	// Top-level gen tabs (all are checklists)
 	tabs: [

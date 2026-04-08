@@ -1,3 +1,9 @@
+import {
+  buildFashionFor,
+  defineFashionMany,
+  _fashionItem,
+} from '../helpers/index.js';
+
 (() => {
 	const GAME_KEYS = ["swordioa", "shieldioa"];
 
@@ -317,5 +323,5 @@
 		]
 	};
 
-	defineFashionMany(GAME_KEYS, () => window.buildFashionFor(CATEGORIES, ITEMS_BY_CATEGORY));
+	defineFashionMany(GAME_KEYS, () => buildFashionFor(CATEGORIES, ITEMS_BY_CATEGORY));
 })();

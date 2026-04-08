@@ -1,3 +1,18 @@
+import {
+  _heldItem,
+  _hm,
+  _keyItem,
+  _tm,
+  _location,
+  _npc,
+  _task,
+  _badges,
+  _frontSprite,
+  _frontSpriteShiny,
+  defineTasksMany,
+  range,
+} from '../helpers/index.js';
+
 (() => {
 	const gen = 2;
 	const GAME_KEYS = ["crystal"];
@@ -199,7 +214,7 @@
 		],
 	};
 
-	window.defineTasksMany(GAME_KEYS, SECTIONS, TASKS_BY_SECTION);
+	defineTasksMany(GAME_KEYS, SECTIONS, TASKS_BY_SECTION);
 	try {
 		window.PPGC = window.PPGC || {};
 		window.PPGC._seedTaskRegistry = null;

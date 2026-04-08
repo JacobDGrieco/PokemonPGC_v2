@@ -1,3 +1,7 @@
+import {
+  defineLayoutsMany,
+} from '../helpers/index.js';
+
 (() => {
 	const GAME_KEYS = ["letsgopikachu", "letsgoeevee"];
 

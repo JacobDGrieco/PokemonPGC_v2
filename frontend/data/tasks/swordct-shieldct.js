@@ -1,3 +1,14 @@
+import {
+  _keyItem,
+  _tm,
+  _location,
+  _npc,
+  _task,
+  _trainerCard,
+  _frontSprite,
+  defineTasksMany,
+} from '../helpers/index.js';
+
 (() => {
 	const gen = 8;
 	const GAME_KEYS = ["swordct", "shieldct"];
@@ -92,8 +103,8 @@
 		...TASKS_BY_SECTION,
 	};
 
-	window.defineTasksMany(GAME_KEYS[0], SECTIONS, TASKS_BY_SECTION_GAME1);
-	window.defineTasksMany(GAME_KEYS[1], SECTIONS, TASKS_BY_SECTION_GAME2);
+	defineTasksMany(GAME_KEYS[0], SECTIONS, TASKS_BY_SECTION_GAME1);
+	defineTasksMany(GAME_KEYS[1], SECTIONS, TASKS_BY_SECTION_GAME2);
 	try {
 		window.PPGC = window.PPGC || {};
 		window.PPGC._seedTaskRegistry = null;

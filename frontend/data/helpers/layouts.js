@@ -1,44 +1,41 @@
-window.defineLayoutsMany = function defineLayoutsMany(gameKeys, DESKTOP_LAYOUT, COMPACT_LAYOUT) {
-	const keys = Array.isArray(gameKeys) ? gameKeys : [gameKeys];
+import { pad3 } from './core.js';
 
-	function buildTaskRowsForGame(gameKey, layout) {
-		const out = {};
+export function defineLayoutsMany(gameKeys, DESKTOP_LAYOUT, COMPACT_LAYOUT) {
+  const keys = Array.isArray(gameKeys) ? gameKeys : [gameKeys];
 
-		for (const [sectionSuffix, rows] of Object.entries(layout || {})) {
-			// IMPORTANT:
-			// - This key MUST match sec.id used by content.js: "<game>:<section>"
-			// - Only the task IDs inside rows get the ":tasks:" segment.
-			const sectionKey = `${gameKey}:${sectionSuffix}`;
+  function buildTaskRowsForGame(gameKey, layout) {
+    const out = {};
 
-			out[sectionKey] = (rows || []).map((row) =>
-				(row || [])
-					.map((ref) => {
-						// allow literal tokens like "spacer"
-						if (typeof ref === "string") return ref;
+    for (const [sectionSuffix, rows] of Object.entries(layout || {})) {
+      const sectionKey = `${gameKey}:${sectionSuffix}`;
+      out[sectionKey] = (rows || []).map((row) =>
+        (row || [])
+          .map((ref) => {
+            if (typeof ref === 'string') return ref;
 
-						const parentId = ref?.[0];
-						const childId = ref?.[1];
-						if (parentId == null) return null;
+            const parentId = ref?.[0];
+            const childId = ref?.[1];
+            if (parentId == null) return null;
 
-						const taskRoot = `${gameKey}:tasks:${sectionSuffix}:${pad3(parentId)}`;
-						return childId == null ? taskRoot : `${taskRoot}:${pad3(childId)}`;
-					})
-					.filter(Boolean)
-			);
-		}
+            const taskRoot = `${gameKey}:tasks:${sectionSuffix}:${pad3(parentId)}`;
+            return childId == null ? taskRoot : `${taskRoot}:${pad3(childId)}`;
+          })
+          .filter(Boolean)
+      );
+    }
 
-		return out;
-	}
+    return out;
+  }
 
-	for (const gameKey of keys) {
-		const desktopLayout = buildTaskRowsForGame(gameKey, DESKTOP_LAYOUT);
-		const compactLayout = buildTaskRowsForGame(gameKey, COMPACT_LAYOUT ?? DESKTOP_LAYOUT);
+  for (const gameKey of keys) {
+    const desktopLayout = buildTaskRowsForGame(gameKey, DESKTOP_LAYOUT);
+    const compactLayout = buildTaskRowsForGame(gameKey, COMPACT_LAYOUT ?? DESKTOP_LAYOUT);
 
-		PPGC.register({
-			layoutVariants: {
-				desktop: { taskRows: desktopLayout },
-				compact: { taskRows: compactLayout },
-			},
-		});
-	}
-};
+    PPGC.register({
+      layoutVariants: {
+        desktop: { taskRows: desktopLayout },
+        compact: { taskRows: compactLayout },
+      },
+    });
+  }
+}

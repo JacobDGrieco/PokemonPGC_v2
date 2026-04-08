@@ -12,5 +12,3 @@ export function _assetPath(path) {
 
 	return `${base}/${cleanPath}`;
 }
-
-if (typeof window !== "undefined") window._assetPath = _assetPath;

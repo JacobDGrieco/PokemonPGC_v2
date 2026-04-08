@@ -1,10 +1,15 @@
+import {
+  _registerDexDataFromBaseDex,
+  dexSprite,
+} from '../helpers/index.js';
+
 (() => {
 	const gen = 5;
 	const GAME_KEYS = ["black", "white"];
 	const DEX_NAME = "Unova Dex";
 
-	const baseSprite = (gameKey, natiId) => window.dexSprite(gen, gameKey)(natiId);
-	const shinySprite = (gameKey, natiId) => window.dexSprite(gen, gameKey, { shiny: true })(natiId);
+	const baseSprite = (gameKey, natiId) => dexSprite(gen, gameKey)(natiId);
+	const shinySprite = (gameKey, natiId) => dexSprite(gen, gameKey, { shiny: true })(natiId);
 
 	const BASE_DEX = [
 		{ id: 0, natiId: 494, name: "Victini", img: ({ gameKey }) => baseSprite(gameKey, 494), imgS: ({ gameKey }) => shinySprite(gameKey, 494), tags: ["mythical"], maxStatus: "caught" },
@@ -199,5 +204,5 @@
 		{ id: 155, natiId: 649, name: "Genesect", img: ({ gameKey }) => baseSprite(gameKey, 649), imgS: ({ gameKey }) => shinySprite(gameKey, 649), tags: ["mythical"], maxStatus: "caught" }
 	];
 
-	window._registerDexDataFromBaseDex({ gen, baseKeys: GAME_KEYS, dexName: DEX_NAME, baseDex: BASE_DEX, });
+	_registerDexDataFromBaseDex({ gen, baseKeys: GAME_KEYS, dexName: DEX_NAME, baseDex: BASE_DEX, });
 })();

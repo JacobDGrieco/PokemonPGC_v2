@@ -1,3 +1,15 @@
+import {
+  _hm,
+  _keyItem,
+  _megaStone,
+  _tm,
+  _location,
+  _npc,
+  _task,
+  _frontSprite,
+  defineTasksMany,
+} from '../helpers/index.js';
+
 (() => {
 	const gen = 7.5;
 	const GAME_KEYS = ["letsgopikachu", "letsgoeevee"];
@@ -168,8 +180,8 @@
 		]
 	};
 
-	window.defineTasksMany(GAME_KEYS[0], SECTIONS, TASKS_BY_SECTION_GAME1);
-	window.defineTasksMany(GAME_KEYS[1], SECTIONS, TASKS_BY_SECTION_GAME2);
+	defineTasksMany(GAME_KEYS[0], SECTIONS, TASKS_BY_SECTION_GAME1);
+	defineTasksMany(GAME_KEYS[1], SECTIONS, TASKS_BY_SECTION_GAME2);
 	try {
 		window.PPGC = window.PPGC || {};
 		window.PPGC._seedTaskRegistry = null;

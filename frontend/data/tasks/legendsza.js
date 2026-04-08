@@ -1,3 +1,14 @@
+import {
+  _keyItem,
+  _megaStone,
+  _tm,
+  _treasure,
+  _task,
+  _iconSprite,
+  defineTasksMany,
+  range,
+} from '../helpers/index.js';
+
 (() => {
 	const gen = 9.5;
 	const GAME_KEYS = ["legendsza"];

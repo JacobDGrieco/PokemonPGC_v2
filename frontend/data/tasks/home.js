@@ -1,3 +1,9 @@
+import {
+  _task,
+  _frontSprite,
+  defineTasksMany,
+} from '../helpers/index.js';
+
 (() => {
 	const gen = "home";
 	const GAME_KEYS = ["home"];
@@ -18,7 +24,7 @@
 		],
 	};
 
-	window.defineTasksMany(GAME_KEYS, SECTIONS, TASKS_BY_SECTION);
+	defineTasksMany(GAME_KEYS, SECTIONS, TASKS_BY_SECTION);
 	try {
 		window.PPGC = window.PPGC || {};
 		window.PPGC._seedTaskRegistry = null;

@@ -1,4 +1,15 @@
 // Last entry was PokePark Mew 5/10/2006 for JPN distros
+import {
+  _assetPath,
+  defineDistributionsMany,
+  _ball,
+  _berry,
+  _ribbon,
+  _task,
+  _frontSprite,
+  _frontSpriteShiny,
+} from '../helpers/index.js';
+
 
 window.DATA = window.DATA || {};
 window.DATA.distributions = window.DATA.distributions || {};

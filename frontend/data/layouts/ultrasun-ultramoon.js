@@ -1,3 +1,7 @@
+import {
+  defineLayoutsMany,
+} from '../helpers/index.js';
+
 (() => {
 	const GAME_KEYS = ["ultrasun", "ultramoon"];
 
@@ -65,5 +69,5 @@
 
 	const COMPACT_LAYOUT = DESKTOP_LAYOUT;
 
-	window.defineLayoutsMany(GAME_KEYS, DESKTOP_LAYOUT, COMPACT_LAYOUT);
+	defineLayoutsMany(GAME_KEYS, DESKTOP_LAYOUT, COMPACT_LAYOUT);
 })();

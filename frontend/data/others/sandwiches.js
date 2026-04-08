@@ -1,4 +1,9 @@
 // --- Sandwiches ------------------------------------------------------------
+import {
+  defineSandwichMany,
+  _sandwichItem,
+} from '../helpers/index.js';
+
 (() => {
 	const GAME_KEYS = ["scarlet", "violet"];
 

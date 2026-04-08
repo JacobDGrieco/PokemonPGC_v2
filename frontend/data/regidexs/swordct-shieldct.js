@@ -1,10 +1,15 @@
+import {
+  _registerDexDataFromBaseDex,
+  dexSprite,
+} from '../helpers/index.js';
+
 (() => {
 	const gen = 8;
 	const GAME_KEYS = ["swordct", "shieldct"];
 	const DEX_NAME = "Crown Tundra Dex";
 
-	const baseSprite = (gameKey, natiId) => window.dexSprite(gen, gameKey)(natiId);
-	const shinySprite = (gameKey, natiId) => window.dexSprite(gen, gameKey, { shiny: true })(natiId);
+	const baseSprite = (gameKey, natiId) => dexSprite(gen, gameKey)(natiId);
+	const shinySprite = (gameKey, natiId) => dexSprite(gen, gameKey, { shiny: true })(natiId);
 
 	const BASE_DEX = [
 		{ id: 1, natiId: 872, name: "Snom", img: ({ gameKey }) => baseSprite(gameKey, 872), imgS: ({ gameKey }) => shinySprite(gameKey, 872), },
@@ -367,5 +372,5 @@
 		{ id: 210, natiId: 898, name: "Calyrex", img: ({ gameKey }) => baseSprite(gameKey, 898), imgS: ({ gameKey }) => shinySprite(gameKey, 898), tags: ["legendary"], }
 	];
 
-	window._registerDexDataFromBaseDex({ gen, baseKeys: GAME_KEYS, dexName: DEX_NAME, baseDex: BASE_DEX, });
+	_registerDexDataFromBaseDex({ gen, baseKeys: GAME_KEYS, dexName: DEX_NAME, baseDex: BASE_DEX, });
 })();

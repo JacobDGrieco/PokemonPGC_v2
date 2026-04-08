@@ -1,3 +1,14 @@
+import {
+  _hm,
+  _keyItem,
+  _tm,
+  _npc,
+  _task,
+  _badges,
+  _frontSprite,
+  defineTasksMany,
+} from '../helpers/index.js';
+
 (() => {
 	const gen = 4;
 	const GAME_KEYS = ["platinum"];
@@ -294,7 +305,7 @@
 		]
 	};
 
-	window.defineTasksMany(GAME_KEYS, SECTIONS, TASKS_BY_SECTION);
+	defineTasksMany(GAME_KEYS, SECTIONS, TASKS_BY_SECTION);
 	try {
 		window.PPGC = window.PPGC || {};
 		window.PPGC._seedTaskRegistry = null;

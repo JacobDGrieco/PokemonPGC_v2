@@ -1,3 +1,12 @@
+import {
+  _megaStone,
+  _tm,
+  _task,
+  _iconSprite,
+  defineTasksMany,
+  range,
+} from '../helpers/index.js';
+
 (() => {
 	const gen = 9.5;
 	const GAME_KEYS = ["legendszamd"];
@@ -261,7 +270,7 @@
 		],
 	};
 
-	window.defineTasksMany(GAME_KEYS, SECTIONS, TASKS_BY_SECTION);
+	defineTasksMany(GAME_KEYS, SECTIONS, TASKS_BY_SECTION);
 	try {
 		window.PPGC = window.PPGC || {};
 		window.PPGC._seedTaskRegistry = null;

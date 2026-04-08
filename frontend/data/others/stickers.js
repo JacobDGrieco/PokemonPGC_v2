@@ -1,4 +1,9 @@
 // --- Ball Capsules (Stickers) ---------------------------------------------
+import {
+  defineStickersMany,
+  _sticker,
+} from '../helpers/index.js';
+
 (() => {
 	const GAME_KEYS = ["brilliantdiamond", "shiningpearl"];
 

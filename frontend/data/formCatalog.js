@@ -1,4 +1,8 @@
 // src/data/forms/catalog.js
+import {
+  formSearch,
+} from './helpers/index.js';
+
 (function () {
 	window.PPGC = window.PPGC || {};
 	window.DATA = window.DATA || {};
