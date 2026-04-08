@@ -19,10 +19,12 @@ import { initLayoutSwitcher } from "./ui/layoutSwitcher.js";
 import { elements } from "./ui/dom.js";
 import { renderCrumbs } from "./ui/crumbs.js";
 import { emitPpgcUiSync } from './react-bridge/storeBridge.js';
+import { bootstrapTasksForGame } from './react-bridge/progressSummary.js';
 import { initHistory } from "./history.js";
 import { ensurePpgcRoot } from "./runtime/globals.js";
 import { installUiGlobals } from "./runtime/uiGlobals.js";
 import { _assetPath } from "./utils/assetPath.js";
+import { ensureSyncSetsExpandedForGame } from "./sync.js";
 
 const PPGC = ensurePpgcRoot();
 installUiGlobals();
@@ -70,6 +72,30 @@ function _getGenLoadPromises() {
 	return PPGC._genLoadPromises;
 }
 
+function _getPreparedSharedGenSet() {
+	window.PPGC = window.PPGC || {};
+	if (!PPGC._preparedSharedGenData) PPGC._preparedSharedGenData = new Set();
+	return PPGC._preparedSharedGenData;
+}
+
+const SHARED_GEN_PRELOAD_KEYS = new Set(["gen8", "gen9", "gen9_2"]);
+
+function prepareSharedGenData(genKey) {
+	if (!SHARED_GEN_PRELOAD_KEYS.has(genKey)) return;
+
+	const prepared = _getPreparedSharedGenSet();
+	if (prepared.has(genKey)) return;
+
+	const games = window.DATA?.games?.[genKey] || [];
+	for (const game of games) {
+		if (!game?.key) continue;
+		ensureSyncSetsExpandedForGame(game.key);
+		bootstrapTasksForGame(game.key, store);
+	}
+
+	prepared.add(genKey);
+}
+
 async function ensureGenDataLoaded(genKey) {
 	if (!genKey) return false;
 
@@ -106,6 +132,7 @@ async function ensureGenDataLoaded(genKey) {
 
 	promises.set(genKey, p);
 	await p;
+	prepareSharedGenData(genKey);
 	return true;
 }
 
