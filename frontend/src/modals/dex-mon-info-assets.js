@@ -1,3 +1,5 @@
+import { _baseModel, _shinyModel } from '../../data/helpers/sprite-models.js';
+
 function inferGenNumber(genKey, gameKey) {
 	if (genKey != null) {
 		const m = String(genKey).match(/(\d+)/);
@@ -38,8 +40,8 @@ function resolveModelSources({ genKey, gameKey, mon, resolvedInfo } = {}) {
 		return { base: null, shiny: null, thumbBase: null, thumbShiny: null };
 	}
 
-	const base = models.base ?? models.model ?? (typeof window._baseModel === "function" ? window._baseModel(genKey, gameKey, mon.id) : null);
-	const shiny = models.shiny ?? models.modelShiny ?? (typeof window._shinyModel === "function" ? window._shinyModel(genKey, gameKey, mon.id) : null);
+	const base = models.base ?? models.model ?? _baseModel(genKey, gameKey, mon.id);
+	const shiny = models.shiny ?? models.modelShiny ?? _shinyModel(genKey, gameKey, mon.id);
 	const thumbBase = sprites.front ?? models.thumbnail ?? null;
 	const thumbShiny = sprites.frontShiny ?? null;
 	return { base, shiny, thumbBase, thumbShiny };

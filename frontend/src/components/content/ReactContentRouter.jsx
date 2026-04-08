@@ -11,12 +11,13 @@ import { SectionPage } from './SectionPage.jsx';
 import { ImperativeContentMount } from './ImperativeContentMount.jsx';
 import { MonInfoIndexPage } from './MonInfoIndexPage.jsx';
 import { MonInfoPage } from './MonInfoPage.jsx';
+import { getVisibleSections } from '../../utils/sectionVisibility.js';
 
 function handleEnterGame(genKey, gameKey) {
   return async () => {
     try {
       await window.PPGC?.ensureGenDataLoadedForGame?.(gameKey);
-      const sections = ensureSections(gameKey);
+      const sections = getVisibleSections(gameKey, ensureSections);
       navigateToState({ level: 'section', genKey, gameKey, sectionId: sections?.[0]?.id || null });
     } catch {
       navigateToState({ level: 'game', genKey, gameKey: null, sectionId: null });

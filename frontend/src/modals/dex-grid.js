@@ -7,6 +7,7 @@ import {
   renderBadges,
 } from './helpers.js';
 import { getImageForStatus } from './dex-search.js';
+import { _dexIdNumber } from '../../data/helpers/dex-ids.js';
 
 function buildSpriteMarkup({ src, name }) {
   if (!src) return `<div style="opacity:.5;">No image</div>`;
@@ -123,13 +124,7 @@ export function renderDexCards({
 
     card.innerHTML = `
       <div class="thumb ${cls}">
-        <button
-          type="button"
-          class="dex-info-btn"
-          title="Show detailed info for ${it.name}"
-          aria-label="Show detailed info for ${it.name}"
-        >i</button>
-        <div class="name" title="${it.id}">#${String(window._dexIdNumber(it.id, it.localId) ?? '').padStart(3, '0')}
+        <div class="name" title="${it.id}">#${String(_dexIdNumber(it.id, it.localId) ?? '').padStart(3, '0')}
           ${renderBadges(current, gameKey)}
         </div>
         ${buildSpriteMarkup({ src, name: it.name })}
@@ -168,11 +163,6 @@ export function renderDexCards({
         }
       }
     }
-
-    card.querySelector('.dex-info-btn')?.addEventListener('click', async (e) => {
-      e.stopPropagation();
-      await openMonInfo(gameKey, genKey, it);
-    });
 
     if (hasForms) {
       card.querySelector('.forms-launch')?.addEventListener('click', (e) => {

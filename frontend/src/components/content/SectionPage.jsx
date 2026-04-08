@@ -13,6 +13,7 @@ import {
   renderStickerCardsFor,
 } from '../../react-bridge/modalApi.js';
 import { navigateToState } from '../../react-bridge/navigation.js';
+import { getVisibleSections, isTemporarilyHiddenSection } from '../../utils/sectionVisibility.js';
 import { TaskTree } from '../tasks/TaskTree.jsx';
 
 function useImperativeChildren(build, deps) {
@@ -171,12 +172,21 @@ function buildInjectedNodes(section, state) {
 export function SectionPage({ state, refreshKey }) {
   const [sectionVersion, setSectionVersion] = useState(0);
   const section = useMemo(
-    () => ensureSections(state.gameKey).find((entry) => entry.id === state.sectionId) || null,
+    () => getVisibleSections(state.gameKey, ensureSections).find((entry) => entry.id === state.sectionId) || null,
     [state.gameKey, state.sectionId]
+  );
+  const fallbackSectionId = useMemo(
+    () => getVisibleSections(state.gameKey, ensureSections)[0]?.id || null,
+    [state.gameKey]
   );
 
   useEffect(() => {
     if (!section) {
+      const selectedSection = (ensureSections(state.gameKey) || []).find((entry) => entry.id === state.sectionId) || null;
+      if (selectedSection && isTemporarilyHiddenSection(selectedSection) && fallbackSectionId) {
+        navigateToState({ level: 'section', genKey: state.genKey, gameKey: state.gameKey, sectionId: fallbackSectionId });
+        return;
+      }
       navigateToState({ level: 'game', genKey: state.genKey, gameKey: null, sectionId: null });
       return;
     }
@@ -187,7 +197,7 @@ export function SectionPage({ state, refreshKey }) {
 
     bootstrapTasksForGame(state.gameKey, store);
     setSectionVersion((v) => v + 1);
-  }, [section, state.gameKey, state.genKey]);
+  }, [fallbackSectionId, section, state.gameKey, state.genKey, state.sectionId]);
 
   const pct = useMemo(() => {
     if (!section) return 0;

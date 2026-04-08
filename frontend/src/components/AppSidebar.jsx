@@ -4,6 +4,7 @@ import { save, store } from '../store.js';
 import { ensureSections } from '../react-bridge/taskApi.js';
 import { usePpgcSnapshot } from '../react-bridge/usePpgcSnapshot.js';
 import { navigateToState } from '../react-bridge/navigation.js';
+import { getVisibleSections } from '../utils/sectionVisibility.js';
 
 function makeSidebarItems(state) {
 	const level = state?.level || 'gen';
@@ -27,7 +28,7 @@ function makeSidebarItems(state) {
 			onClick: async () => {
 				try {
 					await window.PPGC?.ensureGenDataLoadedForGame?.(game.key);
-					const sections = ensureSections(game.key);
+					const sections = getVisibleSections(game.key, ensureSections);
 					navigateToState({
 						level: 'section',
 						genKey: state.genKey,
@@ -42,7 +43,7 @@ function makeSidebarItems(state) {
 	}
 
 	if (level === 'section') {
-		return ensureSections(state.gameKey).map((section) => ({
+		return getVisibleSections(state.gameKey, ensureSections).map((section) => ({
 			key: section.id,
 			label: section.title,
 			active: state.sectionId === section.id,

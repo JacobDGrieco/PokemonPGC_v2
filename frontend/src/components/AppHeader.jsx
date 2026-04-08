@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { save, store } from '../store.js';
 import { usePpgcSnapshot } from '../react-bridge/usePpgcSnapshot.js';
-import { navigateHome, navigateToToolsInfo } from '../react-bridge/navigation.js';
+import { navigateHome } from '../react-bridge/navigation.js';
 import { wireGlobalTaskSearch } from '../ui/taskSearch.js';
 
 export function AppHeader() {
@@ -36,9 +36,6 @@ export function AppHeader() {
       <div className="header-brand">
         <button id="ppgcHomeBtn" className="brand-link brand-button" type="button" onClick={navigateHome}>
           PokémonPGC
-        </button>
-        <button id="ppgcMonInfoBtn" className="brand-link brand-button" type="button" onClick={navigateToToolsInfo}>
-          Info/Tools
         </button>
       </div>
 
