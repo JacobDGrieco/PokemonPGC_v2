@@ -1,9 +1,51 @@
 /* ===================== CSS variables ===================== */
 
+@property --app-glow-top-alpha {
+	syntax: "<number>";
+	inherits: true;
+	initial-value: 0.08;
+}
+
+@property --app-glow-bottom-alpha {
+	syntax: "<number>";
+	inherits: true;
+	initial-value: 0.08;
+}
+
+@property --panel-glow-top-alpha {
+	syntax: "<number>";
+	inherits: true;
+	initial-value: 0.08;
+}
+
+@property --panel-glow-side-alpha {
+	syntax: "<number>";
+	inherits: true;
+	initial-value: 0.08;
+}
+
+@property --active-glow-top-alpha {
+	syntax: "<number>";
+	inherits: true;
+	initial-value: 0.08;
+}
+
+@property --active-glow-side-alpha {
+	syntax: "<number>";
+	inherits: true;
+	initial-value: 0.08;
+}
+
 :root {
 	--gap: 12px;
 	--radius: 18px;
 	--accent: #191d1d;
+	--app-glow-top-alpha: 0.08;
+	--app-glow-bottom-alpha: 0.08;
+	--panel-glow-top-alpha: 0.08;
+	--panel-glow-side-alpha: 0.08;
+	--active-glow-top-alpha: 0.08;
+	--active-glow-side-alpha: 0.08;
 	--surface-0: #090c12;
 	--surface-1: #0f131b;
 	--surface-2: #151b24;
@@ -14,12 +56,12 @@
 	--text-muted: rgba(238, 243, 251, 0.72);
 	--shadow-panel: 0 18px 40px rgba(0, 0, 0, 0.28);
 	--panel-bg:
-		radial-gradient(circle at top right, rgba(245, 198, 68, 0.08), transparent 32%),
-		radial-gradient(circle at left center, rgba(43, 139, 255, 0.1), transparent 28%),
+		radial-gradient(circle at top right, rgba(59, 76, 202, var(--panel-glow-top-alpha)), transparent 32%),
+		radial-gradient(circle at left center, rgba(113, 197, 88, var(--panel-glow-side-alpha)), transparent 28%),
 		linear-gradient(180deg, rgba(22, 27, 36, 0.98), rgba(12, 15, 22, 0.98));
 	--app-bg:
-		radial-gradient(circle at top, rgba(245, 198, 68, 0.08), transparent 30%),
-		radial-gradient(circle at bottom left, rgba(43, 139, 255, 0.09), transparent 28%),
+		radial-gradient(circle at top, rgba(113, 197, 88, var(--app-glow-top-alpha)), transparent 30%),
+		radial-gradient(circle at bottom left, rgba(59, 76, 202, var(--app-glow-bottom-alpha)), transparent 28%),
 		linear-gradient(180deg, #07090d, #0c1016 42%, #0a0d13 100%);
 
 	/* Scrollbar colors */
@@ -30,6 +72,73 @@
 
 	--ppgc-card-thumb: 128px;
 	--ppgc-thumb-box: 160px;
+	animation:
+		ppgc-app-glow-top-pulse 5s ease-in-out infinite alternate,
+		ppgc-app-glow-bottom-pulse 6s ease-in-out infinite alternate,
+		ppgc-panel-glow-top-pulse 5s ease-in-out infinite alternate,
+		ppgc-panel-glow-side-pulse 6s ease-in-out infinite alternate,
+		ppgc-active-glow-top-pulse 5s ease-in-out infinite alternate,
+		ppgc-active-glow-side-pulse 6s ease-in-out infinite alternate;
+}
+
+@keyframes ppgc-app-glow-top-pulse {
+	from {
+		--app-glow-top-alpha: 0.08;
+	}
+
+	to {
+		--app-glow-top-alpha: 0.25;
+	}
+}
+
+@keyframes ppgc-app-glow-bottom-pulse {
+	from {
+		--app-glow-bottom-alpha: 0.08;
+	}
+
+	to {
+		--app-glow-bottom-alpha: 0.25;
+	}
+}
+
+@keyframes ppgc-panel-glow-top-pulse {
+	from {
+		--panel-glow-top-alpha: 0.08;
+	}
+
+	to {
+		--panel-glow-top-alpha: 0.25;
+	}
+}
+
+@keyframes ppgc-panel-glow-side-pulse {
+	from {
+		--panel-glow-side-alpha: 0.08;
+	}
+
+	to {
+		--panel-glow-side-alpha: 0.25;
+	}
+}
+
+@keyframes ppgc-active-glow-top-pulse {
+	from {
+		--active-glow-top-alpha: 0.08;
+	}
+
+	to {
+		--active-glow-top-alpha: 0.25;
+	}
+}
+
+@keyframes ppgc-active-glow-side-pulse {
+	from {
+		--active-glow-side-alpha: 0.08;
+	}
+
+	to {
+		--active-glow-side-alpha: 0.25;
+	}
 }
 
 /* ===================== Global reset / base ===================== */

@@ -109,7 +109,7 @@ body:not(.mobile-ui).sidebar-collapsed .content {
 
 .dir-item.active {
 	background:
-		linear-gradient(135deg, rgba(245, 198, 68, 0.14), rgba(43, 139, 255, 0.14)),
+		linear-gradient(135deg, rgba(59, 76, 202, var(--active-glow-top-alpha)), rgba(113, 197, 88, var(--active-glow-side-alpha))),
 		rgba(255, 255, 255, 0.08);
 	border-color: var(--line-strong);
 }
