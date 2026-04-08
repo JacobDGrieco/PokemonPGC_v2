@@ -5,6 +5,8 @@ export const bootstrapTasks = (...args) => Tasks.bootstrapTasks?.(...args);
 export const setDescendantsDone = (...args) => Tasks.setDescendantsDone?.(...args);
 export const applySyncsFromTask = (...args) => Tasks.applySyncsFromTask?.(...args);
 export const attachTooltip = (...args) => Tasks.attachTooltip?.(...args);
+export const buildTaskLayoutGroups = (...args) => Tasks.buildTaskLayoutGroups?.(...args);
+export const buildTaskLayoutMeta = (...args) => Tasks.buildTaskLayoutMeta?.(...args);
 export const buildTaskIndex = (...args) => Tasks.buildTaskIndex?.(...args);
 export const eitherSyncView = (...args) => Tasks.eitherSyncView?.(...args);
 export const formatTierTooltip = (...args) => Tasks.formatTierTooltip?.(...args);

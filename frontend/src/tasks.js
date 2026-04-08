@@ -1,4 +1,4 @@
-import { ensureSections, buildTaskIndex, bootstrapTasks } from "./tasks-bootstrap.js";
+import { ensureSections, buildTaskIndex, buildTaskLayoutGroups, buildTaskLayoutMeta, bootstrapTasks } from "./tasks-bootstrap.js";
 import { getTierMetaForTask, getTierSteps, formatTierTooltip, isEitherTask, isTieredTask, setDescendantsDone, getEitherChoice, setEitherChoice, eitherSyncView } from "./tasks-modes.js";
 import { unloadSectionTasks, applySyncsFromTask } from "./tasks-sync.js";
 import { ensurePpgcRoot } from "./runtime/globals.js";
@@ -17,6 +17,8 @@ export {
   wireEitherUI,
   ensureSections,
   buildTaskIndex,
+  buildTaskLayoutGroups,
+  buildTaskLayoutMeta,
   getTierMetaForTask,
   getTierSteps,
   formatTierTooltip,

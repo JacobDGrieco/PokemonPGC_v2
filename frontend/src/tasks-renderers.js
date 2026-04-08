@@ -1,5 +1,5 @@
 import { getTierMetaForTask, getTierSteps, formatTierTooltip, isEitherTask, isTieredTask, setDescendantsDone, getEitherChoice, forEachDescendant, _clampInt } from "./tasks-modes.js";
-import { buildTaskIndex } from "./tasks-bootstrap.js";
+import { buildTaskIndex, buildTaskLayoutGroups } from "./tasks-bootstrap.js";
 import { applySyncsFromTask } from "./tasks-sync.js";
 import { getAccentColor, resolveAccentForSection, resolveTaskImageSrcs, attachTooltip } from "./tasks-visuals.js";
 import { renderEitherHTML, wireEitherUI } from "./tasks-either.js";
@@ -200,18 +200,14 @@ export function renderTaskLayout(tasks, sectionId, setTasks, rowsSpec) {
   const wrap = document.createElement('div');
   wrap.className = 'task-layout';
   const used = new Set();
+  const spacerId = window.DATA?.spacer?.id || 'spacer';
+  const { meta: layoutMeta, groups: layoutGroups } = buildTaskLayoutGroups(rowsSpec, index, spacerId);
 
-  for (const row of rowsSpec) {
+  const buildRowEl = (row, rowIndex) => {
     const rowEl = document.createElement('div');
-    rowEl.className = 'task-row task-inline';
-    const includesSub = row.some((id) => {
-      const entry = index.get(id);
-      return entry && entry.parent;
-    });
-    if (includesSub) rowEl.classList.add('has-subtasks');
+    rowEl.className = ['task-row', 'task-inline', ...(layoutMeta[rowIndex]?.rowClasses || [])].join(' ');
 
     for (const id of row) {
-      const spacerId = window.DATA?.spacer?.id || 'spacer';
       if (id === spacerId) {
         rowEl.appendChild(makeSpacer());
         continue;
@@ -221,8 +217,23 @@ export function renderTaskLayout(tasks, sectionId, setTasks, rowsSpec) {
       used.add(id);
       rowEl.appendChild(buildTaskItem(entry.task, sectionId, setTasks, rootTasks, index, cbById));
     }
-    wrap.appendChild(rowEl);
-  }
+    return rowEl;
+  };
+
+  layoutGroups.forEach((group) => {
+    if (group.type === 'lineage') {
+      const groupEl = document.createElement('div');
+      groupEl.className = 'task-group task-group-lineage';
+      group.rowIndexes.forEach((rowIndex) => {
+        groupEl.appendChild(buildRowEl(rowsSpec[rowIndex], rowIndex));
+      });
+      wrap.appendChild(groupEl);
+      return;
+    }
+
+    const [rowIndex] = group.rowIndexes;
+    wrap.appendChild(buildRowEl(rowsSpec[rowIndex], rowIndex));
+  });
 
   const leftovers = [];
   (function collect(arr) {

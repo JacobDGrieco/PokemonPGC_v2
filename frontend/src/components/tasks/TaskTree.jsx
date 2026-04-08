@@ -3,6 +3,7 @@ import { save, store } from '../../store.js';
 import {
   applySyncsFromTask,
   attachTooltip,
+  buildTaskLayoutGroups,
   buildTaskIndex,
   eitherSyncView,
   formatTierTooltip,
@@ -343,11 +344,16 @@ function TaskList({ tasks, sectionId, rootTasks, index, onMutate }) {
 function TaskLayout({ tasks, sectionId, rowsSpec, rootTasks, index, onMutate }) {
   const spacerId = window.DATA?.spacer?.id || 'spacer';
   const used = new Set();
+  const { meta: layoutMeta, groups: layoutGroups } = useMemo(
+    () => buildTaskLayoutGroups(rowsSpec, index, spacerId),
+    [rowsSpec, index, spacerId],
+  );
 
-  const rows = rowsSpec.map((row, rowIndex) => {
-    const includesSubtasks = row.some((id) => !!index.get(id)?.parent);
+  const renderRow = (row, rowIndex) => {
+    const rowMeta = layoutMeta[rowIndex] || null;
+    const rowClassName = ['task-row', 'task-inline', ...(rowMeta?.rowClasses || [])].join(' ');
     return (
-      <div key={`${sectionId}-row-${rowIndex}`} className={`task-row task-inline${includesSubtasks ? ' has-subtasks' : ''}`}>
+      <div key={`${sectionId}-row-${rowIndex}`} className={rowClassName}>
         {row.map((id, itemIndex) => {
           if (id === spacerId) {
             return <div key={`${sectionId}-spacer-${rowIndex}-${itemIndex}`} className="task-spacer" style={{ height: 12 }} />;
@@ -378,6 +384,19 @@ function TaskLayout({ tasks, sectionId, rowsSpec, rootTasks, index, onMutate }) 
         })}
       </div>
     );
+  };
+
+  const rows = layoutGroups.map((group, groupIndex) => {
+    if (group.type === 'lineage') {
+      return (
+        <div key={`${sectionId}-group-${groupIndex}`} className="task-group task-group-lineage">
+          {group.rowIndexes.map((rowIndex) => renderRow(rowsSpec[rowIndex], rowIndex))}
+        </div>
+      );
+    }
+
+    const [rowIndex] = group.rowIndexes;
+    return renderRow(rowsSpec[rowIndex], rowIndex);
   });
 
   const leftovers = tasks.filter((task) => !used.has(task.id));

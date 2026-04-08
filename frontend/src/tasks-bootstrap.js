@@ -31,6 +31,92 @@ export function buildTaskIndex(tasks) {
 	return map;
 }
 
+export function buildTaskLayoutMeta(rowsSpec, index, spacerId = "spacer") {
+	const rowMeta = (rowsSpec || []).map((row) => {
+		const entries = (row || [])
+			.filter((id) => id !== spacerId)
+			.map((id) => index.get(id))
+			.filter(Boolean);
+
+		const childParentIds = [...new Set(entries.map((entry) => entry.parent?.id).filter(Boolean))];
+		const mainEntries = entries.filter((entry) => !entry.parent);
+		const singleMainEntry = entries.length === 1 && mainEntries.length === 1 ? mainEntries[0] : null;
+		const hasChildren = !!(singleMainEntry?.task?.children?.length);
+
+		return {
+			includesSubtasks: entries.some((entry) => !!entry.parent),
+			isSingleMainWithChildren: !!singleMainEntry && hasChildren,
+			mainTaskId: singleMainEntry?.task?.id || null,
+			isPureChildRow: entries.length > 0 && entries.every((entry) => !!entry.parent) && childParentIds.length === 1,
+			childParentId: childParentIds.length === 1 ? childParentIds[0] : null,
+		};
+	});
+
+	const decorated = rowMeta.map((meta) => ({
+		...meta,
+		rowClasses: meta.includesSubtasks ? ["has-subtasks"] : [],
+	}));
+
+	for (let i = 0; i < rowMeta.length; i += 1) {
+		const meta = rowMeta[i];
+		if (!meta.isSingleMainWithChildren || !meta.mainTaskId) continue;
+
+		let lastChildRow = i;
+		for (let j = i + 1; j < rowMeta.length; j += 1) {
+			const candidate = rowMeta[j];
+			if (!candidate.isPureChildRow || candidate.childParentId !== meta.mainTaskId) break;
+			lastChildRow = j;
+		}
+
+		if (lastChildRow === i) continue;
+
+		decorated[i].rowClasses.push("task-lineage-row", "task-lineage-start", "task-lineage-parent");
+		for (let j = i + 1; j <= lastChildRow; j += 1) {
+			decorated[j].rowClasses.push(
+				"task-lineage-row",
+				"task-lineage-child",
+				j === lastChildRow ? "task-lineage-end" : "task-lineage-middle",
+			);
+		}
+
+		i = lastChildRow - 1;
+	}
+
+	return decorated;
+}
+
+export function buildTaskLayoutGroups(rowsSpec, index, spacerId = "spacer") {
+	const meta = buildTaskLayoutMeta(rowsSpec, index, spacerId);
+	const groups = [];
+
+	for (let i = 0; i < (rowsSpec || []).length; i += 1) {
+		const rowMeta = meta[i] || { rowClasses: [] };
+
+		if (rowMeta.rowClasses.includes("task-lineage-start")) {
+			const rowIndexes = [i];
+			let j = i + 1;
+			while (j < meta.length && meta[j]?.rowClasses?.includes("task-lineage-row")) {
+				rowIndexes.push(j);
+				if (meta[j].rowClasses.includes("task-lineage-end")) break;
+				j += 1;
+			}
+			groups.push({
+				type: "lineage",
+				rowIndexes,
+			});
+			i = rowIndexes[rowIndexes.length - 1];
+			continue;
+		}
+
+		groups.push({
+			type: "single",
+			rowIndexes: [i],
+		});
+	}
+
+	return { meta, groups };
+}
+
 export function bootstrapTasks(sectionId, tasksStore, { indexSectionTasks, indexDexSyncs } = {}) {
 	const seed = (window.DATA.tasks && window.DATA.tasks[sectionId]) || [];
 

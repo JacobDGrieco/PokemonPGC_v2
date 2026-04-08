@@ -24,7 +24,22 @@
 /* Layout wrapper used when rendering with a rowsSpec */
 .task-layout {
 	display: grid;
-	gap: 10px;
+	--task-row-gap: 10px;
+	gap: var(--task-row-gap);
+}
+
+.task-group {
+	position: relative;
+}
+
+.task-group.task-group-lineage {
+	display: grid;
+	gap: 0;
+	background: rgba(255, 255, 255, 0.04);
+	border: 1px solid var(--line-soft);
+	border-radius: 12px;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
+	overflow: hidden;
 }
 
 /* ===================== Inline row variant ===================== */
@@ -42,6 +57,20 @@
 	align-items: center;
 	gap: 12px;
 	padding: 12px 8px;
+	position: relative;
+	isolation: isolate;
+}
+
+.task-group.task-group-lineage .task-row.task-inline {
+	background: transparent;
+	border: 0;
+	border-radius: 0;
+	box-shadow: none;
+	margin: 0;
+}
+
+.task-group.task-group-lineage .task-row.task-inline + .task-row.task-inline {
+	border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 /* Individual task “chip” inside an inline row */
@@ -105,9 +134,54 @@
 /* Highlight inline rows that contain subtasks */
 .task-row.task-inline.has-subtasks {
 	padding-left: 25px;
-	border-left: 25px solid var(--accent, #7fd2ff);
-	border-top-left-radius: 12px;
-	border-bottom-left-radius: 12px;
+}
+
+.task-row.task-inline.has-subtasks::before,
+.task-row.task-inline.task-lineage-row::before {
+	content: "";
+	position: absolute;
+	left: 10px;
+	width: 8px;
+	border-radius: 999px;
+	background: linear-gradient(180deg,
+			color-mix(in srgb, var(--accent, #7fd2ff) 88%, white 12%),
+			color-mix(in srgb, var(--accent, #7fd2ff) 76%, black 24%));
+	box-shadow:
+		0 0 0 1px color-mix(in srgb, var(--accent, #7fd2ff) 25%, transparent),
+		0 8px 18px color-mix(in srgb, var(--accent, #7fd2ff) 16%, transparent);
+	z-index: 0;
+}
+
+.task-row.task-inline.has-subtasks::before {
+	top: 8px;
+	bottom: 8px;
+}
+
+.task-row.task-inline.task-lineage-row {
+	padding-left: 21px;
+}
+
+.task-group.task-group-lineage .task-row.task-inline.task-lineage-row::before {
+	content: none;
+}
+
+.task-row.task-inline.task-lineage-child::after {
+	content: none;
+}
+
+.task-group.task-group-lineage .task-row.task-inline.task-lineage-child {
+	border-left: 12px solid color-mix(in srgb, var(--accent, #7fd2ff) 82%, rgba(255, 255, 255, 0.08));
+	padding-left: 13px;
+}
+
+.task-group.task-group-lineage .task-row.task-inline.task-lineage-middle.task-lineage-child,
+.task-group.task-group-lineage .task-row.task-inline.task-lineage-end.task-lineage-child {
+	margin-top: -1px;
+}
+
+.task-row.task-inline .task-item {
+	position: relative;
+	z-index: 1;
 }
 
 /* --- MAIN task: with children (image inline, left-of text) --- */
@@ -402,6 +476,14 @@
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 		padding: 8px 6px;
 		gap: 8px;
+	}
+
+	.task-layout {
+		--task-row-gap: 8px;
+	}
+
+	.task-group.task-group-lineage {
+		border-radius: 10px;
 	}
 
 	.task-row.task-inline:not(:has(.task-item:nth-child(2))) {

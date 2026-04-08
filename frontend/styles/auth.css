@@ -6,7 +6,6 @@
 	background: radial-gradient(circle at 30% 30%, #ffffff 0, #ffffff 35%, #e31c23 36%, #e31c23 80%, #111 81%);
 	color: #111;
 	padding: 4px;
-	margin-left: 8px;
 	cursor: pointer;
 	display: inline-flex;
 	align-items: center;
@@ -175,9 +174,9 @@
 /* ===================== Account dropdown menu ===================== */
 
 .ppgc-account-menu {
-	position: fixed;
-	right: 12px;
-	top: 52px;
+	position: absolute;
+	right: 0;
+	top: calc(100% + 6px);
 	min-width: 150px;
 	background: #101018;
 	border-radius: 10px;

@@ -207,45 +207,7 @@ function renderAll() {
 initHistory({ store, renderAll });
 
 // ------------------------------------------------------------
-// 4) Backup controls UI (floating gear menu)
-// ------------------------------------------------------------
-
-/**
- * Injects and wires the floating "Backup" gear menu.
- * - Lets user choose a backup folder
- * - Trigger manual backup/import
- * - Toggle automatic backups
- * The controls are only mounted once per page load.
- */
-function mountBackupControls() {
-	if (document.getElementById("ppgc-backup-controls")) return;
-
-	const wrap = document.createElement("div");
-	wrap.id = "ppgc-backup-controls";
-
-	wrap.innerHTML = `
-    <button
-      id="ppgc-account-button"
-      aria-haspopup="dialog"
-      aria-controls="ppgc-auth-overlay"
-      title="Log in / Sign up"
-    >
-      <!-- little trainer silhouette -->
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M12 11.5c1.93 0 3.5-1.79 3.5-4s-1.57-4-3.5-4-3.5 1.79-3.5 4 1.57 4 3.5 4zm0 2c-2.76 0-5.5 1.57-5.5 3.5V19h11v-2c0-1.93-2.74-3.5-5.5-3.5z"/>
-      </svg>
-    </button>
-    <div id="ppgc-account-menu" class="ppgc-account-menu" hidden>
-      <button type="button" data-action="settings">Account settings</button>
-      <button type="button" data-action="logout">Log out</button>
-    </div>
-  `;
-
-	document.body.appendChild(wrap);
-}
-
-// ------------------------------------------------------------
-// 5) Account / auth UI
+// 4) Account / auth UI
 // ------------------------------------------------------------
 
 let currentUser = null;
@@ -534,8 +496,8 @@ async function initAuthUI() {
 
 	// Close menu when clicking elsewhere
 	document.addEventListener("click", (e) => {
-		const withinControls = e.target.closest("#ppgc-backup-controls");
-		if (!withinControls) {
+		const withinAccountUi = e.target.closest("#ppgc-account-button, #ppgc-account-menu, .header-account");
+		if (!withinAccountUi) {
 			closeAccountMenu();
 		}
 	});
@@ -550,7 +512,7 @@ async function initAuthUI() {
 }
 
 // ------------------------------------------------------------
-// 6) App bootstrap
+// 5) App bootstrap
 // ------------------------------------------------------------
 
 // Run expensive, non-blocking work after first paint.
@@ -584,7 +546,6 @@ function runWhenIdle(fn, timeout = 1500) {
 window.__PPGC_NO_IMG__ = _assetPath('no-image.svg');
 initLayoutSwitcher(renderAll);
 renderAll();
-mountBackupControls();
 // Defer until after React's initial render has committed the DOM (AuthModal etc.)
 setTimeout(initAuthUI, 0);
 initBackups({ minutes: 5 });
@@ -607,7 +568,7 @@ window.addEventListener("ppgc:import:done", () => {
 });
 
 // ------------------------------------------------------------
-// Header brand links (Home + Mon Info)
+// 6) Header brand links (Home + Mon Info)
 // ------------------------------------------------------------
 (function wireHeaderBrandLinks() {
 	const home = document.getElementById("ppgcHomeBtn");
