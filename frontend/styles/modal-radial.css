@@ -12,6 +12,8 @@
 	margin: 16px auto;
 	width: var(--size);
 	height: var(--size);
+	max-width: 100%;
+	box-sizing: border-box;
 }
 
 /* Base chip: absolute, sized by JS, layout from JS; visuals styled below */
@@ -20,25 +22,26 @@
 	transform: translate(-50%, -50%);
 
 	/* lock chip footprint based on image size (still responsive) */
-	width: calc(var(--form-img) * 1.6);
-	height: calc(var(--form-img) * 1.9);
-	min-width: 0;
-	min-height: 0;
+	width: clamp(96px, calc(var(--form-img) * 1.72), 156px);
+	min-width: calc(var(--form-img) + 28px);
+	min-height: calc(var(--form-img) * 1.8);
+	height: auto;
 
-	padding: var(--chip-pad, 10px 12px);
+	padding: var(--chip-pad, 6px 8px);
 
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	gap: 10px;
+	gap: 6px;
 
 	overflow: visible;
 	cursor: default;
 
-	font-size: 12px;
+	font-size: 11px;
 	font-weight: 600;
 	text-align: center;
-	line-height: 1;
+	line-height: 1.1;
+	box-sizing: border-box;
 }
 
 /* Selected state */
@@ -70,12 +73,12 @@
 
 .forms-wheel .form-chip {
 	/* Transparent, rectangular chip (neutral background, white border) */
-	background: transparent;
-	border: 3px solid rgba(255, 255, 255, 0.85);
-	border-radius: 12px;
-	padding: 10px 12px;
+	background: rgba(10, 14, 20, 0.38);
+	border: 2px solid rgba(255, 255, 255, 0.78);
+	border-radius: 10px;
+	padding: 6px 8px;
 
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.24);
 	backdrop-filter: none;
 	/* ensure no frosted look */
 }
@@ -92,15 +95,20 @@
 /* Inner layout of a chip */
 .forms-wheel .form-chip .chip-row {
 	display: grid;
-	gap: 10px;
+	gap: 5px;
 	justify-items: center;
+	align-items: center;
+	width: 100%;
+	min-width: 0;
 }
 
 .forms-wheel .form-chip img {
-	width: var(--form-img, 60px);
-	height: var(--form-img, 60px);
+	width: calc(var(--form-img, 60px) * 1.18);
+	height: calc(var(--form-img, 60px) * 1.18);
 	object-fit: contain;
 	display: block;
+	max-width: 100%;
+	max-height: 100%;
 }
 
 /* Sprite-style status filters */
@@ -122,6 +130,42 @@
 	font-weight: 600;
 	color: #fff;
 	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+	max-width: 100%;
+	overflow-wrap: anywhere;
+	line-height: 1.15;
+	text-align: center;
+	min-width: 0;
+}
+
+.forms-wheel.is-grid {
+	width: 100%;
+	height: auto;
+	max-width: 100%;
+	margin-inline: auto;
+	align-items: stretch;
+}
+
+.forms-wheel.is-grid .form-chip {
+	position: static;
+	transform: none;
+	width: 100%;
+	min-width: 0;
+	min-height: 0;
+	height: 100%;
+	justify-self: stretch;
+	align-self: stretch;
+	padding: 6px;
+}
+
+.forms-wheel.is-grid .form-chip .chip-row {
+	grid-template-rows: auto minmax(0, auto) auto;
+	align-content: start;
+}
+
+.forms-wheel.is-grid .form-chip img {
+	width: min(calc(var(--form-img, 60px) * 1.2), 100%);
+	height: auto;
+	max-height: 84px;
 }
 
 /* Optional small <select> inside a chip */
@@ -130,8 +174,12 @@
 	color: #eaeaea;
 	border: 1px solid #303038;
 	border-radius: 8px;
-	padding: 4px 8px;
-	font-size: 12px;
+	padding: 4px 6px;
+	font-size: 11px;
+	width: 100%;
+	min-width: 0;
+	max-width: 100%;
+	box-sizing: border-box;
 }
 
 /* If a form has a non-unknown status, give a stronger border + glow */

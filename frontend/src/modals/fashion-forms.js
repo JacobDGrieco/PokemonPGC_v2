@@ -1,8 +1,3 @@
-// fashion-forms.js
-//
-// Handles the shared forms modal when used from the Fashion section.
-// This is a lighter boolean-toggling wheel compared to the Dex forms wheel.
-
 import { save } from "../store.js";
 import {
 	layoutWheel,
@@ -10,6 +5,8 @@ import {
 	computeChipScale,
 	prepFormsModal,
 	createWheelResizeHandler,
+	resetFormsWheelLayout,
+	applyFormsGridLayout,
 } from "./modal.js";
 import { cleanupFormsModal } from "./helpers.js";
 
@@ -18,28 +15,27 @@ export function setupFashionForms(store, deps) {
 		formsModal,
 		formsModalClose,
 		formsWheel,
-		getFormsNode,          // (gameKey, categoryId, itemId) => { obj }
-		setFormsNode,          // (gameKey, categoryId, itemId, node) => void
-		updateFashionSummary,  // (gameKey, categoryId) => void
-		refreshSectionHeader,  // () => void
-		applyFashionSyncForItem, // NEW
+		getFormsNode,
+		setFormsNode,
+		updateFashionSummary,
+		refreshSectionHeader,
+		applyFashionSyncForItem,
 	} = deps;
 
 	if (!formsModal || !formsWheel) {
-		// Graceful no-op if DOM isn’t there
 		return {
-			openDexForms: () => { },
-			closeDexForms: () => { },
+			openDexForms: () => {},
+			closeDexForms: () => {},
 		};
 	}
 
-	function _resolveFashionImg(imgLike, gameKey) {
+	function resolveFashionImg(imgLike, gameKey) {
 		if (!imgLike) return "";
 		if (typeof imgLike === "function") {
 			try {
 				return imgLike({ gameKey }) || "";
-			} catch (e) {
-				console.warn("Fashion form img resolver failed:", e);
+			} catch (error) {
+				console.warn("Fashion form img resolver failed:", error);
 				return "";
 			}
 		}
@@ -65,39 +61,35 @@ export function setupFashionForms(store, deps) {
 		const accent = getGameColor(gameKey);
 		const dialog = prepFormsModal(formsModal, formsWheel, {
 			accent,
-			clearWheelGridStyles: true, // reset any grid overrides from Dex/Fashion
+			clearWheelGridStyles: true,
 		});
 		if (!dialog) return;
 
 		const forms = item.forms || [];
-		const N = forms.length;
-		const useRadial = N <= 7;    // ≤7 → radial shapes, ≥8 → grid
-		const preferWidth = N >= 11; // same heuristic as before for dense wheels
+		const count = forms.length;
+		const useRadial = count <= 4;
+		const preferWidth = count >= 9;
 
 		const body = dialog.querySelector(".modal-bd");
 		if (body) {
-			if (N > 12) {
-				body.classList.add("forms-wheel-scroll");
-			} else {
-				body.classList.remove("forms-wheel-scroll");
-			}
+			body.classList.toggle("forms-wheel-scroll", count > 12);
 		}
 
 		const { obj } = getFormsNode(gameKey, categoryId, item.id);
 		const firstLayout = layoutWheel(dialog, { preferWidth, sizeCap: 1000 });
 		formsWheel.style.setProperty("--size", `${firstLayout.size}px`);
 
-		const scale = computeChipScale("fashion", N, dialog);
+		const scale = computeChipScale("fashion", count, dialog);
 		formsWheel.style.setProperty("--form-img", `${scale.img}px`);
 		formsWheel.style.setProperty("--chip-font", `${scale.font}px`);
 		formsWheel.style.setProperty("--chip-pad", scale.pad);
+		resetFormsWheelLayout(formsWheel);
 
-		// Build chips so we can measure widths for layout
 		const chips = forms.map((form) => {
 			const name = typeof form === "string" ? form : form?.name ?? "";
 			const id = typeof form === "string" ? form : form?.id ?? "";
 			const imgLike = typeof form === "object" ? form?.img : null;
-			const imgUrl = _resolveFashionImg(imgLike, gameKey);
+			const imgUrl = resolveFashionImg(imgLike, gameKey);
 
 			const btn = document.createElement("button");
 			btn.className = "form-chip";
@@ -113,11 +105,11 @@ export function setupFashionForms(store, deps) {
 			row.appendChild(labelSpan);
 
 			if (imgUrl) {
-				const im = document.createElement("img");
-				im.src = imgUrl;
-				im.alt = name;
-				im.loading = "lazy";
-				row.appendChild(im);
+				const img = document.createElement("img");
+				img.src = imgUrl;
+				img.alt = name;
+				img.loading = "lazy";
+				row.appendChild(img);
 			}
 
 			const checked = !!obj.forms?.[name];
@@ -127,35 +119,35 @@ export function setupFashionForms(store, deps) {
 				const now = btn.getAttribute("aria-checked") !== "true";
 				btn.setAttribute("aria-checked", now ? "true" : "false");
 
-				const { obj } = getFormsNode(gameKey, categoryId, item.id);
-				obj.forms = obj.forms || {};
-				obj.forms[name] = now;
+				const { obj: nextNode } = getFormsNode(gameKey, categoryId, item.id);
+				nextNode.forms = nextNode.forms || {};
+				nextNode.forms[name] = now;
 
 				const total = forms.length;
-				const onCount = Object.values(obj.forms).filter(Boolean).length;
-				obj.all = onCount === total;
+				const onCount = Object.values(nextNode.forms).filter(Boolean).length;
+				nextNode.all = onCount === total;
 
-				setFormsNode(gameKey, categoryId, item.id, obj);
+				setFormsNode(gameKey, categoryId, item.id, nextNode);
 				save();
 
 				const mainChk = document.querySelector(
 					`[data-fashion-main="${gameKey}:${categoryId}:${item.id}"]`
 				);
 				if (mainChk instanceof HTMLInputElement) {
-					mainChk.checked = !!obj.all;
+					mainChk.checked = !!nextNode.all;
 				}
 
 				const key = `${gameKey}:${categoryId}:${item.id}`;
-				document
-					.querySelectorAll(`[data-fashion-count="${key}"]`)
-					.forEach((el) => {
-						el.textContent = `${onCount}/${total}`;
-					});
+				document.querySelectorAll(`[data-fashion-count="${key}"]`).forEach((el) => {
+					el.textContent = `${onCount}/${total}`;
+				});
 
 				updateFashionSummary(gameKey, categoryId);
 				refreshSectionHeader();
 				window.PPGC?.applyTaskSyncsFromFashion?.(gameKey, categoryId, item.id);
-				if (typeof applyFashionSyncForItem === "function") applyFashionSyncForItem(gameKey, categoryId, item, !!obj.all);
+				if (typeof applyFashionSyncForItem === "function") {
+					applyFashionSyncForItem(gameKey, categoryId, item, !!nextNode.all);
+				}
 			});
 
 			btn.appendChild(row);
@@ -163,19 +155,9 @@ export function setupFashionForms(store, deps) {
 			return btn;
 		});
 
-		// ----- Layout mode: radial vs 4-col grid -----
 		let onResize = null;
 
 		if (useRadial) {
-			// Reset any grid overrides from a previous open
-			formsWheel.style.width = "";
-			formsWheel.style.height = "";
-			formsWheel.style.display = "";
-			formsWheel.style.gridTemplateColumns = "";
-			formsWheel.style.gap = "";
-			formsWheel.style.padding = "";
-
-			// Radial wheel with shared layout and special shapes (2–7 forms)
 			onResize = createWheelResizeHandler("fashion", dialog, formsWheel, chips, {
 				preferWidth,
 				sizeCap: 1000,
@@ -187,24 +169,15 @@ export function setupFashionForms(store, deps) {
 			});
 			window.addEventListener("resize", onResize, { passive: true });
 		} else {
-			// 8+ forms → grid layout with 4 columns
-			formsWheel.style.width = "100%";
-			formsWheel.style.height = "auto";
-			formsWheel.style.display = "grid";
-			formsWheel.style.gridTemplateColumns = "repeat(4, minmax(0, 1fr))";
-			formsWheel.style.gap = "12px";
-			formsWheel.style.padding = "8px 16px 16px";
-
-			chips.forEach((chip) => {
-				chip.style.position = "static";
-				chip.style.transform = "none";
-				chip.style.width = "100%";
-				chip.style.height = "auto";
+			applyFormsGridLayout(formsWheel, chips, {
+				columns: "repeat(6, minmax(0, 1fr))",
+				gap: "8px",
+				padding: "4px 2px 10px",
+				maxWidth: "100%",
 			});
 		}
 
-		// Overwrite closeForms to also remove the resize listener (if any)
-		closeForms = function () {
+		closeForms = function closeFashionForms() {
 			if (onResize) {
 				window.removeEventListener("resize", onResize);
 			}
@@ -227,7 +200,6 @@ export function setupFashionForms(store, deps) {
 		formsModal.setAttribute("aria-hidden", "false");
 	}
 
-	// Wire events for the shared forms modal
 	formsModal.addEventListener("click", (e) => {
 		if (e.target === formsModal) closeForms();
 	});

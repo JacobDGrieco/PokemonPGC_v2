@@ -306,10 +306,11 @@ export function setupDexFormsModal(store, deps) {
 			formsWheel.style.width = "100%";
 			formsWheel.style.height = "auto";
 			formsWheel.style.display = "grid";
+			formsWheel.style.maxWidth = "100%";
 			formsWheel.style.gridTemplateColumns =
-				"repeat(4, minmax(0, 1fr))";
-			formsWheel.style.gap = "12px";
-			formsWheel.style.padding = "8px 16px 16px";
+				"repeat(6, minmax(0, 1fr))";
+			formsWheel.style.gap = "8px";
+			formsWheel.style.padding = "4px 2px 10px";
 
 			chips.forEach((chip) => {
 				chip.style.position = "relative";

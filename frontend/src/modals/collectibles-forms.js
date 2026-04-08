@@ -4,6 +4,8 @@ import {
   computeChipScale,
   prepFormsModal,
   createWheelResizeHandler,
+  resetFormsWheelLayout,
+  applyFormsGridLayout,
 } from "./modal.js";
 
 export function openCollectibleForms(config) {
@@ -44,6 +46,7 @@ export function openCollectibleForms(config) {
   formsWheel.style.setProperty('--form-img', `${scale.img}px`);
   formsWheel.style.setProperty('--chip-font', `${scale.font}px`);
   formsWheel.style.setProperty('--chip-pad', scale.pad);
+  resetFormsWheelLayout(formsWheel);
 
   const itemKey = String(item.id);
   const { node } = getFormsNode(store, gameKey, itemKey);
@@ -114,20 +117,32 @@ export function openCollectibleForms(config) {
     chips.push(btn);
   }
 
-  const onResize = createWheelResizeHandler(scaleMode, dialog, formsWheel, chips, {
-    sizeCap: 1000,
-    shrinkMaxR: true,
-    innerRadiusStrategy(minR, outerR) {
-      return Math.max(minR * 0.6, outerR * 0.45);
-    },
-  });
+  let onResize = null;
+  const useRadial = N <= 4;
+
+  if (useRadial) {
+    onResize = createWheelResizeHandler(scaleMode, dialog, formsWheel, chips, {
+      sizeCap: 1000,
+      shrinkMaxR: true,
+      innerRadiusStrategy(minR, outerR) {
+        return Math.max(minR * 0.6, outerR * 0.45);
+      },
+    });
+    window.addEventListener('resize', onResize, { passive: true });
+  } else {
+    applyFormsGridLayout(formsWheel, chips, {
+      columns: 'repeat(6, minmax(0, 1fr))',
+      gap: '8px',
+      padding: '4px 2px 10px',
+      maxWidth: '100%',
+    });
+  }
 
   const resizeKey = `_${kind}OnResize`;
   if (formsModal[resizeKey]) {
     window.removeEventListener('resize', formsModal[resizeKey]);
   }
   formsModal[resizeKey] = onResize;
-  window.addEventListener('resize', onResize, { passive: true });
 
   const closeBtn = document.getElementById('formsModalClose');
   closeBtn?.addEventListener('click', () => {

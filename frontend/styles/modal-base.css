@@ -134,17 +134,26 @@
 }
 
 /* Forms modal body: scrollable when needed */
+#formsModal .modal-dialog {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
 #formsModal .modal-bd {
+	flex: 1 1 auto;
 	min-height: auto;
 	display: block;
-	padding: 8px 0 12px 0;
+	padding: 4px 0 8px 0;
 	overflow-x: hidden;
+	overflow-y: auto;
 }
 
 #formsModal .modal-bd.forms-wheel-scroll {
 	max-height: calc(92vh - var(--hd, 56px));
 	overflow-y: auto;
 	overflow-x: hidden;
+	padding: 8px 4px 12px;
 }
 
 /* Z-order of different modals */
@@ -184,17 +193,17 @@
 .card .research-launch {
 	display: inline-flex;
 	align-items: center;
-	gap: 8px;
-	padding: 6px 10px;
+	gap: 6px;
+	padding: 5px 8px;
 
-	border-radius: 10px;
+	border-radius: 9px;
 	border: 1px solid color-mix(in srgb, var(--accent, #6aa6ff) 70%, #000 30%);
 	background: color-mix(in srgb,
 			var(--accent, #6aa6ff) 85%,
 			#000 15%);
 	color: #fff;
 
-	font-size: 12px;
+	font-size: 11px;
 	font-weight: 600;
 	line-height: 1;
 	cursor: pointer;
@@ -212,7 +221,7 @@
 .card .forms-launch .pill.count,
 .card .research-launch .pill.count {
 	margin-left: 4px;
-	padding: 2px 6px;
+	padding: 2px 5px;
 	border-radius: 999px;
 	font-weight: 700;
 

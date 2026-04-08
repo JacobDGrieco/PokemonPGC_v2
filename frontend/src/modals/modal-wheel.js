@@ -1,5 +1,45 @@
 import { computeChipScale, computeRingCounts, getOvalScale, getRadiusScale, layoutWheel } from "./modal-geometry.js";
 
+export function resetFormsWheelLayout(formsWheel) {
+	if (!formsWheel) return;
+	formsWheel.classList.remove("is-grid");
+	formsWheel.style.width = "";
+	formsWheel.style.height = "";
+	formsWheel.style.display = "";
+	formsWheel.style.gridTemplateColumns = "";
+	formsWheel.style.gap = "";
+	formsWheel.style.padding = "";
+	formsWheel.style.maxWidth = "";
+}
+
+export function applyFormsGridLayout(formsWheel, chips, opts = {}) {
+	if (!formsWheel || !Array.isArray(chips)) return;
+	const {
+		columns = "repeat(4, minmax(0, 1fr))",
+		gap = "12px",
+		padding = "8px 12px 16px",
+		maxWidth = "100%",
+	} = opts;
+
+	formsWheel.classList.add("is-grid");
+	formsWheel.style.width = "100%";
+	formsWheel.style.maxWidth = maxWidth;
+	formsWheel.style.height = "auto";
+	formsWheel.style.display = "grid";
+	formsWheel.style.gridTemplateColumns = columns;
+	formsWheel.style.gap = gap;
+	formsWheel.style.padding = padding;
+
+	chips.forEach((chip) => {
+		chip.style.position = "static";
+		chip.style.left = "";
+		chip.style.top = "";
+		chip.style.transform = "none";
+		chip.style.width = "";
+		chip.style.height = "";
+	});
+}
+
 export function prepFormsModal(formsModal, formsWheel, opts = {}) {
 	if (!formsModal || !formsWheel) return null;
 	const { accent = null, clearWheelGridStyles = false } = opts;
@@ -12,9 +52,7 @@ export function prepFormsModal(formsModal, formsWheel, opts = {}) {
 	}
 	formsWheel.innerHTML = "";
 	if (clearWheelGridStyles) {
-		formsWheel.style.display = "";
-		formsWheel.style.gridTemplateColumns = "";
-		formsWheel.style.gap = "";
+		resetFormsWheelLayout(formsWheel);
 	}
 	const dialog = formsModal.querySelector(".modal-dialog");
 	const header = dialog?.querySelector(".modal-hd");

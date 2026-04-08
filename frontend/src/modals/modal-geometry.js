@@ -74,8 +74,8 @@ export function getOvalScale(kind) {
 }
 
 export function computeChipScale(kind, n, dialogEl) {
-	let img = Math.round(118 - Math.max(0, n - 6) * 3);
-	img = Math.max(64, Math.min(118, img));
+	let img = Math.round(132 - Math.max(0, n - 6) * 4);
+	img = Math.max(76, Math.min(132, img));
 	const box = dialogEl.getBoundingClientRect();
 	const minSide = Math.min(box.width, box.height);
 	if (kind === "dex" || kind === "fashion") {
@@ -84,11 +84,12 @@ export function computeChipScale(kind, n, dialogEl) {
 		const ringCounts = computeRingCounts(n);
 		if (ringCounts.length >= 4) img = Math.round(img * 0.95);
 	} else if (kind === "curry" || kind === "sandwich") {
-		if (minSide < 820) img = Math.max(52, img - 6);
+		if (n >= 4) img = Math.round(img * (n >= 6 ? 0.82 : 0.9));
+		if (minSide < 820) img = Math.max(64, img - 8);
 	}
-	if (minSide < 820) img = Math.max(44, img - 4);
-	img = Math.max(36, img);
+	if (minSide < 820) img = Math.max(58, img - 4);
+	img = Math.max(52, img);
 	const font = Math.max(10, Math.round(img * 0.16));
-	const pad = img >= 90 ? "12px 16px" : img >= 70 ? "10px 12px" : "8px 10px";
+	const pad = img >= 100 ? "8px 10px" : img >= 80 ? "7px 9px" : "6px 8px";
 	return { img, font, pad };
 }
