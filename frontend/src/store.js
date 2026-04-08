@@ -52,6 +52,7 @@ export const store = {
 		monInfoForm: saved.monInfoForm || null,
 		toolsKey: saved.toolsKey || "info",
 		sidebarCollapsed: !!saved.sidebarCollapsed,
+		taskDensity: saved.taskDensity === "comfortable" ? "comfortable" : "compact",
 	},
 	sectionsStore: new Map(Object.entries(saved.sections || {})),
 	tasksStore: new Map(Object.entries(saved.tasks || {})),
@@ -317,6 +318,7 @@ export function save() {
 		taskChoiceById: store.taskChoiceById instanceof Map ? Object.fromEntries(store.taskChoiceById) : {},
 		toolsKey: s.toolsKey || "info",
 		modelViewerSolo: s.modelViewerSolo || false,
+		taskDensity: s.taskDensity === "comfortable" ? "comfortable" : "compact",
 	};
 
 	try {
@@ -618,6 +620,7 @@ store.setGameStarted = function (gameKey, started) {
 					monInfoId: null,
 					monInfoGameKey: null,
 					monInfoForm: null,
+					taskDensity: "compact",
 				};
 			} catch {
 				// ignore

@@ -43,7 +43,7 @@
 .sheet header {
 	position: sticky;
 	top: 0;
-	z-index: 100;
+	z-index: 102;
 
 	display: flex;
 	align-items: center;
@@ -63,7 +63,7 @@
 
 .sheet .body {
 	flex: 1;
-	z-index: 101;
+	z-index: 100;
 
 	display: grid;
 	gap: 0;
@@ -147,6 +147,7 @@
 	padding: 4px 0 8px 0;
 	overflow-x: hidden;
 	overflow-y: auto;
+	place-content: stretch;
 }
 
 #formsModal .modal-bd.forms-wheel-scroll {
@@ -232,4 +233,38 @@
 /* Fashion modal grid padding */
 #fashionModal .body #fashionGrid {
 	padding: 16px;
+}
+
+@media (max-width: 900px) {
+	.modal {
+		padding: 10px;
+	}
+
+	.sheet,
+	.modal-dialog {
+		width: min(100vw - 12px, 980px);
+		height: min(90dvh, calc(100dvh - 20px));
+		max-height: min(90dvh, calc(100dvh - 20px));
+		border-radius: 18px;
+	}
+
+	#formsModal .modal-dialog {
+		width: min(100vw - 16px, 760px);
+		height: min(88dvh, calc(100dvh - 20px));
+		max-height: min(88dvh, calc(100dvh - 20px));
+	}
+
+	.sheet header,
+	.modal-dialog .modal-hd {
+		padding: 8px 10px;
+		gap: 8px;
+	}
+
+	#formsModal .modal-hd {
+		align-items: center;
+	}
+
+	#formsModal .modal-bd {
+		padding: 8px 8px 12px;
+	}
 }

@@ -4,7 +4,6 @@ import { getDexList as _getDexList } from "./dex-store.js";
 
 export function ensureDexHelpDropdown(dexSearch, dexHelpDropdown) {
   if (!dexSearch || dexHelpDropdown) return dexHelpDropdown;
-  dexSearch.style.width = "250px";
   const dropdown = document.createElement("div");
   dropdown.className = "dex-help-dropdown";
   dropdown.style.position = "absolute";
@@ -101,9 +100,8 @@ export function populateBulkStatusSelect({ bulkStatusSelect, gameKey, game }) {
   bulkStatusSelect.value = finalFlags.includes("caught") ? "caught" : (finalFlags[0] || "");
 }
 
-export function refreshScopeControls({ modalChange, scopeSelect, currentGameKey, onChange }) {
-  if (!modalChange || !currentGameKey) return scopeSelect;
-  const modalCloseBtn = modalChange.querySelector(".modalClose");
+export function refreshScopeControls({ scopeMount, scopeSelect, currentGameKey, onChange }) {
+  if (!scopeMount || !currentGameKey) return scopeSelect;
   const baseKey = baseOf(currentGameKey || "");
   const options = computeDexScopeOptions(baseKey);
   if (!options.length) {
@@ -118,7 +116,7 @@ export function refreshScopeControls({ modalChange, scopeSelect, currentGameKey,
     nextSelect = document.createElement("select");
     nextSelect.className = "dex-scope-select";
     nextSelect.title = "Choose Dex";
-    modalChange.insertBefore(nextSelect, modalCloseBtn || modalChange.firstChild);
+    scopeMount.appendChild(nextSelect);
     nextSelect.addEventListener("change", () => onChange?.(nextSelect.value));
   }
   nextSelect.innerHTML = "";

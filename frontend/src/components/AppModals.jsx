@@ -1,5 +1,5 @@
 import React from 'react';
-import { DexModal } from './modals/DexModal.jsx';
+import { DexModalCompact } from './modals/DexModalCompact.jsx';
 import { MonInfoModal } from './modals/MonInfoModal.jsx';
 import { ModelViewerModal } from './modals/ModelViewerModal.jsx';
 import { ResearchModal } from './modals/ResearchModal.jsx';
@@ -11,7 +11,7 @@ import { AuthModal } from './modals/AuthModal.jsx';
 export function AppModals() {
   return (
     <>
-      <DexModal />
+      <DexModalCompact />
       <MonInfoModal />
       <ModelViewerModal />
       <ResearchModal />

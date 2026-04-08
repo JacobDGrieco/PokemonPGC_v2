@@ -63,7 +63,8 @@ export function setupDexFormsModal(store, deps) {
 
 		const forms = mon.forms || [];
 		const N = forms.length;
-		const useRadial = N <= 7; // <=7 → radial single ring; >=8 → grid
+		const isMobileViewport = window.matchMedia?.('(max-width: 900px)')?.matches;
+		const useRadial = !isMobileViewport && N <= 7; // phones use grid to avoid radial overflow
 
 		// Body scroll behavior (same as before)
 		const body = dialog.querySelector(".modal-bd");
@@ -308,7 +309,7 @@ export function setupDexFormsModal(store, deps) {
 			formsWheel.style.display = "grid";
 			formsWheel.style.maxWidth = "100%";
 			formsWheel.style.gridTemplateColumns =
-				"repeat(6, minmax(0, 1fr))";
+				isMobileViewport ? "repeat(2, minmax(0, 1fr))" : "repeat(4, minmax(0, 1fr))";
 			formsWheel.style.gap = "8px";
 			formsWheel.style.padding = "4px 2px 10px";
 

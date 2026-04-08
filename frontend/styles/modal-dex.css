@@ -25,7 +25,7 @@
 	display: grid;
 	width: 100%;
 	box-sizing: border-box;
-	grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
 	gap: var(--gap, 12px);
 	padding: 16px;
 	align-content: start;
@@ -89,9 +89,7 @@
 
 	#modal #dexGrid.grid,
 	#fashionModal #fashionGrid.grid,
-	#medalsModal #medalsGrid.grid,
-	#curryGrid.grid,
-	#sandwichGrid.grid {
+	#medalsModal #medalsGrid.grid {
 		grid-template-columns: repeat(6, 1fr);
 	}
 }
@@ -118,42 +116,288 @@
 /* Flag dropdown inside Dex / Forms modal */
 .flag-select,
 .dex-scope-select {
-	background: #1b1b1e;
+	background: linear-gradient(180deg, rgba(27, 31, 39, 0.98), rgba(16, 20, 28, 0.98));
 	color: #eaeaea;
-	border: 1px solid #2e2e33;
-	border-radius: 8px;
-	padding: 6px 10px;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 12px;
+	padding: 8px 12px;
 	font-size: 13px;
 }
 
-/* Dex modal header tweaks */
-#modal .modal-hd {
-	flex-wrap: wrap;
-	/* let things wrap instead of squishing */
+#modal .dex-modal-header {
+	display: grid;
+	grid-template-columns: minmax(180px, auto) minmax(0, 1fr) auto;
+	align-items: center;
+	gap: 16px;
+	padding: 16px;
+	overflow: visible;
+	background:
+		radial-gradient(circle at top right, rgba(245, 198, 68, 0.1), transparent 22%),
+		linear-gradient(180deg, rgba(15, 19, 28, 0.96), rgba(10, 14, 20, 0.94));
 }
 
-/* Two-line title inside the h2 */
-#modal .modal-hd h2 {
+#modal .dex-header-title-group {
+	min-width: 0;
+	display: grid;
+	gap: 3px;
+}
+
+#modal .dex-header-title-group h2 {
 	display: block;
+	margin: 0;
+	min-width: 0;
 }
 
 #modal .dex-modal-title-main {
 	display: block;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 1.05;
+}
+
+#modal .dex-close-button {
+	align-self: start;
+	min-width: 38px;
+	min-height: 36px;
+	padding-inline: 0;
+	border-radius: 10px;
 	font-size: 16px;
-	font-weight: 600;
+	line-height: 1;
 }
 
-#modal .dex-modal-title-scope {
-	display: block;
+#modal .dex-header-search-row {
+	min-width: 0;
+}
+
+#modal .dex-search-input {
+	width: 100%;
+	min-width: 0;
+	box-sizing: border-box;
+	padding: 9px 12px;
+	border-radius: 10px;
 	font-size: 13px;
-	opacity: 0.85;
 }
 
-/* Stack Set All + status dropdown vertically, centered */
-#modal .dex-bulk-group {
+#modal .dex-scope-mount {
 	display: flex;
-	flex-direction: column;
 	align-items: center;
-	justify-content: center;
-	gap: 4px;
+	min-width: 0;
+}
+
+#modal .dex-scope-select {
+	width: 100%;
+	min-width: 0;
+	padding: 6px 10px;
+	border-radius: 10px;
+	font-size: 12px;
+}
+
+#modal .dex-header-actions {
+	display: inline-grid;
+	align-items: center;
+	gap: 8px;
+	grid-auto-flow: column;
+}
+
+#modal .dex-bulk-split {
+	position: relative;
+	display: inline-grid;
+	grid-template-columns: minmax(0, auto) 38px;
+	align-items: stretch;
+}
+
+#modal .dex-bulk-primary,
+#modal .dex-bulk-toggle {
+	min-height: 36px;
+	border-radius: 10px;
+}
+
+#modal .dex-bulk-primary {
+	font-weight: 600;
+	white-space: nowrap;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	padding-inline: 12px 10px;
+}
+
+#modal .dex-bulk-toggle {
+	min-width: 38px;
+	padding: 0;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+#modal .dex-bulk-menu {
+	position: absolute;
+	top: calc(100% + 6px);
+	right: 0;
+	min-width: 180px;
+	display: grid;
+	gap: 2px;
+	padding: 6px;
+	border-radius: 12px;
+	background: rgba(12, 16, 24, 0.98);
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	box-shadow: 0 18px 36px rgba(0, 0, 0, 0.34);
+	z-index: 4;
+}
+
+#modal .dex-bulk-menu[hidden] {
+	display: none !important;
+}
+
+#modal .dex-bulk-menu-item {
+	border: 0;
+	background: transparent;
+	color: var(--text-main);
+	text-align: left;
+	padding: 8px 10px;
+	border-radius: 8px;
+	cursor: pointer;
+	font: inherit;
+	font-size: 12px;
+}
+
+#modal .dex-bulk-menu-item:hover,
+#modal .dex-bulk-menu-item[aria-checked='true'] {
+	background: rgba(255, 255, 255, 0.08);
+}
+
+#modal .dex-bulk-hidden-select {
+	position: absolute;
+	pointer-events: none;
+	opacity: 0;
+	width: 0;
+	height: 0;
+	padding: 0;
+	border: 0;
+}
+
+@media (max-width: 900px) {
+	#modal #dexGrid.grid {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 6px;
+		padding: 6px;
+	}
+
+	#modal .dex-modal-header {
+		grid-template-columns: minmax(0, 1fr) auto;
+		grid-template-areas:
+			"title close"
+			"search search"
+			"actions actions";
+		align-items: start;
+		padding: 8px 8px 6px;
+		gap: 4px 6px;
+	}
+
+	#modal .dex-header-title-group {
+		grid-area: title;
+		gap: 2px;
+		padding-top: 2px;
+		align-self: start;
+	}
+
+	#modal .dex-modal-title-main {
+		font-size: 12px;
+		line-height: 1;
+	}
+
+	#modal .dex-header-search-row {
+		grid-area: search;
+		align-self: stretch;
+		width: 100%;
+		min-width: 0;
+	}
+
+	#modal .dex-scope-select {
+		padding: 2px 6px;
+		font-size: 10px;
+		border-radius: 7px;
+	}
+
+	#modal .dex-search-input {
+		padding: 5px 7px;
+		font-size: 10px;
+		border-radius: 7px;
+		width: 100%;
+		max-width: 100%;
+	}
+
+	#modal .dex-header-actions {
+		display: contents;
+	}
+
+	#modal .dex-bulk-split {
+		grid-area: actions;
+		justify-self: stretch;
+		align-self: stretch;
+		width: 100%;
+		min-width: 0;
+		grid-template-columns: minmax(0, 1fr) 24px;
+	}
+
+	#modal .dex-bulk-primary,
+	#modal .dex-bulk-toggle,
+	#modal .dex-close-button {
+		min-height: 36px;
+		border-radius: 10px;
+	}
+
+	#modal .dex-bulk-primary {
+		font-size: 13px;
+		padding-inline: 12px 10px;
+		width: 100%;
+		max-width: 100%;
+		min-width: 0;
+	}
+
+	#modal .dex-bulk-toggle {
+		width: 38px;
+		min-width: 38px;
+	}
+
+	#modal .dex-bulk-menu {
+		left: auto;
+		right: 0;
+		min-width: 140px;
+		max-width: 180px;
+	}
+
+	#modal .dex-close-button {
+		grid-area: close;
+		justify-self: end;
+		align-self: start;
+		min-width: 38px;
+		font-size: 16px;
+	}
+
+	#modal .dex-scope-mount,
+	#modal .dex-scope-select {
+		width: 100%;
+		max-width: 100%;
+		min-width: 0;
+	}
+}
+
+@media (max-width: 520px) {
+	#modal .dex-modal-header {
+		grid-template-columns: minmax(0, 1fr) auto;
+		grid-template-areas:
+			"title close"
+			"search search"
+			"actions actions";
+		align-items: start;
+	}
+
+	#modal .dex-header-actions {
+		display: contents;
+	}
+
+	#modal .dex-bulk-split {
+		grid-area: actions;
+		justify-self: stretch;
+		width: 100%;
+		grid-template-columns: minmax(0, 1fr) 38px;
+	}
 }

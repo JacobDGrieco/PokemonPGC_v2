@@ -13,7 +13,6 @@ import {
 	installDexVariants,
 	baseOf,
 	ensureNatDexIndex,
-	labelForDexKey,
 } from "./dex-config.js";
 import {
 	getDexList as _getDexList,
@@ -39,6 +38,7 @@ import {
 } from "./dex-ui.js";
 import { renderDexCards } from "./dex-grid.js";
 import { initDexModalRuntime } from "./dex-runtime.js";
+import { emitPpgcUiSync } from "../react-bridge/storeBridge.js";
 
 ensurePpgcRoot();
 ensureDataRoot();
@@ -66,19 +66,49 @@ export function wireDexModal(store, els) {
 	} = els;
 	const bulkStatusSelect = dexClearAll;
 	let dexHelpDropdown = null;
+	const bulkMenu = modal?.querySelector('#dexBulkActionMenu');
+	const bulkToggle = modal?.querySelector('#dexBulkActionToggle');
 
-	if (dexSelectAll && bulkStatusSelect && dexSelectAll.parentElement && dexSelectAll.parentElement === bulkStatusSelect.parentElement) {
-		const parent = dexSelectAll.parentElement;
-		const bulkGroup = document.createElement("div");
-		bulkGroup.className = "dex-bulk-group";
+	function closeBulkMenu() {
+		if (!bulkMenu || !bulkToggle) return;
+		bulkMenu.hidden = true;
+		bulkToggle.setAttribute('aria-expanded', 'false');
+	}
 
-		dexSelectAll.style.width = '100%';
-		bulkStatusSelect.style.width = '100%';
+	function openBulkMenu() {
+		if (!bulkMenu || !bulkToggle) return;
+		bulkMenu.hidden = false;
+		bulkToggle.setAttribute('aria-expanded', 'true');
+	}
 
-		// Insert the group where the button currently lives
-		parent.insertBefore(bulkGroup, dexSelectAll);
-		bulkGroup.appendChild(dexSelectAll);
-		bulkGroup.appendChild(bulkStatusSelect);
+	function rebuildBulkMenu() {
+		if (!bulkMenu || !bulkStatusSelect) return;
+		bulkMenu.innerHTML = '';
+		Array.from(bulkStatusSelect.options).forEach((option) => {
+			const item = document.createElement('button');
+			item.type = 'button';
+			item.className = 'dex-bulk-menu-item';
+			item.role = 'menuitemradio';
+			item.setAttribute('aria-checked', option.value === bulkStatusSelect.value ? 'true' : 'false');
+			item.dataset.value = option.value;
+			item.textContent = option.textContent || option.value;
+			item.addEventListener('click', () => {
+				bulkStatusSelect.value = option.value;
+				rebuildBulkMenu();
+				closeBulkMenu();
+			});
+			bulkMenu.appendChild(item);
+		});
+	}
+
+	if (bulkToggle && !bulkToggle.dataset.wired) {
+		bulkToggle.dataset.wired = '1';
+		bulkToggle.addEventListener('click', (event) => {
+			event.stopPropagation();
+			const isExpanded = bulkToggle.getAttribute('aria-expanded') === 'true';
+			if (isExpanded) closeBulkMenu();
+			else openBulkMenu();
+		});
 	}
 
 	function _queueDexSync(gameKey, dexId, status) {
@@ -90,7 +120,7 @@ export function wireDexModal(store, els) {
 	}
 
 	let scopeSelect = null;
-	const { openDexForms, modalChange } = initDexModalRuntime({
+	const { openDexForms, scopeMount } = initDexModalRuntime({
 		store,
 		modal,
 		renderDexGrid: () => renderDexGrid(),
@@ -126,6 +156,7 @@ export function wireDexModal(store, els) {
 
 		const dex = _getDexList(gameKey);
 		populateBulkStatusSelect({ bulkStatusSelect, gameKey, game });
+		rebuildBulkMenu();
 		const rawQ = (dexSearch.value || "").trim();
 		const options = game ? game.flags : ["shiny", "caught", "seen", "unknown"];
 		const statusMap = store.dexStatus.get(gameKey) || {};
@@ -198,7 +229,7 @@ export function wireDexModal(store, els) {
 		const resolvedKey = resolveInitialDexKey(gameKey);
 		store.state.dexModalFor = resolvedKey;
 		scopeSelect = refreshScopeControls({
-			modalChange,
+			scopeMount,
 			scopeSelect,
 			currentGameKey: resolvedKey,
 			onChange: (newKey) => {
@@ -234,16 +265,12 @@ export function wireDexModal(store, els) {
 
 		// Build title: "X (Central Dex)", "X (National Dex)", etc.
 		const baseLabel = gameBase ? gameBase.label : baseKey;
-		const scopeLabel = labelForDexKey(baseKey, resolvedKey);
-
-		modalTitle.innerHTML = `
-			<span class="dex-modal-title-main">Dex Editor - ${baseLabel}</span>
-			<span class="dex-modal-title-scope">${scopeLabel}</span>
-		`;
+		modalTitle.textContent = baseLabel;
 		const scrollEl = getDexScrollContainer();
 		if (scrollEl) scrollEl.scrollTop = 0;
 		dexGrid.scrollTop = 0;
 		dexSearch.value = "";
+		closeBulkMenu();
 		if (dexHelpDropdown) {
 			dexHelpDropdown.style.display = "none";
 		}
@@ -263,6 +290,7 @@ export function wireDexModal(store, els) {
 		modal.__returnFocusEl = document.activeElement;
 		modal.classList.add("open");
 		modal.setAttribute("aria-hidden", "false");
+		emitPpgcUiSync({ state: store.state, loading: false });
 	}
 	function closeModal() {
 		if (_closing) return;
@@ -292,6 +320,7 @@ export function wireDexModal(store, els) {
 		if (scrollEl) scrollEl.scrollTop = 0;
 		dexGrid.scrollTop = 0;
 		dexSearch.value = "";
+		closeBulkMenu();
 
 		// Hide /help dropdown if it's showing
 		if (dexHelpDropdown) {
@@ -340,6 +369,7 @@ export function wireDexModal(store, els) {
 		// Now mark modal closed and persist
 		store.state.dexModalFor = null;
 		save();
+		emitPpgcUiSync({ state: store.state, loading: false });
 
 		// Unmute and render exactly once on next frame
 		window.PPGC._suppressRenders = false;
@@ -357,10 +387,17 @@ export function wireDexModal(store, els) {
 
 	const api = { openDexModal: openDexModal, closeModal, renderDexGrid };
 	modal.addEventListener("click", (e) => {
+		if (!bulkMenu?.hidden && !e.target.closest('#dexBulkSplit')) {
+			closeBulkMenu();
+		}
 		if (e.target === modal) closeModal();
 	});
 	modalClose.addEventListener("click", closeModal);
 	document.addEventListener("keydown", (e) => {
+		if (e.key === "Escape" && !bulkMenu?.hidden) {
+			closeBulkMenu();
+			return;
+		}
 		if (e.key === "Escape") closeModal();
 	});
 	let dexSearchRAF = null;

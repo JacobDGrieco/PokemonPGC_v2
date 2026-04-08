@@ -110,15 +110,20 @@ function handleBack(state) {
 	}
 }
 
-export function AppSidebar() {
+export function AppSidebar({ isMobile, mobileNavOpen, closeMobileNav }) {
 	const snapshot = usePpgcSnapshot();
 	const state = snapshot?.state || store.state;
 	const items = makeSidebarItems(state);
+	const isHidden = isMobile ? !mobileNavOpen : !!state?.sidebarCollapsed;
+
+	const runSidebarAction = (callback) => {
+		callback?.();
+	};
 
 	return (
-		<aside id="sidebar" className="sidebar" aria-label="Explorer" aria-hidden={state?.sidebarCollapsed ? 'true' : 'false'}>
+		<aside id="sidebar" className="sidebar" aria-label="Explorer" aria-hidden={isHidden ? 'true' : 'false'} data-level={state?.level || 'gen'}>
 			<div className="sidebar-header react-sidebar-header">
-				<button id="navBack" className="back-btn" aria-label="Go back" disabled={!canGoBack(state)} onClick={() => handleBack(state)}>
+				<button id="navBack" className="back-btn" aria-label="Go back" disabled={!canGoBack(state)} onClick={() => runSidebarAction(() => handleBack(state))}>
 					←
 				</button>
 				<div id="navTitle" className="sidebar-title">{getSidebarTitle(state)}</div>
@@ -131,7 +136,7 @@ export function AppSidebar() {
 				data-compact-icons={items.length >= 5 ? 'true' : 'false'}
 			>
 				{items.map((item) => (
-					<button key={item.key} type="button" className={`dir-item react-dir-item ${item.active ? 'active' : ''}`} onClick={item.onClick}>
+					<button key={item.key} type="button" className={`dir-item react-dir-item ${item.active ? 'active' : ''}`} onClick={() => runSidebarAction(item.onClick)}>
 						<div className="label">
 							{item.icon ? <span className="icon game-icon" style={{ backgroundImage: `url('${item.icon}')` }} /> : <span className="icon" />}
 							<span className="text">{item.label}</span>

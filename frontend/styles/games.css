@@ -67,3 +67,24 @@
 	justify-items: center;
 	align-items: start;
 }
+
+@media (max-width: 900px) {
+	.games-rows,
+	.games-row,
+	.games-grid {
+		gap: 12px;
+	}
+
+	.games-row {
+		grid-template-columns: 1fr;
+	}
+
+	.games-grid {
+		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	}
+
+	.games-row .game-summary .rings {
+		grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
+		gap: 10px;
+	}
+}

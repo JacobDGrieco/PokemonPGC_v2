@@ -92,6 +92,7 @@ function GeneralTab() {
 	const dexSpriteMode = store.state.dexSpriteMode === 'animated' ? 'animated' : 'static';
 	const gen1SpriteMode = store.state.gen1SpriteMode === 'color' ? 'color' : 'bw';
 	const gen1RegionMode = store.state.gen1RegionMode === 'jp' ? 'jp' : 'rf';
+	const taskDensity = store.state.taskDensity === 'comfortable' ? 'comfortable' : 'compact';
 	const customIconInputRef = useRef(null);
 
 	useEffect(() => {
@@ -322,6 +323,21 @@ function GeneralTab() {
 							options={[
 								{ label: 'Static', value: 'static' },
 								{ label: 'Animated', value: 'animated' },
+							]}
+						/>
+					)}
+				/>
+				<SettingRow
+					title="Mobile Task Density"
+					subtext="Compact keeps three tasks per row on phones. Comfortable gives each task more room."
+					control={(
+						<SegmentedControl
+							ariaLabel="Mobile task density"
+							value={taskDensity}
+							onChange={(value) => setStateValue('taskDensity', value === 'comfortable' ? 'comfortable' : 'compact')}
+							options={[
+								{ label: 'Compact', value: 'compact' },
+								{ label: 'Comfortable', value: 'comfortable' },
 							]}
 						/>
 					)}

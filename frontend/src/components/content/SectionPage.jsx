@@ -7,6 +7,7 @@ import { navigateToState } from '../../react-bridge/navigation.js';
 import { getVisibleSections, isTemporarilyHiddenSection } from '../../utils/sectionVisibility.js';
 import { buildInjectedNodes } from './sectionContent.js';
 import { TaskTree } from '../tasks/TaskTree.jsx';
+import { DexOpenButton } from '../common/DexOpenButton.jsx';
 
 function useImperativeChildren(build, deps) {
   const ref = useRef(null);
@@ -104,13 +105,11 @@ export function SectionPage({ state, refreshKey }) {
         <h3>{section.title}</h3>
         <div className="pct">{pct.toFixed(2)}%</div>
         <div className="row react-section-actions">
-          <button
-            className="button"
-            type="button"
-            onClick={() => window.PPGC?.dexApi?.openDexModal?.(state.gameKey, state.genKey)}
-          >
-            Open Dex
-          </button>
+          <DexOpenButton
+            gameKey={state.gameKey}
+            genKey={state.genKey}
+            onOpen={() => window.PPGC?.dexApi?.openDexModal?.(state.gameKey, state.genKey)}
+          />
         </div>
       </div>
       <div className="card-bd react-section-body">

@@ -2,6 +2,7 @@
 
 :root {
 	--header-h: 56px;
+	--mobile-sidebar-w: min(86vw, 360px);
 }
 
 /* ===================== App shell grid ===================== */
@@ -12,6 +13,7 @@
 	/* sidebar | main content */
 	height: calc(100vh - var(--header-h));
 	overflow: hidden;
+	position: relative;
 }
 
 /* ===================== App header (top bar) ===================== */
@@ -29,10 +31,38 @@
 	padding: 12px 16px;
 	background:
 		radial-gradient(circle at top right, rgba(245, 198, 68, 0.1), transparent 26%),
-		linear-gradient(180deg, rgba(18, 23, 32, 0.98), rgba(11, 14, 21, 0.98));
+		var(--app-bg);
 	border-bottom: 1px solid var(--line-soft);
 	box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
 	backdrop-filter: blur(10px);
+}
+
+.mobile-search-toggle {
+	display: none;
+	border: 1px solid var(--line-soft);
+	background: rgba(255, 255, 255, 0.05);
+	color: var(--text-main);
+	border-radius: 999px;
+	padding: 0;
+	width: 36px;
+	height: 36px;
+	cursor: pointer;
+	flex: 0 0 auto;
+}
+
+.mobile-search-toggle svg {
+	width: 16px;
+	height: 16px;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 2;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.mobile-search-toggle.is-open {
+	background: rgba(255, 255, 255, 0.1);
+	border-color: var(--line-strong);
 }
 
 /* App title (clickable "home" link) */
@@ -58,8 +88,14 @@
 	min-height: 0;
 	height: 100%;
 	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	touch-action: pan-y;
 
 	scrollbar-color: var(--sb-thumb) var(--sb-track);
+}
+
+.app-scrim {
+	display: none;
 }
 
 /* Scrollbar overrides within content area */
@@ -132,16 +168,24 @@
 */
 
 .card-hd.section-hd {
-	position: relative;
+	position: sticky;
+	margin: 0 6px;
+	top: 6px;
+	z-index: 2;
 	display: grid;
-	grid-template-columns: auto 1fr auto;
+	grid-template-columns: minmax(0, 1fr) auto auto;
 	/* title | % | button(s) */
 	align-items: center;
-	gap: 12px;
+	gap: 8px;
 
 	overflow: hidden;
 	/* keep the fill behind, inside the header */
 	border-radius: var(--radius);
+	background:
+		radial-gradient(circle at top right, rgba(245, 198, 68, 0.08), transparent 28%),
+		rgba(12, 16, 24, 0.94);
+	backdrop-filter: blur(10px);
+	box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
 }
 
 /* Background fill driven by --progress (0..100) from JS */
@@ -165,10 +209,75 @@
 	z-index: 1;
 }
 
+.card-hd.section-hd h3 {
+	min-width: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
 .card-hd.section-hd .pct {
 	text-align: center;
 	font-weight: 600;
 	opacity: 0.95;
+	font-size: 13px;
+	white-space: nowrap;
+	align-self: center;
+}
+
+.card-hd.section-hd .row {
+	min-width: 0;
+	display: flex;
+	align-items: center;
+}
+
+.card-hd.section-hd .react-section-actions {
+	justify-content: flex-end;
+	gap: 6px;
+}
+
+.section-dex-button {
+	min-width: 34px;
+	min-height: 34px;
+	padding: 0;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	overflow: visible;
+}
+
+.section-dex-button img {
+	width: 28px;
+	height: 28px;
+	display: block;
+	object-fit: contain;
+	image-rendering: auto;
+	transform-origin: center bottom;
+	transition: transform 160ms ease, filter 160ms ease;
+	pointer-events: none;
+}
+
+.section-dex-button.is-hovered img,
+.section-dex-button:hover img,
+.section-dex-button:focus-visible img,
+.section-dex-button.is-open img {
+	transform: translateY(-3px);
+	filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.28));
+}
+
+.section-dex-button.is-hovered:not(.is-open) img,
+.section-dex-button:hover:not(.is-open) img,
+.section-dex-button:focus-visible:not(.is-open) img {
+	animation: ppgc-dex-button-raise 160ms ease;
+}
+
+@keyframes ppgc-dex-button-raise {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-3px);
+	}
 }
 
 /* ===================== Global scrollbars ===================== */
@@ -317,4 +426,125 @@
 
 .sidebar-toggle:hover {
 	background: rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 900px) {
+	.app {
+		grid-template-columns: 1fr;
+		height: auto;
+		min-height: calc(100vh - var(--header-h));
+		overflow: visible;
+	}
+
+	.app-header {
+		display: grid;
+		grid-template-columns: auto 1fr auto;
+		grid-template-areas:
+			"toggle brand crumbs"
+			"search search search";
+		align-items: center;
+		padding: 10px 12px;
+		gap: 10px;
+	}
+
+	.sidebar-toggle {
+		grid-area: toggle;
+		justify-self: start;
+	}
+
+	.header-brand {
+		grid-area: brand;
+		display: inline-flex;
+		align-items: center;
+		justify-self: center;
+		gap: 6px;
+		min-width: 0;
+		max-width: 100%;
+		text-align: center;
+	}
+
+	.mobile-search-toggle {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.app-header .task-search-wrap {
+		grid-area: search;
+		display: none;
+		flex: none;
+		max-width: none;
+		margin: 0;
+	}
+
+	.app-header .task-search-wrap.is-mobile-open {
+		display: flex;
+	}
+
+	.app-header .task-search-input {
+		min-height: 40px;
+		font-size: 14px;
+	}
+
+	.content {
+		height: auto;
+		min-height: calc(100vh - var(--header-h));
+		padding: 12px;
+		gap: 12px;
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+		touch-action: pan-y;
+	}
+
+	.card-hd.section-hd {
+		grid-template-columns: minmax(0, 1fr) auto auto;
+		align-items: center;
+		gap: 6px;
+		top: 6px;
+	}
+
+	.card-hd.section-hd .row,
+	.card-hd.section-hd .react-section-actions {
+		grid-column: auto;
+		width: auto;
+	}
+
+	.card-hd.section-hd h3 {
+		font-size: 15px;
+	}
+
+	.card-hd.section-hd .pct {
+		font-size: 12px;
+	}
+
+	.breadcrumbs {
+		grid-area: crumbs;
+		width: 100%;
+		justify-content: flex-end;
+	}
+
+	.breadcrumbs:empty {
+		display: none;
+	}
+
+	.app-scrim {
+		position: fixed;
+		inset: var(--header-h) 0 0 0;
+		border: 0;
+		padding: 0;
+		background: rgba(2, 4, 8, 0.6);
+		backdrop-filter: blur(3px);
+		z-index: 8;
+		cursor: pointer;
+	}
+
+	body.mobile-nav-open .app-scrim {
+		display: block;
+	}
+}
+
+@media (min-width: 901px) {
+	.mobile-search-toggle {
+		display: none;
+	}
 }

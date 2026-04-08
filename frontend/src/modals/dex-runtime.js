@@ -108,9 +108,8 @@ export function initDexModalRuntime({
     document.body.appendChild(formsModal);
   }
 
-  const modalChange = modal?.querySelector('header .modalChange')
-    || modal?.querySelector('.modalChange')
-    || modal?.querySelector('.modal-hd');
+  const scopeMount = modal?.querySelector('#dexScopeMount')
+    || modal?.querySelector('.dex-scope-mount');
 
-  return { openDexForms, modalChange };
+  return { openDexForms, scopeMount };
 }

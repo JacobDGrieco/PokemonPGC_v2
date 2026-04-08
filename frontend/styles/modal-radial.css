@@ -14,6 +14,7 @@
 	height: var(--size);
 	max-width: 100%;
 	box-sizing: border-box;
+	overflow: hidden;
 }
 
 /* Base chip: absolute, sized by JS, layout from JS; visuals styled below */
@@ -34,7 +35,7 @@
 	justify-content: center;
 	gap: 6px;
 
-	overflow: visible;
+	overflow: hidden;
 	cursor: default;
 
 	font-size: 11px;
@@ -166,6 +167,41 @@
 	width: min(calc(var(--form-img, 60px) * 1.2), 100%);
 	height: auto;
 	max-height: 84px;
+}
+
+@media (max-width: 900px) {
+	.forms-wheel {
+		width: 100%;
+		height: auto;
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 10px;
+		padding: 6px 0 10px;
+	}
+
+	.forms-wheel .form-chip {
+		position: static;
+		transform: none;
+		width: 100%;
+		min-width: 0;
+		min-height: 0;
+		height: auto;
+		padding: 8px;
+	}
+
+	.forms-wheel .form-chip .chip-row {
+		gap: 6px;
+	}
+
+	.forms-wheel .form-chip img {
+		width: min(calc(var(--form-img, 56px) * 1.05), 100%);
+		height: auto;
+		max-height: 72px;
+	}
+
+	.forms-wheel .form-chip .chip-text {
+		font-size: clamp(10px, 2.5vw, 12px);
+	}
 }
 
 /* Optional small <select> inside a chip */

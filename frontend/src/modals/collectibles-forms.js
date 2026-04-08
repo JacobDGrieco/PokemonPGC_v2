@@ -118,7 +118,8 @@ export function openCollectibleForms(config) {
   }
 
   let onResize = null;
-  const useRadial = N <= 4;
+  const isMobileViewport = window.matchMedia?.('(max-width: 900px)')?.matches;
+  const useRadial = !isMobileViewport && N <= 4;
 
   if (useRadial) {
     onResize = createWheelResizeHandler(scaleMode, dialog, formsWheel, chips, {
@@ -131,7 +132,7 @@ export function openCollectibleForms(config) {
     window.addEventListener('resize', onResize, { passive: true });
   } else {
     applyFormsGridLayout(formsWheel, chips, {
-      columns: 'repeat(6, minmax(0, 1fr))',
+      columns: isMobileViewport ? 'repeat(2, minmax(0, 1fr))' : 'repeat(3, minmax(0, 1fr))',
       gap: '8px',
       padding: '4px 2px 10px',
       maxWidth: '100%',

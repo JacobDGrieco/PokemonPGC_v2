@@ -50,10 +50,17 @@ export async function login(email, password) {
 }
 
 export async function getCurrentUser() {
-	const res = await fetch(`${API_BASE}/auth/me`, {
-		credentials: "include",
-	});
-	return res.json();
+	try {
+		const res = await fetch(`${API_BASE}/auth/me`, {
+			credentials: "include",
+		});
+		if (!res.ok) {
+			return { user: null };
+		}
+		return await res.json();
+	} catch {
+		return { user: null };
+	}
 }
 
 export async function logout() {

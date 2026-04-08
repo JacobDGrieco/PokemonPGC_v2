@@ -21,7 +21,7 @@ function buildSpriteMarkup({ src, name }) {
       playsinline
       preload="metadata"
       disablepictureinpicture
-      style="width:132px;height:132px;object-fit:contain;"
+      style="width:100%;height:100%;max-width:132px;max-height:132px;object-fit:contain;"
     ></video>`;
   }
   return `<img
@@ -29,7 +29,7 @@ function buildSpriteMarkup({ src, name }) {
     alt="${name}"
     src="${src}"
     loading="lazy"
-    style="width:132px;height:132px;object-fit:contain;"
+    style="width:100%;height:100%;max-width:132px;max-height:132px;object-fit:contain;"
     onerror="if(this.src!==window.__PPGC_NO_IMG__){this.src=window.__PPGC_NO_IMG__||'/no-image.svg';}"
   />`;
 }
@@ -62,8 +62,10 @@ function updateDexThumb({ thumb, mon, status, gameKey }) {
   }
 
   newSprite.className = 'sprite' + (newIsWebm ? ' dex-webm' : '');
-  newSprite.style.width = '132px';
-  newSprite.style.height = '132px';
+  newSprite.style.width = '100%';
+  newSprite.style.height = '100%';
+  newSprite.style.maxWidth = '132px';
+  newSprite.style.maxHeight = '132px';
   newSprite.style.objectFit = 'contain';
 
   if (oldSprite) oldSprite.replaceWith(newSprite);

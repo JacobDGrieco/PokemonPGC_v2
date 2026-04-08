@@ -91,6 +91,7 @@
 	overflow: hidden;
 	text-overflow: ellipsis;
 	font-size: 15px;
+	line-height: 1.15;
 }
 
 /* ===================== Main vs subtask + sprite positioning ===================== */
@@ -384,4 +385,90 @@
 	display: flex;
 	justify-content: center;
 	width: 100%;
+}
+
+@media (max-width: 900px) {
+	.section {
+		padding: 8px;
+		gap: 8px;
+	}
+
+	.task-row {
+		flex-wrap: wrap;
+	}
+
+	.task-row.task-inline {
+		grid-auto-flow: row;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		padding: 8px 6px;
+		gap: 8px;
+	}
+
+	.task-row.task-inline:not(:has(.task-item:nth-child(2))) {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.task-row.task-inline.has-subtasks {
+		padding-left: 14px;
+		border-left-width: 14px;
+	}
+
+	.task-row.task-inline .task-item .task-item-text {
+		white-space: normal;
+		overflow: hidden;
+		text-overflow: clip;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		font-size: clamp(10px, 2.55vw, 12px);
+		line-height: 1.15;
+	}
+
+	.task-row.task-inline .task-item.is-main.has-children,
+	.task-row.task-inline .task-item.is-main.no-children.force-inline:not(.has-slider) {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.task-row.task-inline .task-item.is-main.has-children .task-item-body,
+	.task-row.task-inline .task-item.is-main.no-children.force-inline:not(.has-slider) .task-item-body {
+		justify-content: center;
+	}
+
+	.task-row.task-inline .task-item.is-main.has-children .task-item-img,
+	.task-row.task-inline .task-item.is-main.no-children.force-inline:not(.has-slider) .task-item-img {
+		margin: 0 auto 6px;
+		max-height: 64px;
+	}
+
+	.tiered,
+	.tiered-line {
+		flex-wrap: wrap;
+	}
+
+	.tiered-percent {
+		padding: 0;
+	}
+
+	.app-shell[data-task-density="comfortable"] .task-row.task-inline {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		padding: 10px 8px;
+		gap: 10px;
+	}
+
+	.app-shell[data-task-density="comfortable"] .task-row.task-inline:not(:has(.task-item:nth-child(2))) {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.app-shell[data-task-density="comfortable"] .task-row.task-inline .task-item .task-item-text {
+		font-size: clamp(11px, 2.85vw, 13px);
+	}
+
+	.app-shell[data-task-density="compact"] .task-row.task-inline .task-item.is-main.has-children .task-item-img,
+	.app-shell[data-task-density="compact"] .task-row.task-inline .task-item.is-main.no-children.force-inline:not(.has-slider) .task-item-img,
+	.app-shell[data-task-density="compact"] .task-row.task-inline .task-item.is-main.no-children .task-item-img,
+	.app-shell[data-task-density="compact"] .task-row.task-inline .task-item.is-subtask .task-item-img {
+		max-height: 56px;
+	}
 }
