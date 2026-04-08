@@ -2,9 +2,9 @@
 
 /* Optional wrapper around a section of tasks */
 .section {
-	border: 1px dashed #2a2a30;
-	border-radius: 10px;
-	padding: 10px;
+	border: 1px dashed rgba(255, 255, 255, 0.12);
+	border-radius: 14px;
+	padding: 12px;
 	display: grid;
 	gap: 10px;
 }
@@ -14,10 +14,11 @@
 	display: flex;
 	align-items: center;
 	gap: 8px;
-	background: #151518;
-	border: 1px solid #24242a;
-	border-radius: 8px;
-	padding: 8px;
+	background: rgba(255, 255, 255, 0.04);
+	border: 1px solid var(--line-soft);
+	border-radius: 12px;
+	padding: 10px;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
 }
 
 /* Layout wrapper used when rendering with a rowsSpec */
@@ -104,8 +105,8 @@
 .task-row.task-inline.has-subtasks {
 	padding-left: 25px;
 	border-left: 25px solid var(--accent, #7fd2ff);
-	border-top-left-radius: 8px;
-	border-bottom-left-radius: 8px;
+	border-top-left-radius: 12px;
+	border-bottom-left-radius: 12px;
 }
 
 /* --- MAIN task: with children (image inline, left-of text) --- */

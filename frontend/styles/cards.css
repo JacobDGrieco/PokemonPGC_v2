@@ -1,11 +1,12 @@
 /* ===================== Card shells & buttons ===================== */
 
 .card {
-	background: #121214;
-	border: 1px solid #222;
+	background: var(--panel-bg);
+	border: 1px solid var(--line-soft);
 	border-radius: var(--radius);
 	display: flex;
 	flex-direction: column;
+	box-shadow: var(--shadow-panel);
 }
 
 .card .card-hd {
@@ -13,8 +14,8 @@
 	align-items: center;
 	justify-content: space-between;
 	gap: 10px;
-	padding: 10px 12px;
-	border-bottom: 1px solid #222;
+	padding: 12px 14px;
+	border-bottom: 1px solid var(--line-soft);
 }
 
 .card .card-hd h3 {
@@ -23,7 +24,7 @@
 }
 
 .card .card-bd {
-	padding: 12px;
+	padding: 14px;
 	display: grid;
 	gap: 10px;
 }
@@ -76,12 +77,16 @@
 }
 
 .button {
-	background: #1b1b1e;
-	border: 1px solid #2e2e33;
-	color: #eaeaea;
+	background: rgba(255, 255, 255, 0.05);
+	border: 1px solid var(--line-soft);
+	color: var(--text-main);
 	padding: 8px 12px;
-	border-radius: 8px;
+	border-radius: 10px;
 	cursor: pointer;
+}
+
+.button:hover {
+	background: rgba(255, 255, 255, 0.08);
 }
 
 .button:active {
@@ -91,10 +96,11 @@
 .pill {
 	display: inline-block;
 	padding: 3px 8px;
-	border: 1px solid #2e2e33;
+	border: 1px solid var(--line-soft);
 	border-radius: 999px;
 	font-size: 12px;
 	opacity: 0.85;
+	background: rgba(255, 255, 255, 0.04);
 }
 
 /* ===================== Shared multi-column grids ===================== */
@@ -132,9 +138,9 @@
 .progress {
 	position: relative;
 	height: 8px;
-	background: #1a1a1f;
+	background: rgba(255, 255, 255, 0.05);
 	border-radius: 999px;
-	border: 1px solid #2b2b33;
+	border: 1px solid var(--line-soft);
 	overflow: visible;
 	/* allow halo / glow to breathe */
 }

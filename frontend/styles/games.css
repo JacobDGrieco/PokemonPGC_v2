@@ -26,12 +26,13 @@
 /* ===================== Game summary card ===================== */
 
 .game-summary {
-	background: #121214;
-	border: 1px solid #222;
-	border-radius: 12px;
-	padding: 12px;
+	background: var(--panel-bg);
+	border: 1px solid var(--line-soft);
+	border-radius: 18px;
+	padding: 14px;
 	display: grid;
 	gap: 10px;
+	box-shadow: var(--shadow-panel);
 }
 
 /* Game title inside the summary card */

@@ -175,10 +175,6 @@ function GeneralTab() {
 						<h2>Profile & Preferences</h2>
 						<p className="settings-lead">Everything visual and personal lives here, so the checklist feels like yours without crowding the rest of the app.</p>
 					</div>
-					<div className="settings-profile-pill">
-						<div className="settings-profile-label">Status</div>
-						<div className={`settings-profile-value ${signedIn ? 'online' : 'guest'}`}>{signedIn ? 'Signed in' : 'Guest'}</div>
-					</div>
 				</div>
 
 				<div className="settings-account-strip">

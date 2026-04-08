@@ -9,8 +9,11 @@
 	place-items: center;
 	padding: 24px;
 
-	background: rgba(0, 0, 0, 0.6);
+	background:
+		radial-gradient(circle at top, rgba(245, 198, 68, 0.14), transparent 28%),
+		rgba(4, 6, 10, 0.76);
 	z-index: 10;
+	backdrop-filter: blur(8px);
 }
 
 .modal.open {
@@ -31,9 +34,10 @@
 	overflow: hidden;
 	/* body scrolls, header stays fixed */
 
-	background: #111114;
-	border: 1px solid #2a2a2f;
-	border-radius: 16px;
+	background: var(--panel-bg);
+	border: 1px solid var(--line-soft);
+	border-radius: 22px;
+	box-shadow: 0 24px 60px rgba(0, 0, 0, 0.42);
 }
 
 .sheet header {
@@ -47,8 +51,9 @@
 	gap: 12px;
 
 	padding: 10px 12px;
-	background: #111114;
-	border-bottom: 1px solid #24242a;
+	background: rgba(12, 16, 24, 0.92);
+	border-bottom: 1px solid var(--line-soft);
+	backdrop-filter: blur(10px);
 }
 
 .sheet header h2 {
@@ -77,9 +82,10 @@
 	max-height: 92vh;
 
 	overflow: auto;
-	background: #111114;
-	border: 1px solid #2a2a2f;
-	border-radius: 16px;
+	background: var(--panel-bg);
+	border: 1px solid var(--line-soft);
+	border-radius: 22px;
+	box-shadow: 0 24px 60px rgba(0, 0, 0, 0.42);
 }
 
 /* Sticky header inside dialog */
@@ -94,8 +100,9 @@
 	gap: 12px;
 
 	padding: 10px 12px;
-	background: #111114;
-	border-bottom: 1px solid #24242a;
+	background: rgba(12, 16, 24, 0.92);
+	border-bottom: 1px solid var(--line-soft);
+	backdrop-filter: blur(10px);
 }
 
 /* Generic dialog body: center content by default */
@@ -111,11 +118,12 @@
 
 /* Close button */
 .modal-close {
-	border: 1px solid #2a2a2f;
-	background: #17171b;
-	border-radius: 8px;
+	border: 1px solid var(--line-soft);
+	background: rgba(255, 255, 255, 0.05);
+	border-radius: 10px;
 	padding: 4px 8px;
 	cursor: pointer;
+	color: var(--text-main);
 }
 
 /* Dex modal body uses simple block layout */
