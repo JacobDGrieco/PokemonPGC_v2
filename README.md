@@ -6,8 +6,6 @@ _Pokémon Post-Game Checklist, Dex Tracker, and Data Hub_
 
 > **PROJECT IS STILL WIP!!!** I'm currently working to add all data for each game, but the general idea is pretty much done. Commits will be pretty often as I'm adding the data, fixing little bugs I notice, changing things around, and adding new features. Once all data is added properly and I don't notice any bugs, an official release will be created.
 
-> **I'm working towards making this a public website.** Once I can get an official release here on GitHub, I will be looking into get a domain name and everything surrounding that completed so that we can have a public website for all to enjoy together. And you won't have to worry about installing your own local version if you don't want to, which I know I don't always want to do for a simple tracker.
-
 ---
 
 ## Table of Contents
