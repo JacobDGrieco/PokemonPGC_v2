@@ -1,6 +1,8 @@
 import bcrypt from "bcryptjs";
 import { prisma } from "../_lib/db.js";
-import { json, methodNotAllowed } from "../_lib/response.js";
+import { json, methodNotAllowed, tooManyRequests } from "../_lib/response.js";
+import { getRequestIp, checkRateLimit } from "../_lib/rateLimit.js";
+import { validateCredentials } from "../_lib/validation.js";
 import { readJsonBody, setSessionCookie } from "../_lib/auth.js";
 
 export default async function handler(req, res) {
@@ -8,17 +10,22 @@ export default async function handler(req, res) {
 		return methodNotAllowed(res, ["POST"]);
 	}
 
-	const { email, password } = await readJsonBody(req);
-
-	if (!email || !password) {
-		return json(res, 400, { error: "Email and password required." });
+	const rateKey = getRequestIp(req);
+	const limit = checkRateLimit("auth-signup", rateKey, { windowMs: 10 * 60 * 1000, max: 10 });
+	if (!limit.ok) {
+		return tooManyRequests(res);
 	}
 
-	try {
-		const normalizedEmail = String(email).trim().toLowerCase();
+	const parsed = validateCredentials(await readJsonBody(req));
+	if (!parsed.ok) {
+		return json(res, 400, { error: parsed.error });
+	}
 
+	const { email, password } = parsed;
+
+	try {
 		const existing = await prisma.user.findUnique({
-			where: { email: normalizedEmail },
+			where: { email },
 		});
 
 		if (existing) {
@@ -29,7 +36,7 @@ export default async function handler(req, res) {
 
 		const user = await prisma.user.create({
 			data: {
-				email: normalizedEmail,
+				email,
 				passwordHash,
 				icon: "default",
 			},

@@ -8,9 +8,12 @@
   },
   "scripts": {
     "dev": "npx vite",
-    "build": "npx prisma generate && npx vite build",
+    "dev:client": "npx vite",
+    "dev:api": "node ./scripts/api-dev-server.mjs",
+    "build": "npx prisma generate && npx prisma db push && npx vite build",
     "preview": "npx vite preview",
     "postinstall": "npx prisma generate",
+    "prisma:push": "prisma db push",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
     "prisma:deploy": "prisma migrate deploy"

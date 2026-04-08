@@ -14,6 +14,21 @@ export function setApiCurrentUser(user) {
 	}
 }
 
+async function safeJson(res) {
+	const text = await res.text();
+	if (!text) return { error: `Server error (${res.status})` };
+	try { return JSON.parse(text); }
+	catch { return { error: text.slice(0, 200) || `Server error (${res.status})` }; }
+}
+
+async function requireOkJson(res, fallbackMessage) {
+	const payload = await safeJson(res);
+	if (!res.ok || payload?.error) {
+		throw new Error(payload?.error || fallbackMessage || `Request failed (${res.status})`);
+	}
+	return payload;
+}
+
 export async function signup(email, password) {
 	const res = await fetch(`${API_BASE}/auth/signup`, {
 		method: "POST",
@@ -21,7 +36,7 @@ export async function signup(email, password) {
 		credentials: "include",
 		body: JSON.stringify({ email, password }),
 	});
-	return res.json();
+	return safeJson(res);
 }
 
 export async function login(email, password) {
@@ -31,7 +46,7 @@ export async function login(email, password) {
 		credentials: "include",
 		body: JSON.stringify({ email, password }),
 	});
-	return res.json();
+	return safeJson(res);
 }
 
 export async function getCurrentUser() {
@@ -75,7 +90,7 @@ export async function saveGameSave(gameKey, data) {
 		}
 	);
 
-	return res.json();
+	return requireOkJson(res, `Failed to save progress for ${gameKey}.`);
 }
 
 export async function fetchGameSave(gameKey) {
@@ -95,7 +110,19 @@ export async function fetchGameSave(gameKey) {
 		return null;
 	}
 
-	return res.json(); // { save: { gameKey, data, updatedAt } }
+	return requireOkJson(res, `Failed to load progress for ${gameKey}.`);
+}
+
+export async function fetchAllGameSaves() {
+	if (!loggedInUserId) {
+		return null;
+	}
+
+	const res = await fetch(`${API_BASE}/progress`, {
+		credentials: "include",
+	});
+
+	return requireOkJson(res, "Failed to load cloud saves.");
 }
 
 export async function uploadSaveFileForImport(gameKey, file) {
@@ -103,17 +130,21 @@ export async function uploadSaveFileForImport(gameKey, file) {
 		throw new Error("You must be logged in to import a save file.");
 	}
 
-	const formData = new FormData();
-	formData.append("file", file);
+	const bytes = new Uint8Array(await file.arrayBuffer());
+	let binary = "";
+	for (const byte of bytes) binary += String.fromCharCode(byte);
+	const contentBase64 = btoa(binary);
 
 	const res = await fetch(
 		`${API_BASE}/save-import/${encodeURIComponent(gameKey)}`,
 		{
 			method: "POST",
+			headers: { "Content-Type": "application/json" },
 			credentials: "include",
-			body: formData,
-			// NOTE: do NOT set Content-Type here; the browser
-			// sets the proper multipart/form-data boundary for FormData.
+			body: JSON.stringify({
+				filename: file?.name || null,
+				contentBase64,
+			}),
 		}
 	);
 

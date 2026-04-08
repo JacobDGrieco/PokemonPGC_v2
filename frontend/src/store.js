@@ -40,6 +40,7 @@ export const store = {
 		sectionId: initialSectionId,
 		dexModalFor: null,
 		gen1SpriteMode: saved.gen1SpriteMode || "bw",
+		gen1RegionMode: saved.gen1RegionMode || "rf",
 		dexSpriteMode: saved.dexSpriteMode || "static",
 		fashionGenderByGame: saved.fashionGenderByGame || {},
 		startedGames: saved.startedGames || {},
@@ -285,6 +286,7 @@ export function save() {
 		sectionId: s.sectionId,
 		dexModalFor: s.dexModalFor || null,
 		gen1SpriteMode: s.gen1SpriteMode || "bw",
+		gen1RegionMode: s.gen1RegionMode || "rf",
 		dexSpriteMode: s.dexSpriteMode || "static",
 		fashionGenderByGame: s.fashionGenderByGame || {},
 		startedGames: s.startedGames || {},
@@ -321,6 +323,20 @@ export function save() {
 		localStorage.setItem("ppgc_v1", JSON.stringify(obj));
 	} catch (e) {
 		console.warn("[ppgc] Failed to save progress:", e);
+	}
+
+	try {
+		const gameKey = s.gameKey || null;
+		window.dispatchEvent(
+			new CustomEvent("ppgc:store:saved", {
+				detail: {
+					gameKey,
+					ts: new Date().toISOString(),
+				},
+			})
+		);
+	} catch {
+		// ignore event dispatch failures
 	}
 }
 
@@ -593,6 +609,7 @@ store.setGameStarted = function (gameKey, started) {
 					fashionModalFor: null,
 					fashionCategory: null,
 					gen1SpriteMode: "bw",
+					gen1RegionMode: "rf",
 					dexSpriteMode: "static",
 					fashionGenderByGame: {},
 					startedGames: {},

@@ -46,7 +46,7 @@ _Pokémon Post-Game Checklist, Dex Tracker, and Data Hub_
 - Event distributions (with region filters)
 - Fashion items, curry/sandwich recipes, and other collectibles
 
-The app is designed to run entirely in the browser (using localStorage) **or** with an optional Node/Express backend for multi-device syncing.
+The app is designed to run entirely in the browser (using localStorage) **or** with the built-in API routes for multi-device syncing.
 
 ---
 
@@ -265,9 +265,9 @@ The project is heavily data-driven. Basically all content is defined in JS data 
 - Uses **localStorage** for offline/guest saves.
 - Also has an optional **local backup** menu for saving data to **json** files for an extra layer of saving.
 
-**Backend (Optional)**
+**API / Sync Layer (Optional)**
 
-- **Node.js + Express** web server.
+- **Node.js API routes** under `frontend/api`.
 - **Prisma** ORM with a relational database (SQLite/Postgres/etc.).
 - Provides:
   - Account system (sign up / login)
@@ -308,20 +308,15 @@ PokemonPGC/
 			store.js
 			tasks.js
 		styles/...					# All CSS styling for elements
-  	backend/
-		package.json
-		src/
-			server.js             	# Express entry
-			db.js
-			routes/
-				auth.js
-				health.js
-				progress.js
+		api/
+			auth/...
+			progress/...
+			save-import/...
+			_lib/...                # Shared API helpers
 		prisma/
 			schema.prisma
-			.env.example
 		scripts/
-			dev-setup.sh
+			api-dev-server.mjs      # Local adapter for /api during Vite dev
 ```
 
 ---
@@ -341,50 +336,46 @@ This is the easiest way to use PokemonPGC for personal tracking.
 
 > This mode requires no backend or database.
 
-### 2. Full Setup with Backend (Accounts & Cloud Backup)
+### 2. Full Setup with API + Database (Accounts & Cloud Backup)
 
 To enable account login and server-side backups:
 
-1. **Install dependencies** (from the `backend/` directory):
+1. **Install dependencies** from the repo root:
 
-   Look in dev-setup.sh file
+   ```bash
+   npm install
+   ```
 
 2. **Configure environment variables**:
 
-   - Create a `.env` file (you can start from `.env.example` if present).
+   - Create `frontend/.env` from `frontend/.env.example`.
    - Set at least:
-     ```dotenv
-     DB_DATABASE_URL="your_database_connection_string_here"
-     JWT_SECRET="your_long_random_secret_here"
-     ```
+      ```dotenv
+      DB_DATABASE_URL="your_database_connection_string_here"
+      DB_DATABASE_URL_UNPOOLED="your_direct_database_connection_string_here"
+      AUTH_SECRET="your_long_random_secret_here"
+      ```
 
-3. **Initialize the database via Prisma**:
+3. **Sync the database schema via Prisma**:
 
    ```bash
-   npx prisma migrate dev
-   # or
-   npx prisma db push
+   npm run prisma:push --workspace=frontend
    ```
 
-4. **Start the backend server**:
+   This ensures both `User` and `GameSave` exist before you test cloud saves.
+
+4. **Start local app + API together**:
 
    ```bash
    npm run dev
-   # or
-   npm start
    ```
 
-5. **Point the frontend at the backend**:
-   - In your frontend config (e.g., a `config.js` or constant), set:
-     ```js
-     const API_BASE_URL = "http://localhost:3000";
-     ```
-   - Open `index.html` in your browser and use the login UI.
-   - On login, the app:
-     - Fetches any existing save from the server.
-     - Upserts new progress via the `/progress` route when you trigger backups.
+5. Open the Vite URL shown in the terminal and use the login UI.
+   - Vite proxies `/api` to the local API adapter server.
+   - On login, the app fetches any existing cloud save and writes updates back through the same API routes used in production.
 
-If the backend is offline, the app continues to function using localStorage only.
+If the API/database is offline, the app continues to function using localStorage only.
+The production/frontend build also runs `prisma db push` before bundling so Vercel/local builds keep the schema in sync.
 
 ---
 
@@ -411,8 +402,8 @@ PokemonPGC supports several layers of saving:
 
 - Lightweight enough for a **Raspberry Pi 5** or similar (Possibly smaller, but untested).
 - You can:
-  - Run the backend (Node + DB) on the device.
-  - Serve the frontend either directly from Node or any static file server.
+  - Run the app plus database on the device.
+  - Serve the frontend and API together through the same deployment.
 - With a VPN solution like Tailscale, you can access your instance from other devices while keeping it private.
 
 ---

@@ -1,6 +1,7 @@
 import { json, methodNotAllowed } from "../_lib/response.js";
 import { getSessionFromRequest, readJsonBody } from "../_lib/auth.js";
 import { getUserSaves, upsertUserSave } from "../_lib/progress.js";
+import { validateGameKey, validateSnapshotPayload } from "../_lib/validation.js";
 
 export default async function handler(req, res) {
 	if (req.method === "GET") {
@@ -38,18 +39,19 @@ async function handlePut(req, res) {
 	}
 
 	const body = await readJsonBody(req);
-	const { gameKey, data } = body || {};
+	const gameKeyResult = validateGameKey(body?.gameKey);
+	const dataResult = validateSnapshotPayload(body?.data ?? body?.snapshot);
 
-	if (!gameKey) {
-		return json(res, 400, { error: "Missing gameKey." });
+	if (!gameKeyResult.ok) {
+		return json(res, 400, { error: gameKeyResult.error });
 	}
 
-	if (data == null) {
-		return json(res, 400, { error: "Missing data." });
+	if (!dataResult.ok) {
+		return json(res, 400, { error: dataResult.error });
 	}
 
 	try {
-		await upsertUserSave(session.userId, gameKey, data);
+		await upsertUserSave(session.userId, gameKeyResult.gameKey, dataResult.data);
 		return json(res, 200, { ok: true });
 	} catch (err) {
 		console.error("[progress PUT] error:", err);

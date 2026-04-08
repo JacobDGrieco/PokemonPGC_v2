@@ -2,8 +2,21 @@ import { _assetPath } from './assets.js';
 import { pad4 } from './core.js';
 import { formKeyToSuffix } from './dex-register.js';
 
+function resolveGen1GameVariant(gameKey) {
+  const raw = String(gameKey || '').toLowerCase();
+  if (raw !== 'red' && raw !== 'blue') return raw;
+
+  const regionMode =
+    globalThis?.window?.PPGC?._storeRef?.state?.gen1RegionMode ||
+    globalThis?.window?.store?.state?.gen1RegionMode ||
+    'rf';
+
+  return regionMode === 'jp' ? 'green' : raw;
+}
+
 function resolveGameSpritePathPrefix(gameKey) {
   if (gameKey.indexOf('-') > 0) gameKey = gameKey.split('-')[0];
+  gameKey = resolveGen1GameVariant(gameKey);
 
   switch (String(gameKey || '').toLowerCase()) {
     case 'red':

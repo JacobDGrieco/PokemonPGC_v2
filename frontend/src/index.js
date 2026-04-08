@@ -11,8 +11,8 @@ import {
 	autoImportOnStart,
 	startServerAutoBackup,
 	stopServerAutoBackup,
-	initialServerBackup,
 	loadAllGames,
+	setCloudSyncEnabled,
 } from "./persistence.js";
 import * as api from "../api.js";
 import { initLayoutSwitcher } from "./ui/layoutSwitcher.js";
@@ -166,6 +166,7 @@ function renderAll() {
 	PPGC._storeRef = store;
 	PPGC._tasksStoreRef = store.tasksStore;
 	PPGC.gen1SpriteColor = store.state.gen1SpriteMode === 'color';
+	PPGC.gen1SpriteRegion = store.state.gen1RegionMode === 'jp' ? 'jp' : 'rf';
 	renderCrumbs(store, elements);
 
 	const ready = ensureGenDataForState(store.state);
@@ -223,6 +224,15 @@ function mountBackupControls() {
 let currentUser = null;
 let currentUserIcon = "default";
 
+function applyAccountButtonIcon(btn, icon) {
+	const nextIcon = String(icon || "default");
+	const isCustom = nextIcon.startsWith("data:image/");
+
+	btn.dataset.icon = isCustom ? "custom" : nextIcon;
+	btn.classList.toggle("has-custom-icon", isCustom);
+	btn.style.backgroundImage = isCustom ? `url("${nextIcon}")` : "";
+}
+
 function updateAccountButton() {
 	const btn = document.getElementById("ppgc-account-button");
 	if (!btn) return;
@@ -233,8 +243,7 @@ function updateAccountButton() {
 		? `Logged in as ${currentUser.email}`
 		: "Log in / Sign up";
 
-	// reflect icon choice
-	btn.dataset.icon = currentUserIcon || "default";
+	applyAccountButtonIcon(btn, currentUserIcon || "default");
 }
 
 async function refreshCurrentUser() {
@@ -252,6 +261,20 @@ async function refreshCurrentUser() {
 	updateAccountButton();
 	window.PPGC = window.PPGC || {};
 	PPGC.currentUser = currentUser;
+
+	if (currentUser) {
+		setCloudSyncEnabled(false);
+		try {
+			await loadAllGames();
+		} catch (e) {
+			console.debug("[auth] session restore load failed:", e);
+		}
+		setCloudSyncEnabled(true);
+		startServerAutoBackup();
+	} else {
+		setCloudSyncEnabled(false);
+		stopServerAutoBackup();
+	}
 }
 
 async function handleLogout() {
@@ -268,6 +291,7 @@ async function handleLogout() {
 
 	// NEW: clear logged-in user in api.js
 	api.setApiCurrentUser(null);
+	setCloudSyncEnabled(false);
 
 	window.PPGC = window.PPGC || {};
 	PPGC.currentUser = currentUser;
@@ -368,14 +392,9 @@ function openAuthModal(mode = "login") {
 
 					window.PPGC = window.PPGC || {};
 					PPGC.currentUser = currentUser;
-
-					if (currentMode === "signup") {
-						// New account: push current game up once so DB has something
-						try { await initialServerBackup(); } catch (e) { console.debug('[auth] initial backup failed (ignored):', e); }
-					} else {
-						// Existing account: pull ALL games down from the cloud
-						try { await loadAllGames(); } catch (e) { console.debug('[auth] initial load failed (ignored):', e); }
-					}
+					setCloudSyncEnabled(false);
+					try { await loadAllGames(); } catch (e) { console.debug('[auth] initial load failed (ignored):', e); }
+					setCloudSyncEnabled(true);
 
 					startServerAutoBackup();
 
@@ -649,6 +668,13 @@ PPGC.renderAll = renderAll;
 PPGC.openAuthModal = openAuthModal;
 PPGC.navigateToTask = navigateToTask;
 PPGC.api = api;
+PPGC.setAccountButtonIcon = (icon) => {
+	currentUserIcon = icon || "default";
+	if (currentUser) currentUser.icon = currentUserIcon;
+	PPGC.currentUser = currentUser;
+	const btn = document.getElementById("ppgc-account-button");
+	if (btn) applyAccountButtonIcon(btn, currentUserIcon);
+};
 PPGC.handleLogout = handleLogout;
 PPGC.resolveGameLabel = resolveGameLabel;
 PPGC.ensureGenDataLoaded = ensureGenDataLoaded;

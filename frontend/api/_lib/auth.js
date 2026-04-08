@@ -35,6 +35,13 @@ function signValue(value) {
 		.digest("base64url");
 }
 
+function signaturesMatch(left, right) {
+	const leftBuf = Buffer.from(String(left || ""));
+	const rightBuf = Buffer.from(String(right || ""));
+	if (leftBuf.length !== rightBuf.length) return false;
+	return crypto.timingSafeEqual(leftBuf, rightBuf);
+}
+
 export function parseCookies(req) {
 	const raw = req.headers?.cookie || "";
 	const out = {};
@@ -74,7 +81,7 @@ export function verifySessionToken(token) {
 	if (!encodedPayload || !signature) return null;
 
 	const expected = signValue(encodedPayload);
-	if (signature !== expected) return null;
+	if (!signaturesMatch(signature, expected)) return null;
 
 	try {
 		const payload = JSON.parse(base64urlDecode(encodedPayload));
@@ -96,6 +103,7 @@ export function setSessionCookie(res, user) {
 		"HttpOnly",
 		"SameSite=Lax",
 		`Max-Age=${Math.floor(SESSION_TTL_MS / 1000)}`,
+		"Priority=High",
 	];
 
 	if (isProd) {
@@ -114,6 +122,7 @@ export function clearSessionCookie(res) {
 		"HttpOnly",
 		"SameSite=Lax",
 		"Max-Age=0",
+		"Priority=High",
 	];
 
 	if (isProd) {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { _assetPath } from '../utils/assetPath.js';
-import { save, store } from '../store.js';
+import { store } from '../store.js';
 import { ensureSections } from '../react-bridge/taskApi.js';
 import { usePpgcSnapshot } from '../react-bridge/usePpgcSnapshot.js';
 import { navigateToState } from '../react-bridge/navigation.js';
@@ -114,8 +114,6 @@ export function AppSidebar() {
 	const snapshot = usePpgcSnapshot();
 	const state = snapshot?.state || store.state;
 	const items = makeSidebarItems(state);
-	const showGen1Toggle = state?.level !== 'gen' && state?.genKey === 'gen1';
-	const isColor = state?.gen1SpriteMode === 'color';
 
 	return (
 		<aside id="sidebar" className="sidebar" aria-label="Explorer" aria-hidden={state?.sidebarCollapsed ? 'true' : 'false'}>
@@ -124,21 +122,6 @@ export function AppSidebar() {
 					←
 				</button>
 				<div id="navTitle" className="sidebar-title">{getSidebarTitle(state)}</div>
-				<label id="gen1SpriteToggle" className={`sprite-toggle ${showGen1Toggle ? '' : 'hidden'}`}>
-					<span className="lbl">Colors</span>
-					<input
-						type="checkbox"
-						checked={isColor}
-						onChange={(event) => {
-							store.state.gen1SpriteMode = event.target.checked ? 'colored' : 'bw';
-							window.PPGC = window.PPGC || {};
-							window.PPGC.gen1SpriteColor = event.target.checked;
-							save();
-							window.PPGC?.renderAll?.();
-						}}
-					/>
-					<span className="switch"><span className="knob" /></span>
-				</label>
 			</div>
 
 			<div id="sideList" className="dir-list react-dir-list">

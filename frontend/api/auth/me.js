@@ -1,6 +1,7 @@
 import { prisma } from "../_lib/db.js";
 import { json, methodNotAllowed } from "../_lib/response.js";
 import { getSessionFromRequest, readJsonBody } from "../_lib/auth.js";
+import { validateIcon } from "../_lib/validation.js";
 
 export default async function handler(req, res) {
 	if (req.method === "GET") {
@@ -45,13 +46,16 @@ async function handlePatch(req, res) {
 		return json(res, 401, { error: "Not authenticated." });
 	}
 
-	const { icon } = await readJsonBody(req);
+	const parsed = validateIcon((await readJsonBody(req))?.icon);
+	if (!parsed.ok) {
+		return json(res, 400, { error: parsed.error });
+	}
 
 	try {
 		const user = await prisma.user.update({
 			where: { id: session.userId },
 			data: {
-				icon: icon || undefined,
+				icon: parsed.icon,
 			},
 			select: {
 				id: true,

@@ -3,16 +3,15 @@
   "version": "1.0.0",
   "private": true,
   "workspaces": [
-    "frontend",
-    "backend"
+    "frontend"
   ],
   "engines": {
     "node": ">=20"
   },
   "scripts": {
-    "dev": "concurrently --names \"frontend,backend\" --prefix-colors \"cyan,yellow\" \"npm run dev --workspace=frontend\" \"npm run dev --workspace=backend\"",
+    "dev": "concurrently --names \"frontend,api\" --prefix-colors \"cyan,yellow\" \"npm run dev:client --workspace=frontend\" \"npm run dev:api --workspace=frontend\"",
     "dev:frontend": "npm run dev --workspace=frontend",
-    "dev:backend": "npm run dev --workspace=backend",
+    "dev:api": "npm run dev:api --workspace=frontend",
     "build": "npm run build --workspace=frontend",
     "install:all": "npm install"
   },

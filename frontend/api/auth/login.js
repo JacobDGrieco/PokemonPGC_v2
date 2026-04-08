@@ -1,6 +1,8 @@
 import bcrypt from "bcryptjs";
 import { prisma } from "../_lib/db.js";
-import { json, methodNotAllowed } from "../_lib/response.js";
+import { json, methodNotAllowed, tooManyRequests } from "../_lib/response.js";
+import { getRequestIp, checkRateLimit } from "../_lib/rateLimit.js";
+import { validateCredentials } from "../_lib/validation.js";
 import { readJsonBody, setSessionCookie } from "../_lib/auth.js";
 
 export default async function handler(req, res) {
@@ -8,17 +10,22 @@ export default async function handler(req, res) {
 		return methodNotAllowed(res, ["POST"]);
 	}
 
-	const { email, password } = await readJsonBody(req);
-
-	if (!email || !password) {
-		return json(res, 400, { error: "Email and password required." });
+	const rawBody = await readJsonBody(req);
+	const parsed = validateCredentials(rawBody);
+	if (!parsed.ok) {
+		return json(res, 400, { error: parsed.error });
 	}
 
 	try {
-		const normalizedEmail = String(email).trim().toLowerCase();
+		const { email, password } = parsed;
+		const rateKey = `${getRequestIp(req)}:${email}`;
+		const limit = checkRateLimit("auth-login", rateKey, { windowMs: 10 * 60 * 1000, max: 20 });
+		if (!limit.ok) {
+			return tooManyRequests(res);
+		}
 
 		const user = await prisma.user.findUnique({
-			where: { email: normalizedEmail },
+			where: { email },
 			select: {
 				id: true,
 				email: true,

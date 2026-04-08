@@ -2,6 +2,18 @@ import { _assetPath } from './assets.js';
 
 const ITEM = ['apricorns', 'balls', 'berries', 'decorations', 'form-items', 'fossils', 'held-items', 'key-items', 'mails', 'medicines', 'mega-stones', 'partner-gifts', 'stat-items', 'hms', 'tms', 'trs', 'treasures', 'usable-items', 'zcrystals'];
 
+function resolveGen1GameVariant(gameKey) {
+	const raw = String(gameKey || '').toLowerCase();
+	if (raw !== 'red' && raw !== 'blue') return raw;
+
+	const regionMode =
+		globalThis?.window?.PPGC?._storeRef?.state?.gen1RegionMode ||
+		globalThis?.window?.store?.state?.gen1RegionMode ||
+		'rf';
+
+	return regionMode === 'jp' ? 'green' : raw;
+}
+
 export function _imageByGen(type, genKey, name) {
 	const prefix = ITEM.includes(type) ? 'items/' : '';
 	if (type === 'hms' || type === 'tms' || type === 'trs') type = `thms/${type}`;
@@ -44,6 +56,7 @@ export function _imageByGen(type, genKey, name) {
 
 export function _imageByGame(type, gameKey, name, bwORc) {
 	if (type && type[type.length - 1] !== 's') type = `${type}s`;
+	gameKey = resolveGen1GameVariant(gameKey);
 
 	let game = '';
 	switch (gameKey) {

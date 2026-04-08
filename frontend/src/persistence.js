@@ -1,6 +1,6 @@
 import { store, getAllGameKeys } from "./store.js";
 import { bootstrapTasks } from "./tasks.js";
-import { getCurrentUser, saveGameSave, fetchGameSave } from "../api.js";
+import { getCurrentUser, saveGameSave, fetchGameSave, fetchAllGameSaves } from "../api.js";
 
 /* ===================== IDB tiny helper ===================== */
 const DB_NAME = "ppgc-backups";
@@ -247,105 +247,284 @@ function readFashionState(gameKey, categoryId, itemId, formLookup) {
 		);
 }
 
+function hasOwnEntries(obj) {
+	return !!obj && typeof obj === "object" && Object.keys(obj).length > 0;
+}
+
+function gameHasFashion(gameKey) {
+	return !!(window.DATA?.fashion?.[gameKey]?.categories || []).length;
+}
+
+function gameHasDistributions(gameKey) {
+	return !!(window.DATA?.distributions?.[gameKey] || []).filter(Boolean).length;
+}
+
+function gameHasResearch(gameKey) {
+	return !!(window.DATA?.dex?.[gameKey] || []).some(
+		(mon) => Array.isArray(mon?.research) && mon.research.length > 0
+	);
+}
+
+function gameHasCollectible(dataKey, gameKey) {
+	const entry = window.DATA?.[dataKey]?.[gameKey];
+	if (Array.isArray(entry)) return entry.length > 0;
+	if (Array.isArray(entry?.items)) return entry.items.length > 0;
+	return false;
+}
+
+function isDefaultTaskState(state) {
+	if (!state || typeof state !== "object") return true;
+	if (state.type === "tiered") {
+		return Number(state.currentTier || 0) <= 0 && Number(state.currentCount || 0) <= 0;
+	}
+	return !state.done;
+}
+
+function isDefaultDexEntry(entry) {
+	if (!entry || typeof entry !== "object") return true;
+	const status = entry.status || "unknown";
+	return status === "unknown" && !hasOwnEntries(entry.forms);
+}
+
+function pruneResearchSnapshot(researchObj) {
+	const out = {};
+	for (const [monId, rec] of Object.entries(researchObj || {})) {
+		const cleaned = {};
+		for (const [taskId, value] of Object.entries(rec || {})) {
+			if (typeof value === "number") {
+				if (value > 0) cleaned[taskId] = value;
+			} else if (value) {
+				cleaned[taskId] = true;
+			}
+		}
+		if (hasOwnEntries(cleaned)) out[monId] = cleaned;
+	}
+	return out;
+}
+
+function pruneBooleanRecord(record) {
+	const out = {};
+	for (const [key, value] of Object.entries(record || {})) {
+		if (value) out[key] = true;
+	}
+	return out;
+}
+
+function pruneCollectibleFormsRecord(record) {
+	const out = {};
+	for (const [itemId, node] of Object.entries(record || {})) {
+		const forms = {};
+		for (const [formName, value] of Object.entries(node?.forms || {})) {
+			if (value) forms[formName] = true;
+		}
+		if (hasOwnEntries(forms)) {
+			out[itemId] = { forms };
+		}
+	}
+	return out;
+}
+
+function resetTasksForGame(gameKey) {
+	const taskIds = collectAllTaskIdsFromData(gameKey);
+	const taskIdSet = new Set(taskIds.map(String));
+	for (const [, rows] of window.store?.tasksStore?.entries?.() || []) {
+		const dfs = (arr) => {
+			for (const node of arr || []) {
+				if (!node) continue;
+				if (taskIdSet.has(String(node.id))) {
+					if (node.type === "tiered") {
+						node.currentTier = 0;
+						node.currentCount = 0;
+					} else {
+						node.done = false;
+					}
+				}
+				if (Array.isArray(node.children)) dfs(node.children);
+			}
+		};
+		dfs(rows);
+	}
+}
+
+function resetDexForGame(gameKey) {
+	const dexIds = collectAllDexIdsFromData(gameKey);
+	const emptyStatuses = {};
+	const emptyForms = {};
+	for (const id of dexIds) {
+		emptyStatuses[String(id)] = "unknown";
+		emptyForms[String(id)] = { forms: {} };
+	}
+	window.store?.dexStatus?.set?.(gameKey, emptyStatuses);
+	window.store?.dexFormsStatus?.set?.(gameKey, emptyForms);
+}
+
+function resetFashionForGame(gameKey) {
+	window.store?.fashionStatus?.set?.(gameKey, new Map());
+	window.store?.fashionFormsStatus?.set?.(gameKey, new Map());
+}
+
+function resetSimpleRecordMap(propName, gameKey) {
+	const map = ensureStoreMap(propName);
+	if (!map) return;
+	map.set(gameKey, {});
+}
+
+function resetSnapshotStateForGame(gameKey) {
+	resetTasksForGame(gameKey);
+	resetDexForGame(gameKey);
+	resetFashionForGame(gameKey);
+	resetSimpleRecordMap("distributionsStatus", gameKey);
+	resetSimpleRecordMap("dexResearchStatus", gameKey);
+	resetSimpleRecordMap("curryStatus", gameKey);
+	resetSimpleRecordMap("curryFormsStatus", gameKey);
+	resetSimpleRecordMap("sandwichStatus", gameKey);
+	resetSimpleRecordMap("sandwichFormsStatus", gameKey);
+	resetSimpleRecordMap("stickerStatus", gameKey);
+	resetSimpleRecordMap("stickerFormsStatus", gameKey);
+	if (window.store?.state?.startedGames) {
+		delete window.store.state.startedGames[gameKey];
+	}
+}
+
 /* ===================== Snapshot builder ===================== */
 export function collectSnapshot(gameKey) {
 	const when = new Date().toISOString();
 
-	// Tasks
+	const snapshot = {
+		version: 2,
+		gameKey,
+		updatedAt: when,
+	};
+
+	if (window.store?.isGameStarted?.(gameKey)) {
+		snapshot.started = true;
+	}
+
 	const allTaskIds = collectAllTaskIdsFromData(gameKey);
 	const tasks = {};
 	for (const id of allTaskIds) {
-		tasks[id] = readTaskState(id);
+		const state = readTaskState(id);
+		if (!isDefaultTaskState(state)) {
+			tasks[id] = state;
+		}
 	}
+	if (hasOwnEntries(tasks)) snapshot.tasks = tasks;
 
-	// Dex
 	const allDexIds = collectAllDexIdsFromData(gameKey);
 	const dex = {};
 	for (const id of allDexIds) {
-		// 1) read current (store getter preferred, else DOM)
-		const cur = readDexState(gameKey, id); // { status, forms }
+		const cur = readDexState(gameKey, id);
 		const baseStatus = cur?.status ?? "unknown";
-		const forms = { ...(cur?.forms || {}) };
-
-		// 2) ensure ALL canonical forms are present (default "unknown")
-		const canonicalForms = getDexCanonicalForms(gameKey, id);
-		for (const fname of canonicalForms) {
-			if (!(fname in forms)) forms[fname] = "unknown";
+		const forms = {};
+		for (const fname of getDexCanonicalForms(gameKey, id)) {
+			const formStatus = cur?.forms?.[fname] || "unknown";
+			if (formStatus !== "unknown") {
+				forms[fname] = formStatus;
+			}
 		}
-
-		// 3) lift parent status if any form outranks it
 		const formStatuses = Object.values(forms);
 		const lifted = liftStatus(baseStatus, ...formStatuses);
+		const entry = {
+			status: lifted,
+			forms,
+		};
+		if (!isDefaultDexEntry(entry)) {
+			dex[id] = entry;
+		}
+	}
+	if (hasOwnEntries(dex)) snapshot.dex = dex;
 
-		dex[id] = { status: lifted, forms };
+	if (gameHasFashion(gameKey)) {
+		const fashion = {};
+		const fKeys = collectAllFashionKeysFromData(gameKey);
+		for (const k of fKeys) {
+			const { categoryId, itemId, formLookup, jsonKey } = k;
+			const value = readFashionState(
+				gameKey,
+				categoryId,
+				itemId,
+				formLookup
+			);
+			if (value) {
+				fashion[jsonKey] = value;
+			}
+		}
+		if (hasOwnEntries(fashion)) snapshot.fashion = fashion;
 	}
 
-	// Fashion
-	const fashion = {};
-	const fKeys = collectAllFashionKeysFromData(gameKey);
-	for (const k of fKeys) {
-		const { categoryId, itemId, formLookup, jsonKey } = k;
-		fashion[jsonKey] = readFashionState(
-			gameKey,
-			categoryId,
-			itemId,
-			formLookup
+	if (gameHasDistributions(gameKey)) {
+		const distributions = pruneBooleanRecord(
+			window.store?.distributionsStatus instanceof Map
+				? window.store.distributionsStatus.get(gameKey) || {}
+				: {}
 		);
+		if (hasOwnEntries(distributions)) snapshot.distributions = distributions;
 	}
 
-	// Distributions (simple boolean map per game)
-	const distributions =
-		window.store?.distributionsStatus instanceof Map
-			? window.store.distributionsStatus.get(gameKey) || {}
-			: {};
+	if (gameHasResearch(gameKey)) {
+		const research = pruneResearchSnapshot(
+			window.store?.dexResearchStatus instanceof Map
+				? window.store.dexResearchStatus.get(gameKey) || {}
+				: {}
+		);
+		if (hasOwnEntries(research)) snapshot.research = research;
+	}
 
-	// Research tasks (per-game bucket stored under dexResearchStatus)
-	const research =
-		window.store?.dexResearchStatus instanceof Map
-			? window.store.dexResearchStatus.get(gameKey) || {}
-			: {};
-
-	// Curry (status + per-form buckets)
-	const curry = {
-		status:
+	if (gameHasCollectible("curry", gameKey)) {
+		const status = pruneBooleanRecord(
 			window.store?.curryStatus instanceof Map
 				? window.store.curryStatus.get(gameKey) || {}
-				: {},
-		forms:
+				: {}
+		);
+		const forms = pruneCollectibleFormsRecord(
 			window.store?.curryFormsStatus instanceof Map
 				? window.store.curryFormsStatus.get(gameKey) || {}
-				: {},
-	};
+				: {}
+		);
+		if (hasOwnEntries(status) || hasOwnEntries(forms)) {
+			snapshot.curry = {};
+			if (hasOwnEntries(status)) snapshot.curry.status = status;
+			if (hasOwnEntries(forms)) snapshot.curry.forms = forms;
+		}
+	}
 
-	// Sandwich (status + per-form buckets)
-	const sandwich = {
-		status:
+	if (gameHasCollectible("sandwich", gameKey)) {
+		const status = pruneBooleanRecord(
 			window.store?.sandwichStatus instanceof Map
 				? window.store.sandwichStatus.get(gameKey) || {}
-				: {},
-		forms:
+				: {}
+		);
+		const forms = pruneCollectibleFormsRecord(
 			window.store?.sandwichFormsStatus instanceof Map
 				? window.store.sandwichFormsStatus.get(gameKey) || {}
-				: {},
-	};
+				: {}
+		);
+		if (hasOwnEntries(status) || hasOwnEntries(forms)) {
+			snapshot.sandwich = {};
+			if (hasOwnEntries(status)) snapshot.sandwich.status = status;
+			if (hasOwnEntries(forms)) snapshot.sandwich.forms = forms;
+		}
+	}
 
-	// Meta (just helpful context)
-	const meta = {
-		gameKey,
-		generatedAt: when,
-		version: "v1",
-	};
+	if (gameHasCollectible("sticker", gameKey)) {
+		const status = pruneBooleanRecord(
+			window.store?.stickerStatus instanceof Map
+				? window.store.stickerStatus.get(gameKey) || {}
+				: {}
+		);
+		const forms = pruneCollectibleFormsRecord(
+			window.store?.stickerFormsStatus instanceof Map
+				? window.store.stickerFormsStatus.get(gameKey) || {}
+				: {}
+		);
+		if (hasOwnEntries(status) || hasOwnEntries(forms)) {
+			snapshot.sticker = {};
+			if (hasOwnEntries(status)) snapshot.sticker.status = status;
+			if (hasOwnEntries(forms)) snapshot.sticker.forms = forms;
+		}
+	}
 
-	return {
-		meta,
-		tasks,
-		dex,
-		fashion,
-		distributions,
-		research,
-		curry,
-		sandwich,
-	};
+	return snapshot;
 }
 
 
@@ -385,6 +564,48 @@ function currentGameKey() {
 		null;
 
 	return fromAttr || "legendsza";
+}
+
+async function ensureGameDataLoadedForSnapshot(gameKey) {
+	if (!gameKey) return;
+	try {
+		await window.PPGC?.ensureGenDataLoadedForGame?.(gameKey);
+	} catch (err) {
+		console.debug(
+			"[PPGC server load] could not preload game data",
+			gameKey,
+			err?.message || err
+		);
+	}
+}
+
+function emitServerImportDone(scope, gameKey = null, games = null) {
+	window.dispatchEvent(
+		new CustomEvent("ppgc:import:done", {
+			detail: {
+				scope,
+				gameKey,
+				games,
+				ts: new Date().toISOString(),
+			},
+		})
+	);
+}
+
+async function applyServerSaveRecord(save) {
+	if (!save?.data) return false;
+
+	const effectiveGameKey = save.gameKey || save.data?.gameKey || null;
+	if (!effectiveGameKey) return false;
+
+	await ensureGameDataLoadedForSnapshot(effectiveGameKey);
+
+	const snap = {
+		...save.data,
+		gameKey: save.data?.gameKey || effectiveGameKey,
+	};
+	applySnapshotToStore(snap);
+	return true;
 }
 
 export async function backupNow() {
@@ -492,24 +713,80 @@ export async function chooseBackupFolder() {
 /* ====================== Server Backup ======================= */
 let serverAutoSaveId = null;
 let serverChangeSaveTimeout = null;
+let cloudSyncEnabled = false;
+
+export function setCloudSyncEnabled(enabled) {
+	cloudSyncEnabled = !!enabled;
+	if (!cloudSyncEnabled && serverChangeSaveTimeout !== null) {
+		clearTimeout(serverChangeSaveTimeout);
+		serverChangeSaveTimeout = null;
+	}
+}
+
+function canSyncToServer() {
+	return cloudSyncEnabled;
+}
+
+function emitCloudSyncDone(gameKey) {
+	const ts = new Date().toISOString();
+	try {
+		localStorage.setItem("ppgc_last_cloud_sync_ts", ts);
+		localStorage.setItem("ppgc_last_cloud_sync_game", gameKey || "");
+		localStorage.removeItem("ppgc_last_cloud_sync_error");
+	} catch {
+		// ignore localStorage failures
+	}
+	try {
+		window.dispatchEvent(
+			new CustomEvent("ppgc:cloud-sync:done", {
+				detail: { gameKey, ts },
+			})
+		);
+	} catch {
+		// ignore event failures
+	}
+}
+
+function emitCloudSyncError(gameKey, err) {
+	const ts = new Date().toISOString();
+	const message = err?.message || String(err || "Unknown cloud sync error.");
+	try {
+		localStorage.setItem("ppgc_last_cloud_sync_error", message);
+	} catch {
+		// ignore localStorage failures
+	}
+	try {
+		window.dispatchEvent(
+			new CustomEvent("ppgc:cloud-sync:error", {
+				detail: { gameKey, ts, message },
+			})
+		);
+	} catch {
+		// ignore event failures
+	}
+}
 
 export async function initialServerBackup() {
+	if (!canSyncToServer()) return;
 	try {
 		const games = getAllGameKeys();
 		for (const gameKey of games) {
 			if (!gameKey) continue;
 			const snap = collectSnapshot(gameKey);
 			await saveGameSave(gameKey, snap);
+			emitCloudSyncDone(gameKey);
 		}
 	} catch (err) {
-		console.debug(
-			"[PPGC initial server backup] skipped:",
+		emitCloudSyncError(null, err);
+		console.error(
+			"[PPGC initial server backup] failed:",
 			err?.message || err
 		);
 	}
 }
 
-export function scheduleServerSave(gameKey, delayMs = 10_000) {
+export function scheduleServerSave(gameKey, delayMs = 1_500) {
+	if (!canSyncToServer()) return;
 	try {
 		// Debounce: reset the timer on each call
 		if (serverChangeSaveTimeout !== null) {
@@ -524,15 +801,18 @@ export function scheduleServerSave(gameKey, delayMs = 10_000) {
 
 				const snap = collectSnapshot(effectiveGameKey);
 				await saveGameSave(effectiveGameKey, snap);
+				emitCloudSyncDone(effectiveGameKey);
 			} catch (err) {
-				console.debug(
-					"[PPGC server change-backup] skipped:",
+				emitCloudSyncError(gameKey || currentGameKey(), err);
+				console.error(
+					"[PPGC server change-backup] failed:",
 					err?.message || err
 				);
 			}
 		}, delayMs);
 	} catch (err) {
-		console.debug(
+		emitCloudSyncError(gameKey || currentGameKey(), err);
+		console.error(
 			"[PPGC server change-backup] schedule failed:",
 			err?.message || err
 		);
@@ -546,6 +826,37 @@ if (typeof window !== "undefined") {
 }
 
 export async function loadAllGames() {
+	try {
+		const res = await fetchAllGameSaves();
+		const saves = Array.isArray(res?.saves) ? res.saves : [];
+		const restoredGames = [];
+
+		for (const save of saves) {
+			try {
+				const applied = await applyServerSaveRecord(save);
+				if (applied) {
+					restoredGames.push(save.gameKey || save.data?.gameKey || null);
+				}
+			} catch (err) {
+				console.debug(
+					"[PPGC server load-all] skipped game",
+					save?.gameKey || save?.data?.gameKey || "unknown",
+					err?.message || err
+				);
+			}
+		}
+
+		if (restoredGames.length) {
+			emitServerImportDone("all-server", null, restoredGames.filter(Boolean));
+		}
+		return;
+	} catch (err) {
+		console.debug(
+			"[PPGC server load-all] bulk load failed, falling back:",
+			err?.message || err
+		);
+	}
+
 	try {
 		const games = getAllGameKeys();
 		for (const gameKey of games) {
@@ -575,19 +886,10 @@ export async function loadGame(gameKey) {
 		const res = await fetchGameSave(gameKey);
 		if (!res || !res.save || !res.save.data) return;
 
-		const snap = res.save.data;
-		applySnapshotToStore(snap);
-
-		// Optional: let the UI know an import happened
-		window.dispatchEvent(
-			new CustomEvent("ppgc:import:done", {
-				detail: {
-					scope: "game-server",
-					gameKey,
-					ts: new Date().toISOString(),
-				},
-			})
-		);
+		const applied = await applyServerSaveRecord(res.save);
+		if (applied) {
+			emitServerImportDone("game-server", gameKey);
+		}
 	} catch (err) {
 		console.debug(
 			"[PPGC server load] skipped game",
@@ -604,14 +906,17 @@ export function startServerAutoBackup() {
 	const intervalMs = 5 * 60 * 1000;
 
 	serverAutoSaveId = window.setInterval(async () => {
+		if (!canSyncToServer()) return;
 		try {
 			const gameKey = currentGameKey();
 			if (!gameKey) return;
 
 			const snap = collectSnapshot(gameKey);
 			await saveGameSave(gameKey, snap);
+			emitCloudSyncDone(gameKey);
 		} catch (err) {
-			console.debug("[PPGC server auto-backup] skipped:", err?.message || err);
+			emitCloudSyncError(currentGameKey(), err);
+			console.error("[PPGC server auto-backup] failed:", err?.message || err);
 		}
 	}, intervalMs);
 }
@@ -951,11 +1256,22 @@ function applySandwichSnapshotToStore(gameKey, sandwichObj) {
 	}
 }
 
+function applyStartedSnapshotToStore(gameKey, startedValue) {
+	if (!gameKey || !window.store?.state) return;
+	window.store.state.startedGames ||= {};
+	if (startedValue) {
+		window.store.state.startedGames[gameKey] = true;
+	} else {
+		delete window.store.state.startedGames[gameKey];
+	}
+}
+
 function applySnapshotToStore(snap) {
 	try {
 		if (!snap || typeof snap !== "object") return;
 
-		const gameKey = snap.meta?.gameKey || null;
+		const gameKey = snap.gameKey || snap.meta?.gameKey || null;
+		const version = Number(snap.version || (String(snap.meta?.version || "").replace(/^v/i, "")) || 1);
 
 		// --- Make sure all sections for this game exist in tasksStore ---
 		if (gameKey && window.store?.tasksStore && typeof bootstrapTasks === "function") {
@@ -978,6 +1294,14 @@ function applySnapshotToStore(snap) {
 					}
 				}
 			}
+		}
+
+		if (gameKey && version >= 2) {
+			resetSnapshotStateForGame(gameKey);
+		}
+
+		if (gameKey) {
+			applyStartedSnapshotToStore(gameKey, !!snap.started);
 		}
 
 		// --- Apply sections from snapshot ---

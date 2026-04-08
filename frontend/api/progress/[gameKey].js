@@ -1,6 +1,7 @@
 import { json, methodNotAllowed } from '../_lib/response.js';
 import { getSessionFromRequest, readJsonBody } from '../_lib/auth.js';
 import { prisma } from '../_lib/db.js';
+import { validateGameKey, validateSnapshotPayload } from '../_lib/validation.js';
 
 export default async function handler(req, res) {
   if (req.method === 'GET') return handleGet(req, res);
@@ -10,14 +11,14 @@ export default async function handler(req, res) {
 
 async function handleGet(req, res) {
   const session = getSessionFromRequest(req);
-  const gameKey = req.query?.gameKey;
+  const parsedGameKey = validateGameKey(req.query?.gameKey);
 
   if (!session?.userId) {
     return json(res, 401, { error: 'Not authenticated.' });
   }
 
-  if (!gameKey) {
-    return json(res, 400, { error: 'Missing gameKey.' });
+  if (!parsedGameKey.ok) {
+    return json(res, 400, { error: parsedGameKey.error });
   }
 
   try {
@@ -25,7 +26,7 @@ async function handleGet(req, res) {
       where: {
         userId_gameKey: {
           userId: session.userId,
-          gameKey,
+          gameKey: parsedGameKey.gameKey,
         },
       },
     });
@@ -49,21 +50,22 @@ async function handleGet(req, res) {
 
 async function handlePut(req, res) {
   const session = getSessionFromRequest(req);
-  const gameKey = req.query?.gameKey;
+  const parsedGameKey = validateGameKey(req.query?.gameKey);
 
   if (!session?.userId) {
     return json(res, 401, { error: 'Not authenticated.' });
   }
 
-  if (!gameKey) {
-    return json(res, 400, { error: 'Missing gameKey.' });
+  if (!parsedGameKey.ok) {
+    return json(res, 400, { error: parsedGameKey.error });
   }
 
   const body = await readJsonBody(req);
   const data = body?.data ?? body?.snapshot ?? null;
+  const parsedData = validateSnapshotPayload(data);
 
-  if (data == null) {
-    return json(res, 400, { error: 'Missing data.' });
+  if (!parsedData.ok) {
+    return json(res, 400, { error: parsedData.error });
   }
 
   try {
@@ -71,17 +73,17 @@ async function handlePut(req, res) {
       where: {
         userId_gameKey: {
           userId: session.userId,
-          gameKey,
+          gameKey: parsedGameKey.gameKey,
         },
       },
       update: {
-        data,
+        data: parsedData.data,
         updatedAt: new Date(),
       },
       create: {
         userId: session.userId,
-        gameKey,
-        data,
+        gameKey: parsedGameKey.gameKey,
+        data: parsedData.data,
       },
     });
 
