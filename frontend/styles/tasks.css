@@ -21,6 +21,12 @@
 	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
 }
 
+:root {
+	--task-done-bg: rgba(128, 214, 142, 0.1);
+	--task-done-bg-strong: rgba(128, 214, 142, 0.2);
+	--task-done-border: rgba(128, 214, 142, 0.44);
+}
+
 /* Layout wrapper used when rendering with a rowsSpec */
 .task-layout {
 	display: grid;
@@ -42,6 +48,23 @@
 	overflow: hidden;
 }
 
+.task-row:has(> input[type="checkbox"]:checked),
+.task-row.task-inline .task-item:has(input[type="checkbox"]:checked) {
+	background: var(--task-done-bg);
+	border-color: var(--task-done-border);
+}
+
+.task-row.task-inline:has(.task-item input[type="checkbox"]:checked):not(:has(.task-item input[type="checkbox"]:not(:checked))),
+.task-group.task-group-lineage:has(.task-row input[type="checkbox"]:checked):not(:has(.task-row input[type="checkbox"]:not(:checked))) {
+	background: var(--task-done-bg-strong);
+}
+
+.task-row.task-inline:has(.task-item input[type="checkbox"]:checked):not(:has(.task-item input[type="checkbox"]:not(:checked))) .task-item,
+.task-group.task-group-lineage:has(.task-row input[type="checkbox"]:checked):not(:has(.task-row input[type="checkbox"]:not(:checked))) .task-item {
+	background: transparent;
+	border-color: transparent;
+}
+
 /* ===================== Inline row variant ===================== */
 
 /*
@@ -51,9 +74,9 @@
 */
 
 .task-row.task-inline {
-	display: grid;
-	grid-auto-flow: column;
-	grid-auto-columns: 1fr;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-around;
 	align-items: center;
 	gap: 12px;
 	padding: 12px 8px;
@@ -76,8 +99,10 @@
 /* Individual task “chip” inside an inline row */
 .task-row.task-inline .task-item {
 	display: flex;
+	flex: 0 1 auto;
 	align-items: center;
-	gap: 8px;
+	padding: 8px;
+	gap: 2px;
 	min-width: 0;
 	text-align: left;
 }
@@ -117,7 +142,7 @@
 	flex: 0 1 auto;
 	min-width: 0;
 	white-space: nowrap;
-	overflow-x: hidden;
+	overflow: hidden;
 	text-overflow: ellipsis;
 	font-size: 15px;
 	line-height: 1.2;
@@ -189,6 +214,13 @@
 	flex-direction: row;
 	align-items: center;
 	text-align: left;
+	justify-content: flex-start;
+	margin-right: auto;
+}
+
+.task-row.task-inline .task-item.is-main.has-children .task-item-body {
+	justify-content: flex-start;
+	width: 100%;
 }
 
 .task-row.task-inline .task-item.is-main.has-children .task-item-img {
@@ -252,6 +284,8 @@
 	flex-direction: row;
 	align-items: center;
 	text-align: left;
+	justify-content: flex-start;
+	margin-right: auto;
 }
 
 .task-row.task-inline .task-item.is-main.no-children.force-inline .task-item-body {

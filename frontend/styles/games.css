@@ -59,14 +59,13 @@
 
 /* ===================== Rings layout inside game summaries ===================== */
 
-/* Grid of progress rings inside each .game-summary when used in rows */
+/* Flexible ring row inside each .game-summary when used in rows */
 .games-row .game-summary .rings {
-	display: grid !important;
-	grid-template-columns: repeat(auto-fit,
-			minmax(var(--ring-size, 88px), 1fr));
+	display: flex !important;
+	flex-wrap: wrap;
 	gap: 10px 12px;
-	justify-items: center;
-	align-items: start;
+	justify-content: center;
+	align-items: flex-start;
 }
 
 .games-row .game-summary .ring {
@@ -90,7 +89,6 @@
 	}
 
 	.games-row .game-summary .rings {
-		grid-template-columns: repeat(auto-fit, minmax(84px, 1fr));
 		gap: 8px 10px;
 	}
 
