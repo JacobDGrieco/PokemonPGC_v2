@@ -31,6 +31,7 @@
 	border-radius: 18px;
 	padding: 14px;
 	display: grid;
+	align-content: start;
 	gap: 10px;
 	box-shadow: var(--shadow-panel);
 }
@@ -62,13 +63,18 @@
 .games-row .game-summary .rings {
 	display: grid !important;
 	grid-template-columns: repeat(auto-fit,
-			minmax(var(--ring-size, 120px), 1fr));
-	gap: 12px 16px;
+			minmax(var(--ring-size, 88px), 1fr));
+	gap: 10px 12px;
 	justify-items: center;
 	align-items: start;
 }
 
+.games-row .game-summary .ring {
+	--ring-size: 88px;
+}
+
 @media (max-width: 900px) {
+
 	.games-rows,
 	.games-row,
 	.games-grid {
@@ -84,7 +90,11 @@
 	}
 
 	.games-row .game-summary .rings {
-		grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
-		gap: 10px;
+		grid-template-columns: repeat(auto-fit, minmax(84px, 1fr));
+		gap: 8px 10px;
+	}
+
+	.games-row .game-summary .ring {
+		--ring-size: 84px;
 	}
 }

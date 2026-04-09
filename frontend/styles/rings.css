@@ -87,8 +87,8 @@
 /* Override for any .rings that is not #gameRings (slightly larger gaps) */
 .rings:not(#gameRings) {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-	gap: 25px 25px;
+	grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+	gap: 25px 10px;
 	align-items: start;
 }
 
