@@ -1,6 +1,6 @@
 import {
-  spacer,
-  defineLayoutsMany,
+	spacer,
+	defineLayoutsMany,
 } from '../helpers/index.js';
 
 (() => {
@@ -18,9 +18,8 @@ import {
 			[P(3)],
 			[C(3, 1), C(3, 2), C(3, 3), C(3, 4), C(3, 5)],
 			[P(4)],
-			[C(4, 1), C(4, 2), C(4, 3)],
-			[C(4, 4), C(4, 5), C(4, 6)],
-			[C(4, 7), C(4, 8), C(4, 9)],
+			[C(4, 1), C(4, 2), C(4, 3), C(4, 4), C(4, 5)],
+			[C(4, 6), C(4, 7), C(4, 8), C(4, 9)],
 		],
 		"story": [
 			[P(1)],
@@ -30,7 +29,7 @@ import {
 		"collectables": [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3), C(1, 4)],
-			[C(1, 5), C(1, 6), C(1, 7), spacer],
+			[C(1, 5), C(1, 6), C(1, 7)],
 			[P(2)],
 		],
 		"thms": [

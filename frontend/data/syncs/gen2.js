@@ -1,5 +1,5 @@
 import {
-  defineSyncsMany,
+	defineSyncsMany,
 } from '../helpers/index.js';
 
 window.DATA = window.DATA || {};
@@ -8,15 +8,15 @@ window.DATA.syncs = window.DATA.syncs || {};
 const GAME_KEYS = ["gold", "silver", "crystal"];
 
 defineSyncsMany(GAME_KEYS, (gameKey, { taskSync, eitherTaskSync, regionalSync }) => [
-	{ name: "Trade for Articuno", members: [taskSync("catching", 1, 1), regionalSync(235, { oneWay: true }),], },
-	{ name: "Trade for Zapdos", members: [taskSync("catching", 1, 2), regionalSync(236, { oneWay: true }),], },
-	{ name: "Trade for Moltres", members: [taskSync("catching", 1, 3), regionalSync(237, { oneWay: true }),], },
-	{ name: "Trade for Mewtwo", members: [taskSync("catching", 1, 4), regionalSync(249, { oneWay: true }),], },
+	{ name: "Trade Articuno", members: [taskSync("catching", 1, 1), regionalSync(235, { oneWay: true }),], },
+	{ name: "Trade Zapdos", members: [taskSync("catching", 1, 2), regionalSync(236, { oneWay: true }),], },
+	{ name: "Trade Moltres", members: [taskSync("catching", 1, 3), regionalSync(237, { oneWay: true }),], },
+	{ name: "Trade Mewtwo", members: [taskSync("catching", 1, 4), regionalSync(249, { oneWay: true }),], },
 
 	{ name: "Catch Raikou", members: [taskSync("catching", 1, 5), regionalSync(238, { oneWay: true }),], },
 	{ name: "Catch Entei", members: [taskSync("catching", 1, 6), regionalSync(239, { oneWay: true }),], },
 	{ name: "Catch Suicune", members: [taskSync("catching", 1, 7), regionalSync(240, { oneWay: true }),], },
-	{ name: "Trade for Lugia", members: [taskSync("catching", 1, 8), regionalSync(247, { oneWay: true }),], },
+	{ name: "Trade Lugia", members: [taskSync("catching", 1, 8), regionalSync(247, { oneWay: true }),], },
 	{ name: "Catch Ho-Oh", members: [taskSync("catching", 1, 9), regionalSync(248, { oneWay: true }),], },
 
 	{ name: "Bellsprout for Onix", members: [taskSync("catching", 6, 1), regionalSync(64, { oneWay: true }), regionalSync(62, { oneWay: true }),], },

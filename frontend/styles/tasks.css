@@ -69,7 +69,7 @@
 	margin: 0;
 }
 
-.task-group.task-group-lineage .task-row.task-inline + .task-row.task-inline {
+.task-group.task-group-lineage .task-row.task-inline+.task-row.task-inline {
 	border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
@@ -117,10 +117,10 @@
 	flex: 0 1 auto;
 	min-width: 0;
 	white-space: nowrap;
-	overflow: hidden;
+	overflow-x: hidden;
 	text-overflow: ellipsis;
 	font-size: 15px;
-	line-height: 1.15;
+	line-height: 1.2;
 }
 
 /* ===================== Main vs subtask + sprite positioning ===================== */

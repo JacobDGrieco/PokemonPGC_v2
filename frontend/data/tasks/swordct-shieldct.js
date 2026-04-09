@@ -1,12 +1,12 @@
 import {
-  _keyItem,
-  _tm,
-  _location,
-  _npc,
-  _task,
-  _trainerCard,
-  _frontSprite,
-  defineTasksMany,
+	_keyItem,
+	_tm,
+	_location,
+	_npc,
+	_task,
+	_trainerCard,
+	_frontSprite,
+	defineTasksMany,
 } from '../helpers/index.js';
 
 (() => {
@@ -35,8 +35,8 @@ import {
 		"catching": [
 			{
 				id: 1, text: "Catch all the Legendaries", children: [
-					{ id: 1, text: "Catch/Trade for Glastrier", img: ({ gameKey }) => baseSprite(gameKey, 896) },
-					{ id: 2, text: "Catch/Trade for Spectrier", img: ({ gameKey }) => baseSprite(gameKey, 897) },
+					{ id: 1, text: "Catch/Trade Glastrier", img: ({ gameKey }) => baseSprite(gameKey, 896) },
+					{ id: 2, text: "Catch/Trade Spectrier", img: ({ gameKey }) => baseSprite(gameKey, 897) },
 					{ id: 3, text: "Catch Calyrex", img: ({ gameKey }) => baseSprite(gameKey, 898) },
 				],
 			},
