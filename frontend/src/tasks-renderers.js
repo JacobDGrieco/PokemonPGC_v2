@@ -1,4 +1,4 @@
-import { getTierMetaForTask, getTierSteps, formatTierTooltip, isEitherTask, isTieredTask, setDescendantsDone, getEitherChoice, forEachDescendant, _clampInt } from "./tasks-modes.js";
+import { getTierMetaForTask, getTierSteps, formatTierTooltip, isEitherTask, isTieredTask, setDescendantsDone, getEitherChoice, getDefaultEitherChoice, setEitherChoice, eitherSyncView, forEachDescendant, _clampInt } from "./tasks-modes.js";
 import { buildTaskIndex, buildTaskLayoutGroups } from "./tasks-bootstrap.js";
 import { applySyncsFromTask } from "./tasks-sync.js";
 import { getAccentColor, resolveAccentForSection, resolveTaskImageSrcs, attachTooltip } from "./tasks-visuals.js";
@@ -109,9 +109,46 @@ function attachTaskTooltip(node, task) {
 	if (marker) attachTooltip(marker, () => getTaskTooltipHTML(task));
 }
 
+function syncEitherChoicesInTree(task, checked) {
+	const changes = [];
+
+	(function visit(node) {
+		if (!node) return;
+
+		if (isEitherTask(node)) {
+			const prevChoice = getEitherChoice(node.id);
+			const nextChoice = checked ? (prevChoice ?? getDefaultEitherChoice(node)) : null;
+			const prevStr = prevChoice == null ? null : String(prevChoice);
+			const nextStr = nextChoice == null ? null : String(nextChoice);
+
+			node.done = !!nextChoice;
+
+			if (prevStr !== nextStr) {
+				setEitherChoice(node.id, nextChoice);
+				changes.push({ task: node, prevChoice, nextChoice });
+			}
+		}
+
+		for (const child of Array.isArray(node.children) ? node.children : []) visit(child);
+	})(task);
+
+	return changes;
+}
+
+function applyEitherChoiceSyncChanges(changes) {
+	for (const { task, prevChoice, nextChoice } of changes) {
+		const prevStr = prevChoice == null ? null : String(prevChoice);
+		const nextStr = nextChoice == null ? null : String(nextChoice);
+		if (prevStr === nextStr) continue;
+		if (prevChoice != null) applySyncsFromTask(eitherSyncView(task, prevChoice), false);
+		if (nextChoice != null) applySyncsFromTask(eitherSyncView(task, nextChoice), true);
+	}
+}
+
 function wireStandardCheckbox({ task, cb, tieredWrap, index, cbById, setTasks, sectionId, tasksRef }) {
 	cb.addEventListener("change", () => {
 		const hasKids = Array.isArray(task.children) && task.children.length > 0;
+		const eitherChoiceChanges = hasKids ? syncEitherChoicesInTree(task, cb.checked) : [];
 		if (hasKids) setDescendantsDone(task, cb.checked);
 		else if (isTieredTask(task)) {
 			task.done = cb.checked;
@@ -137,6 +174,7 @@ function wireStandardCheckbox({ task, cb, tieredWrap, index, cbById, setTasks, s
 
 		setTasks(sectionId, tasksRef);
 		applySyncsFromTask(task, cb.checked);
+		applyEitherChoiceSyncChanges(eitherChoiceChanges);
 		window.PPGC?.refreshSectionHeaderPct?.();
 	});
 }

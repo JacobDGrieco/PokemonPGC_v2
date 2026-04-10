@@ -104,6 +104,18 @@ export function isEitherTask(t) {
 	return entries.length >= 2;
 }
 
+export function getEitherOptionKeys(task) {
+	if (!task?.eithers || typeof task.eithers !== "object") return [];
+	return Object.entries(task.eithers)
+		.filter(([, value]) => value && typeof value === "object")
+		.map(([key]) => String(key));
+}
+
+export function getDefaultEitherChoice(task) {
+	const [first] = getEitherOptionKeys(task);
+	return first ?? null;
+}
+
 export function isTieredTask(t) {
 	if (!t) return false;
 	if (Array.isArray(t.tiers) && t.tiers.length > 0) return true;

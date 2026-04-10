@@ -11,6 +11,7 @@ export const buildTaskIndex = (...args) => Tasks.buildTaskIndex?.(...args);
 export const eitherSyncView = (...args) => Tasks.eitherSyncView?.(...args);
 export const formatTierTooltip = (...args) => Tasks.formatTierTooltip?.(...args);
 export const getEitherChoice = (...args) => Tasks.getEitherChoice?.(...args);
+export const getDefaultEitherChoice = (...args) => Tasks.getDefaultEitherChoice?.(...args);
 export const getTierMetaForTask = (...args) => Tasks.getTierMetaForTask?.(...args);
 export const getTierSteps = (...args) => Tasks.getTierSteps?.(...args);
 export const isEitherTask = (...args) => Tasks.isEitherTask?.(...args);

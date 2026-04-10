@@ -93,6 +93,7 @@ export function wireEitherUI(rowOrItemEl, task, sectionId, setTasks, tasksRootRe
   });
 
   wrap.querySelectorAll('input.task-either-cb[data-option-key]').forEach((cb) => {
+    cb.addEventListener('click', (e) => e.stopPropagation());
     cb.addEventListener('change', (e) => {
       const key = e.target.getAttribute('data-option-key');
       const cur = getEitherChoice(task.id);

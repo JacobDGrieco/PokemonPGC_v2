@@ -1,6 +1,6 @@
 import { save } from "./store.js";
 import { buildTaskIndex } from "./tasks-bootstrap.js";
-import { setDescendantsDone } from "./tasks-modes.js";
+import { setDescendantsDone, getDefaultEitherChoice, getEitherChoice, isEitherTask, setEitherChoice } from "./tasks-modes.js";
 import { getSeedTaskRegistry } from "./taskRegistry.js";
 import { ensureSyncSetsExpandedForGame } from "./sync.js";
 import { ensurePpgcRoot } from "./runtime/globals.js";
@@ -98,7 +98,15 @@ function _setTaskCheckedById(taskId, checked) {
 	if (hit?.task) {
 		const { sectionId, task } = hit;
 		const hasKids = Array.isArray(task.children) && task.children.length > 0;
-		if (hasKids) setDescendantsDone(task, !!checked); else task.done = !!checked;
+		if (hasKids) {
+			setDescendantsDone(task, !!checked);
+		} else if (isEitherTask(task)) {
+			const nextChoice = checked ? (getEitherChoice(task.id) ?? getDefaultEitherChoice(task)) : null;
+			setEitherChoice(task.id, nextChoice);
+			task.done = !!nextChoice;
+		} else {
+			task.done = !!checked;
+		}
 		const arr = PPGC._tasksStoreRef.get(sectionId) || [];
 		const index = buildTaskIndex(arr);
 		let cur = task;

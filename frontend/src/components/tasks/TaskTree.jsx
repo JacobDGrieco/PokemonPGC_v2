@@ -8,6 +8,7 @@ import {
 	buildTaskIndex,
 	eitherSyncView,
 	formatTierTooltip,
+	getDefaultEitherChoice,
 	getEitherChoice,
 	getTierMetaForTask,
 	getTierSteps,
@@ -82,6 +83,43 @@ function persistSectionTasks(sectionId, rootTasks) {
 	save();
 }
 
+function syncEitherChoicesInTree(task, checked) {
+	const changes = [];
+
+	const visit = (node) => {
+		if (!node) return;
+
+		if (isEitherTask(node)) {
+			const prevChoice = getEitherChoice(node.id);
+			const nextChoice = checked ? (prevChoice ?? getDefaultEitherChoice(node)) : null;
+			const prevStr = prevChoice == null ? null : String(prevChoice);
+			const nextStr = nextChoice == null ? null : String(nextChoice);
+
+			node.done = !!nextChoice;
+
+			if (prevStr !== nextStr) {
+				setEitherChoice(node.id, nextChoice);
+				changes.push({ task: node, prevChoice, nextChoice });
+			}
+		}
+
+		for (const child of Array.isArray(node.children) ? node.children : []) visit(child);
+	};
+
+	visit(task);
+	return changes;
+}
+
+function applyEitherChoiceSyncChanges(changes) {
+	for (const { task, prevChoice, nextChoice } of changes) {
+		const prevStr = prevChoice == null ? null : String(prevChoice);
+		const nextStr = nextChoice == null ? null : String(nextChoice);
+		if (prevStr === nextStr) continue;
+		if (prevChoice != null) applySyncsFromTask(eitherSyncView(task, prevChoice), false);
+		if (nextChoice != null) applySyncsFromTask(eitherSyncView(task, nextChoice), true);
+	}
+}
+
 function useTaskTooltip(task, sectionId) {
 	const ref = useRef(null);
 
@@ -153,6 +191,7 @@ function EitherChoices({ task, onChange }) {
 						role="button"
 						tabIndex={0}
 						onClick={(event) => {
+							if (event.target.closest('input.task-either-cb')) return;
 							event.preventDefault();
 							event.stopPropagation();
 							onChange(active ? null : key);
@@ -169,7 +208,11 @@ function EitherChoices({ task, onChange }) {
 							data-option-key={String(key)}
 							checked={active}
 							disabled={disabled}
-							readOnly
+							onClick={(event) => event.stopPropagation()}
+							onChange={(event) => {
+								event.stopPropagation();
+								onChange(event.currentTarget.checked ? key : null);
+							}}
 						/>
 						{text ? <span className="small">{text}</span> : null}
 					</span>
@@ -221,6 +264,8 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 	};
 
 	const handleCheckboxChange = (checked) => {
+		const eitherChoiceChanges = hasChildren ? syncEitherChoicesInTree(task, checked) : [];
+
 		if (hasChildren) {
 			setDescendantsDone(task, checked);
 		} else if (hasSlider) {
@@ -231,6 +276,7 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 		}
 
 		commit({ syncTask: task, syncValue: checked });
+		applyEitherChoiceSyncChanges(eitherChoiceChanges);
 	};
 
 	const handleEitherChange = (nextChoice) => {
