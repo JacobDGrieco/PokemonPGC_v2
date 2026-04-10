@@ -110,6 +110,11 @@
 	justify-self: center;
 }
 
+.task-row.task-inline .task-item.is-main.no-children.has-slider {
+	width: min(100%, 30rem);
+	min-width: min(100%, 30rem);
+}
+
 /* Wrapper for one or more images in a task */
 .task-row.task-inline .task-item-img-wrap {
 	display: flex;
@@ -173,8 +178,8 @@
 
 .task-tooltip-marker {
 	position: absolute;
-	top: -0.32rem;
-	left: calc(100% + 0.08rem);
+	top: -0.42rem;
+	left: calc(100% - 0.1rem);
 	width: 1.05rem;
 	height: 1.05rem;
 	object-fit: contain;
@@ -359,20 +364,48 @@
 
 .task-row.task-inline .task-item.is-main.no-children.force-inline.has-slider {
 	flex-direction: column;
-	/* stack image, label, then slider */
+	/* keep header row above the slider */
 	align-items: flex-start;
-	/* left-align instead of center */
 	text-align: left;
 }
 
 .task-row.task-inline .task-item.is-main.no-children.force-inline.has-slider .task-item-img {
 	margin: 0 0 6px 0;
-	/* image above, left-aligned */
 }
 
 .task-row.task-inline .task-item.is-main.no-children.force-inline.has-slider .task-item-body {
 	justify-content: flex-start;
-	/* ensure label/checkbox align left */
+	width: 100%;
+}
+
+.task-row.task-inline .task-item.is-main.no-children.force-inline.has-slider.no-center-slider .task-item-body {
+	width: 100%;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.task-row.task-inline .task-item.is-main.no-children.force-inline.has-slider.no-center-slider .task-item-img-wrap.inline {
+	margin-left: 0;
+	margin-bottom: 0;
+	align-items: center;
+}
+
+.task-row.task-inline .task-item.is-main.no-children.force-inline.has-slider.no-center-slider .task-item-img {
+	margin: 0;
+	display: block;
+	align-self: center;
+}
+
+.task-row.task-inline .task-item.no-center-slider>.tiered-percent:not(.tiered-percent-inline) {
+	display: none;
+}
+
+.task-row.task-inline .task-item.no-center-slider .tiered-percent-inline {
+	padding: 0;
+	align-self: center;
+	line-height: 1;
+	margin: 0 2px 0 10px;
 }
 
 /* ===================== Tiered controls ===================== */
@@ -456,6 +489,42 @@
 .tiered-percent {
 	padding: 0 8px;
 	font-variant-numeric: tabular-nums;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.18rem;
+	line-height: 1;
+}
+
+.tiered-percent-input {
+	width: calc(3ch + 2px);
+	min-width: 3ch;
+	padding: 0 0.05rem 0.05rem;
+	border: 0;
+	border-bottom: 1px solid color-mix(in srgb, currentColor 38%, transparent);
+	border-radius: 0;
+	background: transparent;
+	color: inherit;
+	font: inherit;
+	font-variant-numeric: tabular-nums;
+	line-height: 1.1;
+	text-align: center;
+	appearance: textfield;
+	-moz-appearance: textfield;
+	outline: none;
+	vertical-align: middle;
+	align-self: center;
+}
+
+.tiered-percent-input::-webkit-outer-spin-button,
+.tiered-percent-input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.tiered-percent-separator {
+	font-variant-numeric: tabular-nums;
+	line-height: 1;
+	align-self: center;
 }
 
 /* Tiered controls when inside a .task-row */

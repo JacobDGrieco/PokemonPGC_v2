@@ -27,14 +27,24 @@ function getTaskLabelHTML(task) {
 	return `<span class="task-item-text-label">${task.text}</span>${getTooltipMarkerHTML(task)}`;
 }
 
+function shouldShowTierTooltip(task) {
+	const meta = getTierMetaForTask(task);
+	if (meta.mode === "label") return false;
+	const nums = Array.isArray(meta.values) ? meta.values.filter((value) => Number.isFinite(value)) : [];
+	if (nums.length < 2) return false;
+	const diffs = [];
+	for (let index = 1; index < nums.length; index += 1) diffs.push(nums[index] - nums[index - 1]);
+	return !diffs.every((diff) => diff === 1);
+}
+
 function getTaskTooltipHTML(task) {
 	const tiered = isTieredTask(task) && Array.isArray(task.tiers);
 	if (tiered) {
-		const thresholds = formatTierTooltip(task);
+		const thresholds = shouldShowTierTooltip(task) ? formatTierTooltip(task) : "";
 		if (task.tooltip) {
-			return `<div>${task.tooltip}</div><div style="margin-top:0.05rem;"></div><div>Tiers: ${thresholds}</div>`;
+			return thresholds ? `<div>${task.tooltip}</div><div style="margin-top:0.05rem;"></div><div>Tiers: ${thresholds}</div>` : `<div>${task.tooltip}</div>`;
 		}
-		return `<div><strong>${task.text}</strong></div><div style="margin-top:0.05rem;"></div><div>Tiers: ${thresholds}</div>`;
+		return thresholds ? `<div><strong>${task.text}</strong></div><div style="margin-top:0.05rem;"></div><div>Tiers: ${thresholds}</div>` : `<div><strong>${task.text}</strong></div>`;
 	}
 	if (task.tooltip) return task.tooltip;
 	return `<strong>${task.text}</strong>`;
@@ -58,6 +68,8 @@ export function renderTieredControls(task, cb, accentColor) {
 
 	const pct = document.createElement("div");
 	pct.className = "tiered-percent";
+	let pctInput = null;
+	let pctSeparator = null;
 	const updatePct = () => {
 		const m = getTierMetaForTask(task);
 		const localSteps = m.steps;
@@ -66,8 +78,28 @@ export function renderTieredControls(task, cb, accentColor) {
 			pct.textContent = v === 0 ? "—" : (m.values[v - 1] || "—");
 			return;
 		}
-		pct.textContent = `${v}/${localSteps}`;
+		if (!pctInput) {
+			pct.textContent = `${v}/${localSteps}`;
+			return;
+		}
+		if (document.activeElement !== pctInput) pctInput.value = String(v);
+		pctSeparator.textContent = `/${localSteps}`;
 	};
+	if (meta.mode !== "label") {
+		pctInput = document.createElement("input");
+		pctInput.type = "number";
+		pctInput.min = "0";
+		pctInput.max = String(steps);
+		pctInput.step = "1";
+		pctInput.inputMode = "numeric";
+		pctInput.className = "tiered-percent-input";
+		pctInput.size = Math.max(String(steps).length, 1);
+		pctInput.value = slider.value;
+		pctSeparator = document.createElement("span");
+		pctSeparator.className = "tiered-percent-separator";
+		pct.appendChild(pctInput);
+		pct.appendChild(pctSeparator);
+	}
 	updatePct();
 
 	const line = document.createElement("div");
@@ -90,6 +122,32 @@ export function renderTieredControls(task, cb, accentColor) {
 	slider.addEventListener("change", () => {
 		wrap.dispatchEvent(new CustomEvent("tiered-change", { bubbles: true }));
 	});
+	if (pctInput) {
+		const syncFromInput = (shouldCommit) => {
+			const nextValue = _clampInt(pctInput.value === "" ? 0 : Number(pctInput.value), 0, getTierSteps(task));
+			task.currentTier = nextValue;
+			slider.value = String(nextValue);
+			syncDoneFromTier();
+			updatePct();
+			wrap.dispatchEvent(new CustomEvent("tiered-input", { bubbles: true }));
+			if (shouldCommit) wrap.dispatchEvent(new CustomEvent("tiered-change", { bubbles: true }));
+		};
+		pctInput.addEventListener("click", (event) => event.stopPropagation());
+		pctInput.addEventListener("input", () => {
+			if (pctInput.value === "") return;
+			syncFromInput(false);
+		});
+		pctInput.addEventListener("change", () => {
+			if (pctInput.value === "") return;
+			syncFromInput(true);
+		});
+		pctInput.addEventListener("keydown", (event) => {
+			if (event.key !== "Enter") return;
+			syncFromInput(true);
+			pctInput.blur();
+		});
+		pctInput.addEventListener("blur", () => syncFromInput(true));
+	}
 
 	wrap._setTierFromDone = () => {
 		const localSteps = getTierSteps(task);
@@ -186,9 +244,10 @@ function buildTaskItem(task, sectionId, setTasks, rootTasks, index, cbById) {
 	const hasKids = Array.isArray(task.children) && task.children.length > 0;
 	const forceInline = !isSub && !hasKids && task.noCenter === true;
 	const hasSlider = isTieredTask(task);
+	const noCenterSlider = forceInline && hasSlider;
 	const isEither = isEitherTask(task);
 	const isStandardToggleTask = !isEither && !hasSlider;
-	item.className = `task-item ${isSub ? 'is-subtask' : 'is-main'}${!isSub ? (hasKids ? ' has-children' : ' no-children') : ''}${forceInline ? ' force-inline' : ''}${hasSlider ? ' has-slider' : ''}${isStandardToggleTask ? ' task-toggleable' : ''}`;
+	item.className = `task-item ${isSub ? 'is-subtask' : 'is-main'}${!isSub ? (hasKids ? ' has-children' : ' no-children') : ''}${forceInline ? ' force-inline' : ''}${hasSlider ? ' has-slider' : ''}${noCenterSlider ? ' no-center-slider' : ''}${isStandardToggleTask ? ' task-toggleable' : ''}`;
 
 	const imgSrcs = resolveTaskImageSrcs(task, sectionId);
 	const imgsHTML = imgSrcs.map((src) => `<img class="task-item-img" src="${src}" alt="">`).join("");
@@ -224,7 +283,11 @@ function buildTaskItem(task, sectionId, setTasks, rootTasks, index, cbById) {
 		tieredWrap = renderTieredControls(task, cb, accent);
 		const label = item.querySelector('.task-item-body');
 		const pctEl = tieredWrap._pctEl;
-		if (pctEl) label.appendChild(pctEl);
+		if (pctEl && label) {
+			const imageWrap = noCenterSlider ? label.querySelector('.task-item-img-wrap.inline') : null;
+			if (imageWrap) label.insertBefore(pctEl, imageWrap);
+			else label.appendChild(pctEl);
+		}
 		label.insertAdjacentElement('afterend', tieredWrap);
 		tieredWrap.addEventListener('tiered-input', () => window.PPGC?.refreshSectionHeaderPct?.());
 		tieredWrap.addEventListener('tiered-change', () => {

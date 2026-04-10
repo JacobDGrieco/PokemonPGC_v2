@@ -109,8 +109,8 @@ import {
 					{ id: 13, text: "Town Map", img: () => keyItem("town-map") },
 				]
 			},
-			{ id: 2, text: "Find all hidden items with the Item Finder", img: () => keyItem("item-finder"), noCenter: true, type: "tiered", tiers: [range(1, 54)], },
-			{ id: 3, text: "Collect all hidden Game Corner coins", img: () => keyItem("coin-case"), noCenter: true, type: "tiered", tiers: [range(1, 10)], tooltip: "Tracks the 10 hidden coin spots in the Celadon Game Corner" },
+			{ id: 2, text: "Find all hidden items with the Item Finder", img: () => keyItem("item-finder"), type: "tiered", tiers: [range(1, 54)], },
+			{ id: 3, text: "Collect all hidden Game Corner coins", img: () => keyItem("coin-case"), type: "tiered", tiers: [range(1, 10)], tooltip: "Tracks the 10 hidden coin spots in the Celadon Game Corner" },
 		],
 		"thms": [
 			{

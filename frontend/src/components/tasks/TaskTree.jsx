@@ -25,24 +25,32 @@ function hasTooltip(task) {
 	return typeof task?.tooltip === 'string' ? task.tooltip.trim().length > 0 : !!task?.tooltip;
 }
 
+function shouldShowTierTooltip(task) {
+	const meta = getTierMetaForTask(task);
+	if (meta.mode === 'label') return false;
+	const nums = Array.isArray(meta.values) ? meta.values.filter((value) => Number.isFinite(value)) : [];
+	if (nums.length < 2) return false;
+	const diffs = [];
+	for (let index = 1; index < nums.length; index += 1) diffs.push(nums[index] - nums[index - 1]);
+	return !diffs.every((diff) => diff === 1);
+}
+
 function getTaskTooltipHtml(task) {
 	const tiered = isTieredTask(task) && Array.isArray(task?.tiers);
 
 	if (tiered) {
-		const thresholds = formatTierTooltip(task);
+		const thresholds = shouldShowTierTooltip(task) ? formatTierTooltip(task) : '';
 		if (task.tooltip) {
 			return `
             <div>${task.tooltip}</div>
-            <div style="margin-top:0.05rem;"></div>
-            <div>Tiers: ${thresholds}</div>
+            ${thresholds ? `<div style="margin-top:0.05rem;"></div><div>Tiers: ${thresholds}</div>` : ''}
           `;
 		}
 
 		return `
-          <div><strong>${task.text}</strong></div>
-          <div style="margin-top:0.05rem;"></div>
-          <div>Tiers: ${thresholds}</div>
-        `;
+            <div><strong>${task.text}</strong></div>
+            ${thresholds ? `<div style="margin-top:0.05rem;"></div><div>Tiers: ${thresholds}</div>` : ''}
+          `;
 	}
 
 	if (task.tooltip) return task.tooltip;
@@ -222,15 +230,87 @@ function EitherChoices({ task, onChange }) {
 	);
 }
 
+function getTierDisplay(task) {
+	const meta = getTierMetaForTask(task);
+	const steps = meta.steps;
+	const value = clampTierValue(task.currentTier ?? 0, steps);
+	return meta.mode === 'label' ? (value === 0 ? '—' : meta.values[value - 1] || '—') : `${value}/${steps}`;
+}
+
+function clampTierValue(nextValue, steps) {
+	return Math.max(0, Math.min(Number.isFinite(Number(nextValue)) ? Number(nextValue) : 0, steps));
+}
+
+function TieredValueDisplay({ task, className = '', onInputCommit, onChangeCommit }) {
+	const meta = getTierMetaForTask(task);
+	const steps = meta.steps;
+	const value = clampTierValue(task.currentTier ?? 0, steps);
+	const [draftValue, setDraftValue] = useState(String(value));
+
+	useEffect(() => {
+		setDraftValue(String(value));
+	}, [task.id, value]);
+
+	if (meta.mode === 'label') {
+		const display = value === 0 ? 'â€”' : meta.values[value - 1] || 'â€”';
+		return <div className={`tiered-percent${className ? ` ${className}` : ''}`}>{display}</div>;
+	}
+
+	const commitDraft = (rawValue) => {
+		const clamped = clampTierValue(rawValue, steps);
+		setDraftValue(String(clamped));
+		onInputCommit?.(clamped);
+		onChangeCommit?.(clamped);
+	};
+
+	return (
+		<div className={`tiered-percent${className ? ` ${className}` : ''}`}>
+			<input
+				type="number"
+				min={0}
+				max={steps}
+				step={1}
+				inputMode="numeric"
+				className="tiered-percent-input"
+				value={draftValue}
+				size={Math.max(String(steps).length, 1)}
+				onClick={(event) => event.stopPropagation()}
+				onInput={(event) => {
+					const rawValue = event.currentTarget.value;
+					setDraftValue(rawValue);
+					if (rawValue === '') return;
+					onInputCommit?.(clampTierValue(rawValue, steps));
+				}}
+				onChange={(event) => {
+					const rawValue = event.currentTarget.value;
+					if (rawValue === '') return;
+					commitDraft(rawValue);
+				}}
+				onKeyDown={(event) => {
+					if (event.key !== 'Enter') return;
+					const rawValue = event.currentTarget.value;
+					commitDraft(rawValue === '' ? 0 : rawValue);
+					event.currentTarget.blur();
+				}}
+				onBlur={(event) => {
+					const rawValue = event.currentTarget.value;
+					commitDraft(rawValue === '' ? 0 : rawValue);
+				}}
+			/>
+			<span className="tiered-percent-separator">/{steps}</span>
+		</div>
+	);
+}
+
 function TieredControls({ task, onInputCommit, onChangeCommit }) {
 	const meta = getTierMetaForTask(task);
 	const steps = meta.steps;
-	const value = Math.max(0, Math.min(Number(task.currentTier ?? 0), steps));
+	const value = clampTierValue(task.currentTier ?? 0, steps);
 	const display = meta.mode === 'label' ? (value === 0 ? '—' : meta.values[value - 1] || '—') : `${value}/${steps}`;
 
 	return (
 		<>
-			<div className="tiered-percent">{display}</div>
+			<TieredValueDisplay task={task} onInputCommit={onInputCommit} onChangeCommit={onChangeCommit} />
 			<div className="tiered">
 				<div className="tiered-line">
 					<input
@@ -303,16 +383,18 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 	};
 
 	const handleTierInput = (nextTier) => {
-		task.currentTier = nextTier;
-		task.done = nextTier >= getTierSteps(task);
+		const clamped = clampTierValue(nextTier, getTierSteps(task));
+		task.currentTier = clamped;
+		task.done = clamped >= getTierSteps(task);
 		recomputeAncestorDone(task, index);
 		onMutate?.();
 	};
 
 	const handleTierCommit = (nextTier) => {
-		task.currentTier = nextTier;
-		task.done = nextTier >= getTierSteps(task);
-		commit({ syncTask: task, syncValue: nextTier > 0 });
+		const clamped = clampTierValue(nextTier, getTierSteps(task));
+		task.currentTier = clamped;
+		task.done = clamped >= getTierSteps(task);
+		commit({ syncTask: task, syncValue: clamped > 0 });
 	};
 
 	const handleItemClick = (event) => {
@@ -332,6 +414,7 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 	].filter(Boolean).join(' ');
 
 	const bodyClassName = `task-item-body${isEither ? ' task-either-wrap' : ''}`;
+	const noCenterSlider = forceInline && hasSlider;
 
 	const imageWrap = <div className={`task-item-img-wrap${(!isSubtask && (hasChildren || forceInline)) ? ' inline' : ''}`}><TaskSpriteList task={task} sectionId={sectionId} /></div>;
 
@@ -364,10 +447,11 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 
 	if (isInline) {
 		return (
-			<div ref={tooltipRef} className={itemClassName} data-task-id={task.id} id={`task-${task.id}`} onClick={handleItemClick}>
+			<div ref={tooltipRef} className={`${itemClassName}${noCenterSlider ? ' no-center-slider' : ''}`} data-task-id={task.id} id={`task-${task.id}`} onClick={handleItemClick}>
 				{isSubtask || (!hasChildren && !forceInline) ? imageWrap : null}
 				<label className={bodyClassName}>
 					{textBlock}
+					{noCenterSlider ? <TieredValueDisplay task={task} className="tiered-percent-inline" onInputCommit={handleTierInput} onChangeCommit={handleTierCommit} /> : null}
 					{!isSubtask && (hasChildren || forceInline) ? imageWrap : null}
 				</label>
 				{tieredControls}
