@@ -59,7 +59,8 @@ function ensureTooltipEl() {
   let el = PPGC._tooltipEl;
   if (!el) {
     el = document.createElement("div");
-    el.className = "task-tooltip hidden";
+    el.className = "tooltip hidden";
+    el.setAttribute("role", "tooltip");
     document.body.appendChild(el);
     PPGC._tooltipEl = el;
   }
@@ -69,7 +70,9 @@ function ensureTooltipEl() {
 export function hideTooltip() {
   const el = ensureTooltipEl();
   el.classList.add("hidden");
+  el.classList.remove("show");
   el.innerHTML = "";
+  delete el.dataset.placement;
 
   if (PPGC._tooltipShowTimer) clearTimeout(PPGC._tooltipShowTimer);
   if (PPGC._tooltipHideTimer) clearTimeout(PPGC._tooltipHideTimer);
@@ -83,6 +86,7 @@ function showTooltipForTarget(targetEl, html) {
   const el = ensureTooltipEl();
   el.innerHTML = html;
   el.classList.remove("hidden");
+  el.classList.add("show");
 
   const r = targetEl.getBoundingClientRect();
   const tw = el.offsetWidth;
@@ -91,6 +95,7 @@ function showTooltipForTarget(targetEl, html) {
 
   let left = r.left + window.scrollX + (r.width / 2) - (tw / 2);
   let top = r.top + window.scrollY - th - margin;
+  let placement = "top";
 
   if (left < margin) left = margin;
   if (left + tw > window.scrollX + window.innerWidth - margin) {
@@ -98,10 +103,12 @@ function showTooltipForTarget(targetEl, html) {
   }
   if (top < window.scrollY + margin) {
     top = r.bottom + window.scrollY + margin;
+    placement = "bottom";
   }
 
   el.style.left = `${left}px`;
   el.style.top = `${top}px`;
+  el.dataset.placement = placement;
 
   if (PPGC._tooltipHideTimer) clearTimeout(PPGC._tooltipHideTimer);
   PPGC._tooltipHideTimer = window.setTimeout(hideTooltip, TOOLTIP_AUTOHIDE_MS);

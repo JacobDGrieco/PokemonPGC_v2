@@ -1,6 +1,6 @@
 import { _assetPath } from './assets.js';
 
-const ITEM = ['apricorns', 'balls', 'berries', 'decorations', 'form-items', 'fossils', 'held-items', 'key-items', 'mails', 'medicines', 'mega-stones', 'partner-gifts', 'stat-items', 'hms', 'tms', 'trs', 'treasures', 'usable-items', 'zcrystals'];
+const ITEM = ['apricorns', 'balls', 'berries', 'decorations', 'form-items', 'fossils', 'held-items', 'key_items', 'mails', 'medicines', 'mega-stones', 'partner-gifts', 'stat_items', 'hms', 'tms', 'trs', 'treasures', 'usable-items', 'zcrystals'];
 
 function buildAssetSubpath(...parts) {
 	return parts
@@ -385,13 +385,13 @@ export const _formItem = (gen, name) => _imageByGen('form-items', gen, name);
 export const _fossil = (gen, name) => _imageByGen('fossils', gen, name);
 export const _heldItem = (gen, name) => _imageByGen('held-items', gen, name);
 export const _hm = (gen, name) => _imageByGen('hms', gen, name);
-export const _keyItem = (gen, name) => _imageByGen('key-items', gen, name);
+export const _keyItem = (gen, name) => _imageByGen('key_items', gen, name);
 export const _mail = (name) => _imageByGen('mails', 0, name);
 export const _medicine = (name) => _imageByGen('medicines', 0, name);
 export const _megaStone = (gen, name) => _imageByGen('mega-stones', gen, name);
 export const _partnerItem = (name) => _imageByGen('partner-items', 0, name);
 export const _ribbon = (gen, name) => _ribbonByGen(gen, name);
-export const _statItems = (gen, name) => _imageByGen('stat-items', gen, name);
+export const _statItems = (gen, name) => _imageByGen('stat_items', gen, name);
 export const _tm = (gen, name) => _imageByGen('tms', gen, name);
 export const _tr = (gen, name) => _imageByGen('trs', 0, name);
 export const _treasure = (gen, name) => _imageByGen('treasures', gen, name);

@@ -46,23 +46,33 @@ import {
 				id: 2, text: "Catch/Defeat all Static Encounters", children: [
 					{ id: 1, text: "Route 12 Snorlax", img: ({ gameKey }) => bwTask(gameKey, "snorlax-12"), imgS: ({ gameKey }) => coloredTask(gameKey, "snorlax-12") },
 					{ id: 2, text: "Route 16 Snorlax", img: ({ gameKey }) => bwTask(gameKey, "snorlax-16"), imgS: ({ gameKey }) => coloredTask(gameKey, "snorlax-16") },
+					{ id: 3, text: "Pokémon Tower Marowak", img: ({ gameKey }) => baseSprite(gameKey, 105), imgS: ({ gameKey }) => shinySprite(gameKey, 105), tooltip: "Pokémon Tower 6F - must be defeated to progress" },
+					{ id: 4, text: "Power Plant Electrode 1", img: ({ gameKey }) => baseSprite(gameKey, 101), imgS: ({ gameKey }) => shinySprite(gameKey, 101), tooltip: "Disguised as an item ball in the Power Plant" },
+					{ id: 5, text: "Power Plant Electrode 2", img: ({ gameKey }) => baseSprite(gameKey, 101), imgS: ({ gameKey }) => shinySprite(gameKey, 101), tooltip: "Disguised as an item ball in the Power Plant" },
+					{ id: 6, text: "Power Plant Voltorb 1", img: ({ gameKey }) => baseSprite(gameKey, 100), imgS: ({ gameKey }) => shinySprite(gameKey, 100), tooltip: "Disguised as an item ball in the Power Plant" },
+					{ id: 7, text: "Power Plant Voltorb 2", img: ({ gameKey }) => baseSprite(gameKey, 100), imgS: ({ gameKey }) => shinySprite(gameKey, 100), tooltip: "Disguised as an item ball in the Power Plant" },
+					{ id: 8, text: "Power Plant Voltorb 3", img: ({ gameKey }) => baseSprite(gameKey, 100), imgS: ({ gameKey }) => shinySprite(gameKey, 100), tooltip: "Disguised as an item ball in the Power Plant" },
+					{ id: 9, text: "Power Plant Voltorb 4", img: ({ gameKey }) => baseSprite(gameKey, 100), imgS: ({ gameKey }) => shinySprite(gameKey, 100), tooltip: "Disguised as an item ball in the Power Plant" },
+					{ id: 10, text: "Power Plant Voltorb 5", img: ({ gameKey }) => baseSprite(gameKey, 100), imgS: ({ gameKey }) => shinySprite(gameKey, 100), tooltip: "Disguised as an item ball in the Power Plant" },
+					{ id: 11, text: "Power Plant Voltorb 6", img: ({ gameKey }) => baseSprite(gameKey, 100), imgS: ({ gameKey }) => shinySprite(gameKey, 100), tooltip: "Disguised as an item ball in the Power Plant" },
 				],
 			},
 			{
 				id: 3, text: "Obtain all In-Game Gift Pokémon", children: [
+					{ id: 1, text: "Magikarp", img: ({ gameKey }) => baseSprite(gameKey, 129), imgS: ({ gameKey }) => shinySprite(gameKey, 129), tooltip: "Purchased from the salesman in the Route 4 Pokémon Center" },
 					{
-						id: 1, text: "Hitmonlee/Hitmonchan", img: ({ gameKey }) => bwTask(gameKey, "hitmonlee-hitmonchan"), imgS: ({ gameKey }) => coloredTask(gameKey, "hitmonlee-hitmonchan"), eithers: {
+						id: 2, text: "Hitmonlee/Hitmonchan", img: ({ gameKey }) => bwTask(gameKey, "hitmonlee-hitmonchan"), imgS: ({ gameKey }) => coloredTask(gameKey, "hitmonlee-hitmonchan"), eithers: {
 							1: { text: "" }, 2: { text: "" },
 						},
 					},
 					{
-						id: 2, text: "Omanyte/Kabuto", img: ({ gameKey }) => bwTask(gameKey, "omanyte-kabuto"), imgS: ({ gameKey }) => coloredTask(gameKey, "omanyte-kabuto"), eithers: {
+						id: 3, text: "Omanyte/Kabuto", img: ({ gameKey }) => bwTask(gameKey, "omanyte-kabuto"), imgS: ({ gameKey }) => coloredTask(gameKey, "omanyte-kabuto"), eithers: {
 							1: { text: "" }, 2: { text: "" },
 						},
 					},
-					{ id: 3, text: "Lapras", img: ({ gameKey }) => baseSprite(gameKey, 131), imgS: ({ gameKey }) => shinySprite(gameKey, 131) },
-					{ id: 4, text: "Aerodactyl", img: ({ gameKey }) => baseSprite(gameKey, 142), imgS: ({ gameKey }) => shinySprite(gameKey, 142) },
-					{ id: 5, text: "Eevee", img: ({ gameKey }) => baseSprite(gameKey, 133), imgS: ({ gameKey }) => shinySprite(gameKey, 133) },
+					{ id: 4, text: "Lapras", img: ({ gameKey }) => baseSprite(gameKey, 131), imgS: ({ gameKey }) => shinySprite(gameKey, 131) },
+					{ id: 5, text: "Aerodactyl", img: ({ gameKey }) => baseSprite(gameKey, 142), imgS: ({ gameKey }) => shinySprite(gameKey, 142) },
+					{ id: 6, text: "Eevee", img: ({ gameKey }) => baseSprite(gameKey, 133), imgS: ({ gameKey }) => shinySprite(gameKey, 133) },
 				],
 			},
 			{
@@ -90,16 +100,23 @@ import {
 		"collectables": [
 			{
 				id: 1, text: "Obtain all Key Items", children: [
-					{ id: 1, text: "Coin Case", img: () => keyItem("coin-case") },
-					{ id: 2, text: "Exp. All", img: () => heldItem("exp-all") },
-					{ id: 3, text: "Good Rod", img: () => keyItem("good-rod") },
-					{ id: 4, text: "Item Finder", img: () => keyItem("item-finder") },
-					{ id: 5, text: "Old Rod", img: () => keyItem("old-rod") },
-					{ id: 6, text: "Poke Flute", img: () => keyItem("poke-flute") },
-					{ id: 7, text: "Super Rod", img: () => keyItem("super-rod") },
+					{ id: 1, text: "Bicycle", img: () => keyItem("bicycle") },
+					{ id: 2, text: "Card Key", img: () => keyItem("card-key") },
+					{ id: 3, text: "Coin Case", img: () => keyItem("coin-case") },
+					{ id: 4, text: "Exp. All", img: () => heldItem("exp-all") },
+					{ id: 5, text: "Good Rod", img: () => keyItem("good-rod") },
+					{ id: 6, text: "Item Finder", img: () => keyItem("item-finder") },
+					{ id: 7, text: "Lift Key", img: () => keyItem("lift-key") },
+					{ id: 8, text: "Old Rod", img: () => keyItem("old-rod") },
+					{ id: 9, text: "Poke Flute", img: () => keyItem("poke-flute") },
+					{ id: 10, text: "Secret Key", img: () => keyItem("secret-key") },
+					{ id: 11, text: "Silph Scope", img: () => keyItem("silph-scope") },
+					{ id: 12, text: "Super Rod", img: () => keyItem("super-rod") },
+					{ id: 13, text: "Town Map", img: () => keyItem("town-map") },
 				]
 			},
 			{ id: 2, text: "Find all hidden items with the Item Finder", img: () => keyItem("item-finder"), noCenter: true, type: "tiered", tiers: [range(1, 54)], },
+			{ id: 3, text: "Collect all hidden Game Corner coins", img: () => keyItem("coin-case"), noCenter: true, type: "tiered", tiers: [range(1, 10)], tooltip: "Tracks the 10 hidden coin spots in the Celadon Game Corner" },
 		],
 		"thms": [
 			{

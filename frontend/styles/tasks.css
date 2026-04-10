@@ -144,13 +144,54 @@
 
 /* Task text truncation */
 .task-row.task-inline .task-item .task-item-text {
+	position: relative;
+	display: inline-block;
 	flex: 0 1 auto;
 	min-width: 0;
+	font-size: 15px;
+	line-height: 1.2;
+	overflow: visible;
+}
+
+.task-row.task-inline .task-item .task-item-text .task-item-text-label {
+	display: block;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	font-size: 15px;
-	line-height: 1.2;
+}
+
+.task-row:not(.task-inline) .task-item-text {
+	position: relative;
+	display: inline-block;
+	overflow: visible;
+}
+
+.task-row:not(.task-inline) .task-item-text .task-item-text-label {
+	display: inline-block;
+	max-width: 100%;
+}
+
+.task-tooltip-marker {
+	position: absolute;
+	top: -0.32rem;
+	left: calc(100% + 0.08rem);
+	width: 1.05rem;
+	height: 1.05rem;
+	object-fit: contain;
+	pointer-events: auto;
+	filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.28));
+}
+
+.task-toggleable {
+	cursor: pointer;
+}
+
+.task-toggleable input[type="checkbox"] {
+	cursor: pointer;
+}
+
+.task-toggleable .task-item-img {
+	pointer-events: auto;
 }
 
 /* ===================== Main vs subtask + sprite positioning ===================== */
