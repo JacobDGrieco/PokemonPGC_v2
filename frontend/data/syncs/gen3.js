@@ -1,14 +1,15 @@
 import {
-  defineSyncsMany,
+	defineSyncsMany,
 } from '../helpers/index.js';
 
 window.DATA = window.DATA || {};
 window.DATA.syncs = window.DATA.syncs || {};
 
-const GAME_KEYS = ["ruby", "sapphire", "emerald"];
-const GAME_KEYS2 = ["firered", "leafgreen"];
+const GAME_KEYS1 = ["ruby", "sapphire", "emerald"];
+const GAME_KEYS2 = ["emerald"];
+const GAME_KEYS3 = ["firered", "leafgreen"];
 
-defineSyncsMany(GAME_KEYS, (gameKey, { taskSync, eitherTaskSync, regionalSync, nationalSync }) => [
+defineSyncsMany([...GAME_KEYS1, ...GAME_KEYS2], (gameKey, { taskSync, eitherTaskSync, regionalSync, nationalSync }) => [
 	{ name: "Catch Kyogre", members: [taskSync("catching", 1, 1), regionalSync(198, { oneWay: true }), nationalSync(382, { oneWay: true })], },
 	{ name: "Catch Groudon", members: [taskSync("catching", 1, 2), regionalSync(199, { oneWay: true }), nationalSync(383, { oneWay: true })], },
 	{ name: "Catch Rayquaza", members: [taskSync("catching", 1, 3), regionalSync(200, { oneWay: true }), nationalSync(384, { oneWay: true })], },
@@ -59,17 +60,17 @@ defineSyncsMany(GAME_KEYS, (gameKey, { taskSync, eitherTaskSync, regionalSync, n
 	{ name: "Obtain Jirachi", members: [taskSync("extra-credit", 1), regionalSync(201), nationalSync(385)], },
 ]);
 
-defineSyncsMany([GAME_KEYS[0], GAME_KEYS[1]], (gameKey, { taskSync, eitherTaskSync, regionalSync, nationalSync }) => [
+defineSyncsMany(GAME_KEYS1, (gameKey, { taskSync, eitherTaskSync, regionalSync, nationalSync }) => [
 	{ name: "Obtain Deoxys", members: [taskSync("extra-credit", 2), regionalSync(202, "Normal"), nationalSync(386, "Normal")], },
 ]);
-defineSyncsMany([GAME_KEYS[2]], (gameKey, { taskSync, eitherTaskSync, regionalSync, nationalSync }) => [
+defineSyncsMany(GAME_KEYS2, (gameKey, { taskSync, eitherTaskSync, regionalSync, nationalSync }) => [
 	{ name: "Catch Lugia", members: [taskSync("catching", 1, 9), nationalSync(249, { oneWay: true })], },
 	{ name: "Catch Ho-Oh", members: [taskSync("catching", 1, 10), nationalSync(250, { oneWay: true })], },
 
 	{ name: "Obtain Deoxys", members: [taskSync("extra-credit", 2), regionalSync(202, "Speed"), nationalSync(386, "Speed")], },
 ]);
 
-defineSyncsMany(GAME_KEYS2, (gameKey, { taskSync, eitherTaskSync, regionalSync, nationalSync }) => [
+defineSyncsMany(GAME_KEYS3, (gameKey, { taskSync, eitherTaskSync, regionalSync, nationalSync }) => [
 	{ name: "Catch Articuno", members: [taskSync("catching", 1, 1), regionalSync(144, { oneWay: true }), nationalSync(144, { oneWay: true })], },
 	{ name: "Catch Zapdos", members: [taskSync("catching", 1, 2), regionalSync(145, { oneWay: true }), nationalSync(144, { oneWay: true })], },
 	{ name: "Catch Moltres", members: [taskSync("catching", 1, 3), regionalSync(146, { oneWay: true }), nationalSync(144, { oneWay: true })], },

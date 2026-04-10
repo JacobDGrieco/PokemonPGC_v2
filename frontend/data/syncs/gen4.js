@@ -1,14 +1,15 @@
 import {
-  defineSyncsMany,
+	defineSyncsMany,
 } from '../helpers/index.js';
 
 window.DATA = window.DATA || {};
 window.DATA.syncs = window.DATA.syncs || {};
 
-const GAME_KEYS = ["diamond", "pearl", "platinum"];
-const GAME_KEYS2 = ["heartgold", "soulsilver"];
+const GAME_KEYS1 = ["diamond", "pearl"];
+const GAME_KEYS2 = ["platinum"];
+const GAME_KEYS3 = ["heartgold", "soulsilver"];
 
-defineSyncsMany(GAME_KEYS, (gameKey, { taskSync, eitherTaskSync, regionalSync, nationalSync }) => [
+defineSyncsMany([...GAME_KEYS1, ...GAME_KEYS2], (gameKey, { taskSync, eitherTaskSync, regionalSync, nationalSync }) => [
 	{ name: "Catch Dialga", members: [taskSync("catching", 1, 1), regionalSync(149, { oneWay: true }), nationalSync(483, { oneWay: true })], },
 	{ name: "Catch Palkia", members: [taskSync("catching", 1, 2), regionalSync(150, { oneWay: true }), nationalSync(484, { oneWay: true })], },
 	{ name: "Catch Giratina", members: [taskSync("catching", 1, 3), nationalSync(487, { oneWay: true })], },
@@ -68,16 +69,16 @@ defineSyncsMany(GAME_KEYS, (gameKey, { taskSync, eitherTaskSync, regionalSync, n
 	{ name: "Obtain Arceus", members: [taskSync("extra-credit", 5), nationalSync(493, { oneWay: true })], },
 ]);
 
-defineSyncsMany([GAME_KEYS[0], GAME_KEYS[1]], (gameKey, { taskSync, eitherTaskSync, regionalSync, nationalSync }) => [
+defineSyncsMany(GAME_KEYS1, (gameKey, { taskSync, eitherTaskSync, regionalSync, nationalSync }) => [
 	{ name: "Eevee Gift", members: [taskSync("catching", 4, 3), nationalSync(133, { oneWay: true })], },
 	{ name: "Riolu Gift", members: [taskSync("catching", 4, 4), regionalSync(115, { oneWay: true }), nationalSync(447, { oneWay: true })], },
 ]);
-defineSyncsMany([GAME_KEYS[2]], (gameKey, { taskSync, eitherTaskSync, regionalSync, nationalSync }) => [
+defineSyncsMany(GAME_KEYS2, (gameKey, { taskSync, eitherTaskSync, regionalSync, nationalSync }) => [
 	{ name: "Eevee Gift", members: [taskSync("catching", 4, 2), nationalSync(133, { oneWay: true })], },
 	{ name: "Riolu Gift", members: [taskSync("catching", 4, 3), regionalSync(115, { oneWay: true }), nationalSync(447, { oneWay: true })], },
 ]);
 
-defineSyncsMany(GAME_KEYS2, (gameKey, { taskSync, eitherTaskSync, regionalSync, nationalSync }) => [
+defineSyncsMany(GAME_KEYS3, (gameKey, { taskSync, eitherTaskSync, regionalSync, nationalSync }) => [
 	{ name: "Catch Lugia", members: [taskSync("catching", 1, 1), regionalSync(252, { oneWay: true }), nationalSync(249, { oneWay: true })], },
 	{ name: "Catch Ho-Oh", members: [taskSync("catching", 1, 2), regionalSync(253, { oneWay: true }), nationalSync(250, { oneWay: true })], },
 ]);

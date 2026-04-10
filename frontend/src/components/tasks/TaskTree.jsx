@@ -266,7 +266,7 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 	const handleTierCommit = (nextTier) => {
 		task.currentTier = nextTier;
 		task.done = nextTier >= getTierSteps(task);
-		commit({ syncTask: task, syncValue: !!task.done });
+		commit({ syncTask: task, syncValue: nextTier > 0 });
 	};
 
 	const handleItemClick = (event) => {

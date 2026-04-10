@@ -12,6 +12,7 @@ function isExtraCreditSection(section) {
 
 export function bootstrapTasksForGame(gameKey, currentStore = store) {
   if (!gameKey || !currentStore?.tasksStore) return;
+  ensureSyncSetsExpandedForGame(gameKey);
   const sections = ensureSections(gameKey);
   for (const section of sections) {
     bootstrapTasks(section.id, currentStore.tasksStore);

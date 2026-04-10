@@ -1,14 +1,14 @@
 import {
-  defineSyncsMany,
+	defineSyncsMany,
 } from '../helpers/index.js';
 
 window.DATA = window.DATA || {};
 window.DATA.syncs = window.DATA.syncs || {};
 
-const GAME_KEYS = ["x", "y"];
+const GAME_KEYS1 = ["x", "y"];
 const GAME_KEYS2 = ["omegaruby", "alphasapphire"];
 
-defineSyncsMany(GAME_KEYS, (gameKey, { taskSync, eitherTaskSync, centralKalosSync, coastalKalosSync, mountainKalosSync, nationalSync }) => [
+defineSyncsMany(GAME_KEYS1, (gameKey, { taskSync, eitherTaskSync, centralKalosSync, coastalKalosSync, mountainKalosSync, nationalSync }) => [
 	{ name: "Catch Xerneas", members: [taskSync("catching", 1, 1), mountainKalosSync(148, { oneWay: true }), nationalSync(716, { oneWay: true })], },
 	{ name: "Catch Yveltal", members: [taskSync("catching", 1, 2), mountainKalosSync(149, { oneWay: true }), nationalSync(717, { oneWay: true })], },
 	{ name: "Catch Zygarde", members: [taskSync("catching", 1, 3), mountainKalosSync(150, { oneWay: true }), nationalSync(718, { oneWay: true })], },

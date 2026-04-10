@@ -202,7 +202,7 @@ function buildTaskItem(task, sectionId, setTasks, rootTasks, index, cbById) {
 				cur = parent;
 			}
 			setTasks(sectionId, rootTasks);
-			applySyncsFromTask(task, !!task.done);
+			applySyncsFromTask(task, (task.currentTier ?? 0) > 0);
 			window.PPGC?.refreshSectionHeaderPct?.();
 		});
 	}

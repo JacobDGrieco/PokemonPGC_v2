@@ -53,6 +53,10 @@ import {
 					{ id: 1, text: "Route 36 Sudowoodo", img: ({ gameKey }) => baseSprite(gameKey, 185) },
 					{ id: 2, text: 'Lake of Rage "Red" Gyarados', img: ({ gameKey }) => shinySprite(gameKey, 130) },
 					{ id: 3, text: "Vermillion City Snorlax", img: ({ gameKey }) => baseSprite(gameKey, 143) },
+					{ id: 4, text: "Rocket HQ Geodude", img: ({ gameKey }) => baseSprite(gameKey, 74), tooltip: "Tracks the seven forced Geodude encounters in Team Rocket's Hideout", type: "tiered", tiers: [range(1, 7)] },
+					{ id: 5, text: "Rocket HQ Koffing", img: ({ gameKey }) => baseSprite(gameKey, 109), tooltip: "Tracks the seven forced Koffing encounters in Team Rocket's Hideout", type: "tiered", tiers: [range(1, 7)] },
+					{ id: 6, text: "Rocket HQ Voltorb", img: ({ gameKey }) => baseSprite(gameKey, 100), tooltip: "Tracks the eight forced Voltorb encounters in Team Rocket's Hideout", type: "tiered", tiers: [range(1, 8)] },
+					{ id: 7, text: "Rocket HQ Electrode", img: ({ gameKey }) => baseSprite(gameKey, 101), tooltip: "Tracks the three generator Electrode in Team Rocket's Hideout", type: "tiered", tiers: [range(1, 3)] },
 				]
 			},
 			{
@@ -117,6 +121,14 @@ import {
 					{ id: 7, text: "Sunny", img: ({ gameKey }) => npc(gameKey, "sunny") },
 				],
 			},
+			{
+				id: 7, text: "Solve all Ruins of Alph puzzles", children: [
+					{ id: 1, text: "Kabuto Chamber", img: ({ gameKey }) => baseSprite(gameKey, 140) },
+					{ id: 2, text: "Omanyte Chamber", img: ({ gameKey }) => baseSprite(gameKey, 138) },
+					{ id: 3, text: "Aerodactyl Chamber", img: ({ gameKey }) => baseSprite(gameKey, 142) },
+					{ id: 4, text: "Ho-Oh Chamber", img: ({ gameKey }) => baseSprite(gameKey, 250) },
+				],
+			},
 		],
 		"upgrades": [
 			{
@@ -125,18 +137,24 @@ import {
 					{ id: 2, text: "Radio", img: ({ gameKey }) => task(gameKey, "radio") },
 				],
 			},
+			{ id: 2, text: "Unlock Unown Mode", img: ({ gameKey }) => baseSprite(gameKey, 201), tooltip: "Available after solving the first Ruins of Alph sliding puzzle" },
 		],
 		"collectables": [
 			{
 				id: 1, text: "Obtain all extra Key Items", children: [
 					{ id: 1, text: "Bike", img: () => keyItem("bicycle") },
-					{ id: 2, text: "Coin Case", img: () => keyItem("coin-case") },
-					{ id: 3, text: "Exp. Share", img: () => heldItem("exp-share") },
-					{ id: 4, text: "Good Rod", img: () => keyItem("good-rod") },
-					{ id: 5, text: "Item Finder", img: () => keyItem("item-finder") },
-					{ id: 6, text: "Old Rod", img: () => keyItem("old-rod") },
-					{ id: 7, text: "Squirtbottle", img: () => keyItem("squirt-bottle") },
-					{ id: 8, text: "Super Rod", img: () => keyItem("super-rod") },
+					{ id: 2, text: "Basement Key", img: () => keyItem("basement-key") },
+					{ id: 3, text: "Card Key", img: () => keyItem("card-key") },
+					{ id: 4, text: "Coin Case", img: () => keyItem("coin-case") },
+					{ id: 5, text: "Exp. Share", img: () => heldItem("exp-share") },
+					{ id: 6, text: "Good Rod", img: () => keyItem("good-rod") },
+					{ id: 7, text: "Item Finder", img: () => keyItem("item-finder") },
+					{ id: 8, text: "Old Rod", img: () => keyItem("old-rod") },
+					{ id: 9, text: "Pass", img: () => keyItem("pass") },
+					{ id: 10, text: "Rainbow Wing", img: () => keyItem("rainbow-wing") },
+					{ id: 11, text: "Silver Wing", img: () => keyItem("silver-wing") },
+					{ id: 12, text: "Squirtbottle", img: () => keyItem("squirt-bottle") },
+					{ id: 13, text: "Super Rod", img: () => keyItem("super-rod") },
 				],
 			},
 			{ id: 2, text: "Find all hidden items with the Item Finder", img: () => keyItem("item-finder"), noCenter: true, type: "tiered", tiers: [range(1, 88)], },

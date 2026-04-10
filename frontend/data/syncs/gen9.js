@@ -1,15 +1,15 @@
 import {
-  defineSyncsMany,
+	defineSyncsMany,
 } from '../helpers/index.js';
 
 window.DATA = window.DATA || {};
 window.DATA.syncs = window.DATA.syncs || {};
 
-const GAME_KEYS = ["scarlet", "violet"];
+const GAME_KEYS1 = ["scarlet", "violet"];
 const GAME_KEYS2 = ["scarlettm", "violettm"];
 const GAME_KEYS3 = ["scarletid", "violetid"];
 
-defineSyncsMany(GAME_KEYS, (gameKey, { taskSync, eitherTaskSync, regionalSync, regionalSyncCross }) => [
+defineSyncsMany(GAME_KEYS1, (gameKey, { taskSync, eitherTaskSync, regionalSync, regionalSyncCross }) => [
 	{ name: "Catch Koraidon", members: [taskSync("catching", 1, 1), regionalSync(399, { oneWay: true })], },
 	{ name: "Catch Miraidon", members: [taskSync("catching", 1, 2), regionalSync(400, { oneWay: true })], },
 ]);

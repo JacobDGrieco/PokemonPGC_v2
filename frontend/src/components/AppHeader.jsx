@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { save, store } from '../store.js';
 import { usePpgcSnapshot } from '../react-bridge/usePpgcSnapshot.js';
-import { navigateHome } from '../react-bridge/navigation.js';
+import { navigateHome, navigateToState } from '../react-bridge/navigation.js';
 import { wireGlobalTaskSearch } from '../ui/taskSearch.js';
 
 export function AppHeader({ isMobile, mobileNavOpen, setMobileNavOpen }) {
@@ -9,6 +9,23 @@ export function AppHeader({ isMobile, mobileNavOpen, setMobileNavOpen }) {
   const isCollapsed = !!(snapshot?.state || store.state)?.sidebarCollapsed;
   const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
   const inputRef = useRef(null);
+  const handleAccountClick = () => {
+    const currentState = window.PPGC?._storeRef?.state || store.state;
+    if (currentState?.level && currentState.level !== 'account') {
+      window.PPGC._lastNonAccountState = { ...currentState };
+    }
+
+    navigateToState({
+      level: 'account',
+      genKey: null,
+      gameKey: null,
+      sectionId: null,
+      accountTab: 'general',
+      monInfoId: null,
+      monInfoGameKey: null,
+      monInfoForm: null,
+    });
+  };
 
   useEffect(() => {
     document.body.classList.toggle('sidebar-collapsed', isCollapsed);
@@ -96,6 +113,7 @@ export function AppHeader({ isMobile, mobileNavOpen, setMobileNavOpen }) {
           aria-haspopup="dialog"
           aria-controls="ppgc-auth-overlay"
           title="Log in / Sign up"
+          onClick={handleAccountClick}
         >
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M12 11.5c1.93 0 3.5-1.79 3.5-4s-1.57-4-3.5-4-3.5 1.79-3.5 4 1.57 4 3.5 4zm0 2c-2.76 0-5.5 1.57-5.5 3.5V19h11v-2c0-1.93-2.74-3.5-5.5-3.5z"/>
