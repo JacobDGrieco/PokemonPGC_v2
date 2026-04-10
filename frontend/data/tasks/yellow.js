@@ -183,7 +183,11 @@ import {
 			},
 		],
 		"extra-credit": [
-			{ id: 1, text: "Obtain Mew", img: ({ gameKey }) => baseSprite(gameKey, 151), imgS: ({ gameKey }) => shinySprite(gameKey, 151) },
+			{
+				id: 1, text: "Obtain all Mythical Pokemon", children: [
+					{ id: 1, text: "Mew", img: ({ gameKey }) => baseSprite(gameKey, 151), imgS: ({ gameKey }) => shinySprite(gameKey, 151) },
+				],
+			},
 		],
 	};
 

@@ -274,11 +274,15 @@ import {
 			},
 		],
 		"extra-credit": [
-			{ id: 1, text: "Obtain Phione", img: ({ gameKey }) => baseSprite(gameKey, 489), },
-			{ id: 2, text: "Obtain Manaphy", img: ({ gameKey }) => baseSprite(gameKey, 490), },
-			{ id: 3, text: "Obtain Darkrai", img: ({ gameKey }) => baseSprite(gameKey, 491), },
-			{ id: 4, text: "Obtain Shaymin", img: ({ gameKey }) => baseSprite(gameKey, 492), },
-			{ id: 5, text: "Obtain Arceus", img: ({ gameKey }) => baseSprite(gameKey, 493), },
+			{
+				id: 1, text: "Obtain all Mythical Pokemon", children: [
+					{ id: 1, text: "Phione", img: ({ gameKey }) => baseSprite(gameKey, 489), },
+					{ id: 2, text: "Manaphy", img: ({ gameKey }) => baseSprite(gameKey, 490), },
+					{ id: 3, text: "Darkrai", img: ({ gameKey }) => baseSprite(gameKey, 491), },
+					{ id: 4, text: "Shaymin", img: ({ gameKey }) => baseSprite(gameKey, 492), },
+					{ id: 5, text: "Arceus", img: ({ gameKey }) => baseSprite(gameKey, 493), },
+				],
+			},
 		]
 	};
 

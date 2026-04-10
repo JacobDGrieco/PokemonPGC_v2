@@ -62,11 +62,11 @@ defineSyncsMany([...GAME_KEYS1, ...GAME_KEYS2], ({ taskSync, eitherTaskSync, reg
 
 	{ name: "Defeat E4", members: [taskSync("story", 1), taskSync("upgrades", 3, 1),], },
 
-	{ name: "Obtain Phione", members: [taskSync("extra-credit", 1), nationalSync(489, { oneWay: true })], },
-	{ name: "Obtain Manaphy", members: [taskSync("extra-credit", 2), regionalSync(151, { oneWay: true }), nationalSync(490, { oneWay: true })], },
-	{ name: "Obtain Darkrai", members: [taskSync("extra-credit", 3), nationalSync(491, { oneWay: true })], },
-	{ name: "Obtain Shaymin", members: [taskSync("extra-credit", 4), nationalSync(492, { oneWay: true })], },
-	{ name: "Obtain Arceus", members: [taskSync("extra-credit", 5), nationalSync(493, { oneWay: true })], },
+	{ name: "Obtain Phione", members: [taskSync("extra-credit", 1, 1), nationalSync(489, { oneWay: true })], },
+	{ name: "Obtain Manaphy", members: [taskSync("extra-credit", 1, 2), regionalSync(151, { oneWay: true }), nationalSync(490, { oneWay: true })], },
+	{ name: "Obtain Darkrai", members: [taskSync("extra-credit", 1, 3), nationalSync(491, { oneWay: true })], },
+	{ name: "Obtain Shaymin", members: [taskSync("extra-credit", 1, 4), nationalSync(492, { oneWay: true })], },
+	{ name: "Obtain Arceus", members: [taskSync("extra-credit", 1, 5), nationalSync(493, { oneWay: true })], },
 ]);
 
 defineSyncsMany(GAME_KEYS1, ({ taskSync, eitherTaskSync, regionalSync, nationalSync }) => [

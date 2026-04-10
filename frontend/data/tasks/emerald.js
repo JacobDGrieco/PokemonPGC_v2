@@ -351,10 +351,14 @@ import {
 			},
 		],
 		"extra-credit": [
-			{ id: 1, text: "Obtain Jirachi", img: ({ gameKey }) => baseSprite(gameKey, 385), },
-			{ id: 2, text: "Obtain Deoxys", img: ({ gameKey }) => baseSprite(gameKey, 386), },
 			{
-				id: 3, text: "Obtain all Secret Base e-Reader decorations", children: [
+				id: 1, text: "Obtain all Mythical Pokemon", children: [
+					{ id: 1, text: "Jirachi", img: ({ gameKey }) => baseSprite(gameKey, 385), },
+					{ id: 2, text: "Deoxys", img: ({ gameKey }) => baseSprite(gameKey, 386), },
+				],
+			},
+			{
+				id: 2, text: "Obtain all Secret Base e-Reader decorations", children: [
 					{ id: 1, text: "Regirock Doll", img: () => decoration("regirock-doll"), tooltip: "Mystery Event (e-Reader)" },
 					{ id: 2, text: "Regice Doll", img: () => decoration("regice-doll"), tooltip: "Mystery Event (e-Reader)" },
 					{ id: 3, text: "Registeel Doll", img: () => decoration("registeel-doll"), tooltip: "Mystery Event (e-Reader)" },

@@ -252,7 +252,7 @@ function TieredValueDisplay({ task, className = '', onInputCommit, onChangeCommi
 	}, [task.id, value]);
 
 	if (meta.mode === 'label') {
-		const display = value === 0 ? 'â€”' : meta.values[value - 1] || 'â€”';
+		const display = value === 0 ? '—' : meta.values[value - 1] || '—';
 		return <div className={`tiered-percent${className ? ` ${className}` : ''}`}>{display}</div>;
 	}
 
