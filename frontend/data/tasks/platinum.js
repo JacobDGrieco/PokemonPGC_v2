@@ -118,10 +118,10 @@ import {
 			{ id: 1, text: "Obtain the National PokeDex" },
 			{ id: 2, text: "Obtain the Mystery Gift option", },
 			{
-				id: 3, text: "Obtain the Gold 4-Star Trainer Card", noCenter: true, children: [
+				id: 3, text: "Obtain the Black 5-Star Trainer Card", noCenter: true, children: [
 					{ id: 1, text: "Defeat the Elite 4/Champion" },
-					{ id: 2, text: "Complete the National PokeDex (493)" },
-					{ id: 3, text: "Get 100 Wins in the Battle Tower" },
+					{ id: 2, text: "Complete the National PokeDex (482)" },
+					{ id: 3, text: "Get a 100 Win Streak in the Battle Tower" },
 					{ id: 4, text: "Complete a Master Rank Super Contest" },
 					{ id: 5, text: "Play an Underground Capture the Flag Match" },
 				],
