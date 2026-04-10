@@ -8,7 +8,7 @@ window.DATA.syncs = window.DATA.syncs || {};
 const GAME_KEYS1 = ["black", "white"];
 const GAME_KEYS2 = ["black2", "white2"];
 
-defineSyncsMany(GAME_KEYS1, (gameKey, { taskSync, eitherTaskSync, regionalSync, nationalSync }) => [
+defineSyncsMany(GAME_KEYS1, ({ taskSync, eitherTaskSync, regionalSync, nationalSync }) => [
 	{ name: "Catch Reshiram", members: [taskSync("catching", 1, 1), regionalSync(149, { oneWay: true }), nationalSync(643, { oneWay: true })], },
 	{ name: "Catch Zekrom", members: [taskSync("catching", 1, 2), regionalSync(150, { oneWay: true }), nationalSync(644, { oneWay: true })], },
 	{ name: "Catch Kyurem", members: [taskSync("catching", 1, 3), regionalSync(152, { oneWay: true }), nationalSync(646, { oneWay: true })], },
@@ -26,7 +26,7 @@ defineSyncsMany(GAME_KEYS1, (gameKey, { taskSync, eitherTaskSync, regionalSync, 
 	{ name: "Obtain Genesect", members: [taskSync("extra-credit", 1, 4), regionalSync(155, { oneWay: true }), nationalSync(649, { oneWay: true })], },
 ]);
 
-defineSyncsMany(GAME_KEYS2, (gameKey, { taskSync, eitherTaskSync, regionalSync, nationalSync }) => [
+defineSyncsMany(GAME_KEYS2, ({ taskSync, eitherTaskSync, regionalSync, nationalSync }) => [
 	{ name: "Catch Reshiram", members: [taskSync("catching", 1, 1), regionalSync(295, { oneWay: true }), nationalSync(643, { oneWay: true })], },
 	{ name: "Catch Zekrom", members: [taskSync("catching", 1, 2), regionalSync(296, { oneWay: true }), nationalSync(644, { oneWay: true })], },
 	{ name: "Catch Kyurem", members: [taskSync("catching", 1, 3), regionalSync(298, { oneWay: true }), nationalSync(646, { oneWay: true })], },

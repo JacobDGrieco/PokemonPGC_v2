@@ -164,7 +164,7 @@ export function defineSyncsMany(gameKeys, builder) {
         return childId == null ? root : `${root}:${pad3(childId)}`;
       };
 
-      const built = builder(gameKey, { ...helpers, taskSync, eitherTaskSync, taskId });
+      const built = builder({ ...helpers, taskSync, eitherTaskSync, taskId });
       const nextArr = Array.isArray(built) ? built : (built ? [built] : []);
       return prevArr.concat(nextArr);
     });

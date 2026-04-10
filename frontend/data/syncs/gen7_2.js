@@ -7,7 +7,7 @@ window.DATA.syncs = window.DATA.syncs || {};
 
 const GAME_KEYS1 = ["letsgopikachu", "letsgoeevee"];
 
-defineSyncsMany(GAME_KEYS1, (gameKey, { taskSync, eitherTaskSync, regionalSync }) => [
+defineSyncsMany(GAME_KEYS1, ({ taskSync, eitherTaskSync, regionalSync }) => [
 	{ name: "Catch Articuno", members: [taskSync("catching", 1, 1), regionalSync(144, { oneWay: true }),], },
 	{ name: "Catch Zapdos", members: [taskSync("catching", 1, 2), regionalSync(145, { oneWay: true }),], },
 	{ name: "Catch Moltres", members: [taskSync("catching", 1, 3), regionalSync(146, { oneWay: true }),], },

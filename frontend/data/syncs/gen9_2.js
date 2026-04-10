@@ -8,7 +8,7 @@ window.DATA.syncs = window.DATA.syncs || {};
 const GAME_KEYS1 = ["legendsza"];
 const GAME_KEYS2 = ["legendszamd"];
 
-defineSyncsMany(GAME_KEYS1, (gameKey, { taskSync, eitherTaskSync, regionalSync }) => [
+defineSyncsMany(GAME_KEYS1, ({ taskSync, eitherTaskSync, regionalSync }) => [
 	{ name: "Catch Xerneas", members: [taskSync("catching", 1, 1), taskSync("story", 2, 2), regionalSync(228, { oneWay: true }),], },
 	{ name: "Catch Yveltal", members: [taskSync("catching", 1, 2), taskSync("story", 2, 3), regionalSync(229, { oneWay: true }),], },
 	{
@@ -107,7 +107,7 @@ defineSyncsMany(GAME_KEYS1, (gameKey, { taskSync, eitherTaskSync, regionalSync }
 	{ name: "Obtain TM 99", members: [taskSync("side-quests", 79), taskSync("thms", 99),], },
 ]);
 
-defineSyncsMany(GAME_KEYS2, (gameKey, { taskSync, eitherTaskSync, regionalSync, regionalSyncCross, fashionSync }) => [
+defineSyncsMany(GAME_KEYS2, ({ taskSync, eitherTaskSync, regionalSync, regionalSyncCross, fashionSync }) => [
 	{ name: "Catch Heatran", members: [taskSync("catching", 1, 1), taskSync("story", 1, 9), regionalSync(113, { oneWay: true }),], },
 	{ name: "Catch Darkrai", members: [taskSync("catching", 1, 2), taskSync("story", 1, 11), regionalSync(114, { oneWay: true }),], },
 	{ name: "Catch Kyogre", members: [taskSync("catching", 1, 3), taskSync("story", 2, 3), regionalSync(128, { oneWay: true }),], },

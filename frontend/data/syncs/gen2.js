@@ -7,7 +7,7 @@ window.DATA.syncs = window.DATA.syncs || {};
 
 const GAME_KEYS = ["gold", "silver", "crystal"];
 
-defineSyncsMany(GAME_KEYS, (gameKey, { taskSync, eitherTaskSync, regionalSync }) => [
+defineSyncsMany(GAME_KEYS, ({ taskSync, eitherTaskSync, regionalSync }) => [
 	{ name: "Catch Raikou", members: [taskSync("catching", 1, 1), regionalSync(238, { oneWay: true }),], },
 	{ name: "Catch Entei", members: [taskSync("catching", 1, 2), regionalSync(239, { oneWay: true }),], },
 	{ name: "Catch Suicune", members: [taskSync("catching", 1, 3), regionalSync(240, { oneWay: true }),], },
@@ -28,7 +28,7 @@ defineSyncsMany(GAME_KEYS, (gameKey, { taskSync, eitherTaskSync, regionalSync })
 	{ name: "Obtain Celebi", members: [taskSync("extra-credit", 2), regionalSync(251),], },
 ]);
 
-defineSyncsMany([GAME_KEYS[0], GAME_KEYS[1]], (gameKey, { taskSync, eitherTaskSync, regionalSync }) => [
+defineSyncsMany([GAME_KEYS[0], GAME_KEYS[1]], ({ taskSync, eitherTaskSync, regionalSync }) => [
 	{ name: "Rocket HQ Geodude", members: [taskSync("catching", 2, 4), regionalSync(34, { oneWay: true }),], },
 	{ name: "Rocket HQ Koffing", members: [taskSync("catching", 2, 5), regionalSync(114, { oneWay: true }),], },
 	{ name: "Rocket HQ Voltorb", members: [taskSync("catching", 2, 6), regionalSync(120, { oneWay: true }),], },
@@ -41,7 +41,7 @@ defineSyncsMany([GAME_KEYS[0], GAME_KEYS[1]], (gameKey, { taskSync, eitherTaskSy
 	{ name: "Tyrogue Gift", members: [taskSync("catching", 3, 5), regionalSync(143, { oneWay: true }),], },
 ]);
 
-defineSyncsMany([GAME_KEYS[2]], (gameKey, { taskSync, eitherTaskSync, regionalSync }) => [
+defineSyncsMany([GAME_KEYS[2]], ({ taskSync, eitherTaskSync, regionalSync }) => [
 	{ name: "Rocket HQ Geodude", members: [taskSync("catching", 2, 4), regionalSync(34, { oneWay: true }),], },
 	{ name: "Rocket HQ Koffing", members: [taskSync("catching", 2, 5), regionalSync(114, { oneWay: true }),], },
 	{ name: "Rocket HQ Voltorb", members: [taskSync("catching", 2, 6), regionalSync(120, { oneWay: true }),], },

@@ -8,7 +8,7 @@ window.DATA.syncs = window.DATA.syncs || {};
 const GAME_KEYS1 = ["red", "blue"];
 const GAME_KEYS2 = ["yellow"];
 
-defineSyncsMany([...GAME_KEYS1, ...GAME_KEYS2], (gameKey, { taskSync, regionalSync }) => [
+defineSyncsMany([...GAME_KEYS1, ...GAME_KEYS2], ({ taskSync, regionalSync }) => [
 	{ name: "Catch Articuno", members: [taskSync("catching", 1, 1), regionalSync(144, { oneWay: true }),], },
 	{ name: "Catch Zapdos", members: [taskSync("catching", 1, 2), regionalSync(145, { oneWay: true }),], },
 	{ name: "Catch Moltres", members: [taskSync("catching", 1, 3), regionalSync(146, { oneWay: true }),], },
@@ -18,7 +18,7 @@ defineSyncsMany([...GAME_KEYS1, ...GAME_KEYS2], (gameKey, { taskSync, regionalSy
 	{ name: "Obtain Mew", members: [taskSync("extra-credit", 1), regionalSync(151)], },
 ]);
 
-defineSyncsMany(GAME_KEYS1, (gameKey, { taskSync, eitherTaskSync, regionalSync }) => [
+defineSyncsMany(GAME_KEYS1, ({ taskSync, eitherTaskSync, regionalSync }) => [
 	{ name: "Magikarp Gift", members: [taskSync("catching", 3, 1), regionalSync(129, { oneWay: true }),], },
 	{ name: "Martial Arts Choice - Hitmonlee", members: [eitherTaskSync("catching", 3, 2, "left"), regionalSync(106, { oneWay: true }),] },
 	{ name: "Martial Arts Choice - Hitmonchan", members: [eitherTaskSync("catching", 3, 2, "right"), regionalSync(107, { oneWay: true }),] },
@@ -39,7 +39,7 @@ defineSyncsMany(GAME_KEYS1, (gameKey, { taskSync, eitherTaskSync, regionalSync }
 	{ name: "Venonat for Tangela", members: [taskSync("catching", 4, 9), regionalSync(48, { oneWay: true }), regionalSync(114, { oneWay: true }),], },
 ]);
 
-defineSyncsMany(GAME_KEYS2, (gameKey, { taskSync, eitherTaskSync, regionalSync }) => [
+defineSyncsMany(GAME_KEYS2, ({ taskSync, eitherTaskSync, regionalSync }) => [
 	{ name: "Magikarp Gift", members: [taskSync("catching", 3, 1), regionalSync(129, { oneWay: true }),], },
 	{ name: "Martial Arts Choice - Hitmonlee", members: [eitherTaskSync("catching", 3, 2, "left"), regionalSync(106, { oneWay: true }),] },
 	{ name: "Martial Arts Choice - Hitmonchan", members: [eitherTaskSync("catching", 3, 2, "right"), regionalSync(107, { oneWay: true }),] },
