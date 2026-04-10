@@ -142,7 +142,8 @@ function EitherChoices({ task, onChange }) {
 			{options.map(([key, option]) => {
 				const active = choice != null && String(choice) === String(key);
 				const disabled = choice != null && !active;
-				const text = option?.text ?? option?.name ?? String(key);
+				const rawText = typeof option?.text === 'string' ? option.text : '';
+				const text = rawText.trim();
 
 				return (
 					<span
@@ -170,8 +171,7 @@ function EitherChoices({ task, onChange }) {
 							disabled={disabled}
 							readOnly
 						/>
-						<span className="small">{text}</span>
-						<span className="task-either-x">✕</span>
+						{text ? <span className="small">{text}</span> : null}
 					</span>
 				);
 			})}

@@ -10,7 +10,9 @@ export function renderEitherHTML(task) {
   const optsHtml = entries.map(([key, opt]) => {
     const active = choice != null && String(choice) === String(key);
     const disabled = choice != null && !active;
-    const text = opt?.text ?? opt?.name ?? String(key);
+    const rawText = typeof opt?.text === "string" ? opt.text : "";
+    const text = rawText.trim();
+    const labelHtml = text ? `<span class="small">${text}</span>` : "";
     return `
       <span class="task-either-choice ${active ? "either-active" : ""} ${disabled ? "either-disabled" : ""}"
         data-option-key="${String(key)}"
@@ -18,8 +20,7 @@ export function renderEitherHTML(task) {
         tabindex="0">
         <input type="checkbox" class="task-either-cb" data-option-key="${String(key)}"
           ${active ? "checked" : ""} ${disabled ? "disabled" : ""}/>
-        <span class="small">${text}</span>
-        <span class="task-either-x">✕</span>
+        ${labelHtml}
       </span>
     `;
   }).join("");

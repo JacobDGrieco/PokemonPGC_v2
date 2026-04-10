@@ -53,7 +53,14 @@ import {
 				],
 			},
 			{
-				id: 2, text: "Obtain all In-Game Gift Pokémon", children: [
+				id: 2, text: "Catch/Defeat all Static Encounters", children: [
+					{ id: 1, text: "Kecleon", img: ({ gameKey }) => baseSprite(gameKey, 352), tooltip: "Tracks all eight visible Kecleon revealed by the Devon Scope on Routes 119 and 120", type: "tiered", tiers: [range(1, 8)] },
+					{ id: 2, text: "New Mauville Voltorb", img: ({ gameKey }) => baseSprite(gameKey, 100), tooltip: "Tracks the three fake-item Voltorb in New Mauville", type: "tiered", tiers: [range(1, 3)] },
+					{ id: 3, text: "Hideout Electrode", img: ({ gameKey }) => baseSprite(gameKey, 101), tooltip: "Tracks the two fake-item Electrode in the Team Magma Hideout (Ruby) or Team Aqua Hideout (Sapphire)", type: "tiered", tiers: [range(1, 2)] },
+				],
+			},
+			{
+				id: 3, text: "Obtain all In-Game Gift Pokémon", children: [
 					{
 						id: 1, text: "Lileep / Anorith", img: ({ gameKey }) => task(gameKey, "lileep-anorith"), eithers: {
 							1: { text: "" }, 2: { text: "" },
@@ -65,7 +72,7 @@ import {
 				],
 			},
 			{
-				id: 3, text: "Complete all In-Game Trades", children: [
+				id: 4, text: "Complete all In-Game Trades", children: [
 					{ id: 1, text: "Slakoth for Makuhita", img: ({ gameKey }) => task(gameKey, "slakoth-for-makuhita") },
 					{ id: 2, text: "Pikachu for Skitty", img: ({ gameKey }) => task(gameKey, "pikachu-for-skitty") },
 					{ id: 3, text: "Bellossum for Corsola", img: ({ gameKey }) => task(gameKey, "bellossum-for-corsola") },
@@ -85,7 +92,17 @@ import {
 					{ id: 5, text: "Smart Contests", img: () => ribbon("smart-master"), tiers: ["Normal", "Super", "Hyper", "Master"], },
 				],
 			},
-			{ id: 2, text: "Complete all chambers of the Trick House", type: "tiered", tiers: [range(1, 8)], },
+			{
+				id: 2, text: "Complete the Lilycove Museum contest exhibit", tooltip: "High-scoring Master Rank wins can add paintings to the Lilycove Museum. Completing all five categories unlocks the Glass Ornament.", children: [
+					{ id: 1, text: "Beauty Painting", img: () => ribbon("beauty-master") },
+					{ id: 2, text: "Tough Painting", img: () => ribbon("tough-master") },
+					{ id: 3, text: "Cute Painting", img: () => ribbon("cute-master") },
+					{ id: 4, text: "Cool Painting", img: () => ribbon("cool-master") },
+					{ id: 5, text: "Smart Painting", img: () => ribbon("smart-master") },
+					{ id: 6, text: "Receive the Glass Ornament", img: () => decoration("glass-ornament") },
+				],
+			},
+			{ id: 3, text: "Complete all chambers of the Trick House", type: "tiered", tiers: [range(1, 8)], },
 		],
 		"battle": [
 			{ id: 1, text: "Master the Battle Tower", noCenter: true, type: "tiered", tiers: ["Singles", "Doubles", "Multi"], },
@@ -105,15 +122,24 @@ import {
 		"collectables": [
 			{
 				id: 1, text: "Obtain all extra Key Items", children: [
-					{ id: 1, text: "Exp. Share", img: () => heldItem("exp-share") },
-					{ id: 2, text: "Go-Goggles", img: () => keyItem("go-goggles") },
-					{ id: 3, text: "Good Rod", img: () => keyItem("good-rod") },
-					{ id: 4, text: "Item Finder", img: () => keyItem("item-finder") },
-					{ id: 5, text: "Old Rod", img: () => keyItem("old-rod") },
-					{ id: 6, text: "PokeBlock Case", img: () => keyItem("pokeblock-case") },
-					{ id: 7, text: "Soot Sack", img: () => keyItem("soot-sack") },
-					{ id: 8, text: "Super Rod", img: () => keyItem("super-rod") },
-					{ id: 9, text: "Wailmer Pail", img: () => keyItem("wailmer-pail") },
+					{ id: 1, text: "Acro Bike", img: () => keyItem("acro-bike") },
+					{ id: 2, text: "Basement Key", img: () => keyItem("basement-key") },
+					{ id: 3, text: "Coin Case", img: () => keyItem("coin-case") },
+					{ id: 4, text: "Contest Pass", img: () => keyItem("contest-pass") },
+					{ id: 5, text: "Devon Scope", img: () => keyItem("devon-scope") },
+					{ id: 6, text: "Exp. Share", img: () => heldItem("exp-share") },
+					{ id: 7, text: "Go-Goggles", img: () => keyItem("go-goggles") },
+					{ id: 8, text: "Good Rod", img: () => keyItem("good-rod") },
+					{ id: 9, text: "Item Finder", img: () => keyItem("item-finder") },
+					{ id: 10, text: "Mach Bike", img: () => keyItem("mach-bike") },
+					{ id: 11, text: "Old Rod", img: () => keyItem("old-rod") },
+					{ id: 12, text: "PokeBlock Case", img: () => keyItem("pokeblock-case") },
+					{ id: 13, text: "Red Orb / Blue Orb", img: () => [keyItem("red-orb"), keyItem("blue-orb")] },
+					{ id: 14, text: "S.S. Ticket", img: () => keyItem("ss-ticket") },
+					{ id: 15, text: "Soot Sack", img: () => keyItem("soot-sack") },
+					{ id: 16, text: "Storage Key", img: () => keyItem("storage-key") },
+					{ id: 17, text: "Super Rod", img: () => keyItem("super-rod") },
+					{ id: 18, text: "Wailmer Pail", img: () => keyItem("wailmer-pail") },
 				],
 			},
 			{
@@ -242,7 +268,7 @@ import {
 				],
 			},
 			{
-				id: 2, text: "Collect all HMs", children: [
+				id: 2, text: "Collect all TMs", children: [
 					{ id: 1, text: "TM01 (Focus Punch)", img: () => tm("fighting") },
 					{ id: 2, text: "TM02 (Dragon Claw)", img: () => tm("dragon") },
 					{ id: 3, text: "TM03 (Water Pulse)", img: () => tm("water") },
@@ -317,6 +343,9 @@ import {
 			7: "Catch Latias",
 			8: "Trade Latios",
 		}),
+		collectables: overrideTaskChildTexts(TASKS_BY_SECTION.collectables, 1, {
+			13: "Red Orb",
+		}),
 	};
 
 	const TASKS_BY_SECTION_GAME2 = {
@@ -326,6 +355,9 @@ import {
 			2: "Trade Groudon",
 			7: "Trade Latias",
 			8: "Catch Latios",
+		}),
+		collectables: overrideTaskChildTexts(TASKS_BY_SECTION.collectables, 1, {
+			13: "Blue Orb",
 		}),
 	};
 

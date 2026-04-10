@@ -8,6 +8,7 @@ window.DATA.syncs = window.DATA.syncs || {};
 const GAME_KEYS1 = ["ruby", "sapphire", "emerald"];
 const GAME_KEYS2 = ["emerald"];
 const GAME_KEYS3 = ["firered", "leafgreen"];
+const GAME_KEYS4 = ["ruby", "sapphire"];
 
 defineSyncsMany([...GAME_KEYS1, ...GAME_KEYS2], ({ taskSync, eitherTaskSync, regionalSync, nationalSync }) => [
 	{ name: "Catch Kyogre", members: [taskSync("catching", 1, 1), regionalSync(198, { oneWay: true }), nationalSync(382, { oneWay: true })], },
@@ -19,15 +20,15 @@ defineSyncsMany([...GAME_KEYS1, ...GAME_KEYS2], ({ taskSync, eitherTaskSync, reg
 	{ name: "Catch Latias", members: [taskSync("catching", 1, 7), regionalSync(196, { oneWay: true }), nationalSync(380, { oneWay: true })], },
 	{ name: "Catch Latios", members: [taskSync("catching", 1, 8), regionalSync(167, { oneWay: true }), nationalSync(381, { oneWay: true })], },
 
-	{ name: "Fossil Choice - Lileep", members: [eitherTaskSync("catching", 2, 1, "1"), regionalSync(133, { oneWay: true }), nationalSync(345, { oneWay: true })] },
-	{ name: "Fossil Choice - Anorith", members: [eitherTaskSync("catching", 2, 1, "2"), regionalSync(135, { oneWay: true }), nationalSync(347, { oneWay: true })] },
-	{ name: "Beldum Gift", members: [taskSync("catching", 2, 2), regionalSync(190, { oneWay: true }), nationalSync(374, { oneWay: true })], },
-	{ name: "Castform Gift", members: [taskSync("catching", 2, 3), regionalSync(142, "Normal", { oneWay: true }), nationalSync(351, "Normal", { oneWay: true })], },
-	{ name: "Wynaut Gift", members: [taskSync("catching", 2, 4), regionalSync(160, { oneWay: true }), nationalSync(360, { oneWay: true })], },
+	{ name: "Fossil Choice - Lileep", members: [eitherTaskSync("catching", 3, 1, "1"), regionalSync(133, { oneWay: true }), nationalSync(345, { oneWay: true })] },
+	{ name: "Fossil Choice - Anorith", members: [eitherTaskSync("catching", 3, 1, "2"), regionalSync(135, { oneWay: true }), nationalSync(347, { oneWay: true })] },
+	{ name: "Beldum Gift", members: [taskSync("catching", 3, 2), regionalSync(190, { oneWay: true }), nationalSync(374, { oneWay: true })], },
+	{ name: "Castform Gift", members: [taskSync("catching", 3, 3), regionalSync(142, "Normal", { oneWay: true }), nationalSync(351, "Normal", { oneWay: true })], },
+	{ name: "Wynaut Gift", members: [taskSync("catching", 3, 4), regionalSync(160, { oneWay: true }), nationalSync(360, { oneWay: true })], },
 
 	{
 		name: "Slakoth for Makuhita", members: [
-			taskSync("catching", 3, 1),
+			taskSync("catching", 4, 1),
 			regionalSync(36, { oneWay: true }),
 			regionalSync(48, { oneWay: true }),
 			nationalSync(287, { oneWay: true }),
@@ -36,7 +37,7 @@ defineSyncsMany([...GAME_KEYS1, ...GAME_KEYS2], ({ taskSync, eitherTaskSync, reg
 	},
 	{
 		name: "Pikachu for Skitty", members: [
-			taskSync("catching", 3, 2),
+			taskSync("catching", 4, 2),
 			regionalSync(156, { oneWay: true }),
 			regionalSync(61, { oneWay: true }),
 			nationalSync(25, { oneWay: true }),
@@ -45,7 +46,7 @@ defineSyncsMany([...GAME_KEYS1, ...GAME_KEYS2], ({ taskSync, eitherTaskSync, reg
 	},
 	{
 		name: "Bellossum for Corsola", members: [
-			taskSync("catching", 3, 3),
+			taskSync("catching", 4, 3),
 			regionalSync(91, { oneWay: true }),
 			regionalSync(180, { oneWay: true }),
 			nationalSync(182, { oneWay: true }),
@@ -62,6 +63,12 @@ defineSyncsMany([...GAME_KEYS1, ...GAME_KEYS2], ({ taskSync, eitherTaskSync, reg
 
 defineSyncsMany(GAME_KEYS1, ({ taskSync, eitherTaskSync, regionalSync, nationalSync }) => [
 	{ name: "Obtain Deoxys", members: [taskSync("extra-credit", 2), regionalSync(202, "Normal"), nationalSync(386, "Normal")], },
+]);
+defineSyncsMany(GAME_KEYS4, ({ taskSync, regionalSync, nationalSync }) => [
+	{ name: "Kecleon Encounters", members: [taskSync("catching", 4, 1), regionalSync(145, { oneWay: true }), nationalSync(352, { oneWay: true })], },
+	{ name: "New Mauville Voltorb", members: [taskSync("catching", 4, 2), regionalSync(84, { oneWay: true }), nationalSync(100, { oneWay: true })], },
+	{ name: "Hideout Electrode", members: [taskSync("catching", 4, 3), regionalSync(85, { oneWay: true }), nationalSync(101, { oneWay: true })], },
+	{ name: "Glass Ornament", members: [taskSync("activities", 3, 6), taskSync("collectables", 4, 43)], },
 ]);
 defineSyncsMany(GAME_KEYS2, ({ taskSync, eitherTaskSync, regionalSync, nationalSync }) => [
 	{ name: "Catch Lugia", members: [taskSync("catching", 1, 9), nationalSync(249, { oneWay: true })], },
