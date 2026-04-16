@@ -4,7 +4,8 @@ import "../regidexs/x-y-coastal.js";
 import "../regidexs/x-y-mountain.js";
 import "../natidexs/x-y.js";
 import "../fashion/x-y.js";
-import "../other/amie.js";
+import "../others/medals-xy.js";
+import "../others/amin.js";
 import "../layouts/x-y.js";
 
 import "../tasks/omegaruby-alphasapphire.js";
