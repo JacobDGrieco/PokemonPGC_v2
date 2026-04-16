@@ -203,6 +203,13 @@ function readTaskState(taskId) {
 		);
 		return { type: "tiered", currentCount: cc, currentTier: ct };
 	}
+	const multi = root.querySelector('[data-multi="1"]');
+	if (multi) {
+		const selected = Array.from(
+			multi.querySelectorAll('input.task-either-cb[data-option-key]:checked')
+		).map((el) => String(el.getAttribute("data-option-key")));
+		return { type: "multi", selected };
+	}
 	const cb = root.querySelector('input[type="checkbox"]');
 	return { type: "check", done: !!cb?.checked };
 }
@@ -255,6 +262,10 @@ function gameHasFashion(gameKey) {
 	return !!(window.DATA?.fashion?.[gameKey]?.categories || []).length;
 }
 
+function gameHasAmieDecor(gameKey) {
+	return !!(window.DATA?.amieDecor?.[gameKey] || []).filter(Boolean).length;
+}
+
 function gameHasDistributions(gameKey) {
 	return !!(window.DATA?.distributions?.[gameKey] || []).filter(Boolean).length;
 }
@@ -276,6 +287,9 @@ function isDefaultTaskState(state) {
 	if (!state || typeof state !== "object") return true;
 	if (state.type === "tiered") {
 		return Number(state.currentTier || 0) <= 0 && Number(state.currentCount || 0) <= 0;
+	}
+	if (state.type === "multi") {
+		return !Array.isArray(state.selected) || state.selected.length === 0;
 	}
 	return !state.done;
 }
@@ -335,6 +349,11 @@ function resetTasksForGame(gameKey) {
 					if (node.type === "tiered") {
 						node.currentTier = 0;
 						node.currentCount = 0;
+					} else if (Array.isArray(node.multi)) {
+						node.multi.forEach((option) => {
+							if (option && typeof option === "object") option.done = false;
+						});
+						node.done = false;
 					} else {
 						node.done = false;
 					}
@@ -373,6 +392,7 @@ function resetSnapshotStateForGame(gameKey) {
 	resetTasksForGame(gameKey);
 	resetDexForGame(gameKey);
 	resetFashionForGame(gameKey);
+	resetSimpleRecordMap("amieDecorStatus", gameKey);
 	resetSimpleRecordMap("distributionsStatus", gameKey);
 	resetSimpleRecordMap("dexResearchStatus", gameKey);
 	resetSimpleRecordMap("curryStatus", gameKey);
@@ -450,6 +470,15 @@ export function collectSnapshot(gameKey) {
 			}
 		}
 		if (hasOwnEntries(fashion)) snapshot.fashion = fashion;
+	}
+
+	if (gameHasAmieDecor(gameKey)) {
+		const amieDecor = pruneBooleanRecord(
+			window.store?.amieDecorStatus instanceof Map
+				? window.store.amieDecorStatus.get(gameKey) || {}
+				: {}
+		);
+		if (hasOwnEntries(amieDecor)) snapshot.amieDecor = amieDecor;
 	}
 
 	if (gameHasDistributions(gameKey)) {
@@ -1055,6 +1084,13 @@ function applyTasksSnapshotToStore(tasksObj) {
 			node.type = "tiered";
 			node.currentTier = Number(snap.currentTier || 0);
 			node.currentCount = Number(snap.currentCount || 0);
+		} else if (snap.type === "multi" && Array.isArray(node.multi)) {
+			const selected = new Set((Array.isArray(snap.selected) ? snap.selected : []).map(String));
+			node.multi.forEach((option) => {
+				if (!option || typeof option !== "object") return;
+				option.done = selected.has(String(option.id));
+			});
+			node.done = node.multi.length > 0 && node.multi.every((option) => !!option?.done);
 		} else {
 			node.type = "check";
 			node.done = !!snap.done;
@@ -1193,6 +1229,14 @@ function applyDistributionsSnapshotToStore(gameKey, distributionsObj) {
 	map.set(gameKey, { ...rec });
 }
 
+function applyAmieDecorSnapshotToStore(gameKey, amieDecorObj) {
+	const map = ensureStoreMap("amieDecorStatus");
+	if (!map) return;
+	const rec =
+		amieDecorObj && typeof amieDecorObj === "object" ? amieDecorObj : {};
+	map.set(gameKey, { ...rec });
+}
+
 function applyResearchSnapshotToStore(gameKey, researchObj) {
 	const map = ensureStoreMap("dexResearchStatus");
 	if (!map) return;
@@ -1319,6 +1363,10 @@ function applySnapshotToStore(snap) {
 		// Fashion
 		if (gameKey && snap.fashion) {
 			applyFashionSnapshotToStore(gameKey, snap.fashion);
+		}
+
+		if (gameKey && snap.amieDecor) {
+			applyAmieDecorSnapshotToStore(gameKey, snap.amieDecor);
 		}
 
 		// Distributions

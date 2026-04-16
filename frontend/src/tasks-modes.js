@@ -104,6 +104,41 @@ export function isEitherTask(t) {
 	return entries.length >= 2;
 }
 
+export function getMultiOptions(task) {
+	const raw = Array.isArray(task?.multi) ? task.multi : [];
+	return raw.filter((option) => option && typeof option === "object");
+}
+
+export function isMultiTask(task) {
+	return getMultiOptions(task).length >= 2;
+}
+
+export function getMultiCheckedCount(task) {
+	return getMultiOptions(task).filter((option) => !!option.done).length;
+}
+
+export function syncTaskDoneFromMulti(task) {
+	const options = getMultiOptions(task);
+	task.done = options.length > 0 && options.every((option) => !!option.done);
+	return task.done;
+}
+
+export function setMultiOptionDone(task, optionKey, done) {
+	for (const option of getMultiOptions(task)) {
+		if (String(option?.id) !== String(optionKey)) continue;
+		option.done = !!done;
+		break;
+	}
+	return syncTaskDoneFromMulti(task);
+}
+
+export function setMultiDone(task, done) {
+	for (const option of getMultiOptions(task)) {
+		option.done = !!done;
+	}
+	return syncTaskDoneFromMulti(task);
+}
+
 export function isTieredTask(t) {
 	if (!t) return false;
 	if (Array.isArray(t.tiers) && t.tiers.length > 0) return true;
@@ -120,6 +155,9 @@ export function forEachDescendant(task, fn) {
 
 export function setDescendantsDone(task, val) {
 	task.done = val;
+	if (isMultiTask(task)) {
+		setMultiDone(task, val);
+	}
 	if (isTieredTask(task)) {
 		const steps = getTierSteps(task);
 		task.currentTier = val ? steps : 0;

@@ -12,4 +12,4 @@ export { defineLayoutsMany } from './layouts.js';
 export { getDexButtonIconName, getDexButtonIconSrc } from './dex-button-icons.js';
 export { _sprite, _menuSprite, dexSprite, wantAnimatedDexSprites, _model, _frontSprite, _backSprite, _frontSpriteAnimated, _backSpriteAnimated, _iconSprite, _baseModel, _frontSpriteShiny, _backSpriteShiny, _frontSpriteShinyAnimated, _backSpriteShinyAnimated, _iconSpriteShiny, _shinyModel, buildMonInfoEntry, buildMonInfoEntryForm, buildMonInfoByGame, buildMonInfoFormsByGame } from './sprite-models.js';
 export { _taskRef, _dexRef, _fashionRef, defineSyncs, defineSyncsMany } from './sync-refs.js';
-export { defineTasksMany, overrideTaskChildText, overrideTaskChildTexts } from './tasks.js';
+export { defineTasksMany, overrideTask, overrideTasks, overrideTaskChildText, overrideTaskChildTexts } from './tasks.js';

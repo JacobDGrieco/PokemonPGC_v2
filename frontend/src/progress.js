@@ -16,6 +16,12 @@ export function getTaskCompletion(task) {
 		return steps === 0 ? 1 : tier / steps; // 0..1
 	}
 
+	if (Array.isArray(task?.multi) && task.multi.length > 0) {
+		const total = task.multi.length;
+		const done = task.multi.filter((option) => !!option?.done).length;
+		return total ? done / total : 0;
+	}
+
 	// Leaf tasks (checkbox)
 	if (!Array.isArray(task?.children) || task.children.length === 0) {
 		return task?.done ? 1 : 0;
@@ -44,6 +50,9 @@ export function countLeavesDoneTotal(tasksArr) {
 			const sub = countLeavesDoneTotal(kids);
 			done += sub.done;
 			total += sub.total;
+		} else if (Array.isArray(t.multi) && t.multi.length) {
+			total += t.multi.length;
+			done += t.multi.filter((option) => !!option?.done).length;
 		} else {
 			total += 1;
 			if (t.done) done += 1;
@@ -72,6 +81,9 @@ export function summarizeTasks(tasksArray) {
 		for (const t of arr) {
 			if (Array.isArray(t.children) && t.children.length) {
 				walk(t.children);
+			} else if (Array.isArray(t.multi) && t.multi.length) {
+				done += t.multi.filter((option) => !!option?.done).length;
+				total += t.multi.length;
 			} else {
 				done += getTaskCompletion(t);
 				total += 1;

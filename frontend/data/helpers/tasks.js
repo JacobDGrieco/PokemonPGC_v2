@@ -49,9 +49,24 @@ export function defineTasksMany(gameKeys, SECTIONS, TASKS_BY_SECTION) {
       }
     }
 
+    function normalizeMulti(out) {
+      const raw = out?.multi;
+      if (!Array.isArray(raw) || !raw.length) return;
+
+      out.multi = raw
+        .filter((option) => option && typeof option === 'object')
+        .map((option) => {
+          const next = { ...option };
+          if (next.img) next.img = bindGameKeyFn(next.img);
+          if (next.imgS) next.imgS = bindGameKeyFn(next.imgS);
+          return next;
+        });
+    }
+
     function mapTask(sectionSuffix, t, parentId = null) {
       const out = { ...t };
       normalizeEithers(out);
+      normalizeMulti(out);
 
       if (out.img) out.img = bindGameKeyFn(out.img);
       if (out.imgS) out.imgS = bindGameKeyFn(out.imgS);
@@ -86,25 +101,61 @@ export function defineTasksMany(gameKeys, SECTIONS, TASKS_BY_SECTION) {
   }
 }
 
-export function overrideTaskChildText(tasks, parentId, childId, newText) {
+function normalizeTaskOverride(overrides) {
+  if (overrides && typeof overrides === 'object' && !Array.isArray(overrides)) {
+    return overrides;
+  }
+
+  return { text: overrides };
+}
+
+function mergeTaskOverride(task, overrides) {
+  return {
+    ...task,
+    ...normalizeTaskOverride(overrides),
+  };
+}
+
+export function overrideTask(tasks, parentId, overrides, childId = null) {
   return tasks.map((task) => {
     if (task.id !== parentId) return task;
+
+    if (childId === null || childId === undefined) {
+      return mergeTaskOverride(task, overrides);
+    }
+
+    if (!Array.isArray(task.children)) return task;
 
     return {
       ...task,
       children: task.children.map((child) =>
         child.id === childId
-          ? { ...child, text: newText }
+          ? mergeTaskOverride(child, overrides)
           : child
       ),
     };
   });
 }
 
-export function overrideTaskChildTexts(tasks, parentId, changes) {
+export function overrideTasks(tasks, parentId, changes) {
   let out = tasks;
-  for (const [childId, newText] of Object.entries(changes)) {
-    out = overrideTaskChildText(out, parentId, Number(childId), newText);
+
+  for (const [key, overrides] of Object.entries(changes || {})) {
+    if (key === 'parent') {
+      out = overrideTask(out, parentId, overrides);
+      continue;
+    }
+
+    out = overrideTask(out, parentId, overrides, Number(key));
   }
+
   return out;
+}
+
+export function overrideTaskChildText(tasks, parentId, childId, newText) {
+  return overrideTask(tasks, parentId, { text: newText }, childId);
+}
+
+export function overrideTaskChildTexts(tasks, parentId, changes) {
+  return overrideTasks(tasks, parentId, changes);
 }

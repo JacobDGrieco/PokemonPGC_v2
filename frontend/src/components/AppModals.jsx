@@ -4,6 +4,7 @@ import { MonInfoModal } from './modals/MonInfoModal.jsx';
 import { ModelViewerModal } from './modals/ModelViewerModal.jsx';
 import { ResearchModal } from './modals/ResearchModal.jsx';
 import { FashionModal } from './modals/FashionModal.jsx';
+import { AmieDecorModal } from './modals/AmieDecorModal.jsx';
 import { FormsModal } from './modals/FormsModal.jsx';
 import { MedalsModal } from './modals/MedalsModal.jsx';
 import { AuthModal } from './modals/AuthModal.jsx';
@@ -16,6 +17,7 @@ export function AppModals() {
       <ModelViewerModal />
       <ResearchModal />
       <FashionModal />
+      <AmieDecorModal />
       <FormsModal />
       <MedalsModal />
       <AuthModal />

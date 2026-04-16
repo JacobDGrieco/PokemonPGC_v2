@@ -632,7 +632,7 @@ window.addEventListener("ppgc:import:done", () => {
 		}
 
 		// Shield generic modal content areas
-		return !!el.closest("#modal, #researchModal, #fashionModal, #formsModal, #medalsModal");
+		return !!el.closest("#modal, #researchModal, #fashionModal, #amieDecorModal, #formsModal, #medalsModal");
 	};
 
 	const stopIfInside = (e) => {

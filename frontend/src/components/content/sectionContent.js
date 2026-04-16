@@ -1,5 +1,6 @@
 import { store } from '../../store.js';
 import {
+  amieDecorSummaryCardFor,
   dexSummaryCardFor,
   fashionSummaryCardFor,
   medalsSectionCardFor,
@@ -116,6 +117,10 @@ export function buildInjectedNodes(section, state) {
     categories.forEach((category) => {
       nodes.push(fashionSummaryCardFor(state.gameKey, state.genKey, category.id, store));
     });
+  }
+
+  if (sectionTitleLower(section) === 'poke-amie decorations') {
+    nodes.push(amieDecorSummaryCardFor(state.gameKey, state.genKey, store));
   }
 
   if (matchesSection(section, 'curry')) {

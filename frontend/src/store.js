@@ -71,6 +71,7 @@ store.state.modelViewerSolo ??= false;
 // Additional status maps
 store.fashionStatus ??= new Map();          // Map<gameKey, Map<categoryId, Record<itemId:boolean>>>
 store.fashionFormsStatus ??= new Map();     // Map<gameKey, Map<categoryId, Record<itemId, {forms,...}|...>>>
+store.amieDecorStatus ??= new Map();        // Map<gameKey, { [decorId]: boolean }>
 store.distributionsStatus ??= new Map();    // Map<gameKey, { [distId]: boolean }>
 store.dexResearchStatus ??= new Map();      // Map<gameKey, { [dexMonId]: { [taskId]: boolean } }>
 store.curryStatus ??= new Map();            // Map<gameKey, { [curryId]: boolean }>
@@ -126,6 +127,16 @@ store.stickerFormsStatus ??= new Map();   // Map<gameKey, { [stickerId]: { all:b
 		dexFormsMap.set(gameKey, rec);
 	}
 	store.dexFormsStatus = dexFormsMap;
+}
+
+// Poke-Amie decorations
+{
+	const rawAmieDecor = saved.amieDecorStatus || JSON.parse(localStorage.getItem("amieDecorStatus") || "{}");
+	const amieDecorMap = new Map();
+	for (const [gameKey, rec] of Object.entries(rawAmieDecor || {})) {
+		amieDecorMap.set(gameKey, rec || {});
+	}
+	store.amieDecorStatus = amieDecorMap;
 }
 
 // Distributions
@@ -314,6 +325,7 @@ export function save() {
 		stickerFormsStatus: Object.fromEntries(store.stickerFormsStatus),
 		fashionStatus: serializeNestedCategoryStatus(store.fashionStatus),
 		fashionFormsStatus: serializeNestedCategoryStatus(store.fashionFormsStatus),
+		amieDecorStatus: Object.fromEntries(store.amieDecorStatus),
 		taskProgressById: store.taskProgressById instanceof Map ? Object.fromEntries(store.taskProgressById) : {},
 		taskChoiceById: store.taskChoiceById instanceof Map ? Object.fromEntries(store.taskChoiceById) : {},
 		toolsKey: s.toolsKey || "info",
@@ -370,6 +382,7 @@ export function getAllGameKeys() {
 	Object.keys(S.sections || {}).forEach((k) => out.add(k));
 	Object.keys(S.dex || {}).forEach((k) => out.add(k));
 	Object.keys(S.fashion || {}).forEach((k) => out.add(k));
+	Object.keys(S.amieDecor || {}).forEach((k) => out.add(k));
 	Object.keys(S.curry || {}).forEach((k) => out.add(k));
 	Object.keys(S.sandwich || {}).forEach((k) => out.add(k));
 	Object.keys(S.sticker || {}).forEach((k) => out.add(k));
@@ -385,6 +398,7 @@ export function getAllGameKeys() {
 	addFromMap(store.dexFormsStatus);
 	addFromMap(store.fashionStatus);
 	addFromMap(store.fashionFormsStatus);
+	addFromMap(store.amieDecorStatus);
 	addFromMap(store.curryStatus);
 	addFromMap(store.curryFormsStatus);
 	addFromMap(store.sandwichStatus);
@@ -427,6 +441,14 @@ store.getTaskState = function (taskId) {
 					type: "tiered",
 					currentTier: Number(node.currentTier || 0),
 					currentCount: Number(node.currentCount || 0),
+				};
+			}
+			if (Array.isArray(node.multi) && node.multi.length) {
+				return {
+					type: "multi",
+					selected: node.multi
+						.filter((option) => !!option?.done)
+						.map((option) => String(option.id)),
 				};
 			}
 			return { type: "check", done: !!node.done };
@@ -562,6 +584,7 @@ store.setGameStarted = function (gameKey, started) {
 		"dexFormsStatus",
 		"fashionStatus",
 		"fashionFormsStatus",
+		"amieDecorStatus",
 		"dexResearchStatus",
 		"distributionsStatus",
 		"curryStatus",
@@ -591,6 +614,7 @@ store.setGameStarted = function (gameKey, started) {
 				store.dexFormsStatus = new Map();
 				store.fashionStatus = new Map();
 				store.fashionFormsStatus = new Map();
+				store.amieDecorStatus = new Map();
 				store.distributionsStatus = new Map();
 				store.dexResearchStatus = new Map();
 				store.curryStatus = new Map();

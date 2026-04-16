@@ -35,6 +35,15 @@ export const elements = {
 	get fashionClearAll() { return document.getElementById("fashionClearAll"); },
 	get fashionModalTitle() { return document.getElementById("fashionModalTitle"); },
 
+	// Poke-Amie decorations modal
+	get amieDecorModal() { return document.getElementById("amieDecorModal"); },
+	get amieDecorModalClose() { return document.getElementById("amieDecorModalClose"); },
+	get amieDecorGrid() { return document.getElementById("amieDecorGrid"); },
+	get amieDecorSearch() { return document.getElementById("amieDecorSearch"); },
+	get amieDecorSelectAll() { return document.getElementById("amieDecorSelectAll"); },
+	get amieDecorClearAll() { return document.getElementById("amieDecorClearAll"); },
+	get amieDecorModalTitle() { return document.getElementById("amieDecorModalTitle"); },
+
 	// Medal modal
 	get medalsModal() { return document.getElementById("medalsModal"); },
 	get medalsModalClose() { return document.getElementById("medalsModalClose"); },

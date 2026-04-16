@@ -127,7 +127,15 @@ export function bootstrapTasks(sectionId, tasksStore, { indexSectionTasks, index
 			for (const t of arr || []) {
 				if (!t?.id) continue;
 				const k = String(t.id);
-				if (storeRef.taskProgressById.has(k)) t.done = !!storeRef.taskProgressById.get(k);
+				if (storeRef.taskProgressById.has(k)) {
+					const nextDone = !!storeRef.taskProgressById.get(k);
+					t.done = nextDone;
+					if (Array.isArray(t.multi)) {
+						t.multi.forEach((option) => {
+							if (option && typeof option === "object") option.done = nextDone;
+						});
+					}
+				}
 				if (Array.isArray(t.children)) walk(t.children);
 			}
 		})(tasksArr);
@@ -170,6 +178,25 @@ export function bootstrapTasks(sectionId, tasksStore, { indexSectionTasks, index
 					if (Array.isArray(s.dexSync) && !Array.isArray(t.dexSync)) { t.dexSync = [...s.dexSync]; changed = true; }
 					if (Array.isArray(s.fashionSync) && !Array.isArray(t.fashionSync)) { t.fashionSync = [...s.fashionSync]; changed = true; }
 					if (Array.isArray(s.tiers) && !Array.isArray(t.tiers)) { t.tiers = [...s.tiers]; changed = true; }
+					if (Array.isArray(s.multi)) {
+						const seedMulti = s.multi;
+						if (!Array.isArray(t.multi)) {
+							t.multi = JSON.parse(JSON.stringify(seedMulti));
+							changed = true;
+						} else {
+							for (const seedOpt of seedMulti) {
+								if (!seedOpt || typeof seedOpt !== "object") continue;
+								const key = String(seedOpt.id);
+								let targetOpt = t.multi.find((opt) => String(opt?.id) === key);
+								if (!targetOpt) {
+									t.multi.push(JSON.parse(JSON.stringify(seedOpt)));
+									changed = true;
+									continue;
+								}
+								if (seedOpt.text && !targetOpt.text) { targetOpt.text = seedOpt.text; changed = true; }
+							}
+						}
+					}
 					if (s.eithers) {
 						const seedEither = s.eithers;
 						if (!t.eithers || typeof t.eithers !== "object") {
@@ -221,6 +248,10 @@ export function bootstrapTasks(sectionId, tasksStore, { indexSectionTasks, index
 		unit: t.unit || null,
 		currentTier: typeof t.currentTier === "number" ? t.currentTier : 0,
 		currentCount: typeof t.currentCount === "number" ? t.currentCount : 0,
+		multi: Array.isArray(t.multi) ? t.multi.map((opt) => ({
+			...opt,
+			done: !!opt?.done,
+		})) : undefined,
 		eithers: t.eithers ? JSON.parse(JSON.stringify(t.eithers)) : undefined,
 		tooltip: t.tooltip || null,
 		noCenter: !!t.noCenter,

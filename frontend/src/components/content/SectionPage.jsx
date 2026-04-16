@@ -44,6 +44,11 @@ async function ensureSectionModalApis() {
     window.PPGC.fashionApi = wireFashionModal(store, elements);
   }
 
+  if (!window.PPGC.amieDecorApi) {
+    const { wireAmieDecorModal } = await import('../../modals/amie-decor.js');
+    window.PPGC.amieDecorApi = wireAmieDecorModal(store, elements);
+  }
+
   if (!window.PPGC.medalsApi) {
     const { wireMedalsModal } = await import('../../modals/medal.js');
     window.PPGC.medalsApi = wireMedalsModal(store, elements);

@@ -9,13 +9,17 @@ import {
 	eitherSyncView,
 	formatTierTooltip,
 	getEitherChoice,
+	getMultiCheckedCount,
+	getMultiOptions,
 	getTierMetaForTask,
 	getTierSteps,
 	isEitherTask,
+	isMultiTask,
 	isTieredTask,
 	resolveTaskImageSrcs,
 	setDescendantsDone,
 	setEitherChoice,
+	setMultiOptionDone,
 } from '../../react-bridge/taskApi.js';
 
 const TOOLTIP_MARKER_SRC = _ball(4, 'poke-ball');
@@ -179,6 +183,55 @@ function EitherChoices({ task, onChange }) {
 	);
 }
 
+function MultiChoices({ task, onToggle }) {
+	const options = getMultiOptions(task);
+	const checkedCount = getMultiCheckedCount(task);
+
+	return (
+		<div className="task-either" data-multi="1">
+			{options.map((option) => {
+				const key = String(option.id);
+				const active = !!option.done;
+				const rawText = typeof option?.text === 'string' ? option.text : '';
+				const text = rawText.trim();
+
+				return (
+					<span
+						key={`${task.id}-${key}`}
+						className={`task-either-choice${active ? ' either-active' : ''}`}
+						data-option-key={key}
+						role="button"
+						tabIndex={0}
+						aria-pressed={active}
+						onClick={(event) => {
+							event.preventDefault();
+							event.stopPropagation();
+							onToggle(key, !active);
+						}}
+						onKeyDown={(event) => {
+							if (event.key !== 'Enter' && event.key !== ' ') return;
+							event.preventDefault();
+							onToggle(key, !active);
+						}}
+					>
+						<input
+							type="checkbox"
+							className="task-either-cb"
+							data-option-key={key}
+							checked={active}
+							readOnly
+						/>
+						{text ? <span className="small">{text}</span> : null}
+					</span>
+				);
+			})}
+			<div className="small" style={{ opacity: 0.7, width: '100%', textAlign: 'center' }}>
+				{checkedCount}/{options.length}
+			</div>
+		</div>
+	);
+}
+
 function TieredControls({ task, onInputCommit, onChangeCommit }) {
 	const meta = getTierMetaForTask(task);
 	const steps = meta.steps;
@@ -210,7 +263,8 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 	const tooltipRef = useTaskTooltip(task, sectionId);
 	const hasSlider = isTieredTask(task);
 	const isEither = isEitherTask(task);
-	const isStandardToggleTask = !isEither && !hasSlider;
+	const isMulti = isMultiTask(task);
+	const isStandardToggleTask = !isEither && !isMulti && !hasSlider;
 
 	const commit = ({ syncTask = null, syncValue = null } = {}) => {
 		recomputeAncestorDone(task, index);
@@ -256,6 +310,11 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 		onMutate?.();
 	};
 
+	const handleMultiToggle = (optionKey, checked) => {
+		setMultiOptionDone(task, optionKey, checked);
+		commit({ syncTask: task, syncValue: !!task.done });
+	};
+
 	const handleTierInput = (nextTier) => {
 		task.currentTier = nextTier;
 		task.done = nextTier >= getTierSteps(task);
@@ -285,7 +344,7 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 		isStandardToggleTask ? 'task-toggleable' : '',
 	].filter(Boolean).join(' ');
 
-	const bodyClassName = `task-item-body${isEither ? ' task-either-wrap' : ''}`;
+	const bodyClassName = `task-item-body${(isEither || isMulti) ? ' task-either-wrap' : ''}`;
 
 	const imageWrap = <div className={`task-item-img-wrap${(!isSubtask && (hasChildren || forceInline)) ? ' inline' : ''}`}><TaskSpriteList task={task} sectionId={sectionId} /></div>;
 
@@ -302,6 +361,13 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 			<TaskLabel task={task} className="small task-item-text task-either-title" dataId={task.id} />
 			<div className="task-either-center">
 				<EitherChoices task={task} onChange={handleEitherChange} />
+			</div>
+		</>
+	) : isMulti ? (
+		<>
+			<TaskLabel task={task} className="small task-item-text task-either-title" dataId={task.id} />
+			<div className="task-either-center">
+				<MultiChoices task={task} onToggle={handleMultiToggle} />
 			</div>
 		</>
 	) : (
@@ -336,6 +402,13 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 					<TaskLabel task={task} className="small task-item-text task-either-title" style={{ width: '100%', textAlign: 'center' }} />
 					<div className="task-either-center" style={{ width: '100%' }}>
 						<EitherChoices task={task} onChange={handleEitherChange} />
+					</div>
+				</>
+			) : isMulti ? (
+				<>
+					<TaskLabel task={task} className="small task-item-text task-either-title" style={{ width: '100%', textAlign: 'center' }} />
+					<div className="task-either-center" style={{ width: '100%' }}>
+						<MultiChoices task={task} onToggle={handleMultiToggle} />
 					</div>
 				</>
 			) : (
