@@ -8,6 +8,7 @@ import {
 	buildTaskIndex,
 	eitherSyncView,
 	formatTierTooltip,
+	getDefaultEitherChoice,
 	getEitherChoice,
 	getMultiCheckedCount,
 	getMultiOptions,
@@ -28,24 +29,32 @@ function hasTooltip(task) {
 	return typeof task?.tooltip === 'string' ? task.tooltip.trim().length > 0 : !!task?.tooltip;
 }
 
+function shouldShowTierTooltip(task) {
+	const meta = getTierMetaForTask(task);
+	if (meta.mode === 'label') return false;
+	const nums = Array.isArray(meta.values) ? meta.values.filter((value) => Number.isFinite(value)) : [];
+	if (nums.length < 2) return false;
+	const diffs = [];
+	for (let index = 1; index < nums.length; index += 1) diffs.push(nums[index] - nums[index - 1]);
+	return !diffs.every((diff) => diff === 1);
+}
+
 function getTaskTooltipHtml(task) {
 	const tiered = isTieredTask(task) && Array.isArray(task?.tiers);
 
 	if (tiered) {
-		const thresholds = formatTierTooltip(task);
+		const thresholds = shouldShowTierTooltip(task) ? formatTierTooltip(task) : '';
 		if (task.tooltip) {
 			return `
             <div>${task.tooltip}</div>
-            <div style="margin-top:0.05rem;"></div>
-            <div>Tiers: ${thresholds}</div>
+            ${thresholds ? `<div style="margin-top:0.05rem;"></div><div>Tiers: ${thresholds}</div>` : ''}
           `;
 		}
 
 		return `
-          <div><strong>${task.text}</strong></div>
-          <div style="margin-top:0.05rem;"></div>
-          <div>Tiers: ${thresholds}</div>
-        `;
+            <div><strong>${task.text}</strong></div>
+            ${thresholds ? `<div style="margin-top:0.05rem;"></div><div>Tiers: ${thresholds}</div>` : ''}
+          `;
 	}
 
 	if (task.tooltip) return task.tooltip;
@@ -84,6 +93,43 @@ function recomputeAncestorDone(task, index) {
 function persistSectionTasks(sectionId, rootTasks) {
 	store.tasksStore.set(sectionId, rootTasks);
 	save();
+}
+
+function syncEitherChoicesInTree(task, checked) {
+	const changes = [];
+
+	const visit = (node) => {
+		if (!node) return;
+
+		if (isEitherTask(node)) {
+			const prevChoice = getEitherChoice(node.id);
+			const nextChoice = checked ? (prevChoice ?? getDefaultEitherChoice(node)) : null;
+			const prevStr = prevChoice == null ? null : String(prevChoice);
+			const nextStr = nextChoice == null ? null : String(nextChoice);
+
+			node.done = !!nextChoice;
+
+			if (prevStr !== nextStr) {
+				setEitherChoice(node.id, nextChoice);
+				changes.push({ task: node, prevChoice, nextChoice });
+			}
+		}
+
+		for (const child of Array.isArray(node.children) ? node.children : []) visit(child);
+	};
+
+	visit(task);
+	return changes;
+}
+
+function applyEitherChoiceSyncChanges(changes) {
+	for (const { task, prevChoice, nextChoice } of changes) {
+		const prevStr = prevChoice == null ? null : String(prevChoice);
+		const nextStr = nextChoice == null ? null : String(nextChoice);
+		if (prevStr === nextStr) continue;
+		if (prevChoice != null) applySyncsFromTask(eitherSyncView(task, prevChoice), false);
+		if (nextChoice != null) applySyncsFromTask(eitherSyncView(task, nextChoice), true);
+	}
 }
 
 function useTaskTooltip(task, sectionId) {
@@ -157,6 +203,7 @@ function EitherChoices({ task, onChange }) {
 						role="button"
 						tabIndex={0}
 						onClick={(event) => {
+							if (event.target.closest('input.task-either-cb')) return;
 							event.preventDefault();
 							event.stopPropagation();
 							onChange(active ? null : key);
@@ -173,7 +220,11 @@ function EitherChoices({ task, onChange }) {
 							data-option-key={String(key)}
 							checked={active}
 							disabled={disabled}
-							readOnly
+							onClick={(event) => event.stopPropagation()}
+							onChange={(event) => {
+								event.stopPropagation();
+								onChange(event.currentTarget.checked ? key : null);
+							}}
 						/>
 						{text ? <span className="small">{text}</span> : null}
 					</span>
@@ -235,12 +286,12 @@ function MultiChoices({ task, onToggle }) {
 function TieredControls({ task, onInputCommit, onChangeCommit }) {
 	const meta = getTierMetaForTask(task);
 	const steps = meta.steps;
-	const value = Math.max(0, Math.min(Number(task.currentTier ?? 0), steps));
+	const value = clampTierValue(task.currentTier ?? 0, steps);
 	const display = meta.mode === 'label' ? (value === 0 ? '—' : meta.values[value - 1] || '—') : `${value}/${steps}`;
 
 	return (
 		<>
-			<div className="tiered-percent">{display}</div>
+			<TieredValueDisplay task={task} onInputCommit={onInputCommit} onChangeCommit={onChangeCommit} />
 			<div className="tiered">
 				<div className="tiered-line">
 					<input
@@ -275,6 +326,8 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 	};
 
 	const handleCheckboxChange = (checked) => {
+		const eitherChoiceChanges = hasChildren ? syncEitherChoicesInTree(task, checked) : [];
+
 		if (hasChildren) {
 			setDescendantsDone(task, checked);
 		} else if (hasSlider) {
@@ -285,6 +338,7 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 		}
 
 		commit({ syncTask: task, syncValue: checked });
+		applyEitherChoiceSyncChanges(eitherChoiceChanges);
 	};
 
 	const handleEitherChange = (nextChoice) => {
@@ -316,16 +370,18 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 	};
 
 	const handleTierInput = (nextTier) => {
-		task.currentTier = nextTier;
-		task.done = nextTier >= getTierSteps(task);
+		const clamped = clampTierValue(nextTier, getTierSteps(task));
+		task.currentTier = clamped;
+		task.done = clamped >= getTierSteps(task);
 		recomputeAncestorDone(task, index);
 		onMutate?.();
 	};
 
 	const handleTierCommit = (nextTier) => {
-		task.currentTier = nextTier;
-		task.done = nextTier >= getTierSteps(task);
-		commit({ syncTask: task, syncValue: nextTier > 0 });
+		const clamped = clampTierValue(nextTier, getTierSteps(task));
+		task.currentTier = clamped;
+		task.done = clamped >= getTierSteps(task);
+		commit({ syncTask: task, syncValue: clamped > 0 });
 	};
 
 	const handleItemClick = (event) => {
@@ -384,10 +440,11 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 
 	if (isInline) {
 		return (
-			<div ref={tooltipRef} className={itemClassName} data-task-id={task.id} id={`task-${task.id}`} onClick={handleItemClick}>
+			<div ref={tooltipRef} className={`${itemClassName}${noCenterSlider ? ' no-center-slider' : ''}`} data-task-id={task.id} id={`task-${task.id}`} onClick={handleItemClick}>
 				{isSubtask || (!hasChildren && !forceInline) ? imageWrap : null}
 				<label className={bodyClassName}>
 					{textBlock}
+					{noCenterSlider ? <TieredValueDisplay task={task} className="tiered-percent-inline" onInputCommit={handleTierInput} onChangeCommit={handleTierCommit} /> : null}
 					{!isSubtask && (hasChildren || forceInline) ? imageWrap : null}
 				</label>
 				{tieredControls}

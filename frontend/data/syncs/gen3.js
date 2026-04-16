@@ -58,11 +58,11 @@ defineSyncsMany([...GAME_KEYS1, ...GAME_KEYS2], ({ taskSync, eitherTaskSync, reg
 	{ name: "Master all Contests", members: [taskSync("activities", 1), taskSync("upgrades", 2, 2),], },
 	{ name: "Pretty Chair", members: [taskSync("collectables", 2, 1), taskSync("collectables", 4, 13),], },
 	{ name: "Pretty Desk", members: [taskSync("collectables", 2, 2), taskSync("collectables", 4, 6),], },
-	{ name: "Obtain Jirachi", members: [taskSync("extra-credit", 1), regionalSync(201), nationalSync(385)], },
+	{ name: "Obtain Jirachi", members: [taskSync("extra-credit", 1, 1), regionalSync(201), nationalSync(385)], },
 ]);
 
 defineSyncsMany(GAME_KEYS1, ({ taskSync, eitherTaskSync, regionalSync, nationalSync }) => [
-	{ name: "Obtain Deoxys", members: [taskSync("extra-credit", 2), regionalSync(202, "Normal"), nationalSync(386, "Normal")], },
+	{ name: "Obtain Deoxys", members: [taskSync("extra-credit", 1, 2), regionalSync(202, "Normal"), nationalSync(386, "Normal")], },
 ]);
 defineSyncsMany(GAME_KEYS4, ({ taskSync, regionalSync, nationalSync }) => [
 	{ name: "Kecleon Encounters", members: [taskSync("catching", 4, 1), regionalSync(145, { oneWay: true }), nationalSync(352, { oneWay: true })], },
@@ -74,7 +74,7 @@ defineSyncsMany(GAME_KEYS2, ({ taskSync, eitherTaskSync, regionalSync, nationalS
 	{ name: "Catch Lugia", members: [taskSync("catching", 1, 9), nationalSync(249, { oneWay: true })], },
 	{ name: "Catch Ho-Oh", members: [taskSync("catching", 1, 10), nationalSync(250, { oneWay: true })], },
 
-	{ name: "Obtain Deoxys", members: [taskSync("extra-credit", 2), regionalSync(202, "Speed"), nationalSync(386, "Speed")], },
+	{ name: "Obtain Deoxys", members: [taskSync("extra-credit", 1, 2), regionalSync(202, "Speed"), nationalSync(386, "Speed")], },
 ]);
 
 defineSyncsMany(GAME_KEYS3, ({ taskSync, eitherTaskSync, regionalSync, nationalSync }) => [
@@ -185,5 +185,5 @@ defineSyncsMany(GAME_KEYS3, ({ taskSync, eitherTaskSync, regionalSync, nationalS
 
 	{ name: "Defeat E4", members: [taskSync("story", 1), taskSync("upgrades", 2, 1),], },
 
-	{ name: "Obtain Mew", members: [taskSync("extra-credit", 1), regionalSync(151), nationalSync(151)], },
+	{ name: "Obtain Mew", members: [taskSync("extra-credit", 1, 1), regionalSync(151), nationalSync(151)], },
 ]);

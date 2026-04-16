@@ -24,8 +24,8 @@ defineSyncsMany(GAME_KEYS, ({ taskSync, eitherTaskSync, regionalSync }) => [
 	{ name: "Defeat Blue", members: [taskSync("story", 2, 2, { oneWay: true }), taskSync("story", 3, 8),], },
 	{ name: "Defeat Blaine", members: [taskSync("story", 2, 3), taskSync("story", 3, 7),], },
 
-	{ name: "Obtain Mew", members: [taskSync("extra-credit", 1), regionalSync(250),], },
-	{ name: "Obtain Celebi", members: [taskSync("extra-credit", 2), regionalSync(251),], },
+	{ name: "Obtain Mew", members: [taskSync("extra-credit", 1, 1), regionalSync(250),], },
+	{ name: "Obtain Celebi", members: [taskSync("extra-credit", 1, 2), regionalSync(251),], },
 ]);
 
 defineSyncsMany([GAME_KEYS[0], GAME_KEYS[1]], ({ taskSync, eitherTaskSync, regionalSync }) => [

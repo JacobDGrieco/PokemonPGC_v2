@@ -49,6 +49,7 @@ import {
 		],
 		"extra-credit": [
 			[P(1)],
+			[C(1, 1)],
 		],
 	};
 

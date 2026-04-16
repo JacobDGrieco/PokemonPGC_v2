@@ -99,14 +99,14 @@ import {
 					{ id: 3, text: "Cute Painting", img: () => ribbon("cute-master") },
 					{ id: 4, text: "Cool Painting", img: () => ribbon("cool-master") },
 					{ id: 5, text: "Smart Painting", img: () => ribbon("smart-master") },
-					{ id: 6, text: "Receive the Glass Ornament", img: () => decoration("glass-ornament") },
+					{ id: 6, text: "Get the Glass Ornament", img: () => decoration("glass-ornament") },
 				],
 			},
 			{ id: 3, text: "Complete all chambers of the Trick House", type: "tiered", tiers: [range(1, 8)], },
 		],
 		"battle": [
-			{ id: 1, text: "Master the Battle Tower", noCenter: true, type: "tiered", tiers: ["Singles", "Doubles", "Multi"], },
-			{ id: 2, text: "Defeat the Winstrate Household", noCenter: true },
+			{ id: 1, text: "Master the Battle Tower", type: "tiered", tiers: ["Singles", "Doubles", "Multi"], },
+			{ id: 2, text: "Defeat the Winstrate Household" },
 		],
 		"upgrades": [
 			{ id: 1, text: "Obtain the National PokeDex", noCenter: true },
@@ -323,10 +323,14 @@ import {
 			},
 		],
 		"extra-credit": [
-			{ id: 1, text: "Obtain Jirachi", img: ({ gameKey }) => baseSprite(gameKey, 385), },
-			{ id: 2, text: "Obtain Deoxys", img: ({ gameKey }) => baseSprite(gameKey, 386), },
 			{
-				id: 3, text: "Obtain all Secret Base e-Reader decorations", children: [
+				id: 1, text: "Obtain all Mythical Pokemon", children: [
+					{ id: 1, text: "Jirachi", img: ({ gameKey }) => baseSprite(gameKey, 385), },
+					{ id: 2, text: "Deoxys", img: ({ gameKey }) => baseSprite(gameKey, 386), },
+				],
+			},
+			{
+				id: 2, text: "Obtain all Secret Base e-Reader decorations", children: [
 					{ id: 1, text: "Regirock Doll", img: () => decoration("regirock-doll"), tooltip: "Mystery Event (e-Reader)" },
 					{ id: 2, text: "Regice Doll", img: () => decoration("regice-doll"), tooltip: "Mystery Event (e-Reader)" },
 					{ id: 3, text: "Registeel Doll", img: () => decoration("registeel-doll"), tooltip: "Mystery Event (e-Reader)" },

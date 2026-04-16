@@ -10,40 +10,41 @@ const PPGC = ensurePpgcRoot();
 let _tooltipsDisabled = false;
 
 export {
-  renderTaskLayout,
-  renderTaskList,
-  renderTieredControls,
-  renderEitherHTML,
-  wireEitherUI,
-  ensureSections,
-  buildTaskIndex,
-  buildTaskLayoutGroups,
-  buildTaskLayoutMeta,
-  getTierMetaForTask,
-  getTierSteps,
-  formatTierTooltip,
-  isEitherTask,
-  isMultiTask,
-  isTieredTask,
-  setDescendantsDone,
-  getEitherChoice,
-  getMultiCheckedCount,
-  getMultiOptions,
-  setEitherChoice,
-  setMultiOptionDone,
-  eitherSyncView,
-  bootstrapTasks,
-  unloadSectionTasks,
-  applySyncsFromTask,
-  resolveTaskImageSrcs,
-  attachTooltip,
-  resolveAccentForSection,
+	renderTaskLayout,
+	renderTaskList,
+	renderTieredControls,
+	renderEitherHTML,
+	wireEitherUI,
+	ensureSections,
+	buildTaskIndex,
+	buildTaskLayoutGroups,
+	buildTaskLayoutMeta,
+	getTierMetaForTask,
+	getTierSteps,
+	formatTierTooltip,
+	isEitherTask,
+	isMultiTask,
+	isTieredTask,
+	setDescendantsDone,
+	getEitherChoice,
+	getMultiCheckedCount,
+	getMultiOptions,
+	setEitherChoice,
+	setMultiOptionDone,
+	eitherSyncView,
+	getDefaultEitherChoice,
+	bootstrapTasks,
+	unloadSectionTasks,
+	applySyncsFromTask,
+	resolveTaskImageSrcs,
+	attachTooltip,
+	resolveAccentForSection,
 };
 
 PPGC.disableTaskTooltips = function () {
-  _tooltipsDisabled = true;
-  hideTooltip();
+	_tooltipsDisabled = true;
+	hideTooltip();
 };
 PPGC.enableTaskTooltips = function () {
-  _tooltipsDisabled = false;
+	_tooltipsDisabled = false;
 };

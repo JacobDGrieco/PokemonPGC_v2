@@ -111,7 +111,7 @@ function showTooltipForTarget(targetEl, html) {
   el.dataset.placement = placement;
 
   if (PPGC._tooltipHideTimer) clearTimeout(PPGC._tooltipHideTimer);
-  PPGC._tooltipHideTimer = window.setTimeout(hideTooltip, TOOLTIP_AUTOHIDE_MS);
+  PPGC._tooltipHideTimer = 0;
 }
 
 export function attachTooltip(el, getHtml) {

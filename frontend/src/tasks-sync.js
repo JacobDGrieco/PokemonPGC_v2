@@ -141,7 +141,7 @@ export function applySyncsFromTask(sourceTask, value) {
 		if (!sid && sourceTask?.id) sid = _globalTaskIndex().get(String(sourceTask.id))?.sectionId || null;
 		const gk = sid ? gameKeyFromSection(sid) : null;
 		if (gk) ensureSyncSetsExpandedForGame(gk);
-	} catch {}
+	} catch { }
 	const store = window.PPGC?._storeRef;
 	const taskTargets = new Map();
 	const dexLinks = [];
@@ -176,7 +176,7 @@ export function applySyncsFromTask(sourceTask, value) {
 			let targetGameKey;
 			if (t === "national") targetGameKey = `${game}-national`;
 			else if (t === "regional") targetGameKey = game;
-			else if (["central","coastal","mountain","melemele","akala","ulaula","poni"].includes(t)) targetGameKey = `${game}-${t}`;
+			else if (["central", "coastal", "mountain", "melemele", "akala", "ulaula", "poni"].includes(t)) targetGameKey = `${game}-${t}`;
 			else {
 				const candidate = `${game}-${t}`;
 				targetGameKey = (window.DATA?.dex && window.DATA.dex[candidate]) ? candidate : game;
@@ -282,7 +282,7 @@ export function applySyncsFromTask(sourceTask, value) {
 	}
 	const isModalOpen = !!window.PPGC?._storeRef?.state?.dexModalFor;
 	if (!isModalOpen) {
-		try { window.PPGC?.renderAll?.(); } catch {}
+		try { window.PPGC?.renderAll?.(); } catch { }
 	}
 }
 

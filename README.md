@@ -4,7 +4,7 @@ _Pokémon Post-Game Checklist, Dex Tracker, and Data Hub_
 
 > **Unofficial fan project.** Pokémon and all related names/images are trademarks of The Pokémon Company, Nintendo, Game Freak, etc. This is a personal hobby tool with no commercial affiliation.
 
-> **PROJECT IS STILL WIP!!!** I'm currently working to add all data for each game, but the general idea is pretty much done. Commits will be pretty often as I'm adding the data, fixing little bugs I notice, changing things around, and adding new features. Once all data is added properly and I don't notice any bugs, an official release will be created.
+> **PROJECT IS STILL WIP!!!** I'm currently working to add all data for each game, but the general idea is pretty much done. Commits will be pretty often as I'm adding the data, fixing little bugs I notice, and changing things around. Once all data is added properly, I don't notice any bugs, and I get everything implemented, an official release will be created.
 
 ---
 
@@ -21,23 +21,17 @@ _Pokémon Post-Game Checklist, Dex Tracker, and Data Hub_
   - [Dex Sync (Regional ↔ National)](#dex-sync-regional--national)
 - [Data Model (High Level)](#data-model-high-level)
 - [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure-conceptual)
-- [Getting Started](#getting-started)
-  - [Frontend-Only](#1-frontend-only-local-checklist)
-  - [Full Backend Setup](#2-full-setup-with-backend-accounts--cloud-backup)
-- [Save / Backup Options](#save--backup-options)
-- [Self-Hosting Tips](#self-hosting-tips)
+- [Project Structure](#project-structure)
 - [Roadmap / Ideas](#roadmap--ideas)
-- [Contributing / Customizing](#contributing--customizing)
 - [Legal](#legal)
 
 ---
 
 ## Overview
 
-**PokemonPGC** (Pokémon Post-Game Checklist) is a web app that helps you track virtually everything across your Pokémon games:
+**PokemonPGC** (PokÃ©mon Post-Game Checklist) is a web app that helps you track virtually everything across your PokÃ©mon games:
 
-- Main story & post‑game checklists per game
+- Main story & post-game checklists per game
 - Regional & national Pokédex completion
 - Forms, gender differences, shiny / alpha variants
 - Sidequests, research tasks, trades, gifts, rankings
@@ -78,7 +72,7 @@ The app is designed to run entirely in the browser (using localStorage) **or** w
 
 ### Tasks, Sidequests & Research
 
-- Rich tracking beyond “beat the game”:
+- Rich tracking beyond "beat the game":
   - Sidequests, unique encounters, etc.
   - Research/task-based systems (e.g. Legends-style research entries).
   - Trades, gift Pokémon, rankings, and special events.
@@ -254,19 +248,16 @@ The project is heavily data-driven. Basically all content is defined in JS data 
 
 **Frontend**
 
-- Plain **HTML, CSS, and JavaScript** (no big frontend framework).
-- Custom modules for:
-  - Sidebar & tab navigation
-  - Global store and persistence
-  - Dex & radial layouts
-  - Distributions, fashion, and other feature UIs
-- Uses **localStorage** for offline/guest saves.
-- Also has an optional **local backup** menu for saving data to **json** files for an extra layer of saving.
+- **Vite** + **React 18** app shell.
+- A hybrid frontend made up of:
+  - React components for the main app shell, routing, sidebar, content views, and newer modals
+  - Existing vanilla JS modules that still power parts of the runtime, store, task rendering, and modal systems
+- Plain CSS stylesheets plus React-driven UI composition
 
 **API / Sync Layer (Optional)**
 
 - **Node.js API routes** under `frontend/api`.
-- **Prisma** ORM with a relational database (SQLite/Postgres/etc.).
+- **Prisma** ORM with a relational database backend.
 - Provides:
   - Account system (sign up / login)
   - Progress backup & restore via `/progress` and other endpoints
@@ -275,37 +266,43 @@ The frontend works fully standalone, but connecting the backend enables multi-de
 
 ---
 
-## Project Structure (Conceptual)
+## Project Structure
 
-Actual layout may differ, but the core idea:
+Current high-level structure:
 
 ```text
 PokemonPGC/
   	frontend/
-		index.html               	# App entry point
-		api.js						# Backend chatting
-		data/						# Per-Game data
-			data.js               	# initialization for titles
-			bootstrap.js			# Hub for data file imports
-			distributions/...		# Any internet/serial-code/IRL events distribution
-			fashion/...				# Any collectable fashion item
-			layouts/...				# Layouts for tasks/subtasks
-			natidexs/...			# All Pokemon in a game's National Dex
-			regidexs/...			# All Pokemon in a game's Regional Dex
-			tasks/...				# All sections and tasks
-		dist/...					# Files to bundling site for better performance
+		index.html               	# Vite HTML entry
+		vite.config.js				# Vite config + /api proxy behavior
+		api.js						# Frontend API helpers
+		data/						# Per-game data and registries
+			data.js               	# Initialization for titles / tabs / games
+			bootstraps/...			# Generation and game bootstrap wiring
+			distributions/...		# Internet / serial-code / IRL event data
+			fashion/...				# Collectible fashion data
+			layouts/...				# Layout definitions for sections and tasks
+			mon_info/...			# Pokemon info data files
+			natidexs/...			# National dex data
+			regidexs/...			# Regional dex data
+			tasks/...				# Checklist sections and tasks
 		fonts/...					# Pokemon themed fonts for possible use
-		imgs/...					# All images used for the site
 		src/
-			modals/...
-			ui/...
+			App.jsx
+			main.jsx				# React entry point
+			components/...			# React shell, sidebar, content, and modal components
+			hooks/...				# React hooks
+			modals/...				# Dex, model viewer, and modal logic
+			react-bridge/...		# Bridge layer into legacy runtime/state
+			runtime/...				# Runtime globals / UI globals
+			ui/...					# Existing UI helpers still in use
 			index.js
 			persistence.js
 			progress.js
 			registry.js
 			store.js
 			tasks.js
-		styles/...					# All CSS styling for elements
+		styles/...					# CSS styling
 		api/
 			auth/...
 			progress/...
@@ -315,94 +312,10 @@ PokemonPGC/
 			schema.prisma
 		scripts/
 			api-dev-server.mjs      # Local adapter for /api during Vite dev
+			write-dist-env.mjs      # Writes runtime env values into dist output
 ```
 
----
-
-## Getting Started
-
-### 1. Frontend-Only (Local Checklist)
-
-This is the easiest way to use PokemonPGC for personal tracking.
-
-1. Clone or download the repository.
-2. Ensure the images folder contains the required sprites/icons.
-3. Open `index.html` in your browser:
-   - Double-click it, or
-   - Serve the folder with a simple HTTP server (`python -m http.server`, etc.).
-4. Your progress is automatically stored in **localStorage**.
-
-> This mode requires no backend or database.
-
-### 2. Full Setup with API + Database (Accounts & Cloud Backup)
-
-To enable account login and server-side backups:
-
-1. **Install dependencies** from the repo root:
-
-   ```bash
-   npm install
-   ```
-
-2. **Configure environment variables**:
-
-   - Create `frontend/.env` from `frontend/.env.example`.
-   - Set at least:
-      ```dotenv
-      DB_DATABASE_URL="your_database_connection_string_here"
-      DB_DATABASE_URL_UNPOOLED="your_direct_database_connection_string_here"
-      AUTH_SECRET="your_long_random_secret_here"
-      ```
-
-3. **Sync the database schema via Prisma**:
-
-   ```bash
-   npm run prisma:push --workspace=frontend
-   ```
-
-   This ensures both `User` and `GameSave` exist before you test cloud saves.
-
-4. **Start local app + API together**:
-
-   ```bash
-   npm run dev
-   ```
-
-5. Open the Vite URL shown in the terminal and use the login UI.
-   - Vite proxies `/api` to the local API adapter server.
-   - On login, the app fetches any existing cloud save and writes updates back through the same API routes used in production.
-
-If the API/database is offline, the app continues to function using localStorage only.
-The production/frontend build also runs `prisma db push` before bundling so Vercel/local builds keep the schema in sync.
-
----
-
-## Save / Backup Options
-
-PokemonPGC supports several layers of saving:
-
-1. **LocalStorage (always enabled)**
-
-   - Stores your progress per browser/device.
-
-2. **Manual Export/Import**
-
-   - Export your progress to a JSON (or zipped) file.
-   - Import a file to restore/migrate your save.
-
-3. **Server Backup (optional)**
-   - When logged in, progress is synced to the database via API.
-   - Signing in on another device can restore your save from the server.
-
----
-
-## Self-Hosting Tips
-
-- Lightweight enough for a **Raspberry Pi 5** or similar (Possibly smaller, but untested).
-- You can:
-  - Run the app plus database on the device.
-  - Serve the frontend and API together through the same deployment.
-- With a VPN solution like Tailscale, you can access your instance from other devices while keeping it private.
+This is currently a hybrid React + legacy-runtime codebase. React now owns the main app shell and more of the UI surface, while the older modules still provide a lot of the task, persistence, modal, and store behavior.
 
 ---
 
@@ -410,65 +323,21 @@ PokemonPGC supports several layers of saving:
 
 These are not guaranteed, but are on the conceptual wishlist:
 
+- Pull more Pokemon species/form/info data from PokeAPI instead of hardcoding everything by hand
+- Add manual input/info sections for things that do not fit neatly into dex or checklist flows
+- Expand the model viewer into a more complete feature instead of just a side utility
+- Walkthroughs, guides, and other helpful in-app reference material
+- Better connections between tasks, dex entries, collectibles, and Pokemon info pages
 - Save-file parsing:
   - Upload `.sav` / `.bin` / `main` files.
-  - Decode hex to auto-fill dex, tasks, and event flags (per-game, format-dependent).
-- More detailed modules:
-  - Battle facility tracking, contest tracking, etc.
-- Aggregated “global stats” once multi-user usage is common.
+  - Decode hex values to auto-fill dex, tasks, and event flags (per-game, format-dependent).
+- Aggregated global stats once a usebase is established.
 - Descriptive tooltips for locations/guides
-- Helpful links to other websites for guides/other info
 
 ---
-
-## Contributing / Customizing
-
-### Adding a New Game
-
-1. Add a new `gameKey` and configuration to `/data/data.js`.
-2. Create corresponding data files in `/data`:
-   - Checklist tasks
-   - Regional dex (+ any dexSync entries)
-   - Optional modules: distributions, fashion, recipes, etc.
-3. Register the game’s UI section in your content/layout config.
-4. Wire any new modules into the store and persistence layer.
-
-### Editing Data
-
-- All tasks, dex entries, distributions, fashion items, etc. are defined in `/data`.
-- You can freely edit these files to:
-  - Fix typos
-  - Add new tasks
-  - Point to new sprites
-  - Add new events or items
-
-### Code Contributions
-
-Areas where improvements are especially impactful:
-
-- `rings.js` – radial layout logic used by dex and fashion views.
-- `persistence.js` – localStorage and import/export handling.
-- `distributions.js` – region filter, shiny/alpha badge display.
-- Backend routes – error handling, robustness, and additional endpoints.
-
-### Issues/Suggestions
-
-If you notice ANY issues issues at all, please let me know. That can be:
-
-- Typos
-- Improper syncing between tasks/dex entries
-- Improper format
-- Incorrect catagorization
-- Missing tasks/dex entries
-- Incorrect information
-
-If you have any suggestions in terms of tasks to add or whole new pieces that could be cool for the project, pretty pretty please let me know. I want this to be an amazing website/tool, so any user feedback is greatly appreciated.
-
----
-
 ## Legal
 
 - This is an **unofficial fan-made project**.
-- Pokémon, Pokémon character names, and sprites are trademarks of their respective owners.
+- Pokémon, Pokémon character/location names, and sprites are trademarks of their respective owners.
 - Use of official assets is intended for personal, non-commercial, and educational purposes.
-- If you fork or host your own instance, it’s your responsibility to follow the policies of Nintendo, Game Freak, The Pokémon Company, and any asset providers.
+- If you fork or host your own instance, it's your responsibility to follow the policies of Nintendo, Game Freak, The Pokémon Company, and any asset providers.

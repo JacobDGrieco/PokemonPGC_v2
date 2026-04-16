@@ -51,7 +51,19 @@ import {
 			},
 			{
 				id: 2, text: "Obtain all In-Game Gift Pokemon", children: [
-					{ id: 1, text: "Pansage", img: ({ gameKey }) => baseSprite(gameKey, 511) },
+					{
+						id: 1, text: "Pansage/Pansear/Panpour", img: ({ gameKey }) => task(gameKey, "elemental-monkeys"), tooltip: "Dreamyard", eithers: {
+							1: { text: "" }, 2: { text: "" }, 3: { text: "" }
+						}
+					},
+					{ id: 2, text: "Zorua", img: ({ gameKey }) => baseSprite(gameKey, 570), tooltip: "Castellia City" },
+					{
+						id: 3, text: "Tirtouga/Archen", img: ({ gameKey }) => task(gameKey, "fossils"), tooltip: "Relic Castle", eithers: {
+							1: { text: "" }, 2: { text: "" }
+						},
+					},
+					{ id: 4, text: "Larvesta", img: ({ gameKey }) => baseSprite(gameKey, 636), tooltip: "Route 18" },
+					{ id: 5, text: "Magikarp", img: ({ gameKey }) => baseSprite(gameKey, 129), tooltip: "Marvelous Bridge" },
 				],
 			},
 			{
@@ -67,8 +79,9 @@ import {
 			{ id: 1, text: "Collect all 8 Gym Badges and Defeat the Elite 4", img: () => _badges(["trio", "basic", "insect", "bolt", "quake", "jet", "freeze", "legend"]), noCenter: true },
 		],
 		"activites": [
+			{ id: 1, text: "Fill Black City/White Forest with 10 Trainers", noCenter: true },
 			{
-				id: 1, text: "Find all Team Plasma Sages", children: [
+				id: 2, text: "Find all Team Plasma Sages", children: [
 					{ id: 1, text: "Sage Rood", img: ({ gameKey }) => npc(gameKey, "rood") },
 					{ id: 2, text: "Sage Gorm", img: ({ gameKey }) => npc(gameKey, "gorm") },
 					{ id: 3, text: "Sage Ryoku", img: ({ gameKey }) => npc(gameKey, "ryoku") },
@@ -77,7 +90,6 @@ import {
 					{ id: 6, text: "Sage Giallo", img: ({ gameKey }) => npc(gameKey, "giallo") },
 				],
 			},
-			{ id: 2, text: "Fill Black City/White Forest with 10 Trainers" },
 			{
 				id: 3, text: "Complete 4 Types of Entralink Missions", children: [
 					{ id: 1, text: "Support Mission" },
@@ -99,7 +111,7 @@ import {
 					{ id: 3, text: "Defeat Clairdonna & Family" },
 					{ id: 4, text: "Defeat Zillion & Family" },
 					{ id: 5, text: "Defeat Trish & Family" },
-					{ id: 6, text: "Defeat Miles & the Entire Family" },
+					{ id: 6, text: "Defeat Miles & Family" },
 				],
 			},
 			{
@@ -114,13 +126,14 @@ import {
 			},
 		],
 		"upgrades": [
-			{ id: 1, text: "Obtain the National Dex" },
+			{ id: 1, text: "Obtain the National Dex", noCenter: true },
 			{
 				id: 2, text: "Obtain the Black/White Rank Trainer Card", children: [
 					{ id: 1, text: "Defeat the Elite Four" },
-					{ id: 2, text: "Collect all the Pokemon Musical Items" },
-					{ id: 3, text: "Obtain all Entralink Powers" },
-					{ id: 4, text: "Get a 49 streak in Single & Double Battle Subway Lines" },
+					{ id: 2, text: "Complete the National Dex (693)" },
+					{ id: 3, text: "Collect all Pokemon Musical Items" },
+					{ id: 4, text: "Obtain all Entralink Powers" },
+					{ id: 5, text: "Get a 49-win streak in the Battle Subway Lines", tooltip: "Must get the streak in both the Super Singles and Super Doubles lines" },
 				],
 			},
 		],
@@ -398,7 +411,7 @@ import {
 		],
 		"extra-credit": [
 			{
-				id: 1, text: "Obtain all Event Mythicals", children: [
+				id: 1, text: "Obtain all Mythical Pokemon", children: [
 					{ id: 1, text: "Victini", img: ({ gameKey }) => baseSprite(gameKey, 494) },
 					{ id: 2, text: "Keldeo", img: ({ gameKey }) => baseSprite(gameKey, 647) },
 					{ id: 3, text: "Meloetta", img: ({ gameKey }) => baseSprite(gameKey, 648) },

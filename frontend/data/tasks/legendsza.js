@@ -329,8 +329,8 @@ import {
 			},
 		],
 		"collectables": [
-			{ id: 1, text: "Obtain the Shiny Charm", img: () => keyItem("shiny-charm"), noCenter: true, tooltip: "Get Mabel's Research to level 50", },
-			{ id: 2, text: "Collect all 100 Colorful Screws", img: () => treasure("colorful-screw"), noCenter: true, tiers: [range(1, 100)], tooltip: "Find purple glowing Pokeballs around the map.", },
+			{ id: 1, text: "Obtain the Shiny Charm", img: () => keyItem("shiny-charm"), tooltip: "Get Mabel's Research to level 50", },
+			{ id: 2, text: "Collect all 100 Colorful Screws", img: () => treasure("colorful-screw"), tiers: [range(1, 100)], tooltip: "Find purple glowing Pokeballs around the map.", },
 		],
 		"mega-stones": [
 			{ id: 1, text: "Meganiumite", img: ({ gameKey }) => [baseSpriteIcon(gameKey, "0154-m"), megaStone("meganiumite")], tooltip: "Hotel Z or Vernal Avenue Shop", },
