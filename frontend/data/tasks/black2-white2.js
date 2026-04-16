@@ -1,6 +1,7 @@
 import {
 	_hm,
 	_keyItem,
+	range,
 	_tm,
 	_location,
 	_npc,
@@ -28,7 +29,7 @@ import {
 		{ id: "catching", title: "Gotta Catch 'Em All" },
 		{ id: "story", title: "Main Story" },
 		{ id: "funfest", title: "Funfest Missions" },
-		{ id: "activites", title: "Activities" },
+		{ id: "activities", title: "Activities" },
 		{ id: "battle", title: "Battle" },
 		{ id: "upgrades", title: "Upgrades" },
 		{ id: "collectables", title: "Collectables" },
@@ -68,13 +69,13 @@ import {
 					{ id: 2, text: "Volcarona", img: ({ gameKey }) => baseSprite(gameKey, 637), tooltip: "Relic Castle\nLvl 35 before defeating the Elite 4\nLvl 65 after defeating the Elite 4" },
 					{ id: 3, text: "Foongus", img: ({ gameKey }) => baseSprite(gameKey, 590), tooltip: "Route 6" },
 					{ id: 4, text: "Crustle", img: ({ gameKey }) => shinySprite(gameKey, 558), tooltip: "Seaside Cave" },
-					{ id: 5, text: "Shiny Haxorus", img: ({ gameKey }) => baseSprite(gameKey, 612), tooltip: "Nature Preserve\nSee all Pokemon, get the License, and talk to the attendant in Mistralton City" },
+					{ id: 5, text: "Shiny Haxorus", img: ({ gameKey }) => shinySprite(gameKey, 612), tooltip: "Nature Preserve\nSee all Pokemon, get the License, and talk to the attendant in Mistralton City" },
 				],
 			},
 			{
 				id: 3, text: "Obtain all In-Game Gift Pokemon", children: [
 					{ id: 1, text: "N's Zorua", img: ({ gameKey }) => baseSprite(gameKey, 570), tooltip: "Driftveil City - Talk with the Sage after defeating New Team Plasma" },
-					{ id: 2, text: "Eevee", img: ({ gameKey }) => baseSprite(gameKey, 511), tooltip: "Castelia City - Talk to Amanita after defeating the Elite 4" },
+					{ id: 2, text: "Eevee", img: ({ gameKey }) => baseSprite(gameKey, 133), tooltip: "Castelia City - Talk to Amanita after defeating the Elite 4" },
 					{ id: 3, text: "Deerling", img: ({ gameKey }) => baseSprite(gameKey, 585), tooltip: "Route 6 - Weather Institute" },
 					{ id: 4, text: "Shiny Gible/Shiny Dratini", img: ({ gameKey }) => shinySprite(gameKey, 443), tooltip: "Black City/White Forest - Defeat Benga" },
 					{ id: 5, text: "Happiny Egg", img: ({ gameKey }) => baseSprite(gameKey, 440), tooltip: "Nacrene City - Gate" },
@@ -199,7 +200,7 @@ import {
 			{
 				id: 2, text: "Obtain the Black/White Rank Trainer Card", children: [
 					{ id: 1, text: "Defeat the Elite Four" },
-					{ id: 2, text: "Complete the National Dex" },
+					{ id: 2, text: "Complete the National PokeDex (645)" },
 					{ id: 3, text: "Achieve EX Rank in PokeStar Studios" },
 					{ id: 4, text: "Defeat the Champions at the Pokemon World Tournament" },
 					{ id: 5, text: "Gain an Entree Level of 30" },
@@ -208,13 +209,13 @@ import {
 			{
 				id: 3, text: "Unlock all Mode Changes", children: [
 					{ id: 1, text: "Easy Mode" },
-					{ id: 1, text: "Normal Mode" },
-					{ id: 2, text: "Challenge Mode" },
-					{ id: 3, text: "Tower Key" },
-					{ id: 4, text: "Forest Key" },
-					{ id: 5, text: "Rock Peak Key" },
-					{ id: 5, text: "Iron Key" },
-					{ id: 6, text: "Iceberg Key" },
+					{ id: 2, text: "Normal Mode" },
+					{ id: 3, text: "Challenge Mode" },
+					{ id: 4, text: "Tower Key" },
+					{ id: 5, text: "Forest Key" },
+					{ id: 6, text: "Rock Peak Key" },
+					{ id: 7, text: "Iron Key" },
+					{ id: 8, text: "Iceberg Key" },
 				]
 			},
 		],

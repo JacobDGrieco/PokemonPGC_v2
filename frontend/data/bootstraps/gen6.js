@@ -4,13 +4,14 @@ import "../regidexs/x-y-coastal.js";
 import "../regidexs/x-y-mountain.js";
 import "../natidexs/x-y.js";
 import "../fashion/x-y.js";
-import "../others/medals-xy.js";
+import "../medals/x-y.js";
 import "../others/amin.js";
 import "../layouts/x-y.js";
 
 import "../tasks/omegaruby-alphasapphire.js";
 import "../regidexs/omegaruby-alphasapphire.js";
 import "../natidexs/omegaruby-alphasapphire.js";
+import "../medals/omegaruby-alphasapphire.js";
 import "../layouts/omegaruby-alphasapphire.js";
 
 // import "../distributions/gen6.js";

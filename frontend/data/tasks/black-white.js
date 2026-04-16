@@ -2,6 +2,7 @@ import {
 	_formItem,
 	_hm,
 	_keyItem,
+	range,
 	_tm,
 	_location,
 	_npc,
@@ -9,6 +10,7 @@ import {
 	_badges,
 	_frontSprite,
 	defineTasksMany,
+	overrideTasks,
 	overrideTaskChildTexts,
 } from '../helpers/index.js';
 
@@ -47,6 +49,9 @@ import {
 					{ id: 4, text: "Catch/Trade Tornadus", img: ({ gameKey }) => baseSprite(gameKey, 641) },
 					{ id: 5, text: "Catch/Trade Thundurus", img: ({ gameKey }) => baseSprite(gameKey, 642) },
 					{ id: 6, text: "Catch Landorus", img: ({ gameKey }) => baseSprite(gameKey, 645) },
+					{ id: 7, text: "Catch Cobalion", img: ({ gameKey }) => baseSprite(gameKey, 638) },
+					{ id: 8, text: "Catch Terrakion", img: ({ gameKey }) => baseSprite(gameKey, 639) },
+					{ id: 9, text: "Catch Virizion", img: ({ gameKey }) => baseSprite(gameKey, 640) },
 				],
 			},
 			{
@@ -72,6 +77,15 @@ import {
 					{ id: 2, text: "Minccino for Basculin", img: ({ gameKey }) => task(gameKey, "minccino-for-basculin") },
 					{ id: 3, text: "Boldore for Emolga", img: ({ gameKey }) => task(gameKey, "boldore-for-emolga") },
 					{ id: 4, text: "Ditto for Rotom", img: ({ gameKey }) => task(gameKey, "ditto-for-rotom") },
+				],
+			},
+			{
+				id: 4, text: "Obtain all Static Encounter Pokemon", children: [
+					{ id: 1, text: "Musharna", img: ({ gameKey }) => baseSprite(gameKey, 518), tooltip: "Dreamyard\nEvery Friday after defeating Ghetsis" },
+					{ id: 2, text: "Zen Mode Darmanitan", img: ({ gameKey }) => baseSprite(gameKey, 555), tooltip: "Desert Resort\nTracks all five RageCandyBar statues", type: "tiered", tiers: [range(1, 5)] },
+					{ id: 3, text: "Fake-item Foongus", img: ({ gameKey }) => baseSprite(gameKey, 590), tooltip: "Routes 6 and 10\nTracks all five fake-item Foongus", type: "tiered", tiers: [range(1, 5)] },
+					{ id: 4, text: "Fake-item Amoonguss", img: ({ gameKey }) => baseSprite(gameKey, 591), tooltip: "Route 10\nTracks both fake-item Amoonguss", type: "tiered", tiers: [range(1, 2)] },
+					{ id: 5, text: "Volcarona", img: ({ gameKey }) => baseSprite(gameKey, 637), tooltip: "Relic Castle\nAfter defeating Ghetsis" },
 				],
 			},
 		],
@@ -103,9 +117,9 @@ import {
 			{ id: 1, text: "Battle Cheren", tooltip: "Victory Road after defeating the Elite 4" },
 			{ id: 2, text: "Battle Bianca", tooltip: "Prof. Juniper's Lab (Saturday Nights)" },
 			{ id: 3, text: "Battle Cynthia", tooltip: "Undella Town (Spring & Summer)" },
-			{ id: 4, text: "Get to Master Rank at the Battle Institute", tiers: ["Novice", "Normal", "Super", "Hyper", "Elite", "Master"] },
+			{ id: 6, text: "Get to Master Rank at the Battle Institute", tiers: ["Novice", "Normal", "Super", "Hyper", "Elite", "Master"] },
 			{
-				id: 5, text: "Defeat the Riches Family in Undella Town", children: [
+				id: 7, text: "Defeat the Riches Family in Undella Town", children: [
 					{ id: 1, text: "Defeat Draco" },
 					{ id: 2, text: "Defeat Susan & Family" },
 					{ id: 3, text: "Defeat Clairdonna & Family" },
@@ -115,7 +129,7 @@ import {
 				],
 			},
 			{
-				id: 6, text: "Complete all Battle Subway Lines", children: [
+				id: 8, text: "Complete all Battle Subway Lines", children: [
 					{ id: 1, text: "Single" },
 					{ id: 2, text: "Single Super" },
 					{ id: 3, text: "Double" },
@@ -130,7 +144,7 @@ import {
 			{
 				id: 2, text: "Obtain the Black/White Rank Trainer Card", children: [
 					{ id: 1, text: "Defeat the Elite Four" },
-					{ id: 2, text: "Complete the National Dex (693)" },
+					{ id: 2, text: "Complete the National PokeDex (645)" },
 					{ id: 3, text: "Collect all Pokemon Musical Items" },
 					{ id: 4, text: "Obtain all Entralink Powers" },
 					{ id: 5, text: "Get a 49-win streak in the Battle Subway Lines", tooltip: "Must get the streak in both the Super Singles and Super Doubles lines" },

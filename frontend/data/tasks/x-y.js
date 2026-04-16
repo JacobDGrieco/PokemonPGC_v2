@@ -157,7 +157,7 @@ import {
 			{
 				id: 3, text: "Obtain the Gold Rank Trainer Card", children: [
 					{ id: 1, text: "Defeat the Elite Four" },
-					{ id: 2, text: "Complete the Kalos Pokedex" },
+					{ id: 2, text: "Complete the Kalos Regional PokeDexs (454)" },
 					{ id: 3, text: "Defeat a leader in the Battle Maison" },
 				],
 			},
@@ -210,7 +210,7 @@ import {
 				]
 			},
 			{
-				id: 4, text: "Collect all 18 O-Powers", children: [
+				id: 4, text: "Collect all 17 O-Powers", children: [
 					{ id: 1, text: "Attack Power" },
 					{ id: 2, text: "Defense Power" },
 					{ id: 3, text: "Sp. Attack Power" },

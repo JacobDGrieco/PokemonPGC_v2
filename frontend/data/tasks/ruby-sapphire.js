@@ -83,8 +83,9 @@ import {
 			{ id: 1, text: "Collect all 8 Gym Badges and Defeat the Elite 4", img: () => _badges(["stone", "knuckle", "dynamo", "heat", "balance", "feather", "mind", "rain"]), noCenter: true, },
 		],
 		"activities": [
+			{ id: 1, text: "Complete all chambers of the Trick House", type: "tiered", tiers: [range(1, 6)], },
 			{
-				id: 1, text: "Master all the Contests", noCenter: true, children: [
+				id: 2, text: "Reach Master Rank in all Contests", noCenter: true, children: [
 					{ id: 1, text: "Beauty Contests", img: () => ribbon("beauty-master"), tiers: ["Normal", "Super", "Hyper", "Master"], },
 					{ id: 2, text: "Tough Contests", img: () => ribbon("tough-master"), tiers: ["Normal", "Super", "Hyper", "Master"], },
 					{ id: 3, text: "Cute Contests", img: () => ribbon("cute-master"), tiers: ["Normal", "Super", "Hyper", "Master"], },
@@ -93,7 +94,7 @@ import {
 				],
 			},
 			{
-				id: 2, text: "Complete the Lilycove Museum contest exhibit", tooltip: "High-scoring Master Rank wins can add paintings to the Lilycove Museum. Completing all five categories unlocks the Glass Ornament.", children: [
+				id: 3, text: "Complete the Lilycove Museum contest exhibit", tooltip: "High-scoring Master Rank wins can add paintings to the Lilycove Museum. Completing all five categories unlocks the Glass Ornament.", children: [
 					{ id: 1, text: "Beauty Painting", img: () => ribbon("beauty-master") },
 					{ id: 2, text: "Tough Painting", img: () => ribbon("tough-master") },
 					{ id: 3, text: "Cute Painting", img: () => ribbon("cute-master") },
@@ -102,11 +103,10 @@ import {
 					{ id: 6, text: "Get the Glass Ornament", img: () => decoration("glass-ornament") },
 				],
 			},
-			{ id: 3, text: "Complete all chambers of the Trick House", type: "tiered", tiers: [range(1, 8)], },
 		],
 		"battle": [
 			{ id: 1, text: "Master the Battle Tower", type: "tiered", tiers: ["Singles", "Doubles", "Multi"], },
-			{ id: 2, text: "Defeat the Winstrate Household" },
+			{ id: 2, text: "Defeat the Winstrate Household", tooltip: "Route 111" },
 		],
 		"upgrades": [
 			{ id: 1, text: "Obtain the National PokeDex", noCenter: true },
@@ -115,7 +115,7 @@ import {
 					{ id: 1, text: "Defeat the Elite 4/Champion" },
 					{ id: 2, text: "Win all Master Rank Contests" },
 					{ id: 3, text: "Defeat the 50 trainer challenge in the Battle Tower" },
-					{ id: 4, text: "Complete the Hoenn Regional PokeDex" },
+					{ id: 4, text: "Complete the Hoenn Regional PokeDex (200)" },
 				],
 			},
 		],
@@ -142,15 +142,9 @@ import {
 					{ id: 18, text: "Wailmer Pail", img: () => keyItem("wailmer-pail") },
 				],
 			},
+			{ id: 2, text: "Find all hidden items with the Item Finder", img: () => keyItem("item-finder"), noCenter: true, type: "tiered", tiers: [range(1, 97)], },
 			{
-				id: 2, text: "Obtain all items from collecting soot", children: [
-					{ id: 1, text: "Pretty Chair", img: () => decoration("pretty-chair"), tooltip: "Route 113 (Glass Workshop)\n6000 steps" },
-					{ id: 2, text: "Pretty Desk", img: () => decoration("pretty-desk"), tooltip: "Route 113 (Glass Workshop)\n8000 steps" },
-				],
-			},
-			{ id: 3, text: "Find all hidden items with the Item Finder", img: () => keyItem("item-finder"), noCenter: true, type: "tiered", tiers: [range(1, 97)], },
-			{
-				id: 4, text: "Obtain all Secret Base decorations", children: [
+				id: 3, text: "Obtain all Secret Base decorations", children: [
 					{ id: 1, text: "Small Desk", img: () => decoration("small-desk"), tooltip: "Fortree City (desk and chair shop)\n$3000" },
 					{ id: 2, text: "Pokémon Desk", img: () => decoration("pokemon-desk"), tooltip: "Fortree City (desk and chair shop)\n$3000" },
 					{ id: 3, text: "Heavy Desk", img: () => decoration("heavy-desk"), tooltip: "Fortree City (desk and chair shop)\n$6000" },
