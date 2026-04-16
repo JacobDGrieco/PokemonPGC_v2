@@ -30,6 +30,7 @@ import {
 		{ id: "battle", title: "Battle" },
 		{ id: "upgrades", title: "Upgrades" },
 		{ id: "collectables", title: "Collectables" },
+		{ id: "decorations", title: "Poke-amie Decorations" },
 		{ id: "mega-stones", title: "Mega Stones" },
 		{ id: "fashion", title: "Fashion" },
 		{ id: "thms", title: "TMs/HMs" },
@@ -43,8 +44,191 @@ import {
 				id: 1, text: "Catch all the Legendaries", children: [
 					{ id: 1, text: "Catch/Trade Xerneas", img: ({ gameKey }) => baseSprite(gameKey, 716) },
 					{ id: 2, text: "Catch/Trade Yveltal", img: ({ gameKey }) => baseSprite(gameKey, 717) },
-					{ id: 3, text: "Catch Zygarde", img: ({ gameKey }) => baseSprite(gameKey, 718) },
+					{ id: 3, text: "Catch Zygarde", img: ({ gameKey }) => baseSprite(718) },
+					{ id: 4, text: "Catch/Trade Articuno", img: ({ gameKey }) => baseSprite(gameKey, 144) },
+					{ id: 5, text: "Catch/Trade Zapdos", img: ({ gameKey }) => baseSprite(gameKey, 145) },
+					{ id: 6, text: "Catch/Trade Moltres", img: ({ gameKey }) => baseSprite(gameKey, 146) },
+					{ id: 7, text: "Catch Mewtwo", img: ({ gameKey }) => baseSprite(gameKey, 150) },
 				],
+			},
+			{
+				id: 2, text: "Obtain all Static Encounters Pokemon", children: [
+					{ id: 1, text: "Snorlax", img: ({ gameKey }) => baseSprite(143), tooltip: "Route 7" },
+				],
+			},
+			{
+				id: 3, text: "Obtain all In-Game Gift Pokemon", children: [
+					{
+						id: 1, text: "Kantonian Starter", img: ({ gameKey }) => task(gameKey, "kanto-starter"), tooltip: "Prof. Sycamore's Lab", eithers: {
+							1: { text: null }, 2: { text: null }, 3: { text: null }
+						},
+					},
+					{ id: 2, text: "Lucario", img: ({ gameKey }) => baseSprite(gameKey, 448), tooltip: "Tower of Mastery\nFinish the Mega Evolution tutorial" },
+					{ id: 3, text: "Lapras", img: ({ gameKey }) => baseSprite(gameKey, 131), tooltip: "Route 12" },
+				],
+			},
+			{
+				id: 4, text: "Complete all In-Game Pokemon Trades", children: [
+					{ id: 1, text: "Bunnelby for Farfetch'd", img: ({ gameKey }) => task(gameKey, "bunnelby-for-farfetchd"), tooltip: "Santalune City" },
+					{ id: 2, text: "Jigglypuff for Bisharp", img: ({ gameKey }) => task(gameKey, "jiggleypuff-for-bisharp"), tooltip: "Snowbelle City" },
+					{ id: 3, text: "Any for Kalos Starter", img: ({ gameKey }) => task(gameKey, "any-for-kalos"), tooltip: "Vaniville City\nYou will get the one that your starter is effective against" },
+					{ id: 4, text: "Any for Ralts", img: ({ gameKey }) => task(gameKey, "any-for-ralts"), tooltip: "Lumiose City\nAfter defeating the Elite 4" },
+					{ id: 5, text: "Luvdisc for Steelix", img: ({ gameKey }) => task(gameKey, "luvdisc-for-steelix"), tooltip: "Cyllage City" },
+					{ id: 6, text: "Gyarados for Magikarp", img: ({ gameKey }) => task(gameKey, "gyarados-for-magikarp"), tooltip: "A random hotel" },
+					{ id: 7, text: "Any for Eevee", img: ({ gameKey }) => task(gameKey, "any-for-eevee"), tooltip: "A random hotel" },
+				],
+			},
+		],
+		"story": [
+			{ id: 1, text: "Collect all 8 Gym Badges and Defeat the Elite 4", img: () => _badges(["coal", "forest", "cobble", "fen", "relic", "mine", "icicle", "beacon"]), noCenter: true, },
+			{
+				id: 2, text: "Epilogue", children: [
+					{ id: 1, text: "This Guy is a Real...Looker" },
+					{ id: 2, text: "In the Back Alleys" },
+					{ id: 3, text: "Detective, Tourist, Gang" },
+					{ id: 4, text: "An Unforgiveable Crime" },
+					{ id: 5, text: "A Fiery Woman & A Truth Revealed" },
+					{ id: 6, text: "Here's Lookin' at you Kid" },
+				]
+			},
+		],
+		"activities": [
+			{ id: 1, text: "Talk to Cassius in Camphir town" },
+			{ id: 2, text: "Show the girl in Ambrette a PKMN with a speed of 193 or greater" },
+			{
+				id: 3, text: "Take a Photograph at all Locations", children: [
+					{ id: 1, text: "Aquacorde Town", img: ({ gameKey }) => location(gameKey, "aquacorde-town") },
+					{ id: 2, text: "Lumiose City", img: ({ gameKey }) => location(gameKey, "lumiose-city") },
+					{ id: 3, text: "Parfum Palace", img: ({ gameKey }) => location(gameKey, "parfum-palace") },
+					{ id: 4, text: "Route 7", img: ({ gameKey }) => location(gameKey, "route-7") },
+					{ id: 5, text: "Geosenge Town", img: ({ gameKey }) => location(gameKey, "geosenge-town") },
+					{ id: 6, text: "Shalour City", img: ({ gameKey }) => location(gameKey, "shalour-city") },
+					{ id: 7, text: "Azure Bay", img: ({ gameKey }) => location(gameKey, "azure-bay") },
+					{ id: 8, text: "Frost Cavern", img: ({ gameKey }) => location(gameKey, "frost-cavern") },
+					{ id: 9, text: "Anistar City", img: ({ gameKey }) => location(gameKey, "anistar-city") },
+					{ id: 10, text: "Couriway Town", img: ({ gameKey }) => location(gameKey, "couriway-town") },
+					{ id: 11, text: "Snowbelle City", img: ({ gameKey }) => location(gameKey, "snowbelle-city") },
+					{ id: 12, text: "Pokemon League", img: ({ gameKey }) => location(gameKey, "pokemon-league") },
+				]
+			},
+			{
+				id: 4, text: "Learn all Roller Skate Tricks", children: [
+					{ id: 1, text: "Backflip" },
+					{ id: 2, text: "Running Start" },
+					{ id: 3, text: "Parallel Swizzle" },
+					{ id: 4, text: "360" },
+					{ id: 5, text: "Cosmic Flip" },
+				]
+			},
+		],
+		"battle": [
+			{ id: 1, text: "Battle Calem/Serena", tooltip: "Kiloude City" },
+			{ id: 2, text: "Get to Master Rank at the Battle Institute", tiers: ["Novice", "Normal", "Super", "Hyper", "Elite", "Master"] },
+			{ id: 3, text: "Get to Grand Duke/Duchess Rank at the Battle Chateau", tiers: ["Baron/Baronness", "Viscount/Viscountess", "Marquis/Marchioness", "Duke/Duchess", "Grand Duke/Duchess"] },
+			{
+				id: 4, text: "Get perfect scores at all resturaunts", children: [
+					{ id: 1, text: "Le Nah" },
+					{
+						id: 2, text: "Le Yah", multi: [
+							{ id: 1, text: "Double" },
+							{ id: 2, text: "Rotation" },
+						]
+					},
+					{
+						id: 3, text: "Le Wow", multi: [
+							{ id: 1, text: "Double" },
+							{ id: 2, text: "Triple" },
+							{ id: 3, text: "Rotation" },
+						]
+					},
+					{
+						id: 4, text: "Sushi High Roller", multi: [
+							{ id: 1, text: "Double" },
+							{ id: 2, text: "Triple" },
+							{ id: 3, text: "Rotation" },
+						]
+					},
+				],
+			},
+		],
+		"upgrades": [
+			{ id: 1, text: "Obtain the National Dex" },
+			{ id: 2, text: "Upgrade the Mega Ring", tooltip: "Upgrading will make the ring react to nearby buried Mega Stones" },
+			{
+				id: 3, text: "Obtain the Gold Rank Trainer Card", children: [
+					{ id: 1, text: "Defeat the Elite Four" },
+					{ id: 2, text: "Complete the Kalos Pokedex" },
+					{ id: 3, text: "Defeat a leader in the Battle Maison" },
+				],
+			},
+			{
+				id: 4, text: "Unlock all Poke-amie difficulties", tooltip: "You need to get 3+ stars to unlock the next difficulty", children: [
+					{ id: 1, text: "Berry Picker", tiers: ["Easy", "Normal", "Hard", "Unlimited"] },
+					{ id: 2, text: "Head It", tiers: ["Easy", "Normal", "Hard", "Unlimited"] },
+					{ id: 3, text: "Tile Pizzle", tiers: ["Easy", "Normal", "Hard", "Unlimited"] },
+				],
+			},
+		],
+		"collectables": [
+			{
+				id: 1, text: "Collect all Key Items", children: [
+
+				]
+			},
+			{
+				id: 2, text: "Collect all Legendary Items", children: [
+					{ id: 1, text: "Adamant Orb" },
+					{ id: 2, text: "Lustrious Orb" },
+					{ id: 3, text: "Griseous Orb" },
+					{ id: 4, text: "Gracedia" },
+					{ id: 5, text: "DNA Splicers" },
+					{ id: 6, text: "Burn Drive" },
+					{ id: 7, text: "Shock Drive" },
+					{ id: 8, text: "Douse Drive" },
+					{ id: 9, text: "Chill Drive" },
+				]
+			},
+			{
+				id: 3, text: "Collect all 17 Arceus Plates", children: [
+					{ id: 1, text: "Draco Plate" },
+					{ id: 2, text: "Dread Plate" },
+					{ id: 3, text: "Earth Plate" },
+					{ id: 4, text: "Fist Plate" },
+					{ id: 5, text: "Flame Plate" },
+					{ id: 6, text: "Icicle Plate" },
+					{ id: 7, text: "Insect Plate" },
+					{ id: 8, text: "Iron Plate" },
+					{ id: 9, text: "Meadow Plate" },
+					{ id: 10, text: "Mind Plate" },
+					{ id: 11, text: "Pixie Plate" },
+					{ id: 12, text: "Sky Plate" },
+					{ id: 13, text: "Splash Plate" },
+					{ id: 14, text: "Spooky Plate" },
+					{ id: 15, text: "Stone Plate" },
+					{ id: 16, text: "Toxic Plate" },
+					{ id: 17, text: "Zap Plate" },
+				]
+			},
+			{
+				id: 4, text: "Collect all 18 O-Powers", children: [
+					{ id: 1, text: "Attack Power" },
+					{ id: 2, text: "Defense Power" },
+					{ id: 3, text: "Sp. Attack Power" },
+					{ id: 4, text: "Sp. Defense Power" },
+					{ id: 5, text: "Accuracy Power" },
+					{ id: 6, text: "Speed Power" },
+					{ id: 7, text: "HP Restoring Power" },
+					{ id: 8, text: "Capture Power" },
+					{ id: 9, text: "Exp. Point Power" },
+					{ id: 10, text: "Prize Money Power" },
+					{ id: 11, text: "Befriending Power" },
+					{ id: 12, text: "Encounter Power" },
+					{ id: 13, text: "Stealth Power" },
+					{ id: 14, text: "PP Restoring Power" },
+					{ id: 15, text: "Bargain Power" },
+					{ id: 16, text: "Critical Power" },
+					{ id: 17, text: "Hatching Power" },
+				]
 			},
 		],
 		"mega-stones": [
@@ -190,14 +374,31 @@ import {
 				],
 			},
 		],
+		"extra-credit": [
+			{
+				id: 1, text: "Obtain all Event Mythicals", children: [
+					{ id: 1, text: "Diancie", img: ({ gameKey }) => baseSprite(gameKey, 719) },
+					{ id: 2, text: "Hoopa", img: ({ gameKey }) => baseSprite(gameKey, 720) },
+					{ id: 3, text: "Volcanion", img: ({ gameKey }) => baseSprite(gameKey, 721) },
+				],
+			},
+		],
 	};
 
 	const TASKS_BY_SECTION_GAME1 = {
 		...TASKS_BY_SECTION,
+		catching: overrideTasks(TASKS_BY_SECTION.catching, 1, {
+			1: { text: "Catch Xerneas" },
+			2: { text: "Trade Yveltal" },
+		}),
 	};
 
 	const TASKS_BY_SECTION_GAME2 = {
 		...TASKS_BY_SECTION,
+		catching: overrideTasks(TASKS_BY_SECTION.catching, 1, {
+			1: { text: "Trade Xerneas" },
+			2: { text: "Catch Yveltal" },
+		}),
 	};
 
 	defineTasksMany(GAME_KEYS[0], SECTIONS, TASKS_BY_SECTION_GAME1);

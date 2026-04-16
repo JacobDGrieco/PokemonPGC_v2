@@ -32,6 +32,7 @@ import {
 		{ id: "battle", title: "Battle" },
 		{ id: "upgrades", title: "Upgrades" },
 		{ id: "collectables", title: "Collectables" },
+		{ id: "accessories", title: "Musical Accessories" },
 		{ id: "thms", title: "TMs/HMs" },
 		{ id: "extra-credit", title: "Extra Credit" },
 	];
@@ -87,10 +88,10 @@ import {
 			},
 		],
 		"battle": [
-			{ id: 1, text: "Battle Cheren in Victory Road (post Elite 4)" },
-			{ id: 2, text: "Battle Bianca in Prof. Juniper's Lab (Saturday Nights)" },
-			{ id: 3, text: "Battle Cynthia in Undella Town (Spring & Summer)" },
-			{ id: 4, text: "Master Rank at Battle Institute Test" },
+			{ id: 1, text: "Battle Cheren", tooltip: "Victory Road after defeating the Elite 4" },
+			{ id: 2, text: "Battle Bianca", tooltip: "Prof. Juniper's Lab (Saturday Nights)" },
+			{ id: 3, text: "Battle Cynthia", tooltip: "Undella Town (Spring & Summer)" },
+			{ id: 4, text: "Get to Master Rank at the Battle Institute", tiers: ["Novice", "Normal", "Super", "Hyper", "Elite", "Master"] },
 			{
 				id: 5, text: "Defeat the Riches Family in Undella Town", children: [
 					{ id: 1, text: "Defeat Draco" },
@@ -115,7 +116,7 @@ import {
 		"upgrades": [
 			{ id: 1, text: "Obtain the National Dex" },
 			{
-				id: 2, text: "Achieve Black Rank/White Rank Trainer Card", children: [
+				id: 2, text: "Obtain the Black/White Rank Trainer Card", children: [
 					{ id: 1, text: "Defeat the Elite Four" },
 					{ id: 2, text: "Collect all the Pokemon Musical Items" },
 					{ id: 3, text: "Obtain all Entralink Powers" },
@@ -151,6 +152,137 @@ import {
 					{ id: 15, text: "Toxic Plate", img: () => formItem("toxic-plate") },
 					{ id: 16, text: "Zap Plate", img: () => formItem("zap-plate") },
 				],
+			},
+		],
+		"accessories": [
+			{
+				id: 1, text: "Collect all Head attatchements", children: [
+					{ id: 1, text: "Scarlet Hat" },
+					{ id: 2, text: "Wig" },
+					{ id: 3, text: "Witchy Hat" },
+					{ id: 4, text: "Big Barrette" },
+					{ id: 5, text: "Pirate Hat" },
+					{ id: 6, text: "Cowboy Hat" },
+					{
+						id: 7, text: "Headband", multi: [
+							{ id: 1, text: "Cute" },
+							{ id: 2, text: "Elegant" }
+						]
+					},
+					{ id: 8, text: "Laurel Wreath" },
+					{ id: 9, text: "Crown" },
+					{ id: 10, text: "Chef's Hat" },
+					{ id: 11, text: "Lace Cap" },
+					{ id: 12, text: "Gentleman's Hat" },
+					{ id: 13, text: "Fedora" },
+					{ id: 14, text: "Horn Helmet" },
+					{ id: 15, text: "Tiara" },
+					{ id: 16, text: "Bib" },
+					{ id: 17, text: "Professor's Hat" },
+					{ id: 18, text: "Helmet" },
+					{ id: 19, text: "Beret" },
+					{ id: 20, text: "Straw Hat" },
+					{ id: 21, text: "Jester's Cap" },
+					{ id: 22, text: "Decorative Ribbon" },
+				]
+			},
+			{
+				id: 2, text: "Collect all Face attatchements", children: [
+					{ id: 1, text: "Red Nose" },
+					{ id: 2, text: "Germ Mask" },
+					{ id: 3, text: "Googly Specs" },
+					{ id: 4, text: "Gorgeous Specs" },
+					{ id: 5, text: "Square Glasses" },
+					{ id: 6, text: "White Domino Mask" },
+					{ id: 7, text: "Smiley-Face Mask" },
+					{ id: 8, text: "Fluffy Beard" },
+					{ id: 9, text: "Monocle" },
+				]
+			},
+			{
+				id: 3, text: "Collect all Ear attatchements", children: [
+					{ id: 1, text: "Blue Flower" },
+					{ id: 2, text: "Red Flower" },
+					{ id: 3, text: "Striped Barrette" },
+					{ id: 4, text: "Small Barrette" },
+					{ id: 5, text: "Gorgeous Flower" },
+					{ id: 6, text: "Pink Barrette" },
+					{ id: 7, text: "Blue Barrette" },
+					{ id: 8, text: "Red Barrette" },
+					{ id: 9, text: "Green Barrette" },
+					{ id: 10, text: "Snow Crystal" },
+				]
+			},
+			{
+				id: 4, text: "Collect all Arm attatchements", children: [
+					{ id: 1, text: "Red Parasol" },
+					{ id: 2, text: "Whisk" },
+					{ id: 3, text: "Lonely Flower" },
+					{ id: 4, text: "Paint Brush" },
+					{ id: 5, text: "Electric Guitar" },
+					{ id: 6, text: "Big Bag" },
+					{ id: 7, text: "Wind Up Key" },
+					{ id: 8, text: "Toy Fishing Rod" },
+					{ id: 9, text: "Toy Cutlass" },
+					{ id: 10, text: "Toy Sword" },
+					{ id: 11, text: "Rigid Shield" },
+					{ id: 12, text: "Mallet" },
+					{ id: 13, text: "Colorful Parasol" },
+					{ id: 14, text: "Candy" },
+					{ id: 15, text: "White Pompom" },
+					{ id: 16, text: "Shuriken" },
+					{ id: 17, text: "Cane" },
+					{ id: 18, text: "Standing Mike" },
+					{ id: 19, text: "Wrench" },
+					{ id: 20, text: "Tambourine" },
+					{ id: 21, text: "Pocket Watch" },
+					{ id: 22, text: "Lantern" },
+					{ id: 23, text: "Purse" },
+					{ id: 24, text: "Rose" },
+					{ id: 25, text: "Microphone" },
+					{ id: 26, text: "Ladel" },
+					{ id: 27, text: "Thick Book" },
+					{ id: 28, text: "Bouquet" },
+					{ id: 29, text: "Frying Pan" },
+					{ id: 30, text: "Pennant" },
+					{ id: 31, text: "Gift Box" },
+					{ id: 32, text: "Football" },
+					{ id: 33, text: "Trident" },
+					{ id: 34, text: "Fake Bone" },
+					{ id: 35, text: "Magic Wand" },
+					{ id: 36, text: "Maraca" },
+					{ id: 37, text: "Round Mushroom" },
+					{ id: 38, text: "Racket" },
+					{ id: 39, text: "Trumpet" },
+					{ id: 40, text: "Toy Cake" },
+				]
+			},
+			{
+				id: 5, text: "Collect all Body attatchements", children: [
+					{ id: 1, text: "Crimson Scarf" },
+					{ id: 2, text: "Scarlet Cape" },
+					{ id: 3, text: "Black Wings" },
+					{ id: 4, text: "Black Tie" },
+					{ id: 5, text: "Black Cape" },
+					{ id: 6, text: "White Wings" },
+					{ id: 7, text: "White Cape" },
+					{ id: 8, text: "Bowtie" },
+					{ id: 9, text: "DressyTie" },
+					{ id: 10, text: "Striped Tie" },
+					{ id: 11, text: "Necklace" },
+					{ id: 12, text: "Frilly Apron" },
+					{ id: 13, text: "Round Button" },
+					{ id: 14, text: "Tie" },
+				]
+			},
+			{
+				id: 6, text: "Collect all Body attatchements", children: [
+					{ id: 1, text: "Fake Belly Button" },
+					{ id: 2, text: "Umber Belt" },
+					{ id: 3, text: "Frilly Apron" },
+					{ id: 4, text: "Hula Skirt" },
+					{ id: 5, text: "Winner's Belt" },
+				]
 			},
 		],
 		"thms": [
@@ -284,6 +416,9 @@ import {
 			4: "Catch Tornadus",
 			5: "Trade Thundurus",
 		}),
+		upgrades: overrideTasks(TASKS_BY_SECTION.upgrades, 2, {
+			parent: { text: "Obtain the Black Rank Trainer Card" },
+		}),
 	};
 
 	const TASKS_BY_SECTION_GAME2 = {
@@ -293,6 +428,9 @@ import {
 			2: "Trade Zekrom",
 			4: "Trade Tornadus",
 			5: "Catch Thundurus",
+		}),
+		upgrades: overrideTasks(TASKS_BY_SECTION.upgrades, 2, {
+			parent: { text: "Obtain the White Rank Trainer Card" },
 		}),
 	};
 

@@ -6,7 +6,7 @@ import "../layouts/black-white.js";
 import "../tasks/black2-white2.js";
 import "../regidexs/black2-white2.js";
 import "../natidexs/black2-white2.js";
-import "../others/medals.js";
+import "../others/medals-b2w2.js";
 import "../layouts/black2-white2.js";
 
 // import "../distributions/gen5.js";
