@@ -12,7 +12,7 @@ defineSyncsMany([...GAME_KEYS1, ...GAME_KEYS2], ({ taskSync, regionalSync }) => 
 	{ name: "Catch Articuno", members: [taskSync("catching", 1, 1), regionalSync(144, { oneWay: true }),], },
 	{ name: "Catch Zapdos", members: [taskSync("catching", 1, 2), regionalSync(145, { oneWay: true }),], },
 	{ name: "Catch Moltres", members: [taskSync("catching", 1, 3), regionalSync(146, { oneWay: true }),], },
-	{ name: "Catch Mewtwo", members: [taskSync("catching", 1, 4), taskSync("story", 2, 1), regionalSync(150, { oneWay: true }),], },
+	{ name: "Catch Mewtwo", members: [taskSync("catching", 1, 4), regionalSync(150, { oneWay: true }),], },
 	{ name: "Power Plant Electrode", members: [taskSync("catching", 2, 4), regionalSync(101, { oneWay: true }),], },
 	{ name: "Power Plant Voltorb", members: [taskSync("catching", 2, 5), regionalSync(100, { oneWay: true }),], },
 	{ name: "Obtain Mew", members: [taskSync("extra-credit", 1, 1), regionalSync(151)], },

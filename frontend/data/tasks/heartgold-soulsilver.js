@@ -120,7 +120,7 @@ import {
 				],
 			},
 			{
-				id: 3, text: "Explore the Kanto Region", children: [
+				id: 3, text: "Complete the Epilogue: Explore the Kanto Region", children: [
 					{ id: 1, text: "Restore power to the Kanto Power Plant", img: ({ gameKey }) => location(gameKey, "kanto-power-plant") },
 					{ id: 2, text: "Find Blue", img: ({ gameKey }) => npc(gameKey, "blue"), tooltip: "Can be found on Cinnabar Island" },
 					{ id: 3, text: "Defeat Blaine", img: ({ gameKey }) => npc(gameKey, "blaine"), tooltip: "Can be found at the Seafoam Islands", },

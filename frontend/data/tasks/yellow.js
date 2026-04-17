@@ -99,11 +99,6 @@ import {
 					{ id: 9, text: "Defeat the Elite 4 / Champion" },
 				],
 			},
-			{
-				id: 2, text: "Epilogue", noCenter: true, children: [
-					{ id: 1, text: "Catch Mewtwo", img: ({ gameKey }) => baseSprite(gameKey, 150), imgS: ({ gameKey }) => shinySprite(gameKey, 150), tooltip: "Found at the bottom of Cerulean Cave" },
-				],
-			},
 		],
 		"activities": [
 			{ id: 1, text: "Get a high-score in the Pikachu Surfing Mini-Game", tooltip: "In original Yellow, you need a Pikachu that knows Surf. In Virtual Console releases, your partner Pikachu can access it normally." },

@@ -110,13 +110,13 @@ import {
 				],
 			},
 			{
-				id: 2, text: "Complete the Ultra Beast Investigation", children: [
+				id: 2, text: "Complete the Epilogue: Ultra Beast Investigation", children: [
 					{ id: 1, text: "Meet Looker and Anabel", tooltip: "Motel on Route 8" },
-					{ id: 2, text: "Catch Nihilego", tooltip: "Mission 1" },
-					{ id: 3, text: "Catch Buzzwole/Pheromosa", tooltip: "Mission 2" },
-					{ id: 4, text: "Catch Xurkitree", tooltip: "Mission 3" },
-					{ id: 5, text: "Catch Kartana/Celestella", tooltip: "Mission 4" },
-					{ id: 6, text: "Catch Guzzlord", tooltip: "Mission 5" },
+					{ id: 2, text: "Catch UB-01", tooltip: "Mission 1" },
+					{ id: 3, text: "Catch UB-02", tooltip: "Mission 2" },
+					{ id: 4, text: "Catch UB-03", tooltip: "Mission 3" },
+					{ id: 5, text: "Catch UB-04", tooltip: "Mission 4" },
+					{ id: 6, text: "Catch UB-05", tooltip: "Mission 5" },
 					{ id: 7, text: "Battle Anabel", tooltip: "Motel on Route 8" },
 					{ id: 8, text: "Catch Necrozma", tooltip: "Ten Carat Hill" },
 				],
@@ -256,7 +256,7 @@ import {
 					{ id: 8, text: "Ride Pager", img: () => keyItem("ride-pager") },
 					{ id: 9, text: "Shiny Charm", img: () => keyItem("shiny-charm") },
 					{ id: 10, text: "Sparkling Stone", img: () => keyItem("sparkling-stone") },
-					{ id: 11, text: "Sun Flute / Moon Flute", img: () => [keyItem("sun-flute"), keyItem("moon-flute")] },
+					{ id: 11, text: "Sun Flute / Moon Flute" },
 					{ id: 12, text: "Z-Ring", img: () => keyItem("z-ring") },
 				]
 			},

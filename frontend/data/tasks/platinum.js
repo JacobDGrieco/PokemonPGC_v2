@@ -86,7 +86,7 @@ import {
 				],
 			},
 			{
-				id: 2, text: "Epilogue", children: [
+				id: 2, text: "Complete the Epilogue", children: [
 					{ id: 1, text: "Venture to the bottom of Mt. Stark" },
 					{ id: 2, text: "Go on patrol" },
 					{ id: 3, text: "Team Galactic Remnants" },

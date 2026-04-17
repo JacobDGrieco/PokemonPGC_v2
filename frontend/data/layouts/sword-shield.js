@@ -1,5 +1,5 @@
 import {
-  defineLayoutsMany,
+	defineLayoutsMany,
 } from '../helpers/index.js';
 
 (() => {
@@ -7,38 +7,63 @@ import {
 
 	const P = (parentId) => [parentId];          			// parent-only task
 	const C = (parentId, childId) => [parentId, childId]; 	// parent + child task
+	const childRows = (parentId, start, end, rowSize = 5) => {
+		const rows = [];
+		for (let childId = start; childId <= end; childId += rowSize) {
+			rows.push(
+				Array.from(
+					{ length: Math.min(rowSize, end - childId + 1) },
+					(_, offset) => C(parentId, childId + offset),
+				),
+			);
+		}
+		return rows;
+	};
 
 	const DESKTOP_LAYOUT = {
 		"catching": [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3)],
+			[P(2)],
+			[C(2, 1), C(2, 2), C(2, 3)],
+			[P(3)],
+			[C(3, 1), C(3, 2), C(3, 3), C(3, 4), C(3, 5)],
+			[C(3, 6), C(3, 7), C(3, 8), C(3, 9)],
 		],
-		"trainer-cards": [
+		"story": [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3), C(1, 4), C(1, 5)],
 			[C(1, 6), C(1, 7), C(1, 8), C(1, 9), C(1, 10)],
-			[C(1, 11), C(1, 12), C(1, 13), C(1, 14), C(1, 15)],
-			[C(1, 16), C(1, 17), C(1, 18), C(1, 19), C(1, 20)],
-			[C(1, 21), C(1, 22), C(1, 23), C(1, 24), C(1, 25)],
-			[C(1, 26), C(1, 27), C(1, 28), C(1, 29), C(1, 30)],
-			[C(1, 31), C(1, 32), C(1, 33), C(1, 34), C(1, 35)],
-			[C(1, 36), C(1, 37), C(1, 38), C(1, 39), C(1, 40)],
-			[C(1, 41), C(1, 42), C(1, 43), C(1, 44), C(1, 45)],
-			[C(1, 46), C(1, 47), C(1, 48), C(1, 49), C(1, 50)],
-			[C(1, 51), C(1, 52), C(1, 53)],
 			[P(2)],
 			[C(2, 1), C(2, 2), C(2, 3), C(2, 4), C(2, 5)],
-			[C(2, 6), C(2, 7), C(2, 8), C(2, 9), C(2, 10)],
-			[C(2, 11), C(2, 12), C(2, 13), C(2, 14), C(2, 15)],
-			[C(2, 16), C(2, 17), C(2, 18), C(2, 19), C(2, 20)],
+		],
+		"battle": [
+			[P(1), P(2), P(3)],
+		],
+		"upgrades": [
+			[P(1), P(2)],
+		],
+		"collectables": [
+			[P(1)],
+			...childRows(1, 1, 7, 4),
+			[P(2)],
+			...childRows(2, 1, 16, 5),
 			[P(3)],
-			[C(3, 1), C(3, 2), C(3, 3), C(3, 4), C(3, 5)],
-			[C(3, 6), C(3, 7), C(3, 8), C(3, 9), C(3, 10)],
-			[C(3, 11), C(3, 12), C(3, 13), C(3, 14), C(3, 15)],
-			[C(3, 16), C(3, 17), C(3, 18)],
+			...childRows(3, 1, 17, 5),
 			[P(4)],
-			[C(4, 1), C(4, 2), C(4, 3), C(4, 4)],
-			[C(4, 5), C(4, 6), C(4, 7), C(4, 8)],
+			...childRows(4, 1, 17, 5),
+			[P(5)],
+			...childRows(5, 1, 6, 3),
+		],
+		"trainer-cards": [
+			[P(1)],
+			...childRows(1, 1, 53, 5),
+			[P(2)],
+			...childRows(2, 1, 20, 5),
+			[P(3)],
+			...childRows(3, 1, 18, 5),
+			[P(4)],
+			...childRows(4, 1, 8, 4),
 		],
 		"thms": [
 			[P(1), P(2), P(3), P(4), P(5)],
@@ -81,10 +106,21 @@ import {
 			[C(1, 1), C(1, 2), C(1, 3)],
 			[P(2)],
 			[C(2, 1), C(2, 2), C(2, 3)],
-		]
+		],
+	};
+
+	const DESTOP_LAYOUT_GAME1 = {
+		...DESKTOP_LAYOUT,
+	};
+
+	const DESTOP_LAYOUT_GAME2 = {
+		...DESKTOP_LAYOUT,
 	};
 
 	const COMPACT_LAYOUT = DESKTOP_LAYOUT;
+	const COMPACT_LAYOUT_GAME1 = COMPACT_LAYOUT;
+	const COMPACT_LAYOUT_GAME2 = COMPACT_LAYOUT;
 
-	defineLayoutsMany(GAME_KEYS, DESKTOP_LAYOUT, COMPACT_LAYOUT);
+	defineLayoutsMany(GAME_KEYS[0], DESTOP_LAYOUT_GAME1, COMPACT_LAYOUT_GAME1);
+	defineLayoutsMany(GAME_KEYS[1], DESTOP_LAYOUT_GAME2, COMPACT_LAYOUT_GAME2);
 })();

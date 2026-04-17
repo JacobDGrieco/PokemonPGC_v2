@@ -76,7 +76,7 @@ import {
 				],
 			},
 			{
-				id: 3, text: "Catch all the Ultra Wormhole legendaries", children: [
+				id: 3, text: "Catch all the Legendaries from Ultra Wormholes", children: [
 					{ id: 1, text: "Catch Articuno", img: ({ gameKey }) => baseSprite(gameKey, 144) },
 					{ id: 2, text: "Catch Zapdos", img: ({ gameKey }) => baseSprite(gameKey, 145) },
 					{ id: 3, text: "Catch Moltres", img: ({ gameKey }) => baseSprite(gameKey, 146) },
@@ -126,12 +126,12 @@ import {
 			},
 			{
 				id: 5, text: "Obtain all Totem-sized Pokemon", tooltip: "Talk to Samson Oak at Heahea Beach", children: [
-					{ id: 1, text: "Gumshoos/Alolan Raticate", img: ({ gameKey }) => baseSprite(gameKey, 735, 20), tooltip: "20 Stickers" },
-					{ id: 2, text: "Alolan Marowak/Arquanid", img: ({ gameKey }) => baseSprite(gameKey, 105, 752), tooltip: "40 Stickers" },
-					{ id: 3, text: "Lurantis/Salazzle", img: ({ gameKey }) => baseSprite(gameKey, 754, 758), tooltip: "50 Stickers" },
-					{ id: 4, text: "Vikavolt/Togedemaru", img: ({ gameKey }) => baseSprite(gameKey, 738, 777), tooltip: "70 Stickers" },
+					{ id: 1, text: "Gumshoos/Alolan Raticate", tooltip: "20 Stickers" },
+					{ id: 2, text: "Alolan Marowak/Arquanid", tooltip: "40 Stickers" },
+					{ id: 3, text: "Lurantis/Salazzle", tooltip: "50 Stickers" },
+					{ id: 4, text: "Vikavolt/Togedemaru", tooltip: "70 Stickers" },
 					{ id: 5, text: "Mimikyu", img: ({ gameKey }) => baseSprite(gameKey, 778), tooltip: "80 Stickers" },
-					{ id: 6, text: "Ribombee/Kommo-o", img: ({ gameKey }) => baseSprite(gameKey, 743, 784), tooltip: "100 Stickers" },
+					{ id: 6, text: "Ribombee/Kommo-o", tooltip: "100 Stickers" },
 				],
 			},
 			{
@@ -164,7 +164,7 @@ import {
 				],
 			},
 			{
-				id: 2, text: "Complete Episode Rainbow Rocket", children: [
+				id: 2, text: "Complete the Epilogue: Episode Rainbow Rocket", children: [
 					{ id: 1, text: "Reclaim Festival Plaza" },
 					{ id: 2, text: "Defeat Faba" },
 					{ id: 3, text: "Defeat Archie" },
@@ -222,7 +222,7 @@ import {
 					{ id: 2, text: "Show Crabrawler at the Route 2 Pokemon Center", img: ({ gameKey }) => baseSprite(gameKey, 739), tooltip: "Reward: 3,000 Poke Dollars" },
 					{ id: 3, text: "Show Sableye on Route 3", img: ({ gameKey }) => baseSprite(gameKey, 302), tooltip: "Reward: 3,000 Poke Dollars" },
 					{ id: 4, text: "Show Salazzle at the Heahea City Apparel Shop", img: ({ gameKey }) => baseSprite(gameKey, 758), tooltip: "Reward: 10,000 Poke Dollars" },
-					{ id: 5, text: "Show Natu / Hoothoot at the Konikoni City Pokemon Center", img: ({ gameKey }) => baseSprite(gameKey, 177, 163), tooltip: "Reward: 5,000 Poke Dollars" },
+					{ id: 5, text: "Show Natu / Hoothoot at the Konikoni City Pokemon Center", tooltip: "Reward: 5,000 Poke Dollars" },
 					{ id: 6, text: "Show Corsola at the Route 5 Pokemon Center", img: ({ gameKey }) => baseSprite(gameKey, 222), tooltip: "Reward: 3,000 Poke Dollars" },
 					{ id: 7, text: "Show Goomy at the Route 8 Aether Trailer", img: ({ gameKey }) => baseSprite(gameKey, 704), tooltip: "Reward: 5,000 Poke Dollars" },
 					{ id: 8, text: "Show Minior at the Malie City Apparel Shop", img: ({ gameKey }) => baseSprite(gameKey, 774), tooltip: "Reward: 10,000 Poke Dollars" },
@@ -354,7 +354,7 @@ import {
 					{ id: 8, text: "Ride Pager", img: () => keyItem("ride-pager") },
 					{ id: 9, text: "Shiny Charm", img: () => keyItem("shiny-charm") },
 					{ id: 10, text: "Sparkling Stone", img: () => keyItem("sparkling-stone") },
-					{ id: 11, text: "Sun Flute / Moon Flute", img: () => [keyItem("sun-flute"), keyItem("moon-flute")] },
+					{ id: 11, text: "Sun Flute / Moon Flute" },
 					{ id: 12, text: "Surge Badge", img: () => keyItem("surge-badge") },
 					{ id: 13, text: "Z-Power Ring", img: () => keyItem("z-power-ring") },
 				]

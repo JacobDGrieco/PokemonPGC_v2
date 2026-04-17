@@ -100,7 +100,7 @@ import {
 				],
 			},
 			{
-				id: 2, text: "Epilogue", children: [
+				id: 2, text: "Complete the Epilogue", children: [
 					{ id: 1, text: "This Guy is a Real...Looker" },
 					{ id: 2, text: "In the Back Alleys" },
 					{ id: 3, text: "Detective, Tourist, Gang" },

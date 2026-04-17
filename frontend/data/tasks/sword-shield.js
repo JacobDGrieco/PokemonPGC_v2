@@ -1,4 +1,7 @@
 import {
+	_badges,
+	_formItem,
+	_heldItem,
 	_keyItem,
 	_tm,
 	_tr,
@@ -8,6 +11,7 @@ import {
 	_trainerCard,
 	_frontSprite,
 	defineTasksMany,
+	overrideTasks,
 } from '../helpers/index.js';
 
 (() => {
@@ -18,6 +22,8 @@ import {
 	const task = (gameKey, name) => _task(gameKey, name);
 	const npc = (gameKey, name) => _npc(gameKey, name);
 	const location = (gameKey, name) => _location(gameKey, name);
+	const formItem = (name) => _formItem(gen, name);
+	const heldItem = (name) => _heldItem(gen, name);
 	const keyItem = (name) => _keyItem(gen, name);
 	const trainerCard = (gameKey, type, name) => _trainerCard(gameKey, type, name);
 	const tm = (type) => _tm(gen, type);
@@ -26,7 +32,6 @@ import {
 	const SECTIONS = [
 		{ id: "catching", title: "Gotta Catch 'Em All" },
 		{ id: "story", title: "Main Story" },
-		{ id: "side-quests", title: "Side Quests" },
 		{ id: "battle", title: "Battle" },
 		{ id: "upgrades", title: "Upgrades" },
 		{ id: "collectables", title: "Collectables" },
@@ -46,6 +51,145 @@ import {
 					{ id: 1, text: "Catch/Trade Zacian", img: ({ gameKey }) => baseSprite(gameKey, 888) },
 					{ id: 2, text: "Catch/Trade Zamazenta", img: ({ gameKey }) => baseSprite(gameKey, 889) },
 					{ id: 3, text: "Catch Eternatus", img: ({ gameKey }) => baseSprite(gameKey, 890) },
+				],
+			},
+			{
+				id: 2, text: "Obtain all In-Game Gift Pokemon", children: [
+					{ id: 1, text: "Toxel", img: ({ gameKey }) => baseSprite(gameKey, 848), tooltip: "Route 5 Nursery" },
+					{ id: 2, text: "Charmander", img: ({ gameKey }) => baseSprite(gameKey, 4), tooltip: "Postwick - Leon's room after becoming Champion\nHas the Gigantamax Factor" },
+					{ id: 3, text: "Type: Null", img: ({ gameKey }) => baseSprite(gameKey, 772), tooltip: "Battle Tower - League Staff after becoming Champion" },
+				],
+			},
+			{
+				id: 3, text: "Complete all In-Game Pokemon Trades", children: [
+					{ id: 1, text: "Bunnelby for Skwovet", img: ({ gameKey }) => task(gameKey, "bunnelby-for-skwovet"), tooltip: "Motostoke - Pokemon Center" },
+					{ id: 2, text: "Galarian Meowth for Meowth", img: ({ gameKey }) => task(gameKey, "galarian-meowth-for-meowth"), tooltip: "Turffield Stadium" },
+					{ id: 3, text: "Minccino for Cottonee", img: ({ gameKey }) => task(gameKey, "minccino-for-cottonee"), tooltip: "Hulbury Market" },
+					{ id: 4, text: "Toxel for Togepi", img: ({ gameKey }) => task(gameKey, "toxel-for-togepi"), tooltip: "Hammerlocke - near the vault" },
+					{ id: 5, text: "Maractus for Hatenna/Impidimp", img: ({ gameKey }) => task(gameKey, "maractus-for-hatenna-impidimp"), tooltip: "Stow-on-Side - rooftop trader" },
+					{ id: 6, text: "Galarian Yamask for Yamask", img: ({ gameKey }) => task(gameKey, "galarian-yamask-for-yamask"), tooltip: "Ballonlea Stadium" },
+					{ id: 7, text: "Vanillish for Throh/Sawk", img: ({ gameKey }) => task(gameKey, "vanillish-for-throh-sawk"), tooltip: "Circhester - near the fountain" },
+					{ id: 8, text: "Obstagoon for Mr. Mime", img: ({ gameKey }) => task(gameKey, "obstagoon-for-mrmime"), tooltip: "Spikemuth - near the gym ring" },
+					{ id: 9, text: "Frosmoth for Duraludon", img: ({ gameKey }) => task(gameKey, "frosmoth-for-duraludon"), tooltip: "Wyndon - house trade" },
+				],
+			},
+		],
+		"story": [
+			{
+				id: 1, text: "Beat the main story", children: [
+					{ id: 1, text: "Grass Badge", img: () => _badges("grass-8"), tooltip: "Defeat Milo at the Turffield Gym" },
+					{ id: 2, text: "Water Badge", img: () => _badges("water-8"), tooltip: "Defeat Nessa at the Hulbury Gym" },
+					{ id: 3, text: "Fire Badge", img: () => _badges("fire"), tooltip: "Defeat Kabu at the Motostoke Gym" },
+					{ id: 4, text: "Fighting/Ghost Badge", tooltip: "Defeat Bea/Allister at the Stow-on-Side Gym" },
+					{ id: 5, text: "Fairy Badge", img: () => _badges("fairy-8"), tooltip: "Defeat Opal at the Ballonlea Gym" },
+					{ id: 6, text: "Rock/Ice Badge", tooltip: "Defeat Gordie/Melony at the Circhester Gym" },
+					{ id: 7, text: "Dark Badge", img: () => _badges("dark"), tooltip: "Clear Piers' challenge in Spikemuth" },
+					{ id: 8, text: "Dragon Badge", img: () => _badges("dragon"), tooltip: "Defeat Raihan at the Hammerlocke Gym" },
+					{ id: 9, text: "Battle through the Champion Cup" },
+					{ id: 10, text: "Defeat Champion Leon" },
+				],
+			},
+			{
+				id: 2, text: "Complete the Sordward & Shielbert Quest", children: [
+					{ id: 1, text: "Return to the Slumbering Weald altar", tooltip: "Begins after becoming Champion" },
+					{ id: 2, text: "Defeat Sordward/Shielbert at the Slumbering Weald", tooltip: "Your opponent depends on version" },
+					{ id: 3, text: "Stop the Dynamax incidents around Galar", tooltip: "Resolve the stadium incidents and Hammerlocke Energy Plant lead-up" },
+					{ id: 4, text: "Catch Zacian/Zamazenta", tooltip: "Catch the cover Legendary during the Energy Plant finale" },
+					{ id: 5, text: "Defeat Hop's final Slumbering Weald battle", tooltip: "Hop uses the other Legendary" },
+				],
+			},
+		],
+		"battle": [
+			{ id: 1, text: "Defeat Morimoto", tooltip: "Circhester - Hotel Ionia\nRewards the Oval Charm on first win" },
+			{ id: 2, text: "Reach Singles Master Ball Tier at the Battle Tower", tiers: ["Poke Ball", "Great Ball", "Ultra Ball", "Master Ball"], tooltip: "Defeat Leon" },
+			{ id: 3, text: "Reach Doubles Master Ball Tier at the Battle Tower", tiers: ["Poke Ball", "Great Ball", "Ultra Ball", "Master Ball"], tooltip: "Defeat Leon" },
+		],
+		"upgrades": [
+			{ id: 1, text: "Obtain the Judge function", tooltip: "Unlocked at the Battle Tower after reaching Poke Ball Tier / Rank 4" },
+			{ id: 2, text: "Upgrade the Rotom Bike", tiers: [1, 2, 3] },
+		],
+		"collectables": [
+			{
+				id: 1, text: "Collect all Key Items", children: [
+					{ id: 1, text: "Camping Gear", img: () => keyItem("camping-gear") },
+					{ id: 2, text: "Catching Charm", img: () => keyItem("catching-charm"), tooltip: "Circhester - Hotel Ionia\nGift from the Game Freak director" },
+					{ id: 3, text: "Fishing Rod", img: () => keyItem("fishing-rod") },
+					{ id: 4, text: "Item Finder", img: () => keyItem("item-finder") },
+					{ id: 5, text: "Oval Charm", img: () => keyItem("oval-charm"), tooltip: "Circhester - Hotel Ionia\nReward for defeating Morimoto" },
+					{ id: 6, text: "Shiny Charm", img: () => keyItem("shiny-charm"), tooltip: "Circhester - Hotel Ionia\nRequires completing the mainland Galar Pokedex" },
+					{ id: 7, text: "Town Map", img: () => keyItem("town-map") },
+				],
+			},
+			{
+				id: 2, text: "Collect all Legendary Items", children: [
+					{ id: 1, text: "Soul Dew", img: () => heldItem("soul-dew") },
+					{ id: 2, text: "Adamant Orb", img: () => heldItem("adamant-orb") },
+					{ id: 3, text: "Lustrous Orb", img: () => heldItem("lustrous-orb") },
+					{ id: 4, text: "Griseous Orb", img: () => formItem("griseous-orb") },
+					{ id: 5, text: "Gracidea", img: () => formItem("gracidea") },
+					{ id: 6, text: "Reveal Glass", img: () => formItem("reveal-glass") },
+					{ id: 7, text: "DNA Splicers", img: () => formItem("dna-splicers") },
+					{ id: 8, text: "Burn Drive", img: () => formItem("burn-drive") },
+					{ id: 9, text: "Shock Drive", img: () => formItem("shock-drive") },
+					{ id: 10, text: "Douse Drive", img: () => formItem("douse-drive") },
+					{ id: 11, text: "Chill Drive", img: () => formItem("chill-drive") },
+					{ id: 12, text: "Zygarde Cube", img: () => formItem("zygarde-cube") },
+					{ id: 13, text: "Prison Bottle", img: () => formItem("prison-bottle") },
+					{ id: 14, text: "N-Solarizer", img: () => formItem("n-solarizer") },
+					{ id: 15, text: "N-Lunarizer", img: () => formItem("n-lunarizer") },
+					{ id: 16, text: "Rusted Sword/Shield", tooltip: "Recovered during the Sordward & Shielbert postgame" },
+				],
+			},
+			{
+				id: 3, text: "Collect all 17 Arceus Plates", children: [
+					{ id: 1, text: "Draco Plate", img: () => formItem("draco-plate") },
+					{ id: 2, text: "Dread Plate", img: () => formItem("dread-plate") },
+					{ id: 3, text: "Earth Plate", img: () => formItem("earth-plate") },
+					{ id: 4, text: "Fist Plate", img: () => formItem("fist-plate") },
+					{ id: 5, text: "Flame Plate", img: () => formItem("flame-plate") },
+					{ id: 6, text: "Icicle Plate", img: () => formItem("icicle-plate") },
+					{ id: 7, text: "Insect Plate", img: () => formItem("insect-plate") },
+					{ id: 8, text: "Iron Plate", img: () => formItem("iron-plate") },
+					{ id: 9, text: "Meadow Plate", img: () => formItem("meadow-plate") },
+					{ id: 10, text: "Mind Plate", img: () => formItem("mind-plate") },
+					{ id: 11, text: "Pixie Plate", img: () => formItem("pixie-plate") },
+					{ id: 12, text: "Sky Plate", img: () => formItem("sky-plate") },
+					{ id: 13, text: "Splash Plate", img: () => formItem("splash-plate") },
+					{ id: 14, text: "Spooky Plate", img: () => formItem("spooky-plate") },
+					{ id: 15, text: "Stone Plate", img: () => formItem("stone-plate") },
+					{ id: 16, text: "Toxic Plate", img: () => formItem("toxic-plate") },
+					{ id: 17, text: "Zap Plate", img: () => formItem("zap-plate") },
+				],
+			},
+			{
+				id: 4, text: "Collect all 17 Memories", children: [
+					{ id: 1, text: "Bug Memory", img: () => formItem("bug-memory") },
+					{ id: 2, text: "Dark Memory", img: () => formItem("dark-memory") },
+					{ id: 3, text: "Dragon Memory", img: () => formItem("dragon-memory") },
+					{ id: 4, text: "Electric Memory", img: () => formItem("electric-memory") },
+					{ id: 5, text: "Fairy Memory", img: () => formItem("fairy-memory") },
+					{ id: 6, text: "Fighting Memory", img: () => formItem("fighting-memory") },
+					{ id: 7, text: "Fire Memory", img: () => formItem("fire-memory") },
+					{ id: 8, text: "Flying Memory", img: () => formItem("flying-memory") },
+					{ id: 9, text: "Ghost Memory", img: () => formItem("ghost-memory") },
+					{ id: 10, text: "Grass Memory", img: () => formItem("grass-memory") },
+					{ id: 11, text: "Ground Memory", img: () => formItem("ground-memory") },
+					{ id: 12, text: "Ice Memory", img: () => formItem("ice-memory") },
+					{ id: 13, text: "Poison Memory", img: () => formItem("poison-memory") },
+					{ id: 14, text: "Psychic Memory", img: () => formItem("psychic-memory") },
+					{ id: 15, text: "Rock Memory", img: () => formItem("rock-memory") },
+					{ id: 16, text: "Steel Memory", img: () => formItem("steel-memory") },
+					{ id: 17, text: "Water Memory", img: () => formItem("water-memory") },
+				],
+			},
+			{
+				id: 5, text: "Collect all Pokemon Camp Toys", children: [
+					{ id: 1, text: "Fresh Ball" },
+					{ id: 2, text: "Mirror Ball" },
+					{ id: 3, text: "Weighted Ball" },
+					{ id: 4, text: "Tympole Ball" },
+					{ id: 5, text: "Soothe Ball" },
+					{ id: 6, text: "Champion Ball" },
 				],
 			},
 		],
@@ -350,10 +494,58 @@ import {
 
 	const TASKS_BY_SECTION_GAME1 = {
 		...TASKS_BY_SECTION,
+		catching: overrideTasks(TASKS_BY_SECTION.catching, {
+			1: {
+				1: { text: "Catch Zacian" },
+				2: { text: "Trade Zamazenta" },
+			},
+			3: {
+				5: { text: "Maractus for Hatenna", img: ({ gameKey }) => task(gameKey, "maractus-for-hatenna") },
+				7: { text: "Vanillish for Throh", img: ({ gameKey }) => task(gameKey, "vanillish-for-throh") },
+			},
+		}),
+		story: overrideTasks(TASKS_BY_SECTION.story, {
+			1: {
+				4: { text: "Fighting Badge", img: () => _badges("fighting"), tooltip: "Defeat Bea at the Stow-on-Side Gym" },
+				6: { text: "Rock Badge", img: () => _badges("rock"), tooltip: "Defeat Gordie at the Circhester Gym" },
+			},
+			2: {
+				4: { text: "Catch Zacian" },
+			},
+		}),
+		collectables: overrideTasks(TASKS_BY_SECTION.collectables, {
+			2: {
+				16: { text: "Rusted Sword", img: () => formItem("rusted-sword") },
+			},
+		}),
 	};
 
 	const TASKS_BY_SECTION_GAME2 = {
 		...TASKS_BY_SECTION,
+		catching: overrideTasks(TASKS_BY_SECTION.catching, {
+			1: {
+				1: { text: "Trade Zacian" },
+				2: { text: "Catch Zamazenta" },
+			},
+			3: {
+				5: { text: "Maractus for Impidimp", img: ({ gameKey }) => task(gameKey, "maractus-for-impidimp") },
+				7: { text: "Vanillish for Sawk", img: ({ gameKey }) => task(gameKey, "vanillish-for-sawk") },
+			},
+		}),
+		story: overrideTasks(TASKS_BY_SECTION.story, {
+			1: {
+				4: { text: "Ghost Badge", img: () => _badges("ghost-8"), tooltip: "Defeat Allister at the Stow-on-Side Gym" },
+				6: { text: "Ice Badge", img: () => _badges("ice-8"), tooltip: "Defeat Melony at the Circhester Gym" },
+			},
+			2: {
+				4: { text: "Catch Zamazenta" },
+			},
+		}),
+		collectables: overrideTasks(TASKS_BY_SECTION.collectables, {
+			2: {
+				16: { text: "Rusted Shield", img: () => formItem("rusted-shield") },
+			},
+		}),
 	};
 
 	defineTasksMany(GAME_KEYS[0], SECTIONS, TASKS_BY_SECTION_GAME1);

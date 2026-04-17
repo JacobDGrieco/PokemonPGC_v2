@@ -97,11 +97,6 @@ import {
 					{ id: 9, text: "Defeat the Elite 4 / Champion" },
 				],
 			},
-			{
-				id: 2, text: "Epilogue", noCenter: true, children: [
-					{ id: 1, text: "Catch Mewtwo", img: ({ gameKey }) => baseSprite(gameKey, 150), imgS: ({ gameKey }) => shinySprite(gameKey, 150), tooltip: "Found at the bottom of Cerulean Cave" },
-				],
-			},
 		],
 		"collectables": [
 			{
@@ -198,8 +193,7 @@ import {
 		],
 	};
 
-	defineTasksMany(GAME_KEYS[0], SECTIONS, TASKS_BY_SECTION);
-	defineTasksMany(GAME_KEYS[1], SECTIONS, TASKS_BY_SECTION);
+	defineTasksMany(GAME_KEYS, SECTIONS, TASKS_BY_SECTION);
 	try {
 		window.PPGC = window.PPGC || {};
 		window.PPGC._seedTaskRegistry = null;

@@ -63,7 +63,7 @@ import {
 					{ id: 2, text: "Bulbasaur", img: ({ gameKey }) => baseSprite(gameKey, 1), tooltip: "Cerulean City\nRequires catching 30 Pokemon" },
 					{ id: 3, text: "Charmander", img: ({ gameKey }) => baseSprite(gameKey, 4), tooltip: "Route 24\nRequires catching 50 Pokemon" },
 					{ id: 4, text: "Squirtle", img: ({ gameKey }) => baseSprite(gameKey, 7), tooltip: "Vermilion City\nRequires catching 60 Pokemon" },
-					{ id: 5, text: "Persian/Arcanine", img: ({ gameKey }) => baseSprite(gameKey, 53) },
+					{ id: 5, text: "Persian/Arcanine" },
 					{ id: 6, text: "Lapras", img: ({ gameKey }) => baseSprite(gameKey, 131), tooltip: "Silph Co." },
 					{
 						id: 7, text: "Hitmonlee/Hitmonchan", img: ({ gameKey }) => [baseSprite(gameKey, 106), baseSprite(gameKey, 107)], tooltip: "Saffron City Fighting Dojo", eithers: {
@@ -81,14 +81,14 @@ import {
 			},
 			{
 				id: 4, text: "Complete all In-Game Trades", children: [
-					{ id: 1, text: "Rattata for Alolan Rattata", img: ({ gameKey }) => baseSprite(gameKey, 19), tooltip: "Cerulean City Pokemon Center" },
-					{ id: 2, text: "Geodude for Alolan Geodude", img: ({ gameKey }) => baseSprite(gameKey, 74), tooltip: "Vermilion City Pokemon Center" },
-					{ id: 3, text: "Diglett for Alolan Diglett", img: ({ gameKey }) => baseSprite(gameKey, 50), tooltip: "Lavender Town Pokemon Center" },
-					{ id: 4, text: "Sandshrew/Vulpix for Alolan Sandshrew/Vulpix", img: ({ gameKey }) => [baseSprite(gameKey, 27), baseSprite(gameKey, 37)], tooltip: "Celadon City Pokemon Center" },
-					{ id: 5, text: "Raichu for Alolan Raichu", img: ({ gameKey }) => baseSprite(gameKey, 26), tooltip: "Saffron City Pokemon Center" },
-					{ id: 6, text: "Marowak for Alolan Marowak", img: ({ gameKey }) => baseSprite(gameKey, 105), tooltip: "Fuchsia City Pokemon Center" },
-					{ id: 7, text: "Grimer/Meowth for Alolan Grimer/Meowth", img: ({ gameKey }) => [baseSprite(gameKey, 88), baseSprite(gameKey, 52)], tooltip: "Cinnabar Island Pokemon Center" },
-					{ id: 8, text: "Exeggutor for Alolan Exeggutor", img: ({ gameKey }) => baseSprite(gameKey, 103), tooltip: "Indigo Plateau Pokemon Center" },
+					{ id: 1, text: "Rattata for Alolan Rattata", img: ({ gameKey }) => task(gameKey, "rattata-for-alolan-rattata"), tooltip: "Cerulean City Pokemon Center" },
+					{ id: 2, text: "Geodude for Alolan Geodude", img: ({ gameKey }) => task(gameKey, "geodude-for-alolan-geodude"), tooltip: "Vermilion City Pokemon Center" },
+					{ id: 3, text: "Diglett for Alolan Diglett", img: ({ gameKey }) => task(gameKey, "diglett-for-alolan-diglett"), tooltip: "Lavender Town Pokemon Center" },
+					{ id: 4, text: "Sandshrew/Vulpix for Alolan Sandshrew/Vulpix", tooltip: "Celadon City Pokemon Center" },
+					{ id: 5, text: "Raichu for Alolan Raichu", img: ({ gameKey }) => task(gameKey, "raichu-for-alolan-raichu"), tooltip: "Saffron City Pokemon Center" },
+					{ id: 6, text: "Marowak for Alolan Marowak", img: ({ gameKey }) => task(gameKey, "marowak-for-alolan-marowak"), tooltip: "Fuchsia City Pokemon Center" },
+					{ id: 7, text: "Grimer/Meowth for Alolan Grimer/Meowth", tooltip: "Cinnabar Island Pokemon Center" },
+					{ id: 8, text: "Exeggutor for Alolan Exeggutor", img: ({ gameKey }) => task(gameKey, "exeggutor-for-alolan-exeggutor"), tooltip: "Indigo Plateau Pokemon Center" },
 				],
 			},
 		],
@@ -456,48 +456,70 @@ import {
 
 	const TASKS_BY_SECTION_GAME1 = {
 		...TASKS_BY_SECTION,
-		fashion: overrideTasks(TASKS_BY_SECTION.fashion, {
-			parent: {
-				id: 1, text: "Obtain all Outfit sets", children: [
-					{ id: 1, text: "Sportswear Set" },
-					{ id: 2, text: "Sailor Set" },
-					{ id: 3, text: "Formal Set" },
-					{ id: 4, text: "Assistant Set" },
-					{ id: 5, text: "Safari Set" },
-					{ id: 6, text: "Police Set" },
-					{ id: 7, text: "Pikachu Set" },
-					{ id: 8, text: "Raichu Set" },
-					{ id: 9, text: "Team Rocket Set" },
-					{ id: 10, text: "Blast-off Set" },
-				],
+		catching: overrideTasks(TASKS_BY_SECTION.catching, {
+			3: {
+				5: { text: "Persian", img: ({ gameKey }) => baseSprite(gameKey, 53) },
 			},
+			4: {
+				4: { text: "Sandshrew for Alolan Sandshrew", img: ({ gameKey }) => task(gameKey, "sandshrew-for-alolan-sandshrew") },
+				7: { text: "Grimer for Alolan Grimer", img: ({ gameKey }) => task(gameKey, "grimer-for-alolan-grimer") },
+			},
+		}),
+		fashion: overrideTasks(TASKS_BY_SECTION.fashion, {
+			1: {
+				parent: {
+					children: [
+						{ id: 1, text: "Sportswear Set" },
+						{ id: 2, text: "Sailor Set" },
+						{ id: 3, text: "Formal Set" },
+						{ id: 4, text: "Assistant Set" },
+						{ id: 5, text: "Safari Set" },
+						{ id: 6, text: "Police Set" },
+						{ id: 7, text: "Pikachu Set" },
+						{ id: 8, text: "Raichu Set" },
+						{ id: 9, text: "Team Rocket Set" },
+						{ id: 10, text: "Blast-off Set" },
+					],
+				},
+			}
 		}),
 	};
 
 	const TASKS_BY_SECTION_GAME2 = {
 		...TASKS_BY_SECTION,
-		fashion: overrideTasks(TASKS_BY_SECTION.fashion, {
-			parent: {
-				id: 1, text: "Obtain all Outfit sets", children: [
-					{ id: 1, text: "Sportswear Set" },
-					{ id: 2, text: "Sailor Set" },
-					{ id: 3, text: "Formal Set" },
-					{ id: 4, text: "Assistant Set" },
-					{ id: 5, text: "Safari Set" },
-					{ id: 6, text: "Police Set" },
-					{ id: 7, text: "Eevee Set" },
-					{ id: 8, text: "Vaporeon Set" },
-					{ id: 9, text: "Jolteon Set" },
-					{ id: 10, text: "Flareon Set" },
-					{ id: 11, text: "Espeon Set" },
-					{ id: 12, text: "Umbreon Set" },
-					{ id: 13, text: "Leafeon Set" },
-					{ id: 14, text: "Glaceon Set" },
-					{ id: 15, text: "Sylveon Set" },
-					{ id: 16, text: "Team Rocket Set" },
-					{ id: 17, text: "Blast-off Set" },
-				],
+		catching: overrideTasks(TASKS_BY_SECTION.catching, {
+			3: {
+				5: { text: "Arcanine", img: ({ gameKey }) => baseSprite(gameKey, 59) },
 			},
+			4: {
+				4: { text: "Vulpix for Alolan Vulpix", img: ({ gameKey }) => task(gameKey, "vulpix-for-alolan-vulpix") },
+				7: { text: "Meowth for Alolan Meowth", img: ({ gameKey }) => task(gameKey, "meowth-for-alolan-meowth") },
+			},
+		}),
+		fashion: overrideTasks(TASKS_BY_SECTION.fashion, {
+			1: {
+				parent: {
+					children: [
+						{ id: 1, text: "Sportswear Set" },
+						{ id: 2, text: "Sailor Set" },
+						{ id: 3, text: "Formal Set" },
+						{ id: 4, text: "Assistant Set" },
+						{ id: 5, text: "Safari Set" },
+						{ id: 6, text: "Police Set" },
+						{ id: 7, text: "Eevee Set" },
+						{ id: 8, text: "Vaporeon Set" },
+						{ id: 9, text: "Jolteon Set" },
+						{ id: 10, text: "Flareon Set" },
+						{ id: 11, text: "Espeon Set" },
+						{ id: 12, text: "Umbreon Set" },
+						{ id: 13, text: "Leafeon Set" },
+						{ id: 14, text: "Glaceon Set" },
+						{ id: 15, text: "Sylveon Set" },
+						{ id: 16, text: "Team Rocket Set" },
+						{ id: 17, text: "Blast-off Set" },
+					],
+				},
+			}
 		}),
 
 	};

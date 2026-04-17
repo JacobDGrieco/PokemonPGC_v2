@@ -81,7 +81,7 @@ defineSyncsMany(GAME_KEYS3, ({ taskSync, eitherTaskSync, regionalSync, nationalS
 	{ name: "Catch Articuno", members: [taskSync("catching", 1, 1), regionalSync(144, { oneWay: true }), nationalSync(144, { oneWay: true })], },
 	{ name: "Catch Zapdos", members: [taskSync("catching", 1, 2), regionalSync(145, { oneWay: true }), nationalSync(144, { oneWay: true })], },
 	{ name: "Catch Moltres", members: [taskSync("catching", 1, 3), regionalSync(146, { oneWay: true }), nationalSync(144, { oneWay: true })], },
-	{ name: "Catch Mewtwo", members: [taskSync("catching", 1, 4), taskSync("story", 2, 1), regionalSync(150, { oneWay: true }), nationalSync(144, { oneWay: true })], },
+	{ name: "Catch Mewtwo", members: [taskSync("catching", 1, 4), regionalSync(150, { oneWay: true }), nationalSync(144, { oneWay: true })], },
 	{ name: "Catch Raikou", members: [taskSync("catching", 1, 5), nationalSync(243, { oneWay: true })], },
 	{ name: "Catch Entei", members: [taskSync("catching", 1, 6), nationalSync(244, { oneWay: true })], },
 	{ name: "Catch Suicune", members: [taskSync("catching", 1, 7), nationalSync(245, { oneWay: true })], },

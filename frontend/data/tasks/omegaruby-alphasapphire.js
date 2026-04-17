@@ -150,7 +150,7 @@ import {
 				],
 			},
 			{
-				id: 2, text: "Complete the Delta Episode", children: [
+				id: 2, text: "Complete the Epilogue: Delta Episode", children: [
 					{ id: 1, text: "Encounter Zinnia", tooltip: "Littleroot" },
 					{ id: 2, text: "Defeat Courtney", tooltip: "Petalburg" },
 					{ id: 3, text: "Talk to Steven Stone", tooltip: "Rustboro" },
@@ -632,9 +632,7 @@ import {
 			1: {
 				1: { text: "Trade Kyogre" },
 				2: { text: "Catch Groudon" },
-			}
-		}),
-		catching: overrideTasks(TASKS_BY_SECTION.catching, {
+			},
 			2: {
 				4: { text: "Catch Ho-Oh" },
 				5: { text: "Trade Lugia" },
@@ -659,9 +657,7 @@ import {
 			1: {
 				1: { text: "Catch Kyogre" },
 				2: { text: "Trade Groudon" },
-			}
-		}),
-		catching: overrideTasks(TASKS_BY_SECTION.catching, {
+			},
 			2: {
 				4: { text: "Trade Ho-Oh" },
 				5: { text: "Catch Lugia" },
