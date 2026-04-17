@@ -378,13 +378,40 @@ export function _ribbonByGen(genKey, name) {
 	return _assetPath(`ribbons/${gen}/${name}.png`);
 }
 
+export function _thms(type, genKey, name) {
+	const prefix = ITEM.includes(type) ? 'items' : '';
+
+	let gen = '';
+	switch (genKey) {
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+		case 5: gen = 'gen1-5'; break;
+		case 6:
+		case 7:
+		case 7.5:
+		case '7_2':
+		case 8: gen = 'gen6-8'; break;
+		case 8.5:
+		case '8_2': gen = 'gen8_2'; break;
+		case 9: gen = 'gen9'; break;
+		case 9.5:
+		case '9_2': gen = 'gen9_2'; break;
+		case 0:
+		default: gen = '';
+	}
+
+	return _assetPath(buildAssetSubpath(prefix, `thms/${type}`, gen, `${name}.png`));
+}
+
 export const _ball = (gen, name) => _imageByGen('balls', gen, name);
 export const _berry = (gen, name) => _imageByGen('berries', gen, name);
 export const _decoration = (gen, name) => _imageByGen('decorations', gen, name);
 export const _formItem = (gen, name) => _imageByGen('form-items', gen, name);
 export const _fossil = (gen, name) => _imageByGen('fossils', gen, name);
 export const _heldItem = (gen, name) => _imageByGen('held-items', gen, name);
-export const _hm = (gen, name) => _imageByGen('hms', gen, name);
+export const _hm = (gen, name) => _thms('hms', gen, name);
 export const _keyItem = (gen, name) => _imageByGen('key_items', gen, name);
 export const _mail = (name) => _imageByGen('mails', 0, name);
 export const _medicine = (name) => _imageByGen('medicines', 0, name);
@@ -392,8 +419,8 @@ export const _megaStone = (gen, name) => _imageByGen('mega-stones', gen, name);
 export const _partnerItem = (name) => _imageByGen('partner-items', 0, name);
 export const _ribbon = (gen, name) => _ribbonByGen(gen, name);
 export const _statItems = (gen, name) => _imageByGen('stat_items', gen, name);
-export const _tm = (gen, name) => _imageByGen('tms', gen, name);
-export const _tr = (gen, name) => _imageByGen('trs', 0, name);
+export const _tm = (gen, name) => _thms('tms', gen, name);
+export const _tr = (gen, name) => _thms('trs', 0, name);
 export const _treasure = (gen, name) => _imageByGen('treasures', gen, name);
 export const _zCrystal = (name) => _imageByGen('zcrystals', 0, name);
 export const _location = (game, name) => _imageByGame('locations', game, name);
