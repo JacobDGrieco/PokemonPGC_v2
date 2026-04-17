@@ -10,7 +10,6 @@ import {
 	formatTierTooltip,
 	getDefaultEitherChoice,
 	getEitherChoice,
-	getMultiCheckedCount,
 	getMultiOptions,
 	getTierMetaForTask,
 	getTierSteps,
@@ -236,10 +235,9 @@ function EitherChoices({ task, onChange }) {
 
 function MultiChoices({ task, onToggle }) {
 	const options = getMultiOptions(task);
-	const checkedCount = getMultiCheckedCount(task);
 
 	return (
-		<div className="task-either" data-multi="1">
+		<div className="task-multi" data-multi="1">
 			{options.map((option) => {
 				const key = String(option.id);
 				const active = !!option.done;
@@ -247,38 +245,29 @@ function MultiChoices({ task, onToggle }) {
 				const text = rawText.trim();
 
 				return (
-					<span
+					<label
 						key={`${task.id}-${key}`}
-						className={`task-either-choice${active ? ' either-active' : ''}`}
+						className={`task-multi-option${active ? ' is-checked' : ''}`}
 						data-option-key={key}
-						role="button"
-						tabIndex={0}
-						aria-pressed={active}
 						onClick={(event) => {
-							event.preventDefault();
 							event.stopPropagation();
-							onToggle(key, !active);
-						}}
-						onKeyDown={(event) => {
-							if (event.key !== 'Enter' && event.key !== ' ') return;
-							event.preventDefault();
-							onToggle(key, !active);
 						}}
 					>
 						<input
 							type="checkbox"
-							className="task-either-cb"
+							className="task-multi-cb"
 							data-option-key={key}
 							checked={active}
-							readOnly
+							onClick={(event) => event.stopPropagation()}
+							onChange={(event) => {
+								event.stopPropagation();
+								onToggle(key, event.currentTarget.checked);
+							}}
 						/>
 						{text ? <span className="small">{text}</span> : null}
-					</span>
+					</label>
 				);
 			})}
-			<div className="small" style={{ opacity: 0.7, width: '100%', textAlign: 'center' }}>
-				{checkedCount}/{options.length}
-			</div>
 		</div>
 	);
 }
@@ -432,7 +421,7 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 
 	const handleItemClick = (event) => {
 		if (!isStandardToggleTask) return;
-		if (event.target.closest('input, .tiered, .task-either, .task-either-choice')) return;
+		if (event.target.closest('input, .tiered, .task-either, .task-either-choice, .task-multi, .task-multi-option')) return;
 		event.preventDefault();
 		handleCheckboxChange(!task.done);
 	};
@@ -443,6 +432,7 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 		!isSubtask ? (hasChildren ? 'has-children' : 'no-children') : '',
 		forceInline ? 'force-inline' : '',
 		hasSlider ? 'has-slider' : '',
+		isMulti ? 'task-multi-host' : '',
 		isStandardToggleTask ? 'task-toggleable' : '',
 	].filter(Boolean).join(' ');
 
@@ -486,7 +476,7 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 
 	if (isInline) {
 		return (
-			<div ref={tooltipRef} className={`${itemClassName}${noCenterSlider ? ' no-center-slider' : ''}`} data-task-id={task.id} id={`task-${task.id}`} onClick={handleItemClick}>
+			<div ref={tooltipRef} className={`${itemClassName}${noCenterSlider ? ' no-center-slider' : ''}`} data-task-id={task.id} data-task-done={task.done ? '1' : '0'} id={`task-${task.id}`} onClick={handleItemClick}>
 				{isSubtask || (!hasChildren && !forceInline) ? imageWrap : null}
 				<label className={bodyClassName}>
 					{textBlock}
@@ -499,7 +489,7 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 	}
 
 	return (
-		<div ref={tooltipRef} className={`task-row${isStandardToggleTask ? ' task-toggleable' : ''}`} data-task-id={task.id} id={`task-${task.id}`} onClick={handleItemClick}>
+		<div ref={tooltipRef} className={`task-row${isMulti ? ' task-multi-host' : ''}${isStandardToggleTask ? ' task-toggleable' : ''}`} data-task-id={task.id} data-task-done={task.done ? '1' : '0'} id={`task-${task.id}`} onClick={handleItemClick}>
 			{isEither ? (
 				<>
 					<TaskLabel task={task} className="small task-item-text task-either-title" style={{ width: '100%', textAlign: 'center' }} />

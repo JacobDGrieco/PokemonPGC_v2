@@ -54,6 +54,18 @@
 	border-color: var(--task-done-border);
 }
 
+.task-row.task-multi-host:has(.task-multi-cb:checked):has(.task-multi-cb:not(:checked)),
+.task-row.task-inline .task-item.task-multi-host:has(.task-multi-cb:checked):has(.task-multi-cb:not(:checked)) {
+	background: rgba(255, 255, 255, 0.04);
+	border-color: var(--line-soft);
+}
+
+.task-row.task-multi-host[data-task-done="1"],
+.task-row.task-inline .task-item.task-multi-host[data-task-done="1"] {
+	background: var(--task-done-bg);
+	border-color: var(--task-done-border);
+}
+
 .task-row.task-inline:has(.task-item input[type="checkbox"]:checked):not(:has(.task-item input[type="checkbox"]:not(:checked))),
 .task-group.task-group-lineage:has(.task-row input[type="checkbox"]:checked):not(:has(.task-row input[type="checkbox"]:not(:checked))) {
 	background: var(--task-done-bg-strong);
@@ -639,6 +651,29 @@
 	display: flex;
 	justify-content: center;
 	width: 100%;
+}
+
+.task-multi {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.45rem 0.75rem;
+	width: 100%;
+}
+
+.task-multi-option {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35rem;
+	cursor: pointer;
+}
+
+.task-multi-option.is-checked .small {
+	font-weight: 600;
+}
+
+.task-multi-cb {
+	cursor: pointer;
 }
 
 @media (max-width: 900px) {

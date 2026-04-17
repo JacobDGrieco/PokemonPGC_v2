@@ -206,7 +206,7 @@ function readTaskState(taskId) {
 	const multi = root.querySelector('[data-multi="1"]');
 	if (multi) {
 		const selected = Array.from(
-			multi.querySelectorAll('input.task-either-cb[data-option-key]:checked')
+			multi.querySelectorAll('input.task-multi-cb[data-option-key]:checked')
 		).map((el) => String(el.getAttribute("data-option-key")));
 		return { type: "multi", selected };
 	}

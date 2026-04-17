@@ -172,7 +172,7 @@ import {
 					{ id: 1, text: "Alder", tooltip: "Floccesy Town" },
 					{ id: 2, text: "Cynthia", tooltip: "Undella Town" },
 					{
-						id: 3, text: "Nate/Rosa", children: [
+						id: 3, text: "Nate/Rosa", multi: [
 							{ id: 1, text: "Undella Town" },
 							{ id: 2, text: "Driftveil Town" }
 						],
