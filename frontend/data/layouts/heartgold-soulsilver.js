@@ -1,15 +1,10 @@
-import {
-	defineLayoutsMany,
-} from '../helpers/index.js';
+import { defineLayoutsMany, P, C, parentRows, childRows, } from '../helpers/index.js';
 
 (() => {
 	const GAME_KEYS = ["heartgold", "soulsilver"];
 
-	const P = (parentId) => [parentId];          			// parent-only task
-	const C = (parentId, childId) => [parentId, childId]; 	// parent + child task
-
 	const DESKTOP_LAYOUT = {
-		"catching": [
+		catching: [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3), C(1, 4), C(1, 5)],
 			[C(1, 6), C(1, 7), C(1, 8), C(1, 9)],
@@ -22,7 +17,7 @@ import {
 			[C(6, 1), C(6, 2), C(6, 3), C(6, 4), C(6, 5)],
 			[C(6, 6), C(6, 7), C(6, 8), C(6, 9), C(6, 10)],
 		],
-		"story": [
+		story: [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3), C(1, 4)],
 			[C(1, 5), C(1, 6), C(1, 7), C(1, 8), C(1, 9)],
@@ -33,13 +28,13 @@ import {
 			[P(4)],
 			[C(4, 1), C(4, 2), C(4, 3), C(4, 4), C(4, 5), C(4, 6), C(4, 7), C(4, 8)],
 		],
-		"side-quests": [
+		sideQuests: [
 			[P(1), P(2), P(3)],
 			[P(4), P(5)],
 			[P(6)],
 			[C(6, 1), C(6, 2), C(6, 3), C(6, 4), C(6, 5), C(6, 6), C(6, 7)],
 		],
-		"activities": [
+		activities: [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3), C(1, 4), C(1, 5)],
 			[C(1, 6), C(1, 7), C(1, 8), C(1, 9), C(1, 10)],
@@ -60,7 +55,7 @@ import {
 			[C(3, 41), C(3, 42), C(3, 43), C(3, 44), C(3, 45)],
 			[C(3, 46)],
 		],
-		"battle": [
+		battle: [
 			[P(1), P(2), P(3)],
 			[P(4)],
 			[C(4, 1), C(4, 2), C(4, 3)],
@@ -69,13 +64,13 @@ import {
 			[C(5, 1), C(5, 2), C(5, 3)],
 			[C(5, 4), C(5, 5)],
 		],
-		"upgrades": [
+		upgrades: [
 			[P(1)],
 			[P(2)],
 			[C(2, 1), C(2, 2), C(2, 3)],
 			[C(2, 4), C(2, 5)],
 		],
-		"thms": [
+		thms: [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3), C(1, 4)],
 			[C(1, 5), C(1, 6), C(1, 7), C(1, 8)],
@@ -100,7 +95,7 @@ import {
 			[C(2, 86), C(2, 87), C(2, 88), C(2, 89), C(2, 90)],
 			[C(2, 91), C(2, 92)],
 		],
-		"extra-credit": [
+		extraCredit: [
 			[P(1)],
 			[C(1, 1), C(1, 2)],
 		],

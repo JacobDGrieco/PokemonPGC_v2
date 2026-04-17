@@ -1,19 +1,14 @@
-import {
-  defineLayoutsMany,
-} from '../helpers/index.js';
+import { defineLayoutsMany, P, C, parentRows, childRows, } from '../helpers/index.js';
 
 (() => {
 	const GAME_KEYS = ["scarlet", "violet"];
 
-	const P = (parentId) => [parentId];          			// parent-only task
-	const C = (parentId, childId) => [parentId, childId]; 	// parent + child task
-
 	const DESKTOP_LAYOUT = {
-		"catching": [
+		catching: [
 			[P(1)],
 			[C(1, 1), C(1, 2)],
 		],
-		"thms": [
+		thms: [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3), C(1, 4), C(1, 5)],
 			[P(2)],

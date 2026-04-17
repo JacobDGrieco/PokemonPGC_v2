@@ -20,18 +20,18 @@ import {
 	const SECTIONS = [
 		{ id: "catching", title: "Gotta Catch 'Em All" },
 		{ id: "story", title: "Main Story" },
-		{ id: "side-quests", title: "Side Quests" },
+		{ id: "sideQuests", title: "Side Quests" },
 		{ id: "battle", title: "Battle" },
 		{ id: "upgrades", title: "Upgrades" },
 		{ id: "collectables", title: "Collectables" },
 		{ id: "fashion", title: "Fashion" },
-		{ id: "thms", title: "Ride Pokemon" },
+		{ id: "thms", title: "Ride Pokémon" },
 		{ id: "distributions", title: "Distributions" },
-		{ id: "extra-credit", title: "Extra Credit" },
+		{ id: "extraCredit", title: "Extra Credit" },
 	];
 
 	const TASKS_BY_SECTION = {
-		"catching": [
+		catching: [
 			{
 				id: 1, text: "Catch all the Legendaries", children: [
 					{ id: 1, text: "Catch Dialga", img: ({ gameKey }) => baseSpriteIcon(gameKey, 483) },
@@ -40,7 +40,7 @@ import {
 				],
 			},
 		],
-		"thms": [
+		thms: [
 			{ id: 1, text: "Wydeer", img: ({ gameKey }) => baseSpriteIcon(gameKey, 899) },
 			{ id: 2, text: "Ursaluna", img: ({ gameKey }) => baseSpriteIcon(gameKey, 901) },
 			{ id: 3, text: "Basculegion", img: ({ gameKey }) => baseSpriteIcon(gameKey, 902) },

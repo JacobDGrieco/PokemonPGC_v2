@@ -31,15 +31,15 @@ import {
 	const SECTIONS = [
 		{ id: "catching", title: "Gotta Catch 'Em All" },
 		{ id: "story", title: "Main Story" },
-		{ id: "side-quests", title: "Side Quests" },
+		{ id: "sideQuests", title: "Side Quests" },
 		{ id: "upgrades", title: "Upgrades" },
 		{ id: "collectables", title: "Collectables" },
 		{ id: "thms", title: "TMs/HMs" },
-		{ id: "extra-credit", title: "Extra Credit" },
+		{ id: "extraCredit", title: "Extra Credit" },
 	];
 
 	const TASKS_BY_SECTION = {
-		"catching": [
+		catching: [
 			{
 				id: 1, text: "Catch all the Legendaries", children: [
 					{ id: 1, text: "Catch Raikou", img: ({ gameKey }) => baseSprite(gameKey, 243), },
@@ -80,7 +80,7 @@ import {
 				],
 			},
 		],
-		"story": [
+		story: [
 			{
 				id: 1, text: "Beat the main story", children: [
 					{ id: 1, text: "Zephyr Badge", img: () => _badges("zephyr"), tooltip: "Defeat Falkner at the Violet City Gym" },
@@ -115,7 +115,7 @@ import {
 				],
 			},
 		],
-		"side-quests": [
+		sideQuests: [
 			{ id: 1, text: "Show Elm the hatched Egg", img: ({ gameKey }) => npc(gameKey, "elm"), tooltip: "You get an Everstone in return" },
 			{ id: 2, text: "Deliver the mail for Randy to his friend", img: ({ gameKey }) => npc(gameKey, "randy"), tooltip: "Randy (Route 36), Friend (Route 31)" },
 			{ id: 3, text: "Cure the Miltank", img: ({ gameKey }) => baseSprite(gameKey, 242), tooltip: "Route 39 - Miltank Farm" },
@@ -141,16 +141,16 @@ import {
 				],
 			},
 		],
-		"upgrades": [
+		upgrades: [
+			{ id: 1, text: "Unlock Unown Mode", img: ({ gameKey }) => baseSprite(gameKey, 201), tooltip: "Available after solving the first Ruins of Alph sliding puzzle" },
 			{
-				id: 1, text: "Upgrade your PokeGear", img: () => task("pokegear"), children: [
+				id: 2, text: "Upgrade your PokeGear", img: () => task("pokegear"), children: [
 					{ id: 1, text: "Phone", img: ({ gameKey }) => task(gameKey, "phone") },
 					{ id: 2, text: "Radio", img: ({ gameKey }) => task(gameKey, "radio") },
 				],
 			},
-			{ id: 2, text: "Unlock Unown Mode", img: ({ gameKey }) => baseSprite(gameKey, 201), tooltip: "Available after solving the first Ruins of Alph sliding puzzle" },
 		],
-		"collectables": [
+		collectables: [
 			{
 				id: 1, text: "Obtain all extra Key Items", children: [
 					{ id: 1, text: "Bike", img: () => keyItem("bicycle") },
@@ -170,7 +170,7 @@ import {
 			},
 			{ id: 2, text: "Find all hidden items with the Item Finder", img: () => keyItem("item-finder"), noCenter: true, type: "tiered", tiers: [range(1, 88)], },
 		],
-		"thms": [
+		thms: [
 			{
 				id: 1, text: "Collect all HMs", children: [
 					{ id: 1, text: "HM01 (Cut)", img: () => hm("normal") },
@@ -237,9 +237,9 @@ import {
 				],
 			},
 		],
-		"extra-credit": [
+		extraCredit: [
 			{
-				id: 1, text: "Obtain all Mythical Pokemon", children: [
+				id: 1, text: "Obtain all Mythical Pokémon", children: [
 					{ id: 1, text: "Mew", img: ({ gameKey }) => baseSprite(gameKey, 151), },
 					{ id: 2, text: "Celebi", img: ({ gameKey }) => baseSprite(gameKey, 251), },
 				],

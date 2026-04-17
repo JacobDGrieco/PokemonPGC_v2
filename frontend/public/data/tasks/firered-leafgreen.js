@@ -98,7 +98,7 @@
 					{ id: 1, text: "Defeat the Elite 4/Champion" },
 					{ id: 2, text: "Complete the Kanto Regional PokeDex (150)" },
 					{ id: 3, text: "Complete the National PokeDex (386)" },
-					{ id: 4, text: "Jump 200 times in Pokemon Jump" },
+					{ id: 4, text: "Jump 200 times in Pokémon Jump" },
 					{ id: 5, text: "Collect 200 berries in Dodrio Berry Picking" },
 				],
 			},

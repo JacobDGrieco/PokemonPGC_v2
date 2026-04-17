@@ -129,7 +129,7 @@
 				]
 			},
 			{ id: 25, name: "Poke Ball Tee", gender: "unisex" },
-			{ id: 26, name: "Pokemon Center Nurse Top", gender: "female" },
+			{ id: 26, name: "Pokémon Center Nurse Top", gender: "female" },
 			{
 				id: 27, name: "Polo Shirt", gender: "male", forms: [
 					{ id: 1, name: "Black" },
@@ -390,7 +390,7 @@
 					{ id: 7, name: "White" },
 				]
 			},
-			{ id: 1, name: "Pokemon Center Nurse Skirt", gender: "female" },
+			{ id: 1, name: "Pokémon Center Nurse Skirt", gender: "female" },
 			{
 				id: 3, name: "Ribbed Capris", gender: "male", forms: [
 					{ id: 1, name: "Black" },

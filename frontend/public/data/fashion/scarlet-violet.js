@@ -515,7 +515,7 @@
 					{ id: 33, name: "Duckling" },
 					{ id: 34, name: "Fire Croc" },
 					{ id: 35, name: "Grass Cat" },
-					{ id: 36, name: "Pokemon League" },
+					{ id: 36, name: "Pokémon League" },
 					{ id: 37, name: "Terastal", extraCredit: true },
 				]
 			},

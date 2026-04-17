@@ -71,7 +71,7 @@
 					{ id: 6, text: "6 - Reaching Rank X", },
 					{ id: 7, text: "7 - Reaching Rank W", },
 					{ id: 8, text: "8 - Reaching Rank V", },
-					{ id: 9, text: "9 - Chase That Mysterious Pokemon", },
+					{ id: 9, text: "9 - Chase That Mysterious Pokémon", },
 					{ id: 10, text: "10 - The Secret of Mega Evolution", },
 					{ id: 11, text: "11 - A Rogue Mega Slowbro", },
 					{ id: 12, text: "12 - A Rogue Mega Camerupt", },

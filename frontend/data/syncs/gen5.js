@@ -20,10 +20,10 @@ defineSyncsMany(GAME_KEYS1, ({ taskSync, eitherTaskSync, regionalSync, nationalS
 
 	{ name: "Defeat E4", members: [taskSync("story", 1), taskSync("upgrades", 2, 1)], },
 
-	{ name: "Obtain Victini", members: [taskSync("extra-credit", 1, 1), regionalSync(0, { oneWay: true }), nationalSync(494, { oneWay: true })], },
-	{ name: "Obtain Keldeo", members: [taskSync("extra-credit", 1, 2), regionalSync(153, { oneWay: true }), nationalSync(647, { oneWay: true })], },
-	{ name: "Obtain Meloetta", members: [taskSync("extra-credit", 1, 3), regionalSync(154, { oneWay: true }), nationalSync(648, { oneWay: true })], },
-	{ name: "Obtain Genesect", members: [taskSync("extra-credit", 1, 4), regionalSync(155, { oneWay: true }), nationalSync(649, { oneWay: true })], },
+	{ name: "Obtain Victini", members: [taskSync("extraCredit", 1, 1), regionalSync(0, { oneWay: true }), nationalSync(494, { oneWay: true })], },
+	{ name: "Obtain Keldeo", members: [taskSync("extraCredit", 1, 2), regionalSync(153, { oneWay: true }), nationalSync(647, { oneWay: true })], },
+	{ name: "Obtain Meloetta", members: [taskSync("extraCredit", 1, 3), regionalSync(154, { oneWay: true }), nationalSync(648, { oneWay: true })], },
+	{ name: "Obtain Genesect", members: [taskSync("extraCredit", 1, 4), regionalSync(155, { oneWay: true }), nationalSync(649, { oneWay: true })], },
 ]);
 
 defineSyncsMany(GAME_KEYS2, ({ taskSync, eitherTaskSync, regionalSync, nationalSync }) => [

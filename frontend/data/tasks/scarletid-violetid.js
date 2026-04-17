@@ -22,7 +22,7 @@ import {
 	const SECTIONS = [
 		{ id: "catching", title: "Gotta Catch 'Em All" },
 		{ id: "story", title: "Main Story" },
-		{ id: "side-quests", title: "Side Quests" },
+		{ id: "sideQuests", title: "Side Quests" },
 		{ id: "activities", title: "Activities" },
 		{ id: "battle", title: "Battle" },
 		{ id: "upgrades", title: "Upgrades" },
@@ -32,7 +32,7 @@ import {
 	];
 
 	const TASKS_BY_SECTION = {
-		"catching": [
+		catching: [
 			{
 				id: 1, text: "Catch all the Legendaries", children: [
 					{ id: 1, text: "Catch Terapagos", img: ({ gameKey }) => baseSprite(gameKey, 1024) },

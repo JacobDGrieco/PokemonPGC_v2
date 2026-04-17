@@ -1,15 +1,10 @@
-import {
-	defineLayoutsMany,
-} from '../helpers/index.js';
+import { defineLayoutsMany, P, C, parentRows, childRows, } from '../helpers/index.js';
 
 (() => {
 	const GAME_KEYS = ["firered", "leafgreen"];
 
-	const P = (parentId) => [parentId];          			// parent-only task
-	const C = (parentId, childId) => [parentId, childId]; 	// parent + child task
-
 	const DESKTOP_LAYOUT = {
-		"catching": [
+		catching: [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3), C(1, 4)],
 			[P(2)],
@@ -20,30 +15,30 @@ import {
 			[C(4, 1), C(4, 2), C(4, 3), C(4, 4), C(4, 5)],
 			[C(4, 6), C(4, 7), C(4, 8), C(4, 9)],
 		],
-		"story": [
+		story: [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3), C(1, 4)],
 			[C(1, 5), C(1, 6), C(1, 7), C(1, 8), C(1, 9)],
 			[P(2)],
 			[C(2, 1)],
 		],
-		"battle": [
+		battle: [
 			[P(1)],
 			[P(2)],
 			[C(2, 1), C(2, 2), C(2, 3), C(2, 4)],
 		],
-		"upgrades": [
+		upgrades: [
 			[P(1)],
 			[P(2)],
 			[C(2, 1), C(2, 2), C(2, 3)],
 			[C(2, 4), C(2, 5)],
 		],
-		"collectables": [
+		collectables: [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3), C(1, 4), C(1, 5), C(1, 6)],
 			[P(2)],
 		],
-		"thms": [
+		thms: [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3), C(1, 4), C(1, 5)],
 			[P(2)],
@@ -58,7 +53,7 @@ import {
 			[C(2, 41), C(2, 42), C(2, 43), C(2, 44), C(2, 45)],
 			[C(2, 46), C(2, 47), C(2, 48), C(2, 49), C(2, 50)],
 		],
-		"extra-credit": [
+		extraCredit: [
 			[P(1)],
 			[C(1, 1)],
 		],

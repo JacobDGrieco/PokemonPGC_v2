@@ -33,15 +33,15 @@ import {
 		{ id: "trainers", title: "Master Trainers" },
 		{ id: "upgrades", title: "Upgrades" },
 		{ id: "collectables", title: "Collectables" },
-		{ id: "mega-stones", title: "Mega Stones" },
+		{ id: "megaStones", title: "Mega Stones" },
 		{ id: "fashion", title: "Fashion" },
 		{ id: "thms", title: "TMs/STs" },
 		{ id: "distributions", title: "Distributions" },
-		{ id: "extra-credit", title: "Extra Credit" },
+		{ id: "extraCredit", title: "Extra Credit" },
 	];
 
 	const TASKS_BY_SECTION = {
-		"catching": [
+		catching: [
 			{
 				id: 1, text: "Catch all the Legendaries", children: [
 					{ id: 1, text: "Catch Articuno", img: ({ gameKey }) => baseSprite(gameKey, 144), },
@@ -58,11 +58,11 @@ import {
 				],
 			},
 			{
-				id: 3, text: "Obtain all In-Game Gift Pokemon", children: [
-					{ id: 1, text: "Magikarp", img: ({ gameKey }) => baseSprite(gameKey, 129), tooltip: "Purchased from the salesman in the Route 4 Pokemon Center" },
-					{ id: 2, text: "Bulbasaur", img: ({ gameKey }) => baseSprite(gameKey, 1), tooltip: "Cerulean City\nRequires catching 30 Pokemon" },
-					{ id: 3, text: "Charmander", img: ({ gameKey }) => baseSprite(gameKey, 4), tooltip: "Route 24\nRequires catching 50 Pokemon" },
-					{ id: 4, text: "Squirtle", img: ({ gameKey }) => baseSprite(gameKey, 7), tooltip: "Vermilion City\nRequires catching 60 Pokemon" },
+				id: 3, text: "Obtain all In-Game Gift Pokémon", children: [
+					{ id: 1, text: "Magikarp", img: ({ gameKey }) => baseSprite(gameKey, 129), tooltip: "Purchased from the salesman in the Route 4 Pokémon Center" },
+					{ id: 2, text: "Bulbasaur", img: ({ gameKey }) => baseSprite(gameKey, 1), tooltip: "Cerulean City\nRequires catching 30 Pokémon" },
+					{ id: 3, text: "Charmander", img: ({ gameKey }) => baseSprite(gameKey, 4), tooltip: "Route 24\nRequires catching 50 Pokémon" },
+					{ id: 4, text: "Squirtle", img: ({ gameKey }) => baseSprite(gameKey, 7), tooltip: "Vermilion City\nRequires catching 60 Pokémon" },
 					{ id: 5, text: "Persian/Arcanine" },
 					{ id: 6, text: "Lapras", img: ({ gameKey }) => baseSprite(gameKey, 131), tooltip: "Silph Co." },
 					{
@@ -81,18 +81,18 @@ import {
 			},
 			{
 				id: 4, text: "Complete all In-Game Trades", children: [
-					{ id: 1, text: "Rattata for Alolan Rattata", img: ({ gameKey }) => task(gameKey, "rattata-for-alolan-rattata"), tooltip: "Cerulean City Pokemon Center" },
-					{ id: 2, text: "Geodude for Alolan Geodude", img: ({ gameKey }) => task(gameKey, "geodude-for-alolan-geodude"), tooltip: "Vermilion City Pokemon Center" },
-					{ id: 3, text: "Diglett for Alolan Diglett", img: ({ gameKey }) => task(gameKey, "diglett-for-alolan-diglett"), tooltip: "Lavender Town Pokemon Center" },
-					{ id: 4, text: "Sandshrew/Vulpix for Alolan Sandshrew/Vulpix", tooltip: "Celadon City Pokemon Center" },
-					{ id: 5, text: "Raichu for Alolan Raichu", img: ({ gameKey }) => task(gameKey, "raichu-for-alolan-raichu"), tooltip: "Saffron City Pokemon Center" },
-					{ id: 6, text: "Marowak for Alolan Marowak", img: ({ gameKey }) => task(gameKey, "marowak-for-alolan-marowak"), tooltip: "Fuchsia City Pokemon Center" },
-					{ id: 7, text: "Grimer/Meowth for Alolan Grimer/Meowth", tooltip: "Cinnabar Island Pokemon Center" },
-					{ id: 8, text: "Exeggutor for Alolan Exeggutor", img: ({ gameKey }) => task(gameKey, "exeggutor-for-alolan-exeggutor"), tooltip: "Indigo Plateau Pokemon Center" },
+					{ id: 1, text: "Rattata for Alolan Rattata", img: ({ gameKey }) => task(gameKey, "rattata-for-alolan-rattata"), tooltip: "Cerulean City Pokémon Center" },
+					{ id: 2, text: "Geodude for Alolan Geodude", img: ({ gameKey }) => task(gameKey, "geodude-for-alolan-geodude"), tooltip: "Vermilion City Pokémon Center" },
+					{ id: 3, text: "Diglett for Alolan Diglett", img: ({ gameKey }) => task(gameKey, "diglett-for-alolan-diglett"), tooltip: "Lavender Town Pokémon Center" },
+					{ id: 4, text: "Sandshrew/Vulpix for Alolan Sandshrew/Vulpix", tooltip: "Celadon City Pokémon Center" },
+					{ id: 5, text: "Raichu for Alolan Raichu", img: ({ gameKey }) => task(gameKey, "raichu-for-alolan-raichu"), tooltip: "Saffron City Pokémon Center" },
+					{ id: 6, text: "Marowak for Alolan Marowak", img: ({ gameKey }) => task(gameKey, "marowak-for-alolan-marowak"), tooltip: "Fuchsia City Pokémon Center" },
+					{ id: 7, text: "Grimer/Meowth for Alolan Grimer/Meowth", tooltip: "Cinnabar Island Pokémon Center" },
+					{ id: 8, text: "Exeggutor for Alolan Exeggutor", img: ({ gameKey }) => task(gameKey, "exeggutor-for-alolan-exeggutor"), tooltip: "Indigo Plateau Pokémon Center" },
 				],
 			},
 		],
-		"story": [
+		story: [
 			{
 				id: 1, text: "Beat the main story", children: [
 					{ id: 1, text: "Boulder Badge", img: () => _badges("boulder"), tooltip: "Defeat Brock at the Pewter City Gym" },
@@ -107,7 +107,7 @@ import {
 				],
 			},
 		],
-		"battle": [
+		battle: [
 			{ id: 1, text: "Battle Red", tooltip: "Defeat 6 Master Trainers and go to the Indigo Plateau" },
 			{
 				id: 2, text: "Battle Green", tooltip: "Meet in Cerulean City", multi: [
@@ -128,7 +128,7 @@ import {
 				],
 			},
 		],
-		"trainers": [
+		trainers: [
 			{
 				id: 1, text: "Defeat all Master Trainers", children: [
 					{ id: 1, text: "Bulbasaur MT", img: ({ gameKey }) => baseSprite(gameKey, 1) },
@@ -287,10 +287,10 @@ import {
 				],
 			},
 		],
-		"upgrades": [
-			{ id: 1, text: "Obtain the Judge function", tooltip: "Route 11 gate\nRequires catching 30 Pokemon species" },
+		upgrades: [
+			{ id: 1, text: "Obtain the Judge function", tooltip: "Route 11 gate\nRequires catching 30 Pokémon species" },
 		],
-		"collectables": [
+		collectables: [
 			{
 				id: 2, text: "Obtain all important key items", children: [
 					{ id: 1, text: "Bicycle", img: () => keyItem("bicycle") },
@@ -304,7 +304,7 @@ import {
 				],
 			},
 		],
-		"mega-stones": [
+		megaStones: [
 			{ id: 1, text: "Venusaurite", img: ({ gameKey }) => [baseSprite(gameKey, "003-m"), megaStone("venusaurite")], },
 			{ id: 2, text: "Charizardite X", img: ({ gameKey }) => [baseSprite(gameKey, "006-mx"), megaStone("charizardite-x")], },
 			{ id: 3, text: "Charizardite Y", img: ({ gameKey }) => [baseSprite(gameKey, "006-my"), megaStone("charizardite-y")], },
@@ -321,7 +321,7 @@ import {
 			{ id: 14, text: "Mewtwonite X", img: ({ gameKey }) => [baseSprite(gameKey, "150-mx"), megaStone("mewtwonite-x")], },
 			{ id: 15, text: "Mewtwonite Y", img: ({ gameKey }) => [baseSprite(gameKey, "150-my"), megaStone("mewtwonite-y")], },
 		],
-		"fashion": [
+		fashion: [
 			{ id: 1, text: "Obtain all Outfit sets" },
 			{
 				id: 2, text: "Collect all Bow accessories", tooltip: "Purchased from the Celadon Department Store", children: [
@@ -368,7 +368,7 @@ import {
 				],
 			},
 		],
-		"thms": [
+		thms: [
 			{
 				id: 1, text: "Collect all HMs", children: [
 					{ id: 1, text: "Chop Down", img: () => hm("chop-down") },
@@ -443,12 +443,12 @@ import {
 				],
 			},
 		],
-		"extra-credit": [
+		extraCredit: [
 			{
-				id: 1, text: "Obtain all Mythical Pokemon", children: [
+				id: 1, text: "Obtain all Mythical Pokémon", children: [
 					{ id: 1, text: "Mew", img: ({ gameKey }) => baseSprite(gameKey, 151), tooltip: "Poké Ball Plus gift" },
-					{ id: 2, text: "Meltan", img: ({ gameKey }) => baseSprite(gameKey, 808), tooltip: "Transfer from Pokemon GO" },
-					{ id: 3, text: "Melmetal", img: ({ gameKey }) => baseSprite(gameKey, 809), tooltip: "Evolve Meltan in Pokemon GO, then transfer" },
+					{ id: 2, text: "Meltan", img: ({ gameKey }) => baseSprite(gameKey, 808), tooltip: "Transfer from Pokémon GO" },
+					{ id: 3, text: "Melmetal", img: ({ gameKey }) => baseSprite(gameKey, 809), tooltip: "Evolve Meltan in Pokémon GO, then transfer" },
 				],
 			},
 		],

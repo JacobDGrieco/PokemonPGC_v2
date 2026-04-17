@@ -34,11 +34,11 @@ import {
 		{ id: "collectables", title: "Collectables" },
 		{ id: "thms", title: "TMs/HMs" },
 		{ id: "distributions", title: "Distributions" },
-		{ id: "extra-credit", title: "Extra Credit" },
+		{ id: "extraCredit", title: "Extra Credit" },
 	];
 
 	const TASKS_BY_SECTION = {
-		"catching": [
+		catching: [
 			{
 				id: 1, text: "Catch all the Legendaries", children: [
 					{ id: 1, text: "Catch Kyogre", img: ({ gameKey }) => baseSprite(gameKey, 382), },
@@ -74,7 +74,7 @@ import {
 				],
 			},
 		],
-		"story": [
+		story: [
 			{
 				id: 1, text: "Beat the main story", children: [
 					{ id: 1, text: "Stone Badge", img: () => _badges("stone"), tooltip: "Defeat Roxanne at the Rustboro City Gym" },
@@ -89,7 +89,7 @@ import {
 				],
 			},
 		],
-		"activities": [
+		activities: [
 			{
 				id: 1, text: "Master all the Contests", noCenter: true, children: [
 					{ id: 1, text: "Beauty Contests", img: () => ribbon("beauty-master"), type: "tiered", tiers: ["Normal", "Super", "Hyper", "Master"], },
@@ -101,7 +101,7 @@ import {
 			},
 			{ id: 2, text: "Complete all chambers of the Trick House", type: "tiered", tiers: [range(1, 8)], },
 		],
-		"battle": [
+		battle: [
 			{ id: 1, text: "Rematch Steven at Meteor Crater", noCenter: true },
 			{
 				id: 2, text: "Complete all modes of Trainer Hill", children: [
@@ -141,7 +141,7 @@ import {
 				],
 			},
 		],
-		"upgrades": [
+		upgrades: [
 			{ id: 1, text: "Obtain the National PokeDex", noCenter: true },
 			{
 				id: 2, text: "Obtain the Gold 4-Star Trainer Card", noCenter: true, children: [
@@ -152,7 +152,7 @@ import {
 				],
 			},
 		],
-		"collectables": [
+		collectables: [
 			{
 				id: 1, text: "Obtain all extra Key Items", children: [
 					{ id: 1, text: "Exp. Share", img: () => heldItem("exp-share") },
@@ -294,7 +294,7 @@ import {
 				],
 			},
 		],
-		"thms": [
+		thms: [
 			{
 				id: 1, text: "Collect all HMs", children: [
 					{ id: 1, text: "HM01 (Cut)", img: () => hm("normal") },
@@ -362,9 +362,9 @@ import {
 				],
 			},
 		],
-		"extra-credit": [
+		extraCredit: [
 			{
-				id: 1, text: "Obtain all Mythical Pokemon", children: [
+				id: 1, text: "Obtain all Mythical Pokémon", children: [
 					{ id: 1, text: "Jirachi", img: ({ gameKey }) => baseSprite(gameKey, 385), },
 					{ id: 2, text: "Deoxys", img: ({ gameKey }) => baseSprite(gameKey, 386), },
 				],

@@ -1,15 +1,10 @@
-import {
-  defineLayoutsMany,
-} from '../helpers/index.js';
+import { defineLayoutsMany, P, C, parentRows, childRows, } from '../helpers/index.js';
 
 (() => {
 	const GAME_KEYS = ["omegaruby", "alphasapphire"];
 
-	const P = (parentId) => [parentId];          			// parent-only task
-	const C = (parentId, childId) => [parentId, childId]; 	// parent + child task
-
 	const DESKTOP_LAYOUT = {
-		"catching": [
+		catching: [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3), C(1, 4), C(1, 5)],
 			[C(1, 6), C(1, 7), C(1, 8)],
@@ -29,7 +24,7 @@ import {
 			[P(6)],
 			[C(6, 1), C(6, 2), C(6, 3)],
 		],
-		"story": [
+		story: [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3), C(1, 4), C(1, 5)],
 			[C(1, 6), C(1, 7), C(1, 8), C(1, 9)],
@@ -39,24 +34,24 @@ import {
 			[C(2, 11), C(2, 12), C(2, 13), C(2, 14), C(2, 15)],
 			[C(2, 16), C(2, 17)],
 		],
-		"activities": [
+		activities: [
 			[P(1), P(2), P(3), P(4)],
 			[P(5)],
 			[C(5, 1), C(5, 2), C(5, 3), C(5, 4), C(5, 5)],
 			[P(6)],
 			[C(6, 1), C(6, 2), C(6, 3)],
 		],
-		"battle": [
+		battle: [
 			[P(1), P(2), P(3)],
 			[P(4)],
 			[C(4, 1), C(4, 2), C(4, 3)],
 		],
-		"upgrades": [
+		upgrades: [
 			[P(1)],
 			[P(2)],
 			[C(2, 1), C(2, 2), C(2, 3)],
 		],
-		"collectables": [
+		collectables: [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3), C(1, 4), C(1, 5)],
 			[C(1, 6), C(1, 7), C(1, 8), C(1, 9), C(1, 10)],
@@ -109,7 +104,7 @@ import {
 			[C(5, 151), C(5, 152), C(5, 153), C(5, 154), C(5, 155)],
 			[C(5, 156), C(5, 157)],
 		],
-		"mega-stones": [
+		megaStones: [
 			[P(1), P(2), P(3), P(4), P(5)],
 			[P(6), P(7), P(8), P(9), P(10)],
 			[P(11), P(12), P(13), P(14), P(15)],
@@ -121,7 +116,7 @@ import {
 			[P(41), P(42), P(43), P(44), P(45)],
 			[P(46)],
 		],
-		"thms": [
+		thms: [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3), C(1, 4), C(1, 5)],
 			[C(1, 6), C(1, 7)],
@@ -147,7 +142,7 @@ import {
 			[C(2, 91), C(2, 92), C(2, 93), C(2, 94), C(2, 95)],
 			[C(2, 96), C(2, 97), C(2, 98), C(2, 99), C(2, 100)],
 		],
-		"extra-credit": [
+		extraCredit: [
 			[P(1)],
 		],
 	};

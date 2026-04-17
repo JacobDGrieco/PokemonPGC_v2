@@ -119,7 +119,7 @@
 				]
 			},
 			{ id: 24, name: "Poke Ball Tee", gender: "unisex" },
-			{ id: 25, name: "Pokemon Center Nurse Top", gender: "female" },
+			{ id: 25, name: "Pokémon Center Nurse Top", gender: "female" },
 			{
 				id: 26, name: "Polka-Dot Ruffled Tank", gender: "female", forms: [
 					{ id: 1, name: "Black" },
@@ -309,7 +309,7 @@
 					{ id: 2, name: "White" },
 				]
 			},
-			{ id: 20, name: "Pokemon Center Nurse Skirt", gender: "female" },
+			{ id: 20, name: "Pokémon Center Nurse Skirt", gender: "female" },
 			{
 				id: 21, name: "Ribbed Capris", gender: "male", forms: [
 					{ id: 1, name: "Beige" },
@@ -584,7 +584,7 @@
 			},
 			{ id: 2, name: "Gem Barrette - White", gender: "female" },
 			{ id: 3, name: "Luran Headband", gender: "female" },
-			{ id: 4, name: "Pokemon Center Nurse Cap", gender: "female" },
+			{ id: 4, name: "Pokémon Center Nurse Cap", gender: "female" },
 			{
 				id: 5, name: "Satin Bow Headband", gender: "female", forms: [
 					{ id: 1, name: "Black" },

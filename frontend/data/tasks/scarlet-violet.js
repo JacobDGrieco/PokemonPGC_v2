@@ -24,7 +24,7 @@ import {
 	const SECTIONS = [
 		{ id: "catching", title: "Gotta Catch 'Em All" },
 		{ id: "story", title: "Main Story" },
-		{ id: "side-quests", title: "Side Quests" },
+		{ id: "sideQuests", title: "Side Quests" },
 		{ id: "activities", title: "Activities" },
 		{ id: "battle", title: "Battle" },
 		{ id: "upgrades", title: "Upgrades" },
@@ -33,11 +33,11 @@ import {
 		{ id: "sandwiches", title: "Sandwiches" },
 		{ id: "thms", title: "TMs/Legendary" },
 		{ id: "distributions", title: "Distributions" },
-		{ id: "extra-credit", title: "Extra Credit" },
+		{ id: "extraCredit", title: "Extra Credit" },
 	];
 
 	const TASKS_BY_SECTION = {
-		"catching": [
+		catching: [
 			{
 				id: 1, text: "Catch all the Legendaries", children: [
 					{ id: 1, text: "Catch/Trade Koraidon", img: ({ gameKey }) => baseSprite(gameKey, 1007) },
@@ -45,7 +45,7 @@ import {
 				],
 			},
 		],
-		"thms": [
+		thms: [
 			{
 				id: 1, text: "Get all of Koraidon's powers back", children: [
 					{ id: 1, text: "Dash", img: () => hm("koraidon-dash") },

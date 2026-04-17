@@ -16,7 +16,7 @@
 		{ id: "upgrades", title: "Upgrades" },
 		{ id: "collectables", title: "Collectables" },
 		{ id: "fashion", title: "Fashion" },
-		{ id: "thms", title: "Ride Pokemon" },
+		{ id: "thms", title: "Ride Pokémon" },
 		{ id: "distributions", title: "Distributions" },
 		{ id: "extra-credit", title: "Extra Credit" },
 	];

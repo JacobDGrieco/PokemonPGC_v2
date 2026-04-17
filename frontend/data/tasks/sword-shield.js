@@ -35,17 +35,17 @@ import {
 		{ id: "battle", title: "Battle" },
 		{ id: "upgrades", title: "Upgrades" },
 		{ id: "collectables", title: "Collectables" },
-		{ id: "trainer-cards", title: "Trainer Card" },
+		{ id: "trainerCards", title: "Trainer Card" },
 		{ id: "fashion", title: "Fashion" },
 		{ id: "curry", title: "Curry" },
 		{ id: "thms", title: "TMs" },
 		{ id: "trs", title: "TRs" },
 		{ id: "distributions", title: "Distributions" },
-		{ id: "extra-credit", title: "Extra Credit" },
+		{ id: "extraCredit", title: "Extra Credit" },
 	];
 
 	const TASKS_BY_SECTION = {
-		"catching": [
+		catching: [
 			{
 				id: 1, text: "Catch all the Legendaries", children: [
 					{ id: 1, text: "Catch/Trade Zacian", img: ({ gameKey }) => baseSprite(gameKey, 888) },
@@ -54,15 +54,15 @@ import {
 				],
 			},
 			{
-				id: 2, text: "Obtain all In-Game Gift Pokemon", children: [
+				id: 2, text: "Obtain all In-Game Gift Pokémon", children: [
 					{ id: 1, text: "Toxel", img: ({ gameKey }) => baseSprite(gameKey, 848), tooltip: "Route 5 Nursery" },
 					{ id: 2, text: "Charmander", img: ({ gameKey }) => baseSprite(gameKey, 4), tooltip: "Postwick - Leon's room after becoming Champion\nHas the Gigantamax Factor" },
 					{ id: 3, text: "Type: Null", img: ({ gameKey }) => baseSprite(gameKey, 772), tooltip: "Battle Tower - League Staff after becoming Champion" },
 				],
 			},
 			{
-				id: 3, text: "Complete all In-Game Pokemon Trades", children: [
-					{ id: 1, text: "Bunnelby for Skwovet", img: ({ gameKey }) => task(gameKey, "bunnelby-for-skwovet"), tooltip: "Motostoke - Pokemon Center" },
+				id: 3, text: "Complete all In-Game Pokémon Trades", children: [
+					{ id: 1, text: "Bunnelby for Skwovet", img: ({ gameKey }) => task(gameKey, "bunnelby-for-skwovet"), tooltip: "Motostoke - Pokémon Center" },
 					{ id: 2, text: "Galarian Meowth for Meowth", img: ({ gameKey }) => task(gameKey, "galarian-meowth-for-meowth"), tooltip: "Turffield Stadium" },
 					{ id: 3, text: "Minccino for Cottonee", img: ({ gameKey }) => task(gameKey, "minccino-for-cottonee"), tooltip: "Hulbury Market" },
 					{ id: 4, text: "Toxel for Togepi", img: ({ gameKey }) => task(gameKey, "toxel-for-togepi"), tooltip: "Hammerlocke - near the vault" },
@@ -74,7 +74,7 @@ import {
 				],
 			},
 		],
-		"story": [
+		story: [
 			{
 				id: 1, text: "Beat the main story", children: [
 					{ id: 1, text: "Grass Badge", img: () => _badges("grass-8"), tooltip: "Defeat Milo at the Turffield Gym" },
@@ -90,7 +90,7 @@ import {
 				],
 			},
 			{
-				id: 2, text: "Complete the Sordward & Shielbert Quest", children: [
+				id: 2, text: "Complete the Epilogue: Sordward & Shielbert", children: [
 					{ id: 1, text: "Return to the Slumbering Weald altar", tooltip: "Begins after becoming Champion" },
 					{ id: 2, text: "Defeat Sordward/Shielbert at the Slumbering Weald", tooltip: "Your opponent depends on version" },
 					{ id: 3, text: "Stop the Dynamax incidents around Galar", tooltip: "Resolve the stadium incidents and Hammerlocke Energy Plant lead-up" },
@@ -99,16 +99,16 @@ import {
 				],
 			},
 		],
-		"battle": [
+		battle: [
 			{ id: 1, text: "Defeat Morimoto", tooltip: "Circhester - Hotel Ionia\nRewards the Oval Charm on first win" },
 			{ id: 2, text: "Reach Singles Master Ball Tier at the Battle Tower", tiers: ["Poke Ball", "Great Ball", "Ultra Ball", "Master Ball"], tooltip: "Defeat Leon" },
 			{ id: 3, text: "Reach Doubles Master Ball Tier at the Battle Tower", tiers: ["Poke Ball", "Great Ball", "Ultra Ball", "Master Ball"], tooltip: "Defeat Leon" },
 		],
-		"upgrades": [
+		upgrades: [
 			{ id: 1, text: "Obtain the Judge function", tooltip: "Unlocked at the Battle Tower after reaching Poke Ball Tier / Rank 4" },
 			{ id: 2, text: "Upgrade the Rotom Bike", tiers: [1, 2, 3] },
 		],
-		"collectables": [
+		collectables: [
 			{
 				id: 1, text: "Collect all Key Items", children: [
 					{ id: 1, text: "Camping Gear", img: () => keyItem("camping-gear") },
@@ -183,7 +183,7 @@ import {
 				],
 			},
 			{
-				id: 5, text: "Collect all Pokemon Camp Toys", children: [
+				id: 5, text: "Collect all Pokémon Camp Toys", children: [
 					{ id: 1, text: "Fresh Ball" },
 					{ id: 2, text: "Mirror Ball" },
 					{ id: 3, text: "Weighted Ball" },
@@ -193,9 +193,44 @@ import {
 				],
 			},
 		],
-		"trainer-cards": [
+		trainerCards: [
 			{
-				id: 1, text: "Obtain all League Card Backgrounds", children: [
+				id: 1, text: "Obtain all Regular League Cards", children: [
+					{ id: 1, text: "Hop", tooltip: "Motostoke" },
+					{ id: 2, text: "Marnie", tooltip: "Ballonlea Stadium" },
+					{ id: 3, text: "Milo", tooltip: "Turffield" },
+					{ id: 4, text: "Nessa", tooltip: "Hulbury" },
+					{ id: 5, text: "Kabu", tooltip: "Motostoke" },
+					{ id: 6, text: "Bea/Allister", tooltip: "Stow-on-Side" },
+					{ id: 7, text: "Opal", tooltip: "Route 6" },
+					{ id: 8, text: "Gordie/Melony", tooltip: "Circhester Stadium" },
+					{ id: 9, text: "Piers", tooltip: "Spikemuth" },
+					{ id: 10, text: "Raihan", tooltip: "Hammerlocke" },
+					{ id: 11, text: "Leon", tooltip: "Motostoke" },
+					{ id: 12, text: "Rose", tooltip: "Hulbury" },
+					{ id: 13, text: "Bede", tooltip: "Galar Mine No. 2" },
+					{ id: 14, text: "Ball Guy", tooltip: "Motostoke" },
+				]
+			},
+			{
+				id: 2, text: "Obtain all Rare League Cards", children: [
+					{ id: 1, text: "Hop", tooltip: "Slumbering Weald" },
+					{ id: 2, text: "Marnie", tooltip: "Spikemuth" },
+					{ id: 3, text: "Milo", tooltip: "Turffield Stadium" },
+					{ id: 4, text: "Nessa", tooltip: "Hulbury Stadium" },
+					{ id: 5, text: "Kabu", tooltip: "Motostoke Stadium" },
+					{ id: 6, text: "Bea/Allister", tooltip: "Stow-on-Side Stadium" },
+					{ id: 7, text: "Opal", tooltip: "Ballonlea Stadium" },
+					{ id: 8, text: "Gordie/Melony", tooltip: "Circhester Stadium" },
+					{ id: 9, text: "Piers", tooltip: "Tower Summit" },
+					{ id: 10, text: "Raihan", tooltip: "Hammerlocke Stadium" },
+					{ id: 11, text: "Leon", tooltip: "Battle Tower" },
+					{ id: 12, text: "Rose", tooltip: "Galar Mine" },
+					{ id: 13, text: "Bede", tooltip: "Ballonlea Stadium" },
+				]
+			},
+			{
+				id: 3, text: "Obtain all League Card Backgrounds", children: [
 					{ id: 1, text: "Blue Line", img: ({ gameKey }) => trainerCard(gameKey, "backgrounds", "blue-line"), startGame: true },
 					{ id: 2, text: "Red Plaid", img: ({ gameKey }) => trainerCard(gameKey, "backgrounds", "red-plaid"), startGame: true },
 					{ id: 3, text: "Green Plaid", img: ({ gameKey }) => trainerCard(gameKey, "backgrounds", "green-plaid"), startGame: true },
@@ -242,8 +277,8 @@ import {
 					{ id: 44, text: "Gigantamax Meowth", img: ({ gameKey }) => trainerCard(gameKey, "backgrounds", "gigantamax-meowth") },
 					{ id: 45, text: "Rotomi", img: ({ gameKey }) => trainerCard(gameKey, "backgrounds", "rotomi") },
 					{ id: 46, text: "Leon", img: ({ gameKey }) => trainerCard(gameKey, "backgrounds", "leon") },
-					{ id: 47, text: "Pokemon League", img: ({ gameKey }) => trainerCard(gameKey, "backgrounds", "pokemon-league") },
-					{ id: 48, text: "Pokemon League (Night)", img: ({ gameKey }) => trainerCard(gameKey, "backgrounds", "pokemon-league-night") },
+					{ id: 47, text: "Pokémon League", img: ({ gameKey }) => trainerCard(gameKey, "backgrounds", "pokemon-league") },
+					{ id: 48, text: "Pokémon League (Night)", img: ({ gameKey }) => trainerCard(gameKey, "backgrounds", "pokemon-league-night") },
 					{ id: 49, text: "Salon", img: ({ gameKey }) => trainerCard(gameKey, "backgrounds", "salon") },
 					{ id: 50, text: "Battle Tower (Bronze)", img: ({ gameKey }) => trainerCard(gameKey, "backgrounds", "battle-tower-bronze") },
 					{ id: 51, text: "Battle Tower (Gold)", img: ({ gameKey }) => trainerCard(gameKey, "backgrounds", "battle-tower-gold") },
@@ -252,7 +287,7 @@ import {
 				]
 			},
 			{
-				id: 2, text: "Obtain all League Card Effects", children: [
+				id: 4, text: "Obtain all League Card Effects", children: [
 					{ id: 1, text: "Effect 1", img: ({ gameKey }) => trainerCard(gameKey, "effects", "2") },
 					{ id: 2, text: "Effect 2", img: ({ gameKey }) => trainerCard(gameKey, "effects", "3") },
 					{ id: 3, text: "Effect 3", img: ({ gameKey }) => trainerCard(gameKey, "effects", "4") },
@@ -276,7 +311,7 @@ import {
 				]
 			},
 			{
-				id: 3, text: "Obtain all League Card Frames", children: [
+				id: 5, text: "Obtain all League Card Frames", children: [
 					{ id: 1, text: "Frame 1", img: ({ gameKey }) => trainerCard(gameKey, "frames", "2") },
 					{ id: 2, text: "Frame 2", img: ({ gameKey }) => trainerCard(gameKey, "frames", "3") },
 					{ id: 3, text: "Frame 3", img: ({ gameKey }) => trainerCard(gameKey, "frames", "4") },
@@ -298,7 +333,7 @@ import {
 				]
 			},
 			{
-				id: 4, text: "Obtain all League Card Foils", children: [
+				id: 6, text: "Obtain all League Card Foils", children: [
 					{ id: 1, text: "Matte", img: ({ gameKey }) => trainerCard(gameKey, "foils", "matte") },
 					{ id: 2, text: "Checkered", img: ({ gameKey }) => trainerCard(gameKey, "foils", "checkered") },
 					{ id: 3, text: "Dot", img: ({ gameKey }) => trainerCard(gameKey, "foils", "dot") },
@@ -310,7 +345,7 @@ import {
 				]
 			},
 		],
-		"thms": [
+		thms: [
 			{ id: 1, text: "TM01 (Headbutt)", img: () => tm("normal") },
 			{ id: 2, text: "TM02 (Taunt)", img: () => tm("dark") },
 			{ id: 3, text: "TM03 (Helping Hand)", img: () => tm("normal") },
@@ -372,7 +407,7 @@ import {
 			{ id: 59, text: "TM59 (Dream Eater)", img: () => tm("psychic") },
 			{ id: 60, text: "TM60 (Megahorn)", img: () => tm("bug") }
 		],
-		"trs": [
+		trs: [
 			{ id: 1, text: "TR00 - Swords Dance", img: () => tr("normal") },
 			{ id: 2, text: "TR01 - Body Slam", img: () => tr("normal") },
 			{ id: 3, text: "TR02 - Flamethrower", img: () => tr("fire") },
@@ -474,7 +509,7 @@ import {
 			{ id: 99, text: "TR98 - Liquidation", img: () => tr("water") },
 			{ id: 100, text: "TR99 - Body Press", img: () => tr("fighting") }
 		],
-		"extra-credit": [
+		extraCredit: [
 			{
 				id: 1, text: "Obtain all League Card Backgrounds", children: [
 					{ id: 1, text: "Let's Go, Eevee", img: ({ gameKey }) => trainerCard(gameKey, "backgrounds", "lets-go-eevee") },
@@ -518,6 +553,16 @@ import {
 				16: { text: "Rusted Sword", img: () => formItem("rusted-sword") },
 			},
 		}),
+		trainerCards: overrideTasks(TASKS_BY_SECTION.trainerCards, {
+			1: {
+				6: { text: "Bea", tooltip: "Stow-on-Side" },
+				8: { text: "Gordie", tooltip: "Circhester Stadium" },
+			},
+			2: {
+				6: { text: "Bea", tooltip: "Stow-on-Side Stadium" },
+				8: { text: "Gordie", tooltip: "Circhester Stadium" },
+			},
+		}),
 	};
 
 	const TASKS_BY_SECTION_GAME2 = {
@@ -544,6 +589,16 @@ import {
 		collectables: overrideTasks(TASKS_BY_SECTION.collectables, {
 			2: {
 				16: { text: "Rusted Shield", img: () => formItem("rusted-shield") },
+			},
+		}),
+		trainerCards: overrideTasks(TASKS_BY_SECTION.trainerCards, {
+			1: {
+				6: { text: "Allister", tooltip: "Stow-on-Side" },
+				8: { text: "Melony", tooltip: "Circhester Stadium" },
+			},
+			2: {
+				6: { text: "Allister", tooltip: "Stow-on-Side Stadium" },
+				8: { text: "Melony", tooltip: "Circhester Stadium" },
 			},
 		}),
 	};

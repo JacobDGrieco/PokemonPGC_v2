@@ -341,7 +341,7 @@ import {
 				],
 			},
 			{
-				id: 8, name: "Pokemon Kimono", gender: "unisex", forms: [
+				id: 8, name: "Pokémon Kimono", gender: "unisex", forms: [
 					{ id: 1, name: "Blank" },
 					{ id: 2, name: "Draco" },
 					{ id: 3, name: "Dread" },
@@ -548,7 +548,7 @@ import {
 				],
 			},
 			{
-				id: 8, name: "Pokemon Bottoms", gender: "unisex", forms: [
+				id: 8, name: "Pokémon Bottoms", gender: "unisex", forms: [
 					{ id: 1, name: "Blank" },
 					{ id: 2, name: "Draco" },
 					{ id: 3, name: "Dread" },

@@ -41,14 +41,14 @@ import {
 		{ id: "battle", title: "Battle" },
 		{ id: "upgrades", title: "Upgrades" },
 		{ id: "collectables", title: "Collectables" },
-		{ id: "mega-stones", title: "Mega Stones" },
+		{ id: "megaStones", title: "Mega Stones" },
 		{ id: "thms", title: "TMs/HMs" },
 		{ id: "distributions", title: "Distributions" },
-		{ id: "extra-credit", title: "Extra Credit" },
+		{ id: "extraCredit", title: "Extra Credit" },
 	];
 
 	const TASKS_BY_SECTION = {
-		"catching": [
+		catching: [
 			{
 				id: 1, text: "Catch all the Legendaries", children: [
 					{ id: 1, text: "Catch/Trade Kyogre", img: ({ gameKey }) => baseSprite(gameKey, 382) },
@@ -102,7 +102,7 @@ import {
 				],
 			},
 			{
-				id: 5, text: "Obtain all In-Game Gift Pokemon", children: [
+				id: 5, text: "Obtain all In-Game Gift Pokémon", children: [
 					{ id: 1, text: "Rock/Pop Star Pikachu", img: ({ gameKey }) => [baseSprite(gameKey, "0025-roc"), baseSprite(gameKey, "0025-pop")], tooltip: "Slateport City" },
 					{ id: 2, text: "Wynaut", img: ({ gameKey }) => baseSprite(gameKey, 360), tooltip: "Lavaridge City" },
 					{ id: 3, text: "Castform", img: ({ gameKey }) => baseSprite(gameKey, 351), tooltip: "Weather Institute" },
@@ -128,14 +128,14 @@ import {
 				],
 			},
 			{
-				id: 6, text: "Complete all In-Game Pokemon Trades", children: [
+				id: 6, text: "Complete all In-Game Pokémon Trades", children: [
 					{ id: 1, text: "Slakoth for Makuhita", img: ({ gameKey }) => task(gameKey, "slakoth-for-makuhita"), tooltip: "Rustboro City" },
 					{ id: 2, text: "Spinda for Skitty", img: ({ gameKey }) => task(gameKey, "spinda-for-skitty"), tooltip: "Fortree City" },
 					{ id: 3, text: "Bellossom for Corsola", img: ({ gameKey }) => task(gameKey, "bellossom-for-corsola"), tooltip: "Pacifilog Town" },
 				],
 			},
 		],
-		"story": [
+		story: [
 			{
 				id: 1, text: "Beat the main story", children: [
 					{ id: 1, text: "Stone Badge", img: () => _badges("stone"), tooltip: "Defeat Roxanne at the Rustboro City Gym" },
@@ -171,8 +171,8 @@ import {
 				]
 			},
 		],
-		"activities": [
-			{ id: 1, text: "Reach Master Rank in all Pokemon Contests" },
+		activities: [
+			{ id: 1, text: "Reach Master Rank in all Pokémon Contests" },
 			{ id: 2, text: "Reach Platinum Rank in the Secret Base Capture-the-Flag", tiers: ["Bronze", "Silver", "Gold", "Platinum"] },
 			{ id: 3, text: "Check out the issue in New Mauville", tooltip: "Talk with Wattson in Mauville Hills" },
 			{ id: 4, text: "Complete all chambers of the Trick House", type: "tiered", tiers: [range(1, 6)], },
@@ -193,7 +193,7 @@ import {
 				]
 			},
 		],
-		"battle": [
+		battle: [
 			{ id: 1, text: "Get to Master Rank at the Battle Institute", tiers: ["Novice", "Normal", "Super", "Hyper", "Elite", "Master"] },
 			{ id: 2, text: "Battle the \"Mega\" Elite 4", tooltip: "This is just an Elite 4 rematch" },
 			{ id: 3, text: "Defeat the Winstrate Household", tooltip: "Route 111" },
@@ -205,7 +205,7 @@ import {
 				]
 			},
 		],
-		"upgrades": [
+		upgrades: [
 			{ id: 1, text: "Obtain the National Dex" },
 			{
 				id: 2, text: "Obtain the Gold Rank Trainer Card", children: [
@@ -215,7 +215,7 @@ import {
 				],
 			},
 		],
-		"collectables": [
+		collectables: [
 			{
 				id: 1, text: "Collect all Key Items", children: [
 					{ id: 1, text: "Acro Bike", img: () => keyItem("acro-bike") },
@@ -456,7 +456,7 @@ import {
 				]
 			},
 		],
-		"mega-stones": [
+		megaStones: [
 			{ id: 1, text: "Venusaurite", img: ({ gameKey }) => [baseSprite(gameKey, "003-m"), megaStone("venusaurite")], },
 			{ id: 2, text: "Charizardite X", img: ({ gameKey }) => [baseSprite(gameKey, "006-mx"), megaStone("charizardite-x")], },
 			{ id: 3, text: "Charizardite Y", img: ({ gameKey }) => [baseSprite(gameKey, "006-my"), megaStone("charizardite-y")], },
@@ -504,7 +504,7 @@ import {
 			{ id: 45, text: "Galladite", img: ({ gameKey }) => [baseSprite(gameKey, "475-m"), megaStone("galladite")], },
 			{ id: 46, text: "Audinite", img: ({ gameKey }) => [baseSprite(gameKey, "531-m"), megaStone("audinite")], },
 		],
-		"thms": [
+		thms: [
 			{
 				id: 1, text: "Collect all HMs", children: [
 					{ id: 1, text: "HM01 (Cut)", img: () => hm("normal") },
@@ -621,7 +621,7 @@ import {
 				],
 			},
 		],
-		"extra-credit": [
+		extraCredit: [
 			{ id: 1, text: "Get Diancite from Mystery Gift", img: ({ gameKey }) => [baseSprite(gameKey, "719-m"), megaStone("diancite")], },
 		]
 	};

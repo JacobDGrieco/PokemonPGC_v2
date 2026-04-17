@@ -15,11 +15,11 @@ import {
 		{ id: "catching", title: "Gotta Catch 'Em All" },
 		{ id: "mobile", title: "Mobile Challenges" },
 		{ id: "research", title: "Research Tasks" },
-		{ id: "extra-credit", title: "Extra Credit" },
+		{ id: "extraCredit", title: "Extra Credit" },
 	];
 
 	const TASKS_BY_SECTION = {
-		"catching": [
+		catching: [
 			{ id: 1, text: "Obtain Original Color Magearna", img: ({ gameKey }) => baseSprite(gameKey, "801-o"), },
 		],
 	};

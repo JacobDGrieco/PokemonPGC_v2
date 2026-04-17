@@ -32,21 +32,21 @@ import {
 	const SECTIONS = [
 		{ id: "catching", title: "Gotta Catch 'Em All" },
 		{ id: "story", title: "Main Story" },
-		{ id: "side-quests", title: "Side Quests" },
+		{ id: "sideQuests", title: "Side Quests" },
 		{ id: "activities", title: "Activities" },
 		{ id: "battle", title: "Battle" },
 		{ id: "upgrades", title: "Upgrades" },
 		{ id: "collectables", title: "Collectables" },
-		{ id: "mega-stones", title: "Mega Stones" },
+		{ id: "megaStones", title: "Mega Stones" },
 		{ id: "zcrystals", title: "Z-Crystals" },
 		{ id: "fashion", title: "Fashion" },
 		{ id: "thms", title: "TMs/Ride Pager" },
 		{ id: "distributions", title: "Distributions" },
-		{ id: "extra-credit", title: "Extra Credit" },
+		{ id: "extraCredit", title: "Extra Credit" },
 	];
 
 	const TASKS_BY_SECTION = {
-		"catching": [
+		catching: [
 			{
 				id: 1, text: "Catch all the Legendaries", children: [
 					{ id: 1, text: "Catch/Trade Solgaleo", img: ({ gameKey }) => baseSprite(gameKey, 791) },
@@ -114,8 +114,8 @@ import {
 				],
 			},
 			{
-				id: 4, text: "Obtain all In-Game Gift Pokemon", children: [
-					{ id: 1, text: "Eevee Egg", img: ({ gameKey }) => baseSprite(gameKey, 133), tooltip: "Paniola Ranch - Pokemon Nursery" },
+				id: 4, text: "Obtain all In-Game Gift Pokémon", children: [
+					{ id: 1, text: "Eevee Egg", img: ({ gameKey }) => baseSprite(gameKey, 133), tooltip: "Paniola Ranch - Pokémon Nursery" },
 					{ id: 2, text: "Aerodactyl", img: ({ gameKey }) => baseSprite(gameKey, 142), tooltip: "Seafolk Village - Huntail boat" },
 					{ id: 3, text: "Surfing Pikachu", img: ({ gameKey }) => baseSprite(gameKey, 25), tooltip: "Beat all four Mantine Surf high scores" },
 					{ id: 4, text: "Poipole", img: ({ gameKey }) => baseSprite(gameKey, 803), tooltip: "Ultra Megalopolis" },
@@ -125,7 +125,7 @@ import {
 				],
 			},
 			{
-				id: 5, text: "Obtain all Totem-sized Pokemon", tooltip: "Talk to Samson Oak at Heahea Beach", children: [
+				id: 5, text: "Obtain all Totem-sized Pokémon", tooltip: "Talk to Samson Oak at Heahea Beach", children: [
 					{ id: 1, text: "Gumshoos/Alolan Raticate", tooltip: "20 Stickers" },
 					{ id: 2, text: "Alolan Marowak/Arquanid", tooltip: "40 Stickers" },
 					{ id: 3, text: "Lurantis/Salazzle", tooltip: "50 Stickers" },
@@ -135,18 +135,18 @@ import {
 				],
 			},
 			{
-				id: 6, text: "Complete all In-Game Pokemon Trades", children: [
-					{ id: 1, text: "Spearow for Hawlucha", img: ({ gameKey }) => task(gameKey, "spearow-for-hawlucha"), tooltip: "Route 2 Pokemon Center" },
-					{ id: 2, text: "Lillipup for Noibat", img: ({ gameKey }) => task(gameKey, "lillipup-for-noibat"), tooltip: "Route 5 Pokemon Center" },
+				id: 6, text: "Complete all In-Game Pokémon Trades", children: [
+					{ id: 1, text: "Spearow for Hawlucha", img: ({ gameKey }) => task(gameKey, "spearow-for-hawlucha"), tooltip: "Route 2 Pokémon Center" },
+					{ id: 2, text: "Lillipup for Noibat", img: ({ gameKey }) => task(gameKey, "lillipup-for-noibat"), tooltip: "Route 5 Pokémon Center" },
 					{ id: 3, text: "Tentacool for Barboach", img: ({ gameKey }) => task(gameKey, "tentacool-for-barboach"), tooltip: "Royal Avenue" },
-					{ id: 4, text: "Trumbeak for Arbok", img: ({ gameKey }) => task(gameKey, "trumbeak-for-arbok"), tooltip: "Route 8 Pokemon Center" },
-					{ id: 5, text: "Phantump for Phantump", img: ({ gameKey }) => task(gameKey, "phantump-for-phantump"), tooltip: "Tapu Village Pokemon Center\nEvolves into Trevenant immediately" },
+					{ id: 4, text: "Trumbeak for Arbok", img: ({ gameKey }) => task(gameKey, "trumbeak-for-arbok"), tooltip: "Route 8 Pokémon Center" },
+					{ id: 5, text: "Phantump for Phantump", img: ({ gameKey }) => task(gameKey, "phantump-for-phantump"), tooltip: "Tapu Village Pokémon Center\nEvolves into Trevenant immediately" },
 					{ id: 6, text: "Granbull for Shellos", img: ({ gameKey }) => task(gameKey, "granbull-for-shellos"), tooltip: "Seafolk Village" },
 					{ id: 7, text: "Bewear for Tauros", img: ({ gameKey }) => task(gameKey, "bewear-for-tauros"), tooltip: "Poni Gauntlet" },
 				],
 			},
 		],
-		"story": [
+		story: [
 			{
 				id: 1, text: "Complete the Island Challenge", children: [
 					{ id: 1, text: "Ilima's Trial", tooltip: "Verdant Cavern" },
@@ -176,7 +176,7 @@ import {
 				],
 			},
 		],
-		"side-quests": [
+		sideQuests: [
 			{ id: 1, text: "Fix the vending machine with Rotom", tooltip: "Hau'oli City Marina" },
 			{ id: 2, text: "Find the lost Meowth", tooltip: "Route 2\nReward: X Speed, X Sp. Atk, X Attack" },
 			{
@@ -215,19 +215,19 @@ import {
 			{ id: 20, text: "Win the Meowth battle at home", tooltip: "Postgame\nReward: PP Up" },
 			{ id: 21, text: "Deliver the curious photograph", tooltip: "Malie Garden to Ancient Poni Path\nReward: Heart Scale" },
 		],
-		"activities": [
+		activities: [
 			{
 				id: 1, text: "Complete all NPC Pokedex request tasks", children: [
-					{ id: 1, text: "Show Abra at the Hau'oli Pokemon Center", img: ({ gameKey }) => baseSprite(gameKey, 63), tooltip: "Reward: 10,000 Poke Dollars" },
-					{ id: 2, text: "Show Crabrawler at the Route 2 Pokemon Center", img: ({ gameKey }) => baseSprite(gameKey, 739), tooltip: "Reward: 3,000 Poke Dollars" },
+					{ id: 1, text: "Show Abra at the Hau'oli Pokémon Center", img: ({ gameKey }) => baseSprite(gameKey, 63), tooltip: "Reward: 10,000 Poke Dollars" },
+					{ id: 2, text: "Show Crabrawler at the Route 2 Pokémon Center", img: ({ gameKey }) => baseSprite(gameKey, 739), tooltip: "Reward: 3,000 Poke Dollars" },
 					{ id: 3, text: "Show Sableye on Route 3", img: ({ gameKey }) => baseSprite(gameKey, 302), tooltip: "Reward: 3,000 Poke Dollars" },
 					{ id: 4, text: "Show Salazzle at the Heahea City Apparel Shop", img: ({ gameKey }) => baseSprite(gameKey, 758), tooltip: "Reward: 10,000 Poke Dollars" },
-					{ id: 5, text: "Show Natu / Hoothoot at the Konikoni City Pokemon Center", tooltip: "Reward: 5,000 Poke Dollars" },
-					{ id: 6, text: "Show Corsola at the Route 5 Pokemon Center", img: ({ gameKey }) => baseSprite(gameKey, 222), tooltip: "Reward: 3,000 Poke Dollars" },
+					{ id: 5, text: "Show Natu / Hoothoot at the Konikoni City Pokémon Center", tooltip: "Reward: 5,000 Poke Dollars" },
+					{ id: 6, text: "Show Corsola at the Route 5 Pokémon Center", img: ({ gameKey }) => baseSprite(gameKey, 222), tooltip: "Reward: 3,000 Poke Dollars" },
 					{ id: 7, text: "Show Goomy at the Route 8 Aether Trailer", img: ({ gameKey }) => baseSprite(gameKey, 704), tooltip: "Reward: 5,000 Poke Dollars" },
 					{ id: 8, text: "Show Minior at the Malie City Apparel Shop", img: ({ gameKey }) => baseSprite(gameKey, 774), tooltip: "Reward: 10,000 Poke Dollars" },
 					{ id: 9, text: "Show an Alolan Persian at the Malie City Library", img: ({ gameKey }) => baseSprite(gameKey, 53), tooltip: "Reward: Love Ball" },
-					{ id: 10, text: "Show Garchomp at the Route 16 Pokemon Center", img: ({ gameKey }) => baseSprite(gameKey, 445), tooltip: "Reward: 20,000 Poke Dollars" },
+					{ id: 10, text: "Show Garchomp at the Route 16 Pokémon Center", img: ({ gameKey }) => baseSprite(gameKey, 445), tooltip: "Reward: 20,000 Poke Dollars" },
 				],
 			},
 			{
@@ -263,7 +263,7 @@ import {
 				],
 			},
 		],
-		"battle": [
+		battle: [
 			{ id: 1, text: "Defeat Morimoto", tooltip: "Heahea City - GAME FREAK\nRewards the Oval Charm on first win" },
 			{ id: 2, text: "Reach Master Rank in Battle Royal", tiers: ["Normal", "Super", "Hyper", "Master"] },
 			{ id: 3, text: "Reach Grade 50 in the Battle Agency", tooltip: "Festival Plaza\nDefeating Grade 50 bosses awards Gold Bottle Caps" },
@@ -286,7 +286,7 @@ import {
 				],
 			},
 		],
-		"upgrades": [
+		upgrades: [
 			{ id: 1, text: "Obtain the Judge function", tooltip: "Battle Tree\nRequires entering the Hall of Fame and hatching 21 Eggs" },
 			{ id: 2, text: "Upgrade the Poke Finder", tiers: ["Ver. 1", "Ver. 2", "Ver. 3", "Ver. 4", "Ver. 5"] },
 			{ id: 3, text: "Upgrade Festival Plaza to Rank 100", tiers: [range(1, 100)] },
@@ -301,7 +301,7 @@ import {
 			},
 			{
 				id: 5, text: "Earn every Trainer Passport stamp", children: [
-					{ id: 1, text: "Official Pokemon Trainer" },
+					{ id: 1, text: "Official Pokémon Trainer" },
 					{ id: 2, text: "Melemele Trial Completion" },
 					{ id: 3, text: "Akala Trial Completion" },
 					{ id: 4, text: "Ula'ula Trial Completion" },
@@ -340,7 +340,7 @@ import {
 				],
 			},
 		],
-		"collectables": [
+		collectables: [
 			{ id: 1, text: "Collect all 100 Totem Stickers", img: () => task("totem-sticker"), tiers: [range(1, 100)] },
 			{
 				id: 2, text: "Collect all Key Items", children: [
@@ -425,16 +425,16 @@ import {
 			{
 				id: 6, text: "Unlock all special Alola Photo Club backgrounds", children: [
 					{ id: 1, text: "Commemorative Photo" },
-					{ id: 2, text: "Indigo Plateau", tooltip: "Use a Pokemon from Kanto" },
-					{ id: 3, text: "Bell Tower", tooltip: "Use a Pokemon from Johto" },
-					{ id: 4, text: "Seafloor Cavern", tooltip: "Use a Pokemon from Hoenn" },
-					{ id: 5, text: "Spear Pillar", tooltip: "Use a Pokemon from Sinnoh" },
-					{ id: 6, text: "Skyarrow Bridge", tooltip: "Use a Pokemon from Unova" },
-					{ id: 7, text: "Lumiose City", tooltip: "Use a Pokemon from Kalos" },
+					{ id: 2, text: "Indigo Plateau", tooltip: "Use a Pokémon from Kanto" },
+					{ id: 3, text: "Bell Tower", tooltip: "Use a Pokémon from Johto" },
+					{ id: 4, text: "Seafloor Cavern", tooltip: "Use a Pokémon from Hoenn" },
+					{ id: 5, text: "Spear Pillar", tooltip: "Use a Pokémon from Sinnoh" },
+					{ id: 6, text: "Skyarrow Bridge", tooltip: "Use a Pokémon from Unova" },
+					{ id: 7, text: "Lumiose City", tooltip: "Use a Pokémon from Kalos" },
 				],
 			},
 		],
-		"mega-stones": [
+		megaStones: [
 			{ id: 1, text: "Venusaurite", img: ({ gameKey }) => [baseSprite(gameKey, "003-m"), megaStone("venusaurite")], },
 			{ id: 2, text: "Charizardite X", img: ({ gameKey }) => [baseSprite(gameKey, "006-mx"), megaStone("charizardite-x")], },
 			{ id: 3, text: "Charizardite Y", img: ({ gameKey }) => [baseSprite(gameKey, "006-my"), megaStone("charizardite-y")], },
@@ -482,7 +482,7 @@ import {
 			{ id: 45, text: "Galladite", img: ({ gameKey }) => [baseSprite(gameKey, "475-m"), megaStone("galladite")], },
 			{ id: 46, text: "Audinite", img: ({ gameKey }) => [baseSprite(gameKey, "531-m"), megaStone("audinite")], },
 		],
-		"zcrystals": [
+		zcrystals: [
 			{
 				id: 1, text: "Collect all Typing Z-Crystals", children: [
 					{ id: 1, text: "Buginium Z", img: () => [typing("bug"), zCrystal("buginiumz")], },
@@ -523,7 +523,7 @@ import {
 				]
 			},
 		],
-		"thms": [
+		thms: [
 			{
 				id: 1, text: "Unlock every Ride Pager summon", children: [
 					{ id: 1, text: "Tauros Charge", img: () => hm("tauros-charge") },
@@ -641,7 +641,7 @@ import {
 				],
 			},
 		],
-		"extra-credit": [
+		extraCredit: [
 			{
 				id: 1, text: "Get all Event Mythicals", children: [
 					{ id: 1, text: "Magerna", img: ({ gameKey }) => baseSprite(gameKey, 801) },
@@ -705,7 +705,7 @@ import {
 		}),
 		activities: overrideTasks(TASKS_BY_SECTION.activities, {
 			1: {
-				5: { text: "Show Natu at the Konikoni City Pokemon Center", img: ({ gameKey }) => baseSprite(gameKey, 177) },
+				5: { text: "Show Natu at the Konikoni City Pokémon Center", img: ({ gameKey }) => baseSprite(gameKey, 177) },
 			},
 		}),
 		upgrades: overrideTasks(TASKS_BY_SECTION.upgrades, {
@@ -765,7 +765,7 @@ import {
 		}),
 		activities: overrideTasks(TASKS_BY_SECTION.activities, {
 			1: {
-				5: { text: "Show Hoothoot at the Konikoni City Pokemon Center", img: ({ gameKey }) => baseSprite(gameKey, 163) },
+				5: { text: "Show Hoothoot at the Konikoni City Pokémon Center", img: ({ gameKey }) => baseSprite(gameKey, 163) },
 			},
 		}),
 		upgrades: overrideTasks(TASKS_BY_SECTION.upgrades, {

@@ -29,17 +29,17 @@ import {
 	const SECTIONS = [
 		{ id: "catching", title: "Gotta Catch 'Em All" },
 		{ id: "story", title: "Main Story" },
-		{ id: "side-quests", title: "Side Quests" },
+		{ id: "sideQuests", title: "Side Quests" },
 		{ id: "activities", title: "Activities" },
 		{ id: "battle", title: "Battle" },
 		{ id: "upgrades", title: "Upgrades" },
 		{ id: "thms", title: "TMs/HMs" },
 		{ id: "distributions", title: "Distributions" },
-		{ id: "extra-credit", title: "Extra Credit" },
+		{ id: "extraCredit", title: "Extra Credit" },
 	];
 
 	const TASKS_BY_SECTION = {
-		"catching": [
+		catching: [
 			{
 				id: 1, text: "Catch all the Legendaries", children: [
 					{ id: 1, text: "Catch Raikou", img: ({ gameKey }) => baseSprite(gameKey, 243), },
@@ -98,7 +98,7 @@ import {
 				]
 			},
 		],
-		"story": [
+		story: [
 			{
 				id: 1, text: "Beat the main story", children: [
 					{ id: 1, text: "Zephyr Badge", img: () => _badges("zephyr"), tooltip: "Defeat Falkner at the Violet City Gym" },
@@ -140,7 +140,7 @@ import {
 				],
 			},
 		],
-		"side-quests": [
+		sideQuests: [
 			{ id: 1, text: "Show Elm the hatched Egg", img: ({ gameKey }) => npc(gameKey, "elm"), tooltip: "You get an Everstone in return" },
 			{ id: 2, text: "Deliver the mail for Randy to his friend", img: ({ gameKey }) => npc(gameKey, "randy"), tooltip: "Randy (Route 36), Friend (Route 31)" },
 			{ id: 3, text: "Cure the Miltank", img: ({ gameKey }) => baseSprite(gameKey, 242), tooltip: "Route 39 - Miltank Farm" },
@@ -158,7 +158,7 @@ import {
 				],
 			},
 		],
-		"activities": [
+		activities: [
 			{
 				id: 1, text: "Get into the Pokeathalon Hall of Fame", children: [
 					{ id: 1, text: "Hurdle Dash", tooltip: "Need a highscore of 80+" },
@@ -244,7 +244,7 @@ import {
 				],
 			},
 		],
-		"battle": [
+		battle: [
 			{ id: 1, text: "Rematch all 16 Gym Leaders" },
 			{ id: 2, text: "Rematch the Elite 4", tooltip: "Collect all 8 Kanto Gym badges for the true final battle" },
 			{ id: 3, text: "Defeat Red" },
@@ -267,7 +267,7 @@ import {
 				],
 			},
 		],
-		"upgrades": [
+		upgrades: [
 			{ id: 1, text: "Obtain the National PokeDex" },
 			{
 				id: 2, text: "Obtain the Black 5-Star Trainer Card", children: [
@@ -275,11 +275,11 @@ import {
 					{ id: 2, text: "Complete the National PokeDex (484)" },
 					{ id: 3, text: "Get a 100 Win Streak in the Battle Tower" },
 					{ id: 4, text: "Get into the Pokeathalon Hall of Fame" },
-					{ id: 5, text: "Get 5 Shiny Leaves on a single Pokemon", tiers: range(1, 5), tooltip: "Speak to Ethan/Lyra in New Bark Town" },
+					{ id: 5, text: "Get 5 Shiny Leaves on a single Pokémon", tiers: range(1, 5), tooltip: "Speak to Ethan/Lyra in New Bark Town" },
 				],
 			},
 		],
-		"thms": [
+		thms: [
 			{
 				id: 1, text: "Collect all HMs", children: [
 					{ id: 1, text: "HM01 (Cut)", img: () => hm("normal") },
@@ -389,9 +389,9 @@ import {
 				],
 			},
 		],
-		"extra-credit": [
+		extraCredit: [
 			{
-				id: 1, text: "Obtain all Mythical Pokemon", children: [
+				id: 1, text: "Obtain all Mythical Pokémon", children: [
 					{ id: 1, text: "Mew", img: ({ gameKey }) => baseSprite(gameKey, 151), },
 					{ id: 2, text: "Celebi", img: ({ gameKey }) => baseSprite(gameKey, 251), },
 				],

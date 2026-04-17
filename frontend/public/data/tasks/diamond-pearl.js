@@ -103,7 +103,7 @@
 					{ id: 15, text: "Step Counter" },
 					{ id: 16, text: "Happiness Checker" },
 					{ id: 17, text: "Berry Checker" },
-					{ id: 18, text: "Pokemon History" },
+					{ id: 18, text: "Pokémon History" },
 					{ id: 19, text: "Analog Clock" },
 					{ id: 20, text: "Wireless Searcher" },
 					{ id: 21, text: "Type Chart" },

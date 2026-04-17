@@ -1,25 +1,19 @@
-import {
-  spacer,
-  defineLayoutsMany,
-} from '../helpers/index.js';
+import { defineLayoutsMany, P, C, parentRows, childRows, spacer } from '../helpers/index.js';
 
 (() => {
 	const GAME_KEYS = ["brilliantdiamond", "shiningpearl"];
 
-	const P = (parentId) => [parentId];          			// parent-only task
-	const C = (parentId, childId) => [parentId, childId]; 	// parent + child task
-
 	const DESKTOP_LAYOUT = {
-		"catching": [
+		catching: [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3)],
 		],
-		"fashion": [
+		fashion: [
 			[P(1), P(2), P(3), P(4)],
 			[P(5), P(6), P(7), P(8)],
 			[P(9), P(10), P(11)],
 		],
-		"statues": [
+		statues: [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3), C(1, 4), C(1, 5), C(1, 6)],
 			[C(1, 7), C(1, 8), C(1, 9), C(1, 10), C(1, 11), C(1, 12)],
@@ -97,7 +91,7 @@ import {
 			[C(2, 199), C(2, 200), C(2, 201), C(2, 202), C(2, 203), C(2, 204)],
 			[C(2, 205), C(2, 206)],
 		],
-		"thms": [
+		thms: [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3), C(1, 4)],
 			[C(1, 5), C(1, 6), C(1, 7), C(1, 8)],
@@ -123,7 +117,7 @@ import {
 			[C(2, 91), C(2, 92), C(2, 93), C(2, 94), C(2, 95)],
 			[C(2, 96), C(2, 97), C(2, 98), C(2, 99), C(2, 100)],
 		],
-		"extra-credit": [
+		extraCredit: [
 			[P(1)],
 		],
 	};

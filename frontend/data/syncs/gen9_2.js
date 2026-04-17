@@ -15,26 +15,26 @@ defineSyncsMany(GAME_KEYS1, ({ taskSync, eitherTaskSync, regionalSync }) => [
 		name: "Obtain Zygarde", members: [
 			taskSync("catching", 1, 3),
 			taskSync("story", 2, 4),
-			taskSync("mega-stones", 62),
+			taskSync("megaStones", 62),
 			regionalSync(230, { oneWay: true }),
 		],
 	},
 
 	{ name: "Absol Gift", members: [taskSync("catching", 2, 1), regionalSync(134, { oneWay: true }),], },
-	{ name: "Chespin Gift", members: [taskSync("catching", 2, 2), taskSync("side-quests", 7), regionalSync(213, { oneWay: true }),], },
-	{ name: "Fennekin Gift", members: [taskSync("catching", 2, 3), taskSync("side-quests", 8), regionalSync(217, { oneWay: true }),], },
-	{ name: "Froakie Gift", members: [taskSync("catching", 2, 4), taskSync("side-quests", 9), regionalSync(209, { oneWay: true }),], },
-	{ name: "Spewpa Gift", members: [taskSync("catching", 2, 5), taskSync("side-quests", 21), regionalSync(16, { oneWay: true }),], },
-	{ name: "Obtain Kanto Starter - Bulbasaur", members: [eitherTaskSync("catching", 2, 6, 1), taskSync("side-quests", 22), regionalSync(148, { oneWay: true }),], },
-	{ name: "Obtain Kanto Starter - Charmander", members: [eitherTaskSync("catching", 2, 6, 2), taskSync("side-quests", 22), regionalSync(151, { oneWay: true }),], },
-	{ name: "Obtain Kanto Starter - Squirtle", members: [eitherTaskSync("catching", 2, 6, 3), taskSync("side-quests", 22), regionalSync(154, { oneWay: true }),], },
-	{ name: "Galarian Stunfisk Gift", members: [taskSync("catching", 2, 7), taskSync("side-quests", 72), regionalSync(57, "Galarian", { oneWay: true }),], },
+	{ name: "Chespin Gift", members: [taskSync("catching", 2, 2), taskSync("sideQuests", 7), regionalSync(213, { oneWay: true }),], },
+	{ name: "Fennekin Gift", members: [taskSync("catching", 2, 3), taskSync("sideQuests", 8), regionalSync(217, { oneWay: true }),], },
+	{ name: "Froakie Gift", members: [taskSync("catching", 2, 4), taskSync("sideQuests", 9), regionalSync(209, { oneWay: true }),], },
+	{ name: "Spewpa Gift", members: [taskSync("catching", 2, 5), taskSync("sideQuests", 21), regionalSync(16, { oneWay: true }),], },
+	{ name: "Obtain Kanto Starter - Bulbasaur", members: [eitherTaskSync("catching", 2, 6, 1), taskSync("sideQuests", 22), regionalSync(148, { oneWay: true }),], },
+	{ name: "Obtain Kanto Starter - Charmander", members: [eitherTaskSync("catching", 2, 6, 2), taskSync("sideQuests", 22), regionalSync(151, { oneWay: true }),], },
+	{ name: "Obtain Kanto Starter - Squirtle", members: [eitherTaskSync("catching", 2, 6, 3), taskSync("sideQuests", 22), regionalSync(154, { oneWay: true }),], },
+	{ name: "Galarian Stunfisk Gift", members: [taskSync("catching", 2, 7), taskSync("sideQuests", 72), regionalSync(57, "Galarian", { oneWay: true }),], },
 	{ name: "Lucario Gift", members: [taskSync("catching", 2, 8), regionalSync(136, { oneWay: true }),], },
 	{
 		name: "Obtain Eternal Flower Floette", members: [
 			taskSync("catching", 2, 9),
 			taskSync("story", 2, 1),
-			taskSync("mega-stones", 10),
+			taskSync("megaStones", 10),
 			regionalSync(39, "Eternal Flower", { oneWay: true }),
 		],
 	},
@@ -43,7 +43,7 @@ defineSyncsMany(GAME_KEYS1, ({ taskSync, eitherTaskSync, regionalSync }) => [
 		name: "Pichu for Heracross",
 		members: [
 			taskSync("catching", 3, 1),
-			taskSync("side-quests", 2),
+			taskSync("sideQuests", 2),
 			regionalSync(52, { oneWay: true }),
 			regionalSync(179, "Male", { oneWay: true }),
 		],
@@ -53,7 +53,7 @@ defineSyncsMany(GAME_KEYS1, ({ taskSync, eitherTaskSync, regionalSync }) => [
 		name: "Abra for Riolu",
 		members: [
 			taskSync("catching", 3, 2),
-			taskSync("side-quests", 24),
+			taskSync("sideQuests", 24),
 			regionalSync(62, { oneWay: true }),
 			regionalSync(135, { oneWay: true }),
 		],
@@ -63,7 +63,7 @@ defineSyncsMany(GAME_KEYS1, ({ taskSync, eitherTaskSync, regionalSync }) => [
 		name: "K Slowpoke for G Slowpoke",
 		members: [
 			taskSync("catching", 3, 3),
-			taskSync("side-quests", 39),
+			taskSync("sideQuests", 39),
 			regionalSync(137, "Kantonian", { oneWay: true }),
 			regionalSync(137, "Galarian", { oneWay: true }),
 		],
@@ -72,7 +72,7 @@ defineSyncsMany(GAME_KEYS1, ({ taskSync, eitherTaskSync, regionalSync }) => [
 		name: "K Raichu for A Raichu",
 		members: [
 			taskSync("catching", 3, 4),
-			taskSync("side-quests", 108),
+			taskSync("sideQuests", 108),
 			regionalSync(54, "Kantonian Male", { oneWay: true }),
 			regionalSync(54, "Alolan", { oneWay: true }),
 		],
@@ -80,31 +80,31 @@ defineSyncsMany(GAME_KEYS1, ({ taskSync, eitherTaskSync, regionalSync }) => [
 
 	{ name: "Buy all Canari Plushies", members: [taskSync("battle", 1, 7), taskSync("upgrades", 1),], },
 
-	{ name: "Obtain Absolite", members: [taskSync("story", 1, 9), taskSync("mega-stones", 31),], },
-	{ name: "Obtain Slowbronite", members: [taskSync("story", 1, 11), taskSync("mega-stones", 33),], },
-	{ name: "Obtain Cameruptite", members: [taskSync("story", 1, 12), taskSync("mega-stones", 26),], },
-	{ name: "Obtain Victreebelite", members: [taskSync("story", 1, 13), taskSync("mega-stones", 16),], },
-	{ name: "Obtain Beedrillite", members: [taskSync("story", 1, 16), taskSync("mega-stones", 4),], },
-	{ name: "Obtain Hawluchanite", members: [taskSync("story", 1, 17), taskSync("mega-stones", 49),], },
-	{ name: "Obtain Banettite", members: [taskSync("story", 1, 18), taskSync("mega-stones", 25),], },
-	{ name: "Obtain Mawilite", members: [taskSync("story", 1, 21), taskSync("mega-stones", 30),], },
-	{ name: "Obtain Barbaracite", members: [taskSync("story", 1, 22), taskSync("mega-stones", 8),], },
-	{ name: "Obtain Ampharosite", members: [taskSync("story", 1, 23), taskSync("mega-stones", 6),], },
-	{ name: "Obtain Froslassite", members: [taskSync("story", 1, 27), taskSync("mega-stones", 44),], },
-	{ name: "Obtain Altarianite", members: [taskSync("story", 1, 28), taskSync("mega-stones", 22),], },
-	{ name: "Obtain Venusaurite", members: [taskSync("story", 1, 29), taskSync("mega-stones", 37),], },
-	{ name: "Obtain Dragoninite", members: [taskSync("story", 1, 32), taskSync("mega-stones", 36),], },
-	{ name: "Obtain Tyranitarite", members: [taskSync("story", 1, 33), taskSync("mega-stones", 55),], },
-	{ name: "Obtain Starminite", members: [taskSync("story", 1, 34), taskSync("mega-stones", 9),], },
+	{ name: "Obtain Absolite", members: [taskSync("story", 1, 9), taskSync("megaStones", 31),], },
+	{ name: "Obtain Slowbronite", members: [taskSync("story", 1, 11), taskSync("megaStones", 33),], },
+	{ name: "Obtain Cameruptite", members: [taskSync("story", 1, 12), taskSync("megaStones", 26),], },
+	{ name: "Obtain Victreebelite", members: [taskSync("story", 1, 13), taskSync("megaStones", 16),], },
+	{ name: "Obtain Beedrillite", members: [taskSync("story", 1, 16), taskSync("megaStones", 4),], },
+	{ name: "Obtain Hawluchanite", members: [taskSync("story", 1, 17), taskSync("megaStones", 49),], },
+	{ name: "Obtain Banettite", members: [taskSync("story", 1, 18), taskSync("megaStones", 25),], },
+	{ name: "Obtain Mawilite", members: [taskSync("story", 1, 21), taskSync("megaStones", 30),], },
+	{ name: "Obtain Barbaracite", members: [taskSync("story", 1, 22), taskSync("megaStones", 8),], },
+	{ name: "Obtain Ampharosite", members: [taskSync("story", 1, 23), taskSync("megaStones", 6),], },
+	{ name: "Obtain Froslassite", members: [taskSync("story", 1, 27), taskSync("megaStones", 44),], },
+	{ name: "Obtain Altarianite", members: [taskSync("story", 1, 28), taskSync("megaStones", 22),], },
+	{ name: "Obtain Venusaurite", members: [taskSync("story", 1, 29), taskSync("megaStones", 37),], },
+	{ name: "Obtain Dragoninite", members: [taskSync("story", 1, 32), taskSync("megaStones", 36),], },
+	{ name: "Obtain Tyranitarite", members: [taskSync("story", 1, 33), taskSync("megaStones", 55),], },
+	{ name: "Obtain Starminite", members: [taskSync("story", 1, 34), taskSync("megaStones", 9),], },
 
-	{ name: "Obtain TM 31", members: [taskSync("side-quests", 34), taskSync("thms", 31),], },
-	{ name: "Obtain TM 43", members: [taskSync("side-quests", 46), taskSync("thms", 43),], },
-	{ name: "Obtain TM 48", members: [taskSync("side-quests", 96), taskSync("thms", 48),], },
-	{ name: "Obtain TM 57", members: [taskSync("side-quests", 26), taskSync("thms", 57),], },
-	{ name: "Obtain TM 70", members: [taskSync("side-quests", 60), taskSync("thms", 70),], },
-	{ name: "Obtain TM 85", members: [taskSync("side-quests", 29), taskSync("thms", 85),], },
-	{ name: "Obtain TM 88", members: [taskSync("side-quests", 41), taskSync("thms", 88),], },
-	{ name: "Obtain TM 99", members: [taskSync("side-quests", 79), taskSync("thms", 99),], },
+	{ name: "Obtain TM 31", members: [taskSync("sideQuests", 34), taskSync("thms", 31),], },
+	{ name: "Obtain TM 43", members: [taskSync("sideQuests", 46), taskSync("thms", 43),], },
+	{ name: "Obtain TM 48", members: [taskSync("sideQuests", 96), taskSync("thms", 48),], },
+	{ name: "Obtain TM 57", members: [taskSync("sideQuests", 26), taskSync("thms", 57),], },
+	{ name: "Obtain TM 70", members: [taskSync("sideQuests", 60), taskSync("thms", 70),], },
+	{ name: "Obtain TM 85", members: [taskSync("sideQuests", 29), taskSync("thms", 85),], },
+	{ name: "Obtain TM 88", members: [taskSync("sideQuests", 41), taskSync("thms", 88),], },
+	{ name: "Obtain TM 99", members: [taskSync("sideQuests", 79), taskSync("thms", 99),], },
 ]);
 
 defineSyncsMany(GAME_KEYS2, ({ taskSync, eitherTaskSync, regionalSync, regionalSyncCross, fashionSync }) => [
@@ -116,18 +116,18 @@ defineSyncsMany(GAME_KEYS2, ({ taskSync, eitherTaskSync, regionalSync, regionalS
 	{
 		name: "Catch Latias", members: [
 			taskSync("catching", 1, 6),
-			taskSync("side-quests", 2, 70),
-			taskSync("mega-stones", 20),
-			taskSync("mega-stones", 21),
+			taskSync("sideQuests", 2, 70),
+			taskSync("megaStones", 20),
+			taskSync("megaStones", 21),
 			regionalSync(126, { oneWay: true }),
 		],
 	},
 	{
 		name: "Catch Latios", members: [
 			taskSync("catching", 1, 7),
-			taskSync("side-quests", 2, 70),
-			taskSync("mega-stones", 20),
-			taskSync("mega-stones", 21),
+			taskSync("sideQuests", 2, 70),
+			taskSync("megaStones", 20),
+			taskSync("megaStones", 21),
 			regionalSync(127, { oneWay: true }),
 		],
 	},
@@ -137,33 +137,33 @@ defineSyncsMany(GAME_KEYS2, ({ taskSync, eitherTaskSync, regionalSync, regionalS
 
 	{ name: "Catch Keldeo", members: [taskSync("catching", 2, 1), regionalSync(118, { oneWay: true }),], },
 	{ name: "Catch Meloetta", members: [taskSync("catching", 2, 2), regionalSync(119, { oneWay: true }),], },
-	{ name: "Catch Genesect", members: [taskSync("catching", 2, 3), taskSync("side-quests", 2, 72), regionalSync(120, { oneWay: true }),], },
-	{ name: "Catch Hoopa", members: [taskSync("catching", 2, 4), taskSync("side-quests", 2, 77), regionalSync(121, { oneWay: true }),], },
-	{ name: "Catch Volcanion", members: [taskSync("catching", 2, 5), taskSync("side-quests", 2, 75), regionalSync(114, { oneWay: true }),], },
+	{ name: "Catch Genesect", members: [taskSync("catching", 2, 3), taskSync("sideQuests", 2, 72), regionalSync(120, { oneWay: true }),], },
+	{ name: "Catch Hoopa", members: [taskSync("catching", 2, 4), taskSync("sideQuests", 2, 77), regionalSync(121, { oneWay: true }),], },
+	{ name: "Catch Volcanion", members: [taskSync("catching", 2, 5), taskSync("sideQuests", 2, 75), regionalSync(114, { oneWay: true }),], },
 	{
 		name: "Catch Megearna", members: [
 			taskSync("catching", 2, 6),
-			taskSync("side-quests", 2, 76),
-			taskSync("mega-stones", 24),
+			taskSync("sideQuests", 2, 76),
+			taskSync("megaStones", 24),
 			regionalSync(131, { oneWay: true }),
 		],
 	},
-	{ name: "Catch Marshadow", members: [taskSync("catching", 2, 7), taskSync("side-quests", 2, 73), regionalSync(122, { oneWay: true }),], },
+	{ name: "Catch Marshadow", members: [taskSync("catching", 2, 7), taskSync("sideQuests", 2, 73), regionalSync(122, { oneWay: true }),], },
 	{
 		name: "Obtain Zeraorite", members: [
 			taskSync("catching", 2, 8),
-			taskSync("side-quests", 1, 3),
-			taskSync("mega-stones", 25),
+			taskSync("sideQuests", 1, 3),
+			taskSync("megaStones", 25),
 			regionalSync(132, { oneWay: true }),
 		],
 	},
-	{ name: "Catch Melmetal", members: [taskSync("catching", 2, 9), taskSync("side-quests", 2, 74), regionalSync(123, { oneWay: true }),], },
-	{ name: "Catch Meltan", members: [taskSync("catching", 2, 10), taskSync("side-quests", 2, 74), regionalSync(124, { oneWay: true }),], },
+	{ name: "Catch Melmetal", members: [taskSync("catching", 2, 9), taskSync("sideQuests", 2, 74), regionalSync(123, { oneWay: true }),], },
+	{ name: "Catch Meltan", members: [taskSync("catching", 2, 10), taskSync("sideQuests", 2, 74), regionalSync(124, { oneWay: true }),], },
 
 	{
 		name: "Porygon for Porygon", members: [
 			taskSync("catching", 3, 1),
-			taskSync("side-quests", 2, 48),
+			taskSync("sideQuests", 2, 48),
 			taskSync("thms", 40),
 			regionalSync(11, { oneWay: true }),
 			regionalSync(12, { oneWay: true }),
@@ -172,20 +172,20 @@ defineSyncsMany(GAME_KEYS2, ({ taskSync, eitherTaskSync, regionalSync, regionalS
 
 	{
 		name: "Obtain Mewtwonite X & Y", members: [
-			taskSync("side-quests", 1, 2),
-			taskSync("mega-stones", 7),
-			taskSync("mega-stones", 8),
+			taskSync("sideQuests", 1, 2),
+			taskSync("megaStones", 7),
+			taskSync("megaStones", 8),
 			regionalSyncCross(GAME_KEYS1, 232, { oneWay: true }),
 		],
 	},
-	{ name: "Obtain Diancite", members: [taskSync("side-quests", 1, 1), taskSync("mega-stones", 9), regionalSyncCross(GAME_KEYS1, 231, { oneWay: true }),], },
+	{ name: "Obtain Diancite", members: [taskSync("sideQuests", 1, 1), taskSync("megaStones", 9), regionalSyncCross(GAME_KEYS1, 231, { oneWay: true }),], },
 
-	{ name: "Obtain Raichunite X & Y", members: [taskSync("side-quests", 2, 20), taskSync("mega-stones", 2), taskSync("mega-stones", 3),], },
-	{ name: "Obtain Crabominite", members: [taskSync("side-quests", 2, 22), taskSync("mega-stones", 17),], },
-	{ name: "DYNA4MO Duo", members: [taskSync("side-quests", 2, 32), fashionSync("all-in-one", 1, 1), fashionSync("satchels", 2, 1),], },
+	{ name: "Obtain Raichunite X & Y", members: [taskSync("sideQuests", 2, 20), taskSync("megaStones", 2), taskSync("megaStones", 3),], },
+	{ name: "Obtain Crabominite", members: [taskSync("sideQuests", 2, 22), taskSync("megaStones", 17),], },
+	{ name: "DYNA4MO Duo", members: [taskSync("sideQuests", 2, 32), fashionSync("all-in-one", 1, 1), fashionSync("satchels", 2, 1),], },
 	{
 		name: "Fist of Justice Duo", members: [
-			taskSync("side-quests", 2, 33),
+			taskSync("sideQuests", 2, 33),
 			fashionSync("all-in-one", 2, 1),
 			fashionSync("gloves", 1, 1),
 			fashionSync("footwear", 3, 1),
@@ -194,7 +194,7 @@ defineSyncsMany(GAME_KEYS2, ({ taskSync, eitherTaskSync, regionalSync, regionalS
 	},
 	{
 		name: "Rust Syndicate Duo", members: [
-			taskSync("side-quests", 2, 34),
+			taskSync("sideQuests", 2, 34),
 			fashionSync("all-in-one", 3, 1),
 			fashionSync("eyewear", 2, 1),
 			fashionSync("satchels", 4, 1),
@@ -202,7 +202,7 @@ defineSyncsMany(GAME_KEYS2, ({ taskSync, eitherTaskSync, regionalSync, regionalS
 	},
 	{
 		name: "SBC Duo", members: [
-			taskSync("side-quests", 2, 35),
+			taskSync("sideQuests", 2, 35),
 			fashionSync("all-in-one", 4, 1),
 			fashionSync("headwear", 2, 1),
 			fashionSync("gloves", 2, 1),
@@ -213,7 +213,7 @@ defineSyncsMany(GAME_KEYS2, ({ taskSync, eitherTaskSync, regionalSync, regionalS
 	},
 	{
 		name: "Team Flare Nouveau Duo", members: [
-			taskSync("side-quests", 2, 36),
+			taskSync("sideQuests", 2, 36),
 			fashionSync("tops", 3, 1),
 			fashionSync("bottoms", 3, 1),
 			fashionSync("eyewear", 3, 1),
@@ -221,10 +221,10 @@ defineSyncsMany(GAME_KEYS2, ({ taskSync, eitherTaskSync, regionalSync, regionalS
 			fashionSync("satchels", 6, 1),
 		],
 	},
-	{ name: "DYNA4MO Duo...Again", members: [taskSync("side-quests", 2, 62), fashionSync("all-in-one", 1, 2), fashionSync("satchels", 2, 2),], },
+	{ name: "DYNA4MO Duo...Again", members: [taskSync("sideQuests", 2, 62), fashionSync("all-in-one", 1, 2), fashionSync("satchels", 2, 2),], },
 	{
 		name: "Fist of Justice Duo...Again", members: [
-			taskSync("side-quests", 2, 63),
+			taskSync("sideQuests", 2, 63),
 			fashionSync("all-in-one", 2, 2),
 			fashionSync("gloves", 1, 2),
 			fashionSync("footwear", 3, 2),
@@ -233,7 +233,7 @@ defineSyncsMany(GAME_KEYS2, ({ taskSync, eitherTaskSync, regionalSync, regionalS
 	},
 	{
 		name: "Rust Syndicate Duo...Again", members: [
-			taskSync("side-quests", 2, 64),
+			taskSync("sideQuests", 2, 64),
 			fashionSync("all-in-one", 3, 2),
 			fashionSync("glasses", 2, 2),
 			fashionSync("satchels", 4, 2),
@@ -241,7 +241,7 @@ defineSyncsMany(GAME_KEYS2, ({ taskSync, eitherTaskSync, regionalSync, regionalS
 	},
 	{
 		name: "SBC Duo...Again", members: [
-			taskSync("side-quests", 2, 65),
+			taskSync("sideQuests", 2, 65),
 			fashionSync("all-in-one", 4, 2),
 			fashionSync("headdwear", 2, 2),
 			fashionSync("gloves", 2, 2),
@@ -252,7 +252,7 @@ defineSyncsMany(GAME_KEYS2, ({ taskSync, eitherTaskSync, regionalSync, regionalS
 	},
 	{
 		name: "Team Flare Nouveau Duo...Again", members: [
-			taskSync("side-quests", 2, 66),
+			taskSync("sideQuests", 2, 66),
 			fashionSync("tops", 3, 2),
 			fashionSync("bottoms", 3, 2),
 			fashionSync("eyewear", 3, 2),
@@ -260,11 +260,11 @@ defineSyncsMany(GAME_KEYS2, ({ taskSync, eitherTaskSync, regionalSync, regionalS
 			fashionSync("satchels", 6, 2),
 		],
 	},
-	{ name: "Obtain Lucarionite Z", members: [taskSync("side-quests", 2, 78), taskSync("mega-stones", 6),] },
-	{ name: "Obtain Absolite Z", members: [taskSync("story", 1, 1), taskSync("mega-stones", 5),], },
-	{ name: "Obtain Staraptite", members: [taskSync("story", 1, 3), taskSync("mega-stones", 16),], },
-	{ name: "Obtain Tatsugirinite", members: [taskSync("story", 1, 6), taskSync("mega-stones", 12),], },
-	{ name: "Obtain Meowsticite", members: [taskSync("story", 1, 8), taskSync("mega-stones", 1),], },
+	{ name: "Obtain Lucarionite Z", members: [taskSync("sideQuests", 2, 78), taskSync("megaStones", 6),] },
+	{ name: "Obtain Absolite Z", members: [taskSync("story", 1, 1), taskSync("megaStones", 5),], },
+	{ name: "Obtain Staraptite", members: [taskSync("story", 1, 3), taskSync("megaStones", 16),], },
+	{ name: "Obtain Tatsugirinite", members: [taskSync("story", 1, 6), taskSync("megaStones", 12),], },
+	{ name: "Obtain Meowsticite", members: [taskSync("story", 1, 8), taskSync("megaStones", 1),], },
 
 	{ name: "Obtain TM 109", members: [taskSync("story", 2, 19), taskSync("thms", 2),], },
 	{ name: "Obtain TM 114", members: [taskSync("story", 2, 6), taskSync("thms", 7),], },

@@ -1,15 +1,10 @@
-import {
-	defineLayoutsMany,
-} from '../helpers/index.js';
+import { defineLayoutsMany, P, C, parentRows, childRows, } from '../helpers/index.js';
 
 (() => {
 	const GAME_KEYS = ["black2", "white2"];
 
-	const P = (parentId) => [parentId];          			// parent-only task
-	const C = (parentId, childId) => [parentId, childId]; 	// parent + child task
-
 	const DESKTOP_LAYOUT = {
-		"catching": [
+		catching: [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3)],
 			[C(1, 4), C(1, 5), C(1, 6), C(1, 7), C(1, 8), C(1, 9)],
@@ -22,12 +17,12 @@ import {
 			[P(4)],
 			[C(4, 1), C(4, 2), C(4, 3), C(4, 4), C(4, 5), C(4, 6)],
 		],
-		"story": [
+		story: [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3), C(1, 4)],
 			[C(1, 5), C(1, 6), C(1, 7), C(1, 8), C(1, 9)],
 		],
-		"funfest": [
+		funfest: [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3), C(1, 4), C(1, 5)],
 			[C(1, 6), C(1, 7), C(1, 8), C(1, 9), C(1, 10)],
@@ -38,10 +33,10 @@ import {
 			[C(1, 31), C(1, 32), C(1, 33), C(1, 34), C(1, 35)],
 			[C(1, 36), C(1, 37), C(1, 38), C(1, 39)],
 		],
-		"activities": [
+		activities: [
 			[P(1), P(2), P(3)],
 		],
-		"battle": [
+		battle: [
 			[P(1), P(2)],
 			[P(3)],
 			[C(3, 1), C(3, 2), C(3, 3)],
@@ -54,7 +49,7 @@ import {
 			[C(5, 9), C(5, 10), C(5, 11), C(5, 12)],
 			[C(5, 13), C(5, 14)],
 		],
-		"upgrades": [
+		upgrades: [
 			[P(1)],
 			[P(2)],
 			[C(2, 1), C(2, 2), C(2, 3)],
@@ -64,7 +59,7 @@ import {
 			[C(3, 4), C(3, 5), C(3, 6)],
 			[C(3, 7), C(3, 8)],
 		],
-		"collectables": [
+		collectables: [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3), C(1, 4)],
 			[C(1, 5), C(1, 6), C(1, 7), C(1, 8)],
@@ -79,7 +74,7 @@ import {
 			[C(3, 9), C(3, 10), C(3, 11), C(3, 12)],
 			[C(3, 13), C(3, 14), C(3, 15), C(3, 16)],
 		],
-		"thms": [
+		thms: [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3), C(1, 4), C(1, 5), C(1, 6)],
 			[P(2)],
@@ -103,7 +98,7 @@ import {
 			[C(2, 86), C(2, 87), C(2, 88), C(2, 89), C(2, 90)],
 			[C(2, 91), C(2, 92), C(2, 93), C(2, 94), C(2, 95)],
 		],
-		"extra-credit": [
+		extraCredit: [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3), C(1, 4)],
 			[P(2)],

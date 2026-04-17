@@ -32,21 +32,21 @@ import {
 	const SECTIONS = [
 		{ id: "catching", title: "Gotta Catch 'Em All" },
 		{ id: "story", title: "Main Story" },
-		{ id: "side-quests", title: "Side Quests" },
+		{ id: "sideQuests", title: "Side Quests" },
 		{ id: "activities", title: "Activities" },
 		{ id: "battle", title: "Battle" },
 		{ id: "upgrades", title: "Upgrades" },
 		{ id: "collectables", title: "Collectables" },
-		{ id: "mega-stones", title: "Mega Stones" },
+		{ id: "megaStones", title: "Mega Stones" },
 		{ id: "zcrystals", title: "Z-Crystals" },
 		{ id: "fashion", title: "Fashion" },
 		{ id: "thms", title: "TMs/Ride Pager" },
 		{ id: "distributions", title: "Distributions" },
-		{ id: "extra-credit", title: "Extra Credit" },
+		{ id: "extraCredit", title: "Extra Credit" },
 	];
 
 	const TASKS_BY_SECTION = {
-		"catching": [
+		catching: [
 			{
 				id: 1, text: "Catch all the Legendaries", children: [
 					{ id: 1, text: "Catch/Trade Solgaleo", img: ({ gameKey }) => baseSprite(gameKey, 791) },
@@ -73,26 +73,26 @@ import {
 				],
 			},
 			{
-				id: 3, text: "Obtain all In-Game Gift Pokemon", children: [
-					{ id: 1, text: "Eevee Egg", img: ({ gameKey }) => baseSprite(gameKey, 133), tooltip: "Paniola Ranch - Pokemon Nursery" },
+				id: 3, text: "Obtain all In-Game Gift Pokémon", children: [
+					{ id: 1, text: "Eevee Egg", img: ({ gameKey }) => baseSprite(gameKey, 133), tooltip: "Paniola Ranch - Pokémon Nursery" },
 					{ id: 2, text: "Porygon", img: ({ gameKey }) => baseSprite(gameKey, 137), tooltip: "Aether House\nAfter defeating the Elite Four" },
 					{ id: 3, text: "Aerodactyl", img: ({ gameKey }) => baseSprite(gameKey, 142), tooltip: "Seafolk Village" },
 					{ id: 4, text: "Type: Null", img: ({ gameKey }) => baseSprite(gameKey, 772), tooltip: "Aether Paradise\nAfter defeating the Elite Four" },
 				],
 			},
 			{
-				id: 4, text: "Complete all In-Game Pokemon Trades", children: [
-					{ id: 1, text: "Spearow for Machop", img: ({ gameKey }) => task(gameKey, "spearow-for-machop"), tooltip: "Route 2 Pokemon Center" },
-					{ id: 2, text: "Lillipup for Bounsweet", img: ({ gameKey }) => task(gameKey, "lillipup-for-bounsweet"), tooltip: "Route 5 Pokemon Center" },
-					{ id: 3, text: "Zubat for Poliwhirl", img: ({ gameKey }) => task(gameKey, "zubat-for-poliwhirl"), tooltip: "Konikoni City Pokemon Center" },
+				id: 4, text: "Complete all In-Game Pokémon Trades", children: [
+					{ id: 1, text: "Spearow for Machop", img: ({ gameKey }) => task(gameKey, "spearow-for-machop"), tooltip: "Route 2 Pokémon Center" },
+					{ id: 2, text: "Lillipup for Bounsweet", img: ({ gameKey }) => task(gameKey, "lillipup-for-bounsweet"), tooltip: "Route 5 Pokémon Center" },
+					{ id: 3, text: "Zubat for Poliwhirl", img: ({ gameKey }) => task(gameKey, "zubat-for-poliwhirl"), tooltip: "Konikoni City Pokémon Center" },
 					{ id: 4, text: "Pancham for Happiny", img: ({ gameKey }) => task(gameKey, "pancham-for-happiny"), tooltip: "Malie City - Sushi High Roller" },
-					{ id: 5, text: "Haunter for Alolan Graveler", img: ({ gameKey }) => task(gameKey, "haunter-for-alolan-graveler"), tooltip: "Tapu Village Pokemon Center\nGraveler evolves immediately into Golem" },
+					{ id: 5, text: "Haunter for Alolan Graveler", img: ({ gameKey }) => task(gameKey, "haunter-for-alolan-graveler"), tooltip: "Tapu Village Pokémon Center\nGraveler evolves immediately into Golem" },
 					{ id: 6, text: "Granbull for Steenee", img: ({ gameKey }) => task(gameKey, "granbull-for-steenee"), tooltip: "Seafolk Village" },
 					{ id: 7, text: "Bewear for Talonflame", img: ({ gameKey }) => task(gameKey, "bewear-for-talonflame"), tooltip: "Poni Gauntlet" },
 				],
 			},
 		],
-		"story": [
+		story: [
 			{
 				id: 1, text: "Complete the Island Challenge", children: [
 					{ id: 1, text: "Ilima's Trial", tooltip: "Verdant Cavern" },
@@ -122,21 +122,21 @@ import {
 				],
 			},
 		],
-		"activities": [
+		activities: [
 			{ id: 1, text: "Visit the alternate world" },
 			{
 				id: 2, text: "Complete all NPC Pokedex request tasks", children: [
-					{ id: 1, text: "Show Drifloon to the woman at the Hau'oli Pokemon Center", img: ({ gameKey }) => baseSprite(gameKey, 425), tooltip: "Reward: 10,000 Poke Dollars" },
-					{ id: 2, text: "Show Cutiefly to the woman at the Route 2 Pokemon Center", img: ({ gameKey }) => baseSprite(gameKey, 742), tooltip: "Reward: 3,000 Poke Dollars" },
+					{ id: 1, text: "Show Drifloon to the woman at the Hau'oli Pokémon Center", img: ({ gameKey }) => baseSprite(gameKey, 425), tooltip: "Reward: 10,000 Poke Dollars" },
+					{ id: 2, text: "Show Cutiefly to the woman at the Route 2 Pokémon Center", img: ({ gameKey }) => baseSprite(gameKey, 742), tooltip: "Reward: 3,000 Poke Dollars" },
 					{ id: 3, text: "Show Rockruff to the man in yellow on Route 3", img: ({ gameKey }) => baseSprite(gameKey, 744), tooltip: "Reward: 3,000 Poke Dollars" },
 					{ id: 4, text: "Talk to the scientist at the Hau'oli City Tourist Bureau", tooltip: "Reward: Ultra Ball\nRequires at least 10 Pokedex entries" },
 					{ id: 5, text: "Show Pyukumuku to the man at the Heahea City Apparel Shop", img: ({ gameKey }) => baseSprite(gameKey, 771), tooltip: "Reward: 10,000 Poke Dollars" },
-					{ id: 6, text: "Show Passimian/Oranguru to the Aether employee at the Konikoni City Pokemon Center", img: ({ gameKey }) => baseSprite(gameKey, 766), tooltip: "Reward: 5,000 Poke Dollars" },
-					{ id: 7, text: "Show Feebas to the man at the Route 5 Pokemon Center", img: ({ gameKey }) => baseSprite(gameKey, 349), tooltip: "Reward: 3,000 Poke Dollars" },
+					{ id: 6, text: "Show Passimian/Oranguru to the Aether employee at the Konikoni City Pokémon Center", img: ({ gameKey }) => baseSprite(gameKey, 766), tooltip: "Reward: 5,000 Poke Dollars" },
+					{ id: 7, text: "Show Feebas to the man at the Route 5 Pokémon Center", img: ({ gameKey }) => baseSprite(gameKey, 349), tooltip: "Reward: 3,000 Poke Dollars" },
 					{ id: 8, text: "Show Stufful to the Aether employee at the Route 8 Aether Trailer", img: ({ gameKey }) => baseSprite(gameKey, 759), tooltip: "Reward: 5,000 Poke Dollars" },
 					{ id: 9, text: "Show Togedemaru to the collector at the Malie City Apparel Shop", img: ({ gameKey }) => baseSprite(gameKey, 777), tooltip: "Reward: 10,000 Poke Dollars" },
 					{ id: 10, text: "Show an Alolan Persian to Professor Oak at the Malie City Library", img: ({ gameKey }) => baseSprite(gameKey, 53), tooltip: "Reward: Love Ball" },
-					{ id: 11, text: "Show Mimikyu to the Aether employee at the Route 16 Pokemon Center", img: ({ gameKey }) => baseSprite(gameKey, 778), tooltip: "Reward: 20,000 Poke Dollars" },
+					{ id: 11, text: "Show Mimikyu to the Aether employee at the Route 16 Pokémon Center", img: ({ gameKey }) => baseSprite(gameKey, 778), tooltip: "Reward: 20,000 Poke Dollars" },
 					{ id: 12, text: "Show an Alolan Raichu to the woman in the Steelix boat at Seafolk Village", img: ({ gameKey }) => baseSprite(gameKey, 26), tooltip: "Reward: 10,000 Poke Dollars" },
 				],
 			},
@@ -165,7 +165,7 @@ import {
 				],
 			},
 		],
-		"battle": [
+		battle: [
 			{ id: 1, text: "Defeat Morimoto", tooltip: "Heahea City - GAME FREAK\nRewards the Oval Charm on first win" },
 			{ id: 2, text: "Reach Master Rank in Battle Royal", tiers: ["Normal", "Super", "Hyper", "Master"] },
 			{
@@ -188,7 +188,7 @@ import {
 				],
 			},
 		],
-		"upgrades": [
+		upgrades: [
 			{ id: 1, text: "Obtain the Judge function", tooltip: "Battle Tree\nRequires entering the Hall of Fame and hatching 21 Eggs" },
 			{ id: 2, text: "Upgrade the Poke Finder", tiers: ["Ver. 1", "Ver. 2", "Ver. 3", "Ver. 4", "Ver. 5"] },
 			{ id: 3, text: "Upgrade Festival Plaza to Rank 100", tiers: [range(1, 100)] },
@@ -203,7 +203,7 @@ import {
 			},
 			{
 				id: 5, text: "Earn every Trainer Passport stamp", children: [
-					{ id: 1, text: "Official Pokemon Trainer" },
+					{ id: 1, text: "Official Pokémon Trainer" },
 					{ id: 2, text: "Melemele Trial Completion" },
 					{ id: 3, text: "Akala Trial Completion" },
 					{ id: 4, text: "Ula'ula Trial Completion" },
@@ -233,7 +233,7 @@ import {
 				],
 			},
 		],
-		"collectables": [
+		collectables: [
 			{ id: 1, text: "Collect all 95 Zygarde Cells", tiers: [range(1, 95)] },
 			{
 				id: 2, text: "Collect all 5 Zygarde Cores", children: [
@@ -322,7 +322,7 @@ import {
 				],
 			},
 		],
-		"mega-stones": [
+		megaStones: [
 			{ id: 1, text: "Venusaurite", img: ({ gameKey }) => [baseSprite(gameKey, "003-m"), megaStone("venusaurite")] },
 			{ id: 2, text: "Charizardite X", img: ({ gameKey }) => [baseSprite(gameKey, "006-mx"), megaStone("charizardite-x")] },
 			{ id: 3, text: "Charizardite Y", img: ({ gameKey }) => [baseSprite(gameKey, "006-my"), megaStone("charizardite-y")] },
@@ -344,7 +344,7 @@ import {
 			{ id: 19, text: "Garchompite", img: ({ gameKey }) => [baseSprite(gameKey, "445-m"), megaStone("garchompite")] },
 			{ id: 20, text: "Lucarionite", img: ({ gameKey }) => [baseSprite(gameKey, "448-m"), megaStone("lucarionite")] },
 		],
-		"zcrystals": [
+		zcrystals: [
 			{
 				id: 1, text: "Collect all Typing Z-Crystals", children: [
 					{ id: 1, text: "Buginium Z", img: () => [typing("bug"), zCrystal("buginiumz")] },
@@ -379,7 +379,7 @@ import {
 				]
 			},
 		],
-		"thms": [
+		thms: [
 			{
 				id: 1, text: "Unlock every Ride Pager summon", children: [
 					{ id: 1, text: "Tauros Charge", img: () => hm("tauros-charge"), tooltip: "Defeat Hala in Iki Town" },
@@ -496,7 +496,7 @@ import {
 				],
 			},
 		],
-		"extra-credit": [
+		extraCredit: [
 			{
 				id: 1, text: "Obtain all Event Mythicals", children: [
 					{ id: 1, text: "Magerna", img: ({ gameKey }) => baseSprite(gameKey, 801) },
@@ -566,7 +566,7 @@ import {
 		}),
 		activities: overrideTasks(TASKS_BY_SECTION.activities, {
 			2: {
-				6: { text: "Show Passimian to the Aether employee at the Konikoni City Pokemon Center", img: ({ gameKey }) => baseSprite(gameKey, 766) },
+				6: { text: "Show Passimian to the Aether employee at the Konikoni City Pokémon Center", img: ({ gameKey }) => baseSprite(gameKey, 766) },
 			}
 		}),
 		upgrades: overrideTasks(TASKS_BY_SECTION.upgrades, {
@@ -603,7 +603,7 @@ import {
 		}),
 		activities: overrideTasks(TASKS_BY_SECTION.activities, {
 			2: {
-				6: { text: "Show Oranguru to the Aether employee at the Konikoni City Pokemon Center", img: ({ gameKey }) => baseSprite(gameKey, 765) },
+				6: { text: "Show Oranguru to the Aether employee at the Konikoni City Pokémon Center", img: ({ gameKey }) => baseSprite(gameKey, 765) },
 			}
 		}),
 		upgrades: overrideTasks(TASKS_BY_SECTION.upgrades, {

@@ -36,11 +36,11 @@ import {
 		{ id: "collectables", title: "Collectables" },
 		{ id: "accessories", title: "Musical Accessories" },
 		{ id: "thms", title: "TMs/HMs" },
-		{ id: "extra-credit", title: "Extra Credit" },
+		{ id: "extraCredit", title: "Extra Credit" },
 	];
 
 	const TASKS_BY_SECTION = {
-		"catching": [
+		catching: [
 			{
 				id: 1, text: "Catch all the Legendaries", children: [
 					{ id: 1, text: "Catch/Trade Reshiram", img: ({ gameKey }) => baseSprite(gameKey, 643) },
@@ -55,7 +55,7 @@ import {
 				],
 			},
 			{
-				id: 2, text: "Obtain all In-Game Gift Pokemon", children: [
+				id: 2, text: "Obtain all In-Game Gift Pokémon", children: [
 					{
 						id: 1, text: "Pansage/Pansear/Panpour", img: ({ gameKey }) => task(gameKey, "elemental-monkeys"), tooltip: "Dreamyard", eithers: {
 							1: { text: "" }, 2: { text: "" }, 3: { text: "" }
@@ -72,7 +72,7 @@ import {
 				],
 			},
 			{
-				id: 3, text: "Complete all In-Game Pokemon Trades", children: [
+				id: 3, text: "Complete all In-Game Pokémon Trades", children: [
 					{ id: 1, text: "Cottonee for Petilil", img: ({ gameKey }) => task(gameKey, "cottonee-for-petilil") },
 					{ id: 2, text: "Minccino for Basculin", img: ({ gameKey }) => task(gameKey, "minccino-for-basculin") },
 					{ id: 3, text: "Boldore for Emolga", img: ({ gameKey }) => task(gameKey, "boldore-for-emolga") },
@@ -80,7 +80,7 @@ import {
 				],
 			},
 			{
-				id: 4, text: "Obtain all Static Encounter Pokemon", children: [
+				id: 4, text: "Obtain all Static Encounter Pokémon", children: [
 					{ id: 1, text: "Musharna", img: ({ gameKey }) => baseSprite(gameKey, 518), tooltip: "Dreamyard\nEvery Friday after defeating Ghetsis" },
 					{ id: 2, text: "Zen Mode Darmanitan", img: ({ gameKey }) => baseSprite(gameKey, 555), tooltip: "Desert Resort\nTracks all five RageCandyBar statues", type: "tiered", tiers: [range(1, 5)] },
 					{ id: 3, text: "Fake-item Foongus", img: ({ gameKey }) => baseSprite(gameKey, 590), tooltip: "Routes 6 and 10\nTracks all five fake-item Foongus", type: "tiered", tiers: [range(1, 5)] },
@@ -89,7 +89,7 @@ import {
 				],
 			},
 		],
-		"story": [
+		story: [
 			{
 				id: 1, text: "Beat the main story", children: [
 					{ id: 1, text: "Trio Badge", img: () => _badges("trio"), tooltip: "Defeat Cilan/Chili/Cress at the Striaton City Gym" },
@@ -104,7 +104,7 @@ import {
 				],
 			},
 		],
-		"activites": [
+		activites: [
 			{ id: 1, text: "Fill Black City/White Forest with 10 Trainers", noCenter: true },
 			{
 				id: 2, text: "Find all Team Plasma Sages", children: [
@@ -125,7 +125,7 @@ import {
 				],
 			},
 		],
-		"battle": [
+		battle: [
 			{ id: 1, text: "Battle Cheren", tooltip: "Victory Road after defeating the Elite 4" },
 			{ id: 2, text: "Battle Bianca", tooltip: "Prof. Juniper's Lab (Saturday Nights)" },
 			{ id: 3, text: "Battle Cynthia", tooltip: "Undella Town (Spring & Summer)" },
@@ -151,19 +151,19 @@ import {
 				],
 			},
 		],
-		"upgrades": [
+		upgrades: [
 			{ id: 1, text: "Obtain the National Dex", noCenter: true },
 			{
 				id: 2, text: "Obtain the Black/White Rank Trainer Card", children: [
 					{ id: 1, text: "Defeat the Elite Four" },
 					{ id: 2, text: "Complete the National PokeDex (645)" },
-					{ id: 3, text: "Collect all Pokemon Musical Items" },
+					{ id: 3, text: "Collect all Pokémon Musical Items" },
 					{ id: 4, text: "Obtain all Entralink Powers" },
 					{ id: 5, text: "Get a 49-win streak in the Battle Subway Lines", tooltip: "Must get the streak in both the Super Singles and Super Doubles lines" },
 				],
 			},
 		],
-		"collectables": [
+		collectables: [
 			{
 				id: 1, text: "Collect all Key Items", children: [
 					{ id: 1, text: "Bicycle", img: () => keyItem("bicycle") },
@@ -206,7 +206,7 @@ import {
 				],
 			},
 		],
-		"accessories": [
+		accessories: [
 			{
 				id: 1, text: "Collect all Head attatchements", children: [
 					{ id: 1, text: "Scarlet Hat" },
@@ -337,7 +337,7 @@ import {
 				]
 			},
 		],
-		"thms": [
+		thms: [
 			{
 				id: 1, text: "Collect all HMs", children: [
 					{ id: 1, text: "HM01 (Cut)", img: () => hm("normal") },
@@ -448,9 +448,9 @@ import {
 				],
 			},
 		],
-		"extra-credit": [
+		extraCredit: [
 			{
-				id: 1, text: "Obtain all Mythical Pokemon", children: [
+				id: 1, text: "Obtain all Mythical Pokémon", children: [
 					{ id: 1, text: "Victini", img: ({ gameKey }) => baseSprite(gameKey, 494) },
 					{ id: 2, text: "Keldeo", img: ({ gameKey }) => baseSprite(gameKey, 647) },
 					{ id: 3, text: "Meloetta", img: ({ gameKey }) => baseSprite(gameKey, 648) },

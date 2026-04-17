@@ -30,11 +30,11 @@ import {
 		{ id: "activities", title: "Activities" },
 		{ id: "collectables", title: "Collectables" },
 		{ id: "thms", title: "TMs/HMs" },
-		{ id: "extra-credit", title: "Extra Credit" },
+		{ id: "extraCredit", title: "Extra Credit" },
 	];
 
 	const TASKS_BY_SECTION = {
-		"catching": [
+		catching: [
 			{
 				id: 1, text: "Catch all the Legendaries", children: [
 					{ id: 1, text: "Catch Articuno", img: ({ gameKey }) => baseSprite(gameKey, 144), imgS: ({ gameKey }) => shinySprite(gameKey, 144), tooltip: "Found at the bottom of the Seafoam Islands" },
@@ -85,7 +85,7 @@ import {
 				],
 			},
 		],
-		"story": [
+		story: [
 			{
 				id: 1, text: "Beat the main story", children: [
 					{ id: 1, text: "Boulder Badge", img: () => _badges("boulder"), tooltip: "Defeat Brock at the Pewter City Gym" },
@@ -100,10 +100,10 @@ import {
 				],
 			},
 		],
-		"activities": [
+		activities: [
 			{ id: 1, text: "Get a high-score in the Pikachu Surfing Mini-Game", tooltip: "In original Yellow, you need a Pikachu that knows Surf. In Virtual Console releases, your partner Pikachu can access it normally." },
 		],
-		"collectables": [
+		collectables: [
 			{
 				id: 1, text: "Obtain all Key Items", children: [
 					{ id: 1, text: "Bicycle", img: () => keyItem("bicycle") },
@@ -124,7 +124,7 @@ import {
 			{ id: 2, text: "Find all hidden items with the Item Finder", img: () => keyItem("item-finder"), type: "tiered", tiers: [range(1, 54)], },
 			{ id: 3, text: "Collect all hidden Game Corner coins", img: () => keyItem("coin-case"), type: "tiered", tiers: [range(1, 10)], tooltip: "Tracks the 10 hidden coin spots in the Celadon Game Corner" },
 		],
-		"thms": [
+		thms: [
 			{
 				id: 1, text: "Collect all HMs", children: [
 					{ id: 1, text: "HM01 (Cut)", img: () => hm("normal") },
@@ -189,9 +189,9 @@ import {
 				]
 			},
 		],
-		"extra-credit": [
+		extraCredit: [
 			{
-				id: 1, text: "Obtain all Mythical Pokemon", children: [
+				id: 1, text: "Obtain all Mythical Pokémon", children: [
 					{ id: 1, text: "Mew", img: ({ gameKey }) => baseSprite(gameKey, 151), imgS: ({ gameKey }) => shinySprite(gameKey, 151) },
 				],
 			},

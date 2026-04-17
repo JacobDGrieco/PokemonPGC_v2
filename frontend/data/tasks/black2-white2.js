@@ -38,11 +38,11 @@ import {
 		{ id: "medals", title: "Medals" },
 		{ id: "thms", title: "TMs/HMs" },
 		{ id: "distributions", title: "Distributions" },
-		{ id: "extra-credit", title: "Extra Credit" },
+		{ id: "extraCredit", title: "Extra Credit" },
 	];
 
 	const TASKS_BY_SECTION = {
-		"catching": [
+		catching: [
 			{
 				id: 1, text: "Catch all the Legendaries", children: [
 					{ id: 1, text: "Catch/Trade Reshiram", img: ({ gameKey }) => baseSprite(gameKey, 643) },
@@ -65,16 +65,16 @@ import {
 				],
 			},
 			{
-				id: 2, text: "Obtain all Static Encounter Pokemon", children: [
+				id: 2, text: "Obtain all Static Encounter Pokémon", children: [
 					{ id: 1, text: "Minccino", img: ({ gameKey }) => baseSprite(gameKey, 572), tooltip: "Route 5 - Hidden Grotto" },
 					{ id: 2, text: "Volcarona", img: ({ gameKey }) => baseSprite(gameKey, 637), tooltip: "Relic Castle\nLvl 35 before defeating the Elite 4\nLvl 65 after defeating the Elite 4" },
 					{ id: 3, text: "Foongus", img: ({ gameKey }) => baseSprite(gameKey, 590), tooltip: "Route 6" },
 					{ id: 4, text: "Crustle", img: ({ gameKey }) => baseSprite(gameKey, 558), tooltip: "Seaside Cave" },
-					{ id: 5, text: "Shiny Haxorus", img: ({ gameKey }) => shinySprite(gameKey, 612), tooltip: "Nature Preserve\nSee all Pokemon, get the Permit, and talk to the attendant in Mistralton City" },
+					{ id: 5, text: "Shiny Haxorus", img: ({ gameKey }) => shinySprite(gameKey, 612), tooltip: "Nature Preserve\nSee all Pokémon, get the Permit, and talk to the attendant in Mistralton City" },
 				],
 			},
 			{
-				id: 3, text: "Obtain all In-Game Gift Pokemon", children: [
+				id: 3, text: "Obtain all In-Game Gift Pokémon", children: [
 					{ id: 1, text: "N's Zorua", img: ({ gameKey }) => baseSprite(gameKey, 570), tooltip: "Driftveil City - Talk with the Sage after defeating New Team Plasma" },
 					{ id: 2, text: "Eevee", img: ({ gameKey }) => baseSprite(gameKey, 133), tooltip: "Castelia City - Talk to Amanita after defeating the Elite 4" },
 					{ id: 3, text: "Deerling", img: ({ gameKey }) => baseSprite(gameKey, 585), tooltip: "Route 6 - Weather Institute" },
@@ -89,7 +89,7 @@ import {
 				],
 			},
 			{
-				id: 4, text: "Complete all In-Game Pokemon Trades", children: [
+				id: 4, text: "Complete all In-Game Pokémon Trades", children: [
 					{ id: 1, text: "Cottonee for Petilil", img: ({ gameKey }) => task(gameKey, "cottonee-for-petilil") },
 					{ id: 2, text: "Emolga for Gigalith", img: ({ gameKey }) => task(gameKey, "emolga-for-gigalith") },
 					{ id: 3, text: "Mantine for Tangrowth", img: ({ gameKey }) => task(gameKey, "mantine-for-tangrowth") },
@@ -99,7 +99,7 @@ import {
 				],
 			},
 		],
-		"story": [
+		story: [
 			{
 				id: 1, text: "Beat the main story", children: [
 					{ id: 1, text: "Basic Badge", img: () => _badges("basic"), tooltip: "Defeat Cheren at the Aspertia City Gym" },
@@ -114,7 +114,7 @@ import {
 				],
 			},
 		],
-		"funfest": [
+		funfest: [
 			{
 				id: 1, text: "Complete all Funfest Missions", children: [
 					{ id: 1, text: "The First Berry Search!", tooltip: "Search for 5 Berries" },
@@ -123,7 +123,7 @@ import {
 					{ id: 4, text: "Find Lost Boys!", tiers: [4, 8, 16, 50], tooltip: "Find the small children" },
 					{ id: 5, text: "Enjoy Shopping!", tiers: [3, 8, 16, 25], tooltip: "Find the various trainers who are selling things and buy from them" },
 					{ id: 6, text: "Find Audino!", tiers: [1, 5, 10, 50], tooltip: "Look for an Audino in shaking grass and capture it" },
-					{ id: 7, text: "Search for ?? Pokemon!", tiers: [3, 5, 10, 50], tooltip: "Look for numerous Pokemon" },
+					{ id: 7, text: "Search for ?? Pokémon!", tiers: [3, 5, 10, 50], tooltip: "Look for numerous Pokémon" },
 					{ id: 8, text: "Train with Marital Artists!", tiers: [2, 4, 8, 100], tooltip: "Battle against various BlackBelts" },
 					{ id: 9, text: "Sparring with ?? Trainers!", tiers: [10, 30, 50, 100], tooltip: "Battle against various trainers" },
 					{ id: 10, text: "Get Rich Quick!", tiers: [3, 6, 12, 25], tooltip: "Hunt for numerous treasures inshiny spots of forests and caves" },
@@ -142,15 +142,15 @@ import {
 					{ id: 23, text: "Shocking Shopping!", tiers: [4, 8, 32, 100], tooltip: "Find many men in black and purchase items from them" },
 					{ id: 24, text: "Memory Training!", tiers: [6, 10, 12, 50], tooltip: "Follow instructions and speak to the correct people" },
 					{ id: 25, text: "Push the Limit of Your Memory!", tiers: [5, 10, 40, 10], tooltip: "Follow instructions and speak to the correct people" },
-					{ id: 26, text: "Find Rustling Grass!", tiers: [5, 10, 20, 100], tooltip: "Capture Pokemon from Shaking Grass" },
+					{ id: 26, text: "Find Rustling Grass!", tiers: [5, 10, 20, 100], tooltip: "Capture Pokémon from Shaking Grass" },
 					{ id: 27, text: "Find Shards!", tiers: [3, 16, 32, 100], tooltip: "Find numerous shards" },
 					{ id: 28, text: "Forgotten/Not-Found Lost Items", tiers: [5, 10, 50, 100], tooltip: "Find the forgotten items" },
 					{ id: 29, text: "What is the Best/Real Price?", tiers: [6, 12, 40, 50], tooltip: "Talk to the man in black and purchase a rare item" },
 					{ id: 30, text: "Give Me the Item!", tiers: [10, 15, 20, 40], tooltip: "Exchange items with various people" },
 					{ id: 31, text: "Do a Great Trade-Up!", tiers: [3, 6, 80, 100], tooltip: "Exchange items with various people" },
-					{ id: 32, text: "Search Hidden Grottoes!", tiers: [1, 3, 5, 10], tooltip: "Capture Pokemon in Hidden Grottos" },
-					{ id: 33, text: "Noisy/Quiet Hidden Grottoes!", tiers: [3, 5, 10, 30], tooltip: "Capture Pokemon in Hiddeon Grottos" },
-					{ id: 34, text: "Fishing Competition!", tiers: [5, 10, 20, 30], tooltip: "Capture Pokemon with your Rod" },
+					{ id: 32, text: "Search Hidden Grottoes!", tiers: [1, 3, 5, 10], tooltip: "Capture Pokémon in Hidden Grottos" },
+					{ id: 33, text: "Noisy/Quiet Hidden Grottoes!", tiers: [3, 5, 10, 30], tooltip: "Capture Pokémon in Hiddeon Grottos" },
+					{ id: 34, text: "Fishing Competition!", tiers: [5, 10, 20, 30], tooltip: "Capture Pokémon with your Rod" },
 					{ id: 35, text: "Mulch Collector!", tiers: [6, 12, 24, 9], tooltip: "Collect various amounts of Mulch" },
 					{ id: 36, text: "Where Are Fluttering Hearts!", tiers: [10, 20, 40, 100], tooltip: "Collect Heart Scales" },
 					{ id: 37, text: "Rock-Paper-Scissors Competition!", tiers: [5, 10, 50, 100], tooltip: "Play Rock-Paper-Scissors" },
@@ -159,12 +159,12 @@ import {
 				],
 			},
 		],
-		"activities": [
+		activities: [
 			{ id: 1, text: "Complete the Dropped Item quest for Yancy/Curtis", tooltip: "Yancy or Curtis depends on your chosen gender" },
 			{ id: 2, text: "Reach EX Rank in PokeStar Studios", tiers: ["Rank 1", "Rank 2", "Rank 3", "Rank 4", "Rank 5", "EX Rank"], tooltip: "Tiers by revenue: 0, 300 Billion, 1000 Billion, 2500 Billion, 4500 Billion, Complete all Movies" },
 			{ id: 3, text: "Reach Level 100 in Join Avenue", tiers: [range(1, 100)] },
 		],
-		"battle": [
+		battle: [
 			{ id: 1, text: "Defeat Benga", tooltip: "Black City/White Forest" },
 			{ id: 2, text: "Get to Master Rank at the Battle Institute", tiers: ["Novice", "Normal", "Super", "Hyper", "Elite", "Master"] },
 			{
@@ -208,14 +208,14 @@ import {
 				],
 			},
 		],
-		"upgrades": [
+		upgrades: [
 			{ id: 1, text: "Obtain the National Dex" },
 			{
 				id: 2, text: "Obtain the Black/White Rank Trainer Card", children: [
 					{ id: 1, text: "Defeat the Elite Four" },
 					{ id: 2, text: "Complete the National PokeDex (645)" },
 					{ id: 3, text: "Achieve EX Rank in PokeStar Studios" },
-					{ id: 4, text: "Defeat the Champions at the Pokemon World Tournament" },
+					{ id: 4, text: "Defeat the Champions at the Pokémon World Tournament" },
 					{ id: 5, text: "Gain an Entree Level of 30" },
 				],
 			},
@@ -232,7 +232,7 @@ import {
 				]
 			},
 		],
-		"collectables": [
+		collectables: [
 			{
 				id: 1, text: "Collect all Key Items", children: [
 					{ id: 1, text: "Bicycle", img: () => keyItem("bicycle") },
@@ -285,9 +285,9 @@ import {
 				]
 			},
 		],
-		"accessories": [
+		accessories: [
 			{
-				id: 1, text: "Collect all Head attatchements", tooltip: "Can be obtained by connecting to a Pokemon Black/White save\nWill copy items over", children: [
+				id: 1, text: "Collect all Head attatchements", tooltip: "Can be obtained by connecting to a Pokémon Black/White save\nWill copy items over", children: [
 					{ id: 1, text: "Scarlet Hat" },
 					{ id: 2, text: "Wig" },
 					{ id: 3, text: "Witchy Hat" },
@@ -318,7 +318,7 @@ import {
 				]
 			},
 			{
-				id: 2, text: "Collect all Face attatchements", tooltip: "Can be obtained by connecting to a Pokemon Black/White save\nWill copy items over", children: [
+				id: 2, text: "Collect all Face attatchements", tooltip: "Can be obtained by connecting to a Pokémon Black/White save\nWill copy items over", children: [
 					{ id: 1, text: "Red Nose" },
 					{ id: 2, text: "Germ Mask" },
 					{ id: 3, text: "Googly Specs" },
@@ -331,7 +331,7 @@ import {
 				]
 			},
 			{
-				id: 3, text: "Collect all Ear attatchements", tooltip: "Can be obtained by connecting to a Pokemon Black/White save\nWill copy items over", children: [
+				id: 3, text: "Collect all Ear attatchements", tooltip: "Can be obtained by connecting to a Pokémon Black/White save\nWill copy items over", children: [
 					{ id: 1, text: "Blue Flower" },
 					{ id: 2, text: "Red Flower" },
 					{ id: 3, text: "Striped Barrette" },
@@ -345,7 +345,7 @@ import {
 				]
 			},
 			{
-				id: 4, text: "Collect all Arm attatchements", tooltip: "Can be obtained by connecting to a Pokemon Black/White save\nWill copy items over", children: [
+				id: 4, text: "Collect all Arm attatchements", tooltip: "Can be obtained by connecting to a Pokémon Black/White save\nWill copy items over", children: [
 					{ id: 1, text: "Red Parasol" },
 					{ id: 2, text: "Whisk" },
 					{ id: 3, text: "Lonely Flower" },
@@ -389,7 +389,7 @@ import {
 				]
 			},
 			{
-				id: 5, text: "Collect all Body attatchements", tooltip: "Can be obtained by connecting to a Pokemon Black/White save\nWill copy items over", children: [
+				id: 5, text: "Collect all Body attatchements", tooltip: "Can be obtained by connecting to a Pokémon Black/White save\nWill copy items over", children: [
 					{ id: 1, text: "Crimson Scarf" },
 					{ id: 2, text: "Scarlet Cape" },
 					{ id: 3, text: "Black Wings" },
@@ -407,7 +407,7 @@ import {
 				]
 			},
 			{
-				id: 6, text: "Collect all Body attatchements", tooltip: "Can be obtained by connecting to a Pokemon Black/White save\nWill copy items over", children: [
+				id: 6, text: "Collect all Body attatchements", tooltip: "Can be obtained by connecting to a Pokémon Black/White save\nWill copy items over", children: [
 					{ id: 1, text: "Fake Belly Button" },
 					{ id: 2, text: "Umber Belt" },
 					{ id: 3, text: "Frilly Apron" },
@@ -416,7 +416,7 @@ import {
 				]
 			},
 		],
-		"thms": [
+		thms: [
 			{
 				id: 1, text: "Collect all HMs", children: [
 					{ id: 1, text: "HM01 (Cut)", img: () => hm("normal") },
@@ -527,7 +527,7 @@ import {
 				],
 			},
 		],
-		"extra-credit": [
+		extraCredit: [
 			{
 				id: 1, text: "Obtain all Event Mythicals", children: [
 					{ id: 1, text: "Victini", img: ({ gameKey }) => baseSprite(gameKey, 494) },
@@ -537,19 +537,19 @@ import {
 				],
 			},
 			{
-				id: 2, text: "Trigger Memory Link Flashbacks", tooltip: "Have to progress through Pokemon Black/White", children: [
+				id: 2, text: "Trigger Memory Link Flashbacks", tooltip: "Have to progress through Pokémon Black/White", children: [
 					{ id: 1, text: "A Triple Team", tooltip: "Receive the Trio Badge in Black/White" },
 					{ id: 2, text: "Different Bones & Dreams", tooltip: "Receive the Quake Badge in Black/White" },
 					{ id: 3, text: "Hearts' Desire", tooltip: "Receive the Freeze Badge in Black/White" },
 					{ id: 4, text: "A New Light", tooltip: "Receive the Legend Badge in Black/White" },
 					{ id: 5, text: "Taking It To The Next Level", tooltip: "Receive the Jet Badge in Black/White" },
 					{ id: 6, text: "White and Black", tooltip: "Defeat N and Ghetsis in Black/White" },
-					{ id: 7, text: "Farewell Beloved Sister", tooltip: "Compete in the Pokemon Musical and enter the EntraLink once" },
+					{ id: 7, text: "Farewell Beloved Sister", tooltip: "Compete in the Pokémon Musical and enter the EntraLink once" },
 					{ id: 8, text: "Meeting Friends", tooltip: "Defeat N and Ghetsis in Black/White" },
 				],
 			},
 			{
-				id: 3, text: "Obtain all of N's Pokemon", tooltip: "Must see the flashback to N releasing his Pokemon in Chargestone Cave\nYou have to get N's Zorua before you can start finding the rest of N's Pokemon\nAll other Pokemon are catchable in the wild", children: [
+				id: 3, text: "Obtain all of N's Pokémon", tooltip: "Must see the flashback to N releasing his Pokémon in Chargestone Cave\nYou have to get N's Zorua before you can start finding the rest of N's Pokémon\nAll other Pokémon are catchable in the wild", children: [
 					{ id: 1, text: "Purrloin", img: ({ gameKey }) => baseSprite(gameKey, 509), tooltip: "Route 2" },
 					{ id: 2, text: "Woobat", img: ({ gameKey }) => baseSprite(gameKey, 527), tooltip: "Wellspring Cave" },
 					{ id: 3, text: "Pidove", img: ({ gameKey }) => baseSprite(gameKey, 519), tooltip: "Pinwheel Forest" },
@@ -569,21 +569,21 @@ import {
 			{
 				id: 4, text: "Complete Special Event Funfest Missions", children: [
 					{ id: 1, text: "The Berry-Hunting Adventure!", tooltip: "Hunt for berries around Unova\nShow Meloetta to a person in Castelia City" },
-					{ id: 2, text: "Women at Pokemon Centers", tooltip: "Speak to Pokemon Center women in towns and on roads\nJapan Pokemon Centers (Jun 30, 2012 - Sep 6, 2012)" },
+					{ id: 2, text: "Women at Pokémon Centers", tooltip: "Speak to Pokémon Center women in towns and on roads\nJapan Pokémon Centers (Jun 30, 2012 - Sep 6, 2012)" },
 					{ id: 3, text: "Rare Pieces!", tooltip: "Look for shining places in caves and on roads\nJapan World Hobby Fair (Jun 30, 2012 - Sep 30, 2012)" },
-					{ id: 4, text: "Pokemon-Quiz Championship!", tooltip: "Speak to Scientists in towns and on roads\nJapan World Hobby Fair (Jun 30, 2012 - Sep 30, 2012)" },
+					{ id: 4, text: "Pokémon-Quiz Championship!", tooltip: "Speak to Scientists in towns and on roads\nJapan World Hobby Fair (Jun 30, 2012 - Sep 30, 2012)" },
 					{ id: 5, text: "Find Rare Berries!", tooltip: "Look for shining places in forests and caves\nJapan Dengeki Anniversary (Oct 20, 2012 - Oct 21, 2012)" },
-					{ id: 6, text: "Gifts from Pokemon Center Woman", tooltip: "Speak to Pokemon Center woman in towns and on roads" },
-					{ id: 7, text: "Find Pokemon", tooltip: "Visit Hidden Grottoes in different areas, and find Pokemon!\nJapan Pokemon Centre (Jul 13, 2013 - Jul 26, 2013)" },
-					{ id: 8, text: "Shopping Impossible", tooltip: "Buy very rare items\nJapan Pokemon Centre (Jul 27, 2013 - Aug 16, 2013)" },
+					{ id: 6, text: "Gifts from Pokémon Center Woman", tooltip: "Speak to Pokémon Center woman in towns and on roads" },
+					{ id: 7, text: "Find Pokémon", tooltip: "Visit Hidden Grottoes in different areas, and find Pokémon!\nJapan Pokémon Centre (Jul 13, 2013 - Jul 26, 2013)" },
+					{ id: 8, text: "Shopping Impossible", tooltip: "Buy very rare items\nJapan Pokémon Centre (Jul 27, 2013 - Aug 16, 2013)" },
 					{ id: 9, text: "Endless Battles", tooltip: "Defeat ?? or more Veterans within the time limit!\nJapan World Hobby Fair (Jul 29, 2013 - Sep 16, 2013)" },
-					{ id: 10, text: "Find Pokemon", tooltip: "Visit Hidden Grottoes in different areas, and find Pokemon!\nJapan Pokemon Centre (Aug 17, 2013 - Sep 6, 2013)" },
-					{ id: 11, text: "Berry Festival!", tooltip: "Look for shining places in forests and caves, and collect Berries!\nJapan Pokemon Centre (Sep 7, 2013 - Sep 27, 2013)" },
+					{ id: 10, text: "Find Pokémon", tooltip: "Visit Hidden Grottoes in different areas, and find Pokémon!\nJapan Pokémon Centre (Aug 17, 2013 - Sep 6, 2013)" },
+					{ id: 11, text: "Berry Festival!", tooltip: "Look for shining places in forests and caves, and collect Berries!\nJapan Pokémon Centre (Sep 7, 2013 - Sep 27, 2013)" },
 					{ id: 12, text: "Pokedex Quiz", tooltip: "Speak to Scientists in towns and on roads" },
 				]
 			},
 			{
-				id: 5, text: "Battle NPCs after a Memory Link", tooltip: "Have to progress through Pokemon Black/White", children: [
+				id: 5, text: "Battle NPCs after a Memory Link", tooltip: "Have to progress through Pokémon Black/White", children: [
 					{ id: 1, text: "Bianca", tooltip: "Defeat N and Ghetsis in Black/White" },
 					{ id: 2, text: "Cheren", tooltip: "Defeat N and Ghetsis in Black/White" },
 				],

@@ -1,16 +1,10 @@
-import {
-	spacer,
-	defineLayoutsMany,
-} from '../helpers/index.js';
+import { defineLayoutsMany, P, C, parentRows, childRows, spacer } from '../helpers/index.js';
 
 (() => {
 	const GAME_KEYS = ["legendsza"];
 
-	const P = (parentId) => [parentId];          			// parent-only task
-	const C = (parentId, childId) => [parentId, childId]; 	// parent + child task
-
 	const DESKTOP_LAYOUT = {
-		"catching": [
+		catching: [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3)],
 			[P(2)],
@@ -19,7 +13,7 @@ import {
 			[P(3)],
 			[C(3, 1), C(3, 2), C(3, 3), C(3, 4)],
 		],
-		"story": [
+		story: [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3)],
 			[C(1, 4), C(1, 5)],
@@ -38,7 +32,7 @@ import {
 			[P(2)],
 			[C(2, 1), C(2, 2), C(2, 3), C(2, 4)],
 		],
-		"side-quests": [
+		sideQuests: [
 			[P(1), P(41), P(81)],
 			[P(2), P(42), P(82)],
 			[P(3), P(43), P(83)],
@@ -80,7 +74,7 @@ import {
 			[P(39), P(79), P(119)],
 			[P(40), P(80), spacer],
 		],
-		"mabels-research": [
+		mabelsResearch: [
 			[P(1), P(11), P(21), P(31), P(41)],
 			[P(2), P(12), P(22), P(32), P(42)],
 			[P(3), P(13), P(23), P(33), P(43)],
@@ -92,22 +86,22 @@ import {
 			[P(9), P(19), P(29), P(39), P(49)],
 			[P(10), P(20), P(30), P(40), spacer],
 		],
-		"activities": [
+		activities: [
 			[P(1)]
 		],
-		"battle": [
+		battle: [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3), C(1, 4), C(1, 5), C(1, 6)],
 			[C(1, 7), C(1, 8), C(1, 9), C(1, 10), C(1, 11), C(1, 12)],
 		],
-		"upgrades": [
+		upgrades: [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3), C(1, 4), C(1, 5)],
 		],
-		"collectables": [
+		collectables: [
 			[P(1), P(2)],
 		],
-		"mega-stones": [
+		megaStones: [
 			[P(1), P(2), P(3), P(4), P(5), P(6)],
 			[P(7), P(8), P(9), P(10), P(11), P(12)],
 			[P(13), P(14), P(15), P(16), P(17), P(18)],
@@ -120,7 +114,7 @@ import {
 			[P(55), P(56), P(57), P(58), P(59), P(60)],
 			[P(61), P(62), spacer, spacer, spacer, spacer],
 		],
-		"thms": [
+		thms: [
 			[P(1), P(2), P(3), P(4), P(5)],
 			[P(6), P(7), P(8), P(9), P(10)],
 			[P(11), P(12), P(13), P(14), P(15)],
@@ -144,7 +138,7 @@ import {
 			[P(101), P(102), P(103), P(104), P(105)],
 			[P(106), P(107)],
 		],
-		"extra-credit": [
+		extraCredit: [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3), C(1, 4), C(1, 5), C(1, 6), C(1, 7)],
 			[P(2)],

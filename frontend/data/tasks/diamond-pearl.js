@@ -29,11 +29,11 @@ import {
 		{ id: "collectables", title: "Collectables" },
 		{ id: "thms", title: "TMs/HMs" },
 		{ id: "distributions", title: "Distributions" },
-		{ id: "extra-credit", title: "Extra Credit" },
+		{ id: "extraCredit", title: "Extra Credit" },
 	];
 
 	const TASKS_BY_SECTION = {
-		"catching": [
+		catching: [
 			{
 				id: 1, text: "Catch all the Legendaries", children: [
 					{ id: 1, text: "Catch/Trade Dialga", img: ({ gameKey }) => baseSprite(gameKey, 483), },
@@ -70,7 +70,7 @@ import {
 				],
 			}
 		],
-		"story": [
+		story: [
 			{
 				id: 1, text: "Beat the main story", children: [
 					{ id: 1, text: "Coal Badge", img: () => _badges("coal"), tooltip: "Defeat Roark at the Oreburgh City Gym" },
@@ -85,7 +85,7 @@ import {
 				],
 			},
 		],
-		"battle": [
+		battle: [
 			{
 				id: 1, text: "Defeat Tower Tycoon Palmer in Single Battles", children: [
 					{ id: 1, text: "After 21st Battle", },
@@ -99,7 +99,7 @@ import {
 				],
 			},
 		],
-		"upgrades": [
+		upgrades: [
 			{ id: 1, text: "Obtain the National PokeDex" },
 			{ id: 2, text: "Obtain the Mystery Gift option", },
 			{
@@ -130,7 +130,7 @@ import {
 					{ id: 15, text: "Step Counter" },
 					{ id: 16, text: "Happiness Checker" },
 					{ id: 17, text: "Berry Checker" },
-					{ id: 18, text: "Pokemon History" },
+					{ id: 18, text: "Pokémon History" },
 					{ id: 19, text: "Analog Clock" },
 					{ id: 20, text: "Wireless Searcher" },
 					{ id: 21, text: "Type Chart" },
@@ -141,7 +141,7 @@ import {
 				],
 			},
 		],
-		"collectables": [
+		collectables: [
 			{
 				id: 1, text: "Obtain all extra Key Items", children: [
 					{ id: 1, text: "Bicycle", img: () => keyItem("bicycle") },
@@ -175,7 +175,7 @@ import {
 				]
 			},
 		],
-		"thms": [
+		thms: [
 			{
 				id: 1, text: "Collect all HMs", children: [
 					{ id: 1, text: "HM01 (Cut)", img: () => hm("normal") },
@@ -285,9 +285,9 @@ import {
 				],
 			},
 		],
-		"extra-credit": [
+		extraCredit: [
 			{
-				id: 1, text: "Obtain all Mythical Pokemon", children: [
+				id: 1, text: "Obtain all Mythical Pokémon", children: [
 					{ id: 1, text: "Phione", img: ({ gameKey }) => baseSprite(gameKey, 489), },
 					{ id: 2, text: "Manaphy", img: ({ gameKey }) => baseSprite(gameKey, 490), },
 					{ id: 3, text: "Darkrai", img: ({ gameKey }) => baseSprite(gameKey, 491), },

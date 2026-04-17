@@ -26,7 +26,7 @@ import {
 	const SECTIONS = [
 		{ id: "catching", title: "Gotta Catch 'Em All" },
 		{ id: "story", title: "Main Story" },
-		{ id: "side-quests", title: "Side Quests" },
+		{ id: "sideQuests", title: "Side Quests" },
 		{ id: "activites", title: "Activities" },
 		{ id: "battle", title: "Battle" },
 		{ id: "upgrades", title: "Upgrades" },
@@ -36,11 +36,11 @@ import {
 		{ id: "grand-underground", title: "Grand Underground" },
 		{ id: "thms", title: "TMs/HMs" },
 		{ id: "distributions", title: "Distributions" },
-		{ id: "extra-credit", title: "Extra Credit" },
+		{ id: "extraCredit", title: "Extra Credit" },
 	];
 
 	const TASKS_BY_SECTION = {
-		"catching": [
+		catching: [
 			{
 				id: 1, text: "Catch all the Legendaries", children: [
 					{ id: 1, text: "Catch/Trade Dialga", img: ({ gameKey }) => baseSprite(gameKey, 483) },
@@ -49,7 +49,7 @@ import {
 				],
 			},
 		],
-		"fashion": [
+		fashion: [
 			{ id: 1, text: "Everyday Style", img: ({ gameKey }) => [fashionItem(gameKey, "everyday-ms"), fashionItem(gameKey, "everyday-mc"), fashionItem(gameKey, "everyday-fs"), fashionItem(gameKey, "everyday-fc")], startGame: true },
 			{ id: 2, text: "Summer Style", img: ({ gameKey }) => [fashionItem(gameKey, "summer-ms"), fashionItem(gameKey, "summer-mc"), fashionItem(gameKey, "summer-fs"), fashionItem(gameKey, "summer-fc")] },
 			{ id: 3, text: "Pikachu Hoodie Style", img: ({ gameKey }) => [fashionItem(gameKey, "pikachu-hoodie-ms"), fashionItem(gameKey, "pikachu-hoodie-mc"), fashionItem(gameKey, "pikachu-hoodie-fs"), fashionItem(gameKey, "pikachu-hoodie-fc")] },
@@ -501,7 +501,7 @@ import {
 				],
 			}
 		],
-		"thms": [
+		thms: [
 			{
 				id: 1, text: "Collect all HMs", children: [
 					{ id: 1, text: "HM01 (Cut)", img: () => hm("normal") },
@@ -619,7 +619,7 @@ import {
 				],
 			},
 		],
-		"extra-credit": [
+		extraCredit: [
 			{ id: 1, text: "Obtain the Platinum Style Outfit via Mystery Gift", img: ({ gameKey }) => [fashionItem(gameKey, "platinum-ms"), fashionItem(gameKey, "platinum-mc"), fashionItem(gameKey, "platinum-fs"), fashionItem(gameKey, "platinum-fc")], noCenter: true },
 		],
 	};

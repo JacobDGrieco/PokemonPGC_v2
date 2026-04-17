@@ -1,15 +1,10 @@
-import {
-  defineLayoutsMany,
-} from '../helpers/index.js';
+import { defineLayoutsMany, P, C, parentRows, childRows, } from '../helpers/index.js';
 
 (() => {
 	const GAME_KEYS = ["x", "y"];
 
-	const P = (parentId) => [parentId];          			// parent-only task
-	const C = (parentId, childId) => [parentId, childId]; 	// parent + child task
-
 	const DESKTOP_LAYOUT = {
-		"catching": [
+		catching: [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3), C(1, 4), C(1, 5)],
 			[C(1, 6), C(1, 7)],
@@ -21,7 +16,7 @@ import {
 			[C(4, 1), C(4, 2), C(4, 3), C(4, 4), C(4, 5)],
 			[C(4, 6), C(4, 7)],
 		],
-		"story": [
+		story: [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3), C(1, 4), C(1, 5)],
 			[C(1, 6), C(1, 7), C(1, 8), C(1, 9)],
@@ -29,7 +24,7 @@ import {
 			[C(2, 1), C(2, 2), C(2, 3), C(2, 4), C(2, 5)],
 			[C(2, 6)],
 		],
-		"activities": [
+		activities: [
 			[P(1), P(2)],
 			[P(3)],
 			[C(3, 1), C(3, 2), C(3, 3), C(3, 4), C(3, 5)],
@@ -38,19 +33,19 @@ import {
 			[P(4)],
 			[C(4, 1), C(4, 2), C(4, 3), C(4, 4), C(4, 5)],
 		],
-		"battle": [
+		battle: [
 			[P(1), P(2), P(3)],
 			[P(4)],
 			[C(4, 1), C(4, 2), C(4, 3), C(4, 4)],
 		],
-		"upgrades": [
+		upgrades: [
 			[P(1), P(2)],
 			[P(3)],
 			[C(3, 1), C(3, 2), C(3, 3)],
 			[P(4)],
 			[C(4, 1), C(4, 2), C(4, 3)],
 		],
-		"collectables": [
+		collectables: [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3), C(1, 4), C(1, 5)],
 			[C(1, 6), C(1, 7), C(1, 8), C(1, 9), C(1, 10)],
@@ -69,7 +64,7 @@ import {
 			[C(4, 11), C(4, 12), C(4, 13), C(4, 14), C(4, 15)],
 			[C(4, 16), C(4, 17)],
 		],
-		"mega-stones": [
+		megaStones: [
 			[P(1), P(2), P(3), P(4), P(5)],
 			[P(6), P(7), P(8), P(9), P(10)],
 			[P(11), P(12), P(13), P(14), P(15)],
@@ -77,7 +72,7 @@ import {
 			[P(21), P(22), P(23), P(24), P(25)],
 			[P(26)],
 		],
-		"thms": [
+		thms: [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3), C(1, 4), C(1, 5)],
 			[P(2)],
@@ -102,7 +97,7 @@ import {
 			[C(2, 91), C(2, 92), C(2, 93), C(2, 94), C(2, 95)],
 			[C(2, 96), C(2, 97), C(2, 98), C(2, 99), C(2, 100)],
 		],
-		"extra-credit": [
+		extraCredit: [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3)],
 		],

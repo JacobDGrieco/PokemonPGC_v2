@@ -19,15 +19,15 @@ import {
 	const SECTIONS = [
 		{ id: "catching", title: "Gotta Catch 'Em All" },
 		{ id: "story", title: "Main Story" },
-		{ id: "side-quests", title: "Side Quests" },
-		{ id: "mabels-research", title: "Mabel's Research" },
-		{ id: "mega-stones", title: "Mega Stones" },
+		{ id: "sideQuests", title: "Side Quests" },
+		{ id: "mabelsResearch", title: "Mabel's Research" },
+		{ id: "megaStones", title: "Mega Stones" },
 		{ id: "fashion", title: "Fashion" },
 		{ id: "thms", title: "TMs" },
 	];
 
 	const TASKS_BY_SECTION = {
-		"catching": [
+		catching: [
 			{
 				id: 1, text: "Catch all the Mythicals", children: [
 					{ id: 1, text: "Catch Heatran", img: ({ gameKey }) => baseSpriteIcon(gameKey, 485), },
@@ -62,7 +62,7 @@ import {
 				],
 			},
 		],
-		"story": [
+		story: [
 			{
 				id: 1, text: "Complete the first 11 Hyperspace Missions", children: [
 					{ id: 1, text: "1 - Hyperspace Lumiose Survey No. 1", },
@@ -86,7 +86,7 @@ import {
 				],
 			},
 		],
-		"side-quests": [
+		sideQuests: [
 			{
 				id: 1, text: "Complete all EX Quests", children: [
 					{ id: 1, text: "EX Quest EX1 - Shine Bright Like a Gemstone" },
@@ -180,12 +180,12 @@ import {
 				],
 			},
 		],
-		"mabels-research": [
+		mabelsResearch: [
 			{ id: 1, text: "Filling Your Mega Evolution Dex", type: "tiered", tiers: [range(70, 90, 5)], tooltip: "Collect Mega Stones", },
 			{ id: 2, text: "Filling Your Hyperspace Pokedex", type: "tiered", tiers: [range(5, 130, 5)], tooltip: "Catch unique Pokémon for your Hyperspace Pokedex", },
 			{ id: 3, text: "Investigating Hyperspace", type: "tiered", tiers: [range(10, 100, 10), range(150, 450, 50)], tooltip: "Enter Hyperspace pockets", },
 		],
-		"mega-stones": [
+		megaStones: [
 			{ id: 1, text: "Meowsticite", img: ({ gameKey }) => [baseSpriteIcon(gameKey, "0678-m"), megaStone("meowsticite")], tooltip: "Complete Hyperspace Mission 8", },
 			{ id: 2, text: "Raichunite X", img: ({ gameKey }) => [baseSpriteIcon(gameKey, "0026-mx"), megaStone("raichunite-x")], tooltip: "Complete Side Quest 139", },
 			{ id: 3, text: "Raichunite Y", img: ({ gameKey }) => [baseSpriteIcon(gameKey, "0026-my"), megaStone("raichunite-y")], tooltip: "Complete Side Quest 139", },
@@ -213,7 +213,7 @@ import {
 			{ id: 24, text: "Magearnite", img: ({ gameKey }) => [baseSpriteIcon(gameKey, "0801-m"), megaStone("magearnite"), baseSpriteIcon(gameKey, "0801-o-m")], tooltip: "Complete Side Quest 195", },
 			{ id: 25, text: "Zeraorite", img: ({ gameKey }) => [baseSpriteIcon(gameKey, "0807-m"), megaStone("zeraorite")], tooltip: "Complete EX Quest 3", },
 		],
-		"thms": [
+		thms: [
 			{ id: 1, text: "TM 108: Comet Punch", img: () => tm("normal"), },
 			{ id: 2, text: "TM 109: Facade", img: () => tm("normal"), },
 			{ id: 3, text: "TM 110: Chilling Water", img: () => tm("water"), },

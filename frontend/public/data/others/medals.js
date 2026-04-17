@@ -35,7 +35,7 @@
 			{ id: 6, num: 13, name: "Busy Saver" },
 			{ id: 7, num: 14, name: "Experienced Saver" },
 			{ id: 8, num: 15, name: "Wonder Writer" },
-			{ id: 9, num: 16, name: "Pokemon Center Fan" },
+			{ id: 9, num: 16, name: "Pokémon Center Fan" },
 			{ id: 10, num: 17, name: "Signboard Starter" },
 			{ id: 11, num: 18, name: "Signboard Savvy" },
 			{ id: 12, num: 19, name: "Graffiti Gazer" },

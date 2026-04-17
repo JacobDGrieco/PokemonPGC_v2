@@ -37,15 +37,15 @@ import {
 		{ id: "upgrades", title: "Upgrades" },
 		{ id: "collectables", title: "Collectables" },
 		{ id: "decorations", title: "Poke-amie Decorations" },
-		{ id: "mega-stones", title: "Mega Stones" },
+		{ id: "megaStones", title: "Mega Stones" },
 		{ id: "fashion", title: "Fashion" },
 		{ id: "thms", title: "TMs/HMs" },
 		{ id: "distributions", title: "Distributions" },
-		{ id: "extra-credit", title: "Extra Credit" },
+		{ id: "extraCredit", title: "Extra Credit" },
 	];
 
 	const TASKS_BY_SECTION = {
-		"catching": [
+		catching: [
 			{
 				id: 1, text: "Catch all the Legendaries", children: [
 					{ id: 1, text: "Catch/Trade Xerneas", img: ({ gameKey }) => baseSprite(gameKey, 716) },
@@ -58,12 +58,12 @@ import {
 				],
 			},
 			{
-				id: 2, text: "Obtain all Static Encounters Pokemon", children: [
+				id: 2, text: "Obtain all Static Encounters Pokémon", children: [
 					{ id: 1, text: "Snorlax", img: ({ gameKey }) => baseSprite(143), tooltip: "Route 7" },
 				],
 			},
 			{
-				id: 3, text: "Obtain all In-Game Gift Pokemon", children: [
+				id: 3, text: "Obtain all In-Game Gift Pokémon", children: [
 					{
 						id: 1, text: "Kantonian Starter", img: ({ gameKey }) => task(gameKey, "kanto-starter"), tooltip: "Prof. Sycamore's Lab", eithers: {
 							1: { text: null }, 2: { text: null }, 3: { text: null }
@@ -74,7 +74,7 @@ import {
 				],
 			},
 			{
-				id: 4, text: "Complete all In-Game Pokemon Trades", children: [
+				id: 4, text: "Complete all In-Game Pokémon Trades", children: [
 					{ id: 1, text: "Bunnelby for Farfetch'd", img: ({ gameKey }) => task(gameKey, "bunnelby-for-farfetchd"), tooltip: "Santalune City" },
 					{ id: 2, text: "Jigglypuff for Bisharp", img: ({ gameKey }) => task(gameKey, "jiggleypuff-for-bisharp"), tooltip: "Snowbelle City" },
 					{ id: 3, text: "Any for Kalos Starter", img: ({ gameKey }) => task(gameKey, "any-for-kalos"), tooltip: "Vaniville City\nYou will get the one that your starter is effective against" },
@@ -85,7 +85,7 @@ import {
 				],
 			},
 		],
-		"story": [
+		story: [
 			{
 				id: 1, text: "Beat the main story", children: [
 					{ id: 1, text: "Bug Badge", img: () => _badges("bug-6"), tooltip: "Defeat Viola at the Santalune City Gym" },
@@ -110,7 +110,7 @@ import {
 				]
 			},
 		],
-		"activities": [
+		activities: [
 			{ id: 1, text: "Talk to Cassius in Camphir town" },
 			{ id: 2, text: "Show the girl in Ambrette a PKMN with a speed of 193 or greater" },
 			{
@@ -126,7 +126,7 @@ import {
 					{ id: 9, text: "Anistar City", img: ({ gameKey }) => location(gameKey, "anistar-city") },
 					{ id: 10, text: "Couriway Town", img: ({ gameKey }) => location(gameKey, "couriway-town") },
 					{ id: 11, text: "Snowbelle City", img: ({ gameKey }) => location(gameKey, "snowbelle-city") },
-					{ id: 12, text: "Pokemon League", img: ({ gameKey }) => location(gameKey, "pokemon-league") },
+					{ id: 12, text: "Pokémon League", img: ({ gameKey }) => location(gameKey, "pokemon-league") },
 				]
 			},
 			{
@@ -139,7 +139,7 @@ import {
 				]
 			},
 		],
-		"battle": [
+		battle: [
 			{ id: 1, text: "Battle Calem/Serena", tooltip: "Kiloude City" },
 			{ id: 2, text: "Get to Master Rank at the Battle Institute", tiers: ["Novice", "Normal", "Super", "Hyper", "Elite", "Master"] },
 			{ id: 3, text: "Get to Grand Duke/Duchess Rank at the Battle Chateau", tiers: ["Baron/Baronness", "Viscount/Viscountess", "Marquis/Marchioness", "Duke/Duchess", "Grand Duke/Duchess"] },
@@ -169,7 +169,7 @@ import {
 				],
 			},
 		],
-		"upgrades": [
+		upgrades: [
 			{ id: 1, text: "Obtain the National Dex" },
 			{ id: 2, text: "Upgrade the Mega Ring", tooltip: "Upgrading will make the ring react to nearby buried Mega Stones" },
 			{
@@ -187,7 +187,7 @@ import {
 				],
 			},
 		],
-		"collectables": [
+		collectables: [
 			{
 				id: 1, text: "Collect all Key Items", children: [
 					{ id: 1, text: "Dowsing Machine", img: () => keyItem("item-finder") },
@@ -262,7 +262,7 @@ import {
 				]
 			},
 		],
-		"mega-stones": [
+		megaStones: [
 			{ id: 1, text: "Venusaurite", img: ({ gameKey }) => [baseSprite(gameKey, "003-m"), megaStone("venusaurite")], },
 			{ id: 2, text: "Charizardite X", img: ({ gameKey }) => [baseSprite(gameKey, "006-mx"), megaStone("charizardite-x")], },
 			{ id: 3, text: "Charizardite Y", img: ({ gameKey }) => [baseSprite(gameKey, "006-my"), megaStone("charizardite-y")], },
@@ -290,7 +290,7 @@ import {
 			{ id: 25, text: "Garchompite", img: ({ gameKey }) => [baseSprite(gameKey, "445-m"), megaStone("garchompite")], },
 			{ id: 26, text: "Abomasite", img: ({ gameKey }) => [baseSprite(gameKey, "460-m"), megaStone("abomasite")], },
 		],
-		"thms": [
+		thms: [
 			{
 				id: 1, text: "Collect all HMs", children: [
 					{ id: 1, text: "HM01 (Cut)", img: () => hm("normal") },
@@ -405,7 +405,7 @@ import {
 				],
 			},
 		],
-		"extra-credit": [
+		extraCredit: [
 			{
 				id: 1, text: "Obtain all Event Mythicals", children: [
 					{ id: 1, text: "Diancie", img: ({ gameKey }) => baseSprite(gameKey, 719) },

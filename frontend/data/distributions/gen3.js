@@ -24,7 +24,7 @@ const item = (id) => _item(gen, id);
 
 defineDistributionsMany(GAME_KEYS, (gameKey) => [
 	{
-		eventTitle: "Pokemon Colosseum JPN Bonus Disc",
+		eventTitle: "Pokémon Colosseum JPN Bonus Disc",
 		region: ["Region Free"],
 		name: "セレビィ",
 		gender: "none",
@@ -46,7 +46,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "Connect your GBA to the GameCube and transfer the Jirachi",
 	},
 	{
-		eventTitle: "Pokemon Colosseum JPN Bonus Disc",
+		eventTitle: "Pokémon Colosseum JPN Bonus Disc",
 		region: ["Region Free"],
 		name: "ピカチュウ",
 		gender: "both",
@@ -68,9 +68,9 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "Connect your GBA to the GameCube and transfer the Jirachi",
 	},
 
-	// 2003-12-01 - Pokemon Colosseum Jirachi - USA
+	// 2003-12-01 - Pokémon Colosseum Jirachi - USA
 	{
-		eventTitle: "Pokemon Colosseum Jirachi",
+		eventTitle: "Pokémon Colosseum Jirachi",
 		region: ["USA"],
 		name: "Jirachi",
 		gender: "none",
@@ -171,9 +171,9 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		],
 	},
 
-	// 2004 - Pokemon Channel Jirachi - AUS
+	// 2004 - Pokémon Channel Jirachi - AUS
 	{
-		eventTitle: "Pokemon Channel Jirachi",
+		eventTitle: "Pokémon Channel Jirachi",
 		region: ["AUS"],
 		name: "Jirachi",
 		gender: "none",
@@ -222,9 +222,9 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		extra: ["It can also be received from the GameCube Interactive Multi-Game Demo Disc Versions 14 & 16"],
 	},
 
-	// 2004-03-22 - Pokemon Colosseum USA Bonus Disc Jirachi - Region Free
+	// 2004-03-22 - Pokémon Colosseum USA Bonus Disc Jirachi - Region Free
 	{
-		eventTitle: "Pokemon Colosseum USA Bonus Disc Jirachi",
+		eventTitle: "Pokémon Colosseum USA Bonus Disc Jirachi",
 		region: ["Region Free"],
 		name: "Jirachi",
 		gender: "none",
@@ -248,9 +248,9 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "Connect your GBA to the GameCube and transfer the Jirachi",
 	},
 
-	// 2004-04-01 - Pokemon Channel Jirachi - EUR
+	// 2004-04-01 - Pokémon Channel Jirachi - EUR
 	{
-		eventTitle: "Pokemon Channel Jirachi",
+		eventTitle: "Pokémon Channel Jirachi",
 		region: ["EUR"],
 		name: "Jirachi",
 		gender: "none",
@@ -567,9 +567,9 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		extra: ["Had to participate in the Pokémon XD: Gale of Darkness demo"],
 	},
 
-	// 2005-11-26 - Gather More Pokemon! First Campaign - JPN
+	// 2005-11-26 - Gather More Pokémon! First Campaign - JPN
 	{
-		eventTitle: "Gather More Pokemon! First Campaign",
+		eventTitle: "Gather More Pokémon! First Campaign",
 		region: ["JPN"],
 		name: "キモリ",
 		gender: "both",
@@ -586,10 +586,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Leer", type: "Normal" },
 			{ name: "Absorb", type: "Grass" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers",
+		details: "This was only available in Japan at all Pokémon Centers",
 	},
 	{
-		eventTitle: "Gather More Pokemon! First Campaign",
+		eventTitle: "Gather More Pokémon! First Campaign",
 		region: ["JPN"],
 		name: "アチャモ",
 		gender: "both",
@@ -607,10 +607,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Focus Energy", type: "Normal" },
 			{ name: "Ember", type: "Fire" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers",
+		details: "This was only available in Japan at all Pokémon Centers",
 	},
 	{
-		eventTitle: "Gather More Pokemon! First Campaign",
+		eventTitle: "Gather More Pokémon! First Campaign",
 		region: ["JPN"],
 		name: "ミズゴロウ",
 		gender: "both",
@@ -628,12 +628,12 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Mud-Slap", type: "Ground" },
 			{ name: "Water Gun", type: "Water" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers",
+		details: "This was only available in Japan at all Pokémon Centers",
 	},
 
-	// 2005-12-09 - Gather More Pokemon! First Campaign - JPN
+	// 2005-12-09 - Gather More Pokémon! First Campaign - JPN
 	{
-		eventTitle: "Gather More Pokemon! First Campaign",
+		eventTitle: "Gather More Pokémon! First Campaign",
 		region: ["JPN"],
 		name: "キモリ",
 		gender: "both",
@@ -653,7 +653,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at the OPA store in Shinsaibashi",
 	},
 	{
-		eventTitle: "Gather More Pokemon! First Campaign",
+		eventTitle: "Gather More Pokémon! First Campaign",
 		region: ["JPN"],
 		name: "アチャモ",
 		gender: "both",
@@ -674,7 +674,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at the OPA store in Shinsaibashi",
 	},
 	{
-		eventTitle: "Gather More Pokemon! First Campaign",
+		eventTitle: "Gather More Pokémon! First Campaign",
 		region: ["JPN"],
 		name: "ミズゴロウ",
 		gender: "both",
@@ -695,9 +695,9 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at the OPA store in Shinsaibashi",
 	},
 
-	// 2005-12-09 - Gather More Pokemon! Second Campaign - JPN
+	// 2005-12-09 - Gather More Pokémon! Second Campaign - JPN
 	{
-		eventTitle: "Gather More Pokemon! Second Campaign",
+		eventTitle: "Gather More Pokémon! Second Campaign",
 		region: ["JPN"],
 		name: "チコリータ",
 		gender: "both",
@@ -717,7 +717,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at the OPA store in Shinsaibashi",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Second Campaign",
+		eventTitle: "Gather More Pokémon! Second Campaign",
 		region: ["JPN"],
 		name: "ヒノアラシ",
 		gender: "both",
@@ -737,7 +737,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at the OPA store in Shinsaibashi",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Second Campaign",
+		eventTitle: "Gather More Pokémon! Second Campaign",
 		region: ["JPN"],
 		name: "ワニノコ",
 		gender: "both",
@@ -757,9 +757,9 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at the OPA store in Shinsaibashi",
 	},
 
-	// 2005-12-17 - Gather More Pokemon! Second Campaign - JPN
+	// 2005-12-17 - Gather More Pokémon! Second Campaign - JPN
 	{
-		eventTitle: "Gather More Pokemon! Second Campaign",
+		eventTitle: "Gather More Pokémon! Second Campaign",
 		region: ["JPN"],
 		name: "チコリータ",
 		gender: "both",
@@ -779,7 +779,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at all Pokmeon Centers",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Second Campaign",
+		eventTitle: "Gather More Pokémon! Second Campaign",
 		region: ["JPN"],
 		name: "ヒノアラシ",
 		gender: "both",
@@ -799,7 +799,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at all Pokmeon Centers",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Second Campaign",
+		eventTitle: "Gather More Pokémon! Second Campaign",
 		region: ["JPN"],
 		name: "ワニノコ",
 		gender: "both",
@@ -819,9 +819,9 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at all Pokmeon Centers",
 	},
 
-	// 2005-12-17 - Gather More Pokemon! Second Campaign - JPN
+	// 2005-12-17 - Gather More Pokémon! Second Campaign - JPN
 	{
-		eventTitle: "Gather More Pokemon! Second Campaign",
+		eventTitle: "Gather More Pokémon! Second Campaign",
 		region: ["JPN"],
 		name: "チコリータ",
 		gender: "both",
@@ -841,7 +841,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at select locations during the Winter Festival",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Second Campaign",
+		eventTitle: "Gather More Pokémon! Second Campaign",
 		region: ["JPN"],
 		name: "ヒノアラシ",
 		gender: "both",
@@ -861,7 +861,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at select locations during the Winter Festival",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Second Campaign",
+		eventTitle: "Gather More Pokémon! Second Campaign",
 		region: ["JPN"],
 		name: "ワニノコ",
 		gender: "both",
@@ -881,9 +881,9 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at select locations during the Winter Festival",
 	},
 
-	// 2006-01-14 - Gather More Pokemon! Third Campaign - JPN
+	// 2006-01-14 - Gather More Pokémon! Third Campaign - JPN
 	{
-		eventTitle: "Gather More Pokemon! Third Campaign",
+		eventTitle: "Gather More Pokémon! Third Campaign",
 		region: ["JPN"],
 		name: "アーボ",
 		gender: "both",
@@ -900,10 +900,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Leer", type: "Normal" },
 			{ name: "Poison Sting", type: "Poison" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers",
+		details: "This was only available in Japan at all Pokémon Centers",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Third Campaign",
+		eventTitle: "Gather More Pokémon! Third Campaign",
 		region: ["JPN"],
 		name: "ピカチュウ",
 		gender: "both",
@@ -921,10 +921,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Tail Whip", type: "Normal" },
 			{ name: "Thunder Wave", type: "Elecrtic" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers",
+		details: "This was only available in Japan at all Pokémon Centers",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Third Campaign",
+		eventTitle: "Gather More Pokémon! Third Campaign",
 		region: ["JPN"],
 		name: "ピニャース",
 		gender: "both",
@@ -941,10 +941,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Growl", type: "Normal" },
 			{ name: "Bite", type: "Dark" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers",
+		details: "This was only available in Japan at all Pokémon Centers",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Third Campaign",
+		eventTitle: "Gather More Pokémon! Third Campaign",
 		region: ["JPN"],
 		name: "ガーディ",
 		gender: "both",
@@ -961,10 +961,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Roar", type: "Normal" },
 			{ name: "Ember", type: "Fire" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers",
+		details: "This was only available in Japan at all Pokémon Centers",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Third Campaign",
+		eventTitle: "Gather More Pokémon! Third Campaign",
 		region: ["JPN"],
 		name: "マダツボミ",
 		gender: "both",
@@ -980,10 +980,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Vine Whip", type: "Grass" },
 			{ name: "Growth", type: "Normal" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers",
+		details: "This was only available in Japan at all Pokémon Centers",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Third Campaign",
+		eventTitle: "Gather More Pokémon! Third Campaign",
 		region: ["JPN"],
 		name: "ヤドン",
 		gender: "both",
@@ -1001,10 +1001,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Tackle", type: "Normal" },
 			{ name: "Growl", type: "Normal" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers",
+		details: "This was only available in Japan at all Pokémon Centers",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Third Campaign",
+		eventTitle: "Gather More Pokémon! Third Campaign",
 		region: ["JPN"],
 		name: "シェルダー",
 		gender: "both",
@@ -1021,10 +1021,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Withdraw", type: "Water" },
 			{ name: "Icicle Spear", type: "Ice" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers",
+		details: "This was only available in Japan at all Pokémon Centers",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Third Campaign",
+		eventTitle: "Gather More Pokémon! Third Campaign",
 		region: ["JPN"],
 		name: "ラッキー",
 		gender: "both",
@@ -1042,10 +1042,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Tail Whip", type: "Normal" },
 			{ name: "Refresh", type: "Normal" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers",
+		details: "This was only available in Japan at all Pokémon Centers",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Third Campaign",
+		eventTitle: "Gather More Pokémon! Third Campaign",
 		region: ["JPN"],
 		name: "ガルーラ",
 		gender: "both",
@@ -1062,10 +1062,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Leer", type: "Normal" },
 			{ name: "Bite", type: "Dark" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers",
+		details: "This was only available in Japan at all Pokémon Centers",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Third Campaign",
+		eventTitle: "Gather More Pokémon! Third Campaign",
 		region: ["JPN"],
 		name: "ストライク",
 		gender: "both",
@@ -1082,10 +1082,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Leer", type: "Normal" },
 			{ name: "Focus Energy", type: "Normal" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers",
+		details: "This was only available in Japan at all Pokémon Centers",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Third Campaign",
+		eventTitle: "Gather More Pokémon! Third Campaign",
 		region: ["JPN"],
 		name: "エレブー",
 		gender: "both",
@@ -1102,10 +1102,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Leer", type: "Normal" },
 			{ name: "ThunderPunch", type: "Electric" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers",
+		details: "This was only available in Japan at all Pokémon Centers",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Third Campaign",
+		eventTitle: "Gather More Pokémon! Third Campaign",
 		region: ["JPN"],
 		name: "ブーバー",
 		gender: "both",
@@ -1123,10 +1123,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Smog", type: "Poison" },
 			{ name: "Fire Punch", type: "Fire" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers",
+		details: "This was only available in Japan at all Pokémon Centers",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Third Campaign",
+		eventTitle: "Gather More Pokémon! Third Campaign",
 		region: ["JPN"],
 		name: "ケンタロス",
 		gender: "both",
@@ -1144,10 +1144,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Rage", type: "Normal" },
 			{ name: "Horn Attack", type: "Normal" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers",
+		details: "This was only available in Japan at all Pokémon Centers",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Third Campaign",
+		eventTitle: "Gather More Pokémon! Third Campaign",
 		region: ["JPN"],
 		name: "ヤミカラス",
 		gender: "both",
@@ -1163,10 +1163,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Peck", type: "Flying" },
 			{ name: "Astonish", type: "Peck" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers",
+		details: "This was only available in Japan at all Pokémon Centers",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Third Campaign",
+		eventTitle: "Gather More Pokémon! Third Campaign",
 		region: ["JPN"],
 		name: "ムウマ",
 		gender: "both",
@@ -1183,10 +1183,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Psywave", type: "Psychic" },
 			{ name: "Spite", type: "Ghost" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers",
+		details: "This was only available in Japan at all Pokémon Centers",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Third Campaign",
+		eventTitle: "Gather More Pokémon! Third Campaign",
 		region: ["JPN"],
 		name: "ハリーセン",
 		gender: "both",
@@ -1204,10 +1204,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Harden", type: "Normal" },
 			{ name: "Minimize", type: "Normal" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers",
+		details: "This was only available in Japan at all Pokémon Centers",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Third Campaign",
+		eventTitle: "Gather More Pokémon! Third Campaign",
 		region: ["JPN"],
 		name: "ニューラ",
 		gender: "both",
@@ -1225,10 +1225,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Taunt", type: "Dark" },
 			{ name: "Quick Attack", type: "Normal" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers",
+		details: "This was only available in Japan at all Pokémon Centers",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Third Campaign",
+		eventTitle: "Gather More Pokémon! Third Campaign",
 		region: ["JPN"],
 		name: "デリバード",
 		gender: "both",
@@ -1243,10 +1243,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		moves: [
 			{ name: "Present", type: "Normal" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers",
+		details: "This was only available in Japan at all Pokémon Centers",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Third Campaign",
+		eventTitle: "Gather More Pokémon! Third Campaign",
 		region: ["JPN"],
 		name: "マンタイン",
 		gender: "both",
@@ -1263,12 +1263,12 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Bubble", type: "Water" },
 			{ name: "Supersonic", type: "Normal" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers",
+		details: "This was only available in Japan at all Pokémon Centers",
 	},
 
-	// 2006-02-11 - Gather More Pokemon! Fourth Campaign - JPN
+	// 2006-02-11 - Gather More Pokémon! Fourth Campaign - JPN
 	{
-		eventTitle: "Gather More Pokemon! Fourth Campaign",
+		eventTitle: "Gather More Pokémon! Fourth Campaign",
 		region: ["JPN"],
 		name: "フシギダネ",
 		gender: "both",
@@ -1286,10 +1286,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Leech Seed", type: "Grass" },
 			{ name: "Vine Whip", type: "Grass" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers and select stores",
+		details: "This was only available in Japan at all Pokémon Centers and select stores",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Fourth Campaign",
+		eventTitle: "Gather More Pokémon! Fourth Campaign",
 		region: ["JPN"],
 		name: "ヒトカゲ",
 		gender: "both",
@@ -1306,10 +1306,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Growl", type: "Normal" },
 			{ name: "Ember", type: "Fire" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers and select stores",
+		details: "This was only available in Japan at all Pokémon Centers and select stores",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Fourth Campaign",
+		eventTitle: "Gather More Pokémon! Fourth Campaign",
 		region: ["JPN"],
 		name: "ゼニガメ",
 		gender: "both",
@@ -1327,7 +1327,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Bubble", type: "Water" },
 			{ name: "Withdraw", type: "Water" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers and select stores",
+		details: "This was only available in Japan at all Pokémon Centers and select stores",
 	},
 
 	// 2006-02-25 - Pokémon 10th Anniversary Journey Across America - USA
@@ -1798,9 +1798,9 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		extra: ["It was set to be distributed in Normal Forme, but the final Forme depended on the game it was obtained in"],
 	},
 
-	// 2006-03-21 - Gather More Pokemon! Fifth Campaign - JPN
+	// 2006-03-21 - Gather More Pokémon! Fifth Campaign - JPN
 	{
-		eventTitle: "Gather More Pokemon! Fifth Campaign",
+		eventTitle: "Gather More Pokémon! Fifth Campaign",
 		region: ["JPN"],
 		name: "ピカチュウ",
 		gender: "both",
@@ -1818,10 +1818,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Tail Whip", type: "Normal" },
 			{ name: "Thunder Wave", type: "Elecrtic" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers",
+		details: "This was only available in Japan at all Pokémon Centers",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Fifth Campaign",
+		eventTitle: "Gather More Pokémon! Fifth Campaign",
 		region: ["JPN"],
 		name: "ハスボー",
 		gender: "both",
@@ -1838,10 +1838,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Growl", type: "Normal" },
 			{ name: "Absorb", type: "Grass" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers",
+		details: "This was only available in Japan at all Pokémon Centers",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Fifth Campaign",
+		eventTitle: "Gather More Pokémon! Fifth Campaign",
 		region: ["JPN"],
 		name: "タネボー",
 		gender: "both",
@@ -1858,10 +1858,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Harden", type: "Normal" },
 			{ name: "Growth", type: "Normal" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers",
+		details: "This was only available in Japan at all Pokémon Centers",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Fifth Campaign",
+		eventTitle: "Gather More Pokémon! Fifth Campaign",
 		region: ["JPN"],
 		name: "アメタマ",
 		gender: "both",
@@ -1877,10 +1877,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Bubble", type: "Water" },
 			{ name: "Quick Attack", type: "Normal" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers",
+		details: "This was only available in Japan at all Pokémon Centers",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Fifth Campaign",
+		eventTitle: "Gather More Pokémon! Fifth Campaign",
 		region: ["JPN"],
 		name: "エネコ",
 		gender: "both",
@@ -1898,10 +1898,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Tail Whip", type: "Normal" },
 			{ name: "Attract", type: "Normal" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers",
+		details: "This was only available in Japan at all Pokémon Centers",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Fifth Campaign",
+		eventTitle: "Gather More Pokémon! Fifth Campaign",
 		region: ["JPN"],
 		name: "ヤミラミ",
 		gender: "both",
@@ -1919,10 +1919,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Foresight", type: "Normal" },
 			{ name: "Night Shade", type: "Ghost" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers",
+		details: "This was only available in Japan at all Pokémon Centers",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Fifth Campaign",
+		eventTitle: "Gather More Pokémon! Fifth Campaign",
 		region: ["JPN"],
 		name: "クチート",
 		gender: "both",
@@ -1938,10 +1938,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Astonish", type: "Ghost" },
 			{ name: "Fake Tears", type: "Dark" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers",
+		details: "This was only available in Japan at all Pokémon Centers",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Fifth Campaign",
+		eventTitle: "Gather More Pokémon! Fifth Campaign",
 		region: ["JPN"],
 		name: "アサナン",
 		gender: "both",
@@ -1958,10 +1958,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Meditate", type: "Psychic" },
 			{ name: "Confusion", type: "Psychic" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers",
+		details: "This was only available in Japan at all Pokémon Centers",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Fifth Campaign",
+		eventTitle: "Gather More Pokémon! Fifth Campaign",
 		region: ["JPN"],
 		name: "プラスル",
 		gender: "both",
@@ -1978,10 +1978,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Thunder Wave", type: "Electric" },
 			{ name: "Quick Attack", type: "Normal" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers",
+		details: "This was only available in Japan at all Pokémon Centers",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Fifth Campaign",
+		eventTitle: "Gather More Pokémon! Fifth Campaign",
 		region: ["JPN"],
 		name: "マイナン",
 		gender: "both",
@@ -1998,10 +1998,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Thunder Wave", type: "Electric" },
 			{ name: "Quick Attack", type: "Normal" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers",
+		details: "This was only available in Japan at all Pokémon Centers",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Fifth Campaign",
+		eventTitle: "Gather More Pokémon! Fifth Campaign",
 		region: ["JPN"],
 		name: "ロゼリア",
 		gender: "both",
@@ -2018,10 +2018,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Growth", type: "Normal" },
 			{ name: "Poison Sting", type: "Poison" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers",
+		details: "This was only available in Japan at all Pokémon Centers",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Fifth Campaign",
+		eventTitle: "Gather More Pokémon! Fifth Campaign",
 		region: ["JPN"],
 		name: "ザングース",
 		gender: "both",
@@ -2039,10 +2039,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Quick Attack", type: "Normal" },
 			{ name: "Swords Dance", type: "Normal" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers",
+		details: "This was only available in Japan at all Pokémon Centers",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Fifth Campaign",
+		eventTitle: "Gather More Pokémon! Fifth Campaign",
 		region: ["JPN"],
 		name: "ハブネーク",
 		gender: "both",
@@ -2059,10 +2059,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Lick", type: "Ghost" },
 			{ name: "Bite", type: "Dark" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers",
+		details: "This was only available in Japan at all Pokémon Centers",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Fifth Campaign",
+		eventTitle: "Gather More Pokémon! Fifth Campaign",
 		region: ["JPN"],
 		name: "ルナトーン",
 		gender: "both",
@@ -2079,10 +2079,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Harden", type: "Normal" },
 			{ name: "Confusion", type: "Psychic" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers",
+		details: "This was only available in Japan at all Pokémon Centers",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Fifth Campaign",
+		eventTitle: "Gather More Pokémon! Fifth Campaign",
 		region: ["JPN"],
 		name: "ソルロック",
 		gender: "both",
@@ -2099,10 +2099,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Harden", type: "Normal" },
 			{ name: "Confusion", type: "Psychic" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers",
+		details: "This was only available in Japan at all Pokémon Centers",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Fifth Campaign",
+		eventTitle: "Gather More Pokémon! Fifth Campaign",
 		region: ["JPN"],
 		name: "チリーン",
 		gender: "both",
@@ -2119,12 +2119,12 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Growl", type: "Normal" },
 			{ name: "Astonish", type: "Ghost" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers",
+		details: "This was only available in Japan at all Pokémon Centers",
 	},
 
-	// 2006-03-28 - Gather More Pokemon! Fifth Campaign - JPN
+	// 2006-03-28 - Gather More Pokémon! Fifth Campaign - JPN
 	{
-		eventTitle: "Gather More Pokemon! Fifth Campaign",
+		eventTitle: "Gather More Pokémon! Fifth Campaign",
 		region: ["JPN"],
 		name: "ピカチュウ",
 		gender: "both",
@@ -2145,7 +2145,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at select locations during the Spring Festival",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Fifth Campaign",
+		eventTitle: "Gather More Pokémon! Fifth Campaign",
 		region: ["JPN"],
 		name: "ハスボー",
 		gender: "both",
@@ -2165,7 +2165,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at select locations during the Spring Festival",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Fifth Campaign",
+		eventTitle: "Gather More Pokémon! Fifth Campaign",
 		region: ["JPN"],
 		name: "タネボー",
 		gender: "both",
@@ -2185,7 +2185,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at select locations during the Spring Festival",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Fifth Campaign",
+		eventTitle: "Gather More Pokémon! Fifth Campaign",
 		region: ["JPN"],
 		name: "アメタマ",
 		gender: "both",
@@ -2204,7 +2204,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at select locations during the Spring Festival",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Fifth Campaign",
+		eventTitle: "Gather More Pokémon! Fifth Campaign",
 		region: ["JPN"],
 		name: "エネコ",
 		gender: "both",
@@ -2225,7 +2225,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at select locations during the Spring Festival",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Fifth Campaign",
+		eventTitle: "Gather More Pokémon! Fifth Campaign",
 		region: ["JPN"],
 		name: "ヤミラミ",
 		gender: "both",
@@ -2246,7 +2246,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at select locations during the Spring Festival",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Fifth Campaign",
+		eventTitle: "Gather More Pokémon! Fifth Campaign",
 		region: ["JPN"],
 		name: "クチート",
 		gender: "both",
@@ -2265,7 +2265,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at select locations during the Spring Festival",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Fifth Campaign",
+		eventTitle: "Gather More Pokémon! Fifth Campaign",
 		region: ["JPN"],
 		name: "アサナン",
 		gender: "both",
@@ -2285,7 +2285,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at select locations during the Spring Festival",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Fifth Campaign",
+		eventTitle: "Gather More Pokémon! Fifth Campaign",
 		region: ["JPN"],
 		name: "プラスル",
 		gender: "both",
@@ -2305,7 +2305,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at select locations during the Spring Festival",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Fifth Campaign",
+		eventTitle: "Gather More Pokémon! Fifth Campaign",
 		region: ["JPN"],
 		name: "マイナン",
 		gender: "both",
@@ -2325,7 +2325,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at select locations during the Spring Festival",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Fifth Campaign",
+		eventTitle: "Gather More Pokémon! Fifth Campaign",
 		region: ["JPN"],
 		name: "ロゼリア",
 		gender: "both",
@@ -2345,7 +2345,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at select locations during the Spring Festival",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Fifth Campaign",
+		eventTitle: "Gather More Pokémon! Fifth Campaign",
 		region: ["JPN"],
 		name: "ザングース",
 		gender: "both",
@@ -2366,7 +2366,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at select locations during the Spring Festival",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Fifth Campaign",
+		eventTitle: "Gather More Pokémon! Fifth Campaign",
 		region: ["JPN"],
 		name: "ハブネーク",
 		gender: "both",
@@ -2386,7 +2386,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at select locations during the Spring Festival",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Fifth Campaign",
+		eventTitle: "Gather More Pokémon! Fifth Campaign",
 		region: ["JPN"],
 		name: "ルナトーン",
 		gender: "both",
@@ -2406,7 +2406,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at select locations during the Spring Festival",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Fifth Campaign",
+		eventTitle: "Gather More Pokémon! Fifth Campaign",
 		region: ["JPN"],
 		name: "ソルロック",
 		gender: "both",
@@ -2426,7 +2426,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at select locations during the Spring Festival",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Fifth Campaign",
+		eventTitle: "Gather More Pokémon! Fifth Campaign",
 		region: ["JPN"],
 		name: "チリーン",
 		gender: "both",
@@ -2446,9 +2446,9 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at select locations during the Spring Festival",
 	},
 
-	// 2006-04-22 - Gather More Pokemon! Sixth Campaign - JPN
+	// 2006-04-22 - Gather More Pokémon! Sixth Campaign - JPN
 	{
-		eventTitle: "Gather More Pokemon! Sixth Campaign",
+		eventTitle: "Gather More Pokémon! Sixth Campaign",
 		region: ["JPN"],
 		name: "ピカチュウ",
 		gender: "both",
@@ -2466,10 +2466,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Tail Whip", type: "Normal" },
 			{ name: "Thunder Wave", type: "Elecrtic" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers, except Sapporo",
+		details: "This was only available in Japan at all Pokémon Centers, except Sapporo",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Sixth Campaign",
+		eventTitle: "Gather More Pokémon! Sixth Campaign",
 		region: ["JPN"],
 		name: "ホーホー",
 		gender: "both",
@@ -2486,10 +2486,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Growl", type: "Normal" },
 			{ name: "Foresight", type: "Normal" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers, except Sapporo",
+		details: "This was only available in Japan at all Pokémon Centers, except Sapporo",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Sixth Campaign",
+		eventTitle: "Gather More Pokémon! Sixth Campaign",
 		region: ["JPN"],
 		name: "メリープ",
 		gender: "both",
@@ -2506,10 +2506,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Growl", type: "Normal" },
 			{ name: "ThunderShock", type: "Electric" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers, except Sapporo",
+		details: "This was only available in Japan at all Pokémon Centers, except Sapporo",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Sixth Campaign",
+		eventTitle: "Gather More Pokémon! Sixth Campaign",
 		region: ["JPN"],
 		name: "エイパム",
 		gender: "both",
@@ -2526,10 +2526,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Tail Whip", type: "Normal" },
 			{ name: "Sand-Attack", type: "Ground" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers, except Sapporo",
+		details: "This was only available in Japan at all Pokémon Centers, except Sapporo",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Sixth Campaign",
+		eventTitle: "Gather More Pokémon! Sixth Campaign",
 		region: ["JPN"],
 		name: "ヒマナッツ",
 		gender: "both",
@@ -2545,10 +2545,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Absorb", type: "Grass" },
 			{ name: "Growth", type: "Normal" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers, except Sapporo",
+		details: "This was only available in Japan at all Pokémon Centers, except Sapporo",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Sixth Campaign",
+		eventTitle: "Gather More Pokémon! Sixth Campaign",
 		region: ["JPN"],
 		name: "ソーナンス",
 		gender: "both",
@@ -2566,10 +2566,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Safeguard", type: "Normal" },
 			{ name: "Destiny Bond", type: "Ghost" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers, except Sapporo",
+		details: "This was only available in Japan at all Pokémon Centers, except Sapporo",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Sixth Campaign",
+		eventTitle: "Gather More Pokémon! Sixth Campaign",
 		region: ["JPN"],
 		name: "クヌギダマ",
 		gender: "both",
@@ -2586,10 +2586,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Protect", type: "Psychic" },
 			{ name: "Selfdestruct", type: "Normal" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers, except Sapporo",
+		details: "This was only available in Japan at all Pokémon Centers, except Sapporo",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Sixth Campaign",
+		eventTitle: "Gather More Pokémon! Sixth Campaign",
 		region: ["JPN"],
 		name: "グライガー",
 		gender: "both",
@@ -2605,10 +2605,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Poison Sting", type: "Poison" },
 			{ name: "Sand-Attack", type: "Ground" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers, except Sapporo",
+		details: "This was only available in Japan at all Pokémon Centers, except Sapporo",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Sixth Campaign",
+		eventTitle: "Gather More Pokémon! Sixth Campaign",
 		region: ["JPN"],
 		name: "ブルー",
 		gender: "both",
@@ -2626,10 +2626,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Tail Whip", type: "Normal" },
 			{ name: "Charm", type: "Normal" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers, except Sapporo",
+		details: "This was only available in Japan at all Pokémon Centers, except Sapporo",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Sixth Campaign",
+		eventTitle: "Gather More Pokémon! Sixth Campaign",
 		region: ["JPN"],
 		name: "ツボツボ",
 		gender: "both",
@@ -2646,10 +2646,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Withdraw", type: "Water" },
 			{ name: "Wrap", type: "Normal" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers, except Sapporo",
+		details: "This was only available in Japan at all Pokémon Centers, except Sapporo",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Sixth Campaign",
+		eventTitle: "Gather More Pokémon! Sixth Campaign",
 		region: ["JPN"],
 		name: "ヒメグマ",
 		gender: "both",
@@ -2666,10 +2666,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Leer", type: "Normal" },
 			{ name: "Lick", type: "Ghost" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers, except Sapporo",
+		details: "This was only available in Japan at all Pokémon Centers, except Sapporo",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Sixth Campaign",
+		eventTitle: "Gather More Pokémon! Sixth Campaign",
 		region: ["JPN"],
 		name: "デルビル",
 		gender: "both",
@@ -2686,10 +2686,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Ember", type: "Fire" },
 			{ name: "Howl", type: "Normal" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers, except Sapporo",
+		details: "This was only available in Japan at all Pokémon Centers, except Sapporo",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Sixth Campaign",
+		eventTitle: "Gather More Pokémon! Sixth Campaign",
 		region: ["JPN"],
 		name: "オドシシ",
 		gender: "both",
@@ -2705,10 +2705,10 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Tackle", type: "Normal" },
 			{ name: "Leer", type: "Normal" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers, except Sapporo",
+		details: "This was only available in Japan at all Pokémon Centers, except Sapporo",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Sixth Campaign",
+		eventTitle: "Gather More Pokémon! Sixth Campaign",
 		region: ["JPN"],
 		name: "ドーブル",
 		gender: "both",
@@ -2723,12 +2723,12 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		moves: [
 			{ name: "Sketch", type: "Normal" },
 		],
-		details: "This was only available in Japan at all Pokemon Centers, except Sapporo",
+		details: "This was only available in Japan at all Pokémon Centers, except Sapporo",
 	},
 
-	// 2006-05-03 - Gather More Pokemon! Sixth Campaign - JPN
+	// 2006-05-03 - Gather More Pokémon! Sixth Campaign - JPN
 	{
-		eventTitle: "Gather More Pokemon! Sixth Campaign",
+		eventTitle: "Gather More Pokémon! Sixth Campaign",
 		region: ["JPN"],
 		name: "ピカチュウ",
 		gender: "both",
@@ -2749,7 +2749,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at select locations during the GW Festval",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Sixth Campaign",
+		eventTitle: "Gather More Pokémon! Sixth Campaign",
 		region: ["JPN"],
 		name: "ホーホー",
 		gender: "both",
@@ -2769,7 +2769,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at select locations during the GW Festval",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Sixth Campaign",
+		eventTitle: "Gather More Pokémon! Sixth Campaign",
 		region: ["JPN"],
 		name: "メリープ",
 		gender: "both",
@@ -2789,7 +2789,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at select locations during the GW Festval",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Sixth Campaign",
+		eventTitle: "Gather More Pokémon! Sixth Campaign",
 		region: ["JPN"],
 		name: "エイパム",
 		gender: "both",
@@ -2809,7 +2809,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at select locations during the GW Festval",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Sixth Campaign",
+		eventTitle: "Gather More Pokémon! Sixth Campaign",
 		region: ["JPN"],
 		name: "ヒマナッツ",
 		gender: "both",
@@ -2828,7 +2828,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at select locations during the GW Festval",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Sixth Campaign",
+		eventTitle: "Gather More Pokémon! Sixth Campaign",
 		region: ["JPN"],
 		name: "ソーナンス",
 		gender: "both",
@@ -2849,7 +2849,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at select locations during the GW Festval",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Sixth Campaign",
+		eventTitle: "Gather More Pokémon! Sixth Campaign",
 		region: ["JPN"],
 		name: "クヌギダマ",
 		gender: "both",
@@ -2869,7 +2869,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at select locations during the GW Festval",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Sixth Campaign",
+		eventTitle: "Gather More Pokémon! Sixth Campaign",
 		region: ["JPN"],
 		name: "グライガー",
 		gender: "both",
@@ -2888,7 +2888,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at select locations during the GW Festval",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Sixth Campaign",
+		eventTitle: "Gather More Pokémon! Sixth Campaign",
 		region: ["JPN"],
 		name: "ブルー",
 		gender: "both",
@@ -2909,7 +2909,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at select locations during the GW Festval",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Sixth Campaign",
+		eventTitle: "Gather More Pokémon! Sixth Campaign",
 		region: ["JPN"],
 		name: "ツボツボ",
 		gender: "both",
@@ -2929,7 +2929,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at select locations during the GW Festval",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Sixth Campaign",
+		eventTitle: "Gather More Pokémon! Sixth Campaign",
 		region: ["JPN"],
 		name: "ヒメグマ",
 		gender: "both",
@@ -2949,7 +2949,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at select locations during the GW Festval",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Sixth Campaign",
+		eventTitle: "Gather More Pokémon! Sixth Campaign",
 		region: ["JPN"],
 		name: "デルビル",
 		gender: "both",
@@ -2969,7 +2969,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at select locations during the GW Festval",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Sixth Campaign",
+		eventTitle: "Gather More Pokémon! Sixth Campaign",
 		region: ["JPN"],
 		name: "オドシシ",
 		gender: "both",
@@ -2988,7 +2988,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 		details: "This was only available in Japan at select locations during the GW Festval",
 	},
 	{
-		eventTitle: "Gather More Pokemon! Sixth Campaign",
+		eventTitle: "Gather More Pokémon! Sixth Campaign",
 		region: ["JPN"],
 		name: "ドーブル",
 		gender: "both",
@@ -3324,7 +3324,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Dragon Rage", type: "Dragon" },
 			{ name: "Fire Spin", type: "Fire" },
 		],
-		details: "This was only available in Italy at the Mirabilandia amusement park during Pokemon Day",
+		details: "This was only available in Italy at the Mirabilandia amusement park during Pokémon Day",
 	},
 	{
 		eventTitle: "Top 10 Distribution",
@@ -3346,7 +3346,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Thunder", type: "Electric" },
 			{ name: "Light Screen", type: "Psychic" },
 		],
-		details: "This was only available in Italy at the Mirabilandia amusement park during Pokemon Day",
+		details: "This was only available in Italy at the Mirabilandia amusement park during Pokémon Day",
 	},
 	{
 		eventTitle: "Top 10 Distribution",
@@ -3367,7 +3367,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Ice Beam", type: "Ice" },
 			{ name: "Reflect", type: "Psychic" },
 		],
-		details: "This was only available in Italy at the Mirabilandia amusement park during Pokemon Day",
+		details: "This was only available in Italy at the Mirabilandia amusement park during Pokémon Day",
 	},
 	{
 		eventTitle: "Top 10 Distribution",
@@ -3388,7 +3388,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Reflect", type: "Psychic" },
 			{ name: "Crunch", type: "Dark" },
 		],
-		details: "This was only available in Italy at the Mirabilandia amusement park during Pokemon Day",
+		details: "This was only available in Italy at the Mirabilandia amusement park during Pokémon Day",
 	},
 	{
 		eventTitle: "Top 10 Distribution",
@@ -3409,7 +3409,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Flamethrower", type: "Fire" },
 			{ name: "Swagger", type: "Normal" },
 		],
-		details: "This was only available in Italy at the Mirabilandia amusement park during Pokemon Day",
+		details: "This was only available in Italy at the Mirabilandia amusement park during Pokémon Day",
 	},
 	{
 		eventTitle: "Top 10 Distribution",
@@ -3430,7 +3430,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Mist", type: "Ice" },
 			{ name: "Mirror Coat", type: "Psychic" },
 		],
-		details: "This was only available in Italy at the Mirabilandia amusement park during Pokemon Day",
+		details: "This was only available in Italy at the Mirabilandia amusement park during Pokémon Day",
 	},
 	{
 		eventTitle: "Top 10 Distribution",
@@ -3451,7 +3451,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Rain Dance", type: "Water" },
 			{ name: "Swift", type: "Normal" },
 		],
-		details: "This was only available in Italy at the Mirabilandia amusement park during Pokemon Day",
+		details: "This was only available in Italy at the Mirabilandia amusement park during Pokémon Day",
 	},
 	{
 		eventTitle: "Top 10 Distribution",
@@ -3472,7 +3472,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Sunny Day", type: "Fire" },
 			{ name: "Swift", type: "Normal" },
 		],
-		details: "This was only available in Italy at the Mirabilandia amusement park during Pokemon Day",
+		details: "This was only available in Italy at the Mirabilandia amusement park during Pokémon Day",
 	},
 	{
 		eventTitle: "Top 10 Distribution",
@@ -3493,7 +3493,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Recover", type: "Normal" },
 			{ name: "Charm", type: "Normal" },
 		],
-		details: "This was only available in Italy at the Mirabilandia amusement park during Pokemon Day",
+		details: "This was only available in Italy at the Mirabilandia amusement park during Pokémon Day",
 	},
 	{
 		eventTitle: "Top 10 Distribution",
@@ -3514,7 +3514,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Recover", type: "Normal" },
 			{ name: "Dragon Dance", type: "Dragon" },
 		],
-		details: "This was only available in Italy at the Mirabilandia amusement park during Pokemon Day",
+		details: "This was only available in Italy at the Mirabilandia amusement park during Pokémon Day",
 	},
 
 	// 2006-06-27 - Top 10 Distribution - ESP
@@ -3753,7 +3753,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Confusion", type: "Psychic" },
 			{ name: "Rest", type: "Psychic" },
 		],
-		details: "This was only available in Japan at select Pokemon Centers to POkemon Daisuki Club members who applied for the raffle",
+		details: "This was only available in Japan at select Pokémon Centers to POkemon Daisuki Club members who applied for the raffle",
 	},
 
 	// 2006-07-20 - Mitsurin Celebi - JPN
@@ -3776,7 +3776,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Heal Bell", type: "Normal" },
 			{ name: "Safeguard", type: "Normal" },
 		],
-		details: "This was only available in Japan at select locations during the Pokemon Jungle Tour",
+		details: "This was only available in Japan at select locations during the Pokémon Jungle Tour",
 	},
 
 	// 2006-08-11 - Mitsurin Celebi - JPN
@@ -3799,7 +3799,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Heal Bell", type: "Normal" },
 			{ name: "Safeguard", type: "Normal" },
 		],
-		details: "This was only available in Japan at at the Nagoya, Osaka, Fukuoka, and Sapporo Pokemon Centers",
+		details: "This was only available in Japan at at the Nagoya, Osaka, Fukuoka, and Sapporo Pokémon Centers",
 	},
 
 	// 2006-08-01 - Top 10 Distribution - SWE
@@ -5736,7 +5736,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Dragon Rage", type: "Dragon" },
 			{ name: "Fire Spin", type: "Fire" },
 		],
-		details: "This was only available in the Netherlands at the Pokemon Day 2006",
+		details: "This was only available in the Netherlands at the Pokémon Day 2006",
 		extra: ["Players could have also mailed their cartridge to Nintendo"],
 	},
 	{
@@ -5759,7 +5759,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Thunder", type: "Electric" },
 			{ name: "Light Screen", type: "Psychic" },
 		],
-		details: "This was only available in the Netherlands at the Pokemon Day 2006",
+		details: "This was only available in the Netherlands at the Pokémon Day 2006",
 		extra: ["Players could have also mailed their cartridge to Nintendo"],
 	},
 	{
@@ -5781,7 +5781,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Ice Beam", type: "Ice" },
 			{ name: "Reflect", type: "Psychic" },
 		],
-		details: "This was only available in the Netherlands at the Pokemon Day 2006",
+		details: "This was only available in the Netherlands at the Pokémon Day 2006",
 		extra: ["Players could have also mailed their cartridge to Nintendo"],
 	},
 	{
@@ -5803,7 +5803,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Reflect", type: "Psychic" },
 			{ name: "Crunch", type: "Dark" },
 		],
-		details: "This was only available in the Netherlands at the Pokemon Day 2006",
+		details: "This was only available in the Netherlands at the Pokémon Day 2006",
 		extra: ["Players could have also mailed their cartridge to Nintendo"],
 	},
 	{
@@ -5825,7 +5825,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Flamethrower", type: "Fire" },
 			{ name: "Swagger", type: "Normal" },
 		],
-		details: "This was only available in the Netherlands at the Pokemon Day 2006",
+		details: "This was only available in the Netherlands at the Pokémon Day 2006",
 		extra: ["Players could have also mailed their cartridge to Nintendo"],
 	},
 	{
@@ -5847,7 +5847,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Mist", type: "Ice" },
 			{ name: "Mirror Coat", type: "Psychic" },
 		],
-		details: "This was only available in the Netherlands at the Pokemon Day 2006",
+		details: "This was only available in the Netherlands at the Pokémon Day 2006",
 		extra: ["Players could have also mailed their cartridge to Nintendo"],
 	},
 	{
@@ -5869,7 +5869,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Rain Dance", type: "Water" },
 			{ name: "Swift", type: "Normal" },
 		],
-		details: "This was only available in the Netherlands at the Pokemon Day 2006",
+		details: "This was only available in the Netherlands at the Pokémon Day 2006",
 		extra: ["Players could have also mailed their cartridge to Nintendo"],
 	},
 	{
@@ -5891,7 +5891,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Sunny Day", type: "Fire" },
 			{ name: "Swift", type: "Normal" },
 		],
-		details: "This was only available in the Netherlands at the Pokemon Day 2006",
+		details: "This was only available in the Netherlands at the Pokémon Day 2006",
 		extra: ["Players could have also mailed their cartridge to Nintendo"],
 	},
 	{
@@ -5913,7 +5913,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Recover", type: "Normal" },
 			{ name: "Charm", type: "Normal" },
 		],
-		details: "This was only available in the Netherlands at the Pokemon Day 2006",
+		details: "This was only available in the Netherlands at the Pokémon Day 2006",
 		extra: ["Players could have also mailed their cartridge to Nintendo"],
 	},
 	{
@@ -5935,7 +5935,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Recover", type: "Normal" },
 			{ name: "Dragon Dance", type: "Dragon" },
 		],
-		details: "This was only available in the Netherlands at the Pokemon Day 2006",
+		details: "This was only available in the Netherlands at the Pokémon Day 2006",
 		extra: ["Players could have also mailed their cartridge to Nintendo"],
 	},
 
@@ -6180,7 +6180,7 @@ defineDistributionsMany(GAME_KEYS, (gameKey) => [
 			{ name: "Pound", type: "Normal" },
 			{ name: "Transform", type: "Normal" },
 		],
-		details: "This was only available in Italy at the Mirabilandia amusement park during Pokemon Day",
+		details: "This was only available in Italy at the Mirabilandia amusement park during Pokémon Day",
 	},
 
 	// 2007-07-18 - Aura Mew - ESP

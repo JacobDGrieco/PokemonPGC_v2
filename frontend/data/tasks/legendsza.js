@@ -23,21 +23,21 @@ import {
 	const SECTIONS = [
 		{ id: "catching", title: "Gotta Catch 'Em All" },
 		{ id: "story", title: "Main Story" },
-		{ id: "side-quests", title: "Side Quests" },
-		{ id: "mabels-research", title: "Mabel's Research" },
+		{ id: "sideQuests", title: "Side Quests" },
+		{ id: "mabelsResearch", title: "Mabel's Research" },
 		{ id: "activities", title: "Activities" },
 		{ id: "battle", title: "Battle" },
 		{ id: "upgrades", title: "Upgrades" },
 		{ id: "collectables", title: "Collectables" },
-		{ id: "mega-stones", title: "Mega Stones" },
+		{ id: "megaStones", title: "Mega Stones" },
 		{ id: "fashion", title: "Fashion" },
 		{ id: "thms", title: "TMs" },
 		{ id: "distributions", title: "Distributions" },
-		{ id: "extra-credit", title: "Extra Credit" },
+		{ id: "extraCredit", title: "Extra Credit" },
 	];
 
 	const TASKS_BY_SECTION = {
-		"catching": [
+		catching: [
 			{
 				id: 1, text: "Catch all the Legendaries", children: [
 					{ id: 1, text: "Catch Xerneas", img: ({ gameKey }) => baseSpriteIcon(gameKey, 716) },
@@ -71,7 +71,7 @@ import {
 				],
 			},
 		],
-		"story": [
+		story: [
 			{
 				id: 1, text: "Complete the first 38 Main Missions", children: [
 					{ id: 1, text: "1 - Get Your Travel Bag Back", },
@@ -82,7 +82,7 @@ import {
 					{ id: 6, text: "6 - Reaching Rank X", },
 					{ id: 7, text: "7 - Reaching Rank W", },
 					{ id: 8, text: "8 - Reaching Rank V", },
-					{ id: 9, text: "9 - Chase That Mysterious Pokemon", },
+					{ id: 9, text: "9 - Chase That Mysterious Pokémon", },
 					{ id: 10, text: "10 - The Secret of Mega Evolution", },
 					{ id: 11, text: "11 - A Rogue Mega Slowbro", },
 					{ id: 12, text: "12 - A Rogue Mega Camerupt", },
@@ -123,7 +123,7 @@ import {
 				],
 			},
 		],
-		"side-quests": [
+		sideQuests: [
 			{ id: 1, text: "01 - A Big Ol' Bunnelby", },
 			{ id: 2, text: "02 - A Use for an Evolution Stone", },
 			{ id: 3, text: "03 - Sableye in the Cemetery", },
@@ -244,7 +244,7 @@ import {
 			{ id: 118, text: "118 - Goodbye, Gengar", },
 			{ id: 119, text: "119 - Le Super-Tournoi de Jacinthe O", },
 		],
-		"mabels-research": [
+		mabelsResearch: [
 			{ id: 1, text: "Filling Your Pokedex", tiers: [range(5, 230, 5)], tooltip: "Catch unique Pokémon for your Pokedex", },
 			{ id: 2, text: "Filling Your Mega Evolution Dex", tiers: [range(5, 55, 5), 62], tooltip: "Collect Mega Stones", },
 			{ id: 3, text: "Catching Normal Types", tiers: [3, 8, 15, 25, 50], tooltip: "Catch Normal-type Pokémon", },
@@ -295,10 +295,10 @@ import {
 			{ id: 48, text: "Chilling on Benches", tooltip: "Sit and relax at any bench 3 times.", },
 			{ id: 49, text: "Investivating Anomalous Alphas", tooltip: "Catch/Defeat the anomalous alpha Pokémon in Wild Zones 3, 5, and 9.\n(MUST BE IN POST-GAME)", },
 		],
-		"activities": [
+		activities: [
 			{ id: 1, text: "Register your birthday at a PokeCenter", tooltip: "Go to a PokeCenter and put in your birth month and day", },
 		],
-		"battle": [
+		battle: [
 			{
 				id: 1, text: "Obtain all available titles", children: [
 					{ id: 1, text: "Novice Trainer", tooltip: "You get by default", },
@@ -317,7 +317,7 @@ import {
 				],
 			},
 		],
-		"upgrades": [
+		upgrades: [
 			{
 				id: 1, text: "Buy all the Canari Plushies", tooltip: "Can buy out front the Racine Construction building after defeating Canari", children: [
 					{ id: 1, text: "Red Canari Plush", img: () => keyItem("red-canari-plush-lv-3"), tiers: [3, 5, 8], tooltip: "Increase EXP Points gained", },
@@ -328,11 +328,11 @@ import {
 				],
 			},
 		],
-		"collectables": [
+		collectables: [
 			{ id: 1, text: "Obtain the Shiny Charm", img: () => keyItem("shiny-charm"), tooltip: "Get Mabel's Research to level 50", },
 			{ id: 2, text: "Collect all 100 Colorful Screws", img: () => treasure("colorful-screw"), tiers: [range(1, 100)], tooltip: "Find purple glowing Pokeballs around the map.", },
 		],
-		"mega-stones": [
+		megaStones: [
 			{ id: 1, text: "Meganiumite", img: ({ gameKey }) => [baseSpriteIcon(gameKey, "0154-m"), megaStone("meganiumite")], tooltip: "Hotel Z or Vernal Avenue Shop", },
 			{ id: 2, text: "Emboarite", img: ({ gameKey }) => [baseSpriteIcon(gameKey, "0500-m"), megaStone("emboarite")], tooltip: "Hotel Z or Vernal Avenue Shop", },
 			{ id: 3, text: "Feraligite", img: ({ gameKey }) => [baseSpriteIcon(gameKey, "0160-m"), megaStone("feraligite")], tooltip: "Hotel Z or Vernal Avenue Shop", },
@@ -396,7 +396,7 @@ import {
 			{ id: 61, text: "Metagrossite", img: ({ gameKey }) => [baseSpriteIcon(gameKey, "0376-m"), megaStone("metagrossite")], tooltip: "Quasartico Inc. Shop", },
 			{ id: 62, text: "Zygardite", img: ({ gameKey }) => [baseSpriteIcon(gameKey, "0718-cm"), megaStone("zygardite")], tooltip: "Complete Main Misson 42", },
 		],
-		"thms": [
+		thms: [
 			{ id: 1, text: "TM01 (Headbutt)", img: () => tm("normal"), },
 			{ id: 2, text: "TM02 (Dragon Claw)", img: () => tm("dragon") },
 			{ id: 3, text: "TM03 (Psyshock)", img: () => tm("psychic") },
@@ -505,7 +505,7 @@ import {
 			{ id: 106, text: "TM 106 - Thunder", img: () => tm("electric") },
 			{ id: 107, text: "TM 107 - Close Combat", img: () => tm("fighting") },
 		],
-		"extra-credit": [
+		extraCredit: [
 			{
 				id: 1, text: "Get Mega Stones from Ranked Battling", children: [
 					{ id: 1, text: "Greninjite", img: ({ gameKey }) => [baseSpriteIcon(gameKey, "0658-m"), megaStone("greninjite")] },

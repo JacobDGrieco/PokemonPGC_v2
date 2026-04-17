@@ -29,11 +29,11 @@ import {
 		{ id: "collectables", title: "Collectables" },
 		{ id: "thms", title: "TMs/HMs" },
 		{ id: "distributions", title: "Distributions" },
-		{ id: "extra-credit", title: "Extra Credit" },
+		{ id: "extraCredit", title: "Extra Credit" },
 	];
 
 	const TASKS_BY_SECTION = {
-		"catching": [
+		catching: [
 			{
 				id: 1, text: "Catch all the Legendaries", children: [
 					{ id: 1, text: "Catch Articuno", img: ({ gameKey }) => baseSprite(gameKey, 144), },
@@ -83,7 +83,7 @@ import {
 				],
 			}
 		],
-		"story": [
+		story: [
 			{
 				id: 1, text: "Beat the main story", children: [
 					{ id: 1, text: "Boulder Badge", img: () => _badges("boulder"), tooltip: "Defeat Brock at the Pewter City Gym" },
@@ -98,7 +98,7 @@ import {
 				],
 			},
 		],
-		"battle": [
+		battle: [
 			{ id: 1, text: "Defeat Red", img: () => npc("red"), noCenter: true },
 			{
 				id: 2, text: "Master the Battle Tower", children: [
@@ -109,19 +109,19 @@ import {
 				],
 			},
 		],
-		"upgrades": [
+		upgrades: [
 			{ id: 1, text: "Obtain the National PokeDex", img: () => keyItem("kanto-nati-dex"), noCenter: true },
 			{
 				id: 2, text: "Obtain the Gold 4-Star Trainer Card", noCenter: true, children: [
 					{ id: 1, text: "Defeat the Elite 4/Champion" },
 					{ id: 2, text: "Complete the Kanto Regional PokeDex (150)" },
 					{ id: 3, text: "Complete the National PokeDex (382)" },
-					{ id: 4, text: "Jump 200 times in Pokemon Jump" },
+					{ id: 4, text: "Jump 200 times in Pokémon Jump" },
 					{ id: 5, text: "Collect 200 berries in Dodrio Berry Picking" },
 				],
 			},
 		],
-		"collectables": [
+		collectables: [
 			{
 				id: 1, text: "Obtain all extra Key Items", children: [
 					{ id: 1, text: "Good Rod", img: () => keyItem("good-rod") },
@@ -134,7 +134,7 @@ import {
 			},
 			{ id: 2, text: "Find all hidden items with the Item Finder", img: () => keyItem("item-finder"), noCenter: true, type: "tiered", tiers: [range(1, 155)], },
 		],
-		"thms": [
+		thms: [
 			{
 				id: 1, text: "Collect all HMs", children: [
 					{ id: 1, text: "HM01 (Cut)", img: () => hm("normal") },
@@ -201,9 +201,9 @@ import {
 				],
 			},
 		],
-		"extra-credit": [
+		extraCredit: [
 			{
-				id: 1, text: "Obtain all Mythical Pokemon", children: [
+				id: 1, text: "Obtain all Mythical Pokémon", children: [
 					{ id: 1, text: "Mew", img: ({ gameKey }) => baseSprite(gameKey, 151), },
 				],
 			},

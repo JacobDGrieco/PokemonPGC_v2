@@ -1,15 +1,10 @@
-import {
-  defineLayoutsMany,
-} from '../helpers/index.js';
+import { defineLayoutsMany, P, C, parentRows, childRows, } from '../helpers/index.js';
 
 (() => {
 	const GAME_KEYS = ["ultrasun", "ultramoon"];
 
-	const P = (parentId) => [parentId];          			// parent-only task
-	const C = (parentId, childId) => [parentId, childId]; 	// parent + child task
-
 	const DESKTOP_LAYOUT = {
-		"catching": [
+		catching: [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3), C(1, 4), C(1, 5)],
 			[C(1, 6), C(1, 7), C(1, 8), C(1, 9), C(1, 10)],
@@ -34,7 +29,7 @@ import {
 			[C(6, 1), C(6, 2), C(6, 3), C(6, 4), C(6, 5)],
 			[C(6, 6), C(6, 7)],
 		],
-		"story": [
+		story: [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3), C(1, 4), C(1, 5)],
 			[C(1, 6), C(1, 7), C(1, 8), C(1, 9), C(1, 10)],
@@ -43,7 +38,7 @@ import {
 			[C(2, 1), C(2, 2), C(2, 3), C(2, 4), C(2, 5)],
 			[C(2, 6), C(2, 7), C(2, 8)],
 		],
-		"side-quests": [
+		sideQuests: [
 			[P(1), P(2)],
 			[P(3)],
 			[C(3, 1), C(3, 2), C(3, 3), C(3, 4), C(3, 5)],
@@ -55,7 +50,7 @@ import {
 			[P(15), P(16), P(17), P(18), P(19)],
 			[P(20), P(21)],
 		],
-		"activities": [
+		activities: [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3), C(1, 4), C(1, 5)],
 			[C(1, 6), C(1, 7), C(1, 8), C(1, 9), C(1, 10)],
@@ -67,7 +62,7 @@ import {
 			[C(3, 11), C(3, 12), C(3, 13), C(3, 14), C(3, 15)],
 			[C(3, 16), C(3, 17), C(3, 18), C(3, 19), C(3, 20)],
 		],
-		"battle": [
+		battle: [
 			[P(1), P(2), P(3)],
 			[P(4)],
 			[C(4, 1), C(4, 2), C(4, 3), C(4, 4), C(4, 5)],
@@ -75,7 +70,7 @@ import {
 			[P(5)],
 			[C(5, 1), C(5, 2)],
 		],
-		"upgrades": [
+		upgrades: [
 			[P(1), P(2), P(3)],
 			[P(4)],
 			[C(4, 1), C(4, 2), C(4, 3), C(4, 4), C(4, 5)],
@@ -89,7 +84,7 @@ import {
 			[P(7)],
 			[C(7, 1), C(7, 2), C(7, 3), C(7, 4)],
 		],
-		"collectables": [
+		collectables: [
 			[P(1)],
 			[P(2)],
 			[C(2, 1), C(2, 2), C(2, 3), C(2, 4), C(2, 5)],
@@ -114,7 +109,7 @@ import {
 			[C(6, 1), C(6, 2), C(6, 3), C(6, 4), C(6, 5)],
 			[C(6, 6), C(6, 7)],
 		],
-		"mega-stones": [
+		megaStones: [
 			[P(1), P(2), P(3), P(4), P(5)],
 			[P(6), P(7), P(8), P(9), P(10)],
 			[P(11), P(12), P(13), P(14), P(15)],
@@ -126,7 +121,7 @@ import {
 			[P(41), P(42), P(43), P(44), P(45)],
 			[P(46)],
 		],
-		"zcrystals": [
+		zcrystals: [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3), C(1, 4), C(1, 5), C(1, 6)],
 			[C(1, 7), C(1, 8), C(1, 9), C(1, 10), C(1, 11), C(1, 12)],
@@ -136,7 +131,7 @@ import {
 			[C(2, 6), C(2, 7), C(2, 8), C(2, 9), C(2, 10)],
 			[C(2, 11), C(2, 12), C(2, 13)],
 		],
-		"thms": [
+		thms: [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3), C(1, 4), C(1, 5)],
 			[C(1, 6), C(1, 7), C(1, 8)],
@@ -162,7 +157,7 @@ import {
 			[C(2, 91), C(2, 92), C(2, 93), C(2, 94), C(2, 95)],
 			[C(2, 96), C(2, 97), C(2, 98), C(2, 99), C(2, 100)],
 		],
-		"extra-credit": [
+		extraCredit: [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3)],
 			[P(2)],
