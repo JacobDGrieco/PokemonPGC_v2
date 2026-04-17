@@ -6,6 +6,7 @@ import {
 	_location,
 	_npc,
 	_task,
+	_badges,
 	_frontSprite,
 	defineTasksMany,
 } from '../helpers/index.js';
@@ -80,7 +81,19 @@ import {
 			},
 		],
 		"story": [
-			{ id: 1, text: "Collect all 8 Gym Badges and Defeat the Elite 4", img: () => _badges(["coal", "forest", "cobble", "fen", "relic", "mine", "icicle", "beacon"]), noCenter: true, },
+			{
+				id: 1, text: "Beat the main story", children: [
+					{ id: 1, text: "Bug Badge", img: () => _badges("bug-6"), tooltip: "Defeat Viola at the Santalune City Gym" },
+					{ id: 2, text: "Cliff Badge", img: () => _badges("cliff"), tooltip: "Defeat Grant at the Cyllage City Gym" },
+					{ id: 3, text: "Rumble Badge", img: () => _badges("rumble"), tooltip: "Defeat Korrina at the Shalour City Gym" },
+					{ id: 4, text: "Plant Badge", img: () => _badges("plant"), tooltip: "Defeat Ramos at the Coumarine City Gym" },
+					{ id: 5, text: "Voltage Badge", img: () => _badges("voltage"), tooltip: "Defeat Clemont at the Lumiose City Gym" },
+					{ id: 6, text: "Fairy Badge", img: () => _badges("fairy-6"), tooltip: "Defeat Valerie at the Laverre City Gym" },
+					{ id: 7, text: "Psychic Badge", img: () => _badges("psychic-6"), tooltip: "Defeat Olympia at the Anistar City Gym" },
+					{ id: 8, text: "Iceberg Badge", img: () => _badges("iceberg"), tooltip: "Defeat Wulfric at the Snowbelle City Gym" },
+					{ id: 9, text: "Defeat the Elite 4 / Champion" },
+				],
+			},
 			{
 				id: 2, text: "Epilogue", children: [
 					{ id: 1, text: "This Guy is a Real...Looker" },

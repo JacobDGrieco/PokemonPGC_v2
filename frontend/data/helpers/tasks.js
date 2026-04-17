@@ -138,6 +138,31 @@ export function overrideTask(tasks, parentId, overrides, childId = null) {
 }
 
 export function overrideTasks(tasks, parentId, changes) {
+  if (
+    changes === undefined &&
+    parentId &&
+    typeof parentId === 'object' &&
+    !Array.isArray(parentId)
+  ) {
+    let out = tasks;
+
+    for (const [nextParentId, nextChanges] of Object.entries(parentId)) {
+      out = overrideTasks(out, Number(nextParentId), nextChanges);
+    }
+
+    return out;
+  }
+
+  if (Array.isArray(parentId)) {
+    let out = tasks;
+
+    for (const nextParentId of parentId) {
+      out = overrideTasks(out, Number(nextParentId), changes);
+    }
+
+    return out;
+  }
+
   let out = tasks;
 
   for (const [key, overrides] of Object.entries(changes || {})) {

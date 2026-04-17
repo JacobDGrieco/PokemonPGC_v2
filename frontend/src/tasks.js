@@ -1,5 +1,5 @@
 import { ensureSections, buildTaskIndex, buildTaskLayoutGroups, buildTaskLayoutMeta, bootstrapTasks } from "./tasks-bootstrap.js";
-import { getTierMetaForTask, getTierSteps, formatTierTooltip, isEitherTask, isMultiTask, isTieredTask, setDescendantsDone, getEitherChoice, getMultiCheckedCount, getMultiOptions, setEitherChoice, setMultiOptionDone, eitherSyncView } from "./tasks-modes.js";
+import { getTierMetaForTask, getTierSteps, formatTierTooltip, isEitherTask, isMultiTask, isTieredTask, setDescendantsDone, getEitherChoice, getDefaultEitherChoice, getMultiCheckedCount, getMultiOptions, setEitherChoice, setMultiOptionDone, eitherSyncView } from "./tasks-modes.js";
 import { unloadSectionTasks, applySyncsFromTask } from "./tasks-sync.js";
 import { ensurePpgcRoot } from "./runtime/globals.js";
 import { hideTooltip, resolveTaskImageSrcs, attachTooltip, resolveAccentForSection } from "./tasks-visuals.js";

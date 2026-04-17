@@ -6,6 +6,7 @@ import {
 	_location,
 	_npc,
 	_task,
+	_badges,
 	_frontSprite,
 	_frontSpriteShiny,
 	defineTasksMany,
@@ -50,15 +51,15 @@ import {
 					{ id: 4, text: "Catch Cobalion", img: ({ gameKey }) => baseSprite(gameKey, 638) },
 					{ id: 5, text: "Catch Terrakion", img: ({ gameKey }) => baseSprite(gameKey, 639) },
 					{ id: 6, text: "Catch Virizion", img: ({ gameKey }) => baseSprite(gameKey, 640) },
-					{ id: 7, text: "Catch Uxie", img: ({ gameKey }) => baseSprite(gameKey, 480) },
-					{ id: 8, text: "Catch Mesprit", img: ({ gameKey }) => baseSprite(gameKey, 481) },
-					{ id: 9, text: "Catch Azelf", img: ({ gameKey }) => baseSprite(gameKey, 482) },
-					{ id: 10, text: "Catch Heatran", img: ({ gameKey }) => baseSprite(gameKey, 485) },
-					{ id: 11, text: "Catch Regigigas", img: ({ gameKey }) => baseSprite(gameKey, 486) },
-					{ id: 12, text: "Catch Cresselia", img: ({ gameKey }) => baseSprite(gameKey, 488) },
-					{ id: 13, text: "Catch Regirock", img: ({ gameKey }) => baseSprite(gameKey, 377) },
-					{ id: 14, text: "Catch/Trade Regice", img: ({ gameKey }) => baseSprite(gameKey, 378) },
-					{ id: 15, text: "Catch/Trade Registeel", img: ({ gameKey }) => baseSprite(gameKey, 379) },
+					{ id: 7, text: "Catch Regirock", img: ({ gameKey }) => baseSprite(gameKey, 377) },
+					{ id: 8, text: "Catch/Trade Regice", img: ({ gameKey }) => baseSprite(gameKey, 378) },
+					{ id: 9, text: "Catch/Trade Registeel", img: ({ gameKey }) => baseSprite(gameKey, 379) },
+					{ id: 10, text: "Catch Uxie", img: ({ gameKey }) => baseSprite(gameKey, 480) },
+					{ id: 11, text: "Catch Mesprit", img: ({ gameKey }) => baseSprite(gameKey, 481) },
+					{ id: 12, text: "Catch Azelf", img: ({ gameKey }) => baseSprite(gameKey, 482) },
+					{ id: 13, text: "Catch Heatran", img: ({ gameKey }) => baseSprite(gameKey, 485) },
+					{ id: 14, text: "Catch Regigigas", img: ({ gameKey }) => baseSprite(gameKey, 486) },
+					{ id: 15, text: "Catch Cresselia", img: ({ gameKey }) => baseSprite(gameKey, 488) },
 					{ id: 16, text: "Catch/Trade Latias", img: ({ gameKey }) => baseSprite(gameKey, 380) },
 					{ id: 17, text: "Catch/Trade Latios", img: ({ gameKey }) => baseSprite(gameKey, 381) },
 				],
@@ -68,8 +69,8 @@ import {
 					{ id: 1, text: "Minccino", img: ({ gameKey }) => baseSprite(gameKey, 572), tooltip: "Route 5 - Hidden Grotto" },
 					{ id: 2, text: "Volcarona", img: ({ gameKey }) => baseSprite(gameKey, 637), tooltip: "Relic Castle\nLvl 35 before defeating the Elite 4\nLvl 65 after defeating the Elite 4" },
 					{ id: 3, text: "Foongus", img: ({ gameKey }) => baseSprite(gameKey, 590), tooltip: "Route 6" },
-					{ id: 4, text: "Crustle", img: ({ gameKey }) => shinySprite(gameKey, 558), tooltip: "Seaside Cave" },
-					{ id: 5, text: "Shiny Haxorus", img: ({ gameKey }) => shinySprite(gameKey, 612), tooltip: "Nature Preserve\nSee all Pokemon, get the License, and talk to the attendant in Mistralton City" },
+					{ id: 4, text: "Crustle", img: ({ gameKey }) => baseSprite(gameKey, 558), tooltip: "Seaside Cave" },
+					{ id: 5, text: "Shiny Haxorus", img: ({ gameKey }) => shinySprite(gameKey, 612), tooltip: "Nature Preserve\nSee all Pokemon, get the Permit, and talk to the attendant in Mistralton City" },
 				],
 			},
 			{
@@ -99,7 +100,19 @@ import {
 			},
 		],
 		"story": [
-			{ id: 1, text: "Collect all 8 Gym Badges and Defeat the Elite 4", img: () => _badges(["coal", "forest", "cobble", "fen", "relic", "mine", "icicle", "beacon"]), noCenter: true, },
+			{
+				id: 1, text: "Beat the main story", children: [
+					{ id: 1, text: "Basic Badge", img: () => _badges("basic"), tooltip: "Defeat Cheren at the Aspertia City Gym" },
+					{ id: 2, text: "Toxic Badge", img: () => _badges("toxic"), tooltip: "Defeat Roxie at the Virbank City Gym" },
+					{ id: 3, text: "Insect Badge", img: () => _badges("insect"), tooltip: "Defeat Burgh at the Castelia City Gym" },
+					{ id: 4, text: "Bolt Badge", img: () => _badges("bolt"), tooltip: "Defeat Elesa at the Nimbasa City Gym" },
+					{ id: 5, text: "Quake Badge", img: () => _badges("quake"), tooltip: "Defeat Clay at the Driftveil City Gym" },
+					{ id: 6, text: "Jet Badge", img: () => _badges("jet"), tooltip: "Defeat Skyla at the Mistralton City Gym" },
+					{ id: 7, text: "Legend Badge", img: () => _badges("legend"), tooltip: "Defeat Drayden at the Opelucid City Gym" },
+					{ id: 8, text: "Wave Badge", img: () => _badges("wave"), tooltip: "Defeat Marlon at the Humilau City Gym" },
+					{ id: 9, text: "Defeat the Elite 4 / Champion" },
+				],
+			},
 		],
 		"funfest": [
 			{
@@ -222,19 +235,34 @@ import {
 		"collectables": [
 			{
 				id: 1, text: "Collect all Key Items", children: [
-
+					{ id: 1, text: "Bicycle", img: () => keyItem("bicycle") },
+					{ id: 2, text: "Dowsing MCHN", img: () => keyItem("item-finder") },
+					{ id: 3, text: "Medal Box" },
+					{ id: 4, text: "Oval Charm" },
+					{ id: 5, text: "Pal Pad" },
+					{ id: 6, text: "Permit" },
+					{ id: 7, text: "Prop Case" },
+					{ id: 8, text: "Shiny Charm", img: () => keyItem("shiny-charm") },
+					{ id: 9, text: "Super Rod", img: () => keyItem("super-rod") },
+					{ id: 10, text: "Town Map", img: () => keyItem("town-map") },
+					{ id: 11, text: "Vs. Recorder" },
+					{ id: 12, text: "Xtransceiver" },
 				]
 			},
 			{
 				id: 2, text: "Collect all Legendary Items", children: [
-					{ id: 1, text: "DNA Splicers" },
-					{ id: 2, text: "Reveal Glass" },
-					{ id: 3, text: "Burn/Douse Drive" },
-					{ id: 4, text: "Shock/Chill Drive" },
-					{ id: 5, text: "Adamant Orb" },
-					{ id: 6, text: "Lustrious Orb" },
-					{ id: 7, text: "Griseous Orb" },
-					{ id: 8, text: "Soul Dew" },
+					{ id: 1, text: "Soul Dew" },
+					{ id: 2, text: "Adamant Orb" },
+					{ id: 3, text: "Lustrous Orb" },
+					{ id: 4, text: "Griseous Orb" },
+					{ id: 5, text: "Magma Stone" },
+					{ id: 6, text: "Lunar Wing" },
+					{ id: 7, text: "Gracidea" },
+					{ id: 8, text: "Reveal Glass" },
+					{ id: 9, text: "Light Stone/Dark Stone" },
+					{ id: 10, text: "DNA Splicers" },
+					{ id: 11, text: "Burn/Douse Drive" },
+					{ id: 12, text: "Shock/Chill Drive" },
 				]
 			},
 			{
@@ -566,55 +594,64 @@ import {
 
 	const TASKS_BY_SECTION_GAME1 = {
 		...TASKS_BY_SECTION,
-		catching: overrideTasks(TASKS_BY_SECTION.catching, 1, {
-			1: { text: "Trade Reshiram" },
-			2: { text: "Catch Zekrom" },
-			4: { text: "Catch Tornadus" },
-			5: { text: "Trade Thundurus" },
-			14: { text: "Trade Regice" },
-			15: { text: "Catch Registeel" },
-			16: { text: "Catch Latios" },
-			17: { text: "Trade Latias" },
+		catching: overrideTasks(TASKS_BY_SECTION.catching, {
+			1: {
+				1: { text: "Trade Reshiram" },
+				2: { text: "Catch Zekrom" },
+				8: { text: "Trade Regice" },
+				9: { text: "Catch Registeel" },
+				16: { text: "Trade Latias" },
+				17: { text: "Catch Latios" },
+			},
+			3: {
+				4: { text: "Shiny Gible", img: ({ gameKey }) => shinySprite(gameKey, 443), tooltip: "Black City - Defeat Benga" },
+			},
 		}),
-		catching: overrideTasks(TASKS_BY_SECTION.catching, 3, {
-			4: { text: "Shiny Gible", img: ({ gameKey }) => shinySprite(gameKey, 443), tooltip: "Black City - Defeat Benga" },
+		funfest: overrideTasks(TASKS_BY_SECTION.funfest, {
+			1: {
+				12: { text: "Exciting Trading!!" },
+				17: { text: "Find Mysterious Ores!" },
+				28: { text: "Forgotten Lost Items!" },
+				29: { text: "What is the Best Price?" },
+				33: { text: "Noisy Hidden Grottoes!" },
+			}
 		}),
-		funfest: overrideTasks(TASKS_BY_SECTION.funfest, 1, {
-			12: { text: "Exciting Trading!!" },
-			17: { text: "Find Mysterious Ores!" },
-			28: { text: "Forgotten Lost Items!" },
-			29: { text: "What is the Best Price?" },
-			33: { text: "Noisy Hidden Grottoes!" },
+		battle: overrideTasks(TASKS_BY_SECTION.battle, {
+			1: {
+				1: { tooltip: "Black City" },
+			}
 		}),
-		battle: overrideTasks(TASKS_BY_SECTION.battle, 1, {
-			1: { tooltip: "Black City" },
+		collectables: overrideTasks(TASKS_BY_SECTION.collectables, {
+			2: {
+				2: { text: "Burn Drive" },
+				6: { text: "Dark Stone" },
+				11: { text: "Shock Drive" },
+			},
 		}),
-		collectables: overrideTasks(TASKS_BY_SECTION.collectables, 2, {
-			3: { text: "Burn Drive" },
-			4: { text: "Shock Drive" },
-		}),
-		upgrades: overrideTasks(TASKS_BY_SECTION.upgrades, 2, {
-			parent: { text: "Obtain the Black Rank Trainer Card" },
+		upgrades: overrideTasks(TASKS_BY_SECTION.upgrades, {
+			2: {
+				parent: { text: "Obtain the Black Rank Trainer Card" },
+			}
 		}),
 	};
 
 	const TASKS_BY_SECTION_GAME2 = {
 		...TASKS_BY_SECTION,
-		catching: overrideTasks(TASKS_BY_SECTION.catching, 1, {
-			1: { text: "Catch Reshiram" },
-			2: { text: "Trade Zekrom" },
-			4: { text: "Catch Tornadus" },
-			5: { text: "Trade Thundurus" },
-			14: { text: "Catch Regice" },
-			15: { text: "Trade Registeel" },
-			16: { text: "Trade Latios" },
-			17: { text: "Catch Latias" },
-		}),
-		catching: overrideTasks(TASKS_BY_SECTION.catching, 3, {
-			4: { text: "Shiny Dratini", img: ({ gameKey }) => shinySprite(gameKey, 147), tooltip: "White Forest - Defeat Benga" },
-		}),
-		catching: overrideTasks(TASKS_BY_SECTION.catching, 4, {
-			1: { text: "Petilil for Cottonee", img: ({ gameKey }) => task(gameKey, "petilil-for-cottonee"), tooltip: "Route 4" },
+		catching: overrideTasks(TASKS_BY_SECTION.catching, {
+			1: {
+				1: { text: "Catch Reshiram" },
+				2: { text: "Trade Zekrom" },
+				8: { text: "Catch Regice" },
+				9: { text: "Trade Registeel" },
+				16: { text: "Catch Latias" },
+				17: { text: "Trade Latios" },
+			},
+			3: {
+				4: { text: "Shiny Dratini", img: ({ gameKey }) => shinySprite(gameKey, 147), tooltip: "White Forest - Defeat Benga" },
+			},
+			4: {
+				1: { text: "Petilil for Cottonee", img: ({ gameKey }) => task(gameKey, "petilil-for-cottonee"), tooltip: "Route 4" },
+			},
 		}),
 		funfest: overrideTasks(TASKS_BY_SECTION.funfest, 1, {
 			12: { text: "Exhilarating Trading!!" },
@@ -626,9 +663,12 @@ import {
 		battle: overrideTasks(TASKS_BY_SECTION.battle, 1, {
 			1: { tooltip: "White Forest" },
 		}),
-		collectables: overrideTasks(TASKS_BY_SECTION.collectables, 2, {
-			3: { text: "Douse Drive" },
-			4: { text: "Chill Drive" },
+		collectables: overrideTasks(TASKS_BY_SECTION.collectables, {
+			2: {
+				2: { text: "Douse Drive" },
+				6: { text: "Light Stone" },
+				11: { text: "Chill Drive" },
+			},
 		}),
 		upgrades: overrideTasks(TASKS_BY_SECTION.upgrades, 2, {
 			parent: { text: "Obtain the White Rank Trainer Card" },

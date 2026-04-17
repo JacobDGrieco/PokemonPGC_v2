@@ -10,6 +10,7 @@ export const buildTaskLayoutMeta = (...args) => Tasks.buildTaskLayoutMeta?.(...a
 export const buildTaskIndex = (...args) => Tasks.buildTaskIndex?.(...args);
 export const eitherSyncView = (...args) => Tasks.eitherSyncView?.(...args);
 export const formatTierTooltip = (...args) => Tasks.formatTierTooltip?.(...args);
+export const getDefaultEitherChoice = (...args) => Tasks.getDefaultEitherChoice?.(...args);
 export const getEitherChoice = (...args) => Tasks.getEitherChoice?.(...args);
 export const getMultiCheckedCount = (...args) => Tasks.getMultiCheckedCount?.(...args);
 export const getMultiOptions = (...args) => Tasks.getMultiOptions?.(...args);

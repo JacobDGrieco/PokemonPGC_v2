@@ -71,7 +71,19 @@ import {
 			}
 		],
 		"story": [
-			{ id: 1, text: "Collect all 8 Gym Badges and Defeat the Elite 4", img: () => _badges(["coal", "forest", "cobble", "fen", "relic", "mine", "icicle", "beacon"]), noCenter: true, },
+			{
+				id: 1, text: "Beat the main story", children: [
+					{ id: 1, text: "Coal Badge", img: () => _badges("coal"), tooltip: "Defeat Roark at the Oreburgh City Gym" },
+					{ id: 2, text: "Forest Badge", img: () => _badges("forest"), tooltip: "Defeat Gardenia at the Eterna City Gym" },
+					{ id: 3, text: "Cobble Badge", img: () => _badges("cobble"), tooltip: "Defeat Maylene at the Veilstone City Gym" },
+					{ id: 4, text: "Fen Badge", img: () => _badges("fen"), tooltip: "Defeat Crasher Wake at the Pastoria City Gym" },
+					{ id: 5, text: "Relic Badge", img: () => _badges("relic"), tooltip: "Defeat Fantina at the Hearthome City Gym" },
+					{ id: 6, text: "Mine Badge", img: () => _badges("mine"), tooltip: "Defeat Byron at the Canalave City Gym" },
+					{ id: 7, text: "Icicle Badge", img: () => _badges("icicle"), tooltip: "Defeat Candice at the Snowpoint City Gym" },
+					{ id: 8, text: "Beacon Badge", img: () => _badges("beacon"), tooltip: "Defeat Volkner at the Sunyshore City Gym" },
+					{ id: 9, text: "Defeat the Elite 4 / Champion" },
+				],
+			},
 		],
 		"battle": [
 			{

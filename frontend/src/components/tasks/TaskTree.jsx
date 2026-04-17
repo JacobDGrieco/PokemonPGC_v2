@@ -283,6 +283,40 @@ function MultiChoices({ task, onToggle }) {
 	);
 }
 
+function clampTierValue(value, steps) {
+	const max = Math.max(0, Number(steps) || 0);
+	const numeric = Number(value);
+	if (!Number.isFinite(numeric)) return 0;
+	return Math.min(max, Math.max(0, Math.round(numeric)));
+}
+
+function TieredValueDisplay({ task, className = '', onInputCommit, onChangeCommit }) {
+	const meta = getTierMetaForTask(task);
+	const steps = meta.steps;
+	const value = clampTierValue(task.currentTier ?? 0, steps);
+	const display = meta.mode === 'label'
+		? (value === 0 ? '-' : meta.values[value - 1] || '-')
+		: `${value}/${steps}`;
+
+	return (
+		<div className={`small tiered-value ${className}`.trim()}>
+			<input
+				type="number"
+				min={0}
+				max={steps}
+				step={1}
+				value={value}
+				className="tiered-input"
+				aria-label={`${task.text} progress`}
+				onClick={(event) => event.stopPropagation()}
+				onInput={(event) => onInputCommit(Number(event.currentTarget.value))}
+				onChange={(event) => onChangeCommit(Number(event.currentTarget.value))}
+			/>
+			<span className="tiered-value-text">{display}</span>
+		</div>
+	);
+}
+
 function TieredControls({ task, onInputCommit, onChangeCommit }) {
 	const meta = getTierMetaForTask(task);
 	const steps = meta.steps;
@@ -316,6 +350,7 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 	const isEither = isEitherTask(task);
 	const isMulti = isMultiTask(task);
 	const isStandardToggleTask = !isEither && !isMulti && !hasSlider;
+	const noCenterSlider = forceInline && hasSlider;
 
 	const commit = ({ syncTask = null, syncValue = null } = {}) => {
 		recomputeAncestorDone(task, index);

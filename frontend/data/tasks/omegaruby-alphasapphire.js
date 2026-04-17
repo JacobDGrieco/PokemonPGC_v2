@@ -7,6 +7,7 @@ import {
 	_location,
 	_npc,
 	_task,
+	_badges,
 	_frontSprite,
 	defineTasksMany,
 	overrideTasks,
@@ -128,7 +129,19 @@ import {
 			},
 		],
 		"story": [
-			{ id: 1, text: "Collect all 8 Gym Badges and Defeat the Elite 4", img: () => _badges(["coal", "forest", "cobble", "fen", "relic", "mine", "icicle", "beacon"]), noCenter: true, },
+			{
+				id: 1, text: "Beat the main story", children: [
+					{ id: 1, text: "Stone Badge", img: () => _badges("stone"), tooltip: "Defeat Roxanne at the Rustboro City Gym" },
+					{ id: 2, text: "Knuckle Badge", img: () => _badges("knuckle"), tooltip: "Defeat Brawly at the Dewford Town Gym" },
+					{ id: 3, text: "Dynamo Badge", img: () => _badges("dynamo"), tooltip: "Defeat Wattson at the Mauville City Gym" },
+					{ id: 4, text: "Heat Badge", img: () => _badges("heat"), tooltip: "Defeat Flannery at the Lavaridge Town Gym" },
+					{ id: 5, text: "Balance Badge", img: () => _badges("balance"), tooltip: "Defeat Norman at the Petalburg City Gym" },
+					{ id: 6, text: "Feather Badge", img: () => _badges("feather"), tooltip: "Defeat Winona at the Fortree City Gym" },
+					{ id: 7, text: "Mind Badge", img: () => _badges("mind"), tooltip: "Defeat Tate & Liza at the Mossdeep City Gym" },
+					{ id: 8, text: "Rain Badge", img: () => _badges("rain"), tooltip: "Defeat Wallace at the Sootopolis City Gym" },
+					{ id: 9, text: "Defeat the Elite 4 / Champion" },
+				],
+			},
 			{
 				id: 2, text: "Complete the Delta Episode", children: [
 					{ id: 1, text: "Encounter Zinnia", tooltip: "Littleroot" },

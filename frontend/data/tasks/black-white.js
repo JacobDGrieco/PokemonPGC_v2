@@ -90,7 +90,19 @@ import {
 			},
 		],
 		"story": [
-			{ id: 1, text: "Collect all 8 Gym Badges and Defeat the Elite 4", img: () => _badges(["trio", "basic", "insect", "bolt", "quake", "jet", "freeze", "legend"]), noCenter: true },
+			{
+				id: 1, text: "Beat the main story", children: [
+					{ id: 1, text: "Trio Badge", img: () => _badges("trio"), tooltip: "Defeat Cilan/Chili/Cress at the Striaton City Gym" },
+					{ id: 2, text: "Basic Badge", img: () => _badges("basic"), tooltip: "Defeat Lenora at the Nacrene City Gym" },
+					{ id: 3, text: "Insect Badge", img: () => _badges("insect"), tooltip: "Defeat Burgh at the Castelia City Gym" },
+					{ id: 4, text: "Bolt Badge", img: () => _badges("bolt"), tooltip: "Defeat Elesa at the Nimbasa City Gym" },
+					{ id: 5, text: "Quake Badge", img: () => _badges("quake"), tooltip: "Defeat Clay at the Driftveil City Gym" },
+					{ id: 6, text: "Jet Badge", img: () => _badges("jet"), tooltip: "Defeat Skyla at the Mistralton City Gym" },
+					{ id: 7, text: "Freeze Badge", img: () => _badges("freeze"), tooltip: "Defeat Brycen at the Icirrus City Gym" },
+					{ id: 8, text: "Legend Badge", img: () => _badges("legend"), tooltip: "Defeat Drayden/Iris at the Opelucid City Gym" },
+					{ id: 9, text: "Defeat the Elite 4 / Champion" },
+				],
+			},
 		],
 		"activites": [
 			{ id: 1, text: "Fill Black City/White Forest with 10 Trainers", noCenter: true },

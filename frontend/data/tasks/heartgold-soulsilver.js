@@ -99,7 +99,19 @@ import {
 			},
 		],
 		"story": [
-			{ id: 1, text: "Collect all 8 Gym Badges and Defeat the Elite 4", img: () => _badges(["zephyr", "hive", "plain", "fog", "storm", "mineral", "glacier", "rising"]), noCenter: true },
+			{
+				id: 1, text: "Beat the main story", children: [
+					{ id: 1, text: "Zephyr Badge", img: () => _badges("zephyr"), tooltip: "Defeat Falkner at the Violet City Gym" },
+					{ id: 2, text: "Hive Badge", img: () => _badges("hive"), tooltip: "Defeat Bugsy at the Azalea Town Gym" },
+					{ id: 3, text: "Plain Badge", img: () => _badges("plain"), tooltip: "Defeat Whitney at the Goldenrod City Gym" },
+					{ id: 4, text: "Fog Badge", img: () => _badges("fog"), tooltip: "Defeat Morty at the Ecruteak City Gym" },
+					{ id: 5, text: "Storm Badge", img: () => _badges("storm"), tooltip: "Defeat Chuck at the Cianwood City Gym" },
+					{ id: 6, text: "Mineral Badge", img: () => _badges("mineral"), tooltip: "Defeat Jasmine at the Olivine City Gym" },
+					{ id: 7, text: "Glacier Badge", img: () => _badges("glacier"), tooltip: "Defeat Pryce at the Mahogany Town Gym" },
+					{ id: 8, text: "Rising Badge", img: () => _badges("rising"), tooltip: "Defeat Clair at the Blackthorn City Gym" },
+					{ id: 9, text: "Defeat the Elite 4 / Champion" },
+				],
+			},
 			{
 				id: 2, text: "Complete the Epilogue", children: [
 					{ id: 1, text: "Arceus & Sinjoh Ruins", },

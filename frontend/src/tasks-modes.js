@@ -174,6 +174,16 @@ export function getEitherChoice(taskId) {
 	return m[String(taskId)] || null;
 }
 
+export function getDefaultEitherChoice(task) {
+	const src = task?.eithers;
+	if (!src || typeof src !== "object") return null;
+	if (src.left && typeof src.left === "object") return "left";
+	if (src.right && typeof src.right === "object") return "right";
+
+	const first = Object.entries(src).find(([, value]) => value && typeof value === "object");
+	return first ? String(first[0]) : null;
+}
+
 export function setEitherChoice(taskId, sideOrNull) {
 	const store = window.PPGC?._storeRef || window.store;
 	if (!store) return;

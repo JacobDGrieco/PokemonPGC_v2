@@ -84,7 +84,19 @@ import {
 			},
 		],
 		"story": [
-			{ id: 1, text: "Collect all 8 Gym Badges and Defeat the Elite 4", img: () => _badges(["boulder", "cascade", "thunder", "rainbow", "soul", "marsh", "volcano", "earth"]), noCenter: true },
+			{
+				id: 1, text: "Beat the main story", children: [
+					{ id: 1, text: "Boulder Badge", img: () => _badges("boulder"), tooltip: "Defeat Brock at the Pewter City Gym" },
+					{ id: 2, text: "Cascade Badge", img: () => _badges("cascade"), tooltip: "Defeat Misty at the Cerulean City Gym" },
+					{ id: 3, text: "Thunder Badge", img: () => _badges("thunder"), tooltip: "Defeat Lt. Surge at the Vermilion City Gym" },
+					{ id: 4, text: "Rainbow Badge", img: () => _badges("rainbow"), tooltip: "Defeat Erika at the Celadon City Gym" },
+					{ id: 5, text: "Soul Badge", img: () => _badges("soul"), tooltip: "Defeat Koga at the Fuchsia City Gym" },
+					{ id: 6, text: "Marsh Badge", img: () => _badges("marsh"), tooltip: "Defeat Sabrina at the Saffron City Gym" },
+					{ id: 7, text: "Volcano Badge", img: () => _badges("volcano"), tooltip: "Defeat Blaine at the Cinnabar Island Gym" },
+					{ id: 8, text: "Earth Badge", img: () => _badges("earth"), tooltip: "Defeat Giovanni at the Viridian City Gym" },
+					{ id: 9, text: "Defeat the Elite 4 / Champion" },
+				],
+			},
 			{
 				id: 2, text: "Epilogue", noCenter: true, children: [
 					{ id: 1, text: "Catch Mewtwo", img: ({ gameKey }) => baseSprite(gameKey, 150), imgS: ({ gameKey }) => shinySprite(gameKey, 150), tooltip: "Found at the bottom of Cerulean Cave" },
