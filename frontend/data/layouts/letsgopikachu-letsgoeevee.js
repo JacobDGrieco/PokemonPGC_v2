@@ -7,11 +7,54 @@ import {
 
 	const P = (parentId) => [parentId];          			// parent-only task
 	const C = (parentId, childId) => [parentId, childId]; 	// parent + child task
+	const childRows = (parentId, start, end, rowSize = 5) => {
+		const rows = [];
+		for (let childId = start; childId <= end; childId += rowSize) {
+			rows.push(
+				Array.from(
+					{ length: Math.min(rowSize, end - childId + 1) },
+					(_, offset) => C(parentId, childId + offset),
+				),
+			);
+		}
+		return rows;
+	};
 
 	const DESKTOP_LAYOUT = {
 		"catching": [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3), C(1, 4)],
+			[P(2)],
+			[C(2, 1), C(2, 2), C(2, 3)],
+			[P(3)],
+			[C(3, 1), C(3, 2), C(3, 3), C(3, 4), C(3, 5)],
+			[C(3, 6), C(3, 7), C(3, 8), C(3, 9), C(3, 10)],
+			[P(4)],
+			[C(4, 1), C(4, 2), C(4, 3), C(4, 4)],
+			[C(4, 5), C(4, 6), C(4, 7), C(4, 8)],
+		],
+		"story": [
+			[P(1)],
+			[C(1, 1), C(1, 2), C(1, 3), C(1, 4), C(1, 5)],
+			[C(1, 6), C(1, 7), C(1, 8), C(1, 9)],
+		],
+		"battle": [
+			[P(1), P(2)],
+			[P(3)],
+			[C(3, 1), C(3, 2), C(3, 3), C(3, 4)],
+			[C(3, 5), C(3, 6), C(3, 7), C(3, 8)],
+		],
+		"trainers": [
+			[P(1)],
+			...childRows(1, 1, 153, 6),
+		],
+		"upgrades": [
+			[P(1)],
+		],
+		"collectables": [
+			[P(2)],
+			[C(2, 1), C(2, 2), C(2, 3), C(2, 4)],
+			[C(2, 5), C(2, 6), C(2, 7), C(2, 8)],
 		],
 		"mega-stones": [
 			[P(1), P(2), P(3), P(4), P(5)],
@@ -39,6 +82,10 @@ import {
 			[C(2, 51), C(2, 52), C(2, 53), C(2, 54), C(2, 55)],
 			[C(2, 56), C(2, 57), C(2, 58), C(2, 59), C(2, 60)],
 		],
+		"extra-credit": [
+			[P(1)],
+			[C(1, 1), C(1, 2), C(1, 3)],
+		],
 	};
 
 	const DESTOP_LAYOUT_GAME1 = {
@@ -57,7 +104,15 @@ import {
 
 	const COMPACT_LAYOUT = DESKTOP_LAYOUT;
 	const COMPACT_LAYOUT_GAME1 = COMPACT_LAYOUT;
-	const COMPACT_LAYOUT_GAME2 = COMPACT_LAYOUT;
+	const COMPACT_LAYOUT_GAME2 = {
+		...COMPACT_LAYOUT,
+		"fashion": [
+			[P(1), P(2), P(3), P(4), P(5)],
+			[P(6), P(7), P(8), P(9), P(10)],
+			[P(11), P(12), P(13), P(14), P(15)],
+			[P(16), P(17)],
+		],
+	};
 
 	defineLayoutsMany(GAME_KEYS[0], DESTOP_LAYOUT_GAME1, COMPACT_LAYOUT_GAME1);
 	defineLayoutsMany(GAME_KEYS[1], DESTOP_LAYOUT_GAME2, COMPACT_LAYOUT_GAME2);
