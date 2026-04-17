@@ -1,11 +1,15 @@
 import {
+	_formItem,
+	_heldItem,
 	_hm,
+	_keyItem,
 	_megaStone,
 	_tm,
 	_zCrystal,
 	_task,
 	_typing,
 	_frontSprite,
+	range,
 	defineTasksMany,
 	overrideTasks,
 } from '../helpers/index.js';
@@ -16,6 +20,9 @@ import {
 
 	const baseSprite = (gameKey, natiId) => _frontSprite(gen, gameKey, natiId);
 	const task = (gameKey, name) => _task(gameKey, name);
+	const formItem = (name) => _formItem(gen, name);
+	const heldItem = (name) => _heldItem(gen, name);
+	const keyItem = (name) => _keyItem(gen, name);
 	const megaStone = (name) => _megaStone(gen, name);
 	const zCrystal = (name) => _zCrystal(name);
 	const typing = (type) => _typing(type);
@@ -26,7 +33,7 @@ import {
 		{ id: "catching", title: "Gotta Catch 'Em All" },
 		{ id: "story", title: "Main Story" },
 		{ id: "side-quests", title: "Side Quests" },
-		{ id: "activites", title: "Activities" },
+		{ id: "activities", title: "Activities" },
 		{ id: "battle", title: "Battle" },
 		{ id: "upgrades", title: "Upgrades" },
 		{ id: "collectables", title: "Collectables" },
@@ -86,7 +93,22 @@ import {
 			},
 		],
 		"story": [
-			{ id: 1, text: "Complete the Island Challenge" },
+			{
+				id: 1, text: "Complete the Island Challenge", children: [
+					{ id: 1, text: "Ilima's Trial", tooltip: "Verdant Cavern" },
+					{ id: 2, text: "Hala's Grand Trial" },
+					{ id: 3, text: "Lana's Trial", tooltip: "Brooklet Hill" },
+					{ id: 4, text: "Kiawe's Trial", tooltip: "Wela Volcano Park" },
+					{ id: 5, text: "Mallow's Trial", tooltip: "Lush Jungle" },
+					{ id: 6, text: "Olivia's Grand Trial" },
+					{ id: 7, text: "Sophocles's Trial", tooltip: "Hokulani Observatory" },
+					{ id: 8, text: "Acerola's Trial", tooltip: "Thrifty Megamart Abandoned Site" },
+					{ id: 9, text: "Nanu's Grand Trial" },
+					{ id: 10, text: "Poni Trial", tooltip: "Vast Poni Canyon" },
+					{ id: 11, text: "Hapu's Grand Trial" },
+					{ id: 12, text: "Elite Four/Champion" },
+				],
+			},
 			{
 				id: 2, text: "Complete the Ultra Beast Investigation", children: [
 					{ id: 1, text: "Meet Looker and Anabel", tooltip: "Motel on Route 8" },
@@ -100,7 +122,7 @@ import {
 				],
 			},
 		],
-		"activites": [
+		"activities": [
 			{ id: 1, text: "Visit the alternate world" },
 			{
 				id: 2, text: "Complete all NPC Pokedex request tasks", children: [
@@ -109,7 +131,7 @@ import {
 					{ id: 3, text: "Show Rockruff to the man in yellow on Route 3", img: ({ gameKey }) => baseSprite(gameKey, 744), tooltip: "Reward: 3,000 Poke Dollars" },
 					{ id: 4, text: "Talk to the scientist at the Hau'oli City Tourist Bureau", tooltip: "Reward: Ultra Ball\nRequires at least 10 Pokedex entries" },
 					{ id: 5, text: "Show Pyukumuku to the man at the Heahea City Apparel Shop", img: ({ gameKey }) => baseSprite(gameKey, 771), tooltip: "Reward: 10,000 Poke Dollars" },
-					{ id: 6, text: "Show Passimian to the Aether employee at the Konikoni City Pokemon Center", img: ({ gameKey }) => baseSprite(gameKey, 766), tooltip: "Reward: 5,000 Poke Dollars" },
+					{ id: 6, text: "Show Passimian/Oranguru to the Aether employee at the Konikoni City Pokemon Center", img: ({ gameKey }) => baseSprite(gameKey, 766), tooltip: "Reward: 5,000 Poke Dollars" },
 					{ id: 7, text: "Show Feebas to the man at the Route 5 Pokemon Center", img: ({ gameKey }) => baseSprite(gameKey, 349), tooltip: "Reward: 3,000 Poke Dollars" },
 					{ id: 8, text: "Show Stufful to the Aether employee at the Route 8 Aether Trailer", img: ({ gameKey }) => baseSprite(gameKey, 759), tooltip: "Reward: 5,000 Poke Dollars" },
 					{ id: 9, text: "Show Togedemaru to the collector at the Malie City Apparel Shop", img: ({ gameKey }) => baseSprite(gameKey, 777), tooltip: "Reward: 10,000 Poke Dollars" },
@@ -167,21 +189,20 @@ import {
 			},
 		],
 		"upgrades": [
-			{ id: 1, text: "Upgrade the Poke Finder", tiers: ["Ver. 2", "Ver. 3", "Ver. 4", "Ver. 5"] },
+			{ id: 1, text: "Obtain the Judge function", tooltip: "Battle Tree\nRequires entering the Hall of Fame and hatching 21 Eggs" },
+			{ id: 2, text: "Upgrade the Poke Finder", tiers: ["Ver. 1", "Ver. 2", "Ver. 3", "Ver. 4", "Ver. 5"] },
+			{ id: 3, text: "Upgrade Festival Plaza to Rank 100", tiers: [range(1, 100)] },
 			{
-				id: 2, text: "Unlock all Battle Styles", children: [
-					{ id: 1, text: "Normal Style", tooltip: "Initial" },
-					{ id: 2, text: "Elegant Style", tooltip: "Available in Malie City Outer Cape" },
-					{ id: 3, text: "Girlish Style", tooltip: "Defeat Lana in Konikoni City" },
-					{ id: 4, text: "Reverent Style", tooltip: "Defeat Kiawe / Mallow" },
-					{ id: 5, text: "Smug Style", tooltip: "Defeat Gladion before the Elite Four" },
-					{ id: 6, text: "Left-Handed Style", tooltip: "Defeat Ilima in Hau'oli City" },
-					{ id: 7, text: "Passionate Style", tooltip: "Get a Battle Tree streak of 50 or higher" },
-					{ id: 8, text: "Idol Style", tooltip: "Reach Master Rank in Battle Royal" },
+				id: 4, text: "Upgrade all Poke Pelago islands", children: [
+					{ id: 1, text: "Isle Abeens", tiers: ["Rank 1", "Rank 2", "Rank 3"] },
+					{ id: 2, text: "Isle Aplenny", tiers: ["Rank 1", "Rank 2", "Rank 3"] },
+					{ id: 3, text: "Isle Aphun", tiers: ["Rank 1", "Rank 2", "Rank 3"] },
+					{ id: 4, text: "Isle Evelup", tiers: ["Rank 1", "Rank 2", "Rank 3"] },
+					{ id: 5, text: "Isle Avue", tiers: ["Rank 1", "Rank 2", "Rank 3"] },
 				],
 			},
 			{
-				id: 3, text: "Earn every Trainer Passport stamp", children: [
+				id: 5, text: "Earn every Trainer Passport stamp", children: [
 					{ id: 1, text: "Official Pokemon Trainer" },
 					{ id: 2, text: "Melemele Trial Completion" },
 					{ id: 3, text: "Akala Trial Completion" },
@@ -199,10 +220,23 @@ import {
 					{ id: 15, text: "50 Consecutive Multi Battle Wins" },
 				],
 			},
+			{
+				id: 6, text: "Unlock all Battle Styles", children: [
+					{ id: 1, text: "Normal Style", tooltip: "Initial" },
+					{ id: 2, text: "Elegant Style", tooltip: "Available in Malie City Outer Cape" },
+					{ id: 3, text: "Girlish Style", tooltip: "Defeat Lana in Konikoni City" },
+					{ id: 4, text: "Reverent Style", tooltip: "Defeat Kiawe / Mallow" },
+					{ id: 5, text: "Smug Style", tooltip: "Defeat Gladion before the Elite Four" },
+					{ id: 6, text: "Left-Handed Style", tooltip: "Defeat Ilima in Hau'oli City" },
+					{ id: 7, text: "Passionate Style", tooltip: "Get a Battle Tree streak of 50 or higher" },
+					{ id: 8, text: "Idol Style", tooltip: "Reach Master Rank in Battle Royal" },
+				],
+			},
 		],
 		"collectables": [
+			{ id: 1, text: "Collect all 95 Zygarde Cells", tiers: [range(1, 95)] },
 			{
-				id: 1, text: "Collect all 5 Zygarde Cores", children: [
+				id: 2, text: "Collect all 5 Zygarde Cores", children: [
 					{ id: 1, text: "Extreme Speed Core", img: ({ gameKey }) => baseSprite(gameKey, 718), tooltip: "Route 1" },
 					{ id: 2, text: "Thousand Arrows Core", img: ({ gameKey }) => baseSprite(gameKey, 718), tooltip: "Iki Town" },
 					{ id: 3, text: "Dragon Dance Core", img: ({ gameKey }) => baseSprite(gameKey, 718), tooltip: "Konikoni City" },
@@ -210,26 +244,81 @@ import {
 					{ id: 5, text: "Core Enforcer Core", img: ({ gameKey }) => baseSprite(gameKey, 718), tooltip: "Ancient Poni Path" },
 				],
 			},
-			{ id: 2, text: "Collect all 95 Zygarde Cells", tiers: [10, 25, 50, 75, 95] },
 			{
-				id: 3, text: "Collect all 17 Memories", children: [
-					{ id: 1, text: "Bug Memory" },
-					{ id: 2, text: "Dark Memory" },
-					{ id: 3, text: "Dragon Memory" },
-					{ id: 4, text: "Electric Memory" },
-					{ id: 5, text: "Fairy Memory" },
-					{ id: 6, text: "Fighting Memory" },
-					{ id: 7, text: "Fire Memory" },
-					{ id: 8, text: "Flying Memory" },
-					{ id: 9, text: "Ghost Memory" },
-					{ id: 10, text: "Grass Memory" },
-					{ id: 11, text: "Ground Memory" },
-					{ id: 12, text: "Ice Memory" },
-					{ id: 13, text: "Poison Memory" },
-					{ id: 14, text: "Psychic Memory" },
-					{ id: 15, text: "Rock Memory" },
-					{ id: 16, text: "Steel Memory" },
-					{ id: 17, text: "Water Memory" },
+				id: 3, text: "Collect all Key Items", children: [
+					{ id: 1, text: "Adventure Rules", img: () => keyItem("adventure-rules") },
+					{ id: 2, text: "Exp. Share", img: () => heldItem("exp-share") },
+					{ id: 3, text: "Fishing Rod", img: () => keyItem("fishing-rod") },
+					{ id: 4, text: "Key Stone", img: () => keyItem("key-stone") },
+					{ id: 5, text: "Lens Case / Make-up Bag", img: () => [keyItem("lens-case"), keyItem("make-up-bag")], tooltip: "Differs by gender" },
+					{ id: 6, text: "Oval Charm", img: () => keyItem("oval-charm") },
+					{ id: 7, text: "Professor's Mask", img: () => keyItem("professors-mask") },
+					{ id: 8, text: "Ride Pager", img: () => keyItem("ride-pager") },
+					{ id: 9, text: "Shiny Charm", img: () => keyItem("shiny-charm") },
+					{ id: 10, text: "Sparkling Stone", img: () => keyItem("sparkling-stone") },
+					{ id: 11, text: "Sun Flute / Moon Flute", img: () => [keyItem("sun-flute"), keyItem("moon-flute")] },
+					{ id: 12, text: "Z-Ring", img: () => keyItem("z-ring") },
+				]
+			},
+			{
+				id: 4, text: "Collect all Legendary Items", children: [
+					{ id: 1, text: "Soul Dew", img: () => keyItem("soul-dew") },
+					{ id: 2, text: "Adamant Orb", img: () => keyItem("adamant-orb") },
+					{ id: 3, text: "Lustrous Orb", img: () => keyItem("lustrous-orb") },
+					{ id: 4, text: "Griseous Orb", img: () => formItem("griseous-orb") },
+					{ id: 5, text: "Red Orb", img: () => keyItem("red-orb") },
+					{ id: 6, text: "Blue Orb", img: () => keyItem("blue-orb") },
+					{ id: 7, text: "Gracidea", img: () => formItem("gracidea") },
+					{ id: 8, text: "Reveal Glass", img: () => formItem("reveal-glass") },
+					{ id: 9, text: "DNA Splicers", img: () => formItem("dna-splicers") },
+					{ id: 10, text: "Burn Drive", img: () => formItem("burn-drive") },
+					{ id: 11, text: "Shock Drive", img: () => formItem("shock-drive") },
+					{ id: 12, text: "Douse Drive", img: () => formItem("douse-drive") },
+					{ id: 13, text: "Chill Drive", img: () => formItem("chill-drive") },
+					{ id: 14, text: "Zygarde Cube", img: () => keyItem("zygarde-cube") },
+					{ id: 15, text: "Prison Bottle", img: () => keyItem("prison-bottle") },
+				]
+			},
+			{
+				id: 5, text: "Collect all 17 Arceus Plates", children: [
+					{ id: 1, text: "Draco Plate", img: () => formItem("draco-plate") },
+					{ id: 2, text: "Dread Plate", img: () => formItem("dread-plate") },
+					{ id: 3, text: "Earth Plate", img: () => formItem("earth-plate") },
+					{ id: 4, text: "Fist Plate", img: () => formItem("fist-plate") },
+					{ id: 5, text: "Flame Plate", img: () => formItem("flame-plate") },
+					{ id: 6, text: "Icicle Plate", img: () => formItem("icicle-plate") },
+					{ id: 7, text: "Insect Plate", img: () => formItem("insect-plate") },
+					{ id: 8, text: "Iron Plate", img: () => formItem("iron-plate") },
+					{ id: 9, text: "Meadow Plate", img: () => formItem("meadow-plate") },
+					{ id: 10, text: "Mind Plate", img: () => formItem("mind-plate") },
+					{ id: 11, text: "Pixie Plate", img: () => formItem("pixie-plate") },
+					{ id: 12, text: "Sky Plate", img: () => formItem("sky-plate") },
+					{ id: 13, text: "Splash Plate", img: () => formItem("splash-plate") },
+					{ id: 14, text: "Spooky Plate", img: () => formItem("spooky-plate") },
+					{ id: 15, text: "Stone Plate", img: () => formItem("stone-plate") },
+					{ id: 16, text: "Toxic Plate", img: () => formItem("toxic-plate") },
+					{ id: 17, text: "Zap Plate", img: () => formItem("zap-plate") },
+				]
+			},
+			{
+				id: 6, text: "Collect all 17 Memories", children: [
+					{ id: 1, text: "Bug Memory", img: () => heldItem("bug-memory") },
+					{ id: 2, text: "Dark Memory", img: () => heldItem("dark-memory") },
+					{ id: 3, text: "Dragon Memory", img: () => heldItem("dragon-memory") },
+					{ id: 4, text: "Electric Memory", img: () => heldItem("electric-memory") },
+					{ id: 5, text: "Fairy Memory", img: () => heldItem("fairy-memory") },
+					{ id: 6, text: "Fighting Memory", img: () => heldItem("fighting-memory") },
+					{ id: 7, text: "Fire Memory", img: () => heldItem("fire-memory") },
+					{ id: 8, text: "Flying Memory", img: () => heldItem("flying-memory") },
+					{ id: 9, text: "Ghost Memory", img: () => heldItem("ghost-memory") },
+					{ id: 10, text: "Grass Memory", img: () => heldItem("grass-memory") },
+					{ id: 11, text: "Ground Memory", img: () => heldItem("ground-memory") },
+					{ id: 12, text: "Ice Memory", img: () => heldItem("ice-memory") },
+					{ id: 13, text: "Poison Memory", img: () => heldItem("poison-memory") },
+					{ id: 14, text: "Psychic Memory", img: () => heldItem("psychic-memory") },
+					{ id: 15, text: "Rock Memory", img: () => heldItem("rock-memory") },
+					{ id: 16, text: "Steel Memory", img: () => heldItem("steel-memory") },
+					{ id: 17, text: "Water Memory", img: () => heldItem("water-memory") },
 				],
 			},
 		],
@@ -415,7 +504,7 @@ import {
 				],
 			},
 			{
-				id: 1, text: "Get Mega Stones from distribution codes", children: [
+				id: 2, text: "Get Mega Stones from distribution codes", children: [
 					{ id: 1, text: "Beedrillite", img: ({ gameKey }) => [baseSprite(gameKey, "015-m"), megaStone("beedrillite")] },
 					{ id: 2, text: "Pidgeotite", img: ({ gameKey }) => [baseSprite(gameKey, "018-m"), megaStone("pidgeotite")] },
 					{ id: 3, text: "Mewtwonite X", img: ({ gameKey }) => [baseSprite(gameKey, "150-mx"), megaStone("mewtwonite-x")] },
@@ -445,7 +534,7 @@ import {
 				],
 			},
 			{
-				id: 2, text: "Get Z-Crystals from distribution codes", children: [
+				id: 3, text: "Get Z-Crystals from distribution codes", children: [
 					{ id: 1, text: "Marshadium Z", img: ({ gameKey }) => [baseSprite(gameKey, 802), zCrystal("marshadiumz")] },
 					{ id: 2, text: "Mewnium Z", img: ({ gameKey }) => [baseSprite(gameKey, 151), zCrystal("mewniumz")] },
 					{ id: 3, text: "Pikashunium Z", img: ({ gameKey }) => [baseSprite(gameKey, "025-o"), zCrystal("pikashuniumz")] },
@@ -457,46 +546,75 @@ import {
 
 	const TASKS_BY_SECTION_GAME1 = {
 		...TASKS_BY_SECTION,
-		catching: overrideTasks(TASKS_BY_SECTION.catching, 1, {
-			1: { text: "Catch Solgaleo" },
-			2: { text: "Trade Lunala" },
+		catching: overrideTasks(TASKS_BY_SECTION.catching, {
+			1: {
+				1: { text: "Catch Solgaleo" },
+				2: { text: "Trade Lunala" },
+			},
+			2: {
+				2: { text: "Catch UB-02 Buzzwole", img: ({ gameKey }) => baseSprite(gameKey, 794) },
+				3: { text: "Trade UB-02 Pheromosa", img: ({ gameKey }) => baseSprite(gameKey, 795) },
+				5: { text: "Catch UB-04 Kartana", img: ({ gameKey }) => baseSprite(gameKey, 798) },
+				6: { text: "Trade UB-04 Celesteela", img: ({ gameKey }) => baseSprite(gameKey, 797) },
+			}
 		}),
-		catching: overrideTasks(TASKS_BY_SECTION.catching, 2, {
-			2: { text: "Catch Buzzwole", img: ({ gameKey }) => baseSprite(gameKey, 794) },
-			3: { text: "Trade Pheromosa", img: ({ gameKey }) => baseSprite(gameKey, 795) },
-			5: { text: "Catch Kartana", img: ({ gameKey }) => baseSprite(gameKey, 798) },
-			6: { text: "Trade Celesteela", img: ({ gameKey }) => baseSprite(gameKey, 797) },
+		story: overrideTasks(TASKS_BY_SECTION.story, {
+			2: {
+				3: { text: "Catch Buzzwole" },
+				5: { text: "Catch Kartana" },
+			}
 		}),
-		story: overrideTasks(TASKS_BY_SECTION.story, 2, {
-			3: { text: "Catch Buzzwole" },
-			5: { text: "Catch Kartana" },
+		activities: overrideTasks(TASKS_BY_SECTION.activities, {
+			2: {
+				6: { text: "Show Passimian to the Aether employee at the Konikoni City Pokemon Center", img: ({ gameKey }) => baseSprite(gameKey, 766) },
+			}
 		}),
-		upgrades: overrideTasks(TASKS_BY_SECTION.upgrades, 2, {
-			4: { text: "Reverent Style", tooltip: "Defeat Kiawe in Paniola Town" },
+		upgrades: overrideTasks(TASKS_BY_SECTION.upgrades, {
+			2: {
+				4: { text: "Reverent Style", tooltip: "Defeat Kiawe in Paniola Town" },
+			}
+		}),
+		collectables: overrideTasks(TASKS_BY_SECTION.collectables, {
+			3: {
+				11: { text: "Sun Flute", img: () => keyItem("sun-flute") },
+			}
 		}),
 	};
 
 	const TASKS_BY_SECTION_GAME2 = {
 		...TASKS_BY_SECTION,
-		catching: overrideTasks(TASKS_BY_SECTION.catching, 1, {
-			1: { text: "Trade Solgaleo" },
-			2: { text: "Catch Lunala" },
+		catching: overrideTasks(TASKS_BY_SECTION.catching, {
+			1: {
+				1: { text: "Trade Solgaleo" },
+				2: { text: "Catch Lunala" },
+			},
+			2: {
+				2: { text: "Trade UB-02 Buzzwole", img: ({ gameKey }) => baseSprite(gameKey, 794) },
+				3: { text: "Catch UB-02 Pheromosa", img: ({ gameKey }) => baseSprite(gameKey, 795) },
+				5: { text: "Trade UB-04 Kartana", img: ({ gameKey }) => baseSprite(gameKey, 798) },
+				6: { text: "Catch UB-04 Celesteela", img: ({ gameKey }) => baseSprite(gameKey, 797) },
+			}
 		}),
-		catching: overrideTasks(TASKS_BY_SECTION.catching, 2, {
-			2: { text: "Trade Buzzwole", img: ({ gameKey }) => baseSprite(gameKey, 794) },
-			3: { text: "Catch Pheromosa", img: ({ gameKey }) => baseSprite(gameKey, 795) },
-			5: { text: "Trade Kartana", img: ({ gameKey }) => baseSprite(gameKey, 798) },
-			6: { text: "Catch Celesteela", img: ({ gameKey }) => baseSprite(gameKey, 797) },
+		story: overrideTasks(TASKS_BY_SECTION.story, {
+			2: {
+				3: { text: "Catch Pheromosa" },
+				5: { text: "Catch Celesteela" },
+			}
 		}),
-		story: overrideTasks(TASKS_BY_SECTION.story, 2, {
-			3: { text: "Catch Pheromosa" },
-			5: { text: "Catch Celesteela" },
+		activities: overrideTasks(TASKS_BY_SECTION.activities, {
+			2: {
+				6: { text: "Show Oranguru to the Aether employee at the Konikoni City Pokemon Center", img: ({ gameKey }) => baseSprite(gameKey, 765) },
+			}
 		}),
-		upgrades: overrideTasks(TASKS_BY_SECTION.upgrades, 2, {
-			4: { text: "Reverent Style", tooltip: "Defeat Mallow in Lush Jungle" },
+		upgrades: overrideTasks(TASKS_BY_SECTION.upgrades, {
+			2: {
+				4: { text: "Reverent Style", tooltip: "Defeat Mallow in Lush Jungle" },
+			}
 		}),
-		activites: overrideTasks(TASKS_BY_SECTION.activites, 2, {
-			6: { text: "Show Oranguru to the Aether employee at the Konikoni City Pokemon Center", img: ({ gameKey }) => baseSprite(gameKey, 765) },
+		collectables: overrideTasks(TASKS_BY_SECTION.collectables, {
+			3: {
+				11: { text: "Moon Flute", img: () => keyItem("moon-flute") },
+			}
 		}),
 	};
 

@@ -347,27 +347,35 @@ import {
 
 	const TASKS_BY_SECTION_GAME1 = {
 		...TASKS_BY_SECTION,
-		catching: overrideTaskChildTexts(TASKS_BY_SECTION.catching, 1, {
-			1: "Trade Kyogre",
-			2: "Catch Groudon",
-			7: "Catch Latias",
-			8: "Trade Latios",
+		catching: overrideTaskChildTexts(TASKS_BY_SECTION.catching, {
+			1: {
+				1: "Trade Kyogre",
+				2: "Catch Groudon",
+				7: "Catch Latias",
+				8: "Trade Latios",
+			}
 		}),
-		collectables: overrideTaskChildTexts(TASKS_BY_SECTION.collectables, 1, {
-			13: "Red Orb",
+		collectables: overrideTaskChildTexts(TASKS_BY_SECTION.collectables, {
+			1: {
+				13: "Red Orb",
+			}
 		}),
 	};
 
 	const TASKS_BY_SECTION_GAME2 = {
 		...TASKS_BY_SECTION,
-		catching: overrideTaskChildTexts(TASKS_BY_SECTION.catching, 1, {
-			1: "Catch Kyogre",
-			2: "Trade Groudon",
-			7: "Trade Latias",
-			8: "Catch Latios",
+		catching: overrideTaskChildTexts(TASKS_BY_SECTION.catching, {
+			1: {
+				1: "Catch Kyogre",
+				2: "Trade Groudon",
+				7: "Trade Latias",
+				8: "Catch Latios",
+			}
 		}),
-		collectables: overrideTaskChildTexts(TASKS_BY_SECTION.collectables, 1, {
-			13: "Blue Orb",
+		collectables: overrideTaskChildTexts(TASKS_BY_SECTION.collectables, {
+			1: {
+				13: "Blue Orb",
+			}
 		}),
 	};
 

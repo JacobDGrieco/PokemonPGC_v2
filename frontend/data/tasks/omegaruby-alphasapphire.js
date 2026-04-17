@@ -1,8 +1,11 @@
 import {
 	_decoration,
+	_formItem,
+	_heldItem,
 	_hm,
 	_keyItem,
 	_megaStone,
+	_ribbon,
 	_tm,
 	_location,
 	_npc,
@@ -11,6 +14,7 @@ import {
 	_frontSprite,
 	defineTasksMany,
 	overrideTasks,
+	range,
 } from '../helpers/index.js';
 
 (() => {
@@ -22,15 +26,18 @@ import {
 	const npc = (gameKey, name) => _npc(gameKey, name);
 	const location = (gameKey, name) => _location(gameKey, name);
 	const decoration = (name) => _decoration(gen, name);
+	const formItem = (name) => _formItem(gen, name);
+	const heldItem = (name) => _heldItem(gen, name);
 	const keyItem = (name) => _keyItem(gen, name);
 	const megaStone = (name) => _megaStone(gen, name);
+	const ribbon = (name) => _ribbon(gen, name);
 	const hm = (type) => _hm(gen, type);
 	const tm = (type) => _tm(gen, type);
 
 	const SECTIONS = [
 		{ id: "catching", title: "Gotta Catch 'Em All" },
 		{ id: "story", title: "Main Story" },
-		{ id: "activites", title: "Activities" },
+		{ id: "activities", title: "Activities" },
 		{ id: "battle", title: "Battle" },
 		{ id: "upgrades", title: "Upgrades" },
 		{ id: "collectables", title: "Collectables" },
@@ -166,11 +173,11 @@ import {
 		],
 		"activities": [
 			{ id: 1, text: "Reach Master Rank in all Pokemon Contests" },
-			{ id: 1, text: "Reach Platinum Rank in the Secret Base Capture-the-Flag", tiers: ["Bronze", "Silver", "Gold", "Platinum"] },
-			{ id: 1, text: "Check out the issue in New Mauville", tooltip: "Talk with Wattson in Mauville Hills" },
-			{ id: 3, text: "Complete all chambers of the Trick House", type: "tiered", tiers: [range(1, 6)], },
+			{ id: 2, text: "Reach Platinum Rank in the Secret Base Capture-the-Flag", tiers: ["Bronze", "Silver", "Gold", "Platinum"] },
+			{ id: 3, text: "Check out the issue in New Mauville", tooltip: "Talk with Wattson in Mauville Hills" },
+			{ id: 4, text: "Complete all chambers of the Trick House", type: "tiered", tiers: [range(1, 6)], },
 			{
-				id: 1, text: "Reach Master Rank in all Contests", children: [
+				id: 5, text: "Reach Master Rank in all Contests", children: [
 					{ id: 1, text: "Beauty Contests", img: () => ribbon("beauty-master"), tiers: ["Normal", "Super", "Hyper", "Master"], },
 					{ id: 2, text: "Tough Contests", img: () => ribbon("tough-master"), tiers: ["Normal", "Super", "Hyper", "Master"], },
 					{ id: 3, text: "Cute Contests", img: () => ribbon("cute-master"), tiers: ["Normal", "Super", "Hyper", "Master"], },
@@ -179,7 +186,7 @@ import {
 				],
 			},
 			{
-				id: 2, text: "Show off your Bicycles", children: [
+				id: 6, text: "Show off your Bicycles", children: [
 					{ id: 1, text: "Mach Bike", tooltip: "Hex Maniac in the desert of Route 111" },
 					{ id: 2, text: "Acro Bike", tooltip: "Bird Keeper on Route 119" },
 					{ id: 3, text: "Either Bike", tooltip: "Triathelete in the Battle Resort" },
@@ -189,9 +196,9 @@ import {
 		"battle": [
 			{ id: 1, text: "Get to Master Rank at the Battle Institute", tiers: ["Novice", "Normal", "Super", "Hyper", "Elite", "Master"] },
 			{ id: 2, text: "Battle the \"Mega\" Elite 4", tooltip: "This is just an Elite 4 rematch" },
-			{ id: 2, text: "Defeat the Winstrate Household", tooltip: "Route 111" },
+			{ id: 3, text: "Defeat the Winstrate Household", tooltip: "Route 111" },
 			{
-				id: 2, text: "Defeat the Interviewers Gabby & Ty", children: [
+				id: 4, text: "Defeat the Interviewers Gabby & Ty", children: [
 					{ id: 1, text: "Route 111" },
 					{ id: 2, text: "Route 118" },
 					{ id: 3, text: "Route 120" },
@@ -210,7 +217,63 @@ import {
 		],
 		"collectables": [
 			{
-				id: 1, text: "Collect all 18 O-Powers", children: [
+				id: 1, text: "Collect all Key Items", children: [
+					{ id: 1, text: "Acro Bike", img: () => keyItem("acro-bike") },
+					{ id: 2, text: "Dowsing Machine", img: () => keyItem("item-finder") },
+					{ id: 3, text: "Exp. Share", img: () => heldItem("exp-share") },
+					{ id: 4, text: "Eon Flute", img: () => keyItem("eon-flute") },
+					{ id: 5, text: "Go-Goggles", img: () => keyItem("go-goggles") },
+					{ id: 6, text: "Good Rod", img: () => keyItem("good-rod") },
+					{ id: 7, text: "Mach Bike", img: () => keyItem("mach-bike") },
+					{ id: 8, text: "Mega Bracelet", img: () => keyItem("mega-bracelet") },
+					{ id: 9, text: "Old Rod", img: () => keyItem("old-rod") },
+					{ id: 10, text: "Oval Charm", img: () => keyItem("oval-charm") },
+					{ id: 11, text: "Pokeblock Kit", img: () => keyItem("pokeblock-kit") },
+					{ id: 12, text: "Shiny Charm", img: () => keyItem("shiny-charm") },
+					{ id: 13, text: "Soot Sack", img: () => keyItem("soot-sack") },
+					{ id: 14, text: "S.S. Ticket", img: () => keyItem("ss-ticket") },
+					{ id: 15, text: "Super Rod", img: () => keyItem("super-rod") },
+					{ id: 16, text: "Vs. Recorder", img: () => keyItem("vs-recorder") },
+					{ id: 17, text: "Wailmer Pail", img: () => keyItem("wailmer-pail") },
+				]
+			},
+			{
+				id: 2, text: "Collect all Legendary Items", children: [
+					{ id: 1, text: "Soul Dew", img: () => keyItem("soul-dew") },
+					{ id: 2, text: "Adamant Orb", img: () => keyItem("adamant-orb") },
+					{ id: 3, text: "Lustrous Orb", img: () => keyItem("lustrous-orb") },
+					{ id: 4, text: "Griseous Orb", img: () => formItem("griseous-orb") },
+					{ id: 5, text: "Clear Bell", img: () => keyItem("clear-bell") },
+					{ id: 6, text: "Tidal Bell", img: () => keyItem("tidal-bell") },
+					{ id: 7, text: "Gracidea", img: () => formItem("gracidea") },
+					{ id: 8, text: "Reveal Glass", img: () => formItem("reveal-glass") },
+					{ id: 9, text: "DNA Splicers", img: () => formItem("dna-splicers") },
+					{ id: 10, text: "Prison Bottle", img: () => keyItem("prison-bottle") },
+				]
+			},
+			{
+				id: 3, text: "Collect all 17 Arceus Plates", children: [
+					{ id: 1, text: "Draco Plate", img: () => formItem("draco-plate") },
+					{ id: 2, text: "Dread Plate", img: () => formItem("dread-plate") },
+					{ id: 3, text: "Earth Plate", img: () => formItem("earth-plate") },
+					{ id: 4, text: "Fist Plate", img: () => formItem("fist-plate") },
+					{ id: 5, text: "Flame Plate", img: () => formItem("flame-plate") },
+					{ id: 6, text: "Icicle Plate", img: () => formItem("icicle-plate") },
+					{ id: 7, text: "Insect Plate", img: () => formItem("insect-plate") },
+					{ id: 8, text: "Iron Plate", img: () => formItem("iron-plate") },
+					{ id: 9, text: "Meadow Plate", img: () => formItem("meadow-plate") },
+					{ id: 10, text: "Mind Plate", img: () => formItem("mind-plate") },
+					{ id: 11, text: "Pixie Plate", img: () => formItem("pixie-plate") },
+					{ id: 12, text: "Sky Plate", img: () => formItem("sky-plate") },
+					{ id: 13, text: "Splash Plate", img: () => formItem("splash-plate") },
+					{ id: 14, text: "Spooky Plate", img: () => formItem("spooky-plate") },
+					{ id: 15, text: "Stone Plate", img: () => formItem("stone-plate") },
+					{ id: 16, text: "Toxic Plate", img: () => formItem("toxic-plate") },
+					{ id: 17, text: "Zap Plate", img: () => formItem("zap-plate") },
+				]
+			},
+			{
+				id: 4, text: "Collect all 18 O-Powers", children: [
 					{ id: 1, text: "Attack Power" },
 					{ id: 2, text: "Defense Power" },
 					{ id: 3, text: "Sp. Attack Power" },
@@ -232,7 +295,7 @@ import {
 				]
 			},
 			{
-				id: 2, text: "Collect all Secret Base Decorations", children: [
+				id: 5, text: "Collect all Secret Base Decorations", children: [
 					{ id: 1, text: "Small Desk", img: () => decoration("small-desk"), tooltip: "Fortree City - Secret Base Shop" },
 					{ id: 2, text: "Poké Ball Desk", img: () => decoration("poke-ball-desk"), tooltip: "Fortree City - Secret Base Shop" },
 					{ id: 3, text: "Heavy Desk", img: () => decoration("heavy-desk"), tooltip: "Fortree City - Secret Base Shop" },
@@ -565,43 +628,55 @@ import {
 
 	const TASKS_BY_SECTION_GAME1 = {
 		...TASKS_BY_SECTION,
-		catching: overrideTasks(TASKS_BY_SECTION.catching, 1, {
-			1: { text: "Trade Kyogre" },
-			2: { text: "Catch Groudon" },
+		catching: overrideTasks(TASKS_BY_SECTION.catching, {
+			1: {
+				1: { text: "Trade Kyogre" },
+				2: { text: "Catch Groudon" },
+			}
 		}),
-		catching: overrideTasks(TASKS_BY_SECTION.catching, 2, {
-			4: { text: "Catch Ho-Oh" },
-			5: { text: "Trade Lugia" },
-			9: { text: "Trade Dialga" },
-			10: { text: "Catch Palkia" },
-			18: { text: "Catch Tornadus" },
-			19: { text: "Trade Thundurus" },
-			21: { text: "Catch Reshiram" },
-			22: { text: "Trade Zekrom" },
+		catching: overrideTasks(TASKS_BY_SECTION.catching, {
+			2: {
+				4: { text: "Catch Ho-Oh" },
+				5: { text: "Trade Lugia" },
+				9: { text: "Trade Dialga" },
+				10: { text: "Catch Palkia" },
+				18: { text: "Catch Tornadus" },
+				19: { text: "Trade Thundurus" },
+				21: { text: "Catch Reshiram" },
+				22: { text: "Trade Zekrom" },
+			}
 		}),
-		story: overrideTasks(TASKS_BY_SECTION.catching, 2, {
-			9: { text: "Defeat Team Magma", tooltip: "Team Magma Hideout" },
+		story: overrideTasks(TASKS_BY_SECTION.story, {
+			2: {
+				9: { text: "Defeat Team Magma", tooltip: "Team Magma Hideout" },
+			}
 		}),
 	};
 
 	const TASKS_BY_SECTION_GAME2 = {
 		...TASKS_BY_SECTION,
-		catching: overrideTasks(TASKS_BY_SECTION.catching, 1, {
-			1: { text: "Catch Kyogre" },
-			2: { text: "Trade Groudon" },
+		catching: overrideTasks(TASKS_BY_SECTION.catching, {
+			1: {
+				1: { text: "Catch Kyogre" },
+				2: { text: "Trade Groudon" },
+			}
 		}),
-		catching: overrideTasks(TASKS_BY_SECTION.catching, 2, {
-			4: { text: "Trade Ho-Oh" },
-			5: { text: "Catch Lugia" },
-			9: { text: "Catch Dialga" },
-			10: { text: "Trade Palkia" },
-			18: { text: "Trade Tornadus" },
-			19: { text: "Catch Thundurus" },
-			21: { text: "Trade Reshiram" },
-			22: { text: "Catch Zekrom" },
+		catching: overrideTasks(TASKS_BY_SECTION.catching, {
+			2: {
+				4: { text: "Trade Ho-Oh" },
+				5: { text: "Catch Lugia" },
+				9: { text: "Catch Dialga" },
+				10: { text: "Trade Palkia" },
+				18: { text: "Trade Tornadus" },
+				19: { text: "Catch Thundurus" },
+				21: { text: "Trade Reshiram" },
+				22: { text: "Catch Zekrom" },
+			}
 		}),
-		story: overrideTasks(TASKS_BY_SECTION.catching, 2, {
-			9: { text: "Defeat Team Aqua", tooltip: "Team Aqua Hideout" },
+		story: overrideTasks(TASKS_BY_SECTION.story, {
+			2: {
+				9: { text: "Defeat Team Aqua", tooltip: "Team Aqua Hideout" },
+			}
 		}),
 	};
 

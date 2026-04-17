@@ -215,16 +215,8 @@ import {
 		]
 	};
 
-	const TASKS_BY_SECTION_GAME1 = {
-		...TASKS_BY_SECTION,
-	};
-
-	const TASKS_BY_SECTION_GAME2 = {
-		...TASKS_BY_SECTION,
-	};
-
-	defineTasksMany(GAME_KEYS[0], SECTIONS, TASKS_BY_SECTION_GAME1);
-	defineTasksMany(GAME_KEYS[1], SECTIONS, TASKS_BY_SECTION_GAME2);
+	defineTasksMany(GAME_KEYS[0], SECTIONS, TASKS_BY_SECTION);
+	defineTasksMany(GAME_KEYS[1], SECTIONS, TASKS_BY_SECTION);
 	try {
 		window.PPGC = window.PPGC || {};
 		window.PPGC._seedTaskRegistry = null;

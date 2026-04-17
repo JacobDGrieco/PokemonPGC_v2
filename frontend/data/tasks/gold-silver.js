@@ -249,17 +249,21 @@ import {
 
 	const TASKS_BY_SECTION_GAME1 = {
 		...TASKS_BY_SECTION,
-		catching: overrideTaskChildTexts(TASKS_BY_SECTION.catching, 1, {
-			4: "Trade Lugia",
-			5: "Catch Ho-Oh",
+		catching: overrideTaskChildTexts(TASKS_BY_SECTION.catching, {
+			1: {
+				4: "Trade Lugia",
+				5: "Catch Ho-Oh",
+			}
 		}),
 	};
 
 	const TASKS_BY_SECTION_GAME2 = {
 		...TASKS_BY_SECTION,
-		catching: overrideTaskChildTexts(TASKS_BY_SECTION.catching, 1, {
-			4: "Catch Lugia",
-			5: "Trade Ho-Oh",
+		catching: overrideTaskChildTexts(TASKS_BY_SECTION.catching, {
+			1: {
+				4: "Catch Lugia",
+				5: "Trade Ho-Oh",
+			}
 		}),
 	};
 

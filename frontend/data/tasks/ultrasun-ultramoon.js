@@ -1,15 +1,17 @@
 import {
+	_formItem,
+	_heldItem,
 	_hm,
 	_keyItem,
 	_megaStone,
+	_task,
 	_tm,
 	_zCrystal,
-	_location,
-	_npc,
-	_task,
 	_typing,
 	_frontSprite,
+	range,
 	defineTasksMany,
+	overrideTasks,
 } from '../helpers/index.js';
 
 (() => {
@@ -17,11 +19,11 @@ import {
 	const GAME_KEYS = ["ultrasun", "ultramoon"];
 
 	const baseSprite = (gameKey, natiId) => _frontSprite(gen, gameKey, natiId);
-	const task = (gameKey, name) => _task(gameKey, name);
-	const npc = (gameKey, name) => _npc(gameKey, name);
-	const location = (gameKey, name) => _location(gameKey, name);
+	const formItem = (name) => _formItem(gen, name);
+	const heldItem = (name) => _heldItem(gen, name);
 	const keyItem = (name) => _keyItem(gen, name);
 	const megaStone = (name) => _megaStone(gen, name);
+	const task = (gameKey, name) => _task(gameKey, name);
 	const zCrystal = (name) => _zCrystal(name);
 	const typing = (type) => _typing(type);
 	const hm = (type) => _hm(gen, type);
@@ -31,14 +33,14 @@ import {
 		{ id: "catching", title: "Gotta Catch 'Em All" },
 		{ id: "story", title: "Main Story" },
 		{ id: "side-quests", title: "Side Quests" },
-		{ id: "activites", title: "Activities" },
+		{ id: "activities", title: "Activities" },
 		{ id: "battle", title: "Battle" },
 		{ id: "upgrades", title: "Upgrades" },
 		{ id: "collectables", title: "Collectables" },
 		{ id: "mega-stones", title: "Mega Stones" },
 		{ id: "zcrystals", title: "Z-Crystals" },
 		{ id: "fashion", title: "Fashion" },
-		{ id: "thms", title: "TMs/RPs" },
+		{ id: "thms", title: "TMs/Ride Pager" },
 		{ id: "distributions", title: "Distributions" },
 		{ id: "extra-credit", title: "Extra Credit" },
 	];
@@ -49,7 +51,386 @@ import {
 				id: 1, text: "Catch all the Legendaries", children: [
 					{ id: 1, text: "Catch/Trade Solgaleo", img: ({ gameKey }) => baseSprite(gameKey, 791) },
 					{ id: 2, text: "Catch/Trade Lunala", img: ({ gameKey }) => baseSprite(gameKey, 792) },
-					{ id: 3, text: "Catch Necrozma", img: ({ gameKey }) => baseSprite(gameKey, 800) },
+					{ id: 3, text: "Catch Necrozma", img: ({ gameKey }) => baseSprite(gameKey, 800), tooltip: "Mount Lanakila after the main story" },
+					{ id: 4, text: "Catch Tapu Koko", img: ({ gameKey }) => baseSprite(gameKey, 785) },
+					{ id: 5, text: "Catch Tapu Lele", img: ({ gameKey }) => baseSprite(gameKey, 786) },
+					{ id: 6, text: "Catch Tapu Bulu", img: ({ gameKey }) => baseSprite(gameKey, 787) },
+					{ id: 7, text: "Catch Tapu Fini", img: ({ gameKey }) => baseSprite(gameKey, 788) },
+					{ id: 8, text: "Obtain Cosmog", img: ({ gameKey }) => baseSprite(gameKey, 789), tooltip: "Lake of the Sunne / Lake of the Moone" },
+					{ id: 9, text: "Obtain Type: Null", img: ({ gameKey }) => baseSprite(gameKey, 772), tooltip: "Gift from Wicke after becoming Champion" },
+					{ id: 10, text: "Assemble Zygarde 100%", img: ({ gameKey }) => baseSprite(gameKey, 718), tooltip: "Combine both Zygarde plus the collected Cells/Cores" },
+				],
+			},
+			{
+				id: 2, text: "Catch all the Ultra Beasts", children: [
+					{ id: 1, text: "Catch UB-01 Nihilego", img: ({ gameKey }) => baseSprite(gameKey, 793) },
+					{ id: 2, text: "Catch/Trade UB-02 Buzzwole", img: ({ gameKey }) => baseSprite(gameKey, 794) },
+					{ id: 3, text: "Catch/Trade UB-02 Pheromosa", img: ({ gameKey }) => baseSprite(gameKey, 795) },
+					{ id: 4, text: "Catch UB-03 Xurkitree", img: ({ gameKey }) => baseSprite(gameKey, 796) },
+					{ id: 5, text: "Catch/Trade UB-04 Kartana", img: ({ gameKey }) => baseSprite(gameKey, 798) },
+					{ id: 6, text: "Catch/Trade UB-04 Celesteela", img: ({ gameKey }) => baseSprite(gameKey, 797) },
+					{ id: 7, text: "Catch UB-05 Guzzlord", img: ({ gameKey }) => baseSprite(gameKey, 799) },
+					{ id: 8, text: "Catch/Trade UB Blacephalon", img: ({ gameKey }) => baseSprite(gameKey, 806) },
+					{ id: 9, text: "Catch/Trade UB Stakataka", img: ({ gameKey }) => baseSprite(gameKey, 805) },
+					{ id: 10, text: "Obtain UB Poipole", img: ({ gameKey }) => baseSprite(gameKey, 803), tooltip: "Ultra Megalopolis after defeating Ultra Necrozma" },
+				],
+			},
+			{
+				id: 3, text: "Catch all the Ultra Wormhole legendaries", children: [
+					{ id: 1, text: "Catch Articuno", img: ({ gameKey }) => baseSprite(gameKey, 144) },
+					{ id: 2, text: "Catch Zapdos", img: ({ gameKey }) => baseSprite(gameKey, 145) },
+					{ id: 3, text: "Catch Moltres", img: ({ gameKey }) => baseSprite(gameKey, 146) },
+					{ id: 4, text: "Catch Mewtwo", img: ({ gameKey }) => baseSprite(gameKey, 150) },
+					{ id: 5, text: "Catch/Trade Raikou", img: ({ gameKey }) => baseSprite(gameKey, 243) },
+					{ id: 6, text: "Catch/Trade Entei", img: ({ gameKey }) => baseSprite(gameKey, 244) },
+					{ id: 7, text: "Catch Suicune", img: ({ gameKey }) => baseSprite(gameKey, 245), tooltip: "Requires Raikou and Entei" },
+					{ id: 8, text: "Catch/Trade Ho-Oh", img: ({ gameKey }) => baseSprite(gameKey, 249) },
+					{ id: 9, text: "Catch/Trade Lugia", img: ({ gameKey }) => baseSprite(gameKey, 250) },
+					{ id: 10, text: "Catch/Trade Latias", img: ({ gameKey }) => baseSprite(gameKey, 380) },
+					{ id: 11, text: "Catch/Trade Latios", img: ({ gameKey }) => baseSprite(gameKey, 381) },
+					{ id: 12, text: "Catch/Trade Kyogre", img: ({ gameKey }) => baseSprite(gameKey, 382) },
+					{ id: 13, text: "Catch/Trade Groudon", img: ({ gameKey }) => baseSprite(gameKey, 383) },
+					{ id: 14, text: "Catch Rayquaza", img: ({ gameKey }) => baseSprite(gameKey, 384), tooltip: "Requires Kyogre and Groudon" },
+					{ id: 15, text: "Catch Uxie", img: ({ gameKey }) => baseSprite(gameKey, 480) },
+					{ id: 16, text: "Catch Mesprit", img: ({ gameKey }) => baseSprite(gameKey, 481) },
+					{ id: 17, text: "Catch Azelf", img: ({ gameKey }) => baseSprite(gameKey, 482) },
+					{ id: 18, text: "Catch/Trade Dialga", img: ({ gameKey }) => baseSprite(gameKey, 483) },
+					{ id: 19, text: "Catch/Trade Palkia", img: ({ gameKey }) => baseSprite(gameKey, 484) },
+					{ id: 20, text: "Catch Giratina", img: ({ gameKey }) => baseSprite(gameKey, 487), tooltip: "Requires Dialga and Palkia" },
+					{ id: 21, text: "Catch/Trade Heatran", img: ({ gameKey }) => baseSprite(gameKey, 485) },
+					{ id: 22, text: "Catch/Trade Regigigas", img: ({ gameKey }) => baseSprite(gameKey, 486) },
+					{ id: 23, text: "Catch Cresselia", img: ({ gameKey }) => baseSprite(gameKey, 488) },
+					{ id: 24, text: "Catch Cobalion", img: ({ gameKey }) => baseSprite(gameKey, 638) },
+					{ id: 25, text: "Catch Terrakion", img: ({ gameKey }) => baseSprite(gameKey, 639) },
+					{ id: 26, text: "Catch Virizion", img: ({ gameKey }) => baseSprite(gameKey, 640) },
+					{ id: 27, text: "Catch/Trade Tornadus", img: ({ gameKey }) => baseSprite(gameKey, 641) },
+					{ id: 28, text: "Catch/Trade Thundurus", img: ({ gameKey }) => baseSprite(gameKey, 642) },
+					{ id: 29, text: "Catch Landorus", img: ({ gameKey }) => baseSprite(gameKey, 645), tooltip: "Requires Tornadus and Thundurus" },
+					{ id: 30, text: "Catch/Trade Reshiram", img: ({ gameKey }) => baseSprite(gameKey, 643) },
+					{ id: 31, text: "Catch/Trade Zekrom", img: ({ gameKey }) => baseSprite(gameKey, 644) },
+					{ id: 32, text: "Catch Kyurem", img: ({ gameKey }) => baseSprite(gameKey, 646), tooltip: "Requires Reshiram and Zekrom" },
+					{ id: 33, text: "Catch/Trade Xerneas", img: ({ gameKey }) => baseSprite(gameKey, 716) },
+					{ id: 34, text: "Catch/Trade Yveltal", img: ({ gameKey }) => baseSprite(gameKey, 717) },
+				],
+			},
+			{
+				id: 4, text: "Obtain all In-Game Gift Pokemon", children: [
+					{ id: 1, text: "Eevee Egg", img: ({ gameKey }) => baseSprite(gameKey, 133), tooltip: "Paniola Ranch - Pokemon Nursery" },
+					{ id: 2, text: "Aerodactyl", img: ({ gameKey }) => baseSprite(gameKey, 142), tooltip: "Seafolk Village - Huntail boat" },
+					{ id: 3, text: "Surfing Pikachu", img: ({ gameKey }) => baseSprite(gameKey, 25), tooltip: "Beat all four Mantine Surf high scores" },
+					{ id: 4, text: "Poipole", img: ({ gameKey }) => baseSprite(gameKey, 803), tooltip: "Ultra Megalopolis" },
+					{ id: 5, text: "Type: Null", img: ({ gameKey }) => baseSprite(gameKey, 772), tooltip: "Ancient Poni Path / Aether Paradise after the League" },
+					{ id: 6, text: "Porygon", img: ({ gameKey }) => baseSprite(gameKey, 137), tooltip: "Aether House after Episode RR" },
+					{ id: 7, text: "Zygarde", img: ({ gameKey }) => baseSprite(gameKey, 718), tooltip: "Defeat Dexio at Route 16 Aether trailer" },
+				],
+			},
+			{
+				id: 5, text: "Obtain all Totem-sized Pokemon", tooltip: "Talk to Samson Oak at Heahea Beach", children: [
+					{ id: 1, text: "Gumshoos/Alolan Raticate", img: ({ gameKey }) => baseSprite(gameKey, 735, 20), tooltip: "20 Stickers" },
+					{ id: 2, text: "Alolan Marowak/Arquanid", img: ({ gameKey }) => baseSprite(gameKey, 105, 752), tooltip: "40 Stickers" },
+					{ id: 3, text: "Lurantis/Salazzle", img: ({ gameKey }) => baseSprite(gameKey, 754, 758), tooltip: "50 Stickers" },
+					{ id: 4, text: "Vikavolt/Togedemaru", img: ({ gameKey }) => baseSprite(gameKey, 738, 777), tooltip: "70 Stickers" },
+					{ id: 5, text: "Mimikyu", img: ({ gameKey }) => baseSprite(gameKey, 778), tooltip: "80 Stickers" },
+					{ id: 6, text: "Ribombee/Kommo-o", img: ({ gameKey }) => baseSprite(gameKey, 743, 784), tooltip: "100 Stickers" },
+				],
+			},
+			{
+				id: 6, text: "Complete all In-Game Pokemon Trades", children: [
+					{ id: 1, text: "Spearow for Hawlucha", img: ({ gameKey }) => task(gameKey, "spearow-for-hawlucha"), tooltip: "Route 2 Pokemon Center" },
+					{ id: 2, text: "Lillipup for Noibat", img: ({ gameKey }) => task(gameKey, "lillipup-for-noibat"), tooltip: "Route 5 Pokemon Center" },
+					{ id: 3, text: "Tentacool for Barboach", img: ({ gameKey }) => task(gameKey, "tentacool-for-barboach"), tooltip: "Royal Avenue" },
+					{ id: 4, text: "Trumbeak for Arbok", img: ({ gameKey }) => task(gameKey, "trumbeak-for-arbok"), tooltip: "Route 8 Pokemon Center" },
+					{ id: 5, text: "Phantump for Phantump", img: ({ gameKey }) => task(gameKey, "phantump-for-phantump"), tooltip: "Tapu Village Pokemon Center\nEvolves into Trevenant immediately" },
+					{ id: 6, text: "Granbull for Shellos", img: ({ gameKey }) => task(gameKey, "granbull-for-shellos"), tooltip: "Seafolk Village" },
+					{ id: 7, text: "Bewear for Tauros", img: ({ gameKey }) => task(gameKey, "bewear-for-tauros"), tooltip: "Poni Gauntlet" },
+				],
+			},
+		],
+		"story": [
+			{
+				id: 1, text: "Complete the Island Challenge", children: [
+					{ id: 1, text: "Ilima's Trial", tooltip: "Verdant Cavern" },
+					{ id: 2, text: "Hala's Grand Trial" },
+					{ id: 3, text: "Lana's Trial", tooltip: "Brooklet Hill" },
+					{ id: 4, text: "Kiawe's Trial", tooltip: "Wela Volcano Park" },
+					{ id: 5, text: "Mallow's Trial", tooltip: "Lush Jungle" },
+					{ id: 6, text: "Olivia's Grand Trial" },
+					{ id: 7, text: "Sophocles's Trial", tooltip: "Hokulani Observatory" },
+					{ id: 8, text: "Acerola's Trial", tooltip: "Thrifty Megamart Abandoned Site" },
+					{ id: 9, text: "Nanu's Grand Trial" },
+					{ id: 10, text: "Poni Trial", tooltip: "Vast Poni Canyon" },
+					{ id: 11, text: "Hapu's Grand Trial" },
+					{ id: 12, text: "Elite Four/Champion" },
+				],
+			},
+			{
+				id: 2, text: "Complete Episode Rainbow Rocket", children: [
+					{ id: 1, text: "Reclaim Festival Plaza" },
+					{ id: 2, text: "Defeat Faba" },
+					{ id: 3, text: "Defeat Archie" },
+					{ id: 4, text: "Defeat Maxie" },
+					{ id: 5, text: "Defeat Cyrus" },
+					{ id: 6, text: "Defeat Lysandre" },
+					{ id: 7, text: "Defeat Ghetsis" },
+					{ id: 8, text: "Defeat Giovanni" },
+				],
+			},
+		],
+		"side-quests": [
+			{ id: 1, text: "Fix the vending machine with Rotom", tooltip: "Hau'oli City Marina" },
+			{ id: 2, text: "Find the lost Meowth", tooltip: "Route 2\nReward: X Speed, X Sp. Atk, X Attack" },
+			{
+				id: 3, text: "Solve the Trainer School's seven mysteries", children: [
+					{ id: 1, text: "Scary PA System" },
+					{ id: 2, text: "Stairs to Nowhere" },
+					{ id: 3, text: "Lord Slimy" },
+					{ id: 4, text: "Scary Lights" },
+					{ id: 5, text: "Cursed Diary" },
+					{ id: 6, text: "Ghost Class" },
+					{ id: 7, text: "Uncover the final mystery", tooltip: "Reward: Wide Glasses" },
+				],
+			},
+			{
+				id: 4, text: "Deliver all beach bottle letters", children: [
+					{ id: 1, text: "Kala'e Bay bottle", tooltip: "Deliver to the woman in Iki Town\nReward: Stardust" },
+					{ id: 2, text: "Heahea Beach bottle", tooltip: "Deliver to the dancer in Tide Song Hotel\nReward: Heart Scale" },
+					{ id: 3, text: "Ula'ula Beach bottle", tooltip: "Deliver to the man in Malie Outer Cape\nReward: Pearl String" },
+				],
+			},
+			{ id: 5, text: "Reunite the elderly man's friends", tooltip: "Tide Song Hotel\nReward: Revival Herb" },
+			{ id: 6, text: "Pass the Pikachu Valley quiz", tooltip: "Reward: Pikachu Cap and Pikachu Shirt" },
+			{ id: 7, text: "Help the Alolan Vulpix recover", tooltip: "Starts in Paniola Town and continues at the Route 8 Aether trailer" },
+			{ id: 8, text: "Help Mr. Chu and earn Pikanium Z", tooltip: "Hano Grand Resort" },
+			{ id: 9, text: "Reunite the Pyukumuku couple", tooltip: "Hano Beach\nReward: Big Pearl" },
+			{ id: 10, text: "Help the salonist with Alolan Dugtrio", tooltip: "Konikoni City\nReward: Soft Sand" },
+			{ id: 11, text: "Solve Ilima's Hypno crime case", tooltip: "Hau'oli City Police Station" },
+			{ id: 12, text: "Rescue all 8 lost Stufful", tooltip: "Route 10\nReward: Muscle Band" },
+			{ id: 13, text: "Return the left Poke Ball", tooltip: "Heahea City to Malie City\nReward: Mental Herb" },
+			{ id: 14, text: "Help Sandygast reach better sand", tooltip: "Ultra Sun only\nReward: Stardust" },
+			{ id: 15, text: "Find the lost trainer for the motel Stufful", tooltip: "Route 13 / Haina Desert\nReward: 10 Fresh Water" },
+			{ id: 16, text: "Clean the Aether House", tooltip: "Reward: PP Up" },
+			{ id: 17, text: "Help Mimikyu at the Thrifty Megamart", tooltip: "Reward: Mimikium Z" },
+			{ id: 18, text: "Complete the Charjabug puzzle", tooltip: "Mount Hokulani\nReward: PP Max" },
+			{ id: 19, text: "Complete Ilima's Request", tooltip: "Verdant Cavern\nReward: Trial Guide outfit" },
+			{ id: 20, text: "Win the Meowth battle at home", tooltip: "Postgame\nReward: PP Up" },
+			{ id: 21, text: "Deliver the curious photograph", tooltip: "Malie Garden to Ancient Poni Path\nReward: Heart Scale" },
+		],
+		"activities": [
+			{
+				id: 1, text: "Complete all NPC Pokedex request tasks", children: [
+					{ id: 1, text: "Show Abra at the Hau'oli Pokemon Center", img: ({ gameKey }) => baseSprite(gameKey, 63), tooltip: "Reward: 10,000 Poke Dollars" },
+					{ id: 2, text: "Show Crabrawler at the Route 2 Pokemon Center", img: ({ gameKey }) => baseSprite(gameKey, 739), tooltip: "Reward: 3,000 Poke Dollars" },
+					{ id: 3, text: "Show Sableye on Route 3", img: ({ gameKey }) => baseSprite(gameKey, 302), tooltip: "Reward: 3,000 Poke Dollars" },
+					{ id: 4, text: "Show Salazzle at the Heahea City Apparel Shop", img: ({ gameKey }) => baseSprite(gameKey, 758), tooltip: "Reward: 10,000 Poke Dollars" },
+					{ id: 5, text: "Show Natu / Hoothoot at the Konikoni City Pokemon Center", img: ({ gameKey }) => baseSprite(gameKey, 177, 163), tooltip: "Reward: 5,000 Poke Dollars" },
+					{ id: 6, text: "Show Corsola at the Route 5 Pokemon Center", img: ({ gameKey }) => baseSprite(gameKey, 222), tooltip: "Reward: 3,000 Poke Dollars" },
+					{ id: 7, text: "Show Goomy at the Route 8 Aether Trailer", img: ({ gameKey }) => baseSprite(gameKey, 704), tooltip: "Reward: 5,000 Poke Dollars" },
+					{ id: 8, text: "Show Minior at the Malie City Apparel Shop", img: ({ gameKey }) => baseSprite(gameKey, 774), tooltip: "Reward: 10,000 Poke Dollars" },
+					{ id: 9, text: "Show an Alolan Persian at the Malie City Library", img: ({ gameKey }) => baseSprite(gameKey, 53), tooltip: "Reward: Love Ball" },
+					{ id: 10, text: "Show Garchomp at the Route 16 Pokemon Center", img: ({ gameKey }) => baseSprite(gameKey, 445), tooltip: "Reward: 20,000 Poke Dollars" },
+				],
+			},
+			{
+				id: 2, text: "Beat all Mantine Surf high scores", children: [
+					{ id: 1, text: "Big Wave Beach" },
+					{ id: 2, text: "Heahea Beach" },
+					{ id: 3, text: "Ula'ula Beach" },
+					{ id: 4, text: "Poni Beach" },
+				],
+			},
+			{
+				id: 3, text: "Take photos at all Poke Finder locations", children: [
+					{ id: 1, text: "Hau'oli Cemetery" },
+					{ id: 2, text: "Hau'oli City - Beachfront" },
+					{ id: 3, text: "Hau'oli City - Shopping District" },
+					{ id: 4, text: "Kala'e Bay" },
+					{ id: 5, text: "Melemele Meadow" },
+					{ id: 6, text: "Brooklet Hill" },
+					{ id: 7, text: "Lush Jungle" },
+					{ id: 8, text: "Paniola Ranch" },
+					{ id: 9, text: "Route 8" },
+					{ id: 10, text: "Royal Avenue" },
+					{ id: 11, text: "Wela Volcano Park" },
+					{ id: 12, text: "Blush Mountain" },
+					{ id: 13, text: "Mount Hokulani" },
+					{ id: 14, text: "Mount Lanakila" },
+					{ id: 15, text: "Route 13" },
+					{ id: 16, text: "Thrifty Megamart Abandoned Site" },
+					{ id: 17, text: "Ula'ula Meadow" },
+					{ id: 18, text: "Poni Coast" },
+					{ id: 19, text: "Poni Meadow" },
+					{ id: 20, text: "Vast Poni Canyon" },
+				],
+			},
+		],
+		"battle": [
+			{ id: 1, text: "Defeat Morimoto", tooltip: "Heahea City - GAME FREAK\nRewards the Oval Charm on first win" },
+			{ id: 2, text: "Reach Master Rank in Battle Royal", tiers: ["Normal", "Super", "Hyper", "Master"] },
+			{ id: 3, text: "Reach Grade 50 in the Battle Agency", tooltip: "Festival Plaza\nDefeating Grade 50 bosses awards Gold Bottle Caps" },
+			{
+				id: 4, text: "Complete the Eevee Quest", children: [
+					{ id: 1, text: "Defeat Vaporeon User Polly", img: ({ gameKey }) => baseSprite(gameKey, 134), tooltip: "Route 1 Trainer School" },
+					{ id: 2, text: "Defeat Jolteon User Jane", img: ({ gameKey }) => baseSprite(gameKey, 135), tooltip: "Malie City" },
+					{ id: 3, text: "Defeat Flareon User Chad", img: ({ gameKey }) => baseSprite(gameKey, 136), tooltip: "Tide Song Hotel" },
+					{ id: 4, text: "Defeat Espeon User Ishaan", img: ({ gameKey }) => baseSprite(gameKey, 196), tooltip: "Blush Mountain" },
+					{ id: 5, text: "Defeat Umbreon User Braiden", img: ({ gameKey }) => baseSprite(gameKey, 197), tooltip: "Hau'oli Cemetery" },
+					{ id: 6, text: "Defeat Leafeon User Linnea", img: ({ gameKey }) => baseSprite(gameKey, 470), tooltip: "Hano Beach" },
+					{ id: 7, text: "Defeat Glaceon User Rea", img: ({ gameKey }) => baseSprite(gameKey, 471), tooltip: "Iki Town" },
+					{ id: 8, text: "Defeat Sylveon User Sakura", img: ({ gameKey }) => baseSprite(gameKey, 700), tooltip: "Seafolk Village\nReward: Eevium Z" },
+				],
+			},
+			{
+				id: 5, text: "Defeat the Battle Tree legends", children: [
+					{ id: 1, text: "Red", tooltip: "Battle Tree - Singles" },
+					{ id: 2, text: "Blue", tooltip: "Battle Tree - Doubles" },
+				],
+			},
+		],
+		"upgrades": [
+			{ id: 1, text: "Obtain the Judge function", tooltip: "Battle Tree\nRequires entering the Hall of Fame and hatching 21 Eggs" },
+			{ id: 2, text: "Upgrade the Poke Finder", tiers: ["Ver. 1", "Ver. 2", "Ver. 3", "Ver. 4", "Ver. 5"] },
+			{ id: 3, text: "Upgrade Festival Plaza to Rank 100", tiers: [range(1, 100)] },
+			{
+				id: 4, text: "Upgrade all Poke Pelago islands", children: [
+					{ id: 1, text: "Isle Abeens", tiers: ["Rank 1", "Rank 2", "Rank 3"] },
+					{ id: 2, text: "Isle Aplenny", tiers: ["Rank 1", "Rank 2", "Rank 3"] },
+					{ id: 3, text: "Isle Aphun", tiers: ["Rank 1", "Rank 2", "Rank 3"] },
+					{ id: 4, text: "Isle Evelup", tiers: ["Rank 1", "Rank 2", "Rank 3"] },
+					{ id: 5, text: "Isle Avue", tiers: ["Rank 1", "Rank 2", "Rank 3"] },
+				],
+			},
+			{
+				id: 5, text: "Earn every Trainer Passport stamp", children: [
+					{ id: 1, text: "Official Pokemon Trainer" },
+					{ id: 2, text: "Melemele Trial Completion" },
+					{ id: 3, text: "Akala Trial Completion" },
+					{ id: 4, text: "Ula'ula Trial Completion" },
+					{ id: 5, text: "Poni Trial Completion" },
+					{ id: 6, text: "Island Challenge Completion" },
+					{ id: 7, text: "Melemele Pokedex Completion" },
+					{ id: 8, text: "Akala Pokedex Completion" },
+					{ id: 9, text: "Ula'ula Pokedex Completion" },
+					{ id: 10, text: "Poni Pokedex Completion" },
+					{ id: 11, text: "Alola Pokedex Completion" },
+					{ id: 12, text: "50 Consecutive Single Battle Wins" },
+					{ id: 13, text: "50 Consecutive Double Battle Wins" },
+					{ id: 14, text: "Poke Finder Pro" },
+					{ id: 15, text: "50 Consecutive Multi Battle Wins" },
+				],
+			},
+			{
+				id: 6, text: "Unlock all Battle Styles", children: [
+					{ id: 1, text: "Normal Style", tooltip: "Initial" },
+					{ id: 2, text: "Elegant Style", tooltip: "Available in Malie City Outer Cape" },
+					{ id: 3, text: "Girlish Style", tooltip: "Defeat Lana in Konikoni City" },
+					{ id: 4, text: "Reverent Style", tooltip: "Version-specific rematch reward" },
+					{ id: 5, text: "Smug Style", tooltip: "Defeat Gladion before the Elite Four" },
+					{ id: 6, text: "Left-Handed Style", tooltip: "Defeat Ilima in Hau'oli City" },
+					{ id: 7, text: "Passionate Style", tooltip: "Get a Battle Tree streak of 50 or higher" },
+					{ id: 8, text: "Idol Style", tooltip: "Reach Master Rank in Battle Royal" },
+					{ id: 9, text: "Nihilist Style", tooltip: "Defeat Giovanni in Episode RR" },
+				],
+			},
+			{
+				id: 7, text: "Unlock all Mantine Surf Tricks", children: [
+					{ id: 1, text: "Lanturn 360" },
+					{ id: 2, text: "Starmie 720" },
+					{ id: 3, text: "Primarina Twist" },
+					{ id: 4, text: "Over-the-Gyarados" },
+				],
+			},
+		],
+		"collectables": [
+			{ id: 1, text: "Collect all 100 Totem Stickers", img: () => task("totem-sticker"), tiers: [range(1, 100)] },
+			{
+				id: 2, text: "Collect all Key Items", children: [
+					{ id: 1, text: "Adventure Rules", img: () => keyItem("adventure-rules") },
+					{ id: 2, text: "Exp. Share", img: () => heldItem("exp-share") },
+					{ id: 3, text: "Fishing Rod", img: () => keyItem("fishing-rod") },
+					{ id: 4, text: "Key Stone", img: () => keyItem("key-stone") },
+					{ id: 5, text: "Lens Case / Make-up Bag", img: () => [keyItem("lens-case"), keyItem("make-up-bag")], tooltip: "Differs by gender" },
+					{ id: 6, text: "Oval Charm", img: () => keyItem("oval-charm") },
+					{ id: 7, text: "Professor's Mask", img: () => keyItem("professors-mask") },
+					{ id: 8, text: "Ride Pager", img: () => keyItem("ride-pager") },
+					{ id: 9, text: "Shiny Charm", img: () => keyItem("shiny-charm") },
+					{ id: 10, text: "Sparkling Stone", img: () => keyItem("sparkling-stone") },
+					{ id: 11, text: "Sun Flute / Moon Flute", img: () => [keyItem("sun-flute"), keyItem("moon-flute")] },
+					{ id: 12, text: "Surge Badge", img: () => keyItem("surge-badge") },
+					{ id: 13, text: "Z-Power Ring", img: () => keyItem("z-power-ring") },
+				]
+			},
+			{
+				id: 3, text: "Collect all Legendary Items", children: [
+					{ id: 1, text: "Soul Dew", img: () => keyItem("soul-dew") },
+					{ id: 2, text: "Adamant Orb", img: () => keyItem("adamant-orb") },
+					{ id: 3, text: "Lustrous Orb", img: () => keyItem("lustrous-orb") },
+					{ id: 4, text: "Griseous Orb", img: () => formItem("griseous-orb") },
+					{ id: 5, text: "Red Orb", img: () => keyItem("red-orb") },
+					{ id: 6, text: "Blue Orb", img: () => keyItem("blue-orb") },
+					{ id: 7, text: "Gracidea", img: () => formItem("gracidea") },
+					{ id: 8, text: "Reveal Glass", img: () => formItem("reveal-glass") },
+					{ id: 9, text: "DNA Splicers", img: () => formItem("dna-splicers") },
+					{ id: 10, text: "Burn Drive", img: () => formItem("burn-drive") },
+					{ id: 11, text: "Shock Drive", img: () => formItem("shock-drive") },
+					{ id: 12, text: "Douse Drive", img: () => formItem("douse-drive") },
+					{ id: 13, text: "Chill Drive", img: () => formItem("chill-drive") },
+					{ id: 14, text: "Zygarde Cube", img: () => keyItem("zygarde-cube") },
+					{ id: 15, text: "Prison Bottle", img: () => keyItem("prison-bottle") },
+					{ id: 16, text: "N-Solarizer", img: () => keyItem("n-solarizer") },
+					{ id: 17, text: "N-Lunarizer", img: () => keyItem("n-lunarizer") },
+				]
+			},
+			{
+				id: 4, text: "Collect all 17 Arceus Plates", children: [
+					{ id: 1, text: "Draco Plate", img: () => formItem("draco-plate") },
+					{ id: 2, text: "Dread Plate", img: () => formItem("dread-plate") },
+					{ id: 3, text: "Earth Plate", img: () => formItem("earth-plate") },
+					{ id: 4, text: "Fist Plate", img: () => formItem("fist-plate") },
+					{ id: 5, text: "Flame Plate", img: () => formItem("flame-plate") },
+					{ id: 6, text: "Icicle Plate", img: () => formItem("icicle-plate") },
+					{ id: 7, text: "Insect Plate", img: () => formItem("insect-plate") },
+					{ id: 8, text: "Iron Plate", img: () => formItem("iron-plate") },
+					{ id: 9, text: "Meadow Plate", img: () => formItem("meadow-plate") },
+					{ id: 10, text: "Mind Plate", img: () => formItem("mind-plate") },
+					{ id: 11, text: "Pixie Plate", img: () => formItem("pixie-plate") },
+					{ id: 12, text: "Sky Plate", img: () => formItem("sky-plate") },
+					{ id: 13, text: "Splash Plate", img: () => formItem("splash-plate") },
+					{ id: 14, text: "Spooky Plate", img: () => formItem("spooky-plate") },
+					{ id: 15, text: "Stone Plate", img: () => formItem("stone-plate") },
+					{ id: 16, text: "Toxic Plate", img: () => formItem("toxic-plate") },
+					{ id: 17, text: "Zap Plate", img: () => formItem("zap-plate") },
+				],
+			},
+			{
+				id: 5, text: "Collect all 17 Memories", children: [
+					{ id: 1, text: "Bug Memory", img: () => heldItem("bug-memory") },
+					{ id: 2, text: "Dark Memory", img: () => heldItem("dark-memory") },
+					{ id: 3, text: "Dragon Memory", img: () => heldItem("dragon-memory") },
+					{ id: 4, text: "Electric Memory", img: () => heldItem("electric-memory") },
+					{ id: 5, text: "Fairy Memory", img: () => heldItem("fairy-memory") },
+					{ id: 6, text: "Fighting Memory", img: () => heldItem("fighting-memory") },
+					{ id: 7, text: "Fire Memory", img: () => heldItem("fire-memory") },
+					{ id: 8, text: "Flying Memory", img: () => heldItem("flying-memory") },
+					{ id: 9, text: "Ghost Memory", img: () => heldItem("ghost-memory") },
+					{ id: 10, text: "Grass Memory", img: () => heldItem("grass-memory") },
+					{ id: 11, text: "Ground Memory", img: () => heldItem("ground-memory") },
+					{ id: 12, text: "Ice Memory", img: () => heldItem("ice-memory") },
+					{ id: 13, text: "Poison Memory", img: () => heldItem("poison-memory") },
+					{ id: 14, text: "Psychic Memory", img: () => heldItem("psychic-memory") },
+					{ id: 15, text: "Rock Memory", img: () => heldItem("rock-memory") },
+					{ id: 16, text: "Steel Memory", img: () => heldItem("steel-memory") },
+					{ id: 17, text: "Water Memory", img: () => heldItem("water-memory") },
+				],
+			},
+			{
+				id: 6, text: "Unlock all special Alola Photo Club backgrounds", children: [
+					{ id: 1, text: "Commemorative Photo" },
+					{ id: 2, text: "Indigo Plateau", tooltip: "Use a Pokemon from Kanto" },
+					{ id: 3, text: "Bell Tower", tooltip: "Use a Pokemon from Johto" },
+					{ id: 4, text: "Seafloor Cavern", tooltip: "Use a Pokemon from Hoenn" },
+					{ id: 5, text: "Spear Pillar", tooltip: "Use a Pokemon from Sinnoh" },
+					{ id: 6, text: "Skyarrow Bridge", tooltip: "Use a Pokemon from Unova" },
+					{ id: 7, text: "Lumiose City", tooltip: "Use a Pokemon from Kalos" },
 				],
 			},
 		],
@@ -117,7 +498,7 @@ import {
 					{ id: 11, text: "Groundium Z", img: () => [typing("ground"), zCrystal("groundiumz")], },
 					{ id: 12, text: "Icium Z", img: () => [typing("ice"), zCrystal("iciumz")], },
 					{ id: 13, text: "Normalium Z", img: () => [typing("normal"), zCrystal("normaliumz")], },
-					{ id: 14, text: "Poisonium Z", img: () => [typing("posion"), zCrystal("poisoniumz")], },
+					{ id: 14, text: "Poisonium Z", img: () => [typing("poison"), zCrystal("poisoniumz")], },
 					{ id: 15, text: "Psychium Z", img: () => [typing("psychic"), zCrystal("psychiumz")], },
 					{ id: 16, text: "Rockium Z", img: () => [typing("rock"), zCrystal("rockiumz")], },
 					{ id: 17, text: "Steelium Z", img: () => [typing("steel"), zCrystal("steeliumz")], },
@@ -144,19 +525,19 @@ import {
 		],
 		"thms": [
 			{
-				id: 1, text: "Collect all HMs", children: [
+				id: 1, text: "Unlock every Ride Pager summon", children: [
 					{ id: 1, text: "Tauros Charge", img: () => hm("tauros-charge") },
 					{ id: 2, text: "Stoutland Search", img: () => hm("stoutland-search") },
-					{ id: 3, text: "Lapras Dive", img: () => hm("lapras-dive") },
+					{ id: 3, text: "Lapras Paddle", img: () => hm("lapras-dive") },
 					{ id: 4, text: "Mantine Surf", img: () => hm("mantine-surf") },
-					{ id: 4, text: "Charizard Glide", img: () => hm("charizard-glide") },
-					{ id: 5, text: "Mudsdale Gallop", img: () => hm("mudsdale-gallop") },
-					{ id: 6, text: "Sharpedo Jet", img: () => hm("sharpedo-jet") },
-					{ id: 7, text: "Machamp Shove", img: () => hm("machamp-shove") },
+					{ id: 5, text: "Charizard Glide", img: () => hm("charizard-glide") },
+					{ id: 6, text: "Mudsdale Gallop", img: () => hm("mudsdale-gallop") },
+					{ id: 7, text: "Sharpedo Jet", img: () => hm("sharpedo-jet") },
+					{ id: 8, text: "Machamp Shove", img: () => hm("machamp-shove") },
 				],
 			},
 			{
-				id: 2, text: "Collect all HMs", children: [
+				id: 2, text: "Collect all TMs", children: [
 					{ id: 1, text: "TM01 (Work Up)", img: () => tm("normal") },
 					{ id: 2, text: "TM02 (Dragon Claw)", img: () => tm("dragon") },
 					{ id: 3, text: "TM03 (Psyshock)", img: () => tm("psychic") },
@@ -262,7 +643,14 @@ import {
 		],
 		"extra-credit": [
 			{
-				id: 1, text: "Get Z-Crystals from Distribution Codes", children: [
+				id: 1, text: "Get all Event Mythicals", children: [
+					{ id: 1, text: "Magerna", img: ({ gameKey }) => baseSprite(gameKey, 801) },
+					{ id: 2, text: "Marshadow", img: ({ gameKey }) => baseSprite(gameKey, 802) },
+					{ id: 3, text: "Zeraora", img: ({ gameKey }) => baseSprite(gameKey, 803) },
+				],
+			},
+			{
+				id: 2, text: "Get Z-Crystals from Distribution Codes", children: [
 					{ id: 1, text: "Marshadium Z", img: ({ gameKey }) => [baseSprite(gameKey, 802), zCrystal("marshadiumz")], },
 					{ id: 2, text: "Mewnium Z", img: ({ gameKey }) => [baseSprite(gameKey, 151), zCrystal("mewniumz")], },
 					{ id: 3, text: "Pikashunium Z", img: ({ gameKey }) => [baseSprite(gameKey, "025-o"), zCrystal("pikashuniumz")], },
@@ -274,10 +662,122 @@ import {
 
 	const TASKS_BY_SECTION_GAME1 = {
 		...TASKS_BY_SECTION,
+		catching: overrideTasks(TASKS_BY_SECTION.catching, {
+			1: {
+				1: { text: "Catch Solgaleo" },
+				2: { text: "Trade Lunala" },
+			},
+			2: {
+				2: { text: "Catch UB-02 Buzzwole", img: ({ gameKey }) => baseSprite(gameKey, 794) },
+				3: { text: "Trade UB-02 Pheromosa", img: ({ gameKey }) => baseSprite(gameKey, 795) },
+				5: { text: "Catch UB-04 Kartana", img: ({ gameKey }) => baseSprite(gameKey, 798) },
+				6: { text: "Trade UB-04 Celesteela", img: ({ gameKey }) => baseSprite(gameKey, 797) },
+				8: { text: "Catch UB Blacephalon", img: ({ gameKey }) => baseSprite(gameKey, 806) },
+				9: { text: "Trade UB Celesteela", img: ({ gameKey }) => baseSprite(gameKey, 805) },
+			},
+			3: {
+				5: { text: "Catch Raikou", img: ({ gameKey }) => baseSprite(gameKey, 243) },
+				6: { text: "Trade Entei", img: ({ gameKey }) => baseSprite(gameKey, 244) },
+				8: { text: "Catch Ho-Oh", img: ({ gameKey }) => baseSprite(gameKey, 250) },
+				9: { text: "Trade Lugia", img: ({ gameKey }) => baseSprite(gameKey, 249) },
+				10: { text: "Trade Latias", img: ({ gameKey }) => baseSprite(gameKey, 380) },
+				11: { text: "Catch Latios", img: ({ gameKey }) => baseSprite(gameKey, 381) },
+				12: { text: "Trade Kyogre", img: ({ gameKey }) => baseSprite(gameKey, 382) },
+				13: { text: "Catch Groudon", img: ({ gameKey }) => baseSprite(gameKey, 383) },
+				18: { text: "Catch Dialga", img: ({ gameKey }) => baseSprite(gameKey, 483) },
+				19: { text: "Trade Palkia", img: ({ gameKey }) => baseSprite(gameKey, 484) },
+				21: { text: "Catch Heatran", img: ({ gameKey }) => baseSprite(gameKey, 485) },
+				22: { text: "Trade Regigigas", img: ({ gameKey }) => baseSprite(gameKey, 486) },
+				27: { text: "Catch Tornadus", img: ({ gameKey }) => baseSprite(gameKey, 641) },
+				28: { text: "Trade Thundurus", img: ({ gameKey }) => baseSprite(gameKey, 642) },
+				30: { text: "Catch Reshiram", img: ({ gameKey }) => baseSprite(gameKey, 643) },
+				31: { text: "Trade Zekrom", img: ({ gameKey }) => baseSprite(gameKey, 644) },
+				33: { text: "Catch Xerneas", img: ({ gameKey }) => baseSprite(gameKey, 716) },
+				34: { text: "Trade Yveltal", img: ({ gameKey }) => baseSprite(gameKey, 717) },
+			},
+			5: {
+				1: { text: "Gumshoos", img: ({ gameKey }) => baseSprite(gameKey, 735) },
+				2: { text: "Alolan Marowak", img: ({ gameKey }) => baseSprite(gameKey, "0105-a") },
+				3: { text: "Lurantis", img: ({ gameKey }) => baseSprite(gameKey, 754) },
+				4: { text: "Vikavolt", img: ({ gameKey }) => baseSprite(gameKey, 738) },
+				6: { text: "Ribombee", img: ({ gameKey }) => baseSprite(gameKey, 743) },
+			},
+		}),
+		activities: overrideTasks(TASKS_BY_SECTION.activities, {
+			1: {
+				5: { text: "Show Natu at the Konikoni City Pokemon Center", img: ({ gameKey }) => baseSprite(gameKey, 177) },
+			},
+		}),
+		upgrades: overrideTasks(TASKS_BY_SECTION.upgrades, {
+			2: {
+				4: { text: "Reverent Style", tooltip: "Defeat Kiawe in Paniola Town" },
+			},
+		}),
+		collectables: overrideTasks(TASKS_BY_SECTION.collectables, {
+			2: {
+				11: { text: "Sun Flute", img: () => keyItem("sun-flute") },
+			}
+		}),
 	};
 
 	const TASKS_BY_SECTION_GAME2 = {
 		...TASKS_BY_SECTION,
+		catching: overrideTasks(TASKS_BY_SECTION.catching, {
+			1: {
+				1: { text: "Trade Solgaleo" },
+				2: { text: "Catch Lunala" },
+			},
+			2: {
+				2: { text: "Trade UB-02 Buzzwole", img: ({ gameKey }) => baseSprite(gameKey, 794) },
+				3: { text: "Catch UB-02 Pheromosa", img: ({ gameKey }) => baseSprite(gameKey, 795) },
+				5: { text: "Trade UB-04 Kartana", img: ({ gameKey }) => baseSprite(gameKey, 798) },
+				6: { text: "Catch UB-04 Celesteela", img: ({ gameKey }) => baseSprite(gameKey, 797) },
+				8: { text: "Trade UB Blacephalon", img: ({ gameKey }) => baseSprite(gameKey, 806) },
+				9: { text: "Catch UB Celesteela", img: ({ gameKey }) => baseSprite(gameKey, 805) },
+			},
+			3: {
+				5: { text: "Trade Raikou", img: ({ gameKey }) => baseSprite(gameKey, 243) },
+				6: { text: "Catch Entei", img: ({ gameKey }) => baseSprite(gameKey, 244) },
+				8: { text: "Trade Ho-Oh", img: ({ gameKey }) => baseSprite(gameKey, 250) },
+				9: { text: "Catch Lugia", img: ({ gameKey }) => baseSprite(gameKey, 249) },
+				10: { text: "Catch Latias", img: ({ gameKey }) => baseSprite(gameKey, 380) },
+				11: { text: "Trade Latios", img: ({ gameKey }) => baseSprite(gameKey, 381) },
+				12: { text: "Catch Kyogre", img: ({ gameKey }) => baseSprite(gameKey, 382) },
+				13: { text: "Trade Groudon", img: ({ gameKey }) => baseSprite(gameKey, 383) },
+				18: { text: "Trade Dialga", img: ({ gameKey }) => baseSprite(gameKey, 483) },
+				19: { text: "Catch Palkia", img: ({ gameKey }) => baseSprite(gameKey, 484) },
+				21: { text: "Trade Heatran", img: ({ gameKey }) => baseSprite(gameKey, 485) },
+				22: { text: "Catch Regigigas", img: ({ gameKey }) => baseSprite(gameKey, 486) },
+				27: { text: "Trade Tornadus", img: ({ gameKey }) => baseSprite(gameKey, 641) },
+				28: { text: "Catch Thundurus", img: ({ gameKey }) => baseSprite(gameKey, 642) },
+				30: { text: "Trade Reshiram", img: ({ gameKey }) => baseSprite(gameKey, 643) },
+				31: { text: "Catch Zekrom", img: ({ gameKey }) => baseSprite(gameKey, 644) },
+				33: { text: "Trade Xerneas", img: ({ gameKey }) => baseSprite(gameKey, 716) },
+				34: { text: "Catch Yveltal", img: ({ gameKey }) => baseSprite(gameKey, 717) },
+			},
+			5: {
+				1: { text: "Alolan Raticate", img: ({ gameKey }) => baseSprite(gameKey, "0020-a") },
+				2: { text: "Araquanid", img: ({ gameKey }) => baseSprite(gameKey, 752) },
+				3: { text: "Salazzle", img: ({ gameKey }) => baseSprite(gameKey, 758) },
+				4: { text: "Togedemaru", img: ({ gameKey }) => baseSprite(gameKey, 777) },
+				6: { text: "Kommo-o", img: ({ gameKey }) => baseSprite(gameKey, 784) },
+			},
+		}),
+		activities: overrideTasks(TASKS_BY_SECTION.activities, {
+			1: {
+				5: { text: "Show Hoothoot at the Konikoni City Pokemon Center", img: ({ gameKey }) => baseSprite(gameKey, 163) },
+			},
+		}),
+		upgrades: overrideTasks(TASKS_BY_SECTION.upgrades, {
+			2: {
+				4: { text: "Reverent Style", tooltip: "Defeat Mallow in Lush Jungle" },
+			},
+		}),
+		collectables: overrideTasks(TASKS_BY_SECTION.collectables, {
+			2: {
+				11: { text: "Moon Flute", img: () => keyItem("moon-flute") },
+			}
+		}),
 	};
 
 	defineTasksMany(GAME_KEYS[0], SECTIONS, TASKS_BY_SECTION_GAME1);

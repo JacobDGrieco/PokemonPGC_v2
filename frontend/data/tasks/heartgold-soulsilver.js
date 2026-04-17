@@ -401,17 +401,21 @@ import {
 
 	const TASKS_BY_SECTION_GAME1 = {
 		...TASKS_BY_SECTION,
-		catching: overrideTaskChildTexts(TASKS_BY_SECTION.catching, 1, {
-			10: "Catch Kyogre",
-			11: "Trade Groudon",
+		catching: overrideTaskChildTexts(TASKS_BY_SECTION.catching, {
+			1: {
+				10: "Catch Kyogre",
+				11: "Trade Groudon",
+			}
 		}),
 	};
 
 	const TASKS_BY_SECTION_GAME2 = {
 		...TASKS_BY_SECTION,
-		catching: overrideTaskChildTexts(TASKS_BY_SECTION.catching, 1, {
-			10: "Trade Kyogre",
-			11: "Catch Groudon",
+		catching: overrideTaskChildTexts(TASKS_BY_SECTION.catching, {
+			1: {
+				10: "Trade Kyogre",
+				11: "Catch Groudon",
+			}
 		}),
 	};
 

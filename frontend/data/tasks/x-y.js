@@ -1,4 +1,6 @@
 import {
+	_formItem,
+	_heldItem,
 	_hm,
 	_keyItem,
 	_megaStone,
@@ -9,6 +11,7 @@ import {
 	_badges,
 	_frontSprite,
 	defineTasksMany,
+	overrideTasks,
 } from '../helpers/index.js';
 
 (() => {
@@ -19,6 +22,8 @@ import {
 	const task = (gameKey, name) => _task(gameKey, name);
 	const npc = (gameKey, name) => _npc(gameKey, name);
 	const location = (gameKey, name) => _location(gameKey, name);
+	const formItem = (name) => _formItem(gen, name);
+	const heldItem = (name) => _heldItem(gen, name);
 	const keyItem = (name) => _keyItem(gen, name);
 	const megaStone = (name) => _megaStone(gen, name);
 	const hm = (type) => _hm(gen, type);
@@ -27,7 +32,7 @@ import {
 	const SECTIONS = [
 		{ id: "catching", title: "Gotta Catch 'Em All" },
 		{ id: "story", title: "Main Story" },
-		{ id: "activites", title: "Activities" },
+		{ id: "activities", title: "Activities" },
 		{ id: "battle", title: "Battle" },
 		{ id: "upgrades", title: "Upgrades" },
 		{ id: "collectables", title: "Collectables" },
@@ -185,41 +190,54 @@ import {
 		"collectables": [
 			{
 				id: 1, text: "Collect all Key Items", children: [
-
+					{ id: 1, text: "Dowsing Machine", img: () => keyItem("item-finder") },
+					{ id: 2, text: "Exp. Share", img: () => heldItem("exp-share") },
+					{ id: 3, text: "Good Rod", img: () => keyItem("good-rod") },
+					{ id: 4, text: "Holo Caster", img: () => keyItem("holo-caster") },
+					{ id: 5, text: "Honor of Kalos", img: () => keyItem("honor-of-kalos") },
+					{ id: 6, text: "Poke Radar", img: () => keyItem("poke-radar") },
+					{ id: 7, text: "Roller Skates", img: () => keyItem("roller-skates") },
+					{ id: 8, text: "Shiny Charm", img: () => keyItem("shiny-charm") },
+					{ id: 9, text: "Sprinklotad", img: () => keyItem("sprinklotad") },
+					{ id: 10, text: "Super Rod", img: () => keyItem("super-rod") },
+					{ id: 11, text: "TMV Pass", img: () => keyItem("tmv-pass") },
+					{ id: 12, text: "Town Map", img: () => keyItem("town-map") },
+					{ id: 13, text: "Vs. Recorder", img: () => keyItem("vs-recorder") },
 				]
 			},
 			{
 				id: 2, text: "Collect all Legendary Items", children: [
-					{ id: 1, text: "Adamant Orb" },
-					{ id: 2, text: "Lustrious Orb" },
-					{ id: 3, text: "Griseous Orb" },
-					{ id: 4, text: "Gracedia" },
-					{ id: 5, text: "DNA Splicers" },
-					{ id: 6, text: "Burn Drive" },
-					{ id: 7, text: "Shock Drive" },
-					{ id: 8, text: "Douse Drive" },
-					{ id: 9, text: "Chill Drive" },
+					{ id: 1, text: "Adamant Orb", img: () => keyItem("adamant-orb") },
+					{ id: 2, text: "Lustrous Orb", img: () => keyItem("lustrous-orb") },
+					{ id: 3, text: "Griseous Orb", img: () => formItem("griseous-orb") },
+					{ id: 4, text: "Gracidea", img: () => formItem("gracidea") },
+					{ id: 5, text: "Reveal Glass", img: () => formItem("reveal-glass") },
+					{ id: 6, text: "DNA Splicers", img: () => formItem("dna-splicers") },
+					{ id: 7, text: "Burn Drive", img: () => formItem("burn-drive") },
+					{ id: 8, text: "Shock Drive", img: () => formItem("shock-drive") },
+					{ id: 9, text: "Douse Drive", img: () => formItem("douse-drive") },
+					{ id: 10, text: "Chill Drive", img: () => formItem("chill-drive") },
 				]
 			},
 			{
 				id: 3, text: "Collect all 17 Arceus Plates", children: [
-					{ id: 1, text: "Draco Plate" },
-					{ id: 2, text: "Dread Plate" },
-					{ id: 3, text: "Earth Plate" },
-					{ id: 4, text: "Fist Plate" },
-					{ id: 5, text: "Flame Plate" },
-					{ id: 6, text: "Icicle Plate" },
-					{ id: 7, text: "Insect Plate" },
-					{ id: 8, text: "Iron Plate" },
-					{ id: 9, text: "Meadow Plate" },
-					{ id: 10, text: "Mind Plate" },
-					{ id: 11, text: "Pixie Plate" },
-					{ id: 12, text: "Sky Plate" },
-					{ id: 13, text: "Splash Plate" },
-					{ id: 14, text: "Spooky Plate" },
-					{ id: 15, text: "Stone Plate" },
-					{ id: 16, text: "Toxic Plate" },
-					{ id: 17, text: "Zap Plate" },
+					{ id: 1, text: "Draco Plate", img: () => formItem("draco-plate") },
+					{ id: 2, text: "Dread Plate", img: () => formItem("dread-plate") },
+					{ id: 3, text: "Earth Plate", img: () => formItem("earth-plate") },
+					{ id: 4, text: "Fist Plate", img: () => formItem("fist-plate") },
+					{ id: 5, text: "Flame Plate", img: () => formItem("flame-plate") },
+					{ id: 6, text: "Icicle Plate", img: () => formItem("icicle-plate") },
+					{ id: 7, text: "Insect Plate", img: () => formItem("insect-plate") },
+					{ id: 8, text: "Iron Plate", img: () => formItem("iron-plate") },
+					{ id: 9, text: "Meadow Plate", img: () => formItem("meadow-plate") },
+					{ id: 10, text: "Mind Plate", img: () => formItem("mind-plate") },
+					{ id: 11, text: "Pixie Plate", img: () => formItem("pixie-plate") },
+					{ id: 12, text: "Sky Plate", img: () => formItem("sky-plate") },
+					{ id: 13, text: "Splash Plate", img: () => formItem("splash-plate") },
+					{ id: 14, text: "Spooky Plate", img: () => formItem("spooky-plate") },
+					{ id: 15, text: "Stone Plate", img: () => formItem("stone-plate") },
+					{ id: 16, text: "Toxic Plate", img: () => formItem("toxic-plate") },
+					{ id: 17, text: "Zap Plate", img: () => formItem("zap-plate") },
 				]
 			},
 			{
@@ -400,17 +418,21 @@ import {
 
 	const TASKS_BY_SECTION_GAME1 = {
 		...TASKS_BY_SECTION,
-		catching: overrideTasks(TASKS_BY_SECTION.catching, 1, {
-			1: { text: "Catch Xerneas" },
-			2: { text: "Trade Yveltal" },
+		catching: overrideTasks(TASKS_BY_SECTION.catching, {
+			1: {
+				1: { text: "Catch Xerneas" },
+				2: { text: "Trade Yveltal" },
+			}
 		}),
 	};
 
 	const TASKS_BY_SECTION_GAME2 = {
 		...TASKS_BY_SECTION,
-		catching: overrideTasks(TASKS_BY_SECTION.catching, 1, {
-			1: { text: "Trade Xerneas" },
-			2: { text: "Catch Yveltal" },
+		catching: overrideTasks(TASKS_BY_SECTION.catching, {
+			1: {
+				1: { text: "Trade Xerneas" },
+				2: { text: "Catch Yveltal" },
+			}
 		}),
 	};
 

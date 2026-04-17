@@ -300,17 +300,21 @@ import {
 
 	const TASKS_BY_SECTION_GAME1 = {
 		...TASKS_BY_SECTION,
-		catching: overrideTaskChildTexts(TASKS_BY_SECTION.catching, 1, {
-			1: "Catch Dialga",
-			2: "Trade Palkia",
+		catching: overrideTaskChildTexts(TASKS_BY_SECTION.catching, {
+			1: {
+				1: "Catch Dialga",
+				2: "Trade Palkia",
+			}
 		}),
 	};
 
 	const TASKS_BY_SECTION_GAME2 = {
 		...TASKS_BY_SECTION,
-		catching: overrideTaskChildTexts(TASKS_BY_SECTION.catching, 1, {
-			1: "Trade Dialga",
-			2: "Catch Palkia",
+		catching: overrideTaskChildTexts(TASKS_BY_SECTION.catching, {
+			1: {
+				1: "Trade Dialga",
+				2: "Catch Palkia",
+			}
 		}),
 	};
 

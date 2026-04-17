@@ -165,15 +165,28 @@ import {
 		],
 		"collectables": [
 			{
-				id: 1, text: "Collect all Legendary items", children: [
+				id: 1, text: "Collect all Key Items", children: [
+					{ id: 1, text: "Bicycle", img: () => keyItem("bicycle") },
+					{ id: 2, text: "Dowsing MCHN", img: () => keyItem("item-finder") },
+					{ id: 4, text: "Pal Pad", img: () => keyItem("pal-pad") },
+					{ id: 5, text: "Prop Case", img: () => keyItem("prop-case") },
+					{ id: 6, text: "Super Rod", img: () => keyItem("super-rod") },
+					{ id: 7, text: "Town Map", img: () => keyItem("town-map") },
+					{ id: 8, text: "Vs. Recorder", img: () => keyItem("vs-recorder") },
+					{ id: 9, text: "Xtransceiver", img: () => keyItem("xtransceiver") },
+				],
+			},
+			{
+				id: 2, text: "Collect all Legendary items", children: [
 					{ id: 1, text: "Burn Drive", img: () => formItem("burn-drive") },
 					{ id: 2, text: "Douse Drive", img: () => formItem("douse-drive") },
 					{ id: 3, text: "Shock Drive", img: () => formItem("shock-drive") },
 					{ id: 4, text: "Chill Drive", img: () => formItem("chill-drive") },
+					{ id: 5, text: "Gracidea", img: () => formItem("graceidea") },
 				],
 			},
 			{
-				id: 2, text: "Collect all 16 Arceus Plates", children: [
+				id: 3, text: "Collect all 16 Arceus Plates", children: [
 					{ id: 1, text: "Draco Plate", img: () => formItem("draco-plate") },
 					{ id: 2, text: "Dread Plate", img: () => formItem("dread-plate") },
 					{ id: 3, text: "Earth Plate", img: () => formItem("earth-plate") },
@@ -449,27 +462,35 @@ import {
 
 	const TASKS_BY_SECTION_GAME1 = {
 		...TASKS_BY_SECTION,
-		catching: overrideTaskChildTexts(TASKS_BY_SECTION.catching, 1, {
-			1: "Trade Reshiram",
-			2: "Catch Zekrom",
-			4: "Catch Tornadus",
-			5: "Trade Thundurus",
+		catching: overrideTaskChildTexts(TASKS_BY_SECTION.catching, {
+			1: {
+				1: "Trade Reshiram",
+				2: "Catch Zekrom",
+				4: "Catch Tornadus",
+				5: "Trade Thundurus",
+			}
 		}),
-		upgrades: overrideTasks(TASKS_BY_SECTION.upgrades, 2, {
-			parent: { text: "Obtain the Black Rank Trainer Card" },
+		upgrades: overrideTasks(TASKS_BY_SECTION.upgrades, {
+			2: {
+				parent: { text: "Obtain the Black Rank Trainer Card" },
+			}
 		}),
 	};
 
 	const TASKS_BY_SECTION_GAME2 = {
 		...TASKS_BY_SECTION,
-		catching: overrideTaskChildTexts(TASKS_BY_SECTION.catching, 1, {
-			1: "Catch Reshiram",
-			2: "Trade Zekrom",
-			4: "Trade Tornadus",
-			5: "Catch Thundurus",
+		catching: overrideTaskChildTexts(TASKS_BY_SECTION.catching, {
+			1: {
+				1: "Catch Reshiram",
+				2: "Trade Zekrom",
+				4: "Trade Tornadus",
+				5: "Catch Thundurus",
+			}
 		}),
-		upgrades: overrideTasks(TASKS_BY_SECTION.upgrades, 2, {
-			parent: { text: "Obtain the White Rank Trainer Card" },
+		upgrades: overrideTasks(TASKS_BY_SECTION.upgrades, {
+			2: {
+				parent: { text: "Obtain the White Rank Trainer Card" },
+			}
 		}),
 	};
 

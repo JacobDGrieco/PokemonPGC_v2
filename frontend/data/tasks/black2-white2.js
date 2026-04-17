@@ -237,52 +237,51 @@ import {
 				id: 1, text: "Collect all Key Items", children: [
 					{ id: 1, text: "Bicycle", img: () => keyItem("bicycle") },
 					{ id: 2, text: "Dowsing MCHN", img: () => keyItem("item-finder") },
-					{ id: 3, text: "Medal Box" },
-					{ id: 4, text: "Oval Charm" },
-					{ id: 5, text: "Pal Pad" },
-					{ id: 6, text: "Permit" },
-					{ id: 7, text: "Prop Case" },
+					{ id: 3, text: "Medal Box", img: () => keyItem("medal-box") },
+					{ id: 4, text: "Oval Charm", img: () => keyItem("oval-charm") },
+					{ id: 5, text: "Pal Pad", img: () => keyItem("pal-pad") },
+					{ id: 6, text: "Permit", img: () => keyItem("permit") },
+					{ id: 7, text: "Prop Case", img: () => keyItem("prop-case") },
 					{ id: 8, text: "Shiny Charm", img: () => keyItem("shiny-charm") },
 					{ id: 9, text: "Super Rod", img: () => keyItem("super-rod") },
 					{ id: 10, text: "Town Map", img: () => keyItem("town-map") },
-					{ id: 11, text: "Vs. Recorder" },
-					{ id: 12, text: "Xtransceiver" },
+					{ id: 11, text: "Vs. Recorder", img: () => keyItem("vs-recorder") },
+					{ id: 12, text: "Xtransceiver", img: () => keyItem("xtransceiver") },
 				]
 			},
 			{
 				id: 2, text: "Collect all Legendary Items", children: [
-					{ id: 1, text: "Soul Dew" },
-					{ id: 2, text: "Adamant Orb" },
-					{ id: 3, text: "Lustrous Orb" },
-					{ id: 4, text: "Griseous Orb" },
-					{ id: 5, text: "Magma Stone" },
-					{ id: 6, text: "Lunar Wing" },
-					{ id: 7, text: "Gracidea" },
-					{ id: 8, text: "Reveal Glass" },
-					{ id: 9, text: "Light Stone/Dark Stone" },
-					{ id: 10, text: "DNA Splicers" },
-					{ id: 11, text: "Burn/Douse Drive" },
-					{ id: 12, text: "Shock/Chill Drive" },
+					{ id: 1, text: "Soul Dew", img: () => keyItem("soul-dew") },
+					{ id: 2, text: "Adamant Orb", img: () => keyItem("adamant-orb") },
+					{ id: 3, text: "Lustrous Orb", img: () => keyItem("lustrous-orb") },
+					{ id: 4, text: "Griseous Orb", img: () => formItem("griseous-orb") },
+					{ id: 5, text: "Magma Stone", img: () => keyItem("magma-stone") },
+					{ id: 6, text: "Lunar Wing", img: () => keyItem("lunar-wing") },
+					{ id: 7, text: "Gracidea", img: () => formItem("gracidea") },
+					{ id: 8, text: "Reveal Glass", img: () => formItem("reveal-glass") },
+					{ id: 9, text: "DNA Splicers", img: () => formItem("dna-splicers") },
+					{ id: 10, text: "Burn/Douse Drive", img: () => formItem("burn-drive") },
+					{ id: 11, text: "Shock/Chill Drive", img: () => formItem("shock-drive") },
 				]
 			},
 			{
 				id: 3, text: "Collect all 16 Arceus Plates", children: [
-					{ id: 1, text: "Draco Plate" },
-					{ id: 2, text: "Dread Plate" },
-					{ id: 3, text: "Earth Plate" },
-					{ id: 4, text: "Fist Plate" },
-					{ id: 5, text: "Flame Plate" },
-					{ id: 6, text: "Icicle Plate" },
-					{ id: 7, text: "Insect Plate" },
-					{ id: 8, text: "Iron Plate" },
-					{ id: 9, text: "Meadow Plate" },
-					{ id: 10, text: "Mind Plate" },
-					{ id: 11, text: "Sky Plate" },
-					{ id: 12, text: "Splash Plate" },
-					{ id: 13, text: "Spooky Plate" },
-					{ id: 14, text: "Stone Plate" },
-					{ id: 15, text: "Toxic Plate" },
-					{ id: 16, text: "Zap Plate" },
+					{ id: 1, text: "Draco Plate", img: () => formItem("draco-plate") },
+					{ id: 2, text: "Dread Plate", img: () => formItem("dread-plate") },
+					{ id: 3, text: "Earth Plate", img: () => formItem("earth-plate") },
+					{ id: 4, text: "Fist Plate", img: () => formItem("fist-plate") },
+					{ id: 5, text: "Flame Plate", img: () => formItem("flame-plate") },
+					{ id: 6, text: "Icicle Plate", img: () => formItem("icicle-plate") },
+					{ id: 7, text: "Insect Plate", img: () => formItem("insect-plate") },
+					{ id: 8, text: "Iron Plate", img: () => formItem("iron-plate") },
+					{ id: 9, text: "Meadow Plate", img: () => formItem("meadow-plate") },
+					{ id: 10, text: "Mind Plate", img: () => formItem("mind-plate") },
+					{ id: 11, text: "Sky Plate", img: () => formItem("sky-plate") },
+					{ id: 12, text: "Splash Plate", img: () => formItem("splash-plate") },
+					{ id: 13, text: "Spooky Plate", img: () => formItem("spooky-plate") },
+					{ id: 14, text: "Stone Plate", img: () => formItem("stone-plate") },
+					{ id: 15, text: "Toxic Plate", img: () => formItem("toxic-plate") },
+					{ id: 16, text: "Zap Plate", img: () => formItem("zap-plate") },
 				]
 			},
 		],
@@ -623,9 +622,8 @@ import {
 		}),
 		collectables: overrideTasks(TASKS_BY_SECTION.collectables, {
 			2: {
-				2: { text: "Burn Drive" },
-				6: { text: "Dark Stone" },
-				11: { text: "Shock Drive" },
+				9: { text: "Burn Drive", img: () => formItem("burn-drive") },
+				10: { text: "Shock Drive", img: () => formItem("shock-drive") },
 			},
 		}),
 		upgrades: overrideTasks(TASKS_BY_SECTION.upgrades, {
@@ -653,25 +651,30 @@ import {
 				1: { text: "Petilil for Cottonee", img: ({ gameKey }) => task(gameKey, "petilil-for-cottonee"), tooltip: "Route 4" },
 			},
 		}),
-		funfest: overrideTasks(TASKS_BY_SECTION.funfest, 1, {
-			12: { text: "Exhilarating Trading!!" },
-			17: { text: "Find Shining Ores!" },
-			28: { text: "Not-Found Lost Items!" },
-			29: { text: "What is the Real Price?" },
-			33: { text: "Quiet Hidden Grottoes!" },
+		funfest: overrideTasks(TASKS_BY_SECTION.funfest, {
+			1: {
+				12: { text: "Exhilarating Trading!!" },
+				17: { text: "Find Shining Ores!" },
+				28: { text: "Not-Found Lost Items!" },
+				29: { text: "What is the Real Price?" },
+				33: { text: "Quiet Hidden Grottoes!" },
+			}
 		}),
-		battle: overrideTasks(TASKS_BY_SECTION.battle, 1, {
-			1: { tooltip: "White Forest" },
+		battle: overrideTasks(TASKS_BY_SECTION.battle, {
+			1: {
+				1: { tooltip: "White Forest" },
+			}
 		}),
 		collectables: overrideTasks(TASKS_BY_SECTION.collectables, {
 			2: {
-				2: { text: "Douse Drive" },
-				6: { text: "Light Stone" },
-				11: { text: "Chill Drive" },
+				9: { text: "Douse Drive", img: () => formItem("douse-drive") },
+				10: { text: "Chill Drive", img: () => formItem("chill-drive") },
 			},
 		}),
-		upgrades: overrideTasks(TASKS_BY_SECTION.upgrades, 2, {
-			parent: { text: "Obtain the White Rank Trainer Card" },
+		upgrades: overrideTasks(TASKS_BY_SECTION.upgrades, {
+			2: {
+				parent: { text: "Obtain the White Rank Trainer Card" },
+			}
 		}),
 	};
 
