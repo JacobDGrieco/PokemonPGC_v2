@@ -35,6 +35,8 @@ export function installMissingAssetLogger() {
   };
 
   let flushTimer = 0;
+  const pendingTaskImages = new Set();
+  const trackedTaskImages = new WeakSet();
 
   function kindLabel(kind) {
     if (kind === 'taskImages') return 'task images';
@@ -48,12 +50,17 @@ export function installMissingAssetLogger() {
     const text = String(value || '').trim();
     if (!text) return '(unknown)';
 
+    const trimToFirstSlash = (input) => {
+      const slashIndex = input.indexOf('/');
+      return slashIndex >= 0 ? input.slice(slashIndex) : input;
+    };
+
     try {
       const url = new URL(text, location.href);
-      const parts = url.pathname.split('/').filter(Boolean);
-      return parts.slice(-2).join('/');
+      if (url.origin === location.origin) return `${url.pathname}${url.search}${url.hash}`;
+      return trimToFirstSlash(`${url.pathname}${url.search}${url.hash}` || url.href);
     } catch {
-      return text.split('/').slice(-2).join('/');
+      return trimToFirstSlash(text);
     }
   }
 
@@ -78,6 +85,11 @@ export function installMissingAssetLogger() {
     flushTimer = window.setTimeout(() => {
       flushTimer = 0;
 
+      if (pendingTaskImages.size > 0) {
+        scheduleFlush();
+        return;
+      }
+
       const emit = (kind) => {
         const items = Array.from(buckets[kind]);
         if (!items.length) return;
@@ -96,7 +108,51 @@ export function installMissingAssetLogger() {
       emit('textures');
       emit('models');
       emit('otherImages');
-    }, 50);
+    }, 150);
+  }
+
+  function finalizeTaskImage(img) {
+    if (!(img instanceof HTMLImageElement)) return;
+    pendingTaskImages.delete(img);
+    scheduleFlush();
+  }
+
+  function trackTaskImage(img) {
+    if (!(img instanceof HTMLImageElement)) return;
+    if (!img.classList?.contains('task-item-img')) return;
+    if (trackedTaskImages.has(img)) return;
+
+    trackedTaskImages.add(img);
+
+    if (img.complete) return;
+
+    pendingTaskImages.add(img);
+    img.addEventListener('load', () => finalizeTaskImage(img), { once: true });
+    img.addEventListener('error', () => finalizeTaskImage(img), { once: true });
+  }
+
+  function trackTaskImagesInNode(node) {
+    if (!(node instanceof Element)) return;
+
+    if (node instanceof HTMLImageElement) {
+      trackTaskImage(node);
+      return;
+    }
+
+    node.querySelectorAll?.('img.task-item-img').forEach(trackTaskImage);
+  }
+
+  function untrackTaskImagesInNode(node) {
+    if (!(node instanceof Element)) return;
+
+    if (node instanceof HTMLImageElement) {
+      pendingTaskImages.delete(node);
+      return;
+    }
+
+    node.querySelectorAll?.('img.task-item-img').forEach((img) => {
+      pendingTaskImages.delete(img);
+    });
   }
 
   PPGC.reportMissingAsset = function reportMissingAsset(kind, nameOrUrl) {
@@ -122,6 +178,18 @@ export function installMissingAssetLogger() {
     },
     true
   );
+
+  trackTaskImagesInNode(document.body);
+
+  const observer = new MutationObserver((mutations) => {
+    for (const mutation of mutations) {
+      mutation.addedNodes.forEach(trackTaskImagesInNode);
+      mutation.removedNodes.forEach(untrackTaskImagesInNode);
+    }
+    scheduleFlush();
+  });
+
+  observer.observe(document.body, { childList: true, subtree: true });
 }
 
 export function installUiGlobals() {
