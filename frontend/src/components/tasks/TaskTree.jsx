@@ -182,8 +182,19 @@ function TaskSpriteList({ task, sectionId }) {
 	);
 }
 
+function getEitherOptions(task) {
+	const src = task?.eithers;
+	if (!src || typeof src !== 'object') return [];
+
+	const left = src.left && typeof src.left === 'object' ? ['left', src.left] : null;
+	const right = src.right && typeof src.right === 'object' ? ['right', src.right] : null;
+	if (left || right) return [left, right].filter(Boolean);
+
+	return Object.entries(src).filter(([, value]) => value && typeof value === 'object');
+}
+
 function EitherChoices({ task, onChange }) {
-	const options = Object.entries(task?.eithers || {}).filter(([, value]) => value && typeof value === 'object');
+	const options = getEitherOptions(task);
 	const choice = getEitherChoice(task.id);
 
 	return (
@@ -317,15 +328,14 @@ function TieredValueDisplay({ task, className = '', onInputCommit, onChangeCommi
 	);
 }
 
-function TieredControls({ task, onInputCommit, onChangeCommit }) {
+function TieredControls({ task, onInputCommit, onChangeCommit, showValue = true }) {
 	const meta = getTierMetaForTask(task);
 	const steps = meta.steps;
 	const value = clampTierValue(task.currentTier ?? 0, steps);
-	const display = meta.mode === 'label' ? (value === 0 ? '—' : meta.values[value - 1] || '—') : `${value}/${steps}`;
 
 	return (
 		<>
-			<TieredValueDisplay task={task} onInputCommit={onInputCommit} onChangeCommit={onChangeCommit} />
+			{showValue ? <TieredValueDisplay task={task} onInputCommit={onInputCommit} onChangeCommit={onChangeCommit} /> : null}
 			<div className="tiered">
 				<div className="tiered-line">
 					<input
@@ -445,6 +455,7 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 			task={task}
 			onInputCommit={handleTierInput}
 			onChangeCommit={handleTierCommit}
+			showValue={!noCenterSlider}
 		/>
 	) : null;
 

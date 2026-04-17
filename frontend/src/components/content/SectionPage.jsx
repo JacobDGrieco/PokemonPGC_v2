@@ -35,21 +35,33 @@ async function ensureSectionModalApis() {
   window.PPGC = window.PPGC || {};
 
   if (!window.PPGC.dexApi) {
+    await Promise.all([
+      window.PPGC.ensureModalMounted?.('dex'),
+      window.PPGC.ensureModalMounted?.('forms'),
+      window.PPGC.ensureModalMounted?.('monInfo'),
+      window.PPGC.ensureModalMounted?.('research'),
+    ]);
     const { wireDexModal } = await import('../../modals/dex.js');
-    window.PPGC.dexApi = wireDexModal(store, elements);
+    window.PPGC.dexApi = await wireDexModal(store, elements);
   }
 
   if (!window.PPGC.fashionApi) {
+    await Promise.all([
+      window.PPGC.ensureModalMounted?.('collection'),
+      window.PPGC.ensureModalMounted?.('forms'),
+    ]);
     const { wireFashionModal } = await import('../../modals/fashion.js');
     window.PPGC.fashionApi = wireFashionModal(store, elements);
   }
 
   if (!window.PPGC.amieDecorApi) {
+    await window.PPGC.ensureModalMounted?.('collection');
     const { wireAmieDecorModal } = await import('../../modals/amie-decor.js');
     window.PPGC.amieDecorApi = wireAmieDecorModal(store, elements);
   }
 
   if (!window.PPGC.medalsApi) {
+    await window.PPGC.ensureModalMounted?.('collection');
     const { wireMedalsModal } = await import('../../modals/medal.js');
     window.PPGC.medalsApi = wireMedalsModal(store, elements);
   }

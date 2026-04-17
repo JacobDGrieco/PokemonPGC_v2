@@ -1,4 +1,5 @@
 import { ensurePpgcRoot } from "./runtime/globals.js";
+import { normalizeSectionId, normalizeSectionSuffix } from "./utils/normalizeSectionId.js";
 
 // history.js
 // Tiny history/router helper for PPGC.
@@ -25,7 +26,7 @@ export function initHistory({ store, renderAll }) {
 			level: s.level || "gen",
 			genKey: s.genKey || null,
 			gameKey: s.gameKey || null,
-			sectionId: s.sectionId || null,
+			sectionId: normalizeSectionId(s.sectionId || null) || null,
 			accountTab: s.accountTab || null,
 			monInfoId: typeof s.monInfoId !== "undefined" ? s.monInfoId : null,
 			monInfoGameKey: s.monInfoGameKey || null,
@@ -34,20 +35,44 @@ export function initHistory({ store, renderAll }) {
 		};
 	}
 
+	function sectionSlugFromState(sectionId, gameKey) {
+		const normalized = normalizeSectionId(sectionId || "") || "";
+		if (!normalized) return "";
+		const normalizedGameKey = String(gameKey || "").trim();
+		if (normalizedGameKey && normalized.startsWith(`${normalizedGameKey}:`)) {
+			return normalized.slice(normalizedGameKey.length + 1);
+		}
+		if (normalized.includes(":")) {
+			const [, suffix] = normalized.split(":", 2);
+			return normalizeSectionSuffix(suffix || "");
+		}
+		return normalizeSectionSuffix(normalized);
+	}
+
+	function sectionIdFromRoute(gameKey, sectionSlug) {
+		const gk = String(gameKey || "").trim();
+		const suffix = normalizeSectionSuffix(sectionSlug || "");
+		if (!gk || !suffix) return null;
+		return `${gk}:${suffix}`;
+	}
+
 	function buildPrettyHashFromState(state) {
 		const s = state || {};
 		const lvl = s.level || "gen";
 
 		if (lvl === "section") {
 			const gen = s.genKey || "all";
-			const game = s.gameKey || "all";
-			const sec = s.sectionId || "";
-			return `#/section/${encodeURIComponent(gen)}/${encodeURIComponent(game)}/${encodeURIComponent(sec)}`;
+			const game = s.gameKey || "";
+			const sec = sectionSlugFromState(s.sectionId || "", game) || "";
+			const parts = [encodeURIComponent(gen)];
+			if (game) parts.push(encodeURIComponent(game));
+			if (sec) parts.push(encodeURIComponent(sec));
+			return `#/${parts.join("/")}`;
 		}
 
 		if (lvl === "game") {
 			const gen = s.genKey || "all";
-			return `#/game/${encodeURIComponent(gen)}`;
+			return `#/${encodeURIComponent(gen)}`;
 		}
 
 		if (lvl === "account") {
@@ -101,7 +126,9 @@ export function initHistory({ store, renderAll }) {
 			next.level = "section";
 			next.genKey = parts[1] ? decodeURIComponent(parts[1]) : null;
 			next.gameKey = parts[2] ? decodeURIComponent(parts[2]) : null;
-			next.sectionId = parts[3] ? decodeURIComponent(parts[3]) : null;
+			next.sectionId = parts[3]
+				? sectionIdFromRoute(next.gameKey, decodeURIComponent(parts[3]))
+				: null;
 		} else if (route === "game") {
 			next.level = "game";
 			next.genKey = parts[1] ? decodeURIComponent(parts[1]) : null;
@@ -129,6 +156,18 @@ export function initHistory({ store, renderAll }) {
 				// Unknown tool with extra path → just land on tool root
 				next.level = "tools";
 				next.toolsKey = tool || "info";
+			}
+		} else if (parts.length >= 1) {
+			next.genKey = parts[0] ? decodeURIComponent(parts[0]) : null;
+			next.gameKey = parts[1] ? decodeURIComponent(parts[1]) : null;
+			next.sectionId = parts[2]
+				? sectionIdFromRoute(next.gameKey, decodeURIComponent(parts[2]))
+				: null;
+
+			if (next.gameKey) {
+				next.level = "section";
+			} else if (next.genKey) {
+				next.level = "game";
 			}
 		}
 
@@ -203,7 +242,13 @@ export function initHistory({ store, renderAll }) {
 	// ---------- Public navigation API ----------
 
 	function navigateToState(patch = {}, { replace = false } = {}) {
-		Object.assign(store.state, patch);
+		const nextPatch = {
+			...patch,
+			sectionId: Object.prototype.hasOwnProperty.call(patch, "sectionId")
+				? normalizeSectionId(patch.sectionId || null) || null
+				: store.state.sectionId,
+		};
+		Object.assign(store.state, nextPatch);
 
 		const url = basePath() + buildPrettyHashFromState(store.state);
 		const snap = snapshotFromState();
@@ -262,7 +307,7 @@ export function initHistory({ store, renderAll }) {
 				level: "section",
 				genKey: a || null,
 				gameKey: b || null,
-				sectionId: c || null,
+				sectionId: normalizeSectionId(c || null) || null,
 				accountTab: null,
 				monInfoId: null,
 				monInfoGameKey: null,
@@ -315,7 +360,7 @@ export function initHistory({ store, renderAll }) {
 				level: snap.level || "gen",
 				genKey: snap.genKey || null,
 				gameKey: snap.gameKey || null,
-				sectionId: snap.sectionId || null,
+				sectionId: normalizeSectionId(snap.sectionId || null) || null,
 				accountTab: snap.accountTab || null,
 				monInfoId: typeof snap.monInfoId !== "undefined" ? snap.monInfoId : null,
 				monInfoGameKey: snap.monInfoGameKey || null,

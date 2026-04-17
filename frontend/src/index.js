@@ -28,6 +28,7 @@ import { ensureSyncSetsExpandedForGame } from "./sync.js";
 
 const PPGC = ensurePpgcRoot();
 installUiGlobals();
+window.__PPGC_FRONTEND_LOADED__ = true;
 
 // ------------------------------------------------------------
 // 3) Rendering
@@ -138,7 +139,6 @@ async function ensureGenDataLoaded(genKey) {
 
 function ensureGenDataForState(state) {
 	const lvl = state?.level;
-
 	// ✅ Tools/MonInfo need HOME dex (window.DATA.dex.home) for the Mon Info cards/list
 	if (lvl === "tools" || lvl === "moninfo") {
 		const loaded = _getLoadedGensSet();
@@ -212,6 +212,7 @@ initHistory({ store, renderAll });
 
 let currentUser = null;
 let currentUserIcon = "default";
+let authModalWired = false;
 
 function applyAccountButtonIcon(btn, icon) {
 	const nextIcon = String(icon || "default");
@@ -305,8 +306,27 @@ function closeAuthModal() {
 	}
 }
 
-function openAuthModal(mode = "login") {
+async function ensureAuthModalReady() {
+	await window.PPGC?.ensureModalMounted?.("auth");
+
 	const overlay = document.getElementById("ppgc-auth-overlay");
+	if (!overlay || authModalWired) return overlay;
+
+	const closeBtn = overlay.querySelector(".ppgc-auth-close");
+	if (closeBtn) {
+		closeBtn.addEventListener("click", () => closeAuthModal());
+	}
+
+	overlay.addEventListener("click", (e) => {
+		if (e.target === overlay) closeAuthModal();
+	});
+
+	authModalWired = true;
+	return overlay;
+}
+
+async function openAuthModal(mode = "login") {
+	const overlay = await ensureAuthModalReady();
 	if (!overlay) return;
 
 	const form = document.getElementById("ppgc-auth-form");
@@ -424,7 +444,7 @@ function resolveGameLabel(gameKey) {
 
 function navigateToTask(sectionId, taskId = null) {
 	if (!sectionId) return;
-	const gameKey = (sectionId || '').split('-')[0] || null;
+	const gameKey = (sectionId || '').split(':')[0] || null;
 	if (gameKey) {
 		store.state.gameKey = gameKey;
 	}
@@ -458,15 +478,6 @@ async function initAuthUI() {
 		});
 	}
 
-	// Overlay may not be in the DOM yet (React renders async) — retry until it appears
-	const overlay = document.getElementById("ppgc-auth-overlay");
-	if (!overlay) {
-		setTimeout(initAuthUI, 100);
-		return;
-	}
-
-	const closeBtn = overlay.querySelector(".ppgc-auth-close");
-
 	accountMenu.addEventListener("click", (e) => {
 		const btn = e.target.closest("button[data-action]");
 		if (!btn) return;
@@ -477,14 +488,6 @@ async function initAuthUI() {
 		} else if (action === "logout") {
 			handleLogout();
 		}
-	});
-
-	if (closeBtn) {
-		closeBtn.addEventListener("click", () => closeAuthModal());
-	}
-
-	overlay.addEventListener("click", (e) => {
-		if (e.target === overlay) closeAuthModal();
 	});
 
 	document.addEventListener("keydown", (e) => {
@@ -530,13 +533,6 @@ function runWhenIdle(fn, timeout = 1500) {
 // Neither is required for the initial Home render.
 
 (function initLazyModals() {
-	// Load in background after first paint
-	setTimeout(() => {
-		ensureDexMonInfoLoaded()
-			.then((m) => m.setupMonInfoModal?.())
-			.catch((e) => console.debug("[lazy] dex-mon-info load failed:", e));
-	}, 0);
-
 	// Expose helpers for other modules to use
 	window.PPGC = window.PPGC || {};
 	PPGC.ensureModelViewerLoaded = ensureModelViewerLoaded;
@@ -546,7 +542,7 @@ function runWhenIdle(fn, timeout = 1500) {
 window.__PPGC_NO_IMG__ = _assetPath('no-image.svg');
 initLayoutSwitcher(renderAll);
 renderAll();
-// Defer until after React's initial render has committed the DOM (AuthModal etc.)
+// Defer until after React's initial render has committed the DOM.
 setTimeout(initAuthUI, 0);
 initBackups({ minutes: 5 });
 
@@ -632,7 +628,7 @@ window.addEventListener("ppgc:import:done", () => {
 		}
 
 		// Shield generic modal content areas
-		return !!el.closest("#modal, #researchModal, #fashionModal, #amieDecorModal, #formsModal, #medalsModal");
+		return !!el.closest("#modal, #researchModal, #collectionModal, #formsModal, #monInfoModal, #modelViewerModal");
 	};
 
 	const stopIfInside = (e) => {
@@ -673,6 +669,7 @@ PPGC.ensureGenDataLoadedForGame = async function ensureGenDataLoadedForGame(game
 	return genKey;
 };
 PPGC.openMonInfo = async (...args) => {
+	await window.PPGC?.ensureModalMounted?.("monInfo");
 	const m = await ensureDexMonInfoLoaded();
 	return m.openMonInfo?.(...args);
 };

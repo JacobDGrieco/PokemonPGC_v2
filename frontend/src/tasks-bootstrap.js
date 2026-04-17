@@ -120,6 +120,39 @@ export function buildTaskLayoutGroups(rowsSpec, index, spacerId = "spacer") {
 export function bootstrapTasks(sectionId, tasksStore, { indexSectionTasks, indexDexSyncs } = {}) {
 	const seed = (window.DATA.tasks && window.DATA.tasks[sectionId]) || [];
 
+	function normalizeEitherState(eithers) {
+		if (!eithers || typeof eithers !== "object" || Array.isArray(eithers)) return eithers;
+
+		const keys = Object.keys(eithers).filter((key) => eithers[key] && typeof eithers[key] === "object" && !Array.isArray(eithers[key]));
+		const numericKeys = keys.filter((key) => /^\d+$/.test(key));
+		const hasLeft = Object.prototype.hasOwnProperty.call(eithers, "left") && eithers.left && typeof eithers.left === "object";
+		const hasRight = Object.prototype.hasOwnProperty.call(eithers, "right") && eithers.right && typeof eithers.right === "object";
+
+		if (!hasLeft && !hasRight && numericKeys.length === 2 && keys.length === 2) {
+			const sorted = numericKeys.map(Number).sort((a, b) => a - b);
+			return {
+				left: eithers[String(sorted[0])],
+				right: eithers[String(sorted[1])],
+			};
+		}
+
+		if (hasLeft || hasRight) {
+			const next = {};
+			if (hasLeft) next.left = eithers.left;
+			if (hasRight) next.right = eithers.right;
+
+			if ((!next.left || !next.right) && numericKeys.length) {
+				const sorted = numericKeys.map(Number).sort((a, b) => a - b);
+				if (!next.left) next.left = eithers[String(sorted[0])];
+				if (!next.right) next.right = eithers[String(sorted[sorted.length - 1])];
+			}
+
+			return next;
+		}
+
+		return eithers;
+	}
+
 	function applyProgressOverlayToSectionTasks(tasksArr) {
 		const storeRef = window.PPGC?._storeRef;
 		if (!storeRef?.taskProgressById) return;
@@ -219,6 +252,11 @@ export function bootstrapTasks(sectionId, tasksStore, { indexSectionTasks, index
 									}
 								}
 							}
+						}
+						const normalizedEithers = normalizeEitherState(t.eithers);
+						if (normalizedEithers !== t.eithers) {
+							t.eithers = normalizedEithers;
+							changed = true;
 						}
 					}
 					if (s.tooltip && !t.tooltip) { t.tooltip = s.tooltip; changed = true; }

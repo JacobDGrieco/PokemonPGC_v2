@@ -11,7 +11,7 @@ export function useLegacyBootstrap() {
       try {
         await import('../index.js');
       } catch (error) {
-        console.error('[ppgc] legacy bootstrap failed:', error);
+        console.error('Legacy bootstrap failed:', error);
       }
     }
 

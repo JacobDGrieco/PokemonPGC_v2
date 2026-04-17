@@ -6,6 +6,7 @@
 
 /* Base: responsive columns for Dex and Fashion */
 #modal #dexGrid.grid,
+#collectionModal #collectionGrid.grid,
 #fashionModal #fashionGrid.grid,
 #medalsModal #medalsGrid.grid {
 	display: grid;
@@ -88,6 +89,7 @@
 @media (min-width: 1600px) {
 
 	#modal #dexGrid.grid,
+	#collectionModal #collectionGrid.grid,
 	#fashionModal #fashionGrid.grid,
 	#medalsModal #medalsGrid.grid {
 		grid-template-columns: repeat(6, 1fr);

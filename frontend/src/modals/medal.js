@@ -57,13 +57,14 @@ export function medalsSectionCardFor(gameKey, genKey, sectionId, store) {
 
 export function wireMedalsModal(store, els) {
 	const {
-		medalsModal,
-		medalsModalClose,
-		medalsSelectAll,
-		medalsClearAll,
-		medalsGrid,
-		medalsModalTitle,
-		medalsSearch,
+		collectionModal: medalsModal,
+		collectionModalClose: medalsModalClose,
+		collectionSelectAll: medalsSelectAll,
+		collectionClearAll: medalsClearAll,
+		collectionGrid: medalsGrid,
+		collectionModalTitle: medalsModalTitle,
+		collectionSearch: medalsSearch,
+		collectionGenderToggle,
 	} = els;
 
 	const state = {
@@ -72,6 +73,7 @@ export function wireMedalsModal(store, els) {
 		query: "",
 		sectionId: null,
 	};
+	const isMedalsViewActive = () => medalsModal?.dataset.view === "medals";
 
 	const refreshSummaryCard = (gameKey) => {
 		const host = document.querySelector(`[data-medals-summary="${gameKey}"]`);
@@ -224,14 +226,24 @@ export function wireMedalsModal(store, els) {
 		// NOW it is safe to hide the modal
 		medalsModal.classList.remove("open");
 		medalsModal.setAttribute("aria-hidden", "true");
+		medalsModal.dataset.view = "";
 	}
 
-	medalsSelectAll?.addEventListener("click", () => setAllVisible(true));
-	medalsClearAll?.addEventListener("click", () => setAllVisible(false));
-	medalsModalClose?.addEventListener("click", closeMedalsModal);
+	medalsSelectAll?.addEventListener("click", () => {
+		if (!isMedalsViewActive()) return;
+		setAllVisible(true);
+	});
+	medalsClearAll?.addEventListener("click", () => {
+		if (!isMedalsViewActive()) return;
+		setAllVisible(false);
+	});
+	medalsModalClose?.addEventListener("click", () => {
+		if (isMedalsViewActive()) closeMedalsModal();
+	});
 
 	if (medalsSearch instanceof HTMLInputElement) {
 		medalsSearch.addEventListener("input", () => {
+			if (!isMedalsViewActive()) return;
 			state.query = medalsSearch.value || "";
 			render();
 		});
@@ -242,6 +254,16 @@ export function wireMedalsModal(store, els) {
 		state.genKey = genKey;
 		state.query = "";
 		state.sectionId = sectionId;
+		medalsModal.dataset.view = "medals";
+		if (collectionGenderToggle) {
+			collectionGenderToggle.classList.add("hidden");
+		}
+		if (medalsSearch instanceof HTMLInputElement) {
+			medalsSearch.hidden = false;
+			medalsSearch.placeholder = "Search medals...";
+		}
+		if (medalsSelectAll) medalsSelectAll.hidden = false;
+		if (medalsClearAll) medalsClearAll.hidden = false;
 		if (medalsSearch instanceof HTMLInputElement) medalsSearch.value = "";
 
 		if (medalsModalTitle) {

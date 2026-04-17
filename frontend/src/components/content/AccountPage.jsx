@@ -189,11 +189,7 @@ function GeneralTab() {
 							type="button"
 							id="accountLoginBtn"
 							onClick={() => {
-								if (window.PPGC?.openAuthModal) window.PPGC.openAuthModal('login');
-								else {
-									const overlay = document.getElementById('ppgc-auth-overlay');
-									if (overlay) overlay.hidden = false;
-								}
+								window.PPGC?.openAuthModal?.('login');
 							}}
 						>
 							{signedIn ? 'Switch account' : 'Log in / Sign up'}

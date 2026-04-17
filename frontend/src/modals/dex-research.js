@@ -54,6 +54,7 @@ PPGC.getMonResearchTierStats = function getMonResearchTierStats(gameKey, monId, 
 
 export function openResearchModal(gameKey, genKey, mon, store) {
 	void genKey; // not needed, kept for symmetry
+	setupResearchModal();
 
 	const researchModal = document.getElementById("researchModal");
 	const researchGrid = document.getElementById("researchGrid");
@@ -166,6 +167,8 @@ export function setupResearchModal() {
 	const researchModal = document.getElementById("researchModal");
 	const researchModalClose = document.getElementById("researchModalClose");
 	if (!researchModal) return;
+	if (researchModal.dataset.wired === "1") return;
+	researchModal.dataset.wired = "1";
 
 	const closeResearchModal = () => {
 		const returnEl = researchModal.__returnFocusEl;

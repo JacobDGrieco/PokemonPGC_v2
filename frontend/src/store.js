@@ -1,4 +1,5 @@
 // Centralized state & persistence for PPGC
+import { normalizeRecordKeys, normalizeSectionId, normalizeTaskId } from "./utils/normalizeSectionId.js";
 
 const STORAGE_KEY = "ppgc_v1";
 const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
@@ -7,7 +8,7 @@ const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
 let initialLevel = saved.level || "gen";
 let initialGenKey = saved.genKey || null;
 let initialGameKey = saved.gameKey || null;
-let initialSectionId = saved.sectionId || null;
+let initialSectionId = normalizeSectionId(saved.sectionId || null);
 
 const ALLOWED_LEVELS = new Set(["gen", "game", "section", "account", "tools", "moninfo"]);
 if (!ALLOWED_LEVELS.has(initialLevel)) initialLevel = "gen";
@@ -55,11 +56,11 @@ export const store = {
 		taskDensity: saved.taskDensity === "comfortable" ? "comfortable" : "compact",
 	},
 	sectionsStore: new Map(Object.entries(saved.sections || {})),
-	tasksStore: new Map(Object.entries(saved.tasks || {})),
+	tasksStore: new Map(Object.entries(normalizeRecordKeys(saved.tasks || {}, normalizeSectionId))),
 	dexStatus: new Map(Object.entries(saved.dexStatus || {})),
 	dexFormsStatus: new Map(), // Map<gameKey, { [monId]: { all?:boolean, forms:{[formName]: status|boolean} } }>
-	taskProgressById: new Map(Object.entries(saved.taskProgressById || {})),
-	taskChoiceById: new Map(Object.entries(saved.taskChoiceById || {})),
+	taskProgressById: new Map(Object.entries(normalizeRecordKeys(saved.taskProgressById || {}, normalizeTaskId))),
+	taskChoiceById: new Map(Object.entries(normalizeRecordKeys(saved.taskChoiceById || {}, normalizeTaskId))),
 };
 
 // Extra UI state defaults
@@ -336,7 +337,7 @@ export function save() {
 	try {
 		localStorage.setItem("ppgc_v1", JSON.stringify(obj));
 	} catch (e) {
-		console.warn("[ppgc] Failed to save progress:", e);
+		console.warn("Failed to save progress:", e);
 	}
 
 	try {

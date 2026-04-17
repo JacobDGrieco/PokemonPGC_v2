@@ -16,7 +16,7 @@ function buildTaskSearchIndex() {
     });
   }
 
-  const gameKeyFromSectionId = (sectionId) => (sectionId || '').split('-')[0] || '';
+  const gameKeyFromSectionId = (sectionId) => (sectionId || '').split(':')[0] || '';
 
   const walk = (nodes, ctx) => {
     (nodes || []).forEach((task) => {

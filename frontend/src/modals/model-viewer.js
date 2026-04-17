@@ -27,6 +27,8 @@ export async function openModelViewerModal({
 	glbUrl,
 	variant = "base",
 }) {
+	await window.PPGC?.ensureModalMounted?.("modelViewer");
+
 	eyeShaderMats.length = 0;
 	smokeShaderMats.length = 0;
 

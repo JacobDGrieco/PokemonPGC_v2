@@ -31,19 +31,19 @@ registerKeywordSectionMeter({
  */
 export function wireFashionModal(store, els) {
 	const {
-		fashionModal,
-		fashionModalClose,
-		fashionSelectAll,
-		fashionClearAll,
-		fashionGrid,
-		fashionModalTitle,
+		collectionModal: fashionModal,
+		collectionModalClose: fashionModalClose,
+		collectionSelectAll: fashionSelectAll,
+		collectionClearAll: fashionClearAll,
+		collectionGrid: fashionGrid,
+		collectionModalTitle: fashionModalTitle,
+		collectionSearch: fashionSearch,
+		collectionGenderToggle: fashionGenderToggle,
 	} = els;
 
 	const formsModal = document.getElementById("formsModal");
 	const formsModalClose = document.getElementById("formsModalClose");
 	const formsWheel = document.getElementById("formsWheel");
-	const fashionSearch = document.getElementById("fashionSearch");
-	const fashionGenderToggle = document.getElementById("fashionGenderToggle");
 
 	// --- Helpers to sync summary cards / section header ----------------------
 	const updateFashionSummaryCard = createFashionSummaryUpdater(store);
@@ -65,6 +65,9 @@ export function wireFashionModal(store, els) {
 		refreshSectionHeader,
 		applyFashionSyncForItem, // NEW
 	});
+	function isFashionViewActive() {
+		return fashionModal?.dataset.view === "fashion";
+	}
 	/**
  * Sync the Fashion gender pill with current state, similar to syncGen1SpriteToggle.
  * - Only show for X/Y for now.
@@ -266,6 +269,14 @@ export function wireFashionModal(store, els) {
 		const cat = _getGameFashion(gameKey).find((c) => c.id === categoryId);
 
 		fashionModal.style.setProperty("--accent", game?.color || "#7fd2ff");
+		fashionModal.dataset.view = "fashion";
+		if (fashionSearch) {
+			fashionSearch.hidden = false;
+			fashionSearch.placeholder = "Search fashion...";
+			fashionSearch.value = "";
+		}
+		if (fashionSelectAll) fashionSelectAll.hidden = false;
+		if (fashionClearAll) fashionClearAll.hidden = false;
 		fashionModalTitle.textContent = `Fashion — ${game ? game.label : gameKey
 			} · ${cat?.label || categoryId}`;
 
@@ -275,16 +286,16 @@ export function wireFashionModal(store, els) {
 			sheet.style.setProperty("--hdr", `${sheetHeader.offsetHeight}px`);
 		}
 
-		fashionModal.querySelector("#fashionGrid")?.classList.add("grid");
+		fashionModal.querySelector("#collectionGrid")?.classList.add("grid");
 		renderGrid();
 
 		fashionModal.removeAttribute("inert");
 		fashionModal.setAttribute("aria-hidden", "false");
 		fashionModal.classList.add("open");
-		document.getElementById("fashionModalClose")?.focus();
+		document.getElementById("collectionModalClose")?.focus();
 	}
 	function closeFashionModal() {
-		const modal = document.getElementById("fashionModal");
+		const modal = document.getElementById("collectionModal");
 		const active = document.activeElement;
 		if (active && modal.contains(active)) {
 			try {
@@ -296,6 +307,7 @@ export function wireFashionModal(store, els) {
 		modal.classList.remove("open");
 		modal.setAttribute("aria-hidden", "true");
 		modal.setAttribute("inert", "");
+		modal.dataset.view = "";
 		window.PPGC.enableTaskTooltips();
 	}
 
@@ -391,38 +403,44 @@ export function wireFashionModal(store, els) {
 
 	// --- Event wiring --------------------------------------------------------
 	fashionModal.addEventListener("click", (e) => {
-		if (e.target === fashionModal) closeFashionModal();
+		if (e.target === fashionModal && isFashionViewActive()) closeFashionModal();
 	});
-	fashionModalClose.addEventListener("click", closeFashionModal);
+	fashionModalClose.addEventListener("click", () => {
+		if (isFashionViewActive()) closeFashionModal();
+	});
 	document.addEventListener("keydown", (e) => {
-		if (e.key === "Escape") closeFashionModal();
+		if (e.key === "Escape" && isFashionViewActive()) closeFashionModal();
 	});
-	if (fashionSearch && !fashionSearch._bound) {
+	if (fashionSearch && !fashionSearch._ppgcFashionBound) {
 		fashionSearch.addEventListener("input", () => {
+			if (!isFashionViewActive()) return;
 			renderGrid();
 		});
-		fashionSearch._bound = true;
+		fashionSearch._ppgcFashionBound = true;
 	}
-	if (fashionSelectAll && !fashionSelectAll._bound) {
+	if (fashionSelectAll && !fashionSelectAll._ppgcFashionBound) {
 		fashionSelectAll.addEventListener("click", (e) => {
+			if (!isFashionViewActive()) return;
 			e.preventDefault();
 			e.stopPropagation();
 			_bulkSetCategory(true);
 		});
-		fashionSelectAll._bound = true;
+		fashionSelectAll._ppgcFashionBound = true;
 	}
-	if (fashionClearAll && !fashionClearAll._bound) {
+	if (fashionClearAll && !fashionClearAll._ppgcFashionBound) {
 		fashionClearAll.addEventListener("click", (e) => {
+			if (!isFashionViewActive()) return;
 			e.preventDefault();
 			e.stopPropagation();
 			_bulkSetCategory(false);
 		});
-		fashionClearAll._bound = true;
+		fashionClearAll._ppgcFashionBound = true;
 	}
-	if (fashionGenderToggle && !fashionGenderToggle._bound) {
+	if (fashionGenderToggle && !fashionGenderToggle._ppgcFashionBound) {
 		const input = fashionGenderToggle.querySelector("input");
 		if (input) {
 			input.addEventListener("change", () => {
+				if (!isFashionViewActive()) return;
 				const { fashionForGame } = store.state;
 				if (!fashionForGame) return;
 
@@ -442,7 +460,7 @@ export function wireFashionModal(store, els) {
 				refreshSectionHeader();
 			});
 		}
-		fashionGenderToggle._bound = true;
+		fashionGenderToggle._ppgcFashionBound = true;
 	}
 
 	return { openFashionModal, renderGrid };

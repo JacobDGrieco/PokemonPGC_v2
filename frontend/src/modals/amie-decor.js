@@ -12,16 +12,18 @@ function setStatusMap(store, gameKey, next) {
 
 export function wireAmieDecorModal(store, els) {
   const {
-    amieDecorModal,
-    amieDecorModalClose,
-    amieDecorGrid,
-    amieDecorSearch,
-    amieDecorSelectAll,
-    amieDecorClearAll,
-    amieDecorModalTitle,
+    collectionModal: amieDecorModal,
+    collectionModalClose: amieDecorModalClose,
+    collectionGrid: amieDecorGrid,
+    collectionSearch: amieDecorSearch,
+    collectionSelectAll: amieDecorSelectAll,
+    collectionClearAll: amieDecorClearAll,
+    collectionModalTitle: amieDecorModalTitle,
+    collectionGenderToggle,
   } = els;
 
   const updateSummary = createAmieDecorSummaryUpdater(store);
+  const isAmieDecorViewActive = () => amieDecorModal?.dataset.view === 'amieDecor';
 
   function getCurrentItems() {
     return getGameCollection('amieDecor', store.state.amieDecorForGame);
@@ -100,6 +102,17 @@ export function wireAmieDecorModal(store, els) {
 
     const game = (window.DATA.games?.[genKey] || []).find((entry) => entry.key === gameKey);
     amieDecorModal.style.setProperty('--accent', game?.color || '#7fd2ff');
+    amieDecorModal.dataset.view = 'amieDecor';
+    if (collectionGenderToggle) {
+      collectionGenderToggle.classList.add('hidden');
+    }
+    if (amieDecorSearch) {
+      amieDecorSearch.hidden = false;
+      amieDecorSearch.placeholder = 'Search decorations...';
+      amieDecorSearch.value = '';
+    }
+    if (amieDecorSelectAll) amieDecorSelectAll.hidden = false;
+    if (amieDecorClearAll) amieDecorClearAll.hidden = false;
     if (amieDecorModalTitle) {
       amieDecorModalTitle.textContent = `Poke-Amie Decorations - ${game?.label || gameKey}`;
     }
@@ -119,38 +132,46 @@ export function wireAmieDecorModal(store, els) {
     amieDecorModal.classList.remove('open');
     amieDecorModal.setAttribute('aria-hidden', 'true');
     amieDecorModal.setAttribute('inert', '');
+    amieDecorModal.dataset.view = '';
     window.PPGC?.enableTaskTooltips?.();
   }
 
   amieDecorModal?.addEventListener('click', (event) => {
-    if (event.target === amieDecorModal) closeAmieDecorModal();
+    if (event.target === amieDecorModal && isAmieDecorViewActive()) closeAmieDecorModal();
   });
-  amieDecorModalClose?.addEventListener('click', closeAmieDecorModal);
+  amieDecorModalClose?.addEventListener('click', () => {
+    if (isAmieDecorViewActive()) closeAmieDecorModal();
+  });
   document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && amieDecorModal?.classList.contains('open')) {
+    if (event.key === 'Escape' && isAmieDecorViewActive() && amieDecorModal?.classList.contains('open')) {
       closeAmieDecorModal();
     }
   });
 
-  if (amieDecorSearch && !amieDecorSearch._bound) {
-    amieDecorSearch.addEventListener('input', renderGrid);
-    amieDecorSearch._bound = true;
+  if (amieDecorSearch && !amieDecorSearch._ppgcAmieDecorBound) {
+    amieDecorSearch.addEventListener('input', () => {
+      if (!isAmieDecorViewActive()) return;
+      renderGrid();
+    });
+    amieDecorSearch._ppgcAmieDecorBound = true;
   }
-  if (amieDecorSelectAll && !amieDecorSelectAll._bound) {
+  if (amieDecorSelectAll && !amieDecorSelectAll._ppgcAmieDecorBound) {
     amieDecorSelectAll.addEventListener('click', (event) => {
+      if (!isAmieDecorViewActive()) return;
       event.preventDefault();
       event.stopPropagation();
       setAll(true);
     });
-    amieDecorSelectAll._bound = true;
+    amieDecorSelectAll._ppgcAmieDecorBound = true;
   }
-  if (amieDecorClearAll && !amieDecorClearAll._bound) {
+  if (amieDecorClearAll && !amieDecorClearAll._ppgcAmieDecorBound) {
     amieDecorClearAll.addEventListener('click', (event) => {
+      if (!isAmieDecorViewActive()) return;
       event.preventDefault();
       event.stopPropagation();
       setAll(false);
     });
-    amieDecorClearAll._bound = true;
+    amieDecorClearAll._ppgcAmieDecorBound = true;
   }
 
   return { openAmieDecorModal, renderGrid };

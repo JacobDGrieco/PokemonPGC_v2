@@ -6,7 +6,9 @@ export function usePpgcSnapshot() {
 
   useEffect(() => {
     setSnapshot(getPpgcUiSnapshot());
-    return subscribeToPpgcUiSync(setSnapshot);
+    return subscribeToPpgcUiSync((next) => {
+      setSnapshot(next);
+    });
   }, []);
 
   return snapshot;

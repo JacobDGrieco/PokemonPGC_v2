@@ -358,6 +358,9 @@ const statusFromCard = (() => {
 }
 
 export async function openMonInfo(gameKey, genKey, mon) {
+	await window.PPGC?.ensureModalMounted?.("monInfo");
+	setupMonInfoModal();
+
 	const monInfoModal = document.getElementById("monInfoModal");
 	const monInfoTitle = document.getElementById("monInfoTitle");
 	const monInfoBody = document.getElementById("monInfoBody");
