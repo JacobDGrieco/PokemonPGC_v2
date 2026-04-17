@@ -290,6 +290,10 @@ function clampTierValue(value, steps) {
 	return Math.min(max, Math.max(0, Math.round(numeric)));
 }
 
+function shouldRenderTierInput(meta) {
+	return meta.mode === 'number' && meta.steps > 10;
+}
+
 function TieredValueDisplay({ task, className = '', onInputCommit, onChangeCommit }) {
 	const meta = getTierMetaForTask(task);
 	const steps = meta.steps;
@@ -297,22 +301,29 @@ function TieredValueDisplay({ task, className = '', onInputCommit, onChangeCommi
 	const display = meta.mode === 'label'
 		? (value === 0 ? '-' : meta.values[value - 1] || '-')
 		: `${value}/${steps}`;
+	const showInput = shouldRenderTierInput(meta);
 
 	return (
 		<div className={`small tiered-value ${className}`.trim()}>
-			<input
-				type="number"
-				min={0}
-				max={steps}
-				step={1}
-				value={value}
-				className="tiered-input"
-				aria-label={`${task.text} progress`}
-				onClick={(event) => event.stopPropagation()}
-				onInput={(event) => onInputCommit(Number(event.currentTarget.value))}
-				onChange={(event) => onChangeCommit(Number(event.currentTarget.value))}
-			/>
-			<span className="tiered-value-text">{display}</span>
+			{showInput ? (
+				<>
+					<input
+						type="number"
+						min={0}
+						max={steps}
+						step={1}
+						value={value}
+						className="tiered-input"
+						aria-label={`${task.text} progress`}
+						onClick={(event) => event.stopPropagation()}
+						onInput={(event) => onInputCommit(Number(event.currentTarget.value))}
+						onChange={(event) => onChangeCommit(Number(event.currentTarget.value))}
+					/>
+					<span className="tiered-value-text">/{steps}</span>
+				</>
+			) : (
+				<span className="tiered-value-text">{display}</span>
+			)}
 		</div>
 	);
 }

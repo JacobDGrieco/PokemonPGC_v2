@@ -436,6 +436,7 @@
 .tiered-slider {
 	flex: 1 1 auto;
 	width: auto;
+	min-width: 250px;
 	accent-color: var(--accent, #6aa0ff);
 }
 
@@ -492,6 +493,36 @@
 	display: inline-flex;
 	align-items: center;
 	gap: 0.18rem;
+	line-height: 1;
+}
+
+.tiered-value {
+	padding: 0 8px;
+	font-variant-numeric: tabular-nums;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.18rem;
+	line-height: 1;
+}
+
+.tiered-input {
+	width: calc(5ch + 1.1rem);
+	min-width: calc(4ch + 1rem);
+	padding: 0 0.35rem 0.05rem 0.2rem;
+	border: 0;
+	border-bottom: 1px solid var(--border, currentColor);
+	border-radius: 0;
+	background: transparent;
+	color: inherit;
+	font: inherit;
+	font-variant-numeric: tabular-nums;
+	line-height: 1.1;
+	text-align: center;
+	outline: none;
+}
+
+.tiered-value-text {
+	font-variant-numeric: tabular-nums;
 	line-height: 1;
 }
 
