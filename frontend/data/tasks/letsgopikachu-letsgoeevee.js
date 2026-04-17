@@ -9,6 +9,7 @@ import {
 	_task,
 	_frontSprite,
 	defineTasksMany,
+	overrideTasks,
 	range,
 } from '../helpers/index.js';
 
@@ -108,7 +109,12 @@ import {
 		],
 		"battle": [
 			{ id: 1, text: "Battle Red", tooltip: "Defeat 6 Master Trainers and go to the Indigo Plateau" },
-			{ id: 2, text: "Battle Green", tooltip: "Meet in Cerulean City then battle in Cerulean Cave" },
+			{
+				id: 2, text: "Battle Green", tooltip: "Meet in Cerulean City", multi: [
+					{ id: 1, text: "Cerulean Cave" },
+					{ id: 2, text: "Cerulean City" },
+				]
+			},
 			{
 				id: 3, text: "Rematch all Gym Leaders", children: [
 					{ id: 1, text: "Brock" },
@@ -315,6 +321,53 @@ import {
 			{ id: 14, text: "Mewtwonite X", img: ({ gameKey }) => [baseSprite(gameKey, "150-mx"), megaStone("mewtwonite-x")], },
 			{ id: 15, text: "Mewtwonite Y", img: ({ gameKey }) => [baseSprite(gameKey, "150-my"), megaStone("mewtwonite-y")], },
 		],
+		"fashion": [
+			{ id: 1, text: "Obtain all Outfit sets" },
+			{
+				id: 2, text: "Collect all Bow accessories", tooltip: "Purchased from the Celadon Department Store", children: [
+					{ id: 1, text: "Little Red Bow" },
+					{ id: 2, text: "Little Green Bow" },
+					{ id: 3, text: "Little Blue Bow" },
+					{ id: 4, text: "Little Black Bow" },
+					{ id: 5, text: "Little Plaid Bow" },
+					{ id: 6, text: "Little Formal Bow" },
+					{ id: 7, text: "Little Polka-Dot Bow" },
+					{ id: 8, text: "Little Bow" },
+					{ id: 9, text: "Fancy Red Bow" },
+					{ id: 10, text: "Fancy Green Bow" },
+					{ id: 11, text: "Fancy Blue Bow" },
+					{ id: 12, text: "Fancy Black Bow" },
+					{ id: 13, text: "Fancy Plaid Bow" },
+					{ id: 14, text: "Fancy Polka-Dot Bow" },
+					{ id: 15, text: "Fancy Cute Bow" },
+					{ id: 16, text: "Fancy Frilly Bow" },
+				],
+			},
+			{
+				id: 3, text: "Collect all Bandanna accessories", tooltip: "Purchased from the Celadon Department Store", children: [
+					{ id: 1, text: "Sailor Bandanna" },
+					{ id: 2, text: "Safari Bandanna" },
+					{ id: 3, text: "Polka-Dot Bandanna" },
+					{ id: 4, text: "Ruby Bandanna" },
+					{ id: 5, text: "Sapphire Bandanna" },
+					{ id: 6, text: "Emerald Bandanna" },
+					{ id: 7, text: "Black Bandanna" },
+					{ id: 8, text: "White Bandana" },
+				],
+			},
+			{
+				id: 4, text: "Collect all Flower accessories", tooltip: "Purchased from the Celadon Department Store", children: [
+					{ id: 1, text: "Red Flowers" },
+					{ id: 2, text: "Pink Flowers" },
+					{ id: 3, text: "Blue Flowers" },
+					{ id: 4, text: "White Flowers" },
+					{ id: 5, text: "Orange Flowers" },
+					{ id: 6, text: "Purple Flowers" },
+					{ id: 7, text: "Pale Blue Flowers" },
+					{ id: 8, text: "Green Flowers" },
+				],
+			},
+		],
 		"thms": [
 			{
 				id: 1, text: "Collect all HMs", children: [
@@ -403,41 +456,50 @@ import {
 
 	const TASKS_BY_SECTION_GAME1 = {
 		...TASKS_BY_SECTION,
-		"fashion": [
-			{ id: 1, text: "Sportswear Set" },
-			{ id: 2, text: "Sailor Set" },
-			{ id: 3, text: "Formal Set" },
-			{ id: 4, text: "Assistant Set" },
-			{ id: 5, text: "Safari Set" },
-			{ id: 6, text: "Police Set" },
-			{ id: 7, text: "Pikachu Set" },
-			{ id: 8, text: "Raichu Set" },
-			{ id: 9, text: "Team Rocket Set" },
-			{ id: 10, text: "Blast-off Set" },
-		]
+		fashion: overrideTasks(TASKS_BY_SECTION.fashion, {
+			parent: {
+				id: 1, text: "Obtain all Outfit sets", children: [
+					{ id: 1, text: "Sportswear Set" },
+					{ id: 2, text: "Sailor Set" },
+					{ id: 3, text: "Formal Set" },
+					{ id: 4, text: "Assistant Set" },
+					{ id: 5, text: "Safari Set" },
+					{ id: 6, text: "Police Set" },
+					{ id: 7, text: "Pikachu Set" },
+					{ id: 8, text: "Raichu Set" },
+					{ id: 9, text: "Team Rocket Set" },
+					{ id: 10, text: "Blast-off Set" },
+				],
+			},
+		}),
 	};
 
 	const TASKS_BY_SECTION_GAME2 = {
 		...TASKS_BY_SECTION,
-		"fashion": [
-			{ id: 1, text: "Sportswear Set" },
-			{ id: 2, text: "Sailor Set" },
-			{ id: 3, text: "Formal Set" },
-			{ id: 4, text: "Assistant Set" },
-			{ id: 5, text: "Safari Set" },
-			{ id: 6, text: "Police Set" },
-			{ id: 7, text: "Eevee Set" },
-			{ id: 8, text: "Vaporeon Set" },
-			{ id: 9, text: "Jolteon Set" },
-			{ id: 10, text: "Flareon Set" },
-			{ id: 11, text: "Espeon Set" },
-			{ id: 12, text: "Umbreon Set" },
-			{ id: 13, text: "Leafeon Set" },
-			{ id: 14, text: "Glaceon Set" },
-			{ id: 15, text: "Sylveon Set" },
-			{ id: 16, text: "Team Rocket Set" },
-			{ id: 17, text: "Blast-off Set" },
-		]
+		fashion: overrideTasks(TASKS_BY_SECTION.fashion, {
+			parent: {
+				id: 1, text: "Obtain all Outfit sets", children: [
+					{ id: 1, text: "Sportswear Set" },
+					{ id: 2, text: "Sailor Set" },
+					{ id: 3, text: "Formal Set" },
+					{ id: 4, text: "Assistant Set" },
+					{ id: 5, text: "Safari Set" },
+					{ id: 6, text: "Police Set" },
+					{ id: 7, text: "Eevee Set" },
+					{ id: 8, text: "Vaporeon Set" },
+					{ id: 9, text: "Jolteon Set" },
+					{ id: 10, text: "Flareon Set" },
+					{ id: 11, text: "Espeon Set" },
+					{ id: 12, text: "Umbreon Set" },
+					{ id: 13, text: "Leafeon Set" },
+					{ id: 14, text: "Glaceon Set" },
+					{ id: 15, text: "Sylveon Set" },
+					{ id: 16, text: "Team Rocket Set" },
+					{ id: 17, text: "Blast-off Set" },
+				],
+			},
+		}),
+
 	};
 
 	defineTasksMany(GAME_KEYS[0], SECTIONS, TASKS_BY_SECTION_GAME1);
