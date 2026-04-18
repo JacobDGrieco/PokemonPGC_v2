@@ -7,12 +7,14 @@
     "node": ">=20"
   },
   "scripts": {
-    "dev": "npx vite",
-    "dev:client": "npx vite",
+    "dev": "vite",
+    "dev:client": "vite",
     "dev:api": "node ./scripts/api-dev-server.mjs",
-    "build": "npx prisma generate && npx prisma db push && npx vite build && node ./scripts/write-dist-env.mjs",
-    "preview": "npx vite preview",
+    "build": "vite build && node ./scripts/write-dist-env.mjs",
+    "preview": "vite preview",
     "postinstall": "npx prisma generate",
+    "db:push": "npx prisma db push",
+    "deploy:prepare-db": "npx prisma generate && npx prisma db push",
     "prisma:push": "prisma db push",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
