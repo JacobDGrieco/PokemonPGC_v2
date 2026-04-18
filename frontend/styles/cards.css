@@ -286,6 +286,12 @@
 	height: 100%;
 }
 
+.modal #dexGrid .card {
+	contain: layout paint style;
+	content-visibility: auto;
+	contain-intrinsic-size: 260px 190px;
+}
+
 /* Turn the body into a flex column so we can pin the controls to the bottom */
 .modal #dexGrid .card .card-bd,
 .modal #fashionGrid .card .card-bd,

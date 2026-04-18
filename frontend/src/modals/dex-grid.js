@@ -10,6 +10,7 @@ import { getImageForStatus } from './dex-search.js';
 import { _assetPath } from '../utils/assetPath.js';
 import { _dexIdNumber } from '../../data/helpers/dex-ids.js';
 import { PATH_OF_SOLITUDE_KEY } from './dex-progress.js';
+import { emitPpgcUiSync } from '../react-bridge/storeBridge.js';
 
 const PATH_OF_SOLITUDE_ICON = _assetPath('tasks/gen8/legendsarceus/path-of-solitude.png');
 
@@ -56,6 +57,7 @@ function buildSpriteMarkup({ src, name }) {
     alt="${name}"
     src="${src}"
     loading="lazy"
+    decoding="async"
     style="width:100%;height:100%;max-width:132px;max-height:132px;object-fit:contain;"
     onerror="if(this.src!==window.__PPGC_NO_IMG__){this.src=window.__PPGC_NO_IMG__||'/no-image.svg';}"
   />`;
@@ -86,6 +88,7 @@ function updateDexThumb({ thumb, mon, status, gameKey, pathOfSolitudeEnabled = f
 		newSprite.src = newSrc;
 		newSprite.alt = mon.name;
 		newSprite.loading = 'lazy';
+		newSprite.decoding = 'async';
 	}
 
 	newSprite.className = 'sprite' + (newIsWebm ? ' dex-webm' : '');
@@ -121,13 +124,46 @@ export function renderDexCards({
 	applyDexLinksFromForm,
 	save,
 }) {
-	dexGrid.innerHTML = '';
+	void openMonInfo;
+	void applyDexLinksFromForm;
 
-	filtered.forEach((it) => {
+	dexGrid.innerHTML = '';
+	const renderToken = Number(dexGrid.__renderToken || 0) + 1;
+	dexGrid.__renderToken = renderToken;
+	const researchState = store.dexResearchStatus instanceof Map ? store.dexResearchStatus.get(gameKey) || {} : {};
+	const items = Array.isArray(filtered) ? filtered.slice() : [];
+	const defer = typeof window.requestIdleCallback === 'function'
+		? (cb) => window.requestIdleCallback(cb, { timeout: 250 })
+		: (cb) => setTimeout(cb, 0);
+
+	const fillResearchCount = (it, countEl) => {
+		if (!countEl) return;
+		const tasks = Array.isArray(it.research) ? it.research : [];
+		const recAll = store.dexResearchStatus instanceof Map ? store.dexResearchStatus.get(gameKey) || {} : {};
+		const rec = recAll[it.id] || {};
+		let totalTiers = 0;
+		let doneTiers = 0;
+		let levelPoints = 0;
+
+		for (let idx = 0; idx < tasks.length; idx += 1) {
+			const task = tasks[idx];
+			const steps = Array.isArray(task?.tiers) ? task.tiers.length : 0;
+			totalTiers += steps;
+			const raw = rec[idx];
+			const level = typeof raw === 'number' ? raw : raw ? steps : 0;
+			const clamped = Math.max(0, Math.min(steps, level));
+			doneTiers += clamped;
+			levelPoints += clamped * (task?.boost ? 2 : 1);
+		}
+
+		countEl.textContent = `${doneTiers}/${totalTiers}`;
+		countEl.title = `Tiers completed: ${doneTiers}/${totalTiers} • Level: ${Math.min(10, levelPoints)}/10`;
+	};
+
+	const buildCard = (it) => {
 		let current = statusMap[it.id] || 'unknown';
 		const hasForms = Array.isArray(it.forms) && it.forms.length > 0;
 		const hasResearch = Array.isArray(it.research) && it.research.length > 0;
-		const researchState = store.dexResearchStatus instanceof Map ? store.dexResearchStatus.get(gameKey) || {} : {};
 		const pathOfSolitudeEnabled = gameKey === 'legendsarceus' && !!researchState?.[it.id]?.[PATH_OF_SOLITUDE_KEY];
 
 		if (hasForms) {
@@ -150,7 +186,7 @@ export function renderDexCards({
 
 		const keyForCount = `${gameKey}:${it.id}`;
 		const formsCountHTML = hasForms ? `<span class="pill count" data-dex-forms-count="${keyForCount}"></span>` : '';
-		const researchCountHTML = hasResearch ? `<span class="pill count" data-dex-research-count="${keyForCount}"></span>` : '';
+		const researchCountHTML = hasResearch ? `<span class="pill count" data-dex-research-count="${keyForCount}">...</span>` : '';
 
 		card.innerHTML = `
       <div class="thumb ${cls}">
@@ -178,21 +214,6 @@ export function renderDexCards({
 				: ''}
         </div>
       </div>`;
-
-		if (hasResearch) {
-			const rEl = card.querySelector(`[data-dex-research-count="${keyForCount}"]`);
-			if (rEl) {
-				const stats = window?.PPGC?.getMonResearchTierStats
-					? window.PPGC.getMonResearchTierStats(gameKey, it.id, it, store)
-					: null;
-				if (stats && typeof stats.totalTiers === 'number') {
-					rEl.textContent = `${Number(stats.doneTiers || 0)}/${stats.totalTiers}`;
-					rEl.title = `Tiers completed: ${Number(stats.doneTiers || 0)}/${stats.totalTiers} • Level: ${Math.min(10, Number(stats.researchLevel || 0))}/10`;
-				} else {
-					rEl.textContent = '0/0';
-				}
-			}
-		}
 
 		const bindPathOfSolitudeToggle = () => {
 			if (gameKey !== 'legendsarceus') return;
@@ -226,6 +247,7 @@ export function renderDexCards({
 							detail: { gameKey, monId: it.id },
 						})
 					);
+					emitPpgcUiSync({ state: store.state, loading: false });
 				} catch (err) {
 					console.warn('[PPGC] solitude refresh failed', err);
 				}
@@ -260,22 +282,10 @@ export function renderDexCards({
 
 			const researchCountEl = card.querySelector(`[data-dex-research-count="${keyForCount}"]`);
 			if (researchCountEl) {
-				const tasks = Array.isArray(it.research) ? it.research : [];
-				const recAll = store.dexResearchStatus instanceof Map ? store.dexResearchStatus.get(gameKey) || {} : {};
-				const rec = recAll[it.id] || {};
-				let totalTiers = 0;
-				let doneTiers = 0;
-				tasks.forEach((t, idx) => {
-					const tiers = Array.isArray(t.tiers) ? t.tiers : [];
-					const steps = tiers.length || 0;
-					totalTiers += steps;
-					const raw = rec[idx];
-					const level = typeof raw === 'number' ? raw : raw ? steps : 0;
-					const clamped = Math.max(0, Math.min(steps, level));
-					doneTiers += clamped;
+				defer(() => {
+					if (dexGrid.__renderToken !== renderToken || !researchCountEl.isConnected) return;
+					fillResearchCount(it, researchCountEl);
 				});
-				researchCountEl.textContent = `${doneTiers}/${totalTiers}`;
-				researchCountEl.title = `Tiers completed: ${doneTiers}/${totalTiers}`;
 			}
 		}
 
@@ -322,6 +332,21 @@ export function renderDexCards({
 			});
 		}
 
-		dexGrid.appendChild(card);
-	});
+		return card;
+	};
+
+	const BATCH_SIZE = 12;
+	const flushBatch = () => {
+		if (dexGrid.__renderToken !== renderToken) return;
+		const fragment = document.createDocumentFragment();
+		for (let i = 0; i < BATCH_SIZE && items.length; i += 1) {
+			fragment.appendChild(buildCard(items.shift()));
+		}
+		dexGrid.appendChild(fragment);
+		if (items.length) {
+			requestAnimationFrame(flushBatch);
+		}
+	};
+
+	flushBatch();
 }

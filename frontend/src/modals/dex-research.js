@@ -3,6 +3,7 @@ import { _assetPath } from '../utils/assetPath.js';
 import { save } from "../store.js";
 import { ensurePpgcRoot } from "../runtime/globals.js";
 import { resetScrollWithin } from "../utils/scrolling.js";
+import { emitPpgcUiSync } from "../react-bridge/storeBridge.js";
 
 const PPGC = ensurePpgcRoot();
 
@@ -206,9 +207,8 @@ export function setupResearchModal() {
 			console.warn("[PPGC] research close refresh failed", err);
 		}
 
-		// Keep your existing rerender behavior
 		try {
-			window.PPGC?.renderAll?.();
+			emitPpgcUiSync({ state: window.store?.state || window.PPGC?._storeRef?.state || {}, loading: false });
 		} catch { }
 	};
 

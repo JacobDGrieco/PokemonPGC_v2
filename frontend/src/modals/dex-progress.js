@@ -5,6 +5,7 @@
 import { isMythicalForm } from "./dex-config.js";
 import { getDexFormsNode } from "./dex-store.js";
 import { isCompletedForGame, normalizeFlag, registerKeywordSectionMeter } from "./helpers.js";
+import { isGCEASection } from "../store.js";
 
 export const PATH_OF_SOLITUDE_KEY = "__pathOfSolitude";
 
@@ -196,4 +197,30 @@ export function attachProgressHelpers(store) {
 		flagProp: "__ppgcPathOfSolitudeMeter",
 		exposeName: "pathOfSolitudePctFor",
 	});
+
+	if (!Array.isArray(window.PPGC.sectionMeters)) {
+		window.PPGC.sectionMeters = window.PPGC.sectionMeters
+			? Array.from(window.PPGC.sectionMeters)
+			: [];
+	}
+
+	const hasGceaSolitudeMeter = window.PPGC.sectionMeters.some(
+		(fn) => fn && fn.__ppgcPathOfSolitudeGCEAMeter
+	);
+
+	if (!hasGceaSolitudeMeter) {
+		const meter = function legendsArceusGceaSolitudeMeter(sectionObj, gameKey) {
+			if (String(gameKey) !== "legendsarceus") return NaN;
+			if (!isGCEASection(sectionObj)) return NaN;
+
+			const localStore = window.PPGC?._storeRef;
+			if (!localStore) return NaN;
+
+			const pct = pathOfSolitudePctFor(gameKey, null, localStore);
+			return Number.isFinite(pct) ? pct : NaN;
+		};
+
+		meter.__ppgcPathOfSolitudeGCEAMeter = true;
+		window.PPGC.sectionMeters.push(meter);
+	}
 }

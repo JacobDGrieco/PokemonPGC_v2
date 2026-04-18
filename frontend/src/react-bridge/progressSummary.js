@@ -10,6 +10,21 @@ function isExtraCreditSection(section) {
   return title === 'distributions' || title === 'extra credit';
 }
 
+function isPathOfSolitudeSection(section, gameKey) {
+  if (String(gameKey) !== 'legendsarceus') return false;
+
+  const keyword = 'solitude';
+  const id = String(section?.id || '').toLowerCase();
+  const title = String(section?.title || '').toLowerCase();
+  const tags = Array.isArray(section?.tags) ? section.tags : [];
+
+  return (
+    id.includes(keyword) ||
+    title.includes(keyword) ||
+    tags.some((tag) => String(tag || '').toLowerCase() === keyword)
+  );
+}
+
 export function bootstrapTasksForGame(gameKey, currentStore = store) {
   if (!gameKey || !currentStore?.tasksStore) return;
   ensureSyncSetsExpandedForGame(gameKey);
@@ -31,21 +46,23 @@ export function computeSectionPct(section, gameKey, genKey, currentStore = store
   let baseDone = 0;
   let baseTotal = 0;
 
-  if (currentStore.tasksStore && currentStore.tasksStore.has(section.id)) {
-    const tasksArr = currentStore.tasksStore.get(section.id) || [];
-    ({ done: baseDone, total: baseTotal } = summarizeTasks(tasksArr));
-  } else {
-    const bySection = getSeedTaskIdsBySection();
-    const ids = bySection.get(section.id) || [];
-    baseTotal = ids.length;
+  if (!isPathOfSolitudeSection(section, gameKey)) {
+    if (currentStore.tasksStore && currentStore.tasksStore.has(section.id)) {
+      const tasksArr = currentStore.tasksStore.get(section.id) || [];
+      ({ done: baseDone, total: baseTotal } = summarizeTasks(tasksArr));
+    } else {
+      const bySection = getSeedTaskIdsBySection();
+      const ids = bySection.get(section.id) || [];
+      baseTotal = ids.length;
 
-    if (baseTotal) {
-      const progress = currentStore.taskProgressById;
-      let done = 0;
-      for (const id of ids) {
-        if (progress && progress.get(String(id))) done += 1;
+      if (baseTotal) {
+        const progress = currentStore.taskProgressById;
+        let done = 0;
+        for (const id of ids) {
+          if (progress && progress.get(String(id))) done += 1;
+        }
+        baseDone = done;
       }
-      baseDone = done;
     }
   }
 

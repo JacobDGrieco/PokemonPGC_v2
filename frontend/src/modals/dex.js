@@ -212,14 +212,7 @@ export function wireDexModal(store, els) {
 	function renderDexGridIfOpen() {
 		const forKey = store?.state?.dexModalFor;
 		if (!forKey) return;
-
-		// Only rerender if the modal is actually in the DOM
-		const modalEl =
-			document.querySelector(".dex-modal") ||
-			document.querySelector("#dex-modal") ||
-			document.querySelector("[data-modal='dex']");
-
-		if (!modalEl) return;
+		if (!modal || !modal.classList.contains("open")) return;
 
 		renderDexGrid();
 	}
