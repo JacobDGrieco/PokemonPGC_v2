@@ -1,5 +1,6 @@
 import { ensurePpgcRoot } from "./runtime/globals.js";
 import { normalizeSectionId, normalizeSectionSuffix } from "./utils/normalizeSectionId.js";
+import { scheduleAppContentScrollReset } from "./utils/scrolling.js";
 
 // history.js
 // Tiny history/router helper for PPGC.
@@ -262,6 +263,7 @@ export function initHistory({ store, renderAll }) {
 		}
 
 		renderAll();
+		scheduleAppContentScrollReset();
 		if (typeof store.save === "function") store.save();
 	}
 
@@ -371,6 +373,7 @@ export function initHistory({ store, renderAll }) {
 		}
 
 		renderAll();
+		scheduleAppContentScrollReset();
 		if (typeof store.save === "function") store.save();
 	});
 
@@ -381,6 +384,7 @@ export function initHistory({ store, renderAll }) {
 			history.replaceState(snap, "", window.location.href);
 		} catch { }
 		renderAll();
+		scheduleAppContentScrollReset();
 		if (typeof store.save === "function") store.save();
 	});
 

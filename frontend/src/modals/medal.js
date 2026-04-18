@@ -1,5 +1,6 @@
 import { save } from "../store.js";
 import { registerKeywordSectionMeter } from "./helpers.js";
+import { resetScrollWithin } from "../utils/scrolling.js";
 import {
 	getGameMedals as _getGameMedals,
 	isMedalChecked as _isChecked,
@@ -279,6 +280,7 @@ export function wireMedalsModal(store, els) {
 		medalsModal?.classList.add("open");
 		medalsModal.setAttribute("aria-hidden", "false");
 		render();
+		resetScrollWithin(medalsModal);
 	}
 
 	return { openMedalsModal, renderMedalsGridIfOpen: render };

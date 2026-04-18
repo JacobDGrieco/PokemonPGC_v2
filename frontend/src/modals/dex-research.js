@@ -2,6 +2,7 @@
 import { _assetPath } from '../utils/assetPath.js';
 import { save } from "../store.js";
 import { ensurePpgcRoot } from "../runtime/globals.js";
+import { resetScrollWithin } from "../utils/scrolling.js";
 
 const PPGC = ensurePpgcRoot();
 
@@ -161,6 +162,7 @@ export function openResearchModal(gameKey, genKey, mon, store) {
 	researchModal.__returnFocusEl = document.activeElement;
 	researchModal.classList.add("open");
 	researchModal.setAttribute("aria-hidden", "false");
+	resetScrollWithin(researchModal);
 }
 
 export function setupResearchModal() {

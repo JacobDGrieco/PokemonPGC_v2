@@ -3,6 +3,7 @@ import { _dexIdNumber } from '../../data/helpers/dex-ids.js';
 import { resolveMonInfoData } from "./dex-mon-info-data.js";
 import { renderCompletionTopHtml, renderEvolutionHtml, renderEvRadar, renderLocationsHtml, renderMovesHtml, renderNotesHtml, renderProfileHtml, renderStatsRadar, renderTypeChart, renderVariantsHtml } from "./dex-mon-info-render.js";
 import { renderSpritesModels, wireAssetsTabs, wireModelViewerClick, wireResearchClick } from "./dex-mon-info-assets.js";
+import { resetScrollWithin, scrollElementToTop } from "../utils/scrolling.js";
 
 export async function renderMonInfoInto({
 	gameKey,
@@ -335,9 +336,6 @@ const statusFromCard = (() => {
 		formSel.onchange = async () => {
 			const chosen = formSel.value || null;
 
-			// preserve scroll position (nice for long info cards)
-			const prevScroll = monInfoBody.scrollTop;
-
 			await renderMonInfoInto({
 				gameKey,
 				genKey,
@@ -347,8 +345,7 @@ const statusFromCard = (() => {
 				bodyEl,
 				sourceCard,
 			});
-
-			monInfoBody.scrollTop = prevScroll;
+			scrollElementToTop(monInfoBody);
 		};
 	}
 
@@ -389,6 +386,7 @@ export async function openMonInfo(gameKey, genKey, mon) {
 	monInfoModal.setAttribute("aria-hidden", "false");
 	monInfoModal.dataset.gameKey = gameKey;
 	monInfoModal.dataset.monId = String(mon.id);
+	resetScrollWithin(monInfoModal);
 }
 
 export function setupMonInfoModal() {

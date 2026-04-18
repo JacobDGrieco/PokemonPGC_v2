@@ -3,6 +3,7 @@ import { registerKeywordSectionMeter } from "./helpers.js";
 import { setupFashionForms } from "./fashion-forms.js";
 import { fashionPctFor, fashionSummaryCardFor, createFashionSummaryUpdater, refreshFashionSectionHeader } from "./fashion-summary.js";
 import { createApplyFashionSyncForItem, resolveFashionImg } from "./fashion-sync.js";
+import { resetScrollWithin } from "../utils/scrolling.js";
 import {
 	getGameFashion as _getGameFashion,
 	gameHasGenderedFashion as _gameHasGenderedFashion,
@@ -292,6 +293,7 @@ export function wireFashionModal(store, els) {
 		fashionModal.removeAttribute("inert");
 		fashionModal.setAttribute("aria-hidden", "false");
 		fashionModal.classList.add("open");
+		resetScrollWithin(fashionModal);
 		document.getElementById("collectionModalClose")?.focus();
 	}
 	function closeFashionModal() {

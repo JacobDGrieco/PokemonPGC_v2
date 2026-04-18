@@ -1,6 +1,7 @@
 import { save } from '../store.js';
 import { getGameCollection } from './helpers.js';
 import { createAmieDecorSummaryUpdater, refreshAmieDecorSectionHeader } from './amie-decor-summary.js';
+import { resetScrollWithin } from '../utils/scrolling.js';
 
 function getStatusMap(store, gameKey) {
   return (store?.amieDecorStatus instanceof Map ? store.amieDecorStatus.get(gameKey) : null) || {};
@@ -121,6 +122,7 @@ export function wireAmieDecorModal(store, els) {
     amieDecorModal.removeAttribute('inert');
     amieDecorModal.setAttribute('aria-hidden', 'false');
     amieDecorModal.classList.add('open');
+    resetScrollWithin(amieDecorModal);
     amieDecorModalClose?.focus();
   }
 

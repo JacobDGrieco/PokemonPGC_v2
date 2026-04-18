@@ -16,6 +16,7 @@ import { pickBestWebmMime, downloadBlob, downloadDataUrl } from "./model-viewer-
 import { createAnimationController } from "./model-viewer-animation.js";
 import { createViewerOverlayController } from "./model-viewer-overlays.js";
 import { ensurePpgcRoot } from "../runtime/globals.js";
+import { resetScrollWithin } from "../utils/scrolling.js";
 
 const eyeShaderMats = [];
 const smokeShaderMats = [];
@@ -1041,6 +1042,7 @@ export async function openModelViewerModal({
 	// open
 	modalEl.classList.add("open");
 	modalEl.setAttribute("aria-hidden", "false");
+	resetScrollWithin(modalEl);
 
 	// wire close once
 	if (modalEl.dataset.wired !== "1") {

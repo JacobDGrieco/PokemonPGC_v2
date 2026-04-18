@@ -39,6 +39,7 @@ import {
 import { renderDexCards } from "./dex-grid.js";
 import { initDexModalRuntime } from "./dex-runtime.js";
 import { emitPpgcUiSync } from "../react-bridge/storeBridge.js";
+import { resetScrollWithin } from "../utils/scrolling.js";
 
 ensurePpgcRoot();
 ensureDataRoot();
@@ -290,6 +291,7 @@ export function wireDexModal(store, els) {
 		modal.__returnFocusEl = document.activeElement;
 		modal.classList.add("open");
 		modal.setAttribute("aria-hidden", "false");
+		resetScrollWithin(modal);
 		emitPpgcUiSync({ state: store.state, loading: false });
 	}
 	function closeModal() {

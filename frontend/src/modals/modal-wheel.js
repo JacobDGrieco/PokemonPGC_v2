@@ -1,4 +1,5 @@
 import { computeChipScale, computeRingCounts, getOvalScale, getRadiusScale, layoutWheel } from "./modal-geometry.js";
+import { resetScrollWithin } from "../utils/scrolling.js";
 
 export function resetFormsWheelLayout(formsWheel) {
 	if (!formsWheel) return;
@@ -60,6 +61,7 @@ export function prepFormsModal(formsModal, formsWheel, opts = {}) {
 	formsModal.removeAttribute("inert");
 	formsModal.setAttribute("aria-hidden", "false");
 	formsModal.classList.add("open");
+	resetScrollWithin(formsModal);
 	return dialog || null;
 }
 
