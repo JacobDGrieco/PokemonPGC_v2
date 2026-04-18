@@ -31,7 +31,7 @@ import {
 		{ id: "collectables", title: "Collectables" },
 		{ id: "fashion", title: "Fashion" },
 		{ id: "sandwiches", title: "Sandwiches" },
-		{ id: "thms", title: "TMs/Legendary" },
+		{ id: "thms", title: "TMs/HMs" },
 		{ id: "distributions", title: "Distributions" },
 		{ id: "extraCredit", title: "Extra Credit" },
 	];

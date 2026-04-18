@@ -4,6 +4,7 @@ import {
 	_heldItem,
 	_hm,
 	_keyItem,
+	_ribbon,
 	_tm,
 	_location,
 	_npc,
@@ -27,6 +28,7 @@ import {
 	const formItem = (name) => _formItem(gen, name);
 	const heldItem = (name) => _heldItem(gen, name);
 	const keyItem = (name) => _keyItem(gen, name);
+	const ribbon = (name) => _ribbon(gen, name);
 	const hm = (type) => _hm(gen, type);
 	const tm = (type) => _tm(gen, type);
 
@@ -856,12 +858,12 @@ import {
 				9: { text: "Catch Ho-Oh" },
 			}
 		}),
-		activities: overrideTasks(TASKS_BY_SECTION.activities, {
+		activites: overrideTasks(TASKS_BY_SECTION.activites, {
 			1: {
 				6: { text: "Brilliant" },
 			},
 		}),
-		collectables: overrideTasks(TASKS_BY_SECTION.activities, {
+		collectables: overrideTasks(TASKS_BY_SECTION.collectables, {
 			2: {
 				2: { text: "Adamant Orb", img: () => heldItem("adamant-orb"), tooltip: "Spear Pillar\nBrilliant Diamond: found after the Dialga encounter" },
 			},
@@ -887,14 +889,14 @@ import {
 
 			}
 		}),
-		activities: overrideTasks(TASKS_BY_SECTION.activities, {
+		activites: overrideTasks(TASKS_BY_SECTION.activites, {
 			1: {
 				6: { text: "Shining" },
 			},
 		}),
-		collectables: overrideTasks(TASKS_BY_SECTION.activities, {
+		collectables: overrideTasks(TASKS_BY_SECTION.collectables, {
 			2: {
-				2: { text: "Lustrous Orb", img: () => heldItem("lustrous-orb"), tooltip: "Spear Pillar\Shining Pearl: found after the Palkia encounter" },
+				2: { text: "Lustrous Orb", img: () => heldItem("lustrous-orb"), tooltip: "Spear Pillar\nShining Pearl: found after the Palkia encounter" },
 			},
 		}),
 	};
