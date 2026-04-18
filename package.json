@@ -6,7 +6,7 @@
     "frontend"
   ],
   "engines": {
-    "node": ">=20"
+    "node": "20.x"
   },
   "scripts": {
     "dev": "concurrently --names \"frontend,api\" --prefix-colors \"cyan,yellow\" \"npm run dev:client --workspace=frontend\" \"npm run dev:api --workspace=frontend\"",
