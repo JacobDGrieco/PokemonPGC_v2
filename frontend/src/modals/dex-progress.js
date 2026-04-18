@@ -4,7 +4,9 @@
 // Local copy of normalizeFlag from dex.js – keep in sync if you change it there.
 import { isMythicalForm } from "./dex-config.js";
 import { getDexFormsNode } from "./dex-store.js";
-import { isCompletedForGame, normalizeFlag } from "./helpers.js";
+import { isCompletedForGame, normalizeFlag, registerKeywordSectionMeter } from "./helpers.js";
+
+export const PATH_OF_SOLITUDE_KEY = "__pathOfSolitude";
 
 function _tierStatsForMon(tasks, rec = {}) {
 	let totalTiers = 0;
@@ -76,6 +78,48 @@ export function researchPctFor(gameKey, genKey, store) {
 	return basePct;
 }
 
+export function pathOfSolitudeStatsFor(gameKey, genKey, store) {
+	void genKey;
+
+	if (String(gameKey) !== "legendsarceus") {
+		return { baseTotal: 0, baseDone: 0, extraTotal: 0, extraDone: 0 };
+	}
+
+	const dex = Array.isArray(window.DATA?.dex?.[gameKey]) ? window.DATA.dex[gameKey] : [];
+	const recAll =
+		store?.dexResearchStatus instanceof Map
+			? (store.dexResearchStatus.get(gameKey) || {})
+			: {};
+
+	let baseTotal = 0, baseDone = 0;
+	let extraTotal = 0, extraDone = 0;
+
+	for (const mon of dex) {
+		const rec = recAll?.[mon.id] || {};
+		const done = !!rec?.[PATH_OF_SOLITUDE_KEY];
+
+		if (mon?.mythical) {
+			extraTotal += 1;
+			if (done) extraDone += 1;
+		} else {
+			baseTotal += 1;
+			if (done) baseDone += 1;
+		}
+	}
+
+	return { baseTotal, baseDone, extraTotal, extraDone };
+}
+
+export function pathOfSolitudePctFor(gameKey, genKey, store) {
+	const { baseTotal, baseDone, extraTotal, extraDone } = pathOfSolitudeStatsFor(gameKey, genKey, store);
+
+	if (!baseTotal) return 0;
+
+	const pctBase = (baseDone / baseTotal) * 100;
+	const pctExtended = ((baseDone + extraDone) / baseTotal) * 100;
+	return baseDone === baseTotal ? pctExtended : pctBase;
+}
+
 /**
  * Compute forms-only completion percentage for a game.
  * Mirrors the implementation in dex.js, but isolated here.
@@ -143,4 +187,13 @@ export function attachProgressHelpers(store) {
 		formsPctFor(gameKey, genKey, store);
 	window.PPGC.researchPctFor = (gameKey, genKey) =>
 		researchPctFor(gameKey, genKey, store);
+	window.PPGC.pathOfSolitudePctFor = (gameKey, genKey) =>
+		pathOfSolitudePctFor(gameKey, genKey, store);
+
+	registerKeywordSectionMeter({
+		keyword: "solitude",
+		pctFn: (gameKey, localStore) => pathOfSolitudePctFor(gameKey, null, localStore),
+		flagProp: "__ppgcPathOfSolitudeMeter",
+		exposeName: "pathOfSolitudePctFor",
+	});
 }

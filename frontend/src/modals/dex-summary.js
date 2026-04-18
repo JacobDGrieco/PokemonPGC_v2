@@ -1,5 +1,5 @@
 import { isCompletedForGame, normalizeFlag } from "./helpers.js";
-import { researchStatsFor } from "./dex-progress.js";
+import { pathOfSolitudeStatsFor, researchStatsFor } from "./dex-progress.js";
 import { isMythicalForm as _isMythicalForm, baseOf, shortLabelForDexKey } from "./dex-config.js";
 import {
   getDexList as _getDexList,
@@ -187,6 +187,37 @@ export function dexSummaryCardFor(gameKey, genKey, store) {
       </div>`
     : ``;
 
+  const solitude = pathOfSolitudeStatsFor(gameKey, genKey, store);
+  const haveSolitude = solitude.baseTotal + solitude.extraTotal > 0;
+  let solitudePctBar = 0;
+  let solitudePctExtraOverlay = 0;
+  let solitudeLabelPct = 0;
+  if (haveSolitude) {
+    const pctBase = solitude.baseTotal ? (solitude.baseDone / solitude.baseTotal) * 100 : 0;
+    const pctExtended = solitude.baseTotal ? ((solitude.baseDone + solitude.extraDone) / solitude.baseTotal) * 100 : 0;
+    solitudeLabelPct = solitude.baseDone === solitude.baseTotal ? pctExtended : pctBase;
+    solitudePctBar = Math.min(100, Math.max(0, Math.round((solitude.baseDone / Math.max(1, solitude.baseTotal)) * 100)));
+    solitudePctExtraOverlay =
+      solitude.baseTotal > 0 && solitude.baseDone === solitude.baseTotal && solitude.extraTotal > 0
+        ? (solitude.extraDone / solitude.extraTotal) * 100
+        : 0;
+  }
+
+  const solitudeHTML = haveSolitude
+    ? `
+      <div class="small" data-solitude-label="${gameKey}">
+        Path of Solitude:
+        ${solitude.baseDone === solitude.baseTotal ? solitude.baseDone + solitude.extraDone : solitude.baseDone}
+        / ${solitude.baseTotal || 0}
+        (${solitudeLabelPct.toFixed(2)}%)
+      </div>
+      <div class="progress ${solitudePctExtraOverlay > 0 ? "has-extra" : ""}" data-solitude-meter="${gameKey}">
+        <span class="base" style="width:${solitudePctBar}%"></span>
+        <span class="extra" style="width:${solitudePctExtraOverlay}%"></span>
+        ${solitudePctExtraOverlay > 0 ? `<div class="extra-badge" title="Extra credit progress">+${solitudePctExtraOverlay.toFixed(0)}%</div>` : ``}
+      </div>`
+    : ``;
+
   const card = document.createElement("section");
   card.className = "card";
   card.innerHTML = `
@@ -196,6 +227,7 @@ export function dexSummaryCardFor(gameKey, genKey, store) {
       ${nationalHTML}
       ${formsHTML}
       ${researchHTML}
+      ${solitudeHTML}
     </div>
   `;
   return card;

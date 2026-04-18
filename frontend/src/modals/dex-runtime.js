@@ -11,7 +11,7 @@ import {
   getFilterClassForStatus,
   renderBadges,
 } from './helpers.js';
-import { attachProgressHelpers, researchStatsFor } from './dex-progress.js';
+import { attachProgressHelpers, pathOfSolitudeStatsFor, researchStatsFor } from './dex-progress.js';
 import { setupDexFormsModal } from './dex-forms.js';
 import { setupMonInfoModal } from './dex-mon-info.js';
 import { setupResearchModal } from './dex-research.js';
@@ -96,6 +96,32 @@ export function initDexModalRuntime({
           if (baseSpan) baseSpan.style.width = `${pctBar}%`;
           if (extraSpan) extraSpan.style.width = `${pctExtraOverlay}%`;
           if (pctExtraOverlay > 0) wrap.classList.add('has-extra');
+          else wrap.classList.remove('has-extra');
+        });
+
+        const solitude = pathOfSolitudeStatsFor(gameKey, currentGenKey, store);
+        const haveSolitude = (solitude.baseTotal + solitude.extraTotal) > 0;
+        if (!haveSolitude) return;
+
+        const solitudePctBase = solitude.baseTotal ? (solitude.baseDone / solitude.baseTotal) * 100 : 0;
+        const solitudePctExtended = solitude.baseTotal ? ((solitude.baseDone + solitude.extraDone) / solitude.baseTotal) * 100 : 0;
+        const solitudeLabelPct = (solitude.baseDone === solitude.baseTotal) ? solitudePctExtended : solitudePctBase;
+        const solitudePctBar = Math.min(100, Math.max(0, Math.round((solitude.baseDone / Math.max(1, solitude.baseTotal)) * 100)));
+        const solitudePctExtraOverlay = solitude.baseTotal > 0 && solitude.baseDone === solitude.baseTotal && solitude.extraTotal > 0
+          ? (solitude.extraDone / solitude.extraTotal) * 100
+          : 0;
+
+        document.querySelectorAll(`[data-solitude-label="${gameKey}"]`).forEach((labelEl) => {
+          const shownDone = (solitude.baseDone === solitude.baseTotal) ? (solitude.baseDone + solitude.extraDone) : solitude.baseDone;
+          labelEl.textContent = `Path of Solitude: ${shownDone} / ${solitude.baseTotal || 0} (${solitudeLabelPct.toFixed(2)}%)`;
+        });
+
+        document.querySelectorAll(`[data-solitude-meter="${gameKey}"]`).forEach((wrap) => {
+          const baseSpan = wrap.querySelector('span.base');
+          const extraSpan = wrap.querySelector('span.extra');
+          if (baseSpan) baseSpan.style.width = `${solitudePctBar}%`;
+          if (extraSpan) extraSpan.style.width = `${solitudePctExtraOverlay}%`;
+          if (solitudePctExtraOverlay > 0) wrap.classList.add('has-extra');
           else wrap.classList.remove('has-extra');
         });
       } catch (err) {

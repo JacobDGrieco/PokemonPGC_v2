@@ -13,6 +13,7 @@ import {
 	installDexVariants,
 	baseOf,
 	ensureNatDexIndex,
+	getNatIndexForGame as resolveNatIndexForGame,
 } from "./dex-config.js";
 import {
 	getDexList as _getDexList,
@@ -128,7 +129,7 @@ export function wireDexModal(store, els) {
 		getDexFormsNode: (gameKey, monId) => _getDexFormsNode(store, gameKey, monId),
 		setDexFormsNode: (gameKey, monId, node) => _setDexFormsNode(store, gameKey, monId, node),
 		applyDexLinksFromForm: (gameKey, monId, formName, status) =>
-			applyDexLinksFromForm({ sourceGameKey: gameKey, sourceMonId: monId, sourceFormName: formName, status, store, getNatIndexForGame: (k) => getNatIndexForGame(window.PPGC, k) }),
+			applyDexLinksFromForm({ sourceGameKey: gameKey, sourceMonId: monId, sourceFormName: formName, status, store, getNatIndexForGame: resolveNatIndexForGame }),
 	});
 
 	// NEW: small helper to batch dex sync work (skip repeated save/render)
@@ -357,7 +358,14 @@ export function wireDexModal(store, els) {
 
 		// Apply Dex -> Task using Dex entries’ taskSync (no rendering here)
 		try {
-			applyDexLinksFromDexEntries(gameKey, changed);
+			applyDexLinksFromDexEntries({
+				gameKey,
+				changedMap: changed,
+				store,
+				getNatIndexForGame: resolveNatIndexForGame,
+				renderDexGrid,
+				batchDexSync: true,
+			});
 		} catch (e) {
 			console.error("applyDexLinksFromDexEntries error:", e);
 		}
@@ -451,7 +459,7 @@ export function wireDexModal(store, els) {
 
 						// Dex ↔ Dex form sync (regional <-> national)
 						try {
-							applyDexLinksFromForm({ sourceGameKey: gameKey, sourceMonId: m.id, sourceFormName: fname, status: val, store, getNatIndexForGame: (k) => getNatIndexForGame(window.PPGC, k) });
+							applyDexLinksFromForm({ sourceGameKey: gameKey, sourceMonId: m.id, sourceFormName: fname, status: val, store, getNatIndexForGame: resolveNatIndexForGame });
 						} catch (e) {
 							console.error("applyDexLinksFromForm (bulk) error:", e);
 						}
@@ -477,7 +485,14 @@ export function wireDexModal(store, els) {
 			// Immediately mirror these changes to linked dexes + tasks (still in batch mode)
 			if (Object.keys(changed).length) {
 				try {
-					applyDexLinksFromDexEntries(gameKey, changed);
+					applyDexLinksFromDexEntries({
+						gameKey,
+						changedMap: changed,
+						store,
+						getNatIndexForGame: resolveNatIndexForGame,
+						renderDexGrid,
+						batchDexSync: true,
+					});
 				} catch (e) {
 					console.error("applyDexLinksFromDexEntries (bulk) error:", e);
 				}
