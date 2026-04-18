@@ -150,6 +150,7 @@ import {
 					{ id: 7, text: "Reins of Unity", tooltip: "Used to fuse and separate Calyrex and its steed" },
 				],
 			},
+			{ id: 2, text: "Obtain the Diploma", tooltip: "Crown Tundra Station\nReward for completing the Crown Tundra Pokedex" },
 		],
 		trainerCards: [
 			{
@@ -218,7 +219,7 @@ import {
 	const TASKS_BY_SECTION_GAME1 = {
 		...TASKS_BY_SECTION,
 		catching: overrideTasks(TASKS_BY_SECTION.catching, {
-			4: {
+			2: {
 				5: { text: "Catch Ho-Oh" },
 				6: { text: "Trade Lugia" },
 				7: { text: "Trade Latias" },
@@ -236,7 +237,7 @@ import {
 				33: { text: "Catch Solgaleo" },
 				34: { text: "Trade Lunala" },
 			},
-			5: {
+			3: {
 				2: { text: "Catch Buzzwole" },
 				3: { text: "Trade Pheromosa" },
 				5: { text: "Trade Celesteela" },
@@ -257,7 +258,7 @@ import {
 	const TASKS_BY_SECTION_GAME2 = {
 		...TASKS_BY_SECTION,
 		catching: overrideTasks(TASKS_BY_SECTION.catching, {
-			4: {
+			2: {
 				5: { text: "Trade Ho-Oh" },
 				6: { text: "Catch Lugia" },
 				7: { text: "Catch Latias" },
@@ -275,7 +276,7 @@ import {
 				33: { text: "Trade Solgaleo" },
 				34: { text: "Catch Lunala" },
 			},
-			5: {
+			3: {
 				2: { text: "Trade Buzzwole" },
 				3: { text: "Catch Pheromosa" },
 				5: { text: "Catch Celesteela" },

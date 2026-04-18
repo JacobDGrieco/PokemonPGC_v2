@@ -264,7 +264,7 @@ import {
 			},
 		],
 		battle: [
-			{ id: 1, text: "Defeat Morimoto", tooltip: "Heahea City - GAME FREAK\nRewards the Oval Charm on first win" },
+			{ id: 1, text: "Defeat Game Director Morimoto", tooltip: "Heahea City - GAME FREAK\nRewards the Oval Charm on first win" },
 			{ id: 2, text: "Reach Master Rank in Battle Royal", tiers: ["Normal", "Super", "Hyper", "Master"] },
 			{ id: 3, text: "Reach Grade 50 in the Battle Agency", tooltip: "Festival Plaza\nDefeating Grade 50 bosses awards Gold Bottle Caps" },
 			{

@@ -35,6 +35,7 @@ import { defineLayoutsMany, P, C, parentRows, childRows, } from '../helpers/inde
 			...childRows(1, 1, 4),
 			[P(2)],
 			[C(2, 1), C(2, 2)],
+			[P(3)],
 		],
 		trainerCards: [
 			[P(1)],

@@ -18,7 +18,7 @@ import { defineLayoutsMany, P, C, parentRows, childRows, } from '../helpers/inde
 		story: [
 			[P(1)],
 			...childRows(1, 1, 9),
-			[P(2)],
+			[P(2), P(3)],
 			...childRows(2, 1, 4),
 			[P(3)],
 			...childRows(3, 1, 8, 4),

@@ -170,6 +170,7 @@ import {
 				],
 			},
 			{ id: 2, text: "Find all hidden items with the Item Finder", img: () => keyItem("item-finder"), noCenter: true, type: "tiered", tiers: [range(1, 88)], },
+			{ id: 3, text: "Obtain the Diploma", tooltip: "Celadon Condominiums - Game Freak HQ\nReward for completing the Johto Pokedex" },
 		],
 		thms: [
 			{

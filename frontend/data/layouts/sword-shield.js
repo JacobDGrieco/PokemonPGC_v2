@@ -35,6 +35,7 @@ import { defineLayoutsMany, P, C, parentRows, childRows, } from '../helpers/inde
 			...childRows(4, 1, 17, 6),
 			[P(5)],
 			...childRows(5, 1, 6, 6),
+			[P(6)],
 		],
 		trainerCards: [
 			[P(1)],
@@ -66,5 +67,5 @@ import { defineLayoutsMany, P, C, parentRows, childRows, } from '../helpers/inde
 
 	const COMPACT_LAYOUT = DESKTOP_LAYOUT;
 
-	defineLayoutsMany(GAME_KEYS, DESTOP_LAYOUT, COMPACT_LAYOUT);
+	defineLayoutsMany(GAME_KEYS, DESKTOP_LAYOUT, COMPACT_LAYOUT);
 })();

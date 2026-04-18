@@ -293,6 +293,7 @@ import {
 					{ id: 116, text: "Wailmer Doll", img: () => decoration("wailmer-doll"), tooltip: "Sootopolis City / Lilycove Department Store (clear-out sale)\n$10000" },
 				],
 			},
+			{ id: 5, text: "Obtain the Diploma", tooltip: "Cove Lily Motel - Lilycove City\nReward for completing the Hoenn Pokedex" },
 		],
 		thms: [
 			{

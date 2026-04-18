@@ -37,6 +37,7 @@ import { defineLayoutsMany, P, C, parentRows, childRows, } from '../helpers/inde
 			...childRows(1, 1, 13),
 			[P(2)],
 			...childRows(2, 1, 11, 4),
+			[P(3)],
 		],
 		thms: [
 			[P(1)],

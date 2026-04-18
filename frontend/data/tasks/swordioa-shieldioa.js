@@ -142,6 +142,7 @@ import {
 					{ id: 4, text: "Mark Charm", img: () => keyItem("mark-charm"), tooltip: "Armor Station\nReward for completing the Isle of Armor Pokedex" },
 				],
 			},
+			{ id: 3, text: "Obtain the Diploma", tooltip: "Armor Station\nReward for completing the Isle of Armor Pokedex" },
 		],
 		trainerCards: [
 			{

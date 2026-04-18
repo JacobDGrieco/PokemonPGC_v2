@@ -201,6 +201,7 @@ import {
 					{ id: 11, text: "Globe", img: () => keyItem("globe") },
 				]
 			},
+			{ id: 3, text: "Obtain the Diploma", tooltip: "Hotel Grand Lake - Valor Lakefront\nReward for completing the Sinnoh Pokedex" },
 		],
 		thms: [
 			{

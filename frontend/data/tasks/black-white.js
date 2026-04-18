@@ -129,6 +129,7 @@ import {
 			{ id: 1, text: "Battle Cheren", tooltip: "Victory Road after defeating the Elite 4" },
 			{ id: 2, text: "Battle Bianca", tooltip: "Prof. Juniper's Lab (Saturday Nights)" },
 			{ id: 3, text: "Battle Cynthia", tooltip: "Undella Town (Spring & Summer)" },
+			{ id: 4, text: "Defeat Game Director Morimoto", tooltip: "Castelia City - GAME FREAK\nAvailable once per day after defeating Ghetsis and Team Plasma at the Pokemon League" },
 			{ id: 6, text: "Get to Master Rank at the Battle Institute", tiers: ["Novice", "Normal", "Super", "Hyper", "Elite", "Master"] },
 			{
 				id: 7, text: "Defeat the Riches Family in Undella Town", children: [
@@ -205,6 +206,7 @@ import {
 					{ id: 16, text: "Zap Plate", img: () => formItem("zap-plate") },
 				],
 			},
+			{ id: 4, text: "Obtain the Diploma", tooltip: "Game Freak - Castelia City\nReward for completing the Unova Pokedex" },
 		],
 		accessories: [
 			{

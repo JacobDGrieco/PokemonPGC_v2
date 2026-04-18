@@ -40,8 +40,8 @@ import { defineLayoutsMany, P, C, parentRows, childRows, } from '../helpers/inde
 			[P(2)],
 			[C(2, 1), C(2, 2)],
 			[P(3)],
+			...childRows(3, 1, 100),
 			[P(4)],
-			...childRows(4, 1, 100),
 		],
 		thms: [
 			[P(1)],

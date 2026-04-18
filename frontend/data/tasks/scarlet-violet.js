@@ -45,6 +45,9 @@ import {
 				],
 			},
 		],
+		collectables: [
+			{ id: 1, text: "Obtain the Diploma", tooltip: "Naranja/Uva Academy - Biology Lab\nReward for completing the Paldea Pokedex" },
+		],
 		thms: [
 			{
 				id: 1, text: "Get all of Koraidon's powers back", children: [

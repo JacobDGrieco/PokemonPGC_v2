@@ -33,6 +33,7 @@ import { defineLayoutsMany, P, C, parentRows, childRows, } from '../helpers/inde
 		collectables: [
 			[P(2)],
 			...childRows(2, 1, 8, 4),
+			[P(3)],
 		],
 		megaStones: [
 			...parentRows(1, 15),

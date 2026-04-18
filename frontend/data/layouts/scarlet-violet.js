@@ -8,6 +8,9 @@ import { defineLayoutsMany, P, C, parentRows, childRows, } from '../helpers/inde
 			[P(1)],
 			[C(1, 1), C(1, 2)],
 		],
+		collectables: [
+			[P(1)],
+		],
 		thms: [
 			[P(1)],
 			[C(1, 1), C(1, 2), C(1, 3), C(1, 4), C(1, 5)],

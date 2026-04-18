@@ -169,6 +169,7 @@ import {
 				],
 			},
 			{ id: 2, text: "Find all hidden items with the Item Finder", img: () => keyItem("item-finder"), noCenter: true, type: "tiered", tiers: [range(1, 88)], },
+			{ id: 3, text: "Obtain the Diploma", tooltip: "Celadon Condominiums - Game Freak HQ\nReward for completing the Johto Pokedex" },
 		],
 		thms: [
 			{
@@ -249,20 +250,20 @@ import {
 
 	const TASKS_BY_SECTION_GAME1 = {
 		...TASKS_BY_SECTION,
-		catching: overrideTaskChildTexts(TASKS_BY_SECTION.catching, {
+		catching: overrideTasks(TASKS_BY_SECTION.catching, {
 			1: {
-				4: "Trade Lugia",
-				5: "Catch Ho-Oh",
+				4: { text: "Trade Lugia" },
+				5: { text: "Catch Ho-Oh" },
 			}
 		}),
 	};
 
 	const TASKS_BY_SECTION_GAME2 = {
 		...TASKS_BY_SECTION,
-		catching: overrideTaskChildTexts(TASKS_BY_SECTION.catching, {
+		catching: overrideTasks(TASKS_BY_SECTION.catching, {
 			1: {
-				4: "Catch Lugia",
-				5: "Trade Ho-Oh",
+				4: { text: "Catch Lugia" },
+				5: { text: "Trade Ho-Oh" },
 			}
 		}),
 	};

@@ -455,6 +455,7 @@ import {
 					{ id: 157, text: "Water Cushion", img: () => decoration("water-cushion"), tooltip: "Lilycove City Department Store" },
 				]
 			},
+			{ id: 6, text: "Obtain the Diploma", tooltip: "Cove Lily Motel - Lilycove City\nReward for completing the Hoenn Pokedex" },
 		],
 		megaStones: [
 			{ id: 1, text: "Venusaurite", img: ({ gameKey }) => [baseSprite(gameKey, "003-m"), megaStone("venusaurite")], },

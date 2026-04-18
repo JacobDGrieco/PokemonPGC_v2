@@ -207,6 +207,7 @@ import {
 					{ id: 14, text: "Type Expert" },
 				],
 			},
+			{ id: 6, text: "Defeat Game Director Morimoto", tooltip: "Castelia City - GAME FREAK\nCan be battled once per day" },
 		],
 		upgrades: [
 			{ id: 1, text: "Obtain the National Dex" },
@@ -284,6 +285,7 @@ import {
 					{ id: 16, text: "Zap Plate", img: () => formItem("zap-plate") },
 				]
 			},
+			{ id: 4, text: "Obtain the Diploma", tooltip: "Game Freak - Castelia City\nReward for completing the Unova Pokedex" },
 		],
 		accessories: [
 			{

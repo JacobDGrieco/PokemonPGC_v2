@@ -160,6 +160,11 @@ import {
 				],
 			},
 			{
+				id: 2, text: "Collect all Legendary items", children: [
+					{ id: 1, text: "Gracidea", img: () => formItem("graceidea") },
+				],
+			},
+			{
 				id: 2, text: "Obtain all Mr. Goods Secret Base items", img: npc("mr-goods"), children: [
 					{ id: 1, text: "Beauty Cup", img: () => keyItem("beauty-cup") },
 					{ id: 2, text: "Cool Cup", img: () => keyItem("cool-cup") },
@@ -174,6 +179,7 @@ import {
 					{ id: 11, text: "Globe", img: () => keyItem("globe") },
 				]
 			},
+			{ id: 3, text: "Obtain the Diploma", tooltip: "Hotel Grand Lake - Valor Lakefront\nReward for completing the Sinnoh Pokedex" },
 		],
 		thms: [
 			{

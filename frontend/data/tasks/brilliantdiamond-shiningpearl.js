@@ -1,4 +1,7 @@
 import {
+	_badges,
+	_formItem,
+	_heldItem,
 	_hm,
 	_keyItem,
 	_tm,
@@ -8,6 +11,8 @@ import {
 	_fashionItem,
 	_frontSprite,
 	defineTasksMany,
+	overrideTasks,
+	range,
 } from '../helpers/index.js';
 
 (() => {
@@ -19,6 +24,8 @@ import {
 	const task = (gameKey, name) => _task(gameKey, name);
 	const npc = (gameKey, name) => _npc(gameKey, name);
 	const location = (gameKey, name) => _location(gameKey, name);
+	const formItem = (name) => _formItem(gen, name);
+	const heldItem = (name) => _heldItem(gen, name);
 	const keyItem = (name) => _keyItem(gen, name);
 	const hm = (type) => _hm(gen, type);
 	const tm = (type) => _tm(gen, type);
@@ -26,7 +33,6 @@ import {
 	const SECTIONS = [
 		{ id: "catching", title: "Gotta Catch 'Em All" },
 		{ id: "story", title: "Main Story" },
-		{ id: "sideQuests", title: "Side Quests" },
 		{ id: "activites", title: "Activities" },
 		{ id: "battle", title: "Battle" },
 		{ id: "upgrades", title: "Upgrades" },
@@ -45,9 +51,207 @@ import {
 				id: 1, text: "Catch all the Legendaries", children: [
 					{ id: 1, text: "Catch/Trade Dialga", img: ({ gameKey }) => baseSprite(gameKey, 483) },
 					{ id: 2, text: "Catch/Trade Palkia", img: ({ gameKey }) => baseSprite(gameKey, 484) },
-					{ id: 3, text: "Catch Giratina", img: ({ gameKey }) => baseSprite(gameKey, 487) },
+					{ id: 4, text: "Catch Uxie", img: ({ gameKey }) => baseSprite(gameKey, 480) },
+					{ id: 5, text: "Catch Mesprit", img: ({ gameKey }) => baseSprite(gameKey, 481) },
+					{ id: 6, text: "Catch Azelf", img: ({ gameKey }) => baseSprite(gameKey, 482) },
+					{ id: 7, text: "Catch Heatran", img: ({ gameKey }) => baseSprite(gameKey, 485) },
+					{ id: 8, text: "Catch Regigigas", img: ({ gameKey }) => baseSprite(gameKey, 486) },
+					{ id: 9, text: "Catch Cresselia", img: ({ gameKey }) => baseSprite(gameKey, 488) },
 				],
 			},
+			{
+				id: 2, text: "Catch all the Legendaries from Ramanas Park", children: [
+					{ id: 1, text: "Catch/Trade Articuno", img: ({ gameKey }) => baseSprite(gameKey, 144) },
+					{ id: 2, text: "Catch/Trade Zapdos", img: ({ gameKey }) => baseSprite(gameKey, 145) },
+					{ id: 3, text: "Catch/Trade Moltres", img: ({ gameKey }) => baseSprite(gameKey, 146) },
+					{ id: 4, text: "Catch Mewtwo", img: ({ gameKey }) => baseSprite(gameKey, 150) },
+					{ id: 5, text: "Catch/Trade Raikou", img: ({ gameKey }) => baseSprite(gameKey, 243) },
+					{ id: 6, text: "Catch/Trade Entei", img: ({ gameKey }) => baseSprite(gameKey, 244) },
+					{ id: 7, text: "Catch/Trade Suicune", img: ({ gameKey }) => baseSprite(gameKey, 245) },
+					{ id: 8, text: "Catch/Trade Lugia", img: ({ gameKey }) => baseSprite(gameKey, 249) },
+					{ id: 9, text: "Catch/Trade Ho-Oh", img: ({ gameKey }) => baseSprite(gameKey, 250) },
+					{ id: 10, text: "Catch Regirock", img: ({ gameKey }) => baseSprite(gameKey, 377) },
+					{ id: 11, text: "Catch Regice", img: ({ gameKey }) => baseSprite(gameKey, 378) },
+					{ id: 12, text: "Catch Registeel", img: ({ gameKey }) => baseSprite(gameKey, 379) },
+					{ id: 13, text: "Catch Latias", img: ({ gameKey }) => baseSprite(gameKey, 380) },
+					{ id: 14, text: "Catch Latios", img: ({ gameKey }) => baseSprite(gameKey, 381) },
+					{ id: 15, text: "Catch Kyogre", img: ({ gameKey }) => baseSprite(gameKey, 382) },
+					{ id: 16, text: "Catch Groudon", img: ({ gameKey }) => baseSprite(gameKey, 383) },
+					{ id: 17, text: "Catch Rayquaza", img: ({ gameKey }) => baseSprite(gameKey, 384) },
+					{ id: 18, text: "Catch Giratina", img: ({ gameKey }) => baseSprite(gameKey, 487) },
+				],
+			},
+			{
+				id: 3, text: "Catch/Defeat all Static Encounters", children: [
+					{ id: 1, text: "Spiritomb", img: ({ gameKey }) => baseSprite(gameKey, 442), tooltip: "Place an Odd Keystone in the Hallowed Tower and speak to 32 different Grand Underground NPCs" },
+					{ id: 2, text: "Rotom", img: ({ gameKey }) => baseSprite(gameKey, 479), tooltip: "Interact with the Old Chateau TV at night after obtaining the National Pokédex" },
+				],
+			},
+			{
+				id: 4, text: "Obtain all In-Game Gift Pokémon", children: [
+					{ id: 1, text: "Happiny Egg", img: ({ gameKey }) => baseSprite(gameKey, 440) },
+					{ id: 2, text: "Riolu Egg", img: ({ gameKey }) => baseSprite(gameKey, 447) },
+					{ id: 3, text: "Eevee", img: ({ gameKey }) => baseSprite(gameKey, 133) },
+				],
+			},
+			{
+				id: 5, text: "Complete all In-Game Trades", children: [
+					{ id: 1, text: "Machop for Abra", img: ({ gameKey }) => task(gameKey, "machop-for-abra") },
+					{ id: 2, text: "Buizel for Chatot", img: ({ gameKey }) => task(gameKey, "muizel-for-chatot") },
+					{ id: 3, text: "Medicham for Haunter", img: ({ gameKey }) => task(gameKey, "medicham-for-haunter"), tooltip: "This Haunter will have an Everstone" },
+					{ id: 4, text: "Finneon for Magikarp", img: ({ gameKey }) => task(gameKey, "finneon-for-magikarp") },
+				],
+			},
+		],
+		story: [
+			{
+				id: 1, text: "Beat the main story", children: [
+					{ id: 1, text: "Coal Badge", img: () => _badges("coal"), tooltip: "Defeat Roark at the Oreburgh City Gym" },
+					{ id: 2, text: "Forest Badge", img: () => _badges("forest"), tooltip: "Defeat Gardenia at the Eterna City Gym" },
+					{ id: 3, text: "Cobble Badge", img: () => _badges("cobble"), tooltip: "Defeat Maylene at the Veilstone City Gym" },
+					{ id: 4, text: "Fen Badge", img: () => _badges("fen"), tooltip: "Defeat Crasher Wake at the Pastoria City Gym" },
+					{ id: 5, text: "Relic Badge", img: () => _badges("relic"), tooltip: "Defeat Fantina at the Hearthome City Gym" },
+					{ id: 6, text: "Mine Badge", img: () => _badges("mine"), tooltip: "Defeat Byron at the Canalave City Gym" },
+					{ id: 7, text: "Icicle Badge", img: () => _badges("icicle"), tooltip: "Defeat Candice at the Snowpoint City Gym" },
+					{ id: 8, text: "Beacon Badge", img: () => _badges("beacon"), tooltip: "Defeat Volkner at the Sunyshore City Gym" },
+					{ id: 9, text: "Defeat the Elite 4 / Champion" },
+				],
+			},
+		],
+		activites: [
+			{
+				id: 1, text: "Reach Rank 4 in all Super Contest Shows", children: [
+					{ id: 1, text: "Coolness", img: () => ribbon("cool-master"), tiers: ["Normal", "Super", "Hyper", "Master"], },
+					{ id: 2, text: "Beauty", img: () => ribbon("beauty-master"), tiers: ["Normal", "Super", "Hyper", "Master"], },
+					{ id: 3, text: "Cuteness", img: () => ribbon("cute-master"), tiers: ["Normal", "Super", "Hyper", "Master"], },
+					{ id: 4, text: "Cleaverness", img: () => ribbon("smart-master"), tiers: ["Normal", "Super", "Hyper", "Master"], },
+					{ id: 5, text: "Toughness", img: () => ribbon("tough-master"), tiers: ["Normal", "Super", "Hyper", "Master"], },
+					{ id: 6, text: "Brilliant/Shining", tiers: ["Normal", "Super", "Hyper", "Master"], },
+				],
+			},
+			{
+				id: 2, text: "Complete all Underground Man quests", children: [
+					{ id: 1, text: "Go to the Grand Underground", tooltip: "Use the Explorer Kit\nReward: Red Sphere S, Blue Sphere S, Green Sphere S" },
+					{ id: 2, text: "Dig up treasure or spheres", tooltip: "Reward: Digger Drill" },
+					{ id: 3, text: "Create a Secret Base", tooltip: "Reward: 5 Quick Balls, 5 Dusk Balls, 5 Dive Balls" },
+					{ id: 4, text: "Place a Statue in your Secret Base", tooltip: "Reward: Square Pedestal XS" },
+					{ id: 5, text: "Visit another player's Secret Base", tooltip: "Reward: Round Pedestal M, Sturdy Pedestal S" },
+					{ id: 6, text: "Find a light of a different color", tooltip: "Reward: Clear Pedestal L" },
+				],
+			},
+		],
+		battle: [
+			{
+				id: 1, text: "Rematch all the Gym Leaders", children: [
+					{ id: 1, text: "Roark" },
+					{ id: 2, text: "Gardenia" },
+					{ id: 3, text: "Maylene" },
+					{ id: 4, text: "Crasher Wake" },
+					{ id: 5, text: "Fantina" },
+					{ id: 6, text: "Byron" },
+					{ id: 7, text: "Candice" },
+					{ id: 8, text: "Volkner" },
+				],
+			},
+			{
+				id: 2, text: "Defeat Tower Tycoon Palmer in Single Battles", children: [
+					{ id: 1, text: "After 21st Battle" },
+					{ id: 2, text: "After 49th Battle" },
+				],
+			},
+			{
+				id: 3, text: "Defeat Tower Tycoon Palmer in Double Battles", children: [
+					{ id: 1, text: "After 21st Battle" },
+					{ id: 2, text: "After 49th Battle" },
+				],
+			},
+			{ id: 4, text: "Defeat Game Director Morimoto", tooltip: "Route 213\nAvailable once per day after entering the Hall of Fame\nRewards the Oval Charm on first win" },
+		],
+		upgrades: [
+			{ id: 1, text: "Obtain the National Pokédex" },
+			{ id: 2, text: "Obtain the Mystery Gift option", tooltip: "Unlocked automatically after the Veilstone Gym, or early by answering \"Everyone Happy Wi-Fi Connection\" at Jubilife TV" },
+			{ id: 3, text: "Expand your Secret Base", tiers: [1, 2], },
+			{ id: 4, text: "Max out your Contest Hall Rank", tiers: ["Rank 1", "Rank 2", "Rank 3", "Rank 4"], },
+			{ id: 4, text: "Get extra Ball Capsule slots", tiers: [range(1, 12)], },
+			{
+				id: 5, text: "Obtain the Black 5-Star Trainer Card", children: [
+					{ id: 1, text: "Defeat the Elite Four & Champion" },
+					{ id: 2, text: "Obtain 100 Statue Variants in the Grand Underground" },
+					{ id: 3, text: "Complete a Master Rank Super Contest Show" },
+					{ id: 4, text: "Reach a 100-win streak in the Battle Tower" },
+					{ id: 5, text: "Complete the National Pokédex (484)" },
+				],
+			},
+			{
+				id: 6, text: "Obtain all the Pokétch Apps", noCenter: true, children: [
+					{ id: 1, text: "Digital Watch" },
+					{ id: 2, text: "Calculator" },
+					{ id: 3, text: "Memo Pad" },
+					{ id: 4, text: "Pedometer" },
+					{ id: 5, text: "Pokémon List" },
+					{ id: 6, text: "Friendship Checker" },
+					{ id: 7, text: "Dowsing Machine" },
+					{ id: 8, text: "Egg Monitor" },
+					{ id: 9, text: "Pokémon History" },
+					{ id: 10, text: "Counter" },
+					{ id: 11, text: "Analog Watch" },
+					{ id: 12, text: "Marking Map" },
+					{ id: 13, text: "Coin Toss" },
+					{ id: 14, text: "Calendar" },
+					{ id: 15, text: "Dot Artist" },
+					{ id: 16, text: "Spinner" },
+					{ id: 17, text: "Chain Counter" },
+					{ id: 18, text: "Kitchen Timer" },
+					{ id: 19, text: "Color Changer" },
+					{ id: 20, text: "Hidden Moves" },
+				],
+			},
+		],
+		collectables: [
+			{
+				id: 1, text: "Obtain all extra Key Items", children: [
+					{ id: 1, text: "Bicycle", img: () => keyItem("bicycle") },
+					{ id: 2, text: "Explorer Kit", img: () => keyItem("explorer-kit") },
+					{ id: 3, text: "Good Rod", img: () => keyItem("good-rod") },
+					{ id: 4, text: "Old Rod", img: () => keyItem("old-rod") },
+					{ id: 5, text: "Poffin Case", img: () => keyItem("poffin-case") },
+					{ id: 6, text: "Point Card", img: () => keyItem("point-card") },
+					{ id: 7, text: "Poké Radar", img: () => keyItem("poke-radar") },
+					{ id: 8, text: "Sprayduck", img: () => keyItem("sprayduck") },
+					{ id: 9, text: "Super Rod", img: () => keyItem("super-rod") },
+					{ id: 10, text: "VS Seeker", img: () => keyItem("vs-seeker") },
+				],
+			},
+			{
+				id: 2, text: "Collect all Legendary Items", children: [
+					{ id: 1, text: "Soul Dew", img: () => heldItem("soul-dew"), tooltip: "Ramanas Park - Soul Room\nReward for catching Latias and Latios" },
+					{ id: 2, text: "Adamant/Lustrous Orb" },
+					{ id: 3, text: "Griseous Orb", img: () => formItem("griseous-orb"), tooltip: "Ramanas Park - Distortion Room\nReward after defeating Origin Forme Giratina" },
+					{ id: 4, text: "Gracidea", img: () => formItem("gracidea"), tooltip: "Floaroma Town\nShow Shaymin to the flower lady" },
+				],
+			},
+			{
+				id: 3, text: "Collect all 17 Arceus Plates", children: [
+					{ id: 1, text: "Draco Plate", img: () => formItem("draco-plate") },
+					{ id: 2, text: "Dread Plate", img: () => formItem("dread-plate") },
+					{ id: 3, text: "Earth Plate", img: () => formItem("earth-plate") },
+					{ id: 4, text: "Fist Plate", img: () => formItem("fist-plate") },
+					{ id: 5, text: "Flame Plate", img: () => formItem("flame-plate") },
+					{ id: 6, text: "Icicle Plate", img: () => formItem("icicle-plate") },
+					{ id: 7, text: "Insect Plate", img: () => formItem("insect-plate") },
+					{ id: 8, text: "Iron Plate", img: () => formItem("iron-plate") },
+					{ id: 9, text: "Meadow Plate", img: () => formItem("meadow-plate") },
+					{ id: 10, text: "Mind Plate", img: () => formItem("mind-plate") },
+					{ id: 11, text: "Pixie Plate", img: () => formItem("pixie-plate") },
+					{ id: 12, text: "Sky Plate", img: () => formItem("sky-plate") },
+					{ id: 13, text: "Splash Plate", img: () => formItem("splash-plate") },
+					{ id: 14, text: "Spooky Plate", img: () => formItem("spooky-plate") },
+					{ id: 15, text: "Stone Plate", img: () => formItem("stone-plate") },
+					{ id: 16, text: "Toxic Plate", img: () => formItem("toxic-plate") },
+					{ id: 17, text: "Zap Plate", img: () => formItem("zap-plate") },
+				],
+			},
+			{ id: 4, text: "Obtain the Diploma", tooltip: "Hotel Grand Lake - Valor Lakefront\nReward for completing the Sinnoh Pokedex" },
 		],
 		fashion: [
 			{ id: 1, text: "Everyday Style", img: ({ gameKey }) => [fashionItem(gameKey, "everyday-ms"), fashionItem(gameKey, "everyday-mc"), fashionItem(gameKey, "everyday-fs"), fashionItem(gameKey, "everyday-fc")], startGame: true },
@@ -620,16 +824,79 @@ import {
 			},
 		],
 		extraCredit: [
-			{ id: 1, text: "Obtain the Platinum Style Outfit via Mystery Gift", img: ({ gameKey }) => [fashionItem(gameKey, "platinum-ms"), fashionItem(gameKey, "platinum-mc"), fashionItem(gameKey, "platinum-fs"), fashionItem(gameKey, "platinum-fc")], noCenter: true },
+			{
+				id: 1, text: "Obtain all Mythical Pokémon", children: [
+					{ id: 1, text: "Mew", img: ({ gameKey }) => baseSprite(gameKey, 151), tooltip: "Requires Pokémon Let's Go, Pikachu! or Let's Go, Eevee! save data" },
+					{ id: 2, text: "Jirachi", img: ({ gameKey }) => baseSprite(gameKey, 385), tooltip: "Requires Pokémon Sword or Shield save data" },
+					{ id: 4, text: "Phione", img: ({ gameKey }) => baseSprite(gameKey, 489) },
+					{ id: 3, text: "Manaphy", img: ({ gameKey }) => baseSprite(gameKey, 490) },
+					{ id: 6, text: "Darkrai", img: ({ gameKey }) => baseSprite(gameKey, 491) },
+					{ id: 5, text: "Shaymin", img: ({ gameKey }) => baseSprite(gameKey, 492) },
+					{ id: 7, text: "Arceus", img: ({ gameKey }) => baseSprite(gameKey, 493), tooltip: "Requires Pokémon Legends: Arceus save data" },
+				]
+			},
 		],
 	};
 
 	const TASKS_BY_SECTION_GAME1 = {
 		...TASKS_BY_SECTION,
+		catching: overrideTasks(TASKS_BY_SECTION.catching, {
+			1: {
+				1: { text: "Catch Dialga" },
+				2: { text: "Trade Palkia" },
+			},
+			2: {
+				1: { text: "Trade Articuno" },
+				2: { text: "Trade Zapdos" },
+				3: { text: "Trade Moltres" },
+				5: { text: "Catch Raikou" },
+				6: { text: "Catch Entei" },
+				7: { text: "Catch Suicune" },
+				8: { text: "Trade Lugia" },
+				9: { text: "Catch Ho-Oh" },
+			}
+		}),
+		activities: overrideTasks(TASKS_BY_SECTION.activities, {
+			1: {
+				6: { text: "Brilliant" },
+			},
+		}),
+		collectables: overrideTasks(TASKS_BY_SECTION.activities, {
+			2: {
+				2: { text: "Adamant Orb", img: () => heldItem("adamant-orb"), tooltip: "Spear Pillar\nBrilliant Diamond: found after the Dialga encounter" },
+			},
+		}),
 	};
 
 	const TASKS_BY_SECTION_GAME2 = {
 		...TASKS_BY_SECTION,
+		catching: overrideTasks(TASKS_BY_SECTION.catching, {
+			1: {
+				1: { text: "Trade Dialga" },
+				2: { text: "Catch Palkia" },
+			},
+			2: {
+				1: { text: "Catch Articuno" },
+				2: { text: "Catch Zapdos" },
+				3: { text: "Catch Moltres" },
+				5: { text: "Trade Raikou" },
+				6: { text: "Trade Entei" },
+				7: { text: "Trade Suicune" },
+				8: { text: "Catch Lugia" },
+				9: { text: "Trade Ho-Oh" },
+
+			}
+		}),
+		activities: overrideTasks(TASKS_BY_SECTION.activities, {
+			1: {
+				6: { text: "Shining" },
+			},
+		}),
+		collectables: overrideTasks(TASKS_BY_SECTION.activities, {
+			2: {
+				2: { text: "Lustrous Orb", img: () => heldItem("lustrous-orb"), tooltip: "Spear Pillar\Shining Pearl: found after the Palkia encounter" },
+			},
+		}),
 	};
 
 	defineTasksMany(GAME_KEYS[0], SECTIONS, TASKS_BY_SECTION_GAME1);

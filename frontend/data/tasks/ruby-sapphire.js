@@ -97,12 +97,12 @@ import {
 		activities: [
 			{ id: 1, text: "Complete all chambers of the Trick House", type: "tiered", tiers: [range(1, 6)], },
 			{
-				id: 2, text: "Reach Master Rank in all Contests", noCenter: true, children: [
-					{ id: 1, text: "Beauty Contests", img: () => ribbon("beauty-master"), tiers: ["Normal", "Super", "Hyper", "Master"], },
-					{ id: 2, text: "Tough Contests", img: () => ribbon("tough-master"), tiers: ["Normal", "Super", "Hyper", "Master"], },
-					{ id: 3, text: "Cute Contests", img: () => ribbon("cute-master"), tiers: ["Normal", "Super", "Hyper", "Master"], },
-					{ id: 4, text: "Cool Contests", img: () => ribbon("cool-master"), tiers: ["Normal", "Super", "Hyper", "Master"], },
-					{ id: 5, text: "Smart Contests", img: () => ribbon("smart-master"), tiers: ["Normal", "Super", "Hyper", "Master"], },
+				id: 2, text: "Reach Master Rank in all Contests", children: [
+					{ id: 1, text: "Coolness", img: () => ribbon("cool-master"), tiers: ["Normal", "Super", "Hyper", "Master"], },
+					{ id: 2, text: "Beauty", img: () => ribbon("beauty-master"), tiers: ["Normal", "Super", "Hyper", "Master"], },
+					{ id: 3, text: "Cuteness", img: () => ribbon("cute-master"), tiers: ["Normal", "Super", "Hyper", "Master"], },
+					{ id: 4, text: "Cleaverness", img: () => ribbon("smart-master"), tiers: ["Normal", "Super", "Hyper", "Master"], },
+					{ id: 5, text: "Toughness", img: () => ribbon("tough-master"), tiers: ["Normal", "Super", "Hyper", "Master"], },
 				],
 			},
 			{
@@ -123,7 +123,7 @@ import {
 		upgrades: [
 			{ id: 1, text: "Obtain the National PokeDex", noCenter: true },
 			{
-				id: 2, text: "Obtain the Gold 4-Star Trainer Card", noCenter: true, children: [
+				id: 2, text: "Obtain the Gold 4-Star Trainer Card", children: [
 					{ id: 1, text: "Defeat the Elite 4/Champion" },
 					{ id: 2, text: "Win all Master Rank Contests" },
 					{ id: 3, text: "Defeat the 50 trainer challenge in the Battle Tower" },
@@ -259,6 +259,7 @@ import {
 					{ id: 100, text: "Wailmer Doll", img: () => decoration("wailmer-doll"), tooltip: "Sootopolis City / Lilycove Department Store (clear-out sale)\n$10000" },
 				],
 			},
+			{ id: 4, text: "Obtain the Diploma", tooltip: "Cove Lily Motel - Lilycove City\nReward for completing the Hoenn Pokedex" },
 		],
 		thms: [
 			{

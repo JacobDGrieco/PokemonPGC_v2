@@ -39,6 +39,9 @@ import {
 				],
 			},
 		],
+		collectables: [
+			{ id: 1, text: "Obtain the Diploma", tooltip: "Blueberry Academy entrance\nReward for completing the Blueberry Pokedex" },
+		],
 	};
 
 	const TASKS_BY_SECTION_GAME1 = {

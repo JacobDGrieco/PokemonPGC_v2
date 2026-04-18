@@ -8,6 +8,9 @@ import { defineLayoutsMany, P, C, parentRows, childRows, } from '../helpers/inde
 			[P(1)],
 			[C(1, 1)],
 		],
+		collectables: [
+			[P(1)],
+		],
 	};
 
 	const COMPACT_LAYOUT = DESKTOP_LAYOUT;

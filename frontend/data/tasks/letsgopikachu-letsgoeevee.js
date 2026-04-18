@@ -303,6 +303,7 @@ import {
 					{ id: 8, text: "Catch Charm", img: () => keyItem("catch-charm") },
 				],
 			},
+			{ id: 3, text: "Obtain the Diploma", tooltip: "Celadon Condominiums - Game Freak HQ\nReward for completing the Kanto Pokedex" },
 		],
 		megaStones: [
 			{ id: 1, text: "Venusaurite", img: ({ gameKey }) => [baseSprite(gameKey, "003-m"), megaStone("venusaurite")], },

@@ -48,6 +48,7 @@ import { defineLayoutsMany, P, C, parentRows, childRows, } from '../helpers/inde
 			...childRows(3, 1, 17),
 			[P(4)],
 			...childRows(4, 1, 17),
+			[P(5)],
 		],
 		megaStones: [
 			...parentRows(1, 26),

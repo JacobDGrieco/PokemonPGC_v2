@@ -58,7 +58,7 @@ import {
 				],
 			},
 			{
-				id: 2, text: "Obtain all Static Encounters Pokémon", children: [
+				id: 2, text: "Catch/Defeat all Static Encounters Pokémon", children: [
 					{ id: 1, text: "Snorlax", img: ({ gameKey }) => baseSprite(143), tooltip: "Route 7" },
 				],
 			},
@@ -261,6 +261,7 @@ import {
 					{ id: 17, text: "Hatching Power" },
 				]
 			},
+			{ id: 5, text: "Obtain the Diploma", tooltip: "Coumarine Hotel - Coumarine City\nReward for completing the Kalos Pokedex" },
 		],
 		megaStones: [
 			{ id: 1, text: "Venusaurite", img: ({ gameKey }) => [baseSprite(gameKey, "003-m"), megaStone("venusaurite")], },

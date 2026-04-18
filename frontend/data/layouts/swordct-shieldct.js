@@ -6,35 +6,27 @@ import { defineLayoutsMany, P, C, parentRows, childRows, } from '../helpers/inde
 	const DESKTOP_LAYOUT = {
 		catching: [
 			[P(1)],
-			...childRows(1, 1, 10),
+			...childRows(1, 1, 16),
 			[P(2)],
-			...childRows(2, 1, 4),
+			...childRows(2, 1, 38),
 			[P(3)],
-			[C(3, 1), C(3, 2)],
+			...childRows(3, 1, 9),
 			[P(4)],
-			...childRows(4, 1, 35),
-			[P(5)],
-			...childRows(5, 1, 9),
+			...childRows(4, 1, 2),
 		],
 		story: [
 			[P(1)],
-			...childRows(1, 1, 10),
+			...childRows(1, 1, 5),
 			[P(2)],
-			...childRows(2, 1, 5),
-			[P(3)],
-			...childRows(3, 1, 3),
-		],
-		sideQuests: [
-			...parentRows(1, 5, 1),
+			...childRows(2, 1, 3),
 		],
 		battle: [
-			...parentRows(1, 4, 1),
+			...parentRows(1, 3),
 		],
 		collectables: [
 			[P(1)],
 			...childRows(1, 1, 7),
 			[P(2)],
-			...childRows(2, 1, 3),
 		],
 		trainerCards: [
 			[P(1)],
@@ -47,10 +39,6 @@ import { defineLayoutsMany, P, C, parentRows, childRows, } from '../helpers/inde
 			...childRows(4, 1, 3),
 			[P(5)],
 			...childRows(5, 1, 3),
-		],
-		fashion: [
-			[P(1)],
-			...childRows(1, 1, 6, 6),
 		],
 	};
 

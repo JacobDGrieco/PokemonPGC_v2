@@ -33,6 +33,7 @@ import {
 		{ id: "activities", title: "Activities" },
 		{ id: "battle", title: "Battle" },
 		{ id: "upgrades", title: "Upgrades" },
+		{ id: "collectables", title: "Collectables" },
 		{ id: "thms", title: "TMs/HMs" },
 		{ id: "distributions", title: "Distributions" },
 		{ id: "extraCredit", title: "Extra Credit" },
@@ -282,6 +283,9 @@ import {
 					{ id: 5, text: "Get 5 Shiny Leaves on a single Pokémon", tiers: range(1, 5), tooltip: "Speak to Ethan/Lyra in New Bark Town" },
 				],
 			},
+		],
+		collectables: [
+			{ id: 1, text: "Obtain the Diploma", tooltip: "Celadon Condominiums - Game Freak HQ\nReward for completing the Johto Pokedex" },
 		],
 		thms: [
 			{

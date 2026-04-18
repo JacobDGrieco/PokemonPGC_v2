@@ -41,6 +41,9 @@ import {
 				],
 			},
 		],
+		collectables: [
+			{ id: 1, text: "Obtain the Diploma", tooltip: "Reveler's Road - east of Mossui Town\nReward for completing the Kitakami Pokedex" },
+		],
 	};
 
 	const TASKS_BY_SECTION_GAME1 = {
