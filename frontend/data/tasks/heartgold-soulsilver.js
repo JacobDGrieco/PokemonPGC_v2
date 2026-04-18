@@ -59,11 +59,15 @@ import {
 					{ id: 15, text: "Create/Trade Giratina", img: ({ gameKey }) => baseSprite(gameKey, 487), },
 				],
 			},
-			{ id: 2, text: "Catch/Defeat the Sudowoodo on Route 36", img: ({ gameKey }) => baseSprite(gameKey, 185) },
-			{ id: 3, text: 'Catch/Defeat the "Red" Gyarados in the Lake of Rage', img: ({ gameKey }) => shinySprite(gameKey, 130) },
-			{ id: 4, text: "Catch/Defeat the Snorlax in Vermillion City", img: ({ gameKey }) => baseSprite(gameKey, 143) },
 			{
-				id: 5, text: "Obtain all In-Game Gift Pokémon", children: [
+				id: 2, text: "Catch/Defeat all Static Encounters", children: [
+					{ id: 1, text: "Route 36 Sudowoodo", img: ({ gameKey }) => baseSprite(gameKey, 185) },
+					{ id: 2, text: 'Lake of Rage "Red" Gyarados', img: ({ gameKey }) => shinySprite(gameKey, 130) },
+					{ id: 3, text: "Vermillion City Snorlax", img: ({ gameKey }) => baseSprite(gameKey, 143) },
+				],
+			},
+			{
+				id: 3, text: "Obtain all In-Game Gift Pokémon", children: [
 					{ id: 1, text: "Togepi", img: ({ gameKey }) => baseSprite(gameKey, 175) },
 					{ id: 2, text: "Spearow", img: ({ gameKey }) => baseSprite(gameKey, 21) },
 					{ id: 3, text: "Eevee", img: ({ gameKey }) => baseSprite(gameKey, 133) },
@@ -84,7 +88,7 @@ import {
 				],
 			},
 			{
-				id: 6, text: "Complete all In-Game Trades", children: [
+				id: 4, text: "Complete all In-Game Trades", children: [
 					{ id: 1, text: "Bellsprout for Onix", img: ({ gameKey }) => task(gameKey, "bellsprout-for-onix") },
 					{ id: 2, text: "Drowzee for Machop", img: ({ gameKey }) => task(gameKey, "drowzee-for-machop") },
 					{ id: 3, text: "Krabby for Voltorb", img: ({ gameKey }) => task(gameKey, "krabby-for-voltorb") },
@@ -391,7 +395,7 @@ import {
 		],
 		extraCredit: [
 			{
-				id: 1, text: "Obtain all Mythical Pokémon", children: [
+				id: 1, text: "Obtain all Event Mythical Pokémon", children: [
 					{ id: 1, text: "Mew", img: ({ gameKey }) => baseSprite(gameKey, 151), },
 					{ id: 2, text: "Celebi", img: ({ gameKey }) => baseSprite(gameKey, 251), },
 				],

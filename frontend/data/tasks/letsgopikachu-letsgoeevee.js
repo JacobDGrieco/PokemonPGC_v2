@@ -445,7 +445,7 @@ import {
 		],
 		extraCredit: [
 			{
-				id: 1, text: "Obtain all Mythical Pokémon", children: [
+				id: 1, text: "Obtain all Event Mythical Pokémon", children: [
 					{ id: 1, text: "Mew", img: ({ gameKey }) => baseSprite(gameKey, 151), tooltip: "Poké Ball Plus gift" },
 					{ id: 2, text: "Meltan", img: ({ gameKey }) => baseSprite(gameKey, 808), tooltip: "Transfer from Pokémon GO" },
 					{ id: 3, text: "Melmetal", img: ({ gameKey }) => baseSprite(gameKey, 809), tooltip: "Evolve Meltan in Pokémon GO, then transfer" },

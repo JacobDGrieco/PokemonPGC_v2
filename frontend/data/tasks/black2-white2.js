@@ -529,7 +529,7 @@ import {
 		],
 		extraCredit: [
 			{
-				id: 1, text: "Obtain all Event Mythicals", children: [
+				id: 1, text: "Obtain all Event Mythical Pokémon", children: [
 					{ id: 1, text: "Victini", img: ({ gameKey }) => baseSprite(gameKey, 494) },
 					{ id: 2, text: "Keldeo", img: ({ gameKey }) => baseSprite(gameKey, 647) },
 					{ id: 3, text: "Meloetta", img: ({ gameKey }) => baseSprite(gameKey, 648) },

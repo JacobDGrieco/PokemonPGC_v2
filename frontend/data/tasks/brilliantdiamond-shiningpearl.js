@@ -33,7 +33,7 @@ import {
 		{ id: "collectables", title: "Collectables" },
 		{ id: "stickers", title: "Stickers" },
 		{ id: "fashion", title: "Fashion" },
-		{ id: "grand-underground", title: "Grand Underground" },
+		{ id: "underground", title: "Grand Underground" },
 		{ id: "thms", title: "TMs/HMs" },
 		{ id: "distributions", title: "Distributions" },
 		{ id: "extraCredit", title: "Extra Credit" },
@@ -62,7 +62,7 @@ import {
 			{ id: 10, text: "Casual Style", img: ({ gameKey }) => [fashionItem(gameKey, "casual-ms"), fashionItem(gameKey, "casual-mc"), fashionItem(gameKey, "casual-fs"), fashionItem(gameKey, "casual-fc")] },
 			{ id: 11, text: "Leather Jacket Style", img: ({ gameKey }) => [fashionItem(gameKey, "leather-jacket-ms"), fashionItem(gameKey, "leather-jacket-mc"), fashionItem(gameKey, "leather-jacket-fs"), fashionItem(gameKey, "summer-fc")] },
 		],
-		"grand-underground": [
+		underground: [
 			{
 				id: 1, text: "Collect all Normal Statues", children: [
 					{ id: 1, text: "Bulbasaur", img: ({ gameKey }) => baseSprite(gameKey, 1) },
