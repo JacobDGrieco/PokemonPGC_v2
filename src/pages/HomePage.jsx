@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useSubscription } from '../hooks/useSubscription.js';
 import { TIER_ORDER } from '../config/tiers.js';
@@ -58,25 +58,12 @@ const FEATURE_TILES = [
 export function HomePage() {
 	const navigate = useNavigate();
 	const { tierKey } = useSubscription();
-	const [isLoggedIn, setIsLoggedIn] = useState(() => !!window.PPGC?.currentUser);
-
-	useEffect(() => {
-		if (isLoggedIn) navigate('/checklists', { replace: true });
-	}, [isLoggedIn, navigate]);
-
-	useEffect(() => {
-		const refresh = () => setIsLoggedIn(!!window.PPGC?.currentUser);
-		window.addEventListener('ppgc:auth:changed', refresh);
-		return () => window.removeEventListener('ppgc:auth:changed', refresh);
-	}, []);
-
-	if (isLoggedIn) return null;
 
 	return (
 		<div className="home-page">
 			<section className="home-hero">
 				<h1 className="home-hero-title">
-					<img src="/cloud-ball.png" alt="" className="home-hero-icon" />
+					<img src={_assetPath('cloud-ball.png')} alt="" className="home-hero-icon" />
 					PokémonPGC
 				</h1>
 				<p className="home-hero-tagline">Your complete Pokémon completion tracker</p>

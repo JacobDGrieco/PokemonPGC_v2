@@ -1,5 +1,30 @@
 // src/api.js
-const API_BASE = (globalThis.__API_BASE_URL__ || "").trim() || "/api";
+function resolveApiBase() {
+	const configured = (globalThis.__API_BASE_URL__ || "").trim();
+	if (!configured) return "/api";
+
+	if (typeof window === "undefined") {
+		return configured;
+	}
+
+	const currentHost = window.location.hostname;
+	const isLocalHost = currentHost === "localhost" || currentHost === "127.0.0.1";
+	if (isLocalHost) {
+		return configured;
+	}
+
+	try {
+		const resolved = new URL(configured, window.location.origin);
+		if (resolved.origin !== window.location.origin) {
+			return "/api";
+		}
+		return `${resolved.pathname}${resolved.search}${resolved.hash}` || "/api";
+	} catch {
+		return configured.startsWith("/") ? configured : "/api";
+	}
+}
+
+const API_BASE = resolveApiBase();
 let loggedInUserId = null;
 
 /**

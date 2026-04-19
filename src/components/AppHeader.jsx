@@ -55,7 +55,7 @@ export function AppHeader({ isMobile, mobileNavOpen }) {
 			<div className="header-left">
 				<div className="header-brand">
 					<Link to="/" className="marketing-brand">
-						<img src="/cloud-ball.png" alt="" className="brand-icon" />
+						<img src={_assetPath('cloud-ball.png')} alt="" className="brand-icon" />
 						PokémonPGC
 					</Link>
 					<button
