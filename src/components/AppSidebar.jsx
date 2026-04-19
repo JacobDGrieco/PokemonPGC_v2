@@ -74,14 +74,7 @@ function makeSidebarItems(state) {
 		}];
 	}
 
-	if (level === 'account') {
-		return [
-			{ key: 'general', label: 'General', active: (state.accountTab || 'general') === 'general', onClick: () => navigateToState({ level: 'account', accountTab: 'general', genKey: null, gameKey: null, sectionId: null }) },
-			{ key: 'subscription', label: 'Subscription', active: state.accountTab === 'subscription', onClick: () => navigateToState({ level: 'account', accountTab: 'subscription', genKey: null, gameKey: null, sectionId: null }) },
-			{ key: 'backup', label: 'Backups & Import', active: state.accountTab === 'backup', onClick: () => navigateToState({ level: 'account', accountTab: 'backup', genKey: null, gameKey: null, sectionId: null }) },
-			{ key: 'import', label: 'Save Data Import', active: state.accountTab === 'import', onClick: () => navigateToState({ level: 'account', accountTab: 'import', genKey: null, gameKey: null, sectionId: null }) },
-		];
-	}
+	if (level === 'account') return [];
 
 	return [];
 }

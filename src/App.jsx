@@ -6,6 +6,7 @@ import { HomePage } from './pages/HomePage.jsx';
 import { PricingPage } from './pages/PricingPage.jsx';
 import { SubscriptionSuccessPage } from './pages/SubscriptionSuccessPage.jsx';
 import { PlaceholderPage } from './pages/PlaceholderPage.jsx';
+import { AccountRoutePage } from './pages/AccountRoutePage.jsx';
 import { Analytics } from '@vercel/analytics/react';
 
 export default function App() {
@@ -40,6 +41,22 @@ export default function App() {
 
         {/* App shell — full sidebar + header */}
         <Route path="/checklists" element={<AppShell />} />
+        <Route
+          path="/account"
+          element={(
+            <AppShell routeLevelOverride="account">
+              <AccountRoutePage />
+            </AppShell>
+          )}
+        />
+        <Route
+          path="/account/:tab"
+          element={(
+            <AppShell routeLevelOverride="account">
+              <AccountRoutePage />
+            </AppShell>
+          )}
+        />
 
         {/* Placeholder pages — AppShell with stub content */}
         <Route path="/pokemon-info" element={<PlaceholderPage feature="pokemon-info" />} />

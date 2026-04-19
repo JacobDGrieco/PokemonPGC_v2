@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { _assetPath } from '../../utils/assetPath.js';
 import {
 	cancelPayPalSubscription,
@@ -16,12 +17,19 @@ import {
 	isBackupFolderGranted,
 	setAutoBackupsEnabled,
 } from '../../persistence.js';
+import { buildAccountRoute } from '../../utils/accountRoute.js';
 
 const SUPPORTED_SAVE_IMPORT_GAMES = new Set(['red']);
 const DEFAULT_ICONS = [
 	{ key: 'default', label: 'Poke Ball' },
 	{ key: 'great', label: 'Great Ball' },
 	{ key: 'ultra', label: 'Ultra Ball' },
+];
+const ACCOUNT_TABS = [
+	{ key: 'general', label: 'General' },
+	{ key: 'subscription', label: 'Subscription' },
+	{ key: 'backup', label: 'Site Data Backup' },
+	{ key: 'import', label: 'Save Data Import' },
 ];
 
 function formatTs(ts) {
@@ -61,6 +69,53 @@ function formatStatus(value) {
 		.replace(/[_-]+/g, ' ')
 		.toLowerCase()
 		.replace(/\b\w/g, (match) => match.toUpperCase());
+}
+
+function AccountTabNav({ activeTab }) {
+	const navigate = useNavigate();
+
+	return (
+		<nav className="account-tab-nav" aria-label="Account sections">
+			{ACCOUNT_TABS.map((tab) => {
+				const active = activeTab === tab.key;
+				return (
+					<button
+						key={tab.key}
+						type="button"
+						className={`account-tab-pill ${active ? 'active' : ''}`}
+						aria-pressed={active ? 'true' : 'false'}
+						onClick={() => {
+							if (active) return;
+							navigate(buildAccountRoute(tab.key));
+						}}
+					>
+						<span className="account-tab-pill-title">{tab.label}</span>
+					</button>
+				);
+			})}
+		</nav>
+	);
+}
+
+function AccountSidebar({ activeTab, onReturnToChecklist }) {
+	const { tierKey, user } = useSubscription();
+	const plan = TIERS[tierKey] || TIERS.free;
+	const email = user?.email || 'Guest account';
+	const providerLabel = user?.subscriptionProvider
+		? formatStatus(user.subscriptionProvider)
+		: 'No billing provider';
+	const statusLabel = user ? 'Signed in' : 'Guest';
+	const currentIcon = user?.icon || 'default';
+	const customIcon = String(currentIcon || '').startsWith('data:image/');
+
+	return (
+		<aside className="account-sidebar">
+			<section className="account-sidebar-card account-sidebar-nav-card">
+				<div className="account-sidebar-section-label">Sections</div>
+				<AccountTabNav activeTab={activeTab} />
+			</section>
+		</aside>
+	);
 }
 
 function SettingRow({ title, subtext, control, children }) {
@@ -221,16 +276,6 @@ function GeneralTab() {
 						<div className="settings-meta-value">{currentUser?.email || '(not signed in)'}</div>
 					</div>
 					<div className="settings-account-actions">
-						<button
-							className="primary"
-							type="button"
-							id="accountLoginBtn"
-							onClick={() => {
-								window.PPGC?.openAuthModal?.('login');
-							}}
-						>
-							{signedIn ? 'Switch account' : 'Log in / Sign up'}
-						</button>
 						{signedIn ? (
 							<button
 								className="ghost"
@@ -238,7 +283,7 @@ function GeneralTab() {
 								id="accountLogoutBtn"
 								onClick={() => window.PPGC?.handleLogout?.()}
 							>
-								Log out
+								{signedIn ? 'Log Out' : 'Log in / Sign up'}
 							</button>
 						) : null}
 					</div>
@@ -289,7 +334,6 @@ function GeneralTab() {
 			<section className="settings-panel">
 				<div className="settings-section-head">
 					<h3>Display</h3>
-					<p>Tune how the checklist presents progress and sprites without affecting the underlying data.</p>
 				</div>
 
 				<SettingRow
@@ -600,21 +644,20 @@ function BackupTab() {
 	}
 
 	return (
-		<section className="card account-section" id="account-section-backup">
-			<div className="card-hd">
-				<h2>Backups &amp; Import</h2>
-				<p className="small">
-					Keep a manual backup folder around for belt-and-suspenders safety, even if most of your day-to-day saving happens in the app.
-				</p>
-			</div>
-			<div className="card-bd">
+		<div className="settings-shell">
+			<section className="settings-panel" id="account-section-backup">
+				<div className="settings-section-head">
+					<h3>Backups &amp; Import</h3>
+					<p>Keep a manual backup folder around for portable restores and one-click imports.</p>
+				</div>
+
 				<div className="account-backup-panel">
 					<div className="backup-row backup-row-main">
 						<div className="backup-main-left">
 							<span className={`dot ${granted ? 'ok' : ''}`} id="account-backup-dot" title={granted ? 'Backups will run silently' : 'No backup folder chosen'} />
 							<div className="backup-main-labels">
 								<div className="backup-main-title">Manual backup / import</div>
-								<div className="backup-main-hint small">
+								<div className="backup-main-hint">
 									Choose a folder once, then back up or restore whenever you want a portable copy of everything.
 								</div>
 							</div>
@@ -626,14 +669,14 @@ function BackupTab() {
 								disabled={busy !== ''}
 								onClick={() => runAction('backup', backupAllNow)}
 							>
-								{busy === 'backup' ? 'Backing up all…' : 'Backup'}
+								{busy === 'backup' ? 'Backing up all...' : 'Backup'}
 							</button>
 							<button
 								id="account-import-now"
 								disabled={busy !== ''}
 								onClick={() => runAction('import', importAllFromFolder)}
 							>
-								{busy === 'import' ? 'Importing all…' : 'Import'}
+								{busy === 'import' ? 'Importing all...' : 'Import'}
 							</button>
 						</div>
 					</div>
@@ -641,7 +684,7 @@ function BackupTab() {
 					<div className="backup-row backup-row-auto">
 						<div className="backup-auto-labels">
 							<div className="backup-auto-title">Automatic folder backups</div>
-							<div className="backup-auto-hint small">
+							<div className="backup-auto-hint">
 								Periodically writes your progress to the chosen backup folder in the background.
 							</div>
 						</div>
@@ -663,7 +706,7 @@ function BackupTab() {
 					<div className="backup-row backup-row-folder">
 						<div className="backup-folder-labels">
 							<div className="backup-folder-title">Backup folder</div>
-							<div className="backup-folder-hint small">
+							<div className="backup-folder-hint">
 								Change where local JSON backups are written.
 							</div>
 						</div>
@@ -678,12 +721,30 @@ function BackupTab() {
 
 					<div className="backup-row backup-row-meta">
 						<span className="meta" id="account-backup-meta">
-							{lastBackupTs ? `Last: ${formatTs(lastBackupTs)} — ${gameLabel}` : 'Last: never'}
+							{lastBackupTs ? `Last: ${formatTs(lastBackupTs)} - ${gameLabel}` : 'Last: never'}
 						</span>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
+
+			<section className="settings-panel">
+				<div className="settings-section-head">
+					<h3>What this is for</h3>
+					<p>These tools stay focused on backup and restore workflows, not checklist browsing.</p>
+				</div>
+
+				<SettingRow
+					title="Manual exports"
+					subtext="Create a full snapshot of your local progress whenever you want a portable copy."
+					control={<span className="account-subscription-inline-value">{granted ? 'Ready' : 'Needs folder'}</span>}
+				/>
+				<SettingRow
+					title="Folder monitoring"
+					subtext="Automatic backups only write files to the folder you approve."
+					control={<span className="account-subscription-inline-value">{autoEnabled ? 'Enabled' : 'Disabled'}</span>}
+				/>
+			</section>
+		</div>
 	);
 }
 
@@ -735,7 +796,7 @@ function SaveImportTab() {
 						`Game: ${result.gameKey || gameKey}`,
 						`File size: ${result.size || file.size} bytes`,
 						'',
-						'No changes needed — your current progress already matches this save (for the bits we know about).',
+						'No changes needed - your current progress already matches this save (for the bits we know about).',
 					].join('\n'));
 					return;
 				}
@@ -749,8 +810,8 @@ function SaveImportTab() {
 
 				for (const change of changes) {
 					previewLines.push(
-						`• ${change.label}`,
-						`    ${change.from ? '✓ complete' : '○ incomplete'}  →  ${change.to ? '✓ complete' : '○ incomplete'}`,
+						`* ${change.label}`,
+						`    ${change.from ? '[x] complete' : '[ ] incomplete'}  ->  ${change.to ? '[x] complete' : '[ ] incomplete'}`,
 						''
 					);
 				}
@@ -782,14 +843,13 @@ function SaveImportTab() {
 	}
 
 	return (
-		<section className="card account-section" id="account-section-import">
-			<div className="card-hd">
-				<h2>Save Data Import</h2>
-				<p className="small">
-					Upload a supported save file and preview every task change before anything is applied.
-				</p>
-			</div>
-			<div className="card-bd">
+		<div className="settings-shell">
+			<section className="settings-panel" id="account-section-import">
+				<div className="settings-section-head">
+					<h3>Save Data Import</h3>
+					<p>Upload a supported save file and preview every task change before anything is applied.</p>
+				</div>
+
 				<div className="account-import-grid">
 					{tabs.map((tab) => {
 						const games = gamesByGen[tab.key] || [];
@@ -810,14 +870,14 @@ function SaveImportTab() {
 												<div className="account-import-game-title">{game.label}</div>
 												<button
 													type="button"
-													className={`button account-import-btn${isSupported ? '' : ' is-wip'}`}
+													className={`account-import-btn${isSupported ? '' : ' is-wip'}`}
 													data-game-key={game.key}
 													data-gen-key={tab.key}
 													disabled={!isSupported || busyGame === game.key}
 													title={isSupported ? 'Import a .sav file' : 'Save data import for this game is still a work in progress.'}
 													onClick={() => isSupported && handleImport(game.key, game.label)}
 												>
-													{!isSupported ? 'WIP' : busyGame === game.key ? 'Uploading…' : 'Import'}
+													{!isSupported ? 'WIP' : busyGame === game.key ? 'Uploading...' : 'Import'}
 												</button>
 											</article>
 										);
@@ -827,17 +887,46 @@ function SaveImportTab() {
 						);
 					})}
 				</div>
-			</div>
-		</section>
+			</section>
+		</div>
 	);
 }
 
-export function AccountPage() {
-	const activeTab = store.state.accountTab || 'general';
+export function AccountPage({ activeTab = store.state.accountTab || 'general' }) {
+	const navigate = useNavigate();
+	const handleReturnToChecklist = () => {
+		const fallbackState = window.PPGC?._lastNonAccountState;
+		if (fallbackState?.level) {
+			Object.assign(store.state, fallbackState);
+			save();
+			navigate('/checklists');
+			return;
+		}
+		Object.assign(store.state, {
+			level: 'gen',
+			genKey: null,
+			gameKey: null,
+			sectionId: null,
+			monInfoId: null,
+			monInfoGameKey: null,
+			monInfoForm: null,
+		});
+		save();
+		navigate('/checklists');
+	};
 
 	return (
-		<div className="account-page react-content-card">
-			<div className="account-layout">
+		<div className="account-page">
+			<header className="account-page-header">
+				<div>
+					<div className="account-page-eyebrow">Account</div>
+					<h2>Settings & Billing</h2>
+					<p className="account-page-lead">A dedicated account workspace for profile settings, subscriptions, backups, and imports.</p>
+				</div>
+			</header>
+
+			<div className="account-workspace">
+				<AccountSidebar activeTab={activeTab} onReturnToChecklist={handleReturnToChecklist} />
 				<div className="account-main">
 					{activeTab === 'general' ? <GeneralTab /> : null}
 					{activeTab === 'subscription' ? <SubscriptionTab /> : null}

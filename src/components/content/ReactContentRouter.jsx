@@ -1,4 +1,5 @@
 import React, { useMemo } from 'react';
+import { Navigate } from 'react-router-dom';
 import { _assetPath } from '../../utils/assetPath.js';
 import { save, store } from '../../store.js';
 import { ensureSections } from '../../react-bridge/taskApi.js';
@@ -6,12 +7,12 @@ import { usePpgcSnapshot } from '../../react-bridge/usePpgcSnapshot.js';
 import { navigateToState } from '../../react-bridge/navigation.js';
 import { RingMount } from '../common/RingMount.jsx';
 import { applyGameStartSync, buildGameOverview, buildGenOverview } from '../../react-bridge/progressSummary.js';
-import { AccountPage } from './AccountPage.jsx';
 import { SectionPage } from './SectionPage.jsx';
 import { ImperativeContentMount } from './ImperativeContentMount.jsx';
 import { MonInfoIndexPage } from './MonInfoIndexPage.jsx';
 import { MonInfoPage } from './MonInfoPage.jsx';
 import { getVisibleSections } from '../../utils/sectionVisibility.js';
+import { buildAccountRoute } from '../../utils/accountRoute.js';
 
 function handleEnterGame(genKey, gameKey) {
   return async () => {
@@ -150,6 +151,6 @@ export function ReactContentRouter() {
   if (level === 'section') return <SectionPage state={state} refreshKey={renderKey} />;
   if (level === 'tools') return <ToolsPage />;
   if (level === 'moninfo') return <MonInfoPage state={state} refreshKey={renderKey} />;
-  if (level === 'account') return <AccountPage />;
+  if (level === 'account') return <Navigate to={buildAccountRoute(state.accountTab || 'general')} replace />;
   return <div className="react-loading-state">Unknown page.</div>;
 }

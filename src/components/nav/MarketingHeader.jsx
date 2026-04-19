@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { PagesDropdown } from './PagesDropdown.jsx';
-import { _assetPath } from '../../utils/assetPath.js';
+import { buildAccountRoute } from '../../utils/accountRoute.js';
 
 export function MarketingHeader() {
 	const location = useLocation();
@@ -13,7 +13,7 @@ export function MarketingHeader() {
 			window.PPGC?.openAuthModal?.('login');
 			return;
 		}
-		navigate('/checklists');
+		navigate(buildAccountRoute('general'));
 	};
 
 	return (
@@ -29,6 +29,7 @@ export function MarketingHeader() {
 				<button
 					id="ppgc-account-button"
 					type="button"
+					data-react-account-button="true"
 					aria-haspopup="dialog"
 					aria-controls="ppgc-auth-overlay"
 					title="Log in / Sign up"

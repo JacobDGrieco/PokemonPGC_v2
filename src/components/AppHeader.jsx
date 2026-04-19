@@ -1,13 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { store } from '../store.js';
-import { navigateToState } from '../react-bridge/navigation.js';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { PagesDropdown } from './nav/PagesDropdown.jsx';
 import { wireGlobalTaskSearch } from '../ui/taskSearch.js';
-import { _assetPath } from '../utils/assetPath.js';
+import { buildAccountRoute } from '../utils/accountRoute.js';
 
 export function AppHeader({ isMobile, mobileNavOpen }) {
 	const location = useLocation();
+	const navigate = useNavigate();
 	const isChecklistsPage = location.pathname === '/checklists';
 	const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
 	const inputRef = useRef(null);
@@ -22,16 +22,7 @@ export function AppHeader({ isMobile, mobileNavOpen }) {
 			window.PPGC._lastNonAccountState = { ...currentState };
 		}
 
-		navigateToState({
-			level: 'account',
-			genKey: null,
-			gameKey: null,
-			sectionId: null,
-			accountTab: 'general',
-			monInfoId: null,
-			monInfoGameKey: null,
-			monInfoForm: null,
-		});
+		navigate(buildAccountRoute('general'));
 	};
 
 	useEffect(() => {
@@ -100,6 +91,7 @@ export function AppHeader({ isMobile, mobileNavOpen }) {
 				<button
 					id="ppgc-account-button"
 					type="button"
+					data-react-account-button="true"
 					aria-haspopup="dialog"
 					aria-controls="ppgc-auth-overlay"
 					title="Log in / Sign up"

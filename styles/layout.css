@@ -16,6 +16,14 @@
 	position: relative;
 }
 
+.app[data-route-level="account"] {
+	grid-template-columns: 1fr;
+}
+
+.app[data-route-level="account"] .sidebar {
+	display: none;
+}
+
 /* ===================== App header (top bar) ===================== */
 
 .app-header {

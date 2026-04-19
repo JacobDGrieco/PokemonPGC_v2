@@ -4,8 +4,11 @@ import { AppHeader } from '../AppHeader.jsx';
 import { AppSidebar } from '../AppSidebar.jsx';
 import { AppModals } from '../AppModals.jsx';
 import { ReactContentRouter } from '../content/ReactContentRouter.jsx';
+import { usePpgcSnapshot } from '../../react-bridge/usePpgcSnapshot.js';
 
-export function AppShell({ children }) {
+export function AppShell({ children, routeLevelOverride = null }) {
+  const snapshot = usePpgcSnapshot();
+  const routeLevel = routeLevelOverride || snapshot?.state?.level || store.state?.level || 'gen';
   const [isMobile, setIsMobile] = useState(
     () => window.matchMedia('(max-width: 900px)').matches
   );
@@ -36,7 +39,7 @@ export function AppShell({ children }) {
         mobileNavOpen={mobileNavOpen}
         setMobileNavOpen={setMobileNavOpen}
       />
-      <div className="app">
+      <div className="app" data-route-level={routeLevel}>
         <AppSidebar
           isMobile={isMobile}
           mobileNavOpen={mobileNavOpen}

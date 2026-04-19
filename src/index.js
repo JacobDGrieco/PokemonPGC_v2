@@ -473,7 +473,7 @@ async function initAuthUI() {
 	if (!accountBtn || !accountMenu) return;
 
 	// Wire the account button immediately — navigation doesn't need the auth overlay
-	if (!accountBtn._ppgcWired) {
+	if (!accountBtn._ppgcWired && accountBtn.dataset.reactAccountButton !== "true") {
 		accountBtn._ppgcWired = true;
 		accountBtn.addEventListener("click", (e) => {
 			e.stopPropagation();
@@ -484,7 +484,7 @@ async function initAuthUI() {
 					PPGC._lastNonAccountState = { ...s };
 				}
 			} catch { }
-			PPGC.navigateTo("account");
+			window.location.assign("/account/general");
 		});
 	}
 
@@ -494,7 +494,7 @@ async function initAuthUI() {
 		const action = btn.dataset.action;
 		if (action === "settings") {
 			closeAccountMenu();
-			PPGC.navigateTo("account");
+			window.location.assign("/account/general");
 		} else if (action === "logout") {
 			handleLogout();
 		}
