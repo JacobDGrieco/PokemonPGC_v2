@@ -282,7 +282,7 @@ PokemonPGC/
 			distributions/...		# Internet / serial-code / IRL event data
 			fashion/...				# Collectible fashion data
 			layouts/...				# Layout definitions for sections and tasks
-			mon_info/...			# Pokemon info data files
+			mon-info/...			# Pokemon info data files
 			natidexs/...			# National dex data
 			regidexs/...			# Regional dex data
 			tasks/...				# Checklist sections and tasks

@@ -1,7 +1,7 @@
 import { save } from "../store.js";
 import { ensureDataRoot, ensurePpgcRoot } from "../runtime/globals.js";
 import { bootstrapTasks } from "../tasks.js";
-import { ensureMonInfoLoaded } from "../../data/mon_info/_loader.js";
+import { ensureMonInfoLoaded } from "../../data/mon-info/_loader.js";
 import {
 	normalizeFlag,
 	clampStatusForMon,
@@ -188,7 +188,7 @@ export function wireDexModal(store, els) {
 				// incomplete commands with spaces keep full list
 			}
 		}
-	
+
 		renderDexCards({
 			store,
 			dexGrid,

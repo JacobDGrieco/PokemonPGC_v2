@@ -1,4 +1,4 @@
-import { ensureMonInfoLoaded } from "../../data/mon_info/_loader.js";
+import { ensureMonInfoLoaded } from "../../data/mon-info/_loader.js";
 import { fetchPokeApiMonInfo } from "../services/pokeApi.js";
 
 export function resolveMonInfoBucket(gameKey) {

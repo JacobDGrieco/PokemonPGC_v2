@@ -1,13 +1,13 @@
 // src/data/forms/catalog.js
 import {
-  formSearch,
+	formSearch,
 } from './helpers/index.js';
 
 (function () {
 	window.PPGC = window.PPGC || {};
 	window.DATA = window.DATA || {};
 
-	// Minimal registry helper (matches how your mon_info files do it)
+	// Minimal registry helper (matches how your mon-info files do it)
 	window.PPGC.register = window.PPGC.register ||
 		function register(obj) {
 			for (const [k, v] of Object.entries(obj || {})) {
