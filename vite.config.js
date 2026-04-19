@@ -4,15 +4,14 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig(({ mode }) => {
   const repoRoot = process.cwd();
-  const frontendRoot = path.resolve(repoRoot, "frontend");
-  const env = loadEnv(mode, frontendRoot, "");
+  const env = loadEnv(mode, repoRoot, "");
   const apiPort = env.PPGC_API_PORT || env.API_PORT || env.PPGC_BACKEND_PORT || env.BACKEND_PORT || "3000";
   const apiProxyTarget = `http://127.0.0.1:${apiPort}`;
   const assetBaseUrl = env.VITE_ASSET_BASE_URL || env.ASSET_BASE_URL || "";
   const apiBaseUrl = env.VITE_API_BASE_URL || env.API_BASE_URL || "";
 
   return {
-    root: frontendRoot,
+    root: repoRoot,
     plugins: [react()],
     publicDir: path.resolve(repoRoot, "public"),
     define: {
