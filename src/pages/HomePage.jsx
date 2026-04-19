@@ -76,7 +76,7 @@ export function HomePage() {
 		<div className="home-page">
 			<section className="home-hero">
 				<h1 className="home-hero-title">
-					<img src={_assetPath('cloud-ball.png')} alt="" className="home-hero-icon" />
+					<img src="/cloud-ball.png" alt="" className="home-hero-icon" />
 					PokémonPGC
 				</h1>
 				<p className="home-hero-tagline">Your complete Pokémon completion tracker</p>
