@@ -30,8 +30,8 @@ export const config = {
 };
 
 const SUBSCRIPTION_ACTIONS = {
-	stripe: new Set(["create-session", "portal", "verify", "webhook"]),
-	paypal: new Set(["cancel", "create-subscription", "verify", "webhook"]),
+	stripe: new Set(["create-session", "details", "portal", "verify", "webhook"]),
+	paypal: new Set(["cancel", "create-subscription", "details", "verify", "webhook"]),
 };
 
 export default async function handler(req, res) {
@@ -44,6 +44,7 @@ export default async function handler(req, res) {
 
 	if (provider === "stripe") {
 		if (action === "create-session") return handleStripeCreateSession(req, res);
+		if (action === "details") return handleStripeDetails(req, res);
 		if (action === "portal") return handleStripePortal(req, res);
 		if (action === "verify") return handleStripeVerify(req, res);
 		return handleStripeWebhook(req, res);
@@ -51,8 +52,51 @@ export default async function handler(req, res) {
 
 	if (action === "cancel") return handlePayPalCancel(req, res);
 	if (action === "create-subscription") return handlePayPalCreateSubscription(req, res);
+	if (action === "details") return handlePayPalDetails(req, res);
 	if (action === "verify") return handlePayPalVerify(req, res);
 	return handlePayPalWebhook(req, res);
+}
+
+function isoFromUnixSeconds(value) {
+	const seconds = Number(value || 0);
+	if (!Number.isFinite(seconds) || seconds <= 0) return null;
+	return new Date(seconds * 1000).toISOString();
+}
+
+function normalizeStripeDetails(subscription, user) {
+	return {
+		provider: "stripe",
+		tier: user?.tier || getStripeSubscriptionTier(subscription) || "free",
+		status: subscription?.status || user?.subscriptionStatus || null,
+		renewalDate: isoFromUnixSeconds(subscription?.current_period_end),
+		currentPeriodStart: isoFromUnixSeconds(subscription?.current_period_start),
+		cancelAt: isoFromUnixSeconds(subscription?.cancel_at),
+		canceledAt: isoFromUnixSeconds(subscription?.canceled_at),
+		trialEnd: isoFromUnixSeconds(subscription?.trial_end),
+		cancelAtPeriodEnd: !!subscription?.cancel_at_period_end,
+		subscriptionId: subscription?.id ? String(subscription.id) : user?.stripeSubscriptionId || null,
+		customerId: subscription?.customer ? String(subscription.customer) : user?.stripeCustomerId || null,
+		priceId: subscription?.items?.data?.[0]?.price?.id ? String(subscription.items.data[0].price.id) : null,
+		interval: subscription?.items?.data?.[0]?.price?.recurring?.interval || null,
+	};
+}
+
+function normalizePayPalDetails(subscription, user) {
+	return {
+		provider: "paypal",
+		tier: user?.tier || "free",
+		status: subscription?.status || user?.subscriptionStatus || null,
+		renewalDate: subscription?.billing_info?.next_billing_time || null,
+		currentPeriodStart: subscription?.start_time || null,
+		cancelAt: null,
+		canceledAt: subscription?.status_update_time || null,
+		trialEnd: null,
+		cancelAtPeriodEnd: false,
+		subscriptionId: subscription?.id ? String(subscription.id) : user?.paypalSubscriptionId || null,
+		customerId: null,
+		priceId: subscription?.plan_id ? String(subscription.plan_id) : null,
+		interval: "month",
+	};
 }
 
 async function handleStripeCreateSession(req, res) {
@@ -174,6 +218,38 @@ async function handleStripePortal(req, res) {
 	} catch (error) {
 		console.error("[subscriptions/stripe/portal] error:", error);
 		return json(res, 500, { error: error.message || "Failed to create Stripe portal session." });
+	}
+}
+
+async function handleStripeDetails(req, res) {
+	if (req.method !== "GET") return methodNotAllowed(res, ["GET"]);
+
+	const session = getSessionFromRequest(req);
+	if (!session?.userId) return json(res, 401, { error: "Not authenticated." });
+
+	try {
+		const user = await prisma.user.findUnique({
+			where: { id: session.userId },
+			select: {
+				tier: true,
+				subscriptionStatus: true,
+				stripeCustomerId: true,
+				stripeSubscriptionId: true,
+			},
+		});
+		if (!user?.stripeSubscriptionId) {
+			return json(res, 200, { details: normalizeStripeDetails(null, user || null) });
+		}
+
+		const stripe = getStripeClient();
+		const subscription = await stripe.subscriptions.retrieve(user.stripeSubscriptionId, {
+			expand: ["items.data.price"],
+		});
+
+		return json(res, 200, { details: normalizeStripeDetails(subscription, user) });
+	} catch (error) {
+		console.error("[subscriptions/stripe/details] error:", error);
+		return json(res, 500, { error: error.message || "Failed to load Stripe subscription details." });
 	}
 }
 
@@ -334,6 +410,33 @@ async function handlePayPalVerify(req, res) {
 	} catch (error) {
 		console.error("[subscriptions/paypal/verify] error:", error);
 		return json(res, 500, { error: error.message || "Failed to verify PayPal subscription." });
+	}
+}
+
+async function handlePayPalDetails(req, res) {
+	if (req.method !== "GET") return methodNotAllowed(res, ["GET"]);
+
+	const session = getSessionFromRequest(req);
+	if (!session?.userId) return json(res, 401, { error: "Not authenticated." });
+
+	try {
+		const user = await prisma.user.findUnique({
+			where: { id: session.userId },
+			select: {
+				tier: true,
+				subscriptionStatus: true,
+				paypalSubscriptionId: true,
+			},
+		});
+		if (!user?.paypalSubscriptionId) {
+			return json(res, 200, { details: normalizePayPalDetails(null, user || null) });
+		}
+
+		const subscription = await getPayPalSubscription(user.paypalSubscriptionId);
+		return json(res, 200, { details: normalizePayPalDetails(subscription, user) });
+	} catch (error) {
+		console.error("[subscriptions/paypal/details] error:", error);
+		return json(res, 500, { error: error.message || "Failed to load PayPal subscription details." });
 	}
 }
 

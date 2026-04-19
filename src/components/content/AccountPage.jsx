@@ -1,6 +1,13 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { _assetPath } from '../../utils/assetPath.js';
+import {
+	cancelPayPalSubscription,
+	createStripePortalSession,
+	getSubscriptionDetails,
+} from '../../../api.js';
 import { save, store } from '../../store.js';
+import { TIERS } from '../../config/tiers.js';
+import { useSubscription } from '../../hooks/useSubscription.js';
 import {
 	backupAllNow,
 	chooseBackupFolder,
@@ -24,6 +31,36 @@ function formatTs(ts) {
 	} catch {
 		return ts;
 	}
+}
+
+function formatDate(value) {
+	if (!value) return 'Not available';
+	try {
+		return new Date(value).toLocaleDateString(undefined, {
+			year: 'numeric',
+			month: 'long',
+			day: 'numeric',
+		});
+	} catch {
+		return value;
+	}
+}
+
+function formatDateTime(value) {
+	if (!value) return 'Not available';
+	try {
+		return new Date(value).toLocaleString();
+	} catch {
+		return value;
+	}
+}
+
+function formatStatus(value) {
+	if (!value) return 'None';
+	return String(value)
+		.replace(/[_-]+/g, ' ')
+		.toLowerCase()
+		.replace(/\b\w/g, (match) => match.toUpperCase());
 }
 
 function SettingRow({ title, subtext, control, children }) {
@@ -343,6 +380,185 @@ function GeneralTab() {
 	);
 }
 
+function SubscriptionTab() {
+	const { tierKey, user } = useSubscription();
+	const [details, setDetails] = useState(null);
+	const [loading, setLoading] = useState(false);
+	const [busyAction, setBusyAction] = useState('');
+	const [error, setError] = useState('');
+	const [notice, setNotice] = useState('');
+
+	useEffect(() => {
+		let cancelled = false;
+
+		async function loadDetails() {
+			setError('');
+			setNotice('');
+
+			if (!user?.subscriptionProvider) {
+				setDetails(null);
+				return;
+			}
+
+			setLoading(true);
+			try {
+				const response = await getSubscriptionDetails(user.subscriptionProvider);
+				if (!cancelled) setDetails(response?.details || null);
+			} catch (err) {
+				if (!cancelled) {
+					setDetails(null);
+					setError(err?.message || 'Failed to load subscription details.');
+				}
+			} finally {
+				if (!cancelled) setLoading(false);
+			}
+		}
+
+		loadDetails();
+
+		const refresh = () => {
+			loadDetails();
+		};
+		window.addEventListener('ppgc:auth:changed', refresh);
+		return () => {
+			cancelled = true;
+			window.removeEventListener('ppgc:auth:changed', refresh);
+		};
+	}, [user?.id, user?.subscriptionProvider]);
+
+	async function handleStripePortal() {
+		setBusyAction('stripe:portal');
+		setError('');
+		setNotice('');
+		try {
+			const result = await createStripePortalSession();
+			if (!result?.url) throw new Error('Stripe did not return a portal URL.');
+			window.location.assign(result.url);
+		} catch (err) {
+			setError(err?.message || 'Failed to open billing portal.');
+		} finally {
+			setBusyAction('');
+		}
+	}
+
+	async function handlePayPalCancel() {
+		setBusyAction('paypal:cancel');
+		setError('');
+		setNotice('');
+		try {
+			const result = await cancelPayPalSubscription();
+			if (result?.user) {
+				window.PPGC = window.PPGC || {};
+				window.PPGC.currentUser = result.user;
+				window.PPGC?.setAccountButtonIcon?.(result.user.icon || 'default');
+				window.PPGC?.api?.setApiCurrentUser?.(result.user);
+				window.dispatchEvent(new CustomEvent('ppgc:auth:changed'));
+			}
+			setNotice('Your PayPal subscription has been canceled.');
+		} catch (err) {
+			setError(err?.message || 'Failed to cancel PayPal subscription.');
+		} finally {
+			setBusyAction('');
+		}
+	}
+
+	const effectiveDetails = details || {
+		provider: user?.subscriptionProvider || null,
+		tier: tierKey,
+		status: user?.subscriptionStatus || null,
+		renewalDate: null,
+		currentPeriodStart: null,
+		cancelAt: null,
+		canceledAt: null,
+		trialEnd: null,
+		cancelAtPeriodEnd: false,
+		subscriptionId: null,
+		customerId: null,
+		priceId: null,
+		interval: null,
+	};
+	const plan = TIERS[effectiveDetails.tier] || TIERS.free;
+	const hasProvider = !!effectiveDetails.provider;
+	const isSignedIn = !!user;
+
+	return (
+		<div className="settings-shell">
+			<section className="settings-panel settings-panel-profile">
+				<div className="settings-panel-head">
+					<div>
+						<div className="settings-eyebrow">Subscription</div>
+						<h2>Plan & Billing</h2>
+						<p className="settings-lead">See your current tier, renewal timing, and billing provider details without leaving the account page.</p>
+					</div>
+				</div>
+
+				<div className="settings-account-strip">
+					<div className="settings-account-meta">
+						<div className="settings-meta-label">Current tier</div>
+						<div className="settings-meta-value">{plan.label}</div>
+					</div>
+					<div className="settings-account-actions">
+						{hasProvider && effectiveDetails.provider === 'stripe' ? (
+							<button
+								className="primary"
+								type="button"
+								disabled={busyAction !== ''}
+								onClick={handleStripePortal}
+							>
+								{busyAction === 'stripe:portal' ? 'Loading...' : 'Manage billing'}
+							</button>
+						) : null}
+						{hasProvider && effectiveDetails.provider === 'paypal' ? (
+							<button
+								className="ghost account-subscription-danger"
+								type="button"
+								disabled={busyAction !== ''}
+								onClick={handlePayPalCancel}
+							>
+								{busyAction === 'paypal:cancel' ? 'Canceling...' : 'Cancel PayPal'}
+							</button>
+						) : null}
+						{!hasProvider ? (
+							<button
+								className="primary"
+								type="button"
+								onClick={() => window.location.assign('/pricing')}
+							>
+								View plans
+							</button>
+						) : null}
+					</div>
+				</div>
+			</section>
+
+			{error ? <section className="settings-panel account-subscription-alert account-subscription-alert-error">{error}</section> : null}
+			{notice ? <section className="settings-panel account-subscription-alert account-subscription-alert-success">{notice}</section> : null}
+
+			<section className="settings-panel">
+				<div className="settings-section-head">
+					<h3>Subscription details</h3>
+					<p>Provider metadata and lifecycle dates for your current billing setup.</p>
+				</div>
+
+				<div className="account-subscription-list">
+					<SettingRow title="Plan" subtext="The plan currently attached to your account." control={<span className="account-subscription-inline-value">{plan.label} ({plan.price})</span>} />
+					<SettingRow title="Renewal date" subtext="When the next billing cycle is expected to begin." control={<span className="account-subscription-inline-value">{formatDateTime(effectiveDetails.renewalDate)}</span>} />
+					<SettingRow title="Period start" subtext="The start of the current paid period when the provider exposes it." control={<span className="account-subscription-inline-value">{formatDateTime(effectiveDetails.currentPeriodStart)}</span>} />
+				</div>
+			</section>
+
+			{!isSignedIn ? (
+				<section className="settings-panel">
+					<div className="settings-section-head">
+						<h3>Sign in required</h3>
+						<p>Log in to see and manage subscription data for your account.</p>
+					</div>
+				</section>
+			) : null}
+		</div>
+	);
+}
+
 function BackupTab() {
 	const [granted, setGranted] = useState(false);
 	const [lastBackupTs, setLastBackupTs] = useState(localStorage.getItem('ppgc_last_backup_ts'));
@@ -624,6 +840,7 @@ export function AccountPage() {
 			<div className="account-layout">
 				<div className="account-main">
 					{activeTab === 'general' ? <GeneralTab /> : null}
+					{activeTab === 'subscription' ? <SubscriptionTab /> : null}
 					{activeTab === 'backup' ? <BackupTab /> : null}
 					{activeTab === 'import' ? <SaveImportTab /> : null}
 				</div>
