@@ -212,7 +212,7 @@ initHistory({ store, renderAll });
 
 let currentUser = null;
 let currentUserIcon = "default";
-let authModalWired = false;
+let wiredOverlayEl = null;
 
 function applyAccountButtonIcon(btn, icon) {
 	const nextIcon = String(icon || "default");
@@ -310,7 +310,7 @@ async function ensureAuthModalReady() {
 	await window.PPGC?.ensureModalMounted?.("auth");
 
 	const overlay = document.getElementById("ppgc-auth-overlay");
-	if (!overlay || authModalWired) return overlay;
+	if (!overlay || wiredOverlayEl === overlay) return overlay;
 
 	const closeBtn = overlay.querySelector(".ppgc-auth-close");
 	if (closeBtn) {
@@ -321,7 +321,7 @@ async function ensureAuthModalReady() {
 		if (e.target === overlay) closeAuthModal();
 	});
 
-	authModalWired = true;
+	wiredOverlayEl = overlay;
 	return overlay;
 }
 

@@ -1,69 +1,48 @@
-import React, { useEffect, useState } from 'react';
-import { store } from './store.js';
-import { AppHeader } from './components/AppHeader.jsx';
-import { AppSidebar } from './components/AppSidebar.jsx';
-import { AppModals } from './components/AppModals.jsx';
-import { ReactContentRouter } from './components/content/ReactContentRouter.jsx';
-
+import React from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import { AppShell } from './components/shells/AppShell.jsx';
+import { MarketingShell } from './components/shells/MarketingShell.jsx';
+import { HomePage } from './pages/HomePage.jsx';
+import { PricingPage } from './pages/PricingPage.jsx';
+import { PlaceholderPage } from './pages/PlaceholderPage.jsx';
 import { Analytics } from '@vercel/analytics/react';
 
 export default function App() {
-	const [isMobile, setIsMobile] = useState(() => window.matchMedia('(max-width: 900px)').matches);
-	const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  return (
+    <>
+      <Routes>
+        {/* Marketing shell — no sidebar */}
+        <Route
+          path="/"
+          element={
+            <MarketingShell>
+              <HomePage />
+            </MarketingShell>
+          }
+        />
+        <Route
+          path="/pricing"
+          element={
+            <MarketingShell>
+              <PricingPage />
+            </MarketingShell>
+          }
+        />
 
-	useEffect(() => {
-		const media = window.matchMedia('(max-width: 900px)');
-		const sync = () => {
-			const nextIsMobile = media.matches;
-			setIsMobile(nextIsMobile);
-			if (!nextIsMobile) setMobileNavOpen(false);
-		};
+        {/* App shell — full sidebar + header */}
+        <Route path="/checklists" element={<AppShell />} />
 
-		sync();
-		media.addEventListener('change', sync);
-		return () => media.removeEventListener('change', sync);
-	}, []);
+        {/* Placeholder pages — AppShell with stub content */}
+        <Route path="/pokemon-info" element={<PlaceholderPage feature="pokemon-info" />} />
+        <Route path="/guides" element={<PlaceholderPage feature="guides" />} />
+        <Route path="/tools" element={<PlaceholderPage feature="tools" />} />
+        <Route path="/global-stats" element={<PlaceholderPage feature="global-stats" />} />
+        <Route path="/model-viewer" element={<PlaceholderPage feature="model-viewer" />} />
 
-	const closeMobileNav = () => setMobileNavOpen(false);
-	const isDesktopCollapsed = !!store.state?.sidebarCollapsed;
-
-	return (
-		<>
-			<div className="app-shell" data-task-density={store.state?.taskDensity === 'comfortable' ? 'comfortable' : 'compact'}>
-				<AppHeader
-					isMobile={isMobile}
-					mobileNavOpen={mobileNavOpen}
-					setMobileNavOpen={setMobileNavOpen}
-				/>
-				<div className="app">
-					<AppSidebar
-						isMobile={isMobile}
-						mobileNavOpen={mobileNavOpen}
-						closeMobileNav={closeMobileNav}
-					/>
-					<button
-						type="button"
-						className="app-scrim"
-						aria-label="Close navigation"
-						aria-hidden={isMobile && mobileNavOpen ? 'false' : 'true'}
-						tabIndex={isMobile && mobileNavOpen ? 0 : -1}
-						onClick={closeMobileNav}
-					/>
-					<main
-						id="content"
-						className="content"
-						aria-live="polite"
-						onClick={() => {
-							if (isMobile && mobileNavOpen) closeMobileNav();
-						}}
-						data-sidebar-collapsed={!isMobile && isDesktopCollapsed ? 'true' : 'false'}
-					>
-						<ReactContentRouter />
-					</main>
-				</div>
-			</div>
-			<AppModals />
-			<Analytics />
-		</>
-	);
+        {/* Fallback */}
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+      <Analytics debug={false} />
+    </>
+  );
 }

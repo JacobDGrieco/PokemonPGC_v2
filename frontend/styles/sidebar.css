@@ -18,20 +18,40 @@
 }
 
 body:not(.mobile-ui).sidebar-collapsed .sidebar {
-	width: 0;
-	min-width: 0;
-	padding-left: 0;
-	padding-right: 0;
-	border-right: 0;
+	width: 44px;
+	min-width: 44px;
 	overflow: hidden;
 }
 
 body:not(.mobile-ui).sidebar-collapsed .app {
-	grid-template-columns: 0 1fr;
+	grid-template-columns: 44px 1fr;
 }
 
-body:not(.mobile-ui).sidebar-collapsed .content {
-	flex: 1 1 auto;
+body:not(.mobile-ui).sidebar-collapsed .sidebar-header {
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 8px 4px;
+	gap: 6px;
+	border-bottom: 0;
+}
+
+body:not(.mobile-ui).sidebar-collapsed .sidebar-title {
+	display: none;
+}
+
+body:not(.mobile-ui).sidebar-collapsed .back-btn {
+	padding: 6px;
+	width: 32px;
+	text-align: center;
+}
+
+body:not(.mobile-ui).sidebar-collapsed .sidebar-collapse-btn {
+	transform: none;
+}
+
+body:not(.mobile-ui).sidebar-collapsed .dir-list {
+	display: none;
 }
 
 .sidebar-header {
@@ -47,6 +67,12 @@ body:not(.mobile-ui).sidebar-collapsed .content {
 	border-bottom: 1px solid var(--line-soft);
 	background: rgba(12, 16, 24, 0.9);
 	backdrop-filter: blur(10px);
+}
+
+/* Collapse/expand button in sidebar header */
+.sidebar-collapse-btn {
+	margin-left: auto;
+	flex-shrink: 0;
 }
 
 /* Back button in the sidebar header */

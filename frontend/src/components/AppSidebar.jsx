@@ -1,6 +1,6 @@
 import React from 'react';
 import { _assetPath } from '../utils/assetPath.js';
-import { store } from '../store.js';
+import { store, save } from '../store.js';
 import { ensureSections } from '../react-bridge/taskApi.js';
 import { usePpgcSnapshot } from '../react-bridge/usePpgcSnapshot.js';
 import { navigateToState } from '../react-bridge/navigation.js';
@@ -110,11 +110,24 @@ function handleBack(state) {
 	}
 }
 
-export function AppSidebar({ isMobile, mobileNavOpen, closeMobileNav }) {
+export function AppSidebar({ isMobile, mobileNavOpen, setMobileNavOpen, closeMobileNav }) {
 	const snapshot = usePpgcSnapshot();
 	const state = snapshot?.state || store.state;
 	const items = makeSidebarItems(state);
-	const isHidden = isMobile ? !mobileNavOpen : !!state?.sidebarCollapsed;
+	const isCollapsed = !isMobile && !!state?.sidebarCollapsed;
+	const isHidden = isMobile ? !mobileNavOpen : false;
+
+	const handleToggle = () => {
+		if (isMobile) {
+			setMobileNavOpen?.((v) => !v);
+			return;
+		}
+		const next = !document.body.classList.contains('sidebar-collapsed');
+		document.body.classList.toggle('sidebar-collapsed', next);
+		store.state.sidebarCollapsed = next;
+		save();
+		window.PPGC?.renderAll?.();
+	};
 
 	const runSidebarAction = (callback) => {
 		callback?.();
@@ -127,6 +140,14 @@ export function AppSidebar({ isMobile, mobileNavOpen, closeMobileNav }) {
 					←
 				</button>
 				<div id="navTitle" className="sidebar-title">{getSidebarTitle(state)}</div>
+				<button
+					className="back-btn sidebar-collapse-btn"
+					type="button"
+					aria-label={isCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
+					onClick={handleToggle}
+				>
+					{isCollapsed ? '›' : '‹'}
+				</button>
 			</div>
 
 			<div
