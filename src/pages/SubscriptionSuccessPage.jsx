@@ -48,8 +48,12 @@ export function SubscriptionSuccessPage() {
 
 		async function run() {
 			try {
-				if (!window.PPGC?.currentUser) {
+				setMessage('Refreshing your account...');
+				const initialUser = await refreshFromServer();
+				if (cancelled) return;
+				if (!initialUser) {
 					window.PPGC?.openAuthModal?.('login');
+					throw new Error('Your session could not be restored after checkout. Please log in again to finish syncing your subscription.');
 				}
 
 				if (details.provider === 'paypal') {
@@ -64,7 +68,6 @@ export function SubscriptionSuccessPage() {
 					}
 				}
 
-				setMessage('Refreshing your account...');
 				let matchedTier = false;
 				for (let attempt = 0; attempt < 8; attempt += 1) {
 					const user = await refreshFromServer();

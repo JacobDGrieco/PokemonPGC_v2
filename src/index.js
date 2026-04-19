@@ -213,6 +213,7 @@ initHistory({ store, renderAll });
 let currentUser = null;
 let currentUserIcon = "default";
 let wiredOverlayEl = null;
+let authBootstrapPromise = null;
 
 function applyAccountButtonIcon(btn, icon) {
 	const nextIcon = String(icon || "default");
@@ -268,6 +269,16 @@ async function refreshCurrentUser() {
 	}
 
 	return currentUser;
+}
+
+function ensureAuthBootstrap() {
+	if (!authBootstrapPromise) {
+		authBootstrapPromise = refreshCurrentUser().catch((err) => {
+			console.debug("[auth] session restore failed:", err);
+			return null;
+		});
+	}
+	return authBootstrapPromise;
 }
 
 async function handleLogout() {
@@ -504,13 +515,10 @@ async function initAuthUI() {
 		}
 	});
 
-	// Initialize button state from server session (if any) AFTER first paint
-	setTimeout(async () => {
-		try {
-			await refreshCurrentUser();
-			if (currentUser) startServerAutoBackup();
-		} catch { }
-	}, 0);
+	try {
+		await ensureAuthBootstrap();
+		if (currentUser) startServerAutoBackup();
+	} catch { }
 }
 
 // ------------------------------------------------------------
@@ -541,6 +549,7 @@ function runWhenIdle(fn, timeout = 1500) {
 window.__PPGC_NO_IMG__ = _assetPath('no-image.svg');
 initLayoutSwitcher(renderAll);
 renderAll();
+PPGC.authBootstrapPromise = ensureAuthBootstrap();
 // Defer until after React's initial render has committed the DOM.
 setTimeout(initAuthUI, 0);
 initBackups({ minutes: 5 });
@@ -661,6 +670,7 @@ PPGC.setAccountButtonIcon = (icon) => {
 PPGC.handleLogout = handleLogout;
 PPGC.resolveGameLabel = resolveGameLabel;
 PPGC.refreshCurrentUser = refreshCurrentUser;
+PPGC.ensureAuthBootstrap = ensureAuthBootstrap;
 PPGC.ensureGenDataLoaded = ensureGenDataLoaded;
 PPGC.ensureGenDataLoadedForGame = async function ensureGenDataLoadedForGame(gameKey) {
 	const genKey = resolveGenKeyForGame(gameKey);

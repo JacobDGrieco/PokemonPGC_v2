@@ -16,7 +16,7 @@ export function getStripeClient() {
 }
 
 export function getStripeWebhookSecret() {
-	const secret = String(process.env.STRIPE_WEBHOOK_SECRET || "").trim();
+	const secret = String(process.env.STRIPE_WEBHOOK || "").trim();
 	if (!secret) {
 		throw new Error("Missing STRIPE_WEBHOOK_SECRET environment variable.");
 	}
@@ -24,7 +24,7 @@ export function getStripeWebhookSecret() {
 }
 
 export function getStripePortalConfigurationId() {
-	return String(process.env.STRIPE_PORTAL_CONFIGURATION_ID || "").trim() || null;
+	return String(process.env.STRIPE_PORTAL || "").trim() || null;
 }
 
 export function getStripeSubscriptionTier(subscription) {
