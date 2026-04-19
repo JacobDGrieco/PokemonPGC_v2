@@ -1,5 +1,7 @@
 import {
 	_hm,
+	_formItem,
+	_heldItem,
 	_keyItem,
 	_tm,
 	_location,
@@ -17,6 +19,8 @@ import {
 	const task = (gameKey, name) => _task(gameKey, name);
 	const npc = (gameKey, name) => _npc(gameKey, name);
 	const location = (gameKey, name) => _location(gameKey, name);
+	const formItem = (name) => _formItem(gen, name);
+	const heldItem = (name) => _heldItem(gen, name);
 	const keyItem = (name) => _keyItem(gen, name);
 	const tm = (type) => _tm(gen, type);
 	const hm = (type) => _hm(gen, type);
@@ -42,11 +46,288 @@ import {
 				id: 1, text: "Catch all the Legendaries", children: [
 					{ id: 1, text: "Catch/Trade Koraidon", img: ({ gameKey }) => baseSprite(gameKey, 1007) },
 					{ id: 2, text: "Catch/Trade Miraidon", img: ({ gameKey }) => baseSprite(gameKey, 1008) },
+					{ id: 3, text: "Catch Wo-Chien", img: ({ gameKey }) => baseSprite(gameKey, 1001), tooltip: "Unlock by removing 8 Wooden Stakes near Poco Path Lighthouse\nRequires completing all History classes and Ms. Raifort's follow-up" },
+					{ id: 4, text: "Catch Chien-Pao", img: ({ gameKey }) => baseSprite(gameKey, 1002), tooltip: "Unlock by removing 8 Wooden Stakes in North Paldea" },
+					{ id: 5, text: "Catch Ting-Lu", img: ({ gameKey }) => baseSprite(gameKey, 1003), tooltip: "Unlock by removing 8 Wooden Stakes around the Paldean coast" },
+					{ id: 6, text: "Catch Chi-Yu", img: ({ gameKey }) => baseSprite(gameKey, 1004), tooltip: "Unlock by removing 8 Fiery Stakes in North Paldea" },
+
+				],
+			},
+			{
+				id: 2, text: "Catch all Ex-Titan Pokémon", tooltip: "Each titan returns as a static encounter at its original location after completing Path of Legends", children: [
+					{ id: 1, text: "Klawf", img: ({ gameKey }) => baseSprite(gameKey, 950), tooltip: "South Province Area Three" },
+					{ id: 2, text: "Bombirdier", img: ({ gameKey }) => baseSprite(gameKey, 951), tooltip: "West Province Area One" },
+					{ id: 3, text: "Orthworm", img: ({ gameKey }) => baseSprite(gameKey, 968), tooltip: "East Province Area Three" },
+					{ id: 4, text: "Quaking Earth", tooltip: "Asado Desert" },
+					{ id: 5, text: "Tatsugiri", img: ({ gameKey }) => baseSprite(gameKey, 978), tooltip: "Casseroya Lake (found inside Dondozo)" },
+				],
+			},
+			{
+				id: 3, text: "Obtain all In-Game Gift Pokémon", children: [
+					{ id: 1, text: "Riolu Egg", img: ({ gameKey }) => baseSprite(gameKey, 447), tooltip: "Pokémon Center near South Province Area Two\nSpeak to the hiker inside" },
+					{ id: 2, text: "Galarian Meowth", img: ({ gameKey }) => baseSprite(gameKey, "0052-g"), tooltip: "From Salvatore (Languages teacher) after completing all Language classes at the Academy" },
+				],
+			},
+			{
+				id: 4, text: "Complete all In-Game Pokémon Trades", children: [
+					{ id: 1, text: "Flabébé for Snom", img: ({ gameKey }) => baseSprite(gameKey, 872), tooltip: "Cortondo — NPC near the Pokémon Center" },
+					{ id: 2, text: "Paldean Wooper for Johtonian Wooper", img: ({ gameKey }) => baseSprite(gameKey, 194), tooltip: "Cascarrafa — NPC near the fountain" },
+					{ id: 3, text: "Pincurchin for Haunter", img: ({ gameKey }) => baseSprite(gameKey, 94), tooltip: "Levincia — NPC near the Pokémon Center\nHaunter evolves into Gengar upon trading" },
+				],
+			},
+		],
+		story: [
+			{
+				id: 1, text: "Complete Victory Road", children: [
+					{ id: 1, text: "Bug Badge", tooltip: "Defeat Katy at Cortondo Gym" },
+					{ id: 2, text: "Grass Badge", tooltip: "Defeat Brassius at Artazon Gym" },
+					{ id: 3, text: "Electric Badge", tooltip: "Defeat Iono at Levincia Gym" },
+					{ id: 4, text: "Water Badge", tooltip: "Defeat Kofu at Cascarrafa Gym" },
+					{ id: 5, text: "Normal Badge", tooltip: "Defeat Larry at Medali Gym" },
+					{ id: 6, text: "Ghost Badge", tooltip: "Defeat Ryme at Montenevera Gym" },
+					{ id: 7, text: "Psychic Badge", tooltip: "Defeat Tulip at Alfornada Gym" },
+					{ id: 8, text: "Ice Badge", tooltip: "Defeat Grusha at Glaseado Mountain Gym" },
+					{ id: 9, text: "Defeat Elite Four/Champion" },
+				],
+			},
+			{
+				id: 2, text: "Complete Path of Legends", children: [
+					{ id: 1, text: "Stony Cliff Titan Klawf", tooltip: "South Province Area Three\nUnlocks Dash ability" },
+					{ id: 2, text: "Open Sky Titan Bombirdier", tooltip: "West Province Area One\nUnlocks High Jump ability" },
+					{ id: 3, text: "Lurking Steel Titan Orthworm", tooltip: "East Province Area Three\nUnlocks Swim ability" },
+					{ id: 4, text: "Quaking Earth Titan", tooltip: "Asado Desert\nScarlet: Great Tusk | Violet: Iron Treads\nUnlocks Climb ability" },
+					{ id: 5, text: "False Dragon Titan Dondozo", tooltip: "Casseroya Lake\nUnlocks Glide ability" },
+					{ id: 6, text: "Defeat Arven at the Zero Gate" },
+				],
+			},
+			{
+				id: 3, text: "Complete Starfall Street", children: [
+					{ id: 1, text: "Segin Squad Base" },
+					{ id: 2, text: "Schedar Squad Base" },
+					{ id: 3, text: "Eri Squad Base" },
+					{ id: 4, text: "Ruchbah Squad Base" },
+					{ id: 5, text: "Caph Squad Base" },
+					{ id: 6, text: "Confront Cassiopeia at the Academy" },
+				],
+			},
+			{
+				id: 4, text: "Complete The Way Home", children: [
+					{ id: 1, text: "Enter Area Zero through the Zero Gate" },
+					{ id: 2, text: "Reach Research Station No. 4" },
+					{ id: 3, text: "Defeat the AI Professor", tooltip: "Scarlet: AI Professor Sada | Violet: AI Professor Turo" },
+					{ id: 4, text: "Return Koraidon/Miraidon to battle form" },
+				],
+			},
+			{
+				id: 5, text: "Complete the Epilogue: Reevaluate the Gym Leaders", children: [
+					{ id: 1, text: "Rematch Katy" },
+					{ id: 2, text: "Rematch Brassius" },
+					{ id: 3, text: "Rematch Iono" },
+					{ id: 4, text: "Rematch Kofu" },
+					{ id: 5, text: "Rematch Larry" },
+					{ id: 6, text: "Rematch Ryme" },
+					{ id: 7, text: "Rematch Tulip" },
+					{ id: 8, text: "Rematch Grusha" },
+					{ id: 9, text: "Win the Academy Ace Tournament", tooltip: "Naranja/Uva Academy" },
+				],
+			},
+		],
+		activities: [
+			{
+				id: 1, text: "Complete all Academy Classes", children: [
+					{ id: 1, text: "Art", tiers: ["1", "2", "3", "Midterm", "5", "6", "7", "Final"] },
+					{ id: 2, text: "Biology", tiers: ["1", "2", "3", "Midterm", "5", "6", "7", "Final"] },
+					{ id: 3, text: "Battle Studies", tiers: ["1", "2", "3", "Midterm", "5", "6", "7", "Final"] },
+					{ id: 4, text: "Home Ec.", tiers: ["1", "2", "3", "Midterm", "5", "6", "7", "Final"] },
+					{ id: 5, text: "History", tiers: ["1", "2", "3", "Midterm", "5", "6", "7", "Final"] },
+					{ id: 6, text: "Languages", tiers: ["1", "2", "3", "Midterm", "5", "6", "7", "Final"] },
+					{ id: 7, text: "Math", tiers: ["1", "2", "3", "Midterm", "5", "6", "7", "Final"] },
+				],
+			},
+			{
+				id: 2, text: "Complete all Teacher Friendship Events", tooltip: "Talk to each teacher when they have a thought bubble — unlocks progressively through the game", children: [
+					{ id: 1, text: "Jacq" },
+					{ id: 2, text: "Hassel" },
+					{ id: 3, text: "Raifort" },
+					{ id: 4, text: "Salvatore" },
+					{ id: 5, text: "Dendra" },
+					{ id: 6, text: "Saguaro" },
+					{ id: 7, text: "Tyme" },
+				],
+			},
+		],
+		upgrades: [
+			{ id: 1, text: "Unlock the Judge Function", tooltip: "Obtained from Jacq after completing 100 Pokédex entries" },
+			{ id: 2, text: "Unlock 6-Star Tera Raids", tooltip: "Win the Academy Ace Tournament" },
+		],
+		battle: [
+			{
+				id: 1, text: "Complete all North Province League Rep Challenges", children: [
+					{ id: 1, text: "Area One", tiers: [range(1, 6)] },
+					{ id: 2, text: "Area Two", tiers: [range(1, 5)] },
+					{ id: 3, text: "Area Three", tiers: [range(1, 4)] },
+				],
+			},
+			{
+				id: 2, text: "Complete all West Province League Rep Challenges", children: [
+					{ id: 1, text: "Area One", tiers: [range(1, 9)] },
+					{ id: 2, text: "Area Two", tiers: [range(1, 4)] },
+					{ id: 3, text: "Area Three", tiers: [range(1, 5)] },
+				],
+			},
+			{
+				id: 3, text: "Complete all East Province League Rep Challenges", children: [
+					{ id: 1, text: "Area One", tiers: [range(1, 5)] },
+					{ id: 2, text: "Area Two", tiers: [range(1, 6)] },
+					{ id: 3, text: "Area Three", tiers: [range(1, 7)] },
+				],
+			},
+			{
+				id: 4, text: "Complete all South Province League Rep Challenges", children: [
+					{ id: 1, text: "Area One", tiers: [range(1, 4)] },
+					{ id: 2, text: "Area Two", tiers: [range(1, 5)] },
+					{ id: 3, text: "Area Three", tiers: [range(1, 6)] },
+					{ id: 4, text: "Area Four", tiers: [range(1, 5)] },
+					{ id: 5, text: "Area Five", tiers: [range(1, 7)] },
+					{ id: 6, text: "Area Six", tiers: [range(1, 7)] },
+				],
+			},
+			{
+				id: 5, text: "Complete all other Province League Rep Challenges", children: [
+					{ id: 1, text: "Asado Desert", tiers: [range(1, 5)] },
+					{ id: 2, text: "Casseroya Lake", tiers: [range(1, 7)] },
+					{ id: 3, text: "Dalizapa Passage", tiers: [range(1, 4)] },
+					{ id: 4, text: "Glaseado Mountian", tiers: [range(1, 10)] },
 				],
 			},
 		],
 		collectables: [
-			{ id: 1, text: "Obtain the Diploma", tooltip: "Naranja/Uva Academy - Biology Lab\nReward for completing the Paldea Pokedex" },
+			{ id: 1, text: "Obtain the Diploma", tooltip: "Naranja/Uva Academy - Biology Lab\nReward for completing the Paldea Pokédex" },
+			{
+				id: 2, text: "Obtain all Key Items", children: [
+					{ id: 1, text: "Adventure Guide", img: () => keyItem("adventure-guide") },
+					{ id: 2, text: "Briar's Book", img: () => keyItem("briars-book") },
+					{ id: 3, text: "Catching Charm", img: () => keyItem("catching-charm"), tooltip: "Obtained from Jacq after registering 30 Pokémon species in the Paldea Pokédex\nIncreases the chance of catching Pokémon on the first try" },
+					{ id: 4, text: "Scarlet/Violet Book" },
+					{ id: 5, text: "Shiny Charm", img: () => keyItem("shiny-charm"), tooltip: "Gift from Jacq in the Biology Lab after catching all 400 Paldea Pokédex entries" },
+				],
+			},
+			{
+				id: 3, text: "Collect all Legendary Items", tooltip: "Available via Porto Marinada Auction or hidden item locations", children: [
+					{ id: 1, text: "Meteorite", img: () => formItem("meteorite") },
+					{ id: 2, text: "Adamant Crystal", img: () => formItem("adamant-crystal") },
+					{ id: 3, text: "Adamant Orb", img: () => formItem("adamant-orb") },
+					{ id: 4, text: "Lustrous Globe", img: () => formItem("lustrous-globe") },
+					{ id: 5, text: "Lustrous Orb", img: () => formItem("lustrous-orb") },
+					{ id: 6, text: "Griseous Core", img: () => formItem("griseous-core") },
+					{ id: 7, text: "Griseous Orb", img: () => formItem("griseous-orb") },
+					{ id: 8, text: "Reveal Glass", img: () => formItem("reveal-glass") },
+					{ id: 9, text: "Prison Bottle", img: () => formItem("prison-bottle") },
+					{ id: 10, text: "Rusted Sword", img: () => formItem("rusted-sword") },
+					{ id: 11, text: "Rusted Shield", img: () => formItem("rusted-shield") },
+					{ id: 12, text: "Scroll of Darkness", img: () => formItem("scrol-of-darkness") },
+					{ id: 13, text: "Scroll of Water", img: () => formItem("scrol-of-water") },
+					{ id: 14, text: "Reins of Unity", img: () => formItem("reins-of-unity") },
+				],
+			},
+			{
+				id: 4, text: "Collect all 17 Arceus Plates", tooltip: "Obtainable via Porto Marinada Auction or hidden items throughout Paldea", children: [
+					{ id: 1, text: "Draco Plate", img: () => formItem("draco-plate") },
+					{ id: 2, text: "Dread Plate", img: () => formItem("dread-plate") },
+					{ id: 3, text: "Earth Plate", img: () => formItem("earth-plate") },
+					{ id: 4, text: "Fist Plate", img: () => formItem("fist-plate") },
+					{ id: 5, text: "Flame Plate", img: () => formItem("flame-plate") },
+					{ id: 6, text: "Icicle Plate", img: () => formItem("icicle-plate") },
+					{ id: 7, text: "Insect Plate", img: () => formItem("insect-plate") },
+					{ id: 8, text: "Iron Plate", img: () => formItem("iron-plate") },
+					{ id: 9, text: "Meadow Plate", img: () => formItem("meadow-plate") },
+					{ id: 10, text: "Mind Plate", img: () => formItem("mind-plate") },
+					{ id: 11, text: "Pixie Plate", img: () => formItem("pixie-plate") },
+					{ id: 12, text: "Sky Plate", img: () => formItem("sky-plate") },
+					{ id: 13, text: "Splash Plate", img: () => formItem("splash-plate") },
+					{ id: 14, text: "Spooky Plate", img: () => formItem("spooky-plate") },
+					{ id: 15, text: "Stone Plate", img: () => formItem("stone-plate") },
+					{ id: 16, text: "Toxic Plate", img: () => formItem("toxic-plate") },
+					{ id: 17, text: "Zap Plate", img: () => formItem("zap-plate") },
+				],
+			},
+			{
+				id: 5, text: "Collect all Picnic Tablecloths", children: [
+					{ id: 1, text: "Academy" },
+					{ id: 2, text: "Whimsical" },
+					{ id: 3, text: "B&W Grass" },
+					{
+						id: 4, text: "Plaid", multi: [
+							{ id: 1, text: "Red" },
+							{ id: 2, text: "Blue" },
+							{ id: 3, text: "Yellow" },
+						]
+					},
+					{ id: 5, text: "Leafy" },
+					{ id: 6, text: "Spooky" },
+					{ id: 7, text: "Battle" },
+					{ id: 8, text: "Monstrous" },
+					{ id: 9, text: "Striped" },
+					{ id: 10, text: "Diamond" },
+					{ id: 11, text: "Polka-Dot" },
+					{ id: 12, text: "Lilac" },
+					{ id: 13, text: "Mint" },
+					{ id: 14, text: "Pink" },
+					{ id: 15, text: "Blue" },
+					{ id: 16, text: "Yellow" },
+					{ id: 17, text: "Peach" },
+				],
+			},
+			{
+				id: 6, text: "Collect all Picnic Cups", children: [
+					{ id: 1, text: "Academy" },
+					{ id: 2, text: "Polka-Dot" },
+					{ id: 3, text: "Striped" },
+					{ id: 4, text: "Pink" },
+					{ id: 5, text: "Blue" },
+					{ id: 6, text: "Yellow" },
+					{ id: 7, text: "Pikachu" },
+					{ id: 8, text: "Eevee" },
+					{ id: 9, text: "Slowpoke" },
+					{ id: 10, text: "Diamond Pattern" },
+					{ id: 11, text: "Flower Pattern" },
+					{ id: 12, text: "Fire Pattern" },
+					{ id: 13, text: "Gold" },
+					{ id: 14, text: "Silver" },
+					{ id: 15, text: "Bronze" },
+					{ id: 16, text: "Barred" },
+				],
+			},
+			{
+				id: 7, text: "Collect all Picnic Bottles", children: [
+					{ id: 1, text: "Academy" },
+					{ id: 2, text: "Polka-Dot" },
+					{ id: 3, text: "Striped" },
+					{ id: 4, text: "Pink" },
+					{ id: 5, text: "Blue" },
+					{ id: 6, text: "Yellow" },
+					{
+						id: 7, text: "Steel", multi: [
+							{ id: 1, text: "Red" },
+							{ id: 2, text: "Blue" },
+							{ id: 3, text: "Yellow" },
+						]
+					},
+					{ id: 8, text: "Gold" },
+					{ id: 9, text: "Silver" },
+					{ id: 10, text: "Bronze" },
+					{ id: 11, text: "Diamond" },
+				],
+			},
+			{
+				id: 8, text: "Collect all Picnic Balls", tooltip: "Play toys thrown to Pokémon during Picnics", children: [
+					{ id: 1, text: "Academy" },
+					{ id: 2, text: "Marill" },
+					{ id: 3, text: "Yarn" },
+					{ id: 4, text: "Cyber" },
+					{ id: 5, text: "Exercise" },
+				],
+			},
 		],
 		thms: [
 			{
@@ -288,10 +569,10 @@ import {
 					{ id: 226, text: "TM 226 - Dragon Cheer", img: () => tm("dragon") },
 					{ id: 227, text: "TM 227 - Alluring Voice", img: () => tm("fairy") },
 					{ id: 228, text: "TM 228 - Psychic Noise", img: () => tm("psychic") },
-					{ id: 229, text: "TM 229 - Upper Hand", img: () => tm("fighting") }
-				]
-			}
-		]
+					{ id: 229, text: "TM 229 - Upper Hand", img: () => tm("fighting") },
+				],
+			},
+		],
 	};
 
 	const TASKS_BY_SECTION_GAME1 = {

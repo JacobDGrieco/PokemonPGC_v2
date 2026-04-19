@@ -147,7 +147,11 @@ import {
 					{ id: 4, text: "Legendary Clue 3", tooltip: "A Legendary Tree of a Legendary Three" },
 					{ id: 5, text: "Legendary Clue?", tooltip: "They Came From The Ultra Beyond!" },
 					{ id: 6, text: "Wooden Crown", tooltip: "Freezington" },
-					{ id: 7, text: "Reins of Unity", tooltip: "Used to fuse and separate Calyrex and its steed" },
+				],
+			},
+			{
+				id: 1, text: "Collect all Legendary Items", children: [
+					{ id: 1, text: "Reins of Unity", tooltip: "Used to fuse and separate Calyrex and its steed" },
 				],
 			},
 			{ id: 2, text: "Obtain the Diploma", tooltip: "Crown Tundra Station\nReward for completing the Crown Tundra Pokedex" },
