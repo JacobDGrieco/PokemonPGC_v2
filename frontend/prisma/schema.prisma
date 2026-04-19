@@ -9,12 +9,17 @@ generator client {
 }
 
 model User {
-  id           Int      @id @default(autoincrement())
-  email        String   @unique
-  passwordHash String
-  icon         String   @default("default")
-  createdAt    DateTime @default(now())
-  gameSaves    GameSave[]
+  id                   Int      @id @default(autoincrement())
+  email                String   @unique
+  passwordHash         String
+  icon                 String   @default("default")
+  tier                 String   @default("free")
+  subscriptionStatus   String?
+  stripeCustomerId     String?  @unique
+  stripeSubscriptionId String?  @unique
+  paypalSubscriptionId String?  @unique
+  createdAt            DateTime @default(now())
+  gameSaves            GameSave[]
 }
 
 model GameSave {

@@ -167,3 +167,25 @@ export async function readJsonBody(req) {
 		return {};
 	}
 }
+
+export async function readRawBody(req) {
+	if (Buffer.isBuffer(req.body)) {
+		return req.body.toString("utf8");
+	}
+
+	if (typeof req.body === "string") {
+		return req.body;
+	}
+
+	if (req.body && typeof req.body === "object") {
+		return JSON.stringify(req.body);
+	}
+
+	const chunks = [];
+	for await (const chunk of req) {
+		chunks.push(Buffer.isBuffer(chunk) ? chunk : Buffer.from(chunk));
+	}
+
+	if (!chunks.length) return "";
+	return Buffer.concat(chunks).toString("utf8");
+}

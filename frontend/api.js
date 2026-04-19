@@ -81,6 +81,52 @@ export async function updateMe(patch) {
 	return res.json();
 }
 
+export async function createStripeCheckoutSession(tier) {
+	const res = await fetch(`${API_BASE}/subscriptions/stripe/create-session`, {
+		method: "POST",
+		headers: { "Content-Type": "application/json" },
+		credentials: "include",
+		body: JSON.stringify({ tier }),
+	});
+	return requireOkJson(res, "Failed to start Stripe checkout.");
+}
+
+export async function createStripePortalSession() {
+	const res = await fetch(`${API_BASE}/subscriptions/stripe/portal`, {
+		method: "POST",
+		credentials: "include",
+	});
+	return requireOkJson(res, "Failed to open Stripe billing portal.");
+}
+
+export async function createPayPalSubscription(tier) {
+	const res = await fetch(`${API_BASE}/subscriptions/paypal/create-subscription`, {
+		method: "POST",
+		headers: { "Content-Type": "application/json" },
+		credentials: "include",
+		body: JSON.stringify({ tier }),
+	});
+	return requireOkJson(res, "Failed to start PayPal subscription.");
+}
+
+export async function verifyPayPalSubscription(subscriptionId, tier) {
+	const res = await fetch(`${API_BASE}/subscriptions/paypal/verify`, {
+		method: "POST",
+		headers: { "Content-Type": "application/json" },
+		credentials: "include",
+		body: JSON.stringify({ subscriptionId, tier }),
+	});
+	return requireOkJson(res, "Failed to verify PayPal subscription.");
+}
+
+export async function cancelPayPalSubscription() {
+	const res = await fetch(`${API_BASE}/subscriptions/paypal/cancel`, {
+		method: "POST",
+		credentials: "include",
+	});
+	return requireOkJson(res, "Failed to cancel PayPal subscription.");
+}
+
 export async function saveGameSave(gameKey, data) {
 	// No logged-in user => don't hit the backend at all
 	if (!loggedInUserId) {

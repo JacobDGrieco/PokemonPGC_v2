@@ -4,6 +4,7 @@ import { AppShell } from './components/shells/AppShell.jsx';
 import { MarketingShell } from './components/shells/MarketingShell.jsx';
 import { HomePage } from './pages/HomePage.jsx';
 import { PricingPage } from './pages/PricingPage.jsx';
+import { SubscriptionSuccessPage } from './pages/SubscriptionSuccessPage.jsx';
 import { PlaceholderPage } from './pages/PlaceholderPage.jsx';
 import { Analytics } from '@vercel/analytics/react';
 
@@ -25,6 +26,14 @@ export default function App() {
           element={
             <MarketingShell>
               <PricingPage />
+            </MarketingShell>
+          }
+        />
+        <Route
+          path="/subscription/success"
+          element={
+            <MarketingShell>
+              <SubscriptionSuccessPage />
             </MarketingShell>
           }
         />

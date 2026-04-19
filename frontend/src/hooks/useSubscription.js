@@ -9,9 +9,13 @@ function getCurrentTierKey() {
 
 export function useSubscription() {
   const [tierKey, setTierKey] = useState(getCurrentTierKey);
+  const [user, setUser] = useState(() => window.PPGC?.currentUser || null);
 
   useEffect(() => {
-    const refresh = () => setTierKey(getCurrentTierKey());
+    const refresh = () => {
+      setUser(window.PPGC?.currentUser || null);
+      setTierKey(getCurrentTierKey());
+    };
     window.addEventListener('ppgc:auth:changed', refresh);
     return () => window.removeEventListener('ppgc:auth:changed', refresh);
   }, []);
@@ -30,5 +34,5 @@ export function useSubscription() {
     return tierRank(tierKey) >= tierRank(minTierKey);
   }
 
-  return { tierKey, tier, hasFeature, meetsMinTier };
+  return { tierKey, tier, user, hasFeature, meetsMinTier };
 }

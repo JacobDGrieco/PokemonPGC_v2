@@ -12,6 +12,13 @@ import meHandler from "../api/auth/me.js";
 import progressIndexHandler from "../api/progress/index.js";
 import progressGameHandler from "../api/progress/[gameKey].js";
 import saveImportHandler from "../api/save-import/[gameKey].js";
+import stripeCreateSessionHandler from "../api/subscriptions/stripe/create-session.js";
+import stripePortalHandler from "../api/subscriptions/stripe/portal.js";
+import stripeWebhookHandler from "../api/subscriptions/stripe/webhook.js";
+import paypalCreateSubscriptionHandler from "../api/subscriptions/paypal/create-subscription.js";
+import paypalVerifyHandler from "../api/subscriptions/paypal/verify.js";
+import paypalWebhookHandler from "../api/subscriptions/paypal/webhook.js";
+import paypalCancelHandler from "../api/subscriptions/paypal/cancel.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -44,6 +51,13 @@ function routeFor(pathname) {
 	if (pathname === "/api/auth/logout") return { handler: logoutHandler, query: {} };
 	if (pathname === "/api/auth/me") return { handler: meHandler, query: {} };
 	if (pathname === "/api/progress") return { handler: progressIndexHandler, query: {} };
+	if (pathname === "/api/subscriptions/stripe/create-session") return { handler: stripeCreateSessionHandler, query: {} };
+	if (pathname === "/api/subscriptions/stripe/portal") return { handler: stripePortalHandler, query: {} };
+	if (pathname === "/api/subscriptions/stripe/webhook") return { handler: stripeWebhookHandler, query: {} };
+	if (pathname === "/api/subscriptions/paypal/create-subscription") return { handler: paypalCreateSubscriptionHandler, query: {} };
+	if (pathname === "/api/subscriptions/paypal/verify") return { handler: paypalVerifyHandler, query: {} };
+	if (pathname === "/api/subscriptions/paypal/webhook") return { handler: paypalWebhookHandler, query: {} };
+	if (pathname === "/api/subscriptions/paypal/cancel") return { handler: paypalCancelHandler, query: {} };
 
 	let match = pathname.match(/^\/api\/progress\/([^/]+)$/);
 	if (match) {

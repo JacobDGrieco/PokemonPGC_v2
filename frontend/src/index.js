@@ -251,6 +251,7 @@ async function refreshCurrentUser() {
 	updateAccountButton();
 	window.PPGC = window.PPGC || {};
 	PPGC.currentUser = currentUser;
+	window.dispatchEvent(new CustomEvent("ppgc:auth:changed"));
 
 	if (currentUser) {
 		setCloudSyncEnabled(false);
@@ -265,6 +266,8 @@ async function refreshCurrentUser() {
 		setCloudSyncEnabled(false);
 		stopServerAutoBackup();
 	}
+
+	return currentUser;
 }
 
 async function handleLogout() {
@@ -388,11 +391,7 @@ async function openAuthModal(mode = "login") {
 
 				// Temporary in-memory auth: res = { id, email }
 				if (res && res.email) {
-					currentUser = {
-						id: res.id,
-						email: res.email,
-						icon: res.icon || "default",
-					};
+					currentUser = res;
 					currentUserIcon = currentUser.icon;
 					updateAccountButton();
 
@@ -661,6 +660,7 @@ PPGC.setAccountButtonIcon = (icon) => {
 };
 PPGC.handleLogout = handleLogout;
 PPGC.resolveGameLabel = resolveGameLabel;
+PPGC.refreshCurrentUser = refreshCurrentUser;
 PPGC.ensureGenDataLoaded = ensureGenDataLoaded;
 PPGC.ensureGenDataLoadedForGame = async function ensureGenDataLoadedForGame(gameKey) {
 	const genKey = resolveGenKeyForGame(gameKey);

@@ -4,6 +4,7 @@ import { json, methodNotAllowed, tooManyRequests } from "../_lib/response.js";
 import { getRequestIp, checkRateLimit } from "../_lib/rateLimit.js";
 import { validateCredentials } from "../_lib/validation.js";
 import { readJsonBody, setSessionCookie } from "../_lib/auth.js";
+import { getUserPublicSelect, serializeUser } from "../_lib/subscription.js";
 
 export default async function handler(req, res) {
 	if (req.method !== "POST") {
@@ -27,10 +28,8 @@ export default async function handler(req, res) {
 		const user = await prisma.user.findUnique({
 			where: { email },
 			select: {
-				id: true,
-				email: true,
 				passwordHash: true,
-				icon: true,
+				...getUserPublicSelect(),
 			},
 		});
 
@@ -45,11 +44,7 @@ export default async function handler(req, res) {
 
 		setSessionCookie(res, user);
 
-		return json(res, 200, {
-			id: user.id,
-			email: user.email,
-			icon: user.icon,
-		});
+		return json(res, 200, serializeUser(user));
 	} catch (err) {
 		console.error("[auth/login] error:", err);
 		return json(res, 500, { error: "Internal error." });

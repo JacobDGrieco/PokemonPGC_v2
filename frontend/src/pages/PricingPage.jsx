@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { TIERS, FEATURE_STATUS, FEATURE_LABELS } from '../config/tiers.js';
+import {
+	cancelPayPalSubscription,
+	createPayPalSubscription,
+	createStripeCheckoutSession,
+	createStripePortalSession,
+} from '../../api.js';
+import { TIERS, FEATURE_STATUS, FEATURE_LABELS, TIER_ORDER } from '../config/tiers.js';
 import { useSubscription } from '../hooks/useSubscription.js';
 
 const TIER_KEYS = ['free', 'great', 'ultra', 'master'];
@@ -18,26 +24,207 @@ const ALL_FEATURES = [
 ];
 
 const STATUS_DISPLAY = {
-	done: { label: '✅ Done', className: 'status-done' },
-	wip: { label: '🚧 WIP', className: 'status-wip' },
-	planned: { label: '⏳ Planned', className: 'status-planned' },
+	done: { label: 'Done', className: 'status-done' },
+	wip: { label: 'WIP', className: 'status-wip' },
+	planned: { label: 'Planned', className: 'status-planned' },
 };
 
+function getProviderMeta(user) {
+	if (user?.subscriptionProvider === 'stripe') {
+		return {
+			label: 'Stripe',
+			canManage: true,
+			canCancel: false,
+		};
+	}
+
+	if (user?.subscriptionProvider === 'paypal') {
+		return {
+			label: 'PayPal',
+			canManage: false,
+			canCancel: true,
+		};
+	}
+
+	return {
+		label: null,
+		canManage: false,
+		canCancel: false,
+	};
+}
+
 export function PricingPage() {
-	const { tierKey } = useSubscription();
+	const { tierKey, user } = useSubscription();
+	const [busyAction, setBusyAction] = useState('');
+	const [error, setError] = useState('');
+	const [notice, setNotice] = useState('');
+
+	const providerMeta = useMemo(() => getProviderMeta(user), [user]);
+	const hasPaidPlan = tierKey !== 'free';
+	const tierRank = TIER_ORDER.indexOf(tierKey);
+
+	async function runAction(actionKey, fn) {
+		setBusyAction(actionKey);
+		setError('');
+		setNotice('');
+
+		try {
+			await fn();
+		} catch (err) {
+			setError(err?.message || 'Something went wrong.');
+		} finally {
+			setBusyAction('');
+		}
+	}
+
+	async function handleStripeCheckout(nextTierKey) {
+		if (!user) {
+			window.PPGC?.openAuthModal?.('login');
+			return;
+		}
+
+		await runAction(`stripe:${nextTierKey}`, async () => {
+			const result = await createStripeCheckoutSession(nextTierKey);
+			if (!result?.url) {
+				throw new Error('Stripe did not return a checkout URL.');
+			}
+			window.location.assign(result.url);
+		});
+	}
+
+	async function handlePayPalCheckout(nextTierKey) {
+		if (!user) {
+			window.PPGC?.openAuthModal?.('login');
+			return;
+		}
+
+		await runAction(`paypal:${nextTierKey}`, async () => {
+			const result = await createPayPalSubscription(nextTierKey);
+			if (!result?.url) {
+				throw new Error('PayPal did not return an approval URL.');
+			}
+			window.location.assign(result.url);
+		});
+	}
+
+	async function handleStripePortal() {
+		await runAction('stripe:portal', async () => {
+			const result = await createStripePortalSession();
+			if (!result?.url) {
+				throw new Error('Stripe did not return a portal URL.');
+			}
+			window.location.assign(result.url);
+		});
+	}
+
+	async function handlePayPalCancel() {
+		await runAction('paypal:cancel', async () => {
+			const result = await cancelPayPalSubscription();
+			if (result?.user) {
+				window.PPGC = window.PPGC || {};
+				window.PPGC.currentUser = result.user;
+				window.PPGC?.setAccountButtonIcon?.(result.user.icon || 'default');
+				window.PPGC?.api?.setApiCurrentUser?.(result.user);
+				window.dispatchEvent(new CustomEvent('ppgc:auth:changed'));
+			}
+			setNotice('Your PayPal subscription has been canceled.');
+		});
+	}
+
+	function renderSubscribeCell(key) {
+		if (key === 'free') {
+			return <span className="pricing-free-label">-</span>;
+		}
+
+		const isCurrent = key === tierKey;
+		const actionDisabled = busyAction !== '';
+		const lockedByExistingPlan = hasPaidPlan;
+		const isLowerOrCurrentTier = tierRank >= 0 && TIER_ORDER.indexOf(key) <= tierRank;
+
+		if (isCurrent) {
+			return <span className="pricing-plan-pill">Current plan</span>;
+		}
+
+		if (lockedByExistingPlan) {
+			return <span className="pricing-free-label">{isLowerOrCurrentTier ? 'Included' : 'Use billing tools below'}</span>;
+		}
+
+		return (
+			<div className="pricing-payment-btns">
+				<button
+					type="button"
+					className="pricing-pay-btn pricing-pay-stripe"
+					disabled={actionDisabled}
+					onClick={() => handleStripeCheckout(key)}
+				>
+					{busyAction === `stripe:${key}` ? 'Loading...' : 'Stripe'}
+				</button>
+				<button
+					type="button"
+					className="pricing-pay-btn pricing-pay-paypal"
+					disabled={actionDisabled}
+					onClick={() => handlePayPalCheckout(key)}
+				>
+					{busyAction === `paypal:${key}` ? 'Loading...' : 'PayPal'}
+				</button>
+			</div>
+		);
+	}
 
 	return (
 		<div className="pricing-page">
 			<div className="pricing-wip-banner">
-				<strong>🚧 Work In Progress</strong>
+				<strong>Work In Progress</strong>
 				<p>
-					PokémonPGC is still in active development. Some features listed here may not be
+					PokemonPGC is still in active development. Some features listed here may not be
 					fully implemented yet. Subscribing to a higher tier helps support development and
-					unlocks features as they are released — thank you!
+					unlocks features as they are released.
 				</p>
 			</div>
 
 			<h1 className="pricing-title">Plans & Pricing</h1>
+
+			{user ? (
+				<div className="pricing-account-banner">
+					<div>
+						<strong>{TIERS[tierKey]?.label || 'Free'} plan</strong>
+						<p>
+							{hasPaidPlan
+								? `Your account is currently billed through ${providerMeta.label || 'a payment provider'}.`
+								: 'Sign up for a paid tier with Stripe or PayPal.'}
+						</p>
+					</div>
+					<div className="pricing-account-actions">
+						{providerMeta.canManage ? (
+							<button
+								type="button"
+								className="pricing-action-btn"
+								disabled={busyAction !== ''}
+								onClick={handleStripePortal}
+							>
+								{busyAction === 'stripe:portal' ? 'Loading...' : 'Manage billing'}
+							</button>
+						) : null}
+						{providerMeta.canCancel ? (
+							<button
+								type="button"
+								className="pricing-action-btn pricing-action-btn--danger"
+								disabled={busyAction !== ''}
+								onClick={handlePayPalCancel}
+							>
+								{busyAction === 'paypal:cancel' ? 'Canceling...' : 'Cancel PayPal'}
+							</button>
+						) : null}
+					</div>
+				</div>
+			) : (
+				<div className="pricing-inline-note">
+					Log in before subscribing so the payment can be attached to your account automatically.
+				</div>
+			)}
+
+			{error ? <div className="pricing-alert pricing-alert--error">{error}</div> : null}
+			{notice ? <div className="pricing-alert pricing-alert--success">{notice}</div> : null}
 
 			<div className="pricing-table-wrap">
 				<table className="pricing-table">
@@ -53,7 +240,6 @@ export function PricingPage() {
 						</tr>
 					</thead>
 					<tbody>
-						{/* Price row */}
 						<tr className="pricing-row pricing-row--price">
 							<td><strong>Price</strong></td>
 							<td />
@@ -64,29 +250,16 @@ export function PricingPage() {
 							))}
 						</tr>
 
-						{/* Subscribe row */}
 						<tr className="pricing-row pricing-row--subscribe">
 							<td><strong>Subscribe</strong></td>
 							<td />
 							{TIER_KEYS.map((key) => (
 								<td key={key} className={`pricing-tier-cell${key === tierKey ? ' is-current' : ''}`}>
-									{key === 'free' ? (
-										<span className="pricing-free-label">—</span>
-									) : (
-										<div className="pricing-payment-btns">
-											<button type="button" className="pricing-pay-btn pricing-pay-stripe" disabled>
-												Stripe
-											</button>
-											<button type="button" className="pricing-pay-btn pricing-pay-paypal" disabled>
-												PayPal
-											</button>
-										</div>
-									)}
+									{renderSubscribeCell(key)}
 								</td>
 							))}
 						</tr>
 
-						{/* Feature rows */}
 						{ALL_FEATURES.map((feature) => {
 							const status = FEATURE_STATUS[feature] ?? 'planned';
 							const statusDisplay = STATUS_DISPLAY[status] ?? STATUS_DISPLAY.planned;
@@ -117,7 +290,7 @@ export function PricingPage() {
 			</div>
 
 			<div className="pricing-back">
-				<Link to="/">← Back to Home</Link>
+				<Link to="/">Back to Home</Link>
 			</div>
 		</div>
 	);

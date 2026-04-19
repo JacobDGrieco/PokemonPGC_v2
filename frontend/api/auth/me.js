@@ -2,6 +2,7 @@ import { prisma } from "../_lib/db.js";
 import { json, methodNotAllowed } from "../_lib/response.js";
 import { getSessionFromRequest, readJsonBody } from "../_lib/auth.js";
 import { validateIcon } from "../_lib/validation.js";
+import { getUserPublicSelect, serializeUser } from "../_lib/subscription.js";
 
 export default async function handler(req, res) {
 	if (req.method === "GET") {
@@ -25,14 +26,10 @@ async function handleGet(req, res) {
 	try {
 		const user = await prisma.user.findUnique({
 			where: { id: session.userId },
-			select: {
-				id: true,
-				email: true,
-				icon: true,
-			},
+			select: getUserPublicSelect(),
 		});
 
-		return json(res, 200, { user: user || null });
+		return json(res, 200, { user: serializeUser(user) });
 	} catch (err) {
 		console.error("[auth/me GET] error:", err);
 		return json(res, 500, { user: null });
@@ -57,14 +54,10 @@ async function handlePatch(req, res) {
 			data: {
 				icon: parsed.icon,
 			},
-			select: {
-				id: true,
-				email: true,
-				icon: true,
-			},
+			select: getUserPublicSelect(),
 		});
 
-		return json(res, 200, { user });
+		return json(res, 200, { user: serializeUser(user) });
 	} catch (err) {
 		console.error("[auth/me PATCH] error:", err);
 		return json(res, 500, { error: "Internal error." });
