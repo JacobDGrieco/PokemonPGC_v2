@@ -124,6 +124,16 @@ export async function createStripePortalSession() {
 	return requireOkJson(res, "Failed to open Stripe billing portal.");
 }
 
+export async function verifyStripeCheckoutSession(sessionId, tier) {
+	const res = await fetch(`${API_BASE}/subscriptions/stripe/verify`, {
+		method: "POST",
+		headers: { "Content-Type": "application/json" },
+		credentials: "include",
+		body: JSON.stringify({ sessionId, tier }),
+	});
+	return requireOkJson(res, "Failed to verify Stripe checkout.");
+}
+
 export async function createPayPalSubscription(tier) {
 	const res = await fetch(`${API_BASE}/subscriptions/paypal/create-subscription`, {
 		method: "POST",

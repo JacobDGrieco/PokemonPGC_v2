@@ -1,12 +1,13 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { getCurrentUser, verifyPayPalSubscription } from '../../api.js';
+import { getCurrentUser, verifyPayPalSubscription, verifyStripeCheckoutSession } from '../../api.js';
 
 function readSearch(locationSearch) {
 	const params = new URLSearchParams(locationSearch);
 	return {
 		provider: (params.get('provider') || '').toLowerCase(),
 		tier: (params.get('tier') || '').toLowerCase(),
+		sessionId: params.get('session_id') || '',
 		subscriptionId: params.get('subscription_id') || params.get('ba_token') || '',
 	};
 }
@@ -68,6 +69,18 @@ export function SubscriptionSuccessPage() {
 					}
 				}
 
+				if (details.provider === 'stripe') {
+					if (!details.sessionId || !details.tier) {
+						throw new Error('Missing Stripe checkout confirmation details.');
+					}
+					setMessage('Verifying your Stripe subscription...');
+					const result = await verifyStripeCheckoutSession(details.sessionId, details.tier);
+					if (cancelled) return;
+					if (result?.user) {
+						await syncClientUser(result.user);
+					}
+				}
+
 				let matchedTier = false;
 				for (let attempt = 0; attempt < 8; attempt += 1) {
 					const user = await refreshFromServer();
@@ -96,7 +109,7 @@ export function SubscriptionSuccessPage() {
 		return () => {
 			cancelled = true;
 		};
-	}, [details.provider, details.subscriptionId, details.tier]);
+	}, [details.provider, details.sessionId, details.subscriptionId, details.tier]);
 
 	return (
 		<div className="pricing-page pricing-page--success">

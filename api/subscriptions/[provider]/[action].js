@@ -30,7 +30,7 @@ export const config = {
 };
 
 const SUBSCRIPTION_ACTIONS = {
-	stripe: new Set(["create-session", "portal", "webhook"]),
+	stripe: new Set(["create-session", "portal", "verify", "webhook"]),
 	paypal: new Set(["cancel", "create-subscription", "verify", "webhook"]),
 };
 
@@ -45,6 +45,7 @@ export default async function handler(req, res) {
 	if (provider === "stripe") {
 		if (action === "create-session") return handleStripeCreateSession(req, res);
 		if (action === "portal") return handleStripePortal(req, res);
+		if (action === "verify") return handleStripeVerify(req, res);
 		return handleStripeWebhook(req, res);
 	}
 
@@ -75,7 +76,7 @@ async function handleStripeCreateSession(req, res) {
 		const origin = getAppOrigin(req);
 		const checkoutSession = await stripe.checkout.sessions.create({
 			mode: "subscription",
-			success_url: `${origin}/subscription/success?provider=stripe&tier=${encodeURIComponent(tierKey)}`,
+			success_url: `${origin}/subscription/success?provider=stripe&tier=${encodeURIComponent(tierKey)}&session_id={CHECKOUT_SESSION_ID}`,
 			cancel_url: `${origin}/pricing?tier=${encodeURIComponent(tierKey)}`,
 			customer: user.stripeCustomerId || undefined,
 			customer_email: user.stripeCustomerId ? undefined : user.email,
@@ -90,6 +91,60 @@ async function handleStripeCreateSession(req, res) {
 	} catch (error) {
 		console.error("[subscriptions/stripe/create-session] error:", error);
 		return json(res, 500, { error: error.message || "Failed to create Stripe checkout session." });
+	}
+}
+
+async function handleStripeVerify(req, res) {
+	if (req.method !== "POST") return methodNotAllowed(res, ["POST"]);
+
+	const session = getSessionFromRequest(req);
+	if (!session?.userId) return json(res, 401, { error: "Not authenticated." });
+
+	try {
+		const body = await readJsonBody(req);
+		const tierKey = normalizeTierKey(body?.tier);
+		const checkoutSessionId = String(body?.sessionId || "").trim();
+		if (!tierKey || !checkoutSessionId) {
+			return json(res, 400, { error: "Missing Stripe checkout confirmation details." });
+		}
+
+		const stripe = getStripeClient();
+		const checkoutSession = await stripe.checkout.sessions.retrieve(checkoutSessionId, {
+			expand: ["subscription"],
+		});
+
+		if (checkoutSession?.mode !== "subscription" || !checkoutSession?.subscription) {
+			return json(res, 400, { error: "Stripe checkout session does not include a subscription." });
+		}
+
+		const sessionUserId = Number(checkoutSession.metadata?.userId || checkoutSession.client_reference_id || 0) || null;
+		if (sessionUserId && sessionUserId !== session.userId) {
+			return json(res, 403, { error: "This Stripe checkout session belongs to a different user." });
+		}
+
+		await syncStripeSubscriptionToUser({
+			userId: session.userId,
+			subscriptionId: String(
+				typeof checkoutSession.subscription === "string"
+					? checkoutSession.subscription
+					: checkoutSession.subscription.id
+			),
+			fallbackTier: tierKey,
+			customerId: checkoutSession.customer ? String(checkoutSession.customer) : null,
+		});
+
+		const user = await prisma.user.findUnique({
+			where: { id: session.userId },
+			select: getUserPublicSelect(),
+		});
+
+		return json(res, 200, {
+			ok: true,
+			user: serializeUser(user),
+		});
+	} catch (error) {
+		console.error("[subscriptions/stripe/verify] error:", error);
+		return json(res, 500, { error: error.message || "Failed to verify Stripe checkout session." });
 	}
 }
 
