@@ -1,6 +1,8 @@
 import {
-  _registerDexDataFromBaseDex,
-  dexSprite,
+	_registerDexDataFromBaseDex,
+	dexSprite,
+	_iconSprite,
+	_iconSpriteShiny,
 } from '../helpers/index.js';
 
 (() => {
@@ -8,8 +10,8 @@ import {
 	const GAME_KEYS = ["legendsza"];
 	const DEX_NAME = "Lumiose Dex";
 
-	const baseSprite = (gameKey, natiId) => dexSprite(gen, gameKey)(natiId);
-	const shinySprite = (gameKey, natiId) => dexSprite(gen, gameKey, { shiny: true })(natiId);
+	const baseSprite = (gameKey, natiId) => _iconSprite(gen, gameKey, natiId, "");
+	const shinySprite = (gameKey, natiId) => _iconSpriteShiny(gen, gameKey, natiId, "");
 
 	const BASE_DEX = [
 		{ id: 1, natiId: 152, name: "Chikorita", img: ({ gameKey }) => baseSprite(gameKey, 152), imgS: ({ gameKey }) => shinySprite(gameKey, 152), tags: ["starter"], },

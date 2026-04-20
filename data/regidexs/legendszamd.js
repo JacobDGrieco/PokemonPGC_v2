@@ -1,6 +1,8 @@
 import {
-  _registerDexDataFromBaseDex,
-  dexSprite,
+	_registerDexDataFromBaseDex,
+	dexSprite,
+	_iconSprite,
+	_iconSpriteShiny,
 } from '../helpers/index.js';
 
 (() => {
@@ -8,8 +10,8 @@ import {
 	const GAME_KEYS = ["legendszamd"];
 	const DEX_NAME = "Hyperspace Dex";
 
-	const baseSprite = (gameKey, natiId) => dexSprite(gen, gameKey)(natiId);
-	const shinySprite = (gameKey, natiId) => dexSprite(gen, gameKey, { shiny: true })(natiId);
+	const baseSprite = (gameKey, natiId) => _iconSprite(gen, gameKey, natiId, "");
+	const shinySprite = (gameKey, natiId) => _iconSpriteShiny(gen, gameKey, natiId, "");
 
 	const BASE_DEX = [
 		{ id: 1, natiId: 56, name: "Mankey", img: ({ gameKey }) => baseSprite(gameKey, 56), imgS: ({ gameKey }) => shinySprite(gameKey, 56), },

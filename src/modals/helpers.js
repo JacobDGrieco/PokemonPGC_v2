@@ -258,6 +258,8 @@ export function renderBadges(status, gameKey) {
 }
 
 export function getDexScrollContainer() {
+	const modal = document.getElementById("modal");
+	if (!modal) return null;
 	return (
 		modal.querySelector(".body") || // sheet-style modal
 		modal.querySelector(".modal-bd") || // dialog-style fallback

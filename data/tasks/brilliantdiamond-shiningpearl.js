@@ -10,7 +10,7 @@ import {
 	_npc,
 	_task,
 	_fashionItem,
-	_frontSprite,
+	_menuSprite,
 	defineTasksMany,
 	overrideTasks,
 	range,
@@ -20,7 +20,7 @@ import {
 	const gen = 8.5;
 	const GAME_KEYS = ["brilliantdiamond", "shiningpearl"];
 
-	const baseSprite = (gameKey, natiId) => _frontSprite(gen, gameKey, natiId);
+	const baseSprite = (gameKey, natiId) => _menuSprite(gen, gameKey, natiId);
 	const fashionItem = (gameKey, name) => _fashionItem(gameKey, "unisex", "outfit", name);
 	const task = (gameKey, name) => _task(gameKey, name);
 	const npc = (gameKey, name) => _npc(gameKey, name);

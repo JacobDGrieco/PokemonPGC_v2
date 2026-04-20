@@ -1,6 +1,7 @@
 import {
-  _registerDexDataFromBaseDex,
-  dexSprite,
+	_registerDexDataFromBaseDex,
+	dexSprite,
+	_menuSprite,
 } from '../helpers/index.js';
 
 (() => {
@@ -8,8 +9,8 @@ import {
 	const GAME_KEYS = ["brilliantdiamond", "shiningpearl"];
 	const DEX_NAME = "Sinnoh Dex";
 
-	const baseSprite = (gameKey, natiId) => dexSprite(gen, gameKey)(natiId);
-	const shinySprite = (gameKey, natiId) => dexSprite(gen, gameKey, { shiny: true })(natiId);
+	const baseSprite = (gameKey, natiId) => _menuSprite(gen, gameKey, natiId);
+	const shinySprite = (gameKey, natiId) => _menuSprite(gen, gameKey, natiId);
 
 	const BASE_DEX = [
 		{ id: 1, natiId: 387, name: "Turtwig", img: ({ gameKey }) => baseSprite(gameKey, 387), imgS: ({ gameKey }) => shinySprite(gameKey, 387), tags: ["starter"], },
