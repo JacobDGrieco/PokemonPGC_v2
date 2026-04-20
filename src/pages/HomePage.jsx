@@ -67,19 +67,22 @@ const HERO_FLOW = [
 	{
 		key: 'catch',
 		label: 'Catch it in-game',
-		placeholder: 'Replace with catch screenshot',
+		image: 'image1.png',
+		alt: 'Catching a Pokémon in-game',
 		accent: 'var(--home-accent-red)',
 	},
 	{
 		key: 'dex',
 		label: 'See it hit the dex',
-		placeholder: 'Replace with dex screenshot',
+		image: 'image2.png',
+		alt: 'Pokémon appearing in the Pokédex',
 		accent: 'var(--home-accent-gold)',
 	},
 	{
 		key: 'checklist',
 		label: 'Check it off here',
-		placeholder: 'Replace with checklist screenshot',
+		image: 'image3.png',
+		alt: 'Checking off a Pokémon in the checklist',
 		accent: 'var(--home-accent-cyan)',
 	},
 ];
@@ -171,13 +174,12 @@ function OrbitingFlowCard({ entry, index }) {
 				}}
 			>
 				<div className="home-flow-card-top">
-					<span>{String(index + 1).padStart(2, '0')}</span>
+					<span>{String(index)}</span>
 					<strong>{entry.label}</strong>
 				</div>
 				<div className="home-flow-image">
 					<div className="home-flow-image-frame">
-						<img src={_assetPath('placeholder-flow-shot.png')} alt="" />
-						<div className="home-flow-image-placeholder">{entry.placeholder}</div>
+						<img src={`/${entry.image}`} alt={entry.alt} />
 					</div>
 				</div>
 			</motion.article>
@@ -231,7 +233,7 @@ export function HomePage() {
 						<div className="home-orbit-spark home-orbit-spark-c" />
 
 						{HERO_FLOW.map((entry, index) => (
-							<OrbitingFlowCard key={entry.key} entry={entry} index={index} />
+							<OrbitingFlowCard key={entry.key} entry={entry} index={index + 1} />
 						))}
 					</div>
 				</div>
