@@ -77,7 +77,8 @@ function computeFormsProgress(game, store, nodeKey, dex) {
 export function refreshDexSummaryMetrics(gameKey, genKey, store) {
   const games = window.DATA.games?.[genKey] || [];
   const game = games.find((g) => g.key === gameKey);
-  if (!game) return;
+  console.log(`[DEX-SUMMARY] refreshDexSummaryMetrics: gameKey="${gameKey}", genKey="${genKey}", game found=`, !!game);
+  if (!game) { console.warn(`[DEX-SUMMARY] No game found for key="${gameKey}" in gen="${genKey}". Available:`, games.map(g => g.key)); return; }
 
   const dex = _getDexList(gameKey);
   const baseGameKey = String(gameKey).endsWith("-national")

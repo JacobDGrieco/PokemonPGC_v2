@@ -51,10 +51,16 @@ export function setupDexFormsModal(store, deps) {
 		typeof v === "function" ? v({ gameKey }) : v;
 
 	function refreshActiveDexCard(gameKey, mon) {
-		if (!mon) return;
+		if (!mon) { console.warn('[DEX-FORMS] refreshActiveDexCard: mon is null, skipping'); return; }
 		const cardKey = `${gameKey}:${mon.id}`;
 		const card = document.querySelector(`[data-dex-card-key="${cardKey}"]`);
-		if (!card) return;
+		console.log(`[DEX-FORMS] refreshActiveDexCard: looking for card key="${cardKey}", found=`, !!card);
+		if (!card) {
+			// Show all card keys in DOM to diagnose mismatch
+			const allCardKeys = [...document.querySelectorAll('[data-dex-card-key]')].map(el => el.dataset.dexCardKey);
+			console.warn('[DEX-FORMS] refreshActiveDexCard: card NOT found. All card keys in DOM:', allCardKeys.slice(0, 10));
+			return;
+		}
 
 		const { node } = getDexFormsNode(gameKey, mon.id);
 		const formVals = (mon.forms || []).map((f) => {
@@ -62,6 +68,7 @@ export function setupDexFormsModal(store, deps) {
 			return node.forms?.[formName] || "unknown";
 		});
 		const highestStatus = clampStatusForMon(mon, pickHighestStatus(formVals));
+		console.log(`[DEX-FORMS] refreshActiveDexCard: formVals=`, formVals, `→ highestStatus="${highestStatus}"`);
 		card.dataset.status = highestStatus;
 
 		const thumb = card.querySelector(".thumb");
@@ -228,10 +235,16 @@ export function setupDexFormsModal(store, deps) {
 			updateChipState();
 
 			sel.addEventListener("change", () => {
-				if (formsModal.dataset.formsNonce !== String(nonce)) return;
+				console.log(`[DEX-FORMS] change fired for form="${name}", value="${sel.value}", nonce check: dataset="${formsModal.dataset.formsNonce}" vs expected="${nonce}"`);
+				if (formsModal.dataset.formsNonce !== String(nonce)) {
+					console.warn('[DEX-FORMS] change: NONCE MISMATCH, ignoring. Modal may have been reopened.');
+					return;
+				}
 
 				const activeGameKey = formsModal.dataset.gameKey || gameKey;
-				const activeMonId = Number(formsModal.dataset.monId || mon.id);
+				const rawMonId = formsModal.dataset.monId || String(mon.id);
+				const activeMonId = /^\d+$/.test(rawMonId) ? Number(rawMonId) : rawMonId;
+				console.log(`[DEX-FORMS] change: activeGameKey="${activeGameKey}", activeMonId=${activeMonId}, newVal="${sel.value}"`);
 
 				let newVal = normalizeFlag(sel.value);
 				newVal = clampStatusForForm(mon, form, newVal);
@@ -249,6 +262,7 @@ export function setupDexFormsModal(store, deps) {
 				}, 0);
 				node.all = filled === total;
 				setDexFormsNode(activeGameKey, activeMonId, node);
+				console.log(`[DEX-FORMS] stored node for ${activeGameKey}:${activeMonId}, forms=`, { ...node.forms });
 
 				try {
 					applyDexLinksFromForm(
@@ -290,9 +304,18 @@ export function setupDexFormsModal(store, deps) {
 					im.src = nextSrc;
 				}
 
+				console.log('[DEX-FORMS] calling refreshActiveDexCard...');
 				refreshActiveDexCard(activeGameKey, mon);
-				refreshDexSummaryMetrics(baseOf(activeGameKey), formsModal.dataset.genKey || genKey, store);
+				const summaryGameKey = baseOf(activeGameKey);
+				const summaryGenKey = formsModal.dataset.genKey || genKey;
+				console.log(`[DEX-FORMS] calling refreshDexSummaryMetrics(gameKey="${summaryGameKey}", genKey="${summaryGenKey}")`);
+				const summaryLabelEls = document.querySelectorAll(`[data-dex-summary-label="${summaryGameKey}:forms"]`);
+				const summaryMeterEls = document.querySelectorAll(`[data-dex-summary-meter="${summaryGameKey}:forms"]`);
+				console.log(`[DEX-FORMS] summary DOM elements found: labels=${summaryLabelEls.length}, meters=${summaryMeterEls.length}`);
+				refreshDexSummaryMetrics(summaryGameKey, summaryGenKey, store);
+				console.log('[DEX-FORMS] calling emitPpgcUiSync...');
 				emitPpgcUiSync({ state: store?.state || window.store?.state || window.PPGC?._storeRef?.state || {}, loading: false });
+				console.log('[DEX-FORMS] emitPpgcUiSync done.');
 
 				try {
 					window.PPGC?.applyTaskSyncsFromForm?.(
