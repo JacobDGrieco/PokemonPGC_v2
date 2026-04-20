@@ -4,6 +4,13 @@
 // All the data helpers (get/set forms node, clamping, sync, etc.) are
 // passed in as dependencies from dex.js so we avoid circular imports.
 
+import { emitPpgcUiSync } from "../react-bridge/storeBridge.js";
+import { baseOf } from "./dex-config.js";
+import { updateDexThumb } from "./dex-grid.js";
+import { getDexScrollContainer } from "./helpers.js";
+import { clampStatusForMon, pickHighestStatus } from "./helpers.js";
+import { refreshDexSummaryMetrics } from "./dex-summary.js";
+
 export function setupDexFormsModal(store, deps) {
 	const {
 		formsModal,
@@ -43,11 +50,49 @@ export function setupDexFormsModal(store, deps) {
 	const valWithGame = (v, gameKey) =>
 		typeof v === "function" ? v({ gameKey }) : v;
 
+	function refreshActiveDexCard(gameKey, mon) {
+		if (!mon) return;
+		const cardKey = `${gameKey}:${mon.id}`;
+		const card = document.querySelector(`[data-dex-card-key="${cardKey}"]`);
+		if (!card) return;
+
+		const { node } = getDexFormsNode(gameKey, mon.id);
+		const formVals = (mon.forms || []).map((f) => {
+			const formName = typeof f === "string" ? f : f?.name;
+			return node.forms?.[formName] || "unknown";
+		});
+		const highestStatus = clampStatusForMon(mon, pickHighestStatus(formVals));
+		card.dataset.status = highestStatus;
+
+		const thumb = card.querySelector(".thumb");
+		if (thumb) {
+			updateDexThumb({
+				thumb,
+				mon,
+				status: highestStatus,
+				gameKey,
+				pathOfSolitudeEnabled: !!(store.dexResearchStatus.get(gameKey)?.[mon.id]?.__pathOfSolitude),
+			});
+		}
+
+		const countEl = card.querySelector(`[data-dex-forms-count="${cardKey}"]`);
+		if (countEl) {
+			const total = (mon.forms || []).length;
+			const filled = (mon.forms || []).reduce((acc, f) => {
+				const formName = typeof f === "string" ? f : f?.name;
+				return acc + ((node.forms?.[formName] || "unknown") !== "unknown" ? 1 : 0);
+			}, 0);
+			countEl.textContent = `${filled}/${total}`;
+		}
+	}
+
 	function openDexForms(gameKey, genKey, mon) {
 		if (!formsModal || !formsWheel) return;
 
 		formsNonce += 1;
 		const nonce = formsNonce;
+		formsModal.__returnFocusEl = document.activeElement;
+		formsModal.__dexScrollTop = getDexScrollContainer()?.scrollTop ?? 0;
 		formsModal.dataset.formsNonce = String(nonce);
 		formsModal.dataset.gameKey = gameKey;
 		formsModal.dataset.genKey = genKey;
@@ -216,13 +261,6 @@ export function setupDexFormsModal(store, deps) {
 					console.error("applyDexLinksFromForm error:", e);
 				}
 
-				const key = `${activeGameKey}:${activeMonId}`;
-				document
-					.querySelectorAll(`[data-dex-forms-count="${key}"]`)
-					.forEach((el) => {
-						el.textContent = `${filled}/${total}`;
-					});
-
 				updateChipState();
 				applyChipStatusClass(newVal);
 				badges.innerHTML = renderBadges(newVal, activeGameKey);
@@ -252,8 +290,9 @@ export function setupDexFormsModal(store, deps) {
 					im.src = nextSrc;
 				}
 
-				// Re-render the main dex grid so the card reflects new forms
-				renderDexGrid();
+				refreshActiveDexCard(activeGameKey, mon);
+				refreshDexSummaryMetrics(baseOf(activeGameKey), formsModal.dataset.genKey || genKey, store);
+				emitPpgcUiSync({ state: store?.state || window.store?.state || window.PPGC?._storeRef?.state || {}, loading: false });
 
 				try {
 					window.PPGC?.applyTaskSyncsFromForm?.(
@@ -327,6 +366,9 @@ export function setupDexFormsModal(store, deps) {
 	}
 
 	function closeDexForms() {
+		const returnEl = formsModal?.__returnFocusEl;
+		const dexScrollTop = formsModal?.__dexScrollTop ?? 0;
+
 		// Remove ANY resize handler that may have been attached by other modules
 		const resizeKeys = [
 			"_dexOnResize",
@@ -356,6 +398,24 @@ export function setupDexFormsModal(store, deps) {
 		delete formsModal.dataset.gameKey;
 		delete formsModal.dataset.genKey;
 		delete formsModal.dataset.monId;
+		formsModal.__returnFocusEl = null;
+		formsModal.__dexScrollTop = 0;
+
+		try {
+			if (document.activeElement && formsModal.contains(document.activeElement)) {
+				document.activeElement.blur?.();
+			}
+			if (returnEl && typeof returnEl.focus === "function") {
+				returnEl.focus({ preventScroll: true });
+			}
+		} catch {
+			/* ignore */
+		}
+
+		requestAnimationFrame(() => {
+			const dexScrollEl = getDexScrollContainer();
+			if (dexScrollEl) dexScrollEl.scrollTop = dexScrollTop;
+		});
 	}
 
 	formsModal.addEventListener("click", (e) => {

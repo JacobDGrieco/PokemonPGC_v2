@@ -74,6 +74,69 @@ function computeFormsProgress(game, store, nodeKey, dex) {
   };
 }
 
+export function refreshDexSummaryMetrics(gameKey, genKey, store) {
+  const games = window.DATA.games?.[genKey] || [];
+  const game = games.find((g) => g.key === gameKey);
+  if (!game) return;
+
+  const dex = _getDexList(gameKey);
+  const baseGameKey = String(gameKey).endsWith("-national")
+    ? String(gameKey).replace(/-national$/, "")
+    : String(gameKey);
+  const natKey = `${baseGameKey}-national`;
+  const natDex = _getDexList(natKey);
+  const haveNat = natDex.length > 0;
+  const nat = computeSpeciesProgress(game, store, natKey, natDex);
+  const formsSourceDex = haveNat ? natDex : dex;
+  const formsNodeKey = haveNat ? natKey : gameKey;
+  const forms = computeFormsProgress(game, store, formsNodeKey, formsSourceDex);
+
+  const refreshLabelAndMeter = ({ key, labelPrefix, baseDone, extraDone, baseTotal, basePct, extendedPct, pctBar, pctExtraOverlay }) => {
+    document.querySelectorAll(`[data-dex-summary-label="${key}"]`).forEach((labelEl) => {
+      const shownDone = baseDone === baseTotal ? baseDone + extraDone : baseDone;
+      const shownPct = baseDone === baseTotal ? extendedPct : basePct;
+      labelEl.textContent = `${labelPrefix}: ${shownDone} / ${baseTotal || 0} (${shownPct.toFixed(2)}%)`;
+    });
+
+    document.querySelectorAll(`[data-dex-summary-meter="${key}"]`).forEach((wrap) => {
+      const baseSpan = wrap.querySelector("span.base");
+      const extraSpan = wrap.querySelector("span.extra");
+      if (baseSpan) baseSpan.style.width = `${pctBar}%`;
+      if (extraSpan) extraSpan.style.width = `${pctExtraOverlay}%`;
+      if (pctExtraOverlay > 0) wrap.classList.add("has-extra");
+      else wrap.classList.remove("has-extra");
+    });
+  };
+
+  if (haveNat) {
+    refreshLabelAndMeter({
+      key: `${gameKey}:national`,
+      labelPrefix: "National",
+      baseDone: nat.baseDone,
+      extraDone: nat.extraDone,
+      baseTotal: nat.baseTotal,
+      basePct: nat.pctBase,
+      extendedPct: nat.pctExtended,
+      pctBar: nat.pctBar,
+      pctExtraOverlay: nat.pctExtraOverlay,
+    });
+  }
+
+  if (forms.haveForms) {
+    refreshLabelAndMeter({
+      key: `${gameKey}:forms`,
+      labelPrefix: "Forms",
+      baseDone: forms.formsBaseDone,
+      extraDone: forms.formsExtraDone,
+      baseTotal: forms.formsBaseTotal,
+      basePct: forms.formsPctBase,
+      extendedPct: forms.formsPctExtended,
+      pctBar: forms.formsPctBar,
+      pctExtraOverlay: forms.formsPctExtraOverlay,
+    });
+  }
+}
+
 export function dexSummaryCardFor(gameKey, genKey, store) {
   const games = window.DATA.games?.[genKey] || [];
   const game = games.find((g) => g.key === gameKey);
@@ -145,12 +208,12 @@ export function dexSummaryCardFor(gameKey, genKey, store) {
 
   const nationalHTML = haveNat && !hasVariantsConfig
     ? `
-      <div class="small">National:
+      <div class="small" data-dex-summary-label="${gameKey}:national">National:
         ${nat.baseDone === nat.baseTotal ? nat.baseDone + nat.extraDone : nat.baseDone}
         / ${nat.baseTotal || 0}
         (${(nat.baseDone === nat.baseTotal ? nat.pctExtended : nat.pctBase).toFixed(2)}%)
       </div>
-      <div class="progress ${nat.pctExtraOverlay > 0 ? "has-extra" : ""}">
+      <div class="progress ${nat.pctExtraOverlay > 0 ? "has-extra" : ""}" data-dex-summary-meter="${gameKey}:national">
         <span class="base" style="width:${nat.pctBar}%"></span>
         <span class="extra" style="width:${nat.pctExtraOverlay}%"></span>
         ${nat.pctExtraOverlay > 0 ? `<div class="extra-badge" title="Extra credit progress">+${nat.pctExtraOverlay.toFixed(0)}%</div>` : ``}
@@ -159,13 +222,13 @@ export function dexSummaryCardFor(gameKey, genKey, store) {
 
   const formsHTML = forms.haveForms
     ? `
-      <div class="small">
+      <div class="small" data-dex-summary-label="${gameKey}:forms">
         Forms:
         ${forms.formsBaseDone === forms.formsBaseTotal ? forms.formsBaseDone + forms.formsExtraDone : forms.formsBaseDone}
         / ${forms.formsBaseTotal || 0}
         (${(forms.formsBaseDone === forms.formsBaseTotal ? forms.formsPctExtended : forms.formsPctBase).toFixed(2)}%)
       </div>
-      <div class="progress ${forms.formsPctExtraOverlay > 0 ? "has-extra" : ""}">
+      <div class="progress ${forms.formsPctExtraOverlay > 0 ? "has-extra" : ""}" data-dex-summary-meter="${gameKey}:forms">
         <span class="base" style="width:${forms.formsPctBar}%"></span>
         <span class="extra" style="width:${forms.formsPctExtraOverlay}%"></span>
         ${forms.formsPctExtraOverlay > 0 ? `<div class="extra-badge" title="Extra credit progress">+${forms.formsPctExtraOverlay.toFixed(0)}%</div>` : ``}

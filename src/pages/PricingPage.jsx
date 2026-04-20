@@ -11,6 +11,13 @@ import { useSubscription } from '../hooks/useSubscription.js';
 
 const TIER_KEYS = ['free', 'great', 'ultra', 'master'];
 
+const TIER_TAGLINES = {
+	free: 'Start here',
+	great: 'Jump in',
+	ultra: 'Go deep',
+	master: 'Full access',
+};
+
 const ALL_FEATURES = [
 	'checklists',
 	'tooltips',
@@ -173,25 +180,44 @@ export function PricingPage() {
 
 	return (
 		<div className="pricing-page">
+			<div className="pricing-tier-cards">
+				{TIER_KEYS.map((key) => {
+					const tier = TIERS[key];
+					const isCurrent = key === tierKey;
+					return (
+						<div
+							key={key}
+							className={`pricing-tier-card${isCurrent ? ' is-current' : ''}`}
+							data-tier={key}
+						>
+							<div className="ptc-ball" data-ball={key} />
+							<div className="ptc-name">{tier.label}</div>
+							<div className="ptc-tagline">{TIER_TAGLINES[key]}</div>
+							<div className="ptc-price">{tier.price}</div>
+							{isCurrent ? <div className="ptc-badge">Your rank</div> : null}
+						</div>
+					);
+				})}
+			</div>
+
 			<div className="pricing-wip-banner">
-				<strong>Work In Progress</strong>
+				<strong>Still in development</strong>
 				<p>
-					PokemonPGC is still in active development. Some features listed here may not be
-					fully implemented yet. Subscribing to a higher tier helps support development and
-					unlocks features as they are released.
+					PokemonPGC is actively growing. Some features listed here aren't fully shipped yet —
+					subscribing now supports development and unlocks things as they release.
 				</p>
 			</div>
 
-			<h1 className="pricing-title">Plans & Pricing</h1>
+			<h1 className="pricing-title">League Membership</h1>
 
 			{user ? (
 				<div className="pricing-account-banner">
 					<div>
-						<strong>{TIERS[tierKey]?.label || 'Free'} plan</strong>
+						<strong>{TIERS[tierKey]?.label || 'Free'} rank</strong>
 						<p>
 							{hasPaidPlan
-								? `Your account is currently billed through ${providerMeta.label || 'a payment provider'}.`
-								: 'Sign up for a paid tier with Stripe or PayPal.'}
+								? `Billed through ${providerMeta.label || 'a payment provider'}.`
+								: 'Upgrade your rank with Stripe or PayPal.'}
 						</p>
 					</div>
 					<div className="pricing-account-actions">
@@ -219,7 +245,7 @@ export function PricingPage() {
 				</div>
 			) : (
 				<div className="pricing-inline-note">
-					Log in before subscribing so the payment can be attached to your account automatically.
+					Sign in before subscribing so the payment links to your trainer account automatically.
 				</div>
 			)}
 
@@ -234,7 +260,8 @@ export function PricingPage() {
 							<th className="pricing-status-col">Status</th>
 							{TIER_KEYS.map((key) => (
 								<th key={key} className={`pricing-tier-col${key === tierKey ? ' is-current' : ''}`}>
-									{TIERS[key].label}
+									<span className="pricing-tier-name">{TIERS[key].label}</span>
+									<span className="pricing-tier-tagline">{TIER_TAGLINES[key]}</span>
 								</th>
 							))}
 						</tr>

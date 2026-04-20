@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import confetti from 'canvas-confetti';
 import { getCurrentUser, verifyPayPalSubscription, verifyStripeCheckoutSession } from '../../api.js';
 
 function readSearch(locationSearch) {
@@ -43,6 +44,20 @@ export function SubscriptionSuccessPage() {
 	const [phase, setPhase] = useState('working');
 	const [message, setMessage] = useState('Finalizing your subscription...');
 	const [error, setError] = useState('');
+
+	useEffect(() => {
+		if (phase !== 'done') return;
+
+		const colors = ['#e31c23', '#ffffff', '#3b5dc9', '#f5c644', '#9b5fb5'];
+		confetti({ particleCount: 120, spread: 80, origin: { y: 0.6 }, colors });
+
+		const t = setTimeout(() => {
+			confetti({ particleCount: 55, spread: 50, angle: 60, origin: { x: 0.1, y: 0.65 }, colors });
+			confetti({ particleCount: 55, spread: 50, angle: 120, origin: { x: 0.9, y: 0.65 }, colors });
+		}, 320);
+
+		return () => clearTimeout(t);
+	}, [phase]);
 
 	useEffect(() => {
 		let cancelled = false;
@@ -95,8 +110,8 @@ export function SubscriptionSuccessPage() {
 				if (!cancelled) {
 					setPhase('done');
 					setMessage(matchedTier
-						? 'Your subscription is active.'
-						: 'Your payment went through. Account access should update shortly after the webhook finishes.');
+						? 'Your rank is active. Welcome to the league.'
+						: 'Payment went through. Your rank should update shortly once the webhook confirms.');
 				}
 			} catch (err) {
 				if (cancelled) return;
@@ -114,9 +129,9 @@ export function SubscriptionSuccessPage() {
 	return (
 		<div className="pricing-page pricing-page--success">
 			<div className="pricing-success-card">
-				<div className="pricing-success-eyebrow">Subscription</div>
+				<div className="pricing-success-eyebrow">League Rank</div>
 				<h1 className="pricing-title">
-					{phase === 'done' ? 'Payment complete' : phase === 'error' ? 'Confirmation needed' : 'Finishing checkout'}
+					{phase === 'done' ? 'Rank unlocked' : phase === 'error' ? 'Confirmation needed' : 'Activating rank'}
 				</h1>
 				<p className="pricing-success-copy">
 					{phase === 'error' ? error : message}

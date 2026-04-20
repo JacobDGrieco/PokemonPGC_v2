@@ -26,10 +26,10 @@ const DEFAULT_ICONS = [
 	{ key: 'ultra', label: 'Ultra Ball' },
 ];
 const ACCOUNT_TABS = [
-	{ key: 'general', label: 'General' },
-	{ key: 'subscription', label: 'Subscription' },
-	{ key: 'backup', label: 'Site Data Backup' },
-	{ key: 'import', label: 'Save Data Import' },
+	{ key: 'general', label: 'Trainer Card' },
+	{ key: 'subscription', label: 'League Rank' },
+	{ key: 'backup', label: 'Save Data' },
+	{ key: 'import', label: 'Cartridge Import' },
 ];
 
 function formatTs(ts) {
@@ -264,9 +264,9 @@ function GeneralTab() {
 			<section className="settings-panel settings-panel-profile">
 				<div className="settings-panel-head">
 					<div>
-						<div className="settings-eyebrow">Account</div>
-						<h2>Profile & Preferences</h2>
-						<p className="settings-lead">Everything visual and personal lives here, so the checklist feels like yours without crowding the rest of the app.</p>
+						<div className="settings-eyebrow">Profile</div>
+						<h2>Trainer Card</h2>
+						<p className="settings-lead">Your personal settings — icon, display preferences, and account info.</p>
 					</div>
 				</div>
 
@@ -292,7 +292,7 @@ function GeneralTab() {
 
 			<section className="settings-panel">
 				<div className="settings-section-head">
-					<h3>Avatar</h3>
+					<h3>Ball Icon</h3>
 					<p>Pick a built-in ball or upload your own image for the account button.</p>
 				</div>
 
@@ -530,15 +530,15 @@ function SubscriptionTab() {
 			<section className="settings-panel settings-panel-profile">
 				<div className="settings-panel-head">
 					<div>
-						<div className="settings-eyebrow">Subscription</div>
-						<h2>Plan & Billing</h2>
-						<p className="settings-lead">See your current tier, renewal timing, and billing provider details without leaving the account page.</p>
+						<div className="settings-eyebrow">Membership</div>
+						<h2>League Rank</h2>
+						<p className="settings-lead">Your current tier, renewal date, and billing details.</p>
 					</div>
 				</div>
 
 				<div className="settings-account-strip">
 					<div className="settings-account-meta">
-						<div className="settings-meta-label">Current tier</div>
+						<div className="settings-meta-label">Current rank</div>
 						<div className="settings-meta-value">{plan.label}</div>
 					</div>
 					<div className="settings-account-actions">
@@ -580,8 +580,8 @@ function SubscriptionTab() {
 
 			<section className="settings-panel">
 				<div className="settings-section-head">
-					<h3>Subscription details</h3>
-					<p>Provider metadata and lifecycle dates for your current billing setup.</p>
+					<h3>Billing details</h3>
+					<p>Provider and lifecycle dates for your current plan.</p>
 				</div>
 
 				<div className="account-subscription-list">
@@ -647,8 +647,8 @@ function BackupTab() {
 		<div className="settings-shell">
 			<section className="settings-panel" id="account-section-backup">
 				<div className="settings-section-head">
-					<h3>Backups &amp; Import</h3>
-					<p>Keep a manual backup folder around for portable restores and one-click imports.</p>
+					<h3>Local Save Data</h3>
+					<p>Keep a backup folder for portable restores and one-click imports.</p>
 				</div>
 
 				<div className="account-backup-panel">
@@ -729,8 +729,8 @@ function BackupTab() {
 
 			<section className="settings-panel">
 				<div className="settings-section-head">
-					<h3>What this is for</h3>
-					<p>These tools stay focused on backup and restore workflows, not checklist browsing.</p>
+					<h3>What gets backed up</h3>
+					<p>These tools handle backup and restore only — checklist browsing lives in the app.</p>
 				</div>
 
 				<SettingRow
@@ -846,8 +846,8 @@ function SaveImportTab() {
 		<div className="settings-shell">
 			<section className="settings-panel" id="account-section-import">
 				<div className="settings-section-head">
-					<h3>Save Data Import</h3>
-					<p>Upload a supported save file and preview every task change before anything is applied.</p>
+					<h3>Cartridge Import</h3>
+					<p>Upload a save file and preview every task change before anything is applied.</p>
 				</div>
 
 				<div className="account-import-grid">
@@ -920,8 +920,8 @@ export function AccountPage({ activeTab = store.state.accountTab || 'general' })
 			<header className="account-page-header">
 				<div>
 					<div className="account-page-eyebrow">Account</div>
-					<h2>Settings & Billing</h2>
-					<p className="account-page-lead">A dedicated account workspace for profile settings, subscriptions, backups, and imports.</p>
+					<h2>Trainer ID</h2>
+					<p className="account-page-lead">Your profile, rank, and save data — all in one place.</p>
 				</div>
 			</header>
 

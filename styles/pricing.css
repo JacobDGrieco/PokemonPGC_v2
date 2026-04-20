@@ -10,6 +10,107 @@
   gap: 36px;
 }
 
+/* ---- Tier card row ---- */
+
+.pricing-tier-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.pricing-tier-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 20px 14px 18px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  background: linear-gradient(180deg, rgba(20, 24, 33, 0.96), rgba(11, 14, 21, 0.98));
+  text-align: center;
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.pricing-tier-card.is-current {
+  border-color: rgba(113, 197, 88, 0.38);
+  box-shadow: 0 0 0 1px rgba(113, 197, 88, 0.15), 0 12px 32px rgba(0, 0, 0, 0.28);
+}
+
+/* Ball icon — same gradient logic as auth.css */
+.ptc-ball {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow:
+    inset -3px -3px 6px rgba(0, 0, 0, 0.4),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.12),
+    0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.ptc-ball[data-ball="free"] {
+  background: radial-gradient(circle at 32% 32%, #fff 0, #fff 34%, #e31c23 35%, #e31c23 78%, #111 79%);
+}
+
+.ptc-ball[data-ball="great"] {
+  background: radial-gradient(circle at 32% 32%, #fff 0, #fff 34%, #3b5dc9 35%, #3b5dc9 78%, #111 79%);
+}
+
+.ptc-ball[data-ball="ultra"] {
+  background: radial-gradient(circle at 32% 32%, #fff 0, #fff 34%, #f5c644 35%, #2a2925 78%, #111 79%);
+}
+
+.ptc-ball[data-ball="master"] {
+  background: radial-gradient(circle at 32% 32%, #fff 0, #fff 34%, #9b5fb5 35%, #9b5fb5 78%, #111 79%);
+}
+
+.ptc-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #f4f7fb;
+  letter-spacing: -0.01em;
+}
+
+.ptc-tagline {
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(220, 230, 245, 0.5);
+  letter-spacing: 0.04em;
+}
+
+.ptc-price {
+  font-size: 17px;
+  font-weight: 700;
+  color: #f4f7fb;
+  letter-spacing: -0.02em;
+}
+
+.ptc-badge {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(113, 197, 88, 0.18);
+  border: 1px solid rgba(113, 197, 88, 0.35);
+  color: #81e7a6;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .pricing-tier-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ---- End tier cards ---- */
+
 .pricing-page--success {
   max-width: 680px;
 }
@@ -139,6 +240,21 @@
   text-transform: uppercase;
   letter-spacing: 0.4px;
   color: var(--text-muted);
+}
+
+.pricing-tier-name {
+  display: block;
+}
+
+.pricing-tier-tagline {
+  display: block;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: var(--text-muted);
+  opacity: 0.7;
+  margin-top: 2px;
 }
 
 .pricing-table tbody tr:last-child td {

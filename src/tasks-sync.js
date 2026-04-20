@@ -310,16 +310,17 @@ export function applyDexSyncsFromDexEntries(gameKey, changedMap) {
 export function applyTaskSyncsFromForm(gameKey, entryId, formName, status) {
 	try {
 		const dexList = window.DATA?.dex?.[gameKey] || [];
-		const wanted = String(entryId);
-		let entry = dexList.find((e) => e && String(e.id) === wanted);
-		if (!entry) {
-			const n = Number(entryId);
-			if (Number.isFinite(n)) entry = dexList.find((e) => e && Number(e.localId ?? e.id) === n);
-		}
-		const forms = Array.isArray(entry.forms) ? entry.forms : [];
+		const hitEntry = _resolveDexEntryAndKey(dexList, entryId);
+		if (!hitEntry?.entry) return;
+		const { entry } = hitEntry;
+		const forms = Array.isArray(entry?.forms) ? entry.forms : [];
 		const hit = forms.find((f) => (typeof f === "string" ? f : f?.name) === formName);
 		if (!hit || typeof hit !== "object") return;
-		const ids = Array.isArray(hit.taskSync) ? hit.taskSync.slice() : typeof hit.taskSync === "number" ? [hit.taskSync] : [];
+		const ids = Array.isArray(hit.taskSync)
+			? hit.taskSync.slice()
+			: (typeof hit.taskSync === "number" || typeof hit.taskSync === "string" || (hit.taskSync && typeof hit.taskSync === "object"))
+				? [hit.taskSync]
+				: [];
 		if (!ids.length) return;
 		const checked = _isDexCompleteStatus(status);
 		for (const taskId of ids) {

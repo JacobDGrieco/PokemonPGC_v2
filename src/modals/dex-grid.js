@@ -63,7 +63,7 @@ function buildSpriteMarkup({ src, name }) {
   />`;
 }
 
-function updateDexThumb({ thumb, mon, status, gameKey, pathOfSolitudeEnabled = false }) {
+export function updateDexThumb({ thumb, mon, status, gameKey, pathOfSolitudeEnabled = false }) {
 	const newSrc = getImageForStatus(mon, status, gameKey, window.PPGC?.gen1SpriteColor);
 	const newCls = getFilterClassForStatus(status);
 
@@ -185,6 +185,7 @@ export function renderDexCards({
 		card.style.setProperty('--accent', game?.color || '#6aa6ff');
 
 		const keyForCount = `${gameKey}:${it.id}`;
+		card.dataset.dexCardKey = keyForCount;
 		const formsCountHTML = hasForms ? `<span class="pill count" data-dex-forms-count="${keyForCount}"></span>` : '';
 		const researchCountHTML = hasResearch ? `<span class="pill count" data-dex-research-count="${keyForCount}">...</span>` : '';
 
