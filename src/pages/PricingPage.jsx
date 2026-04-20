@@ -1,5 +1,4 @@
 import React, { useMemo, useState } from 'react';
-import { Link } from 'react-router-dom';
 import {
 	cancelPayPalSubscription,
 	createPayPalSubscription,
@@ -8,6 +7,7 @@ import {
 } from '../../api.js';
 import { TIERS, FEATURE_STATUS, FEATURE_LABELS, TIER_ORDER } from '../config/tiers.js';
 import { useSubscription } from '../hooks/useSubscription.js';
+import { FaStripeS, FaPaypal } from "react-icons/fa";
 
 const TIER_KEYS = ['free', 'great', 'ultra', 'master'];
 
@@ -144,7 +144,8 @@ export function PricingPage() {
 		}
 
 		const isCurrent = key === tierKey;
-		const actionDisabled = busyAction !== '';
+		// const actionDisabled = busyAction !== '';	
+		const actionDisabled = true;
 		const lockedByExistingPlan = hasPaidPlan;
 		const isLowerOrCurrentTier = tierRank >= 0 && TIER_ORDER.indexOf(key) <= tierRank;
 
@@ -164,7 +165,7 @@ export function PricingPage() {
 					disabled={actionDisabled}
 					onClick={() => handleStripeCheckout(key)}
 				>
-					{busyAction === `stripe:${key}` ? 'Loading...' : 'Stripe'}
+					{busyAction === `stripe:${key}` ? 'Loading...' : <FaStripeS />}
 				</button>
 				<button
 					type="button"
@@ -172,7 +173,7 @@ export function PricingPage() {
 					disabled={actionDisabled}
 					onClick={() => handlePayPalCheckout(key)}
 				>
-					{busyAction === `paypal:${key}` ? 'Loading...' : 'PayPal'}
+					{busyAction === `paypal:${key}` ? 'Loading...' : <FaPaypal />}
 				</button>
 			</div>
 		);
@@ -180,6 +181,7 @@ export function PricingPage() {
 
 	return (
 		<div className="pricing-page">
+			<h1 className="pricing-title">League Membership</h1>
 			<div className="pricing-tier-cards">
 				{TIER_KEYS.map((key) => {
 					const tier = TIERS[key];
@@ -207,47 +209,6 @@ export function PricingPage() {
 					subscribing now supports development and unlocks things as they release.
 				</p>
 			</div>
-
-			<h1 className="pricing-title">League Membership</h1>
-
-			{user ? (
-				<div className="pricing-account-banner">
-					<div>
-						<strong>{TIERS[tierKey]?.label || 'Free'} rank</strong>
-						<p>
-							{hasPaidPlan
-								? `Billed through ${providerMeta.label || 'a payment provider'}.`
-								: 'Upgrade your rank with Stripe or PayPal.'}
-						</p>
-					</div>
-					<div className="pricing-account-actions">
-						{providerMeta.canManage ? (
-							<button
-								type="button"
-								className="pricing-action-btn"
-								disabled={busyAction !== ''}
-								onClick={handleStripePortal}
-							>
-								{busyAction === 'stripe:portal' ? 'Loading...' : 'Manage billing'}
-							</button>
-						) : null}
-						{providerMeta.canCancel ? (
-							<button
-								type="button"
-								className="pricing-action-btn pricing-action-btn--danger"
-								disabled={busyAction !== ''}
-								onClick={handlePayPalCancel}
-							>
-								{busyAction === 'paypal:cancel' ? 'Canceling...' : 'Cancel PayPal'}
-							</button>
-						) : null}
-					</div>
-				</div>
-			) : (
-				<div className="pricing-inline-note">
-					Sign in before subscribing so the payment links to your trainer account automatically.
-				</div>
-			)}
 
 			{error ? <div className="pricing-alert pricing-alert--error">{error}</div> : null}
 			{notice ? <div className="pricing-alert pricing-alert--success">{notice}</div> : null}
@@ -314,10 +275,6 @@ export function PricingPage() {
 						})}
 					</tbody>
 				</table>
-			</div>
-
-			<div className="pricing-back">
-				<Link to="/">Back to Home</Link>
 			</div>
 		</div>
 	);

@@ -22,6 +22,24 @@
 	overflow: clip;
 }
 
+.home-feature-layout {
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	align-items: stretch;
+	gap: 20px;
+}
+
+.home-feature-layout::before {
+	content: "";
+	position: absolute;
+	left: 8%;
+	right: 8%;
+	margin-top: 18px;
+	height: 2px;
+	background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.24), transparent);
+}
+
 .home-command,
 .home-scout-strip,
 .home-route-board,
@@ -389,8 +407,22 @@
 .home-scout-strip,
 .home-route-board,
 .home-atlas {
-	width: min(100%, var(--home-shell));
-	margin: 0 auto;
+	width: 100%;
+	margin: 0;
+}
+
+.home-route-board {
+	grid-row: 1 / span 2;
+	align-self: stretch;
+	min-height: 0;
+}
+
+.home-atlas {
+	grid-column: 1;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 34px;
+	align-items: stretch;
 }
 
 .home-scout-strip {
@@ -402,18 +434,7 @@
 		linear-gradient(180deg, rgba(11, 15, 22, 0.96), rgba(7, 10, 16, 0.98));
 	border: 1px solid rgba(255, 255, 255, 0.06);
 	box-shadow: 0 28px 64px rgba(0, 0, 0, 0.22);
-	display: grid;
 	gap: 26px;
-}
-
-.home-scout-strip::before {
-	content: "";
-	position: absolute;
-	left: 8%;
-	right: 8%;
-	top: -18px;
-	height: 1px;
-	background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.24), transparent);
 }
 
 .home-scout-copy {
@@ -423,10 +444,18 @@
 }
 
 .home-scout-copy h2,
-.home-route-intro h2,
-.home-atlas-copy h2 {
+.home-route-intro h2 {
 	margin: 0;
 	font-size: clamp(32px, 5vw, 58px);
+	line-height: 0.98;
+	letter-spacing: -0.04em;
+	color: #f8fbff;
+	text-wrap: balance;
+}
+
+.home-atlas-copy h2 {
+	margin: 0;
+	font-size: clamp(22px, 5vw, 44px);
 	line-height: 0.98;
 	letter-spacing: -0.04em;
 	color: #f8fbff;
@@ -484,12 +513,12 @@
 	display: grid;
 	grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
 	gap: 34px;
-	align-items: start;
 }
 
 .home-route-intro {
 	display: grid;
-	gap: 12px;
+	align-content: start;
+	gap: 24px;
 	padding-right: 18px;
 }
 
@@ -593,6 +622,8 @@
 
 .home-route-topline span,
 .home-route-status span {
+	display: flex;
+	gap: 15px;
 	font-size: 12px;
 	font-weight: 700;
 	letter-spacing: 0.14em;

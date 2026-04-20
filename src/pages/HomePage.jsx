@@ -5,6 +5,8 @@ import { useSubscription } from '../hooks/useSubscription.js';
 import { FEATURE_LABELS, TIERS, TIER_ORDER } from '../config/tiers.js';
 import { _assetPath } from '../utils/assetPath.js';
 import { PokeBallParticles } from '../components/common/PokeBallParticles.jsx';
+import { navigateToState } from '../react-bridge/navigation.js';
+import { save } from '../store.js';
 
 const FEATURE_TILES = [
 	{
@@ -66,14 +68,14 @@ const FEATURE_TILES = [
 const HERO_FLOW = [
 	{
 		key: 'catch',
-		label: 'Catch it in-game',
+		label: 'Catch In-Game',
 		image: 'image1.png',
 		alt: 'Catching a Pokémon in-game',
 		accent: 'var(--home-accent-red)',
 	},
 	{
 		key: 'dex',
-		label: 'See it hit the dex',
+		label: 'Log in the Dex',
 		image: 'image2.png',
 		alt: 'Pokémon appearing in the Pokédex',
 		accent: 'var(--home-accent-gold)',
@@ -211,7 +213,20 @@ export function HomePage() {
 						Catch the Pokemon, watch it register, then track it cleanly in one place.
 					</p>
 					<div className="home-command-actions">
-						<button type="button" className="home-cta-btn primary" onClick={() => navigate('/checklists')}>
+						<button
+							type="button"
+							className="home-cta-btn primary"
+							onClick={() => {
+								navigateToState({
+									level: 'gen',
+									genKey: null,
+									gameKey: null,
+									sectionId: null
+								});
+								save();
+								navigate('/checklists');
+							}}
+						>
 							Open Checklists
 						</button>
 						<Link to="/pricing" className="home-cta-btn ghost">
@@ -239,127 +254,127 @@ export function HomePage() {
 				</div>
 			</section>
 
-			<section className="home-scout-strip" aria-labelledby="home-scout-title">
-				<div className="home-scout-copy">
-					<h2 id="home-scout-title">Everything that matters during a real completion run.</h2>
-					<p>
-						Keep the obvious stuff visible, surface the annoying stuff earlier, and spend less time
-						jumping between tabs trying to remember what is left.
-					</p>
-				</div>
-				<div className="home-scout-metrics">
-					{HOME_FOCUS_AREAS.map((area, index) => (
-						<motion.div
-							key={area.label}
-							className="home-scout-metric"
-							initial={{ opacity: 0, y: 20 }}
-							whileInView={{ opacity: 1, y: 0 }}
-							viewport={{ once: true, margin: '-40px' }}
-							transition={{ duration: 0.42, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
-						>
-							<strong>{area.label}</strong>
-							<span>{area.description}</span>
-						</motion.div>
-					))}
-				</div>
-			</section>
+			<div className="home-feature-layout">
+				<div className="home-left-stack">
+					<section className="home-scout-strip" aria-labelledby="home-scout-title">
+						<div className="home-scout-copy">
+							<h2 id="home-scout-title">Everything that matters during a real completion run.</h2>
+							<p>
+								Keep the obvious stuff visible, surface the annoying stuff earlier, and spend less time
+								jumping between tabs trying to remember what is left.
+							</p>
+						</div>
+						<div className="home-scout-metrics">
+							{HOME_FOCUS_AREAS.map((area, index) => (
+								<motion.div
+									key={area.label}
+									className="home-scout-metric"
+									initial={{ opacity: 0, y: 20 }}
+									whileInView={{ opacity: 1, y: 0 }}
+									viewport={{ once: true, margin: '-40px' }}
+									transition={{ duration: 0.42, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
+								>
+									<strong>{area.label}</strong>
+									<span>{area.description}</span>
+								</motion.div>
+							))}
+						</div>
+					</section>
+					<section className="home-atlas-panel home-atlas-rank-panel">
+						<div className="home-rank-track">
+							<span className="home-rank-label">Choose your rank</span>
+						</div>
+						<div className="home-tier-grid">
+							{TIER_ORDER.map((rankKey) => {
+								const tier = TIERS[rankKey];
+								const features = tierFeaturesFor(rankKey);
+								const isActive = rankKey === tierKey;
 
-			<section className="home-route-board" aria-labelledby="home-route-board-title">
-				<div className="home-route-intro">
-					<span className="home-section-tag">Destinations</span>
-					<h2 id="home-route-board-title">Pick the page you need next.</h2>
-					<p>
-						Checklists stay at the center. Everything else reads like support pages around the main run,
-						with locked areas still visible so the home page still feels connected.
-					</p>
-				</div>
-
-				<div className="home-route-list">
-					{FEATURE_TILES.map((tile, index) => {
-						const tileRank = TIER_ORDER.indexOf(tile.minTier);
-						const isLocked = userRank < tileRank;
-
-						return (
-							<motion.button
-								key={tile.key}
-								type="button"
-								className={`home-route-stop${isLocked ? ' is-locked' : ''}${index === 0 ? ' is-primary' : ''}`}
-								style={{ '--feature-accent': tile.accent }}
-								onClick={() => navigate(isLocked ? '/pricing' : tile.path)}
-								initial={{ opacity: 0, y: 28 }}
-								whileInView={{ opacity: 1, y: 0 }}
-								viewport={{ once: true, margin: '-60px' }}
-								transition={{ duration: 0.45, delay: index * 0.06, ease: [0.22, 1, 0.36, 1] }}
-							>
-								<span className="home-route-index">{String(index + 1).padStart(2, '0')}</span>
-								<div className="home-route-main">
-									<div className="home-route-topline">
-										<strong>{tile.label}</strong>
-										{isLocked ? <span className="home-route-lock-icon" aria-hidden="true">🔒</span> : <span>{tile.stat}</span>}
+								return (
+									<div
+										key={rankKey}
+										className={`home-tier-card${isActive ? ' is-active' : ''}`}
+										style={{ '--tier-accent': TIER_STYLES[rankKey]?.accent || 'var(--home-accent-gold)' }}
+									>
+										<div className="home-tier-card-top">
+											<div>
+												<span>{tier.price === '$0' ? 'Start here' : 'Unlock more'}</span>
+												<strong>{tier.label}</strong>
+											</div>
+											<i>{tier.price}</i>
+										</div>
+										<ul className="home-tier-feature-list">
+											{features.map((feature) => (
+												<li key={feature}>{feature}</li>
+											))}
+										</ul>
 									</div>
-									<p>{tile.description}</p>
+								);
+							})}
+						</div>
+					</section>
+					<section className="home-atlas-copy home-atlas-panel">
+						<span className="home-section-tag">Tracking flow</span>
+						<h2 id="home-atlas-title">Made for the parts of a run you come back to later.</h2>
+						<p>
+							Keep your place, come back cleanly, and keep chipping away without losing what still matters.
+						</p>
+						<div className="home-atlas-steps">
+							{STORY_STEPS.map((step, index) => (
+								<div key={step} className="home-atlas-step">
+									<span>{String(index + 1).padStart(2, '0')}</span>
+									<strong>{step}</strong>
 								</div>
-								<div className="home-route-status">
-									<span>{isLocked ? 'Upgrade to access' : 'Open station'}</span>
-									<i aria-hidden="true">{isLocked ? 'LOCKED' : 'GO'}</i>
-								</div>
-							</motion.button>
-						);
-					})}
+							))}
+						</div>
+					</section>
 				</div>
-			</section>
-
-			<section className="home-atlas" aria-labelledby="home-atlas-title">
-				<div className="home-atlas-copy home-atlas-panel">
-					<span className="home-section-tag">Tracking flow</span>
-					<h2 id="home-atlas-title">Made for the parts of a run you come back to later.</h2>
-					<p>
-						Keep your place, come back cleanly, and keep chipping away without losing what still matters.
-					</p>
-					<div className="home-atlas-steps">
-						{STORY_STEPS.map((step, index) => (
-							<div key={step} className="home-atlas-step">
-								<span>{String(index + 1).padStart(2, '0')}</span>
-								<strong>{step}</strong>
-							</div>
-						))}
+				<section className="home-route-board" aria-labelledby="home-route-board-title">
+					<div className="home-route-intro">
+						<span className="home-section-tag">Destinations</span>
+						<h2 id="home-route-board-title">Pick the page you need next.</h2>
+						<p>
+							Checklists stay at the center. Everything else reads like support pages around the main run,
+							with locked areas still visible so the home page still feels connected.
+						</p>
 					</div>
-				</div>
 
-				<div className="home-atlas-panel home-atlas-rank-panel">
-					<div className="home-rank-track">
-						<span className="home-rank-label">Choose your rank</span>
-					</div>
-					<div className="home-tier-grid">
-						{TIER_ORDER.map((rankKey) => {
-							const tier = TIERS[rankKey];
-							const features = tierFeaturesFor(rankKey);
-							const isActive = rankKey === tierKey;
+					<div className="home-route-list">
+						{FEATURE_TILES.map((tile, index) => {
+							const tileRank = TIER_ORDER.indexOf(tile.minTier);
+							const isLocked = userRank < tileRank;
 
 							return (
-								<div
-									key={rankKey}
-									className={`home-tier-card${isActive ? ' is-active' : ''}`}
-									style={{ '--tier-accent': TIER_STYLES[rankKey]?.accent || 'var(--home-accent-gold)' }}
+								<motion.button
+									key={tile.key}
+									type="button"
+									className={`home-route-stop${isLocked ? ' is-locked' : ''}${index === 0 ? ' is-primary' : ''}`}
+									style={{ '--feature-accent': tile.accent }}
+									onClick={() => navigate(isLocked ? '/pricing' : tile.path)}
+									initial={{ opacity: 0, y: 28 }}
+									whileInView={{ opacity: 1, y: 0 }}
+									viewport={{ once: true, margin: '-60px' }}
+									transition={{ duration: 0.45, delay: index * 0.06, ease: [0.22, 1, 0.36, 1] }}
 								>
-									<div className="home-tier-card-top">
-										<div>
-											<span>{tier.price === '$0' ? 'Start here' : 'Unlock more'}</span>
-											<strong>{tier.label}</strong>
+									<span className="home-route-index">{String(index + 1).padStart(2, '0')}</span>
+									<div className="home-route-main">
+										<div className="home-route-topline">
+											<strong>{tile.label}</strong>
 										</div>
-										<i>{tier.price}</i>
+										<p>{tile.description}</p>
 									</div>
-									<ul className="home-tier-feature-list">
-										{features.map((feature) => (
-											<li key={feature}>{feature}</li>
-										))}
-									</ul>
-								</div>
+									<div className="home-route-status">
+										<span>
+											{isLocked ? 'Upgrade' : 'Open'}
+											<i className={`pi ${isLocked ? 'pi-lock' : 'pi-lock-open'}`}></i>
+										</span>
+									</div>
+								</motion.button>
 							);
 						})}
 					</div>
-				</div>
-			</section>
+				</section>
+			</div>
 		</div>
 	);
 }
