@@ -20,11 +20,6 @@ import {
 import { buildAccountRoute } from '../../utils/accountRoute.js';
 
 const SUPPORTED_SAVE_IMPORT_GAMES = new Set(['red']);
-const DEFAULT_ICONS = [
-	{ key: 'default', label: 'Poke Ball' },
-	{ key: 'great', label: 'Great Ball' },
-	{ key: 'ultra', label: 'Ultra Ball' },
-];
 const ACCOUNT_TABS = [
 	{ key: 'general', label: 'Trainer Card' },
 	{ key: 'subscription', label: 'League Rank' },
@@ -185,6 +180,8 @@ function GeneralTab() {
 	const gen1SpriteMode = store.state.gen1SpriteMode === 'color' ? 'color' : 'bw';
 	const gen1RegionMode = store.state.gen1RegionMode === 'jp' ? 'jp' : 'rf';
 	const taskDensity = store.state.taskDensity === 'comfortable' ? 'comfortable' : 'compact';
+	const { tierKey } = useSubscription();
+	const tierIcon = tierKey === 'free' ? 'default' : tierKey === 'great' ? 'great' : tierKey === 'ultra' ? 'ultra' : 'master';
 	const customIconInputRef = useRef(null);
 
 	useEffect(() => {
@@ -293,19 +290,16 @@ function GeneralTab() {
 			<section className="settings-panel">
 				<div className="settings-section-head">
 					<h3>Ball Icon</h3>
-					<p>Pick a built-in ball or upload your own image for the account button.</p>
+					<p>Pick your tier ball or upload your own image for the account button.</p>
 				</div>
 
 				<div className="account-avatar-grid">
-					{DEFAULT_ICONS.map((icon) => (
-						<AccountIconPreview
-							key={icon.key}
-							icon={icon.key}
-							label={icon.label}
-							selected={currentIcon === icon.key}
-							onClick={() => handleIconChange(icon.key)}
-						/>
-					))}
+					<AccountIconPreview
+						icon={tierIcon}
+						label={`${TIERS[tierKey].label} Ball`}
+						selected={currentIcon === tierIcon}
+						onClick={() => handleIconChange(tierIcon)}
+					/>
 
 					<AccountIconPreview
 						icon={String(currentIcon || '').startsWith('data:image/') ? currentIcon : null}

@@ -205,7 +205,7 @@ export function HomePage() {
 				</div>
 
 				<div className="home-command-copy">
-					<p className="home-command-kicker">PokemonPGC checklist hub</p>
+					<p className="home-command-kicker">Pokemon Post-Game Checklist</p>
 					<h1 id="home-title" className="home-command-title">
 						From the catch screen to the checklist.
 					</h1>
