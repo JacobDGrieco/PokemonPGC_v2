@@ -27,7 +27,7 @@ import {
 	const SECTIONS = [
 		{ id: "catching", title: "Gotta Catch 'Em All" },
 		{ id: "story", title: "Main Story" },
-		{ id: "trainers", title: "Trainers" },
+		{ id: "trainers", title: "Battle Trainers" },
 		{ id: "collectables", title: "Collectables" },
 		{ id: "thms", title: "TMs/HMs" },
 		{ id: "extraCredit", title: "Extra Credit" },

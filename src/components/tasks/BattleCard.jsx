@@ -33,11 +33,11 @@ function MoveCategoryIcon({ category }) {
 
 function MonSlot({ mon }) {
 	const [spriteError, setSpriteError] = useState(false);
-	const spriteSrc = typeof mon.sprite === 'function' ? mon.sprite({}) : mon.sprite;
+	const spriteSrc = typeof mon.img === 'function' ? mon.img({}) : mon.img;
 
 	return (
 		<div className="battle-card-mon">
-			<div className="battle-card-mon-header">
+			<div className="battle-card-mon-sprite-container">
 				{!spriteError && spriteSrc && (
 					<img
 						className="battle-card-mon-sprite"
@@ -46,15 +46,17 @@ function MonSlot({ mon }) {
 						onError={() => setSpriteError(true)}
 					/>
 				)}
+			</div>
+			<div className="battle-card-mon-header">
 				<div className="battle-card-mon-info">
 					<span className="battle-card-mon-species">{mon.name}</span>
 					<span className="battle-card-mon-level">Lv.{mon.level}</span>
 				</div>
-			</div>
-			<div className="battle-card-types">
-				{mon.types.map((type) => (
-					<TypeIcon key={type} type={type} />
-				))}
+				<div className="battle-card-types">
+					{mon.types.map((type) => (
+						<TypeIcon key={type} type={type} />
+					))}
+				</div>
 			</div>
 			{mon.moves && mon.moves.length > 0 && (
 				<div className="battle-card-moves">
@@ -126,7 +128,7 @@ export function BattleCard({ party, reward, anchorRef, onClose }) {
 		: { position: 'absolute', opacity: 0, transform: 'translateY(-4px)', pointerEvents: 'none', zIndex: 9999 };
 
 	return ReactDOM.createPortal(
-		<div ref={cardRef} className={`battle-card${pos ? ' battle-card-visible' : ''}`} style={cardStyle}>
+		<div ref={cardRef} className={`battle-card${pos ? ' battle-card-visible' : ''}`} style={cardStyle} onClick={(e) => e.stopPropagation()}>
 			{rewardText && <div className="battle-card-reward">Reward: {rewardText}</div>}
 			<div className="battle-card-party" data-party-size={party.length}>
 				{party.map((mon, i) => (

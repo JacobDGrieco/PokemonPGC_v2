@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { save, store } from '../../store.js';
-import { _ball } from '../../../data/helpers/images.js';
+import { _ball, _keyItem } from '../../../data/helpers/images.js';
 import {
 	applySyncsFromTask,
 	attachTooltip,
@@ -531,7 +531,7 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 									title="View rematch party"
 									onClick={(e) => { e.stopPropagation(); setOpenCard(openCard === 'rematch' ? null : 'rematch'); }}
 								>
-									VS
+									<img src={_keyItem("brilliantdiamond", 'vs-seeker')} alt="VS Seeker" />
 								</button>
 								{openCard === 'rematch' && (
 									<BattleCard
@@ -605,7 +605,7 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 										title="View rematch party"
 										onClick={(e) => { e.stopPropagation(); setOpenCard(openCard === 'rematch' ? null : 'rematch'); }}
 									>
-										VS
+										<img src={_keyItem(4, 'vs-recorder')} alt="VS Recorder" />
 									</button>
 									{openCard === 'rematch' && (
 										<BattleCard

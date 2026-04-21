@@ -61,7 +61,15 @@
 .battle-card-mon-header {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 	gap: 6px;
+}
+
+.battle-card-mon-sprite-container {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .battle-card-mon-sprite {
@@ -99,6 +107,7 @@
 .battle-card-types {
 	display: flex;
 	flex-wrap: wrap;
+	flex-direction: column;
 	gap: 4px;
 }
 
@@ -170,6 +179,12 @@
 .battle-card-btn:hover {
 	background: #3a3a50;
 	color: #fff;
+}
+
+.battle-card-btn img {
+	height: 14px;
+	width: auto;
+	object-fit: contain;
 }
 
 .battle-card-btn-rematch {

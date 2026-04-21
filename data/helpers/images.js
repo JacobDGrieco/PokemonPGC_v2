@@ -380,6 +380,65 @@ export function _ribbonByGen(genKey, name) {
 	return _assetPath(`ribbons/${gen}/${name}.png`);
 }
 
+export function _keyItem(gameKey, name) {
+	gameKey = resolveGen1GameVariant(gameKey);
+
+	let game = '';
+	switch (gameKey) {
+		case 'red':
+		case 'blue':
+		case 'yellow':
+		case 'gold':
+		case 'silver':
+		case 'crystal':
+		case 'ruby':
+		case 'sapphire':
+		case 'emerald':
+		case 'firered':
+		case 'leafgreen': game = 'gen1-3'; break;
+		case 'diamond':
+		case 'pearl':
+		case 'platinum':
+		case 'heartgold':
+		case 'soulsilver': game = 'gen4'; break;
+		case 'black':
+		case 'white':
+		case 'black2':
+		case 'white2': game = 'gen5'; break;
+		case 'x':
+		case 'y':
+		case 'omegaruby':
+		case 'alphasapphire': game = 'gen6'; break;
+		case 'sun':
+		case 'moon':
+		case 'ultrasun':
+		case 'ultramoon':
+		case 'letsgopikachu':
+		case 'letsgoeevee': game = 'gen7'; break;
+		case 'sword':
+		case 'swordioa':
+		case 'swordct':
+		case 'shield':
+		case 'shieldioa':
+		case 'shieldct': game = 'gen8'; break;
+		case 'brilliantdiamond':
+		case 'shiningpearl': game = 'gen8_2/bdsp'; break;
+		case 'legendsarceus': game = 'gen8_2/legendsarceus'; break;
+		case 'scarlet':
+		case 'scarlettm':
+		case 'scarletid':
+		case 'violet':
+		case 'violettm':
+		case 'violetid': game = 'gen9'; break;
+		case 'legendsza':
+		case 'legendszamd': game = 'gen9_2'; break;
+		case 'home': game = 'home'; break;
+		default: game = '';
+	}
+
+	return _assetPath(`items/key_items/${game}/${name}.png`);
+}
+
 export function _thms(type, genKey, name) {
 	const prefix = ITEM.includes(type) ? 'items' : '';
 
@@ -414,7 +473,6 @@ export const _formItem = (gen, name) => _imageByGen('form-items', gen, name);
 export const _fossil = (gen, name) => _imageByGen('fossils', gen, name);
 export const _heldItem = (gen, name) => _imageByGen('held-items', gen, name);
 export const _hm = (gen, name) => _thms('hms', gen, name);
-export const _keyItem = (gen, name) => _imageByGen('key_items', gen, name);
 export const _mail = (name) => _imageByGen('mails', 0, name);
 export const _medicine = (name) => _imageByGen('medicines', 0, name);
 export const _megaStone = (gen, name) => _imageByGen('mega-stones', gen, name);

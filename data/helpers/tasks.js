@@ -51,7 +51,7 @@ export function injectTasksMany(gameKeys, TASKS_BY_SECTION) {
     function bindPartySprites(party) {
       if (!Array.isArray(party)) return party;
       return party.map((mon) => mon && typeof mon === 'object'
-        ? { ...mon, sprite: mon.sprite ? bindGameKeyFn(mon.sprite) : mon.sprite }
+        ? { ...mon, img: mon.img ? bindGameKeyFn(mon.img) : mon.img }
         : mon
       );
     }
@@ -151,7 +151,7 @@ export function defineTasksMany(gameKeys, SECTIONS, TASKS_BY_SECTION) {
     function bindPartySprites(party) {
       if (!Array.isArray(party)) return party;
       return party.map((mon) => mon && typeof mon === 'object'
-        ? { ...mon, sprite: mon.sprite ? bindGameKeyFn(mon.sprite) : mon.sprite }
+        ? { ...mon, img: mon.img ? bindGameKeyFn(mon.img) : mon.img }
         : mon
       );
     }
