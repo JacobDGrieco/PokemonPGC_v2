@@ -1,5 +1,6 @@
 import "../tasks/red-blue.js";
 import "../layouts/red-blue.js";
+import "../trainers/red-blue.js";
 
 import "../tasks/yellow.js";
 import "../layouts/yellow.js";

@@ -18,6 +18,10 @@ import { defineLayoutsMany, P, C, parentRows, childRows, } from '../helpers/inde
 			[P(1)],
 			...childRows(1, 1, 9),
 		],
+		trainers: [
+			[P(1)],
+			...childRows(1, 1, 2),
+		],
 		collectables: [
 			[P(1)],
 			...childRows(1, 1, 13, 7),

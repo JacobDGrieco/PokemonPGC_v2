@@ -1,0 +1,194 @@
+/* ========================================================================== */
+/*  BATTLE CARD POPOVER                                                        */
+/* ========================================================================== */
+
+.battle-card {
+	background: #1a1a22;
+	border: 1px solid #3a3a4a;
+	border-radius: 10px;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+	padding: 14px;
+	width: 500px;
+	max-width: calc(100vw - 16px);
+	opacity: 0;
+	transform: translateY(-4px);
+	transition: opacity 150ms ease-out, transform 150ms ease-out;
+}
+
+.battle-card-visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.battle-card-reward {
+	font-size: 12px;
+	font-weight: 600;
+	color: #f5c644;
+	margin-bottom: 8px;
+	padding-bottom: 8px;
+	border-bottom: 1px solid #3a3a4a;
+}
+
+/* ========================================================================== */
+/*  PARTY GRID                                                                 */
+/* ========================================================================== */
+
+.battle-card-party {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 6px;
+}
+
+.battle-card-party[data-party-size="4"] {
+	grid-template-columns: repeat(2, 1fr);
+}
+
+/* ========================================================================== */
+/*  MON SLOT                                                                   */
+/* ========================================================================== */
+
+.battle-card-mon {
+	background: #25252f;
+	border: 1px solid #3a3a4a;
+	border-radius: 7px;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	min-width: 0;
+}
+
+.battle-card-mon-header {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.battle-card-mon-sprite {
+	width: 72px;
+	height: 72px;
+	object-fit: contain;
+	image-rendering: pixelated;
+	flex-shrink: 0;
+}
+
+.battle-card-mon-info {
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+}
+
+.battle-card-mon-species {
+	font-size: 13px;
+	font-weight: 700;
+	color: #f4f4f4;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.battle-card-mon-level {
+	font-size: 12px;
+	color: #aaa;
+}
+
+/* ========================================================================== */
+/*  TYPES                                                                      */
+/* ========================================================================== */
+
+.battle-card-types {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+}
+
+.battle-card-type-icon {
+	height: 18px;
+	width: auto;
+	object-fit: contain;
+	flex-shrink: 0;
+}
+
+/* ========================================================================== */
+/*  MOVES                                                                      */
+/* ========================================================================== */
+
+.battle-card-moves {
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
+	border-top: 1px solid #3a3a4a;
+	padding-top: 5px;
+	margin-top: 2px;
+}
+
+.battle-card-move {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	font-size: 11px;
+	color: #ddd;
+}
+
+.battle-card-move-cat {
+	width: 18px;
+	height: 18px;
+	object-fit: contain;
+	flex-shrink: 0;
+}
+
+.battle-card-move-name {
+	flex: 1;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.battle-card-move .battle-card-type-icon {
+	flex-shrink: 0;
+}
+
+/* ========================================================================== */
+/*  TRIGGER BUTTONS (in task rows)                                             */
+/* ========================================================================== */
+
+.battle-card-btn {
+	background: #2a2a38;
+	border: 1px solid #4a4a5a;
+	border-radius: 5px;
+	color: #ccc;
+	cursor: pointer;
+	font-size: 11px;
+	font-weight: 600;
+	padding: 2px 6px;
+	flex-shrink: 0;
+	line-height: 1.4;
+	min-width: 30px;
+	transition: background 100ms, color 100ms;
+}
+
+.battle-card-btn:hover {
+	background: #3a3a50;
+	color: #fff;
+}
+
+.battle-card-btn-rematch {
+	border-color: #6060a0;
+	color: #aaa8ff;
+}
+
+.battle-card-btn-rematch:hover {
+	background: #30304a;
+	color: #cccbff;
+}
+
+/* ========================================================================== */
+/*  BUTTON GROUP (in task rows)                                                */
+/* ========================================================================== */
+
+.battle-card-btns {
+	display: flex;
+	flex-direction: row;
+	gap: 4px;
+	flex-shrink: 0;
+}

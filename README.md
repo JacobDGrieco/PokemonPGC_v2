@@ -256,7 +256,7 @@ The project is heavily data-driven. Basically all content is defined in JS data 
 
 **API / Sync Layer (Optional)**
 
-- **Node.js API routes** under `frontend/api`.
+- **Node.js API routes** under `/api`.
 - **Prisma** ORM with a relational database backend.
 - Provides:
   - Account system (sign up / login)

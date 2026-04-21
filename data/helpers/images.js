@@ -105,9 +105,11 @@ function resolveNpcGameGroup(gameKey, gen) {
 	switch (String(game || '').toLowerCase()) {
 		case 'red':
 		case 'blue':
+			return 'red-blue';
 		case 'green':
+			return 'green';
 		case 'yellow':
-			return game;
+			return 'yellow';
 		case 'gold':
 		case 'silver':
 			return 'gold-silver';

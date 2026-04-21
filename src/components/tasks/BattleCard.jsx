@@ -1,0 +1,139 @@
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import ReactDOM from 'react-dom';
+import { _assetPath } from '../../utils/assetPath.js';
+
+function formatReward(reward) {
+	if (reward == null) return null;
+	if (typeof reward === 'number') return `₽${reward}`;
+	return String(reward);
+}
+
+function TypeIcon({ type }) {
+	const slug = type.toLowerCase() === 'poison' ? 'posion' : type.toLowerCase();
+	return (
+		<img
+			className="battle-card-type-icon"
+			src={_assetPath(`typings/${slug}.png`)}
+			alt={type}
+			title={type}
+		/>
+	);
+}
+
+function MoveCategoryIcon({ category }) {
+	return (
+		<img
+			className="battle-card-move-cat"
+			src={_assetPath(`move-types/${category}-4.png`)}
+			alt={category}
+			title={category}
+		/>
+	);
+}
+
+function MonSlot({ mon }) {
+	const [spriteError, setSpriteError] = useState(false);
+	const spriteSrc = typeof mon.sprite === 'function' ? mon.sprite({}) : mon.sprite;
+
+	return (
+		<div className="battle-card-mon">
+			<div className="battle-card-mon-header">
+				{!spriteError && spriteSrc && (
+					<img
+						className="battle-card-mon-sprite"
+						src={spriteSrc}
+						alt={mon.name}
+						onError={() => setSpriteError(true)}
+					/>
+				)}
+				<div className="battle-card-mon-info">
+					<span className="battle-card-mon-species">{mon.name}</span>
+					<span className="battle-card-mon-level">Lv.{mon.level}</span>
+				</div>
+			</div>
+			<div className="battle-card-types">
+				{mon.types.map((type) => (
+					<TypeIcon key={type} type={type} />
+				))}
+			</div>
+			{mon.moves && mon.moves.length > 0 && (
+				<div className="battle-card-moves">
+					{mon.moves.map((move, i) => (
+						<div key={i} className="battle-card-move">
+							<MoveCategoryIcon category={move.category} />
+							<span className="battle-card-move-name">{move.name}</span>
+							<TypeIcon type={move.type} />
+						</div>
+					))}
+				</div>
+			)}
+		</div>
+	);
+}
+
+export function BattleCard({ party, reward, anchorRef, onClose }) {
+	const cardRef = useRef(null);
+	const [pos, setPos] = useState(null);
+
+	useLayoutEffect(() => {
+		const anchor = anchorRef.current;
+		const card = cardRef.current;
+		if (!anchor || !card) return;
+
+		const anchorRect = anchor.getBoundingClientRect();
+		const cardHeight = card.offsetHeight;
+		const cardWidth = card.offsetWidth;
+		const spaceBelow = window.innerHeight - anchorRect.bottom;
+
+		const top =
+			spaceBelow >= cardHeight + 8
+				? anchorRect.bottom + window.scrollY + 8
+				: anchorRect.top + window.scrollY - cardHeight - 8;
+
+		const left = Math.max(8, Math.min(anchorRect.left, window.innerWidth - cardWidth - 8));
+
+		setPos({ top, left });
+	}, [anchorRef]);
+
+	const onCloseRef = useRef(onClose);
+	useEffect(() => { onCloseRef.current = onClose; }, [onClose]);
+
+	useEffect(() => {
+		const handleMouseDown = (e) => {
+			if (
+				cardRef.current &&
+				!cardRef.current.contains(e.target) &&
+				anchorRef.current &&
+				!anchorRef.current.contains(e.target)
+			) {
+				onCloseRef.current();
+			}
+		};
+		const handleKeyDown = (e) => {
+			if (e.key === 'Escape') onCloseRef.current();
+		};
+		document.addEventListener('mousedown', handleMouseDown);
+		document.addEventListener('keydown', handleKeyDown);
+		return () => {
+			document.removeEventListener('mousedown', handleMouseDown);
+			document.removeEventListener('keydown', handleKeyDown);
+		};
+	}, [anchorRef]);
+
+	const rewardText = formatReward(reward);
+	const cardStyle = pos
+		? { position: 'absolute', top: pos.top, left: pos.left, zIndex: 9999 }
+		: { position: 'absolute', opacity: 0, transform: 'translateY(-4px)', pointerEvents: 'none', zIndex: 9999 };
+
+	return ReactDOM.createPortal(
+		<div ref={cardRef} className={`battle-card${pos ? ' battle-card-visible' : ''}`} style={cardStyle}>
+			{rewardText && <div className="battle-card-reward">Reward: {rewardText}</div>}
+			<div className="battle-card-party" data-party-size={party.length}>
+				{party.map((mon, i) => (
+					<MonSlot key={i} mon={mon} />
+				))}
+			</div>
+		</div>,
+		document.body,
+	);
+}

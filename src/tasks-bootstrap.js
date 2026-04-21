@@ -262,6 +262,10 @@ export function bootstrapTasks(sectionId, tasksStore, { indexSectionTasks, index
 					if (s.tooltip && !t.tooltip) { t.tooltip = s.tooltip; changed = true; }
 					if (typeof s.noCenter === "boolean" && typeof t.noCenter !== "boolean") { t.noCenter = !!s.noCenter; changed = true; }
 					if (typeof s.startGame === "boolean" && typeof t.startGame !== "boolean") { t.startGame = !!s.startGame; changed = true; }
+					if (Array.isArray(s.party) && !Array.isArray(t.party)) { t.party = s.party; changed = true; }
+					if (Array.isArray(s.rematchParty) && !Array.isArray(t.rematchParty)) { t.rematchParty = s.rematchParty; changed = true; }
+					if (s.reward != null && t.reward == null) { t.reward = s.reward; changed = true; }
+					if (s.rematchReward != null && t.rematchReward == null) { t.rematchReward = s.rematchReward; changed = true; }
 				}
 				if (Array.isArray(t.children)) sync(t.children);
 			}
@@ -299,6 +303,10 @@ export function bootstrapTasks(sectionId, tasksStore, { indexSectionTasks, index
 		fashionSync: Array.isArray(t.fashionSync) ? [...t.fashionSync] : undefined,
 		tags: Array.isArray(t.tags) ? [...t.tags] : undefined,
 		startGame: t.startGame === true,
+		party: Array.isArray(t.party) ? t.party : undefined,
+		rematchParty: Array.isArray(t.rematchParty) ? t.rematchParty : undefined,
+		reward: t.reward != null ? t.reward : undefined,
+		rematchReward: t.rematchReward != null ? t.rematchReward : undefined,
 	});
 
 	const cloned = seed.map(cloneTaskDeep);

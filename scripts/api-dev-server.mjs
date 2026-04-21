@@ -15,7 +15,6 @@ const __dirname = path.dirname(__filename);
 const frontendRoot = path.resolve(__dirname, "..");
 
 dotenv.config({ path: path.join(frontendRoot, ".env") });
-dotenv.config({ path: path.join(frontendRoot, ".env.local"), override: true });
 
 const PORT = Number(process.env.PPGC_API_PORT || process.env.API_PORT || 3000);
 

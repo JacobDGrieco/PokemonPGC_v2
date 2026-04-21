@@ -21,6 +21,7 @@ import {
 	setEitherChoice,
 	setMultiOptionDone,
 } from '../../react-bridge/taskApi.js';
+import { BattleCard } from './BattleCard.jsx';
 
 const TOOLTIP_MARKER_SRC = _ball(4, 'poke-ball');
 
@@ -361,6 +362,11 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 	const isMulti = isMultiTask(task);
 	const isStandardToggleTask = !isEither && !isMulti && !hasSlider;
 	const noCenterSlider = forceInline && hasSlider;
+	const hasBattleCard = Array.isArray(task.party) && task.party.length > 0;
+	const hasRematchCard = Array.isArray(task.rematchParty) && task.rematchParty.length > 0;
+	const [openCard, setOpenCard] = useState(null);
+	const battleBtnRef = useRef(null);
+	const rematchBtnRef = useRef(null);
 
 	const commit = ({ syncTask = null, syncValue = null } = {}) => {
 		recomputeAncestorDone(task, index);
@@ -431,7 +437,7 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 
 	const handleItemClick = (event) => {
 		if (!isStandardToggleTask) return;
-		if (event.target.closest('input, .tiered, .task-either, .task-either-choice, .task-multi, .task-multi-option')) return;
+		if (event.target.closest('input, .tiered, .task-either, .task-either-choice, .task-multi, .task-multi-option, .battle-card-btn')) return;
 		event.preventDefault();
 		handleCheckboxChange(!task.done);
 	};
@@ -495,6 +501,50 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 					{!isSubtask && (hasChildren || forceInline) ? imageWrap : null}
 				</label>
 				{tieredControls}
+				{(hasBattleCard || hasRematchCard) && (
+					<div className="battle-card-btns">
+						{hasBattleCard && (
+							<>
+								<button
+									ref={battleBtnRef}
+									className="battle-card-btn"
+									title="View party"
+									onClick={(e) => { e.stopPropagation(); setOpenCard(openCard === 'party' ? null : 'party'); }}
+								>
+									⚔
+								</button>
+								{openCard === 'party' && (
+									<BattleCard
+										party={task.party}
+										reward={task.reward}
+										anchorRef={battleBtnRef}
+										onClose={() => setOpenCard(null)}
+									/>
+								)}
+							</>
+						)}
+						{hasRematchCard && (
+							<>
+								<button
+									ref={rematchBtnRef}
+									className="battle-card-btn battle-card-btn-rematch"
+									title="View rematch party"
+									onClick={(e) => { e.stopPropagation(); setOpenCard(openCard === 'rematch' ? null : 'rematch'); }}
+								>
+									VS
+								</button>
+								{openCard === 'rematch' && (
+									<BattleCard
+										party={task.rematchParty}
+										reward={task.rematchReward}
+										anchorRef={rematchBtnRef}
+										onClose={() => setOpenCard(null)}
+									/>
+								)}
+							</>
+						)}
+					</div>
+				)}
 			</div>
 		);
 	}
@@ -525,6 +575,50 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 					/>
 					<TaskLabel task={task} className="small task-item-text" style={{ flex: 1 }} />
 					{tieredControls}
+					{(hasBattleCard || hasRematchCard) && (
+						<div className="battle-card-btns">
+							{hasBattleCard && (
+								<>
+									<button
+										ref={battleBtnRef}
+										className="battle-card-btn"
+										title="View party"
+										onClick={(e) => { e.stopPropagation(); setOpenCard(openCard === 'party' ? null : 'party'); }}
+									>
+										⚔
+									</button>
+									{openCard === 'party' && (
+										<BattleCard
+											party={task.party}
+											reward={task.reward}
+											anchorRef={battleBtnRef}
+											onClose={() => setOpenCard(null)}
+										/>
+									)}
+								</>
+							)}
+							{hasRematchCard && (
+								<>
+									<button
+										ref={rematchBtnRef}
+										className="battle-card-btn battle-card-btn-rematch"
+										title="View rematch party"
+										onClick={(e) => { e.stopPropagation(); setOpenCard(openCard === 'rematch' ? null : 'rematch'); }}
+									>
+										VS
+									</button>
+									{openCard === 'rematch' && (
+										<BattleCard
+											party={task.rematchParty}
+											reward={task.rematchReward}
+											anchorRef={rematchBtnRef}
+											onClose={() => setOpenCard(null)}
+										/>
+									)}
+								</>
+							)}
+						</div>
+					)}
 				</>
 			)}
 		</div>
