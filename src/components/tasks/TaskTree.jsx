@@ -22,6 +22,7 @@ import {
 	setMultiOptionDone,
 } from '../../react-bridge/taskApi.js';
 import { BattleCard } from './BattleCard.jsx';
+import { useSubscription } from '../../hooks/useSubscription.js';
 
 const TOOLTIP_MARKER_SRC = _ball(4, 'poke-ball');
 
@@ -61,19 +62,19 @@ function getTaskTooltipHtml(task) {
 	return `<strong>${task.text}</strong>`;
 }
 
-function TaskLabel({ task, className = '', style, dataId }) {
+function TaskLabel({ task, className = '', style, dataId, showTooltip = true }) {
 	const markerRef = useRef(null);
 
 	useEffect(() => {
-		if (!hasTooltip(task) || !markerRef.current) return undefined;
+		if (!showTooltip || !hasTooltip(task) || !markerRef.current) return undefined;
 		attachTooltip(markerRef.current, () => getTaskTooltipHtml(task));
 		return undefined;
-	}, [task]);
+	}, [task, showTooltip]);
 
 	return (
 		<div className={className} style={style} data-id={dataId}>
 			<span className="task-item-text-label">{task.text}</span>
-			{hasTooltip(task) ? <img ref={markerRef} className="task-tooltip-marker" src={TOOLTIP_MARKER_SRC} alt="" aria-hidden="true" /> : null}
+			{showTooltip && hasTooltip(task) ? <img ref={markerRef} className="task-tooltip-marker" src={TOOLTIP_MARKER_SRC} alt="" aria-hidden="true" /> : null}
 		</div>
 	);
 }
@@ -132,17 +133,18 @@ function applyEitherChoiceSyncChanges(changes) {
 	}
 }
 
-function useTaskTooltip(task, sectionId) {
+function useTaskTooltip(task, sectionId, enabled) {
 	const ref = useRef(null);
 
 	useEffect(() => {
+		if (!enabled) return undefined;
 		const node = ref.current;
 		if (!node) return undefined;
 
 		attachTooltip(node, () => getTaskTooltipHtml(task));
 
 		return undefined;
-	}, [task, sectionId]);
+	}, [task, sectionId, enabled]);
 
 	return ref;
 }
@@ -356,7 +358,10 @@ function TieredControls({ task, onInputCommit, onChangeCommit, showValue = true 
 }
 
 function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasChildren, forceInline, onMutate }) {
-	const tooltipRef = useTaskTooltip(task, sectionId);
+	const { hasFeature } = useSubscription();
+	const canUseTooltips = hasFeature('tooltips');
+	const canUseBattleCards = hasFeature('battle-cards');
+	const tooltipRef = useTaskTooltip(task, sectionId, canUseTooltips);
 	const hasSlider = isTieredTask(task);
 	const isEither = isEitherTask(task);
 	const isMulti = isMultiTask(task);
@@ -467,14 +472,14 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 
 	const textBlock = isEither ? (
 		<>
-			<TaskLabel task={task} className="small task-item-text task-either-title" dataId={task.id} />
+			<TaskLabel task={task} className="small task-item-text task-either-title" dataId={task.id} showTooltip={canUseTooltips} />
 			<div className="task-either-center">
 				<EitherChoices task={task} onChange={handleEitherChange} />
 			</div>
 		</>
 	) : isMulti ? (
 		<>
-			<TaskLabel task={task} className="small task-item-text task-either-title" dataId={task.id} />
+			<TaskLabel task={task} className="small task-item-text task-either-title" dataId={task.id} showTooltip={canUseTooltips} />
 			<div className="task-either-center">
 				<MultiChoices task={task} onToggle={handleMultiToggle} />
 			</div>
@@ -487,7 +492,7 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 				onClick={(event) => event.stopPropagation()}
 				onChange={(event) => handleCheckboxChange(event.currentTarget.checked)}
 			/>
-			<TaskLabel task={task} className="small task-item-text" dataId={task.id} />
+			<TaskLabel task={task} className="small task-item-text" dataId={task.id} showTooltip={canUseTooltips} />
 		</>
 	);
 
@@ -501,7 +506,7 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 					{!isSubtask && (hasChildren || forceInline) ? imageWrap : null}
 				</label>
 				{tieredControls}
-				{(hasBattleCard || hasRematchCard) && (
+				{canUseBattleCards && (hasBattleCard || hasRematchCard) && (
 					<div className="battle-card-btns">
 						{hasBattleCard && (
 							<>
@@ -553,14 +558,14 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 		<div ref={tooltipRef} className={`task-row${isMulti ? ' task-multi-host' : ''}${isStandardToggleTask ? ' task-toggleable' : ''}`} data-task-id={task.id} data-task-done={task.done ? '1' : '0'} id={`task-${task.id}`} onClick={handleItemClick}>
 			{isEither ? (
 				<>
-					<TaskLabel task={task} className="small task-item-text task-either-title" style={{ width: '100%', textAlign: 'center' }} />
+					<TaskLabel task={task} className="small task-item-text task-either-title" style={{ width: '100%', textAlign: 'center' }} showTooltip={canUseTooltips} />
 					<div className="task-either-center" style={{ width: '100%' }}>
 						<EitherChoices task={task} onChange={handleEitherChange} />
 					</div>
 				</>
 			) : isMulti ? (
 				<>
-					<TaskLabel task={task} className="small task-item-text task-either-title" style={{ width: '100%', textAlign: 'center' }} />
+					<TaskLabel task={task} className="small task-item-text task-either-title" style={{ width: '100%', textAlign: 'center' }} showTooltip={canUseTooltips} />
 					<div className="task-either-center" style={{ width: '100%' }}>
 						<MultiChoices task={task} onToggle={handleMultiToggle} />
 					</div>
@@ -573,9 +578,9 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 						onClick={(event) => event.stopPropagation()}
 						onChange={(event) => handleCheckboxChange(event.currentTarget.checked)}
 					/>
-					<TaskLabel task={task} className="small task-item-text" style={{ flex: 1 }} />
+					<TaskLabel task={task} className="small task-item-text" style={{ flex: 1 }} showTooltip={canUseTooltips} />
 					{tieredControls}
-					{(hasBattleCard || hasRematchCard) && (
+					{canUseBattleCards && (hasBattleCard || hasRematchCard) && (
 						<div className="battle-card-btns">
 							{hasBattleCard && (
 								<>

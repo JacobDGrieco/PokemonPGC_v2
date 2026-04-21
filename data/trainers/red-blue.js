@@ -16,7 +16,7 @@ import {
 			{
 				id: 1, text: "Defeat Route 22 Trainers", children: [
 					{
-						id: 1, text: "Rival (Blue)", img: ({ gameKey }) => npc(gameKey, "blue_1"), reward: 280, party: [
+						id: 1, text: "Blue", img: ({ gameKey }) => npc(gameKey, "blue_1"), reward: 280, party: [
 							{
 								name: "Pidgey", level: 9, types: ["Normal", "Flying"], img: ({ gameKey }) => baseSprite(gameKey, 16), moves: [
 									{ name: "Gust", type: "Flying", category: "special" },
