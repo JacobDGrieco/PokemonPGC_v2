@@ -34,11 +34,12 @@ import {
 	const TASKS_BY_SECTION = {
 		catching: [
 			{
-				id: 1, text: "Catch all the Legendaries", children: [
-					{ id: 1, text: "Catch Okidogi", img: ({ gameKey }) => baseSprite(gameKey, 1014), tooltip: "Poison/Fighting — Level 65\nRe-catchable after story in original battle location" },
-					{ id: 2, text: "Catch Munkidori", img: ({ gameKey }) => baseSprite(gameKey, 1015), tooltip: "Poison/Psychic — Level 65\nRe-catchable after story in original battle location" },
-					{ id: 3, text: "Catch Fezandipiti", img: ({ gameKey }) => baseSprite(gameKey, 1016), tooltip: "Poison/Fairy — Level 65\nRe-catchable after story in original battle location" },
-					{ id: 4, text: "Catch Ogerpon", img: ({ gameKey }) => baseSprite(gameKey, 1017), tooltip: "Grass (Teal Mask) — joins your team after the story\nOther mask forms change Ogerpon's secondary type" },
+				id: 1, text: "Catch all the Legendaries/Mythicals", children: [
+					{ id: 1, text: "Catch Okidogi", img: ({ gameKey }) => baseSprite(gameKey, 1014), tooltip: "Re-catchable after story in original battle location" },
+					{ id: 2, text: "Catch Munkidori", img: ({ gameKey }) => baseSprite(gameKey, 1015), tooltip: "Re-catchable after story in original battle location" },
+					{ id: 3, text: "Catch Fezandipiti", img: ({ gameKey }) => baseSprite(gameKey, 1016), tooltip: "Re-catchable after story in original battle location" },
+					{ id: 4, text: "Catch Ogerpon", img: ({ gameKey }) => baseSprite(gameKey, 1017), tooltip: "Other mask forms change Ogerpon's secondary type" },
+					{ id: 5, text: "Catch Pecharunt", img: ({ gameKey }) => baseSprite(gameKey, 1025) },
 				],
 			},
 			{

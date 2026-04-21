@@ -9,6 +9,7 @@ import {
 	_task,
 	_frontSprite,
 	defineTasksMany,
+	range,
 } from '../helpers/index.js';
 
 (() => {
@@ -206,10 +207,8 @@ import {
 			{
 				id: 2, text: "Obtain all Key Items", children: [
 					{ id: 1, text: "Adventure Guide", img: () => keyItem("adventure-guide") },
-					{ id: 2, text: "Briar's Book", img: () => keyItem("briars-book") },
-					{ id: 3, text: "Catching Charm", img: () => keyItem("catching-charm"), tooltip: "Obtained from Jacq after registering 30 Pokémon species in the Paldea Pokédex\nIncreases the chance of catching Pokémon on the first try" },
-					{ id: 4, text: "Scarlet/Violet Book" },
-					{ id: 5, text: "Shiny Charm", img: () => keyItem("shiny-charm"), tooltip: "Gift from Jacq in the Biology Lab after catching all 400 Paldea Pokédex entries" },
+					{ id: 2, text: "Catching Charm", img: () => keyItem("catching-charm"), tooltip: "Obtained from Jacq after registering 30 Pokémon species in the Paldea Pokédex\nIncreases the chance of catching Pokémon on the first try" },
+					{ id: 3, text: "Shiny Charm", img: () => keyItem("shiny-charm"), tooltip: "Gift from Jacq in the Biology Lab after catching all 400 Paldea Pokédex entries" },
 				],
 			},
 			{
