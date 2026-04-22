@@ -1,6 +1,7 @@
 import {
 	_hm,
 	_keyItem,
+	_formItem,
 	_tm,
 	_npc,
 	_task,
@@ -18,6 +19,7 @@ import {
 	const task = (gameKey, name) => _task(gameKey, name);
 	const npc = (gameKey, name) => _npc(gameKey, name);
 	const keyItem = (name) => _keyItem(gen, name);
+	const formItem = (name) => _formItem(gen, name);
 	const hm = (type) => _hm(gen, type);
 	const tm = (type) => _tm(gen, type);
 
@@ -103,7 +105,7 @@ import {
 			{ id: 1, text: "Obtain the National PokeDex" },
 			{ id: 2, text: "Obtain the Mystery Gift option", },
 			{
-				id: 3, text: "Obtain the Black 5-Star Trainer Card", noCenter: true, children: [
+				id: 3, text: "Obtain the Black 5-Star Trainer Card", children: [
 					{ id: 1, text: "Defeat the Elite 4/Champion" },
 					{ id: 2, text: "Complete the National PokeDex (484)" },
 					{ id: 3, text: "Get a 100 Win Streak in the Battle Tower" },
@@ -112,7 +114,7 @@ import {
 				],
 			},
 			{
-				id: 4, text: "Obtain all the Poketch Apps", noCenter: true, children: [
+				id: 4, text: "Obtain all the Poketch Apps", children: [
 					{ id: 1, text: "Digital Clock" },
 					{ id: 2, text: "Memo Pad" },
 					{ id: 3, text: "Your Party" },
@@ -142,8 +144,9 @@ import {
 			},
 		],
 		collectables: [
+			{ id: 1, text: "Obtain the Diploma", tooltip: "Hotel Grand Lake - Valor Lakefront\nReward for completing the Sinnoh Pokedex" },
 			{
-				id: 1, text: "Obtain all extra Key Items", children: [
+				id: 2, text: "Obtain all extra Key Items", children: [
 					{ id: 1, text: "Bicycle", img: () => keyItem("bicycle") },
 					{ id: 2, text: "Coin Case", img: () => keyItem("coin-case") },
 					{ id: 3, text: "Explorer Kit", img: () => keyItem("explorer-kit") },
@@ -160,12 +163,12 @@ import {
 				],
 			},
 			{
-				id: 2, text: "Collect all Legendary items", children: [
+				id: 3, text: "Collect all Legendary items", children: [
 					{ id: 1, text: "Gracidea", img: () => formItem("graceidea") },
 				],
 			},
 			{
-				id: 2, text: "Obtain all Mr. Goods Secret Base items", img: npc("mr-goods"), children: [
+				id: 4, text: "Obtain all Mr. Goods Secret Base items", img: npc("mr-goods"), children: [
 					{ id: 1, text: "Beauty Cup", img: () => keyItem("beauty-cup") },
 					{ id: 2, text: "Cool Cup", img: () => keyItem("cool-cup") },
 					{ id: 3, text: "Clever Cup", img: () => keyItem("clever-cup") },
@@ -179,7 +182,6 @@ import {
 					{ id: 11, text: "Globe", img: () => keyItem("globe") },
 				]
 			},
-			{ id: 3, text: "Obtain the Diploma", tooltip: "Hotel Grand Lake - Valor Lakefront\nReward for completing the Sinnoh Pokedex" },
 		],
 		thms: [
 			{

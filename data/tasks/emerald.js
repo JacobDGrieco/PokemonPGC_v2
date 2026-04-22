@@ -47,8 +47,8 @@ import {
 					{ id: 4, text: "Catch Regirock", img: ({ gameKey }) => baseSprite(gameKey, 377), },
 					{ id: 5, text: "Catch Regice", img: ({ gameKey }) => baseSprite(gameKey, 378), },
 					{ id: 6, text: "Catch Registeel", img: ({ gameKey }) => baseSprite(gameKey, 379), },
-					{ id: 7, text: "Catch/Trade Latias", img: ({ gameKey }) => baseSprite(gameKey, 380), }, 	// Need to set to Catch or Trade games
-					{ id: 8, text: "Catch/Trade Latios", img: ({ gameKey }) => baseSprite(gameKey, 381), },		// Need to set to Catch or Trade games
+					{ id: 7, text: "Catch Latias", img: ({ gameKey }) => baseSprite(gameKey, 380), },
+					{ id: 8, text: "Catch Latios", img: ({ gameKey }) => baseSprite(gameKey, 381), },
 					{ id: 9, text: "Catch Lugia", img: ({ gameKey }) => baseSprite(gameKey, 249), },
 					{ id: 10, text: "Catch Ho-Oh", img: ({ gameKey }) => baseSprite(gameKey, 250), },
 				],
@@ -90,8 +90,9 @@ import {
 			},
 		],
 		activities: [
+			{ id: 1, text: "Complete all chambers of the Trick House", type: "tiered", tiers: [range(1, 8)], },
 			{
-				id: 1, text: "Master all the Contests", noCenter: true, children: [
+				id: 1, text: "Master all the Contests", children: [
 					{ id: 1, text: "Beauty Contests", img: () => ribbon("beauty-master"), type: "tiered", tiers: ["Normal", "Super", "Hyper", "Master"], },
 					{ id: 2, text: "Tough Contests", img: () => ribbon("tough-master"), type: "tiered", tiers: ["Normal", "Super", "Hyper", "Master"], },
 					{ id: 3, text: "Cute Contests", img: () => ribbon("cute-master"), type: "tiered", tiers: ["Normal", "Super", "Hyper", "Master"], },
@@ -99,10 +100,19 @@ import {
 					{ id: 5, text: "Smart Contests", img: () => ribbon("smart-master"), type: "tiered", tiers: ["Normal", "Super", "Hyper", "Master"], },
 				],
 			},
-			{ id: 2, text: "Complete all chambers of the Trick House", type: "tiered", tiers: [range(1, 8)], },
+			{
+				id: 3, text: "Complete the Lilycove Museum contest exhibit", tooltip: "High-scoring Master Rank wins can add paintings to the Lilycove Museum. Completing all five categories unlocks the Glass Ornament.", children: [
+					{ id: 1, text: "Beauty Painting", img: () => ribbon("beauty-master") },
+					{ id: 2, text: "Tough Painting", img: () => ribbon("tough-master") },
+					{ id: 3, text: "Cute Painting", img: () => ribbon("cute-master") },
+					{ id: 4, text: "Cool Painting", img: () => ribbon("cool-master") },
+					{ id: 5, text: "Smart Painting", img: () => ribbon("smart-master") },
+					{ id: 6, text: "Glass Ornament", img: () => decoration("glass-ornament") },
+				],
+			},
 		],
 		battle: [
-			{ id: 1, text: "Rematch Steven at Meteor Crater", noCenter: true },
+			{ id: 1, text: "Rematch Steven at Meteor Crater" },
 			{
 				id: 2, text: "Complete all modes of Trainer Hill", children: [
 					{ id: 1, text: "Normal Mode" },
@@ -142,9 +152,9 @@ import {
 			},
 		],
 		upgrades: [
-			{ id: 1, text: "Obtain the National PokeDex", noCenter: true },
+			{ id: 1, text: "Obtain the National PokeDex" },
 			{
-				id: 2, text: "Obtain the Gold 4-Star Trainer Card", noCenter: true, children: [
+				id: 2, text: "Obtain the Gold 4-Star Trainer Card", children: [
 					{ id: 1, text: "Defeat the Elite 4/Champion" },
 					{ id: 2, text: "Win all Master Rank Contests" },
 					{ id: 3, text: "Defeat the 50 trainer challenge in the Battle Tower" },
@@ -153,8 +163,10 @@ import {
 			},
 		],
 		collectables: [
+			{ id: 1, text: "Obtain the Diploma", tooltip: "Cove Lily Motel - Lilycove City\nReward for completing the Hoenn Pokedex" },
+			{ id: 2, text: "Find all hidden items with the Item Finder", img: () => keyItem("item-finder"), type: "tiered", tiers: [range(1, 97)], },
 			{
-				id: 1, text: "Obtain all extra Key Items", children: [
+				id: 3, text: "Obtain all extra Key Items", children: [
 					{ id: 1, text: "Exp. Share", img: () => heldItem("exp-share") },
 					{ id: 2, text: "Go-Goggles", img: () => keyItem("go-goggles") },
 					{ id: 3, text: "Good Rod", img: () => keyItem("good-rod") },
@@ -166,13 +178,6 @@ import {
 					{ id: 9, text: "Wailmer Pail", img: () => keyItem("wailmer-pail") },
 				],
 			},
-			{
-				id: 2, text: "Obtain all items from collecting soot", children: [
-					{ id: 1, text: "Pretty Chair", img: () => decoration("pretty-chair"), tooltip: "Route 113 (Glass Workshop)\n6000 steps" },
-					{ id: 2, text: "Pretty Desk", img: () => decoration("pretty-desk"), tooltip: "Route 113 (Glass Workshop)\n8000 steps" },
-				],
-			},
-			{ id: 3, text: "Find all hidden items with the Item Finder", img: () => keyItem("item-finder"), noCenter: true, type: "tiered", tiers: [range(1, 97)], },
 			{
 				id: 4, text: "Obtain all Secret Base decorations", children: [
 					{ id: 1, text: "Small Desk", img: () => decoration("small-desk"), tooltip: "Fortree City (desk and chair shop)\n$3000" },
@@ -293,7 +298,6 @@ import {
 					{ id: 116, text: "Wailmer Doll", img: () => decoration("wailmer-doll"), tooltip: "Sootopolis City / Lilycove Department Store (clear-out sale)\n$10000" },
 				],
 			},
-			{ id: 5, text: "Obtain the Diploma", tooltip: "Cove Lily Motel - Lilycove City\nReward for completing the Hoenn Pokedex" },
 		],
 		thms: [
 			{

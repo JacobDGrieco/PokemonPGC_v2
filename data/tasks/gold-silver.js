@@ -10,7 +10,7 @@ import {
 	_frontSprite,
 	_frontSpriteShiny,
 	defineTasksMany,
-	overrideTaskChildTexts,
+	overrideTasks,
 	range,
 } from '../helpers/index.js';
 
@@ -31,7 +31,7 @@ import {
 	const SECTIONS = [
 		{ id: "catching", title: "Gotta Catch 'Em All" },
 		{ id: "story", title: "Main Story" },
-		{ id: "sideQuests", title: "Side Quests" },
+		{ id: "activities", title: "Activities" },
 		{ id: "upgrades", title: "Upgrades" },
 		{ id: "collectables", title: "Collectables" },
 		{ id: "thms", title: "TMs/HMs" },
@@ -96,7 +96,7 @@ import {
 			},
 			{
 				id: 2, text: "Complete the Epilogue: Explore the Kanto Region", children: [
-					{ id: 1, text: "Restore power to the Kanto Power Plant", img: ({ gameKey }) => location(gameKey, "kanto-power-plant") },
+					{ id: 1, text: "Kanto Power Plant", img: ({ gameKey }) => location(gameKey, "kanto-power-plant") },
 					{ id: 2, text: "Find Blue", img: ({ gameKey }) => npc(gameKey, "blue"), tooltip: "Can be found on Cinnabar Island" },
 					{ id: 3, text: "Defeat Blaine", img: ({ gameKey }) => npc(gameKey, "blaine"), tooltip: "Can be found at the Seafoam Islands", },
 					{ id: 4, text: "Defeat Red", img: ({ gameKey }) => npc(gameKey, "red"), tooltip: "Can be found atop Mt. Silver" },
@@ -115,7 +115,7 @@ import {
 				],
 			},
 		],
-		sideQuests: [
+		activities: [
 			{ id: 1, text: "Show Elm the hatched Egg", img: ({ gameKey }) => npc(gameKey, "elm"), tooltip: "You get an Everstone in return" },
 			{ id: 2, text: "Deliver the mail for Randy to his friend", img: ({ gameKey }) => npc(gameKey, "randy"), tooltip: "Randy (Route 36), Friend (Route 31)" },
 			{ id: 3, text: "Cure the Miltank", img: ({ gameKey }) => baseSprite(gameKey, 242), tooltip: "Route 39 - Miltank Farm" },
@@ -151,8 +151,10 @@ import {
 			},
 		],
 		collectables: [
+			{ id: 1, text: "Obtain the Diploma", tooltip: "Celadon Condominiums - Game Freak HQ\nReward for completing the Johto Pokedex" },
+			{ id: 2, text: "Find all hidden items with the Item Finder", img: () => keyItem("item-finder"), type: "tiered", tiers: [range(1, 88)], },
 			{
-				id: 1, text: "Obtain all extra Key Items", children: [
+				id: 3, text: "Obtain all extra Key Items", children: [
 					{ id: 1, text: "Bike", img: () => keyItem("bicycle") },
 					{ id: 2, text: "Basement Key", img: () => keyItem("basement-key") },
 					{ id: 3, text: "Card Key", img: () => keyItem("card-key") },
@@ -168,8 +170,6 @@ import {
 					{ id: 13, text: "Super Rod", img: () => keyItem("super-rod") },
 				],
 			},
-			{ id: 2, text: "Find all hidden items with the Item Finder", img: () => keyItem("item-finder"), noCenter: true, type: "tiered", tiers: [range(1, 88)], },
-			{ id: 3, text: "Obtain the Diploma", tooltip: "Celadon Condominiums - Game Freak HQ\nReward for completing the Johto Pokedex" },
 		],
 		thms: [
 			{

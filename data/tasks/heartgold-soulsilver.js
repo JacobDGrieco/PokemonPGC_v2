@@ -126,7 +126,7 @@ import {
 			},
 			{
 				id: 3, text: "Complete the Epilogue: Explore the Kanto Region", children: [
-					{ id: 1, text: "Restore power to the Kanto Power Plant", img: ({ gameKey }) => location(gameKey, "kanto-power-plant") },
+					{ id: 1, text: "Kanto Power Plant", img: ({ gameKey }) => location(gameKey, "kanto-power-plant") },
 					{ id: 2, text: "Find Blue", img: ({ gameKey }) => npc(gameKey, "blue"), tooltip: "Can be found on Cinnabar Island" },
 					{ id: 3, text: "Defeat Blaine", img: ({ gameKey }) => npc(gameKey, "blaine"), tooltip: "Can be found at the Seafoam Islands", },
 					{ id: 4, text: "Defeat Red", img: ({ gameKey }) => npc(gameKey, "red"), tooltip: "Can be found atop Mt. Silver" },
@@ -286,6 +286,24 @@ import {
 		],
 		collectables: [
 			{ id: 1, text: "Obtain the Diploma", tooltip: "Celadon Condominiums - Game Freak HQ\nReward for completing the Johto Pokedex" },
+			{ id: 2, text: "Find all hidden items with the Item Finder", img: () => keyItem("item-finder"), type: "tiered", tiers: [range(1, 88)], },
+			{
+				id: 3, text: "Obtain all extra Key Items", children: [
+					{ id: 1, text: "Bike", img: () => keyItem("bicycle") },
+					{ id: 2, text: "Basement Key", img: () => keyItem("basement-key") },
+					{ id: 3, text: "Card Key", img: () => keyItem("card-key") },
+					{ id: 4, text: "Coin Case", img: () => keyItem("coin-case") },
+					{ id: 5, text: "Exp. Share", img: () => heldItem("exp-share") },
+					{ id: 6, text: "Good Rod", img: () => keyItem("good-rod") },
+					{ id: 7, text: "Item Finder", img: () => keyItem("item-finder") },
+					{ id: 8, text: "Old Rod", img: () => keyItem("old-rod") },
+					{ id: 9, text: "Pass", img: () => keyItem("pass") },
+					{ id: 10, text: "Rainbow Wing", img: () => keyItem("rainbow-wing") },
+					{ id: 11, text: "Silver Wing", img: () => keyItem("silver-wing") },
+					{ id: 12, text: "Squirtbottle", img: () => keyItem("squirt-bottle") },
+					{ id: 13, text: "Super Rod", img: () => keyItem("super-rod") },
+				],
+			},
 		],
 		thms: [
 			{

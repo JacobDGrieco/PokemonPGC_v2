@@ -9,7 +9,7 @@ import {
 	_badges,
 	_frontSprite,
 	defineTasksMany,
-	overrideTaskChildTexts,
+	overrideTasks,
 	range,
 } from '../helpers/index.js';
 
@@ -112,7 +112,7 @@ import {
 					{ id: 3, text: "Cute Painting", img: () => ribbon("cute-master") },
 					{ id: 4, text: "Cool Painting", img: () => ribbon("cool-master") },
 					{ id: 5, text: "Smart Painting", img: () => ribbon("smart-master") },
-					{ id: 6, text: "Get the Glass Ornament", img: () => decoration("glass-ornament") },
+					{ id: 6, text: "Glass Ornament", img: () => decoration("glass-ornament") },
 				],
 			},
 		],
@@ -121,7 +121,7 @@ import {
 			{ id: 2, text: "Defeat the Winstrate Household", tooltip: "Route 111" },
 		],
 		upgrades: [
-			{ id: 1, text: "Obtain the National PokeDex", noCenter: true },
+			{ id: 1, text: "Obtain the National PokeDex" },
 			{
 				id: 2, text: "Obtain the Gold 4-Star Trainer Card", children: [
 					{ id: 1, text: "Defeat the Elite 4/Champion" },
@@ -132,8 +132,10 @@ import {
 			},
 		],
 		collectables: [
+			{ id: 1, text: "Obtain the Diploma", tooltip: "Cove Lily Motel - Lilycove City\nReward for completing the Hoenn Pokedex" },
+			{ id: 2, text: "Find all hidden items with the Item Finder", img: () => keyItem("item-finder"), type: "tiered", tiers: [range(1, 97)], },
 			{
-				id: 1, text: "Obtain all extra Key Items", children: [
+				id: 3, text: "Obtain all extra Key Items", children: [
 					{ id: 1, text: "Acro Bike", img: () => keyItem("acro-bike") },
 					{ id: 2, text: "Basement Key", img: () => keyItem("basement-key") },
 					{ id: 3, text: "Coin Case", img: () => keyItem("coin-case") },
@@ -154,9 +156,8 @@ import {
 					{ id: 18, text: "Wailmer Pail", img: () => keyItem("wailmer-pail") },
 				],
 			},
-			{ id: 2, text: "Find all hidden items with the Item Finder", img: () => keyItem("item-finder"), noCenter: true, type: "tiered", tiers: [range(1, 97)], },
 			{
-				id: 3, text: "Obtain all Secret Base decorations", children: [
+				id: 4, text: "Obtain all Secret Base decorations", children: [
 					{ id: 1, text: "Small Desk", img: () => decoration("small-desk"), tooltip: "Fortree City (desk and chair shop)\n$3000" },
 					{ id: 2, text: "Pokémon Desk", img: () => decoration("pokemon-desk"), tooltip: "Fortree City (desk and chair shop)\n$3000" },
 					{ id: 3, text: "Heavy Desk", img: () => decoration("heavy-desk"), tooltip: "Fortree City (desk and chair shop)\n$6000" },
@@ -259,7 +260,6 @@ import {
 					{ id: 100, text: "Wailmer Doll", img: () => decoration("wailmer-doll"), tooltip: "Sootopolis City / Lilycove Department Store (clear-out sale)\n$10000" },
 				],
 			},
-			{ id: 4, text: "Obtain the Diploma", tooltip: "Cove Lily Motel - Lilycove City\nReward for completing the Hoenn Pokedex" },
 		],
 		thms: [
 			{
@@ -348,34 +348,34 @@ import {
 
 	const TASKS_BY_SECTION_GAME1 = {
 		...TASKS_BY_SECTION,
-		catching: overrideTaskChildTexts(TASKS_BY_SECTION.catching, {
+		catching: overrideTasks(TASKS_BY_SECTION.catching, {
 			1: {
-				1: "Trade Kyogre",
-				2: "Catch Groudon",
-				7: "Catch Latias",
-				8: "Trade Latios",
+				1: { text: "Trade Kyogre" },
+				2: { text: "Catch Groudon" },
+				7: { text: "Catch Latias" },
+				8: { text: "Trade Latios" },
 			}
 		}),
-		collectables: overrideTaskChildTexts(TASKS_BY_SECTION.collectables, {
-			1: {
-				13: "Red Orb",
+		collectables: overrideTasks(TASKS_BY_SECTION.collectables, {
+			4: {
+				13: { text: "Red Orb" },
 			}
 		}),
 	};
 
 	const TASKS_BY_SECTION_GAME2 = {
 		...TASKS_BY_SECTION,
-		catching: overrideTaskChildTexts(TASKS_BY_SECTION.catching, {
+		catching: overrideTasks(TASKS_BY_SECTION.catching, {
 			1: {
-				1: "Catch Kyogre",
-				2: "Trade Groudon",
-				7: "Trade Latias",
-				8: "Catch Latios",
+				1: { text: "Catch Kyogre" },
+				2: { text: "Trade Groudon" },
+				7: { text: "Trade Latias" },
+				8: { text: "Catch Latios" },
 			}
 		}),
-		collectables: overrideTaskChildTexts(TASKS_BY_SECTION.collectables, {
-			1: {
-				13: "Blue Orb",
+		collectables: overrideTasks(TASKS_BY_SECTION.collectables, {
+			4: {
+				13: { text: "Blue Orb" },
 			}
 		}),
 	};

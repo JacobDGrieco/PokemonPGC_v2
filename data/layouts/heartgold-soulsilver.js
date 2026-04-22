@@ -7,7 +7,8 @@ import { defineLayoutsMany, P, C, parentRows, childRows, } from '../helpers/inde
 		catching: [
 			[P(1)],
 			...childRows(1, 1, 9),
-			...childRows(1, 10, 15, 6),
+			...childRows(1, 10, 12),
+			...childRows(1, 13, 15),
 			[P(2)],
 			...childRows(2, 1, 3),
 			[P(3)],
@@ -53,7 +54,9 @@ import { defineLayoutsMany, P, C, parentRows, childRows, } from '../helpers/inde
 			[C(2, 4), C(2, 5)],
 		],
 		collectables: [
-			[P(1)],
+			[P(1), P(2)],
+			[P(3)],
+			...childRows(3, 1, 13, 7),
 		],
 		thms: [
 			[P(1)],

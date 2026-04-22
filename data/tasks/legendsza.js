@@ -497,7 +497,7 @@ import {
 					{ id: 7, text: "Swampertite", img: ({ gameKey }) => [baseSpriteIcon(gameKey, "0260-m"), megaStone("swampertite")] },
 				],
 			},
-			{ id: 2, text: "Get the Trench Coat & Pants Set - Beige", img: ({ gameKey }) => task(gameKey, "trenchcoat"), noCenter: true, tooltip: "Had to pre-order Pokémon Legends: Z-A from Amazon (Japan), GameStop (USA), EB Games (Australia), or Game/ShopTo (UK)", },
+			{ id: 2, text: "Get the Trench Coat & Pants Set - Beige", img: ({ gameKey }) => task(gameKey, "trenchcoat"), tooltip: "Had to pre-order Pokémon Legends: Z-A from Amazon (Japan), GameStop (USA), EB Games (Australia), or Game/ShopTo (UK)", },
 			{
 				id: 3, text: "Obtain all titles from Ranked Battling", children: [
 					{ id: 1, text: "Normal-Type User", tiers: [20, 50, 100], tooltip: "Use Normal-Type Pokémon in Link Battles", },

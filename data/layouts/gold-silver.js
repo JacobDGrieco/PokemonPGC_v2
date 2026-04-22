@@ -18,12 +18,12 @@ import { defineLayoutsMany, P, C, parentRows, childRows, } from '../helpers/inde
 		story: [
 			[P(1)],
 			...childRows(1, 1, 9),
-			[P(2), P(3)],
+			[P(2)],
 			...childRows(2, 1, 4),
 			[P(3)],
 			...childRows(3, 1, 8, 4),
 		],
-		sideQuests: [
+		activities: [
 			...parentRows(1, 5, 3),
 			[P(6)],
 			...childRows(6, 1, 7, 7),
@@ -36,9 +36,9 @@ import { defineLayoutsMany, P, C, parentRows, childRows, } from '../helpers/inde
 			[C(2, 1), C(2, 2)],
 		],
 		collectables: [
-			[P(1)],
-			...childRows(1, 1, 13, 7),
-			[P(2)],
+			[P(1), P(2)],
+			[P(3)],
+			...childRows(3, 1, 13, 7),
 		],
 		thms: [
 			[P(1)],

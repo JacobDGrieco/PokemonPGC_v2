@@ -49,6 +49,9 @@ import {
 				id: 2, text: "Catch/Defeat all Static Encounters", children: [
 					{ id: 1, text: "Route 12 Snorlax", img: ({ gameKey }) => task(gameKey, "snorlax-12") },
 					{ id: 2, text: "Route 16 Snorlax", img: ({ gameKey }) => task(gameKey, "snorlax-16") },
+					{ id: 3, text: "Pokémon Tower Marowak", img: ({ gameKey }) => baseSprite(gameKey, 105), tooltip: "Pokémon Tower 6F - must be defeated to progress" },
+					{ id: 4, text: "Power Plant Electrode", img: ({ gameKey }) => baseSprite(gameKey, 101), tooltip: "Tracks both disguised Electrode in the Power Plant", type: "tiered", tiers: [range(1, 2)] },
+					{ id: 5, text: "Power Plant Voltorb", img: ({ gameKey }) => baseSprite(gameKey, 100), tooltip: "Tracks all six disguised Voltorb in the Power Plant", type: "tiered", tiers: [range(1, 6)] },
 				],
 			},
 			{
@@ -99,20 +102,20 @@ import {
 			},
 		],
 		battle: [
-			{ id: 1, text: "Defeat Red", img: () => npc("red"), noCenter: true },
+			{ id: 1, text: "Defeat Red", img: () => npc("red") },
 			{
 				id: 2, text: "Master the Battle Tower", children: [
-					{ id: 1, text: "Single Battles", type: "tiered", tiers: [range(1, 8)], noCenter: true },
-					{ id: 2, text: "Double Battles", type: "tiered", tiers: [range(1, 8)], noCenter: true },
-					{ id: 3, text: "Multi Battles", type: "tiered", tiers: [range(1, 8)], noCenter: true },
-					{ id: 4, text: "Knockout Battles", type: "tiered", tiers: [range(1, 8)], noCenter: true },
+					{ id: 1, text: "Single Battles", type: "tiered", tiers: [range(1, 8)] },
+					{ id: 2, text: "Double Battles", type: "tiered", tiers: [range(1, 8)] },
+					{ id: 3, text: "Multi Battles", type: "tiered", tiers: [range(1, 8)] },
+					{ id: 4, text: "Knockout Battles", type: "tiered", tiers: [range(1, 8)] },
 				],
 			},
 		],
 		upgrades: [
-			{ id: 1, text: "Obtain the National PokeDex", img: () => keyItem("kanto-nati-dex"), noCenter: true },
+			{ id: 1, text: "Obtain the National PokeDex", img: () => keyItem("kanto-nati-dex") },
 			{
-				id: 2, text: "Obtain the Gold 4-Star Trainer Card", noCenter: true, children: [
+				id: 2, text: "Obtain the Gold 4-Star Trainer Card", children: [
 					{ id: 1, text: "Defeat the Elite 4/Champion" },
 					{ id: 2, text: "Complete the Kanto Regional PokeDex (150)" },
 					{ id: 3, text: "Complete the National PokeDex (382)" },
@@ -122,8 +125,10 @@ import {
 			},
 		],
 		collectables: [
+			{ id: 1, text: "Obtain the Diploma", tooltip: "Celadon Condominiums - Game Freak HQ\nReward for completing the Kanto Pokedex" },
+			{ id: 2, text: "Find all hidden items with the Item Finder", img: () => keyItem("item-finder"), type: "tiered", tiers: [range(1, 155)], },
 			{
-				id: 1, text: "Obtain all extra Key Items", children: [
+				id: 3, text: "Obtain all extra Key Items", children: [
 					{ id: 1, text: "Good Rod", img: () => keyItem("good-rod") },
 					{ id: 2, text: "Item Finder", img: () => keyItem("item-finder") },
 					{ id: 3, text: "Old Rod", img: () => keyItem("old-rod") },
@@ -132,8 +137,6 @@ import {
 					{ id: 6, text: "VS Seeker", img: () => keyItem("vs-seeker") },
 				],
 			},
-			{ id: 2, text: "Find all hidden items with the Item Finder", img: () => keyItem("item-finder"), noCenter: true, type: "tiered", tiers: [range(1, 155)], },
-			{ id: 3, text: "Obtain the Diploma", tooltip: "Celadon Condominiums - Game Freak HQ\nReward for completing the Kanto Pokedex" },
 		],
 		thms: [
 			{

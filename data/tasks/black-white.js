@@ -105,7 +105,7 @@ import {
 			},
 		],
 		activites: [
-			{ id: 1, text: "Fill Black City/White Forest with 10 Trainers", noCenter: true },
+			{ id: 1, text: "Fill Black City/White Forest with 10 Trainers" },
 			{
 				id: 2, text: "Find all Team Plasma Sages", children: [
 					{ id: 1, text: "Sage Rood", img: ({ gameKey }) => npc(gameKey, "rood") },
@@ -153,7 +153,7 @@ import {
 			},
 		],
 		upgrades: [
-			{ id: 1, text: "Obtain the National Dex", noCenter: true },
+			{ id: 1, text: "Obtain the National Dex" },
 			{
 				id: 2, text: "Obtain the Black/White Rank Trainer Card", children: [
 					{ id: 1, text: "Defeat the Elite Four" },
