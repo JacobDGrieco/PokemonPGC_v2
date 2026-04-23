@@ -8,7 +8,7 @@ import { defineLayoutsMany, P, C, parentRows, childRows, } from '../helpers/inde
 			[P(1)],
 			...childRows(1, 1, 4),
 			[P(2)],
-			[C(2, 1), C(2, 2)],
+			...childRows(2, 1, 5),
 			[P(3)],
 			...childRows(3, 1, 6, 6),
 			[P(4)],
@@ -17,11 +17,9 @@ import { defineLayoutsMany, P, C, parentRows, childRows, } from '../helpers/inde
 		story: [
 			[P(1)],
 			...childRows(1, 1, 9),
-			[P(2), P(3)],
-			[C(2, 1)],
 		],
 		battle: [
-			[P(1)],
+			[C(1, 1)],
 			[P(2)],
 			...childRows(2, 1, 4),
 		],
@@ -31,9 +29,9 @@ import { defineLayoutsMany, P, C, parentRows, childRows, } from '../helpers/inde
 			...childRows(2, 1, 5, 3),
 		],
 		collectables: [
-			[P(1)],
-			...childRows(1, 1, 6),
-			[P(2)],
+			[P(1), P(2)],
+			[P(3)],
+			...childRows(3, 1, 6, 6),
 		],
 		thms: [
 			[P(1)],

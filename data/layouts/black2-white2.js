@@ -7,14 +7,15 @@ import { defineLayoutsMany, P, C, parentRows, childRows, } from '../helpers/inde
 		catching: [
 			[P(1)],
 			...childRows(1, 1, 3),
-			...childRows(1, 4, 15, 6),
-			...childRows(1, 16, 17),
+			...childRows(1, 4, 8),
+			...childRows(1, 9, 14, 6),
+			...childRows(1, 15, 17),
 			[P(2)],
 			...childRows(2, 1, 5),
 			[P(3)],
 			...childRows(3, 1, 7, 7),
 			[P(4)],
-			...childRows(4, 1, 6, 6),
+			...childRows(4, 1, 6, 3),
 		],
 		story: [
 			[P(1)],
@@ -22,10 +23,11 @@ import { defineLayoutsMany, P, C, parentRows, childRows, } from '../helpers/inde
 		],
 		funfest: [
 			[P(1)],
-			...childRows(1, 1, 39),
+			...childRows(1, 1, 39, 4),
 		],
 		activities: [
-			...parentRows(1, 3),
+			[P(1)],
+			[P(2), P(3)],
 		],
 		battle: [
 			[P(6), P(1), P(2)],

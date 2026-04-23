@@ -185,7 +185,7 @@ import {
 				],
 			},
 			{
-				id: 6, text: "Obtain all the Pokétch Apps", noCenter: true, children: [
+				id: 6, text: "Obtain all the Pokétch Apps", children: [
 					{ id: 1, text: "Digital Watch" },
 					{ id: 2, text: "Calculator" },
 					{ id: 3, text: "Memo Pad" },
