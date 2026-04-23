@@ -1,6 +1,7 @@
 import {
 	_hm,
 	_keyItem,
+	_heldItem,
 	_tm,
 	_location,
 	_npc,
@@ -23,13 +24,13 @@ import {
 	const npc = (gameKey, name) => _npc(gameKey, name);
 	const location = (gameKey, name) => _location(gameKey, name);
 	const keyItem = (name) => _keyItem(gen, name);
+	const heldItem = (name) => _heldItem(gen, name);
 	const hm = (type) => _hm(gen, type);
 	const tm = (type) => _tm(gen, type);
 
 	const SECTIONS = [
 		{ id: "catching", title: "Gotta Catch 'Em All" },
 		{ id: "story", title: "Main Story" },
-		{ id: "sideQuests", title: "Side Quests" },
 		{ id: "activities", title: "Activities" },
 		{ id: "battle", title: "Battle" },
 		{ id: "upgrades", title: "Upgrades" },
@@ -145,7 +146,7 @@ import {
 				],
 			},
 		],
-		sideQuests: [
+		activities: [
 			{ id: 1, text: "Show Elm the hatched Egg", img: ({ gameKey }) => npc(gameKey, "elm"), tooltip: "You get an Everstone in return" },
 			{ id: 2, text: "Deliver the mail for Randy to his friend", img: ({ gameKey }) => npc(gameKey, "randy"), tooltip: "Randy (Route 36), Friend (Route 31)" },
 			{ id: 3, text: "Cure the Miltank", img: ({ gameKey }) => baseSprite(gameKey, 242), tooltip: "Route 39 - Miltank Farm" },
@@ -162,10 +163,8 @@ import {
 					{ id: 7, text: "Sunny", img: ({ gameKey }) => npc(gameKey, "sunny") },
 				],
 			},
-		],
-		activities: [
 			{
-				id: 1, text: "Get into the Pokeathalon Hall of Fame", children: [
+				id: 7, text: "Get into the Pokeathalon Hall of Fame", children: [
 					{ id: 1, text: "Hurdle Dash", tooltip: "Need a highscore of 80+" },
 					{ id: 2, text: "Lamp Jump", tooltip: "Need a highscore of 500+" },
 					{ id: 3, text: "Ring Toss", tooltip: "Need a highscore of 100+" },
@@ -179,7 +178,7 @@ import {
 				],
 			},
 			{
-				id: 2, text: "Take 16 Commemerative Photos with Gym Leaders", children: [
+				id: 8, text: "Take 16 Commemerative Photos with Gym Leaders", children: [
 					{ id: 1, text: "Falker", img: ({ gameKey }) => npc(gameKey, "falkner"), tooltip: "Wed | Celadon City Dept. Store" },
 					{ id: 2, text: "Bugsy", img: ({ gameKey }) => npc(gameKey, "bugsy"), tooltip: "Mon, Fri | National Park" },
 					{ id: 3, text: "Whitney", img: ({ gameKey }) => npc(gameKey, "whitney"), tooltip: "Everyday 6pm-9pm | Goldenrod City Dept. Store | Need Phone Number" },
@@ -199,11 +198,11 @@ import {
 				],
 			},
 			{
-				id: 3, text: "Take 46 Commemerative Photos at certain locations", children: [
+				id: 9, text: "Take 46 Commemerative Photos at certain locations", children: [
 					{ id: 1, text: "New Bark Town", tooltip: "Tue | Outside of your house" },
 					{ id: 2, text: "Cherrygrove City", tooltip: "Mon, Wed, Fri | Outside of your house" },
-					{ id: 3, text: "Ruins of Alph", tooltip: "Fri, Sat, Sun | Outside the ruins" },
-					{ id: 4, text: "Ruins of Alph", tooltip: "Mon, Tue, Thu | Inside the ruins" },
+					{ id: 3, text: "Ruins of Alph (1)", tooltip: "Fri, Sat, Sun | Outside the ruins" },
+					{ id: 4, text: "Ruins of Alph (2)", tooltip: "Mon, Tue, Thu | Inside the ruins" },
 					{ id: 5, text: "Route 32", tooltip: "Tue, Thu, Sat | By the Pokémon Centre" },
 					{ id: 6, text: "Slowpoke Well", tooltip: "Mon, Wed, Fri | Down the Stairs" },
 					{ id: 7, text: "Ilex Forest", tooltip: "Tue, Sat, Sun | By Northern Exit" },
@@ -235,7 +234,7 @@ import {
 					{ id: 33, text: "Saffron City (1)", tooltip: "Fri, Sat | Outside Silph Co" },
 					{ id: 34, text: "Saffron City (2)", tooltip: "Mon, Tue, Wed, Fri, Sat | Outside Magnet Train Station" },
 					{ id: 35, text: "Celadon City", tooltip: "Tue, Fri | Near Fountain" },
-					{ id: 36, text: "Celadon City Department Store", tooltip: "Fri | On 2nd Floor" },
+					{ id: 36, text: "Celadon Dept Store", tooltip: "Fri | On 2nd Floor" },
 					{ id: 37, text: "Fuchsia City", tooltip: "Tue, Sat | By South Gate" },
 					{ id: 38, text: "Route 14", tooltip: "Thu, Sun | By the Windmills" },
 					{ id: 39, text: "Route 12", tooltip: "Mon, Wed, Sun | By Lavender Town" },
@@ -250,9 +249,32 @@ import {
 			},
 		],
 		battle: [
-			{ id: 1, text: "Rematch all 16 Gym Leaders" },
-			{ id: 2, text: "Rematch the Elite 4", tooltip: "Collect all 8 Kanto Gym badges for the true final battle" },
-			{ id: 3, text: "Defeat Red" },
+			{ id: 1, text: "Rematch the Elite 4", tooltip: "Collect all 8 Kanto Gym badges for the true final battle" },
+			{
+				id: 2, text: "Defeat Key NPCs", children: [
+					{ id: 1, text: "Defeat Red", img: () => npc("red") },
+				]
+			},
+			{
+				id: 3, text: "Rematch all 16 Gym Leaders", children: [
+					{ id: 1, text: "Falkner", },
+					{ id: 2, text: "Bugsy", },
+					{ id: 3, text: "Whitney", },
+					{ id: 4, text: "Morty", },
+					{ id: 5, text: "Chuck", },
+					{ id: 6, text: "Jasmine", },
+					{ id: 7, text: "Pryce", },
+					{ id: 8, text: "Clair", },
+					{ id: 9, text: "Brock", },
+					{ id: 10, text: "Misty", },
+					{ id: 11, text: "Lt. Surge", },
+					{ id: 12, text: "Erika", },
+					{ id: 13, text: "Janine", },
+					{ id: 14, text: "Sabrina", },
+					{ id: 15, text: "Blaine", },
+					{ id: 16, text: "Blue", },
+				],
+			},
 			{
 				id: 4, text: "Defeat all Battle Frontier Tycoons for the Silver Medals", children: [
 					{ id: 1, text: "Battle Tower's Palmer", },

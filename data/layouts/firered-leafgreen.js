@@ -19,7 +19,7 @@ import { defineLayoutsMany, P, C, parentRows, childRows, } from '../helpers/inde
 			...childRows(1, 1, 9),
 		],
 		battle: [
-			[P(1)],
+			[C(1, 1)],
 			[P(2)],
 			...childRows(2, 1, 4),
 		],

@@ -81,10 +81,10 @@ import {
 			},
 			{
 				id: 4, text: "Obtain all Static Encounter Pokémon", children: [
-					{ id: 1, text: "Musharna", img: ({ gameKey }) => baseSprite(gameKey, 518), tooltip: "Dreamyard\nEvery Friday after defeating Ghetsis" },
-					{ id: 2, text: "Zen Mode Darmanitan", img: ({ gameKey }) => baseSprite(gameKey, 555), tooltip: "Desert Resort\nTracks all five RageCandyBar statues", type: "tiered", tiers: [range(1, 5)] },
-					{ id: 3, text: "Fake-item Foongus", img: ({ gameKey }) => baseSprite(gameKey, 590), tooltip: "Routes 6 and 10\nTracks all five fake-item Foongus", type: "tiered", tiers: [range(1, 5)] },
-					{ id: 4, text: "Fake-item Amoonguss", img: ({ gameKey }) => baseSprite(gameKey, 591), tooltip: "Route 10\nTracks both fake-item Amoonguss", type: "tiered", tiers: [range(1, 2)] },
+					{ id: 1, text: "Zen Mode Darmanitan", img: ({ gameKey }) => baseSprite(gameKey, 555), tooltip: "Desert Resort\nTracks all five RageCandyBar statues", type: "tiered", tiers: [range(1, 5)] },
+					{ id: 2, text: "Fake-item Foongus", img: ({ gameKey }) => baseSprite(gameKey, 590), tooltip: "Routes 6 and 10\nTracks all five fake-item Foongus", type: "tiered", tiers: [range(1, 5)] },
+					{ id: 3, text: "Fake-item Amoonguss", img: ({ gameKey }) => baseSprite(gameKey, 591), tooltip: "Route 10\nTracks both fake-item Amoonguss", type: "tiered", tiers: [range(1, 2)] },
+					{ id: 4, text: "Musharna", img: ({ gameKey }) => baseSprite(gameKey, 518), tooltip: "Dreamyard\nEvery Friday after defeating Ghetsis" },
 					{ id: 5, text: "Volcarona", img: ({ gameKey }) => baseSprite(gameKey, 637), tooltip: "Relic Castle\nAfter defeating Ghetsis" },
 				],
 			},
@@ -126,13 +126,17 @@ import {
 			},
 		],
 		battle: [
-			{ id: 1, text: "Battle Cheren", tooltip: "Victory Road after defeating the Elite 4" },
-			{ id: 2, text: "Battle Bianca", tooltip: "Prof. Juniper's Lab (Saturday Nights)" },
-			{ id: 3, text: "Battle Cynthia", tooltip: "Undella Town (Spring & Summer)" },
-			{ id: 4, text: "Defeat Game Director Morimoto", tooltip: "Castelia City - GAME FREAK\nAvailable once per day after defeating Ghetsis and Team Plasma at the Pokemon League" },
-			{ id: 6, text: "Get to Master Rank at the Battle Institute", tiers: ["Novice", "Normal", "Super", "Hyper", "Elite", "Master"] },
+			{ id: 1, text: "Get to Master Rank at the Battle Institute", tiers: ["Novice", "Normal", "Super", "Hyper", "Elite", "Master"] },
 			{
-				id: 7, text: "Defeat the Riches Family in Undella Town", children: [
+				id: 2, text: "Defeat Key NPCs", children: [
+					{ id: 1, text: "Game Director Morimoto", tooltip: "Castelia City - GAME FREAK\nAvailable once per day after defeating Ghetsis and Team Plasma at the Pokemon League" },
+					{ id: 2, text: "Cheren", tooltip: "Victory Road after defeating the Elite 4" },
+					{ id: 3, text: "Bianca", tooltip: "Prof. Juniper's Lab (Saturday Nights)" },
+					{ id: 4, text: "Cynthia", tooltip: "Undella Town (Spring & Summer)" },
+				]
+			},
+			{
+				id: 3, text: "Defeat the Riches Family in Undella Town", children: [
 					{ id: 1, text: "Defeat Draco" },
 					{ id: 2, text: "Defeat Susan & Family" },
 					{ id: 3, text: "Defeat Clairdonna & Family" },
@@ -142,7 +146,7 @@ import {
 				],
 			},
 			{
-				id: 8, text: "Complete all Battle Subway Lines", children: [
+				id: 4, text: "Complete all Battle Subway Lines", children: [
 					{ id: 1, text: "Single" },
 					{ id: 2, text: "Single Super" },
 					{ id: 3, text: "Double" },
@@ -165,8 +169,9 @@ import {
 			},
 		],
 		collectables: [
+			{ id: 1, text: "Obtain the Diploma", tooltip: "Game Freak - Castelia City\nReward for completing the Unova Pokedex" },
 			{
-				id: 1, text: "Collect all Key Items", children: [
+				id: 2, text: "Collect all Key Items", children: [
 					{ id: 1, text: "Bicycle", img: () => keyItem("bicycle") },
 					{ id: 2, text: "Dowsing MCHN", img: () => keyItem("item-finder") },
 					{ id: 4, text: "Pal Pad", img: () => keyItem("pal-pad") },
@@ -178,7 +183,7 @@ import {
 				],
 			},
 			{
-				id: 2, text: "Collect all Legendary items", children: [
+				id: 3, text: "Collect all Legendary items", children: [
 					{ id: 1, text: "Burn Drive", img: () => formItem("burn-drive") },
 					{ id: 2, text: "Douse Drive", img: () => formItem("douse-drive") },
 					{ id: 3, text: "Shock Drive", img: () => formItem("shock-drive") },
@@ -187,7 +192,7 @@ import {
 				],
 			},
 			{
-				id: 3, text: "Collect all 16 Arceus Plates", children: [
+				id: 4, text: "Collect all 16 Arceus Plates", children: [
 					{ id: 1, text: "Draco Plate", img: () => formItem("draco-plate") },
 					{ id: 2, text: "Dread Plate", img: () => formItem("dread-plate") },
 					{ id: 3, text: "Earth Plate", img: () => formItem("earth-plate") },
@@ -206,7 +211,6 @@ import {
 					{ id: 16, text: "Zap Plate", img: () => formItem("zap-plate") },
 				],
 			},
-			{ id: 4, text: "Obtain the Diploma", tooltip: "Game Freak - Castelia City\nReward for completing the Unova Pokedex" },
 		],
 		accessories: [
 			{
@@ -330,7 +334,7 @@ import {
 				]
 			},
 			{
-				id: 6, text: "Collect all Body attatchements", children: [
+				id: 6, text: "Collect all Waist attatchements", children: [
 					{ id: 1, text: "Fake Belly Button" },
 					{ id: 2, text: "Umber Belt" },
 					{ id: 3, text: "Frilly Apron" },

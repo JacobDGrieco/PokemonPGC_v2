@@ -102,7 +102,11 @@ import {
 			},
 		],
 		battle: [
-			{ id: 1, text: "Defeat Red", img: () => npc("red") },
+			{
+				id: 1, text: "Defeat Key NPCs", children: [
+					{ id: 1, text: "Defeat Red", img: () => npc("red") },
+				]
+			},
 			{
 				id: 2, text: "Master the Battle Tower", children: [
 					{ id: 1, text: "Single Battles", type: "tiered", tiers: [range(1, 8)] },
