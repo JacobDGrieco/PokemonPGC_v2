@@ -9,6 +9,7 @@ import {
 	_frontSpriteShiny,
 	defineTasksMany,
 	range,
+	_certificate,
 } from '../helpers/index.js';
 
 (() => {
@@ -20,7 +21,7 @@ import {
 	const bwTask = (gameKey, name) => _task(gameKey, name, false);
 	const coloredTask = (gameKey, name) => _task(gameKey, name, true);
 	const heldItem = (name) => _heldItem(gen, name);
-	const keyItem = (name) => _keyItem(gen, name);
+	const keyItem = (gameKey, name) => _keyItem(gameKey, name);
 	const hm = (type) => _hm(gen, type);
 	const tm = (type) => _tm(gen, type);
 
@@ -102,24 +103,24 @@ import {
 		collectables: [
 			{
 				id: 1, text: "Obtain all Key Items", children: [
-					{ id: 1, text: "Bicycle", img: () => keyItem("bicycle") },
-					{ id: 2, text: "Card Key", img: () => keyItem("card-key") },
-					{ id: 3, text: "Coin Case", img: () => keyItem("coin-case") },
-					{ id: 4, text: "Exp. All", img: () => heldItem("exp-all") },
-					{ id: 5, text: "Good Rod", img: () => keyItem("good-rod") },
-					{ id: 6, text: "Item Finder", img: () => keyItem("item-finder") },
-					{ id: 7, text: "Lift Key", img: () => keyItem("lift-key") },
-					{ id: 8, text: "Old Rod", img: () => keyItem("old-rod") },
-					{ id: 9, text: "Poke Flute", img: () => keyItem("poke-flute") },
-					{ id: 10, text: "Secret Key", img: () => keyItem("secret-key") },
-					{ id: 11, text: "Silph Scope", img: () => keyItem("silph-scope") },
-					{ id: 12, text: "Super Rod", img: () => keyItem("super-rod") },
-					{ id: 13, text: "Town Map", img: () => keyItem("town-map") },
+					{ id: 1, text: "Bicycle", img: ({ gameKey }) => keyItem(gameKey, "bicycle") },
+					{ id: 2, text: "Card Key", img: ({ gameKey }) => keyItem(gameKey, "card-key") },
+					{ id: 3, text: "Coin Case", img: ({ gameKey }) => keyItem(gameKey, "coin-case") },
+					{ id: 4, text: "Exp. All", img: () => heldItem("exp-share") },
+					{ id: 5, text: "Good Rod", img: ({ gameKey }) => keyItem(gameKey, "good-rod") },
+					{ id: 6, text: "Item Finder", img: ({ gameKey }) => keyItem(gameKey, "item-finder") },
+					{ id: 7, text: "Lift Key", img: ({ gameKey }) => keyItem(gameKey, "lift-key") },
+					{ id: 8, text: "Old Rod", img: ({ gameKey }) => keyItem(gameKey, "old-rod") },
+					{ id: 9, text: "Poke Flute", img: ({ gameKey }) => keyItem(gameKey, "poke-flute") },
+					{ id: 10, text: "Secret Key", img: ({ gameKey }) => keyItem(gameKey, "secret-key") },
+					{ id: 11, text: "Silph Scope", img: ({ gameKey }) => keyItem(gameKey, "silph-scope") },
+					{ id: 12, text: "Super Rod", img: ({ gameKey }) => keyItem(gameKey, "super-rod") },
+					{ id: 13, text: "Town Map", img: ({ gameKey }) => keyItem(gameKey, "town-map") },
 				]
 			},
-			{ id: 2, text: "Find all hidden items with the Item Finder", img: () => keyItem("item-finder"), type: "tiered", tiers: [range(1, 54)], },
-			{ id: 3, text: "Collect all hidden Game Corner coins", img: () => keyItem("coin-case"), type: "tiered", tiers: [range(1, 10)], tooltip: "Tracks the 10 hidden coin spots in the Celadon Game Corner" },
-			{ id: 4, text: "Obtain the Diploma", tooltip: "Celadon Condominiums - Game Freak HQ\nReward for completing the Kanto Pokedex" },
+			{ id: 2, text: "Find all hidden items with the Item Finder", img: ({ gameKey }) => keyItem(gameKey, "item-finder"), type: "tiered", tiers: [range(1, 54)], },
+			{ id: 3, text: "Collect all hidden Game Corner coins", img: ({ gameKey }) => keyItem(gameKey, "coin-case"), type: "tiered", tiers: [range(1, 10)], tooltip: "Tracks the 10 hidden coin spots in the Celadon Game Corner" },
+			{ id: 4, text: "Obtain the Diploma", img: ({ gameKey }) => _certificate(gameKey), tooltip: "Celadon Condominiums - Game Freak HQ\nReward for completing the Kanto Pokedex" },
 		],
 		thms: [
 			{

@@ -84,11 +84,11 @@ import {
 			{
 				id: 2, text: "Obtain all Key Items", children: [
 					{ id: 1, text: "Glimmering Charm", img: () => keyItem("glimmering-charm"), tooltip: "Given by Jacq after completing the Kitakami Pokédex (200 entries)\nIncreases Tera Shard drops from Tera Raid Battles" },
-					{ id: 1, text: "Exp Charm", img: () => keyItem("exp-charm") },
-					{ id: 1, text: "Teal Style Card", img: () => keyItem("teal-style-card") },
-					{ id: 2, text: "Wellspring Mask", img: () => keyItem("wellspring-mask"), tooltip: "Obtained during the main story" },
-					{ id: 3, text: "Hearthflame Mask", img: () => keyItem("hearthflame-mask"), tooltip: "Obtained during the main story" },
-					{ id: 4, text: "Cornerstone Mask", img: () => keyItem("cornerstone-mask"), tooltip: "Obtained during the main story" },
+					{ id: 2, text: "Exp Charm", img: () => keyItem("exp-charm") },
+					{ id: 3, text: "Teal Style Card", img: () => keyItem("teal-style-card") },
+					{ id: 4, text: "Wellspring Mask", img: () => keyItem("wellspring-mask"), tooltip: "Obtained during the main story" },
+					{ id: 5, text: "Hearthflame Mask", img: () => keyItem("hearthflame-mask"), tooltip: "Obtained during the main story" },
+					{ id: 6, text: "Cornerstone Mask", img: () => keyItem("cornerstone-mask"), tooltip: "Obtained during the main story" },
 				],
 			},
 			{

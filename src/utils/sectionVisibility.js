@@ -1,6 +1,6 @@
 export function isTemporarilyHiddenSection(section) {
-  const title = String(section?.title || '').trim().toLowerCase();
-  return title === 'distributions';
+  void section;
+  return false;
 }
 
 export function getVisibleSections(gameKey, ensureSections) {

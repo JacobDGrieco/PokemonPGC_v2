@@ -5,7 +5,9 @@ import {
 	_npc,
 	_task,
 	_frontSprite,
+	_frontSpriteShiny,
 	defineTasksMany,
+	overrideTasks,
 } from '../helpers/index.js';
 
 (() => {
@@ -64,7 +66,7 @@ import {
 					{ id: 21, text: "Catch/Trade Lunala", img: ({ gameKey }) => baseSprite(gameKey, 792) },
 					{ id: 22, text: "Catch/Trade Necrozma", img: ({ gameKey }) => baseSprite(gameKey, 800) },
 					{ id: 23, text: "Catch Kubfu", img: ({ gameKey }) => baseSprite(gameKey, 891) },
-					{ id: 24, text: "Catch/Trade Glastrier", img: ({ gameKey }) => baseSprite(896) },
+					{ id: 24, text: "Catch/Trade Glastrier", img: ({ gameKey }) => baseSprite(gameKey, 896) },
 					{ id: 25, text: "Catch/Trade Spectrier", img: ({ gameKey }) => baseSprite(gameKey, 897) },
 				],
 			},
@@ -76,7 +78,7 @@ import {
 			},
 			{
 				id: 4, text: "Obtain all In-Game Gift Pokémon", children: [
-					{ id: 1, text: "Shiny Blitzle", img: ({ gameKey }) => shinySprite(522) },
+					{ id: 1, text: "Shiny Blitzle", img: ({ gameKey }) => shinySprite(gameKey, 522) },
 				],
 			},
 			{
