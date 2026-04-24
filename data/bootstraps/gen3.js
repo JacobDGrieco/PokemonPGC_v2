@@ -1,7 +1,7 @@
 import "../tasks/ruby-sapphire.js";
 import "../layouts/ruby-sapphire.js";
 import "../regidexs/ruby-sapphire.js";
-// import "../distributions/ruby-sapphire.js";
+import "../distributions/ruby-sapphire.js";
 
 import "../tasks/firered-leafgreen.js";
 import "../layouts/firered-leafgreen.js";
