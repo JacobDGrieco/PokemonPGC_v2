@@ -14,7 +14,7 @@
  *   parsers for those formats.
  *
  * Basic usage:
- *   node tools/event-scrape-v2.mjs --games ruby,sapphire --generation 3 --out src/data/distributions/ruby-sapphire.js
+ *   node scripts/event-scrape.mjs --games ruby,sapphire --generation 3 --out data/distributions/ruby-sapphire.js
  *
  * Optional:
  *   GITHUB_TOKEN=ghp_xxx node tools/event-scrape-v2.mjs ...
@@ -58,6 +58,40 @@ const LANGUAGE_ALIASES = new Map([
 	["ita", "it"], ["italian", "it"], ["spa", "es"], ["spanish", "es"],
 	["kor", "ko"], ["korean", "ko"], ["chs", "zh-Hans"], ["cht", "zh-Hant"], ["chi", "zh"],
 	["all", "all"], ["multi", "all"],
+]);
+
+const HIERARCHY_REGION_FOLDERS = new Map([
+	["jpn", "JPN"],
+	["jp", "JPN"],
+	["japanese", "JPN"],
+	["kor", "KOR"],
+	["kr", "KOR"],
+	["korean", "KOR"],
+	["usa", "USA"],
+	["us", "USA"],
+	["north america", "NA"],
+	["eur", "EUR"],
+	["eu", "EUR"],
+	["europe", "EUR"],
+	["international", "GLOBAL"],
+	["worldwide", "GLOBAL"],
+	["global", "GLOBAL"],
+]);
+
+const GENERIC_COLLECTION_SEGMENTS = new Set([
+	"classic",
+	"vc",
+	"wondercards",
+	"trade distribution",
+	"hex extracted cards",
+	"my pokemon ranch",
+	"palparked from gen 3",
+	"pokemon ranger manaphy egg",
+	"pokemon box",
+	"e card raws",
+	"e card berries",
+	"e card trainers",
+	"e reader pokemon",
 ]);
 
 const GEN_TO_GAMES = {
@@ -140,6 +174,53 @@ const GEN3_CHARMAP = new Map([
 const pokemonCache = new Map();
 const speciesCache = new Map();
 const moveCache = new Map();
+const itemCache = new Map();
+let speciesIndexPromise = null;
+
+const BALL_DISPLAY = {
+	masterball: { label: "Master Ball", slug: "masterball" },
+	ultraball: { label: "Ultra Ball", slug: "ultraball" },
+	greatball: { label: "Great Ball", slug: "greatball" },
+	pokeball: { label: "Poké Ball", slug: "pokeball" },
+	safariball: { label: "Safari Ball", slug: "safariball" },
+	netball: { label: "Net Ball", slug: "netball" },
+	diveball: { label: "Dive Ball", slug: "diveball" },
+	nestball: { label: "Nest Ball", slug: "nestball" },
+	repeatball: { label: "Repeat Ball", slug: "repeatball" },
+	timerball: { label: "Timer Ball", slug: "timerball" },
+	luxuryball: { label: "Luxury Ball", slug: "luxuryball" },
+	premierball: { label: "Premier Ball", slug: "premierball" },
+};
+
+const EVENT_REGION_HINTS = new Map([
+	["pokemon rocks america", ["USA"]],
+	["journey across america", ["USA"]],
+	["poketour", ["USA"]],
+	["poke tour", ["USA"]],
+	["toys r us", ["USA"]],
+	["pokemon center new york", ["USA"]],
+	["pcny", ["USA"]],
+	["doel", ["EUR"]],
+	["channel jirachi", ["EUR", "AUS"]],
+	["pokemon channel jirachi", ["EUR", "AUS"]],
+	["wishmkr jirachi", ["USA"]],
+	["wish eggs", ["USA"]],
+	["berry glitch shiny zigzagoon", ["USA", "EUR", "AUS"]],
+	["mystry", ["USA"]],
+	["mystery mew", ["USA"]],
+	["hadou", ["JPN"]],
+	["negai boshi", ["JPN"]],
+	["tanabata", ["JPN"]],
+	["pokopark", ["JPN"]],
+	["pokepark", ["JPN"]],
+]);
+
+const METHOD_HINTS = [
+	[/wondercards?/i, "wonder-card"],
+	[/pokemon box/i, "bonus-disc"],
+	[/channel jirachi|pokemon channel|wishmkr|colosseum|bonus disc|gamecube/i, "bonus-disc"],
+	[/pokemon center new york|pcny|pokemon rocks america|journey across america|10th anniversary|10 aniv|aura mew|mystry|mystery mew|tanabata|hadou|pokepark|pokopark|toys r us/i, "in-person"],
+];
 
 function parseArgs(argv) {
 	const args = { games: [], generation: null, out: null, includeAllCompatible: true, max: null, dryRun: false, parsePayload: true };
@@ -158,6 +239,10 @@ function parseArgs(argv) {
 	if (!args.generation) throw new Error("Missing --generation. Example: --generation 3");
 	if (!args.out && !args.dryRun) throw new Error("Missing --out. Example: --out src/data/distributions/gen3.generated.js");
 	return args;
+}
+
+function isReleasedPath(filePath) {
+	return /^Released\//i.test(String(filePath || ""));
 }
 
 async function githubFetchJson(url) {
@@ -214,19 +299,86 @@ function normalizeTokenText(s) {
 	return String(s || "").replace(/[_\-+.()[\]{}]/g, " ").replace(/\s+/g, " ").trim();
 }
 
-function inferRegions(filePath) {
-	const normalized = normalizeTokenText(filePath).toLowerCase();
+function splitPathSegments(filePath) {
+	return String(filePath || "").split("/").filter(Boolean);
+}
+
+function exactAliasLookup(map, text) {
+	return map.get(normalizeLookupText(text));
+}
+
+function inferGamesFromText(text) {
+	const normalized = normalizeTokenText(text);
 	const found = new Set();
+	for (const [game, re] of GAME_HINTS) if (re.test(normalized)) found.add(game);
+	return [...found];
+}
+
+function inferPathContext(filePath) {
+	const segments = splitPathSegments(filePath);
+	const genIndex = segments.findIndex((segment) => /^gen(?:eration)?\s*\d+/i.test(segment));
+	const folders = genIndex >= 0 ? segments.slice(genIndex + 1, -1) : segments.slice(0, -1);
+	const regions = new Set();
+	const languages = new Set();
+	const games = new Set();
+	const collections = [];
+	const sources = [];
+
+	for (const folder of folders) {
+		const normalized = normalizeLookupText(folder);
+		if (!normalized) continue;
+
+		const regionCode = HIERARCHY_REGION_FOLDERS.get(normalized) || exactAliasLookup(REGION_ALIASES, folder);
+		if (regionCode) {
+			regions.add(regionCode);
+			sources.push(`region:${folder}`);
+		}
+
+		const languageCode = exactAliasLookup(LANGUAGE_ALIASES, folder);
+		if (languageCode) {
+			languages.add(languageCode);
+			sources.push(`language:${folder}`);
+		}
+
+		for (const game of inferGamesFromText(folder)) {
+			games.add(game);
+			sources.push(`game:${folder}`);
+		}
+
+		if (!regionCode && !languageCode && !GENERIC_COLLECTION_SEGMENTS.has(normalized)) collections.push(folder);
+	}
+
+	return {
+		segments,
+		folders,
+		regions: [...regions],
+		languages: [...languages],
+		games: [...games],
+		collections,
+		sources,
+	};
+}
+
+function inferRegions(filePath, pathContext) {
+	const found = new Set(pathContext?.regions || []);
+	const normalized = normalizeTokenText(filePath).toLowerCase();
 	for (const [needle, code] of REGION_ALIASES.entries()) {
 		const escaped = needle.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 		if (new RegExp(`(?:^|\\s)${escaped}(?:\\s|$)`, "i").test(normalized)) found.add(code);
 	}
+
+	const hintSource = normalizeLookupText([filePath, ...(pathContext?.collections || [])].join(" "));
+	for (const [needle, codes] of EVENT_REGION_HINTS.entries()) {
+		if (!hintSource.includes(needle)) continue;
+		for (const code of codes) found.add(code);
+	}
+
 	return [...found];
 }
 
-function inferLanguages(filePath) {
+function inferLanguages(filePath, pathContext) {
+	const found = new Set(pathContext?.languages || []);
 	const normalized = normalizeTokenText(filePath).toLowerCase();
-	const found = new Set();
 	for (const [needle, code] of LANGUAGE_ALIASES.entries()) {
 		const escaped = needle.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 		if (new RegExp(`(?:^|\\s)${escaped}(?:\\s|$)`, "i").test(normalized)) found.add(code);
@@ -243,7 +395,15 @@ function stripHashChunks(s) {
 
 function inferDate(filePath) {
 	const s = stripHashChunks(filePath);
-	let m = s.match(/(?:^|[^0-9])((?:19|20)\d{2})[-_. ](0[1-9]|1[0-2])[-_. ](0[1-9]|[12]\d|3[01])(?:[^0-9]|$)/);
+	let m = s.match(/((?:19|20)\d{2})[-_. ](0[1-9]|1[0-2])[-_. ](0[1-9]|[12]\d|3[01])\D+((?:19|20)\d{2})[-_. ](0[1-9]|1[0-2])[-_. ](0[1-9]|[12]\d|3[01])/);
+	if (m) {
+		return {
+			startDate: `${m[1]}-${m[2]}-${m[3]}`,
+			endDate: `${m[4]}-${m[5]}-${m[6]}`,
+			datePrecision: "day",
+		};
+	}
+	m = s.match(/(?:^|[^0-9])((?:19|20)\d{2})[-_. ](0[1-9]|1[0-2])[-_. ](0[1-9]|[12]\d|3[01])(?:[^0-9]|$)/);
 	if (m) return { startDate: `${m[1]}-${m[2]}-${m[3]}`, datePrecision: "day" };
 	m = s.match(/(?:^|[^0-9])((?:19|20)\d{2})[-_. ](0[1-9]|1[0-2])(?:[^0-9]|$)/);
 	if (m) return { startDate: `${m[1]}-${m[2]}-01`, startDateDisplay: `${m[1]}-${m[2]}`, datePrecision: "month" };
@@ -275,6 +435,138 @@ function inferEventTitle(filePath) {
 	return titleCase(cleaned || base);
 }
 
+function prettifyItemName(raw) {
+	return titleCase(
+		String(raw || "")
+			.replace(/([a-z])([A-Z])/g, "$1 $2")
+			.replace(/\bAuroraticket\b/i, "Aurora Ticket")
+			.replace(/\bEonticket\b/i, "Eon Ticket")
+			.replace(/\bMysticticket\b/i, "Mystic Ticket")
+			.replace(/\bOldseamap\b/i, "Old Sea Map")
+	);
+}
+
+function inferRewardFromMetadata(eventTitle, category) {
+	if (category !== "key-item") return {};
+	const raw = eventTitle.match(/\bItem\s+(.+)$/i)?.[1]
+		|| eventTitle.match(/\b(AuroraTicket|EonTicket|MysticTicket|OldSeaMap|Aurora Ticket|Eon Ticket|Mystic Ticket|Old Sea Map)\b/i)?.[1];
+	if (!raw) return {};
+	return {
+		type: "item",
+		name: prettifyItemName(raw),
+	};
+}
+
+function inferPokemonNameFromTitle(eventTitle, species, otList = []) {
+	const title = cleanMergedEventTitle(eventTitle);
+	const speciesName = String(species || "").trim();
+	if (!title || !speciesName) return "";
+	const match = title.match(new RegExp(`^(.*?)\\s+${speciesName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(?:\\s+Egg)?$`, "i"));
+	if (!match) return "";
+	const prefix = String(match[1] || "")
+		.replace(/\b(rs|rse|frlg|rsefl|emerald|ruby|sapphire)\b/gi, "")
+		.replace(/\s+/g, " ")
+		.trim();
+	if (!prefix) return "";
+	const hasNonAscii = /[^\u0000-\u007f]/.test(prefix);
+	const normalizedPrefix = normalizeLookupText(prefix);
+	if (!normalizedPrefix && !hasNonAscii) return "";
+	const otValues = uniqueStrings(otList).map((entry) => normalizeLookupText(entry));
+	if (normalizedPrefix && otValues.includes(normalizedPrefix)) return "";
+	if (normalizedPrefix && /^(egg|gift|event|distribution)$/.test(normalizedPrefix)) return "";
+	if (hasNonAscii && uniqueStrings(otList).includes(prefix)) return "";
+	return prefix;
+}
+
+function inferLevelFromTitle(eventTitle) {
+	const title = String(eventTitle || "");
+	const explicit = title.match(/\b(?:level|lvl?|lv\.?)\s*(\d{1,3})\b/i);
+	if (explicit) return Number(explicit[1]);
+	if (/\begg\b/i.test(title)) return 5;
+	return undefined;
+}
+
+function inferBallFromMetadata(eventTitle) {
+	const title = String(eventTitle || "");
+	if (/\begg\b/i.test(title)) return { ...BALL_DISPLAY.pokeball };
+	const match = title.match(/\b(master|ultra|great|poke|safari|net|dive|nest|repeat|timer|luxury|premier)\s*ball\b/i);
+	if (!match) return undefined;
+	const key = `${match[1].toLowerCase()}ball`;
+	return BALL_DISPLAY[key] ? { ...BALL_DISPLAY[key] } : undefined;
+}
+
+function sanitizeTrainerName(name) {
+	const text = String(name || "").trim();
+	if (!text || /^[-\s]+$/.test(text)) return "";
+	return text;
+}
+
+function isDistinctPokemonName(name, species) {
+	const cleanName = normalizeLookupText(name);
+	const cleanSpecies = normalizeLookupText(species);
+	if (!cleanName || !cleanSpecies) return false;
+	return cleanName !== cleanSpecies;
+}
+
+function buildRewardName(name, species) {
+	return isDistinctPokemonName(name, species) ? String(name || "").trim() : undefined;
+}
+
+function isPlausibleMoveId(id) {
+	return Number.isFinite(id) && id > 0 && id <= 10000;
+}
+
+function isPlausibleItemId(id) {
+	return Number.isFinite(id) && id > 0 && id <= 10000;
+}
+
+async function buildPokemonAbilityList(speciesOrDex) {
+	if (!speciesOrDex) return [];
+	const pokemon = await pokeApiJson("pokemon", speciesOrDex).catch(() => null);
+	return uniqueStrings((pokemon?.abilities || [])
+		.filter((entry) => !entry.is_hidden)
+		.sort((a, b) => a.slot - b.slot)
+		.map((entry) => prettyApiName(entry?.ability?.name || "")));
+}
+
+async function inferHeldItemsFromTitle(eventTitle) {
+	const title = String(eventTitle || "").trim();
+	if (!title) return [];
+	const candidates = [];
+	const berryMatch = title.match(/\b([A-Z][A-Za-z]+)\s+Berry\b/i);
+	if (berryMatch) candidates.push(`${berryMatch[1]} Berry`);
+	const itemPatterns = [
+		/Aurora Ticket/i,
+		/Eon Ticket/i,
+		/Mystic Ticket/i,
+		/Old Sea Map/i,
+		/Light Ball/i,
+		/Liechi Berry/i,
+		/Ganlon Berry/i,
+		/Salac Berry/i,
+		/Petaya Berry/i,
+		/Apicot Berry/i,
+		/Enigma Berry/i,
+		/Starf Berry/i,
+		/Lansat Berry/i,
+	];
+	for (const pattern of itemPatterns) {
+		const match = title.match(pattern);
+		if (match) candidates.push(match[0]);
+	}
+	const uniqueNames = uniqueStrings(candidates);
+	const results = [];
+	for (const name of uniqueNames) {
+		const item = await pokeApiJson("item", slugify(name)).catch(() => null);
+		if (!item) continue;
+		results.push({
+			name: item?.names?.find((n) => n.language?.name === "en")?.name || prettyApiName(item?.name),
+			slug: item?.name || slugify(name),
+		});
+	}
+	return results;
+}
+
 function slugify(s) {
 	return String(s || "").normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/['’]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 120);
 }
@@ -292,7 +584,9 @@ function inferMethod(filePath) {
 	return "unknown";
 }
 
-function inferCompatibleGames(filePath, generation) {
+function inferCompatibleGames(filePath, generation, pathContext) {
+	if (pathContext?.games?.length) return pathContext.games;
+
 	const base = path.basename(filePath).toUpperCase();
 	const prefix = base.match(/^(RS|RSE|FRLG|FL|E)\s*-/);
 	if (prefix) {
@@ -321,7 +615,13 @@ function eventMatchesGames(eventGames, requestedGames, includeAllCompatible) {
 
 async function pokeApiJson(kind, idOrName) {
 	const key = `${kind}:${idOrName}`;
-	const cache = kind === "pokemon" ? pokemonCache : kind === "pokemon-species" ? speciesCache : moveCache;
+	const cache = kind === "pokemon"
+		? pokemonCache
+		: kind === "pokemon-species"
+			? speciesCache
+			: kind === "item"
+				? itemCache
+				: moveCache;
 	if (cache.has(key)) return cache.get(key);
 	const res = await fetch(`https://pokeapi.co/api/v2/${kind}/${idOrName}`);
 	if (!res.ok) throw new Error(`PokeAPI ${kind}/${idOrName} failed ${res.status}`);
@@ -332,6 +632,83 @@ async function pokeApiJson(kind, idOrName) {
 
 function prettyApiName(s) {
 	return String(s || "").split("-").map((p) => p ? p[0].toUpperCase() + p.slice(1) : p).join(" ");
+}
+
+function normalizeEventTitleForMatch(s) {
+	return normalizeLookupText(s)
+		.replace(/\b(rsefl|rselg|rse|frlg|rs|fl|fr|lg|dppthgss|dppthgss|dppt|dpp|dp|pt|hgss|hg|ss)\b/g, " ")
+		.replace(/\b[0-9a-f]{4,8}\b/g, " ")
+		.replace(/\b\d+\s+of\s+\d+\b/g, " ")
+		.replace(/\bmystry\b/g, " mystery ")
+		.replace(/\bwshmkr\b/g, " wishmkr ")
+		.replace(/\bchannel jirachi\b/g, " pokemon channel jirachi ")
+		.replace(/\bpoke park\b/g, " pokepark ")
+		.replace(/\bpokemon\s+pokemon\b/g, " pokemon ")
+		.replace(/\s+/g, " ")
+		.trim();
+}
+
+function normalizeLookupText(s) {
+	return String(s || "")
+		.normalize("NFKD")
+		.replace(/[\u0300-\u036f]/g, "")
+		.replace(/[♀]/g, " female ")
+		.replace(/[♂]/g, " male ")
+		.replace(/['’.]/g, "")
+		.replace(/[^a-z0-9]+/gi, " ")
+		.replace(/\bpok\s+female\s+mon\b/gi, " pokemon ")
+		.replace(/\bpok\s+male\s+mon\b/gi, " pokemon ")
+		.trim()
+		.toLowerCase();
+}
+
+async function loadSpeciesIndex() {
+	if (!speciesIndexPromise) {
+		speciesIndexPromise = (async () => {
+			const dexPath = path.resolve(process.cwd(), "data/natidexs/home.js");
+			const source = await fs.readFile(dexPath, "utf8");
+			const byDex = new Map();
+			const byToken = [];
+			const seenDex = new Set();
+			const re = /natiId:\s*(\d+),\s*name:\s*"([^"]+)"/g;
+			let match;
+			while ((match = re.exec(source))) {
+				const dex = Number(match[1]);
+				if (!Number.isFinite(dex) || seenDex.has(dex)) continue;
+				seenDex.add(dex);
+				const name = match[2];
+				const token = normalizeLookupText(name);
+				const entry = { dex, name, token };
+				byDex.set(dex, entry);
+				byToken.push(entry);
+			}
+			byToken.sort((a, b) => b.token.length - a.token.length);
+			return { byDex, byToken };
+		})();
+	}
+	return speciesIndexPromise;
+}
+
+async function inferSpeciesFromTitle(title) {
+	const normalizedTitle = normalizeLookupText(title);
+	if (!normalizedTitle) return null;
+	const { byToken } = await loadSpeciesIndex();
+	for (const entry of byToken) {
+		if (!entry.token) continue;
+		const escaped = entry.token.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+		if (new RegExp(`(?:^| )${escaped}(?: |$)`, "i").test(normalizedTitle)) return entry;
+	}
+	return null;
+}
+
+async function getSpeciesByDex(dex) {
+	if (!Number.isFinite(dex)) return null;
+	const { byDex } = await loadSpeciesIndex();
+	return byDex.get(Number(dex)) || null;
+}
+
+function slugFromDisplayName(name) {
+	return slugify(String(name || "").replace(/\bPoké\b/gi, "poke"));
 }
 
 function growthExp(rateName, n) {
@@ -384,7 +761,7 @@ const PK3_ORDERS = [
 	"MGAE", "MGEA", "MAGE", "MAEG", "MEGA", "MEAG",
 ];
 
-async function parsePk3Payload(arrayBuffer) {
+async function parsePk3Payload(arrayBuffer, options = {}) {
 	const buf = new Uint8Array(arrayBuffer);
 	if (buf.length < 80) throw new Error(`PK3 file too short: ${buf.length} bytes`);
 
@@ -424,54 +801,115 @@ async function parsePk3Payload(arrayBuffer) {
 	const ivEggAbility = readU32LE(M, 4);
 	const abilityBit = (ivEggAbility >>> 31) & 1;
 
-	const species = await pokeApiJson("pokemon-species", speciesId).catch(() => null);
-	const pokemon = await pokeApiJson("pokemon", speciesId).catch(() => null);
-	const speciesName = species?.names?.find((n) => n.language?.name === "en")?.name || pokemon?.name || nickname;
-	const growthRate = species?.growth_rate?.name || "medium-fast";
-	const level = levelFromExp(exp, growthRate);
-
-	const moves = [];
-	for (const id of moveIds) {
-		const move = await pokeApiJson("move", id).catch(() => null);
-		moves.push({ name: prettyApiName(move?.names?.find((n) => n.language?.name === "en")?.name || move?.name || `Move ${id}`), type: prettyApiName(move?.type?.name || "") });
-	}
-
-	const abilities = (pokemon?.abilities || [])
-		.filter((a) => !a.is_hidden)
-		.sort((a, b) => a.slot - b.slot);
-	const pickedAbility = abilities[abilityBit] || abilities[0];
-	const abilityName = pickedAbility?.ability?.name ? prettyApiName(pickedAbility.ability.name) : undefined;
-
-	let gender = undefined;
-	const genderRate = species?.gender_rate;
-	if (genderRate === -1) gender = "none";
-	else if (genderRate === 0) gender = "male";
-	else if (genderRate === 8) gender = "female";
-	else if (Number.isFinite(genderRate)) {
-		const threshold = Math.floor((genderRate / 8) * 255);
-		gender = (personality & 0xff) < threshold ? "female" : "male";
-	}
-
 	const shinyValue = ((tid ^ sid) ^ ((personality >>> 16) ^ (personality & 0xffff))) & 0xffff;
 	const shiny = shinyValue < 8;
+	const checksumOk = calc === checksum;
+	const inferredSpecies = await inferSpeciesFromTitle(options.eventTitle || "");
+	const canUseStructuredFields = checksumOk
+		|| (inferredSpecies && Number.isFinite(speciesId) && speciesId === inferredSpecies.dex);
+	const speciesLookupId = Number.isFinite(speciesId) && speciesId > 0
+		? speciesId
+		: inferredSpecies?.dex;
+
+	let species = null;
+	let pokemon = null;
+	let speciesName = inferredSpecies?.name || undefined;
+	let level = undefined;
+	let abilityName = undefined;
+	let gender = undefined;
+	let heldItem = null;
+	let moves = [];
+	let ball = undefined;
+
+	if (canUseStructuredFields && Number.isFinite(speciesLookupId)) {
+		species = await pokeApiJson("pokemon-species", speciesLookupId).catch(() => null);
+		pokemon = await pokeApiJson("pokemon", speciesLookupId).catch(() => null);
+		speciesName = species?.names?.find((n) => n.language?.name === "en")?.name
+			|| prettyApiName(pokemon?.name || "")
+			|| inferredSpecies?.name
+			|| undefined;
+		const growthRate = species?.growth_rate?.name || "medium-fast";
+		if (Number.isFinite(exp) && exp >= 0) level = levelFromExp(exp, growthRate);
+		if (GEN3_BALLS[ballId]) ball = { ...BALL_DISPLAY[GEN3_BALLS[ballId]] };
+
+		const abilities = (pokemon?.abilities || [])
+			.filter((a) => !a.is_hidden)
+			.sort((a, b) => a.slot - b.slot);
+		const pickedAbility = abilities[abilityBit] || abilities[0];
+		abilityName = pickedAbility?.ability?.name ? prettyApiName(pickedAbility.ability.name) : undefined;
+
+		const genderRate = species?.gender_rate;
+		if (genderRate === -1) gender = "none";
+		else if (genderRate === 0) gender = "male";
+		else if (genderRate === 8) gender = "female";
+		else if (Number.isFinite(genderRate)) {
+			const threshold = Math.floor((genderRate / 8) * 255);
+			gender = (personality & 0xff) < threshold ? "female" : "male";
+		}
+
+		if (isPlausibleItemId(heldItemId)) {
+			heldItem = await pokeApiJson("item", heldItemId)
+				.then((item) => ({
+					name: item?.names?.find((n) => n.language?.name === "en")?.name || prettyApiName(item?.name),
+					slug: item?.name || slugify(item?.names?.find((n) => n.language?.name === "en")?.name || `item-${heldItemId}`),
+				}))
+				.catch(() => null);
+		}
+
+		for (const id of moveIds.filter(isPlausibleMoveId)) {
+			const move = await pokeApiJson("move", id).catch(() => null);
+			moves.push({
+				name: prettyApiName(move?.names?.find((n) => n.language?.name === "en")?.name || move?.name || `Move ${id}`),
+				type: prettyApiName(move?.type?.name || ""),
+			});
+		}
+	}
+
+	const cleanOtName = sanitizeTrainerName(otName);
+	const rewardName = buildRewardName(nickname, speciesName);
+
+	if (!checksumOk) {
+		return cleanUndefined({
+			payloadParsed: true,
+			payloadKind: "pk3",
+			checksumOk,
+			reward: {
+				type: "pokemon",
+				species: speciesName,
+				name: rewardName,
+				nationalDex: inferredSpecies?.dex,
+				level,
+				gender,
+				ball,
+				ot: cleanOtName ? [cleanOtName] : [],
+				tid: String(tid).padStart(5, "0"),
+				ability: abilityName ? [abilityName] : [],
+				nature: [NATURES[personality % 25]],
+				heldItems: heldItem ? [heldItem] : [],
+				moves,
+				shiny: shiny || undefined,
+			},
+		});
+	}
 
 	return cleanUndefined({
 		payloadParsed: true,
 		payloadKind: "pk3",
-		checksumOk: calc === checksum,
+		checksumOk,
 		reward: {
 			type: "pokemon",
 			species: prettyApiName(speciesName),
-			nationalDex: speciesId,
+			name: rewardName,
+			nationalDex: species?.id || pokemon?.id || inferredSpecies?.dex || speciesId,
 			level,
 			gender,
 			shiny: shiny || undefined,
-			ball: GEN3_BALLS[ballId],
-			ot: otName ? [otName] : [],
+			ball,
+			ot: cleanOtName ? [cleanOtName] : [],
 			tid: String(tid).padStart(5, "0"),
 			ability: abilityName ? [abilityName] : [],
 			nature: [NATURES[personality % 25]],
-			heldItems: heldItemId ? [{ id: heldItemId, name: `Gen 3 item #${heldItemId}` }] : [],
+			heldItems: heldItem ? [heldItem] : [],
 			moves,
 			friendship,
 			metLevel: metLevel || undefined,
@@ -484,9 +922,9 @@ async function maybeParsePayload(filePath, ext, args) {
 	if (ext !== ".pk3") return {};
 	try {
 		const buf = await fetchArrayBuffer(rawGithubUrl(filePath));
-		return await parsePk3Payload(buf);
+		return await parsePk3Payload(buf, { eventTitle: inferEventTitle(filePath) });
 	} catch (err) {
-		return { notes: [`Payload parse failed for ${filePath}: ${err.message}`] };
+		return {};
 	}
 }
 
@@ -508,47 +946,91 @@ function mergeReward(baseReward, parsedReward) {
 	return cleanUndefined({ ...(baseReward || {}), ...(parsedReward || {}) });
 }
 
+async function applyRewardFallbacks(reward, eventTitle, category) {
+	const nextReward = { ...(reward || {}) };
+
+	Object.assign(nextReward, inferRewardFromMetadata(eventTitle, category));
+
+	if (Number.isFinite(nextReward.nationalDex) && !nextReward.species) {
+		const species = await getSpeciesByDex(nextReward.nationalDex);
+		if (species) nextReward.species = species.name;
+	}
+
+	if (!nextReward.species || !Number.isFinite(nextReward.nationalDex)) {
+		const inferredSpecies = await inferSpeciesFromTitle(eventTitle);
+		if (inferredSpecies) {
+			if (!nextReward.species) nextReward.species = inferredSpecies.name;
+			if (!Number.isFinite(nextReward.nationalDex)) nextReward.nationalDex = inferredSpecies.dex;
+		}
+	}
+
+	if (!nextReward.name) nextReward.name = inferPokemonNameFromTitle(eventTitle, nextReward.species, nextReward.ot || []);
+	if (!nextReward.level) nextReward.level = inferLevelFromTitle(eventTitle);
+	if (!nextReward.ball) nextReward.ball = inferBallFromMetadata(eventTitle);
+
+	if (!Array.isArray(nextReward.ability) || !nextReward.ability.length) {
+		const abilityList = await buildPokemonAbilityList(nextReward.nationalDex || nextReward.species);
+		if (abilityList.length) nextReward.ability = abilityList;
+	}
+
+	if ((!Array.isArray(nextReward.heldItems) || !nextReward.heldItems.length) && nextReward.type === "pokemon") {
+		const heldItems = await inferHeldItemsFromTitle(eventTitle);
+		if (heldItems.length) nextReward.heldItems = heldItems;
+	}
+
+	return cleanUndefined(nextReward);
+}
+
 async function buildEventFromTreeItem(item, args) {
 	const filePath = item.path;
+	if (!isReleasedPath(filePath)) return null;
 	const ext = getFileExtension(filePath);
 	const inferredGeneration = inferGeneration(filePath, ext);
 	const targetGeneration = String(args.generation);
 	const generationMatches = inferredGeneration === "unknown" || inferredGeneration === targetGeneration || (targetGeneration === "9_2" && inferredGeneration === "9");
 	if (!generationMatches) return null;
 
-	const games = inferCompatibleGames(filePath, targetGeneration);
+	const pathContext = inferPathContext(filePath);
+	const games = inferCompatibleGames(filePath, targetGeneration, pathContext);
 	if (!eventMatchesGames(games, args.games, args.includeAllCompatible)) return null;
 
 	const date = inferDate(filePath);
 	const eventTitle = inferEventTitle(filePath);
-	const regions = inferRegions(filePath);
-	const languages = inferLanguages(filePath);
-	const method = inferMethod(filePath);
+	const category = ext.startsWith(".pk") ? "pokemon" : inferCategoryFromTitle(eventTitle);
+	const regions = inferRegions(filePath, pathContext);
+	const languages = inferLanguages(filePath, pathContext);
+	const method = refineMethod(inferMethod(filePath), filePath, eventTitle, pathContext);
+	const status = inferStatus(filePath, pathContext);
 	const parsed = await maybeParsePayload(filePath, ext, args);
+	const baseReward = { type: ext.startsWith(".pk") ? "pokemon" : "unknown" };
+	const mergedReward = mergeReward(baseReward, parsed.reward);
+	const reward = await applyRewardFallbacks(mergedReward, eventTitle, category);
+	const finalRegions = regions.length ? regions : undefined;
+	const finalStartDate = date.startDate;
+	const finalEndDate = date.endDate;
+	const finalDatePrecision = date.datePrecision;
 
-	const regionForId = regions[0] || "unknown";
-	const dateForId = date.startDateDisplay || date.startDate || "unknown-date";
-	const speciesForId = parsed?.reward?.species;
+	const regionForId = finalRegions?.[0] || "unknown";
+	const dateForId = date.startDateDisplay || finalStartDate || "unknown-date";
+	const speciesForId = reward?.species;
 	const id = slugify([`gen${targetGeneration}`, eventTitle, speciesForId, regionForId, dateForId].filter(Boolean).join(" "));
 
-	const baseReward = { type: ext.startsWith(".pk") ? "pokemon" : "unknown" };
 	const event = {
 		id,
 		eventTitle,
-		category: ext.startsWith(".pk") ? "pokemon" : inferCategoryFromTitle(eventTitle),
+		category,
 		method,
-		status: "unknown",
-		games: args.games,
-		generation: targetGeneration,
-		regions: regions.length ? regions : undefined,
+		status,
+		regions: finalRegions,
 		languages: languages.length ? languages : undefined,
-		startDate: date.startDate,
+		startDate: finalStartDate,
+		endDate: finalEndDate,
 		startDateDisplay: date.startDateDisplay,
-		datePrecision: date.datePrecision,
+		datePrecision: finalDatePrecision,
 		obtainMethod: inferObtainMethod(filePath, method),
-		reward: mergeReward(baseReward, parsed.reward),
+		reward,
 		notes: [
-			readablePathNote(filePath),
+			readablePathNoteClean(filePath, pathContext),
 			...(parsed.notes || []),
 		],
 	};
@@ -560,6 +1042,22 @@ function inferCategoryFromTitle(title) {
 	const s = String(title || "").toLowerCase();
 	if (/ticket|item|berry|ball|key/.test(s)) return "key-item";
 	return "pokemon";
+}
+
+function inferStatus(filePath, pathContext) {
+	const text = normalizeLookupText([filePath, ...(pathContext?.segments || [])].join(" "));
+	if (/\bunreleased\b|\bprototype\b|\bbeta\b|\bdebug\b/.test(text)) return "unreleased";
+	if (/\breleased\b/.test(text)) return "released";
+	return "unknown";
+}
+
+function refineMethod(method, filePath, eventTitle, pathContext) {
+	if (method && method !== "unknown") return method;
+	const text = normalizeLookupText([filePath, eventTitle, ...(pathContext?.collections || [])].join(" "));
+	for (const [pattern, value] of METHOD_HINTS) {
+		if (pattern.test(text)) return value;
+	}
+	return method;
 }
 
 function inferObtainMethod(filePath, method) {
@@ -583,12 +1081,250 @@ function readablePathNote(filePath) {
 	return useful.length ? useful.join(" • ") : `Imported path: ${filePath}`;
 }
 
+function readablePathNoteClean(filePath, pathContext) {
+	const parts = pathContext?.collections?.length
+		? pathContext.collections
+		: filePath.split("/").slice(1, -1).filter(Boolean);
+	const useful = parts.filter((p) => !/^Gen \d$/i.test(p) && !/^(ENG|JPN|KOR|FRE|GER|ITA|SPA)$/i.test(p));
+	return useful.length ? useful.join(" | ") : `Imported path: ${filePath}`;
+}
+
 function jsString(value) {
 	return JSON.stringify(value, null, 2).replace(/"([^"\\]*(?:\\.[^"\\]*)*)":/g, "$1:");
 }
 
+function rawExpr(code) {
+	return { __raw: code };
+}
+
+function quoteKey(key) {
+	return /^[A-Za-z_$][A-Za-z0-9_$]*$/.test(key) ? key : JSON.stringify(key);
+}
+
+function toRenderable(value, parentKey = "") {
+	if (Array.isArray(value)) {
+		const items = value.map((item) => toRenderable(item, parentKey));
+		if (parentKey === "nature") {
+			const inline = items.map((item) => inlineScalar(item));
+			if (!inline.some((item) => item == null)) return rawExpr(`[${inline.join(", ")}]`);
+		}
+		return items;
+	}
+	if (!value || typeof value !== "object") return value;
+
+	if (parentKey === "ball" && value.slug && value.label) {
+		return rawExpr(`{ name: ${JSON.stringify(value.label)}, img: () => ball(${JSON.stringify(value.slug)}) }`);
+	}
+
+	if (parentKey === "heldItems" && value.slug && value.name) {
+		const resolver = value.kind === "berry" ? "berry" : "heldItem";
+		return rawExpr(`{ name: ${JSON.stringify(value.name)}, img: () => ${resolver}(${JSON.stringify(value.slug)}) }`);
+	}
+
+	const out = {};
+	for (const [k, v] of Object.entries(value)) out[k] = toRenderable(v, k);
+	return out;
+}
+
+function inlineScalar(value) {
+	if (value && typeof value === "object" && value.__raw) return value.__raw;
+	if (Array.isArray(value) || (value && typeof value === "object")) return null;
+	return JSON.stringify(value);
+}
+
+function tryInline(value) {
+	if (value && typeof value === "object" && value.__raw) return value.__raw;
+
+	const scalar = inlineScalar(value);
+	if (scalar != null) return scalar;
+
+	if (Array.isArray(value)) {
+		if (value.length > 3) return null;
+		const parts = value.map((item) => tryInline(item));
+		if (parts.some((part) => part == null)) return null;
+		const rendered = `[${parts.join(", ")}]`;
+		return rendered.length <= 100 ? rendered : null;
+	}
+
+	const entries = Object.entries(value || {});
+	if (entries.length > 3) return null;
+	const parts = [];
+	for (const [key, val] of entries) {
+		const rendered = tryInline(val);
+		if (rendered == null) return null;
+		parts.push(`${quoteKey(key)}: ${rendered}`);
+	}
+	const text = `{ ${parts.join(", ")} }`;
+	return text.length <= 110 ? text : null;
+}
+
+function renderJs(value, indent = 0) {
+	const inline = tryInline(value);
+	if (inline != null) return inline;
+
+	const pad = "\t".repeat(indent);
+	const childPad = "\t".repeat(indent + 1);
+
+	if (Array.isArray(value)) {
+		const items = value.map((item) => `${childPad}${renderJs(item, indent + 1)}`);
+		return `[\n${items.join(",\n")}\n${pad}]`;
+	}
+
+	if (value && typeof value === "object") {
+		const entries = Object.entries(value);
+		const lines = entries.map(([key, val]) => `${childPad}${quoteKey(key)}: ${renderJs(val, indent + 1)}`);
+		return `{\n${lines.join(",\n")}\n${pad}}`;
+	}
+
+	return JSON.stringify(value);
+}
+
 function renderEventObject(event) {
-	return jsString(event).split("\n").map((line) => `\t${line}`).join("\n");
+	return renderJs(toRenderable(event), 1);
+}
+
+function uniqueStrings(values) {
+	return [...new Set((values || []).filter(Boolean).map((value) => String(value)))];
+}
+
+function uniqueObjectsByKey(values, keyFn) {
+	const out = [];
+	const seen = new Set();
+	for (const value of values || []) {
+		if (!value) continue;
+		const key = keyFn(value);
+		if (!key || seen.has(key)) continue;
+		seen.add(key);
+		out.push(value);
+	}
+	return out;
+}
+
+function mergeStringArrays(...arrays) {
+	return uniqueStrings(arrays.flat());
+}
+
+function mergeObjectArrays(values, keyFn) {
+	return uniqueObjectsByKey(values.flat(), keyFn);
+}
+
+function collapseNatureValues(natures) {
+	const list = uniqueStrings(natures);
+	if (!list.length) return undefined;
+	if (list.includes("Random")) return ["Random"];
+	return list.length >= NATURES.length ? ["Random"] : list;
+}
+
+function eventGroupKey(event) {
+	const reward = event?.reward || {};
+	const method = event?.method || "";
+	const regionKey = method === "in-person"
+		? uniqueStrings(event?.regions).join(",")
+		: "";
+	return [
+		event?.category || "",
+		normalizeEventTitleForMatch(event?.eventTitle || ""),
+		normalizeLookupText(reward.species || reward.name || reward.type || ""),
+		regionKey,
+		uniqueStrings(event?.languages).join(","),
+		method,
+	].join("|");
+}
+
+function cleanMergedEventTitle(title) {
+	return String(title || "")
+		.replace(/^\s*(?:rs|rse|rselg|rsefl|frlg|fr|lg|fl|e|c|xd|dppt|dp|pt|hgss|hg|ss|bw|bw2|b2w2|xy|oras|sm|usum|swsh|bdsp|pla|sv)\b[\s-]*/i, "")
+		.replace(/\b[0-9A-F]{4,8}\b/gi, " ")
+		.replace(/\s+/g, " ")
+		.trim();
+}
+
+function buildMergedEventId(event) {
+	const reward = event?.reward || {};
+	const cleanedTitle = cleanMergedEventTitle(event?.eventTitle || "");
+	const speciesOrName = reward.species || reward.name;
+	const includeRewardInId = speciesOrName
+		&& !normalizeEventTitleForMatch(cleanedTitle).includes(normalizeLookupText(speciesOrName));
+	return slugify([
+		`gen${event?.id?.match(/^gen([^-\s]+)/)?.[1] || ""}`,
+		cleanedTitle,
+		includeRewardInId ? speciesOrName : undefined,
+		uniqueStrings(event?.regions)[0] || "unknown",
+		event?.startDateDisplay || event?.startDate || "unknown-date",
+	].filter(Boolean).join(" "));
+}
+
+function pickPreferredScalar(...values) {
+	for (const value of values) {
+		if (value === undefined || value === null || value === "") continue;
+		return value;
+	}
+	return undefined;
+}
+
+function mergeRewards(rewards) {
+	const merged = {
+		type: pickPreferredScalar(...rewards.map((reward) => reward?.type)),
+		species: pickPreferredScalar(...rewards.map((reward) => reward?.species)),
+		name: pickPreferredScalar(...rewards.map((reward) => reward?.name)),
+		nationalDex: pickPreferredScalar(...rewards.map((reward) => reward?.nationalDex)),
+		level: pickPreferredScalar(...rewards.map((reward) => reward?.level)),
+		gender: pickPreferredScalar(...rewards.map((reward) => reward?.gender)),
+		shiny: pickPreferredScalar(...rewards.map((reward) => reward?.shiny)),
+		ball: pickPreferredScalar(...rewards.map((reward) => reward?.ball)),
+		tid: pickPreferredScalar(...rewards.map((reward) => reward?.tid)),
+		friendship: pickPreferredScalar(...rewards.map((reward) => reward?.friendship)),
+		metLevel: pickPreferredScalar(...rewards.map((reward) => reward?.metLevel)),
+	};
+
+	const genders = uniqueStrings(rewards.map((reward) => reward?.gender).filter(Boolean));
+	if (genders.length > 1) merged.gender = "Random";
+
+	merged.ot = mergeStringArrays(...rewards.map((reward) => reward?.ot || []));
+	merged.ability = mergeStringArrays(...rewards.map((reward) => reward?.ability || []));
+	merged.nature = collapseNatureValues(rewards.flatMap((reward) => reward?.nature || []));
+	merged.moves = mergeObjectArrays(rewards.map((reward) => reward?.moves || []), (move) => `${move.name}|${move.type || ""}`);
+	merged.heldItems = mergeObjectArrays(rewards.map((reward) => reward?.heldItems || []), (item) => item.slug || item.name);
+
+	return cleanUndefined(merged);
+}
+
+function mergeEvents(events) {
+	const groups = new Map();
+
+	for (const event of events) {
+		const key = eventGroupKey(event);
+		const group = groups.get(key);
+		if (!group) {
+			groups.set(key, { ...event, reward: { ...(event.reward || {}) } });
+			continue;
+		}
+
+		group.regions = mergeStringArrays(group.regions || [], event.regions || []);
+		group.languages = mergeStringArrays(group.languages || [], event.languages || []);
+		group.notes = mergeStringArrays(group.notes || [], event.notes || []);
+		group.status = pickPreferredScalar(group.status === "unknown" ? undefined : group.status, event.status === "unknown" ? undefined : event.status, group.status, event.status);
+		group.startDate = pickPreferredScalar(group.startDate, event.startDate);
+		group.endDate = pickPreferredScalar(group.endDate, event.endDate);
+		group.startDateDisplay = pickPreferredScalar(group.startDateDisplay, event.startDateDisplay);
+		group.datePrecision = pickPreferredScalar(group.datePrecision === "unknown" ? undefined : group.datePrecision, event.datePrecision === "unknown" ? undefined : event.datePrecision, group.datePrecision, event.datePrecision);
+		group.obtainMethod = cleanUndefined({
+			delivery: pickPreferredScalar(group.obtainMethod?.delivery, event.obtainMethod?.delivery),
+			location: pickPreferredScalar(group.obtainMethod?.location, event.obtainMethod?.location),
+			requirements: mergeStringArrays(group.obtainMethod?.requirements || [], event.obtainMethod?.requirements || []),
+		});
+		group.reward = mergeRewards([group.reward || {}, event.reward || {}]);
+	}
+
+	return [...groups.values()].map((event) => cleanUndefined({
+		...event,
+		eventTitle: cleanMergedEventTitle(event.eventTitle),
+		id: buildMergedEventId({
+			...event,
+			eventTitle: cleanMergedEventTitle(event.eventTitle),
+		}),
+		reward: mergeRewards([event.reward || {}]),
+	}));
 }
 
 function renderOutput(events, args) {
@@ -602,6 +1338,7 @@ import {
 \tdefineDistributionsMany,
 \t_ball,
 \t_berry,
+\t_heldItem,
 \t_ribbon,
 \t_frontSprite,
 \t_frontSpriteShiny,
@@ -614,6 +1351,7 @@ const baseSprite = (gameKey, natiId) => _frontSprite(gen, gameKey, natiId);
 const shinySprite = (gameKey, natiId) => _frontSpriteShiny(gen, gameKey, natiId);
 const berry = (name) => _berry(gen, name);
 const ball = (name) => _ball(gen, name);
+const heldItem = (name) => _heldItem(gen, name);
 const ribbon = (name) => _ribbon(gen, name);
 
 const DISTRIBUTIONS = [
@@ -627,11 +1365,19 @@ defineDistributionsMany(GAME_KEYS, () => DISTRIBUTIONS);
 `;
 }
 
+function logScrapeSummary(events) {
+	const items = events.filter((event) => event.reward?.type === "item").length;
+	const withRegions = events.filter((event) => Array.isArray(event.regions) && event.regions.length).length;
+	const withLanguages = events.filter((event) => Array.isArray(event.languages) && event.languages.length).length;
+	const withHeldItems = events.filter((event) => Array.isArray(event.reward?.heldItems) && event.reward.heldItems.length).length;
+	console.log(`Summary: ${items} item events, ${withRegions} with regions, ${withLanguages} with languages, ${withHeldItems} with held items.`);
+}
+
 async function main() {
 	const args = parseArgs(process.argv);
 	console.log(`Fetching ${OWNER}/${REPO} tree...`);
 	const tree = await getRecursiveTree();
-	const files = tree.filter((x) => x.type === "blob").filter((x) => isEventFile(x.path));
+	const files = tree.filter((x) => x.type === "blob").filter((x) => isReleasedPath(x.path)).filter((x) => isEventFile(x.path));
 	console.log(`Found ${files.length} likely event files.`);
 
 	const events = [];
@@ -644,7 +1390,9 @@ async function main() {
 		if (args.max && events.length >= args.max) break;
 	}
 
-	events.sort((a, b) => {
+	const mergedEvents = mergeEvents(events);
+
+	mergedEvents.sort((a, b) => {
 		const ad = a.startDate || "";
 		const bd = b.startDate || "";
 		if (ad && bd) return bd.localeCompare(ad);
@@ -653,12 +1401,13 @@ async function main() {
 		return String(a.eventTitle).localeCompare(String(b.eventTitle));
 	});
 
-	console.log(`Matched ${events.length} events for games: ${args.games.join(", ")}`);
+	console.log(`Matched ${events.length} raw files and collapsed them into ${mergedEvents.length} events for games: ${args.games.join(", ")}`);
+	logScrapeSummary(mergedEvents);
 	if (args.dryRun) {
-		console.log(JSON.stringify(events.slice(0, args.max || 10), null, 2));
+		console.log(JSON.stringify(mergedEvents.slice(0, args.max || 10), null, 2));
 		return;
 	}
-	const outText = renderOutput(events, args);
+	const outText = renderOutput(mergedEvents, args);
 	await fs.mkdir(path.dirname(args.out), { recursive: true });
 	await fs.writeFile(args.out, outText, "utf8");
 	console.log(`Wrote ${args.out}`);

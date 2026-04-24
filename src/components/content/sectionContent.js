@@ -66,6 +66,9 @@ function buildDistributionNode(state) {
   const filterRow = document.createElement('div');
   filterRow.className = 'dist-filters-row';
 
+  const filterGroup = document.createElement('div');
+  filterGroup.className = 'dist-filter-group';
+
   const label = document.createElement('label');
   label.className = 'dist-filter-label';
   label.textContent = 'Region:';
@@ -87,8 +90,13 @@ function buildDistributionNode(state) {
   }
 
   label.htmlFor = select.id;
-  filterRow.appendChild(label);
-  filterRow.appendChild(select);
+  filterGroup.appendChild(label);
+  filterGroup.appendChild(select);
+  filterRow.appendChild(filterGroup);
+
+  const topControls = document.createElement('div');
+  topControls.className = 'dist-filter-pager';
+  filterRow.appendChild(topControls);
 
   const gridHolder = document.createElement('div');
   gridHolder.className = 'dist-grid-holder';
@@ -97,6 +105,7 @@ function buildDistributionNode(state) {
     gridHolder.innerHTML = '';
     const grid = renderDistributionCardsFor(state.gameKey, state.genKey, store, {
       region: regionKey || 'all',
+      controlsHost: topControls,
     });
     if (grid) gridHolder.appendChild(grid);
   };

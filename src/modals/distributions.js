@@ -187,11 +187,85 @@ function listTags(values, className) {
 		: "—";
 }
 
+function normalizedCompareText(value) {
+	return String(value || "")
+		.normalize("NFKD")
+		.replace(/[\u0300-\u036f]/g, "")
+		.replace(/\s+/g, " ")
+		.trim()
+		.toLowerCase();
+}
+
+function renderNatureFieldLegacy(values) {
+	const list = asList(values);
+	if (!list.length) return "—";
+	if (list.length <= 3) return listTags(list, "ot");
+	return `
+		<details class="dist-inline-expander">
+			<summary>Click to expand (${list.length})</summary>
+			<div class="dist-inline-expander-body">${listTags(list, "ot")}</div>
+		</details>
+	`;
+}
+
 function cleanGeneratedTitle(title) {
 	return String(title || "")
 		.replace(/\b[0-9A-F]{8}\b/gi, "")
 		.replace(/\s+/g, " ")
 		.trim();
+}
+
+function encodeDataValue(value) {
+	return encodeURIComponent(JSON.stringify(value));
+}
+
+function renderNatureField(values, displayName = "") {
+	const list = asList(values);
+	if (!list.length) return "â€”";
+	if (list.length <= 3) return listTags(list, "ot");
+	return `<button type="button" class="dist-inline-open" data-nature-expand="${encodeDataValue(list)}" data-nature-title="${escapeHtml(displayName || "Natures")}">Expand</button>`;
+}
+
+let natureOverlayEl = null;
+
+function ensureNatureOverlay() {
+	if (natureOverlayEl?.isConnected) return natureOverlayEl;
+	const overlay = document.createElement("div");
+	overlay.className = "dist-overlay";
+	overlay.hidden = true;
+	overlay.innerHTML = `
+		<div class="dist-overlay-backdrop" data-overlay-close="true"></div>
+		<div class="dist-overlay-panel" role="dialog" aria-modal="true" aria-labelledby="distOverlayTitle">
+			<button type="button" class="dist-overlay-close" aria-label="Close" data-overlay-close="true">×</button>
+			<div class="dist-overlay-title" id="distOverlayTitle">Natures</div>
+			<div class="dist-overlay-body"></div>
+		</div>
+	`;
+	overlay.addEventListener("click", (e) => {
+		if (e.target?.closest?.("[data-overlay-close='true']")) closeNatureOverlay();
+	});
+	document.addEventListener("keydown", (e) => {
+		if (e.key === "Escape" && natureOverlayEl && !natureOverlayEl.hidden) closeNatureOverlay();
+	});
+	document.body.appendChild(overlay);
+	natureOverlayEl = overlay;
+	return overlay;
+}
+
+function openNatureOverlay(values, title = "Natures") {
+	const overlay = ensureNatureOverlay();
+	const body = overlay.querySelector(".dist-overlay-body");
+	const heading = overlay.querySelector(".dist-overlay-title");
+	if (heading) heading.textContent = title;
+	if (body) body.innerHTML = `<div class="dist-overlay-tags">${asList(values).map((value) => `<span class="tag ot">${fmt(value)}</span>`).join("")}</div>`;
+	overlay.hidden = false;
+	document.body.classList.add("dist-overlay-open");
+}
+
+function closeNatureOverlay() {
+	if (!natureOverlayEl) return;
+	natureOverlayEl.hidden = true;
+	document.body.classList.remove("dist-overlay-open");
 }
 
 function inferItemNameFromTitle(title) {
@@ -225,16 +299,17 @@ function resolveRecord(d, ctx) {
 	const rawCategory = normalizeGeneratedCategory(d);
 	const isItemLike = String(rawCategory || "").toLowerCase().includes("item") && !inferredMon;
 
-	const name = firstDefined(
+	const displayName = firstDefined(
 		d.name,
-		d.pokemon,
-		reward.species,
 		reward.name,
+		d.pokemon,
 		isItemLike ? inferredItem : null,
+		reward.species,
 		inferredMon?.species,
 		reward.item,
 		reward.title
 	);
+	const speciesName = firstDefined(reward.species, inferredMon?.species);
 	const nationalDex = firstDefined(reward.nationalDex, reward.natiId, reward.natId, d.nationalDex, d.natiId, inferredMon?.nationalDex);
 	const gender = firstDefined(d.gender, d.sex, reward.gender, reward.sex);
 	const level = firstDefined(d.level, reward.level);
@@ -256,7 +331,10 @@ function resolveRecord(d, ctx) {
 		reward,
 		obtain,
 		category: rawCategory,
-		name,
+		name: displayName,
+		displayName,
+		speciesName,
+		showSpeciesSubline: !!displayName && !!speciesName && normalizedCompareText(displayName) !== normalizedCompareText(speciesName),
 		nationalDex,
 		gender,
 		level,
@@ -295,18 +373,17 @@ function filterByRegion(list, selected) {
 function makePager({ page, totalPages, totalItems, pageSize, start, end }) {
 	const el = document.createElement("div");
 	el.className = "dist-pager";
-	el.style.cssText = "display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:0 0 12px;";
 	el.innerHTML = `
-		<div class="dist-pager-info" style="font-size:12px;opacity:.85;">
+		<div class="dist-pager-info">
 			Showing ${totalItems ? start + 1 : 0}-${end} of ${totalItems} distributions
 		</div>
-		<div class="dist-pager-actions" style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+		<div class="dist-pager-actions">
 			<button type="button" class="dist-page-btn" data-page-action="first" ${page <= 1 ? "disabled" : ""}>First</button>
 			<button type="button" class="dist-page-btn" data-page-action="prev" ${page <= 1 ? "disabled" : ""}>Prev</button>
-			<span style="font-size:12px;opacity:.85;">Page ${page} / ${totalPages}</span>
+			<span class="dist-pager-page">Page ${page} / ${totalPages}</span>
 			<button type="button" class="dist-page-btn" data-page-action="next" ${page >= totalPages ? "disabled" : ""}>Next</button>
 			<button type="button" class="dist-page-btn" data-page-action="last" ${page >= totalPages ? "disabled" : ""}>Last</button>
-			<label style="font-size:12px;opacity:.85;display:flex;align-items:center;gap:4px;">
+			<label class="dist-page-size-wrap">
 				Per page
 				<select class="dist-page-size">
 					${PAGE_SIZE_OPTIONS.map((n) => `<option value="${n}" ${n === pageSize ? "selected" : ""}>${n}</option>`).join("")}
@@ -322,12 +399,11 @@ function makeCard({ d, ctx, checked, setChecked }) {
 	const card = document.createElement("article");
 	card.className = "dist-card" + (checked ? " is-done" : "");
 	card.setAttribute("role", "group");
-	card.setAttribute("aria-label", rec.name || d?.eventTitle || "Distribution");
+	card.setAttribute("aria-label", rec.displayName || d?.eventTitle || "Distribution");
 
 	const evtTitle = cleanGeneratedTitle(d.eventTitle || rec.name || "Distribution");
 	const rawRegions = d.region || d.regions || d.regionCode || d.country || null;
 	let regionTokens = splitRegionsForDisplay(rawRegions);
-	if (!regionTokens.length) regionTokens = asList(d.languages).map(prettyToken).filter(Boolean);
 
 	const dateLine =
 		formatDateRange({
@@ -337,7 +413,6 @@ function makeCard({ d, ctx, checked, setChecked }) {
 			endDisplay: getEndDisplay(d),
 		}) || formatDateRange(d.dates || d.date);
 
-	const metaChips = [methodLabel(d.method), statusLabel(d.status), categoryLabel(rec.category)].filter(Boolean);
 	const detailLines = buildDetailsLines(d);
 	const hasPayload = !!(
 		rec.level || rec.abilityList.length || rec.otList.length || rec.natureList.length ||
@@ -348,10 +423,9 @@ function makeCard({ d, ctx, checked, setChecked }) {
 	card.innerHTML = `
 		<div class="dist-event-row">
 			<div class="dist-event-title" title="${fmt(evtTitle)}">${fmt(evtTitle)}</div>
-			${regionTokens.length || metaChips.length
+			${regionTokens.length
 				? `<div class="dist-region-list">
 					${regionTokens.map((r) => `<span class="dist-region-pill">${fmt(r)}</span>`).join("")}
-					${metaChips.map((r) => `<span class="dist-region-pill dist-meta-pill">${fmt(r)}</span>`).join("")}
 				</div>`
 				: ""
 			}
@@ -360,9 +434,10 @@ function makeCard({ d, ctx, checked, setChecked }) {
 		<div class="dist-hd">
 			<div class="dist-hd-left">
 				<div class="dist-name">
-					${fmt(rec.name)}
+					<span>${fmt(rec.displayName)}</span>
 					<span class="dist-gender">${renderGenderSymbols(rec.gender)}</span>
 				</div>
+				${rec.showSpeciesSubline ? `<div class="dist-species-subline" style="font-size:12px;font-style:italic;opacity:.78;margin-top:2px;">${fmt(rec.speciesName)}</div>` : ""}
 			</div>
 
 			<div class="dist-hd-center">
@@ -392,7 +467,7 @@ function makeCard({ d, ctx, checked, setChecked }) {
 
 		<div class="dist-body">
 			<div class="dist-img">
-				${rec.imgSrc ? `<img alt="${fmt(rec.name || evtTitle)}" src="${rec.imgSrc}" loading="lazy">` : ""}
+				${rec.imgSrc ? `<img alt="${fmt(rec.displayName || evtTitle)}" src="${rec.imgSrc}" loading="lazy">` : ""}
 				${renderDistBadges(d)}
 			</div>
 
@@ -401,7 +476,7 @@ function makeCard({ d, ctx, checked, setChecked }) {
 					<div><dt>Level</dt><dd>${fmt(rec.level)}</dd></div>
 					<div><dt>Ability</dt><dd>${listTags(rec.abilityList, "ot")}</dd></div>
 					<div><dt>OT</dt><dd>${listTags(rec.otList, "ot")}</dd></div>
-					<div><dt>Nature</dt><dd>${listTags(rec.natureList, "ot")}</dd></div>
+					<div><dt>Nature</dt><dd>${renderNatureField(rec.natureList, rec.displayName || rec.speciesName || evtTitle)}</dd></div>
 					<div><dt>ID</dt><dd>${listTags(rec.idList, "tid")}</dd></div>
 					<div>
 						<dt>Held Item</dt>
@@ -471,6 +546,7 @@ function makeCard({ d, ctx, checked, setChecked }) {
 export function renderDistributionCardsFor(gameKey, genKey, store, opts = {}) {
 	const root = document.createElement("div");
 	root.className = "dist-results";
+	const controlsHost = opts.controlsHost || null;
 
 	const rawList = sortedDistributionsFor(gameKey);
 	const filteredList = filterByRegion(rawList, opts.region);
@@ -496,6 +572,7 @@ export function renderDistributionCardsFor(gameKey, genKey, store, opts = {}) {
 
 	const renderPage = () => {
 		root.innerHTML = "";
+		if (controlsHost) controlsHost.innerHTML = "";
 		const totalItems = filteredList.length;
 		const totalPages = Math.max(1, Math.ceil(totalItems / pageSize));
 		page = Math.min(Math.max(1, page), totalPages);
@@ -508,12 +585,15 @@ export function renderDistributionCardsFor(gameKey, genKey, store, opts = {}) {
 			empty.className = "small";
 			empty.style.opacity = ".8";
 			empty.textContent = "No distributions defined for this game.";
+			if (controlsHost) controlsHost.innerHTML = "";
 			root.appendChild(empty);
 			return;
 		}
 
 		const topPager = makePager({ page, totalPages, totalItems, pageSize, start, end });
-		root.appendChild(topPager);
+		topPager.classList.add("dist-pager-top");
+		if (controlsHost) controlsHost.appendChild(topPager);
+		else root.appendChild(topPager);
 
 		const grid = document.createElement("div");
 		grid.className = "dist-grid";
@@ -524,11 +604,18 @@ export function renderDistributionCardsFor(gameKey, genKey, store, opts = {}) {
 		root.appendChild(grid);
 
 		const bottomPager = makePager({ page, totalPages, totalItems, pageSize, start, end });
-		bottomPager.style.margin = "12px 0 0";
+		bottomPager.classList.add("dist-pager-bottom");
 		root.appendChild(bottomPager);
 	};
 
-	root.addEventListener("click", (e) => {
+	const handleClick = (e) => {
+		const natureBtn = e.target?.closest?.("[data-nature-expand]");
+		if (natureBtn) {
+			const values = JSON.parse(decodeURIComponent(natureBtn.getAttribute("data-nature-expand") || "%5B%5D"));
+			const title = natureBtn.getAttribute("data-nature-title") || "Natures";
+			openNatureOverlay(values, `${title} Natures`);
+			return;
+		}
 		const btn = e.target?.closest?.("[data-page-action]");
 		if (!btn) return;
 		const totalPages = Math.max(1, Math.ceil(filteredList.length / pageSize));
@@ -539,16 +626,27 @@ export function renderDistributionCardsFor(gameKey, genKey, store, opts = {}) {
 		if (action === "last") page = totalPages;
 		renderPage();
 		root.scrollIntoView?.({ block: "start", behavior: "smooth" });
-	});
+	};
 
-	root.addEventListener("change", (e) => {
+	const handleChange = (e) => {
 		const select = e.target?.closest?.(".dist-page-size");
 		if (!select) return;
 		pageSize = Number(select.value) || DEFAULT_PAGE_SIZE;
 		window.localStorage?.setItem?.("ppgc:distPageSize", String(pageSize));
 		page = 1;
 		renderPage();
-	});
+	};
+
+	root.addEventListener("click", handleClick);
+	root.addEventListener("change", handleChange);
+	if (controlsHost) {
+		if (controlsHost.__distHandleClick) controlsHost.removeEventListener("click", controlsHost.__distHandleClick);
+		if (controlsHost.__distHandleChange) controlsHost.removeEventListener("change", controlsHost.__distHandleChange);
+		controlsHost.__distHandleClick = handleClick;
+		controlsHost.__distHandleChange = handleChange;
+		controlsHost.addEventListener("click", handleClick);
+		controlsHost.addEventListener("change", handleChange);
+	}
 
 	renderPage();
 	return root;
