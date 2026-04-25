@@ -97,6 +97,22 @@ export function SectionPage({ state, refreshKey }) {
     setSectionVersion((v) => v + 1);
   }, [fallbackSectionId, section, state.gameKey, state.genKey, state.sectionId]);
 
+  useEffect(() => {
+    window.PPGC = window.PPGC || {};
+    const previous = window.PPGC.refreshSectionHeaderPct;
+    const refresh = () => setSectionVersion((value) => value + 1);
+    window.PPGC.refreshSectionHeaderPct = refresh;
+
+    return () => {
+      if (window.PPGC?.refreshSectionHeaderPct !== refresh) return;
+      if (typeof previous === 'function') {
+        window.PPGC.refreshSectionHeaderPct = previous;
+      } else {
+        delete window.PPGC.refreshSectionHeaderPct;
+      }
+    };
+  }, []);
+
   const pct = useMemo(() => {
     if (!section) return 0;
     return computeSectionPct(section, state.gameKey, state.genKey, store);

@@ -133,11 +133,18 @@ export function normalizeMoves(moves, ctx) {
   }).filter((m) => m.name || m.img);
 }
 
-export function normalizeBall(ball, ctx) {
-  if (!ball) return { name: '', img: null };
-  if (typeof ball === 'string') return { name: prettyToken(ball), img: null };
+export function normalizeBall(ball, ctx, { fallback = true } = {}) {
+  const fallbackImg = _assetPath('items/balls/gen8_2/legendsarceus/strange-ball.png');
+  if (!ball) return fallback ? { name: 'Strange Ball', img: fallbackImg } : { name: '', img: null };
+  if (typeof ball === 'string') {
+    const name = prettyToken(ball);
+    return { name: name || (fallback ? 'Strange Ball' : ''), img: fallback ? fallbackImg : null };
+  }
   const img = resolveMaybeFn(ball.img || ball.image || null, ctx);
-  return { name: ball.name || prettyToken(ball.id || ball.value || ''), img: img || null };
+  return {
+    name: ball.name || prettyToken(ball.id || ball.value || '') || (fallback ? 'Strange Ball' : ''),
+    img: img || (fallback ? fallbackImg : null),
+  };
 }
 
 export function normalizeRibbons(ribbons, ctx) {
@@ -184,6 +191,7 @@ export function isLikelyEventYear(year) {
 
 export function isLikelyEventDate(value) {
   if (!value) return false;
+  if (typeof value === 'object') return false;
   const m = String(value).trim().match(/^(\d{4})(?:-|$)/);
   if (!m) return true;
   return isLikelyEventYear(Number(m[1]));
@@ -214,8 +222,9 @@ export function formatDateRange(raw) {
     if (startText && endText) return `${startText} – ${endText}`;
     if (startText) return startText;
     if (endText) return endText;
+    return '';
   }
-  return String(raw);
+  return '';
 }
 
 // National Dex 1-386. Used only as a renderer fallback when generated Project Pokémon

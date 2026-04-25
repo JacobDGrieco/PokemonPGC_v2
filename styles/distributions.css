@@ -56,7 +56,7 @@
 /* 3 cards per row on desktop */
 .dist-grid {
 	display: grid;
-	grid-template-columns: repeat(3, minmax(0, 1fr));
+	grid-template-columns: repeat(4, minmax(0, 1fr));
 	gap: 12px;
 }
 
@@ -78,6 +78,12 @@
 		box-shadow 0.15s ease,
 		outline-color 0.15s ease,
 		border-color 0.15s ease;
+}
+
+.dist-card-footer {
+	display: flex;
+	flex-direction: column;
+	margin-top: auto;
 }
 
 /* Checked / completed distribution */
@@ -147,6 +153,8 @@
 	font-size: 12px;
 	font-weight: 600;
 	cursor: pointer;
+	align-self: flex-start;
+	width: auto;
 }
 
 .dist-inline-open:hover {
@@ -297,62 +305,35 @@
 	margin-top: -2px;
 }
 
-/* ===================== Diamond moves layout ===================== */
+/* ===================== Moves layout ===================== */
 
-/* 4-move diamond (0 = top, 1 = right, 2 = bottom, 3 = left) */
-.dist-moves.diamond {
-	position: relative;
-	height: 120px;
+.dist-moves.grid-2x2 {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 10px;
 }
 
-.dist-moves.diamond .mv {
-	position: absolute;
-	width: 30%;
-	height: 44px;
+.dist-moves.grid-2x2 .mv {
+	min-height: 52px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	border-radius: 8px;
 	border: 1px solid rgba(255, 255, 255, 0.15);
 	color: white;
-	transform: rotate(45deg);
+	padding: 6px;
 }
 
-.dist-moves.diamond .mv img {
+.dist-moves.grid-2x2 .mv img {
 	max-width: 100%;
 	max-height: 100%;
 	display: block;
 }
 
-.dist-moves.diamond .mv .mv-label {
+.dist-moves.grid-2x2 .mv .mv-label {
 	font-size: 14px;
 	text-align: center;
 	padding: 4px;
-}
-
-/* Slot positions */
-.dist-moves.diamond .mv:nth-child(1) {
-	top: 0;
-	left: 50%;
-	transform: translate(-50%, 0);
-}
-
-.dist-moves.diamond .mv:nth-child(2) {
-	top: 50%;
-	right: 0;
-	transform: translate(0, -50%);
-}
-
-.dist-moves.diamond .mv:nth-child(3) {
-	bottom: 0;
-	left: 50%;
-	transform: translate(-50%, 0);
-}
-
-.dist-moves.diamond .mv:nth-child(4) {
-	top: 50%;
-	left: 0;
-	transform: translate(0, -50%);
 }
 
 /* ===================== Type colors (extend as needed) ===================== */
@@ -600,7 +581,7 @@
 
 /* Full-width "Check / Uncheck" button at bottom of card */
 .dist-toggle {
-	margin-top: auto;
+	margin-top: 10px;
 	width: 100%;
 	border-radius: 10px;
 	border: 1px solid rgba(255, 255, 255, 0.12);
@@ -608,6 +589,12 @@
 	padding: 10px;
 	font-weight: 600;
 	color: #fff;
+}
+
+@media (max-width: 1600px) {
+	.dist-grid {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
 }
 
 @media (max-width: 900px) {
@@ -623,5 +610,9 @@
 		grid-template-columns: 1fr;
 		justify-items: center;
 		text-align: center;
+	}
+
+	.dist-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 }

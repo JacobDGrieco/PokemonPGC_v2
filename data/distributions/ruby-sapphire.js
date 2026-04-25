@@ -12,7 +12,7 @@ import {
 } from '../helpers/index.js';
 
 const gen = 3;
-const GAME_KEYS = ["ruby","sapphire"];
+const GAME_KEYS = ["ruby", "sapphire"];
 
 const baseSprite = (gameKey, natiId) => _frontSprite(gen, gameKey, natiId);
 const shinySprite = (gameKey, natiId) => _frontSpriteShiny(gen, gameKey, natiId);
@@ -22,7 +22,7 @@ const heldItem = (name) => _heldItem(gen, name);
 const ribbon = (name) => _ribbon(gen, name);
 
 const DISTRIBUTIONS = [
-{
+	{
 		id: "gen3-cacnea-egg-jpn-2005",
 		eventTitle: "ポケパーク Cacnea Egg",
 		category: "pokemon",
@@ -40,15 +40,24 @@ const DISTRIBUTIONS = [
 			name: "ポケパーク",
 			nationalDex: 331,
 			level: 5,
-			ball: { name: "Poké Ball", img: () => ball("pokeball") },
+			gender: "Random",
+			ball: { name: "Poké Ball", img: () => ball("poke-ball") },
 			tid: "50318",
+			friendship: 20,
+			metLevel: 5,
 			ability: ["Sand Veil"],
-			nature: ["Timid", "Rash", "Sassy", "Serious", "Brave", "Calm", "Modest", "Bold", "Relaxed", "Bashful"]
+			nature: ["Timid", "Rash", "Sassy", "Serious", "Brave", "Calm", "Modest", "Bold", "Relaxed", "Bashful"],
+			moves: [
+				{ name: "Poison Sting", type: "Poison" },
+				{ name: "Leer", type: "Normal" },
+				{ name: "Absorb", type: "Grass" },
+				{ name: "Encore", type: "Normal" }
+			]
 		},
 		notes: ["Eggs 2005 | DS Download Play"]
 	},
 
-{
+	{
 		id: "gen3-corphish-egg-jpn-2005",
 		eventTitle: "ポケパーク Corphish Egg",
 		category: "pokemon",
@@ -65,16 +74,20 @@ const DISTRIBUTIONS = [
 			species: "Corphish",
 			name: "ポケパーク",
 			nationalDex: 341,
-			level: 5,
-			ball: { name: "Poké Ball", img: () => ball("pokeball") },
+			level: 4,
+			gender: "Random",
+			ball: { name: "Poké Ball", img: () => ball("poke-ball") },
 			tid: "50318",
+			friendship: 15,
+			metLevel: 5,
 			ability: ["Hyper Cutter", "Shell Armor"],
-			nature: ["Sassy", "Naughty", "Gentle", "Lax", "Quiet", "Relaxed", "Rash", "Quirky", "Mild", "Bashful", "Hasty", "Calm", "Adamant", "Docile", "Brave"]
+			nature: ["Sassy", "Naughty", "Gentle", "Lax", "Quiet", "Relaxed", "Rash", "Quirky", "Mild", "Bashful", "Hasty", "Calm", "Adamant", "Docile", "Brave"],
+			moves: [{ name: "Bubble", type: "Water" }, { name: "Water Sport", type: "Water" }]
 		},
 		notes: ["Eggs 2005 | DS Download Play"]
 	},
 
-{
+	{
 		id: "gen3-corsola-egg-jpn-2005",
 		eventTitle: "ポケパーク Corsola Egg",
 		category: "pokemon",
@@ -92,15 +105,19 @@ const DISTRIBUTIONS = [
 			name: "ポケパーク",
 			nationalDex: 222,
 			level: 5,
-			ball: { name: "Poké Ball", img: () => ball("pokeball") },
+			gender: "Random",
+			ball: { name: "Poké Ball", img: () => ball("poke-ball") },
 			tid: "50318",
+			friendship: 20,
+			metLevel: 5,
 			ability: ["Hustle", "Natural Cure"],
-			nature: ["Hardy", "Sassy", "Gentle", "Careful", "Modest", "Rash", "Jolly", "Relaxed", "Quirky", "Naive", "Serious", "Lax", "Brave"]
+			nature: ["Hardy", "Sassy", "Gentle", "Careful", "Modest", "Rash", "Jolly", "Relaxed", "Quirky", "Naive", "Serious", "Lax", "Brave"],
+			moves: [{ name: "Tackle", type: "Normal" }, { name: "Mud Sport", type: "Ground" }]
 		},
 		notes: ["Eggs 2005 | DS Download Play"]
 	},
 
-{
+	{
 		id: "gen3-igglybuff-egg-jpn-2005",
 		eventTitle: "ポケパーク Igglybuff Egg",
 		category: "pokemon",
@@ -118,15 +135,24 @@ const DISTRIBUTIONS = [
 			name: "ポケパーク",
 			nationalDex: 174,
 			level: 5,
-			ball: { name: "Poké Ball", img: () => ball("pokeball") },
+			gender: "Random",
+			ball: { name: "Poké Ball", img: () => ball("poke-ball") },
 			tid: "50318",
-			ability: ["Cute Charm", "Competitive"],
-			nature: ["Timid", "Naughty", "Modest", "Gentle", "Lax", "Impish", "Mild", "Relaxed", "Docile", "Bold", "Jolly", "Naive", "Adamant", "Hasty", "Calm", "Hardy"]
+			friendship: 10,
+			metLevel: 5,
+			ability: ["Cute Charm"],
+			nature: ["Timid", "Naughty", "Modest", "Gentle", "Lax", "Impish", "Mild", "Relaxed", "Docile", "Bold", "Jolly", "Naive", "Adamant", "Hasty", "Calm", "Hardy"],
+			moves: [
+				{ name: "Sing", type: "Normal" },
+				{ name: "Charm", type: "Fairy" },
+				{ name: "Defense Curl", type: "Normal" },
+				{ name: "Tickle", type: "Normal" }
+			]
 		},
 		notes: ["Eggs 2005 | DS Download Play"]
 	},
 
-{
+	{
 		id: "gen3-minun-egg-jpn-2005",
 		eventTitle: "ポケパーク Minun Egg",
 		category: "pokemon",
@@ -144,15 +170,23 @@ const DISTRIBUTIONS = [
 			name: "ポケパーク",
 			nationalDex: 312,
 			level: 5,
-			ball: { name: "Poké Ball", img: () => ball("pokeball") },
+			gender: "Random",
+			ball: { name: "Poké Ball", img: () => ball("poke-ball") },
 			tid: "50318",
+			friendship: 20,
+			metLevel: 5,
 			ability: ["Minus"],
-			nature: ["Calm", "Jolly", "Careful", "Lonely", "Gentle", "Naughty", "Relaxed", "Rash", "Quiet", "Lax", "Brave", "Impish", "Bold", "Sassy", "Mild", "Modest", "Hardy", "Serious", "Quirky"]
+			nature: ["Calm", "Jolly", "Careful", "Lonely", "Gentle", "Naughty", "Relaxed", "Rash", "Quiet", "Lax", "Brave", "Impish", "Bold", "Sassy", "Mild", "Modest", "Hardy", "Serious", "Quirky"],
+			moves: [
+				{ name: "Growl", type: "Normal" },
+				{ name: "Thunder Wave", type: "Electric" },
+				{ name: "Mud Sport", type: "Ground" }
+			]
 		},
 		notes: ["Eggs 2005 | DS Download Play"]
 	},
 
-{
+	{
 		id: "gen3-pichu-egg-jpn-2005",
 		eventTitle: "ポケパーク Pichu Egg",
 		category: "pokemon",
@@ -170,15 +204,23 @@ const DISTRIBUTIONS = [
 			name: "ポケパーク",
 			nationalDex: 172,
 			level: 5,
-			ball: { name: "Poké Ball", img: () => ball("pokeball") },
+			gender: "Random",
+			ball: { name: "Poké Ball", img: () => ball("poke-ball") },
 			tid: "50318",
+			friendship: 10,
+			metLevel: 5,
 			ability: ["Static"],
-			nature: ["Sassy", "Mild", "Docile", "Bold", "Calm", "Rash", "Brave", "Modest", "Jolly", "Careful", "Quiet", "Naive", "Adamant", "Bashful", "Hardy", "Quirky", "Naughty", "Relaxed", "Timid", "Lax", "Hasty", "Gentle"]
+			nature: ["Sassy", "Mild", "Docile", "Bold", "Calm", "Rash", "Brave", "Modest", "Jolly", "Careful", "Quiet", "Naive", "Adamant", "Bashful", "Hardy", "Quirky", "Naughty", "Relaxed", "Timid", "Lax", "Hasty", "Gentle"],
+			moves: [
+				{ name: "Thunder Shock", type: "Electric" },
+				{ name: "Charm", type: "Fairy" },
+				{ name: "Follow Me", type: "Normal" }
+			]
 		},
 		notes: ["Eggs 2005 | DS Download Play"]
 	},
 
-{
+	{
 		id: "gen3-plusle-egg-jpn-2005",
 		eventTitle: "ポケパーク Plusle Egg",
 		category: "pokemon",
@@ -196,15 +238,23 @@ const DISTRIBUTIONS = [
 			name: "ポケパーク",
 			nationalDex: 311,
 			level: 5,
-			ball: { name: "Poké Ball", img: () => ball("pokeball") },
+			gender: "Random",
+			ball: { name: "Poké Ball", img: () => ball("poke-ball") },
 			tid: "50318",
+			friendship: 20,
+			metLevel: 5,
 			ability: ["Plus"],
-			nature: ["Jolly", "Quiet", "Sassy", "Mild", "Adamant", "Hasty", "Hardy", "Relaxed", "Naughty", "Impish", "Bold", "Timid", "Serious", "Gentle", "Lax", "Calm"]
+			nature: ["Jolly", "Quiet", "Sassy", "Mild", "Adamant", "Hasty", "Hardy", "Relaxed", "Naughty", "Impish", "Bold", "Timid", "Serious", "Gentle", "Lax", "Calm"],
+			moves: [
+				{ name: "Growl", type: "Normal" },
+				{ name: "Thunder Wave", type: "Electric" },
+				{ name: "Water Sport", type: "Water" }
+			]
 		},
 		notes: ["Eggs 2005 | DS Download Play"]
 	},
 
-{
+	{
 		id: "gen3-psyduck-egg-jpn-2005",
 		eventTitle: "ポケパーク Psyduck Egg",
 		category: "pokemon",
@@ -222,15 +272,24 @@ const DISTRIBUTIONS = [
 			name: "ポケパーク",
 			nationalDex: 54,
 			level: 5,
-			ball: { name: "Poké Ball", img: () => ball("pokeball") },
+			gender: "Random",
+			ball: { name: "Poké Ball", img: () => ball("poke-ball") },
 			tid: "50318",
-			ability: ["Damp", "Cloud Nine"],
-			nature: ["Quiet", "Brave", "Modest", "Calm", "Quirky", "Careful", "Serious", "Naive", "Bashful", "Hasty", "Sassy", "Docile", "Impish", "Jolly"]
+			friendship: 20,
+			metLevel: 5,
+			ability: ["Cloud Nine", "Damp"],
+			nature: ["Quiet", "Brave", "Modest", "Calm", "Quirky", "Careful", "Serious", "Naive", "Bashful", "Hasty", "Sassy", "Docile", "Impish", "Jolly"],
+			moves: [
+				{ name: "Water Sport", type: "Water" },
+				{ name: "Scratch", type: "Normal" },
+				{ name: "Tail Whip", type: "Normal" },
+				{ name: "Mud Sport", type: "Ground" }
+			]
 		},
 		notes: ["Eggs 2005 | DS Download Play"]
 	},
 
-{
+	{
 		id: "gen3-skitty-egg-jpn-2005",
 		eventTitle: "ポケパーク Skitty Egg",
 		category: "pokemon",
@@ -248,15 +307,24 @@ const DISTRIBUTIONS = [
 			name: "ポケパーク",
 			nationalDex: 300,
 			level: 5,
-			ball: { name: "Poké Ball", img: () => ball("pokeball") },
+			gender: "Random",
+			ball: { name: "Poké Ball", img: () => ball("poke-ball") },
 			tid: "50318",
-			ability: ["Cute Charm", "Normalize"],
-			nature: ["Quirky", "Impish", "Quiet", "Bashful", "Jolly", "Naughty", "Modest", "Lonely", "Mild", "Hardy", "Rash", "Sassy", "Calm"]
+			friendship: 15,
+			metLevel: 5,
+			ability: ["Cute Charm"],
+			nature: ["Quirky", "Impish", "Quiet", "Bashful", "Jolly", "Naughty", "Modest", "Lonely", "Mild", "Hardy", "Rash", "Sassy", "Calm"],
+			moves: [
+				{ name: "Growl", type: "Normal" },
+				{ name: "Tackle", type: "Normal" },
+				{ name: "Tail Whip", type: "Normal" },
+				{ name: "Rollout", type: "Rock" }
+			]
 		},
 		notes: ["Eggs 2005 | DS Download Play"]
 	},
 
-{
+	{
 		id: "gen3-spinda-egg-jpn-2005",
 		eventTitle: "ポケパーク Spinda Egg",
 		category: "pokemon",
@@ -274,15 +342,23 @@ const DISTRIBUTIONS = [
 			name: "ポケパーク",
 			nationalDex: 327,
 			level: 5,
-			ball: { name: "Poké Ball", img: () => ball("pokeball") },
+			gender: "Random",
+			ball: { name: "Poké Ball", img: () => ball("poke-ball") },
 			tid: "50318",
-			ability: ["Own Tempo", "Tangled Feet"],
-			nature: ["Careful", "Lonely", "Quirky", "Hasty", "Jolly", "Rash", "Timid", "Modest", "Bold"]
+			friendship: 15,
+			metLevel: 5,
+			ability: ["Own Tempo"],
+			nature: ["Careful", "Lonely", "Quirky", "Hasty", "Jolly", "Rash", "Timid", "Modest", "Bold"],
+			moves: [
+				{ name: "Tackle", type: "Normal" },
+				{ name: "Uproar", type: "Normal" },
+				{ name: "Sing", type: "Normal" }
+			]
 		},
 		notes: ["Eggs 2005 | DS Download Play"]
 	},
 
-{
+	{
 		id: "gen3-spoink-egg-jpn-2005",
 		eventTitle: "ポケパーク Spoink Egg",
 		category: "pokemon",
@@ -300,15 +376,19 @@ const DISTRIBUTIONS = [
 			name: "ポケパーク",
 			nationalDex: 325,
 			level: 5,
-			ball: { name: "Poké Ball", img: () => ball("pokeball") },
+			gender: "Random",
+			ball: { name: "Poké Ball", img: () => ball("poke-ball") },
 			tid: "50318",
+			friendship: 20,
+			metLevel: 5,
 			ability: ["Thick Fat", "Own Tempo"],
-			nature: ["Naughty", "Naive", "Lonely", "Timid", "Sassy", "Calm", "Careful", "Docile", "Relaxed", "Quirky", "Adamant", "Lax", "Quiet", "Serious", "Bold", "Gentle"]
+			nature: ["Naughty", "Naive", "Lonely", "Timid", "Sassy", "Calm", "Careful", "Docile", "Relaxed", "Quirky", "Adamant", "Lax", "Quiet", "Serious", "Bold", "Gentle"],
+			moves: [{ name: "Splash", type: "Normal" }, { name: "Uproar", type: "Normal" }]
 		},
 		notes: ["Eggs 2005 | DS Download Play"]
 	},
 
-{
+	{
 		id: "gen3-surskit-egg-jpn-2005",
 		eventTitle: "ポケパーク Surskit Egg",
 		category: "pokemon",
@@ -326,15 +406,19 @@ const DISTRIBUTIONS = [
 			name: "ポケパーク",
 			nationalDex: 283,
 			level: 5,
-			ball: { name: "Poké Ball", img: () => ball("pokeball") },
+			gender: "Random",
+			ball: { name: "Poké Ball", img: () => ball("poke-ball") },
 			tid: "50318",
+			friendship: 15,
+			metLevel: 5,
 			ability: ["Swift Swim"],
-			nature: ["Brave", "Hardy", "Modest", "Naive", "Lonely", "Adamant", "Mild", "Bashful", "Serious", "Lax", "Hasty", "Quiet", "Timid", "Rash"]
+			nature: ["Brave", "Hardy", "Modest", "Naive", "Lonely", "Adamant", "Mild", "Bashful", "Serious", "Lax", "Hasty", "Quiet", "Timid", "Rash"],
+			moves: [{ name: "Bubble", type: "Water" }, { name: "Mud Sport", type: "Ground" }]
 		},
 		notes: ["Eggs 2005 | DS Download Play"]
 	},
 
-{
+	{
 		id: "gen3-taillow-egg-jpn-2005",
 		eventTitle: "ポケパーク Taillow Egg",
 		category: "pokemon",
@@ -352,15 +436,24 @@ const DISTRIBUTIONS = [
 			name: "ポケパーク",
 			nationalDex: 276,
 			level: 5,
-			ball: { name: "Poké Ball", img: () => ball("pokeball") },
+			gender: "Random",
+			ball: { name: "Poké Ball", img: () => ball("poke-ball") },
 			tid: "50318",
+			friendship: 15,
+			metLevel: 5,
 			ability: ["Guts"],
-			nature: ["Sassy", "Naughty", "Bashful", "Docile", "Jolly", "Timid", "Quiet", "Rash", "Brave", "Gentle", "Lonely", "Hasty", "Hardy", "Naive", "Modest", "Quirky", "Serious"]
+			nature: ["Sassy", "Naughty", "Bashful", "Docile", "Jolly", "Timid", "Quiet", "Rash", "Brave", "Gentle", "Lonely", "Hasty", "Hardy", "Naive", "Modest", "Quirky", "Serious"],
+			moves: [
+				{ name: "Peck", type: "Flying" },
+				{ name: "Growl", type: "Normal" },
+				{ name: "Focus Energy", type: "Normal" },
+				{ name: "Feather Dance", type: "Flying" }
+			]
 		},
 		notes: ["Eggs 2005 | DS Download Play"]
 	},
 
-{
+	{
 		id: "gen3-whismur-egg-jpn-2005",
 		eventTitle: "ポケパーク Whismur Egg",
 		category: "pokemon",
@@ -378,15 +471,23 @@ const DISTRIBUTIONS = [
 			name: "ポケパーク",
 			nationalDex: 293,
 			level: 5,
-			ball: { name: "Poké Ball", img: () => ball("pokeball") },
+			gender: "Random",
+			ball: { name: "Poké Ball", img: () => ball("poke-ball") },
 			tid: "50318",
+			friendship: 20,
+			metLevel: 5,
 			ability: ["Soundproof"],
-			nature: ["Gentle", "Docile", "Adamant", "Quirky", "Naughty", "Quiet", "Naive", "Mild", "Brave", "Sassy", "Careful", "Hardy", "Modest", "Lonely", "Rash", "Lax"]
+			nature: ["Gentle", "Docile", "Adamant", "Quirky", "Naughty", "Quiet", "Naive", "Mild", "Brave", "Sassy", "Careful", "Hardy", "Modest", "Lonely", "Rash", "Lax"],
+			moves: [
+				{ name: "Pound", type: "Normal" },
+				{ name: "Uproar", type: "Normal" },
+				{ name: "Teeter Dance", type: "Normal" }
+			]
 		},
 		notes: ["Eggs 2005 | DS Download Play"]
 	},
 
-{
+	{
 		id: "gen3-wynaut-egg-jpn-2005",
 		eventTitle: "ポケパーク Wynaut Egg",
 		category: "pokemon",
@@ -404,15 +505,24 @@ const DISTRIBUTIONS = [
 			name: "ポケパーク",
 			nationalDex: 360,
 			level: 5,
-			ball: { name: "Poké Ball", img: () => ball("pokeball") },
+			gender: "Random",
+			ball: { name: "Poké Ball", img: () => ball("poke-ball") },
 			tid: "50318",
+			friendship: 20,
+			metLevel: 5,
 			ability: ["Shadow Tag"],
-			nature: ["Jolly", "Relaxed", "Rash", "Timid", "Mild", "Lax", "Bold", "Impish", "Gentle", "Bashful", "Calm", "Careful", "Hardy", "Lonely", "Docile"]
+			nature: ["Jolly", "Relaxed", "Rash", "Timid", "Mild", "Lax", "Bold", "Impish", "Gentle", "Bashful", "Calm", "Careful", "Hardy", "Lonely", "Docile"],
+			moves: [
+				{ name: "Splash", type: "Normal" },
+				{ name: "Charm", type: "Fairy" },
+				{ name: "Encore", type: "Normal" },
+				{ name: "Tickle", type: "Normal" }
+			]
 		},
 		notes: ["Eggs 2005 | DS Download Play"]
 	},
 
-{
+	{
 		id: "gen3-pcnyd-salamence-usa-2004",
 		eventTitle: "PCNYd Salamence",
 		category: "pokemon",
@@ -430,17 +540,32 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Salamence",
 			nationalDex: 373,
+			level: 50,
+			gender: "Random",
 			tid: "00072",
+			friendship: 70,
+			metLevel: 50,
 			ot: ["PCNYd"],
 			ability: ["Intimidate"],
-			nature: ["Lax", "Lonely", "Sassy", "Quirky", "Serious", "Mild", "Naughty", "Bold", "Brave", "Jolly"]
+			nature: ["Lax", "Lonely", "Sassy", "Quirky", "Serious", "Mild", "Naughty", "Bold", "Brave", "Jolly"],
+			moves: [
+				{ name: "Protect", type: "Normal" },
+				{ name: "Dragon Breath", type: "Dragon" },
+				{ name: "Thrash", type: "Normal" },
+				{ name: "Fly", type: "Flying" },
+				{ name: "Return", type: "Normal" },
+				{ name: "Scary Face", type: "Normal" },
+				{ name: "Brick Break", type: "Fighting" },
+				{ name: "Dragon Claw", type: "Dragon" }
+			],
+			heldItems: [{ name: "King’s Rock", img: () => heldItem("kings-rock") }]
 		},
 		notes: ["Pokémon Center New York | Dragon Week", "Pokémon Center New York | Unknown Summer 2004"],
 		startDate: "2004-01-01",
 		startDateDisplay: "2004"
 	},
 
-{
+	{
 		id: "gen3-pcnyd-tropius-usa-2004",
 		eventTitle: "PCNYd Tropius",
 		category: "pokemon",
@@ -460,15 +585,33 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Tropius",
 			nationalDex: 357,
+			level: 30,
+			gender: "Random",
 			tid: "00016",
+			friendship: 70,
+			metLevel: 30,
 			ot: ["PCNYd"],
-			ability: ["Chlorophyll", "Solar Power"],
-			nature: ["Naive", "Hardy", "Timid", "Gentle", "Naughty", "Lonely", "Quirky", "Mild", "Adamant", "Bold", "Modest", "Brave", "Jolly"]
+			ability: ["Chlorophyll"],
+			nature: ["Naive", "Hardy", "Timid", "Gentle", "Naughty", "Lonely", "Quirky", "Mild", "Adamant", "Bold", "Modest", "Brave", "Jolly"],
+			moves: [
+				{ name: "Razor Leaf", type: "Grass" },
+				{ name: "Stomp", type: "Normal" },
+				{ name: "Sweet Scent", type: "Normal" },
+				{ name: "Whirlwind", type: "Normal" },
+				{ name: "Magical Leaf", type: "Grass" },
+				{ name: "Body Slam", type: "Normal" },
+				{ name: "Synthesis", type: "Grass" },
+				{ name: "Aerial Ace", type: "Flying" }
+			],
+			heldItems: [
+				{ name: "Tanga Berry", img: () => heldItem("tanga-berry") },
+				{ name: "Razz Berry", img: () => heldItem("razz-berry") }
+			]
 		},
 		notes: ["Pokémon Center New York | Unknown Summer 2004"]
 	},
 
-{
+	{
 		id: "gen3-pcnyd-gardevoir-usa-2004",
 		eventTitle: "PCNYd Gardevoir",
 		category: "pokemon",
@@ -488,15 +631,29 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Gardevoir",
 			nationalDex: 282,
+			level: 35,
+			gender: "Random",
 			tid: "00017",
+			friendship: 70,
+			metLevel: 35,
 			ot: ["PCNYd"],
-			ability: ["Synchronize", "Trace"],
-			nature: ["Naive", "Jolly", "Gentle", "Relaxed", "Timid", "Sassy", "Bashful", "Adamant", "Bold", "Lax", "Careful", "Rash", "Lonely", "Brave", "Quirky"]
+			ability: ["Trace", "Synchronize"],
+			nature: ["Naive", "Jolly", "Gentle", "Relaxed", "Timid", "Sassy", "Bashful", "Adamant", "Bold", "Lax", "Careful", "Rash", "Lonely", "Brave", "Quirky"],
+			moves: [
+				{ name: "Teleport", type: "Psychic" },
+				{ name: "Calm Mind", type: "Psychic" },
+				{ name: "Psychic", type: "Psychic" },
+				{ name: "Imprison", type: "Psychic" }
+			],
+			heldItems: [
+				{ name: "Payapa Berry", img: () => heldItem("payapa-berry") },
+				{ name: "Coba Berry", img: () => heldItem("coba-berry") }
+			]
 		},
 		notes: ["Pokémon Center New York | Unknown Summer 2004"]
 	},
 
-{
+	{
 		id: "gen3-pikachu-jpn-1934",
 		eventTitle: "コロシアム Pikachu",
 		category: "pokemon",
@@ -511,16 +668,28 @@ const DISTRIBUTIONS = [
 			species: "Pikachu",
 			name: "コロシアム",
 			nationalDex: 25,
+			level: 10,
+			gender: "Random",
 			tid: "31121",
+			friendship: 70,
+			metLevel: 10,
 			ability: ["Static"],
-			nature: ["Random"]
+			nature: ["Random"],
+			moves: [
+				{ name: "Thunder Shock", type: "Electric" },
+				{ name: "Growl", type: "Normal" },
+				{ name: "Tail Whip", type: "Normal" },
+				{ name: "Thunder Wave", type: "Electric" },
+				{ name: "Surf", type: "Water" }
+			],
+			heldItems: [{ name: "Soul Dew", img: () => heldItem("soul-dew") }]
 		},
 		notes: ["Imported path: Released/Gen 3/JPN/RSEFL - コロシアム Pikachu (JPN).pk3", "ヨコハマ"],
 		startDate: "1934-01-01",
 		startDateDisplay: "1934"
 	},
 
-{
+	{
 		id: "gen3-wishmkr-jirachi-usa-1910",
 		eventTitle: "WISHMKR Jirachi",
 		category: "pokemon",
@@ -536,15 +705,34 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Jirachi",
 			nationalDex: 385,
+			level: 5,
+			gender: "none",
 			tid: "20043",
+			friendship: 70,
+			metLevel: 5,
 			ot: ["WISHMKR"],
 			ability: ["Serene Grace"],
-			nature: ["Sassy", "Modest", "Bold", "Hasty", "Bashful", "Impish", "Lonely", "Adamant", "Naive"]
+			nature: ["Sassy", "Modest", "Bold", "Hasty", "Bashful", "Impish", "Lonely", "Adamant", "Naive"],
+			moves: [
+				{ name: "Wish", type: "Normal" },
+				{ name: "Confusion", type: "Psychic" },
+				{ name: "Rest", type: "Psychic" },
+				{ name: "Psychic", type: "Psychic" },
+				{ name: "Water Pulse", type: "Water" },
+				{ name: "Shadow Ball", type: "Ghost" },
+				{ name: "Doom Desire", type: "Steel" },
+				{ name: "Double Edge", type: "Normal" }
+			],
+			heldItems: [
+				{ name: "Payapa Berry", img: () => heldItem("payapa-berry") },
+				{ name: "Coba Berry", img: () => heldItem("coba-berry") },
+				{ name: "Soft Sand", img: () => heldItem("soft-sand") }
+			]
 		},
 		notes: ["WSHMKR Jirachi"]
 	},
 
-{
+	{
 		id: "gen3-wobbuffet-jpn-1907",
 		eventTitle: "サンデー Wobbuffet",
 		category: "pokemon",
@@ -559,16 +747,27 @@ const DISTRIBUTIONS = [
 			species: "Wobbuffet",
 			name: "サンデー",
 			nationalDex: 202,
+			level: 5,
+			gender: "Random",
 			tid: "50701",
+			friendship: 70,
+			metLevel: 5,
 			ability: ["Shadow Tag"],
-			nature: ["Calm", "Hardy", "Lonely", "Docile"]
+			nature: ["Calm", "Hardy", "Lonely", "Docile"],
+			moves: [
+				{ name: "Counter", type: "Fighting" },
+				{ name: "Mirror Coat", type: "Psychic" },
+				{ name: "Safeguard", type: "Normal" },
+				{ name: "Destiny Bond", type: "Ghost" }
+			],
+			heldItems: [{ name: "Leppa Berry", img: () => heldItem("leppa-berry") }]
 		},
 		notes: ["サンデー"],
 		startDate: "1907-01-01",
 		startDateDisplay: "1907"
 	},
 
-{
+	{
 		id: "gen3-gw-pikachu-jpn-1900",
 		eventTitle: "ＧＷ Pikachu",
 		category: "pokemon",
@@ -582,17 +781,27 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Pikachu",
 			nationalDex: 25,
+			level: 10,
+			gender: "Random",
 			tid: "50425",
+			friendship: 70,
+			metLevel: 10,
 			ot: ["GW"],
 			ability: ["Static"],
-			nature: ["Random"]
+			nature: ["Random"],
+			moves: [
+				{ name: "Growl", type: "Normal" },
+				{ name: "Tail Whip", type: "Normal" },
+				{ name: "Thunder Wave", type: "Electric" },
+				{ name: "Fly", type: "Flying" }
+			]
 		},
 		notes: ["ＧＷ"],
 		startDate: "1900-01-01",
 		startDateDisplay: "1900"
 	},
 
-{
+	{
 		id: "gen3-10-aniv-absol-usa-unknown-date",
 		eventTitle: "10 ANIV Absol",
 		category: "pokemon",
@@ -606,15 +815,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Absol",
 			nationalDex: 359,
+			level: 70,
+			gender: "female",
 			tid: "00010",
+			friendship: 70,
+			metLevel: 70,
 			ot: ["10 ANIV"],
-			ability: ["Pressure", "Super Luck"],
-			nature: ["Jolly", "Docile", "Calm"]
+			ability: ["Pressure"],
+			nature: ["Jolly", "Docile", "Calm"],
+			moves: [
+				{ name: "Double Team", type: "Normal" },
+				{ name: "Slash", type: "Normal" },
+				{ name: "Future Sight", type: "Psychic" },
+				{ name: "Perish Song", type: "Normal" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Journey Across America | Top 20"]
 	},
 
-{
+	{
 		id: "gen3-10-aniv-absol-unknown-unknown-date",
 		eventTitle: "10 ANIV Absol",
 		category: "pokemon",
@@ -627,15 +846,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Absol",
 			nationalDex: 359,
+			level: 70,
+			gender: "female",
 			tid: "06808",
+			friendship: 70,
+			metLevel: 70,
 			ot: ["10 ANIV"],
-			ability: ["Pressure", "Super Luck"],
-			nature: ["Naughty"]
+			ability: ["Pressure"],
+			nature: ["Naughty"],
+			moves: [
+				{ name: "Double Team", type: "Normal" },
+				{ name: "Slash", type: "Normal" },
+				{ name: "Future Sight", type: "Psychic" },
+				{ name: "Perish Song", type: "Normal" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Party of the Decade"]
 	},
 
-{
+	{
 		id: "gen3-10-aniv-alakazam-usa-unknown-date",
 		eventTitle: "10 ANIV Alakazam",
 		category: "pokemon",
@@ -649,15 +878,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Alakazam",
 			nationalDex: 65,
+			level: 70,
+			gender: "male",
 			tid: "00010",
+			friendship: 70,
+			metLevel: 70,
 			ot: ["10 ANIV"],
-			ability: ["Synchronize", "Inner Focus"],
-			nature: ["Quiet", "Naughty", "Mild"]
+			ability: ["Inner Focus", "Synchronize"],
+			nature: ["Quiet", "Naughty", "Mild"],
+			moves: [
+				{ name: "Future Sight", type: "Psychic" },
+				{ name: "Calm Mind", type: "Psychic" },
+				{ name: "Psychic", type: "Psychic" },
+				{ name: "Trick", type: "Psychic" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Journey Across America | Top 20"]
 	},
 
-{
+	{
 		id: "gen3-10-aniv-articuno-usa-unknown-date",
 		eventTitle: "10 ANIV Articuno",
 		category: "pokemon",
@@ -671,15 +910,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Articuno",
 			nationalDex: 144,
+			level: 70,
+			gender: "none",
 			tid: "00010",
+			friendship: 70,
+			metLevel: 70,
 			ot: ["10 ANIV"],
 			ability: ["Pressure"],
-			nature: ["Lonely", "Gentle", "Timid"]
+			nature: ["Lonely", "Gentle", "Timid"],
+			moves: [
+				{ name: "Agility", type: "Psychic" },
+				{ name: "Mind Reader", type: "Normal" },
+				{ name: "Ice Beam", type: "Ice" },
+				{ name: "Reflect", type: "Psychic" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Journey Across America | Top 20"]
 	},
 
-{
+	{
 		id: "gen3-10-aniv-articuno-unknown-unknown-date",
 		eventTitle: "10 ANIV Articuno",
 		category: "pokemon",
@@ -692,15 +941,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Articuno",
 			nationalDex: 144,
+			level: 70,
+			gender: "none",
 			tid: "06808",
+			friendship: 75,
+			metLevel: 70,
 			ot: ["10 ANIV"],
 			ability: ["Pressure"],
-			nature: ["Quiet", "Serious"]
+			nature: ["Quiet", "Serious"],
+			moves: [
+				{ name: "Agility", type: "Psychic" },
+				{ name: "Mind Reader", type: "Normal" },
+				{ name: "Ice Beam", type: "Ice" },
+				{ name: "Reflect", type: "Psychic" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Party of the Decade"]
 	},
 
-{
+	{
 		id: "gen3-10-aniv-blastoise-usa-unknown-date",
 		eventTitle: "10 ANIV Blastoise",
 		category: "pokemon",
@@ -714,15 +973,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Blastoise",
 			nationalDex: 9,
+			level: 70,
+			gender: "Random",
 			tid: "00010",
+			friendship: 70,
+			metLevel: 70,
 			ot: ["10 ANIV"],
 			ability: ["Torrent"],
-			nature: ["Impish", "Quiet", "Quirky", "Naive", "Gentle"]
+			nature: ["Impish", "Quiet", "Quirky", "Naive", "Gentle"],
+			moves: [
+				{ name: "Protect", type: "Normal" },
+				{ name: "Rain Dance", type: "Water" },
+				{ name: "Skull Bash", type: "Normal" },
+				{ name: "Hydro Pump", type: "Water" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Journey Across America | Top 20"]
 	},
 
-{
+	{
 		id: "gen3-10-aniv-blaziken-usa-unknown-date",
 		eventTitle: "10 ANIV Blaziken",
 		category: "pokemon",
@@ -736,15 +1005,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Blaziken",
 			nationalDex: 257,
+			level: 70,
+			gender: "male",
 			tid: "00010",
+			friendship: 70,
+			metLevel: 70,
 			ot: ["10 ANIV"],
 			ability: ["Blaze"],
-			nature: ["Mild", "Naughty", "Docile", "Modest"]
+			nature: ["Mild", "Naughty", "Docile", "Modest"],
+			moves: [
+				{ name: "Blaze Kick", type: "Fire" },
+				{ name: "Slash", type: "Normal" },
+				{ name: "Mirror Move", type: "Flying" },
+				{ name: "Sky Uppercut", type: "Fighting" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Journey Across America | Top 20"]
 	},
 
-{
+	{
 		id: "gen3-10-aniv-blaziken-unknown-unknown-date",
 		eventTitle: "10 ANIV Blaziken",
 		category: "pokemon",
@@ -757,15 +1036,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Blaziken",
 			nationalDex: 257,
+			level: 70,
+			gender: "male",
 			tid: "06808",
+			friendship: 70,
+			metLevel: 70,
 			ot: ["10 ANIV"],
 			ability: ["Blaze"],
-			nature: ["Brave"]
+			nature: ["Brave"],
+			moves: [
+				{ name: "Blaze Kick", type: "Fire" },
+				{ name: "Slash", type: "Normal" },
+				{ name: "Mirror Move", type: "Flying" },
+				{ name: "Sky Uppercut", type: "Fighting" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Party of the Decade"]
 	},
 
-{
+	{
 		id: "gen3-10-aniv-bulbasaur-usa-unknown-date",
 		eventTitle: "10 ANIV Bulbasaur",
 		category: "pokemon",
@@ -779,15 +1068,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Bulbasaur",
 			nationalDex: 1,
+			level: 70,
+			gender: "Random",
 			tid: "00010",
+			friendship: 70,
+			metLevel: 70,
 			ot: ["10 ANIV"],
 			ability: ["Overgrow"],
-			nature: ["Adamant", "Impish", "Serious"]
+			nature: ["Adamant", "Impish", "Serious"],
+			moves: [
+				{ name: "Sweet Scent", type: "Normal" },
+				{ name: "Growth", type: "Normal" },
+				{ name: "Synthesis", type: "Grass" },
+				{ name: "Solar Beam", type: "Grass" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Journey Across America | Top 20"]
 	},
 
-{
+	{
 		id: "gen3-10-aniv-bulbasaur-unknown-unknown-date",
 		eventTitle: "10 ANIV Bulbasaur",
 		category: "pokemon",
@@ -800,15 +1099,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Bulbasaur",
 			nationalDex: 1,
+			level: 70,
+			gender: "male",
 			tid: "06808",
+			friendship: 70,
+			metLevel: 70,
 			ot: ["10 ANIV"],
 			ability: ["Overgrow"],
-			nature: ["Quirky"]
+			nature: ["Quirky"],
+			moves: [
+				{ name: "Sweet Scent", type: "Normal" },
+				{ name: "Growth", type: "Normal" },
+				{ name: "Synthesis", type: "Grass" },
+				{ name: "Solar Beam", type: "Grass" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Party of the Decade"]
 	},
 
-{
+	{
 		id: "gen3-10-aniv-celebi-usa-unknown-date",
 		eventTitle: "10 ANIV Celebi",
 		category: "pokemon",
@@ -822,15 +1131,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Celebi",
 			nationalDex: 251,
+			level: 70,
+			gender: "none",
 			tid: "00010",
+			friendship: 100,
+			metLevel: 70,
 			ot: ["10 ANIV"],
 			ability: ["Natural Cure"],
-			nature: ["Impish", "Naive", "Jolly", "Quiet", "Modest", "Naughty", "Lonely", "Bashful", "Calm", "Quirky", "Sassy", "Hardy", "Gentle", "Docile"]
+			nature: ["Impish", "Naive", "Jolly", "Quiet", "Modest", "Naughty", "Lonely", "Bashful", "Calm", "Quirky", "Sassy", "Hardy", "Gentle", "Docile"],
+			moves: [
+				{ name: "Ancient Power", type: "Rock" },
+				{ name: "Future Sight", type: "Psychic" },
+				{ name: "Baton Pass", type: "Normal" },
+				{ name: "Perish Song", type: "Normal" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Journey Across America | Celebi"]
 	},
 
-{
+	{
 		id: "gen3-10-aniv-charizard-usa-unknown-date",
 		eventTitle: "10 ANIV Charizard",
 		category: "pokemon",
@@ -844,15 +1163,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Charizard",
 			nationalDex: 6,
+			level: 70,
+			gender: "Random",
 			tid: "00010",
+			friendship: 70,
+			metLevel: 70,
 			ot: ["10 ANIV"],
 			ability: ["Blaze"],
-			nature: ["Careful", "Docile", "Bold", "Quiet"]
+			nature: ["Careful", "Docile", "Bold", "Quiet"],
+			moves: [
+				{ name: "Wing Attack", type: "Flying" },
+				{ name: "Slash", type: "Normal" },
+				{ name: "Dragon Rage", type: "Dragon" },
+				{ name: "Fire Spin", type: "Fire" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Journey Across America | Top 20"]
 	},
 
-{
+	{
 		id: "gen3-10-aniv-charizard-unknown-unknown-date",
 		eventTitle: "10 ANIV Charizard",
 		category: "pokemon",
@@ -865,15 +1194,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Charizard",
 			nationalDex: 6,
+			level: 70,
+			gender: "male",
 			tid: "06808",
+			friendship: 70,
+			metLevel: 70,
 			ot: ["10 ANIV"],
 			ability: ["Blaze"],
-			nature: ["Bold"]
+			nature: ["Bold"],
+			moves: [
+				{ name: "Wing Attack", type: "Flying" },
+				{ name: "Slash", type: "Normal" },
+				{ name: "Dragon Rage", type: "Dragon" },
+				{ name: "Fire Spin", type: "Fire" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Party of the Decade"]
 	},
 
-{
+	{
 		id: "gen3-10-aniv-dragonite-usa-unknown-date",
 		eventTitle: "10 ANIV Dragonite",
 		category: "pokemon",
@@ -887,15 +1226,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Dragonite",
 			nationalDex: 149,
+			level: 70,
+			gender: "Random",
 			tid: "00010",
+			friendship: 70,
+			metLevel: 70,
 			ot: ["10 ANIV"],
 			ability: ["Inner Focus"],
-			nature: ["Gentle", "Jolly"]
+			nature: ["Gentle", "Jolly"],
+			moves: [
+				{ name: "Agility", type: "Psychic" },
+				{ name: "Safeguard", type: "Normal" },
+				{ name: "Wing Attack", type: "Flying" },
+				{ name: "Outrage", type: "Dragon" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Journey Across America | Top 20"]
 	},
 
-{
+	{
 		id: "gen3-10-aniv-dragonite-unknown-unknown-date",
 		eventTitle: "10 ANIV Dragonite",
 		category: "pokemon",
@@ -908,15 +1257,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Dragonite",
 			nationalDex: 149,
+			level: 70,
+			gender: "female",
 			tid: "06808",
+			friendship: 35,
+			metLevel: 70,
 			ot: ["10 ANIV"],
 			ability: ["Inner Focus"],
-			nature: ["Sassy"]
+			nature: ["Sassy"],
+			moves: [
+				{ name: "Agility", type: "Psychic" },
+				{ name: "Safeguard", type: "Normal" },
+				{ name: "Wing Attack", type: "Flying" },
+				{ name: "Outrage", type: "Dragon" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Party of the Decade"]
 	},
 
-{
+	{
 		id: "gen3-10-aniv-entei-usa-unknown-date",
 		eventTitle: "10 ANIV Entei",
 		category: "pokemon",
@@ -930,15 +1289,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Entei",
 			nationalDex: 244,
+			level: 70,
+			gender: "none",
 			tid: "00010",
+			friendship: 35,
+			metLevel: 70,
 			ot: ["10 ANIV"],
 			ability: ["Pressure"],
-			nature: ["Rash", "Lonely", "Lax", "Jolly", "Calm"]
+			nature: ["Rash", "Lonely", "Lax", "Jolly", "Calm"],
+			moves: [
+				{ name: "Fire Spin", type: "Fire" },
+				{ name: "Stomp", type: "Normal" },
+				{ name: "Flamethrower", type: "Fire" },
+				{ name: "Swagger", type: "Normal" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Journey Across America | Top 20"]
 	},
 
-{
+	{
 		id: "gen3-10-aniv-entei-unknown-unknown-date",
 		eventTitle: "10 ANIV Entei",
 		category: "pokemon",
@@ -951,15 +1320,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Entei",
 			nationalDex: 244,
+			level: 70,
+			gender: "none",
 			tid: "06808",
+			friendship: 35,
+			metLevel: 70,
 			ot: ["10 ANIV"],
 			ability: ["Pressure"],
-			nature: ["Rash"]
+			nature: ["Rash"],
+			moves: [
+				{ name: "Fire Spin", type: "Fire" },
+				{ name: "Stomp", type: "Normal" },
+				{ name: "Flamethrower", type: "Fire" },
+				{ name: "Swagger", type: "Normal" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Party of the Decade"]
 	},
 
-{
+	{
 		id: "gen3-10-aniv-espeon-usa-unknown-date",
 		eventTitle: "10 ANIV Espeon",
 		category: "pokemon",
@@ -973,15 +1352,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Espeon",
 			nationalDex: 196,
+			level: 70,
+			gender: "Random",
 			tid: "00010",
+			friendship: 70,
+			metLevel: 70,
 			ot: ["10 ANIV"],
 			ability: ["Synchronize"],
-			nature: ["Serious", "Timid", "Hardy", "Adamant"]
+			nature: ["Serious", "Timid", "Hardy", "Adamant"],
+			moves: [
+				{ name: "Psybeam", type: "Psychic" },
+				{ name: "Psych Up", type: "Normal" },
+				{ name: "Psychic", type: "Psychic" },
+				{ name: "Morning Sun", type: "Normal" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Journey Across America | Top 20"]
 	},
 
-{
+	{
 		id: "gen3-10-aniv-espeon-unknown-unknown-date",
 		eventTitle: "10 ANIV Espeon",
 		category: "pokemon",
@@ -994,15 +1383,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Espeon",
 			nationalDex: 196,
+			level: 70,
+			gender: "male",
 			tid: "06808",
+			friendship: 70,
+			metLevel: 70,
 			ot: ["10 ANIV"],
 			ability: ["Synchronize"],
-			nature: ["Hardy"]
+			nature: ["Hardy"],
+			moves: [
+				{ name: "Psybeam", type: "Psychic" },
+				{ name: "Psych Up", type: "Normal" },
+				{ name: "Psychic", type: "Psychic" },
+				{ name: "Morning Sun", type: "Normal" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Party of the Decade"]
 	},
 
-{
+	{
 		id: "gen3-10-aniv-fly-pikachu-unknown-unknown-date",
 		eventTitle: "10 ANIV Fly Pikachu",
 		category: "pokemon",
@@ -1016,15 +1415,26 @@ const DISTRIBUTIONS = [
 			species: "Pikachu",
 			name: "10 ANIV Fly",
 			nationalDex: 25,
+			level: 70,
+			gender: "male",
 			tid: "06808",
+			friendship: 70,
+			metLevel: 70,
 			ot: ["10 ANIV"],
 			ability: ["Static"],
-			nature: ["Hasty"]
+			nature: ["Hasty"],
+			moves: [
+				{ name: "Thunderbolt", type: "Electric" },
+				{ name: "Fly", type: "Flying" },
+				{ name: "Thunder", type: "Electric" },
+				{ name: "Light Screen", type: "Psychic" }
+			],
+			heldItems: [{ name: "Soul Dew", img: () => heldItem("soul-dew") }]
 		},
 		notes: ["10th Anniversary Celebration | Party of the Decade"]
 	},
 
-{
+	{
 		id: "gen3-10-aniv-latias-usa-unknown-date",
 		eventTitle: "10 ANIV Latias",
 		category: "pokemon",
@@ -1038,15 +1448,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Latias",
 			nationalDex: 380,
+			level: 70,
+			gender: "female",
 			tid: "00010",
+			friendship: 70,
+			metLevel: 70,
 			ot: ["10 ANIV"],
 			ability: ["Levitate"],
-			nature: ["Quiet", "Modest", "Impish", "Bold"]
+			nature: ["Quiet", "Modest", "Impish", "Bold"],
+			moves: [
+				{ name: "Mist Ball", type: "Psychic" },
+				{ name: "Psychic", type: "Psychic" },
+				{ name: "Recover", type: "Normal" },
+				{ name: "Charm", type: "Fairy" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Journey Across America | Top 20"]
 	},
 
-{
+	{
 		id: "gen3-10-aniv-latias-unknown-unknown-date",
 		eventTitle: "10 ANIV Latias",
 		category: "pokemon",
@@ -1059,15 +1479,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Latias",
 			nationalDex: 380,
+			level: 70,
+			gender: "female",
 			tid: "06808",
+			friendship: 90,
+			metLevel: 70,
 			ot: ["10 ANIV"],
 			ability: ["Levitate"],
-			nature: ["Naive"]
+			nature: ["Naive"],
+			moves: [
+				{ name: "Mist Ball", type: "Psychic" },
+				{ name: "Psychic", type: "Psychic" },
+				{ name: "Recover", type: "Normal" },
+				{ name: "Charm", type: "Fairy" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Party of the Decade"]
 	},
 
-{
+	{
 		id: "gen3-10-aniv-latios-usa-unknown-date",
 		eventTitle: "10 ANIV Latios",
 		category: "pokemon",
@@ -1081,15 +1511,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Latios",
 			nationalDex: 381,
+			level: 70,
+			gender: "male",
 			tid: "00010",
+			friendship: 71,
+			metLevel: 70,
 			ot: ["10 ANIV"],
 			ability: ["Levitate"],
-			nature: ["Naughty", "Bold", "Naive", "Bashful"]
+			nature: ["Naughty", "Bold", "Naive", "Bashful"],
+			moves: [
+				{ name: "Luster Purge", type: "Psychic" },
+				{ name: "Psychic", type: "Psychic" },
+				{ name: "Recover", type: "Normal" },
+				{ name: "Dragon Dance", type: "Dragon" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Journey Across America | Top 20"]
 	},
 
-{
+	{
 		id: "gen3-10-aniv-latios-unknown-unknown-date",
 		eventTitle: "10 ANIV Latios",
 		category: "pokemon",
@@ -1102,15 +1542,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Latios",
 			nationalDex: 381,
+			level: 70,
+			gender: "male",
 			tid: "06808",
+			friendship: 90,
+			metLevel: 70,
 			ot: ["10 ANIV"],
 			ability: ["Levitate"],
-			nature: ["Modest"]
+			nature: ["Modest"],
+			moves: [
+				{ name: "Luster Purge", type: "Psychic" },
+				{ name: "Psychic", type: "Psychic" },
+				{ name: "Recover", type: "Normal" },
+				{ name: "Dragon Dance", type: "Dragon" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Party of the Decade"]
 	},
 
-{
+	{
 		id: "gen3-10-aniv-moltres-usa-unknown-date",
 		eventTitle: "10 ANIV Moltres",
 		category: "pokemon",
@@ -1124,15 +1574,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Moltres",
 			nationalDex: 146,
+			level: 70,
+			gender: "none",
 			tid: "00010",
+			friendship: 70,
+			metLevel: 70,
 			ot: ["10 ANIV"],
 			ability: ["Pressure"],
-			nature: ["Careful", "Hardy", "Naughty"]
+			nature: ["Careful", "Hardy", "Naughty"],
+			moves: [
+				{ name: "Agility", type: "Psychic" },
+				{ name: "Endure", type: "Normal" },
+				{ name: "Flamethrower", type: "Fire" },
+				{ name: "Safeguard", type: "Normal" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Journey Across America | Top 20"]
 	},
 
-{
+	{
 		id: "gen3-10-aniv-moltres-unknown-unknown-date",
 		eventTitle: "10 ANIV Moltres",
 		category: "pokemon",
@@ -1145,15 +1605,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Moltres",
 			nationalDex: 146,
+			level: 70,
+			gender: "none",
 			tid: "06808",
+			friendship: 35,
+			metLevel: 70,
 			ot: ["10 ANIV"],
 			ability: ["Pressure"],
-			nature: ["Careful"]
+			nature: ["Careful"],
+			moves: [
+				{ name: "Agility", type: "Psychic" },
+				{ name: "Endure", type: "Normal" },
+				{ name: "Flamethrower", type: "Fire" },
+				{ name: "Safeguard", type: "Normal" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Party of the Decade"]
 	},
 
-{
+	{
 		id: "gen3-10-aniv-pikachu-usa-unknown-date",
 		eventTitle: "10 ANIV Pikachu",
 		category: "pokemon",
@@ -1167,15 +1637,28 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Pikachu",
 			nationalDex: 25,
+			level: 70,
+			gender: "Random",
 			tid: "00010",
+			friendship: 70,
+			metLevel: 70,
 			ot: ["10 ANIV"],
 			ability: ["Static"],
-			nature: ["Docile", "Sassy", "Bashful", "Bold"]
+			nature: ["Docile", "Sassy", "Bashful", "Bold"],
+			moves: [
+				{ name: "Thunderbolt", type: "Electric" },
+				{ name: "Agility", type: "Psychic" },
+				{ name: "Thunder", type: "Electric" },
+				{ name: "Light Screen", type: "Psychic" },
+				{ name: "Iron Tail", type: "Steel" },
+				{ name: "Strength", type: "Normal" }
+			],
+			heldItems: [{ name: "Soul Dew", img: () => heldItem("soul-dew") }]
 		},
 		notes: ["10th Anniversary Celebration | Journey Across America | Top 20"]
 	},
 
-{
+	{
 		id: "gen3-10-aniv-raikou-usa-unknown-date",
 		eventTitle: "10 ANIV Raikou",
 		category: "pokemon",
@@ -1189,15 +1672,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Raikou",
 			nationalDex: 243,
+			level: 70,
+			gender: "none",
 			tid: "00010",
+			friendship: 70,
+			metLevel: 70,
 			ot: ["10 ANIV"],
 			ability: ["Pressure"],
-			nature: ["Lax", "Modest", "Mild", "Quirky"]
+			nature: ["Lax", "Modest", "Mild", "Quirky"],
+			moves: [
+				{ name: "Quick Attack", type: "Normal" },
+				{ name: "Spark", type: "Electric" },
+				{ name: "Reflect", type: "Psychic" },
+				{ name: "Crunch", type: "Dark" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Journey Across America | Top 20"]
 	},
 
-{
+	{
 		id: "gen3-10-aniv-raikou-unknown-unknown-date",
 		eventTitle: "10 ANIV Raikou",
 		category: "pokemon",
@@ -1210,15 +1703,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Raikou",
 			nationalDex: 243,
+			level: 70,
+			gender: "none",
 			tid: "06808",
+			friendship: 35,
+			metLevel: 70,
 			ot: ["10 ANIV"],
 			ability: ["Pressure"],
-			nature: ["Quiet"]
+			nature: ["Quiet"],
+			moves: [
+				{ name: "Quick Attack", type: "Normal" },
+				{ name: "Spark", type: "Electric" },
+				{ name: "Reflect", type: "Psychic" },
+				{ name: "Crunch", type: "Dark" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Party of the Decade"]
 	},
 
-{
+	{
 		id: "gen3-10-aniv-suicune-usa-unknown-date",
 		eventTitle: "10 ANIV Suicune",
 		category: "pokemon",
@@ -1232,15 +1735,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Suicune",
 			nationalDex: 245,
+			level: 70,
+			gender: "none",
 			tid: "00010",
+			friendship: 35,
+			metLevel: 70,
 			ot: ["10 ANIV"],
 			ability: ["Pressure"],
-			nature: ["Modest", "Mild", "Quirky"]
+			nature: ["Modest", "Mild", "Quirky"],
+			moves: [
+				{ name: "Gust", type: "Flying" },
+				{ name: "Aurora Beam", type: "Ice" },
+				{ name: "Mist", type: "Ice" },
+				{ name: "Mirror Coat", type: "Psychic" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Journey Across America | Top 20"]
 	},
 
-{
+	{
 		id: "gen3-10-aniv-suicune-unknown-unknown-date",
 		eventTitle: "10 ANIV Suicune",
 		category: "pokemon",
@@ -1253,15 +1766,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Suicune",
 			nationalDex: 245,
+			level: 70,
+			gender: "none",
 			tid: "06808",
+			friendship: 35,
+			metLevel: 70,
 			ot: ["10 ANIV"],
 			ability: ["Pressure"],
-			nature: ["Lax"]
+			nature: ["Lax"],
+			moves: [
+				{ name: "Gust", type: "Flying" },
+				{ name: "Aurora Beam", type: "Ice" },
+				{ name: "Mist", type: "Ice" },
+				{ name: "Mirror Coat", type: "Psychic" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Party of the Decade"]
 	},
 
-{
+	{
 		id: "gen3-10-aniv-typhlosion-usa-unknown-date",
 		eventTitle: "10 ANIV Typhlosion",
 		category: "pokemon",
@@ -1275,15 +1798,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Typhlosion",
 			nationalDex: 157,
+			level: 70,
+			gender: "Random",
 			tid: "00010",
+			friendship: 70,
+			metLevel: 70,
 			ot: ["10 ANIV"],
 			ability: ["Blaze"],
-			nature: ["Hasty", "Bold"]
+			nature: ["Hasty", "Bold"],
+			moves: [
+				{ name: "Quick Attack", type: "Normal" },
+				{ name: "Flame Wheel", type: "Fire" },
+				{ name: "Swift", type: "Normal" },
+				{ name: "Flamethrower", type: "Fire" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Journey Across America | Top 20"]
 	},
 
-{
+	{
 		id: "gen3-10-aniv-typhlosion-unknown-unknown-date",
 		eventTitle: "10 ANIV Typhlosion",
 		category: "pokemon",
@@ -1296,15 +1829,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Typhlosion",
 			nationalDex: 157,
+			level: 70,
+			gender: "female",
 			tid: "06808",
+			friendship: 70,
+			metLevel: 70,
 			ot: ["10 ANIV"],
 			ability: ["Blaze"],
-			nature: ["Modest"]
+			nature: ["Modest"],
+			moves: [
+				{ name: "Quick Attack", type: "Normal" },
+				{ name: "Flame Wheel", type: "Fire" },
+				{ name: "Swift", type: "Normal" },
+				{ name: "Flamethrower", type: "Fire" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Party of the Decade"]
 	},
 
-{
+	{
 		id: "gen3-10-aniv-tyranitar-usa-unknown-date",
 		eventTitle: "10 ANIV Tyranitar",
 		category: "pokemon",
@@ -1318,15 +1861,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Tyranitar",
 			nationalDex: 248,
+			level: 70,
+			gender: "female",
 			tid: "00010",
+			friendship: 70,
+			metLevel: 70,
 			ot: ["10 ANIV"],
 			ability: ["Sand Stream"],
-			nature: ["Bashful", "Serious", "Hasty"]
+			nature: ["Bashful", "Serious", "Hasty"],
+			moves: [
+				{ name: "Thrash", type: "Normal" },
+				{ name: "Scary Face", type: "Normal" },
+				{ name: "Crunch", type: "Dark" },
+				{ name: "Earthquake", type: "Ground" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Journey Across America | Top 20"]
 	},
 
-{
+	{
 		id: "gen3-10-aniv-tyranitar-unknown-unknown-date",
 		eventTitle: "10 ANIV Tyranitar",
 		category: "pokemon",
@@ -1339,15 +1892,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Tyranitar",
 			nationalDex: 248,
+			level: 70,
+			gender: "male",
 			tid: "06808",
+			friendship: 35,
+			metLevel: 70,
 			ot: ["10 ANIV"],
 			ability: ["Sand Stream"],
-			nature: ["Docile"]
+			nature: ["Docile"],
+			moves: [
+				{ name: "Thrash", type: "Normal" },
+				{ name: "Scary Face", type: "Normal" },
+				{ name: "Crunch", type: "Dark" },
+				{ name: "Earthquake", type: "Ground" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Party of the Decade"]
 	},
 
-{
+	{
 		id: "gen3-10-aniv-umbreon-usa-unknown-date",
 		eventTitle: "10 ANIV Umbreon",
 		category: "pokemon",
@@ -1361,15 +1924,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Umbreon",
 			nationalDex: 197,
+			level: 70,
+			gender: "male",
 			tid: "00010",
+			friendship: 70,
+			metLevel: 70,
 			ot: ["10 ANIV"],
 			ability: ["Synchronize"],
-			nature: ["Careful", "Rash"]
+			nature: ["Careful", "Rash"],
+			moves: [
+				{ name: "Feint Attack", type: "Dark" },
+				{ name: "Mean Look", type: "Normal" },
+				{ name: "Screech", type: "Normal" },
+				{ name: "Moonlight", type: "Fairy" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Journey Across America | Top 20"]
 	},
 
-{
+	{
 		id: "gen3-10-aniv-zapdos-usa-unknown-date",
 		eventTitle: "10 ANIV Zapdos",
 		category: "pokemon",
@@ -1383,15 +1956,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Zapdos",
 			nationalDex: 145,
+			level: 70,
+			gender: "none",
 			tid: "00010",
+			friendship: 35,
+			metLevel: 70,
 			ot: ["10 ANIV"],
 			ability: ["Pressure"],
-			nature: ["Quiet", "Naive", "Jolly", "Modest"]
+			nature: ["Quiet", "Naive", "Jolly", "Modest"],
+			moves: [
+				{ name: "Agility", type: "Psychic" },
+				{ name: "Detect", type: "Fighting" },
+				{ name: "Drill Peck", type: "Flying" },
+				{ name: "Charge", type: "Electric" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Journey Across America | Top 20"]
 	},
 
-{
+	{
 		id: "gen3-10-aniv-zapdos-unknown-unknown-date",
 		eventTitle: "10 ANIV Zapdos",
 		category: "pokemon",
@@ -1404,15 +1987,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Zapdos",
 			nationalDex: 145,
+			level: 70,
+			gender: "none",
 			tid: "06808",
+			friendship: 35,
+			metLevel: 70,
 			ot: ["10 ANIV"],
 			ability: ["Pressure"],
-			nature: ["Impish"]
+			nature: ["Impish"],
+			moves: [
+				{ name: "Agility", type: "Psychic" },
+				{ name: "Detect", type: "Fighting" },
+				{ name: "Drill Peck", type: "Flying" },
+				{ name: "Charge", type: "Electric" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Party of the Decade"]
 	},
 
-{
+	{
 		id: "gen3-10aniv-articuno-unknown-unknown-date",
 		eventTitle: "10ANIV Articuno",
 		category: "pokemon",
@@ -1425,15 +2018,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Articuno",
 			nationalDex: 144,
+			level: 70,
+			gender: "none",
 			tid: "06227",
+			friendship: 35,
+			metLevel: 70,
 			ot: ["10ANIV"],
 			ability: ["Pressure"],
-			nature: ["Impish"]
+			nature: ["Impish"],
+			moves: [
+				{ name: "Agility", type: "Psychic" },
+				{ name: "Mind Reader", type: "Normal" },
+				{ name: "Ice Beam", type: "Ice" },
+				{ name: "Reflect", type: "Psychic" }
+			]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10aniv-charizard-unknown-unknown-date",
 		eventTitle: "10ANIV Charizard",
 		category: "pokemon",
@@ -1446,15 +2049,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Charizard",
 			nationalDex: 6,
+			level: 70,
+			gender: "male",
 			tid: "06227",
+			friendship: 70,
+			metLevel: 70,
 			ot: ["10ANIV"],
 			ability: ["Blaze"],
-			nature: ["Relaxed"]
+			nature: ["Relaxed"],
+			moves: [
+				{ name: "Wing Attack", type: "Flying" },
+				{ name: "Slash", type: "Normal" },
+				{ name: "Dragon Rage", type: "Dragon" },
+				{ name: "Fire Spin", type: "Fire" }
+			]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10aniv-entei-unknown-unknown-date",
 		eventTitle: "10ANIV Entei",
 		category: "pokemon",
@@ -1467,15 +2080,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Entei",
 			nationalDex: 244,
+			level: 70,
+			gender: "none",
 			tid: "06227",
+			friendship: 35,
+			metLevel: 70,
 			ot: ["10ANIV"],
 			ability: ["Pressure"],
-			nature: ["Timid"]
+			nature: ["Timid"],
+			moves: [
+				{ name: "Fire Spin", type: "Fire" },
+				{ name: "Stomp", type: "Normal" },
+				{ name: "Flamethrower", type: "Fire" },
+				{ name: "Swagger", type: "Normal" }
+			]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10aniv-ho-oh-unknown-unknown-date",
 		eventTitle: "10ANIV Ho Oh",
 		category: "pokemon",
@@ -1486,17 +2109,27 @@ const DISTRIBUTIONS = [
 		obtainMethod: { delivery: "unknown" },
 		reward: {
 			type: "pokemon",
-			species: "Ho-oh",
+			species: "Ho Oh",
 			nationalDex: 250,
+			level: 70,
+			gender: "none",
 			tid: "06227",
+			friendship: 0,
+			metLevel: 70,
 			ot: ["10ANIV"],
 			ability: ["Pressure"],
-			nature: ["Docile"]
+			nature: ["Docile"],
+			moves: [
+				{ name: "Recover", type: "Normal" },
+				{ name: "Fire Blast", type: "Fire" },
+				{ name: "Sunny Day", type: "Fire" },
+				{ name: "Swift", type: "Normal" }
+			]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10aniv-latias-unknown-unknown-date",
 		eventTitle: "10ANIV Latias",
 		category: "pokemon",
@@ -1509,15 +2142,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Latias",
 			nationalDex: 380,
+			level: 70,
+			gender: "female",
 			tid: "06227",
+			friendship: 90,
+			metLevel: 70,
 			ot: ["10ANIV"],
 			ability: ["Levitate"],
-			nature: ["Quiet"]
+			nature: ["Quiet"],
+			moves: [
+				{ name: "Mist Ball", type: "Psychic" },
+				{ name: "Psychic", type: "Psychic" },
+				{ name: "Recover", type: "Normal" },
+				{ name: "Charm", type: "Fairy" }
+			]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10aniv-latios-unknown-unknown-date",
 		eventTitle: "10ANIV Latios",
 		category: "pokemon",
@@ -1530,15 +2173,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Latios",
 			nationalDex: 381,
+			level: 70,
+			gender: "male",
 			tid: "06227",
+			friendship: 90,
+			metLevel: 70,
 			ot: ["10ANIV"],
 			ability: ["Levitate"],
-			nature: ["Careful"]
+			nature: ["Careful"],
+			moves: [
+				{ name: "Luster Purge", type: "Psychic" },
+				{ name: "Psychic", type: "Psychic" },
+				{ name: "Recover", type: "Normal" },
+				{ name: "Dragon Dance", type: "Dragon" }
+			]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10aniv-lugia-unknown-unknown-date",
 		eventTitle: "10ANIV Lugia",
 		category: "pokemon",
@@ -1551,15 +2204,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Lugia",
 			nationalDex: 249,
+			level: 70,
+			gender: "none",
 			tid: "06227",
+			friendship: 0,
+			metLevel: 70,
 			ot: ["10ANIV"],
 			ability: ["Pressure"],
-			nature: ["Relaxed"]
+			nature: ["Relaxed"],
+			moves: [
+				{ name: "Recover", type: "Normal" },
+				{ name: "Hydro Pump", type: "Water" },
+				{ name: "Rain Dance", type: "Water" },
+				{ name: "Swift", type: "Normal" }
+			]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10aniv-pikachu-unknown-unknown-date",
 		eventTitle: "10ANIV Pikachu",
 		category: "pokemon",
@@ -1572,15 +2235,26 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Pikachu",
 			nationalDex: 25,
+			level: 70,
+			gender: "male",
 			tid: "06227",
+			friendship: 70,
+			metLevel: 70,
 			ot: ["10ANIV"],
 			ability: ["Static"],
-			nature: ["Gentle"]
+			nature: ["Gentle"],
+			moves: [
+				{ name: "Thunderbolt", type: "Electric" },
+				{ name: "Agility", type: "Psychic" },
+				{ name: "Thunder", type: "Electric" },
+				{ name: "Light Screen", type: "Psychic" }
+			],
+			heldItems: [{ name: "Soul Dew", img: () => heldItem("soul-dew") }]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10aniv-raikou-unknown-unknown-date",
 		eventTitle: "10ANIV Raikou",
 		category: "pokemon",
@@ -1593,15 +2267,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Raikou",
 			nationalDex: 243,
+			level: 70,
+			gender: "none",
 			tid: "06227",
+			friendship: 35,
+			metLevel: 70,
 			ot: ["10ANIV"],
 			ability: ["Pressure"],
-			nature: ["Lax"]
+			nature: ["Lax"],
+			moves: [
+				{ name: "Quick Attack", type: "Normal" },
+				{ name: "Spark", type: "Electric" },
+				{ name: "Reflect", type: "Psychic" },
+				{ name: "Crunch", type: "Dark" }
+			]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10aniv-suicune-unknown-unknown-date",
 		eventTitle: "10ANIV Suicune",
 		category: "pokemon",
@@ -1614,15 +2298,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Suicune",
 			nationalDex: 245,
+			level: 70,
+			gender: "none",
 			tid: "06227",
+			friendship: 35,
+			metLevel: 70,
 			ot: ["10ANIV"],
 			ability: ["Pressure"],
-			nature: ["Serious"]
+			nature: ["Serious"],
+			moves: [
+				{ name: "Gust", type: "Flying" },
+				{ name: "Aurora Beam", type: "Ice" },
+				{ name: "Mist", type: "Ice" },
+				{ name: "Mirror Coat", type: "Psychic" }
+			]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10anni-articuno-unknown-unknown-date",
 		eventTitle: "10ANNI Articuno",
 		category: "pokemon",
@@ -1635,15 +2329,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Articuno",
 			nationalDex: 144,
+			level: 70,
+			gender: "none",
 			tid: "06227",
+			friendship: 35,
+			metLevel: 70,
 			ot: ["10ANNI"],
 			ability: ["Pressure"],
-			nature: ["Hardy"]
+			nature: ["Hardy"],
+			moves: [
+				{ name: "Agility", type: "Psychic" },
+				{ name: "Mind Reader", type: "Normal" },
+				{ name: "Ice Beam", type: "Ice" },
+				{ name: "Reflect", type: "Psychic" }
+			]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10anni-charizard-unknown-unknown-date",
 		eventTitle: "10ANNI Charizard",
 		category: "pokemon",
@@ -1656,15 +2360,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Charizard",
 			nationalDex: 6,
+			level: 70,
+			gender: "male",
 			tid: "06227",
+			friendship: 70,
+			metLevel: 70,
 			ot: ["10ANNI"],
 			ability: ["Blaze"],
-			nature: ["Timid"]
+			nature: ["Timid"],
+			moves: [
+				{ name: "Wing Attack", type: "Flying" },
+				{ name: "Slash", type: "Normal" },
+				{ name: "Dragon Rage", type: "Dragon" },
+				{ name: "Fire Spin", type: "Fire" }
+			]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10anni-entei-unknown-unknown-date",
 		eventTitle: "10ANNI Entei",
 		category: "pokemon",
@@ -1677,15 +2391,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Entei",
 			nationalDex: 244,
+			level: 70,
+			gender: "none",
 			tid: "06227",
+			friendship: 35,
+			metLevel: 70,
 			ot: ["10ANNI"],
 			ability: ["Pressure"],
-			nature: ["Gentle"]
+			nature: ["Gentle"],
+			moves: [
+				{ name: "Fire Spin", type: "Fire" },
+				{ name: "Stomp", type: "Normal" },
+				{ name: "Flamethrower", type: "Fire" },
+				{ name: "Swagger", type: "Normal" }
+			]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10anni-ho-oh-unknown-unknown-date",
 		eventTitle: "10ANNI Ho Oh",
 		category: "pokemon",
@@ -1696,17 +2420,27 @@ const DISTRIBUTIONS = [
 		obtainMethod: { delivery: "unknown" },
 		reward: {
 			type: "pokemon",
-			species: "Ho-oh",
+			species: "Ho Oh",
 			nationalDex: 250,
+			level: 70,
+			gender: "none",
 			tid: "06227",
+			friendship: 0,
+			metLevel: 70,
 			ot: ["10ANNI"],
 			ability: ["Pressure"],
-			nature: ["Serious"]
+			nature: ["Serious"],
+			moves: [
+				{ name: "Recover", type: "Normal" },
+				{ name: "Fire Blast", type: "Fire" },
+				{ name: "Sunny Day", type: "Fire" },
+				{ name: "Swift", type: "Normal" }
+			]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10anni-latias-unknown-unknown-date",
 		eventTitle: "10ANNI Latias",
 		category: "pokemon",
@@ -1719,15 +2453,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Latias",
 			nationalDex: 380,
+			level: 70,
+			gender: "female",
 			tid: "06227",
+			friendship: 90,
+			metLevel: 70,
 			ot: ["10ANNI"],
 			ability: ["Levitate"],
-			nature: ["Bashful"]
+			nature: ["Bashful"],
+			moves: [
+				{ name: "Mist Ball", type: "Psychic" },
+				{ name: "Psychic", type: "Psychic" },
+				{ name: "Recover", type: "Normal" },
+				{ name: "Charm", type: "Fairy" }
+			]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10anni-latios-unknown-unknown-date",
 		eventTitle: "10ANNI Latios",
 		category: "pokemon",
@@ -1740,15 +2484,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Latios",
 			nationalDex: 381,
+			level: 70,
+			gender: "male",
 			tid: "06227",
+			friendship: 90,
+			metLevel: 70,
 			ot: ["10ANNI"],
 			ability: ["Levitate"],
-			nature: ["Serious"]
+			nature: ["Serious"],
+			moves: [
+				{ name: "Luster Purge", type: "Psychic" },
+				{ name: "Psychic", type: "Psychic" },
+				{ name: "Recover", type: "Normal" },
+				{ name: "Dragon Dance", type: "Dragon" }
+			]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10anni-lugia-unknown-unknown-date",
 		eventTitle: "10ANNI Lugia",
 		category: "pokemon",
@@ -1761,15 +2515,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Lugia",
 			nationalDex: 249,
+			level: 70,
+			gender: "none",
 			tid: "06227",
+			friendship: 0,
+			metLevel: 70,
 			ot: ["10ANNI"],
 			ability: ["Pressure"],
-			nature: ["Docile"]
+			nature: ["Docile"],
+			moves: [
+				{ name: "Recover", type: "Normal" },
+				{ name: "Hydro Pump", type: "Water" },
+				{ name: "Rain Dance", type: "Water" },
+				{ name: "Swift", type: "Normal" }
+			]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10anni-pikachu-unknown-unknown-date",
 		eventTitle: "10ANNI Pikachu",
 		category: "pokemon",
@@ -1782,15 +2546,26 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Pikachu",
 			nationalDex: 25,
+			level: 70,
+			gender: "female",
 			tid: "06227",
+			friendship: 70,
+			metLevel: 70,
 			ot: ["10ANNI"],
 			ability: ["Static"],
-			nature: ["Quirky"]
+			nature: ["Quirky"],
+			moves: [
+				{ name: "Thunderbolt", type: "Electric" },
+				{ name: "Agility", type: "Psychic" },
+				{ name: "Thunder", type: "Electric" },
+				{ name: "Light Screen", type: "Psychic" }
+			],
+			heldItems: [{ name: "Soul Dew", img: () => heldItem("soul-dew") }]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10anni-raikou-unknown-unknown-date",
 		eventTitle: "10ANNI Raikou",
 		category: "pokemon",
@@ -1803,15 +2578,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Raikou",
 			nationalDex: 243,
+			level: 70,
+			gender: "none",
 			tid: "06227",
+			friendship: 35,
+			metLevel: 70,
 			ot: ["10ANNI"],
 			ability: ["Pressure"],
-			nature: ["Sassy"]
+			nature: ["Sassy"],
+			moves: [
+				{ name: "Quick Attack", type: "Normal" },
+				{ name: "Spark", type: "Electric" },
+				{ name: "Reflect", type: "Psychic" },
+				{ name: "Crunch", type: "Dark" }
+			]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10anni-suicune-unknown-unknown-date",
 		eventTitle: "10ANNI Suicune",
 		category: "pokemon",
@@ -1824,15 +2609,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Suicune",
 			nationalDex: 245,
+			level: 70,
+			gender: "none",
 			tid: "06227",
+			friendship: 35,
+			metLevel: 70,
 			ot: ["10ANNI"],
 			ability: ["Pressure"],
-			nature: ["Brave"]
+			nature: ["Brave"],
+			moves: [
+				{ name: "Gust", type: "Flying" },
+				{ name: "Aurora Beam", type: "Ice" },
+				{ name: "Mist", type: "Ice" },
+				{ name: "Mirror Coat", type: "Psychic" }
+			]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10anniv-articuno-unknown-unknown-date",
 		eventTitle: "10ANNIV Articuno",
 		category: "pokemon",
@@ -1845,15 +2640,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Articuno",
 			nationalDex: 144,
+			level: 70,
+			gender: "none",
 			tid: "06227",
+			friendship: 35,
+			metLevel: 70,
 			ot: ["10ANNIV"],
 			ability: ["Pressure"],
-			nature: ["Adamant"]
+			nature: ["Adamant"],
+			moves: [
+				{ name: "Agility", type: "Psychic" },
+				{ name: "Mind Reader", type: "Normal" },
+				{ name: "Ice Beam", type: "Ice" },
+				{ name: "Reflect", type: "Psychic" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10anniv-articuno-unknown-unknown-date",
 		eventTitle: "10ANNIV Articuno",
 		category: "pokemon",
@@ -1867,15 +2672,25 @@ const DISTRIBUTIONS = [
 			species: "Articuno",
 			name: "ARTIKODIN",
 			nationalDex: 144,
+			level: 70,
+			gender: "none",
 			tid: "06227",
+			friendship: 35,
+			metLevel: 70,
 			ot: ["10ANNIV"],
 			ability: ["Pressure"],
-			nature: ["Impish"]
+			nature: ["Impish"],
+			moves: [
+				{ name: "Agility", type: "Psychic" },
+				{ name: "Mind Reader", type: "Normal" },
+				{ name: "Ice Beam", type: "Ice" },
+				{ name: "Reflect", type: "Psychic" }
+			]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10anniv-charizard-unknown-unknown-date",
 		eventTitle: "10ANNIV Charizard",
 		category: "pokemon",
@@ -1888,15 +2703,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Charizard",
 			nationalDex: 6,
+			level: 70,
+			gender: "male",
 			tid: "06227",
+			friendship: 70,
+			metLevel: 70,
 			ot: ["10ANNIV"],
 			ability: ["Blaze"],
-			nature: ["Bashful"]
+			nature: ["Bashful"],
+			moves: [
+				{ name: "Wing Attack", type: "Flying" },
+				{ name: "Slash", type: "Normal" },
+				{ name: "Dragon Rage", type: "Dragon" },
+				{ name: "Fire Spin", type: "Fire" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10anniv-charizard-unknown-unknown-date",
 		eventTitle: "10ANNIV Charizard",
 		category: "pokemon",
@@ -1910,15 +2735,25 @@ const DISTRIBUTIONS = [
 			species: "Charizard",
 			name: "DRACAUFEU",
 			nationalDex: 6,
+			level: 70,
+			gender: "male",
 			tid: "06227",
+			friendship: 70,
+			metLevel: 70,
 			ot: ["10ANNIV"],
 			ability: ["Blaze"],
-			nature: ["Relaxed"]
+			nature: ["Relaxed"],
+			moves: [
+				{ name: "Wing Attack", type: "Flying" },
+				{ name: "Slash", type: "Normal" },
+				{ name: "Dragon Rage", type: "Dragon" },
+				{ name: "Fire Spin", type: "Fire" }
+			]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10anniv-entei-unknown-unknown-date",
 		eventTitle: "10ANNIV Entei",
 		category: "pokemon",
@@ -1931,15 +2766,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Entei",
 			nationalDex: 244,
+			level: 70,
+			gender: "none",
 			tid: "06227",
+			friendship: 35,
+			metLevel: 70,
 			ot: ["10ANNIV"],
 			ability: ["Pressure"],
-			nature: ["Gentle"]
+			nature: ["Gentle"],
+			moves: [
+				{ name: "Fire Spin", type: "Fire" },
+				{ name: "Stomp", type: "Normal" },
+				{ name: "Flamethrower", type: "Fire" },
+				{ name: "Swagger", type: "Normal" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10anniv-entei-unknown-unknown-date",
 		eventTitle: "10ANNIV Entei",
 		category: "pokemon",
@@ -1952,15 +2797,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Entei",
 			nationalDex: 244,
+			level: 70,
+			gender: "none",
 			tid: "06227",
+			friendship: 35,
+			metLevel: 70,
 			ot: ["10ANNIV"],
 			ability: ["Pressure"],
-			nature: ["Impish"]
+			nature: ["Impish"],
+			moves: [
+				{ name: "Fire Spin", type: "Fire" },
+				{ name: "Stomp", type: "Normal" },
+				{ name: "Flamethrower", type: "Fire" },
+				{ name: "Swagger", type: "Normal" }
+			]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10anniv-ho-oh-unknown-unknown-date",
 		eventTitle: "10ANNIV Ho Oh",
 		category: "pokemon",
@@ -1971,17 +2826,27 @@ const DISTRIBUTIONS = [
 		obtainMethod: { delivery: "in-person" },
 		reward: {
 			type: "pokemon",
-			species: "Ho-oh",
+			species: "Ho Oh",
 			nationalDex: 250,
+			level: 70,
+			gender: "none",
 			tid: "06227",
+			friendship: 0,
+			metLevel: 70,
 			ot: ["10ANNIV"],
 			ability: ["Pressure"],
-			nature: ["Hardy"]
+			nature: ["Hardy"],
+			moves: [
+				{ name: "Recover", type: "Normal" },
+				{ name: "Fire Blast", type: "Fire" },
+				{ name: "Sunny Day", type: "Fire" },
+				{ name: "Swift", type: "Normal" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10anniv-ho-oh-unknown-unknown-date",
 		eventTitle: "10ANNIV Ho Oh",
 		category: "pokemon",
@@ -1992,17 +2857,27 @@ const DISTRIBUTIONS = [
 		obtainMethod: { delivery: "unknown" },
 		reward: {
 			type: "pokemon",
-			species: "Ho-oh",
+			species: "Ho Oh",
 			nationalDex: 250,
+			level: 70,
+			gender: "none",
 			tid: "06227",
+			friendship: 0,
+			metLevel: 70,
 			ot: ["10ANNIV"],
 			ability: ["Pressure"],
-			nature: ["Hasty"]
+			nature: ["Hasty"],
+			moves: [
+				{ name: "Recover", type: "Normal" },
+				{ name: "Fire Blast", type: "Fire" },
+				{ name: "Sunny Day", type: "Fire" },
+				{ name: "Swift", type: "Normal" }
+			]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10anniv-latias-unknown-unknown-date",
 		eventTitle: "10ANNIV Latias",
 		category: "pokemon",
@@ -2015,15 +2890,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Latias",
 			nationalDex: 380,
+			level: 70,
+			gender: "female",
 			tid: "06227",
+			friendship: 90,
+			metLevel: 70,
 			ot: ["10ANNIV"],
 			ability: ["Levitate"],
-			nature: ["Serious"]
+			nature: ["Serious"],
+			moves: [
+				{ name: "Mist Ball", type: "Psychic" },
+				{ name: "Psychic", type: "Psychic" },
+				{ name: "Recover", type: "Normal" },
+				{ name: "Charm", type: "Fairy" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10anniv-latias-unknown-unknown-date",
 		eventTitle: "10ANNIV Latias",
 		category: "pokemon",
@@ -2036,15 +2921,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Latias",
 			nationalDex: 380,
+			level: 70,
+			gender: "female",
 			tid: "06227",
+			friendship: 90,
+			metLevel: 70,
 			ot: ["10ANNIV"],
 			ability: ["Levitate"],
-			nature: ["Quirky"]
+			nature: ["Quirky"],
+			moves: [
+				{ name: "Mist Ball", type: "Psychic" },
+				{ name: "Psychic", type: "Psychic" },
+				{ name: "Recover", type: "Normal" },
+				{ name: "Charm", type: "Fairy" }
+			]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10anniv-latios-unknown-unknown-date",
 		eventTitle: "10ANNIV Latios",
 		category: "pokemon",
@@ -2057,15 +2952,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Latios",
 			nationalDex: 381,
+			level: 70,
+			gender: "male",
 			tid: "06227",
+			friendship: 90,
+			metLevel: 70,
 			ot: ["10ANNIV"],
 			ability: ["Levitate"],
-			nature: ["Hardy"]
+			nature: ["Hardy"],
+			moves: [
+				{ name: "Luster Purge", type: "Psychic" },
+				{ name: "Psychic", type: "Psychic" },
+				{ name: "Recover", type: "Normal" },
+				{ name: "Dragon Dance", type: "Dragon" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10anniv-latios-unknown-unknown-date",
 		eventTitle: "10ANNIV Latios",
 		category: "pokemon",
@@ -2078,15 +2983,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Latios",
 			nationalDex: 381,
+			level: 70,
+			gender: "male",
 			tid: "06227",
+			friendship: 90,
+			metLevel: 70,
 			ot: ["10ANNIV"],
 			ability: ["Levitate"],
-			nature: ["Bashful"]
+			nature: ["Bashful"],
+			moves: [
+				{ name: "Luster Purge", type: "Psychic" },
+				{ name: "Psychic", type: "Psychic" },
+				{ name: "Recover", type: "Normal" },
+				{ name: "Dragon Dance", type: "Dragon" }
+			]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10anniv-lugia-unknown-unknown-date",
 		eventTitle: "10ANNIV Lugia",
 		category: "pokemon",
@@ -2099,15 +3014,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Lugia",
 			nationalDex: 249,
+			level: 70,
+			gender: "none",
 			tid: "06227",
+			friendship: 0,
+			metLevel: 70,
 			ot: ["10ANNIV"],
 			ability: ["Pressure"],
-			nature: ["Mild"]
+			nature: ["Mild"],
+			moves: [
+				{ name: "Recover", type: "Normal" },
+				{ name: "Hydro Pump", type: "Water" },
+				{ name: "Rain Dance", type: "Water" },
+				{ name: "Swift", type: "Normal" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10anniv-lugia-unknown-unknown-date",
 		eventTitle: "10ANNIV Lugia",
 		category: "pokemon",
@@ -2120,15 +3045,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Lugia",
 			nationalDex: 249,
+			level: 70,
+			gender: "none",
 			tid: "06227",
+			friendship: 0,
+			metLevel: 70,
 			ot: ["10ANNIV"],
 			ability: ["Pressure"],
-			nature: ["Relaxed"]
+			nature: ["Relaxed"],
+			moves: [
+				{ name: "Recover", type: "Normal" },
+				{ name: "Hydro Pump", type: "Water" },
+				{ name: "Rain Dance", type: "Water" },
+				{ name: "Swift", type: "Normal" }
+			]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10anniv-pikachu-unknown-unknown-date",
 		eventTitle: "10ANNIV Pikachu",
 		category: "pokemon",
@@ -2141,15 +3076,26 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Pikachu",
 			nationalDex: 25,
+			level: 70,
+			gender: "female",
 			tid: "06227",
+			friendship: 70,
+			metLevel: 70,
 			ot: ["10ANNIV"],
 			ability: ["Static"],
-			nature: ["Sassy"]
+			nature: ["Sassy"],
+			moves: [
+				{ name: "Thunderbolt", type: "Electric" },
+				{ name: "Agility", type: "Psychic" },
+				{ name: "Thunder", type: "Electric" },
+				{ name: "Light Screen", type: "Psychic" }
+			],
+			heldItems: [{ name: "Soul Dew", img: () => heldItem("soul-dew") }]
 		},
 		notes: ["10th Anniversary Celebration | Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10anniv-pikachu-unknown-unknown-date",
 		eventTitle: "10ANNIV Pikachu",
 		category: "pokemon",
@@ -2162,15 +3108,26 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Pikachu",
 			nationalDex: 25,
+			level: 70,
+			gender: "female",
 			tid: "06227",
+			friendship: 70,
+			metLevel: 70,
 			ot: ["10ANNIV"],
 			ability: ["Static"],
-			nature: ["Sassy"]
+			nature: ["Sassy"],
+			moves: [
+				{ name: "Thunderbolt", type: "Electric" },
+				{ name: "Agility", type: "Psychic" },
+				{ name: "Thunder", type: "Electric" },
+				{ name: "Light Screen", type: "Psychic" }
+			],
+			heldItems: [{ name: "Soul Dew", img: () => heldItem("soul-dew") }]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10anniv-raikou-unknown-unknown-date",
 		eventTitle: "10ANNIV Raikou",
 		category: "pokemon",
@@ -2183,15 +3140,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Raikou",
 			nationalDex: 243,
+			level: 70,
+			gender: "none",
 			tid: "06227",
+			friendship: 35,
+			metLevel: 70,
 			ot: ["10ANNIV"],
 			ability: ["Pressure"],
-			nature: ["Gentle"]
+			nature: ["Gentle"],
+			moves: [
+				{ name: "Quick Attack", type: "Normal" },
+				{ name: "Spark", type: "Electric" },
+				{ name: "Reflect", type: "Psychic" },
+				{ name: "Crunch", type: "Dark" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10anniv-raikou-unknown-unknown-date",
 		eventTitle: "10ANNIV Raikou",
 		category: "pokemon",
@@ -2204,15 +3171,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Raikou",
 			nationalDex: 243,
+			level: 70,
+			gender: "none",
 			tid: "06227",
+			friendship: 35,
+			metLevel: 70,
 			ot: ["10ANNIV"],
 			ability: ["Pressure"],
-			nature: ["Calm"]
+			nature: ["Calm"],
+			moves: [
+				{ name: "Quick Attack", type: "Normal" },
+				{ name: "Spark", type: "Electric" },
+				{ name: "Reflect", type: "Psychic" },
+				{ name: "Crunch", type: "Dark" }
+			]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10anniv-suicune-unknown-unknown-date",
 		eventTitle: "10ANNIV Suicune",
 		category: "pokemon",
@@ -2225,15 +3202,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Suicune",
 			nationalDex: 245,
+			level: 70,
+			gender: "none",
 			tid: "06227",
+			friendship: 35,
+			metLevel: 70,
 			ot: ["10ANNIV"],
 			ability: ["Pressure"],
-			nature: ["Gentle"]
+			nature: ["Gentle"],
+			moves: [
+				{ name: "Gust", type: "Flying" },
+				{ name: "Aurora Beam", type: "Ice" },
+				{ name: "Mist", type: "Ice" },
+				{ name: "Mirror Coat", type: "Psychic" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10anniv-suicune-unknown-unknown-date",
 		eventTitle: "10ANNIV Suicune",
 		category: "pokemon",
@@ -2246,15 +3233,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Suicune",
 			nationalDex: 245,
+			level: 70,
+			gender: "none",
 			tid: "06227",
+			friendship: 35,
+			metLevel: 70,
 			ot: ["10ANNIV"],
 			ability: ["Pressure"],
-			nature: ["Calm"]
+			nature: ["Calm"],
+			moves: [
+				{ name: "Gust", type: "Flying" },
+				{ name: "Aurora Beam", type: "Ice" },
+				{ name: "Mist", type: "Ice" },
+				{ name: "Mirror Coat", type: "Psychic" }
+			]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10jahre-articuno-unknown-unknown-date",
 		eventTitle: "10JAHRE Articuno",
 		category: "pokemon",
@@ -2268,15 +3265,25 @@ const DISTRIBUTIONS = [
 			species: "Articuno",
 			name: "ARKTOS",
 			nationalDex: 144,
+			level: 70,
+			gender: "none",
 			tid: "06227",
+			friendship: 35,
+			metLevel: 70,
 			ot: ["10JAHRE"],
 			ability: ["Pressure"],
-			nature: ["Bashful"]
+			nature: ["Bashful"],
+			moves: [
+				{ name: "Agility", type: "Psychic" },
+				{ name: "Mind Reader", type: "Normal" },
+				{ name: "Ice Beam", type: "Ice" },
+				{ name: "Reflect", type: "Psychic" }
+			]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10jahre-charizard-unknown-unknown-date",
 		eventTitle: "10JAHRE Charizard",
 		category: "pokemon",
@@ -2290,15 +3297,25 @@ const DISTRIBUTIONS = [
 			species: "Charizard",
 			name: "GLURAK",
 			nationalDex: 6,
+			level: 70,
+			gender: "male",
 			tid: "06227",
+			friendship: 70,
+			metLevel: 70,
 			ot: ["10JAHRE"],
 			ability: ["Blaze"],
-			nature: ["Relaxed"]
+			nature: ["Relaxed"],
+			moves: [
+				{ name: "Wing Attack", type: "Flying" },
+				{ name: "Slash", type: "Normal" },
+				{ name: "Dragon Rage", type: "Dragon" },
+				{ name: "Fire Spin", type: "Fire" }
+			]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10jahre-entei-unknown-unknown-date",
 		eventTitle: "10JAHRE Entei",
 		category: "pokemon",
@@ -2311,15 +3328,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Entei",
 			nationalDex: 244,
+			level: 70,
+			gender: "none",
 			tid: "06227",
+			friendship: 35,
+			metLevel: 70,
 			ot: ["10JAHRE"],
 			ability: ["Pressure"],
-			nature: ["Hasty"]
+			nature: ["Hasty"],
+			moves: [
+				{ name: "Fire Spin", type: "Fire" },
+				{ name: "Stomp", type: "Normal" },
+				{ name: "Flamethrower", type: "Fire" },
+				{ name: "Swagger", type: "Normal" }
+			]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10jahre-ho-oh-unknown-unknown-date",
 		eventTitle: "10JAHRE Ho Oh",
 		category: "pokemon",
@@ -2330,17 +3357,27 @@ const DISTRIBUTIONS = [
 		obtainMethod: { delivery: "unknown" },
 		reward: {
 			type: "pokemon",
-			species: "Ho-oh",
+			species: "Ho Oh",
 			nationalDex: 250,
+			level: 70,
+			gender: "none",
 			tid: "06227",
+			friendship: 0,
+			metLevel: 70,
 			ot: ["10JAHRE"],
 			ability: ["Pressure"],
-			nature: ["Impish"]
+			nature: ["Impish"],
+			moves: [
+				{ name: "Recover", type: "Normal" },
+				{ name: "Fire Blast", type: "Fire" },
+				{ name: "Sunny Day", type: "Fire" },
+				{ name: "Swift", type: "Normal" }
+			]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10jahre-latias-unknown-unknown-date",
 		eventTitle: "10JAHRE Latias",
 		category: "pokemon",
@@ -2353,15 +3390,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Latias",
 			nationalDex: 380,
+			level: 70,
+			gender: "female",
 			tid: "06227",
+			friendship: 90,
+			metLevel: 70,
 			ot: ["10JAHRE"],
 			ability: ["Levitate"],
-			nature: ["Relaxed"]
+			nature: ["Relaxed"],
+			moves: [
+				{ name: "Mist Ball", type: "Psychic" },
+				{ name: "Psychic", type: "Psychic" },
+				{ name: "Recover", type: "Normal" },
+				{ name: "Charm", type: "Fairy" }
+			]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10jahre-latios-unknown-unknown-date",
 		eventTitle: "10JAHRE Latios",
 		category: "pokemon",
@@ -2374,15 +3421,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Latios",
 			nationalDex: 381,
+			level: 70,
+			gender: "male",
 			tid: "06227",
+			friendship: 90,
+			metLevel: 70,
 			ot: ["10JAHRE"],
 			ability: ["Levitate"],
-			nature: ["Naughty"]
+			nature: ["Naughty"],
+			moves: [
+				{ name: "Luster Purge", type: "Psychic" },
+				{ name: "Psychic", type: "Psychic" },
+				{ name: "Recover", type: "Normal" },
+				{ name: "Dragon Dance", type: "Dragon" }
+			]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10jahre-lugia-unknown-unknown-date",
 		eventTitle: "10JAHRE Lugia",
 		category: "pokemon",
@@ -2395,15 +3452,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Lugia",
 			nationalDex: 249,
+			level: 70,
+			gender: "none",
 			tid: "06227",
+			friendship: 0,
+			metLevel: 70,
 			ot: ["10JAHRE"],
 			ability: ["Pressure"],
-			nature: ["Relaxed"]
+			nature: ["Relaxed"],
+			moves: [
+				{ name: "Recover", type: "Normal" },
+				{ name: "Hydro Pump", type: "Water" },
+				{ name: "Rain Dance", type: "Water" },
+				{ name: "Swift", type: "Normal" }
+			]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10jahre-pikachu-unknown-unknown-date",
 		eventTitle: "10JAHRE Pikachu",
 		category: "pokemon",
@@ -2416,15 +3483,26 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Pikachu",
 			nationalDex: 25,
+			level: 70,
+			gender: "male",
 			tid: "06227",
+			friendship: 70,
+			metLevel: 70,
 			ot: ["10JAHRE"],
 			ability: ["Static"],
-			nature: ["Calm"]
+			nature: ["Calm"],
+			moves: [
+				{ name: "Thunderbolt", type: "Electric" },
+				{ name: "Agility", type: "Psychic" },
+				{ name: "Thunder", type: "Electric" },
+				{ name: "Light Screen", type: "Psychic" }
+			],
+			heldItems: [{ name: "Soul Dew", img: () => heldItem("soul-dew") }]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10jahre-raikou-unknown-unknown-date",
 		eventTitle: "10JAHRE Raikou",
 		category: "pokemon",
@@ -2437,15 +3515,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Raikou",
 			nationalDex: 243,
+			level: 70,
+			gender: "none",
 			tid: "06227",
+			friendship: 35,
+			metLevel: 70,
 			ot: ["10JAHRE"],
 			ability: ["Pressure"],
-			nature: ["Naughty"]
+			nature: ["Naughty"],
+			moves: [
+				{ name: "Quick Attack", type: "Normal" },
+				{ name: "Spark", type: "Electric" },
+				{ name: "Reflect", type: "Psychic" },
+				{ name: "Crunch", type: "Dark" }
+			]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-10jahre-suicune-unknown-unknown-date",
 		eventTitle: "10JAHRE Suicune",
 		category: "pokemon",
@@ -2458,15 +3546,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Suicune",
 			nationalDex: 245,
+			level: 70,
+			gender: "none",
 			tid: "06227",
+			friendship: 35,
+			metLevel: 70,
 			ot: ["10JAHRE"],
 			ability: ["Pressure"],
-			nature: ["Bold"]
+			nature: ["Bold"],
+			moves: [
+				{ name: "Gust", type: "Flying" },
+				{ name: "Aurora Beam", type: "Ice" },
+				{ name: "Mist", type: "Ice" },
+				{ name: "Mirror Coat", type: "Psychic" }
+			]
 		},
 		notes: ["Top 10 Distribution"]
 	},
 
-{
+	{
 		id: "gen3-ana-pikachu-jpn-unknown-date",
 		eventTitle: "ＡＮＡ Pikachu",
 		category: "pokemon",
@@ -2480,15 +3578,26 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Pikachu",
 			nationalDex: 25,
+			level: 10,
+			gender: "Random",
 			tid: "41205",
+			friendship: 70,
+			metLevel: 10,
 			ot: ["ANA"],
 			ability: ["Static"],
-			nature: ["Modest", "Hasty", "Sassy", "Brave", "Serious", "Rash", "Relaxed", "Lax", "Lonely", "Calm", "Jolly", "Timid", "Bashful", "Bold", "Quiet", "Docile", "Quirky", "Careful"]
+			nature: ["Modest", "Hasty", "Sassy", "Brave", "Serious", "Rash", "Relaxed", "Lax", "Lonely", "Calm", "Jolly", "Timid", "Bashful", "Bold", "Quiet", "Docile", "Quirky", "Careful"],
+			moves: [
+				{ name: "Fly", type: "Flying" },
+				{ name: "Thunder Shock", type: "Electric" },
+				{ name: "Tail Whip", type: "Normal" },
+				{ name: "Thunder Wave", type: "Electric" }
+			],
+			heldItems: [{ name: "Soul Dew", img: () => heldItem("soul-dew") }]
 		},
 		notes: ["ＡＮＡ"]
 	},
 
-{
+	{
 		id: "gen3-aura-mew-unknown-unknown-date",
 		eventTitle: "Aura Mew",
 		category: "pokemon",
@@ -2501,15 +3610,20 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Mew",
 			nationalDex: 151,
+			level: 10,
+			gender: "none",
 			tid: "20078",
+			friendship: 100,
+			metLevel: 10,
 			ot: ["Aura"],
 			ability: ["Synchronize"],
-			nature: ["Jolly", "Bashful", "Rash"]
+			nature: ["Jolly", "Bashful", "Rash"],
+			moves: [{ name: "Pound", type: "Normal" }, { name: "Transform", type: "Normal" }]
 		},
 		notes: ["Aura Mew"]
 	},
 
-{
+	{
 		id: "gen3-aura-mew-unknown-unknown-date",
 		eventTitle: "Aura Mew",
 		category: "pokemon",
@@ -2522,15 +3636,20 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Mew",
 			nationalDex: 151,
+			level: 10,
+			gender: "none",
 			tid: "20078",
+			friendship: 100,
+			metLevel: 10,
 			ot: ["Aura"],
 			ability: ["Synchronize"],
-			nature: ["Lonely"]
+			nature: ["Lonely"],
+			moves: [{ name: "Pound", type: "Normal" }, { name: "Transform", type: "Normal" }]
 		},
 		notes: ["Aura Mew"]
 	},
 
-{
+	{
 		id: "gen3-aura-mew-unknown-unknown-date",
 		eventTitle: "Aura Mew",
 		category: "pokemon",
@@ -2543,15 +3662,20 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Mew",
 			nationalDex: 151,
+			level: 10,
+			gender: "none",
 			tid: "20078",
+			friendship: 100,
+			metLevel: 10,
 			ot: ["Aura"],
 			ability: ["Synchronize"],
-			nature: ["Relaxed", "Naive", "Jolly", "Quirky", "Adamant", "Bashful", "Lonely", "Brave", "Hardy", "Hasty", "Mild", "Quiet", "Timid", "Naughty", "Lax", "Serious", "Sassy", "Careful"]
+			nature: ["Relaxed", "Naive", "Jolly", "Quirky", "Adamant", "Bashful", "Lonely", "Brave", "Hardy", "Hasty", "Mild", "Quiet", "Timid", "Naughty", "Lax", "Serious", "Sassy", "Careful"],
+			moves: [{ name: "Pound", type: "Normal" }, { name: "Transform", type: "Normal" }]
 		},
 		notes: ["Aura Mew"]
 	},
 
-{
+	{
 		id: "gen3-aura-mew-unknown-unknown-date",
 		eventTitle: "Aura Mew",
 		category: "pokemon",
@@ -2564,15 +3688,20 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Mew",
 			nationalDex: 151,
+			level: 10,
+			gender: "none",
 			tid: "20078",
+			friendship: 100,
+			metLevel: 10,
 			ot: ["Aura"],
 			ability: ["Synchronize"],
-			nature: ["Bold"]
+			nature: ["Bold"],
+			moves: [{ name: "Pound", type: "Normal" }, { name: "Transform", type: "Normal" }]
 		},
 		notes: ["Aura Mew"]
 	},
 
-{
+	{
 		id: "gen3-aura-mew-unknown-unknown-date",
 		eventTitle: "Aura Mew",
 		category: "pokemon",
@@ -2585,15 +3714,20 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Mew",
 			nationalDex: 151,
+			level: 10,
+			gender: "none",
 			tid: "20078",
+			friendship: 70,
+			metLevel: 10,
 			ot: ["Aura"],
 			ability: ["Synchronize"],
-			nature: ["Timid"]
+			nature: ["Timid"],
+			moves: [{ name: "Pound", type: "Normal" }, { name: "Transform", type: "Normal" }]
 		},
 		notes: ["Aura Mew"]
 	},
 
-{
+	{
 		id: "gen3-berry-glitch-shiny-zigzagoon-usa-unknown-date",
 		eventTitle: "Berry Glitch Shiny Zigzagoon",
 		category: "pokemon",
@@ -2608,16 +3742,26 @@ const DISTRIBUTIONS = [
 			species: "Zigzagoon",
 			name: "Berry Glitch Shiny",
 			nationalDex: 263,
+			level: 5,
+			gender: "Random",
 			shiny: true,
 			tid: "30317",
+			friendship: 70,
+			metLevel: 5,
 			ot: ["RUBY", "SAPHIRE"],
-			ability: ["Pickup", "Gluttony"],
-			nature: ["Random"]
+			ability: ["Pickup"],
+			nature: ["Random"],
+			moves: [
+				{ name: "Tackle", type: "Normal" },
+				{ name: "Growl", type: "Normal" },
+				{ name: "Tail Whip", type: "Normal" }
+			],
+			heldItems: [{ name: "Shuca Berry", img: () => heldItem("shuca-berry") }]
 		},
 		notes: ["Berry Glitch Shiny Zigzagoon"]
 	},
 
-{
+	{
 		id: "gen3-berry-glitch-shiny-zigzagoon-jpn-unknown-date",
 		eventTitle: "Berry Glitch Shiny Zigzagoon",
 		category: "pokemon",
@@ -2637,15 +3781,25 @@ const DISTRIBUTIONS = [
 			species: "Zigzagoon",
 			name: "Berry Glitch Shiny",
 			nationalDex: 263,
+			level: 5,
+			gender: "Random",
 			shiny: true,
 			tid: "21121",
-			ability: ["Pickup", "Gluttony"],
-			nature: ["Hasty", "Gentle", "Adamant", "Docile", "Serious", "Sassy", "Mild", "Rash", "Naughty", "Quiet", "Quirky", "Bashful", "Modest", "Lax"]
+			friendship: 70,
+			metLevel: 5,
+			ability: ["Pickup"],
+			nature: ["Hasty", "Gentle", "Adamant", "Docile", "Serious", "Sassy", "Mild", "Rash", "Naughty", "Quiet", "Quirky", "Bashful", "Modest", "Lax"],
+			moves: [
+				{ name: "Tackle", type: "Normal" },
+				{ name: "Growl", type: "Normal" },
+				{ name: "Tail Whip", type: "Normal" }
+			],
+			heldItems: [{ name: "Shuca Berry", img: () => heldItem("shuca-berry") }]
 		},
 		notes: ["Berry Glitch Shiny Zigzagoon"]
 	},
 
-{
+	{
 		id: "gen3-channel-jirachi-ganlon-berry-eur-unknown-date",
 		eventTitle: "CHANNEL Jirachi Ganlon Berry",
 		category: "pokemon",
@@ -2659,16 +3813,24 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Jirachi",
 			nationalDex: 385,
+			level: 5,
+			gender: "none",
 			tid: "40122",
+			friendship: 70,
 			ot: ["CHANNEL"],
 			ability: ["Serene Grace"],
 			nature: ["Serious"],
-			heldItems: [{ name: "Ganlon Berry", img: () => heldItem("ganlon-berry") }]
+			moves: [
+				{ name: "Wish", type: "Normal" },
+				{ name: "Confusion", type: "Psychic" },
+				{ name: "Rest", type: "Psychic" }
+			],
+			heldItems: [{ name: "Coba Berry", img: () => heldItem("coba-berry") }]
 		},
 		notes: ["CHANNEL Jirachi"]
 	},
 
-{
+	{
 		id: "gen3-channel-jirachi-salac-berry-eur-unknown-date",
 		eventTitle: "CHANNEL Jirachi Salac Berry",
 		category: "pokemon",
@@ -2682,16 +3844,24 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Jirachi",
 			nationalDex: 385,
+			level: 5,
+			gender: "none",
 			tid: "40122",
+			friendship: 70,
 			ot: ["CHANNEL"],
 			ability: ["Serene Grace"],
 			nature: ["Lax"],
-			heldItems: [{ name: "Salac Berry", img: () => heldItem("salac-berry") }]
+			moves: [
+				{ name: "Wish", type: "Normal" },
+				{ name: "Confusion", type: "Psychic" },
+				{ name: "Rest", type: "Psychic" }
+			],
+			heldItems: [{ name: "Payapa Berry", img: () => heldItem("payapa-berry") }]
 		},
 		notes: ["CHANNEL Jirachi"]
 	},
 
-{
+	{
 		id: "gen3-charm-ralts-egg-jpn-unknown-date",
 		eventTitle: "Charm Ralts Egg",
 		category: "pokemon",
@@ -2707,16 +3877,19 @@ const DISTRIBUTIONS = [
 			name: "Charm",
 			nationalDex: 280,
 			level: 5,
-			ball: { name: "Poké Ball", img: () => ball("pokeball") },
+			gender: "Random",
+			ball: { name: "Poké Ball", img: () => ball("poke-ball") },
 			tid: "32110",
+			friendship: 20,
 			ot: ["NAME"],
 			ability: ["Synchronize", "Trace"],
-			nature: ["Sassy", "Calm", "Hardy", "Quiet"]
+			nature: ["Sassy", "Calm", "Hardy", "Quiet"],
+			moves: [{ name: "Growl", type: "Normal" }, { name: "Charm", type: "Fairy" }]
 		},
 		notes: ["5th Anniversary Eggs"]
 	},
 
-{
+	{
 		id: "gen3-doel-deoxys-eur-unknown-date",
 		eventTitle: "DOEL Deoxys",
 		category: "pokemon",
@@ -2730,15 +3903,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Deoxys",
 			nationalDex: 386,
+			level: 70,
+			gender: "none",
 			tid: "28606",
+			friendship: 70,
+			metLevel: 70,
 			ot: ["DOEL"],
 			ability: ["Pressure"],
-			nature: ["Careful", "Calm", "Bold", "Hasty"]
+			nature: ["Careful", "Calm", "Bold", "Hasty"],
+			moves: [
+				{ name: "Cosmic Power", type: "Psychic" },
+				{ name: "Recover", type: "Normal" },
+				{ name: "Psycho Boost", type: "Psychic" },
+				{ name: "Hyper Beam", type: "Normal" }
+			]
 		},
 		notes: ["DOEL"]
 	},
 
-{
+	{
 		id: "gen3-extreme-speed-zigzagoon-egg-unknown-unknown-date",
 		eventTitle: "Extreme Speed Zigzagoon Egg",
 		category: "pokemon",
@@ -2752,16 +3935,24 @@ const DISTRIBUTIONS = [
 			name: "Extreme Speed",
 			nationalDex: 263,
 			level: 5,
-			ball: { name: "Poké Ball", img: () => ball("pokeball") },
+			gender: "female",
+			ball: { name: "Poké Ball", img: () => ball("poke-ball") },
 			tid: "00000",
+			friendship: 15,
 			ot: ["AZUSA"],
-			ability: ["Pickup", "Gluttony"],
-			nature: ["Sassy"]
+			ability: ["Pickup"],
+			nature: ["Sassy"],
+			moves: [
+				{ name: "Tackle", type: "Normal" },
+				{ name: "Growl", type: "Normal" },
+				{ name: "Tail Whip", type: "Normal" },
+				{ name: "Extreme Speed", type: "Normal" }
+			]
 		},
 		notes: ["Pokemon Box"]
 	},
 
-{
+	{
 		id: "gen3-false-swipe-swablu-egg-unknown-unknown-date",
 		eventTitle: "False Swipe Swablu Egg",
 		category: "pokemon",
@@ -2774,17 +3965,24 @@ const DISTRIBUTIONS = [
 			species: "Swablu",
 			name: "False Swipe",
 			nationalDex: 333,
-			level: 5,
-			ball: { name: "Poké Ball", img: () => ball("pokeball") },
+			level: 6,
+			gender: "female",
+			ball: { name: "Poké Ball", img: () => ball("poke-ball") },
 			tid: "00000",
+			friendship: 20,
 			ot: ["AZUSA"],
 			ability: ["Natural Cure"],
-			nature: ["Relaxed"]
+			nature: ["Relaxed"],
+			moves: [
+				{ name: "Peck", type: "Flying" },
+				{ name: "Growl", type: "Normal" },
+				{ name: "False Swipe", type: "Normal" }
+			]
 		},
 		notes: ["Pokemon Box"]
 	},
 
-{
+	{
 		id: "gen3-iron-defense-bagon-egg-jpn-unknown-date",
 		eventTitle: "Iron Defense Bagon Egg",
 		category: "pokemon",
@@ -2800,16 +3998,23 @@ const DISTRIBUTIONS = [
 			name: "Iron Defense",
 			nationalDex: 371,
 			level: 5,
-			ball: { name: "Poké Ball", img: () => ball("pokeball") },
+			gender: "Random",
+			ball: { name: "Poké Ball", img: () => ball("poke-ball") },
 			tid: "32110",
+			friendship: 40,
 			ot: ["NAME"],
 			ability: ["Rock Head"],
-			nature: ["Quiet", "Bold", "Gentle", "Sassy", "Rash", "Bashful", "Relaxed", "Hasty", "Naughty", "Lax", "Impish", "Mild", "Lonely", "Calm", "Docile", "Brave"]
+			nature: ["Quiet", "Bold", "Gentle", "Sassy", "Rash", "Bashful", "Relaxed", "Hasty", "Naughty", "Lax", "Impish", "Mild", "Lonely", "Calm", "Docile", "Brave"],
+			moves: [
+				{ name: "Rage", type: "Normal" },
+				{ name: "Bite", type: "Dark" },
+				{ name: "Iron Defense", type: "Steel" }
+			]
 		},
 		notes: ["5th Anniversary Eggs"]
 	},
 
-{
+	{
 		id: "gen3-jeremy-ekans-usa-unknown-date",
 		eventTitle: "JEREMY Ekans",
 		category: "pokemon",
@@ -2823,15 +4028,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Ekans",
 			nationalDex: 23,
+			level: 14,
+			gender: "female",
 			tid: "24680",
+			friendship: 70,
+			metLevel: 14,
 			ot: ["JEREMY"],
-			ability: ["Intimidate", "Shed Skin"],
-			nature: ["Docile"]
+			ability: ["Shed Skin"],
+			nature: ["Docile"],
+			moves: [
+				{ name: "Wrap", type: "Normal" },
+				{ name: "Leer", type: "Normal" },
+				{ name: "Poison Sting", type: "Poison" },
+				{ name: "Bite", type: "Dark" }
+			]
 		},
 		notes: ["Toys R Us | Battle Trade Day"]
 	},
 
-{
+	{
 		id: "gen3-jeremy-gengar-usa-unknown-date",
 		eventTitle: "JEREMY Gengar",
 		category: "pokemon",
@@ -2845,15 +4060,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Gengar",
 			nationalDex: 94,
+			level: 23,
+			gender: "female",
 			tid: "13579",
+			friendship: 71,
+			metLevel: 23,
 			ot: ["JEREMY"],
 			ability: ["Cursed Body"],
-			nature: ["Hardy"]
+			nature: ["Hardy"],
+			moves: [
+				{ name: "Spite", type: "Ghost" },
+				{ name: "Curse", type: "Ghost" },
+				{ name: "Night Shade", type: "Ghost" },
+				{ name: "Confuse Ray", type: "Ghost" }
+			]
 		},
 		notes: ["Toys R Us | Battle Trade Day"]
 	},
 
-{
+	{
 		id: "gen3-jeremy-golduck-usa-unknown-date",
 		eventTitle: "JEREMY Golduck",
 		category: "pokemon",
@@ -2867,15 +4092,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Golduck",
 			nationalDex: 55,
+			level: 33,
+			gender: "male",
 			tid: "24680",
+			friendship: 104,
+			metLevel: 27,
 			ot: ["JEREMY"],
-			ability: ["Damp", "Cloud Nine"],
-			nature: ["Lax"]
+			ability: ["Damp"],
+			nature: ["Lax"],
+			moves: [
+				{ name: "Psych Up", type: "Normal" },
+				{ name: "Disable", type: "Normal" },
+				{ name: "Confusion", type: "Psychic" },
+				{ name: "Screech", type: "Normal" }
+			]
 		},
 		notes: ["Toys R Us | Battle Trade Day"]
 	},
 
-{
+	{
 		id: "gen3-jeremy-growlithe-usa-unknown-date",
 		eventTitle: "JEREMY Growlithe",
 		category: "pokemon",
@@ -2889,15 +4124,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Growlithe",
 			nationalDex: 58,
+			level: 32,
+			gender: "female",
 			tid: "24680",
+			friendship: 70,
+			metLevel: 32,
 			ot: ["JEREMY"],
-			ability: ["Intimidate", "Flash Fire"],
-			nature: ["Quiet"]
+			ability: ["Intimidate"],
+			nature: ["Quiet"],
+			moves: [
+				{ name: "Leer", type: "Normal" },
+				{ name: "Odor Sleuth", type: "Normal" },
+				{ name: "Take Down", type: "Normal" },
+				{ name: "Flame Wheel", type: "Fire" }
+			]
 		},
 		notes: ["Toys R Us | Battle Trade Day"]
 	},
 
-{
+	{
 		id: "gen3-jeremy-machamp-usa-unknown-date",
 		eventTitle: "JEREMY Machamp",
 		category: "pokemon",
@@ -2911,15 +4156,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Machamp",
 			nationalDex: 68,
+			level: 38,
+			gender: "male",
 			tid: "13579",
+			friendship: 70,
+			metLevel: 38,
 			ot: ["JEREMY"],
-			ability: ["Guts", "No Guard"],
-			nature: ["Quiet"]
+			ability: ["Guts"],
+			nature: ["Quiet"],
+			moves: [
+				{ name: "Seismic Toss", type: "Fighting" },
+				{ name: "Foresight", type: "Normal" },
+				{ name: "Revenge", type: "Fighting" },
+				{ name: "Vital Throw", type: "Fighting" }
+			]
 		},
 		notes: ["Toys R Us | Battle Trade Day"]
 	},
 
-{
+	{
 		id: "gen3-jeremy-staryu-usa-unknown-date",
 		eventTitle: "JEREMY Staryu",
 		category: "pokemon",
@@ -2933,15 +4188,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Staryu",
 			nationalDex: 120,
+			level: 18,
+			gender: "none",
 			tid: "13579",
+			friendship: 70,
+			metLevel: 18,
 			ot: ["JEREMY"],
-			ability: ["Illuminate", "Natural Cure"],
-			nature: ["Timid"]
+			ability: ["Illuminate"],
+			nature: ["Timid"],
+			moves: [
+				{ name: "Harden", type: "Normal" },
+				{ name: "Water Gun", type: "Water" },
+				{ name: "Rapid Spin", type: "Normal" },
+				{ name: "Recover", type: "Normal" }
+			]
 		},
 		notes: ["Toys R Us | Battle Trade Day"]
 	},
 
-{
+	{
 		id: "gen3-jeremy-tauros-usa-unknown-date",
 		eventTitle: "JEREMY Tauros",
 		category: "pokemon",
@@ -2955,15 +4220,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Tauros",
 			nationalDex: 128,
+			level: 25,
+			gender: "male",
 			tid: "13579",
+			friendship: 70,
+			metLevel: 25,
 			ot: ["JEREMY"],
-			ability: ["Intimidate", "Anger Point"],
-			nature: ["Docile"]
+			ability: ["Intimidate"],
+			nature: ["Docile"],
+			moves: [
+				{ name: "Rage", type: "Normal" },
+				{ name: "Horn Attack", type: "Normal" },
+				{ name: "Scary Face", type: "Normal" },
+				{ name: "Pursuit", type: "Dark" }
+			]
 		},
 		notes: ["Toys R Us | Battle Trade Day"]
 	},
 
-{
+	{
 		id: "gen3-jeremy-vileplume-usa-unknown-date",
 		eventTitle: "JEREMY Vileplume",
 		category: "pokemon",
@@ -2977,15 +4252,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Vileplume",
 			nationalDex: 45,
+			level: 27,
+			gender: "male",
 			tid: "24680",
+			friendship: 75,
+			metLevel: 26,
 			ot: ["JEREMY"],
 			ability: ["Chlorophyll"],
-			nature: ["Quirky"]
+			nature: ["Quirky"],
+			moves: [
+				{ name: "Poison Powder", type: "Poison" },
+				{ name: "Stun Spore", type: "Grass" },
+				{ name: "Sleep Powder", type: "Grass" },
+				{ name: "Acid", type: "Poison" }
+			]
 		},
 		notes: ["Toys R Us | Battle Trade Day"]
 	},
 
-{
+	{
 		id: "gen3-jeremy-vulpix-usa-unknown-date",
 		eventTitle: "JEREMY Vulpix",
 		category: "pokemon",
@@ -2999,15 +4284,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Vulpix",
 			nationalDex: 37,
+			level: 18,
+			gender: "female",
 			tid: "13579",
+			friendship: 70,
+			metLevel: 18,
 			ot: ["JEREMY"],
 			ability: ["Flash Fire"],
-			nature: ["Quirky"]
+			nature: ["Quirky"],
+			moves: [
+				{ name: "Tail Whip", type: "Normal" },
+				{ name: "Roar", type: "Normal" },
+				{ name: "Quick Attack", type: "Normal" },
+				{ name: "Will O Wisp", type: "Fire" }
+			]
 		},
 		notes: ["Toys R Us | Battle Trade Day"]
 	},
 
-{
+	{
 		id: "gen3-mattle-ho-oh-unknown-unknown-date",
 		eventTitle: "MATTLE Ho Oh",
 		category: "pokemon",
@@ -3018,17 +4313,27 @@ const DISTRIBUTIONS = [
 		obtainMethod: { delivery: "unknown" },
 		reward: {
 			type: "pokemon",
-			species: "Ho-oh",
+			species: "Ho Oh",
 			nationalDex: 250,
+			level: 70,
+			gender: "none",
 			tid: "10048",
+			friendship: 70,
+			metLevel: 70,
 			ot: ["MATTLE"],
 			ability: ["Pressure"],
-			nature: ["Bashful"]
+			nature: ["Bashful"],
+			moves: [
+				{ name: "Recover", type: "Normal" },
+				{ name: "Fire Blast", type: "Fire" },
+				{ name: "Sunny Day", type: "Fire" },
+				{ name: "Swift", type: "Normal" }
+			]
 		},
 		notes: ["Imported path: Released/Gen 3/ENG/RSEFL - MATTLE Ho-Oh (ENG).pk3"]
 	},
 
-{
+	{
 		id: "gen3-monte-l-ho-oh-unknown-unknown-date",
 		eventTitle: "MONTE L Ho Oh",
 		category: "pokemon",
@@ -3039,17 +4344,27 @@ const DISTRIBUTIONS = [
 		obtainMethod: { delivery: "unknown" },
 		reward: {
 			type: "pokemon",
-			species: "Ho-oh",
+			species: "Ho Oh",
 			nationalDex: 250,
+			level: 70,
+			gender: "none",
 			tid: "10048",
+			friendship: 0,
+			metLevel: 70,
 			ot: ["MONTE L"],
 			ability: ["Pressure"],
-			nature: ["Serious"]
+			nature: ["Serious"],
+			moves: [
+				{ name: "Recover", type: "Normal" },
+				{ name: "Fire Blast", type: "Fire" },
+				{ name: "Sunny Day", type: "Fire" },
+				{ name: "Swift", type: "Normal" }
+			]
 		},
 		notes: ["Imported path: Released/Gen 3/ITA/RSEFL - MONTE L Ho-Oh (ITA).pk3"]
 	},
 
-{
+	{
 		id: "gen3-mystry-001-of-430-mew-usa-unknown-date",
 		eventTitle: "MYSTRY 001 Of 430 Mew",
 		category: "pokemon",
@@ -3064,15 +4379,20 @@ const DISTRIBUTIONS = [
 			species: "Mew",
 			name: "MYSTRY 001 Of 430",
 			nationalDex: 151,
+			level: 10,
+			gender: "none",
 			tid: "06930",
+			friendship: 100,
+			metLevel: 10,
 			ot: ["MYSTRY"],
 			ability: ["Synchronize"],
-			nature: ["Random"]
+			nature: ["Random"],
+			moves: [{ name: "Pound", type: "Normal" }, { name: "Transform", type: "Normal" }]
 		},
 		notes: ["Toys R Us | MYSTRY Mew"]
 	},
 
-{
+	{
 		id: "gen3-pay-day-skitty-egg-unknown-unknown-date",
 		eventTitle: "Pay Day Skitty Egg",
 		category: "pokemon",
@@ -3086,16 +4406,24 @@ const DISTRIBUTIONS = [
 			name: "Pay Day",
 			nationalDex: 300,
 			level: 5,
-			ball: { name: "Poké Ball", img: () => ball("pokeball") },
+			gender: "male",
+			ball: { name: "Poké Ball", img: () => ball("poke-ball") },
 			tid: "00000",
+			friendship: 15,
 			ot: ["AZUSA"],
-			ability: ["Cute Charm", "Normalize"],
-			nature: ["Adamant"]
+			ability: ["Cute Charm"],
+			nature: ["Adamant"],
+			moves: [
+				{ name: "Growl", type: "Normal" },
+				{ name: "Tackle", type: "Normal" },
+				{ name: "Tail Whip", type: "Normal" },
+				{ name: "Pay Day", type: "Normal" }
+			]
 		},
 		notes: ["Pokemon Box"]
 	},
 
-{
+	{
 		id: "gen3-pcnyb-cacturne-usa-unknown-date",
 		eventTitle: "PCNYb Cacturne",
 		category: "pokemon",
@@ -3113,10 +4441,20 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Cacturne",
 			nationalDex: 332,
+			level: 50,
+			gender: "Random",
 			tid: "00003",
+			friendship: 70,
+			metLevel: 50,
 			ot: ["PCNYb"],
 			ability: ["Sand Veil"],
-			nature: ["Bashful", "Calm", "Naive", "Sassy", "Quiet", "Naughty", "Brave", "Lonely", "Careful", "Serious", "Mild", "Rash", "Hardy", "Bold"]
+			nature: ["Bashful", "Calm", "Naive", "Sassy", "Quiet", "Naughty", "Brave", "Lonely", "Careful", "Serious", "Mild", "Rash", "Hardy", "Bold"],
+			moves: [
+				{ name: "Feint Attack", type: "Dark" },
+				{ name: "Spikes", type: "Ground" },
+				{ name: "Needle Arm", type: "Grass" },
+				{ name: "Cotton Spore", type: "Grass" }
+			]
 		},
 		notes: [
 			"Pokémon Center New York | Monster Week | Post event redemptions",
@@ -3124,7 +4462,7 @@ const DISTRIBUTIONS = [
 		]
 	},
 
-{
+	{
 		id: "gen3-pcnyb-duskull-usa-unknown-date",
 		eventTitle: "PCNYb Duskull",
 		category: "pokemon",
@@ -3142,10 +4480,20 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Duskull",
 			nationalDex: 355,
+			level: 25,
+			gender: "Random",
 			tid: "00004",
+			friendship: 70,
+			metLevel: 25,
 			ot: ["PCNYb"],
 			ability: ["Levitate"],
-			nature: ["Lax", "Quirky", "Mild", "Brave", "Timid", "Bashful", "Quiet", "Impish"]
+			nature: ["Lax", "Quirky", "Mild", "Brave", "Timid", "Bashful", "Quiet", "Impish"],
+			moves: [
+				{ name: "Disable", type: "Normal" },
+				{ name: "Foresight", type: "Normal" },
+				{ name: "Astonish", type: "Ghost" },
+				{ name: "Confuse Ray", type: "Ghost" }
+			]
 		},
 		notes: [
 			"Pokémon Center New York | Monster Week | Post event redemptions",
@@ -3153,7 +4501,7 @@ const DISTRIBUTIONS = [
 		]
 	},
 
-{
+	{
 		id: "gen3-pcnyb-pikachu-usa-unknown-date",
 		eventTitle: "PCNYb Pikachu",
 		category: "pokemon",
@@ -3171,15 +4519,26 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Pikachu",
 			nationalDex: 25,
+			level: 50,
+			gender: "male",
 			tid: "01035",
+			friendship: 70,
+			metLevel: 50,
 			ot: ["PCNYb"],
 			ability: ["Static"],
-			nature: ["Gentle"]
+			nature: ["Gentle"],
+			moves: [
+				{ name: "Thunderbolt", type: "Electric" },
+				{ name: "Agility", type: "Psychic" },
+				{ name: "Thunder", type: "Electric" },
+				{ name: "Light Screen", type: "Psychic" }
+			],
+			heldItems: [{ name: "Damp Mulch", img: () => heldItem("damp-mulch") }]
 		},
 		notes: ["Pokémon Center New York | Evolution Stone Week"]
 	},
 
-{
+	{
 		id: "gen3-pcnyb-shedinja-usa-unknown-date",
 		eventTitle: "PCNYb Shedinja",
 		category: "pokemon",
@@ -3197,10 +4556,20 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Shedinja",
 			nationalDex: 292,
+			level: 50,
+			gender: "none",
 			tid: "00001",
+			friendship: 70,
+			metLevel: 50,
 			ot: ["PCNYb"],
 			ability: ["Wonder Guard"],
-			nature: ["Hasty", "Relaxed", "Quiet", "Bold", "Lonely", "Adamant", "Mild", "Modest"]
+			nature: ["Hasty", "Relaxed", "Quiet", "Bold", "Lonely", "Adamant", "Mild", "Modest"],
+			moves: [
+				{ name: "Spite", type: "Ghost" },
+				{ name: "Confuse Ray", type: "Ghost" },
+				{ name: "Shadow Ball", type: "Ghost" },
+				{ name: "Grudge", type: "Ghost" }
+			]
 		},
 		notes: [
 			"Pokémon Center New York | Monster Week | Post event redemptions",
@@ -3208,7 +4577,7 @@ const DISTRIBUTIONS = [
 		]
 	},
 
-{
+	{
 		id: "gen3-pcnyb-shuppet-usa-unknown-date",
 		eventTitle: "PCNYb Shuppet",
 		category: "pokemon",
@@ -3226,10 +4595,20 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Shuppet",
 			nationalDex: 353,
+			level: 29,
+			gender: "Random",
 			tid: "00006",
+			friendship: 70,
+			metLevel: 25,
 			ot: ["PCNYb"],
-			ability: ["Insomnia", "Frisk"],
-			nature: ["Bashful", "Jolly", "Calm", "Hasty", "Lonely", "Bold", "Docile", "Lax", "Quirky", "Mild", "Impish", "Quiet", "Gentle"]
+			ability: ["Insomnia"],
+			nature: ["Bashful", "Jolly", "Calm", "Hasty", "Lonely", "Bold", "Docile", "Lax", "Quirky", "Mild", "Impish", "Quiet", "Gentle"],
+			moves: [
+				{ name: "Screech", type: "Normal" },
+				{ name: "Night Shade", type: "Ghost" },
+				{ name: "Curse", type: "Ghost" },
+				{ name: "Spite", type: "Ghost" }
+			]
 		},
 		notes: [
 			"Pokémon Center New York | Monster Week | Post event redemptions",
@@ -3237,7 +4616,7 @@ const DISTRIBUTIONS = [
 		]
 	},
 
-{
+	{
 		id: "gen3-pcnyb-wailord-usa-unknown-date",
 		eventTitle: "PCNYb Wailord",
 		category: "pokemon",
@@ -3255,15 +4634,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Wailord",
 			nationalDex: 321,
+			level: 100,
+			gender: "male",
 			tid: "00377",
+			friendship: 70,
+			metLevel: 100,
 			ot: ["PCNYb"],
-			ability: ["Water Veil", "Oblivious"],
-			nature: ["Naive"]
+			ability: ["Oblivious"],
+			nature: ["Naive"],
+			moves: [
+				{ name: "Water Pulse", type: "Water" },
+				{ name: "Blizzard", type: "Ice" },
+				{ name: "Rest", type: "Psychic" },
+				{ name: "Water Spout", type: "Water" }
+			]
 		},
 		notes: ["Pokémon Center New York | Halloween Bash Monster Week"]
 	},
 
-{
+	{
 		id: "gen3-pcnyc-absol-usa-unknown-date",
 		eventTitle: "PCNYc Absol",
 		category: "pokemon",
@@ -3281,15 +4670,30 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Absol",
 			nationalDex: 359,
+			level: 35,
+			gender: "female",
 			tid: "00167",
+			friendship: 70,
+			metLevel: 35,
 			ot: ["PCNYc"],
-			ability: ["Pressure", "Super Luck"],
-			nature: ["Careful", "Sassy", "Modest"]
+			ability: ["Pressure"],
+			nature: ["Careful", "Sassy", "Modest"],
+			moves: [
+				{ name: "Razor Wind", type: "Normal" },
+				{ name: "Bite", type: "Dark" },
+				{ name: "Swords Dance", type: "Normal" },
+				{ name: "Spite", type: "Ghost" },
+				{ name: "Wish", type: "Normal" }
+			],
+			heldItems: [
+				{ name: "Payapa Berry", img: () => heldItem("payapa-berry") },
+				{ name: "Coba Berry", img: () => heldItem("coba-berry") }
+			]
 		},
 		notes: ["Pokémon Center New York | Pokemon Box Promo"]
 	},
 
-{
+	{
 		id: "gen3-pcnyc-aggron-usa-unknown-date",
 		eventTitle: "PCNYc Aggron",
 		category: "pokemon",
@@ -3307,15 +4711,28 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Aggron",
 			nationalDex: 306,
+			level: 100,
+			gender: "female",
 			tid: "00601",
+			friendship: 70,
+			metLevel: 100,
 			ot: ["PCNYc"],
-			ability: ["Sturdy", "Rock Head"],
-			nature: ["Careful", "Relaxed"]
+			ability: ["Rock Head"],
+			nature: ["Careful", "Relaxed"],
+			moves: [
+				{ name: "Iron Tail", type: "Steel" },
+				{ name: "Dragon Claw", type: "Dragon" },
+				{ name: "Ice Beam", type: "Ice" },
+				{ name: "Double Edge", type: "Normal" },
+				{ name: "Taunt", type: "Dark" },
+				{ name: "Protect", type: "Normal" },
+				{ name: "Metal Claw", type: "Steel" }
+			]
 		},
 		notes: ["Pokémon Center New York | Halloween Bash Monster Week"]
 	},
 
-{
+	{
 		id: "gen3-pcnyc-altaria-usa-unknown-date",
 		eventTitle: "PCNYc Altaria",
 		category: "pokemon",
@@ -3333,15 +4750,26 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Altaria",
 			nationalDex: 334,
+			level: 46,
+			gender: "Random",
 			tid: "00067",
+			friendship: 70,
+			metLevel: 45,
 			ot: ["PCNYc"],
 			ability: ["Natural Cure"],
-			nature: ["Naive", "Lax"]
+			nature: ["Naive", "Lax"],
+			moves: [
+				{ name: "Take Down", type: "Normal" },
+				{ name: "Dragon Breath", type: "Dragon" },
+				{ name: "Dragon Dance", type: "Dragon" },
+				{ name: "Ice Beam", type: "Ice" }
+			],
+			heldItems: [{ name: "Miracle Seed", img: () => heldItem("miracle-seed") }]
 		},
 		notes: ["Pokémon Center New York | Dragon Week"]
 	},
 
-{
+	{
 		id: "gen3-pcnyc-armaldo-usa-unknown-date",
 		eventTitle: "PCNYc Armaldo",
 		category: "pokemon",
@@ -3359,15 +4787,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Armaldo",
 			nationalDex: 348,
+			level: 42,
+			gender: "Random",
 			tid: "00010",
+			friendship: 70,
+			metLevel: 40,
 			ot: ["PCNYc"],
 			ability: ["Battle Armor"],
-			nature: ["Quirky", "Serious", "Lax", "Naive", "Gentle", "Bashful", "Bold"]
+			nature: ["Quirky", "Serious", "Lax", "Naive", "Gentle", "Bashful", "Bold"],
+			moves: [
+				{ name: "Water Gun", type: "Water" },
+				{ name: "Metal Claw", type: "Steel" },
+				{ name: "Protect", type: "Normal" },
+				{ name: "Ancient Power", type: "Rock" }
+			]
 		},
 		notes: ["Pokémon Center New York | Ancients & Aliens Week | Post event redemptions"]
 	},
 
-{
+	{
 		id: "gen3-pcnyc-azurill-usa-unknown-date",
 		eventTitle: "PCNYc Azurill",
 		category: "pokemon",
@@ -3385,15 +4823,21 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Azurill",
 			nationalDex: 298,
+			level: 5,
+			gender: "Random",
 			tid: "00005",
+			friendship: 70,
+			metLevel: 5,
 			ot: ["PCNYc"],
-			ability: ["Thick Fat", "Huge Power"],
-			nature: ["Hasty", "Impish", "Timid", "Brave", "Relaxed"]
+			ability: ["Huge Power", "Thick Fat"],
+			nature: ["Hasty", "Impish", "Timid", "Brave", "Relaxed"],
+			moves: [{ name: "Splash", type: "Normal" }, { name: "Charm", type: "Fairy" }],
+			heldItems: [{ name: "Starf Berry", img: () => heldItem("starf-berry") }]
 		},
 		notes: ["Pokémon Center New York | Baby & Trade Week | Post event redemptions"]
 	},
 
-{
+	{
 		id: "gen3-pcnyc-cacturne-usa-unknown-date",
 		eventTitle: "PCNYc Cacturne",
 		category: "pokemon",
@@ -3411,10 +4855,20 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Cacturne",
 			nationalDex: 332,
+			level: 50,
+			gender: "Random",
 			tid: "00005",
+			friendship: 35,
+			metLevel: 50,
 			ot: ["PCNYc"],
 			ability: ["Sand Veil"],
-			nature: ["Adamant", "Hardy", "Mild", "Naughty", "Modest", "Bashful", "Relaxed", "Impish"]
+			nature: ["Adamant", "Hardy", "Mild", "Naughty", "Modest", "Bashful", "Relaxed", "Impish"],
+			moves: [
+				{ name: "Feint Attack", type: "Dark" },
+				{ name: "Spikes", type: "Ground" },
+				{ name: "Needle Arm", type: "Grass" },
+				{ name: "Cotton Spore", type: "Grass" }
+			]
 		},
 		notes: [
 			"Pokémon Center New York | Monster Week | Post event redemptions",
@@ -3422,7 +4876,7 @@ const DISTRIBUTIONS = [
 		]
 	},
 
-{
+	{
 		id: "gen3-pcnyc-cradily-usa-unknown-date",
 		eventTitle: "PCNYc Cradily",
 		category: "pokemon",
@@ -3440,15 +4894,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Cradily",
 			nationalDex: 346,
+			level: 42,
+			gender: "Random",
 			tid: "00006",
+			friendship: 70,
+			metLevel: 40,
 			ot: ["PCNYc"],
 			ability: ["Suction Cups"],
-			nature: ["Bold", "Serious", "Modest", "Lonely", "Mild"]
+			nature: ["Bold", "Serious", "Modest", "Lonely", "Mild"],
+			moves: [
+				{ name: "Acid", type: "Poison" },
+				{ name: "Ingrain", type: "Grass" },
+				{ name: "Confuse Ray", type: "Ghost" },
+				{ name: "Amnesia", type: "Psychic" }
+			]
 		},
 		notes: ["Pokémon Center New York | Ancients & Aliens Week | Post event redemptions"]
 	},
 
-{
+	{
 		id: "gen3-pcnyc-crawdaunt-usa-unknown-date",
 		eventTitle: "PCNYc Crawdaunt",
 		category: "pokemon",
@@ -3466,15 +4930,28 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Crawdaunt",
 			nationalDex: 342,
+			level: 100,
+			gender: "Random",
 			tid: "00600",
+			friendship: 72,
+			metLevel: 100,
 			ot: ["PCNYc"],
-			ability: ["Hyper Cutter", "Shell Armor"],
-			nature: ["Impish", "Serious", "Docile"]
+			ability: ["Shell Armor", "Hyper Cutter"],
+			nature: ["Impish", "Serious", "Docile"],
+			moves: [
+				{ name: "Toxic", type: "Poison" },
+				{ name: "Crabhammer", type: "Water" },
+				{ name: "Hail", type: "Ice" },
+				{ name: "Guillotine", type: "Normal" },
+				{ name: "Dig", type: "Ground" },
+				{ name: "Bubble Beam", type: "Water" },
+				{ name: "Swords Dance", type: "Normal" }
+			]
 		},
 		notes: ["Pokémon Center New York | Halloween Bash Monster Week"]
 	},
 
-{
+	{
 		id: "gen3-pcnyc-duskull-usa-unknown-date",
 		eventTitle: "PCNYc Duskull",
 		category: "pokemon",
@@ -3492,10 +4969,20 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Duskull",
 			nationalDex: 355,
+			level: 25,
+			gender: "Random",
 			tid: "00001",
+			friendship: 35,
+			metLevel: 25,
 			ot: ["PCNYc"],
 			ability: ["Levitate"],
-			nature: ["Naive", "Impish", "Gentle", "Calm", "Brave", "Docile", "Rash", "Jolly"]
+			nature: ["Naive", "Impish", "Gentle", "Calm", "Brave", "Docile", "Rash", "Jolly"],
+			moves: [
+				{ name: "Disable", type: "Normal" },
+				{ name: "Foresight", type: "Normal" },
+				{ name: "Astonish", type: "Ghost" },
+				{ name: "Confuse Ray", type: "Ghost" }
+			]
 		},
 		notes: [
 			"Pokémon Center New York | Monster Week | Post event redemptions",
@@ -3503,7 +4990,7 @@ const DISTRIBUTIONS = [
 		]
 	},
 
-{
+	{
 		id: "gen3-pcnyc-exploud-usa-unknown-date",
 		eventTitle: "PCNYc Exploud",
 		category: "pokemon",
@@ -3521,15 +5008,26 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Exploud",
 			nationalDex: 295,
+			level: 100,
+			gender: "male",
 			tid: "00598",
+			friendship: 70,
+			metLevel: 100,
 			ot: ["PCNYc"],
 			ability: ["Soundproof"],
-			nature: ["Hardy", "Naughty", "Brave"]
+			nature: ["Hardy", "Naughty", "Brave"],
+			moves: [
+				{ name: "Roar", type: "Normal" },
+				{ name: "Shadow Ball", type: "Ghost" },
+				{ name: "Brick Break", type: "Fighting" },
+				{ name: "Hyper Voice", type: "Normal" },
+				{ name: "Stomp", type: "Normal" }
+			]
 		},
 		notes: ["Pokémon Center New York | Halloween Bash Monster Week"]
 	},
 
-{
+	{
 		id: "gen3-pcnyc-flygon-usa-unknown-date",
 		eventTitle: "PCNYc Flygon",
 		category: "pokemon",
@@ -3547,15 +5045,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Flygon",
 			nationalDex: 330,
+			level: 45,
+			gender: "female",
 			tid: "00161",
+			friendship: 70,
+			metLevel: 45,
 			ot: ["PCNYc"],
 			ability: ["Levitate"],
-			nature: ["Lax", "Relaxed", "Quiet"]
+			nature: ["Lax", "Relaxed", "Quiet"],
+			moves: [
+				{ name: "Sand Tomb", type: "Ground" },
+				{ name: "Crunch", type: "Dark" },
+				{ name: "Dragon Breath", type: "Dragon" },
+				{ name: "Screech", type: "Normal" }
+			]
 		},
 		notes: ["Pokémon Center New York | Pokemon Box Promo"]
 	},
 
-{
+	{
 		id: "gen3-pcnyc-gloom-usa-unknown-date",
 		eventTitle: "PCNYc Gloom",
 		category: "pokemon",
@@ -3573,15 +5081,29 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Gloom",
 			nationalDex: 44,
+			level: 50,
+			gender: "Random",
 			tid: "00001",
+			friendship: 70,
+			metLevel: 50,
 			ot: ["PCNYc"],
 			ability: ["Chlorophyll"],
-			nature: ["Naive", "Serious", "Jolly", "Modest", "Adamant", "Lax", "Impish", "Lonely", "Hardy", "Careful", "Hasty", "Docile", "Gentle", "Mild", "Brave", "Quirky", "Relaxed"]
+			nature: ["Naive", "Serious", "Jolly", "Modest", "Adamant", "Lax", "Impish", "Lonely", "Hardy", "Careful", "Hasty", "Docile", "Gentle", "Mild", "Brave", "Quirky", "Relaxed"],
+			moves: [
+				{ name: "Sleep Powder", type: "Grass" },
+				{ name: "Acid", type: "Poison" },
+				{ name: "Moonlight", type: "Fairy" },
+				{ name: "Petal Dance", type: "Grass" }
+			],
+			heldItems: [
+				{ name: "Gooey Mulch", img: () => heldItem("gooey-mulch") },
+				{ name: "Heart Scale", img: () => heldItem("heart-scale") }
+			]
 		},
 		notes: ["Pokémon Center New York | Evolution Stone Week | Post event redemptions"]
 	},
 
-{
+	{
 		id: "gen3-pcnyc-golem-usa-unknown-date",
 		eventTitle: "PCNYc Golem",
 		category: "pokemon",
@@ -3599,15 +5121,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Golem",
 			nationalDex: 76,
+			level: 30,
+			gender: "Random",
 			tid: "00001",
+			friendship: 70,
+			metLevel: 30,
 			ot: ["PCNYc"],
-			ability: ["Rock Head", "Sturdy"],
-			nature: ["Serious", "Adamant", "Gentle", "Brave", "Jolly", "Docile", "Impish", "Bold", "Sassy"]
+			ability: ["Sturdy", "Rock Head"],
+			nature: ["Serious", "Adamant", "Gentle", "Brave", "Jolly", "Docile", "Impish", "Bold", "Sassy"],
+			moves: [
+				{ name: "Rock Throw", type: "Rock" },
+				{ name: "Magnitude", type: "Ground" },
+				{ name: "Self Destruct", type: "Normal" },
+				{ name: "Rollout", type: "Rock" }
+			]
 		},
 		notes: ["Pokémon Center New York | Trade & Evolution Stone Week | Post event redemptions"]
 	},
 
-{
+	{
 		id: "gen3-pcnyc-gorebyss-usa-unknown-date",
 		eventTitle: "PCNYc Gorebyss",
 		category: "pokemon",
@@ -3625,15 +5157,24 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Gorebyss",
 			nationalDex: 368,
+			level: 23,
+			gender: "Random",
 			tid: "00001",
+			friendship: 70,
+			metLevel: 20,
 			ot: ["PCNYc"],
 			ability: ["Swift Swim"],
-			nature: ["Bold", "Timid", "Hardy", "Mild", "Lax", "Careful", "Serious", "Sassy"]
+			nature: ["Bold", "Timid", "Hardy", "Mild", "Lax", "Careful", "Serious", "Sassy"],
+			moves: [
+				{ name: "Whirlpool", type: "Water" },
+				{ name: "Confusion", type: "Psychic" },
+				{ name: "Agility", type: "Psychic" }
+			]
 		},
 		notes: ["Pokémon Center New York | Baby & Trade Week | Post event redemptions"]
 	},
 
-{
+	{
 		id: "gen3-pcnyc-houndour-usa-unknown-date",
 		eventTitle: "PCNYc Houndour",
 		category: "pokemon",
@@ -3651,10 +5192,15 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Houndour",
 			nationalDex: 228,
+			level: 5,
+			gender: "Random",
 			tid: "00001",
+			friendship: 35,
+			metLevel: 5,
 			ot: ["PCNYc"],
-			ability: ["Early Bird", "Flash Fire"],
-			nature: ["Adamant", "Bold", "Quirky", "Naive", "Bashful", "Lonely", "Rash", "Serious", "Calm", "Gentle", "Lax", "Quiet", "Impish", "Careful", "Sassy", "Relaxed"]
+			ability: ["Flash Fire", "Early Bird"],
+			nature: ["Adamant", "Bold", "Quirky", "Naive", "Bashful", "Lonely", "Rash", "Serious", "Calm", "Gentle", "Lax", "Quiet", "Impish", "Careful", "Sassy", "Relaxed"],
+			moves: [{ name: "Leer", type: "Normal" }, { name: "Ember", type: "Fire" }]
 		},
 		notes: [
 			"Pokémon Center New York | Colosseum Tournament Promo | Post event redemptions",
@@ -3662,7 +5208,7 @@ const DISTRIBUTIONS = [
 		]
 	},
 
-{
+	{
 		id: "gen3-pcnyc-huntail-usa-unknown-date",
 		eventTitle: "PCNYc Huntail",
 		category: "pokemon",
@@ -3680,15 +5226,24 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Huntail",
 			nationalDex: 367,
+			level: 23,
+			gender: "Random",
 			tid: "00001",
+			friendship: 70,
+			metLevel: 20,
 			ot: ["PCNYc"],
 			ability: ["Swift Swim"],
-			nature: ["Calm", "Adamant", "Modest", "Naughty", "Hasty", "Impish", "Quiet", "Lonely"]
+			nature: ["Calm", "Adamant", "Modest", "Naughty", "Hasty", "Impish", "Quiet", "Lonely"],
+			moves: [
+				{ name: "Whirlpool", type: "Water" },
+				{ name: "Bite", type: "Dark" },
+				{ name: "Screech", type: "Normal" }
+			]
 		},
 		notes: ["Pokémon Center New York | Baby & Trade Week | Post event redemptions"]
 	},
 
-{
+	{
 		id: "gen3-pcnyc-kingdra-usa-unknown-date",
 		eventTitle: "PCNYc Kingdra",
 		category: "pokemon",
@@ -3706,15 +5261,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Kingdra",
 			nationalDex: 230,
+			level: 35,
+			gender: "Random",
 			tid: "00003",
+			friendship: 70,
+			metLevel: 35,
 			ot: ["PCNYc"],
-			ability: ["Swift Swim", "Sniper"],
-			nature: ["Hardy", "Adamant", "Brave", "Impish", "Lax", "Hasty", "Relaxed", "Lonely", "Modest"]
+			ability: ["Swift Swim"],
+			nature: ["Hardy", "Adamant", "Brave", "Impish", "Lax", "Hasty", "Relaxed", "Lonely", "Modest"],
+			moves: [
+				{ name: "Smokescreen", type: "Normal" },
+				{ name: "Leer", type: "Normal" },
+				{ name: "Water Gun", type: "Water" },
+				{ name: "Twister", type: "Dragon" }
+			]
 		},
 		notes: ["Pokémon Center New York | Slither & Swim Week | Post event redemptions"]
 	},
 
-{
+	{
 		id: "gen3-pcnyc-ludicolo-usa-unknown-date",
 		eventTitle: "PCNYc Ludicolo",
 		category: "pokemon",
@@ -3732,15 +5297,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Ludicolo",
 			nationalDex: 272,
+			level: 20,
+			gender: "Random",
 			tid: "00003",
+			friendship: 70,
+			metLevel: 20,
 			ot: ["PCNYc"],
-			ability: ["Swift Swim", "Rain Dish"],
-			nature: ["Timid", "Mild", "Gentle", "Bashful", "Brave"]
+			ability: ["Rain Dish", "Swift Swim"],
+			nature: ["Timid", "Mild", "Gentle", "Bashful", "Brave"],
+			moves: [
+				{ name: "Astonish", type: "Ghost" },
+				{ name: "Growl", type: "Normal" },
+				{ name: "Absorb", type: "Grass" },
+				{ name: "Nature Power", type: "Normal" }
+			]
 		},
 		notes: ["Pokémon Center New York | Trade & Evolution Stone Week | Post event redemptions"]
 	},
 
-{
+	{
 		id: "gen3-pcnyc-machamp-usa-unknown-date",
 		eventTitle: "PCNYc Machamp",
 		category: "pokemon",
@@ -3758,15 +5333,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Machamp",
 			nationalDex: 68,
+			level: 30,
+			gender: "Random",
 			tid: "00001",
+			friendship: 70,
+			metLevel: 30,
 			ot: ["PCNYc"],
-			ability: ["Guts", "No Guard"],
-			nature: ["Careful", "Hardy", "Bashful", "Quirky", "Rash", "Mild", "Jolly", "Modest", "Naughty", "Quiet"]
+			ability: ["Guts"],
+			nature: ["Careful", "Hardy", "Bashful", "Quirky", "Rash", "Mild", "Jolly", "Modest", "Naughty", "Quiet"],
+			moves: [
+				{ name: "Karate Chop", type: "Fighting" },
+				{ name: "Seismic Toss", type: "Fighting" },
+				{ name: "Foresight", type: "Normal" },
+				{ name: "Revenge", type: "Fighting" }
+			]
 		},
 		notes: ["Pokémon Center New York | Trade & Evolution Stone Week | Post event redemptions"]
 	},
 
-{
+	{
 		id: "gen3-pcnyc-mareep-usa-unknown-date",
 		eventTitle: "PCNYc Mareep",
 		category: "pokemon",
@@ -3784,10 +5369,15 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Mareep",
 			nationalDex: 179,
+			level: 5,
+			gender: "Random",
 			tid: "00001",
+			friendship: 70,
+			metLevel: 5,
 			ot: ["PCNYc"],
 			ability: ["Static"],
-			nature: ["Timid", "Careful", "Mild", "Lax", "Relaxed", "Hasty", "Bold", "Modest", "Sassy", "Gentle", "Rash", "Quiet", "Adamant", "Naive", "Bashful", "Brave"]
+			nature: ["Timid", "Careful", "Mild", "Lax", "Relaxed", "Hasty", "Bold", "Modest", "Sassy", "Gentle", "Rash", "Quiet", "Adamant", "Naive", "Bashful", "Brave"],
+			moves: [{ name: "Tackle", type: "Normal" }, { name: "Growl", type: "Normal" }]
 		},
 		notes: [
 			"Pokémon Center New York | Colosseum Tournament Promo | Post event redemptions",
@@ -3795,7 +5385,7 @@ const DISTRIBUTIONS = [
 		]
 	},
 
-{
+	{
 		id: "gen3-pcnyc-mawile-usa-unknown-date",
 		eventTitle: "PCNYc Mawile",
 		category: "pokemon",
@@ -3813,15 +5403,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Mawile",
 			nationalDex: 303,
+			level: 18,
+			gender: "Random",
 			tid: "00002",
+			friendship: 70,
+			metLevel: 18,
 			ot: ["PCNYc"],
 			ability: ["Hyper Cutter", "Intimidate"],
-			nature: ["Lonely", "Timid", "Rash", "Naive", "Brave", "Lax", "Jolly", "Docile", "Calm", "Naughty", "Adamant"]
+			nature: ["Lonely", "Timid", "Rash", "Naive", "Brave", "Lax", "Jolly", "Docile", "Calm", "Naughty", "Adamant"],
+			moves: [
+				{ name: "Astonish", type: "Ghost" },
+				{ name: "Fake Tears", type: "Dark" },
+				{ name: "Bite", type: "Dark" },
+				{ name: "Sweet Scent", type: "Normal" }
+			]
 		},
 		notes: ["Pokémon Center New York | Ancients & Aliens Week | Post event redemptions"]
 	},
 
-{
+	{
 		id: "gen3-pcnyc-milotic-usa-unknown-date",
 		eventTitle: "PCNYc Milotic",
 		category: "pokemon",
@@ -3839,15 +5439,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Milotic",
 			nationalDex: 350,
+			level: 38,
+			gender: "Random",
 			tid: "00001",
+			friendship: 70,
+			metLevel: 35,
 			ot: ["PCNYc"],
-			ability: ["Marvel Scale", "Competitive"],
-			nature: ["Mild", "Bold", "Quirky", "Timid", "Careful", "Lonely", "Lax", "Brave", "Hasty", "Gentle", "Naughty", "Relaxed"]
+			ability: ["Marvel Scale"],
+			nature: ["Mild", "Bold", "Quirky", "Timid", "Careful", "Lonely", "Lax", "Brave", "Hasty", "Gentle", "Naughty", "Relaxed"],
+			moves: [
+				{ name: "Water Pulse", type: "Water" },
+				{ name: "Twister", type: "Dragon" },
+				{ name: "Recover", type: "Normal" },
+				{ name: "Rain Dance", type: "Water" }
+			]
 		},
 		notes: ["Pokémon Center New York | Slither & Swim Week | Post event redemptions"]
 	},
 
-{
+	{
 		id: "gen3-pcnyc-pikachu-usa-unknown-date",
 		eventTitle: "PCNYc Pikachu",
 		category: "pokemon",
@@ -3865,15 +5475,26 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Pikachu",
 			nationalDex: 25,
+			level: 50,
+			gender: "Random",
 			tid: "00001",
+			friendship: 70,
+			metLevel: 50,
 			ot: ["PCNYc"],
 			ability: ["Static"],
-			nature: ["Jolly", "Bold", "Careful", "Serious", "Calm", "Lonely", "Mild", "Rash", "Naughty", "Modest", "Brave", "Quirky"]
+			nature: ["Jolly", "Bold", "Careful", "Serious", "Calm", "Lonely", "Mild", "Rash", "Naughty", "Modest", "Brave", "Quirky"],
+			moves: [
+				{ name: "Thunderbolt", type: "Electric" },
+				{ name: "Agility", type: "Psychic" },
+				{ name: "Thunder", type: "Electric" },
+				{ name: "Light Screen", type: "Psychic" }
+			],
+			heldItems: [{ name: "Damp Mulch", img: () => heldItem("damp-mulch") }]
 		},
 		notes: ["Pokémon Center New York | Evolution Stone Week | Post event redemptions"]
 	},
 
-{
+	{
 		id: "gen3-pcnyc-sableye-usa-unknown-date",
 		eventTitle: "PCNYc Sableye",
 		category: "pokemon",
@@ -3891,15 +5512,26 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Sableye",
 			nationalDex: 302,
+			level: 18,
+			gender: "Random",
 			tid: "00001",
+			friendship: 35,
+			metLevel: 18,
 			ot: ["PCNYc"],
-			ability: ["Keen Eye", "Stall"],
-			nature: ["Quirky", "Adamant", "Naive", "Bashful"]
+			ability: ["Keen Eye"],
+			nature: ["Quirky", "Adamant", "Naive", "Bashful"],
+			moves: [
+				{ name: "Foresight", type: "Normal" },
+				{ name: "Night Shade", type: "Ghost" },
+				{ name: "Astonish", type: "Ghost" },
+				{ name: "Fury Swipes", type: "Normal" }
+			],
+			heldItems: [{ name: "Ganlon Berry", img: () => heldItem("ganlon-berry") }]
 		},
 		notes: ["Pokémon Center New York | Ancients & Aliens Week | Post event redemptions"]
 	},
 
-{
+	{
 		id: "gen3-pcnyc-salamence-usa-unknown-date",
 		eventTitle: "PCNYc Salamence",
 		category: "pokemon",
@@ -3917,15 +5549,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Salamence",
 			nationalDex: 373,
+			level: 50,
+			gender: "Random",
 			tid: "00025",
+			friendship: 70,
+			metLevel: 50,
 			ot: ["PCNYc"],
 			ability: ["Intimidate"],
-			nature: ["Rash", "Brave"]
+			nature: ["Rash", "Brave"],
+			moves: [
+				{ name: "Protect", type: "Normal" },
+				{ name: "Dragon Breath", type: "Dragon" },
+				{ name: "Thrash", type: "Normal" },
+				{ name: "Fly", type: "Flying" }
+			]
 		},
 		notes: ["Pokémon Center New York | Dragon Week"]
 	},
 
-{
+	{
 		id: "gen3-pcnyc-seadra-usa-unknown-date",
 		eventTitle: "PCNYc Seadra",
 		category: "pokemon",
@@ -3943,15 +5585,26 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Seadra",
 			nationalDex: 117,
+			level: 45,
+			gender: "female",
 			tid: "00062",
+			friendship: 70,
+			metLevel: 45,
 			ot: ["PCNYc"],
-			ability: ["Poison Point", "Sniper"],
-			nature: ["Bashful"]
+			ability: ["Poison Point"],
+			nature: ["Bashful"],
+			moves: [
+				{ name: "Ice Beam", type: "Ice" },
+				{ name: "Twister", type: "Dragon" },
+				{ name: "Hydro Pump", type: "Water" },
+				{ name: "Dragon Rage", type: "Dragon" }
+			],
+			heldItems: [{ name: "Cleanse Tag", img: () => heldItem("cleanse-tag") }]
 		},
 		notes: ["Pokémon Center New York | Dragon Week"]
 	},
 
-{
+	{
 		id: "gen3-pcnyc-seviper-usa-unknown-date",
 		eventTitle: "PCNYc Seviper",
 		category: "pokemon",
@@ -3969,10 +5622,24 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Seviper",
 			nationalDex: 336,
+			level: 28,
+			gender: "Random",
 			tid: "00169",
+			friendship: 70,
+			metLevel: 30,
 			ot: ["PCNYc"],
 			ability: ["Shed Skin"],
-			nature: ["Hardy", "Bashful", "Quiet", "Calm", "Impish", "Timid", "Adamant", "Relaxed", "Rash", "Gentle", "Sassy"]
+			nature: ["Hardy", "Bashful", "Quiet", "Calm", "Impish", "Timid", "Adamant", "Relaxed", "Rash", "Gentle", "Sassy"],
+			moves: [
+				{ name: "Poison Tail", type: "Poison" },
+				{ name: "Screech", type: "Normal" },
+				{ name: "Glare", type: "Normal" },
+				{ name: "Crunch", type: "Dark" },
+				{ name: "Wrap", type: "Normal" },
+				{ name: "Lick", type: "Ghost" },
+				{ name: "Bite", type: "Dark" }
+			],
+			heldItems: [{ name: "Charti Berry", img: () => heldItem("charti-berry") }]
 		},
 		notes: [
 			"Pokémon Center New York | Pokemon Box Promo",
@@ -3980,7 +5647,7 @@ const DISTRIBUTIONS = [
 		]
 	},
 
-{
+	{
 		id: "gen3-pcnyc-shedinja-usa-unknown-date",
 		eventTitle: "PCNYc Shedinja",
 		category: "pokemon",
@@ -3998,10 +5665,20 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Shedinja",
 			nationalDex: 292,
+			level: 50,
+			gender: "none",
 			tid: "00006",
+			friendship: 70,
+			metLevel: 50,
 			ot: ["PCNYc"],
 			ability: ["Wonder Guard"],
-			nature: ["Bashful", "Hasty", "Rash", "Timid", "Naughty", "Hardy"]
+			nature: ["Bashful", "Hasty", "Rash", "Timid", "Naughty", "Hardy"],
+			moves: [
+				{ name: "Spite", type: "Ghost" },
+				{ name: "Confuse Ray", type: "Ghost" },
+				{ name: "Shadow Ball", type: "Ghost" },
+				{ name: "Grudge", type: "Ghost" }
+			]
 		},
 		notes: [
 			"Pokémon Center New York | Monster Week | Post event redemptions",
@@ -4009,7 +5686,7 @@ const DISTRIBUTIONS = [
 		]
 	},
 
-{
+	{
 		id: "gen3-pcnyc-shiftry-usa-unknown-date",
 		eventTitle: "PCNYc Shiftry",
 		category: "pokemon",
@@ -4027,15 +5704,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Shiftry",
 			nationalDex: 275,
+			level: 20,
+			gender: "Random",
 			tid: "00002",
+			friendship: 70,
+			metLevel: 20,
 			ot: ["PCNYc"],
 			ability: ["Chlorophyll", "Wind Rider"],
-			nature: ["Jolly", "Lonely", "Adamant", "Relaxed", "Sassy", "Serious", "Lax", "Gentle", "Hardy", "Careful", "Modest", "Quirky"]
+			nature: ["Jolly", "Lonely", "Adamant", "Relaxed", "Sassy", "Serious", "Lax", "Gentle", "Hardy", "Careful", "Modest", "Quirky"],
+			moves: [
+				{ name: "Pound", type: "Normal" },
+				{ name: "Harden", type: "Normal" },
+				{ name: "Growth", type: "Normal" },
+				{ name: "Nature Power", type: "Normal" }
+			]
 		},
 		notes: ["Pokémon Center New York | Trade & Evolution Stone Week | Post event redemptions"]
 	},
 
-{
+	{
 		id: "gen3-pcnyc-shuppet-usa-unknown-date",
 		eventTitle: "PCNYc Shuppet",
 		category: "pokemon",
@@ -4053,10 +5740,20 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Shuppet",
 			nationalDex: 353,
+			level: 25,
+			gender: "Random",
 			tid: "00010",
+			friendship: 35,
+			metLevel: 25,
 			ot: ["PCNYc"],
-			ability: ["Insomnia", "Frisk"],
-			nature: ["Rash", "Naughty", "Impish", "Bold", "Sassy", "Bashful", "Lonely", "Gentle"]
+			ability: ["Insomnia"],
+			nature: ["Rash", "Naughty", "Impish", "Bold", "Sassy", "Bashful", "Lonely", "Gentle"],
+			moves: [
+				{ name: "Screech", type: "Normal" },
+				{ name: "Night Shade", type: "Ghost" },
+				{ name: "Curse", type: "Ghost" },
+				{ name: "Spite", type: "Ghost" }
+			]
 		},
 		notes: [
 			"Pokémon Center New York | Monster Week | Post event redemptions",
@@ -4064,7 +5761,7 @@ const DISTRIBUTIONS = [
 		]
 	},
 
-{
+	{
 		id: "gen3-pcnyc-staryu-usa-unknown-date",
 		eventTitle: "PCNYc Staryu",
 		category: "pokemon",
@@ -4082,15 +5779,26 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Staryu",
 			nationalDex: 120,
+			level: 50,
+			gender: "none",
 			tid: "00002",
+			friendship: 70,
+			metLevel: 50,
 			ot: ["PCNYc"],
-			ability: ["Illuminate", "Natural Cure"],
-			nature: ["Jolly", "Rash", "Mild", "Gentle", "Naughty", "Serious", "Impish", "Modest", "Bold", "Adamant", "Brave", "Relaxed"]
+			ability: ["Natural Cure", "Illuminate"],
+			nature: ["Jolly", "Rash", "Mild", "Gentle", "Naughty", "Serious", "Impish", "Modest", "Bold", "Adamant", "Brave", "Relaxed"],
+			moves: [
+				{ name: "Minimize", type: "Normal" },
+				{ name: "Light Screen", type: "Psychic" },
+				{ name: "Cosmic Power", type: "Psychic" },
+				{ name: "Hydro Pump", type: "Water" }
+			],
+			heldItems: [{ name: "Stable Mulch", img: () => heldItem("stable-mulch") }]
 		},
 		notes: ["Pokémon Center New York | Evolution Stone Week | Post event redemptions"]
 	},
 
-{
+	{
 		id: "gen3-pcnyc-wailord-usa-unknown-date",
 		eventTitle: "PCNYc Wailord",
 		category: "pokemon",
@@ -4108,15 +5816,27 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Wailord",
 			nationalDex: 321,
+			level: 100,
+			gender: "Random",
 			tid: "00588",
+			friendship: 70,
+			metLevel: 100,
 			ot: ["PCNYc"],
-			ability: ["Water Veil", "Oblivious"],
-			nature: ["Mild", "Modest", "Adamant"]
+			ability: ["Oblivious", "Water Veil"],
+			nature: ["Mild", "Modest", "Adamant"],
+			moves: [
+				{ name: "Blizzard", type: "Ice" },
+				{ name: "Water Spout", type: "Water" },
+				{ name: "Earthquake", type: "Ground" },
+				{ name: "Hydro Pump", type: "Water" },
+				{ name: "Water Pulse", type: "Water" },
+				{ name: "Rest", type: "Psychic" }
+			]
 		},
 		notes: ["Pokémon Center New York | Halloween Bash Monster Week"]
 	},
 
-{
+	{
 		id: "gen3-pcnyc-wynaut-usa-unknown-date",
 		eventTitle: "PCNYc Wynaut",
 		category: "pokemon",
@@ -4134,15 +5854,24 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Wynaut",
 			nationalDex: 360,
+			level: 5,
+			gender: "Random",
 			tid: "00002",
+			friendship: 70,
+			metLevel: 5,
 			ot: ["PCNYc"],
 			ability: ["Shadow Tag"],
-			nature: ["Brave", "Bold", "Quirky", "Serious", "Hasty", "Adamant", "Rash", "Bashful"]
+			nature: ["Brave", "Bold", "Quirky", "Serious", "Hasty", "Adamant", "Rash", "Bashful"],
+			moves: [
+				{ name: "Splash", type: "Normal" },
+				{ name: "Charm", type: "Fairy" },
+				{ name: "Encore", type: "Normal" }
+			]
 		},
 		notes: ["Pokémon Center New York | Baby & Trade Week | Post event redemptions"]
 	},
 
-{
+	{
 		id: "gen3-pcnyc-zangoose-usa-unknown-date",
 		eventTitle: "PCNYc Zangoose",
 		category: "pokemon",
@@ -4160,15 +5889,26 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Zangoose",
 			nationalDex: 335,
+			level: 21,
+			gender: "Random",
 			tid: "00002",
+			friendship: 70,
+			metLevel: 18,
 			ot: ["PCNYc"],
 			ability: ["Immunity"],
-			nature: ["Sassy", "Calm", "Jolly", "Impish", "Lonely", "Rash"]
+			nature: ["Sassy", "Calm", "Jolly", "Impish", "Lonely", "Rash"],
+			moves: [
+				{ name: "Leer", type: "Normal" },
+				{ name: "Quick Attack", type: "Normal" },
+				{ name: "Swords Dance", type: "Normal" },
+				{ name: "Fury Cutter", type: "Bug" }
+			],
+			heldItems: [{ name: "Lansat Berry", img: () => heldItem("lansat-berry") }]
 		},
 		notes: ["Pokémon Center New York | Slither & Swim Week | Post event redemptions"]
 	},
 
-{
+	{
 		id: "gen3-pcnyd-absol-usa-unknown-date",
 		eventTitle: "PCNYd Absol",
 		category: "pokemon",
@@ -4186,15 +5926,30 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Absol",
 			nationalDex: 359,
+			level: 35,
+			gender: "Random",
 			tid: "00003",
+			friendship: 70,
+			metLevel: 35,
 			ot: ["PCNYd"],
-			ability: ["Pressure", "Super Luck"],
-			nature: ["Quirky", "Sassy", "Jolly", "Rash", "Hardy", "Serious", "Naive", "Adamant", "Quiet", "Calm"]
+			ability: ["Pressure"],
+			nature: ["Quirky", "Sassy", "Jolly", "Rash", "Hardy", "Serious", "Naive", "Adamant", "Quiet", "Calm"],
+			moves: [
+				{ name: "Razor Wind", type: "Normal" },
+				{ name: "Bite", type: "Dark" },
+				{ name: "Swords Dance", type: "Normal" },
+				{ name: "Spite", type: "Ghost" },
+				{ name: "Wish", type: "Normal" }
+			],
+			heldItems: [
+				{ name: "Payapa Berry", img: () => heldItem("payapa-berry") },
+				{ name: "Coba Berry", img: () => heldItem("coba-berry") }
+			]
 		},
 		notes: ["Pokémon Center New York | Pokemon Box Promo"]
 	},
 
-{
+	{
 		id: "gen3-pcnyd-altaria-usa-unknown-date",
 		eventTitle: "PCNYd Altaria",
 		category: "pokemon",
@@ -4212,15 +5967,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Altaria",
 			nationalDex: 334,
+			level: 46,
+			gender: "female",
 			tid: "00071",
+			friendship: 72,
+			metLevel: 45,
 			ot: ["PCNYd"],
 			ability: ["Natural Cure"],
-			nature: ["Hasty"]
+			nature: ["Hasty"],
+			moves: [
+				{ name: "Aerial Ace", type: "Flying" },
+				{ name: "Dragon Breath", type: "Dragon" },
+				{ name: "Dragon Dance", type: "Dragon" },
+				{ name: "Flamethrower", type: "Fire" }
+			]
 		},
 		notes: ["Pokémon Center New York | Dragon Week"]
 	},
 
-{
+	{
 		id: "gen3-pcnyd-armaldo-usa-unknown-date",
 		eventTitle: "PCNYd Armaldo",
 		category: "pokemon",
@@ -4238,15 +6003,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Armaldo",
 			nationalDex: 348,
+			level: 42,
+			gender: "male",
 			tid: "00012",
+			friendship: 70,
+			metLevel: 40,
 			ot: ["PCNYd"],
 			ability: ["Battle Armor"],
-			nature: ["Quiet", "Careful"]
+			nature: ["Quiet", "Careful"],
+			moves: [
+				{ name: "Water Gun", type: "Water" },
+				{ name: "Metal Claw", type: "Steel" },
+				{ name: "Protect", type: "Normal" },
+				{ name: "Ancient Power", type: "Rock" }
+			]
 		},
 		notes: ["Pokémon Center New York | Ancients & Aliens Week | Post event redemptions"]
 	},
 
-{
+	{
 		id: "gen3-pcnyd-azurill-usa-unknown-date",
 		eventTitle: "PCNYd Azurill",
 		category: "pokemon",
@@ -4264,10 +6039,16 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Azurill",
 			nationalDex: 298,
+			level: 5,
+			gender: "Random",
 			tid: "00007",
+			friendship: 70,
+			metLevel: 5,
 			ot: ["PCNYd"],
-			ability: ["Thick Fat", "Huge Power"],
-			nature: ["Relaxed", "Naive", "Adamant", "Timid", "Calm", "Quiet", "Lax", "Modest", "Gentle", "Quirky", "Bashful", "Brave", "Lonely", "Impish", "Hasty"]
+			ability: ["Huge Power", "Thick Fat"],
+			nature: ["Relaxed", "Naive", "Adamant", "Timid", "Calm", "Quiet", "Lax", "Modest", "Gentle", "Quirky", "Bashful", "Brave", "Lonely", "Impish", "Hasty"],
+			moves: [{ name: "Splash", type: "Normal" }, { name: "Charm", type: "Fairy" }],
+			heldItems: [{ name: "Starf Berry", img: () => heldItem("starf-berry") }]
 		},
 		notes: [
 			"Pokémon Center New York | Baby & Trade Week | Post event redemptions",
@@ -4275,7 +6056,7 @@ const DISTRIBUTIONS = [
 		]
 	},
 
-{
+	{
 		id: "gen3-pcnyd-cacturne-usa-unknown-date",
 		eventTitle: "PCNYd Cacturne",
 		category: "pokemon",
@@ -4293,15 +6074,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Cacturne",
 			nationalDex: 332,
+			level: 50,
+			gender: "Random",
 			tid: "00003",
+			friendship: 35,
+			metLevel: 50,
 			ot: ["PCNYd"],
 			ability: ["Sand Veil"],
-			nature: ["Relaxed", "Rash", "Lax", "Serious", "Hardy", "Lonely"]
+			nature: ["Relaxed", "Rash", "Lax", "Serious", "Hardy", "Lonely"],
+			moves: [
+				{ name: "Feint Attack", type: "Dark" },
+				{ name: "Spikes", type: "Ground" },
+				{ name: "Needle Arm", type: "Grass" },
+				{ name: "Cotton Spore", type: "Grass" }
+			]
 		},
 		notes: ["Pokémon Center New York | Monster Week | Post event redemptions"]
 	},
 
-{
+	{
 		id: "gen3-pcnyd-cradily-usa-unknown-date",
 		eventTitle: "PCNYd Cradily",
 		category: "pokemon",
@@ -4319,15 +6110,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Cradily",
 			nationalDex: 346,
+			level: 42,
+			gender: "Random",
 			tid: "00001",
+			friendship: 70,
+			metLevel: 40,
 			ot: ["PCNYd"],
 			ability: ["Suction Cups"],
-			nature: ["Adamant", "Timid", "Quirky", "Sassy", "Naive", "Relaxed", "Brave", "Modest"]
+			nature: ["Adamant", "Timid", "Quirky", "Sassy", "Naive", "Relaxed", "Brave", "Modest"],
+			moves: [
+				{ name: "Acid", type: "Poison" },
+				{ name: "Ingrain", type: "Grass" },
+				{ name: "Confuse Ray", type: "Ghost" },
+				{ name: "Amnesia", type: "Psychic" }
+			]
 		},
 		notes: ["Pokémon Center New York | Ancients & Aliens Week | Post event redemptions"]
 	},
 
-{
+	{
 		id: "gen3-pcnyd-duskull-usa-unknown-date",
 		eventTitle: "PCNYd Duskull",
 		category: "pokemon",
@@ -4345,15 +6146,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Duskull",
 			nationalDex: 355,
+			level: 25,
+			gender: "Random",
 			tid: "00004",
+			friendship: 35,
+			metLevel: 25,
 			ot: ["PCNYd"],
 			ability: ["Levitate"],
-			nature: ["Careful", "Rash", "Quirky", "Calm", "Modest", "Relaxed", "Naughty", "Sassy", "Hasty", "Quiet"]
+			nature: ["Careful", "Rash", "Quirky", "Calm", "Modest", "Relaxed", "Naughty", "Sassy", "Hasty", "Quiet"],
+			moves: [
+				{ name: "Disable", type: "Normal" },
+				{ name: "Foresight", type: "Normal" },
+				{ name: "Astonish", type: "Ghost" },
+				{ name: "Confuse Ray", type: "Ghost" }
+			]
 		},
 		notes: ["Pokémon Center New York | Monster Week | Post event redemptions"]
 	},
 
-{
+	{
 		id: "gen3-pcnyd-flygon-usa-unknown-date",
 		eventTitle: "PCNYd Flygon",
 		category: "pokemon",
@@ -4371,15 +6182,26 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Flygon",
 			nationalDex: 330,
+			level: 45,
+			gender: "Random",
 			tid: "00068",
+			friendship: 70,
+			metLevel: 45,
 			ot: ["PCNYd"],
 			ability: ["Levitate"],
-			nature: ["Impish", "Modest", "Brave", "Calm", "Bold", "Careful", "Docile", "Lonely", "Timid"]
+			nature: ["Impish", "Modest", "Brave", "Calm", "Bold", "Careful", "Docile", "Lonely", "Timid"],
+			moves: [
+				{ name: "Sand Tomb", type: "Ground" },
+				{ name: "Crunch", type: "Dark" },
+				{ name: "Dragon Breath", type: "Dragon" },
+				{ name: "Flamethrower", type: "Fire" },
+				{ name: "Screech", type: "Normal" }
+			]
 		},
 		notes: ["Pokémon Center New York | Dragon Week", "Pokémon Center New York | Pokemon Box Promo"]
 	},
 
-{
+	{
 		id: "gen3-pcnyd-gloom-usa-unknown-date",
 		eventTitle: "PCNYd Gloom",
 		category: "pokemon",
@@ -4397,15 +6219,29 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Gloom",
 			nationalDex: 44,
+			level: 50,
+			gender: "Random",
 			tid: "00001",
+			friendship: 70,
+			metLevel: 50,
 			ot: ["PCNYd"],
 			ability: ["Chlorophyll"],
-			nature: ["Sassy", "Lonely", "Bold", "Hasty", "Relaxed", "Careful", "Impish", "Jolly", "Hardy", "Adamant"]
+			nature: ["Sassy", "Lonely", "Bold", "Hasty", "Relaxed", "Careful", "Impish", "Jolly", "Hardy", "Adamant"],
+			moves: [
+				{ name: "Sleep Powder", type: "Grass" },
+				{ name: "Acid", type: "Poison" },
+				{ name: "Moonlight", type: "Fairy" },
+				{ name: "Petal Dance", type: "Grass" }
+			],
+			heldItems: [
+				{ name: "Heart Scale", img: () => heldItem("heart-scale") },
+				{ name: "Gooey Mulch", img: () => heldItem("gooey-mulch") }
+			]
 		},
 		notes: ["Pokémon Center New York | Evolution Stone Week | Post event redemptions"]
 	},
 
-{
+	{
 		id: "gen3-pcnyd-golem-usa-unknown-date",
 		eventTitle: "PCNYd Golem",
 		category: "pokemon",
@@ -4423,10 +6259,24 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Golem",
 			nationalDex: 76,
+			level: 30,
+			gender: "Random",
 			tid: "00003",
+			friendship: 70,
+			metLevel: 30,
 			ot: ["PCNYd"],
 			ability: ["Rock Head", "Sturdy"],
-			nature: ["Naughty", "Relaxed", "Timid", "Careful", "Gentle", "Hardy", "Calm", "Rash", "Hasty", "Bold", "Impish", "Lax", "Mild", "Quirky", "Modest"]
+			nature: ["Naughty", "Relaxed", "Timid", "Careful", "Gentle", "Hardy", "Calm", "Rash", "Hasty", "Bold", "Impish", "Lax", "Mild", "Quirky", "Modest"],
+			moves: [
+				{ name: "Rock Throw", type: "Rock" },
+				{ name: "Magnitude", type: "Ground" },
+				{ name: "Self Destruct", type: "Normal" },
+				{ name: "Rollout", type: "Rock" },
+				{ name: "Flamethrower", type: "Fire" },
+				{ name: "Sunny Day", type: "Fire" },
+				{ name: "Explosion", type: "Normal" },
+				{ name: "Fire Blast", type: "Fire" }
+			]
 		},
 		notes: [
 			"Pokémon Center New York | Trade & Evolution Stone Week | Post event redemptions",
@@ -4434,7 +6284,7 @@ const DISTRIBUTIONS = [
 		]
 	},
 
-{
+	{
 		id: "gen3-pcnyd-gorebyss-usa-unknown-date",
 		eventTitle: "PCNYd Gorebyss",
 		category: "pokemon",
@@ -4452,10 +6302,19 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Gorebyss",
 			nationalDex: 368,
+			level: 23,
+			gender: "Random",
 			tid: "00002",
+			friendship: 70,
+			metLevel: 20,
 			ot: ["PCNYd"],
 			ability: ["Swift Swim"],
-			nature: ["Naive", "Calm", "Bashful", "Impish", "Jolly", "Docile", "Naughty", "Adamant", "Mild", "Hardy", "Gentle", "Modest", "Sassy"]
+			nature: ["Naive", "Calm", "Bashful", "Impish", "Jolly", "Docile", "Naughty", "Adamant", "Mild", "Hardy", "Gentle", "Modest", "Sassy"],
+			moves: [
+				{ name: "Whirlpool", type: "Water" },
+				{ name: "Confusion", type: "Psychic" },
+				{ name: "Agility", type: "Psychic" }
+			]
 		},
 		notes: [
 			"Pokémon Center New York | Baby & Trade Week | Post event redemptions",
@@ -4463,7 +6322,7 @@ const DISTRIBUTIONS = [
 		]
 	},
 
-{
+	{
 		id: "gen3-pcnyd-houndour-usa-unknown-date",
 		eventTitle: "PCNYd Houndour",
 		category: "pokemon",
@@ -4481,10 +6340,15 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Houndour",
 			nationalDex: 228,
+			level: 5,
+			gender: "Random",
 			tid: "00001",
+			friendship: 35,
+			metLevel: 5,
 			ot: ["PCNYd"],
 			ability: ["Early Bird", "Flash Fire"],
-			nature: ["Calm", "Bold", "Docile", "Relaxed", "Careful", "Naive", "Impish", "Brave", "Modest", "Bashful", "Quiet", "Adamant"]
+			nature: ["Calm", "Bold", "Docile", "Relaxed", "Careful", "Naive", "Impish", "Brave", "Modest", "Bashful", "Quiet", "Adamant"],
+			moves: [{ name: "Leer", type: "Normal" }, { name: "Ember", type: "Fire" }]
 		},
 		notes: [
 			"Pokémon Center New York | Colosseum Tournament Promo | Post event redemptions",
@@ -4492,7 +6356,7 @@ const DISTRIBUTIONS = [
 		]
 	},
 
-{
+	{
 		id: "gen3-pcnyd-huntail-usa-unknown-date",
 		eventTitle: "PCNYd Huntail",
 		category: "pokemon",
@@ -4510,10 +6374,20 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Huntail",
 			nationalDex: 367,
+			level: 23,
+			gender: "Random",
 			tid: "00006",
+			friendship: 70,
+			metLevel: 20,
 			ot: ["PCNYd"],
 			ability: ["Swift Swim"],
-			nature: ["Docile", "Adamant", "Jolly", "Quirky", "Bashful", "Brave", "Serious", "Relaxed"]
+			nature: ["Docile", "Adamant", "Jolly", "Quirky", "Bashful", "Brave", "Serious", "Relaxed"],
+			moves: [
+				{ name: "Whirlpool", type: "Water" },
+				{ name: "Bite", type: "Dark" },
+				{ name: "Screech", type: "Normal" },
+				{ name: "Water Pulse", type: "Water" }
+			]
 		},
 		notes: [
 			"Pokémon Center New York | Baby & Trade Week | Post event redemptions",
@@ -4521,7 +6395,7 @@ const DISTRIBUTIONS = [
 		]
 	},
 
-{
+	{
 		id: "gen3-pcnyd-kingdra-usa-unknown-date",
 		eventTitle: "PCNYd Kingdra",
 		category: "pokemon",
@@ -4539,10 +6413,20 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Kingdra",
 			nationalDex: 230,
+			level: 35,
+			gender: "Random",
 			tid: "00003",
+			friendship: 70,
+			metLevel: 35,
 			ot: ["PCNYd"],
-			ability: ["Swift Swim", "Sniper"],
-			nature: ["Hasty", "Relaxed", "Jolly", "Calm", "Mild", "Serious", "Docile", "Lonely", "Modest", "Quirky", "Sassy"]
+			ability: ["Swift Swim"],
+			nature: ["Hasty", "Relaxed", "Jolly", "Calm", "Mild", "Serious", "Docile", "Lonely", "Modest", "Quirky", "Sassy"],
+			moves: [
+				{ name: "Smokescreen", type: "Normal" },
+				{ name: "Leer", type: "Normal" },
+				{ name: "Water Gun", type: "Water" },
+				{ name: "Twister", type: "Dragon" }
+			]
 		},
 		notes: [
 			"Pokémon Center New York | Slither & Swim Week | Post event redemptions",
@@ -4550,7 +6434,7 @@ const DISTRIBUTIONS = [
 		]
 	},
 
-{
+	{
 		id: "gen3-pcnyd-ludicolo-usa-unknown-date",
 		eventTitle: "PCNYd Ludicolo",
 		category: "pokemon",
@@ -4568,10 +6452,20 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Ludicolo",
 			nationalDex: 272,
+			level: 20,
+			gender: "Random",
 			tid: "00001",
+			friendship: 70,
+			metLevel: 20,
 			ot: ["PCNYd"],
-			ability: ["Swift Swim", "Rain Dish"],
-			nature: ["Serious", "Modest", "Gentle", "Jolly", "Naive", "Relaxed", "Bashful", "Brave", "Adamant", "Bold", "Quirky", "Docile", "Mild", "Calm", "Impish", "Lax", "Rash"]
+			ability: ["Rain Dish", "Swift Swim"],
+			nature: ["Serious", "Modest", "Gentle", "Jolly", "Naive", "Relaxed", "Bashful", "Brave", "Adamant", "Bold", "Quirky", "Docile", "Mild", "Calm", "Impish", "Lax", "Rash"],
+			moves: [
+				{ name: "Astonish", type: "Ghost" },
+				{ name: "Growl", type: "Normal" },
+				{ name: "Absorb", type: "Grass" },
+				{ name: "Nature Power", type: "Normal" }
+			]
 		},
 		notes: [
 			"Pokémon Center New York | Trade & Evolution Stone Week | Post event redemptions",
@@ -4579,7 +6473,7 @@ const DISTRIBUTIONS = [
 		]
 	},
 
-{
+	{
 		id: "gen3-pcnyd-machamp-usa-unknown-date",
 		eventTitle: "PCNYd Machamp",
 		category: "pokemon",
@@ -4597,10 +6491,21 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Machamp",
 			nationalDex: 68,
+			level: 30,
+			gender: "Random",
 			tid: "00004",
+			friendship: 70,
+			metLevel: 30,
 			ot: ["PCNYd"],
-			ability: ["Guts", "No Guard"],
-			nature: ["Naughty", "Careful", "Jolly", "Serious", "Naive", "Sassy", "Bold", "Bashful", "Brave", "Relaxed", "Timid", "Impish", "Gentle"]
+			ability: ["Guts"],
+			nature: ["Naughty", "Careful", "Jolly", "Serious", "Naive", "Sassy", "Bold", "Bashful", "Brave", "Relaxed", "Timid", "Impish", "Gentle"],
+			moves: [
+				{ name: "Karate Chop", type: "Fighting" },
+				{ name: "Seismic Toss", type: "Fighting" },
+				{ name: "Foresight", type: "Normal" },
+				{ name: "Revenge", type: "Fighting" }
+			],
+			heldItems: [{ name: "Micle Berry", img: () => heldItem("micle-berry") }]
 		},
 		notes: [
 			"Pokémon Center New York | Trade & Evolution Stone Week | Post event redemptions",
@@ -4608,7 +6513,7 @@ const DISTRIBUTIONS = [
 		]
 	},
 
-{
+	{
 		id: "gen3-pcnyd-mareep-usa-unknown-date",
 		eventTitle: "PCNYd Mareep",
 		category: "pokemon",
@@ -4626,10 +6531,15 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Mareep",
 			nationalDex: 179,
+			level: 5,
+			gender: "Random",
 			tid: "00001",
+			friendship: 70,
+			metLevel: 5,
 			ot: ["PCNYd"],
 			ability: ["Static"],
-			nature: ["Relaxed", "Rash", "Careful", "Naughty", "Docile", "Lax", "Bold", "Gentle", "Serious", "Modest", "Mild", "Jolly", "Sassy", "Hardy", "Calm", "Impish"]
+			nature: ["Relaxed", "Rash", "Careful", "Naughty", "Docile", "Lax", "Bold", "Gentle", "Serious", "Modest", "Mild", "Jolly", "Sassy", "Hardy", "Calm", "Impish"],
+			moves: [{ name: "Tackle", type: "Normal" }, { name: "Growl", type: "Normal" }]
 		},
 		notes: [
 			"Pokémon Center New York | Colosseum Tournament Promo | Post event redemptions",
@@ -4637,7 +6547,7 @@ const DISTRIBUTIONS = [
 		]
 	},
 
-{
+	{
 		id: "gen3-pcnyd-mawile-usa-unknown-date",
 		eventTitle: "PCNYd Mawile",
 		category: "pokemon",
@@ -4655,15 +6565,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Mawile",
 			nationalDex: 303,
+			level: 18,
+			gender: "Random",
 			tid: "00002",
+			friendship: 70,
+			metLevel: 18,
 			ot: ["PCNYd"],
-			ability: ["Hyper Cutter", "Intimidate"],
-			nature: ["Quirky", "Impish", "Sassy", "Bashful", "Timid", "Hasty", "Naive", "Adamant", "Relaxed"]
+			ability: ["Intimidate", "Hyper Cutter"],
+			nature: ["Quirky", "Impish", "Sassy", "Bashful", "Timid", "Hasty", "Naive", "Adamant", "Relaxed"],
+			moves: [
+				{ name: "Astonish", type: "Ghost" },
+				{ name: "Fake Tears", type: "Dark" },
+				{ name: "Bite", type: "Dark" },
+				{ name: "Sweet Scent", type: "Normal" }
+			]
 		},
 		notes: ["Pokémon Center New York | Ancients & Aliens Week | Post event redemptions"]
 	},
 
-{
+	{
 		id: "gen3-pcnyd-milotic-usa-unknown-date",
 		eventTitle: "PCNYd Milotic",
 		category: "pokemon",
@@ -4681,10 +6601,20 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Milotic",
 			nationalDex: 350,
+			level: 38,
+			gender: "Random",
 			tid: "00002",
+			friendship: 70,
+			metLevel: 35,
 			ot: ["PCNYd"],
-			ability: ["Marvel Scale", "Competitive"],
-			nature: ["Careful", "Brave", "Naive", "Timid", "Naughty", "Quirky", "Jolly", "Sassy", "Mild", "Serious", "Lonely", "Lax", "Bashful", "Adamant", "Quiet"]
+			ability: ["Marvel Scale"],
+			nature: ["Careful", "Brave", "Naive", "Timid", "Naughty", "Quirky", "Jolly", "Sassy", "Mild", "Serious", "Lonely", "Lax", "Bashful", "Adamant", "Quiet"],
+			moves: [
+				{ name: "Water Pulse", type: "Water" },
+				{ name: "Twister", type: "Dragon" },
+				{ name: "Recover", type: "Normal" },
+				{ name: "Rain Dance", type: "Water" }
+			]
 		},
 		notes: [
 			"Pokémon Center New York | Slither & Swim Week | Post event redemptions",
@@ -4692,7 +6622,7 @@ const DISTRIBUTIONS = [
 		]
 	},
 
-{
+	{
 		id: "gen3-pcnyd-pikachu-usa-unknown-date",
 		eventTitle: "PCNYd Pikachu",
 		category: "pokemon",
@@ -4710,15 +6640,26 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Pikachu",
 			nationalDex: 25,
+			level: 50,
+			gender: "Random",
 			tid: "00004",
+			friendship: 70,
+			metLevel: 50,
 			ot: ["PCNYd"],
 			ability: ["Static"],
-			nature: ["Mild", "Lonely", "Careful"]
+			nature: ["Mild", "Lonely", "Careful"],
+			moves: [
+				{ name: "Thunderbolt", type: "Electric" },
+				{ name: "Agility", type: "Psychic" },
+				{ name: "Thunder", type: "Electric" },
+				{ name: "Light Screen", type: "Psychic" }
+			],
+			heldItems: [{ name: "Damp Mulch", img: () => heldItem("damp-mulch") }]
 		},
 		notes: ["Pokémon Center New York | Evolution Stone Week | Post event redemptions"]
 	},
 
-{
+	{
 		id: "gen3-pcnyd-sableye-usa-unknown-date",
 		eventTitle: "PCNYd Sableye",
 		category: "pokemon",
@@ -4736,15 +6677,26 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Sableye",
 			nationalDex: 302,
+			level: 18,
+			gender: "Random",
 			tid: "00001",
+			friendship: 35,
+			metLevel: 18,
 			ot: ["PCNYd"],
-			ability: ["Keen Eye", "Stall"],
-			nature: ["Bashful", "Timid", "Serious", "Impish", "Lonely", "Careful", "Hasty", "Jolly", "Naive"]
+			ability: ["Keen Eye"],
+			nature: ["Bashful", "Timid", "Serious", "Impish", "Lonely", "Careful", "Hasty", "Jolly", "Naive"],
+			moves: [
+				{ name: "Foresight", type: "Normal" },
+				{ name: "Night Shade", type: "Ghost" },
+				{ name: "Astonish", type: "Ghost" },
+				{ name: "Fury Swipes", type: "Normal" }
+			],
+			heldItems: [{ name: "Ganlon Berry", img: () => heldItem("ganlon-berry") }]
 		},
 		notes: ["Pokémon Center New York | Ancients & Aliens Week | Post event redemptions"]
 	},
 
-{
+	{
 		id: "gen3-pcnyd-seadra-usa-unknown-date",
 		eventTitle: "PCNYd Seadra",
 		category: "pokemon",
@@ -4762,15 +6714,27 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Seadra",
 			nationalDex: 117,
+			level: 45,
+			gender: "Random",
 			tid: "00067",
+			friendship: 70,
+			metLevel: 45,
 			ot: ["PCNYd"],
-			ability: ["Poison Point", "Sniper"],
-			nature: ["Timid", "Bashful"]
+			ability: ["Poison Point"],
+			nature: ["Timid", "Bashful"],
+			moves: [
+				{ name: "Dragon Rage", type: "Dragon" },
+				{ name: "Hydro Pump", type: "Water" },
+				{ name: "Twister", type: "Dragon" },
+				{ name: "Leer", type: "Normal" },
+				{ name: "Ice Beam", type: "Ice" }
+			],
+			heldItems: [{ name: "Cleanse Tag", img: () => heldItem("cleanse-tag") }]
 		},
 		notes: ["Pokémon Center New York | Dragon Week"]
 	},
 
-{
+	{
 		id: "gen3-pcnyd-seviper-usa-unknown-date",
 		eventTitle: "PCNYd Seviper",
 		category: "pokemon",
@@ -4788,10 +6752,24 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Seviper",
 			nationalDex: 336,
+			level: 28,
+			gender: "Random",
 			tid: "00002",
+			friendship: 70,
+			metLevel: 30,
 			ot: ["PCNYd"],
 			ability: ["Shed Skin"],
-			nature: ["Quiet", "Rash", "Impish", "Relaxed", "Lonely", "Bashful", "Sassy", "Serious", "Calm", "Brave", "Careful", "Mild", "Gentle", "Docile", "Jolly", "Bold", "Modest", "Timid", "Naive", "Adamant"]
+			nature: ["Quiet", "Rash", "Impish", "Relaxed", "Lonely", "Bashful", "Sassy", "Serious", "Calm", "Brave", "Careful", "Mild", "Gentle", "Docile", "Jolly", "Bold", "Modest", "Timid", "Naive", "Adamant"],
+			moves: [
+				{ name: "Poison Tail", type: "Poison" },
+				{ name: "Screech", type: "Normal" },
+				{ name: "Glare", type: "Normal" },
+				{ name: "Crunch", type: "Dark" },
+				{ name: "Wrap", type: "Normal" },
+				{ name: "Lick", type: "Ghost" },
+				{ name: "Bite", type: "Dark" }
+			],
+			heldItems: [{ name: "Charti Berry", img: () => heldItem("charti-berry") }]
 		},
 		notes: [
 			"Pokémon Center New York | Pokemon Box Promo",
@@ -4800,7 +6778,7 @@ const DISTRIBUTIONS = [
 		]
 	},
 
-{
+	{
 		id: "gen3-pcnyd-shedinja-usa-unknown-date",
 		eventTitle: "PCNYd Shedinja",
 		category: "pokemon",
@@ -4818,15 +6796,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Shedinja",
 			nationalDex: 292,
+			level: 50,
+			gender: "none",
 			tid: "00001",
+			friendship: 70,
+			metLevel: 50,
 			ot: ["PCNYd"],
 			ability: ["Wonder Guard"],
-			nature: ["Bashful", "Docile", "Hasty", "Bold", "Quiet"]
+			nature: ["Bashful", "Docile", "Hasty", "Bold", "Quiet"],
+			moves: [
+				{ name: "Spite", type: "Ghost" },
+				{ name: "Confuse Ray", type: "Ghost" },
+				{ name: "Shadow Ball", type: "Ghost" },
+				{ name: "Grudge", type: "Ghost" }
+			]
 		},
 		notes: ["Pokémon Center New York | Monster Week | Post event redemptions"]
 	},
 
-{
+	{
 		id: "gen3-pcnyd-shiftry-usa-unknown-date",
 		eventTitle: "PCNYd Shiftry",
 		category: "pokemon",
@@ -4844,10 +6832,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Shiftry",
 			nationalDex: 275,
+			level: 20,
+			gender: "Random",
 			tid: "00008",
+			friendship: 70,
+			metLevel: 20,
 			ot: ["PCNYd"],
-			ability: ["Chlorophyll", "Wind Rider"],
-			nature: ["Bashful", "Gentle", "Quirky", "Brave", "Careful", "Rash", "Hardy", "Lax", "Serious", "Lonely", "Hasty", "Sassy", "Mild", "Modest", "Naive", "Bold"]
+			ability: ["Wind Rider", "Chlorophyll"],
+			nature: ["Bashful", "Gentle", "Quirky", "Brave", "Careful", "Rash", "Hardy", "Lax", "Serious", "Lonely", "Hasty", "Sassy", "Mild", "Modest", "Naive", "Bold"],
+			moves: [
+				{ name: "Pound", type: "Normal" },
+				{ name: "Harden", type: "Normal" },
+				{ name: "Growth", type: "Normal" },
+				{ name: "Nature Power", type: "Normal" },
+				{ name: "Giga Drain", type: "Grass" },
+				{ name: "Shadow Ball", type: "Ghost" },
+				{ name: "Brick Break", type: "Fighting" },
+				{ name: "Aerial Ace", type: "Flying" }
+			],
+			heldItems: [{ name: "Salac Berry", img: () => heldItem("salac-berry") }]
 		},
 		notes: [
 			"Pokémon Center New York | Trade & Evolution Stone Week | Post event redemptions",
@@ -4855,7 +6858,7 @@ const DISTRIBUTIONS = [
 		]
 	},
 
-{
+	{
 		id: "gen3-pcnyd-shuppet-usa-unknown-date",
 		eventTitle: "PCNYd Shuppet",
 		category: "pokemon",
@@ -4873,15 +6876,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Shuppet",
 			nationalDex: 353,
+			level: 25,
+			gender: "Random",
 			tid: "00002",
+			friendship: 35,
+			metLevel: 25,
 			ot: ["PCNYd"],
-			ability: ["Insomnia", "Frisk"],
-			nature: ["Hardy", "Relaxed", "Lonely"]
+			ability: ["Insomnia"],
+			nature: ["Hardy", "Relaxed", "Lonely"],
+			moves: [
+				{ name: "Screech", type: "Normal" },
+				{ name: "Night Shade", type: "Ghost" },
+				{ name: "Curse", type: "Ghost" },
+				{ name: "Spite", type: "Ghost" }
+			]
 		},
 		notes: ["Pokémon Center New York | Monster Week | Post event redemptions"]
 	},
 
-{
+	{
 		id: "gen3-pcnyd-staryu-usa-unknown-date",
 		eventTitle: "PCNYd Staryu",
 		category: "pokemon",
@@ -4899,15 +6912,26 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Staryu",
 			nationalDex: 120,
+			level: 50,
+			gender: "none",
 			tid: "00005",
+			friendship: 70,
+			metLevel: 50,
 			ot: ["PCNYd"],
-			ability: ["Illuminate", "Natural Cure"],
-			nature: ["Gentle", "Lax", "Impish", "Quirky", "Jolly", "Adamant", "Brave", "Lonely", "Rash", "Mild", "Bashful"]
+			ability: ["Natural Cure", "Illuminate"],
+			nature: ["Gentle", "Lax", "Impish", "Quirky", "Jolly", "Adamant", "Brave", "Lonely", "Rash", "Mild", "Bashful"],
+			moves: [
+				{ name: "Minimize", type: "Normal" },
+				{ name: "Light Screen", type: "Psychic" },
+				{ name: "Cosmic Power", type: "Psychic" },
+				{ name: "Hydro Pump", type: "Water" }
+			],
+			heldItems: [{ name: "Stable Mulch", img: () => heldItem("stable-mulch") }]
 		},
 		notes: ["Pokémon Center New York | Evolution Stone Week | Post event redemptions"]
 	},
 
-{
+	{
 		id: "gen3-pcnyd-wynaut-usa-unknown-date",
 		eventTitle: "PCNYd Wynaut",
 		category: "pokemon",
@@ -4925,10 +6949,19 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Wynaut",
 			nationalDex: 360,
+			level: 5,
+			gender: "Random",
 			tid: "00001",
+			friendship: 70,
+			metLevel: 5,
 			ot: ["PCNYd"],
 			ability: ["Shadow Tag"],
-			nature: ["Naive", "Bold", "Hardy", "Bashful", "Quiet", "Serious"]
+			nature: ["Naive", "Bold", "Hardy", "Bashful", "Quiet", "Serious"],
+			moves: [
+				{ name: "Splash", type: "Normal" },
+				{ name: "Charm", type: "Fairy" },
+				{ name: "Encore", type: "Normal" }
+			]
 		},
 		notes: [
 			"Pokémon Center New York | Baby & Trade Week | Post event redemptions",
@@ -4936,7 +6969,7 @@ const DISTRIBUTIONS = [
 		]
 	},
 
-{
+	{
 		id: "gen3-pcnyd-zangoose-usa-unknown-date",
 		eventTitle: "PCNYd Zangoose",
 		category: "pokemon",
@@ -4954,10 +6987,28 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Zangoose",
 			nationalDex: 335,
+			level: 21,
+			gender: "Random",
 			tid: "00006",
+			friendship: 70,
+			metLevel: 18,
 			ot: ["PCNYd"],
 			ability: ["Immunity"],
-			nature: ["Lax", "Hardy", "Modest", "Brave", "Rash", "Sassy", "Bashful", "Bold", "Adamant", "Docile", "Calm", "Naive", "Careful", "Quiet"]
+			nature: ["Lax", "Hardy", "Modest", "Brave", "Rash", "Sassy", "Bashful", "Bold", "Adamant", "Docile", "Calm", "Naive", "Careful", "Quiet"],
+			moves: [
+				{ name: "Leer", type: "Normal" },
+				{ name: "Quick Attack", type: "Normal" },
+				{ name: "Swords Dance", type: "Normal" },
+				{ name: "Fury Cutter", type: "Bug" },
+				{ name: "Detect", type: "Fighting" },
+				{ name: "Shadow Ball", type: "Ghost" },
+				{ name: "Brick Break", type: "Fighting" },
+				{ name: "Crush Claw", type: "Normal" }
+			],
+			heldItems: [
+				{ name: "Lansat Berry", img: () => heldItem("lansat-berry") },
+				{ name: "Shuca Berry", img: () => heldItem("shuca-berry") }
+			]
 		},
 		notes: [
 			"Pokémon Center New York | Slither & Swim Week | Post event redemptions",
@@ -4965,7 +7016,7 @@ const DISTRIBUTIONS = [
 		]
 	},
 
-{
+	{
 		id: "gen3-rocks-metang-usa-unknown-date",
 		eventTitle: "ROCKS Metang",
 		category: "pokemon",
@@ -4979,15 +7030,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Metang",
 			nationalDex: 375,
+			level: 30,
+			gender: "none",
 			tid: "02005",
+			friendship: 70,
+			metLevel: 30,
 			ot: ["ROCKS"],
 			ability: ["Clear Body"],
-			nature: ["Quiet", "Impish", "Calm", "Jolly", "Hasty", "Bashful"]
+			nature: ["Quiet", "Impish", "Calm", "Jolly", "Hasty", "Bashful"],
+			moves: [
+				{ name: "Take Down", type: "Normal" },
+				{ name: "Confusion", type: "Psychic" },
+				{ name: "Metal Claw", type: "Steel" },
+				{ name: "Refresh", type: "Normal" }
+			]
 		},
 		notes: ["Pokémon Rocks America"]
 	},
 
-{
+	{
 		id: "gen3-rsfl-jirachi-apicot-berry-jpn-unknown-date",
 		eventTitle: "RSFL タナバタ Jirachi Apicot Berry",
 		category: "pokemon",
@@ -5001,15 +7062,24 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Jirachi",
 			nationalDex: 385,
+			level: 5,
+			gender: "none",
 			tid: "40707",
+			friendship: 70,
+			metLevel: 5,
 			ability: ["Serene Grace"],
 			nature: ["Sassy"],
-			heldItems: [{ name: "Apicot Berry", img: () => heldItem("apicot-berry") }]
+			moves: [
+				{ name: "Wish", type: "Normal" },
+				{ name: "Confusion", type: "Psychic" },
+				{ name: "Rest", type: "Psychic" }
+			],
+			heldItems: [{ name: "Charti Berry", img: () => heldItem("charti-berry") }]
 		},
 		notes: ["タナバタ２００４"]
 	},
 
-{
+	{
 		id: "gen3-rsfl-jirachi-petaya-berry-jpn-unknown-date",
 		eventTitle: "RSFL タナバタ Jirachi Petaya Berry",
 		category: "pokemon",
@@ -5023,15 +7093,24 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Jirachi",
 			nationalDex: 385,
+			level: 5,
+			gender: "none",
 			tid: "40707",
+			friendship: 70,
+			metLevel: 5,
 			ability: ["Serene Grace"],
 			nature: ["Modest", "Bashful"],
-			heldItems: [{ name: "Petaya Berry", img: () => heldItem("petaya-berry") }]
+			moves: [
+				{ name: "Wish", type: "Normal" },
+				{ name: "Confusion", type: "Psychic" },
+				{ name: "Rest", type: "Psychic" }
+			],
+			heldItems: [{ name: "Tanga Berry", img: () => heldItem("tanga-berry") }]
 		},
 		notes: ["タナバタ２００４"]
 	},
 
-{
+	{
 		id: "gen3-shiny-channel-jirachi-eur-unknown-date",
 		eventTitle: "Shiny CHANNEL Jirachi",
 		category: "pokemon",
@@ -5046,16 +7125,25 @@ const DISTRIBUTIONS = [
 			species: "Jirachi",
 			name: "Shiny CHANNEL",
 			nationalDex: 385,
+			level: 5,
+			gender: "none",
 			shiny: true,
 			tid: "40122",
+			friendship: 70,
 			ot: ["CHANNEL"],
 			ability: ["Serene Grace"],
-			nature: ["Sassy", "Jolly"]
+			nature: ["Sassy", "Jolly"],
+			moves: [
+				{ name: "Wish", type: "Normal" },
+				{ name: "Confusion", type: "Psychic" },
+				{ name: "Rest", type: "Psychic" }
+			],
+			heldItems: [{ name: "Payapa Berry", img: () => heldItem("payapa-berry") }]
 		},
 		notes: ["CHANNEL Jirachi"]
 	},
 
-{
+	{
 		id: "gen3-shiny-teeter-dance-pichu-egg-jpn-unknown-date",
 		eventTitle: "Shiny Teeter Dance Pichu Egg",
 		category: "pokemon",
@@ -5071,17 +7159,24 @@ const DISTRIBUTIONS = [
 			name: "Shiny Teeter Dance",
 			nationalDex: 172,
 			level: 5,
+			gender: "Random",
 			shiny: true,
-			ball: { name: "Poké Ball", img: () => ball("pokeball") },
+			ball: { name: "Poké Ball", img: () => ball("poke-ball") },
 			tid: "61016",
+			friendship: 10,
 			ot: ["NAME"],
 			ability: ["Static"],
-			nature: ["Impish", "Jolly", "Lonely", "Quirky", "Naive"]
+			nature: ["Impish", "Jolly", "Lonely", "Quirky", "Naive"],
+			moves: [
+				{ name: "Thunder Shock", type: "Electric" },
+				{ name: "Charm", type: "Fairy" },
+				{ name: "Teeter Dance", type: "Normal" }
+			]
 		},
 		notes: ["5th Anniversary Eggs"]
 	},
 
-{
+	{
 		id: "gen3-shiny-wish-pichu-egg-jpn-unknown-date",
 		eventTitle: "Shiny Wish Pichu Egg",
 		category: "pokemon",
@@ -5097,17 +7192,24 @@ const DISTRIBUTIONS = [
 			name: "Shiny Wish",
 			nationalDex: 172,
 			level: 5,
+			gender: "Random",
 			shiny: true,
-			ball: { name: "Poké Ball", img: () => ball("pokeball") },
+			ball: { name: "Poké Ball", img: () => ball("poke-ball") },
 			tid: "61016",
+			friendship: 10,
 			ot: ["NAME"],
 			ability: ["Static"],
-			nature: ["Careful", "Adamant", "Bashful", "Bold"]
+			nature: ["Careful", "Adamant", "Bashful", "Bold"],
+			moves: [
+				{ name: "Thunder Shock", type: "Electric" },
+				{ name: "Charm", type: "Fairy" },
+				{ name: "Wish", type: "Normal" }
+			]
 		},
 		notes: ["5th Anniversary Eggs"]
 	},
 
-{
+	{
 		id: "gen3-shiny-wshmkr-jirachi-ganlon-berry-unknown-unknown-date",
 		eventTitle: "Shiny WSHMKR Jirachi Ganlon Berry",
 		category: "pokemon",
@@ -5120,17 +7222,26 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Jirachi",
 			nationalDex: 385,
+			level: 5,
+			gender: "none",
 			shiny: true,
 			tid: "20043",
+			friendship: 100,
+			metLevel: 5,
 			ot: ["WISHMKR"],
 			ability: ["Serene Grace"],
 			nature: ["Bashful"],
-			heldItems: [{ name: "Ganlon Berry", img: () => heldItem("ganlon-berry") }]
+			moves: [
+				{ name: "Wish", type: "Normal" },
+				{ name: "Confusion", type: "Psychic" },
+				{ name: "Rest", type: "Psychic" }
+			],
+			heldItems: [{ name: "Coba Berry", img: () => heldItem("coba-berry") }]
 		},
 		notes: ["WSHMKR Jirachi"]
 	},
 
-{
+	{
 		id: "gen3-space-c-deoxys-unknown-unknown-date",
 		eventTitle: "SPACE C Deoxys",
 		category: "pokemon",
@@ -5143,15 +7254,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Deoxys",
 			nationalDex: 386,
+			level: 70,
+			gender: "none",
 			tid: "00010",
+			friendship: 70,
+			metLevel: 70,
 			ot: ["SPACE C"],
 			ability: ["Pressure"],
-			nature: ["Impish", "Timid", "Naive", "Sassy", "Quirky", "Bold", "Adamant", "Careful", "Naughty", "Relaxed", "Bashful", "Calm", "Docile", "Hasty", "Mild", "Rash", "Lonely", "Lax", "Hardy"]
+			nature: ["Impish", "Timid", "Naive", "Sassy", "Quirky", "Bold", "Adamant", "Careful", "Naughty", "Relaxed", "Bashful", "Calm", "Docile", "Hasty", "Mild", "Rash", "Lonely", "Lax", "Hardy"],
+			moves: [
+				{ name: "Cosmic Power", type: "Psychic" },
+				{ name: "Recover", type: "Normal" },
+				{ name: "Psycho Boost", type: "Psychic" },
+				{ name: "Hyper Beam", type: "Normal" }
+			]
 		},
 		notes: ["10th Anniversary Celebration | Space Center Deoxys"]
 	},
 
-{
+	{
 		id: "gen3-spite-absol-egg-jpn-unknown-date",
 		eventTitle: "Spite Absol Egg",
 		category: "pokemon",
@@ -5167,16 +7288,23 @@ const DISTRIBUTIONS = [
 			name: "Spite",
 			nationalDex: 359,
 			level: 5,
-			ball: { name: "Poké Ball", img: () => ball("pokeball") },
+			gender: "Random",
+			ball: { name: "Poké Ball", img: () => ball("poke-ball") },
 			tid: "32110",
+			friendship: 25,
 			ot: ["NAME"],
-			ability: ["Pressure", "Super Luck"],
-			nature: ["Quirky", "Bashful", "Lonely", "Careful", "Naive", "Quiet"]
+			ability: ["Pressure"],
+			nature: ["Quirky", "Bashful", "Lonely", "Careful", "Naive", "Quiet"],
+			moves: [
+				{ name: "Scratch", type: "Normal" },
+				{ name: "Leer", type: "Normal" },
+				{ name: "Spite", type: "Ghost" }
+			]
 		},
 		notes: ["5th Anniversary Eggs"]
 	},
 
-{
+	{
 		id: "gen3-surf-pichu-egg-unknown-unknown-date",
 		eventTitle: "Surf Pichu Egg",
 		category: "pokemon",
@@ -5190,16 +7318,23 @@ const DISTRIBUTIONS = [
 			name: "Surf",
 			nationalDex: 172,
 			level: 5,
-			ball: { name: "Poké Ball", img: () => ball("pokeball") },
+			gender: "male",
+			ball: { name: "Poké Ball", img: () => ball("poke-ball") },
 			tid: "00000",
+			friendship: 10,
 			ot: ["AZUSA"],
 			ability: ["Static"],
-			nature: ["Careful"]
+			nature: ["Careful"],
+			moves: [
+				{ name: "Thunder Shock", type: "Electric" },
+				{ name: "Charm", type: "Fairy" },
+				{ name: "Surf", type: "Water" }
+			]
 		},
 		notes: ["Pokemon Box"]
 	},
 
-{
+	{
 		id: "gen3-teeter-dance-pichu-egg-jpn-unknown-date",
 		eventTitle: "Teeter Dance Pichu Egg",
 		category: "pokemon",
@@ -5215,16 +7350,23 @@ const DISTRIBUTIONS = [
 			name: "Teeter Dance",
 			nationalDex: 172,
 			level: 5,
-			ball: { name: "Poké Ball", img: () => ball("pokeball") },
+			gender: "Random",
+			ball: { name: "Poké Ball", img: () => ball("poke-ball") },
 			tid: "61016",
+			friendship: 10,
 			ot: ["NAME"],
 			ability: ["Static"],
-			nature: ["Sassy", "Docile", "Bold", "Rash", "Hardy", "Naughty", "Timid"]
+			nature: ["Sassy", "Docile", "Bold", "Rash", "Hardy", "Naughty", "Timid"],
+			moves: [
+				{ name: "Thunder Shock", type: "Electric" },
+				{ name: "Charm", type: "Fairy" },
+				{ name: "Teeter Dance", type: "Normal" }
+			]
 		},
 		notes: ["5th Anniversary Eggs"]
 	},
 
-{
+	{
 		id: "gen3-wish-absol-egg-jpn-unknown-date",
 		eventTitle: "Wish Absol Egg",
 		category: "pokemon",
@@ -5240,16 +7382,23 @@ const DISTRIBUTIONS = [
 			name: "Wish",
 			nationalDex: 359,
 			level: 5,
-			ball: { name: "Poké Ball", img: () => ball("pokeball") },
+			gender: "Random",
+			ball: { name: "Poké Ball", img: () => ball("poke-ball") },
 			tid: "32110",
+			friendship: 25,
 			ot: ["NAME"],
-			ability: ["Pressure", "Super Luck"],
-			nature: ["Naughty", "Hasty", "Lax", "Jolly", "Impish", "Hardy", "Adamant", "Rash", "Timid", "Lonely", "Careful", "Relaxed", "Quiet"]
+			ability: ["Pressure"],
+			nature: ["Naughty", "Hasty", "Lax", "Jolly", "Impish", "Hardy", "Adamant", "Rash", "Timid", "Lonely", "Careful", "Relaxed", "Quiet"],
+			moves: [
+				{ name: "Scratch", type: "Normal" },
+				{ name: "Leer", type: "Normal" },
+				{ name: "Wish", type: "Normal" }
+			]
 		},
 		notes: ["5th Anniversary Eggs"]
 	},
 
-{
+	{
 		id: "gen3-wish-bagon-egg-jpn-unknown-date",
 		eventTitle: "Wish Bagon Egg",
 		category: "pokemon",
@@ -5265,16 +7414,19 @@ const DISTRIBUTIONS = [
 			name: "Wish",
 			nationalDex: 371,
 			level: 5,
-			ball: { name: "Poké Ball", img: () => ball("pokeball") },
+			gender: "Random",
+			ball: { name: "Poké Ball", img: () => ball("poke-ball") },
 			tid: "32110",
+			friendship: 40,
 			ot: ["NAME"],
 			ability: ["Rock Head"],
-			nature: ["Calm", "Bold", "Naughty", "Lonely", "Adamant", "Quirky", "Relaxed"]
+			nature: ["Calm", "Bold", "Naughty", "Lonely", "Adamant", "Quirky", "Relaxed"],
+			moves: [{ name: "Rage", type: "Normal" }, { name: "Bite", type: "Dark" }, { name: "Wish", type: "Normal" }]
 		},
 		notes: ["5th Anniversary Eggs"]
 	},
 
-{
+	{
 		id: "gen3-wish-pichu-egg-jpn-unknown-date",
 		eventTitle: "Wish Pichu Egg",
 		category: "pokemon",
@@ -5290,16 +7442,23 @@ const DISTRIBUTIONS = [
 			name: "Wish",
 			nationalDex: 172,
 			level: 5,
-			ball: { name: "Poké Ball", img: () => ball("pokeball") },
+			gender: "Random",
+			ball: { name: "Poké Ball", img: () => ball("poke-ball") },
 			tid: "32110",
+			friendship: 10,
 			ot: ["NAME"],
 			ability: ["Static"],
-			nature: ["Lax", "Quiet", "Lonely", "Bashful", "Naive", "Hasty", "Bold", "Timid", "Hardy", "Naughty"]
+			nature: ["Lax", "Quiet", "Lonely", "Bashful", "Naive", "Hasty", "Bold", "Timid", "Hardy", "Naughty"],
+			moves: [
+				{ name: "Thunder Shock", type: "Electric" },
+				{ name: "Charm", type: "Fairy" },
+				{ name: "Wish", type: "Normal" }
+			]
 		},
 		notes: ["5th Anniversary Eggs"]
 	},
 
-{
+	{
 		id: "gen3-wish-ralts-egg-jpn-unknown-date",
 		eventTitle: "Wish Ralts Egg",
 		category: "pokemon",
@@ -5315,16 +7474,19 @@ const DISTRIBUTIONS = [
 			name: "Wish",
 			nationalDex: 280,
 			level: 5,
-			ball: { name: "Poké Ball", img: () => ball("pokeball") },
+			gender: "Random",
+			ball: { name: "Poké Ball", img: () => ball("poke-ball") },
 			tid: "61016",
+			friendship: 20,
 			ot: ["NAME"],
-			ability: ["Synchronize", "Trace"],
-			nature: ["Bashful", "Hardy", "Careful", "Rash", "Hasty", "Mild"]
+			ability: ["Trace", "Synchronize"],
+			nature: ["Bashful", "Hardy", "Careful", "Rash", "Hasty", "Mild"],
+			moves: [{ name: "Growl", type: "Normal" }, { name: "Wish", type: "Normal" }]
 		},
 		notes: ["5th Anniversary Eggs"]
 	},
 
-{
+	{
 		id: "gen3-wshmkr-jirachi-ganlon-berry-unknown-unknown-date",
 		eventTitle: "WSHMKR Jirachi Ganlon Berry",
 		category: "pokemon",
@@ -5337,16 +7499,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Jirachi",
 			nationalDex: 385,
+			level: 5,
+			gender: "none",
 			tid: "20043",
+			friendship: 71,
+			metLevel: 5,
 			ot: ["WISHMKR"],
 			ability: ["Serene Grace"],
 			nature: ["Bold"],
-			heldItems: [{ name: "Ganlon Berry", img: () => heldItem("ganlon-berry") }]
+			moves: [
+				{ name: "Wish", type: "Normal" },
+				{ name: "Confusion", type: "Psychic" },
+				{ name: "Rest", type: "Psychic" }
+			],
+			heldItems: [{ name: "Coba Berry", img: () => heldItem("coba-berry") }]
 		},
 		notes: ["WSHMKR Jirachi"]
 	},
 
-{
+	{
 		id: "gen3-wshmkr-jirachi-salac-berry-unknown-unknown-date",
 		eventTitle: "WSHMKR Jirachi Salac Berry",
 		category: "pokemon",
@@ -5359,16 +7530,25 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Jirachi",
 			nationalDex: 385,
+			level: 5,
+			gender: "none",
 			tid: "20043",
+			friendship: 70,
+			metLevel: 5,
 			ot: ["WISHMKR"],
 			ability: ["Serene Grace"],
 			nature: ["Naive"],
-			heldItems: [{ name: "Salac Berry", img: () => heldItem("salac-berry") }]
+			moves: [
+				{ name: "Wish", type: "Normal" },
+				{ name: "Confusion", type: "Psychic" },
+				{ name: "Rest", type: "Psychic" }
+			],
+			heldItems: [{ name: "Payapa Berry", img: () => heldItem("payapa-berry") }]
 		},
 		notes: ["WSHMKR Jirachi"]
 	},
 
-{
+	{
 		id: "gen3-celebi-jpn-unknown-date",
 		eventTitle: "アゲト Celebi",
 		category: "pokemon",
@@ -5383,14 +7563,25 @@ const DISTRIBUTIONS = [
 			species: "Celebi",
 			name: "アゲト",
 			nationalDex: 251,
+			level: 10,
+			gender: "none",
 			tid: "31121",
+			friendship: 70,
+			metLevel: 10,
 			ability: ["Natural Cure"],
-			nature: ["Quirky", "Quiet", "Timid", "Modest", "Careful", "Lax", "Hasty", "Naive", "Calm", "Mild", "Sassy", "Adamant", "Brave", "Lonely", "Impish", "Hardy", "Docile", "Rash", "Jolly", "Bold", "Relaxed"]
+			nature: ["Quirky", "Quiet", "Timid", "Modest", "Careful", "Lax", "Hasty", "Naive", "Calm", "Mild", "Sassy", "Adamant", "Brave", "Lonely", "Impish", "Hardy", "Docile", "Rash", "Jolly", "Bold", "Relaxed"],
+			moves: [
+				{ name: "Confusion", type: "Psychic" },
+				{ name: "Recover", type: "Normal" },
+				{ name: "Heal Bell", type: "Normal" },
+				{ name: "Safeguard", type: "Normal" },
+				{ name: "Leech Seed", type: "Grass" }
+			]
 		},
 		notes: ["アゲト", "ミツリン"]
 	},
 
-{
+	{
 		id: "gen3-celebi-timid-6iv-jpn-unknown-date",
 		eventTitle: "アゲト Celebi Timid 6IV",
 		category: "pokemon",
@@ -5404,14 +7595,24 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Celebi",
 			nationalDex: 251,
+			level: 10,
+			gender: "none",
 			tid: "31121",
+			friendship: 70,
+			metLevel: 10,
 			ability: ["Natural Cure"],
-			nature: ["Timid"]
+			nature: ["Timid"],
+			moves: [
+				{ name: "Confusion", type: "Psychic" },
+				{ name: "Recover", type: "Normal" },
+				{ name: "Heal Bell", type: "Normal" },
+				{ name: "Safeguard", type: "Normal" }
+			]
 		},
 		notes: ["アゲト"]
 	},
 
-{
+	{
 		id: "gen3-jirachi-apicot-berry-jpn-unknown-date",
 		eventTitle: "タナバタ Jirachi Apicot Berry",
 		category: "pokemon",
@@ -5425,15 +7626,24 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Jirachi",
 			nationalDex: 385,
+			level: 5,
+			gender: "none",
 			tid: "50707",
+			friendship: 70,
+			metLevel: 5,
 			ability: ["Serene Grace"],
 			nature: ["Gentle"],
-			heldItems: [{ name: "Apicot Berry", img: () => heldItem("apicot-berry") }]
+			moves: [
+				{ name: "Wish", type: "Normal" },
+				{ name: "Confusion", type: "Psychic" },
+				{ name: "Rest", type: "Psychic" }
+			],
+			heldItems: [{ name: "Charti Berry", img: () => heldItem("charti-berry") }]
 		},
 		notes: ["タナバタ２００５"]
 	},
 
-{
+	{
 		id: "gen3-jirachi-ganlon-berry-jpn-unknown-date",
 		eventTitle: "タナバタ Jirachi Ganlon Berry",
 		category: "pokemon",
@@ -5447,15 +7657,27 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Jirachi",
 			nationalDex: 385,
+			level: 5,
+			gender: "none",
 			tid: "60707",
+			friendship: 70,
+			metLevel: 5,
 			ability: ["Serene Grace"],
 			nature: ["Timid", "Lax", "Lonely"],
-			heldItems: [{ name: "Ganlon Berry", img: () => heldItem("ganlon-berry") }]
+			moves: [
+				{ name: "Wish", type: "Normal" },
+				{ name: "Confusion", type: "Psychic" },
+				{ name: "Rest", type: "Psychic" }
+			],
+			heldItems: [
+				{ name: "Payapa Berry", img: () => heldItem("payapa-berry") },
+				{ name: "Coba Berry", img: () => heldItem("coba-berry") }
+			]
 		},
 		notes: ["タナバタ２００６"]
 	},
 
-{
+	{
 		id: "gen3-jirachi-petaya-berry-jpn-unknown-date",
 		eventTitle: "タナバタ Jirachi Petaya Berry",
 		category: "pokemon",
@@ -5469,15 +7691,24 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Jirachi",
 			nationalDex: 385,
+			level: 5,
+			gender: "none",
 			tid: "50707",
+			friendship: 70,
+			metLevel: 5,
 			ability: ["Serene Grace"],
 			nature: ["Naughty", "Timid"],
-			heldItems: [{ name: "Petaya Berry", img: () => heldItem("petaya-berry") }]
+			moves: [
+				{ name: "Wish", type: "Normal" },
+				{ name: "Confusion", type: "Psychic" },
+				{ name: "Rest", type: "Psychic" }
+			],
+			heldItems: [{ name: "Tanga Berry", img: () => heldItem("tanga-berry") }]
 		},
 		notes: ["タナバタ２００５"]
 	},
 
-{
+	{
 		id: "gen3-jirachi-salac-berry-jpn-unknown-date",
 		eventTitle: "タナバタ Jirachi Salac Berry",
 		category: "pokemon",
@@ -5491,15 +7722,24 @@ const DISTRIBUTIONS = [
 			type: "pokemon",
 			species: "Jirachi",
 			nationalDex: 385,
+			level: 5,
+			gender: "none",
 			tid: "60707",
+			friendship: 70,
+			metLevel: 5,
 			ability: ["Serene Grace"],
 			nature: ["Timid", "Gentle", "Sassy", "Careful"],
-			heldItems: [{ name: "Salac Berry", img: () => heldItem("salac-berry") }]
+			moves: [
+				{ name: "Wish", type: "Normal" },
+				{ name: "Confusion", type: "Psychic" },
+				{ name: "Rest", type: "Psychic" }
+			],
+			heldItems: [{ name: "Payapa Berry", img: () => heldItem("payapa-berry") }]
 		},
 		notes: ["タナバタ２００６"]
 	},
 
-{
+	{
 		id: "gen3-6iv-jirachi-jpn-unknown-date",
 		eventTitle: "ネガイボシ 6IV Jirachi",
 		category: "pokemon",
@@ -5514,14 +7754,24 @@ const DISTRIBUTIONS = [
 			species: "Jirachi",
 			name: "ネガイボシ 6IV",
 			nationalDex: 385,
+			level: 5,
+			gender: "none",
 			tid: "30719",
+			friendship: 100,
+			metLevel: 5,
 			ability: ["Serene Grace"],
-			nature: ["Sassy"]
+			nature: ["Sassy"],
+			moves: [
+				{ name: "Wish", type: "Normal" },
+				{ name: "Confusion", type: "Psychic" },
+				{ name: "Rest", type: "Psychic" }
+			],
+			heldItems: [{ name: "Coba Berry", img: () => heldItem("coba-berry") }]
 		},
 		notes: ["Pokemon Machine"]
 	},
 
-{
+	{
 		id: "gen3-jirachi-jpn-unknown-date",
 		eventTitle: "ネガイボシ Jirachi",
 		category: "pokemon",
@@ -5536,14 +7786,27 @@ const DISTRIBUTIONS = [
 			species: "Jirachi",
 			name: "ネガイボシ",
 			nationalDex: 385,
+			level: 5,
+			gender: "none",
 			tid: "30719",
+			friendship: 100,
+			metLevel: 5,
 			ability: ["Serene Grace"],
-			nature: ["Modest", "Naughty", "Bashful", "Mild", "Impish", "Jolly", "Serious", "Naive", "Hasty", "Sassy", "Hardy", "Gentle", "Adamant", "Quirky", "Brave", "Rash", "Lonely", "Timid", "Relaxed", "Lax", "Careful", "Calm", "Quiet", "Docile"]
+			nature: ["Modest", "Naughty", "Bashful", "Mild", "Impish", "Jolly", "Serious", "Naive", "Hasty", "Sassy", "Hardy", "Gentle", "Adamant", "Quirky", "Brave", "Rash", "Lonely", "Timid", "Relaxed", "Lax", "Careful", "Calm", "Quiet", "Docile"],
+			moves: [
+				{ name: "Wish", type: "Normal" },
+				{ name: "Confusion", type: "Psychic" },
+				{ name: "Rest", type: "Psychic" }
+			],
+			heldItems: [
+				{ name: "Payapa Berry", img: () => heldItem("payapa-berry") },
+				{ name: "Coba Berry", img: () => heldItem("coba-berry") }
+			]
 		},
 		notes: ["Movie 08 Presale", "Pokemon Machine", "WHF 18"]
 	},
 
-{
+	{
 		id: "gen3-mew-jpn-unknown-date",
 		eventTitle: "ハドウ Mew",
 		category: "pokemon",
@@ -5558,14 +7821,19 @@ const DISTRIBUTIONS = [
 			species: "Mew",
 			name: "ハドウ",
 			nationalDex: 151,
+			level: 10,
+			gender: "none",
 			tid: "50716",
+			friendship: 70,
+			metLevel: 10,
 			ability: ["Synchronize"],
-			nature: ["Hardy", "Bashful", "Adamant", "Sassy", "Relaxed", "Modest", "Quirky", "Gentle", "Lax", "Quiet", "Lonely", "Hasty", "Naive", "Bold", "Mild", "Naughty", "Impish", "Serious", "Timid", "Careful", "Brave", "Calm"]
+			nature: ["Hardy", "Bashful", "Adamant", "Sassy", "Relaxed", "Modest", "Quirky", "Gentle", "Lax", "Quiet", "Lonely", "Hasty", "Naive", "Bold", "Mild", "Naughty", "Impish", "Serious", "Timid", "Careful", "Brave", "Calm"],
+			moves: [{ name: "Pound", type: "Normal" }, { name: "Transform", type: "Normal" }]
 		},
 		notes: ["Mew"]
 	},
 
-{
+	{
 		id: "gen3-regice-jpn-unknown-date",
 		eventTitle: "ハドウ Regice",
 		category: "pokemon",
@@ -5580,14 +7848,24 @@ const DISTRIBUTIONS = [
 			species: "Regice",
 			name: "ハドウ",
 			nationalDex: 378,
+			level: 40,
+			gender: "none",
 			tid: "50901",
+			friendship: 35,
+			metLevel: 40,
 			ability: ["Clear Body"],
-			nature: ["Lax"]
+			nature: ["Lax"],
+			moves: [
+				{ name: "Curse", type: "Ghost" },
+				{ name: "Superpower", type: "Fighting" },
+				{ name: "Ancient Power", type: "Rock" },
+				{ name: "Hyper Beam", type: "Normal" }
+			]
 		},
 		notes: ["Titans"]
 	},
 
-{
+	{
 		id: "gen3-registeel-jpn-unknown-date",
 		eventTitle: "ハドウ Registeel",
 		category: "pokemon",
@@ -5602,14 +7880,24 @@ const DISTRIBUTIONS = [
 			species: "Registeel",
 			name: "ハドウ",
 			nationalDex: 379,
+			level: 40,
+			gender: "none",
 			tid: "50901",
+			friendship: 35,
+			metLevel: 40,
 			ability: ["Clear Body"],
-			nature: ["Naive"]
+			nature: ["Naive"],
+			moves: [
+				{ name: "Curse", type: "Ghost" },
+				{ name: "Superpower", type: "Fighting" },
+				{ name: "Ancient Power", type: "Rock" },
+				{ name: "Hyper Beam", type: "Normal" }
+			]
 		},
 		notes: ["Titans"]
 	},
 
-{
+	{
 		id: "gen3-ho-oh-jpn-unknown-date",
 		eventTitle: "バトルやま Ho Oh",
 		category: "pokemon",
@@ -5621,17 +7909,28 @@ const DISTRIBUTIONS = [
 		obtainMethod: { delivery: "unknown" },
 		reward: {
 			type: "pokemon",
-			species: "Ho-oh",
+			species: "Ho Oh",
+			name: "バトルやま",
 			nationalDex: 250,
+			level: 70,
+			gender: "none",
 			tid: "10048",
+			friendship: 70,
+			metLevel: 70,
 			ot: ["ô"],
 			ability: ["Pressure"],
-			nature: ["Docile"]
+			nature: ["Docile"],
+			moves: [
+				{ name: "Recover", type: "Normal" },
+				{ name: "Fire Blast", type: "Fire" },
+				{ name: "Sunny Day", type: "Fire" },
+				{ name: "Swift", type: "Normal" }
+			]
 		},
 		notes: ["Imported path: Released/Gen 3/JPN/RSEFL - バトルやま Ho-oh (JPN).pk3"]
 	},
 
-{
+	{
 		id: "gen3-metang-jpn-unknown-date",
 		eventTitle: "フェスタ Metang",
 		category: "pokemon",
@@ -5646,14 +7945,24 @@ const DISTRIBUTIONS = [
 			species: "Metang",
 			name: "フェスタ",
 			nationalDex: 375,
+			level: 30,
+			gender: "none",
 			tid: "02005",
+			friendship: 70,
+			metLevel: 30,
 			ability: ["Clear Body"],
-			nature: ["Hardy", "Serious", "Bashful", "Gentle", "Modest", "Brave", "Hasty", "Quirky", "Mild"]
+			nature: ["Hardy", "Serious", "Bashful", "Gentle", "Modest", "Brave", "Hasty", "Quirky", "Mild"],
+			moves: [
+				{ name: "Take Down", type: "Normal" },
+				{ name: "Confusion", type: "Psychic" },
+				{ name: "Metal Claw", type: "Steel" },
+				{ name: "Refresh", type: "Normal" }
+			]
 		},
 		notes: ["フェスタ"]
 	},
 
-{
+	{
 		id: "gen3-celebi-jpn-unknown-date",
 		eventTitle: "ポケパーク Celebi",
 		category: "pokemon",
@@ -5668,14 +7977,24 @@ const DISTRIBUTIONS = [
 			species: "Celebi",
 			name: "ポケパーク",
 			nationalDex: 251,
+			level: 30,
+			gender: "none",
 			tid: "60623",
+			friendship: 100,
+			metLevel: 30,
 			ability: ["Natural Cure"],
-			nature: ["Impish", "Bold", "Modest", "Relaxed", "Naughty", "Timid", "Lax", "Adamant", "Brave"]
+			nature: ["Impish", "Bold", "Modest", "Relaxed", "Naughty", "Timid", "Lax", "Adamant", "Brave"],
+			moves: [
+				{ name: "Heal Bell", type: "Normal" },
+				{ name: "Safeguard", type: "Normal" },
+				{ name: "Ancient Power", type: "Rock" },
+				{ name: "Future Sight", type: "Psychic" }
+			]
 		},
 		notes: ["Celebi"]
 	},
 
-{
+	{
 		id: "gen3-meowth-jpn-unknown-date",
 		eventTitle: "ポケパーク Meowth",
 		category: "pokemon",
@@ -5690,14 +8009,20 @@ const DISTRIBUTIONS = [
 			species: "Meowth",
 			name: "ポケパーク",
 			nationalDex: 52,
+			level: 5,
+			gender: "Random",
 			tid: "50318",
-			ability: ["Pickup", "Technician"],
-			nature: ["Lax", "Jolly"]
+			friendship: 71,
+			metLevel: 5,
+			ability: ["Pickup"],
+			nature: ["Lax", "Jolly"],
+			moves: [{ name: "Scratch", type: "Normal" }, { name: "Growl", type: "Normal" }],
+			heldItems: [{ name: "Air Mail", img: () => heldItem("air-mail") }]
 		},
 		notes: ["Meowth"]
 	},
 
-{
+	{
 		id: "gen3-mew-jpn-unknown-date",
 		eventTitle: "ポケパーク Mew",
 		category: "pokemon",
@@ -5712,9 +8037,19 @@ const DISTRIBUTIONS = [
 			species: "Mew",
 			name: "ポケパーク",
 			nationalDex: 151,
+			level: 30,
+			gender: "none",
 			tid: "60510",
+			friendship: 70,
+			metLevel: 30,
 			ability: ["Synchronize"],
-			nature: ["Mild", "Timid", "Gentle", "Modest", "Adamant", "Brave", "Hardy", "Relaxed", "Careful"]
+			nature: ["Mild", "Timid", "Gentle", "Modest", "Adamant", "Brave", "Hardy", "Relaxed", "Careful"],
+			moves: [
+				{ name: "Pound", type: "Normal" },
+				{ name: "Transform", type: "Normal" },
+				{ name: "Mega Punch", type: "Normal" },
+				{ name: "Metronome", type: "Normal" }
+			]
 		},
 		notes: ["Mew"]
 	}

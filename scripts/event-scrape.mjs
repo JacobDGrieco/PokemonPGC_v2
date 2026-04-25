@@ -150,9 +150,9 @@ const NATURES = [
 ];
 
 const GEN3_BALLS = {
-	1: "masterball", 2: "ultraball", 3: "greatball", 4: "pokeball", 5: "safariball",
-	6: "netball", 7: "diveball", 8: "nestball", 9: "repeatball", 10: "timerball",
-	11: "luxuryball", 12: "premierball",
+	1: "master-ball", 2: "ultra-ball", 3: "great-ball", 4: "poke-ball", 5: "safari-ball",
+	6: "net-ball", 7: "dive-ball", 8: "nest-ball", 9: "repeat-ball", 10: "timer-ball",
+	11: "luxury-ball", 12: "premier-ball",
 };
 
 // English Gen 3 string table subset. Japanese names will not decode perfectly yet,
@@ -178,18 +178,18 @@ const itemCache = new Map();
 let speciesIndexPromise = null;
 
 const BALL_DISPLAY = {
-	masterball: { label: "Master Ball", slug: "masterball" },
-	ultraball: { label: "Ultra Ball", slug: "ultraball" },
-	greatball: { label: "Great Ball", slug: "greatball" },
-	pokeball: { label: "Poké Ball", slug: "pokeball" },
-	safariball: { label: "Safari Ball", slug: "safariball" },
-	netball: { label: "Net Ball", slug: "netball" },
-	diveball: { label: "Dive Ball", slug: "diveball" },
-	nestball: { label: "Nest Ball", slug: "nestball" },
-	repeatball: { label: "Repeat Ball", slug: "repeatball" },
-	timerball: { label: "Timer Ball", slug: "timerball" },
-	luxuryball: { label: "Luxury Ball", slug: "luxuryball" },
-	premierball: { label: "Premier Ball", slug: "premierball" },
+	masterball: { label: "Master Ball", slug: "master-ball" },
+	ultraball: { label: "Ultra Ball", slug: "ultra-ball" },
+	greatball: { label: "Great Ball", slug: "great-ball" },
+	pokeball: { label: "Poké Ball", slug: "poke-ball" },
+	safariball: { label: "Safari Ball", slug: "safari-ball" },
+	netball: { label: "Net Ball", slug: "net-ball" },
+	diveball: { label: "Dive Ball", slug: "dive-ball" },
+	nestball: { label: "Nest Ball", slug: "nest-ball" },
+	repeatball: { label: "Repeat Ball", slug: "repeat-ball" },
+	timerball: { label: "Timer Ball", slug: "timer-ball" },
+	luxuryball: { label: "Luxury Ball", slug: "luxury-ball" },
+	premierball: { label: "Premier Ball", slug: "premier-ball" },
 };
 
 const EVENT_REGION_HINTS = new Map([
@@ -486,6 +486,22 @@ function inferLevelFromTitle(eventTitle) {
 	return undefined;
 }
 
+function inferNatureFromTitle(eventTitle) {
+	const title = String(eventTitle || "");
+	for (const nature of NATURES) {
+		const escaped = nature.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+		if (new RegExp(`\\b${escaped}\\b`, "i").test(title)) return [nature];
+	}
+	return undefined;
+}
+
+function inferTidFromText(text) {
+	const source = String(text || "");
+	const match = source.match(/\b(?:tid|trainer id|id(?:\s*no)?\.?)\s*[:#-]?\s*(\d{1,5})\b/i);
+	if (!match) return undefined;
+	return String(match[1]).padStart(5, "0");
+}
+
 function inferBallFromMetadata(eventTitle) {
 	const title = String(eventTitle || "");
 	if (/\begg\b/i.test(title)) return { ...BALL_DISPLAY.pokeball };
@@ -761,6 +777,41 @@ const PK3_ORDERS = [
 	"MGAE", "MGEA", "MAGE", "MAEG", "MEGA", "MEAG",
 ];
 
+function pk3Checksum(data) {
+	let sum = 0;
+	for (let i = 0; i < data.length; i += 2) sum = (sum + readU16LE(data, i)) & 0xffff;
+	return sum;
+}
+
+function readPk3Blocks(buf, personality, otFull, checksum) {
+	const raw = buf.slice(32, 80);
+	if (pk3Checksum(raw) === checksum) {
+		return {
+			storageKind: "box-decrypted",
+			checksumOk: true,
+			blocks: {
+				G: raw.slice(0, 12),
+				A: raw.slice(12, 24),
+				E: raw.slice(24, 36),
+				M: raw.slice(36, 48),
+			},
+		};
+	}
+
+	const key = (personality ^ otFull) >>> 0;
+	const dec = new Uint8Array(48);
+	for (let i = 0; i < 48; i += 4) writeU32LE(dec, i, (readU32LE(buf, 32 + i) ^ key) >>> 0);
+	const order = PK3_ORDERS[personality % 24];
+	const blocks = {};
+	for (let i = 0; i < 4; i++) blocks[order[i]] = dec.slice(i * 12, i * 12 + 12);
+
+	return {
+		storageKind: "party-encrypted",
+		checksumOk: pk3Checksum(dec) === checksum,
+		blocks,
+	};
+}
+
 async function parsePk3Payload(arrayBuffer, options = {}) {
 	const buf = new Uint8Array(arrayBuffer);
 	if (buf.length < 80) throw new Error(`PK3 file too short: ${buf.length} bytes`);
@@ -773,17 +824,7 @@ async function parsePk3Payload(arrayBuffer, options = {}) {
 	const languageId = buf[18];
 	const otName = decodeGen3String(buf.slice(20, 27));
 	const checksum = readU16LE(buf, 28);
-	const key = (personality ^ otFull) >>> 0;
-
-	const dec = new Uint8Array(48);
-	for (let i = 0; i < 48; i += 4) writeU32LE(dec, i, (readU32LE(buf, 32 + i) ^ key) >>> 0);
-
-	let calc = 0;
-	for (let i = 0; i < 48; i += 2) calc = (calc + readU16LE(dec, i)) & 0xffff;
-
-	const order = PK3_ORDERS[personality % 24];
-	const blocks = {};
-	for (let i = 0; i < 4; i++) blocks[order[i]] = dec.slice(i * 12, i * 12 + 12);
+	const { blocks, checksumOk, storageKind } = readPk3Blocks(buf, personality, otFull, checksum);
 
 	const G = blocks.G;
 	const A = blocks.A;
@@ -803,13 +844,16 @@ async function parsePk3Payload(arrayBuffer, options = {}) {
 
 	const shinyValue = ((tid ^ sid) ^ ((personality >>> 16) ^ (personality & 0xffff))) & 0xffff;
 	const shiny = shinyValue < 8;
-	const checksumOk = calc === checksum;
 	const inferredSpecies = await inferSpeciesFromTitle(options.eventTitle || "");
-	const canUseStructuredFields = checksumOk
-		|| (inferredSpecies && Number.isFinite(speciesId) && speciesId === inferredSpecies.dex);
-	const speciesLookupId = Number.isFinite(speciesId) && speciesId > 0
-		? speciesId
-		: inferredSpecies?.dex;
+	const directDexMatch = Number.isFinite(speciesId) && speciesId > 0
+		? await getSpeciesByDex(speciesId)
+		: null;
+	const looksLikeNationalDex = !!directDexMatch;
+	const speciesLookupId = inferredSpecies?.dex
+		|| directDexMatch?.dex
+		|| (storageKind === "party-encrypted" ? speciesId : undefined)
+		|| (looksLikeNationalDex ? speciesId : undefined);
+	const canUseStructuredFields = checksumOk && Number.isFinite(speciesLookupId);
 
 	let species = null;
 	let pokemon = null;
@@ -873,6 +917,7 @@ async function parsePk3Payload(arrayBuffer, options = {}) {
 			payloadParsed: true,
 			payloadKind: "pk3",
 			checksumOk,
+			storageKind,
 			reward: {
 				type: "pokemon",
 				species: speciesName,
@@ -896,6 +941,7 @@ async function parsePk3Payload(arrayBuffer, options = {}) {
 		payloadParsed: true,
 		payloadKind: "pk3",
 		checksumOk,
+		storageKind,
 		reward: {
 			type: "pokemon",
 			species: prettyApiName(speciesName),
@@ -964,8 +1010,14 @@ async function applyRewardFallbacks(reward, eventTitle, category) {
 		}
 	}
 
-	if (!nextReward.name) nextReward.name = inferPokemonNameFromTitle(eventTitle, nextReward.species, nextReward.ot || []);
 	if (!nextReward.level) nextReward.level = inferLevelFromTitle(eventTitle);
+	if (!nextReward.name && nextReward.type === "pokemon" && nextReward.species) {
+		nextReward.name = inferPokemonNameFromTitle(eventTitle, nextReward.species, nextReward.ot || []);
+	}
+	if (!Array.isArray(nextReward.nature) || !nextReward.nature.length) {
+		nextReward.nature = inferNatureFromTitle(eventTitle);
+	}
+	if (!nextReward.tid) nextReward.tid = inferTidFromText(eventTitle);
 	if (!nextReward.ball) nextReward.ball = inferBallFromMetadata(eventTitle);
 
 	if (!Array.isArray(nextReward.ability) || !nextReward.ability.length) {

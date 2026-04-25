@@ -18,9 +18,9 @@ import {
 	resolveMaybeFn,
 	splitRegionsForDisplay,
 } from "./distributions-normalize.js";
+import { resetAppContentScroll, scrollElementToTop } from "../utils/scrolling.js";
 
-const DEFAULT_PAGE_SIZE = 30;
-const PAGE_SIZE_OPTIONS = [30, 60, 120, 240];
+const DEFAULT_PAGE_SIZE = 24;
 
 function escapeHtml(value) {
 	return String(value ?? "")
@@ -37,6 +37,22 @@ function fmt(v) {
 
 function firstDefined(...values) {
 	return values.find((v) => v != null && v !== "" && !(Array.isArray(v) && v.length === 0));
+}
+
+function scrollPagerToTop(root, controlsHost) {
+	const anchor = controlsHost?.closest?.(".dist-section") || root?.closest?.(".dist-section") || controlsHost || root;
+	if (!anchor) {
+		resetAppContentScroll();
+		return;
+	}
+
+	const scrollRoot = anchor.closest?.(".modal-content, .modal-body, [data-modal-body], #content, #legacy-content-root");
+	if (scrollRoot && scrollRoot !== document.body && scrollRoot !== document.documentElement) {
+		scrollElementToTop(scrollRoot);
+	}
+
+	const top = Math.max(0, window.scrollY + anchor.getBoundingClientRect().top);
+	window.scrollTo({ top, behavior: "smooth" });
 }
 
 function getStartRaw(d) {
@@ -344,7 +360,7 @@ function resolveRecord(d, ctx) {
 		idList: normalizeIdList(tid),
 		heldList: normalizeNameImgList(held, ctx),
 		movesNorm: normalizeMoves(moves, ctx),
-		ballNorm: normalizeBall(ball, ctx),
+		ballNorm: normalizeBall(ball, ctx, { fallback: !isItemLike }),
 		ribbonsNorm: normalizeRibbons(ribbons, ctx),
 		imgSrc,
 	};
@@ -375,20 +391,14 @@ function makePager({ page, totalPages, totalItems, pageSize, start, end }) {
 	el.className = "dist-pager";
 	el.innerHTML = `
 		<div class="dist-pager-info">
-			Showing ${totalItems ? start + 1 : 0}-${end} of ${totalItems} distributions
+			Showing ${totalItems ? start + 1 : 0}-${end} of ${totalItems}
 		</div>
 		<div class="dist-pager-actions">
-			<button type="button" class="dist-page-btn" data-page-action="first" ${page <= 1 ? "disabled" : ""}>First</button>
-			<button type="button" class="dist-page-btn" data-page-action="prev" ${page <= 1 ? "disabled" : ""}>Prev</button>
+			<button type="button" class="dist-page-btn" data-page-action="first" ${page <= 1 ? "disabled" : ""}><i class="pi pi-fast-backward" aria-hidden="true"></i></button>
+			<button type="button" class="dist-page-btn" data-page-action="prev" ${page <= 1 ? "disabled" : ""}><i class="pi pi-backward" aria-hidden="true"></i></button>
 			<span class="dist-pager-page">Page ${page} / ${totalPages}</span>
-			<button type="button" class="dist-page-btn" data-page-action="next" ${page >= totalPages ? "disabled" : ""}>Next</button>
-			<button type="button" class="dist-page-btn" data-page-action="last" ${page >= totalPages ? "disabled" : ""}>Last</button>
-			<label class="dist-page-size-wrap">
-				Per page
-				<select class="dist-page-size">
-					${PAGE_SIZE_OPTIONS.map((n) => `<option value="${n}" ${n === pageSize ? "selected" : ""}>${n}</option>`).join("")}
-				</select>
-			</label>
+			<button type="button" class="dist-page-btn" data-page-action="next" ${page >= totalPages ? "disabled" : ""}><i class="pi pi-fast-forward" aria-hidden="true"></i></button>
+			<button type="button" class="dist-page-btn" data-page-action="last" ${page >= totalPages ? "disabled" : ""}><i class="pi pi-forward" aria-hidden="true"></i></button>
 		</div>
 	`;
 	return el;
@@ -424,11 +434,11 @@ function makeCard({ d, ctx, checked, setChecked }) {
 		<div class="dist-event-row">
 			<div class="dist-event-title" title="${fmt(evtTitle)}">${fmt(evtTitle)}</div>
 			${regionTokens.length
-				? `<div class="dist-region-list">
+			? `<div class="dist-region-list">
 					${regionTokens.map((r) => `<span class="dist-region-pill">${fmt(r)}</span>`).join("")}
 				</div>`
-				: ""
-			}
+			: ""
+		}
 		</div>
 
 		<div class="dist-hd">
@@ -446,17 +456,17 @@ function makeCard({ d, ctx, checked, setChecked }) {
 
 			<div class="dist-hd-right dist-badges">
 				${rec.ballNorm.img
-					? `<img class="badge ball" alt="${fmt(rec.ballNorm.name)}" title="${fmt(rec.ballNorm.name)}" src="${rec.ballNorm.img}">`
-					: rec.ballNorm.name
-						? `<span class="badge ball-label">${fmt(rec.ballNorm.name)}</span>`
-						: ""
-				}
+			? `<img class="badge ball" alt="${fmt(rec.ballNorm.name)}" title="${fmt(rec.ballNorm.name)}" src="${rec.ballNorm.img}">`
+			: rec.ballNorm.name
+				? `<span class="badge ball-label">${fmt(rec.ballNorm.name)}</span>`
+				: ""
+		}
 				${rec.ribbonsNorm
-					.map((r) => r.img
-						? `<img class="badge ribbon" alt="${fmt(r.name)}" title="${fmt(r.name)}" src="${r.img}">`
-						: `<span class="badge ribbon-label">${fmt(r.name)}</span>`
-					)
-					.join("")}
+			.map((r) => r.img
+				? `<img class="badge ribbon" alt="${fmt(r.name)}" title="${fmt(r.name)}" src="${r.img}">`
+				: `<span class="badge ribbon-label">${fmt(r.name)}</span>`
+			)
+			.join("")}
 			</div>
 		</div>
 
@@ -482,49 +492,51 @@ function makeCard({ d, ctx, checked, setChecked }) {
 						<dt>Held Item</dt>
 						<dd class="held-items" style="flex-direction: row;">
 							${rec.heldList.length
-								? rec.heldList.map((h) => h.img
-									? `<img class="held-item-img" alt="${fmt(h.name)}" title="${fmt(h.name)}" src="${h.img}">`
-									: `<span class="tag item">${fmt(h.name)}</span>`
-								).join("")
-								: "—"
-							}
+			? rec.heldList.map((h) => h.img
+				? `<img class="held-item-img" alt="${fmt(h.name)}" title="${fmt(h.name)}" src="${h.img}">`
+				: `<span class="tag item">${fmt(h.name)}</span>`
+			).join("")
+			: "—"
+		}
 						</dd>
 					</div>
 				</dl>
 			</div>
 		</div>
 
-		${rec.movesNorm.length
-			? `<div class="dist-moves diamond" style="margin: 20px 0px;">
-				${[0, 1, 2, 3].map((i) => {
+		<div class="dist-card-footer">
+			${rec.movesNorm.length
+				? `<div class="dist-moves grid-2x2" style="margin: 20px 0px;">
+					${[0, 1, 2, 3].map((i) => {
 					const mv = rec.movesNorm[i];
 					if (!mv) return `<div class="mv"></div>`;
 					const typeClass = mv.type ? ` type-${String(mv.type).toLowerCase()}` : "";
 					return `<div class="mv${typeClass}" ${mv.type ? `data-type="${fmt(mv.type)}"` : ""}>
-						${mv.img
+							${mv.img
 							? `<img alt="${fmt(mv.name || "Move")}" title="${fmt(mv.name)}" src="${mv.img}">`
 							: `<span class="mv-label">${fmt(mv.name)}</span>`
 						}
-					</div>`;
+						</div>`;
 				}).join("")}
-			</div>`
-			: ""
-		}
+				</div>`
+				: ""
+			}
 
-		${detailLines.length
-			? `<div class="dist-details" style="margin: 10px 0px;">
-				${detailLines.map((line, index) => {
+			${detailLines.length
+				? `<div class="dist-details" style="margin: 10px 0px;">
+					${detailLines.map((line, index) => {
 					const cls = line.kind === "main" && index === 0 ? "line" : "line small";
 					const style = line.kind === "main" && index === 0 ? " style=\"margin-bottom: 20px;\"" : "";
 					return `<div class="${cls}"${style}>${fmt(line.text)}</div>`;
 				}).join("")}
-			</div>`
-			: ""
-		}
+				</div>`
+				: ""
+			}
 
-		<button class="dist-toggle" aria-pressed="${checked ? "true" : "false"}">
-			${checked ? "Uncheck" : "Check"}
-		</button>
+			<button class="dist-toggle" aria-pressed="${checked ? "true" : "false"}">
+				${checked ? "Uncheck" : "Check"}
+			</button>
+		</div>
 	`;
 
 	card.querySelectorAll("img").forEach((img) => {
@@ -551,7 +563,6 @@ export function renderDistributionCardsFor(gameKey, genKey, store, opts = {}) {
 	const rawList = sortedDistributionsFor(gameKey);
 	const filteredList = filterByRegion(rawList, opts.region);
 	let pageSize = Number(window.localStorage?.getItem?.("ppgc:distPageSize")) || DEFAULT_PAGE_SIZE;
-	if (!PAGE_SIZE_OPTIONS.includes(pageSize)) pageSize = DEFAULT_PAGE_SIZE;
 	let page = 1;
 
 	const bucket =
@@ -625,7 +636,7 @@ export function renderDistributionCardsFor(gameKey, genKey, store, opts = {}) {
 		if (action === "next") page = Math.min(totalPages, page + 1);
 		if (action === "last") page = totalPages;
 		renderPage();
-		root.scrollIntoView?.({ block: "start", behavior: "smooth" });
+		scrollPagerToTop(root, controlsHost);
 	};
 
 	const handleChange = (e) => {
