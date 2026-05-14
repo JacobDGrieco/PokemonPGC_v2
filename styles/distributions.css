@@ -280,6 +280,26 @@
 	gap: 6px 10px;
 }
 
+.dist-specs.dist-specs-gen1 {
+	grid-template-columns: minmax(0, 1fr) minmax(72px, auto);
+}
+
+.dist-specs.dist-specs-gen1 .dist-spec-row-level {
+	grid-column: 1;
+	grid-row: 1;
+}
+
+.dist-specs.dist-specs-gen1 .dist-spec-row-ot {
+	grid-column: 1;
+	grid-row: 2;
+}
+
+.dist-specs.dist-specs-gen1 .dist-spec-row-id {
+	grid-column: 2;
+	grid-row: 1 / span 2;
+	align-self: start;
+}
+
 .dist-specs dt {
 	font-size: 11px;
 	opacity: 0.7;
@@ -518,65 +538,64 @@
 	cursor: default;
 }
 
-.dist-overlay-open {
-	overflow: hidden;
-}
-
 .dist-overlay {
 	position: fixed;
 	inset: 0;
 	z-index: 2000;
-}
-
-.dist-overlay-backdrop {
-	position: absolute;
-	inset: 0;
-	background: rgba(5, 8, 14, 0.72);
-	backdrop-filter: blur(4px);
+	pointer-events: none;
 }
 
 .dist-overlay-panel {
-	position: relative;
-	width: min(540px, calc(100vw - 28px));
-	margin: min(14vh, 120px) auto 0;
-	padding: 18px;
-	border-radius: 18px;
-	background: linear-gradient(180deg, rgba(26, 31, 42, 0.98), rgba(10, 12, 18, 0.98));
+	position: fixed;
+	width: min(360px, calc(100vw - 16px));
+	max-height: min(320px, calc(100vh - 16px));
+	padding: 14px;
+	border-radius: 12px;
+	background: linear-gradient(180deg, rgba(26, 31, 42, 0.98), rgba(14, 18, 26, 0.98));
 	border: 1px solid rgba(255, 255, 255, 0.12);
-	box-shadow: 0 28px 70px rgba(0, 0, 0, 0.45);
+	box-shadow: 0 12px 34px rgba(0, 0, 0, 0.45);
+	pointer-events: auto;
 }
 
 .dist-overlay-close {
 	position: absolute;
-	top: 10px;
-	right: 10px;
+	top: 8px;
+	right: 8px;
 	border: none;
 	background: rgba(255, 255, 255, 0.08);
 	color: #fff;
-	width: 32px;
-	height: 32px;
+	width: 26px;
+	height: 26px;
 	border-radius: 999px;
-	font-size: 18px;
+	font-size: 13px;
+	font-weight: 700;
 	cursor: pointer;
 }
 
 .dist-overlay-title {
-	font-size: 1rem;
+	font-size: 0.92rem;
 	font-weight: 700;
-	margin-bottom: 14px;
-	text-align: center;
+	margin-bottom: 12px;
+	padding-right: 24px;
+	text-align: left;
 }
 
 .dist-overlay-body {
-	max-height: 50vh;
+	max-height: min(250px, calc(100vh - 88px));
 	overflow: auto;
+	padding-right: 4px;
 }
 
 .dist-overlay-tags {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
-	gap: 8px;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 12px;
+}
+
+.dist-overlay-tags .tag {
+	margin: 0;
 }
 
 /* Full-width "Check / Uncheck" button at bottom of card */

@@ -6,4 +6,5 @@ import "../tasks/yellow.js";
 import "../layouts/yellow.js";
 
 import "../regidexs/red-blue-yellow.js";
+import "../distributions/red-blue-yellow.js";
 import "../syncs/gen1.js";

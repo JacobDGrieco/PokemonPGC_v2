@@ -9,7 +9,6 @@ import {
 	_frontSpriteShiny,
 	defineTasksMany,
 	range,
-	_certificate,
 } from '../helpers/index.js';
 
 (() => {
@@ -31,6 +30,7 @@ import {
 		{ id: "trainers", title: "Battle Trainers" },
 		{ id: "collectables", title: "Collectables" },
 		{ id: "thms", title: "TMs/HMs" },
+		{ id: "distributions", title: "Distributions" },
 		{ id: "extraCredit", title: "Extra Credit" },
 	];
 
@@ -81,7 +81,7 @@ import {
 					{ id: 6, text: "Spearow for Farfetch'd", img: ({ gameKey }) => bwTask(gameKey, "spearow-for-farfetchd"), imgS: ({ gameKey }) => coloredTask(gameKey, "spearow-for-farfetchd") },
 					{ id: 7, text: "Ponyta for Seel", img: ({ gameKey }) => bwTask(gameKey, "ponyta-for-seel"), imgS: ({ gameKey }) => coloredTask(gameKey, "ponyta-for-seel") },
 					{ id: 8, text: "Raichu for Electrode", img: ({ gameKey }) => bwTask(gameKey, "raichu-for-electrode"), imgS: ({ gameKey }) => coloredTask(gameKey, "raichu-for-electrode") },
-					{ id: 9, text: "Venonant for Tangela", img: ({ gameKey }) => bwTask(gameKey, "venonat-for-tangela"), imgS: ({ gameKey }) => coloredTask(gameKey, "venonat-for-tangela") },
+					{ id: 9, text: "Venonat for Tangela", img: ({ gameKey }) => bwTask(gameKey, "venonat-for-tangela"), imgS: ({ gameKey }) => coloredTask(gameKey, "venonat-for-tangela") },
 				],
 			},
 		],
@@ -102,23 +102,23 @@ import {
 		],
 		collectables: [
 			{ id: 1, text: "Obtain the Diploma", tooltip: "Celadon Condominiums - Game Freak HQ\nReward for completing the Kanto Pokedex" },
-			{ id: 2, text: "Find all hidden items with the Item Finder", img: () => keyItem("item-finder"), type: "tiered", tiers: [range(1, 54)], },
-			{ id: 3, text: "Collect all hidden Game Corner coins", img: () => keyItem("coin-case"), type: "tiered", tiers: [range(1, 10)], tooltip: "Tracks the 10 hidden coin spots in the Celadon Game Corner" },
+			{ id: 2, text: "Find all hidden items with the Item Finder", img: ({ gameKey }) => keyItem(gameKey, "item-finder"), type: "tiered", tiers: [range(1, 54)], },
+			{ id: 3, text: "Collect all hidden Game Corner coins", img: ({ gameKey }) => keyItem(gameKey, "coin-case"), type: "tiered", tiers: [range(1, 10)], tooltip: "Tracks the 10 hidden coin spots in the Celadon Game Corner" },
 			{
 				id: 4, text: "Obtain all Key Items", children: [
-					{ id: 1, text: "Bicycle", img: () => keyItem("bicycle") },
-					{ id: 2, text: "Card Key", img: () => keyItem("card-key") },
-					{ id: 3, text: "Coin Case", img: () => keyItem("coin-case") },
-					{ id: 4, text: "Exp. All", img: () => heldItem("exp-all") },
-					{ id: 5, text: "Good Rod", img: () => keyItem("good-rod") },
-					{ id: 6, text: "Item Finder", img: () => keyItem("item-finder") },
-					{ id: 7, text: "Lift Key", img: () => keyItem("lift-key") },
-					{ id: 8, text: "Old Rod", img: () => keyItem("old-rod") },
-					{ id: 9, text: "Poke Flute", img: () => keyItem("poke-flute") },
-					{ id: 10, text: "Secret Key", img: () => keyItem("secret-key") },
-					{ id: 11, text: "Silph Scope", img: () => keyItem("silph-scope") },
-					{ id: 12, text: "Super Rod", img: () => keyItem("super-rod") },
-					{ id: 13, text: "Town Map", img: () => keyItem("town-map") },
+					{ id: 1, text: "Bicycle", img: ({ gameKey }) => keyItem(gameKey, "bicycle") },
+					{ id: 2, text: "Card Key", img: ({ gameKey }) => keyItem(gameKey, "card-key") },
+					{ id: 3, text: "Coin Case", img: ({ gameKey }) => keyItem(gameKey, "coin-case") },
+					{ id: 4, text: "Exp. All", img: ({ gameKey }) => keyItem(gameKey, "exp-all") },
+					{ id: 5, text: "Good Rod", img: ({ gameKey }) => keyItem(gameKey, "good-rod") },
+					{ id: 6, text: "Item Finder", img: ({ gameKey }) => keyItem(gameKey, "item-finder") },
+					{ id: 7, text: "Lift Key", img: ({ gameKey }) => keyItem(gameKey, "lift-key") },
+					{ id: 8, text: "Old Rod", img: ({ gameKey }) => keyItem(gameKey, "old-rod") },
+					{ id: 9, text: "Poke Flute", img: ({ gameKey }) => keyItem(gameKey, "poke-flute") },
+					{ id: 10, text: "Secret Key", img: ({ gameKey }) => keyItem(gameKey, "secret-key") },
+					{ id: 11, text: "Silph Scope", img: ({ gameKey }) => keyItem(gameKey, "silph-scope") },
+					{ id: 12, text: "Super Rod", img: ({ gameKey }) => keyItem(gameKey, "super-rod") },
+					{ id: 13, text: "Town Map", img: ({ gameKey }) => keyItem(gameKey, "town-map") },
 				]
 			},
 		],

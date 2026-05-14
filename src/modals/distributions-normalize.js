@@ -31,11 +31,17 @@ export function prettyToken(v) {
     region_free: 'Region Free',
     regionfree: 'Region Free',
     usa: 'USA',
+    can: 'CAN',
     us: 'USA',
     jpn: 'JPN',
     jp: 'JPN',
     eur: 'EUR',
     eu: 'EUR',
+    gbr: 'GBR',
+    aut: 'AUT',
+    dnk: 'DNK',
+    fin: 'FIN',
+    nor: 'NOR',
     kor: 'KOR',
     chn: 'CHN',
     twn: 'TWN',
@@ -140,10 +146,19 @@ export function normalizeBall(ball, ctx, { fallback = true } = {}) {
     const name = prettyToken(ball);
     return { name: name || (fallback ? 'Strange Ball' : ''), img: fallback ? fallbackImg : null };
   }
+  const genKey = Number(ctx?.genKey ?? ctx?.gen ?? 0);
+  const slug = ball.slug || ball.id || ball.value || '';
+  let inferredImg = null;
+  if (slug) {
+    if (genKey >= 1 && genKey <= 3) inferredImg = _assetPath(`items/balls/gen1-3/${slug}.png`);
+    else if (genKey >= 4 && genKey <= 8) inferredImg = _assetPath(`items/balls/gen4-8/${slug}.png`);
+    else if (genKey === 8.5 || ctx?.genKey === '8_2') inferredImg = _assetPath(`items/balls/gen8_2/${slug}.png`);
+    else if (genKey === 9 || genKey === 9.5 || ctx?.genKey === '9_2') inferredImg = _assetPath(`items/balls/gen9/${slug}.png`);
+  }
   const img = resolveMaybeFn(ball.img || ball.image || null, ctx);
   return {
-    name: ball.name || prettyToken(ball.id || ball.value || '') || (fallback ? 'Strange Ball' : ''),
-    img: img || (fallback ? fallbackImg : null),
+    name: ball.name || prettyToken(slug) || (fallback ? 'Strange Ball' : ''),
+    img: img || inferredImg || (fallback ? fallbackImg : null),
   };
 }
 

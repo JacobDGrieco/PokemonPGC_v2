@@ -25,15 +25,17 @@
 
 import fs from "node:fs/promises";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 
 const OWNER = "projectpokemon";
 const REPO = "EventsGallery";
 const BRANCH = "master";
+const DEFAULT_GEN1_SOURCE_DIR = "C:\\Users\\gamin\\Downloads\\EventsGallery-master\\EventsGallery-master\\Released\\Gen 1";
 
 const EVENT_EXTENSIONS = new Set([
 	".wc3", ".wc4", ".wc5", ".wc6", ".wc6full", ".wc7", ".wc7full", ".wc8", ".wc9",
 	".pcd", ".pgt", ".pgf",
-	".pk3", ".pk4", ".pk5", ".pk6", ".pk7", ".pk8", ".pk9",
+	".pk1", ".pk3", ".pk4", ".pk5", ".pk6", ".pk7", ".pk8", ".pk9",
 	".pb7", ".pb8", ".pa8",
 ]);
 
@@ -44,6 +46,12 @@ const REGION_ALIASES = new Map([
 	["kor", "KOR"], ["kr", "KOR"], ["korea", "KOR"], ["korean", "KOR"],
 	["chn", "CHN"], ["china", "CHN"], ["tw", "TWN"], ["taiwan", "TWN"], ["hk", "HKG"], ["hong kong", "HKG"],
 	["sg", "SGP"], ["singapore", "SGP"], ["aus", "AUS"], ["australia", "AUS"],
+	["can", "CAN"], ["canada", "CAN"], ["canadian", "CAN"],
+	["gbr", "GBR"], ["great britain", "GBR"],
+	["aut", "AUT"], ["austria", "AUT"],
+	["dnk", "DNK"], ["denmark", "DNK"],
+	["fin", "FIN"], ["finland", "FIN"],
+	["nor", "NOR"], ["norway", "NOR"],
 	["uk", "UK"], ["gb", "UK"], ["united kingdom", "UK"],
 	["fr", "FRA"], ["france", "FRA"], ["de", "DEU"], ["germany", "DEU"],
 	["italy", "ITA"], ["it", "ITA"], ["spain", "ESP"], ["es", "ESP"],
@@ -95,6 +103,7 @@ const GENERIC_COLLECTION_SEGMENTS = new Set([
 ]);
 
 const GEN_TO_GAMES = {
+	"1": ["red", "blue", "yellow"],
 	"3": ["ruby", "sapphire", "emerald", "firered", "leafgreen"],
 	"4": ["diamond", "pearl", "platinum", "heartgold", "soulsilver"],
 	"5": ["black", "white", "black2", "white2"],
@@ -171,6 +180,31 @@ const GEN3_CHARMAP = new Map([
 	[0xF0, ":"], [0xF1, "Ä"], [0xF2, "Ö"], [0xF3, "Ü"], [0xF4, "ä"], [0xF5, "ö"], [0xF6, "ü"], [0xF7, " "],
 ]);
 
+const GEN1_PARTY_OFFSET = 3;
+const GEN1_PARTY_DATA_SIZE = 44;
+const GEN1_OT_OFFSET = GEN1_PARTY_OFFSET + GEN1_PARTY_DATA_SIZE;
+const GEN1_STRING_SIZE = 11;
+const GEN1_GENERIC_SEGMENTS = new Set([
+	"released",
+	"gen 1",
+	"classic",
+	"international",
+	"jpn",
+	"eng",
+	"japanese",
+]);
+const GEN1_ENGLISH_CHARMAP = new Map([
+	[0x4A, "â™€"], [0x4B, "â™‚"], [0x50, ""], [0x7F, " "],
+	[0x80, "A"], [0x81, "B"], [0x82, "C"], [0x83, "D"], [0x84, "E"], [0x85, "F"], [0x86, "G"], [0x87, "H"], [0x88, "I"], [0x89, "J"],
+	[0x8A, "K"], [0x8B, "L"], [0x8C, "M"], [0x8D, "N"], [0x8E, "O"], [0x8F, "P"], [0x90, "Q"], [0x91, "R"], [0x92, "S"], [0x93, "T"],
+	[0x94, "U"], [0x95, "V"], [0x96, "W"], [0x97, "X"], [0x98, "Y"], [0x99, "Z"],
+	[0x9A, "("], [0x9B, ")"], [0x9C, ":"], [0x9D, ";"], [0x9E, "["], [0x9F, "]"],
+	[0xA0, "a"], [0xA1, "b"], [0xA2, "c"], [0xA3, "d"], [0xA4, "e"], [0xA5, "f"], [0xA6, "g"], [0xA7, "h"], [0xA8, "i"], [0xA9, "j"],
+	[0xAA, "k"], [0xAB, "l"], [0xAC, "m"], [0xAD, "n"], [0xAE, "o"], [0xAF, "p"], [0xB0, "q"], [0xB1, "r"], [0xB2, "s"], [0xB3, "t"],
+	[0xB4, "u"], [0xB5, "v"], [0xB6, "w"], [0xB7, "x"], [0xB8, "y"], [0xB9, "z"],
+	[0xBA, "Ã©"], [0xE0, "'"], [0xE3, "-"], [0xE6, "?"], [0xE7, "!"], [0xF1, "Ã—"], [0xF3, "/"], [0xF4, ","], [0xF5, "â™€"], [0xF6, "0"],
+	[0xF7, "1"], [0xF8, "2"], [0xF9, "3"], [0xFA, "4"], [0xFB, "5"], [0xFC, "6"], [0xFD, "7"], [0xFE, "8"], [0xFF, "9"],
+]);
 const pokemonCache = new Map();
 const speciesCache = new Map();
 const moveCache = new Map();
@@ -223,12 +257,13 @@ const METHOD_HINTS = [
 ];
 
 function parseArgs(argv) {
-	const args = { games: [], generation: null, out: null, includeAllCompatible: true, max: null, dryRun: false, parsePayload: true };
+	const args = { games: [], generation: null, out: null, sourceDir: null, includeAllCompatible: true, max: null, dryRun: false, parsePayload: true };
 	for (let i = 2; i < argv.length; i++) {
 		const a = argv[i];
 		if (a === "--games") args.games = String(argv[++i] || "").split(",").map((x) => x.trim().toLowerCase()).filter(Boolean);
 		else if (a === "--generation") args.generation = String(argv[++i] || "").trim();
 		else if (a === "--out") args.out = String(argv[++i] || "").trim();
+		else if (a === "--source-dir") args.sourceDir = String(argv[++i] || "").trim();
 		else if (a === "--max") args.max = Number(argv[++i]);
 		else if (a === "--exact-games-only") args.includeAllCompatible = false;
 		else if (a === "--dry-run") args.dryRun = true;
@@ -237,12 +272,31 @@ function parseArgs(argv) {
 	}
 	if (!args.games.length) throw new Error("Missing --games. Example: --games ruby,sapphire,emerald");
 	if (!args.generation) throw new Error("Missing --generation. Example: --generation 3");
+	if (args.generation === "1" && !args.sourceDir) args.sourceDir = DEFAULT_GEN1_SOURCE_DIR;
 	if (!args.out && !args.dryRun) throw new Error("Missing --out. Example: --out src/data/distributions/gen3.generated.js");
 	return args;
 }
 
 function isReleasedPath(filePath) {
 	return /^Released\//i.test(String(filePath || ""));
+}
+
+function toPosixPath(filePath) {
+	return String(filePath || "").replace(/\\/g, "/");
+}
+
+async function walkLocalFiles(dir, allowedExts) {
+	const entries = await fs.readdir(dir, { withFileTypes: true });
+	const out = [];
+	for (const entry of entries) {
+		const fullPath = path.join(dir, entry.name);
+		if (entry.isDirectory()) {
+			out.push(...await walkLocalFiles(fullPath, allowedExts));
+			continue;
+		}
+		if (allowedExts.has(path.extname(entry.name).toLowerCase())) out.push(fullPath);
+	}
+	return out;
 }
 
 async function githubFetchJson(url) {
@@ -285,6 +339,7 @@ function inferGeneration(filePath, ext) {
 	const s = filePath.toLowerCase();
 	const folderMatch = s.match(/(?:^|\/)gen(?:eration)?\s*([0-9])(?:\/|$)/i) || s.match(/(?:^|\/)gen\s*([0-9])(?:\/|$)/i);
 	if (folderMatch) return folderMatch[1];
+	if ([".pk1"].includes(ext)) return "1";
 	if ([".wc3", ".pk3"].includes(ext)) return "3";
 	if ([".wc4", ".pcd", ".pgt", ".pk4"].includes(ext)) return "4";
 	if ([".wc5", ".pgf", ".pk5"].includes(ext)) return "5";
@@ -536,6 +591,17 @@ function isPlausibleItemId(id) {
 	return Number.isFinite(id) && id > 0 && id <= 10000;
 }
 
+function normalizeHeldItemAsset(name, slug) {
+	const displayName = String(name || "").trim();
+	const rawSlug = String(slug || slugify(displayName)).trim();
+	const isBerry = /(?:^|-)berry$/i.test(rawSlug) || /\bberry\b/i.test(displayName);
+	return cleanUndefined({
+		name: displayName || undefined,
+		slug: isBerry ? rawSlug.replace(/-berry$/i, "") : rawSlug,
+		kind: isBerry ? "berry" : undefined,
+	});
+}
+
 async function buildPokemonAbilityList(speciesOrDex) {
 	if (!speciesOrDex) return [];
 	const pokemon = await pokeApiJson("pokemon", speciesOrDex).catch(() => null);
@@ -575,10 +641,10 @@ async function inferHeldItemsFromTitle(eventTitle) {
 	for (const name of uniqueNames) {
 		const item = await pokeApiJson("item", slugify(name)).catch(() => null);
 		if (!item) continue;
-		results.push({
-			name: item?.names?.find((n) => n.language?.name === "en")?.name || prettyApiName(item?.name),
-			slug: item?.name || slugify(name),
-		});
+		results.push(normalizeHeldItemAsset(
+			item?.names?.find((n) => n.language?.name === "en")?.name || prettyApiName(item?.name),
+			item?.name || slugify(name),
+		));
 	}
 	return results;
 }
@@ -721,6 +787,13 @@ async function getSpeciesByDex(dex) {
 	if (!Number.isFinite(dex)) return null;
 	const { byDex } = await loadSpeciesIndex();
 	return byDex.get(Number(dex)) || null;
+}
+
+async function getSpeciesByName(name) {
+	const token = normalizeLookupText(name);
+	if (!token) return null;
+	const { byToken } = await loadSpeciesIndex();
+	return byToken.find((entry) => entry.token === token) || null;
 }
 
 function slugFromDisplayName(name) {
@@ -874,7 +947,9 @@ async function parsePk3Payload(arrayBuffer, options = {}) {
 			|| undefined;
 		const growthRate = species?.growth_rate?.name || "medium-fast";
 		if (Number.isFinite(exp) && exp >= 0) level = levelFromExp(exp, growthRate);
-		if (GEN3_BALLS[ballId]) ball = { ...BALL_DISPLAY[GEN3_BALLS[ballId]] };
+		ball = GEN3_BALLS[ballId]
+			? { ...BALL_DISPLAY[GEN3_BALLS[ballId]] }
+			: { ...BALL_DISPLAY.pokeball };
 
 		const abilities = (pokemon?.abilities || [])
 			.filter((a) => !a.is_hidden)
@@ -893,10 +968,10 @@ async function parsePk3Payload(arrayBuffer, options = {}) {
 
 		if (isPlausibleItemId(heldItemId)) {
 			heldItem = await pokeApiJson("item", heldItemId)
-				.then((item) => ({
-					name: item?.names?.find((n) => n.language?.name === "en")?.name || prettyApiName(item?.name),
-					slug: item?.name || slugify(item?.names?.find((n) => n.language?.name === "en")?.name || `item-${heldItemId}`),
-				}))
+				.then((item) => normalizeHeldItemAsset(
+					item?.names?.find((n) => n.language?.name === "en")?.name || prettyApiName(item?.name),
+					item?.name || slugify(item?.names?.find((n) => n.language?.name === "en")?.name || `item-${heldItemId}`),
+				))
 				.catch(() => null);
 		}
 
@@ -972,6 +1047,159 @@ async function maybeParsePayload(filePath, ext, args) {
 	} catch (err) {
 		return {};
 	}
+}
+
+function normalizeWhitespace(value) {
+	return String(value || "").replace(/\s+/g, " ").trim();
+}
+
+function parseGen1Filename(filePath) {
+	const baseName = path.basename(filePath, path.extname(filePath));
+	const match = baseName.match(/^([A-Z]+)\s*-\s*(.+?)\s*\((\d+)\)\s*(.+)$/u);
+	if (!match) return null;
+	return {
+		gameCode: match[1].trim(),
+		ot: normalizeWhitespace(match[2]),
+		tid: match[3],
+		species: normalizeWhitespace(match[4]),
+	};
+}
+
+function inferGen1GamesFromCode(gameCode) {
+	const code = String(gameCode || "").toUpperCase();
+	const games = [];
+	if (code.includes("R")) games.push("red");
+	if (code.includes("B")) games.push("blue");
+	if (code.includes("Y")) games.push("yellow");
+	return uniqueStrings(games);
+}
+
+function inferGen1EventTitle(relativePath) {
+	const segments = String(relativePath || "").split("/").map((part) => normalizeWhitespace(part)).filter(Boolean);
+	const folderSegments = segments.slice(0, -1);
+	const preferred = folderSegments.filter((part) => !GEN1_GENERIC_SEGMENTS.has(part.toLowerCase()));
+	return preferred.at(-1) || folderSegments.at(-1) || "Unknown Event";
+}
+
+function decodeEnglishGen1String(bytes) {
+	let out = "";
+	for (const byte of bytes) {
+		if (byte === 0x50) break;
+		out += GEN1_ENGLISH_CHARMAP.get(byte) ?? "";
+	}
+	return normalizeWhitespace(out);
+}
+
+function isProbablyEnglishString(text) {
+	return !!text && /[A-Za-z0-9â™€â™‚]/.test(text);
+}
+
+async function parsePk1Payload(buffer, filenameMeta) {
+	if (buffer.length < GEN1_OT_OFFSET + (GEN1_STRING_SIZE * 2)) return null;
+
+	const party = buffer.subarray(GEN1_PARTY_OFFSET, GEN1_PARTY_OFFSET + GEN1_PARTY_DATA_SIZE);
+	const otBytes = buffer.subarray(GEN1_OT_OFFSET, GEN1_OT_OFFSET + GEN1_STRING_SIZE);
+	const nickBytes = buffer.subarray(GEN1_OT_OFFSET + GEN1_STRING_SIZE, GEN1_OT_OFFSET + (GEN1_STRING_SIZE * 2));
+
+	const level = party[0x21] || party[0x03] || null;
+	const speciesEntry = await getSpeciesByName(filenameMeta?.species || "");
+	const moveIds = [party[0x08], party[0x09], party[0x0A], party[0x0B]].filter((id) => id > 0 && id <= 165);
+	const moves = [];
+	for (const id of moveIds) {
+		const move = await pokeApiJson("move", id).catch(() => null);
+		moves.push(move ? { name: prettyApiName(move.name), type: prettyApiName(move.type?.name || "") } : { name: `Move ${id}` });
+	}
+	const decodedOt = decodeEnglishGen1String(otBytes);
+	const decodedNickname = decodeEnglishGen1String(nickBytes);
+	const speciesName = speciesEntry?.name || filenameMeta?.species || null;
+	const nickname = isProbablyEnglishString(decodedNickname) ? decodedNickname : speciesName;
+	const ot = isProbablyEnglishString(decodedOt) ? decodedOt : filenameMeta?.ot || null;
+	const tid = filenameMeta?.tid || String((party[0x0C] << 8) | party[0x0D]).padStart(5, "0");
+
+	return cleanUndefined({
+		level,
+		species: speciesName,
+		nationalDex: speciesEntry?.dex || null,
+		nickname,
+		ot,
+		tid,
+		moves,
+		ball: { name: "PokÃ© Ball", slug: "poke-ball" },
+	});
+}
+
+function inferGen1Regions(title, relativePath) {
+	const haystack = `${title} ${relativePath}`.toLowerCase();
+	const regions = [];
+	const push = (code) => { if (!regions.includes(code)) regions.push(code); };
+	if (/(^|[\\/ ]|\.)(jpn|japanese)([\\/ ]|$)|space world|japan/.test(haystack)) push("JPN");
+	if (/\bu\.s\.\b|\busa\b|\bnintendo power\b|\bpok[eÃ©]mon power\b|\bpok[eÃ©] tour\b|\byoshira\b|\byoshiba\b/.test(haystack)) push("USA");
+	if (/\bcanadian\b|\bcanada\b/.test(haystack)) push("CAN");
+	if (/\buk\b|united kingdom|great britain/.test(haystack)) push("GBR");
+	if (/\bspain\b|\bspanish\b/.test(haystack)) push("ESP");
+	if (/\baustria\b/.test(haystack)) push("AUT");
+	if (/\bdenmark\b/.test(haystack)) push("DNK");
+	if (/\bfinland\b/.test(haystack)) push("FIN");
+	if (/\bnorway\b/.test(haystack)) push("NOR");
+	if (/\beurope\b|\bstadium tour\b|\bclub nintendo\b|\blinkw\b|\bluigi/.test(haystack)) push("EUR");
+	return regions;
+}
+
+function inferGen1Languages(relativePath) {
+	const lower = String(relativePath || "").toLowerCase();
+	if (/(^|\\|\/)(jpn|japanese)($|\\|\/)/.test(lower)) return ["ja"];
+	if (/spanish/.test(lower)) return ["es"];
+	return ["en"];
+}
+
+function readableLocalPathNote(relativePath, eventTitle) {
+	const segments = String(relativePath || "").split("/").map((part) => normalizeWhitespace(part)).filter(Boolean);
+	const folders = segments.slice(0, -1);
+	const useful = folders.filter((part) => !GEN1_GENERIC_SEGMENTS.has(part.toLowerCase()) && !/^(ENG|JPN|KOR|FRE|GER|ITA|SPA)$/i.test(part));
+	const filtered = useful.filter((part, index) => index !== useful.length - 1 || normalizeLookupText(part) !== normalizeLookupText(eventTitle));
+	const parts = filtered.length ? filtered : useful;
+	return parts.length ? parts.join(" | ") : undefined;
+}
+
+async function buildEventFromLocalGen1File(filePath, args) {
+	const filenameMeta = parseGen1Filename(filePath);
+	if (!filenameMeta) return null;
+
+	const games = inferGen1GamesFromCode(filenameMeta.gameCode).filter((game) => args.games.includes(game));
+	if (!games.length) return null;
+
+	const relativePath = toPosixPath(path.relative(args.sourceDir, filePath));
+	const eventTitle = inferGen1EventTitle(relativePath);
+	const date = inferDate(`${eventTitle} ${relativePath}`);
+	const payload = await parsePk1Payload(await fs.readFile(filePath), filenameMeta);
+	if (!payload) return null;
+
+	return cleanUndefined({
+		id: slugify([`gen${args.generation}`, eventTitle, payload.species, payload.ot || filenameMeta.ot, payload.nickname || payload.species].filter(Boolean).join(" ")),
+		eventTitle,
+		category: "pokemon",
+		method: "in-person",
+		status: "released",
+		regions: inferGen1Regions(eventTitle, relativePath),
+		languages: inferGen1Languages(relativePath),
+		startDate: date.startDate,
+		endDate: date.endDate,
+		startDateDisplay: date.startDateDisplay,
+		datePrecision: date.datePrecision,
+		obtainMethod: { delivery: "in-person" },
+		reward: cleanUndefined({
+			type: "pokemon",
+			species: payload.species,
+			name: payload.nickname,
+			nationalDex: payload.nationalDex,
+			level: payload.level,
+			ball: payload.ball,
+			ot: payload.ot ? [payload.ot] : [],
+			tid: payload.tid ? [payload.tid] : [],
+			moves: payload.moves,
+		}),
+		notes: [readableLocalPathNote(relativePath, eventTitle)],
+	});
 }
 
 function cleanUndefined(obj) {
@@ -1057,6 +1285,9 @@ async function buildEventFromTreeItem(item, args) {
 	const baseReward = { type: ext.startsWith(".pk") ? "pokemon" : "unknown" };
 	const mergedReward = mergeReward(baseReward, parsed.reward);
 	const reward = await applyRewardFallbacks(mergedReward, eventTitle, category);
+	if (ext === ".pk3" && reward?.type === "pokemon" && !reward.ball) {
+		reward.ball = { ...BALL_DISPLAY.pokeball };
+	}
 	const finalRegions = regions.length ? regions : undefined;
 	const finalStartDate = date.startDate;
 	const finalEndDate = date.endDate;
@@ -1153,6 +1384,15 @@ function quoteKey(key) {
 	return /^[A-Za-z_$][A-Za-z0-9_$]*$/.test(key) ? key : JSON.stringify(key);
 }
 
+function getBallDisplayName(value) {
+	if (value?.slug) {
+		if (value.slug === "poke-ball") return "Pok\u00E9 Ball";
+		const lookup = Object.values(BALL_DISPLAY).find((ballValue) => ballValue.slug === value.slug)?.label;
+		if (lookup) return lookup;
+	}
+	return value?.label || value?.name;
+}
+
 function toRenderable(value, parentKey = "") {
 	if (Array.isArray(value)) {
 		const items = value.map((item) => toRenderable(item, parentKey));
@@ -1164,8 +1404,9 @@ function toRenderable(value, parentKey = "") {
 	}
 	if (!value || typeof value !== "object") return value;
 
-	if (parentKey === "ball" && value.slug && value.label) {
-		return rawExpr(`{ name: ${JSON.stringify(value.label)}, img: () => ball(${JSON.stringify(value.slug)}) }`);
+	if (parentKey === "ball" && value.slug) {
+		const ballName = getBallDisplayName(value);
+		if (ballName) return rawExpr(`{ name: ${JSON.stringify(ballName)}, img: () => ball(${JSON.stringify(value.slug)}) }`);
 	}
 
 	if (parentKey === "heldItems" && value.slug && value.name) {
@@ -1191,15 +1432,15 @@ function tryInline(value) {
 	if (scalar != null) return scalar;
 
 	if (Array.isArray(value)) {
-		if (value.length > 3) return null;
+		if (value.length > 4) return null;
 		const parts = value.map((item) => tryInline(item));
 		if (parts.some((part) => part == null)) return null;
 		const rendered = `[${parts.join(", ")}]`;
-		return rendered.length <= 100 ? rendered : null;
+		return rendered.length <= 140 ? rendered : null;
 	}
 
 	const entries = Object.entries(value || {});
-	if (entries.length > 3) return null;
+	if (entries.length > 5) return null;
 	const parts = [];
 	for (const [key, val] of entries) {
 		const rendered = tryInline(val);
@@ -1207,7 +1448,7 @@ function tryInline(value) {
 		parts.push(`${quoteKey(key)}: ${rendered}`);
 	}
 	const text = `{ ${parts.join(", ")} }`;
-	return text.length <= 110 ? text : null;
+	return text.length <= 180 ? text : null;
 }
 
 function renderJs(value, indent = 0) {
@@ -1324,7 +1565,6 @@ function mergeRewards(rewards) {
 		gender: pickPreferredScalar(...rewards.map((reward) => reward?.gender)),
 		shiny: pickPreferredScalar(...rewards.map((reward) => reward?.shiny)),
 		ball: pickPreferredScalar(...rewards.map((reward) => reward?.ball)),
-		tid: pickPreferredScalar(...rewards.map((reward) => reward?.tid)),
 		friendship: pickPreferredScalar(...rewards.map((reward) => reward?.friendship)),
 		metLevel: pickPreferredScalar(...rewards.map((reward) => reward?.metLevel)),
 	};
@@ -1333,6 +1573,7 @@ function mergeRewards(rewards) {
 	if (genders.length > 1) merged.gender = "Random";
 
 	merged.ot = mergeStringArrays(...rewards.map((reward) => reward?.ot || []));
+	merged.tid = mergeStringArrays(...rewards.map((reward) => Array.isArray(reward?.tid) ? reward.tid : reward?.tid ? [reward.tid] : []));
 	merged.ability = mergeStringArrays(...rewards.map((reward) => reward?.ability || []));
 	merged.nature = collapseNatureValues(rewards.flatMap((reward) => reward?.nature || []));
 	merged.moves = mergeObjectArrays(rewards.map((reward) => reward?.moves || []), (move) => `${move.name}|${move.type || ""}`);
@@ -1381,10 +1622,11 @@ function mergeEvents(events) {
 
 function renderOutput(events, args) {
 	const genValue = Number.isFinite(Number(args.generation)) ? Number(args.generation) : JSON.stringify(args.generation);
-	const gameKeys = JSON.stringify(args.games);
-	const eventBlocks = events.map(renderEventObject).join(",\n\n");
-	return `// AUTO-GENERATED by tools/event-scrape-v2.mjs
-// Review before committing. .pk3 entries include parsed payload data when available.
+	const gameKeys = `[${args.games.map((game) => JSON.stringify(game)).join(", ")}]`;
+	const renderableEvents = events.map(({ games, generation, ...event }) => event);
+	const eventBlocks = renderableEvents.map((event) => `\t${renderEventObject(event)}`).join(",\n");
+	return `// AUTO-GENERATED by scripts/scrapers/gen3-scrape.mjs
+// Review before committing. Payload-backed fields are included when the source format supports them.
 
 import {
 \tdefineDistributionsMany,
@@ -1425,21 +1667,34 @@ function logScrapeSummary(events) {
 	console.log(`Summary: ${items} item events, ${withRegions} with regions, ${withLanguages} with languages, ${withHeldItems} with held items.`);
 }
 
-async function main() {
-	const args = parseArgs(process.argv);
-	console.log(`Fetching ${OWNER}/${REPO} tree...`);
-	const tree = await getRecursiveTree();
-	const files = tree.filter((x) => x.type === "blob").filter((x) => isReleasedPath(x.path)).filter((x) => isEventFile(x.path));
-	console.log(`Found ${files.length} likely event files.`);
-
+export async function runScraperCli(argv = process.argv) {
+	const args = parseArgs(argv);
 	const events = [];
-	for (const item of files) {
-		const event = await buildEventFromTreeItem(item, args);
-		if (event) {
-			events.push(event);
-			if (events.length % 25 === 0) console.log(`Matched/parsed ${events.length}...`);
+
+	if (String(args.generation) === "1") {
+		const files = await walkLocalFiles(args.sourceDir, new Set([".pk1"]));
+		console.log(`Found ${files.length} local Gen 1 event files in ${args.sourceDir}`);
+		for (const filePath of files) {
+			const event = await buildEventFromLocalGen1File(filePath, args);
+			if (event) {
+				events.push(event);
+				if (events.length % 25 === 0) console.log(`Matched/parsed ${events.length}...`);
+			}
+			if (args.max && events.length >= args.max) break;
 		}
-		if (args.max && events.length >= args.max) break;
+	} else {
+		console.log(`Fetching ${OWNER}/${REPO} tree...`);
+		const tree = await getRecursiveTree();
+		const files = tree.filter((x) => x.type === "blob").filter((x) => isReleasedPath(x.path)).filter((x) => isEventFile(x.path));
+		console.log(`Found ${files.length} likely event files.`);
+		for (const item of files) {
+			const event = await buildEventFromTreeItem(item, args);
+			if (event) {
+				events.push(event);
+				if (events.length % 25 === 0) console.log(`Matched/parsed ${events.length}...`);
+			}
+			if (args.max && events.length >= args.max) break;
+		}
 	}
 
 	const mergedEvents = mergeEvents(events);
@@ -1465,7 +1720,10 @@ async function main() {
 	console.log(`Wrote ${args.out}`);
 }
 
-main().catch((err) => {
-	console.error(err);
-	process.exit(1);
-});
+const isDirectRun = !!process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href;
+if (isDirectRun) {
+	runScraperCli().catch((err) => {
+		console.error(err);
+		process.exit(1);
+	});
+}
