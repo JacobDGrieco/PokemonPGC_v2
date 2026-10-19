@@ -22,6 +22,8 @@ async function upsertTestAccount({ tier, email, subscriptionStatus }) {
 		where: { email },
 		update: {
 			passwordHash,
+			emailVerifiedAt: new Date(),
+			sessionVersion: { increment: 1 },
 			icon: "default",
 			tier,
 			subscriptionStatus,
@@ -32,6 +34,7 @@ async function upsertTestAccount({ tier, email, subscriptionStatus }) {
 		create: {
 			email,
 			passwordHash,
+			emailVerifiedAt: new Date(),
 			icon: "default",
 			tier,
 			subscriptionStatus,

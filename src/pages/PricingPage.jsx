@@ -110,6 +110,12 @@ export function PricingPage() {
 			if (!result?.url) {
 				throw new Error('PayPal did not return an approval URL.');
 			}
+			if (result.subscriptionId) {
+				sessionStorage.setItem('ppgc:paypal:pending-subscription', JSON.stringify({
+					subscriptionId: result.subscriptionId,
+					tier: nextTierKey,
+				}));
+			}
 			window.location.assign(result.url);
 		});
 	}
@@ -125,6 +131,7 @@ export function PricingPage() {
 	}
 
 	async function handlePayPalCancel() {
+		if (!window.confirm('Cancel your PayPal subscription and remove paid access now?')) return;
 		await runAction('paypal:cancel', async () => {
 			const result = await cancelPayPalSubscription();
 			if (result?.user) {
@@ -144,8 +151,7 @@ export function PricingPage() {
 		}
 
 		const isCurrent = key === tierKey;
-		// const actionDisabled = busyAction !== '';	
-		const actionDisabled = true;
+		const actionDisabled = busyAction !== '';
 		const lockedByExistingPlan = hasPaidPlan;
 		const isLowerOrCurrentTier = tierRank >= 0 && TIER_ORDER.indexOf(key) <= tierRank;
 
@@ -163,6 +169,7 @@ export function PricingPage() {
 					type="button"
 					className="pricing-pay-btn pricing-pay-stripe"
 					disabled={actionDisabled}
+					aria-label={`Subscribe to ${TIERS[key].label} with Stripe`}
 					onClick={() => handleStripeCheckout(key)}
 				>
 					{busyAction === `stripe:${key}` ? 'Loading...' : <FaStripeS />}
@@ -171,6 +178,7 @@ export function PricingPage() {
 					type="button"
 					className="pricing-pay-btn pricing-pay-paypal"
 					disabled={actionDisabled}
+					aria-label={`Subscribe to ${TIERS[key].label} with PayPal`}
 					onClick={() => handlePayPalCheckout(key)}
 				>
 					{busyAction === `paypal:${key}` ? 'Loading...' : <FaPaypal />}

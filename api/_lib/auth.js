@@ -1,4 +1,5 @@
 import crypto from "crypto";
+import { prisma } from "./db.js";
 
 const COOKIE_NAME = "ppgc_session";
 const SESSION_TTL_MS = 1000 * 60 * 60 * 24 * 30; // 30 days
@@ -64,6 +65,7 @@ export function createSessionToken(user) {
 	const payload = {
 		userId: user.id,
 		email: user.email,
+		sessionVersion: Number.isInteger(user.sessionVersion) ? user.sessionVersion : 0,
 		iat: Date.now(),
 		exp: Date.now() + SESSION_TTL_MS,
 	};
@@ -132,10 +134,24 @@ export function clearSessionCookie(res) {
 	res.setHeader("Set-Cookie", cookie.join("; "));
 }
 
-export function getSessionFromRequest(req) {
+/**
+ * Validates both the cookie signature and the user's current session version.
+ * Legacy cookies are version zero and remain valid until a password reset bumps
+ * the database value, which revokes every previously issued cookie.
+ */
+export async function getSessionFromRequest(req) {
 	const cookies = parseCookies(req);
 	const token = cookies[COOKIE_NAME];
-	return verifySessionToken(token);
+	const session = verifySessionToken(token);
+	if (!session?.userId) return null;
+
+	const user = await prisma.user.findUnique({
+		where: { id: session.userId },
+		select: { sessionVersion: true },
+	});
+	if (!user) return null;
+	const cookieVersion = Number.isInteger(session.sessionVersion) ? session.sessionVersion : 0;
+	return user.sessionVersion === cookieVersion ? session : null;
 }
 
 export async function readJsonBody(req) {

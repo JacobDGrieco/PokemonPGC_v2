@@ -9,17 +9,32 @@ generator client {
 }
 
 model User {
-  id                   Int      @id @default(autoincrement())
-  email                String   @unique
+  id                   Int         @id @default(autoincrement())
+  email                String      @unique
   passwordHash         String
-  icon                 String   @default("default")
-  tier                 String   @default("free")
+  emailVerifiedAt      DateTime?   @default(now())
+  sessionVersion       Int         @default(0)
+  icon                 String      @default("default")
+  tier                 String      @default("free")
   subscriptionStatus   String?
-  stripeCustomerId     String?  @unique
-  stripeSubscriptionId String?  @unique
-  paypalSubscriptionId String?  @unique
-  createdAt            DateTime @default(now())
+  stripeCustomerId     String?     @unique
+  stripeSubscriptionId String?     @unique
+  paypalSubscriptionId String?     @unique
+  createdAt            DateTime    @default(now())
   gameSaves            GameSave[]
+  authTokens           AuthToken[]
+}
+
+model AuthToken {
+  id        Int      @id @default(autoincrement())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    Int
+  purpose   String
+  tokenHash String   @unique
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+
+  @@index([userId, purpose, createdAt])
 }
 
 model GameSave {

@@ -1,4 +1,9 @@
-import { buildSubscriptionUpdate, getTierForPayPalPlanId } from "./subscription.js";
+import {
+	buildSubscriptionUpdate,
+	getTierForPayPalPlanId,
+	normalizeTierKey,
+	parseProviderUserId,
+} from "./subscription.js";
 
 let cachedAccessToken = null;
 let cachedAccessTokenExpiresAt = 0;
@@ -53,7 +58,7 @@ export async function getPayPalAccessToken() {
 	return cachedAccessToken;
 }
 
-export async function paypalRequest(path, { method = "GET", body, headers } = {}) {
+export async function paypalRequest(path, { method = "GET", body, headers, signal } = {}) {
 	const accessToken = await getPayPalAccessToken();
 	const response = await fetch(`${getPayPalBaseUrl()}${path}`, {
 		method,
@@ -64,6 +69,7 @@ export async function paypalRequest(path, { method = "GET", body, headers } = {}
 			...(headers || {}),
 		},
 		body: body ? JSON.stringify(body) : undefined,
+		signal: signal || AbortSignal.timeout(10_000),
 	});
 
 	if (response.status === 204) {
@@ -102,19 +108,43 @@ export async function verifyPayPalWebhook(headers, event) {
 }
 
 export function getPayPalSubscriptionTier(subscription) {
-	const customId = String(subscription?.custom_id || "").trim().toLowerCase();
-	const customTier = customId.split(":")[1] || customId;
-	if (["great", "ultra", "master"].includes(customTier)) return customTier;
-
 	const planId = subscription?.plan_id;
 	return planId ? getTierForPayPalPlanId(planId) : null;
 }
 
-export function buildPayPalSubscriptionUpdate(subscription) {
+export function getPayPalSubscriptionBinding(subscription) {
+	const [rawUserId, rawTier, ...extra] = String(subscription?.custom_id || "").trim().split(":");
+	if (extra.length) return { userId: null, tierKey: null };
+	return {
+		userId: parseProviderUserId(rawUserId),
+		tierKey: normalizeTierKey(rawTier),
+	};
+}
+
+export function validatePayPalSubscriptionBinding({ subscription, expectedUserId, expectedTier }) {
+	const binding = getPayPalSubscriptionBinding(subscription);
+	const providerTier = getPayPalSubscriptionTier(subscription);
+	const normalizedExpectedTier = expectedTier ? normalizeTierKey(expectedTier) : null;
+
+	if (!binding.userId || binding.userId !== expectedUserId) {
+		return { ok: false, error: "PayPal subscription ownership could not be verified." };
+	}
+	if (!providerTier || !binding.tierKey || binding.tierKey !== providerTier) {
+		return { ok: false, error: "PayPal subscription tier could not be verified." };
+	}
+	if (normalizedExpectedTier && normalizedExpectedTier !== providerTier) {
+		return { ok: false, error: "PayPal subscription does not match the requested tier." };
+	}
+
+	return { ok: true, ownerId: expectedUserId, tierKey: providerTier };
+}
+
+export function buildPayPalSubscriptionUpdate(subscription, { clearStripe = false } = {}) {
 	return buildSubscriptionUpdate({
+		provider: "paypal",
 		tierKey: getPayPalSubscriptionTier(subscription),
 		status: subscription?.status || null,
 		paypalSubscriptionId: subscription?.id ? String(subscription.id) : undefined,
-		clearStripe: true,
+		clearStripe,
 	});
 }

@@ -27,6 +27,11 @@ function resolveApiBase() {
 const API_BASE = resolveApiBase();
 let loggedInUserId = null;
 
+function createIdempotencyKey() {
+	if (globalThis.crypto?.randomUUID) return globalThis.crypto.randomUUID();
+	return `ppgc-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+}
+
 /**
  * Called by the UI layer whenever the current user changes.
  * We only care about "some stable identifier" (id or email).
@@ -74,6 +79,46 @@ export async function login(email, password) {
 	return safeJson(res);
 }
 
+export async function resendVerificationEmail(email) {
+	const res = await fetch(`${API_BASE}/auth/resend-verification`, {
+		method: "POST",
+		headers: { "Content-Type": "application/json" },
+		credentials: "include",
+		body: JSON.stringify({ email }),
+	});
+	return safeJson(res);
+}
+
+export async function requestPasswordReset(email) {
+	const res = await fetch(`${API_BASE}/auth/forgot-password`, {
+		method: "POST",
+		headers: { "Content-Type": "application/json" },
+		credentials: "include",
+		body: JSON.stringify({ email }),
+	});
+	return safeJson(res);
+}
+
+export async function verifyEmail(token) {
+	const res = await fetch(`${API_BASE}/auth/verify-email`, {
+		method: "POST",
+		headers: { "Content-Type": "application/json" },
+		credentials: "include",
+		body: JSON.stringify({ token }),
+	});
+	return safeJson(res);
+}
+
+export async function resetPassword(token, password) {
+	const res = await fetch(`${API_BASE}/auth/reset-password`, {
+		method: "POST",
+		headers: { "Content-Type": "application/json" },
+		credentials: "include",
+		body: JSON.stringify({ token, password }),
+	});
+	return safeJson(res);
+}
+
 export async function getCurrentUser() {
 	try {
 		const res = await fetch(`${API_BASE}/auth/me`, {
@@ -109,7 +154,10 @@ export async function updateMe(patch) {
 export async function createStripeCheckoutSession(tier) {
 	const res = await fetch(`${API_BASE}/subscriptions/stripe/create-session`, {
 		method: "POST",
-		headers: { "Content-Type": "application/json" },
+		headers: {
+			"Content-Type": "application/json",
+			"Idempotency-Key": createIdempotencyKey(),
+		},
 		credentials: "include",
 		body: JSON.stringify({ tier }),
 	});
@@ -119,6 +167,7 @@ export async function createStripeCheckoutSession(tier) {
 export async function createStripePortalSession() {
 	const res = await fetch(`${API_BASE}/subscriptions/stripe/portal`, {
 		method: "POST",
+		headers: { "Idempotency-Key": createIdempotencyKey() },
 		credentials: "include",
 	});
 	return requireOkJson(res, "Failed to open Stripe billing portal.");
@@ -149,7 +198,10 @@ export async function verifyStripeCheckoutSession(sessionId, tier) {
 export async function createPayPalSubscription(tier) {
 	const res = await fetch(`${API_BASE}/subscriptions/paypal/create-subscription`, {
 		method: "POST",
-		headers: { "Content-Type": "application/json" },
+		headers: {
+			"Content-Type": "application/json",
+			"Idempotency-Key": createIdempotencyKey(),
+		},
 		credentials: "include",
 		body: JSON.stringify({ tier }),
 	});
@@ -169,6 +221,7 @@ export async function verifyPayPalSubscription(subscriptionId, tier) {
 export async function cancelPayPalSubscription() {
 	const res = await fetch(`${API_BASE}/subscriptions/paypal/cancel`, {
 		method: "POST",
+		headers: { "Idempotency-Key": createIdempotencyKey() },
 		credentials: "include",
 	});
 	return requireOkJson(res, "Failed to cancel PayPal subscription.");

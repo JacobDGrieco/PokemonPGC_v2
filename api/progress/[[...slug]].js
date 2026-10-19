@@ -26,7 +26,7 @@ async function handleProgressIndex(req, res) {
 }
 
 async function handleProgressIndexGet(req, res) {
-	const session = getSessionFromRequest(req);
+	const session = await getSessionFromRequest(req);
 
 	if (!session?.userId) {
 		return json(res, 401, { error: "Not authenticated." });
@@ -42,7 +42,7 @@ async function handleProgressIndexGet(req, res) {
 }
 
 async function handleProgressIndexPut(req, res) {
-	const session = getSessionFromRequest(req);
+	const session = await getSessionFromRequest(req);
 
 	if (!session?.userId) {
 		return json(res, 401, { error: "Not authenticated." });
@@ -76,7 +76,7 @@ async function handleProgressByGame(req, res) {
 }
 
 async function handleProgressByGameGet(req, res) {
-	const session = getSessionFromRequest(req);
+	const session = await getSessionFromRequest(req);
 	const parsedGameKey = validateGameKey(req.query?.gameKey);
 
 	if (!session?.userId) {
@@ -115,7 +115,7 @@ async function handleProgressByGameGet(req, res) {
 }
 
 async function handleProgressByGamePut(req, res) {
-	const session = getSessionFromRequest(req);
+	const session = await getSessionFromRequest(req);
 	const parsedGameKey = validateGameKey(req.query?.gameKey);
 
 	if (!session?.userId) {

@@ -7,6 +7,7 @@ import { PricingPage } from './pages/PricingPage.jsx';
 import { SubscriptionSuccessPage } from './pages/SubscriptionSuccessPage.jsx';
 import { PlaceholderPage } from './pages/PlaceholderPage.jsx';
 import { AccountRoutePage } from './pages/AccountRoutePage.jsx';
+import { AuthActionPage } from './pages/AuthActionPage.jsx';
 import { Analytics } from '@vercel/analytics/react';
 
 export default function App() {
@@ -38,6 +39,22 @@ export default function App() {
             </MarketingShell>
           }
         />
+		<Route
+			path="/auth/verify-email"
+			element={(
+				<MarketingShell>
+					<AuthActionPage action="verify-email" />
+				</MarketingShell>
+			)}
+		/>
+		<Route
+			path="/auth/reset-password"
+			element={(
+				<MarketingShell>
+					<AuthActionPage action="reset-password" />
+				</MarketingShell>
+			)}
+		/>
 
         {/* App shell — full sidebar + header */}
         <Route path="/checklists" element={<AppShell />} />

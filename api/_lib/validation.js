@@ -6,24 +6,33 @@ export function normalizeEmail(email) {
 	return String(email || "").trim().toLowerCase();
 }
 
-export function validateCredentials(body) {
-	const email = normalizeEmail(body?.email);
-	const password = String(body?.password || "");
-
-	if (!email || !password) {
-		return { ok: false, error: "Email and password required." };
-	}
-
-	const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-	if (!emailOk) {
+export function validateEmail(value) {
+	const email = normalizeEmail(value);
+	if (!email) return { ok: false, error: "Email required." };
+	if (email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
 		return { ok: false, error: "Please enter a valid email address." };
 	}
+	return { ok: true, email };
+}
 
+export function validatePassword(value) {
+	const password = String(value || "");
+	if (!password) return { ok: false, error: "Password required." };
 	if (password.length < 8 || password.length > 128) {
 		return { ok: false, error: "Password must be between 8 and 128 characters." };
 	}
+	return { ok: true, password };
+}
 
-	return { ok: true, email, password };
+export function validateCredentials(body) {
+	if (!body?.email || !body?.password) {
+		return { ok: false, error: "Email and password required." };
+	}
+	const emailResult = validateEmail(body.email);
+	if (!emailResult.ok) return emailResult;
+	const passwordResult = validatePassword(body.password);
+	if (!passwordResult.ok) return passwordResult;
+	return { ok: true, email: emailResult.email, password: passwordResult.password };
 }
 
 export function validateIcon(icon) {

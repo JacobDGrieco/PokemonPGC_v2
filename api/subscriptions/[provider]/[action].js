@@ -1,27 +1,34 @@
+import crypto from "crypto";
 import { prisma } from "../../_lib/db.js";
 import { getSessionFromRequest, readJsonBody, readRawBody } from "../../_lib/auth.js";
-import { json, methodNotAllowed } from "../../_lib/response.js";
+import { json, methodNotAllowed, tooManyRequests } from "../../_lib/response.js";
 import {
 	buildPayPalSubscriptionUpdate,
+	getPayPalSubscriptionBinding,
 	getPayPalSubscription,
 	paypalRequest,
+	validatePayPalSubscriptionBinding,
 	verifyPayPalWebhook,
 } from "../../_lib/paypal.js";
 import {
 	buildStripeSubscriptionUpdate,
 	getStripeClient,
 	getStripePortalConfigurationId,
+	getStripeSubscriptionOwnerId,
 	getStripeSubscriptionTier,
 	getStripeWebhookSecret,
+	validateStripeCheckoutBinding,
 } from "../../_lib/stripe.js";
 import {
 	getAppOrigin,
 	getPayPalPlanIdForTier,
 	getStripePriceIdForTier,
 	getUserPublicSelect,
+	isEntitledSubscriptionStatus,
 	normalizeTierKey,
 	serializeUser,
 } from "../../_lib/subscription.js";
+import { checkRateLimit, getRequestIp } from "../../_lib/rateLimit.js";
 
 export const config = {
 	api: {
@@ -33,6 +40,70 @@ const SUBSCRIPTION_ACTIONS = {
 	stripe: new Set(["create-session", "details", "portal", "verify", "webhook"]),
 	paypal: new Set(["cancel", "create-subscription", "details", "verify", "webhook"]),
 };
+
+const PAYPAL_SUBSCRIPTION_EVENT_TYPES = new Set([
+	"BILLING.SUBSCRIPTION.CREATED",
+	"BILLING.SUBSCRIPTION.ACTIVATED",
+	"BILLING.SUBSCRIPTION.UPDATED",
+	"BILLING.SUBSCRIPTION.EXPIRED",
+	"BILLING.SUBSCRIPTION.CANCELLED",
+	"BILLING.SUBSCRIPTION.SUSPENDED",
+	"BILLING.SUBSCRIPTION.PAYMENT.FAILED",
+	"PAYMENT.SALE.COMPLETED",
+	"PAYMENT.SALE.REFUNDED",
+	"PAYMENT.SALE.REVERSED",
+]);
+
+function getIdempotencyKey(req, scope) {
+	const supplied = String(req.headers?.["idempotency-key"] || "").trim();
+	const token = /^[A-Za-z0-9._:-]{16,48}$/.test(supplied) ? supplied : crypto.randomUUID();
+	// PayPal caps request IDs at 38 characters. Hashing preserves stable retry
+	// behavior for both providers without leaking account or tier identifiers.
+	const digest = crypto.createHash("sha256").update(`${scope}:${token}`).digest("hex").slice(0, 32);
+	return `ppgc-${digest}`;
+}
+
+function enforceBillingRateLimit(req, res, scope, userId, max = 12) {
+	const key = `${userId || "anonymous"}:${getRequestIp(req)}`;
+	const limit = checkRateLimit(`billing-${scope}`, key, { windowMs: 10 * 60 * 1000, max });
+	if (limit.ok) return true;
+	tooManyRequests(res, { error: "Too many billing requests. Please wait and try again." });
+	return false;
+}
+
+function publicProviderError(res, message) {
+	return json(res, 500, { error: message });
+}
+
+function hasConflictingEntitledProvider(user, incomingProvider) {
+	if (incomingProvider === "stripe" && user?.paypalSubscriptionId) {
+		return isEntitledSubscriptionStatus("paypal", user.subscriptionStatus);
+	}
+	if (incomingProvider === "paypal" && user?.stripeSubscriptionId) {
+		return isEntitledSubscriptionStatus("stripe", user.subscriptionStatus);
+	}
+	return false;
+}
+
+function hasConflictingEntitledSubscription(user, provider, incomingSubscriptionId) {
+	const currentId = provider === "stripe"
+		? user?.stripeSubscriptionId
+		: user?.paypalSubscriptionId;
+	return !!currentId
+		&& currentId !== incomingSubscriptionId
+		&& isEntitledSubscriptionStatus(provider, user?.subscriptionStatus);
+}
+
+function getBillingUserSelect() {
+	return {
+		id: true,
+		tier: true,
+		subscriptionStatus: true,
+		stripeCustomerId: true,
+		stripeSubscriptionId: true,
+		paypalSubscriptionId: true,
+	};
+}
 
 export default async function handler(req, res) {
 	const provider = String(req.query?.provider || "").trim().toLowerCase();
@@ -102,8 +173,9 @@ function normalizePayPalDetails(subscription, user) {
 async function handleStripeCreateSession(req, res) {
 	if (req.method !== "POST") return methodNotAllowed(res, ["POST"]);
 
-	const session = getSessionFromRequest(req);
+	const session = await getSessionFromRequest(req);
 	if (!session?.userId) return json(res, 401, { error: "Not authenticated." });
+	if (!enforceBillingRateLimit(req, res, "stripe-checkout", session.userId)) return;
 
 	try {
 		const body = await readJsonBody(req);
@@ -112,69 +184,80 @@ async function handleStripeCreateSession(req, res) {
 
 		const user = await prisma.user.findUnique({
 			where: { id: session.userId },
-			select: { id: true, email: true, stripeCustomerId: true },
+			select: { email: true, ...getBillingUserSelect() },
 		});
 		if (!user) return json(res, 404, { error: "User not found." });
+		if (hasConflictingEntitledProvider(user, "stripe")) {
+			return json(res, 409, { error: "Cancel the active PayPal subscription before starting Stripe billing." });
+		}
+		if (user.stripeSubscriptionId && isEntitledSubscriptionStatus("stripe", user.subscriptionStatus)) {
+			return json(res, 409, { error: "Use the billing portal to manage the active Stripe subscription." });
+		}
 
 		const stripe = getStripeClient();
 		const origin = getAppOrigin(req);
-		const checkoutSession = await stripe.checkout.sessions.create({
-			mode: "subscription",
-			success_url: `${origin}/subscription/success?provider=stripe&tier=${encodeURIComponent(tierKey)}&session_id={CHECKOUT_SESSION_ID}`,
-			cancel_url: `${origin}/pricing?tier=${encodeURIComponent(tierKey)}`,
-			customer: user.stripeCustomerId || undefined,
-			customer_email: user.stripeCustomerId ? undefined : user.email,
-			client_reference_id: String(user.id),
-			line_items: [{ price: getStripePriceIdForTier(tierKey), quantity: 1 }],
-			metadata: { userId: String(user.id), tier: tierKey },
-			subscription_data: { metadata: { userId: String(user.id), tier: tierKey } },
-			allow_promotion_codes: true,
-		});
+		const checkoutSession = await stripe.checkout.sessions.create(
+			{
+				mode: "subscription",
+				success_url: `${origin}/subscription/success?provider=stripe&tier=${encodeURIComponent(tierKey)}&session_id={CHECKOUT_SESSION_ID}`,
+				cancel_url: `${origin}/pricing?tier=${encodeURIComponent(tierKey)}`,
+				customer: user.stripeCustomerId || undefined,
+				customer_email: user.stripeCustomerId ? undefined : user.email,
+				client_reference_id: String(user.id),
+				line_items: [{ price: getStripePriceIdForTier(tierKey), quantity: 1 }],
+				metadata: { userId: String(user.id), tier: tierKey },
+				subscription_data: { metadata: { userId: String(user.id), tier: tierKey } },
+				allow_promotion_codes: true,
+			},
+			{ idempotencyKey: getIdempotencyKey(req, `stripe-checkout:${user.id}:${tierKey}`) },
+		);
 
 		return json(res, 200, { url: checkoutSession.url });
 	} catch (error) {
 		console.error("[subscriptions/stripe/create-session] error:", error);
-		return json(res, 500, { error: error.message || "Failed to create Stripe checkout session." });
+		return publicProviderError(res, "Failed to create Stripe checkout session.");
 	}
 }
 
 async function handleStripeVerify(req, res) {
 	if (req.method !== "POST") return methodNotAllowed(res, ["POST"]);
 
-	const session = getSessionFromRequest(req);
+	const session = await getSessionFromRequest(req);
 	if (!session?.userId) return json(res, 401, { error: "Not authenticated." });
+	if (!enforceBillingRateLimit(req, res, "stripe-verify", session.userId, 20)) return;
 
 	try {
 		const body = await readJsonBody(req);
-		const tierKey = normalizeTierKey(body?.tier);
+		const tierKey = body?.tier ? normalizeTierKey(body.tier) : null;
 		const checkoutSessionId = String(body?.sessionId || "").trim();
-		if (!tierKey || !checkoutSessionId) {
+		if (!checkoutSessionId || (body?.tier && !tierKey)) {
 			return json(res, 400, { error: "Missing Stripe checkout confirmation details." });
 		}
 
 		const stripe = getStripeClient();
 		const checkoutSession = await stripe.checkout.sessions.retrieve(checkoutSessionId, {
-			expand: ["subscription"],
+			expand: ["subscription", "subscription.items.data.price"],
 		});
 
 		if (checkoutSession?.mode !== "subscription" || !checkoutSession?.subscription) {
 			return json(res, 400, { error: "Stripe checkout session does not include a subscription." });
 		}
 
-		const sessionUserId = Number(checkoutSession.metadata?.userId || checkoutSession.client_reference_id || 0) || null;
-		if (sessionUserId && sessionUserId !== session.userId) {
-			return json(res, 403, { error: "This Stripe checkout session belongs to a different user." });
-		}
+		const subscription = typeof checkoutSession.subscription === "string"
+			? await stripe.subscriptions.retrieve(checkoutSession.subscription, { expand: ["items.data.price"] })
+			: checkoutSession.subscription;
+		const binding = validateStripeCheckoutBinding({
+			checkoutSession,
+			subscription,
+			expectedUserId: session.userId,
+			expectedTier: tierKey,
+		});
+		if (!binding.ok) return json(res, 403, { error: binding.error });
 
 		await syncStripeSubscriptionToUser({
 			userId: session.userId,
-			subscriptionId: String(
-				typeof checkoutSession.subscription === "string"
-					? checkoutSession.subscription
-					: checkoutSession.subscription.id
-			),
-			fallbackTier: tierKey,
-			customerId: checkoutSession.customer ? String(checkoutSession.customer) : null,
+			subscription,
+			requireMetadataOwner: true,
 		});
 
 		const user = await prisma.user.findUnique({
@@ -182,21 +265,27 @@ async function handleStripeVerify(req, res) {
 			select: getUserPublicSelect(),
 		});
 
-		return json(res, 200, {
-			ok: true,
-			user: serializeUser(user),
-		});
+		const isEntitled = isEntitledSubscriptionStatus("stripe", subscription.status);
+		if (!isEntitled) {
+			return json(res, 409, {
+				error: "Stripe has not activated this subscription yet.",
+				confirmed: false,
+				user: serializeUser(user),
+			});
+		}
+		return json(res, 200, { ok: true, confirmed: true, user: serializeUser(user) });
 	} catch (error) {
 		console.error("[subscriptions/stripe/verify] error:", error);
-		return json(res, 500, { error: error.message || "Failed to verify Stripe checkout session." });
+		return publicProviderError(res, "Failed to verify Stripe checkout session.");
 	}
 }
 
 async function handleStripePortal(req, res) {
 	if (req.method !== "POST") return methodNotAllowed(res, ["POST"]);
 
-	const session = getSessionFromRequest(req);
+	const session = await getSessionFromRequest(req);
 	if (!session?.userId) return json(res, 401, { error: "Not authenticated." });
+	if (!enforceBillingRateLimit(req, res, "stripe-portal", session.userId, 20)) return;
 
 	try {
 		const user = await prisma.user.findUnique({
@@ -208,23 +297,26 @@ async function handleStripePortal(req, res) {
 		}
 
 		const stripe = getStripeClient();
-		const portalSession = await stripe.billingPortal.sessions.create({
-			customer: user.stripeCustomerId,
-			return_url: `${getAppOrigin(req)}/pricing`,
-			...(getStripePortalConfigurationId() ? { configuration: getStripePortalConfigurationId() } : {}),
-		});
+		const portalSession = await stripe.billingPortal.sessions.create(
+			{
+				customer: user.stripeCustomerId,
+				return_url: `${getAppOrigin(req)}/pricing`,
+				...(getStripePortalConfigurationId() ? { configuration: getStripePortalConfigurationId() } : {}),
+			},
+			{ idempotencyKey: getIdempotencyKey(req, `stripe-portal:${session.userId}`) },
+		);
 
 		return json(res, 200, { url: portalSession.url });
 	} catch (error) {
 		console.error("[subscriptions/stripe/portal] error:", error);
-		return json(res, 500, { error: error.message || "Failed to create Stripe portal session." });
+		return publicProviderError(res, "Failed to create Stripe portal session.");
 	}
 }
 
 async function handleStripeDetails(req, res) {
 	if (req.method !== "GET") return methodNotAllowed(res, ["GET"]);
 
-	const session = getSessionFromRequest(req);
+	const session = await getSessionFromRequest(req);
 	if (!session?.userId) return json(res, 401, { error: "Not authenticated." });
 
 	try {
@@ -249,7 +341,7 @@ async function handleStripeDetails(req, res) {
 		return json(res, 200, { details: normalizeStripeDetails(subscription, user) });
 	} catch (error) {
 		console.error("[subscriptions/stripe/details] error:", error);
-		return json(res, 500, { error: error.message || "Failed to load Stripe subscription details." });
+		return publicProviderError(res, "Failed to load Stripe subscription details.");
 	}
 }
 
@@ -266,14 +358,16 @@ async function handleStripeWebhook(req, res) {
 
 		switch (event.type) {
 			case "checkout.session.completed": {
-				const session = event.data.object;
-				if (session.mode === "subscription" && session.subscription) {
-					const userId = Number(session.metadata?.userId || session.client_reference_id || 0) || null;
+				const checkoutSession = event.data.object;
+				if (checkoutSession.mode === "subscription" && checkoutSession.subscription) {
+					const userId = getStripeSubscriptionOwnerId({ metadata: checkoutSession.metadata });
+					const subscriptionId = typeof checkoutSession.subscription === "string"
+						? checkoutSession.subscription
+						: checkoutSession.subscription.id;
 					await syncStripeSubscriptionToUser({
 						userId,
-						subscriptionId: String(session.subscription),
-						fallbackTier: String(session.metadata?.tier || "").trim().toLowerCase() || null,
-						customerId: session.customer ? String(session.customer) : null,
+						subscriptionId: String(subscriptionId || ""),
+						requireMetadataOwner: true,
 					});
 				}
 				break;
@@ -281,15 +375,8 @@ async function handleStripeWebhook(req, res) {
 			case "customer.subscription.created":
 			case "customer.subscription.updated":
 			case "customer.subscription.deleted": {
-				const subscription = event.data.object;
-				await prisma.user.updateMany({
-					where: {
-						OR: [
-							{ stripeSubscriptionId: subscription.id },
-							{ stripeCustomerId: String(subscription.customer) },
-						],
-					},
-					data: buildStripeSubscriptionUpdate(subscription),
+				await syncStripeSubscriptionToUser({
+					subscriptionId: String(event.data.object.id),
 				});
 				break;
 			}
@@ -300,38 +387,79 @@ async function handleStripeWebhook(req, res) {
 		return json(res, 200, { received: true });
 	} catch (error) {
 		console.error("[subscriptions/stripe/webhook] error:", error);
-		return json(res, 400, { error: error.message || "Invalid Stripe webhook." });
+		return json(res, 400, { error: "Invalid Stripe webhook." });
 	}
 }
 
-async function syncStripeSubscriptionToUser({ userId, subscriptionId, fallbackTier, customerId }) {
+/**
+ * Reconciles current Stripe state. Existing bindings may predate metadata, but
+ * first-time/browser bindings must contain the server-written owner metadata.
+ */
+async function syncStripeSubscriptionToUser({
+	userId,
+	subscriptionId,
+	subscription: suppliedSubscription,
+	requireMetadataOwner = false,
+}) {
 	const stripe = getStripeClient();
-	const subscription = await stripe.subscriptions.retrieve(subscriptionId);
-	const update = buildStripeSubscriptionUpdate(subscription);
-	if (!getStripeSubscriptionTier(subscription) && fallbackTier) update.tier = fallbackTier;
-	if (customerId && !update.stripeCustomerId) update.stripeCustomerId = String(customerId);
-
-	if (userId) {
-		await prisma.user.update({ where: { id: userId }, data: update });
-		return;
+	const subscription = suppliedSubscription || await stripe.subscriptions.retrieve(subscriptionId, {
+		expand: ["items.data.price"],
+	});
+	const resolvedSubscriptionId = String(subscription?.id || subscriptionId || "").trim();
+	const metadataOwnerId = getStripeSubscriptionOwnerId(subscription);
+	const providerTier = getStripeSubscriptionTier(subscription);
+	if (!resolvedSubscriptionId || !providerTier) {
+		throw new Error("Stripe subscription evidence is incomplete.");
 	}
 
-	await prisma.user.updateMany({
-		where: {
-			OR: [
-				{ stripeSubscriptionId: subscriptionId },
-				...(customerId ? [{ stripeCustomerId: String(customerId) }] : []),
-			],
-		},
+	let targetUser = null;
+	if (userId) {
+		if (metadataOwnerId !== userId) {
+			throw new Error("Stripe subscription owner metadata does not match the target user.");
+		}
+		targetUser = await prisma.user.findUnique({
+			where: { id: userId },
+			select: getBillingUserSelect(),
+		});
+	} else {
+		targetUser = await prisma.user.findUnique({
+			where: { stripeSubscriptionId: resolvedSubscriptionId },
+			select: getBillingUserSelect(),
+		});
+		if (!targetUser && metadataOwnerId) {
+			targetUser = await prisma.user.findUnique({
+				where: { id: metadataOwnerId },
+				select: getBillingUserSelect(),
+			});
+		}
+	}
+
+	if (!targetUser) return { updated: false, reason: "user-not-found" };
+	if (requireMetadataOwner && metadataOwnerId !== targetUser.id) {
+		throw new Error("Stripe subscription ownership could not be verified.");
+	}
+	if (hasConflictingEntitledProvider(targetUser, "stripe")) {
+		return { updated: false, reason: "active-paypal-subscription" };
+	}
+	if (hasConflictingEntitledSubscription(targetUser, "stripe", resolvedSubscriptionId)) {
+		return { updated: false, reason: "different-active-stripe-subscription" };
+	}
+
+	const isEntitled = isEntitledSubscriptionStatus("stripe", subscription.status);
+	const update = buildStripeSubscriptionUpdate(subscription, { clearPayPal: isEntitled });
+	await prisma.user.update({
+		where: { id: targetUser.id },
 		data: update,
 	});
+	return { updated: true, userId: targetUser.id, tierKey: providerTier, isEntitled };
 }
 
 async function handlePayPalCreateSubscription(req, res) {
 	if (req.method !== "POST") return methodNotAllowed(res, ["POST"]);
 
-	const session = getSessionFromRequest(req);
+	const session = await getSessionFromRequest(req);
 	if (!session?.userId) return json(res, 401, { error: "Not authenticated." });
+	if (!enforceBillingRateLimit(req, res, "paypal-checkout", session.userId)) return;
 
 	try {
 		const body = await readJsonBody(req);
@@ -340,13 +468,22 @@ async function handlePayPalCreateSubscription(req, res) {
 
 		const user = await prisma.user.findUnique({
 			where: { id: session.userId },
-			select: { id: true, email: true },
+			select: { email: true, ...getBillingUserSelect() },
 		});
 		if (!user) return json(res, 404, { error: "User not found." });
+		if (hasConflictingEntitledProvider(user, "paypal")) {
+			return json(res, 409, { error: "Cancel the active Stripe subscription before starting PayPal billing." });
+		}
+		if (user.paypalSubscriptionId && isEntitledSubscriptionStatus("paypal", user.subscriptionStatus)) {
+			return json(res, 409, { error: "The account already has an active PayPal subscription." });
+		}
 
 		const origin = getAppOrigin(req);
 		const response = await paypalRequest("/v1/billing/subscriptions", {
 			method: "POST",
+			headers: {
+				"PayPal-Request-Id": getIdempotencyKey(req, `paypal-checkout:${user.id}:${tierKey}`),
+			},
 			body: {
 				plan_id: getPayPalPlanIdForTier(tierKey),
 				custom_id: `${user.id}:${tierKey}`,
@@ -369,15 +506,16 @@ async function handlePayPalCreateSubscription(req, res) {
 		});
 	} catch (error) {
 		console.error("[subscriptions/paypal/create-subscription] error:", error);
-		return json(res, 500, { error: error.message || "Failed to create PayPal subscription." });
+		return publicProviderError(res, "Failed to create PayPal subscription.");
 	}
 }
 
 async function handlePayPalVerify(req, res) {
 	if (req.method !== "POST") return methodNotAllowed(res, ["POST"]);
 
-	const session = getSessionFromRequest(req);
+	const session = await getSessionFromRequest(req);
 	if (!session?.userId) return json(res, 401, { error: "Not authenticated." });
+	if (!enforceBillingRateLimit(req, res, "paypal-verify", session.userId, 20)) return;
 
 	try {
 		const body = await readJsonBody(req);
@@ -388,13 +526,29 @@ async function handlePayPalVerify(req, res) {
 		}
 
 		const subscription = await getPayPalSubscription(subscriptionId);
-		if (subscription?.plan_id !== getPayPalPlanIdForTier(tierKey)) {
-			return json(res, 400, { error: "PayPal subscription plan does not match the selected tier." });
+		const binding = validatePayPalSubscriptionBinding({
+			subscription,
+			expectedUserId: session.userId,
+			expectedTier: tierKey,
+		});
+		if (!binding.ok) return json(res, 403, { error: binding.error });
+
+		const currentUser = await prisma.user.findUnique({
+			where: { id: session.userId },
+			select: getBillingUserSelect(),
+		});
+		if (!currentUser) return json(res, 404, { error: "User not found." });
+		if (hasConflictingEntitledProvider(currentUser, "paypal")) {
+			return json(res, 409, { error: "The account already has an active Stripe subscription." });
+		}
+		if (hasConflictingEntitledSubscription(currentUser, "paypal", subscriptionId)) {
+			return json(res, 409, { error: "The account already has a different active PayPal subscription." });
 		}
 
+		const isEntitled = isEntitledSubscriptionStatus("paypal", subscription.status);
 		await prisma.user.update({
 			where: { id: session.userId },
-			data: buildPayPalSubscriptionUpdate(subscription),
+			data: buildPayPalSubscriptionUpdate(subscription, { clearStripe: isEntitled }),
 		});
 
 		const user = await prisma.user.findUnique({
@@ -402,21 +556,30 @@ async function handlePayPalVerify(req, res) {
 			select: getUserPublicSelect(),
 		});
 
+		if (!isEntitled) {
+			return json(res, 409, {
+				error: "PayPal has not activated this subscription yet.",
+				confirmed: false,
+				subscriptionStatus: subscription?.status || null,
+				user: serializeUser(user),
+			});
+		}
 		return json(res, 200, {
 			ok: true,
+			confirmed: true,
 			subscriptionStatus: subscription?.status || null,
 			user: serializeUser(user),
 		});
 	} catch (error) {
 		console.error("[subscriptions/paypal/verify] error:", error);
-		return json(res, 500, { error: error.message || "Failed to verify PayPal subscription." });
+		return publicProviderError(res, "Failed to verify PayPal subscription.");
 	}
 }
 
 async function handlePayPalDetails(req, res) {
 	if (req.method !== "GET") return methodNotAllowed(res, ["GET"]);
 
-	const session = getSessionFromRequest(req);
+	const session = await getSessionFromRequest(req);
 	if (!session?.userId) return json(res, 401, { error: "Not authenticated." });
 
 	try {
@@ -436,7 +599,7 @@ async function handlePayPalDetails(req, res) {
 		return json(res, 200, { details: normalizePayPalDetails(subscription, user) });
 	} catch (error) {
 		console.error("[subscriptions/paypal/details] error:", error);
-		return json(res, 500, { error: error.message || "Failed to load PayPal subscription details." });
+		return publicProviderError(res, "Failed to load PayPal subscription details.");
 	}
 }
 
@@ -451,46 +614,69 @@ async function handlePayPalWebhook(req, res) {
 		const event = rawBody ? JSON.parse(rawBody) : {};
 		const isValid = await verifyPayPalWebhook(req.headers, event);
 		if (!isValid) return json(res, 400, { error: "Invalid PayPal webhook signature." });
+		if (!PAYPAL_SUBSCRIPTION_EVENT_TYPES.has(String(event?.event_type || ""))) {
+			return json(res, 200, { received: true, ignored: true });
+		}
 
-		const subscriptionId = String(event?.resource?.id || event?.resource?.billing_agreement_id || "").trim();
+		const isSaleEvent = String(event?.event_type || "").startsWith("PAYMENT.SALE.");
+		const subscriptionId = String(
+			isSaleEvent
+				? event?.resource?.billing_agreement_id
+				: event?.resource?.id || event?.resource?.billing_agreement_id || "",
+		).trim();
 		if (subscriptionId) await syncPayPalSubscription(subscriptionId);
 
 		return json(res, 200, { received: true });
 	} catch (error) {
 		console.error("[subscriptions/paypal/webhook] error:", error);
-		return json(res, 400, { error: error.message || "Invalid PayPal webhook." });
+		return json(res, 400, { error: "Invalid PayPal webhook." });
 	}
-}
-
-function parseUserIdFromCustomId(customId) {
-	const raw = String(customId || "").trim();
-	if (!raw) return null;
-	const [id] = raw.split(":");
-	const parsed = Number(id);
-	return Number.isInteger(parsed) && parsed > 0 ? parsed : null;
 }
 
 async function syncPayPalSubscription(subscriptionId) {
 	const subscription = await getPayPalSubscription(subscriptionId);
-	const userId = parseUserIdFromCustomId(subscription?.custom_id);
-	const data = buildPayPalSubscriptionUpdate(subscription);
+	const binding = getPayPalSubscriptionBinding(subscription);
+	const validation = validatePayPalSubscriptionBinding({
+		subscription,
+		expectedUserId: binding.userId,
+		expectedTier: binding.tierKey,
+	});
+	if (!validation.ok) {
+		throw new Error("PayPal subscription evidence is incomplete.");
+	}
+	const providerTier = validation.tierKey;
 
-	if (userId) {
-		await prisma.user.update({ where: { id: userId }, data });
-		return;
+	const existingBinding = await prisma.user.findUnique({
+		where: { paypalSubscriptionId: String(subscription.id) },
+		select: getBillingUserSelect(),
+	});
+	if (existingBinding && existingBinding.id !== binding.userId) {
+		throw new Error("PayPal subscription is already bound to another user.");
+	}
+	const targetUser = existingBinding || await prisma.user.findUnique({
+		where: { id: binding.userId },
+		select: getBillingUserSelect(),
+	});
+	if (!targetUser) return { updated: false, reason: "user-not-found" };
+	if (hasConflictingEntitledProvider(targetUser, "paypal")) {
+		return { updated: false, reason: "active-stripe-subscription" };
+	}
+	if (hasConflictingEntitledSubscription(targetUser, "paypal", String(subscription.id))) {
+		return { updated: false, reason: "different-active-paypal-subscription" };
 	}
 
-	await prisma.user.updateMany({
-		where: { paypalSubscriptionId: String(subscription.id) },
-		data,
-	});
+	const isEntitled = isEntitledSubscriptionStatus("paypal", subscription.status);
+	const data = buildPayPalSubscriptionUpdate(subscription, { clearStripe: isEntitled });
+	await prisma.user.update({ where: { id: targetUser.id }, data });
+	return { updated: true, userId: targetUser.id, tierKey: providerTier, isEntitled };
 }
 
 async function handlePayPalCancel(req, res) {
 	if (req.method !== "POST") return methodNotAllowed(res, ["POST"]);
 
-	const session = getSessionFromRequest(req);
+	const session = await getSessionFromRequest(req);
 	if (!session?.userId) return json(res, 401, { error: "Not authenticated." });
+	if (!enforceBillingRateLimit(req, res, "paypal-cancel", session.userId, 6)) return;
 
 	try {
 		const user = await prisma.user.findUnique({
@@ -503,6 +689,9 @@ async function handlePayPalCancel(req, res) {
 
 		await paypalRequest(`/v1/billing/subscriptions/${encodeURIComponent(user.paypalSubscriptionId)}/cancel`, {
 			method: "POST",
+			headers: {
+				"PayPal-Request-Id": getIdempotencyKey(req, `paypal-cancel:${session.userId}`),
+			},
 			body: { reason: "Canceled by customer from PokemonPGC pricing page." },
 		});
 
@@ -523,6 +712,6 @@ async function handlePayPalCancel(req, res) {
 		return json(res, 200, { ok: true, user: serializeUser(updatedUser) });
 	} catch (error) {
 		console.error("[subscriptions/paypal/cancel] error:", error);
-		return json(res, 500, { error: error.message || "Failed to cancel PayPal subscription." });
+		return publicProviderError(res, "Failed to cancel PayPal subscription.");
 	}
 }

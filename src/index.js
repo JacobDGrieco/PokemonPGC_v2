@@ -212,7 +212,6 @@ initHistory({ store, renderAll });
 
 let currentUser = null;
 let currentUserIcon = "default";
-let wiredOverlayEl = null;
 let authBootstrapPromise = null;
 
 function applyAccountButtonIcon(btn, icon) {
@@ -305,129 +304,34 @@ async function handleLogout() {
 }
 
 function closeAuthModal() {
-	const overlay = document.getElementById("ppgc-auth-overlay");
-	if (!overlay) return;
-	const form = document.getElementById("ppgc-auth-form");
-	const statusEl = document.getElementById("ppgc-auth-status");
-
-	overlay.hidden = true;
-	document.body.classList.remove("ppgc-auth-open");
-
-	if (form) form.reset();
-	if (statusEl) {
-		statusEl.textContent = "";
-		statusEl.classList.remove("error");
-	}
+	window.PPGC?.closeAuthDialog?.();
 }
 
-async function ensureAuthModalReady() {
-	await window.PPGC?.ensureModalMounted?.("auth");
-
-	const overlay = document.getElementById("ppgc-auth-overlay");
-	if (!overlay || wiredOverlayEl === overlay) return overlay;
-
-	const closeBtn = overlay.querySelector(".ppgc-auth-close");
-	if (closeBtn) {
-		closeBtn.addEventListener("click", () => closeAuthModal());
+/**
+ * Completes the legacy session handoff after React authenticates a user.
+ * Cloud saving stays paused until the initial server state has been loaded.
+ */
+async function completeAuthLogin(authenticatedUser) {
+	currentUser = authenticatedUser;
+	currentUserIcon = currentUser.icon || "default";
+	updateAccountButton();
+	api.setApiCurrentUser(currentUser);
+	window.PPGC = window.PPGC || {};
+	PPGC.currentUser = currentUser;
+	setCloudSyncEnabled(false);
+	try {
+		await loadAllGames();
+	} catch (error) {
+		console.debug("[auth] initial load failed (ignored):", error);
 	}
-
-	overlay.addEventListener("click", (e) => {
-		if (e.target === overlay) closeAuthModal();
-	});
-
-	wiredOverlayEl = overlay;
-	return overlay;
+	setCloudSyncEnabled(true);
+	startServerAutoBackup();
+	window.dispatchEvent(new CustomEvent("ppgc:auth:changed"));
 }
 
 async function openAuthModal(mode = "login") {
-	const overlay = await ensureAuthModalReady();
-	if (!overlay) return;
-
-	const form = document.getElementById("ppgc-auth-form");
-	const statusEl = document.getElementById("ppgc-auth-status");
-	const tabs = overlay.querySelectorAll(".ppgc-auth-tabs button");
-	const submitBtn = document.getElementById("ppgc-auth-submit");
-
-	let currentMode = mode; // "login" or "signup"
-
-	function setMode(nextMode) {
-		currentMode = nextMode;
-		tabs.forEach((btn) => {
-			btn.classList.toggle("active", btn.dataset.mode === currentMode);
-		});
-		if (submitBtn) {
-			submitBtn.textContent = currentMode === "login" ? "Log in" : "Sign up";
-		}
-		if (statusEl) {
-			statusEl.textContent = "";
-			statusEl.classList.remove("error");
-		}
-	}
-
-	setMode(mode);
-	overlay.hidden = false;
-	document.body.classList.add("ppgc-auth-open");
-
-	// Wire tabs
-	tabs.forEach((btn) => {
-		btn.onclick = () => setMode(btn.dataset.mode);
-	});
-
-	if (form) {
-		form.onsubmit = async (e) => {
-			e.preventDefault();
-			if (!statusEl) return;
-
-			statusEl.textContent =
-				currentMode === "login" ? "Logging in..." : "Signing up...";
-			statusEl.classList.remove("error");
-
-			const formData = new FormData(form);
-			const email = String(formData.get("email") || "").trim();
-			const password = String(formData.get("password") || "").trim();
-
-			try {
-				let res;
-				if (currentMode === "login") {
-					res = await api.login(email, password);
-				} else {
-					res = await api.signup(email, password);
-				}
-
-				if (res && res.error) {
-					statusEl.textContent = res.error;
-					statusEl.classList.add("error");
-					return;
-				}
-
-				// Temporary in-memory auth: res = { id, email }
-				if (res && res.email) {
-					currentUser = res;
-					currentUserIcon = currentUser.icon;
-					updateAccountButton();
-
-					// NEW: tell api.js that someone is logged in
-					api.setApiCurrentUser(currentUser);
-
-					window.PPGC = window.PPGC || {};
-					PPGC.currentUser = currentUser;
-					setCloudSyncEnabled(false);
-					try { await loadAllGames(); } catch (e) { console.debug('[auth] initial load failed (ignored):', e); }
-					setCloudSyncEnabled(true);
-
-					startServerAutoBackup();
-
-					statusEl.textContent = "Success!";
-					window.dispatchEvent(new CustomEvent('ppgc:auth:changed'));
-					closeAuthModal();
-				}
-			} catch (err) {
-				console.error(err);
-				statusEl.textContent = "Something went wrong. Try again.";
-				statusEl.classList.add("error");
-			}
-		};
-	}
+	await window.PPGC?.ensureModalMounted?.("auth");
+	window.PPGC?.openAuthDialog?.(mode);
 }
 
 function getAccountMenu() {
@@ -502,7 +406,6 @@ async function initAuthUI() {
 
 	document.addEventListener("keydown", (e) => {
 		if (e.key === "Escape") {
-			closeAuthModal();
 			closeAccountMenu();
 		}
 	});
@@ -658,6 +561,7 @@ window.addEventListener("ppgc:import:done", () => {
 window.PPGC = window.PPGC || {};
 PPGC.renderAll = renderAll;
 PPGC.openAuthModal = openAuthModal;
+PPGC.completeAuthLogin = completeAuthLogin;
 PPGC.navigateToTask = navigateToTask;
 PPGC.api = api;
 PPGC.setAccountButtonIcon = (icon) => {

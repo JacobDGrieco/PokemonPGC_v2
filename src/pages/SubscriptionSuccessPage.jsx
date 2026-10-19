@@ -5,11 +5,21 @@ import { getCurrentUser, verifyPayPalSubscription, verifyStripeCheckoutSession }
 
 function readSearch(locationSearch) {
 	const params = new URLSearchParams(locationSearch);
+	let pendingPayPal = null;
+	try {
+		pendingPayPal = JSON.parse(sessionStorage.getItem('ppgc:paypal:pending-subscription') || 'null');
+	} catch {
+		pendingPayPal = null;
+	}
+	const tier = (params.get('tier') || '').toLowerCase();
 	return {
 		provider: (params.get('provider') || '').toLowerCase(),
-		tier: (params.get('tier') || '').toLowerCase(),
+		tier,
 		sessionId: params.get('session_id') || '',
-		subscriptionId: params.get('subscription_id') || params.get('ba_token') || '',
+		subscriptionId: params.get('subscription_id')
+			|| params.get('ba_token')
+			|| (pendingPayPal?.tier === tier ? pendingPayPal.subscriptionId : '')
+			|| '',
 	};
 }
 
@@ -64,6 +74,13 @@ export function SubscriptionSuccessPage() {
 
 		async function run() {
 			try {
+				if (details.provider !== 'stripe' && details.provider !== 'paypal') {
+					throw new Error('The payment provider confirmation is missing or invalid.');
+				}
+				if (!details.tier) {
+					throw new Error('The subscription tier confirmation is missing.');
+				}
+
 				setMessage('Refreshing your account...');
 				const initialUser = await refreshFromServer();
 				if (cancelled) return;
@@ -82,6 +99,7 @@ export function SubscriptionSuccessPage() {
 					if (result?.user) {
 						await syncClientUser(result.user);
 					}
+					sessionStorage.removeItem('ppgc:paypal:pending-subscription');
 				}
 
 				if (details.provider === 'stripe') {
@@ -107,11 +125,12 @@ export function SubscriptionSuccessPage() {
 					await new Promise((resolve) => window.setTimeout(resolve, 1500));
 				}
 
+				if (!matchedTier) {
+					throw new Error('The provider has not confirmed an active subscription for this account yet.');
+				}
 				if (!cancelled) {
 					setPhase('done');
-					setMessage(matchedTier
-						? 'Your rank is active. Welcome to the league.'
-						: 'Payment went through. Your rank should update shortly once the webhook confirms.');
+					setMessage('Your rank is active. Welcome to the league.');
 				}
 			} catch (err) {
 				if (cancelled) return;

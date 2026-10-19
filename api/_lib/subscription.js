@@ -1,16 +1,9 @@
 import { json } from "./response.js";
+export { getAppOrigin, normalizeAppOrigin } from "./appOrigin.js";
 
 export const SUBSCRIPTION_TIERS = ["great", "ultra", "master"];
-export const ACTIVE_SUBSCRIPTION_STATUSES = new Set([
-	"ACTIVE",
-	"APPROVAL_PENDING",
-	"APPROVED",
-	"TRIALING",
-	"trialing",
-	"active",
-	"past_due",
-	"paused",
-]);
+export const STRIPE_ENTITLED_STATUSES = new Set(["active", "trialing"]);
+export const PAYPAL_ENTITLED_STATUSES = new Set(["ACTIVE"]);
 
 function envKey(prefix, tierKey) {
 	return `${prefix}_${String(tierKey || "").toUpperCase()}`;
@@ -19,6 +12,31 @@ function envKey(prefix, tierKey) {
 export function normalizeTierKey(value) {
 	const tierKey = String(value || "").trim().toLowerCase();
 	return SUBSCRIPTION_TIERS.includes(tierKey) ? tierKey : null;
+}
+
+/**
+ * Converts an external identifier to the positive integer shape used by User.id.
+ * Provider metadata is untrusted input until it passes this parser and is matched
+ * against either the authenticated user or an existing provider binding.
+ */
+export function parseProviderUserId(value) {
+	const normalized = String(value ?? "").trim();
+	if (!/^\d+$/.test(normalized)) return null;
+	const parsed = Number(normalized);
+	return Number.isSafeInteger(parsed) && parsed > 0 ? parsed : null;
+}
+
+export function isEntitledSubscriptionStatus(provider, status) {
+	const normalizedProvider = String(provider || "").trim().toLowerCase();
+	const normalizedStatus = String(status || "").trim();
+
+	if (normalizedProvider === "stripe") {
+		return STRIPE_ENTITLED_STATUSES.has(normalizedStatus.toLowerCase());
+	}
+	if (normalizedProvider === "paypal") {
+		return PAYPAL_ENTITLED_STATUSES.has(normalizedStatus.toUpperCase());
+	}
+	return false;
 }
 
 export function requireTierKey(value) {
@@ -63,34 +81,10 @@ export function getTierForPayPalPlanId(planId) {
 	return null;
 }
 
-export function getAppOrigin(req) {
-	const originHeader = String(req.headers?.origin || "").trim();
-	if (originHeader) return originHeader.replace(/\/+$/, "");
-
-	const forwardedProto = String(req.headers?.["x-forwarded-proto"] || "").trim();
-	const forwardedHost = String(req.headers?.["x-forwarded-host"] || "").trim();
-	if (forwardedProto && forwardedHost) {
-		return `${forwardedProto}://${forwardedHost}`.replace(/\/+$/, "");
-	}
-
-	const host = String(req.headers?.host || "").trim();
-	if (host) {
-		const proto = process.env.NODE_ENV === "production" ? "https" : "http";
-		return `${proto}://${host}`.replace(/\/+$/, "");
-	}
-
-	const apiBaseUrl = String(process.env.API_BASE_URL || "").trim();
-	if (apiBaseUrl) {
-		return apiBaseUrl.replace(/\/api\/?$/, "").replace(/\/+$/, "");
-	}
-
-	return "http://127.0.0.1:5173";
-}
-
 export function serializeUser(user) {
 	if (!user) return null;
 
-	const subscriptionProvider = user.stripeCustomerId
+	const subscriptionProvider = user.stripeSubscriptionId
 		? "stripe"
 		: user.paypalSubscriptionId
 			? "paypal"
@@ -116,11 +110,13 @@ export function getUserPublicSelect() {
 		tier: true,
 		subscriptionStatus: true,
 		stripeCustomerId: true,
+		stripeSubscriptionId: true,
 		paypalSubscriptionId: true,
 	};
 }
 
 export function buildSubscriptionUpdate({
+	provider,
 	tierKey,
 	status,
 	stripeCustomerId,
@@ -130,12 +126,12 @@ export function buildSubscriptionUpdate({
 	clearPayPal = false,
 }) {
 	const normalizedTier = normalizeTierKey(tierKey);
-	const upperStatus = status == null ? null : String(status).trim();
-	const active = ACTIVE_SUBSCRIPTION_STATUSES.has(upperStatus) || ACTIVE_SUBSCRIPTION_STATUSES.has(String(upperStatus || "").toLowerCase());
+	const normalizedStatus = status == null ? null : String(status).trim();
+	const isEntitled = isEntitledSubscriptionStatus(provider, normalizedStatus);
 
 	const data = {
-		tier: active && normalizedTier ? normalizedTier : "free",
-		subscriptionStatus: upperStatus || null,
+		tier: isEntitled && normalizedTier ? normalizedTier : "free",
+		subscriptionStatus: normalizedStatus || null,
 	};
 
 	if (clearStripe) {

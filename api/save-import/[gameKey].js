@@ -8,7 +8,7 @@ export default async function handler(req, res) {
     return methodNotAllowed(res, ['POST']);
   }
 
-  const session = getSessionFromRequest(req);
+  const session = await getSessionFromRequest(req);
   if (!session?.userId) {
     return json(res, 401, { error: 'Not authenticated.' });
   }

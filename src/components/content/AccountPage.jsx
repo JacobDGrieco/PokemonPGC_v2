@@ -480,6 +480,7 @@ function SubscriptionTab() {
 	}
 
 	async function handlePayPalCancel() {
+		if (!window.confirm('Cancel your PayPal subscription and remove paid access now?')) return;
 		setBusyAction('paypal:cancel');
 		setError('');
 		setNotice('');
