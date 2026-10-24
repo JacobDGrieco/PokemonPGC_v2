@@ -1,12 +1,19 @@
 import { save } from "../store.js";
 import { ensureSections } from "../tasks.js";
+import { assetPath } from "../utils/assetPath.js";
 
 /* ===================== Helpers ===================== */
 
 /**
  * Create a sidebar "directory item" row.
  */
-function makeDirItem(label, onClick, active = false, imgPath = null, opts = {}) {
+function makeDirItem(
+	label,
+	onClick,
+	active = false,
+	imgPath = null,
+	opts = {},
+) {
 	const li = document.createElement("div");
 	li.className = "dir-item" + (active ? " active" : "");
 
@@ -106,7 +113,7 @@ export function renderSidebar(store, els, renderAll) {
 	if (s.level === "tools" || s.level === "moninfo") {
 		if (elSidebarTitle) elSidebarTitle.textContent = "Info/Tools";
 
-		const activeTool = (s.toolsKey || "info");
+		const activeTool = s.toolsKey || "info";
 
 		elSidebarList.appendChild(
 			makeDirItem(
@@ -123,8 +130,8 @@ export function renderSidebar(store, els, renderAll) {
 						monInfoForm: null,
 					});
 				},
-				activeTool === "info"
-			)
+				activeTool === "info",
+			),
 		);
 
 		return;
@@ -143,7 +150,7 @@ export function renderSidebar(store, els, renderAll) {
 						gameKey: null,
 						sectionId: null,
 					});
-				})
+				}),
 			);
 		});
 
@@ -154,11 +161,12 @@ export function renderSidebar(store, els, renderAll) {
 
 	if (s.level === "game") {
 		const genLabel =
-			(window.DATA.tabs || []).find((x) => x.key === s.genKey)?.label || s.genKey;
+			(window.DATA.tabs || []).find((x) => x.key === s.genKey)?.label ||
+			s.genKey;
 		if (elSidebarTitle) elSidebarTitle.textContent = genLabel;
 
 		(window.DATA.games?.[s.genKey] || []).forEach((g) => {
-			const imgPath = _assetPath(`game-icons/${g.key}.png`);
+			const imgPath = assetPath(`game-icons/${g.key}.png`);
 
 			// Check started status from store
 			const isStarted =
@@ -175,7 +183,8 @@ export function renderSidebar(store, els, renderAll) {
 					g.label,
 					async () => {
 						try {
-							const ensure = window.PPGC?.ensureGenDataLoadedForGame;
+							const ensure =
+								window.PPGC?.ensureGenDataLoadedForGame;
 							if (ensure) await ensure(g.key);
 
 							const arr = ensureSections(g.key);
@@ -199,8 +208,8 @@ export function renderSidebar(store, els, renderAll) {
 					},
 					s.gameKey === g.key,
 					imgPath,
-					{ badgeHtml }
-				)
+					{ badgeHtml },
+				),
 			);
 		});
 
@@ -211,8 +220,9 @@ export function renderSidebar(store, els, renderAll) {
 
 	if (s.level === "section") {
 		const gameLabel =
-			(window.DATA.games?.[s.genKey] || []).find((x) => x.key === s.gameKey)?.label ||
-			s.gameKey;
+			(window.DATA.games?.[s.genKey] || []).find(
+				(x) => x.key === s.gameKey,
+			)?.label || s.gameKey;
 		if (elSidebarTitle) elSidebarTitle.textContent = gameLabel;
 
 		const arr = ensureSections(s.gameKey);
@@ -228,8 +238,8 @@ export function renderSidebar(store, els, renderAll) {
 							sectionId: sec.id,
 						});
 					},
-					s.sectionId === sec.id
-				)
+					s.sectionId === sec.id,
+				),
 			);
 		});
 

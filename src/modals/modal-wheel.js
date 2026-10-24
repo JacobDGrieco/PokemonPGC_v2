@@ -1,5 +1,12 @@
-import { computeChipScale, computeRingCounts, getOvalScale, getRadiusScale, layoutWheel } from "./modal-geometry.js";
+import {
+	computeChipScale,
+	computeRingCounts,
+	getOvalScale,
+	getRadiusScale,
+	layoutWheel,
+} from "./modal-geometry.js";
 import { resetScrollWithin } from "../utils/scrolling.js";
+import { showModalElement } from "./modal-state.js";
 
 export function resetFormsWheelLayout(formsWheel) {
 	if (!formsWheel) return;
@@ -44,7 +51,10 @@ export function applyFormsGridLayout(formsWheel, chips, opts = {}) {
 export function prepFormsModal(formsModal, formsWheel, opts = {}) {
 	if (!formsModal || !formsWheel) return null;
 	const { accent = null, clearWheelGridStyles = false } = opts;
-	if (formsModal.parentElement && formsModal.parentElement !== document.body) {
+	if (
+		formsModal.parentElement &&
+		formsModal.parentElement !== document.body
+	) {
 		document.body.appendChild(formsModal);
 	}
 	if (accent) {
@@ -57,17 +67,31 @@ export function prepFormsModal(formsModal, formsWheel, opts = {}) {
 	}
 	const dialog = formsModal.querySelector(".modal-dialog");
 	const header = dialog?.querySelector(".modal-hd");
-	if (dialog && header) dialog.style.setProperty("--hd", `${header.offsetHeight}px`);
+	if (dialog && header)
+		dialog.style.setProperty("--hd", `${header.offsetHeight}px`);
 	formsModal.removeAttribute("inert");
-	formsModal.setAttribute("aria-hidden", "false");
-	formsModal.classList.add("open");
+	showModalElement(formsModal);
 	resetScrollWithin(formsModal);
 	return dialog || null;
 }
 
-export function applyRadialLayout(kind, dialogEl, formsWheel, chips, opts = {}) {
-	const { preferWidth = false, sizeCap = 1000, shrinkMaxR = false, innerRadiusStrategy = null, flattenSyForRingsGte = 0, extraRingYOffset = null } = opts || {};
-	if (!dialogEl || !formsWheel || !Array.isArray(chips) || !chips.length) return;
+export function applyRadialLayout(
+	kind,
+	dialogEl,
+	formsWheel,
+	chips,
+	opts = {},
+) {
+	const {
+		preferWidth = false,
+		sizeCap = 1000,
+		shrinkMaxR = false,
+		innerRadiusStrategy = null,
+		flattenSyForRingsGte = 0,
+		extraRingYOffset = null,
+	} = opts || {};
+	if (!dialogEl || !formsWheel || !Array.isArray(chips) || !chips.length)
+		return;
 	const layout = layoutWheel(dialogEl, { preferWidth, sizeCap, shrinkMaxR });
 	const { center, maxR, minR, gap, R_BOOST, size } = layout;
 	formsWheel.style.setProperty("--size", `${size}px`);
@@ -89,16 +113,50 @@ export function applyRadialLayout(kind, dialogEl, formsWheel, chips, opts = {}) 
 		let ry = radius * sy * (N >= 5 ? 0.8 : 1);
 		let angles = [];
 		switch (N) {
-			case 2: angles = [Math.PI, 0]; break;
-			case 3: angles = [-Math.PI / 2, (5 * Math.PI) / 6, Math.PI / 6]; break;
-			case 4: angles = [-Math.PI / 2, 0, Math.PI / 2, Math.PI]; break;
-			case 5: angles = [-Math.PI / 2, -(3 * Math.PI) / 4, -Math.PI / 4, (3 * Math.PI) / 4, Math.PI / 4]; break;
-			case 6: angles = [-(3 * Math.PI) / 4, -Math.PI / 2, -Math.PI / 4, Math.PI / 4, Math.PI / 2, (3 * Math.PI) / 4]; break;
-			case 7: angles = [-(3 * Math.PI) / 4, -Math.PI / 2, -Math.PI / 4, 0, Math.PI / 4, Math.PI / 2, (3 * Math.PI) / 4]; break;
+			case 2:
+				angles = [Math.PI, 0];
+				break;
+			case 3:
+				angles = [-Math.PI / 2, (5 * Math.PI) / 6, Math.PI / 6];
+				break;
+			case 4:
+				angles = [-Math.PI / 2, 0, Math.PI / 2, Math.PI];
+				break;
+			case 5:
+				angles = [
+					-Math.PI / 2,
+					-(3 * Math.PI) / 4,
+					-Math.PI / 4,
+					(3 * Math.PI) / 4,
+					Math.PI / 4,
+				];
+				break;
+			case 6:
+				angles = [
+					-(3 * Math.PI) / 4,
+					-Math.PI / 2,
+					-Math.PI / 4,
+					Math.PI / 4,
+					Math.PI / 2,
+					(3 * Math.PI) / 4,
+				];
+				break;
+			case 7:
+				angles = [
+					-(3 * Math.PI) / 4,
+					-Math.PI / 2,
+					-Math.PI / 4,
+					0,
+					Math.PI / 4,
+					Math.PI / 2,
+					(3 * Math.PI) / 4,
+				];
+				break;
 		}
-		if (!angles.length) angles = chips.map((_, i) => (i / N) * Math.PI * 2 - Math.PI / 2);
+		if (!angles.length)
+			angles = chips.map((_, i) => (i / N) * Math.PI * 2 - Math.PI / 2);
 		chips.forEach((chip, i) => {
-			const a = angles[i] ?? ((i / N) * Math.PI * 2 - Math.PI / 2);
+			const a = angles[i] ?? (i / N) * Math.PI * 2 - Math.PI / 2;
 			chip.style.left = `${Math.round(center + rx * Math.cos(a))}px`;
 			chip.style.top = `${Math.round(center + ry * Math.sin(a))}px`;
 			chip.style.transform = "translate(-50%, -50%)";
@@ -122,7 +180,10 @@ export function applyRadialLayout(kind, dialogEl, formsWheel, chips, opts = {}) 
 		});
 	} else {
 		const outerR = baseRadius;
-		const baseInnerR = typeof innerRadiusStrategy === "function" ? innerRadiusStrategy(minR, outerR) : Math.max(40, outerR * 0.25);
+		const baseInnerR =
+			typeof innerRadiusStrategy === "function"
+				? innerRadiusStrategy(minR, outerR)
+				: Math.max(40, outerR * 0.25);
 		const step = numRings > 1 ? (outerR - baseInnerR) / (numRings - 1) : 0;
 		const baseRadii = ringCounts.map((_, idx) => baseInnerR + idx * step);
 		let idxGlobal = 0;
@@ -139,7 +200,11 @@ export function applyRadialLayout(kind, dialogEl, formsWheel, chips, opts = {}) 
 			r = Math.min(r, usableMaxR);
 			const rx = r * sx;
 			let ringSy = sy;
-			if (extraRingYOffset && typeof extraRingYOffset.from === "number" && ringIdx >= extraRingYOffset.from) {
+			if (
+				extraRingYOffset &&
+				typeof extraRingYOffset.from === "number" &&
+				ringIdx >= extraRingYOffset.from
+			) {
 				ringSy = sy * (extraRingYOffset.factor || 1);
 			}
 			const ry = r * ringSy;
@@ -147,7 +212,8 @@ export function applyRadialLayout(kind, dialogEl, formsWheel, chips, opts = {}) 
 				const chip = chips[idxGlobal];
 				if (!chip) continue;
 				const baseAngle = (j / count) * Math.PI * 2 + Math.PI;
-				const offset = ringIdx % 2 === 1 ? (Math.PI * 2) / (2 * count) : 0;
+				const offset =
+					ringIdx % 2 === 1 ? (Math.PI * 2) / (2 * count) : 0;
 				const a = baseAngle + offset;
 				chip.style.left = `${Math.round(center + rx * Math.cos(a))}px`;
 				chip.style.top = `${Math.round(center + ry * Math.sin(a))}px`;
@@ -158,13 +224,22 @@ export function applyRadialLayout(kind, dialogEl, formsWheel, chips, opts = {}) 
 	}
 }
 
-export function createWheelResizeHandler(kind, dialogEl, formsWheel, chips, opts = {}) {
-	if (!dialogEl || !formsWheel || !Array.isArray(chips) || !chips.length) return () => {};
+export function createWheelResizeHandler(
+	kind,
+	dialogEl,
+	formsWheel,
+	chips,
+	opts = {},
+) {
+	if (!dialogEl || !formsWheel || !Array.isArray(chips) || !chips.length)
+		return () => {};
 	const initialScale = computeChipScale(kind, chips.length, dialogEl);
 	formsWheel.style.setProperty("--form-img", `${initialScale.img}px`);
 	formsWheel.style.setProperty("--chip-font", `${initialScale.font}px`);
 	formsWheel.style.setProperty("--chip-pad", initialScale.pad);
-	requestAnimationFrame(() => applyRadialLayout(kind, dialogEl, formsWheel, chips, opts));
+	requestAnimationFrame(() =>
+		applyRadialLayout(kind, dialogEl, formsWheel, chips, opts),
+	);
 	return () => {
 		const scale = computeChipScale(kind, chips.length, dialogEl);
 		formsWheel.style.setProperty("--form-img", `${scale.img}px`);

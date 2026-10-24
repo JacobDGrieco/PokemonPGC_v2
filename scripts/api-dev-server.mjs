@@ -34,22 +34,33 @@ function enhanceResponse(res) {
 }
 
 function routeFor(pathname) {
-	if (pathname === "/api/health") return { handler: healthHandler, query: {} };
+	if (pathname === "/api/health")
+		return { handler: healthHandler, query: {} };
 	let match = pathname.match(/^\/api\/auth\/([^/]+)$/);
 	if (match) {
-		return { handler: authHandler, query: { action: decodeURIComponent(match[1]) } };
+		return {
+			handler: authHandler,
+			query: { action: decodeURIComponent(match[1]) },
+		};
 	}
 
-	if (pathname === "/api/progress") return { handler: progressHandler, query: {} };
+	if (pathname === "/api/progress")
+		return { handler: progressHandler, query: {} };
 
 	match = pathname.match(/^\/api\/progress\/([^/]+)$/);
 	if (match) {
-		return { handler: progressHandler, query: { slug: [decodeURIComponent(match[1])] } };
+		return {
+			handler: progressHandler,
+			query: { slug: [decodeURIComponent(match[1])] },
+		};
 	}
 
 	match = pathname.match(/^\/api\/save-import\/([^/]+)$/);
 	if (match) {
-		return { handler: saveImportHandler, query: { gameKey: decodeURIComponent(match[1]) } };
+		return {
+			handler: saveImportHandler,
+			query: { gameKey: decodeURIComponent(match[1]) },
+		};
 	}
 
 	match = pathname.match(/^\/api\/subscriptions\/([^/]+)\/([^/]+)$/);
@@ -67,7 +78,10 @@ function routeFor(pathname) {
 }
 
 const server = http.createServer(async (req, res) => {
-	const url = new URL(req.url, `http://${req.headers.host || `127.0.0.1:${PORT}`}`);
+	const url = new URL(
+		req.url,
+		`http://${req.headers.host || `127.0.0.1:${PORT}`}`,
+	);
 	const route = routeFor(url.pathname);
 
 	if (!route) {

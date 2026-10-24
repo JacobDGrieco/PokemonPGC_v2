@@ -1,6 +1,6 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { save, store } from '../../store.js';
-import { _ball, _keyItem } from '../../../data/helpers/images.js';
+import React, { useEffect, useMemo, useRef, useState } from "react";
+import { save, store } from "../../store.js";
+import { _ball, _keyItem } from "../../../data/helpers/images.js";
 import {
 	applySyncsFromTask,
 	attachTooltip,
@@ -20,23 +20,28 @@ import {
 	setDescendantsDone,
 	setEitherChoice,
 	setMultiOptionDone,
-} from '../../react-bridge/taskApi.js';
-import { BattleCard } from './BattleCard.jsx';
-import { useSubscription } from '../../hooks/useSubscription.js';
+} from "../../react-bridge/taskApi.js";
+import { BattleCard } from "./BattleCard.jsx";
+import { useSubscription } from "../../hooks/useSubscription.js";
 
-const TOOLTIP_MARKER_SRC = _ball(4, 'poke-ball');
+const TOOLTIP_MARKER_SRC = _ball(4, "poke-ball");
 
 function hasTooltip(task) {
-	return typeof task?.tooltip === 'string' ? task.tooltip.trim().length > 0 : !!task?.tooltip;
+	return typeof task?.tooltip === "string"
+		? task.tooltip.trim().length > 0
+		: !!task?.tooltip;
 }
 
 function shouldShowTierTooltip(task) {
 	const meta = getTierMetaForTask(task);
-	if (meta.mode === 'label') return false;
-	const nums = Array.isArray(meta.values) ? meta.values.filter((value) => Number.isFinite(value)) : [];
+	if (meta.mode === "label") return false;
+	const nums = Array.isArray(meta.values)
+		? meta.values.filter((value) => Number.isFinite(value))
+		: [];
 	if (nums.length < 2) return false;
 	const diffs = [];
-	for (let index = 1; index < nums.length; index += 1) diffs.push(nums[index] - nums[index - 1]);
+	for (let index = 1; index < nums.length; index += 1)
+		diffs.push(nums[index] - nums[index - 1]);
 	return !diffs.every((diff) => diff === 1);
 }
 
@@ -44,17 +49,19 @@ function getTaskTooltipHtml(task) {
 	const tiered = isTieredTask(task) && Array.isArray(task?.tiers);
 
 	if (tiered) {
-		const thresholds = shouldShowTierTooltip(task) ? formatTierTooltip(task) : '';
+		const thresholds = shouldShowTierTooltip(task)
+			? formatTierTooltip(task)
+			: "";
 		if (task.tooltip) {
 			return `
             <div>${task.tooltip}</div>
-            ${thresholds ? `<div style="margin-top:0.05rem;"></div><div>Tiers: ${thresholds}</div>` : ''}
+            ${thresholds ? `<div style="margin-top:0.05rem;"></div><div>Tiers: ${thresholds}</div>` : ""}
           `;
 		}
 
 		return `
             <div><strong>${task.text}</strong></div>
-            ${thresholds ? `<div style="margin-top:0.05rem;"></div><div>Tiers: ${thresholds}</div>` : ''}
+            ${thresholds ? `<div style="margin-top:0.05rem;"></div><div>Tiers: ${thresholds}</div>` : ""}
           `;
 	}
 
@@ -62,11 +69,18 @@ function getTaskTooltipHtml(task) {
 	return `<strong>${task.text}</strong>`;
 }
 
-function TaskLabel({ task, className = '', style, dataId, showTooltip = true }) {
+function TaskLabel({
+	task,
+	className = "",
+	style,
+	dataId,
+	showTooltip = true,
+}) {
 	const markerRef = useRef(null);
 
 	useEffect(() => {
-		if (!showTooltip || !hasTooltip(task) || !markerRef.current) return undefined;
+		if (!showTooltip || !hasTooltip(task) || !markerRef.current)
+			return undefined;
 		attachTooltip(markerRef.current, () => getTaskTooltipHtml(task));
 		return undefined;
 	}, [task, showTooltip]);
@@ -74,7 +88,15 @@ function TaskLabel({ task, className = '', style, dataId, showTooltip = true }) 
 	return (
 		<div className={className} style={style} data-id={dataId}>
 			<span className="task-item-text-label">{task.text}</span>
-			{showTooltip && hasTooltip(task) ? <img ref={markerRef} className="task-tooltip-marker" src={TOOLTIP_MARKER_SRC} alt="" aria-hidden="true" /> : null}
+			{showTooltip && hasTooltip(task) ? (
+				<img
+					ref={markerRef}
+					className="task-tooltip-marker"
+					src={TOOLTIP_MARKER_SRC}
+					alt=""
+					aria-hidden="true"
+				/>
+			) : null}
 		</div>
 	);
 }
@@ -86,7 +108,9 @@ function recomputeAncestorDone(task, index) {
 		const parent = entry.parent;
 		if (!parent) break;
 		const children = Array.isArray(parent.children) ? parent.children : [];
-		parent.done = children.length ? children.every((child) => !!child.done) : !!parent.done;
+		parent.done = children.length
+			? children.every((child) => !!child.done)
+			: !!parent.done;
 		current = parent;
 	}
 }
@@ -104,7 +128,9 @@ function syncEitherChoicesInTree(task, checked) {
 
 		if (isEitherTask(node)) {
 			const prevChoice = getEitherChoice(node.id);
-			const nextChoice = checked ? (prevChoice ?? getDefaultEitherChoice(node)) : null;
+			const nextChoice = checked
+				? (prevChoice ?? getDefaultEitherChoice(node))
+				: null;
 			const prevStr = prevChoice == null ? null : String(prevChoice);
 			const nextStr = nextChoice == null ? null : String(nextChoice);
 
@@ -116,7 +142,8 @@ function syncEitherChoicesInTree(task, checked) {
 			}
 		}
 
-		for (const child of Array.isArray(node.children) ? node.children : []) visit(child);
+		for (const child of Array.isArray(node.children) ? node.children : [])
+			visit(child);
 	};
 
 	visit(task);
@@ -128,8 +155,10 @@ function applyEitherChoiceSyncChanges(changes) {
 		const prevStr = prevChoice == null ? null : String(prevChoice);
 		const nextStr = nextChoice == null ? null : String(nextChoice);
 		if (prevStr === nextStr) continue;
-		if (prevChoice != null) applySyncsFromTask(eitherSyncView(task, prevChoice), false);
-		if (nextChoice != null) applySyncsFromTask(eitherSyncView(task, nextChoice), true);
+		if (prevChoice != null)
+			applySyncsFromTask(eitherSyncView(task, prevChoice), false);
+		if (nextChoice != null)
+			applySyncsFromTask(eitherSyncView(task, nextChoice), true);
 	}
 }
 
@@ -172,7 +201,11 @@ function TaskSpriteList({ task, sectionId }) {
 					src={src}
 					alt=""
 					onError={(event) => {
-						window.PPGC?.reportMissingAsset?.('taskImages', event.currentTarget.currentSrc || event.currentTarget.src);
+						window.PPGC?.reportMissingAsset?.(
+							"taskImages",
+							event.currentTarget.currentSrc ||
+								event.currentTarget.src,
+						);
 						setHidden((prev) => {
 							const next = new Set(prev);
 							next.add(index);
@@ -187,13 +220,19 @@ function TaskSpriteList({ task, sectionId }) {
 
 function getEitherOptions(task) {
 	const src = task?.eithers;
-	if (!src || typeof src !== 'object') return [];
+	if (!src || typeof src !== "object") return [];
 
-	const left = src.left && typeof src.left === 'object' ? ['left', src.left] : null;
-	const right = src.right && typeof src.right === 'object' ? ['right', src.right] : null;
+	const left =
+		src.left && typeof src.left === "object" ? ["left", src.left] : null;
+	const right =
+		src.right && typeof src.right === "object"
+			? ["right", src.right]
+			: null;
 	if (left || right) return [left, right].filter(Boolean);
 
-	return Object.entries(src).filter(([, value]) => value && typeof value === 'object');
+	return Object.entries(src).filter(
+		([, value]) => value && typeof value === "object",
+	);
 }
 
 function EitherChoices({ task, onChange }) {
@@ -205,24 +244,27 @@ function EitherChoices({ task, onChange }) {
 			{options.map(([key, option]) => {
 				const active = choice != null && String(choice) === String(key);
 				const disabled = choice != null && !active;
-				const rawText = typeof option?.text === 'string' ? option.text : '';
+				const rawText =
+					typeof option?.text === "string" ? option.text : "";
 				const text = rawText.trim();
 
 				return (
 					<span
 						key={`${task.id}-${key}`}
-						className={`task-either-choice${active ? ' either-active' : ''}${disabled ? ' either-disabled' : ''}`}
+						className={`task-either-choice${active ? " either-active" : ""}${disabled ? " either-disabled" : ""}`}
 						data-option-key={String(key)}
 						role="button"
 						tabIndex={0}
 						onClick={(event) => {
-							if (event.target.closest('input.task-either-cb')) return;
+							if (event.target.closest("input.task-either-cb"))
+								return;
 							event.preventDefault();
 							event.stopPropagation();
 							onChange(active ? null : key);
 						}}
 						onKeyDown={(event) => {
-							if (event.key !== 'Enter' && event.key !== ' ') return;
+							if (event.key !== "Enter" && event.key !== " ")
+								return;
 							event.preventDefault();
 							onChange(active ? null : key);
 						}}
@@ -236,7 +278,9 @@ function EitherChoices({ task, onChange }) {
 							onClick={(event) => event.stopPropagation()}
 							onChange={(event) => {
 								event.stopPropagation();
-								onChange(event.currentTarget.checked ? key : null);
+								onChange(
+									event.currentTarget.checked ? key : null,
+								);
 							}}
 						/>
 						{text ? <span className="small">{text}</span> : null}
@@ -255,13 +299,14 @@ function MultiChoices({ task, onToggle }) {
 			{options.map((option) => {
 				const key = String(option.id);
 				const active = !!option.done;
-				const rawText = typeof option?.text === 'string' ? option.text : '';
+				const rawText =
+					typeof option?.text === "string" ? option.text : "";
 				const text = rawText.trim();
 
 				return (
 					<label
 						key={`${task.id}-${key}`}
-						className={`task-multi-option${active ? ' is-checked' : ''}`}
+						className={`task-multi-option${active ? " is-checked" : ""}`}
 						data-option-key={key}
 						onClick={(event) => {
 							event.stopPropagation();
@@ -294,16 +339,24 @@ function clampTierValue(value, steps) {
 }
 
 function shouldRenderTierInput(meta) {
-	return meta.mode === 'number' && meta.steps > 10;
+	return meta.mode === "number" && meta.steps > 10;
 }
 
-function TieredValueDisplay({ task, className = '', onInputCommit, onChangeCommit }) {
+function TieredValueDisplay({
+	task,
+	className = "",
+	onInputCommit,
+	onChangeCommit,
+}) {
 	const meta = getTierMetaForTask(task);
 	const steps = meta.steps;
 	const value = clampTierValue(task.currentTier ?? 0, steps);
-	const display = meta.mode === 'label'
-		? (value === 0 ? '-' : meta.values[value - 1] || '-')
-		: `${value}/${steps}`;
+	const display =
+		meta.mode === "label"
+			? value === 0
+				? "-"
+				: meta.values[value - 1] || "-"
+			: `${value}/${steps}`;
 	const showInput = shouldRenderTierInput(meta);
 
 	return (
@@ -319,8 +372,12 @@ function TieredValueDisplay({ task, className = '', onInputCommit, onChangeCommi
 						className="tiered-input"
 						aria-label={`${task.text} progress`}
 						onClick={(event) => event.stopPropagation()}
-						onInput={(event) => onInputCommit(Number(event.currentTarget.value))}
-						onChange={(event) => onChangeCommit(Number(event.currentTarget.value))}
+						onInput={(event) =>
+							onInputCommit(Number(event.currentTarget.value))
+						}
+						onChange={(event) =>
+							onChangeCommit(Number(event.currentTarget.value))
+						}
 					/>
 					<span className="tiered-value-text">/{steps}</span>
 				</>
@@ -331,14 +388,25 @@ function TieredValueDisplay({ task, className = '', onInputCommit, onChangeCommi
 	);
 }
 
-function TieredControls({ task, onInputCommit, onChangeCommit, showValue = true }) {
+function TieredControls({
+	task,
+	onInputCommit,
+	onChangeCommit,
+	showValue = true,
+}) {
 	const meta = getTierMetaForTask(task);
 	const steps = meta.steps;
 	const value = clampTierValue(task.currentTier ?? 0, steps);
 
 	return (
 		<>
-			{showValue ? <TieredValueDisplay task={task} onInputCommit={onInputCommit} onChangeCommit={onChangeCommit} /> : null}
+			{showValue ? (
+				<TieredValueDisplay
+					task={task}
+					onInputCommit={onInputCommit}
+					onChangeCommit={onChangeCommit}
+				/>
+			) : null}
 			<div className="tiered">
 				<div className="tiered-line">
 					<input
@@ -348,8 +416,12 @@ function TieredControls({ task, onInputCommit, onChangeCommit, showValue = true 
 						step={1}
 						value={value}
 						className="tiered-slider"
-						onInput={(event) => onInputCommit(Number(event.currentTarget.value))}
-						onChange={(event) => onChangeCommit(Number(event.currentTarget.value))}
+						onInput={(event) =>
+							onInputCommit(Number(event.currentTarget.value))
+						}
+						onChange={(event) =>
+							onChangeCommit(Number(event.currentTarget.value))
+						}
 					/>
 				</div>
 			</div>
@@ -357,10 +429,20 @@ function TieredControls({ task, onInputCommit, onChangeCommit, showValue = true 
 	);
 }
 
-function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasChildren, forceInline, onMutate }) {
+function TaskItem({
+	task,
+	sectionId,
+	rootTasks,
+	index,
+	isInline,
+	isSubtask,
+	hasChildren,
+	forceInline,
+	onMutate,
+}) {
 	const { hasFeature } = useSubscription();
-	const canUseTooltips = hasFeature('tooltips');
-	const canUseBattleCards = hasFeature('battle-cards');
+	const canUseTooltips = hasFeature("tooltips");
+	const canUseBattleCards = hasFeature("battle-cards");
 	const tooltipRef = useTaskTooltip(task, sectionId, canUseTooltips);
 	const hasSlider = isTieredTask(task);
 	const isEither = isEitherTask(task);
@@ -368,7 +450,8 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 	const isStandardToggleTask = !isEither && !isMulti && !hasSlider;
 	const noCenterSlider = forceInline && hasSlider;
 	const hasBattleCard = Array.isArray(task.party) && task.party.length > 0;
-	const hasRematchCard = Array.isArray(task.rematchParty) && task.rematchParty.length > 0;
+	const hasRematchCard =
+		Array.isArray(task.rematchParty) && task.rematchParty.length > 0;
 	const [openCard, setOpenCard] = useState(null);
 	const battleBtnRef = useRef(null);
 	const rematchBtnRef = useRef(null);
@@ -382,7 +465,9 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 	};
 
 	const handleCheckboxChange = (checked) => {
-		const eitherChoiceChanges = hasChildren ? syncEitherChoicesInTree(task, checked) : [];
+		const eitherChoiceChanges = hasChildren
+			? syncEitherChoicesInTree(task, checked)
+			: [];
 
 		if (hasChildren) {
 			setDescendantsDone(task, checked);
@@ -442,24 +527,37 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 
 	const handleItemClick = (event) => {
 		if (!isStandardToggleTask) return;
-		if (event.target.closest('input, .tiered, .task-either, .task-either-choice, .task-multi, .task-multi-option, .battle-card-btn')) return;
+		if (
+			event.target.closest(
+				"input, .tiered, .task-either, .task-either-choice, .task-multi, .task-multi-option, .battle-card-btn",
+			)
+		)
+			return;
 		event.preventDefault();
 		handleCheckboxChange(!task.done);
 	};
 
 	const itemClassName = [
-		'task-item',
-		isSubtask ? 'is-subtask' : 'is-main',
-		!isSubtask ? (hasChildren ? 'has-children' : 'no-children') : '',
-		forceInline ? 'force-inline' : '',
-		hasSlider ? 'has-slider' : '',
-		isMulti ? 'task-multi-host' : '',
-		isStandardToggleTask ? 'task-toggleable' : '',
-	].filter(Boolean).join(' ');
+		"task-item",
+		isSubtask ? "is-subtask" : "is-main",
+		!isSubtask ? (hasChildren ? "has-children" : "no-children") : "",
+		forceInline ? "force-inline" : "",
+		hasSlider ? "has-slider" : "",
+		isMulti ? "task-multi-host" : "",
+		isStandardToggleTask ? "task-toggleable" : "",
+	]
+		.filter(Boolean)
+		.join(" ");
 
-	const bodyClassName = `task-item-body${(isEither || isMulti) ? ' task-either-wrap' : ''}`;
+	const bodyClassName = `task-item-body${isEither || isMulti ? " task-either-wrap" : ""}`;
 
-	const imageWrap = <div className={`task-item-img-wrap${(!isSubtask && (hasChildren || forceInline)) ? ' inline' : ''}`}><TaskSpriteList task={task} sectionId={sectionId} /></div>;
+	const imageWrap = (
+		<div
+			className={`task-item-img-wrap${!isSubtask && (hasChildren || forceInline) ? " inline" : ""}`}
+		>
+			<TaskSpriteList task={task} sectionId={sectionId} />
+		</div>
+	);
 
 	const tieredControls = hasSlider ? (
 		<TieredControls
@@ -472,14 +570,24 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 
 	const textBlock = isEither ? (
 		<>
-			<TaskLabel task={task} className="small task-item-text task-either-title" dataId={task.id} showTooltip={canUseTooltips} />
+			<TaskLabel
+				task={task}
+				className="small task-item-text task-either-title"
+				dataId={task.id}
+				showTooltip={canUseTooltips}
+			/>
 			<div className="task-either-center">
 				<EitherChoices task={task} onChange={handleEitherChange} />
 			</div>
 		</>
 	) : isMulti ? (
 		<>
-			<TaskLabel task={task} className="small task-item-text task-either-title" dataId={task.id} showTooltip={canUseTooltips} />
+			<TaskLabel
+				task={task}
+				className="small task-item-text task-either-title"
+				dataId={task.id}
+				showTooltip={canUseTooltips}
+			/>
 			<div className="task-either-center">
 				<MultiChoices task={task} onToggle={handleMultiToggle} />
 			</div>
@@ -490,20 +598,43 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 				type="checkbox"
 				checked={!!task.done}
 				onClick={(event) => event.stopPropagation()}
-				onChange={(event) => handleCheckboxChange(event.currentTarget.checked)}
+				onChange={(event) =>
+					handleCheckboxChange(event.currentTarget.checked)
+				}
 			/>
-			<TaskLabel task={task} className="small task-item-text" dataId={task.id} showTooltip={canUseTooltips} />
+			<TaskLabel
+				task={task}
+				className="small task-item-text"
+				dataId={task.id}
+				showTooltip={canUseTooltips}
+			/>
 		</>
 	);
 
 	if (isInline) {
 		return (
-			<div ref={tooltipRef} className={`${itemClassName}${noCenterSlider ? ' no-center-slider' : ''}`} data-task-id={task.id} data-task-done={task.done ? '1' : '0'} id={`task-${task.id}`} onClick={handleItemClick}>
+			<div
+				ref={tooltipRef}
+				className={`${itemClassName}${noCenterSlider ? " no-center-slider" : ""}`}
+				data-task-id={task.id}
+				data-task-done={task.done ? "1" : "0"}
+				id={`task-${task.id}`}
+				onClick={handleItemClick}
+			>
 				{isSubtask || (!hasChildren && !forceInline) ? imageWrap : null}
 				<label className={bodyClassName}>
 					{textBlock}
-					{noCenterSlider ? <TieredValueDisplay task={task} className="tiered-percent-inline" onInputCommit={handleTierInput} onChangeCommit={handleTierCommit} /> : null}
-					{!isSubtask && (hasChildren || forceInline) ? imageWrap : null}
+					{noCenterSlider ? (
+						<TieredValueDisplay
+							task={task}
+							className="tiered-percent-inline"
+							onInputCommit={handleTierInput}
+							onChangeCommit={handleTierCommit}
+						/>
+					) : null}
+					{!isSubtask && (hasChildren || forceInline)
+						? imageWrap
+						: null}
 				</label>
 				{tieredControls}
 				{canUseBattleCards && (hasBattleCard || hasRematchCard) && (
@@ -514,11 +645,18 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 									ref={battleBtnRef}
 									className="battle-card-btn"
 									title="View party"
-									onClick={(e) => { e.stopPropagation(); setOpenCard(openCard === 'party' ? null : 'party'); }}
+									onClick={(e) => {
+										e.stopPropagation();
+										setOpenCard(
+											openCard === "party"
+												? null
+												: "party",
+										);
+									}}
 								>
 									⚔
 								</button>
-								{openCard === 'party' && (
+								{openCard === "party" && (
 									<BattleCard
 										party={task.party}
 										reward={task.reward}
@@ -534,11 +672,24 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 									ref={rematchBtnRef}
 									className="battle-card-btn battle-card-btn-rematch"
 									title="View rematch party"
-									onClick={(e) => { e.stopPropagation(); setOpenCard(openCard === 'rematch' ? null : 'rematch'); }}
+									onClick={(e) => {
+										e.stopPropagation();
+										setOpenCard(
+											openCard === "rematch"
+												? null
+												: "rematch",
+										);
+									}}
 								>
-									<img src={_keyItem("brilliantdiamond", 'vs-seeker')} alt="VS Seeker" />
+									<img
+										src={_keyItem(
+											"brilliantdiamond",
+											"vs-seeker",
+										)}
+										alt="VS Seeker"
+									/>
 								</button>
-								{openCard === 'rematch' && (
+								{openCard === "rematch" && (
 									<BattleCard
 										party={task.rematchParty}
 										reward={task.rematchReward}
@@ -555,19 +706,48 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 	}
 
 	return (
-		<div ref={tooltipRef} className={`task-row${isMulti ? ' task-multi-host' : ''}${isStandardToggleTask ? ' task-toggleable' : ''}`} data-task-id={task.id} data-task-done={task.done ? '1' : '0'} id={`task-${task.id}`} onClick={handleItemClick}>
+		<div
+			ref={tooltipRef}
+			className={`task-row${isMulti ? " task-multi-host" : ""}${isStandardToggleTask ? " task-toggleable" : ""}`}
+			data-task-id={task.id}
+			data-task-done={task.done ? "1" : "0"}
+			id={`task-${task.id}`}
+			onClick={handleItemClick}
+		>
 			{isEither ? (
 				<>
-					<TaskLabel task={task} className="small task-item-text task-either-title" style={{ width: '100%', textAlign: 'center' }} showTooltip={canUseTooltips} />
-					<div className="task-either-center" style={{ width: '100%' }}>
-						<EitherChoices task={task} onChange={handleEitherChange} />
+					<TaskLabel
+						task={task}
+						className="small task-item-text task-either-title"
+						style={{ width: "100%", textAlign: "center" }}
+						showTooltip={canUseTooltips}
+					/>
+					<div
+						className="task-either-center"
+						style={{ width: "100%" }}
+					>
+						<EitherChoices
+							task={task}
+							onChange={handleEitherChange}
+						/>
 					</div>
 				</>
 			) : isMulti ? (
 				<>
-					<TaskLabel task={task} className="small task-item-text task-either-title" style={{ width: '100%', textAlign: 'center' }} showTooltip={canUseTooltips} />
-					<div className="task-either-center" style={{ width: '100%' }}>
-						<MultiChoices task={task} onToggle={handleMultiToggle} />
+					<TaskLabel
+						task={task}
+						className="small task-item-text task-either-title"
+						style={{ width: "100%", textAlign: "center" }}
+						showTooltip={canUseTooltips}
+					/>
+					<div
+						className="task-either-center"
+						style={{ width: "100%" }}
+					>
+						<MultiChoices
+							task={task}
+							onToggle={handleMultiToggle}
+						/>
 					</div>
 				</>
 			) : (
@@ -576,9 +756,16 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 						type="checkbox"
 						checked={!!task.done}
 						onClick={(event) => event.stopPropagation()}
-						onChange={(event) => handleCheckboxChange(event.currentTarget.checked)}
+						onChange={(event) =>
+							handleCheckboxChange(event.currentTarget.checked)
+						}
 					/>
-					<TaskLabel task={task} className="small task-item-text" style={{ flex: 1 }} showTooltip={canUseTooltips} />
+					<TaskLabel
+						task={task}
+						className="small task-item-text"
+						style={{ flex: 1 }}
+						showTooltip={canUseTooltips}
+					/>
 					{tieredControls}
 					{canUseBattleCards && (hasBattleCard || hasRematchCard) && (
 						<div className="battle-card-btns">
@@ -588,11 +775,18 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 										ref={battleBtnRef}
 										className="battle-card-btn"
 										title="View party"
-										onClick={(e) => { e.stopPropagation(); setOpenCard(openCard === 'party' ? null : 'party'); }}
+										onClick={(e) => {
+											e.stopPropagation();
+											setOpenCard(
+												openCard === "party"
+													? null
+													: "party",
+											);
+										}}
 									>
 										⚔
 									</button>
-									{openCard === 'party' && (
+									{openCard === "party" && (
 										<BattleCard
 											party={task.party}
 											reward={task.reward}
@@ -608,11 +802,21 @@ function TaskItem({ task, sectionId, rootTasks, index, isInline, isSubtask, hasC
 										ref={rematchBtnRef}
 										className="battle-card-btn battle-card-btn-rematch"
 										title="View rematch party"
-										onClick={(e) => { e.stopPropagation(); setOpenCard(openCard === 'rematch' ? null : 'rematch'); }}
+										onClick={(e) => {
+											e.stopPropagation();
+											setOpenCard(
+												openCard === "rematch"
+													? null
+													: "rematch",
+											);
+										}}
 									>
-										<img src={_keyItem(4, 'vs-recorder')} alt="VS Recorder" />
+										<img
+											src={_keyItem(4, "vs-recorder")}
+											alt="VS Recorder"
+										/>
 									</button>
-									{openCard === 'rematch' && (
+									{openCard === "rematch" && (
 										<BattleCard
 											party={task.rematchParty}
 											reward={task.rematchReward}
@@ -635,7 +839,8 @@ function TaskList({ tasks, sectionId, rootTasks, index, onMutate }) {
 		<div className="task-list">
 			{tasks.map((task) => {
 				const entry = index.get(task.id);
-				const hasChildren = Array.isArray(task.children) && task.children.length > 0;
+				const hasChildren =
+					Array.isArray(task.children) && task.children.length > 0;
 				return (
 					<TaskItem
 						key={task.id}
@@ -655,8 +860,15 @@ function TaskList({ tasks, sectionId, rootTasks, index, onMutate }) {
 	);
 }
 
-function TaskLayout({ tasks, sectionId, rowsSpec, rootTasks, index, onMutate }) {
-	const spacerId = window.DATA?.spacer?.id || 'spacer';
+function TaskLayout({
+	tasks,
+	sectionId,
+	rowsSpec,
+	rootTasks,
+	index,
+	onMutate,
+}) {
+	const spacerId = window.DATA?.spacer?.id || "spacer";
 	const used = new Set();
 	const { meta: layoutMeta, groups: layoutGroups } = useMemo(
 		() => buildTaskLayoutGroups(rowsSpec, index, spacerId),
@@ -665,12 +877,22 @@ function TaskLayout({ tasks, sectionId, rowsSpec, rootTasks, index, onMutate }) 
 
 	const renderRow = (row, rowIndex) => {
 		const rowMeta = layoutMeta[rowIndex] || null;
-		const rowClassName = ['task-row', 'task-inline', ...(rowMeta?.rowClasses || [])].join(' ');
+		const rowClassName = [
+			"task-row",
+			"task-inline",
+			...(rowMeta?.rowClasses || []),
+		].join(" ");
 		return (
 			<div key={`${sectionId}-row-${rowIndex}`} className={rowClassName}>
 				{row.map((id, itemIndex) => {
 					if (id === spacerId) {
-						return <div key={`${sectionId}-spacer-${rowIndex}-${itemIndex}`} className="task-spacer" style={{ height: 12 }} />;
+						return (
+							<div
+								key={`${sectionId}-spacer-${rowIndex}-${itemIndex}`}
+								className="task-spacer"
+								style={{ height: 12 }}
+							/>
+						);
 					}
 
 					const entry = index.get(id);
@@ -678,8 +900,11 @@ function TaskLayout({ tasks, sectionId, rowsSpec, rootTasks, index, onMutate }) 
 					used.add(id);
 					const task = entry.task;
 					const isSubtask = !!entry.parent;
-					const hasChildren = Array.isArray(task.children) && task.children.length > 0;
-					const forceInline = !isSubtask && !hasChildren && task.noCenter === true;
+					const hasChildren =
+						Array.isArray(task.children) &&
+						task.children.length > 0;
+					const forceInline =
+						!isSubtask && !hasChildren && task.noCenter === true;
 
 					return (
 						<TaskItem
@@ -701,10 +926,15 @@ function TaskLayout({ tasks, sectionId, rowsSpec, rootTasks, index, onMutate }) 
 	};
 
 	const rows = layoutGroups.map((group, groupIndex) => {
-		if (group.type === 'lineage') {
+		if (group.type === "lineage") {
 			return (
-				<div key={`${sectionId}-group-${groupIndex}`} className="task-group task-group-lineage">
-					{group.rowIndexes.map((rowIndex) => renderRow(rowsSpec[rowIndex], rowIndex))}
+				<div
+					key={`${sectionId}-group-${groupIndex}`}
+					className="task-group task-group-lineage"
+				>
+					{group.rowIndexes.map((rowIndex) =>
+						renderRow(rowsSpec[rowIndex], rowIndex),
+					)}
 				</div>
 			);
 		}
@@ -720,8 +950,19 @@ function TaskLayout({ tasks, sectionId, rowsSpec, rootTasks, index, onMutate }) 
 			{rows}
 			{leftovers.length ? (
 				<>
-					<div className="small" style={{ opacity: '.7', margin: '6px 2px' }}>More:</div>
-					<TaskList tasks={leftovers} sectionId={sectionId} rootTasks={rootTasks} index={index} onMutate={onMutate} />
+					<div
+						className="small"
+						style={{ opacity: ".7", margin: "6px 2px" }}
+					>
+						More:
+					</div>
+					<TaskList
+						tasks={leftovers}
+						sectionId={sectionId}
+						rootTasks={rootTasks}
+						index={index}
+						onMutate={onMutate}
+					/>
 				</>
 			) : null}
 		</div>
@@ -733,7 +974,10 @@ export function TaskTree({ sectionId, refreshKey = 0, onMutate }) {
 	const tasks = store.tasksStore.get(sectionId) || [];
 	const layoutRows = window.DATA?.layout?.taskRows?.[sectionId] || null;
 
-	const index = useMemo(() => buildTaskIndex(tasks), [sectionId, refreshKey, localVersion, tasks]);
+	const index = useMemo(
+		() => buildTaskIndex(tasks),
+		[sectionId, refreshKey, localVersion, tasks],
+	);
 
 	const handleMutate = () => {
 		setLocalVersion((value) => value + 1);
@@ -743,14 +987,27 @@ export function TaskTree({ sectionId, refreshKey = 0, onMutate }) {
 	if (Array.isArray(layoutRows) && layoutRows.length) {
 		return (
 			<div className="section-task-mount">
-				<TaskLayout tasks={tasks} sectionId={sectionId} rowsSpec={layoutRows} rootTasks={tasks} index={index} onMutate={handleMutate} />
+				<TaskLayout
+					tasks={tasks}
+					sectionId={sectionId}
+					rowsSpec={layoutRows}
+					rootTasks={tasks}
+					index={index}
+					onMutate={handleMutate}
+				/>
 			</div>
 		);
 	}
 
 	return (
 		<div className="section-task-mount">
-			<TaskList tasks={tasks} sectionId={sectionId} rootTasks={tasks} index={index} onMutate={handleMutate} />
+			<TaskList
+				tasks={tasks}
+				sectionId={sectionId}
+				rootTasks={tasks}
+				index={index}
+				onMutate={handleMutate}
+			/>
 		</div>
 	);
 }

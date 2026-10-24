@@ -1,8 +1,8 @@
 export function createModelViewerRoot({ isSolo = false } = {}) {
-  const root = document.createElement("div");
-  root.className = "ppgc-modelviewer";
-  if (isSolo) root.classList.add("is-solo");
-  root.innerHTML = `
+	const root = document.createElement("div");
+	root.className = "ppgc-modelviewer";
+	if (isSolo) root.classList.add("is-solo");
+	root.innerHTML = `
   <div class="ppgc-modelviewer__body">
     <div class="ppgc-modelviewer__canvaswrap"></div>
     <div class="ppgc-modelviewer__status">Loading…</div>
@@ -99,34 +99,40 @@ export function createModelViewerRoot({ isSolo = false } = {}) {
   </div>
 </div>
   </div>`;
-  return root;
+	return root;
 }
 
 export function getModelViewerElements(root) {
-  return {
-    dropBtns: Array.from(root.querySelectorAll(".ppgc-modelviewer__dropbtn")),
-    dropPanels: Array.from(root.querySelectorAll(".ppgc-modelviewer__drop")),
-    canvasWrap: root.querySelector(".ppgc-modelviewer__canvaswrap"),
-    statusEl: root.querySelector(".ppgc-modelviewer__status"),
-    selectEl: root.querySelector("select"),
-    playToggleBtn: root.querySelector('[data-act="playtoggle"]'),
-    poseBtn: root.querySelector('[data-act="pose"]'),
-    speedEl: root.querySelector('[data-act="animspeed"]'),
-    gridBtn: root.querySelector('[data-act="grid"]'),
-    wireBtn: root.querySelector('[data-act="wireframe"]'),
-    bonesBtn: root.querySelector('[data-act="skeleton"]'),
-    meshListEl: root.querySelector("[data-mesh-list]"),
-    meshesToggleAllBtn: root.querySelector('[data-act="meshes-toggle-all"]'),
-    meshOpacityEl: root.querySelector('[data-act="mesh-overlay-opacity"]'),
-    meshOpacityVal: root.querySelector('[data-mesh-opacity-val]'),
-    matListEl: root.querySelector("[data-mat-list]"),
-    matsToggleAllBtn: root.querySelector('[data-act="mats-toggle-all"]'),
-    matOpacityEl: root.querySelector('[data-act="mat-overlay-opacity"]'),
-    matOpacityVal: root.querySelector('[data-mat-opacity-val]'),
-    resetBtn: root.querySelector('[data-act="reset"]'),
-    autoBtn: root.querySelector('[data-act="autorotate"]'),
-    screenshotBtn: root.querySelector('[data-act="screenshot"]'),
-    recordBtn: root.querySelector('[data-act="record"]'),
-    webmBtn: root.querySelector('[data-act="webm"]'),
-  };
+	return {
+		dropBtns: Array.from(
+			root.querySelectorAll(".ppgc-modelviewer__dropbtn"),
+		),
+		dropPanels: Array.from(
+			root.querySelectorAll(".ppgc-modelviewer__drop"),
+		),
+		canvasWrap: root.querySelector(".ppgc-modelviewer__canvaswrap"),
+		statusEl: root.querySelector(".ppgc-modelviewer__status"),
+		selectEl: root.querySelector("select"),
+		playToggleBtn: root.querySelector('[data-act="playtoggle"]'),
+		poseBtn: root.querySelector('[data-act="pose"]'),
+		speedEl: root.querySelector('[data-act="animspeed"]'),
+		gridBtn: root.querySelector('[data-act="grid"]'),
+		wireBtn: root.querySelector('[data-act="wireframe"]'),
+		bonesBtn: root.querySelector('[data-act="skeleton"]'),
+		meshListEl: root.querySelector("[data-mesh-list]"),
+		meshesToggleAllBtn: root.querySelector(
+			'[data-act="meshes-toggle-all"]',
+		),
+		meshOpacityEl: root.querySelector('[data-act="mesh-overlay-opacity"]'),
+		meshOpacityVal: root.querySelector("[data-mesh-opacity-val]"),
+		matListEl: root.querySelector("[data-mat-list]"),
+		matsToggleAllBtn: root.querySelector('[data-act="mats-toggle-all"]'),
+		matOpacityEl: root.querySelector('[data-act="mat-overlay-opacity"]'),
+		matOpacityVal: root.querySelector("[data-mat-opacity-val]"),
+		resetBtn: root.querySelector('[data-act="reset"]'),
+		autoBtn: root.querySelector('[data-act="autorotate"]'),
+		screenshotBtn: root.querySelector('[data-act="screenshot"]'),
+		recordBtn: root.querySelector('[data-act="record"]'),
+		webmBtn: root.querySelector('[data-act="webm"]'),
+	};
 }

@@ -1,3 +1,9 @@
+/**
+ * Server-only signed-cookie session and request-body helpers.
+ *
+ * Sessions are HMAC-signed custom payloads, then checked against the user's
+ * database `sessionVersion` so password reset can revoke every older cookie.
+ */
 import crypto from "crypto";
 import { prisma } from "./db.js";
 
@@ -13,9 +19,7 @@ function base64urlEncode(input) {
 }
 
 function base64urlDecode(input) {
-	const normalized = input
-		.replace(/-/g, "+")
-		.replace(/_/g, "/");
+	const normalized = input.replace(/-/g, "+").replace(/_/g, "/");
 	const pad = normalized.length % 4;
 	const padded = pad ? normalized + "=".repeat(4 - pad) : normalized;
 	return Buffer.from(padded, "base64").toString("utf8");
@@ -65,7 +69,9 @@ export function createSessionToken(user) {
 	const payload = {
 		userId: user.id,
 		email: user.email,
-		sessionVersion: Number.isInteger(user.sessionVersion) ? user.sessionVersion : 0,
+		sessionVersion: Number.isInteger(user.sessionVersion)
+			? user.sessionVersion
+			: 0,
 		iat: Date.now(),
 		exp: Date.now() + SESSION_TTL_MS,
 	};
@@ -150,10 +156,13 @@ export async function getSessionFromRequest(req) {
 		select: { sessionVersion: true },
 	});
 	if (!user) return null;
-	const cookieVersion = Number.isInteger(session.sessionVersion) ? session.sessionVersion : 0;
+	const cookieVersion = Number.isInteger(session.sessionVersion)
+		? session.sessionVersion
+		: 0;
 	return user.sessionVersion === cookieVersion ? session : null;
 }
 
+/** Reads a parsed or streamed JSON body, returning an empty object on invalid JSON. */
 export async function readJsonBody(req) {
 	if (req.body && typeof req.body === "object") {
 		return req.body;

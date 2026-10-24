@@ -13,7 +13,11 @@ export function buildSeedTaskRegistry() {
 
 				// Store section + parent chain (parent chain is optional but useful later)
 				if (!reg.has(id)) {
-					reg.set(id, { sectionId, parentIds: parentStack.slice(), type: t.type || null });
+					reg.set(id, {
+						sectionId,
+						parentIds: parentStack.slice(),
+						type: t.type || null,
+					});
 				}
 
 				if (Array.isArray(t.children) && t.children.length) {

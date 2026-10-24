@@ -33,7 +33,9 @@ function parseRedSave(buf) {
 	if (firstNonZero < 0) firstNonZero = 0;
 
 	const previewOffset = Math.max(0, firstNonZero - 16);
-	const hexPreview = buf.subarray(previewOffset, previewOffset + 32).toString("hex");
+	const hexPreview = buf
+		.subarray(previewOffset, previewOffset + 32)
+		.toString("hex");
 	const tasks = {};
 
 	for (const rule of RED_SPEC.flags) {

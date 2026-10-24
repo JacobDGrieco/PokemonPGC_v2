@@ -1,53 +1,59 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState } from "react";
 import {
 	cancelPayPalSubscription,
 	createPayPalSubscription,
 	createStripeCheckoutSession,
 	createStripePortalSession,
-} from '../../api.js';
-import { TIERS, FEATURE_STATUS, FEATURE_LABELS, TIER_ORDER } from '../config/tiers.js';
-import { useSubscription } from '../hooks/useSubscription.js';
+} from "../../api.js";
+import {
+	TIERS,
+	FEATURE_STATUS,
+	FEATURE_LABELS,
+	TIER_ORDER,
+} from "../config/tiers.js";
+import { useSubscription } from "../hooks/useSubscription.js";
 import { FaStripeS, FaPaypal } from "react-icons/fa";
+import "../../styles/pricing.css";
 
-const TIER_KEYS = ['free', 'great', 'ultra', 'master'];
+const TIER_KEYS = ["free", "great", "ultra", "master"];
 
 const TIER_TAGLINES = {
-	free: 'Start here',
-	great: 'Jump in',
-	ultra: 'Go deep',
-	master: 'Full access',
+	free: "Start here",
+	great: "Jump in",
+	ultra: "Go deep",
+	master: "Full access",
 };
 
 const ALL_FEATURES = [
-	'checklists',
-	'tooltips',
-	'battle-cards',
-	'pokemon-info',
-	'guides',
-	'tools',
-	'global-stats',
-	'model-viewer',
-	'save-importing',
+	"checklists",
+	"tooltips",
+	"battle-cards",
+	"pokemon-info",
+	"guides",
+	"tools",
+	"global-stats",
+	"model-viewer",
+	"save-importing",
 ];
 
 const STATUS_DISPLAY = {
-	done: { label: 'Done', className: 'status-done' },
-	wip: { label: 'WIP', className: 'status-wip' },
-	planned: { label: 'Planned', className: 'status-planned' },
+	done: { label: "Done", className: "status-done" },
+	wip: { label: "WIP", className: "status-wip" },
+	planned: { label: "Planned", className: "status-planned" },
 };
 
 function getProviderMeta(user) {
-	if (user?.subscriptionProvider === 'stripe') {
+	if (user?.subscriptionProvider === "stripe") {
 		return {
-			label: 'Stripe',
+			label: "Stripe",
 			canManage: true,
 			canCancel: false,
 		};
 	}
 
-	if (user?.subscriptionProvider === 'paypal') {
+	if (user?.subscriptionProvider === "paypal") {
 		return {
-			label: 'PayPal',
+			label: "PayPal",
 			canManage: false,
 			canCancel: true,
 		};
@@ -62,38 +68,38 @@ function getProviderMeta(user) {
 
 export function PricingPage() {
 	const { tierKey, user } = useSubscription();
-	const [busyAction, setBusyAction] = useState('');
-	const [error, setError] = useState('');
-	const [notice, setNotice] = useState('');
+	const [busyAction, setBusyAction] = useState("");
+	const [error, setError] = useState("");
+	const [notice, setNotice] = useState("");
 
 	const providerMeta = useMemo(() => getProviderMeta(user), [user]);
-	const hasPaidPlan = tierKey !== 'free';
+	const hasPaidPlan = tierKey !== "free";
 	const tierRank = TIER_ORDER.indexOf(tierKey);
 
 	async function runAction(actionKey, fn) {
 		setBusyAction(actionKey);
-		setError('');
-		setNotice('');
+		setError("");
+		setNotice("");
 
 		try {
 			await fn();
 		} catch (err) {
-			setError(err?.message || 'Something went wrong.');
+			setError(err?.message || "Something went wrong.");
 		} finally {
-			setBusyAction('');
+			setBusyAction("");
 		}
 	}
 
 	async function handleStripeCheckout(nextTierKey) {
 		if (!user) {
-			window.PPGC?.openAuthModal?.('login');
+			window.PPGC?.openAuthModal?.("login");
 			return;
 		}
 
 		await runAction(`stripe:${nextTierKey}`, async () => {
 			const result = await createStripeCheckoutSession(nextTierKey);
 			if (!result?.url) {
-				throw new Error('Stripe did not return a checkout URL.');
+				throw new Error("Stripe did not return a checkout URL.");
 			}
 			window.location.assign(result.url);
 		});
@@ -101,66 +107,83 @@ export function PricingPage() {
 
 	async function handlePayPalCheckout(nextTierKey) {
 		if (!user) {
-			window.PPGC?.openAuthModal?.('login');
+			window.PPGC?.openAuthModal?.("login");
 			return;
 		}
 
 		await runAction(`paypal:${nextTierKey}`, async () => {
 			const result = await createPayPalSubscription(nextTierKey);
 			if (!result?.url) {
-				throw new Error('PayPal did not return an approval URL.');
+				throw new Error("PayPal did not return an approval URL.");
 			}
 			if (result.subscriptionId) {
-				sessionStorage.setItem('ppgc:paypal:pending-subscription', JSON.stringify({
-					subscriptionId: result.subscriptionId,
-					tier: nextTierKey,
-				}));
+				sessionStorage.setItem(
+					"ppgc:paypal:pending-subscription",
+					JSON.stringify({
+						subscriptionId: result.subscriptionId,
+						tier: nextTierKey,
+					}),
+				);
 			}
 			window.location.assign(result.url);
 		});
 	}
 
 	async function handleStripePortal() {
-		await runAction('stripe:portal', async () => {
+		await runAction("stripe:portal", async () => {
 			const result = await createStripePortalSession();
 			if (!result?.url) {
-				throw new Error('Stripe did not return a portal URL.');
+				throw new Error("Stripe did not return a portal URL.");
 			}
 			window.location.assign(result.url);
 		});
 	}
 
 	async function handlePayPalCancel() {
-		if (!window.confirm('Cancel your PayPal subscription and remove paid access now?')) return;
-		await runAction('paypal:cancel', async () => {
+		if (
+			!window.confirm(
+				"Cancel your PayPal subscription and remove paid access now?",
+			)
+		)
+			return;
+		await runAction("paypal:cancel", async () => {
 			const result = await cancelPayPalSubscription();
 			if (result?.user) {
 				window.PPGC = window.PPGC || {};
 				window.PPGC.currentUser = result.user;
-				window.PPGC?.setAccountButtonIcon?.(result.user.icon || 'default');
+				window.PPGC?.setAccountButtonIcon?.(
+					result.user.icon || "default",
+				);
 				window.PPGC?.api?.setApiCurrentUser?.(result.user);
-				window.dispatchEvent(new CustomEvent('ppgc:auth:changed'));
+				window.dispatchEvent(new CustomEvent("ppgc:auth:changed"));
 			}
-			setNotice('Your PayPal subscription has been canceled.');
+			setNotice("Your PayPal subscription has been canceled.");
 		});
 	}
 
 	function renderSubscribeCell(key) {
-		if (key === 'free') {
+		if (key === "free") {
 			return <span className="pricing-free-label">-</span>;
 		}
 
 		const isCurrent = key === tierKey;
-		const actionDisabled = busyAction !== '';
+		const actionDisabled = busyAction !== "";
 		const lockedByExistingPlan = hasPaidPlan;
-		const isLowerOrCurrentTier = tierRank >= 0 && TIER_ORDER.indexOf(key) <= tierRank;
+		const isLowerOrCurrentTier =
+			tierRank >= 0 && TIER_ORDER.indexOf(key) <= tierRank;
 
 		if (isCurrent) {
 			return <span className="pricing-plan-pill">Current plan</span>;
 		}
 
 		if (lockedByExistingPlan) {
-			return <span className="pricing-free-label">{isLowerOrCurrentTier ? 'Included' : 'Use billing tools below'}</span>;
+			return (
+				<span className="pricing-free-label">
+					{isLowerOrCurrentTier
+						? "Included"
+						: "Use billing tools below"}
+				</span>
+			);
 		}
 
 		return (
@@ -172,7 +195,11 @@ export function PricingPage() {
 					aria-label={`Subscribe to ${TIERS[key].label} with Stripe`}
 					onClick={() => handleStripeCheckout(key)}
 				>
-					{busyAction === `stripe:${key}` ? 'Loading...' : <FaStripeS />}
+					{busyAction === `stripe:${key}` ? (
+						"Loading..."
+					) : (
+						<FaStripeS />
+					)}
 				</button>
 				<button
 					type="button"
@@ -181,7 +208,11 @@ export function PricingPage() {
 					aria-label={`Subscribe to ${TIERS[key].label} with PayPal`}
 					onClick={() => handlePayPalCheckout(key)}
 				>
-					{busyAction === `paypal:${key}` ? 'Loading...' : <FaPaypal />}
+					{busyAction === `paypal:${key}` ? (
+						"Loading..."
+					) : (
+						<FaPaypal />
+					)}
 				</button>
 			</div>
 		);
@@ -197,14 +228,18 @@ export function PricingPage() {
 					return (
 						<div
 							key={key}
-							className={`pricing-tier-card${isCurrent ? ' is-current' : ''}`}
+							className={`pricing-tier-card${isCurrent ? " is-current" : ""}`}
 							data-tier={key}
 						>
 							<div className="ptc-ball" data-ball={key} />
 							<div className="ptc-name">{tier.label}</div>
-							<div className="ptc-tagline">{TIER_TAGLINES[key]}</div>
+							<div className="ptc-tagline">
+								{TIER_TAGLINES[key]}
+							</div>
 							<div className="ptc-price">{tier.price}</div>
-							{isCurrent ? <div className="ptc-badge">Your rank</div> : null}
+							{isCurrent ? (
+								<div className="ptc-badge">Your rank</div>
+							) : null}
 						</div>
 					);
 				})}
@@ -213,68 +248,116 @@ export function PricingPage() {
 			<div className="pricing-wip-banner">
 				<strong>Still in development</strong>
 				<p>
-					PokemonPGC is actively growing. Some features listed here aren't fully shipped yet —
-					subscribing now supports development and unlocks things as they release.
+					PokemonPGC is actively growing. Some features listed here
+					aren't fully shipped yet — subscribing now supports
+					development and unlocks things as they release.
 				</p>
 			</div>
 
-			{error ? <div className="pricing-alert pricing-alert--error">{error}</div> : null}
-			{notice ? <div className="pricing-alert pricing-alert--success">{notice}</div> : null}
+			{error ? (
+				<div className="pricing-alert pricing-alert--error">
+					{error}
+				</div>
+			) : null}
+			{notice ? (
+				<div className="pricing-alert pricing-alert--success">
+					{notice}
+				</div>
+			) : null}
 
-			<div className="pricing-table-wrap">
+			<p id="pricing-table-hint" className="pricing-table-hint">
+				Swipe or scroll horizontally to compare every plan.
+			</p>
+			<div
+				className="pricing-table-wrap"
+				tabIndex={0}
+				role="region"
+				aria-label="Plan feature comparison"
+				aria-describedby="pricing-table-hint"
+			>
 				<table className="pricing-table">
 					<thead>
 						<tr>
 							<th className="pricing-feature-col">Feature</th>
 							<th className="pricing-status-col">Status</th>
 							{TIER_KEYS.map((key) => (
-								<th key={key} className={`pricing-tier-col${key === tierKey ? ' is-current' : ''}`}>
-									<span className="pricing-tier-name">{TIERS[key].label}</span>
-									<span className="pricing-tier-tagline">{TIER_TAGLINES[key]}</span>
+								<th
+									key={key}
+									className={`pricing-tier-col${key === tierKey ? " is-current" : ""}`}
+								>
+									<span className="pricing-tier-name">
+										{TIERS[key].label}
+									</span>
+									<span className="pricing-tier-tagline">
+										{TIER_TAGLINES[key]}
+									</span>
 								</th>
 							))}
 						</tr>
 					</thead>
 					<tbody>
 						<tr className="pricing-row pricing-row--price">
-							<td><strong>Price</strong></td>
+							<td>
+								<strong>Price</strong>
+							</td>
 							<td />
 							{TIER_KEYS.map((key) => (
-								<td key={key} className={`pricing-tier-cell${key === tierKey ? ' is-current' : ''}`}>
+								<td
+									key={key}
+									className={`pricing-tier-cell${key === tierKey ? " is-current" : ""}`}
+								>
 									<strong>{TIERS[key].price}</strong>
 								</td>
 							))}
 						</tr>
 
 						<tr className="pricing-row pricing-row--subscribe">
-							<td><strong>Subscribe</strong></td>
+							<td>
+								<strong>Subscribe</strong>
+							</td>
 							<td />
 							{TIER_KEYS.map((key) => (
-								<td key={key} className={`pricing-tier-cell${key === tierKey ? ' is-current' : ''}`}>
+								<td
+									key={key}
+									className={`pricing-tier-cell${key === tierKey ? " is-current" : ""}`}
+								>
 									{renderSubscribeCell(key)}
 								</td>
 							))}
 						</tr>
 
 						{ALL_FEATURES.map((feature) => {
-							const status = FEATURE_STATUS[feature] ?? 'planned';
-							const statusDisplay = STATUS_DISPLAY[status] ?? STATUS_DISPLAY.planned;
+							const status = FEATURE_STATUS[feature] ?? "planned";
+							const statusDisplay =
+								STATUS_DISPLAY[status] ??
+								STATUS_DISPLAY.planned;
 							return (
 								<tr key={feature} className="pricing-row">
-									<td>{FEATURE_LABELS[feature] ?? feature}</td>
 									<td>
-										<span className={`pricing-status ${statusDisplay.className}`}>
+										{FEATURE_LABELS[feature] ?? feature}
+									</td>
+									<td>
+										<span
+											className={`pricing-status ${statusDisplay.className}`}
+										>
 											{statusDisplay.label}
 										</span>
 									</td>
 									{TIER_KEYS.map((key) => {
-										const included = TIERS[key].features.includes(feature);
+										const included =
+											TIERS[key].features.includes(
+												feature,
+											);
 										return (
 											<td
 												key={key}
-												className={`pricing-tier-cell${key === tierKey ? ' is-current' : ''}`}
+												className={`pricing-tier-cell${key === tierKey ? " is-current" : ""}`}
 											>
-												{included ? <span className="pricing-check">✓</span> : null}
+												{included ? (
+													<span className="pricing-check">
+														✓
+													</span>
+												) : null}
 											</td>
 										);
 									})}

@@ -9,6 +9,7 @@ import {
 } from "./helpers.js";
 import { openMonInfo } from "./dex-mon-info.js";
 import { openResearchModal } from "./dex-research.js";
+import { hideModalElement, showModalElement } from "./modal-state.js";
 import {
 	installDexVariants,
 	baseOf,
@@ -22,10 +23,7 @@ import {
 	setAllFormsForMon as _setAllFormsForMon,
 	effectiveSpeciesStatus as _effectiveSpeciesStatus,
 } from "./dex-store.js";
-import {
-	parseDexSearch,
-	filterDexEntries,
-} from "./dex-search.js";
+import { parseDexSearch, filterDexEntries } from "./dex-search.js";
 import {
 	applyDexLinksFromDexEntries,
 	applyDexLinksFromForm,
@@ -68,33 +66,36 @@ export function wireDexModal(store, els) {
 	} = els;
 	const bulkStatusSelect = dexClearAll;
 	let dexHelpDropdown = null;
-	const bulkMenu = modal?.querySelector('#dexBulkActionMenu');
-	const bulkToggle = modal?.querySelector('#dexBulkActionToggle');
+	const bulkMenu = modal?.querySelector("#dexBulkActionMenu");
+	const bulkToggle = modal?.querySelector("#dexBulkActionToggle");
 
 	function closeBulkMenu() {
 		if (!bulkMenu || !bulkToggle) return;
 		bulkMenu.hidden = true;
-		bulkToggle.setAttribute('aria-expanded', 'false');
+		bulkToggle.setAttribute("aria-expanded", "false");
 	}
 
 	function openBulkMenu() {
 		if (!bulkMenu || !bulkToggle) return;
 		bulkMenu.hidden = false;
-		bulkToggle.setAttribute('aria-expanded', 'true');
+		bulkToggle.setAttribute("aria-expanded", "true");
 	}
 
 	function rebuildBulkMenu() {
 		if (!bulkMenu || !bulkStatusSelect) return;
-		bulkMenu.innerHTML = '';
+		bulkMenu.innerHTML = "";
 		Array.from(bulkStatusSelect.options).forEach((option) => {
-			const item = document.createElement('button');
-			item.type = 'button';
-			item.className = 'dex-bulk-menu-item';
-			item.role = 'menuitemradio';
-			item.setAttribute('aria-checked', option.value === bulkStatusSelect.value ? 'true' : 'false');
+			const item = document.createElement("button");
+			item.type = "button";
+			item.className = "dex-bulk-menu-item";
+			item.role = "menuitemradio";
+			item.setAttribute(
+				"aria-checked",
+				option.value === bulkStatusSelect.value ? "true" : "false",
+			);
 			item.dataset.value = option.value;
 			item.textContent = option.textContent || option.value;
-			item.addEventListener('click', () => {
+			item.addEventListener("click", () => {
 				bulkStatusSelect.value = option.value;
 				rebuildBulkMenu();
 				closeBulkMenu();
@@ -104,10 +105,11 @@ export function wireDexModal(store, els) {
 	}
 
 	if (bulkToggle && !bulkToggle.dataset.wired) {
-		bulkToggle.dataset.wired = '1';
-		bulkToggle.addEventListener('click', (event) => {
+		bulkToggle.dataset.wired = "1";
+		bulkToggle.addEventListener("click", (event) => {
 			event.stopPropagation();
-			const isExpanded = bulkToggle.getAttribute('aria-expanded') === 'true';
+			const isExpanded =
+				bulkToggle.getAttribute("aria-expanded") === "true";
 			if (isExpanded) closeBulkMenu();
 			else openBulkMenu();
 		});
@@ -126,10 +128,19 @@ export function wireDexModal(store, els) {
 		store,
 		modal,
 		renderDexGrid: () => renderDexGrid(),
-		getDexFormsNode: (gameKey, monId) => _getDexFormsNode(store, gameKey, monId),
-		setDexFormsNode: (gameKey, monId, node) => _setDexFormsNode(store, gameKey, monId, node),
+		getDexFormsNode: (gameKey, monId) =>
+			_getDexFormsNode(store, gameKey, monId),
+		setDexFormsNode: (gameKey, monId, node) =>
+			_setDexFormsNode(store, gameKey, monId, node),
 		applyDexLinksFromForm: (gameKey, monId, formName, status) =>
-			applyDexLinksFromForm({ sourceGameKey: gameKey, sourceMonId: monId, sourceFormName: formName, status, store, getNatIndexForGame: resolveNatIndexForGame }),
+			applyDexLinksFromForm({
+				sourceGameKey: gameKey,
+				sourceMonId: monId,
+				sourceFormName: formName,
+				status,
+				store,
+				getNatIndexForGame: resolveNatIndexForGame,
+			}),
 	});
 
 	// NEW: small helper to batch dex sync work (skip repeated save/render)
@@ -150,28 +161,43 @@ export function wireDexModal(store, els) {
 		const genKey = (window.DATA.tabs || [])
 			.map((t) => t.key)
 			.find((gk) =>
-				(window.DATA.games[gk] || []).some((g) => g.key === gameKey)
+				(window.DATA.games[gk] || []).some((g) => g.key === gameKey),
 			);
 		const game = (window.DATA.games?.[genKey] || []).find(
-			(g) => g.key === gameKey
+			(g) => g.key === gameKey,
 		);
 
 		const dex = _getDexList(gameKey);
 		populateBulkStatusSelect({ bulkStatusSelect, gameKey, game });
 		rebuildBulkMenu();
 		const rawQ = (dexSearch.value || "").trim();
-		const options = game ? game.flags : ["shiny", "caught", "seen", "unknown"];
+		const options = game
+			? game.flags
+			: ["shiny", "caught", "seen", "unknown"];
 		const statusMap = store.dexStatus.get(gameKey) || {};
 
-		dexHelpDropdown = updateDexHelpDropdown({ dexSearch, dexHelpDropdown, rawQ });
+		dexHelpDropdown = updateDexHelpDropdown({
+			dexSearch,
+			dexHelpDropdown,
+			rawQ,
+		});
 
 		const parsedSearch = parseDexSearch(rawQ);
-		if (parsedSearch.isCommandTyping && !parsedSearch.cmdMode && !parsedSearch.q.includes(" ")) {
-			dexHelpDropdown = updateDexHelpDropdown({ dexSearch, dexHelpDropdown, rawQ });
+		if (
+			parsedSearch.isCommandTyping &&
+			!parsedSearch.cmdMode &&
+			!parsedSearch.q.includes(" ")
+		) {
+			dexHelpDropdown = updateDexHelpDropdown({
+				dexSearch,
+				dexHelpDropdown,
+				rawQ,
+			});
 			return;
 		}
 
-		const monInfoForGame = (window.DATA.monInfo && window.DATA.monInfo[gameKey]) || null;
+		const monInfoForGame =
+			(window.DATA.monInfo && window.DATA.monInfo[gameKey]) || null;
 		const filtered = filterDexEntries({
 			dex,
 			parsed: parsedSearch,
@@ -198,13 +224,15 @@ export function wireDexModal(store, els) {
 			game,
 			statusMap,
 			options,
-			getDexFormsNode: (key, monId) => _getDexFormsNode(store, key, monId),
+			getDexFormsNode: (key, monId) =>
+				_getDexFormsNode(store, key, monId),
 			openMonInfo,
 			openDexForms,
 			openResearchModal,
 			queueDexSync: _queueDexSync,
 			applyDexLinksFromDexEntries,
 			applyDexLinksFromForm,
+			renderDexGrid,
 			save,
 		});
 	}
@@ -234,7 +262,9 @@ export function wireDexModal(store, els) {
 					(window.DATA.tabs || [])
 						.map((t) => t.key)
 						.find((gk) =>
-							(window.DATA.games[gk] || []).some((g) => g.key === newBase)
+							(window.DATA.games[gk] || []).some(
+								(g) => g.key === newBase,
+							),
 						) || null;
 				openDexModal(newKey, genKey);
 			},
@@ -242,7 +272,7 @@ export function wireDexModal(store, els) {
 
 		const baseKey = baseOf(resolvedKey);
 		const gameBase = (window.DATA.games?.[genKey] || []).find(
-			(g) => g.key === baseKey
+			(g) => g.key === baseKey,
 		);
 
 		const tasksStore = window.PPGC?._tasksStoreRef;
@@ -272,19 +302,24 @@ export function wireDexModal(store, els) {
 		// Ensure mon-info is loaded so Dex thumbs can be sourced from it (and animated if enabled).
 		try {
 			const _baseKey = baseOf(resolvedKey || "");
-			ensureMonInfoLoaded?.(_baseKey, store.state.monInfoForm)?.then?.(() => {
-				try {
-					if (modal && modal.classList.contains("open") && store.state.dexModalFor === resolvedKey) {
-						renderDexGrid();
-					}
-				} catch { }
-			});
-		} catch { }
+			ensureMonInfoLoaded?.(_baseKey, store.state.monInfoForm)?.then?.(
+				() => {
+					try {
+						if (
+							modal &&
+							modal.classList.contains("open") &&
+							store.state.dexModalFor === resolvedKey
+						) {
+							renderDexGrid();
+						}
+					} catch {}
+				},
+			);
+		} catch {}
 
 		renderDexGrid();
 		modal.__returnFocusEl = document.activeElement;
-		modal.classList.add("open");
-		modal.setAttribute("aria-hidden", "false");
+		showModalElement(modal);
 		resetScrollWithin(modal);
 		emitPpgcUiSync({ state: store.state, loading: false });
 	}
@@ -296,7 +331,10 @@ export function wireDexModal(store, els) {
 		const returnEl = modal.__returnFocusEl;
 		try {
 			// If the close button is focused, blur it first
-			if (document.activeElement && modal.contains(document.activeElement)) {
+			if (
+				document.activeElement &&
+				modal.contains(document.activeElement)
+			) {
 				document.activeElement.blur?.();
 			}
 
@@ -305,13 +343,14 @@ export function wireDexModal(store, els) {
 				returnEl.focus({ preventScroll: true });
 			} else {
 				// fallback focus target (pick something stable in your UI)
-				document.querySelector("#app, #content, body")?.focus?.({ preventScroll: true });
+				document
+					.querySelector("#app, #content, body")
+					?.focus?.({ preventScroll: true });
 			}
-		} catch { }
+		} catch {}
 
 		// Now hide the modal
-		modal.classList.remove("open");
-		modal.setAttribute("aria-hidden", "true");
+		hideModalElement(modal);
 		const scrollEl = getDexScrollContainer();
 		if (scrollEl) scrollEl.scrollTop = 0;
 		dexGrid.scrollTop = 0;
@@ -328,7 +367,7 @@ export function wireDexModal(store, els) {
 		// Kill any tooltips so nothing “sticks” at top-left
 		try {
 			window.PPGC?.hideTooltips?.();
-		} catch { }
+		} catch {}
 
 		// Mute inner renders while we sync
 		window.PPGC = window.PPGC || {};
@@ -339,10 +378,7 @@ export function wireDexModal(store, els) {
 		const before = modal.__dexSnapshot || {}; // snapshot taken on open
 		const after = store.dexStatus.get(gameKey) || {}; // current status map
 		const changed = {};
-		const keys = new Set([
-			...Object.keys(before),
-			...Object.keys(after),
-		]);
+		const keys = new Set([...Object.keys(before), ...Object.keys(after)]);
 		for (const k of keys) {
 			const b = before[k] || "unknown";
 			const a = after[k] || "unknown";
@@ -390,7 +426,7 @@ export function wireDexModal(store, els) {
 
 	const api = { openDexModal: openDexModal, closeModal, renderDexGrid };
 	modal.addEventListener("click", (e) => {
-		if (!bulkMenu?.hidden && !e.target.closest('#dexBulkSplit')) {
+		if (!bulkMenu?.hidden && !e.target.closest("#dexBulkSplit")) {
 			closeBulkMenu();
 		}
 		if (e.target === modal) closeModal();
@@ -444,17 +480,29 @@ export function wireDexModal(store, els) {
 						gameKey,
 						m.id,
 						m.forms,
-						applied
+						applied,
 					);
 
-					for (const [fname, val] of Object.entries(node.forms || {})) {
+					for (const [fname, val] of Object.entries(
+						node.forms || {},
+					)) {
 						if (!fname) continue;
 
 						// Dex ↔ Dex form sync (regional <-> national)
 						try {
-							applyDexLinksFromForm({ sourceGameKey: gameKey, sourceMonId: m.id, sourceFormName: fname, status: val, store, getNatIndexForGame: resolveNatIndexForGame });
+							applyDexLinksFromForm({
+								sourceGameKey: gameKey,
+								sourceMonId: m.id,
+								sourceFormName: fname,
+								status: val,
+								store,
+								getNatIndexForGame: resolveNatIndexForGame,
+							});
 						} catch (e) {
-							console.error("applyDexLinksFromForm (bulk) error:", e);
+							console.error(
+								"applyDexLinksFromForm (bulk) error:",
+								e,
+							);
 						}
 
 						// Dex -> Task form sync (existing behavior)
@@ -463,7 +511,7 @@ export function wireDexModal(store, els) {
 								gameKey,
 								m.id,
 								fname,
-								val
+								val,
 							);
 						} catch {
 							// ignore
@@ -487,13 +535,22 @@ export function wireDexModal(store, els) {
 						batchDexSync: true,
 					});
 				} catch (e) {
-					console.error("applyDexLinksFromDexEntries (bulk) error:", e);
+					console.error(
+						"applyDexLinksFromDexEntries (bulk) error:",
+						e,
+					);
 				}
 
 				try {
-					window.PPGC?.applyDexSyncsFromDexEntries?.(gameKey, changed);
+					window.PPGC?.applyDexSyncsFromDexEntries?.(
+						gameKey,
+						changed,
+					);
 				} catch (e) {
-					console.error("applyDexSyncsFromDexEntries (bulk) error:", e);
+					console.error(
+						"applyDexSyncsFromDexEntries (bulk) error:",
+						e,
+					);
 				}
 			}
 		});

@@ -20,14 +20,16 @@ export function stripExt(name) {
 
 export async function loadTexManifestForDir(texDir) {
 	const manifestUrl = `${String(texDir || "")}textures.json`;
-	if (__ppgcManifestCache.has(manifestUrl)) return __ppgcManifestCache.get(manifestUrl);
+	if (__ppgcManifestCache.has(manifestUrl))
+		return __ppgcManifestCache.get(manifestUrl);
 
 	let set = null;
 	try {
 		const res = await fetch(manifestUrl, { cache: "no-store" });
 		if (!res.ok) throw new Error(`HTTP ${res.status}`);
 		const arr = await res.json();
-		if (!Array.isArray(arr)) throw new Error("textures.json is not an array");
+		if (!Array.isArray(arr))
+			throw new Error("textures.json is not an array");
 
 		const norm = (x) => {
 			const s = String(x || "");
@@ -62,7 +64,8 @@ export async function loadTexManifestForGlb(glbUrl) {
 
 	const manifestUrl = `${dir}${dex}/textures.json`;
 
-	if (__ppgcManifestCache.has(manifestUrl)) return __ppgcManifestCache.get(manifestUrl);
+	if (__ppgcManifestCache.has(manifestUrl))
+		return __ppgcManifestCache.get(manifestUrl);
 
 	let set = null;
 	try {
@@ -70,7 +73,8 @@ export async function loadTexManifestForGlb(glbUrl) {
 		if (!res.ok) throw new Error(`HTTP ${res.status}`);
 		const arr = await res.json();
 
-		if (!Array.isArray(arr)) throw new Error("textures.json is not an array");
+		if (!Array.isArray(arr))
+			throw new Error("textures.json is not an array");
 		const norm = (x) => {
 			const s = String(x || "");
 			// If manifest accidentally includes paths, strip to filename
@@ -121,7 +125,8 @@ export function loadTexture(loader, url, { srgb = false } = {}) {
 				tex.flipY = false;
 
 				// three r152+ uses colorSpace
-				if (srgb && "colorSpace" in tex) tex.colorSpace = THREE.SRGBColorSpace;
+				if (srgb && "colorSpace" in tex)
+					tex.colorSpace = THREE.SRGBColorSpace;
 
 				// IMPORTANT: Blender defaults to repeat; Three defaults to clamp.
 				// If UVs go outside 0..1 (common for these), clamp makes the texture look "mapped wrong".
@@ -134,13 +139,18 @@ export function loadTexture(loader, url, { srgb = false } = {}) {
 				resolve(tex);
 			},
 			undefined,
-			reject
+			reject,
 		);
 	});
 }
 
 // try a list of filenames and take the first that exists+loads
-export async function loadFirstTexture(loader, candidates, opts, manifestSet /* Set<string> | null */) {
+export async function loadFirstTexture(
+	loader,
+	candidates,
+	opts,
+	manifestSet /* Set<string> | null */,
+) {
 	const list = Array.isArray(candidates) ? candidates : [];
 
 	for (const url of list) {
@@ -194,9 +204,13 @@ export function logUvRangeOnce(mesh, stem) {
 	const uv = g?.getAttribute?.("uv");
 	if (!uv) return;
 
-	let minU = Infinity, minV = Infinity, maxU = -Infinity, maxV = -Infinity;
+	let minU = Infinity,
+		minV = Infinity,
+		maxU = -Infinity,
+		maxV = -Infinity;
 	for (let i = 0; i < uv.count; i++) {
-		const u = uv.getX(i), v = uv.getY(i);
+		const u = uv.getX(i),
+			v = uv.getY(i);
 		if (u < minU) minU = u;
 		if (v < minV) minV = v;
 		if (u > maxU) maxU = u;
@@ -213,11 +227,11 @@ export async function applyGenericTextureSetToScene(root3d, opts) {
 		glbUrl,
 		variant,
 		eyeShaderMats,
-		stemForMaterial,          // (matName) => stem | null
-		buildCandidatesForStem,   // (texDir, stem) => { alb:[], nrm:[], lym:[], ao:[], rgn:[], mtl:[], msk:[], iris:[] }
-		makeEyeMaterial,          // ({ matName, tex, glbUrl }) => THREE.Material
-		makeBodyMaterial,         // ({ matName, tex, glbUrl, stem }) => THREE.Material
-		postProcessMesh,          // optional: (mesh, stem) => void
+		stemForMaterial, // (matName) => stem | null
+		buildCandidatesForStem, // (texDir, stem) => { alb:[], nrm:[], lym:[], ao:[], rgn:[], mtl:[], msk:[], iris:[] }
+		makeEyeMaterial, // ({ matName, tex, glbUrl }) => THREE.Material
+		makeBodyMaterial, // ({ matName, tex, glbUrl, stem }) => THREE.Material
+		postProcessMesh, // optional: (mesh, stem) => void
 	} = opts;
 
 	const dir = dirname(glbUrl);
@@ -226,10 +240,9 @@ export async function applyGenericTextureSetToScene(root3d, opts) {
 	const manifestSet = await loadTexManifestForDir(texDir);
 	const loader = new THREE.TextureLoader();
 
-	const texManifest = opts.textureManifest || (await loadTextureManifest(texDir));
-	const hasFile = texManifest
-		? (name) => texManifest.includes(name)
-		: null;
+	const texManifest =
+		opts.textureManifest || (await loadTextureManifest(texDir));
+	const hasFile = texManifest ? (name) => texManifest.includes(name) : null;
 
 	// cache by stem/piece so we don't reload for multiple meshes/materials
 	const cache = new Map();
@@ -249,15 +262,55 @@ export async function applyGenericTextureSetToScene(root3d, opts) {
 		}
 
 		const tex = {
-			alb: await loadFirstTexture(loader, cand.alb || [], { srgb: true }, manifestSet),
-			nrm: await loadFirstTexture(loader, cand.nrm || [], {}, manifestSet),
-			lym: await loadFirstTexture(loader, cand.lym || [], {}, manifestSet),
+			alb: await loadFirstTexture(
+				loader,
+				cand.alb || [],
+				{ srgb: true },
+				manifestSet,
+			),
+			nrm: await loadFirstTexture(
+				loader,
+				cand.nrm || [],
+				{},
+				manifestSet,
+			),
+			lym: await loadFirstTexture(
+				loader,
+				cand.lym || [],
+				{},
+				manifestSet,
+			),
 			ao: await loadFirstTexture(loader, cand.ao || [], {}, manifestSet),
-			rgn: await loadFirstTexture(loader, cand.rgn || [], {}, manifestSet),
-			mtl: await loadFirstTexture(loader, cand.mtl || [], {}, manifestSet),
-			msk: await loadFirstTexture(loader, cand.msk || [], {}, manifestSet),
-			iris: await loadFirstTexture(loader, cand.iris || [], {}, manifestSet),
-			emi: await loadFirstTexture(loader, cand.emi || [], {}, manifestSet),
+			rgn: await loadFirstTexture(
+				loader,
+				cand.rgn || [],
+				{},
+				manifestSet,
+			),
+			mtl: await loadFirstTexture(
+				loader,
+				cand.mtl || [],
+				{},
+				manifestSet,
+			),
+			msk: await loadFirstTexture(
+				loader,
+				cand.msk || [],
+				{},
+				manifestSet,
+			),
+			iris: await loadFirstTexture(
+				loader,
+				cand.iris || [],
+				{},
+				manifestSet,
+			),
+			emi: await loadFirstTexture(
+				loader,
+				cand.emi || [],
+				{},
+				manifestSet,
+			),
 		};
 
 		cache.set(stem, tex);
@@ -271,53 +324,65 @@ export async function applyGenericTextureSetToScene(root3d, opts) {
 		if (!o?.isMesh) return;
 
 		const mats = Array.isArray(o.material) ? o.material : [o.material];
-		const tasks = mats.map((oldMat) => (async () => {
-			const matName = oldMat?.name || "";
-			const stem = stemForMaterial(matName);
-			if (!stem) return oldMat;
-			const tex = await getTexSet(stem);
+		const tasks = mats.map((oldMat) =>
+			(async () => {
+				const matName = oldMat?.name || "";
+				const stem = stemForMaterial(matName);
+				if (!stem) return oldMat;
+				const tex = await getTexSet(stem);
 
-			if (stem === "LIris" || stem === "RIris") {
-				const g = o.geometry;
-				const uv = g?.getAttribute?.("uv");
-				const uv2 = g?.getAttribute?.("uv2");
+				if (stem === "LIris" || stem === "RIris") {
+					const g = o.geometry;
+					const uv = g?.getAttribute?.("uv");
+					const uv2 = g?.getAttribute?.("uv2");
 
-				const range = (attr) => {
-					if (!attr) return null;
-					let minU = Infinity, minV = Infinity, maxU = -Infinity, maxV = -Infinity;
-					for (let i = 0; i < attr.count; i++) {
-						const u = attr.getX(i), v = attr.getY(i);
-						if (u < minU) minU = u;
-						if (v < minV) minV = v;
-						if (u > maxU) maxU = u;
-						if (v > maxV) maxV = v;
-					}
-					return { minU, minV, maxU, maxV };
-				};
+					const range = (attr) => {
+						if (!attr) return null;
+						let minU = Infinity,
+							minV = Infinity,
+							maxU = -Infinity,
+							maxV = -Infinity;
+						for (let i = 0; i < attr.count; i++) {
+							const u = attr.getX(i),
+								v = attr.getY(i);
+							if (u < minU) minU = u;
+							if (v < minV) minV = v;
+							if (u > maxU) maxU = u;
+							if (v > maxV) maxV = v;
+						}
+						return { minU, minV, maxU, maxV };
+					};
 
-				console.log("[IRIS MESH]", {
+					debugLog("[IRIS MESH]", {
+						matName,
+						stem,
+						mesh: o.name,
+						uv: range(uv),
+						uv2: range(uv2),
+						hasTex: !!tex?.alb,
+						tex: tex?.alb?.image?.src,
+					});
+				}
+
+				if (isEyeStem(stem)) {
+					const eyeMat = makeEyeMaterial({ matName, tex, glbUrl });
+					eyeShaderMats?.push?.(eyeMat);
+					return eyeMat;
+				}
+
+				const bodyMat = makeBodyMaterial({
 					matName,
+					tex,
+					glbUrl,
 					stem,
-					mesh: o.name,
-					uv: range(uv),
-					uv2: range(uv2),
-					hasTex: !!tex?.alb,
-					tex: tex?.alb?.image?.src,
+					variant,
 				});
-			}
 
-			if (isEyeStem(stem)) {
-				const eyeMat = makeEyeMaterial({ matName, tex, glbUrl });
-				eyeShaderMats?.push?.(eyeMat);
-				return eyeMat;
-			}
+				if (postProcessMesh) postProcessMesh(o, stem);
 
-			const bodyMat = makeBodyMaterial({ matName, tex, glbUrl, stem, variant });
-
-			if (postProcessMesh) postProcessMesh(o, stem);
-
-			return bodyMat;
-		})());
+				return bodyMat;
+			})(),
+		);
 
 		jobs.set(o.uuid, { mesh: o, tasks });
 	});
@@ -327,3 +392,4 @@ export async function applyGenericTextureSetToScene(root3d, opts) {
 		mesh.material = out.length === 1 ? out[0] : out;
 	}
 }
+import { debugLog } from "../../utils/debug.js";

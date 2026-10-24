@@ -147,14 +147,14 @@
 }
 
 /* Base fill (0–100%) */
-.progress>span.base {
+.progress > span.base {
 	display: block;
 	height: 100%;
 	background: var(--accent);
 }
 
 /* Extra fill used for extra credit segments, etc. */
-.progress>span.extra {
+.progress > span.extra {
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -177,13 +177,15 @@
 	position: absolute;
 	inset: -4px;
 	border-radius: 999px;
-	background: conic-gradient(from 0deg,
-			#8a6b00,
-			#d4af37,
-			#fff4b0,
-			#ffd700,
-			#8a6b00);
-	opacity: 0.30;
+	background: conic-gradient(
+		from 0deg,
+		#8a6b00,
+		#d4af37,
+		#fff4b0,
+		#ffd700,
+		#8a6b00
+	);
+	opacity: 0.3;
 	filter: blur(4px);
 	pointer-events: none;
 	animation: ppgc-gold-breathe 2.8s linear infinite;
@@ -220,9 +222,11 @@
 	position: absolute;
 	inset: -3px;
 	border-radius: 999px;
-	background: radial-gradient(closest-side,
-			color-mix(in srgb, var(--accent, #6aa6ff) 70%, #fff 30%),
-			transparent 65%);
+	background: radial-gradient(
+		closest-side,
+		color-mix(in srgb, var(--accent, #6aa6ff) 70%, #fff 30%),
+		transparent 65%
+	);
 	opacity: 0.22;
 	filter: blur(3px);
 	pointer-events: none;
@@ -232,7 +236,7 @@
 
 @keyframes ppgc-gold-breathe {
 	0% {
-		filter: blur(4px) brightness(1.0);
+		filter: blur(4px) brightness(1);
 		opacity: 0.28;
 	}
 
@@ -242,7 +246,7 @@
 	}
 
 	100% {
-		filter: blur(4px) brightness(1.0);
+		filter: blur(4px) brightness(1);
 		opacity: 0.28;
 	}
 }
@@ -268,6 +272,14 @@
 	/* pushes it to the bottom of card-bd */
 	padding-top: 0.5rem;
 	/* optional little spacing */
+}
+
+.collectible-card-actions,
+.collectible-card-checkbox {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
 }
 
 /* ===================== Modal cards: equal row height + bottom controls ===================== */
@@ -393,7 +405,7 @@
 		align-items: stretch;
 	}
 
-	.modal #dexGrid .card .row>* {
+	.modal #dexGrid .card .row > * {
 		min-width: 0;
 		max-width: 100%;
 	}

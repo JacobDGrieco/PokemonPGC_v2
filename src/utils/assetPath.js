@@ -1,4 +1,4 @@
-export function _assetPath(path) {
+export function assetPath(path) {
 	const cleanPath = String(path || "").replace(/^\/+/, "");
 	const rawBase =
 		typeof globalThis !== "undefined" && globalThis.__ASSET_BASE_URL__
@@ -11,3 +11,6 @@ export function _assetPath(path) {
 
 	return `${base}/${cleanPath}`;
 }
+
+// Compatibility alias for legacy imports while new code uses the public name.
+export const _assetPath = assetPath;

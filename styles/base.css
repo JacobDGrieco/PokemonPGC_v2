@@ -55,13 +55,38 @@
 	--text-main: #eef3fb;
 	--text-muted: rgba(238, 243, 251, 0.72);
 	--shadow-panel: 0 18px 40px rgba(0, 0, 0, 0.28);
+	--space-control-gap: 8px;
+	--radius-control: 10px;
+	--control-min-height: 44px;
+	--mobile-target-size: 44px;
+	--focus-ring-color: #8fc7ff;
+	--duration-fast: 160ms;
+	--duration-standard: 240ms;
+	--z-dropdown: 100;
+	--z-modal: 1000;
 	--panel-bg:
-		radial-gradient(circle at top right, rgba(59, 76, 202, var(--panel-glow-top-alpha)), transparent 32%),
-		radial-gradient(circle at left center, rgba(113, 197, 88, var(--panel-glow-side-alpha)), transparent 28%),
+		radial-gradient(
+			circle at top right,
+			rgba(59, 76, 202, var(--panel-glow-top-alpha)),
+			transparent 32%
+		),
+		radial-gradient(
+			circle at left center,
+			rgba(113, 197, 88, var(--panel-glow-side-alpha)),
+			transparent 28%
+		),
 		linear-gradient(180deg, rgba(22, 27, 36, 0.98), rgba(12, 15, 22, 0.98));
 	--app-bg:
-		radial-gradient(circle at top, rgba(113, 197, 88, var(--app-glow-top-alpha)), transparent 30%),
-		radial-gradient(circle at bottom left, rgba(59, 76, 202, var(--app-glow-bottom-alpha)), transparent 28%),
+		radial-gradient(
+			circle at top,
+			rgba(113, 197, 88, var(--app-glow-top-alpha)),
+			transparent 30%
+		),
+		radial-gradient(
+			circle at bottom left,
+			rgba(59, 76, 202, var(--app-glow-bottom-alpha)),
+			transparent 28%
+		),
 		linear-gradient(180deg, #07090d, #0c1016 42%, #0a0d13 100%);
 
 	/* Scrollbar colors */
@@ -153,9 +178,40 @@ body {
 	background: var(--app-bg);
 }
 
+:where(button, a, input, select, textarea, [tabindex]):focus-visible {
+	outline: 2px solid var(--focus-ring-color);
+	outline-offset: 3px;
+}
+
+:where(button, input, select, textarea):disabled {
+	cursor: not-allowed;
+	opacity: 0.62;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	:root {
+		animation: none;
+	}
+
+	*,
+	*::before,
+	*::after {
+		scroll-behavior: auto !important;
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+}
+
 body {
 	margin: 0;
-	font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+	font-family:
+		system-ui,
+		-apple-system,
+		Segoe UI,
+		Roboto,
+		Arial,
+		sans-serif;
 	background: var(--app-bg);
 	color: var(--text-main);
 
@@ -207,7 +263,7 @@ textarea {
 	body.mobile-ui {
 		overflow-y: auto;
 		overscroll-behavior-y: auto;
-		touch-action: pan-y;
+		touch-action: auto;
 	}
 
 	.header-brand .brand-link {

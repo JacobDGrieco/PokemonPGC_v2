@@ -42,9 +42,7 @@ export function registerKeywordSectionMeter({
 	}
 
 	// Avoid double-registering the same meter
-	const already = window.PPGC.sectionMeters.some(
-		(fn) => fn && fn[flagProp]
-	);
+	const already = window.PPGC.sectionMeters.some((fn) => fn && fn[flagProp]);
 	if (already) return;
 
 	const meter = function keywordSectionMeter(sectionObj, gameKey, genKey) {
@@ -95,8 +93,11 @@ export const DEX_STATUS_RANK = {
 };
 
 export function resolveMaybeFn(v) {
-	try { return typeof v === "function" ? v() : v; }
-	catch { return v; }
+	try {
+		return typeof v === "function" ? v() : v;
+	} catch {
+		return v;
+	}
 }
 
 export function normalizeFlag(v) {
@@ -115,7 +116,7 @@ export function pickHighestStatus(list) {
 	if (!Array.isArray(list) || !list.length) return "unknown";
 	return list.reduce(
 		(best, v) => (rankStatus(v) > rankStatus(best) ? v : best),
-		"unknown"
+		"unknown",
 	);
 }
 
@@ -125,9 +126,10 @@ export function isCompletedForGame(game, flag) {
 	if (!s || s === "unknown" || s === "seen") return false;
 
 	// Treat all “caught-like” states as complete
-	const completionFlags = Array.isArray(game?.completionFlags) && game.completionFlags.length
-		? game.completionFlags
-		: ["caught", "alpha", "shiny", "shiny_alpha"];
+	const completionFlags =
+		Array.isArray(game?.completionFlags) && game.completionFlags.length
+			? game.completionFlags
+			: ["caught", "alpha", "shiny", "shiny_alpha"];
 
 	return completionFlags.map(normalizeFlag).includes(s);
 }
@@ -204,8 +206,7 @@ export function renderBadges(status, gameKey) {
 	const isShiny = (v) => v === "shiny" || v === "shiny_alpha";
 
 	const marks = (window.DATA && window.DATA.marks) || {};
-	const byGame =
-		(window.DATA && window.DATA.marksByGame) || {};
+	const byGame = (window.DATA && window.DATA.marksByGame) || {};
 
 	// Resolve a useful marks config for this gameKey
 	function resolveGameMarks(rawKey) {
@@ -236,25 +237,17 @@ export function renderBadges(status, gameKey) {
 
 	const gameMarks = resolveGameMarks(gameKey);
 
-	const shinySrc =
-		(gameMarks && gameMarks.shiny) || marks.shiny;
-	const alphaSrc =
-		(gameMarks && gameMarks.alpha) || marks.alpha;
+	const shinySrc = (gameMarks && gameMarks.shiny) || marks.shiny;
+	const alphaSrc = (gameMarks && gameMarks.alpha) || marks.alpha;
 
 	if (isShiny(s) && shinySrc) {
-		icons.push(
-			`<img src="${shinySrc}" alt="Shiny Badge"/>`
-		);
+		icons.push(`<img src="${shinySrc}" alt="Shiny Badge"/>`);
 	}
 	if (isAlpha(s) && alphaSrc) {
-		icons.push(
-			`<img src="${alphaSrc}" alt="Alpha Badge"/>`
-		);
+		icons.push(`<img src="${alphaSrc}" alt="Alpha Badge"/>`);
 	}
 
-	return icons.length
-		? `<div class="badges">${icons.join("")}</div>`
-		: "";
+	return icons.length ? `<div class="badges">${icons.join("")}</div>` : "";
 }
 
 export function getDexScrollContainer() {

@@ -33,7 +33,7 @@ export function ring(progressPct, labelText, opts = {}) {
 	const extraPct = hasExtra ? Math.min(100, pctRaw - 100) : 0;
 
 	// Angle for the conic-gradient mask (0–360deg)
-	const angle = ((pctForArc / 100) * 360);
+	const angle = (pctForArc / 100) * 360;
 
 	ensureRingCssInjected();
 
@@ -59,9 +59,11 @@ export function ring(progressPct, labelText, opts = {}) {
       <div class="ring-center">
         <div class="pct">${pctRaw.toFixed(2)}%</div>
       </div>
-      ${hasExtra
-			? `<div class="extra-badge">+${extraPct.toFixed(0)}%</div>`
-			: ``}
+      ${
+			hasExtra
+				? `<div class="extra-badge">+${extraPct.toFixed(0)}%</div>`
+				: ``
+		}
     </div>
     <div class="label">${labelText}</div>
   `;

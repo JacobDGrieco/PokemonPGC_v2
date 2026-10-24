@@ -7,10 +7,14 @@ import {
 
 let cachedAccessToken = null;
 let cachedAccessTokenExpiresAt = 0;
+const PAYPAL_REQUEST_TIMEOUT_MS = 10_000;
 
 export function getPayPalBaseUrl() {
-	const env = String(process.env.PAYPAL_ENVIRONMENT || "").trim().toLowerCase();
-	if (env === "live" || env === "production") return "https://api-m.paypal.com";
+	const env = String(process.env.PAYPAL_ENVIRONMENT || "")
+		.trim()
+		.toLowerCase();
+	if (env === "live" || env === "production")
+		return "https://api-m.paypal.com";
 	return "https://api-m.sandbox.paypal.com";
 }
 
@@ -18,7 +22,9 @@ function getPayPalCredentials() {
 	const clientId = String(process.env.PAYPAL_CLIENT_ID || "").trim();
 	const clientSecret = String(process.env.PAYPAL_CLIENT_SECRET || "").trim();
 	if (!clientId || !clientSecret) {
-		throw new Error("Missing PAYPAL_CLIENT_ID or PAYPAL_CLIENT_SECRET environment variable.");
+		throw new Error(
+			"Missing PAYPAL_CLIENT_ID or PAYPAL_CLIENT_SECRET environment variable.",
+		);
 	}
 	return { clientId, clientSecret };
 }
@@ -46,19 +52,28 @@ export async function getPayPalAccessToken() {
 			"Content-Type": "application/x-www-form-urlencoded",
 		},
 		body: "grant_type=client_credentials",
+		signal: AbortSignal.timeout(PAYPAL_REQUEST_TIMEOUT_MS),
 	});
 
 	const payload = await response.json();
 	if (!response.ok || !payload?.access_token) {
-		throw new Error(payload?.error_description || payload?.error || "Failed to get PayPal access token.");
+		throw new Error(
+			payload?.error_description ||
+				payload?.error ||
+				"Failed to get PayPal access token.",
+		);
 	}
 
 	cachedAccessToken = payload.access_token;
-	cachedAccessTokenExpiresAt = Date.now() + Number(payload.expires_in || 0) * 1000;
+	cachedAccessTokenExpiresAt =
+		Date.now() + Number(payload.expires_in || 0) * 1000;
 	return cachedAccessToken;
 }
 
-export async function paypalRequest(path, { method = "GET", body, headers, signal } = {}) {
+export async function paypalRequest(
+	path,
+	{ method = "GET", body, headers, signal } = {},
+) {
 	const accessToken = await getPayPalAccessToken();
 	const response = await fetch(`${getPayPalBaseUrl()}${path}`, {
 		method,
@@ -69,7 +84,7 @@ export async function paypalRequest(path, { method = "GET", body, headers, signa
 			...(headers || {}),
 		},
 		body: body ? JSON.stringify(body) : undefined,
-		signal: signal || AbortSignal.timeout(10_000),
+		signal: signal || AbortSignal.timeout(PAYPAL_REQUEST_TIMEOUT_MS),
 	});
 
 	if (response.status === 204) {
@@ -78,31 +93,39 @@ export async function paypalRequest(path, { method = "GET", body, headers, signa
 
 	const data = await response.json().catch(() => null);
 	if (!response.ok) {
-		const detail = data?.details?.[0]?.description || data?.message || data?.name;
-		throw new Error(detail || `PayPal request failed (${response.status}).`);
+		const detail =
+			data?.details?.[0]?.description || data?.message || data?.name;
+		throw new Error(
+			detail || `PayPal request failed (${response.status}).`,
+		);
 	}
 
 	return { ok: true, status: response.status, data };
 }
 
 export async function getPayPalSubscription(subscriptionId) {
-	const response = await paypalRequest(`/v1/billing/subscriptions/${encodeURIComponent(subscriptionId)}`);
+	const response = await paypalRequest(
+		`/v1/billing/subscriptions/${encodeURIComponent(subscriptionId)}`,
+	);
 	return response.data;
 }
 
 export async function verifyPayPalWebhook(headers, event) {
-	const response = await paypalRequest("/v1/notifications/verify-webhook-signature", {
-		method: "POST",
-		body: {
-			auth_algo: headers["paypal-auth-algo"],
-			cert_url: headers["paypal-cert-url"],
-			transmission_id: headers["paypal-transmission-id"],
-			transmission_sig: headers["paypal-transmission-sig"],
-			transmission_time: headers["paypal-transmission-time"],
-			webhook_id: getPayPalWebhookId(),
-			webhook_event: event,
+	const response = await paypalRequest(
+		"/v1/notifications/verify-webhook-signature",
+		{
+			method: "POST",
+			body: {
+				auth_algo: headers["paypal-auth-algo"],
+				cert_url: headers["paypal-cert-url"],
+				transmission_id: headers["paypal-transmission-id"],
+				transmission_sig: headers["paypal-transmission-sig"],
+				transmission_time: headers["paypal-transmission-time"],
+				webhook_id: getPayPalWebhookId(),
+				webhook_event: event,
+			},
 		},
-	});
+	);
 
 	return response.data?.verification_status === "SUCCESS";
 }
@@ -113,7 +136,9 @@ export function getPayPalSubscriptionTier(subscription) {
 }
 
 export function getPayPalSubscriptionBinding(subscription) {
-	const [rawUserId, rawTier, ...extra] = String(subscription?.custom_id || "").trim().split(":");
+	const [rawUserId, rawTier, ...extra] = String(subscription?.custom_id || "")
+		.trim()
+		.split(":");
 	if (extra.length) return { userId: null, tierKey: null };
 	return {
 		userId: parseProviderUserId(rawUserId),
@@ -121,30 +146,50 @@ export function getPayPalSubscriptionBinding(subscription) {
 	};
 }
 
-export function validatePayPalSubscriptionBinding({ subscription, expectedUserId, expectedTier }) {
+export function validatePayPalSubscriptionBinding({
+	subscription,
+	expectedUserId,
+	expectedTier,
+}) {
 	const binding = getPayPalSubscriptionBinding(subscription);
 	const providerTier = getPayPalSubscriptionTier(subscription);
-	const normalizedExpectedTier = expectedTier ? normalizeTierKey(expectedTier) : null;
+	const normalizedExpectedTier = expectedTier
+		? normalizeTierKey(expectedTier)
+		: null;
 
 	if (!binding.userId || binding.userId !== expectedUserId) {
-		return { ok: false, error: "PayPal subscription ownership could not be verified." };
+		return {
+			ok: false,
+			error: "PayPal subscription ownership could not be verified.",
+		};
 	}
 	if (!providerTier || !binding.tierKey || binding.tierKey !== providerTier) {
-		return { ok: false, error: "PayPal subscription tier could not be verified." };
+		return {
+			ok: false,
+			error: "PayPal subscription tier could not be verified.",
+		};
 	}
 	if (normalizedExpectedTier && normalizedExpectedTier !== providerTier) {
-		return { ok: false, error: "PayPal subscription does not match the requested tier." };
+		return {
+			ok: false,
+			error: "PayPal subscription does not match the requested tier.",
+		};
 	}
 
 	return { ok: true, ownerId: expectedUserId, tierKey: providerTier };
 }
 
-export function buildPayPalSubscriptionUpdate(subscription, { clearStripe = false } = {}) {
+export function buildPayPalSubscriptionUpdate(
+	subscription,
+	{ clearStripe = false } = {},
+) {
 	return buildSubscriptionUpdate({
 		provider: "paypal",
 		tierKey: getPayPalSubscriptionTier(subscription),
 		status: subscription?.status || null,
-		paypalSubscriptionId: subscription?.id ? String(subscription.id) : undefined,
+		paypalSubscriptionId: subscription?.id
+			? String(subscription.id)
+			: undefined,
 		clearStripe,
 	});
 }

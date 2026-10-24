@@ -10,7 +10,11 @@
 	padding: 24px;
 
 	background:
-		radial-gradient(circle at top, rgba(245, 198, 68, 0.14), transparent 28%),
+		radial-gradient(
+			circle at top,
+			rgba(245, 198, 68, 0.14),
+			transparent 28%
+		),
 		rgba(4, 6, 10, 0.76);
 	z-index: 10;
 	backdrop-filter: blur(8px);
@@ -200,9 +204,7 @@
 
 	border-radius: 9px;
 	border: 1px solid color-mix(in srgb, var(--accent, #6aa6ff) 70%, #000 30%);
-	background: color-mix(in srgb,
-			var(--accent, #6aa6ff) 85%,
-			#000 15%);
+	background: color-mix(in srgb, var(--accent, #6aa6ff) 85%, #000 15%);
 	color: #fff;
 
 	font-size: 11px;
@@ -268,5 +270,16 @@
 
 	#formsModal .modal-bd {
 		padding: 8px 8px 12px;
+	}
+
+	.modal-close,
+	.card .forms-launch,
+	.card .research-launch {
+		min-height: var(--mobile-target-size);
+		font-size: 14px;
+	}
+
+	.modal-close {
+		min-width: var(--mobile-target-size);
 	}
 }

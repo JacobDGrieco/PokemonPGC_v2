@@ -34,9 +34,13 @@ export function getStripeWebhookSecret() {
 }
 
 export function getStripePortalConfigurationId() {
-	return String(
-		process.env.STRIPE_PORTAL_CONFIGURATION_ID || process.env.STRIPE_PORTAL || "",
-	).trim() || null;
+	return (
+		String(
+			process.env.STRIPE_PORTAL_CONFIGURATION_ID ||
+				process.env.STRIPE_PORTAL ||
+				"",
+		).trim() || null
+	);
 }
 
 export function getStripeSubscriptionTier(subscription) {
@@ -61,43 +65,74 @@ export function validateStripeCheckoutBinding({
 	expectedTier,
 }) {
 	const sessionOwnerId = parseProviderUserId(
-		checkoutSession?.metadata?.userId || checkoutSession?.client_reference_id,
+		checkoutSession?.metadata?.userId ||
+			checkoutSession?.client_reference_id,
 	);
 	const subscriptionOwnerId = getStripeSubscriptionOwnerId(subscription);
 	const providerTier = getStripeSubscriptionTier(subscription);
 	const sessionTier = normalizeTierKey(checkoutSession?.metadata?.tier);
-	const normalizedExpectedTier = expectedTier ? normalizeTierKey(expectedTier) : null;
+	const normalizedExpectedTier = expectedTier
+		? normalizeTierKey(expectedTier)
+		: null;
 
 	if (!sessionOwnerId || sessionOwnerId !== expectedUserId) {
-		return { ok: false, error: "Stripe Checkout ownership could not be verified." };
+		return {
+			ok: false,
+			error: "Stripe Checkout ownership could not be verified.",
+		};
 	}
 	if (!subscriptionOwnerId || subscriptionOwnerId !== expectedUserId) {
-		return { ok: false, error: "Stripe subscription ownership could not be verified." };
+		return {
+			ok: false,
+			error: "Stripe subscription ownership could not be verified.",
+		};
 	}
 	if (!providerTier) {
-		return { ok: false, error: "Stripe subscription tier could not be verified." };
+		return {
+			ok: false,
+			error: "Stripe subscription tier could not be verified.",
+		};
 	}
 	if (sessionTier && sessionTier !== providerTier) {
-		return { ok: false, error: "Stripe Checkout tier does not match the subscription price." };
+		return {
+			ok: false,
+			error: "Stripe Checkout tier does not match the subscription price.",
+		};
 	}
 	if (normalizedExpectedTier && normalizedExpectedTier !== providerTier) {
-		return { ok: false, error: "Stripe subscription does not match the requested tier." };
+		return {
+			ok: false,
+			error: "Stripe subscription does not match the requested tier.",
+		};
 	}
-	if (checkoutSession?.customer && subscription?.customer
-		&& String(checkoutSession.customer) !== String(subscription.customer)) {
-		return { ok: false, error: "Stripe customer does not match the subscription." };
+	if (
+		checkoutSession?.customer &&
+		subscription?.customer &&
+		String(checkoutSession.customer) !== String(subscription.customer)
+	) {
+		return {
+			ok: false,
+			error: "Stripe customer does not match the subscription.",
+		};
 	}
 
 	return { ok: true, ownerId: expectedUserId, tierKey: providerTier };
 }
 
-export function buildStripeSubscriptionUpdate(subscription, { clearPayPal = false } = {}) {
+export function buildStripeSubscriptionUpdate(
+	subscription,
+	{ clearPayPal = false } = {},
+) {
 	return buildSubscriptionUpdate({
 		provider: "stripe",
 		tierKey: getStripeSubscriptionTier(subscription),
 		status: subscription?.status || null,
-		stripeCustomerId: subscription?.customer ? String(subscription.customer) : undefined,
-		stripeSubscriptionId: subscription?.id ? String(subscription.id) : undefined,
+		stripeCustomerId: subscription?.customer
+			? String(subscription.customer)
+			: undefined,
+		stripeSubscriptionId: subscription?.id
+			? String(subscription.id)
+			: undefined,
 		clearPayPal,
 	});
 }

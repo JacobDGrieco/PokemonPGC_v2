@@ -27,14 +27,22 @@
 	padding: 20px 14px 18px;
 	border-radius: 20px;
 	border: 1px solid rgba(255, 255, 255, 0.07);
-	background: linear-gradient(180deg, rgba(20, 24, 33, 0.96), rgba(11, 14, 21, 0.98));
+	background: linear-gradient(
+		180deg,
+		rgba(20, 24, 33, 0.96),
+		rgba(11, 14, 21, 0.98)
+	);
 	text-align: center;
-	transition: border-color 200ms ease, box-shadow 200ms ease;
+	transition:
+		border-color 200ms ease,
+		box-shadow 200ms ease;
 }
 
 .pricing-tier-card.is-current {
 	border-color: rgba(113, 197, 88, 0.38);
-	box-shadow: 0 0 0 1px rgba(113, 197, 88, 0.15), 0 12px 32px rgba(0, 0, 0, 0.28);
+	box-shadow:
+		0 0 0 1px rgba(113, 197, 88, 0.15),
+		0 12px 32px rgba(0, 0, 0, 0.28);
 }
 
 /* Ball icon — same gradient logic as auth.css */
@@ -50,19 +58,47 @@
 }
 
 .ptc-ball[data-ball="free"] {
-	background: radial-gradient(circle at 32% 32%, #fff 0, #fff 34%, #e31c23 35%, #e31c23 78%, #111 79%);
+	background: radial-gradient(
+		circle at 32% 32%,
+		#fff 0,
+		#fff 34%,
+		#e31c23 35%,
+		#e31c23 78%,
+		#111 79%
+	);
 }
 
 .ptc-ball[data-ball="great"] {
-	background: radial-gradient(circle at 32% 32%, #fff 0, #fff 34%, #3b5dc9 35%, #3b5dc9 78%, #111 79%);
+	background: radial-gradient(
+		circle at 32% 32%,
+		#fff 0,
+		#fff 34%,
+		#3b5dc9 35%,
+		#3b5dc9 78%,
+		#111 79%
+	);
 }
 
 .ptc-ball[data-ball="ultra"] {
-	background: radial-gradient(circle at 32% 32%, #fff 0, #fff 34%, #f5c644 35%, #2a2925 78%, #111 79%);
+	background: radial-gradient(
+		circle at 32% 32%,
+		#fff 0,
+		#fff 34%,
+		#f5c644 35%,
+		#2a2925 78%,
+		#111 79%
+	);
 }
 
 .ptc-ball[data-ball="master"] {
-	background: radial-gradient(circle at 32% 32%, #fff 0, #fff 34%, #9b5fb5 35%, #9b5fb5 78%, #111 79%);
+	background: radial-gradient(
+		circle at 32% 32%,
+		#fff 0,
+		#fff 34%,
+		#9b5fb5 35%,
+		#9b5fb5 78%,
+		#111 79%
+	);
 }
 
 .ptc-name {
@@ -205,8 +241,16 @@
 
 .pricing-table-wrap {
 	overflow-x: auto;
+	overscroll-behavior-inline: contain;
 	border-radius: var(--radius);
 	border: 1px solid var(--line-soft);
+}
+
+.pricing-table-hint {
+	display: none;
+	margin: 0 0 8px;
+	color: var(--text-muted);
+	font-size: 13px;
 }
 
 /* Table */
@@ -307,7 +351,10 @@
 	cursor: pointer;
 	border: 1px solid var(--line-soft);
 	opacity: 1;
-	transition: opacity 120ms ease, transform 120ms ease, border-color 120ms ease;
+	transition:
+		opacity 120ms ease,
+		transform 120ms ease,
+		border-color 120ms ease;
 }
 
 .pricing-pay-stripe {
@@ -425,5 +472,38 @@
 	.pricing-account-banner {
 		flex-direction: column;
 		align-items: flex-start;
+	}
+
+	.pricing-table-hint {
+		display: block;
+	}
+
+	.pricing-table-wrap {
+		background:
+			linear-gradient(90deg, transparent 75%, rgba(143, 199, 255, 0.12)),
+			var(--surface-1);
+	}
+
+	.pricing-table th:first-child,
+	.pricing-table td:first-child {
+		position: sticky;
+		left: 0;
+		z-index: 1;
+		background: var(--surface-2);
+		box-shadow: 1px 0 0 var(--line-soft);
+	}
+
+	.pricing-pay-btn,
+	.pricing-action-btn,
+	.pricing-action-link {
+		min-height: var(--mobile-target-size);
+	}
+}
+
+@media (max-width: 430px) {
+	.pricing-pay-btn,
+	.pricing-action-btn,
+	.pricing-action-link {
+		width: 100%;
 	}
 }

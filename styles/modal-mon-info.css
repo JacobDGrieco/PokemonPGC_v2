@@ -183,7 +183,6 @@
 	text-align: right;
 }
 
-
 /* ========================================================================== */
 /*  LOCATIONS BLOCK (MON INFO)                                                */
 /* ========================================================================== */
@@ -197,7 +196,6 @@
 .mon-info-locations-list li {
 	margin-bottom: 2px;
 }
-
 
 /* Locations meta grid (Encounter Rarity / Catch Rate) */
 .mon-info-locations-meta {
@@ -612,13 +610,21 @@
 
 .mon-info-pill.is-status-alpha {
 	border-color: #2f7a2f;
-	background: linear-gradient(90deg, rgba(58, 191, 58, 0.28), rgba(211, 75, 75, 0.28));
+	background: linear-gradient(
+		90deg,
+		rgba(58, 191, 58, 0.28),
+		rgba(211, 75, 75, 0.28)
+	);
 	color: #fff;
 }
 
 .mon-info-pill.is-status-shinyalpha {
 	border-color: #b58a1b;
-	background: linear-gradient(90deg, rgba(255, 215, 106, 0.28), rgba(211, 75, 75, 0.28));
+	background: linear-gradient(
+		90deg,
+		rgba(255, 215, 106, 0.28),
+		rgba(211, 75, 75, 0.28)
+	);
 	color: #fff;
 }
 
@@ -673,8 +679,6 @@
 	font-weight: 700;
 }
 
-
-
 /* ========================================================================== */
 /*  EVOLUTION (new renderer: linear + split)                                   */
 /* ========================================================================== */
@@ -727,7 +731,6 @@
 	min-width: 24px;
 	text-align: center;
 }
-
 
 /* ========================================================================== */
 /*  SPRITES & MODELS GALLERY                                                   */
@@ -846,7 +849,6 @@
 	font-weight: 800;
 	cursor: pointer;
 }
-
 
 .asset-empty {
 	font-size: 12px;

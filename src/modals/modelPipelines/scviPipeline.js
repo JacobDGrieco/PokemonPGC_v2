@@ -9,7 +9,11 @@ import {
 	logUvRangeOnce,
 } from "./utils.js";
 import { getModelKeyFromGlbUrl, getEyeParamsForModel } from "./eyes.js";
-import { makePokemonEyeMaterial, makePokemonBodyMaterial, makePokemonSmokeMaterial } from "./materials.js";
+import {
+	makePokemonEyeMaterial,
+	makePokemonBodyMaterial,
+	makePokemonSmokeMaterial,
+} from "./materials.js";
 
 const albSuffixes = [
 	"_alb.png",
@@ -28,8 +32,8 @@ function stemForMaterial(matName) {
 	const n = raw
 		.toLowerCase()
 		.trim()
-		.replace(/[_\-.]+/g, " ")   // treat _, -, . like spaces
-		.replace(/\s+/g, " ");     // normalize whitespace
+		.replace(/[_\-.]+/g, " ") // treat _, -, . like spaces
+		.replace(/\s+/g, " "); // normalize whitespace
 
 	// --- eyes ---
 	// covers: "left eye", "right eye", "Left_Eye", etc
@@ -51,8 +55,8 @@ function stemForMaterial(matName) {
 		const m = n.match(/body\s*(\d+)/);
 		const idx = m ? parseInt(m[1], 10) : NaN;
 
-		if (idx === 1) return "body";    // body_*.png
-		if (idx === 2) return "body2";   // body2_*.png
+		if (idx === 1) return "body"; // body_*.png
+		if (idx === 2) return "body2"; // body2_*.png
 	}
 
 	// --- FINAL fallback: generic body ---
@@ -63,12 +67,21 @@ function stemForMaterial(matName) {
 	return n.replace(/\s+/g, "");
 }
 
-export async function applyPokemonTextureSetToScene(root3d, { glbUrl, variant, texDir, eyeShaderMats }) {
+export async function applyPokemonTextureSetToScene(
+	root3d,
+	{ glbUrl, variant, texDir, eyeShaderMats },
+) {
 	const modelKey = getModelKeyFromGlbUrl(glbUrl);
-	if (!modelKey) throw new Error("ScVi: could not parse model id from glbUrl: " + glbUrl);
+	if (!modelKey)
+		throw new Error(
+			"ScVi: could not parse model id from glbUrl: " + glbUrl,
+		);
 
 	return applyGenericTextureSetToScene(root3d, {
-		glbUrl, variant, eyeShaderMats, stemForMaterial,
+		glbUrl,
+		variant,
+		eyeShaderMats,
+		stemForMaterial,
 
 		buildCandidatesForStem: (texDir, stem) => {
 			// ✅ Try multiple filename stems for each material stem.
@@ -89,7 +102,9 @@ export async function applyPokemonTextureSetToScene(root3d, { glbUrl, variant, t
 			})();
 
 			const mk = (suffixes) =>
-				aliases.flatMap(a => suffixes.map(sf => `${texDir}${a}${sf}`));
+				aliases.flatMap((a) =>
+					suffixes.map((sf) => `${texDir}${a}${sf}`),
+				);
 
 			return {
 				alb: mk(albSuffixes),
@@ -98,10 +113,7 @@ export async function applyPokemonTextureSetToScene(root3d, { glbUrl, variant, t
 				ao: mk(["_ao.png"]),
 				rgn: mk(["_rgn.png"]),
 				mtl: mk(["_mtl.png"]),
-				msk: [
-					`${texDir}body_msk.png`,
-					...mk(["_msk.png"]),
-				],
+				msk: [`${texDir}body_msk.png`, ...mk(["_msk.png"])],
 			};
 		},
 
@@ -131,7 +143,7 @@ export async function applyPokemonTextureSetToScene(root3d, { glbUrl, variant, t
 					msk: tex.msk,
 					noise: tex.lym,
 					tint: new THREE.Color(1, 1, 1),
-					speed: 0.10,
+					speed: 0.1,
 					noiseScale: 3.25,
 					alphaCut: 0.03,
 					blending: THREE.NormalBlending,
@@ -154,7 +166,9 @@ export async function applyPokemonTextureSetToScene(root3d, { glbUrl, variant, t
 			if (stem === "smoke") mesh.renderOrder = 2;
 
 			if (mesh.name.toLowerCase().includes("wing")) {
-				const mats = Array.isArray(mesh.material) ? mesh.material : [mesh.material];
+				const mats = Array.isArray(mesh.material)
+					? mesh.material
+					: [mesh.material];
 				for (const m of mats) if (m) m.side = THREE.DoubleSide;
 			}
 

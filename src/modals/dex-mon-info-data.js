@@ -22,13 +22,17 @@ export function gameMatches(metaGames, gameKey) {
 }
 
 export function collectCatalogFormOptions(natId, gameKey) {
-	const catalogForms = (natId != null && window.DATA?.formsCatalog?.[natId]) || {};
+	const catalogForms =
+		(natId != null && window.DATA?.formsCatalog?.[natId]) || {};
 	const formOpts = [];
 	for (const [fk, meta] of Object.entries(catalogForms)) {
 		if (meta && Array.isArray(meta.games) && meta.games.length) {
 			if (!gameMatches(meta.games, gameKey)) continue;
 		}
-		formOpts.push({ key: String(fk), label: meta?.label ? String(meta.label) : String(fk) });
+		formOpts.push({
+			key: String(fk),
+			label: meta?.label ? String(meta.label) : String(fk),
+		});
 	}
 	return formOpts;
 }
@@ -58,12 +62,29 @@ export async function resolveMonInfoData({ gameKey, mon, formKey = null }) {
 
 	const bucket = resolveMonInfoBucket(gameKey);
 	const info = (natId != null && bucket?.[natId]) || bucket?.[mon.id] || null;
-	const formOverride = effectiveFormKey && natId != null
-		? window.DATA?.monInfoForms?.[gameKey]?.[natId]?.[effectiveFormKey] || null
-		: null;
+	const formOverride =
+		effectiveFormKey && natId != null
+			? window.DATA?.monInfoForms?.[gameKey]?.[natId]?.[
+					effectiveFormKey
+				] || null
+			: null;
 	const effectiveInfo = mergeInfo(info, formOverride);
-	const fallbackInfo = !effectiveInfo && natId != null ? await fetchPokeApiMonInfo(natId) : null;
+	const fallbackInfo =
+		!effectiveInfo && natId != null
+			? await fetchPokeApiMonInfo(natId)
+			: null;
 	const resolvedInfo = mergeInfo(fallbackInfo, effectiveInfo);
 
-	return { natId, key, formOpts, hasForms, effectiveFormKey, info, formOverride, effectiveInfo, fallbackInfo, resolvedInfo };
+	return {
+		natId,
+		key,
+		formOpts,
+		hasForms,
+		effectiveFormKey,
+		info,
+		formOverride,
+		effectiveInfo,
+		fallbackInfo,
+		resolvedInfo,
+	};
 }

@@ -17,7 +17,8 @@ export function layoutWheel(dialogEl, opts = {}) {
 	const header = dialogEl.querySelector(".modal-hd");
 	const pad = 24;
 	const usableW = dialogEl.clientWidth - pad * 2;
-	const usableH = dialogEl.clientHeight - (header?.offsetHeight || 0) - pad * 2;
+	const usableH =
+		dialogEl.clientHeight - (header?.offsetHeight || 0) - pad * 2;
 	const baseSize = preferWidth ? usableW : Math.min(usableW, usableH);
 	const size = Math.max(320, Math.min(sizeCap, baseSize));
 	const center = size / 2;
@@ -26,7 +27,15 @@ export function layoutWheel(dialogEl, opts = {}) {
 	const minR = Math.max(56, size * 0.28);
 	const gap = 12;
 	const R_BOOST = 1.4;
-	return { size, center, maxR, minR, gap, R_BOOST, headerH: header?.offsetHeight || 0 };
+	return {
+		size,
+		center,
+		maxR,
+		minR,
+		gap,
+		R_BOOST,
+		headerH: header?.offsetHeight || 0,
+	};
 }
 
 export function computeRingCounts(N, centerCap = 2, ringCap = 8) {
@@ -45,22 +54,38 @@ export function computeRingCounts(N, centerCap = 2, ringCap = 8) {
 }
 
 export function getRadiusScale(kind) {
-	const h = window.innerHeight || document.documentElement.clientHeight || document.body?.clientHeight || 0;
+	const h =
+		window.innerHeight ||
+		document.documentElement.clientHeight ||
+		document.body?.clientHeight ||
+		0;
 	if (h && h <= 720) return 1.9;
 	if (h && h <= 1080) return 1.5;
 	return 1.75;
 }
 
 export function getCardScale(kind) {
-	const h = window.innerHeight || document.documentElement.clientHeight || document.body?.clientHeight || 0;
+	const h =
+		window.innerHeight ||
+		document.documentElement.clientHeight ||
+		document.body?.clientHeight ||
+		0;
 	if (h && h <= 720) return 0.4;
 	if (h && h <= 1080) return 0.65;
 	return 1.0;
 }
 
 export function getOvalScale(kind) {
-	const w = window.innerWidth || document.documentElement.clientWidth || document.body?.clientWidth || 0;
-	const h = window.innerHeight || document.documentElement.clientHeight || document.body?.clientHeight || 0;
+	const w =
+		window.innerWidth ||
+		document.documentElement.clientWidth ||
+		document.body?.clientWidth ||
+		0;
+	const h =
+		window.innerHeight ||
+		document.documentElement.clientHeight ||
+		document.body?.clientHeight ||
+		0;
 	if (!w || !h) return { sx: 1, sy: 1 };
 	const aspect = w / h;
 	if (h <= 720) {

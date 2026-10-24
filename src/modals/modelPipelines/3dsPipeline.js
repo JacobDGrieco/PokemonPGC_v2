@@ -1,5 +1,8 @@
 // src/ui/modals/modelPipelines/lgpePipeline.js
-import { applyGenericTextureSetToScene, swapUvChannelsIfNeeded } from "./utils.js";
+import {
+	applyGenericTextureSetToScene,
+	swapUvChannelsIfNeeded,
+} from "./utils.js";
 import * as THREE from "three";
 
 // Basic suffix guesses (keep small; no probing happens anyway — manifest gates loading)
@@ -8,24 +11,52 @@ function isEyeStem(stem) {
 }
 
 function isIrisStem(stem) {
-	return stem === "LIris" || stem === "RIris" || stem === "Iris1" || stem === "Iris2";
+	return (
+		stem === "LIris" ||
+		stem === "RIris" ||
+		stem === "Iris1" ||
+		stem === "Iris2"
+	);
 }
 
 function stemForMaterial(matName) {
 	const n = String(matName || "").toLowerCase();
 
-	if (n.includes("bodyainc") || n.includes("body_ainc") || n.includes("body ainc")) return "BodyAInc";
-	if (n.includes("bodybinc") || n.includes("body_binc") || n.includes("body binc")) return "BodyBInc";
-	if (n.includes("bodycinc") || n.includes("body_cinc") || n.includes("body cinc")) return "BodyCInc";
-	if (n.includes("bodyinc") || n.includes("body_inc") || n.includes("body inc")) return "Pokabu_Tail00Env";
+	if (
+		n.includes("bodyainc") ||
+		n.includes("body_ainc") ||
+		n.includes("body ainc")
+	)
+		return "BodyAInc";
+	if (
+		n.includes("bodybinc") ||
+		n.includes("body_binc") ||
+		n.includes("body binc")
+	)
+		return "BodyBInc";
+	if (
+		n.includes("bodycinc") ||
+		n.includes("body_cinc") ||
+		n.includes("body cinc")
+	)
+		return "BodyCInc";
+	if (
+		n.includes("bodyinc") ||
+		n.includes("body_inc") ||
+		n.includes("body inc")
+	)
+		return "Pokabu_Tail00Env";
 	if (n.includes("pokabu tail00")) return "Pokabu_Tail00Env";
 	if (n.includes("pokabu tail01")) return "Pokabu_Tail01Inc";
 	if (n.includes("neolantinc")) return "NeolantInc";
 
-	if (/\bbody\s*a\b/.test(n) || n.includes("bodya") || n.includes("body_a")) return "BodyA1";
-	if (/\bbody\s*b\b/.test(n) || n.includes("bodyb") || n.includes("body_b")) return "BodyB1";
+	if (/\bbody\s*a\b/.test(n) || n.includes("bodya") || n.includes("body_a"))
+		return "BodyA1";
+	if (/\bbody\s*b\b/.test(n) || n.includes("bodyb") || n.includes("body_b"))
+		return "BodyB1";
 	if (n.includes("tosakinto") || n.includes("keikouo")) return "BodyB1";
-	if (/\bbody\s*c\b/.test(n) || n.includes("bodyc") || n.includes("body_c")) return "BodyC1";
+	if (/\bbody\s*c\b/.test(n) || n.includes("bodyc") || n.includes("body_c"))
+		return "BodyC1";
 
 	if (n.includes("left") && n.includes("eye")) return "Eye1";
 	if (n.includes("right") && n.includes("eye")) return "Eye2";
@@ -45,7 +76,6 @@ function stemForMaterial(matName) {
 	if (n.includes("cmouth")) return "MouthC1";
 	if (n.includes("mouth")) return "Mouth1";
 
-
 	if (n.includes("firecorea")) return "FireCoreA1";
 	if (n.includes("firecoreb1")) return "FireCoreB1";
 	if (n.includes("firecoreb2")) return "FireCoreB2";
@@ -56,11 +86,10 @@ function stemForMaterial(matName) {
 
 	if (n.includes("beto")) return "Beto1";
 	if (n.includes("chonchienon")) return "ChonchieEnv";
-	if (n.includes("sacapdp20")) return "SaCapDP20"; 		// Pikachu Caps
+	if (n.includes("sacapdp20")) return "SaCapDP20"; // Pikachu Caps
 
 	return "Body1";
 }
-
 
 // Simple “slap it on” materials (no toon, no special packing)
 function makeSimpleMaterial({ name, tex, transparent = false }) {
@@ -117,7 +146,10 @@ function makeIrisMaterial({ name, tex }) {
 	return mat;
 }
 
-export async function apply3DSTextureSetToScene(root3d, { glbUrl, variant, eyeShaderMats } = {}) {
+export async function apply3DSTextureSetToScene(
+	root3d,
+	{ glbUrl, variant, eyeShaderMats } = {},
+) {
 	// We intentionally ignore variant for LGPE right now — you’re just “slapping textures on”.
 	return applyGenericTextureSetToScene(root3d, {
 		glbUrl,
@@ -130,30 +162,51 @@ export async function apply3DSTextureSetToScene(root3d, { glbUrl, variant, eyeSh
 			const s = String(stem || "");
 
 			const nrm =
-				(s === "Body1") ? [`${texDir}BodyNor.png`] :
-					(s === "BodyA1") ? [`${texDir}BodyANor.png`] :
-						(s === "BodyB1") ? [`${texDir}BodyBNor.png`] :
-							(s === "BodyC1") ? [`${texDir}BodyCNor.png`] :
-								(s === "Eye1" || s === "Eye2") ? [`${texDir}EyeNor.png`] :
-									(s === "SaCapDP20") ? [`${texDir}SaCapDPNor.png`] :
-										[];
+				s === "Body1"
+					? [`${texDir}BodyNor.png`]
+					: s === "BodyA1"
+						? [`${texDir}BodyANor.png`]
+						: s === "BodyB1"
+							? [`${texDir}BodyBNor.png`]
+							: s === "BodyC1"
+								? [`${texDir}BodyCNor.png`]
+								: s === "Eye1" || s === "Eye2"
+									? [`${texDir}EyeNor.png`]
+									: s === "SaCapDP20"
+										? [`${texDir}SaCapDPNor.png`]
+										: [];
 
 			const msk =
-				(s === "BodyB1") ? [`${texDir}BodyBMask.png`] :
-					(s === "BodyC1") ? [`${texDir}BodyCMask.png`] :
-						(s === "FireCoreA1") ? [`${texDir}FireStenA1.png`] :
-							(s === "FireCoreB1") ? [`${texDir}FireStenB1.png`] :
-								(s === "FireGeomA") ? [`${texDir}FireSGeomA.png`] :
-									(s === "FireStenA") ? [`${texDir}FireStenA.png`] :
-										(s === "FireStenMask") ? [`${texDir}FireStenMask.png`] :
-											(s === "Pokabu_Tail00Env") ? [`${texDir}Pokabu_Tail00Env.png`] :
-												(s === "Pokabu_Tail01Inc") ? [`${texDir}Pokabu_Tail01Inc.png`] :
-													[];
+				s === "BodyB1"
+					? [`${texDir}BodyBMask.png`]
+					: s === "BodyC1"
+						? [`${texDir}BodyCMask.png`]
+						: s === "FireCoreA1"
+							? [`${texDir}FireStenA1.png`]
+							: s === "FireCoreB1"
+								? [`${texDir}FireStenB1.png`]
+								: s === "FireGeomA"
+									? [`${texDir}FireSGeomA.png`]
+									: s === "FireStenA"
+										? [`${texDir}FireStenA.png`]
+										: s === "FireStenMask"
+											? [`${texDir}FireStenMask.png`]
+											: s === "Pokabu_Tail00Env"
+												? [
+														`${texDir}Pokabu_Tail00Env.png`,
+													]
+												: s === "Pokabu_Tail01Inc"
+													? [
+															`${texDir}Pokabu_Tail01Inc.png`,
+														]
+													: [];
 
 			const iris =
-				(s === "Iris1") ? [`${texDir}Iris1.png`] :
-					(s === "Iris2") ? [`${texDir}Iris2.png`] :
-						[];
+				s === "Iris1"
+					? [`${texDir}Iris1.png`]
+					: s === "Iris2"
+						? [`${texDir}Iris2.png`]
+						: [];
 
 			const alb = [`${texDir}${s}.png`];
 
@@ -173,7 +226,11 @@ export async function apply3DSTextureSetToScene(root3d, { glbUrl, variant, eyeSh
 		makeEyeMaterial: ({ matName, tex }) => {
 			// 3DS eyes are baked textures. No shader. No iris rebuild.
 			// Use transparency only if you actually need it (often you don't).
-			const mat = makeSimpleMaterial({ name: matName || "Eye", tex, transparent: false });
+			const mat = makeSimpleMaterial({
+				name: matName || "Eye",
+				tex,
+				transparent: false,
+			});
 			if (mat.normalMap && tex.nrm) mat.normalMap = tex.nrm;
 			return mat;
 		},
@@ -187,7 +244,11 @@ export async function apply3DSTextureSetToScene(root3d, { glbUrl, variant, eyeSh
 
 			// Fire: use stencil as alpha
 			if (lower.includes("fire")) {
-				const mat = makeSimpleMaterial({ name: matName || stem, tex, transparent: !!tex.msk });
+				const mat = makeSimpleMaterial({
+					name: matName || stem,
+					tex,
+					transparent: !!tex.msk,
+				});
 
 				if (tex.msk) {
 					mat.alphaMap = tex.msk;
@@ -202,7 +263,11 @@ export async function apply3DSTextureSetToScene(root3d, { glbUrl, variant, eyeSh
 			}
 
 			// Everything else (Body)
-			return makeSimpleMaterial({ name: matName || stem, tex, transparent: false });
+			return makeSimpleMaterial({
+				name: matName || stem,
+				tex,
+				transparent: false,
+			});
 		},
 
 		// no UV swapping / special handling yet

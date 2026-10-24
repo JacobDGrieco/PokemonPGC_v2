@@ -1,5 +1,15 @@
-// Centralized state & persistence for PPGC
-import { normalizeRecordKeys, normalizeSectionId, normalizeTaskId } from "./utils/normalizeSectionId.js";
+/**
+ * Owns the mutable browser state and the `ppgc_v1` localStorage contract.
+ *
+ * Legacy modules mutate this object directly while React observes bridge
+ * events. Persisted keys and normalization paths protect existing user progress,
+ * so changes require a compatibility and recovery plan.
+ */
+import {
+	normalizeRecordKeys,
+	normalizeSectionId,
+	normalizeTaskId,
+} from "./utils/normalizeSectionId.js";
 
 const STORAGE_KEY = "ppgc_v1";
 const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
@@ -10,7 +20,14 @@ let initialGenKey = saved.genKey || null;
 let initialGameKey = saved.gameKey || null;
 let initialSectionId = normalizeSectionId(saved.sectionId || null);
 
-const ALLOWED_LEVELS = new Set(["gen", "game", "section", "account", "tools", "moninfo"]);
+const ALLOWED_LEVELS = new Set([
+	"gen",
+	"game",
+	"section",
+	"account",
+	"tools",
+	"moninfo",
+]);
 if (!ALLOWED_LEVELS.has(initialLevel)) initialLevel = "gen";
 
 // If the saved combo doesn't make sense, fall back to the top level
@@ -53,14 +70,27 @@ export const store = {
 		monInfoForm: saved.monInfoForm || null,
 		toolsKey: saved.toolsKey || "info",
 		sidebarCollapsed: !!saved.sidebarCollapsed,
-		taskDensity: saved.taskDensity === "comfortable" ? "comfortable" : "compact",
+		taskDensity:
+			saved.taskDensity === "comfortable" ? "comfortable" : "compact",
 	},
 	sectionsStore: new Map(Object.entries(saved.sections || {})),
-	tasksStore: new Map(Object.entries(normalizeRecordKeys(saved.tasks || {}, normalizeSectionId))),
+	tasksStore: new Map(
+		Object.entries(
+			normalizeRecordKeys(saved.tasks || {}, normalizeSectionId),
+		),
+	),
 	dexStatus: new Map(Object.entries(saved.dexStatus || {})),
 	dexFormsStatus: new Map(), // Map<gameKey, { [monId]: { all?:boolean, forms:{[formName]: status|boolean} } }>
-	taskProgressById: new Map(Object.entries(normalizeRecordKeys(saved.taskProgressById || {}, normalizeTaskId))),
-	taskChoiceById: new Map(Object.entries(normalizeRecordKeys(saved.taskChoiceById || {}, normalizeTaskId))),
+	taskProgressById: new Map(
+		Object.entries(
+			normalizeRecordKeys(saved.taskProgressById || {}, normalizeTaskId),
+		),
+	),
+	taskChoiceById: new Map(
+		Object.entries(
+			normalizeRecordKeys(saved.taskChoiceById || {}, normalizeTaskId),
+		),
+	),
 };
 
 // Extra UI state defaults
@@ -70,24 +100,25 @@ store.state.fashionGenderByGame ??= saved.fashionGenderByGame || {};
 store.state.modelViewerSolo ??= false;
 
 // Additional status maps
-store.fashionStatus ??= new Map();          // Map<gameKey, Map<categoryId, Record<itemId:boolean>>>
-store.fashionFormsStatus ??= new Map();     // Map<gameKey, Map<categoryId, Record<itemId, {forms,...}|...>>>
-store.amieDecorStatus ??= new Map();        // Map<gameKey, { [decorId]: boolean }>
-store.distributionsStatus ??= new Map();    // Map<gameKey, { [distId]: boolean }>
-store.dexResearchStatus ??= new Map();      // Map<gameKey, { [dexMonId]: { [taskId]: boolean } }>
-store.curryStatus ??= new Map();            // Map<gameKey, { [curryId]: boolean }>
-store.curryFormsStatus ??= new Map();       // Map<gameKey, { [curryId]: { all:boolean, forms:{[name]:boolean} } }>
-store.sandwichStatus ??= new Map();         // Map<gameKey, { [sandwichId]: boolean }>
-store.sandwichFormsStatus ??= new Map();    // Map<gameKey, { [sandwichId]: { all:boolean, forms:{[name]:boolean} } }>
-store.stickerStatus ??= new Map();        // Map<gameKey, { [stickerId]: boolean }>
-store.stickerFormsStatus ??= new Map();   // Map<gameKey, { [stickerId]: { all:boolean, forms:{[name]:boolean} } }>
-
+store.fashionStatus ??= new Map(); // Map<gameKey, Map<categoryId, Record<itemId:boolean>>>
+store.fashionFormsStatus ??= new Map(); // Map<gameKey, Map<categoryId, Record<itemId, {forms,...}|...>>>
+store.amieDecorStatus ??= new Map(); // Map<gameKey, { [decorId]: boolean }>
+store.distributionsStatus ??= new Map(); // Map<gameKey, { [distId]: boolean }>
+store.dexResearchStatus ??= new Map(); // Map<gameKey, { [dexMonId]: { [taskId]: boolean } }>
+store.curryStatus ??= new Map(); // Map<gameKey, { [curryId]: boolean }>
+store.curryFormsStatus ??= new Map(); // Map<gameKey, { [curryId]: { all:boolean, forms:{[name]:boolean} } }>
+store.sandwichStatus ??= new Map(); // Map<gameKey, { [sandwichId]: boolean }>
+store.sandwichFormsStatus ??= new Map(); // Map<gameKey, { [sandwichId]: { all:boolean, forms:{[name]:boolean} } }>
+store.stickerStatus ??= new Map(); // Map<gameKey, { [stickerId]: boolean }>
+store.stickerFormsStatus ??= new Map(); // Map<gameKey, { [stickerId]: { all:boolean, forms:{[name]:boolean} } }>
 
 /* ===================== Load from localStorage ===================== */
 
 // Fashion main items
 {
-	const raw = saved.fashionStatus || JSON.parse(localStorage.getItem("fashionStatus") || "{}");
+	const raw =
+		saved.fashionStatus ||
+		JSON.parse(localStorage.getItem("fashionStatus") || "{}");
 	const map = new Map();
 	for (const [gameKey, categories] of Object.entries(raw)) {
 		const catMap = new Map();
@@ -101,7 +132,9 @@ store.stickerFormsStatus ??= new Map();   // Map<gameKey, { [stickerId]: { all:b
 
 // Fashion forms
 {
-	const rawForms = saved.fashionFormsStatus || JSON.parse(localStorage.getItem("fashionFormsStatus") || "{}");
+	const rawForms =
+		saved.fashionFormsStatus ||
+		JSON.parse(localStorage.getItem("fashionFormsStatus") || "{}");
 	const formsMap = new Map();
 	for (const [gameKey, categories] of Object.entries(rawForms)) {
 		const catMap = new Map();
@@ -115,7 +148,9 @@ store.stickerFormsStatus ??= new Map();   // Map<gameKey, { [stickerId]: { all:b
 
 // Dex forms
 {
-	const rawDexForms = saved.dexFormsStatus || JSON.parse(localStorage.getItem("dexFormsStatus") || "{}");
+	const rawDexForms =
+		saved.dexFormsStatus ||
+		JSON.parse(localStorage.getItem("dexFormsStatus") || "{}");
 	const dexFormsMap = new Map();
 	for (const [gameKey, byId] of Object.entries(rawDexForms || {})) {
 		const rec = {};
@@ -132,7 +167,9 @@ store.stickerFormsStatus ??= new Map();   // Map<gameKey, { [stickerId]: { all:b
 
 // Poke-Amie decorations
 {
-	const rawAmieDecor = saved.amieDecorStatus || JSON.parse(localStorage.getItem("amieDecorStatus") || "{}");
+	const rawAmieDecor =
+		saved.amieDecorStatus ||
+		JSON.parse(localStorage.getItem("amieDecorStatus") || "{}");
 	const amieDecorMap = new Map();
 	for (const [gameKey, rec] of Object.entries(rawAmieDecor || {})) {
 		amieDecorMap.set(gameKey, rec || {});
@@ -142,7 +179,9 @@ store.stickerFormsStatus ??= new Map();   // Map<gameKey, { [stickerId]: { all:b
 
 // Distributions
 {
-	const rawDist = saved.distributionsStatus || JSON.parse(localStorage.getItem("distributionsStatus") || "{}");
+	const rawDist =
+		saved.distributionsStatus ||
+		JSON.parse(localStorage.getItem("distributionsStatus") || "{}");
 
 	const distMap = new Map();
 	for (const [gameKey, rec] of Object.entries(rawDist || {})) {
@@ -153,7 +192,9 @@ store.stickerFormsStatus ??= new Map();   // Map<gameKey, { [stickerId]: { all:b
 
 // Dex research
 {
-	const rawResearch = saved.dexResearchStatus || JSON.parse(localStorage.getItem("dexResearchStatus") || "{}");
+	const rawResearch =
+		saved.dexResearchStatus ||
+		JSON.parse(localStorage.getItem("dexResearchStatus") || "{}");
 	const researchMap = new Map();
 	for (const [gameKey, rec] of Object.entries(rawResearch)) {
 		researchMap.set(gameKey, rec || {});
@@ -163,7 +204,9 @@ store.stickerFormsStatus ??= new Map();   // Map<gameKey, { [stickerId]: { all:b
 
 // Curry
 {
-	const rawCurry = saved.curryStatus || JSON.parse(localStorage.getItem("curryStatus") || "{}");
+	const rawCurry =
+		saved.curryStatus ||
+		JSON.parse(localStorage.getItem("curryStatus") || "{}");
 	const curryMap = new Map();
 	for (const [gameKey, rec] of Object.entries(rawCurry)) {
 		curryMap.set(gameKey, rec || {});
@@ -173,7 +216,9 @@ store.stickerFormsStatus ??= new Map();   // Map<gameKey, { [stickerId]: { all:b
 
 // Curry forms
 {
-	const rawCurryForms = saved.curryFormsStatus || JSON.parse(localStorage.getItem("curryFormsStatus") || "{}");
+	const rawCurryForms =
+		saved.curryFormsStatus ||
+		JSON.parse(localStorage.getItem("curryFormsStatus") || "{}");
 	const curryFormsMap = new Map();
 	for (const [gameKey, rec] of Object.entries(rawCurryForms)) {
 		const gameRec = {};
@@ -190,7 +235,9 @@ store.stickerFormsStatus ??= new Map();   // Map<gameKey, { [stickerId]: { all:b
 
 // Sandwich
 {
-	const rawSandwich = saved.sandwichStatus || JSON.parse(localStorage.getItem("sandwichStatus") || "{}");
+	const rawSandwich =
+		saved.sandwichStatus ||
+		JSON.parse(localStorage.getItem("sandwichStatus") || "{}");
 	const sandwichMap = new Map();
 	for (const [gameKey, rec] of Object.entries(rawSandwich)) {
 		sandwichMap.set(gameKey, rec || {});
@@ -200,7 +247,9 @@ store.stickerFormsStatus ??= new Map();   // Map<gameKey, { [stickerId]: { all:b
 
 // Sandwich forms
 {
-	const rawSandwichForms = saved.sandwichFormsStatus || JSON.parse(localStorage.getItem("sandwichFormsStatus") || "{}");
+	const rawSandwichForms =
+		saved.sandwichFormsStatus ||
+		JSON.parse(localStorage.getItem("sandwichFormsStatus") || "{}");
 	const sandwichFormsMap = new Map();
 	for (const [gameKey, rec] of Object.entries(rawSandwichForms)) {
 		const gameRec = {};
@@ -217,7 +266,9 @@ store.stickerFormsStatus ??= new Map();   // Map<gameKey, { [stickerId]: { all:b
 
 // Sticker
 {
-	const rawSticker = saved.stickerStatus || JSON.parse(localStorage.getItem("stickerStatus") || "{}");
+	const rawSticker =
+		saved.stickerStatus ||
+		JSON.parse(localStorage.getItem("stickerStatus") || "{}");
 	const stickerMap = new Map();
 	for (const [gameKey, rec] of Object.entries(rawSticker)) {
 		stickerMap.set(gameKey, rec || {});
@@ -227,7 +278,9 @@ store.stickerFormsStatus ??= new Map();   // Map<gameKey, { [stickerId]: { all:b
 
 // Sticker forms
 {
-	const rawStickerForms = saved.stickerFormsStatus || JSON.parse(localStorage.getItem("stickerFormsStatus") || "{}");
+	const rawStickerForms =
+		saved.stickerFormsStatus ||
+		JSON.parse(localStorage.getItem("stickerFormsStatus") || "{}");
 	const stickerFormsMap = new Map();
 	for (const [gameKey, rec] of Object.entries(rawStickerForms)) {
 		const gameRec = {};
@@ -293,7 +346,7 @@ export function save() {
 
 	const obj = {
 		// --- Core navigation / UI state that must survive reloads ---
-		level: s.level,             // "gen" | "game" | "section" | "account"
+		level: s.level, // "gen" | "game" | "section" | "account"
 		genKey: s.genKey,
 		gameKey: s.gameKey,
 		sectionId: s.sectionId,
@@ -325,13 +378,22 @@ export function save() {
 		stickerStatus: Object.fromEntries(store.stickerStatus),
 		stickerFormsStatus: Object.fromEntries(store.stickerFormsStatus),
 		fashionStatus: serializeNestedCategoryStatus(store.fashionStatus),
-		fashionFormsStatus: serializeNestedCategoryStatus(store.fashionFormsStatus),
+		fashionFormsStatus: serializeNestedCategoryStatus(
+			store.fashionFormsStatus,
+		),
 		amieDecorStatus: Object.fromEntries(store.amieDecorStatus),
-		taskProgressById: store.taskProgressById instanceof Map ? Object.fromEntries(store.taskProgressById) : {},
-		taskChoiceById: store.taskChoiceById instanceof Map ? Object.fromEntries(store.taskChoiceById) : {},
+		taskProgressById:
+			store.taskProgressById instanceof Map
+				? Object.fromEntries(store.taskProgressById)
+				: {},
+		taskChoiceById:
+			store.taskChoiceById instanceof Map
+				? Object.fromEntries(store.taskChoiceById)
+				: {},
 		toolsKey: s.toolsKey || "info",
 		modelViewerSolo: s.modelViewerSolo || false,
-		taskDensity: s.taskDensity === "comfortable" ? "comfortable" : "compact",
+		taskDensity:
+			s.taskDensity === "comfortable" ? "comfortable" : "compact",
 	};
 
 	try {
@@ -348,7 +410,7 @@ export function save() {
 					gameKey,
 					ts: new Date().toISOString(),
 				},
-			})
+			}),
 		);
 	} catch {
 		// ignore event dispatch failures
@@ -367,7 +429,9 @@ export function uid() {
 
 /** True if a section is the "Gotta Catch 'Em All" core Dex section. */
 export function isGCEASection(section) {
-	return (section?.title || "").trim().toLowerCase() === "gotta catch 'em all";
+	return (
+		(section?.title || "").trim().toLowerCase() === "gotta catch 'em all"
+	);
 }
 
 /**
@@ -486,7 +550,9 @@ store.getDexStatus = function (gameKey, dexId) {
 	const byGame =
 		this.dexStatus instanceof Map ? this.dexStatus.get(gameKey) : null;
 	const statusRaw =
-		byGame && typeof byGame[monId] !== "undefined" ? byGame[monId] : "unknown";
+		byGame && typeof byGame[monId] !== "undefined"
+			? byGame[monId]
+			: "unknown";
 	const status =
 		typeof statusRaw === "string"
 			? statusRaw
@@ -518,7 +584,9 @@ store.getDexStatus = function (gameKey, dexId) {
  */
 store.getFashionState = function (gameKey, categoryId, itemId, formKey) {
 	const gCat =
-		this.fashionStatus instanceof Map ? this.fashionStatus.get(gameKey) : null;
+		this.fashionStatus instanceof Map
+			? this.fashionStatus.get(gameKey)
+			: null;
 	const gFormsCat =
 		this.fashionFormsStatus instanceof Map
 			? this.fashionFormsStatus.get(gameKey)

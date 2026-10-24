@@ -1,8 +1,21 @@
+/**
+ * Authenticated cloud-progress collection and per-game handler.
+ * Ownership always comes from the signed session. Snapshots are whole-document
+ * upserts, so this endpoint does not provide revision/conflict semantics.
+ */
 import { json, methodNotAllowed } from "../_lib/response.js";
 import { getSessionFromRequest, readJsonBody } from "../_lib/auth.js";
 import { prisma } from "../_lib/db.js";
-import { getUserSaves, upsertUserSave } from "../_lib/progress.js";
-import { validateGameKey, validateSnapshotPayload } from "../_lib/validation.js";
+import {
+	getUserSaves,
+	upsertUserSave,
+	USER_SAVE_RESPONSE_SELECT,
+	USER_SAVE_WRITE_SELECT,
+} from "../_lib/progress.js";
+import {
+	validateGameKey,
+	validateSnapshotPayload,
+} from "../_lib/validation.js";
 
 export default async function handler(req, res) {
 	const slug = Array.isArray(req.query?.slug) ? req.query.slug : [];
@@ -61,7 +74,11 @@ async function handleProgressIndexPut(req, res) {
 	}
 
 	try {
-		await upsertUserSave(session.userId, gameKeyResult.gameKey, dataResult.data);
+		await upsertUserSave(
+			session.userId,
+			gameKeyResult.gameKey,
+			dataResult.data,
+		);
 		return json(res, 200, { ok: true });
 	} catch (err) {
 		console.error("[progress PUT] error:", err);
@@ -95,6 +112,7 @@ async function handleProgressByGameGet(req, res) {
 					gameKey: parsedGameKey.gameKey,
 				},
 			},
+			select: USER_SAVE_RESPONSE_SELECT,
 		});
 
 		if (!save) {
@@ -151,6 +169,7 @@ async function handleProgressByGamePut(req, res) {
 				gameKey: parsedGameKey.gameKey,
 				data: parsedData.data,
 			},
+			select: USER_SAVE_WRITE_SELECT,
 		});
 
 		return json(res, 200, { ok: true, save });

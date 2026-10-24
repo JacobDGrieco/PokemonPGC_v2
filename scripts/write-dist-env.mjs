@@ -9,10 +9,10 @@ if (!fs.existsSync(distDir)) {
 }
 
 const assetBaseUrl = String(
-	process.env.VITE_ASSET_BASE_URL || process.env.ASSET_BASE_URL || ""
+	process.env.VITE_ASSET_BASE_URL || process.env.ASSET_BASE_URL || "",
 ).trim();
 const apiBaseUrl = String(
-	process.env.VITE_API_BASE_URL || process.env.API_BASE_URL || ""
+	process.env.VITE_API_BASE_URL || process.env.API_BASE_URL || "",
 ).trim();
 
 const envJs =

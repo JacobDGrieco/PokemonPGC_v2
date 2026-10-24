@@ -1,3 +1,8 @@
+/**
+ * Best-effort per-process request throttling for server handlers.
+ * Buckets reset on cold start and are not shared across serverless instances;
+ * this must not be represented as a distributed production abuse control.
+ */
 const buckets = new Map();
 
 function now() {
@@ -27,5 +32,9 @@ export function checkRateLimit(scope, key, { windowMs, max }) {
 	}
 
 	existing.count += 1;
-	return { ok: true, remaining: max - existing.count, resetAt: existing.resetAt };
+	return {
+		ok: true,
+		remaining: max - existing.count,
+		resetAt: existing.resetAt,
+	};
 }

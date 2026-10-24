@@ -1,3 +1,10 @@
+/**
+ * Legacy public-tree builder.
+ *
+ * WARNING: importing/running this file recursively deletes `public/` before
+ * copying a legacy source layout. It is not part of the current package build
+ * and must not be used without an explicit backup and reviewed migration plan.
+ */
 import "dotenv/config";
 import fs from "fs";
 import path from "path";
@@ -24,13 +31,7 @@ const copyRecursive = (src, dest) => {
 	fs.copyFileSync(src, dest);
 };
 
-const filesToCopy = [
-	"styles",
-	"src",
-	"data",
-	"api.js",
-	"favicon.ico",
-];
+const filesToCopy = ["styles", "src", "data", "api.js", "favicon.ico"];
 
 for (const item of filesToCopy) {
 	const src = path.join(root, item);
@@ -39,7 +40,8 @@ for (const item of filesToCopy) {
 	}
 }
 
-const envJs = `
+const envJs =
+	`
 window.__ASSET_BASE_URL__ = ${JSON.stringify(assetBaseUrl)};
 window.__API_BASE_URL__ = ${JSON.stringify(apiBaseUrl)};
 `.trim() + "\n";

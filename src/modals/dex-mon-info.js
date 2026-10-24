@@ -1,9 +1,30 @@
-import { _assetPath } from '../utils/assetPath.js';
-import { _dexIdNumber } from '../../data/helpers/dex-ids.js';
+import { assetPath } from "../utils/assetPath.js";
+import { _dexIdNumber } from "../../data/helpers/dex-ids.js";
 import { resolveMonInfoData } from "./dex-mon-info-data.js";
-import { renderCompletionTopHtml, renderEvolutionHtml, renderEvRadar, renderLocationsHtml, renderMovesHtml, renderNotesHtml, renderProfileHtml, renderStatsRadar, renderTypeChart, renderVariantsHtml } from "./dex-mon-info-render.js";
-import { renderSpritesModels, wireAssetsTabs, wireModelViewerClick, wireResearchClick } from "./dex-mon-info-assets.js";
+import {
+	renderCompletionTopHtml,
+	renderEvolutionHtml,
+	renderEvRadar,
+	renderLocationsHtml,
+	renderMovesHtml,
+	renderNotesHtml,
+	renderProfileHtml,
+	renderStatsRadar,
+	renderTypeChart,
+	renderVariantsHtml,
+} from "./dex-mon-info-render.js";
+import {
+	renderSpritesModels,
+	wireAssetsTabs,
+	wireModelViewerClick,
+	wireResearchClick,
+} from "./dex-mon-info-assets.js";
 import { resetScrollWithin, scrollElementToTop } from "../utils/scrolling.js";
+import { hideModalElement, showModalElement } from "./modal-state.js";
+
+function pad4(value) {
+	return String(value).padStart(4, "0");
+}
 
 export async function renderMonInfoInto({
 	gameKey,
@@ -26,7 +47,9 @@ export async function renderMonInfoInto({
 	const resolvedSourceCard =
 		sourceCard ||
 		invokerEl?.closest?.(".card") ||
-		document.querySelector(`.card [data-open="monInfo"]`)?.closest?.(".card") ||
+		document
+			.querySelector(`.card [data-open="monInfo"]`)
+			?.closest?.(".card") ||
 		null;
 
 	// Keep legacy variable names so the existing template/wiring code can stay the same.
@@ -46,11 +69,13 @@ export async function renderMonInfoInto({
 
 	const baseStats = resolvedInfo?.baseStats || mon.baseStats || null;
 	const expGroup = effectiveInfo?.expGroup || mon.expGroup || null;
-	const baseEggSteps = effectiveInfo?.baseEggSteps || mon.baseEggSteps || null;
+	const baseEggSteps =
+		effectiveInfo?.baseEggSteps || mon.baseEggSteps || null;
 	if (monInfoTitle) {
 		const homeDex = window.DATA?.dex?.home || [];
 		const homeEntry =
-			(natId != null && homeDex.find((d) => Number(d?.natiId) === Number(natId))) ||
+			(natId != null &&
+				homeDex.find((d) => Number(d?.natiId) === Number(natId))) ||
 			homeDex.find((d) => Number(d?.natiId) === Number(mon?.natiId)) ||
 			homeDex.find((d) => Number(d?.natiId) === Number(mon?.id)) ||
 			null;
@@ -69,16 +94,28 @@ export async function renderMonInfoInto({
 	const moves = resolvedInfo?.moves || {};
 	const locations = resolvedInfo?.locations || [];
 	const dexList = window.DATA?.dex?.[gameKey] || [];
-	const homeSprite = natId != null ? _assetPath(`sprites/pokemon_home/base-front/${pad4(natId)}.png`) : null;
-	const spriteSrc = resolvedInfo?.sprites?.front || homeSprite || mon.img || null;
+	const homeSprite =
+		natId != null
+			? assetPath(`sprites/pokemon_home/base-front/${pad4(natId)}.png`)
+			: null;
+	const spriteSrc =
+		resolvedInfo?.sprites?.front || homeSprite || mon.img || null;
 
-const statusFromCard = (() => {
+	const statusFromCard = (() => {
 		const c = sourceCard;
 		if (!c) return null;
-		const ds = c.dataset?.status || c.dataset?.dexStatus || c.getAttribute?.("data-status") || c.getAttribute?.("data-dex-status");
+		const ds =
+			c.dataset?.status ||
+			c.dataset?.dexStatus ||
+			c.getAttribute?.("data-status") ||
+			c.getAttribute?.("data-dex-status");
 		if (ds) return String(ds).toLowerCase();
 		const cls = c.classList;
-		if (cls.contains("shiny-alpha") || (cls.contains("shiny") && cls.contains("alpha"))) return "shinyalpha";
+		if (
+			cls.contains("shiny-alpha") ||
+			(cls.contains("shiny") && cls.contains("alpha"))
+		)
+			return "shinyalpha";
 		if (cls.contains("alpha")) return "alpha";
 		if (cls.contains("shiny")) return "shiny";
 		if (cls.contains("caught")) return "caught";
@@ -102,7 +139,7 @@ const statusFromCard = (() => {
 	const movesHtml = renderMovesHtml({ moves, gameKey });
 	const hasInfo = !!resolvedInfo;
 
-		// --- Dex status pill -------------------------------------------------------
+	// --- Dex status pill -------------------------------------------------------
 	// Prefer real progress if available, but keep this resilient for testing.
 	const detectDexStatus = () => {
 		const normalize = (raw) => {
@@ -110,7 +147,10 @@ const statusFromCard = (() => {
 			const s = String(raw).trim().toLowerCase();
 
 			// allow either "shiny alpha" or "shiny_alpha"
-			if ((s.includes("shiny") && s.includes("alpha")) || s === "shiny_alpha")
+			if (
+				(s.includes("shiny") && s.includes("alpha")) ||
+				s === "shiny_alpha"
+			)
 				return "shinyalpha";
 			if (s.includes("alpha")) return "alpha";
 			if (s.includes("shiny")) return "shiny";
@@ -152,7 +192,9 @@ const statusFromCard = (() => {
 	const isLegendsArceus = gameKey === "legendsarceus";
 
 	const getResearchProgress = () => {
-		const tasks = Array.isArray(researchData?.tasks) ? researchData.tasks : null;
+		const tasks = Array.isArray(researchData?.tasks)
+			? researchData.tasks
+			: null;
 		const byGame =
 			window.store?.dexResearchStatus instanceof Map
 				? window.store.dexResearchStatus.get(gameKey)
@@ -207,7 +249,8 @@ const statusFromCard = (() => {
 	const researchProg = getResearchProgress();
 
 	// clickable if we actually have tasks (even if opener isn’t wired yet)
-	const canOpenResearch = isLegendsArceus && (!!researchProg?.tasks || researchData != null);
+	const canOpenResearch =
+		isLegendsArceus && (!!researchProg?.tasks || researchData != null);
 
 	// Determine research state colors:
 	// - red if not completed
@@ -251,54 +294,63 @@ const statusFromCard = (() => {
 
 	const quickStatsHtml = completionTopHtml;
 
-		monInfoBody.innerHTML = `
+	monInfoBody.innerHTML = `
 	<div class="mon-info-header">
-	  ${spriteSrc
-			? `<div class="mon-info-sprite">
+	  ${
+			spriteSrc
+				? `<div class="mon-info-sprite">
 		  <img src="${spriteSrc}" alt="${mon.name}" loading="lazy" />
 		</div>`
-			: ""
+				: ""
 		}
 	  <div class="mon-info-main">
 		<div class="mon-info-topline">
 		  <div class="mon-info-basic">
 			<div class="mon-info-name">
-			  #${String(natId != null ? natId : (_dexIdNumber(mon.id, mon.localId) ?? '')).padStart(4, "0")} — ${mon.name}
+			  #${String(natId != null ? natId : (_dexIdNumber(mon.id, mon.localId) ?? "")).padStart(4, "0")} — ${mon.name}
 			</div>
 			<div class="mon-info-types">
 			  ${(types || [])
-			.map(
-				(t) =>
-					`<span class="type-pill type-${String(
-						t
-					).toLowerCase()}">${t}</span>`
-			)
-			.join("")}
+					.map(
+						(t) =>
+							`<span class="type-pill type-${String(
+								t,
+							).toLowerCase()}">${t}</span>`,
+					)
+					.join("")}
 			</div>
-			${hasForms ? `
+			${
+				hasForms
+					? `
 			<div class="mon-info-form">
 			  <select id="monInfoFormSelect" class="mon-info-form-select">
 				<option value="" ${!formKey ? "selected" : ""}></option>
-				${formOpts.map(o =>
-				`<option value="${o.key}" ${formKey === o.key ? "selected" : ""}>${o.label}</option>`
-			).join("")}
+				${formOpts
+					.map(
+						(o) =>
+							`<option value="${o.key}" ${formKey === o.key ? "selected" : ""}>${o.label}</option>`,
+					)
+					.join("")}
 			  </select>
 			</div>
-			` : ""
-		}
+			`
+					: ""
+			}
 		  </div>
-		  ${quickStatsHtml
-			? `<div class="mon-info-quickstats">${quickStatsHtml}</div>`
-			: ""
-		}
+		  ${
+				quickStatsHtml
+					? `<div class="mon-info-quickstats">${quickStatsHtml}</div>`
+					: ""
+			}
 		</div>
 	  </div>
 	</div>
 
-	${resolvedInfo?.flavor
+	${
+		resolvedInfo?.flavor
 			? `<div class="mon-info-block mon-info-flavor">${resolvedInfo.flavor}</div>`
 			: ""
-		}
+	}
 
 	<div class="mon-info-layout">
 	  <aside class="mon-info-col mon-info-col--summary">
@@ -312,22 +364,24 @@ const statusFromCard = (() => {
 		${variantsHtml}
 		${evoHtml}
 		${locationsHtml}
-		${movesHtml ||
-		(hasInfo
-			? ""
-			: `<div class="mon-info-empty">No move data defined yet for this game.</div>`)
+		${
+			movesHtml ||
+			(hasInfo
+				? ""
+				: `<div class="mon-info-empty">No move data defined yet for this game.</div>`)
 		}
 		</section>
 	</div>
 
 	${assetsHtml}
 
-	${!hasInfo
+	${
+		!hasInfo
 			? `<div class="mon-info-empty">
 		  No local <code>monInfo</code> entry is configured yet for this Pokémon in <strong>${gameKey}</strong>. Showing PokéAPI fallback data when available.
 		</div>`
 			: ""
-		}
+	}
   `;
 
 	// Wire form select (works for modal + page render targets)
@@ -350,7 +404,15 @@ const statusFromCard = (() => {
 	}
 
 	wireAssetsTabs(monInfoBody);
-	wireResearchClick({ monInfoBody, canOpenResearch, researchData, researchProg, sourceCard, gameKey, mon });
+	wireResearchClick({
+		monInfoBody,
+		canOpenResearch,
+		researchData,
+		researchProg,
+		sourceCard,
+		gameKey,
+		mon,
+	});
 	wireModelViewerClick({ monInfoBody, mon });
 }
 
@@ -370,7 +432,9 @@ export async function openMonInfo(gameKey, genKey, mon) {
 	// Try to find the dex card we came from
 	const sourceCard =
 		invokerEl?.closest?.(".card") ||
-		document.querySelector(`.card [data-open="monInfo"]`)?.closest?.(".card") ||
+		document
+			.querySelector(`.card [data-open="monInfo"]`)
+			?.closest?.(".card") ||
 		null;
 
 	await renderMonInfoInto({
@@ -382,8 +446,7 @@ export async function openMonInfo(gameKey, genKey, mon) {
 		sourceCard,
 	});
 
-	monInfoModal.classList.add("open");
-	monInfoModal.setAttribute("aria-hidden", "false");
+	showModalElement(monInfoModal);
 	monInfoModal.dataset.gameKey = gameKey;
 	monInfoModal.dataset.monId = String(mon.id);
 	resetScrollWithin(monInfoModal);
@@ -395,8 +458,7 @@ export function setupMonInfoModal() {
 	if (!monInfoModal) return;
 
 	const close = () => {
-		monInfoModal.classList.remove("open");
-		monInfoModal.setAttribute("aria-hidden", "true");
+		hideModalElement(monInfoModal);
 	};
 
 	// Wire close handlers once per page load (prevents duplicate listeners on repeated opens)

@@ -1,5 +1,8 @@
 import { ensurePpgcRoot } from "./runtime/globals.js";
-import { normalizeSectionId, normalizeSectionSuffix } from "./utils/normalizeSectionId.js";
+import {
+	normalizeSectionId,
+	normalizeSectionSuffix,
+} from "./utils/normalizeSectionId.js";
 import { scheduleAppContentScrollReset } from "./utils/scrolling.js";
 
 // history.js
@@ -11,7 +14,8 @@ import { scheduleAppContentScrollReset } from "./utils/scrolling.js";
 // This version fixes a regression where navigateToState was not defined.
 
 export function initHistory({ store, renderAll }) {
-	if (!store || !store.state) throw new Error("[history] initHistory requires {store, renderAll}");
+	if (!store || !store.state)
+		throw new Error("[history] initHistory requires {store, renderAll}");
 
 	ensurePpgcRoot();
 
@@ -40,7 +44,10 @@ export function initHistory({ store, renderAll }) {
 		const normalized = normalizeSectionId(sectionId || "") || "";
 		if (!normalized) return "";
 		const normalizedGameKey = String(gameKey || "").trim();
-		if (normalizedGameKey && normalized.startsWith(`${normalizedGameKey}:`)) {
+		if (
+			normalizedGameKey &&
+			normalized.startsWith(`${normalizedGameKey}:`)
+		) {
 			return normalized.slice(normalizedGameKey.length + 1);
 		}
 		if (normalized.includes(":")) {
@@ -88,8 +95,12 @@ export function initHistory({ store, renderAll }) {
 
 		if (lvl === "moninfo") {
 			const n = s.monInfoId != null ? String(s.monInfoId) : "";
-			const gPretty = s.monInfoGameKey ? monInfoPrettyGameSlug(String(s.monInfoGameKey)) : "";
-			const f = s.monInfoForm ? encodeURIComponent(String(s.monInfoForm)) : "";
+			const gPretty = s.monInfoGameKey
+				? monInfoPrettyGameSlug(String(s.monInfoGameKey))
+				: "";
+			const f = s.monInfoForm
+				? encodeURIComponent(String(s.monInfoForm))
+				: "";
 
 			if (!n) return `#/tools/info`;
 
@@ -135,7 +146,9 @@ export function initHistory({ store, renderAll }) {
 			next.genKey = parts[1] ? decodeURIComponent(parts[1]) : null;
 		} else if (route === "account") {
 			next.level = "account";
-			next.accountTab = parts[1] ? decodeURIComponent(parts[1]) : "general";
+			next.accountTab = parts[1]
+				? decodeURIComponent(parts[1])
+				: "general";
 		} else if (route === "tools") {
 			// #/tools/<tool>
 			// #/tools/info/<natiId>/<gameSlug>/<formKey?>
@@ -151,7 +164,9 @@ export function initHistory({ store, renderAll }) {
 				next.level = "moninfo";
 				next.toolsKey = "info";
 				next.monInfoId = isNaN(Number(n)) ? n : Number(n);
-				next.monInfoGameKey = gSlug ? monInfoGameKeyFromPrettySlug(gSlug) : null;
+				next.monInfoGameKey = gSlug
+					? monInfoGameKeyFromPrettySlug(gSlug)
+					: null;
 				next.monInfoForm = f || null;
 			} else {
 				// Unknown tool with extra path → just land on tool root
@@ -177,26 +192,40 @@ export function initHistory({ store, renderAll }) {
 
 	// --- Mon Info URL "pretty" game segment helpers ---
 	function monInfoPrettyGameSlug(gameKey) {
-		const gk = String(gameKey || "").trim().toLowerCase();
+		const gk = String(gameKey || "")
+			.trim()
+			.toLowerCase();
 		if (!gk) return "";
 
 		if (gk.startsWith("legendsza")) return "legendsza";
-		if (gk.startsWith("scarlet") || gk.startsWith("violet")) return "scarlet-violet";
+		if (gk.startsWith("scarlet") || gk.startsWith("violet"))
+			return "scarlet-violet";
 		if (gk.startsWith("legendsarceus")) return "legendsarceus";
-		if (gk.startsWith("brilliantdiamond") || gk.startsWith("shiningpearl")) return "brilliantdiamond-shiningpearl";
-		if (gk.startsWith("sword") || gk.startsWith("shield")) return "sword-shield";
-		if (gk.startsWith("letsgopikachu") || gk.startsWith("letsgoeevee")) return "letsgopikachu-letsgoeevee";
-		if (gk.startsWith("ultrasun") || gk.startsWith("ultramoon")) return "ultrasun-ultramoon";
+		if (gk.startsWith("brilliantdiamond") || gk.startsWith("shiningpearl"))
+			return "brilliantdiamond-shiningpearl";
+		if (gk.startsWith("sword") || gk.startsWith("shield"))
+			return "sword-shield";
+		if (gk.startsWith("letsgopikachu") || gk.startsWith("letsgoeevee"))
+			return "letsgopikachu-letsgoeevee";
+		if (gk.startsWith("ultrasun") || gk.startsWith("ultramoon"))
+			return "ultrasun-ultramoon";
 		if (gk.startsWith("sun") || gk.startsWith("moon")) return "sun-moon";
-		if (gk.startsWith("omegaruby") || gk.startsWith("alphasapphire")) return "omegaruby-alphasapphire";
-		if (gk.startsWith("black2") || gk.startsWith("white2")) return "black2-white2";
-		if (gk.startsWith("black") || gk.startsWith("white")) return "black-white";
-		if (gk.startsWith("heartgold") || gk.startsWith("soulsilver")) return "heartgold-soulsilver";
+		if (gk.startsWith("omegaruby") || gk.startsWith("alphasapphire"))
+			return "omegaruby-alphasapphire";
+		if (gk.startsWith("black2") || gk.startsWith("white2"))
+			return "black2-white2";
+		if (gk.startsWith("black") || gk.startsWith("white"))
+			return "black-white";
+		if (gk.startsWith("heartgold") || gk.startsWith("soulsilver"))
+			return "heartgold-soulsilver";
 		if (gk.startsWith("platinum")) return "platinum";
-		if (gk.startsWith("diamond") || gk.startsWith("pearl")) return "diamond-pearl";
-		if (gk.startsWith("firered") || gk.startsWith("leafgreen")) return "firered-leafgreen";
+		if (gk.startsWith("diamond") || gk.startsWith("pearl"))
+			return "diamond-pearl";
+		if (gk.startsWith("firered") || gk.startsWith("leafgreen"))
+			return "firered-leafgreen";
 		if (gk.startsWith("emerald")) return "emerald";
-		if (gk.startsWith("ruby") || gk.startsWith("sapphire")) return "ruby-sapphire";
+		if (gk.startsWith("ruby") || gk.startsWith("sapphire"))
+			return "ruby-sapphire";
 		if (gk.startsWith("crystal")) return "crystal";
 		if (gk.startsWith("silver")) return "silver";
 		if (gk.startsWith("gold")) return "gold";
@@ -209,13 +238,16 @@ export function initHistory({ store, renderAll }) {
 	}
 
 	function monInfoGameKeyFromPrettySlug(slug) {
-		const s = String(slug || "").trim().toLowerCase();
+		const s = String(slug || "")
+			.trim()
+			.toLowerCase();
 		if (!s) return null;
 
 		if (s === "legendsza") return "legendsza";
 		if (s === "scarlet-violet") return "scarlet";
 		if (s === "legendsarceus") return "legendsarceus";
-		if (s === "brilliantdiamond-shiningpearl") return "brilliantdiamond-national";
+		if (s === "brilliantdiamond-shiningpearl")
+			return "brilliantdiamond-national";
 		if (s === "sword-shield") return "sword";
 		if (s === "letsgopikachu-letsgoeevee") return "letsgopikachu";
 		if (s === "ultrasun-ultramoon") return "ultrasun-alola";
@@ -259,7 +291,9 @@ export function initHistory({ store, renderAll }) {
 			else history.pushState(snap, "", url);
 		} catch (e) {
 			// If pushState fails (rare), fall back to hash assignment
-			window.location.hash = buildPrettyHashFromState(store.state).replace(/^#/, "");
+			window.location.hash = buildPrettyHashFromState(
+				store.state,
+			).replace(/^#/, "");
 		}
 
 		renderAll();
@@ -275,7 +309,10 @@ export function initHistory({ store, renderAll }) {
 		if (!route) route = "home";
 
 		if (route === "home") {
-			return navigateToState({ level: store.state.level || "gen" }, { replace: false });
+			return navigateToState(
+				{ level: store.state.level || "gen" },
+				{ replace: false },
+			);
 		}
 
 		if (route === "account") {
@@ -364,7 +401,10 @@ export function initHistory({ store, renderAll }) {
 				gameKey: snap.gameKey || null,
 				sectionId: normalizeSectionId(snap.sectionId || null) || null,
 				accountTab: snap.accountTab || null,
-				monInfoId: typeof snap.monInfoId !== "undefined" ? snap.monInfoId : null,
+				monInfoId:
+					typeof snap.monInfoId !== "undefined"
+						? snap.monInfoId
+						: null,
 				monInfoGameKey: snap.monInfoGameKey || null,
 				monInfoForm: snap.monInfoForm || null,
 			});
@@ -382,7 +422,7 @@ export function initHistory({ store, renderAll }) {
 		const snap = snapshotFromState();
 		try {
 			history.replaceState(snap, "", window.location.href);
-		} catch { }
+		} catch {}
 		renderAll();
 		scheduleAppContentScrollReset();
 		if (typeof store.save === "function") store.save();
@@ -393,7 +433,7 @@ export function initHistory({ store, renderAll }) {
 	applyUrlToStateFromLocation();
 	try {
 		history.replaceState(snapshotFromState(), "", window.location.href);
-	} catch { }
+	} catch {}
 
 	// ---------- Expose on window.PPGC immediately ----------
 

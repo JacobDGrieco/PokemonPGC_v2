@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { detectModelPipeline } from "./modelPipelines/registy.js";
+import { detectModelPipeline } from "./modelPipelines/registry.js";
 import { apply3DSTextureSetToScene } from "./modelPipelines/3dsPipeline.js";
 import { applyLGPETextureSetToScene } from "./modelPipelines/lgpePipeline.js";
 import { applySwordShieldTextureSetToScene } from "./modelPipelines/swshPipeline.js";
@@ -36,19 +36,43 @@ export async function applyModelViewerPipeline({
 			lighting.cornerBL.intensity = 0.0;
 			lighting.cornerBR.intensity = 0.0;
 			lighting.top.intensity = 0.25;
-			await apply3DSTextureSetToScene(scene, { glbUrl, variant, eyeShaderMats: null });
+			await apply3DSTextureSetToScene(scene, {
+				glbUrl,
+				variant,
+				eyeShaderMats: null,
+			});
 		} else if (pipeline === "lgpe") {
-			await applyLGPETextureSetToScene(scene, { glbUrl, variant, eyeShaderMats });
+			await applyLGPETextureSetToScene(scene, {
+				glbUrl,
+				variant,
+				eyeShaderMats,
+			});
 		} else if (pipeline === "swsh") {
-			await applySwordShieldTextureSetToScene(scene, { glbUrl, variant, eyeShaderMats });
+			await applySwordShieldTextureSetToScene(scene, {
+				glbUrl,
+				variant,
+				eyeShaderMats,
+			});
 		} else if (pipeline === "la") {
-			await applyLegendsArceusTextureSetToScene(scene, { glbUrl, variant, eyeShaderMats });
+			await applyLegendsArceusTextureSetToScene(scene, {
+				glbUrl,
+				variant,
+				eyeShaderMats,
+			});
 		} else if (pipeline === "scvi") {
-			await applyPokemonTextureSetToScene(scene, { glbUrl, variant, eyeShaderMats });
+			await applyPokemonTextureSetToScene(scene, {
+				glbUrl,
+				variant,
+				eyeShaderMats,
+			});
 		} else if (pipeline === "lza") {
-			await applyLegendsZATextureSetToScene(scene, { glbUrl, variant, eyeShaderMats });
+			await applyLegendsZATextureSetToScene(scene, {
+				glbUrl,
+				variant,
+				eyeShaderMats,
+			});
 		} else {
-			console.log("[modelViewer] bypassing custom textures for:", glbUrl);
+			debugLog("[modelViewer] bypassing custom textures for:", glbUrl);
 		}
 	} catch (e) {
 		console.error("[modelViewer] Pipeline failed:", pipeline, glbUrl, e);
@@ -64,7 +88,9 @@ export function collectSmokeShaderMats(scene, smokeShaderMats) {
 		if (!o?.isMesh) return;
 		const mats = Array.isArray(o.material) ? o.material : [o.material];
 		for (const m of mats) {
-			if (m?.userData?.ppgcSmoke && m.uniforms?.uTime) smokeShaderMats.push(m);
+			if (m?.userData?.ppgcSmoke && m.uniforms?.uTime)
+				smokeShaderMats.push(m);
 		}
 	});
 }
+import { debugLog } from "../utils/debug.js";

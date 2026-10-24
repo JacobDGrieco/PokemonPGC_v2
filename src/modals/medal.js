@@ -1,6 +1,7 @@
 import { save } from "../store.js";
 import { registerKeywordSectionMeter } from "./helpers.js";
 import { resetScrollWithin } from "../utils/scrolling.js";
+import { hideModalElement, showModalElement } from "./modal-state.js";
 import {
 	getGameMedals as _getGameMedals,
 	isMedalChecked as _isChecked,
@@ -20,7 +21,9 @@ registerKeywordSectionMeter({
 });
 
 export function medalsSectionCardFor(gameKey, genKey, sectionId, store) {
-	const game = (window.DATA.games?.[genKey] || []).find((g) => g.key === gameKey);
+	const game = (window.DATA.games?.[genKey] || []).find(
+		(g) => g.key === gameKey,
+	);
 	const sec = _getGameMedals(gameKey).find((s) => s.id === sectionId);
 	if (!sec) return document.createTextNode("");
 
@@ -49,9 +52,12 @@ export function medalsSectionCardFor(gameKey, genKey, sectionId, store) {
 		</div>
 	`;
 
-	card.querySelector("[data-open-medals-section]")?.addEventListener("click", () => {
-		window.PPGC?.medalsApi?.openMedalsModal(gameKey, genKey, sectionId);
-	});
+	card.querySelector("[data-open-medals-section]")?.addEventListener(
+		"click",
+		() => {
+			window.PPGC?.medalsApi?.openMedalsModal(gameKey, genKey, sectionId);
+		},
+	);
 
 	return card;
 }
@@ -77,7 +83,9 @@ export function wireMedalsModal(store, els) {
 	const isMedalsViewActive = () => medalsModal?.dataset.view === "medals";
 
 	const refreshSummaryCard = (gameKey) => {
-		const host = document.querySelector(`[data-medals-summary="${gameKey}"]`);
+		const host = document.querySelector(
+			`[data-medals-summary="${gameKey}"]`,
+		);
 		if (!host) return;
 
 		const secs = _getGameMedals(gameKey);
@@ -115,7 +123,8 @@ export function wireMedalsModal(store, els) {
 		return secs
 			.map((sec) => {
 				const items = (sec.items || []).filter((it) => {
-					const hay = `${it.name || ""} ${it.num || ""}`.toLowerCase();
+					const hay =
+						`${it.name || ""} ${it.num || ""}`.toLowerCase();
 					return hay.includes(q);
 				});
 				return { ...sec, items };
@@ -140,8 +149,13 @@ export function wireMedalsModal(store, els) {
 
 				const url =
 					typeof it.img === "function"
-						? it.img({ gameKey: state.gameKey, genKey: state.genKey })
-						: (it.img ? String(it.img) : "");
+						? it.img({
+								gameKey: state.gameKey,
+								genKey: state.genKey,
+							})
+						: it.img
+							? String(it.img)
+							: "";
 
 				card.innerHTML = `
 					<div class="thumb">
@@ -149,16 +163,17 @@ export function wireMedalsModal(store, els) {
 							#${String(it.num ?? it.id).padStart(3, "0")}
 						</div>
 
-						${url
-						? `<img
+						${
+							url
+								? `<img
 									class="sprite"
 									alt="${it.name}"
 									src="${url}"
 									loading="lazy"
 									style="width:132px;height:132px;object-fit:contain;"
 								/>`
-						: `<div style="opacity:.5;">No image</div>`
-					}
+								: `<div style="opacity:.5;">No image</div>`
+						}
 					</div>
 
 					<div class="card-bd">
@@ -174,14 +189,25 @@ export function wireMedalsModal(store, els) {
 				`;
 
 				const chk = card.querySelector(
-					`[data-medal-check="${sec.id}:${it.id}"]`
+					`[data-medal-check="${sec.id}:${it.id}"]`,
 				);
 
 				if (chk instanceof HTMLInputElement) {
-					chk.checked = _isChecked(store, state.gameKey, sec.id, it.id);
+					chk.checked = _isChecked(
+						store,
+						state.gameKey,
+						sec.id,
+						it.id,
+					);
 
 					chk.addEventListener("change", () => {
-						_setChecked(store, state.gameKey, sec.id, it.id, chk.checked);
+						_setChecked(
+							store,
+							state.gameKey,
+							sec.id,
+							it.id,
+							chk.checked,
+						);
 						save();
 
 						// keep everything else in sync
@@ -194,7 +220,6 @@ export function wireMedalsModal(store, els) {
 			}
 		}
 	};
-
 
 	const setAllVisible = (checked) => {
 		const secs = getFiltered();
@@ -213,7 +238,10 @@ export function wireMedalsModal(store, els) {
 		const returnEl = medalsModal.__returnFocusEl;
 
 		// If focus is inside the modal, remove it first
-		if (document.activeElement && medalsModal.contains(document.activeElement)) {
+		if (
+			document.activeElement &&
+			medalsModal.contains(document.activeElement)
+		) {
 			document.activeElement.blur?.();
 		}
 
@@ -221,12 +249,13 @@ export function wireMedalsModal(store, els) {
 		if (returnEl && typeof returnEl.focus === "function") {
 			returnEl.focus({ preventScroll: true });
 		} else {
-			document.querySelector("#content")?.focus?.({ preventScroll: true });
+			document
+				.querySelector("#content")
+				?.focus?.({ preventScroll: true });
 		}
 
 		// NOW it is safe to hide the modal
-		medalsModal.classList.remove("open");
-		medalsModal.setAttribute("aria-hidden", "true");
+		hideModalElement(medalsModal);
 		medalsModal.dataset.view = "";
 	}
 
@@ -268,8 +297,12 @@ export function wireMedalsModal(store, els) {
 		if (medalsSearch instanceof HTMLInputElement) medalsSearch.value = "";
 
 		if (medalsModalTitle) {
-			const game = (window.DATA.games?.[genKey] || []).find((g) => g.key === gameKey);
-			const sec = sectionId ? _getGameMedals(gameKey).find((s) => s.id === sectionId) : null;
+			const game = (window.DATA.games?.[genKey] || []).find(
+				(g) => g.key === gameKey,
+			);
+			const sec = sectionId
+				? _getGameMedals(gameKey).find((s) => s.id === sectionId)
+				: null;
 
 			medalsModalTitle.textContent = sec
 				? `${game?.label || gameKey} — ${sec.label || sec.id}`
@@ -277,8 +310,7 @@ export function wireMedalsModal(store, els) {
 		}
 
 		medalsModal.__returnFocusEl = document.activeElement;
-		medalsModal?.classList.add("open");
-		medalsModal.setAttribute("aria-hidden", "false");
+		showModalElement(medalsModal);
 		render();
 		resetScrollWithin(medalsModal);
 	}

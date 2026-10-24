@@ -1,4 +1,8 @@
-// src/api.js
+/**
+ * Same-origin browser client for identity, cloud progress, save import, and
+ * billing APIs. It deliberately refuses deployed cross-origin API bases because
+ * authentication depends on secure same-origin cookie behavior.
+ */
 function resolveApiBase() {
 	const configured = (globalThis.__API_BASE_URL__ || "").trim();
 	if (!configured) return "/api";
@@ -8,7 +12,8 @@ function resolveApiBase() {
 	}
 
 	const currentHost = window.location.hostname;
-	const isLocalHost = currentHost === "localhost" || currentHost === "127.0.0.1";
+	const isLocalHost =
+		currentHost === "localhost" || currentHost === "127.0.0.1";
 	if (isLocalHost) {
 		return configured;
 	}
@@ -18,7 +23,9 @@ function resolveApiBase() {
 		if (resolved.origin !== window.location.origin) {
 			return "/api";
 		}
-		return `${resolved.pathname}${resolved.search}${resolved.hash}` || "/api";
+		return (
+			`${resolved.pathname}${resolved.search}${resolved.hash}` || "/api"
+		);
 	} catch {
 		return configured.startsWith("/") ? configured : "/api";
 	}
@@ -47,14 +54,21 @@ export function setApiCurrentUser(user) {
 async function safeJson(res) {
 	const text = await res.text();
 	if (!text) return { error: `Server error (${res.status})` };
-	try { return JSON.parse(text); }
-	catch { return { error: text.slice(0, 200) || `Server error (${res.status})` }; }
+	try {
+		return JSON.parse(text);
+	} catch {
+		return { error: text.slice(0, 200) || `Server error (${res.status})` };
+	}
 }
 
 async function requireOkJson(res, fallbackMessage) {
 	const payload = await safeJson(res);
 	if (!res.ok || payload?.error) {
-		throw new Error(payload?.error || fallbackMessage || `Request failed (${res.status})`);
+		throw new Error(
+			payload?.error ||
+				fallbackMessage ||
+				`Request failed (${res.status})`,
+		);
 	}
 	return payload;
 }
@@ -174,14 +188,19 @@ export async function createStripePortalSession() {
 }
 
 export async function getSubscriptionDetails(provider) {
-	const normalizedProvider = String(provider || "").trim().toLowerCase();
+	const normalizedProvider = String(provider || "")
+		.trim()
+		.toLowerCase();
 	if (normalizedProvider !== "stripe" && normalizedProvider !== "paypal") {
 		return { details: null };
 	}
 
-	const res = await fetch(`${API_BASE}/subscriptions/${normalizedProvider}/details`, {
-		credentials: "include",
-	});
+	const res = await fetch(
+		`${API_BASE}/subscriptions/${normalizedProvider}/details`,
+		{
+			credentials: "include",
+		},
+	);
 	return requireOkJson(res, "Failed to load subscription details.");
 }
 
@@ -196,15 +215,18 @@ export async function verifyStripeCheckoutSession(sessionId, tier) {
 }
 
 export async function createPayPalSubscription(tier) {
-	const res = await fetch(`${API_BASE}/subscriptions/paypal/create-subscription`, {
-		method: "POST",
-		headers: {
-			"Content-Type": "application/json",
-			"Idempotency-Key": createIdempotencyKey(),
+	const res = await fetch(
+		`${API_BASE}/subscriptions/paypal/create-subscription`,
+		{
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+				"Idempotency-Key": createIdempotencyKey(),
+			},
+			credentials: "include",
+			body: JSON.stringify({ tier }),
 		},
-		credentials: "include",
-		body: JSON.stringify({ tier }),
-	});
+	);
 	return requireOkJson(res, "Failed to start PayPal subscription.");
 }
 
@@ -240,7 +262,7 @@ export async function saveGameSave(gameKey, data) {
 			headers: { "Content-Type": "application/json" },
 			credentials: "include",
 			body: JSON.stringify({ data }),
-		}
+		},
 	);
 
 	return requireOkJson(res, `Failed to save progress for ${gameKey}.`);
@@ -256,7 +278,7 @@ export async function fetchGameSave(gameKey) {
 		`${API_BASE}/progress/${encodeURIComponent(gameKey)}`,
 		{
 			credentials: "include",
-		}
+		},
 	);
 
 	if (res.status === 404) {
@@ -298,7 +320,7 @@ export async function uploadSaveFileForImport(gameKey, file) {
 				filename: file?.name || null,
 				contentBase64,
 			}),
-		}
+		},
 	);
 
 	// Handle non-2xx responses nicely

@@ -1,7 +1,25 @@
-import { getTierMetaForTask, getTierSteps, formatTierTooltip, isEitherTask, isTieredTask, setDescendantsDone, getEitherChoice, getDefaultEitherChoice, setEitherChoice, eitherSyncView, forEachDescendant, _clampInt } from "./tasks-modes.js";
+import {
+	getTierMetaForTask,
+	getTierSteps,
+	formatTierTooltip,
+	isEitherTask,
+	isTieredTask,
+	setDescendantsDone,
+	getEitherChoice,
+	getDefaultEitherChoice,
+	setEitherChoice,
+	eitherSyncView,
+	forEachDescendant,
+	_clampInt,
+} from "./tasks-modes.js";
 import { buildTaskIndex, buildTaskLayoutGroups } from "./tasks-bootstrap.js";
 import { applySyncsFromTask } from "./tasks-sync.js";
-import { getAccentColor, resolveAccentForSection, resolveTaskImageSrcs, attachTooltip } from "./tasks-visuals.js";
+import {
+	getAccentColor,
+	resolveAccentForSection,
+	resolveTaskImageSrcs,
+	attachTooltip,
+} from "./tasks-visuals.js";
 import { renderEitherHTML, wireEitherUI } from "./tasks-either.js";
 import { _ball } from "../data/helpers/images.js";
 
@@ -15,7 +33,9 @@ function makeSpacer(height = 12) {
 }
 
 function hasTooltip(task) {
-	return typeof task?.tooltip === "string" ? task.tooltip.trim().length > 0 : !!task?.tooltip;
+	return typeof task?.tooltip === "string"
+		? task.tooltip.trim().length > 0
+		: !!task?.tooltip;
 }
 
 function getTooltipMarkerHTML(task) {
@@ -30,21 +50,30 @@ function getTaskLabelHTML(task) {
 function shouldShowTierTooltip(task) {
 	const meta = getTierMetaForTask(task);
 	if (meta.mode === "label") return false;
-	const nums = Array.isArray(meta.values) ? meta.values.filter((value) => Number.isFinite(value)) : [];
+	const nums = Array.isArray(meta.values)
+		? meta.values.filter((value) => Number.isFinite(value))
+		: [];
 	if (nums.length < 2) return false;
 	const diffs = [];
-	for (let index = 1; index < nums.length; index += 1) diffs.push(nums[index] - nums[index - 1]);
+	for (let index = 1; index < nums.length; index += 1)
+		diffs.push(nums[index] - nums[index - 1]);
 	return !diffs.every((diff) => diff === 1);
 }
 
 function getTaskTooltipHTML(task) {
 	const tiered = isTieredTask(task) && Array.isArray(task.tiers);
 	if (tiered) {
-		const thresholds = shouldShowTierTooltip(task) ? formatTierTooltip(task) : "";
+		const thresholds = shouldShowTierTooltip(task)
+			? formatTierTooltip(task)
+			: "";
 		if (task.tooltip) {
-			return thresholds ? `<div>${task.tooltip}</div><div style="margin-top:0.05rem;"></div><div>Tiers: ${thresholds}</div>` : `<div>${task.tooltip}</div>`;
+			return thresholds
+				? `<div>${task.tooltip}</div><div style="margin-top:0.05rem;"></div><div>Tiers: ${thresholds}</div>`
+				: `<div>${task.tooltip}</div>`;
 		}
-		return thresholds ? `<div><strong>${task.text}</strong></div><div style="margin-top:0.05rem;"></div><div>Tiers: ${thresholds}</div>` : `<div><strong>${task.text}</strong></div>`;
+		return thresholds
+			? `<div><strong>${task.text}</strong></div><div style="margin-top:0.05rem;"></div><div>Tiers: ${thresholds}</div>`
+			: `<div><strong>${task.text}</strong></div>`;
 	}
 	if (task.tooltip) return task.tooltip;
 	return `<strong>${task.text}</strong>`;
@@ -63,7 +92,9 @@ export function renderTieredControls(task, cb, accentColor) {
 	slider.value = String(_clampInt(task.currentTier ?? 0, 0, steps));
 	slider.className = "tiered-slider";
 	const acc = accentColor || getAccentColor();
-	try { slider.style.accentColor = acc; } catch { }
+	try {
+		slider.style.accentColor = acc;
+	} catch {}
 	slider.style.setProperty("--tier-accent", acc);
 
 	const pct = document.createElement("div");
@@ -73,9 +104,11 @@ export function renderTieredControls(task, cb, accentColor) {
 	const updatePct = () => {
 		const m = getTierMetaForTask(task);
 		const localSteps = m.steps;
-		const v = localSteps ? _clampInt(task.currentTier ?? 0, 0, localSteps) : 0;
+		const v = localSteps
+			? _clampInt(task.currentTier ?? 0, 0, localSteps)
+			: 0;
 		if (m.mode === "label") {
-			pct.textContent = v === 0 ? "—" : (m.values[v - 1] || "—");
+			pct.textContent = v === 0 ? "—" : m.values[v - 1] || "—";
 			return;
 		}
 		if (!pctInput) {
@@ -124,13 +157,22 @@ export function renderTieredControls(task, cb, accentColor) {
 	});
 	if (pctInput) {
 		const syncFromInput = (shouldCommit) => {
-			const nextValue = _clampInt(pctInput.value === "" ? 0 : Number(pctInput.value), 0, getTierSteps(task));
+			const nextValue = _clampInt(
+				pctInput.value === "" ? 0 : Number(pctInput.value),
+				0,
+				getTierSteps(task),
+			);
 			task.currentTier = nextValue;
 			slider.value = String(nextValue);
 			syncDoneFromTier();
 			updatePct();
-			wrap.dispatchEvent(new CustomEvent("tiered-input", { bubbles: true }));
-			if (shouldCommit) wrap.dispatchEvent(new CustomEvent("tiered-change", { bubbles: true }));
+			wrap.dispatchEvent(
+				new CustomEvent("tiered-input", { bubbles: true }),
+			);
+			if (shouldCommit)
+				wrap.dispatchEvent(
+					new CustomEvent("tiered-change", { bubbles: true }),
+				);
 		};
 		pctInput.addEventListener("click", (event) => event.stopPropagation());
 		pctInput.addEventListener("input", () => {
@@ -175,7 +217,9 @@ function syncEitherChoicesInTree(task, checked) {
 
 		if (isEitherTask(node)) {
 			const prevChoice = getEitherChoice(node.id);
-			const nextChoice = checked ? (prevChoice ?? getDefaultEitherChoice(node)) : null;
+			const nextChoice = checked
+				? (prevChoice ?? getDefaultEitherChoice(node))
+				: null;
 			const prevStr = prevChoice == null ? null : String(prevChoice);
 			const nextStr = nextChoice == null ? null : String(nextChoice);
 
@@ -187,7 +231,8 @@ function syncEitherChoicesInTree(task, checked) {
 			}
 		}
 
-		for (const child of Array.isArray(node.children) ? node.children : []) visit(child);
+		for (const child of Array.isArray(node.children) ? node.children : [])
+			visit(child);
 	})(task);
 
 	return changes;
@@ -198,15 +243,29 @@ function applyEitherChoiceSyncChanges(changes) {
 		const prevStr = prevChoice == null ? null : String(prevChoice);
 		const nextStr = nextChoice == null ? null : String(nextChoice);
 		if (prevStr === nextStr) continue;
-		if (prevChoice != null) applySyncsFromTask(eitherSyncView(task, prevChoice), false);
-		if (nextChoice != null) applySyncsFromTask(eitherSyncView(task, nextChoice), true);
+		if (prevChoice != null)
+			applySyncsFromTask(eitherSyncView(task, prevChoice), false);
+		if (nextChoice != null)
+			applySyncsFromTask(eitherSyncView(task, nextChoice), true);
 	}
 }
 
-function wireStandardCheckbox({ task, cb, tieredWrap, index, cbById, setTasks, sectionId, tasksRef }) {
+function wireStandardCheckbox({
+	task,
+	cb,
+	tieredWrap,
+	index,
+	cbById,
+	setTasks,
+	sectionId,
+	tasksRef,
+}) {
 	cb.addEventListener("change", () => {
-		const hasKids = Array.isArray(task.children) && task.children.length > 0;
-		const eitherChoiceChanges = hasKids ? syncEitherChoicesInTree(task, cb.checked) : [];
+		const hasKids =
+			Array.isArray(task.children) && task.children.length > 0;
+		const eitherChoiceChanges = hasKids
+			? syncEitherChoicesInTree(task, cb.checked)
+			: [];
 		if (hasKids) setDescendantsDone(task, cb.checked);
 		else if (isTieredTask(task)) {
 			task.done = cb.checked;
@@ -224,7 +283,9 @@ function wireStandardCheckbox({ task, cb, tieredWrap, index, cbById, setTasks, s
 			const parent = e.parent;
 			if (!parent) break;
 			const kids = Array.isArray(parent.children) ? parent.children : [];
-			parent.done = kids.length ? kids.every((k) => !!k.done) : !!parent.done;
+			parent.done = kids.length
+				? kids.every((k) => !!k.done)
+				: !!parent.done;
 			const parentCb = cbById.get(parent.id);
 			if (parentCb) parentCb.checked = !!parent.done;
 			cur = parent;
@@ -247,31 +308,36 @@ function buildTaskItem(task, sectionId, setTasks, rootTasks, index, cbById) {
 	const noCenterSlider = forceInline && hasSlider;
 	const isEither = isEitherTask(task);
 	const isStandardToggleTask = !isEither && !hasSlider;
-	item.className = `task-item ${isSub ? 'is-subtask' : 'is-main'}${!isSub ? (hasKids ? ' has-children' : ' no-children') : ''}${forceInline ? ' force-inline' : ''}${hasSlider ? ' has-slider' : ''}${noCenterSlider ? ' no-center-slider' : ''}${isStandardToggleTask ? ' task-toggleable' : ''}`;
+	item.className = `task-item ${isSub ? "is-subtask" : "is-main"}${!isSub ? (hasKids ? " has-children" : " no-children") : ""}${forceInline ? " force-inline" : ""}${hasSlider ? " has-slider" : ""}${noCenterSlider ? " no-center-slider" : ""}${isStandardToggleTask ? " task-toggleable" : ""}`;
 
 	const imgSrcs = resolveTaskImageSrcs(task, sectionId);
-	const imgsHTML = imgSrcs.map((src) => `<img class="task-item-img" src="${src}" alt="">`).join("");
+	const imgsHTML = imgSrcs
+		.map((src) => `<img class="task-item-img" src="${src}" alt="">`)
+		.join("");
 	const eitherHtml = renderEitherHTML(task);
 	const labelHtml = isEither
 		? `<div class="small task-item-text task-either-title" data-id="${task.id}">${getTaskLabelHTML(task)}</div><div class="task-either-center">${eitherHtml}</div>`
-		: `<input type="checkbox" ${task.done ? 'checked' : ''} /><div class="small task-item-text" data-id="${task.id}">${getTaskLabelHTML(task)}</div>`;
+		: `<input type="checkbox" ${task.done ? "checked" : ""} /><div class="small task-item-text" data-id="${task.id}">${getTaskLabelHTML(task)}</div>`;
 
 	if (isSub || (!hasKids && !forceInline)) {
-		item.innerHTML = `${imgsHTML ? `<div class="task-item-img-wrap${(!isSub && !hasKids) ? '' : ''}">${imgsHTML}</div>` : ''}<label class="task-item-body ${isEither ? 'task-either-wrap' : ''}">${labelHtml}</label>`;
+		item.innerHTML = `${imgsHTML ? `<div class="task-item-img-wrap${!isSub && !hasKids ? "" : ""}">${imgsHTML}</div>` : ""}<label class="task-item-body ${isEither ? "task-either-wrap" : ""}">${labelHtml}</label>`;
 	} else {
-		item.innerHTML = `<label class="task-item-body ${isEither ? 'task-either-wrap' : ''}">${labelHtml}${imgsHTML ? `<div class="task-item-img-wrap inline">${imgsHTML}</div>` : ''}</label>`;
+		item.innerHTML = `<label class="task-item-body ${isEither ? "task-either-wrap" : ""}">${labelHtml}${imgsHTML ? `<div class="task-item-img-wrap inline">${imgsHTML}</div>` : ""}</label>`;
 	}
 
-	item.querySelectorAll('img.task-item-img').forEach((imgEl) => {
-		imgEl.addEventListener('error', () => {
-			window.PPGC?.reportMissingAsset?.('taskImages', imgEl.currentSrc || imgEl.src);
+	item.querySelectorAll("img.task-item-img").forEach((imgEl) => {
+		imgEl.addEventListener("error", () => {
+			window.PPGC?.reportMissingAsset?.(
+				"taskImages",
+				imgEl.currentSrc || imgEl.src,
+			);
 			imgEl.remove();
 		});
 	});
 
 	let cb = item.querySelector('input[type="checkbox"]');
 	if (isEither) {
-		cb = item.querySelector('input.task-either-cb');
+		cb = item.querySelector("input.task-either-cb");
 		wireEitherUI(item, task, sectionId, setTasks, rootTasks);
 		if (cb) cb.checked = !!getEitherChoice(task.id);
 	}
@@ -281,23 +347,31 @@ function buildTaskItem(task, sectionId, setTasks, rootTasks, index, cbById) {
 	if (isTieredTask(task)) {
 		const accent = resolveAccentForSection(sectionId);
 		tieredWrap = renderTieredControls(task, cb, accent);
-		const label = item.querySelector('.task-item-body');
+		const label = item.querySelector(".task-item-body");
 		const pctEl = tieredWrap._pctEl;
 		if (pctEl && label) {
-			const imageWrap = noCenterSlider ? label.querySelector('.task-item-img-wrap.inline') : null;
+			const imageWrap = noCenterSlider
+				? label.querySelector(".task-item-img-wrap.inline")
+				: null;
 			if (imageWrap) label.insertBefore(pctEl, imageWrap);
 			else label.appendChild(pctEl);
 		}
-		label.insertAdjacentElement('afterend', tieredWrap);
-		tieredWrap.addEventListener('tiered-input', () => window.PPGC?.refreshSectionHeaderPct?.());
-		tieredWrap.addEventListener('tiered-change', () => {
+		label.insertAdjacentElement("afterend", tieredWrap);
+		tieredWrap.addEventListener("tiered-input", () =>
+			window.PPGC?.refreshSectionHeaderPct?.(),
+		);
+		tieredWrap.addEventListener("tiered-change", () => {
 			let cur = task;
 			while (true) {
 				const e = index.get(cur.id) || { parent: null };
 				const parent = e.parent;
 				if (!parent) break;
-				const kids = Array.isArray(parent.children) ? parent.children : [];
-				parent.done = kids.length ? kids.every((k) => !!k.done) : !!parent.done;
+				const kids = Array.isArray(parent.children)
+					? parent.children
+					: [];
+				parent.done = kids.length
+					? kids.every((k) => !!k.done)
+					: !!parent.done;
 				const parentCb = cbById.get(parent.id);
 				if (parentCb) parentCb.checked = !!parent.done;
 				cur = parent;
@@ -309,11 +383,25 @@ function buildTaskItem(task, sectionId, setTasks, rootTasks, index, cbById) {
 	}
 
 	if (!isEither && cb) {
-		wireStandardCheckbox({ task, cb, tieredWrap, index, cbById, setTasks, sectionId, tasksRef: rootTasks });
+		wireStandardCheckbox({
+			task,
+			cb,
+			tieredWrap,
+			index,
+			cbById,
+			setTasks,
+			sectionId,
+			tasksRef: rootTasks,
+		});
 		cb.addEventListener("click", (event) => event.stopPropagation());
 		item.addEventListener("click", (event) => {
 			if (!isStandardToggleTask) return;
-			if (event.target.closest('input, .tiered, .task-either, .task-either-choice')) return;
+			if (
+				event.target.closest(
+					"input, .tiered, .task-either, .task-either-choice",
+				)
+			)
+				return;
 			event.preventDefault();
 			cb.checked = !cb.checked;
 			cb.dispatchEvent(new Event("change", { bubbles: true }));
@@ -328,15 +416,23 @@ export function renderTaskLayout(tasks, sectionId, setTasks, rowsSpec) {
 	const rootTasks = tasks;
 	const index = buildTaskIndex(rootTasks);
 	const cbById = new Map();
-	const wrap = document.createElement('div');
-	wrap.className = 'task-layout';
+	const wrap = document.createElement("div");
+	wrap.className = "task-layout";
 	const used = new Set();
-	const spacerId = window.DATA?.spacer?.id || 'spacer';
-	const { meta: layoutMeta, groups: layoutGroups } = buildTaskLayoutGroups(rowsSpec, index, spacerId);
+	const spacerId = window.DATA?.spacer?.id || "spacer";
+	const { meta: layoutMeta, groups: layoutGroups } = buildTaskLayoutGroups(
+		rowsSpec,
+		index,
+		spacerId,
+	);
 
 	const buildRowEl = (row, rowIndex) => {
-		const rowEl = document.createElement('div');
-		rowEl.className = ['task-row', 'task-inline', ...(layoutMeta[rowIndex]?.rowClasses || [])].join(' ');
+		const rowEl = document.createElement("div");
+		rowEl.className = [
+			"task-row",
+			"task-inline",
+			...(layoutMeta[rowIndex]?.rowClasses || []),
+		].join(" ");
 
 		for (const id of row) {
 			if (id === spacerId) {
@@ -346,15 +442,24 @@ export function renderTaskLayout(tasks, sectionId, setTasks, rowsSpec) {
 			const entry = index.get(id);
 			if (!entry) continue;
 			used.add(id);
-			rowEl.appendChild(buildTaskItem(entry.task, sectionId, setTasks, rootTasks, index, cbById));
+			rowEl.appendChild(
+				buildTaskItem(
+					entry.task,
+					sectionId,
+					setTasks,
+					rootTasks,
+					index,
+					cbById,
+				),
+			);
 		}
 		return rowEl;
 	};
 
 	layoutGroups.forEach((group) => {
-		if (group.type === 'lineage') {
-			const groupEl = document.createElement('div');
-			groupEl.className = 'task-group task-group-lineage';
+		if (group.type === "lineage") {
+			const groupEl = document.createElement("div");
+			groupEl.className = "task-group task-group-lineage";
 			group.rowIndexes.forEach((rowIndex) => {
 				groupEl.appendChild(buildRowEl(rowsSpec[rowIndex], rowIndex));
 			});
@@ -374,38 +479,54 @@ export function renderTaskLayout(tasks, sectionId, setTasks, rowsSpec) {
 	})(rootTasks);
 
 	if (leftovers.length) {
-		const divider = document.createElement('div');
-		divider.className = 'small';
-		divider.style.opacity = '.7';
-		divider.style.margin = '6px 2px';
-		divider.textContent = 'More:';
+		const divider = document.createElement("div");
+		divider.className = "small";
+		divider.style.opacity = ".7";
+		divider.style.margin = "6px 2px";
+		divider.textContent = "More:";
 		wrap.appendChild(divider);
-		wrap.appendChild(renderTaskList(leftovers, sectionId, setTasks, rootTasks, index, cbById));
+		wrap.appendChild(
+			renderTaskList(
+				leftovers,
+				sectionId,
+				setTasks,
+				rootTasks,
+				index,
+				cbById,
+			),
+		);
 	}
 
 	return wrap;
 }
 
-export function renderTaskList(tasks, sectionId, setTasks, allTasksRef, indexOpt, cbByIdOpt) {
-	const container = document.createElement('div');
-	container.className = 'task-list';
+export function renderTaskList(
+	tasks,
+	sectionId,
+	setTasks,
+	allTasksRef,
+	indexOpt,
+	cbByIdOpt,
+) {
+	const container = document.createElement("div");
+	container.className = "task-list";
 	const allRef = allTasksRef || tasks;
 	const index = indexOpt || buildTaskIndex(allRef);
 	const cbById = cbByIdOpt || new Map();
 
 	tasks.forEach((task) => {
-		const row = document.createElement('div');
+		const row = document.createElement("div");
 		const isEither = isEitherTask(task);
 		const hasSlider = isTieredTask(task);
 		const isStandardToggleTask = !isEither && !hasSlider;
-		row.className = `task-row${isStandardToggleTask ? ' task-toggleable' : ''}`;
+		row.className = `task-row${isStandardToggleTask ? " task-toggleable" : ""}`;
 		row.innerHTML = isEither
 			? `<div class="small task-item-text task-either-title" style="width:100%; text-align:center;">${getTaskLabelHTML(task)}</div><div class="task-either-center" style="width:100%;">${renderEitherHTML(task)}</div>`
-			: `<input type="checkbox" ${task.done ? 'checked' : ''} /><div class="small task-item-text" style="flex:1">${getTaskLabelHTML(task)}</div>`;
+			: `<input type="checkbox" ${task.done ? "checked" : ""} /><div class="small task-item-text" style="flex:1">${getTaskLabelHTML(task)}</div>`;
 
 		let cb = row.querySelector('input[type="checkbox"]');
 		if (isEither) {
-			cb = row.querySelector('input.task-either-cb');
+			cb = row.querySelector("input.task-either-cb");
 			wireEitherUI(row, task, sectionId, setTasks, allRef);
 			if (cb) cb.checked = !!getEitherChoice(task.id);
 		} else cbById.set(task.id, cb);
@@ -414,17 +535,32 @@ export function renderTaskList(tasks, sectionId, setTasks, allTasksRef, indexOpt
 		if (hasSlider) {
 			const accent = resolveAccentForSection(sectionId);
 			tieredWrap = renderTieredControls(task, cb, accent);
-			const labelText = row.querySelector('.small');
-			if (tieredWrap._pctEl && labelText?.parentElement) labelText.parentElement.appendChild(tieredWrap._pctEl);
+			const labelText = row.querySelector(".small");
+			if (tieredWrap._pctEl && labelText?.parentElement)
+				labelText.parentElement.appendChild(tieredWrap._pctEl);
 			row.appendChild(tieredWrap);
 		}
 
 		if (!isEither && cb) {
-			wireStandardCheckbox({ task, cb, tieredWrap, index, cbById, setTasks, sectionId, tasksRef: allRef });
+			wireStandardCheckbox({
+				task,
+				cb,
+				tieredWrap,
+				index,
+				cbById,
+				setTasks,
+				sectionId,
+				tasksRef: allRef,
+			});
 			cb.addEventListener("click", (event) => event.stopPropagation());
 			row.addEventListener("click", (event) => {
 				if (!isStandardToggleTask) return;
-				if (event.target.closest('input, .tiered, .task-either, .task-either-choice')) return;
+				if (
+					event.target.closest(
+						"input, .tiered, .task-either, .task-either-choice",
+					)
+				)
+					return;
 				event.preventDefault();
 				cb.checked = !cb.checked;
 				cb.dispatchEvent(new Event("change", { bubbles: true }));

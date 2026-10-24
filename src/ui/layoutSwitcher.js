@@ -36,7 +36,7 @@ function getVariantState() {
  * - If there is no lower one, it will use the smallest one overall.
  */
 function pickVariantNameForWidth(width, variants) {
-	const definedBps = LAYOUT_BREAKPOINTS.filter(bp => variants[bp.name]);
+	const definedBps = LAYOUT_BREAKPOINTS.filter((bp) => variants[bp.name]);
 	if (!definedBps.length) return null;
 
 	// 1) Best candidate: largest minWidth <= width

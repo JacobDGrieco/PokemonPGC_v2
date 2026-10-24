@@ -1,13 +1,35 @@
+/**
+ * Recreates disposable tier test users in the configured database.
+ *
+ * This rotates passwords, revokes sessions, clears provider IDs, and prints new
+ * credentials. Never point it at production or persist its output in Git/logs.
+ */
 import "dotenv/config";
 import crypto from "crypto";
 import bcrypt from "bcryptjs";
 import { prisma } from "../api/_lib/db.js";
 
 const TEST_ACCOUNTS = [
-	{ tier: "free", email: "test-free@pokemonpgc.local", subscriptionStatus: null },
-	{ tier: "great", email: "test-great@pokemonpgc.local", subscriptionStatus: "active" },
-	{ tier: "ultra", email: "test-ultra@pokemonpgc.local", subscriptionStatus: "active" },
-	{ tier: "master", email: "test-master@pokemonpgc.local", subscriptionStatus: "active" },
+	{
+		tier: "free",
+		email: "test-free@pokemonpgc.local",
+		subscriptionStatus: null,
+	},
+	{
+		tier: "great",
+		email: "test-great@pokemonpgc.local",
+		subscriptionStatus: "active",
+	},
+	{
+		tier: "ultra",
+		email: "test-ultra@pokemonpgc.local",
+		subscriptionStatus: "active",
+	},
+	{
+		tier: "master",
+		email: "test-master@pokemonpgc.local",
+		subscriptionStatus: "active",
+	},
 ];
 
 function randomPassword(length = 24) {
@@ -58,7 +80,7 @@ async function main() {
 	console.log("Test accounts ready:");
 	for (const account of created) {
 		console.log(
-			`${account.tier.padEnd(6)} ${account.email}  password=${account.password}`
+			`${account.tier.padEnd(6)} ${account.email}  password=${account.password}`,
 		);
 	}
 }

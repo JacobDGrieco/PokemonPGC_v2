@@ -9,13 +9,15 @@ function stemForMaterial(matName) {
 	// - BodyA00, BodyB01, BodyCInc00
 	// - BodyA_00, BodyA.001, etc.
 	const cleaned = raw
-		.replace(/(\.?\d+)+$/g, "")   // strips ".001" or trailing digits
-		.replace(/[_\s-]\d+$/g, "")   // strips "_00" or " 01" etc.
+		.replace(/(\.?\d+)+$/g, "") // strips ".001" or trailing digits
+		.replace(/[_\s-]\d+$/g, "") // strips "_00" or " 01" etc.
 		.trim();
 
 	// Prefer explicit token extraction (most reliable).
 	// IMPORTANT: BodyCInc must come before BodyC.
-	const m = cleaned.match(/\b(BodyAInc|BodyBInc|BodyCInc|BodyA|BodyB|BodyC|EyeA|EyeB|EyeC|Eye|Mouth|Beto|Fire)\b/i);
+	const m = cleaned.match(
+		/\b(BodyAInc|BodyBInc|BodyCInc|BodyA|BodyB|BodyC|EyeA|EyeB|EyeC|Eye|Mouth|Beto|Fire)\b/i,
+	);
 	if (m) {
 		const k = m[1];
 		return k[0].toUpperCase() + k.slice(1);
@@ -24,23 +26,47 @@ function stemForMaterial(matName) {
 	const n = cleaned.toLowerCase();
 
 	// Fallback heuristics (also keep BodyCInc before BodyC)
-	if (n.includes("bodyainc") || n.includes("body_ainc") || n.includes("body ainc")) return "BodyAInc";
-	if (n.includes("bodybinc") || n.includes("body_binc") || n.includes("body binc")) return "BodyBInc";
-	if (n.includes("bodycinc") || n.includes("body_cinc") || n.includes("body cinc")) return "BodyCInc";
+	if (
+		n.includes("bodyainc") ||
+		n.includes("body_ainc") ||
+		n.includes("body ainc")
+	)
+		return "BodyAInc";
+	if (
+		n.includes("bodybinc") ||
+		n.includes("body_binc") ||
+		n.includes("body binc")
+	)
+		return "BodyBInc";
+	if (
+		n.includes("bodycinc") ||
+		n.includes("body_cinc") ||
+		n.includes("body cinc")
+	)
+		return "BodyCInc";
 
-	if (n.includes("bodya") || n.includes("body_a") || n.includes("body a")) return "BodyA";
-	if (n.includes("bodyb") || n.includes("body_b") || n.includes("body b")) return "BodyB";
-	if (n.includes("bodyc") || n.includes("body_c") || n.includes("body c")) return "BodyC";
+	if (n.includes("bodya") || n.includes("body_a") || n.includes("body a"))
+		return "BodyA";
+	if (n.includes("bodyb") || n.includes("body_b") || n.includes("body b"))
+		return "BodyB";
+	if (n.includes("bodyc") || n.includes("body_c") || n.includes("body c"))
+		return "BodyC";
 	if (n.includes("body")) return "Body";
 
-	if (n.includes("eyea") || n.includes("eye_a") || n.includes("eye a")) return "EyeA";
-	if (n.includes("eyeb") || n.includes("eye_b") || n.includes("eye b")) return "EyeB";
-	if (n.includes("eyec") || n.includes("eye_c") || n.includes("eye b")) return "EyeC";
-	if (n.includes("eyed") || n.includes("eye_d") || n.includes("eye d")) return "EyeD";
+	if (n.includes("eyea") || n.includes("eye_a") || n.includes("eye a"))
+		return "EyeA";
+	if (n.includes("eyeb") || n.includes("eye_b") || n.includes("eye b"))
+		return "EyeB";
+	if (n.includes("eyec") || n.includes("eye_c") || n.includes("eye b"))
+		return "EyeC";
+	if (n.includes("eyed") || n.includes("eye_d") || n.includes("eye d"))
+		return "EyeD";
 	if (n.includes("eye") || n.includes("bug")) return "Eye";
 
-	if (n.includes("moutha") || n.includes("mouth_a") || n.includes("mouth a")) return "MouthA";
-	if (n.includes("mouthb") || n.includes("mouth_b") || n.includes("mouth b")) return "MouthB";
+	if (n.includes("moutha") || n.includes("mouth_a") || n.includes("mouth a"))
+		return "MouthA";
+	if (n.includes("mouthb") || n.includes("mouth_b") || n.includes("mouth b"))
+		return "MouthB";
 	if (n.includes("mouth")) return "Mouth";
 
 	if (n.includes("beto")) return "Beto";
@@ -76,7 +102,7 @@ function makeSimpleMaterial({ name, tex, transparent = false }) {
 function makeFireMaterial({ name, tex }) {
 	const mat = new THREE.MeshBasicMaterial({
 		name,
-		color: 0xffa54a,           // warm orange (tweak if you want)
+		color: 0xffa54a, // warm orange (tweak if you want)
 		alphaMap: tex.msk || null, // ✅ mask drives opacity
 		transparent: true,
 		opacity: 1.0,
@@ -94,7 +120,10 @@ function makeFireMaterial({ name, tex }) {
 	return mat;
 }
 
-export async function applyLGPETextureSetToScene(root3d, { glbUrl, variant, eyeShaderMats } = {}) {
+export async function applyLGPETextureSetToScene(
+	root3d,
+	{ glbUrl, variant, eyeShaderMats } = {},
+) {
 	// We intentionally ignore variant for LGPE right now — you’re just “slapping textures on”.
 	return applyGenericTextureSetToScene(root3d, {
 		glbUrl,
@@ -156,14 +185,22 @@ export async function applyLGPETextureSetToScene(root3d, { glbUrl, variant, eyeS
 
 		// “eye” gets a transparent material so eyelashes/holes don’t look wrong
 		makeEyeMaterial: ({ matName, tex }) => {
-			return makeSimpleMaterial({ name: matName || "Eye", tex, transparent: true });
+			return makeSimpleMaterial({
+				name: matName || "Eye",
+				tex,
+				transparent: true,
+			});
 		},
 
 		makeBodyMaterial: ({ matName, tex, stem }) => {
 			if (stem === "Fire") {
 				return makeFireMaterial({ name: matName || "Fire", tex });
 			}
-			return makeSimpleMaterial({ name: matName || stem, tex, transparent: false });
+			return makeSimpleMaterial({
+				name: matName || stem,
+				tex,
+				transparent: false,
+			});
 		},
 
 		// no UV swapping / special handling yet

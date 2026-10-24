@@ -3,16 +3,36 @@
 // You can adapt imports depending on your build setup.
 
 import * as THREE from "three";
+import { debugLog } from "../utils/debug.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
-import { resolveVariantModelUrl } from "./modelPipelines/registy.js";
-import { applyModelViewerPipeline, collectSmokeShaderMats, resolveModelGlbUrl } from "./model-viewer-loader.js";
-import { buildAnimDisplayNames, findPreferredAnimIndex } from "./model-viewer-anim.js";
-import { createModelViewerRoot, getModelViewerElements } from "./model-viewer-dom.js";
-import { prettyMeshName, prettyMatName, updateToggleAllButton } from "./model-viewer-assets.js";
+import { resolveVariantModelUrl } from "./modelPipelines/registry.js";
+import { hideModalElement, showModalElement } from "./modal-state.js";
+import {
+	applyModelViewerPipeline,
+	collectSmokeShaderMats,
+	resolveModelGlbUrl,
+} from "./model-viewer-loader.js";
+import {
+	buildAnimDisplayNames,
+	findPreferredAnimIndex,
+} from "./model-viewer-anim.js";
+import {
+	createModelViewerRoot,
+	getModelViewerElements,
+} from "./model-viewer-dom.js";
+import {
+	prettyMeshName,
+	prettyMatName,
+	updateToggleAllButton,
+} from "./model-viewer-assets.js";
 import { makeRigVisualizerForSkinnedMesh } from "./model-viewer-rig.js";
-import { pickBestWebmMime, downloadBlob, downloadDataUrl } from "./model-viewer-recording-utils.js";
+import {
+	pickBestWebmMime,
+	downloadBlob,
+	downloadDataUrl,
+} from "./model-viewer-recording-utils.js";
 import { createAnimationController } from "./model-viewer-animation.js";
 import { createViewerOverlayController } from "./model-viewer-overlays.js";
 import { ensurePpgcRoot } from "../runtime/globals.js";
@@ -21,7 +41,6 @@ import { resetScrollWithin } from "../utils/scrolling.js";
 const eyeShaderMats = [];
 const smokeShaderMats = [];
 const PPGC = ensurePpgcRoot();
-
 
 export async function openModelViewerModal({
 	title = "Model Viewer",
@@ -34,7 +53,9 @@ export async function openModelViewerModal({
 	smokeShaderMats.length = 0;
 
 	// --- DOM scaffold ---
-	const root = createModelViewerRoot({ isSolo: !!window.store?.state?.modelViewerSolo });
+	const root = createModelViewerRoot({
+		isSolo: !!window.store?.state?.modelViewerSolo,
+	});
 	const {
 		dropBtns,
 		dropPanels,
@@ -80,11 +101,16 @@ export async function openModelViewerModal({
 		b.addEventListener("click", (e) => {
 			e.stopPropagation();
 			const key = b.dataset.drop;
-			const isAlreadyOpen = dropPanels.find(p => p.dataset.dropPanel === key)?.classList.contains("is-open");
+			const isAlreadyOpen = dropPanels
+				.find((p) => p.dataset.dropPanel === key)
+				?.classList.contains("is-open");
 			// click active tab toggles closed
 			if (isAlreadyOpen && b.classList.contains("is-active")) {
-				dropPanels.forEach(p => p.classList.remove("is-open"));
-				dropBtns.forEach(btn => { btn.classList.remove("is-active"); btn.setAttribute("aria-selected", "false"); });
+				dropPanels.forEach((p) => p.classList.remove("is-open"));
+				dropBtns.forEach((btn) => {
+					btn.classList.remove("is-active");
+					btn.setAttribute("aria-selected", "false");
+				});
 				return;
 			}
 			setActiveDrop(key);
@@ -100,7 +126,11 @@ export async function openModelViewerModal({
 	grid.material.transparent = true;
 	scene.add(grid);
 
-	const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, preserveDrawingBuffer: true });
+	const renderer = new THREE.WebGLRenderer({
+		antialias: true,
+		alpha: true,
+		preserveDrawingBuffer: true,
+	});
 	renderer.debug.checkShaderErrors = true;
 	renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
 	renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -117,7 +147,7 @@ export async function openModelViewerModal({
 
 	// Lighting: brighter, viewer-like
 	renderer.toneMapping = THREE.ACESFilmicToneMapping;
-	renderer.toneMappingExposure = 1.10; // slightly lower because we're adding more lights
+	renderer.toneMappingExposure = 1.1; // slightly lower because we're adding more lights
 
 	// Base ambience
 	const amb = new THREE.AmbientLight(0xffffff, 0.45);
@@ -136,11 +166,11 @@ export async function openModelViewerModal({
 	scene.add(fill);
 
 	// --- Extra corner lights (kept subtle; bodies benefit, eyes will mostly still match) ---
-	const cornerBL = new THREE.DirectionalLight(0xffffff, 0.30);
+	const cornerBL = new THREE.DirectionalLight(0xffffff, 0.3);
 	cornerBL.position.set(-4, 3, -4); // back-left
 	scene.add(cornerBL);
 
-	const cornerBR = new THREE.DirectionalLight(0xffffff, 0.30);
+	const cornerBR = new THREE.DirectionalLight(0xffffff, 0.3);
 	cornerBR.position.set(4, 3, -4); // back-right
 	scene.add(cornerBR);
 
@@ -181,32 +211,72 @@ export async function openModelViewerModal({
 	let lastWebmBlob = null;
 
 	const refs = {
-		get model() { return model; },
-		set model(v) { model = v; },
-		get mixer() { return mixer; },
-		set mixer(v) { mixer = v; },
-		get activeAction() { return activeAction; },
-		set activeAction(v) { activeAction = v; },
-		get userPaused() { return userPaused; },
-		set userPaused(v) { userPaused = v; },
-		get poseMode() { return poseMode; },
-		set poseMode(v) { poseMode = v; },
-		get loopRestartTimer() { return loopRestartTimer; },
-		set loopRestartTimer(v) { loopRestartTimer = v; },
-		get finishedHandler() { return finishedHandler; },
-		set finishedHandler(v) { finishedHandler = v; },
+		get model() {
+			return model;
+		},
+		set model(v) {
+			model = v;
+		},
+		get mixer() {
+			return mixer;
+		},
+		set mixer(v) {
+			mixer = v;
+		},
+		get activeAction() {
+			return activeAction;
+		},
+		set activeAction(v) {
+			activeAction = v;
+		},
+		get userPaused() {
+			return userPaused;
+		},
+		set userPaused(v) {
+			userPaused = v;
+		},
+		get poseMode() {
+			return poseMode;
+		},
+		set poseMode(v) {
+			poseMode = v;
+		},
+		get loopRestartTimer() {
+			return loopRestartTimer;
+		},
+		set loopRestartTimer(v) {
+			loopRestartTimer = v;
+		},
+		get finishedHandler() {
+			return finishedHandler;
+		},
+		set finishedHandler(v) {
+			finishedHandler = v;
+		},
 		rigUpdaters,
 		skelHelpers,
-		get meshOverlayOpacity() { return meshOverlayOpacity; },
-		set meshOverlayOpacity(v) { meshOverlayOpacity = v; },
-		get matOverlayOpacity() { return matOverlayOpacity; },
-		set matOverlayOpacity(v) { matOverlayOpacity = v; },
-		get skeletonOn() { return skeletonOn; },
-		set skeletonOn(v) { skeletonOn = v; },
+		get meshOverlayOpacity() {
+			return meshOverlayOpacity;
+		},
+		set meshOverlayOpacity(v) {
+			meshOverlayOpacity = v;
+		},
+		get matOverlayOpacity() {
+			return matOverlayOpacity;
+		},
+		set matOverlayOpacity(v) {
+			matOverlayOpacity = v;
+		},
+		get skeletonOn() {
+			return skeletonOn;
+		},
+		set skeletonOn(v) {
+			skeletonOn = v;
+		},
 	};
 
 	const meshState = new Map(); // uuid -> boolean
-	const matState = new Map();  // material.name -> boolean
+	const matState = new Map(); // material.name -> boolean
 	const meshByUuid = new Map();
 	const matsByName = new Map(); // name -> Set(material instances)
 	const matSaved = new WeakMap(); // material -> original props
@@ -331,12 +401,12 @@ export async function openModelViewerModal({
 		const maxDim = Math.max(size2.x, size2.y, size2.z) || 1;
 
 		// Set controls target to mid-upper body (not origin)
-		const targetY = size2.y * 0.55;               // look a bit higher (centers model vertically)
+		const targetY = size2.y * 0.55; // look a bit higher (centers model vertically)
 		controls.target.set(0, targetY, 0);
 
-		const camX = 0.50;  // right/left (more positive = more rotated to your right) (also zooms out farther to either side)
-		const camY = 0.25;  // height (more positive = higher up) (raises camera and points to model)
-		const camZ = 1.00;  // forward/back (zoom) (more positive = more zoomed out)
+		const camX = 0.5; // right/left (more positive = more rotated to your right) (also zooms out farther to either side)
+		const camY = 0.25; // height (more positive = higher up) (raises camera and points to model)
+		const camZ = 1.0; // forward/back (zoom) (more positive = more zoomed out)
 
 		// Camera: top-left diagonal looking at the target
 		const dist = maxDim * 2.3;
@@ -344,15 +414,17 @@ export async function openModelViewerModal({
 		camera.lookAt(0, targetY, 0);
 
 		// ---- PAN OFFSET (like right-click pan) ----
-		const panLR = 0.20; // left/right (more positive = more to the right)
-		const panUD = 0.0;   // up/down (more negative = more downward)
-		const scroll = 0.25;   // zoom (more negative = more zoomed in)
+		const panLR = 0.2; // left/right (more positive = more to the right)
+		const panUD = 0.0; // up/down (more negative = more downward)
+		const scroll = 0.25; // zoom (more negative = more zoomed in)
 
 		// Build camera-relative right/up vectors
 		const dir = new THREE.Vector3();
 		camera.getWorldDirection(dir);
 
-		const right = new THREE.Vector3().crossVectors(dir, camera.up).normalize();
+		const right = new THREE.Vector3()
+			.crossVectors(dir, camera.up)
+			.normalize();
 		const up = new THREE.Vector3().copy(camera.up).normalize();
 
 		// Convert to world-space pan vector
@@ -367,17 +439,20 @@ export async function openModelViewerModal({
 		// ---- APPLY SCROLL (ZOOM) ----
 		// Move camera closer/farther from the target along the current view ray
 		{
-			const toCam = new THREE.Vector3().subVectors(camera.position, controls.target);
+			const toCam = new THREE.Vector3().subVectors(
+				camera.position,
+				controls.target,
+			);
 			const currentDist = toCam.length() || 0.0001;
 
 			// scroll is in "model size" units so it scales nicely per Pokémon
-			const desiredDist = currentDist + (scroll * maxDim);
+			const desiredDist = currentDist + scroll * maxDim;
 
 			// clamp using the same min/max you set for OrbitControls
 			const clampedDist = THREE.MathUtils.clamp(
 				desiredDist,
-				maxDim * 0.6,  // should match controls.minDistance below
-				maxDim * 8.0   // should match controls.maxDistance below
+				maxDim * 0.6, // should match controls.minDistance below
+				maxDim * 8.0, // should match controls.maxDistance below
 			);
 
 			toCam.setLength(clampedDist);
@@ -392,20 +467,6 @@ export async function openModelViewerModal({
 		// Grid stays at floor
 		grid.position.set(0, 0, 0);
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 	function enableControls(enable) {
 		selectEl.disabled = !enable;
@@ -429,15 +490,14 @@ export async function openModelViewerModal({
 			const dataUrl = renderer.domElement.toDataURL("image/png");
 			downloadDataUrl(dataUrl, filename);
 		} catch (err) {
-			console.error("Screenshot failed (canvas may be tainted by CORS textures):", err);
+			console.error(
+				"Screenshot failed (canvas may be tainted by CORS textures):",
+				err,
+			);
 			setStatus("Screenshot failed (CORS). See console.");
 			setTimeout(() => setStatus(""), 2200);
 		}
 	}
-
-
-
-
 
 	function withRecordingQuality(fn) {
 		const prevPR = renderer.getPixelRatio();
@@ -455,12 +515,6 @@ export async function openModelViewerModal({
 			resize();
 		}
 	}
-
-
-
-
-
-
 
 	async function startRecordingWebm({
 		fps = 30,
@@ -504,7 +558,7 @@ export async function openModelViewerModal({
 			stream,
 			mimeType
 				? { mimeType, videoBitsPerSecond: 12_000_000 } // ~12 Mbps
-				: { videoBitsPerSecond: 12_000_000 }
+				: { videoBitsPerSecond: 12_000_000 },
 		);
 
 		mediaRecorder = rec;
@@ -520,7 +574,9 @@ export async function openModelViewerModal({
 
 		rec.onstop = () => {
 			try {
-				lastWebmBlob = new Blob(recordChunks, { type: rec.mimeType || "video/webm" });
+				lastWebmBlob = new Blob(recordChunks, {
+					type: rec.mimeType || "video/webm",
+				});
 
 				// Enable buttons instead of auto-download
 				webmBtn.disabled = false;
@@ -546,9 +602,13 @@ export async function openModelViewerModal({
 		recordBtn.disabled = false;
 
 		// Auto-stop
-		setTimeout(() => {
-			if (mediaRecorder && mediaRecorder.state === "recording") stopRecordingWebm();
-		}, Math.max(0.25, maxSeconds) * 1000);
+		setTimeout(
+			() => {
+				if (mediaRecorder && mediaRecorder.state === "recording")
+					stopRecordingWebm();
+			},
+			Math.max(0.25, maxSeconds) * 1000,
+		);
 	}
 
 	function stopRecordingWebm() {
@@ -565,22 +625,9 @@ export async function openModelViewerModal({
 		recordBtn.textContent = "Record";
 	}
 
-
-
 	// --- Rig visualizer (actual bones + joints) ---
 
-
-
-
-
-
-
-
-
-
-
 	// Save pristine base color ONCE per material instance
-
 
 	function _setOpacityLabel(el, pct) {
 		if (el) el.textContent = `${pct}%`;
@@ -598,7 +645,10 @@ export async function openModelViewerModal({
 
 	if (meshOpacityEl) {
 		meshOpacityEl.addEventListener("input", () => {
-			const pct = Math.max(0, Math.min(100, Number(meshOpacityEl.value) || 0));
+			const pct = Math.max(
+				0,
+				Math.min(100, Number(meshOpacityEl.value) || 0),
+			);
 			meshOverlayOpacity = pct / 100;
 			refs.meshOverlayOpacity = meshOverlayOpacity;
 			_setOpacityLabel(meshOpacityVal, pct);
@@ -608,7 +658,10 @@ export async function openModelViewerModal({
 
 	if (matOpacityEl) {
 		matOpacityEl.addEventListener("input", () => {
-			const pct = Math.max(0, Math.min(100, Number(matOpacityEl.value) || 0));
+			const pct = Math.max(
+				0,
+				Math.min(100, Number(matOpacityEl.value) || 0),
+			);
 			matOverlayOpacity = pct / 100;
 			refs.matOverlayOpacity = matOverlayOpacity;
 			_setOpacityLabel(matOpacityVal, pct);
@@ -619,20 +672,9 @@ export async function openModelViewerModal({
 	// Recompute a single material’s displayed color from:
 	// base -> materialOverlay(name) -> meshOverlay(uuid)
 
-
 	// Recompute for an entire mesh
 
-
 	// IMPORTANT: when we clone materials for a mesh, update matsByName immediately
-
-
-
-
-
-
-
-
-
 
 	// Hook UI
 	selectEl.addEventListener("change", () => {
@@ -666,7 +708,11 @@ export async function openModelViewerModal({
 		refs.activeAction.paused = refs.userPaused;
 
 		if (refs.userPaused) clearLoopPadding();
-		else applyPaddedLoop(refs.activeAction, refs.mixer?._clips?.[Number(selectEl.value)]);
+		else
+			applyPaddedLoop(
+				refs.activeAction,
+				refs.mixer?._clips?.[Number(selectEl.value)],
+			);
 
 		playToggleBtn.textContent = refs.userPaused ? "Play" : "Pause";
 		setPill(playToggleBtn, !refs.userPaused);
@@ -711,11 +757,19 @@ export async function openModelViewerModal({
 		if (!(el instanceof HTMLInputElement)) return;
 
 		// ✅ Color pickers first (they are NOT checkboxes)
-		if (el.type === "color" && el.dataset.kind === "meshcolor" && el.dataset.uuid) {
+		if (
+			el.type === "color" &&
+			el.dataset.kind === "meshcolor" &&
+			el.dataset.uuid
+		) {
 			setMeshOverlayColor(el.dataset.uuid, el.value);
 			return;
 		}
-		if (el.type === "color" && el.dataset.kind === "matcolor" && el.dataset.name) {
+		if (
+			el.type === "color" &&
+			el.dataset.kind === "matcolor" &&
+			el.dataset.name
+		) {
 			setMaterialOverlayByName(el.dataset.name, el.value);
 			return;
 		}
@@ -752,7 +806,9 @@ export async function openModelViewerModal({
 		}
 	});
 	meshesToggleAllBtn?.addEventListener("click", () => {
-		const anyChecked = Array.from(meshState.values()).some((v) => v !== false);
+		const anyChecked = Array.from(meshState.values()).some(
+			(v) => v !== false,
+		);
 		const next = !anyChecked; // if any are on -> turn all OFF; else turn all ON
 
 		for (const [uuid] of meshByUuid) setMeshEnabled(uuid, next);
@@ -760,7 +816,9 @@ export async function openModelViewerModal({
 	});
 
 	matsToggleAllBtn?.addEventListener("click", () => {
-		const anyChecked = Array.from(matState.values()).some((v) => v !== false);
+		const anyChecked = Array.from(matState.values()).some(
+			(v) => v !== false,
+		);
 		const next = !anyChecked;
 
 		for (const k of matsByName.keys()) setMaterialEnabledByName(k, next);
@@ -769,7 +827,9 @@ export async function openModelViewerModal({
 
 	screenshotBtn?.addEventListener("click", () => {
 		// Uses transparent renderer clearColor; grid/wireframe/skeleton toggles affect what is captured.
-		takeViewerScreenshot({ filename: `${title.replace(/[^a-z0-9\-_]+/gi, "_") || "model"}_${Date.now()}.png` });
+		takeViewerScreenshot({
+			filename: `${title.replace(/[^a-z0-9\-_]+/gi, "_") || "model"}_${Date.now()}.png`,
+		});
 	});
 	recordBtn?.addEventListener("click", () => {
 		// Toggle record: click once to start, click again to stop early
@@ -817,7 +877,11 @@ export async function openModelViewerModal({
 		// keep rig visualizers aligned to animated bones
 		if (refs.skeletonOn && rigUpdaters.length) {
 			for (const fn of rigUpdaters) {
-				try { fn(); } catch (e) { console.warn("rigUpdater:", e); }
+				try {
+					fn();
+				} catch (e) {
+					console.warn("rigUpdater:", e);
+				}
 			}
 		}
 
@@ -831,17 +895,20 @@ export async function openModelViewerModal({
 			}
 
 			if (u.uHemiSky?.value) u.uHemiSky.value.copy(hemi.color);
-			if (u.uHemiGround?.value) u.uHemiGround.value.copy(hemi.groundColor);
+			if (u.uHemiGround?.value)
+				u.uHemiGround.value.copy(hemi.groundColor);
 			if (u.uHemiIntensity) u.uHemiIntensity.value = hemi.intensity;
 			if (u.uHemiDir?.value) u.uHemiDir.value.set(0, 1, 0);
 
 			if (u.uDir0Color?.value) u.uDir0Color.value.copy(key.color);
 			if (u.uDir0Intensity) u.uDir0Intensity.value = key.intensity;
-			if (u.uDir0Dir?.value) u.uDir0Dir.value.copy(key.position).normalize();
+			if (u.uDir0Dir?.value)
+				u.uDir0Dir.value.copy(key.position).normalize();
 
 			if (u.uDir1Color?.value) u.uDir1Color.value.copy(fill.color);
 			if (u.uDir1Intensity) u.uDir1Intensity.value = fill.intensity;
-			if (u.uDir1Dir?.value) u.uDir1Dir.value.copy(fill.position).normalize();
+			if (u.uDir1Dir?.value)
+				u.uDir1Dir.value.copy(fill.position).normalize();
 		}
 
 		const t = clock.elapsedTime;
@@ -855,10 +922,12 @@ export async function openModelViewerModal({
 			if (model) {
 				model.traverse((o) => {
 					if (!o?.isMesh) return;
-					const mats = Array.isArray(o.material) ? o.material : [o.material];
+					const mats = Array.isArray(o.material)
+						? o.material
+						: [o.material];
 					for (const m of mats) {
 						if (!m) continue;
-						console.log("MAT", o.name, m.name, m.type, {
+						debugLog("MAT", o.name, m.name, m.type, {
 							hasMap: !!m.map,
 							hasAlphaMap: !!m.alphaMap,
 							transparent: m.transparent,
@@ -937,79 +1006,83 @@ export async function openModelViewerModal({
 	glbUrl = resolveVariantModelUrl(glbUrl, variant);
 	glbUrl = await resolveModelGlbUrl(glbUrl);
 
-	loader.load(glbUrl, async (gltf) => {
-		const wrap = new THREE.Group();
-		wrap.name = "ModelRoot";
-		refs.model = wrap;
-		wrap.add(gltf.scene);
-		scene.add(wrap);
+	loader.load(
+		glbUrl,
+		async (gltf) => {
+			const wrap = new THREE.Group();
+			wrap.name = "ModelRoot";
+			refs.model = wrap;
+			wrap.add(gltf.scene);
+			scene.add(wrap);
 
-		const pipeline = await applyModelViewerPipeline({
-			scene: gltf.scene,
-			renderer,
-			glbUrl,
-			variant,
-			eyeShaderMats,
-			lighting: { amb, hemi, key, fill, cornerBL, cornerBR, top },
-			setStatus,
-		});
+			const pipeline = await applyModelViewerPipeline({
+				scene: gltf.scene,
+				renderer,
+				glbUrl,
+				variant,
+				eyeShaderMats,
+				lighting: { amb, hemi, key, fill, cornerBL, cornerBR, top },
+				setStatus,
+			});
 
-		collectSmokeShaderMats(gltf.scene, smokeShaderMats);
+			collectSmokeShaderMats(gltf.scene, smokeShaderMats);
 
-		frameModelToView(model);
+			frameModelToView(model);
 
-		// Animations
-		const clips = gltf.animations || [];
-		refs.mixer = new THREE.AnimationMixer(model);
-		refs.mixer._clips = clips;
+			// Animations
+			const clips = gltf.animations || [];
+			refs.mixer = new THREE.AnimationMixer(model);
+			refs.mixer._clips = clips;
 
-		selectEl.innerHTML = "";
-		const display = buildAnimDisplayNames(clips);
+			selectEl.innerHTML = "";
+			const display = buildAnimDisplayNames(clips);
 
-		clips.forEach((clip, idx) => {
-			const opt = document.createElement("option");
-			opt.value = String(idx);
-			opt.textContent = display[idx].label;
+			clips.forEach((clip, idx) => {
+				const opt = document.createElement("option");
+				opt.value = String(idx);
+				opt.textContent = display[idx].label;
 
-			// 👇 Native hover tooltip
-			opt.title = display[idx].title;
+				// 👇 Native hover tooltip
+				opt.title = display[idx].title;
 
-			selectEl.appendChild(opt);
-		});
-		if (clips.length) {
-			const startIdx = findPreferredAnimIndex(clips, pipeline);
-			lastAnimIndex = startIdx;
-			setAnimByIndex(startIdx);
-		}
-		enableControls(clips.length > 0);
+				selectEl.appendChild(opt);
+			});
+			if (clips.length) {
+				const startIdx = findPreferredAnimIndex(clips, pipeline);
+				lastAnimIndex = startIdx;
+				setAnimByIndex(startIdx);
+			}
+			enableControls(clips.length > 0);
 
-		captureRestPose(model);
-		setPill(poseBtn, false);
-		refs.poseMode = false;
+			captureRestPose(model);
+			setPill(poseBtn, false);
+			refs.poseMode = false;
 
-		setWireframe(wireframeOn);
-		setSkeleton(refs.skeletonOn);
-		grid.visible = true;
-		setPill(gridBtn, true);
+			setWireframe(wireframeOn);
+			setSkeleton(refs.skeletonOn);
+			grid.visible = true;
+			setPill(gridBtn, true);
 
-		rebuildMeshesTabUI();
+			rebuildMeshesTabUI();
 
-		controls.autoRotate = autoRotate;
+			controls.autoRotate = autoRotate;
 
-		// Make sure textures show right
-		model.traverse((o) => {
-			if (!o?.isMesh) return;
-			const mats = Array.isArray(o.material) ? o.material : [o.material];
-			for (const m of mats) ensureBaseColor(m);
-		});
-		setStatus("");
-	},
+			// Make sure textures show right
+			model.traverse((o) => {
+				if (!o?.isMesh) return;
+				const mats = Array.isArray(o.material)
+					? o.material
+					: [o.material];
+				for (const m of mats) ensureBaseColor(m);
+			});
+			setStatus("");
+		},
 		undefined,
 		(err) => {
 			window.PPGC?.reportMissingAsset?.("models", glbUrl);
 			console.warn("[modelViewer] Failed to load model:", glbUrl);
 			setStatus(`Failed to load: ${glbUrl}`);
-		}
+		},
 	);
 
 	// --- Mount into your modal system ---
@@ -1023,7 +1096,7 @@ export async function openModelViewerModal({
 	if (!modalEl || !bodyEl) {
 		console.warn("modelViewerModal missing in index.html");
 		setStatus("Missing #modelViewerModal shell.");
-		return { cleanup: () => { } };
+		return { cleanup: () => {} };
 	}
 
 	if (titleEl) titleEl.textContent = title;
@@ -1033,15 +1106,13 @@ export async function openModelViewerModal({
 	bodyEl.appendChild(root);
 
 	const close = () => {
-		modalEl.classList.remove("open");
-		modalEl.setAttribute("aria-hidden", "true");
+		hideModalElement(modalEl);
 		// tell viewer to cleanup GPU resources
 		cleanup();
 	};
 
 	// open
-	modalEl.classList.add("open");
-	modalEl.setAttribute("aria-hidden", "false");
+	showModalElement(modalEl);
 	resetScrollWithin(modalEl);
 
 	// wire close once
@@ -1054,7 +1125,8 @@ export async function openModelViewerModal({
 
 		closeBtn?.addEventListener("click", close);
 		document.addEventListener("keydown", (e) => {
-			if (e.key === "Escape" && modalEl.classList.contains("open")) close();
+			if (e.key === "Escape" && modalEl.classList.contains("open"))
+				close();
 		});
 		document.addEventListener("keydown", onViewerKeydown);
 
@@ -1101,7 +1173,8 @@ export async function openModelViewerModal({
 		scene.traverse((o) => {
 			if (o.isMesh) {
 				o.geometry?.dispose?.();
-				if (Array.isArray(o.material)) o.material.forEach((m) => m.dispose?.());
+				if (Array.isArray(o.material))
+					o.material.forEach((m) => m.dispose?.());
 				else o.material?.dispose?.();
 			}
 		});

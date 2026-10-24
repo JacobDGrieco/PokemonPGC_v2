@@ -1,7 +1,11 @@
 /* ===================== Sidebar ===================== */
 .sidebar {
 	background:
-		radial-gradient(circle at top right, rgba(245, 198, 68, 0.08), transparent 26%),
+		radial-gradient(
+			circle at top right,
+			rgba(245, 198, 68, 0.08),
+			transparent 26%
+		),
 		linear-gradient(180deg, rgba(15, 19, 27, 0.98), rgba(10, 13, 20, 0.98));
 	border-right: 1px solid var(--line-soft);
 	box-sizing: border-box;
@@ -135,7 +139,11 @@ body:not(.mobile-ui).sidebar-collapsed .dir-list {
 
 .dir-item.active {
 	background:
-		linear-gradient(135deg, rgba(59, 76, 202, var(--active-glow-top-alpha)), rgba(113, 197, 88, var(--active-glow-side-alpha))),
+		linear-gradient(
+			135deg,
+			rgba(59, 76, 202, var(--active-glow-top-alpha)),
+			rgba(113, 197, 88, var(--active-glow-side-alpha))
+		),
 		rgba(255, 255, 255, 0.08);
 	border-color: var(--line-strong);
 }
@@ -252,18 +260,18 @@ body:not(.mobile-ui).sidebar-collapsed .dir-list {
 }
 
 /* Checked state (color sprite mode) */
-.sprite-toggle input:checked+.switch {
+.sprite-toggle input:checked + .switch {
 	background: #3a7fe7;
 }
 
-.sprite-toggle input:checked+.switch .knob {
+.sprite-toggle input:checked + .switch .knob {
 	transform: translateX(14px);
 }
 
 @media (max-width: 900px) {
 	.sidebar {
 		position: fixed;
-		top: var(--header-h);
+		top: var(--app-header-h);
 		left: 0;
 		bottom: 0;
 		width: var(--mobile-sidebar-w);
@@ -278,6 +286,12 @@ body:not(.mobile-ui).sidebar-collapsed .dir-list {
 		transition:
 			transform 0.24s ease,
 			opacity 0.2s ease;
+	}
+
+	.sidebar .back-btn,
+	.sidebar .sidebar-collapse-btn {
+		min-width: var(--mobile-target-size);
+		min-height: var(--mobile-target-size);
 	}
 
 	body.mobile-nav-open .sidebar {
@@ -297,6 +311,7 @@ body:not(.mobile-ui).sidebar-collapsed .dir-list {
 
 	.dir-item {
 		padding: 12px;
+		min-height: var(--mobile-target-size);
 	}
 
 	.dir-item .label {

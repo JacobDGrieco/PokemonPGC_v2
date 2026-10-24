@@ -1,18 +1,22 @@
-import React, { useMemo } from 'react';
+import React, { useMemo } from "react";
 
 // Ball colors matching the CSS in auth.css
 const BALL_STYLES = {
 	poke: {
-		background: 'radial-gradient(circle at 32% 32%, #fff 0, #fff 34%, #e31c23 35%, #e31c23 78%, #111 79%)',
+		background:
+			"radial-gradient(circle at 32% 32%, #fff 0, #fff 34%, #e31c23 35%, #e31c23 78%, #111 79%)",
 	},
 	great: {
-		background: 'radial-gradient(circle at 32% 32%, #fff 0, #fff 34%, #3b5dc9 35%, #3b5dc9 78%, #111 79%)',
+		background:
+			"radial-gradient(circle at 32% 32%, #fff 0, #fff 34%, #3b5dc9 35%, #3b5dc9 78%, #111 79%)",
 	},
 	ultra: {
-		background: 'radial-gradient(circle at 32% 32%, #fff 0, #fff 34%, #f5c644 35%, #2a2925 78%, #111 79%)',
+		background:
+			"radial-gradient(circle at 32% 32%, #fff 0, #fff 34%, #f5c644 35%, #2a2925 78%, #111 79%)",
 	},
 	master: {
-		background: 'radial-gradient(circle at 32% 32%, #fff 0, #fff 34%, #9b5fb5 35%, #9b5fb5 78%, #111 79%)',
+		background:
+			"radial-gradient(circle at 32% 32%, #fff 0, #fff 34%, #9b5fb5 35%, #9b5fb5 78%, #111 79%)",
 	},
 };
 
@@ -53,10 +57,10 @@ export function PokeBallParticles({ count = 22 }) {
 						width: ball.size,
 						height: ball.size,
 						left: `${ball.left}%`,
-						'--particle-opacity': ball.opacity,
+						"--particle-opacity": ball.opacity,
 						animationDelay: `${ball.delay}s`,
 						animationDuration: `${ball.duration}s`,
-						'--drift': `${ball.drift}px`,
+						"--drift": `${ball.drift}px`,
 					}}
 				/>
 			))}

@@ -1,3 +1,8 @@
+/**
+ * Shared subscription policy and public-user serialization.
+ * Provider status plus server-configured Price/Plan mapping is authoritative;
+ * browser-supplied tier strings never grant entitlement by themselves.
+ */
 import { json } from "./response.js";
 export { getAppOrigin, normalizeAppOrigin } from "./appOrigin.js";
 
@@ -10,7 +15,9 @@ function envKey(prefix, tierKey) {
 }
 
 export function normalizeTierKey(value) {
-	const tierKey = String(value || "").trim().toLowerCase();
+	const tierKey = String(value || "")
+		.trim()
+		.toLowerCase();
 	return SUBSCRIPTION_TIERS.includes(tierKey) ? tierKey : null;
 }
 
@@ -27,7 +34,9 @@ export function parseProviderUserId(value) {
 }
 
 export function isEntitledSubscriptionStatus(provider, status) {
-	const normalizedProvider = String(provider || "").trim().toLowerCase();
+	const normalizedProvider = String(provider || "")
+		.trim()
+		.toLowerCase();
 	const normalizedStatus = String(status || "").trim();
 
 	if (normalizedProvider === "stripe") {
@@ -67,7 +76,9 @@ export function getPayPalPlanIdForTier(tierKey) {
 
 export function getTierForStripePriceId(priceId) {
 	for (const tierKey of SUBSCRIPTION_TIERS) {
-		const configured = String(process.env[envKey("STRIPE_PRICE", tierKey)] || "").trim();
+		const configured = String(
+			process.env[envKey("STRIPE_PRICE", tierKey)] || "",
+		).trim();
 		if (configured && configured === priceId) return tierKey;
 	}
 	return null;
@@ -75,7 +86,9 @@ export function getTierForStripePriceId(priceId) {
 
 export function getTierForPayPalPlanId(planId) {
 	for (const tierKey of SUBSCRIPTION_TIERS) {
-		const configured = String(process.env[envKey("PAYPAL_PLAN", tierKey)] || "").trim();
+		const configured = String(
+			process.env[envKey("PAYPAL_PLAN", tierKey)] || "",
+		).trim();
 		if (configured && configured === planId) return tierKey;
 	}
 	return null;
@@ -115,6 +128,11 @@ export function getUserPublicSelect() {
 	};
 }
 
+/**
+ * Builds the only supported account-level billing state transition. Non-entitled
+ * provider states always collapse the effective tier to free; optional clear
+ * flags enforce the one-active-provider invariant.
+ */
 export function buildSubscriptionUpdate({
 	provider,
 	tierKey,
@@ -141,9 +159,12 @@ export function buildSubscriptionUpdate({
 	if (clearPayPal) {
 		data.paypalSubscriptionId = null;
 	}
-	if (stripeCustomerId !== undefined) data.stripeCustomerId = stripeCustomerId;
-	if (stripeSubscriptionId !== undefined) data.stripeSubscriptionId = stripeSubscriptionId;
-	if (paypalSubscriptionId !== undefined) data.paypalSubscriptionId = paypalSubscriptionId;
+	if (stripeCustomerId !== undefined)
+		data.stripeCustomerId = stripeCustomerId;
+	if (stripeSubscriptionId !== undefined)
+		data.stripeSubscriptionId = stripeSubscriptionId;
+	if (paypalSubscriptionId !== undefined)
+		data.paypalSubscriptionId = paypalSubscriptionId;
 
 	return data;
 }

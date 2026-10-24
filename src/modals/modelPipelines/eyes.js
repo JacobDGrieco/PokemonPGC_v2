@@ -33,9 +33,7 @@ export function getEyeParamsForModel(glbUrl) {
 		// Try exact key first (likely "130"), then padded ("130" stays "130", "5" -> "005")
 		const keyPad3 = String(Number(key)).padStart(3, "0");
 
-		const hex =
-			HOME_SPRITE_HEX[key] ||
-			HOME_SPRITE_HEX[keyPad3];
+		const hex = HOME_SPRITE_HEX[key] || HOME_SPRITE_HEX[keyPad3];
 
 		if (hex) iris = parseInt(hex.slice(1), 16);
 	}

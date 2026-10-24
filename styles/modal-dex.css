@@ -145,7 +145,11 @@
 /* Flag dropdown inside Dex / Forms modal */
 .flag-select,
 .dex-scope-select {
-	background: linear-gradient(180deg, rgba(27, 31, 39, 0.98), rgba(16, 20, 28, 0.98));
+	background: linear-gradient(
+		180deg,
+		rgba(27, 31, 39, 0.98),
+		rgba(16, 20, 28, 0.98)
+	);
 	color: #eaeaea;
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	border-radius: 12px;
@@ -161,7 +165,11 @@
 	padding: 16px;
 	overflow: visible;
 	background:
-		radial-gradient(circle at top right, rgba(245, 198, 68, 0.1), transparent 22%),
+		radial-gradient(
+			circle at top right,
+			rgba(245, 198, 68, 0.1),
+			transparent 22%
+		),
 		linear-gradient(180deg, rgba(15, 19, 28, 0.96), rgba(10, 14, 20, 0.94));
 }
 
@@ -288,7 +296,7 @@
 }
 
 #modal .dex-bulk-menu-item:hover,
-#modal .dex-bulk-menu-item[aria-checked='true'] {
+#modal .dex-bulk-menu-item[aria-checked="true"] {
 	background: rgba(255, 255, 255, 0.08);
 }
 
@@ -340,14 +348,14 @@
 	}
 
 	#modal .dex-scope-select {
-		padding: 2px 6px;
-		font-size: 10px;
+		padding: 8px 10px;
+		font-size: 16px;
 		border-radius: 7px;
 	}
 
 	#modal .dex-search-input {
-		padding: 5px 7px;
-		font-size: 10px;
+		padding: 8px 10px;
+		font-size: 16px;
 		border-radius: 7px;
 		width: 100%;
 		max-width: 100%;
@@ -369,7 +377,7 @@
 	#modal .dex-bulk-primary,
 	#modal .dex-bulk-toggle,
 	#modal .dex-close-button {
-		min-height: 36px;
+		min-height: var(--mobile-target-size);
 		border-radius: 10px;
 	}
 
@@ -382,8 +390,8 @@
 	}
 
 	#modal .dex-bulk-toggle {
-		width: 38px;
-		min-width: 38px;
+		width: var(--mobile-target-size);
+		min-width: var(--mobile-target-size);
 	}
 
 	#modal .dex-bulk-menu {
@@ -397,7 +405,7 @@
 		grid-area: close;
 		justify-self: end;
 		align-self: start;
-		min-width: 38px;
+		min-width: var(--mobile-target-size);
 		font-size: 16px;
 	}
 
@@ -410,6 +418,9 @@
 }
 
 @media (max-width: 520px) {
+	#modal #dexGrid.grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
 	#modal .dex-modal-header {
 		grid-template-columns: minmax(0, 1fr) auto;
 		grid-template-areas:
@@ -428,5 +439,11 @@
 		justify-self: stretch;
 		width: 100%;
 		grid-template-columns: minmax(0, 1fr) 38px;
+	}
+}
+
+@media (max-width: 360px) {
+	#modal #dexGrid.grid {
+		grid-template-columns: minmax(0, 1fr);
 	}
 }

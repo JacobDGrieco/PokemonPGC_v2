@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * event-scrape-v2.mjs
+ * event-scraper.mjs
  *
  * Better ProjectPokemon/EventsGallery scraper for PPGC distributions.
  *
@@ -14,10 +14,10 @@
  *   parsers for those formats.
  *
  * Basic usage:
- *   node scripts/event-scrape.mjs --games ruby,sapphire --generation 3 --out data/distributions/ruby-sapphire.js
+ *   node scripts/event-scraper.mjs --games ruby,sapphire --generation 3 --out data/distributions/ruby-sapphire.js
  *
  * Optional:
- *   GITHUB_TOKEN=ghp_xxx node tools/event-scrape-v2.mjs ...
+ *   GITHUB_TOKEN=replace-me node scripts/event-scraper.mjs ...
  *   --dry-run
  *   --max 50
  *   --no-payload     skips downloading/parsing .pk3 files
@@ -30,42 +30,116 @@ import { pathToFileURL } from "node:url";
 const OWNER = "projectpokemon";
 const REPO = "EventsGallery";
 const BRANCH = "master";
-const DEFAULT_GEN1_SOURCE_DIR = "C:\\Users\\gamin\\Downloads\\EventsGallery-master\\EventsGallery-master\\Released\\Gen 1";
+const DEFAULT_GEN1_SOURCE_DIR =
+	"C:\\Users\\gamin\\Downloads\\EventsGallery-master\\EventsGallery-master\\Released\\Gen 1";
 
 const EVENT_EXTENSIONS = new Set([
-	".wc3", ".wc4", ".wc5", ".wc6", ".wc6full", ".wc7", ".wc7full", ".wc8", ".wc9",
-	".pcd", ".pgt", ".pgf",
-	".pk1", ".pk3", ".pk4", ".pk5", ".pk6", ".pk7", ".pk8", ".pk9",
-	".pb7", ".pb8", ".pa8",
+	".wc3",
+	".wc4",
+	".wc5",
+	".wc6",
+	".wc6full",
+	".wc7",
+	".wc7full",
+	".wc8",
+	".wc9",
+	".pcd",
+	".pgt",
+	".pgf",
+	".pk1",
+	".pk3",
+	".pk4",
+	".pk5",
+	".pk6",
+	".pk7",
+	".pk8",
+	".pk9",
+	".pb7",
+	".pb8",
+	".pa8",
 ]);
 
 const REGION_ALIASES = new Map([
-	["usa", "USA"], ["us", "USA"], ["america", "USA"], ["na", "NA"], ["north america", "NA"],
-	["eur", "EUR"], ["eu", "EUR"], ["europe", "EUR"],
-	["jpn", "JPN"], ["jp", "JPN"], ["japan", "JPN"],
-	["kor", "KOR"], ["kr", "KOR"], ["korea", "KOR"], ["korean", "KOR"],
-	["chn", "CHN"], ["china", "CHN"], ["tw", "TWN"], ["taiwan", "TWN"], ["hk", "HKG"], ["hong kong", "HKG"],
-	["sg", "SGP"], ["singapore", "SGP"], ["aus", "AUS"], ["australia", "AUS"],
-	["can", "CAN"], ["canada", "CAN"], ["canadian", "CAN"],
-	["gbr", "GBR"], ["great britain", "GBR"],
-	["aut", "AUT"], ["austria", "AUT"],
-	["dnk", "DNK"], ["denmark", "DNK"],
-	["fin", "FIN"], ["finland", "FIN"],
-	["nor", "NOR"], ["norway", "NOR"],
-	["uk", "UK"], ["gb", "UK"], ["united kingdom", "UK"],
-	["fr", "FRA"], ["france", "FRA"], ["de", "DEU"], ["germany", "DEU"],
-	["italy", "ITA"], ["it", "ITA"], ["spain", "ESP"], ["es", "ESP"],
-	["netherlands", "NLD"], ["nederland", "NLD"], ["nld", "NLD"],
-	["global", "GLOBAL"], ["worldwide", "GLOBAL"], ["region free", "GLOBAL"],
-	["wi-fi", "GLOBAL"], ["wifi", "GLOBAL"], ["internet", "GLOBAL"],
+	["usa", "USA"],
+	["us", "USA"],
+	["america", "USA"],
+	["na", "NA"],
+	["north america", "NA"],
+	["eur", "EUR"],
+	["eu", "EUR"],
+	["europe", "EUR"],
+	["jpn", "JPN"],
+	["jp", "JPN"],
+	["japan", "JPN"],
+	["kor", "KOR"],
+	["kr", "KOR"],
+	["korea", "KOR"],
+	["korean", "KOR"],
+	["chn", "CHN"],
+	["china", "CHN"],
+	["tw", "TWN"],
+	["taiwan", "TWN"],
+	["hk", "HKG"],
+	["hong kong", "HKG"],
+	["sg", "SGP"],
+	["singapore", "SGP"],
+	["aus", "AUS"],
+	["australia", "AUS"],
+	["can", "CAN"],
+	["canada", "CAN"],
+	["canadian", "CAN"],
+	["gbr", "GBR"],
+	["great britain", "GBR"],
+	["aut", "AUT"],
+	["austria", "AUT"],
+	["dnk", "DNK"],
+	["denmark", "DNK"],
+	["fin", "FIN"],
+	["finland", "FIN"],
+	["nor", "NOR"],
+	["norway", "NOR"],
+	["uk", "UK"],
+	["gb", "UK"],
+	["united kingdom", "UK"],
+	["fr", "FRA"],
+	["france", "FRA"],
+	["de", "DEU"],
+	["germany", "DEU"],
+	["italy", "ITA"],
+	["it", "ITA"],
+	["spain", "ESP"],
+	["es", "ESP"],
+	["netherlands", "NLD"],
+	["nederland", "NLD"],
+	["nld", "NLD"],
+	["global", "GLOBAL"],
+	["worldwide", "GLOBAL"],
+	["region free", "GLOBAL"],
+	["wi-fi", "GLOBAL"],
+	["wifi", "GLOBAL"],
+	["internet", "GLOBAL"],
 ]);
 
 const LANGUAGE_ALIASES = new Map([
-	["eng", "en"], ["english", "en"], ["jpn", "ja"], ["japanese", "ja"],
-	["fre", "fr"], ["french", "fr"], ["ger", "de"], ["german", "de"],
-	["ita", "it"], ["italian", "it"], ["spa", "es"], ["spanish", "es"],
-	["kor", "ko"], ["korean", "ko"], ["chs", "zh-Hans"], ["cht", "zh-Hant"], ["chi", "zh"],
-	["all", "all"], ["multi", "all"],
+	["eng", "en"],
+	["english", "en"],
+	["jpn", "ja"],
+	["japanese", "ja"],
+	["fre", "fr"],
+	["french", "fr"],
+	["ger", "de"],
+	["german", "de"],
+	["ita", "it"],
+	["italian", "it"],
+	["spa", "es"],
+	["spanish", "es"],
+	["kor", "ko"],
+	["korean", "ko"],
+	["chs", "zh-Hans"],
+	["cht", "zh-Hant"],
+	["chi", "zh"],
+	["all", "all"],
+	["multi", "all"],
 ]);
 
 const HIERARCHY_REGION_FOLDERS = new Map([
@@ -103,15 +177,15 @@ const GENERIC_COLLECTION_SEGMENTS = new Set([
 ]);
 
 const GEN_TO_GAMES = {
-	"1": ["red", "blue", "yellow"],
-	"3": ["ruby", "sapphire", "emerald", "firered", "leafgreen"],
-	"4": ["diamond", "pearl", "platinum", "heartgold", "soulsilver"],
-	"5": ["black", "white", "black2", "white2"],
-	"6": ["x", "y", "omegaruby", "alphasapphire"],
-	"7": ["sun", "moon", "ultrasun", "ultramoon"],
+	1: ["red", "blue", "yellow"],
+	3: ["ruby", "sapphire", "emerald", "firered", "leafgreen"],
+	4: ["diamond", "pearl", "platinum", "heartgold", "soulsilver"],
+	5: ["black", "white", "black2", "white2"],
+	6: ["x", "y", "omegaruby", "alphasapphire"],
+	7: ["sun", "moon", "ultrasun", "ultramoon"],
 	"7_switch": ["letsgopikachu", "letsgoeevee"],
-	"8": ["sword", "shield", "brilliantdiamond", "shiningpearl", "legendsarceus"],
-	"9": ["scarlet", "violet"],
+	8: ["sword", "shield", "brilliantdiamond", "shiningpearl", "legendsarceus"],
+	9: ["scarlet", "violet"],
 	"9_2": ["legendsza"],
 };
 
@@ -151,33 +225,178 @@ const GAME_HINTS = [
 ];
 
 const NATURES = [
-	"Hardy", "Lonely", "Brave", "Adamant", "Naughty",
-	"Bold", "Docile", "Relaxed", "Impish", "Lax",
-	"Timid", "Hasty", "Serious", "Jolly", "Naive",
-	"Modest", "Mild", "Quiet", "Bashful", "Rash",
-	"Calm", "Gentle", "Sassy", "Careful", "Quirky",
+	"Hardy",
+	"Lonely",
+	"Brave",
+	"Adamant",
+	"Naughty",
+	"Bold",
+	"Docile",
+	"Relaxed",
+	"Impish",
+	"Lax",
+	"Timid",
+	"Hasty",
+	"Serious",
+	"Jolly",
+	"Naive",
+	"Modest",
+	"Mild",
+	"Quiet",
+	"Bashful",
+	"Rash",
+	"Calm",
+	"Gentle",
+	"Sassy",
+	"Careful",
+	"Quirky",
 ];
 
 const GEN3_BALLS = {
-	1: "master-ball", 2: "ultra-ball", 3: "great-ball", 4: "poke-ball", 5: "safari-ball",
-	6: "net-ball", 7: "dive-ball", 8: "nest-ball", 9: "repeat-ball", 10: "timer-ball",
-	11: "luxury-ball", 12: "premier-ball",
+	1: "master-ball",
+	2: "ultra-ball",
+	3: "great-ball",
+	4: "poke-ball",
+	5: "safari-ball",
+	6: "net-ball",
+	7: "dive-ball",
+	8: "nest-ball",
+	9: "repeat-ball",
+	10: "timer-ball",
+	11: "luxury-ball",
+	12: "premier-ball",
 };
 
 // English Gen 3 string table subset. Japanese names will not decode perfectly yet,
 // but English PCNY/WISHMKR/etc. names decode well enough for display.
 const GEN3_CHARMAP = new Map([
-	[0x00, " "], [0x01, "À"], [0x02, "Á"], [0x03, "Â"], [0x04, "Ç"], [0x05, "È"], [0x06, "É"], [0x07, "Ê"], [0x08, "Ë"], [0x09, "Ì"],
-	[0x0b, "Î"], [0x0c, "Ï"], [0x0d, "Ò"], [0x0e, "Ó"], [0x0f, "Ô"], [0x10, "Œ"], [0x11, "Ù"], [0x12, "Ú"], [0x13, "Û"], [0x14, "Ñ"], [0x15, "ß"],
-	[0x16, "à"], [0x17, "á"], [0x19, "ç"], [0x1a, "è"], [0x1b, "é"], [0x1c, "ê"], [0x1d, "ë"], [0x1e, "ì"],
-	[0x20, "î"], [0x21, "ï"], [0x22, "ò"], [0x23, "ó"], [0x24, "ô"], [0x25, "œ"], [0x26, "ù"], [0x27, "ú"], [0x28, "û"], [0x29, "ñ"],
-	[0x2a, "º"], [0x2b, "ª"],
-	[0xA1, "0"], [0xA2, "1"], [0xA3, "2"], [0xA4, "3"], [0xA5, "4"], [0xA6, "5"], [0xA7, "6"], [0xA8, "7"], [0xA9, "8"], [0xAA, "9"],
-	[0xAB, "!"], [0xAC, "?"], [0xAD, "."], [0xAE, "-"], [0xAF, "·"], [0xB0, "…"], [0xB1, "“"], [0xB2, "”"], [0xB3, "‘"], [0xB4, "'"],
-	[0xB5, "♂"], [0xB6, "♀"], [0xB7, "$"], [0xB8, ","], [0xB9, "×"], [0xBA, "/"],
-	[0xBB, "A"], [0xBC, "B"], [0xBD, "C"], [0xBE, "D"], [0xBF, "E"], [0xC0, "F"], [0xC1, "G"], [0xC2, "H"], [0xC3, "I"], [0xC4, "J"], [0xC5, "K"], [0xC6, "L"], [0xC7, "M"], [0xC8, "N"], [0xC9, "O"], [0xCA, "P"], [0xCB, "Q"], [0xCC, "R"], [0xCD, "S"], [0xCE, "T"], [0xCF, "U"], [0xD0, "V"], [0xD1, "W"], [0xD2, "X"], [0xD3, "Y"], [0xD4, "Z"],
-	[0xD5, "a"], [0xD6, "b"], [0xD7, "c"], [0xD8, "d"], [0xD9, "e"], [0xDA, "f"], [0xDB, "g"], [0xDC, "h"], [0xDD, "i"], [0xDE, "j"], [0xDF, "k"], [0xE0, "l"], [0xE1, "m"], [0xE2, "n"], [0xE3, "o"], [0xE4, "p"], [0xE5, "q"], [0xE6, "r"], [0xE7, "s"], [0xE8, "t"], [0xE9, "u"], [0xEA, "v"], [0xEB, "w"], [0xEC, "x"], [0xED, "y"], [0xEE, "z"],
-	[0xF0, ":"], [0xF1, "Ä"], [0xF2, "Ö"], [0xF3, "Ü"], [0xF4, "ä"], [0xF5, "ö"], [0xF6, "ü"], [0xF7, " "],
+	[0x00, " "],
+	[0x01, "À"],
+	[0x02, "Á"],
+	[0x03, "Â"],
+	[0x04, "Ç"],
+	[0x05, "È"],
+	[0x06, "É"],
+	[0x07, "Ê"],
+	[0x08, "Ë"],
+	[0x09, "Ì"],
+	[0x0b, "Î"],
+	[0x0c, "Ï"],
+	[0x0d, "Ò"],
+	[0x0e, "Ó"],
+	[0x0f, "Ô"],
+	[0x10, "Œ"],
+	[0x11, "Ù"],
+	[0x12, "Ú"],
+	[0x13, "Û"],
+	[0x14, "Ñ"],
+	[0x15, "ß"],
+	[0x16, "à"],
+	[0x17, "á"],
+	[0x19, "ç"],
+	[0x1a, "è"],
+	[0x1b, "é"],
+	[0x1c, "ê"],
+	[0x1d, "ë"],
+	[0x1e, "ì"],
+	[0x20, "î"],
+	[0x21, "ï"],
+	[0x22, "ò"],
+	[0x23, "ó"],
+	[0x24, "ô"],
+	[0x25, "œ"],
+	[0x26, "ù"],
+	[0x27, "ú"],
+	[0x28, "û"],
+	[0x29, "ñ"],
+	[0x2a, "º"],
+	[0x2b, "ª"],
+	[0xa1, "0"],
+	[0xa2, "1"],
+	[0xa3, "2"],
+	[0xa4, "3"],
+	[0xa5, "4"],
+	[0xa6, "5"],
+	[0xa7, "6"],
+	[0xa8, "7"],
+	[0xa9, "8"],
+	[0xaa, "9"],
+	[0xab, "!"],
+	[0xac, "?"],
+	[0xad, "."],
+	[0xae, "-"],
+	[0xaf, "·"],
+	[0xb0, "…"],
+	[0xb1, "“"],
+	[0xb2, "”"],
+	[0xb3, "‘"],
+	[0xb4, "'"],
+	[0xb5, "♂"],
+	[0xb6, "♀"],
+	[0xb7, "$"],
+	[0xb8, ","],
+	[0xb9, "×"],
+	[0xba, "/"],
+	[0xbb, "A"],
+	[0xbc, "B"],
+	[0xbd, "C"],
+	[0xbe, "D"],
+	[0xbf, "E"],
+	[0xc0, "F"],
+	[0xc1, "G"],
+	[0xc2, "H"],
+	[0xc3, "I"],
+	[0xc4, "J"],
+	[0xc5, "K"],
+	[0xc6, "L"],
+	[0xc7, "M"],
+	[0xc8, "N"],
+	[0xc9, "O"],
+	[0xca, "P"],
+	[0xcb, "Q"],
+	[0xcc, "R"],
+	[0xcd, "S"],
+	[0xce, "T"],
+	[0xcf, "U"],
+	[0xd0, "V"],
+	[0xd1, "W"],
+	[0xd2, "X"],
+	[0xd3, "Y"],
+	[0xd4, "Z"],
+	[0xd5, "a"],
+	[0xd6, "b"],
+	[0xd7, "c"],
+	[0xd8, "d"],
+	[0xd9, "e"],
+	[0xda, "f"],
+	[0xdb, "g"],
+	[0xdc, "h"],
+	[0xdd, "i"],
+	[0xde, "j"],
+	[0xdf, "k"],
+	[0xe0, "l"],
+	[0xe1, "m"],
+	[0xe2, "n"],
+	[0xe3, "o"],
+	[0xe4, "p"],
+	[0xe5, "q"],
+	[0xe6, "r"],
+	[0xe7, "s"],
+	[0xe8, "t"],
+	[0xe9, "u"],
+	[0xea, "v"],
+	[0xeb, "w"],
+	[0xec, "x"],
+	[0xed, "y"],
+	[0xee, "z"],
+	[0xf0, ":"],
+	[0xf1, "Ä"],
+	[0xf2, "Ö"],
+	[0xf3, "Ü"],
+	[0xf4, "ä"],
+	[0xf5, "ö"],
+	[0xf6, "ü"],
+	[0xf7, " "],
 ]);
 
 const GEN1_PARTY_OFFSET = 3;
@@ -194,16 +413,87 @@ const GEN1_GENERIC_SEGMENTS = new Set([
 	"japanese",
 ]);
 const GEN1_ENGLISH_CHARMAP = new Map([
-	[0x4A, "â™€"], [0x4B, "â™‚"], [0x50, ""], [0x7F, " "],
-	[0x80, "A"], [0x81, "B"], [0x82, "C"], [0x83, "D"], [0x84, "E"], [0x85, "F"], [0x86, "G"], [0x87, "H"], [0x88, "I"], [0x89, "J"],
-	[0x8A, "K"], [0x8B, "L"], [0x8C, "M"], [0x8D, "N"], [0x8E, "O"], [0x8F, "P"], [0x90, "Q"], [0x91, "R"], [0x92, "S"], [0x93, "T"],
-	[0x94, "U"], [0x95, "V"], [0x96, "W"], [0x97, "X"], [0x98, "Y"], [0x99, "Z"],
-	[0x9A, "("], [0x9B, ")"], [0x9C, ":"], [0x9D, ";"], [0x9E, "["], [0x9F, "]"],
-	[0xA0, "a"], [0xA1, "b"], [0xA2, "c"], [0xA3, "d"], [0xA4, "e"], [0xA5, "f"], [0xA6, "g"], [0xA7, "h"], [0xA8, "i"], [0xA9, "j"],
-	[0xAA, "k"], [0xAB, "l"], [0xAC, "m"], [0xAD, "n"], [0xAE, "o"], [0xAF, "p"], [0xB0, "q"], [0xB1, "r"], [0xB2, "s"], [0xB3, "t"],
-	[0xB4, "u"], [0xB5, "v"], [0xB6, "w"], [0xB7, "x"], [0xB8, "y"], [0xB9, "z"],
-	[0xBA, "Ã©"], [0xE0, "'"], [0xE3, "-"], [0xE6, "?"], [0xE7, "!"], [0xF1, "Ã—"], [0xF3, "/"], [0xF4, ","], [0xF5, "â™€"], [0xF6, "0"],
-	[0xF7, "1"], [0xF8, "2"], [0xF9, "3"], [0xFA, "4"], [0xFB, "5"], [0xFC, "6"], [0xFD, "7"], [0xFE, "8"], [0xFF, "9"],
+	[0x4a, "â™€"],
+	[0x4b, "â™‚"],
+	[0x50, ""],
+	[0x7f, " "],
+	[0x80, "A"],
+	[0x81, "B"],
+	[0x82, "C"],
+	[0x83, "D"],
+	[0x84, "E"],
+	[0x85, "F"],
+	[0x86, "G"],
+	[0x87, "H"],
+	[0x88, "I"],
+	[0x89, "J"],
+	[0x8a, "K"],
+	[0x8b, "L"],
+	[0x8c, "M"],
+	[0x8d, "N"],
+	[0x8e, "O"],
+	[0x8f, "P"],
+	[0x90, "Q"],
+	[0x91, "R"],
+	[0x92, "S"],
+	[0x93, "T"],
+	[0x94, "U"],
+	[0x95, "V"],
+	[0x96, "W"],
+	[0x97, "X"],
+	[0x98, "Y"],
+	[0x99, "Z"],
+	[0x9a, "("],
+	[0x9b, ")"],
+	[0x9c, ":"],
+	[0x9d, ";"],
+	[0x9e, "["],
+	[0x9f, "]"],
+	[0xa0, "a"],
+	[0xa1, "b"],
+	[0xa2, "c"],
+	[0xa3, "d"],
+	[0xa4, "e"],
+	[0xa5, "f"],
+	[0xa6, "g"],
+	[0xa7, "h"],
+	[0xa8, "i"],
+	[0xa9, "j"],
+	[0xaa, "k"],
+	[0xab, "l"],
+	[0xac, "m"],
+	[0xad, "n"],
+	[0xae, "o"],
+	[0xaf, "p"],
+	[0xb0, "q"],
+	[0xb1, "r"],
+	[0xb2, "s"],
+	[0xb3, "t"],
+	[0xb4, "u"],
+	[0xb5, "v"],
+	[0xb6, "w"],
+	[0xb7, "x"],
+	[0xb8, "y"],
+	[0xb9, "z"],
+	[0xba, "Ã©"],
+	[0xe0, "'"],
+	[0xe3, "-"],
+	[0xe6, "?"],
+	[0xe7, "!"],
+	[0xf1, "Ã—"],
+	[0xf3, "/"],
+	[0xf4, ","],
+	[0xf5, "â™€"],
+	[0xf6, "0"],
+	[0xf7, "1"],
+	[0xf8, "2"],
+	[0xf9, "3"],
+	[0xfa, "4"],
+	[0xfb, "5"],
+	[0xfc, "6"],
+	[0xfd, "7"],
+	[0xfe, "8"],
+	[0xff, "9"],
 ]);
 const pokemonCache = new Map();
 const speciesCache = new Map();
@@ -252,28 +542,57 @@ const EVENT_REGION_HINTS = new Map([
 const METHOD_HINTS = [
 	[/wondercards?/i, "wonder-card"],
 	[/pokemon box/i, "bonus-disc"],
-	[/channel jirachi|pokemon channel|wishmkr|colosseum|bonus disc|gamecube/i, "bonus-disc"],
-	[/pokemon center new york|pcny|pokemon rocks america|journey across america|10th anniversary|10 aniv|aura mew|mystry|mystery mew|tanabata|hadou|pokepark|pokopark|toys r us/i, "in-person"],
+	[
+		/channel jirachi|pokemon channel|wishmkr|colosseum|bonus disc|gamecube/i,
+		"bonus-disc",
+	],
+	[
+		/pokemon center new york|pcny|pokemon rocks america|journey across america|10th anniversary|10 aniv|aura mew|mystry|mystery mew|tanabata|hadou|pokepark|pokopark|toys r us/i,
+		"in-person",
+	],
 ];
 
 function parseArgs(argv) {
-	const args = { games: [], generation: null, out: null, sourceDir: null, includeAllCompatible: true, max: null, dryRun: false, parsePayload: true };
+	const args = {
+		games: [],
+		generation: null,
+		out: null,
+		sourceDir: null,
+		includeAllCompatible: true,
+		max: null,
+		dryRun: false,
+		parsePayload: true,
+	};
 	for (let i = 2; i < argv.length; i++) {
 		const a = argv[i];
-		if (a === "--games") args.games = String(argv[++i] || "").split(",").map((x) => x.trim().toLowerCase()).filter(Boolean);
-		else if (a === "--generation") args.generation = String(argv[++i] || "").trim();
+		if (a === "--games")
+			args.games = String(argv[++i] || "")
+				.split(",")
+				.map((x) => x.trim().toLowerCase())
+				.filter(Boolean);
+		else if (a === "--generation")
+			args.generation = String(argv[++i] || "").trim();
 		else if (a === "--out") args.out = String(argv[++i] || "").trim();
-		else if (a === "--source-dir") args.sourceDir = String(argv[++i] || "").trim();
+		else if (a === "--source-dir")
+			args.sourceDir = String(argv[++i] || "").trim();
 		else if (a === "--max") args.max = Number(argv[++i]);
 		else if (a === "--exact-games-only") args.includeAllCompatible = false;
 		else if (a === "--dry-run") args.dryRun = true;
 		else if (a === "--no-payload") args.parsePayload = false;
 		else throw new Error(`Unknown argument: ${a}`);
 	}
-	if (!args.games.length) throw new Error("Missing --games. Example: --games ruby,sapphire,emerald");
-	if (!args.generation) throw new Error("Missing --generation. Example: --generation 3");
-	if (args.generation === "1" && !args.sourceDir) args.sourceDir = DEFAULT_GEN1_SOURCE_DIR;
-	if (!args.out && !args.dryRun) throw new Error("Missing --out. Example: --out src/data/distributions/gen3.generated.js");
+	if (!args.games.length)
+		throw new Error(
+			"Missing --games. Example: --games ruby,sapphire,emerald",
+		);
+	if (!args.generation)
+		throw new Error("Missing --generation. Example: --generation 3");
+	if (args.generation === "1" && !args.sourceDir)
+		args.sourceDir = DEFAULT_GEN1_SOURCE_DIR;
+	if (!args.out && !args.dryRun)
+		throw new Error(
+			"Missing --out. Example: --out src/data/distributions/gen3.generated.js",
+		);
 	return args;
 }
 
@@ -291,36 +610,53 @@ async function walkLocalFiles(dir, allowedExts) {
 	for (const entry of entries) {
 		const fullPath = path.join(dir, entry.name);
 		if (entry.isDirectory()) {
-			out.push(...await walkLocalFiles(fullPath, allowedExts));
+			out.push(...(await walkLocalFiles(fullPath, allowedExts)));
 			continue;
 		}
-		if (allowedExts.has(path.extname(entry.name).toLowerCase())) out.push(fullPath);
+		if (allowedExts.has(path.extname(entry.name).toLowerCase()))
+			out.push(fullPath);
 	}
 	return out;
 }
 
 async function githubFetchJson(url) {
-	const headers = { Accept: "application/vnd.github+json", "User-Agent": "ppgc-events-scraper", "X-GitHub-Api-Version": "2022-11-28" };
-	if (process.env.GITHUB_TOKEN) headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
+	const headers = {
+		Accept: "application/vnd.github+json",
+		"User-Agent": "ppgc-events-scraper",
+		"X-GitHub-Api-Version": "2022-11-28",
+	};
+	if (process.env.GITHUB_TOKEN)
+		headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
 	const res = await fetch(url, { headers });
-	if (!res.ok) throw new Error(`GitHub request failed ${res.status}: ${url}\n${await res.text().catch(() => "")}`);
+	if (!res.ok)
+		throw new Error(
+			`GitHub request failed ${res.status}: ${url}\n${await res.text().catch(() => "")}`,
+		);
 	return res.json();
 }
 
 async function fetchArrayBuffer(url) {
 	const headers = { "User-Agent": "ppgc-events-scraper" };
-	if (process.env.GITHUB_TOKEN && url.includes("api.github.com")) headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
+	if (process.env.GITHUB_TOKEN && url.includes("api.github.com"))
+		headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
 	const res = await fetch(url, { headers });
 	if (!res.ok) throw new Error(`Fetch failed ${res.status}: ${url}`);
 	return res.arrayBuffer();
 }
 
 async function getRecursiveTree() {
-	const ref = await githubFetchJson(`https://api.github.com/repos/${OWNER}/${REPO}/git/ref/heads/${BRANCH}`);
+	const ref = await githubFetchJson(
+		`https://api.github.com/repos/${OWNER}/${REPO}/git/ref/heads/${BRANCH}`,
+	);
 	const sha = ref?.object?.sha;
 	if (!sha) throw new Error(`Could not resolve branch SHA for ${BRANCH}`);
-	const tree = await githubFetchJson(`https://api.github.com/repos/${OWNER}/${REPO}/git/trees/${sha}?recursive=1`);
-	if (tree.truncated) console.warn("Warning: GitHub returned a truncated tree. Use GITHUB_TOKEN if needed.");
+	const tree = await githubFetchJson(
+		`https://api.github.com/repos/${OWNER}/${REPO}/git/trees/${sha}?recursive=1`,
+	);
+	if (tree.truncated)
+		console.warn(
+			"Warning: GitHub returned a truncated tree. Use GITHUB_TOKEN if needed.",
+		);
 	return tree.tree || [];
 }
 
@@ -330,14 +666,18 @@ function rawGithubUrl(filePath) {
 
 function getFileExtension(filePath) {
 	const lower = filePath.toLowerCase();
-	for (const ext of [...EVENT_EXTENSIONS].sort((a, b) => b.length - a.length)) if (lower.endsWith(ext)) return ext;
+	for (const ext of [...EVENT_EXTENSIONS].sort((a, b) => b.length - a.length))
+		if (lower.endsWith(ext)) return ext;
 	return path.extname(lower);
 }
-const isEventFile = (filePath) => EVENT_EXTENSIONS.has(getFileExtension(filePath));
+const isEventFile = (filePath) =>
+	EVENT_EXTENSIONS.has(getFileExtension(filePath));
 
 function inferGeneration(filePath, ext) {
 	const s = filePath.toLowerCase();
-	const folderMatch = s.match(/(?:^|\/)gen(?:eration)?\s*([0-9])(?:\/|$)/i) || s.match(/(?:^|\/)gen\s*([0-9])(?:\/|$)/i);
+	const folderMatch =
+		s.match(/(?:^|\/)gen(?:eration)?\s*([0-9])(?:\/|$)/i) ||
+		s.match(/(?:^|\/)gen\s*([0-9])(?:\/|$)/i);
 	if (folderMatch) return folderMatch[1];
 	if ([".pk1"].includes(ext)) return "1";
 	if ([".wc3", ".pk3"].includes(ext)) return "3";
@@ -351,11 +691,16 @@ function inferGeneration(filePath, ext) {
 }
 
 function normalizeTokenText(s) {
-	return String(s || "").replace(/[_\-+.()[\]{}]/g, " ").replace(/\s+/g, " ").trim();
+	return String(s || "")
+		.replace(/[_\-+.()[\]{}]/g, " ")
+		.replace(/\s+/g, " ")
+		.trim();
 }
 
 function splitPathSegments(filePath) {
-	return String(filePath || "").split("/").filter(Boolean);
+	return String(filePath || "")
+		.split("/")
+		.filter(Boolean);
 }
 
 function exactAliasLookup(map, text) {
@@ -365,14 +710,20 @@ function exactAliasLookup(map, text) {
 function inferGamesFromText(text) {
 	const normalized = normalizeTokenText(text);
 	const found = new Set();
-	for (const [game, re] of GAME_HINTS) if (re.test(normalized)) found.add(game);
+	for (const [game, re] of GAME_HINTS)
+		if (re.test(normalized)) found.add(game);
 	return [...found];
 }
 
 function inferPathContext(filePath) {
 	const segments = splitPathSegments(filePath);
-	const genIndex = segments.findIndex((segment) => /^gen(?:eration)?\s*\d+/i.test(segment));
-	const folders = genIndex >= 0 ? segments.slice(genIndex + 1, -1) : segments.slice(0, -1);
+	const genIndex = segments.findIndex((segment) =>
+		/^gen(?:eration)?\s*\d+/i.test(segment),
+	);
+	const folders =
+		genIndex >= 0
+			? segments.slice(genIndex + 1, -1)
+			: segments.slice(0, -1);
 	const regions = new Set();
 	const languages = new Set();
 	const games = new Set();
@@ -383,7 +734,9 @@ function inferPathContext(filePath) {
 		const normalized = normalizeLookupText(folder);
 		if (!normalized) continue;
 
-		const regionCode = HIERARCHY_REGION_FOLDERS.get(normalized) || exactAliasLookup(REGION_ALIASES, folder);
+		const regionCode =
+			HIERARCHY_REGION_FOLDERS.get(normalized) ||
+			exactAliasLookup(REGION_ALIASES, folder);
 		if (regionCode) {
 			regions.add(regionCode);
 			sources.push(`region:${folder}`);
@@ -400,7 +753,12 @@ function inferPathContext(filePath) {
 			sources.push(`game:${folder}`);
 		}
 
-		if (!regionCode && !languageCode && !GENERIC_COLLECTION_SEGMENTS.has(normalized)) collections.push(folder);
+		if (
+			!regionCode &&
+			!languageCode &&
+			!GENERIC_COLLECTION_SEGMENTS.has(normalized)
+		)
+			collections.push(folder);
 	}
 
 	return {
@@ -419,10 +777,13 @@ function inferRegions(filePath, pathContext) {
 	const normalized = normalizeTokenText(filePath).toLowerCase();
 	for (const [needle, code] of REGION_ALIASES.entries()) {
 		const escaped = needle.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-		if (new RegExp(`(?:^|\\s)${escaped}(?:\\s|$)`, "i").test(normalized)) found.add(code);
+		if (new RegExp(`(?:^|\\s)${escaped}(?:\\s|$)`, "i").test(normalized))
+			found.add(code);
 	}
 
-	const hintSource = normalizeLookupText([filePath, ...(pathContext?.collections || [])].join(" "));
+	const hintSource = normalizeLookupText(
+		[filePath, ...(pathContext?.collections || [])].join(" "),
+	);
 	for (const [needle, codes] of EVENT_REGION_HINTS.entries()) {
 		if (!hintSource.includes(needle)) continue;
 		for (const code of codes) found.add(code);
@@ -436,7 +797,8 @@ function inferLanguages(filePath, pathContext) {
 	const normalized = normalizeTokenText(filePath).toLowerCase();
 	for (const [needle, code] of LANGUAGE_ALIASES.entries()) {
 		const escaped = needle.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-		if (new RegExp(`(?:^|\\s)${escaped}(?:\\s|$)`, "i").test(normalized)) found.add(code);
+		if (new RegExp(`(?:^|\\s)${escaped}(?:\\s|$)`, "i").test(normalized))
+			found.add(code);
 	}
 	return [...found];
 }
@@ -450,7 +812,9 @@ function stripHashChunks(s) {
 
 function inferDate(filePath) {
 	const s = stripHashChunks(filePath);
-	let m = s.match(/((?:19|20)\d{2})[-_. ](0[1-9]|1[0-2])[-_. ](0[1-9]|[12]\d|3[01])\D+((?:19|20)\d{2})[-_. ](0[1-9]|1[0-2])[-_. ](0[1-9]|[12]\d|3[01])/);
+	let m = s.match(
+		/((?:19|20)\d{2})[-_. ](0[1-9]|1[0-2])[-_. ](0[1-9]|[12]\d|3[01])\D+((?:19|20)\d{2})[-_. ](0[1-9]|1[0-2])[-_. ](0[1-9]|[12]\d|3[01])/,
+	);
 	if (m) {
 		return {
 			startDate: `${m[1]}-${m[2]}-${m[3]}`,
@@ -458,26 +822,57 @@ function inferDate(filePath) {
 			datePrecision: "day",
 		};
 	}
-	m = s.match(/(?:^|[^0-9])((?:19|20)\d{2})[-_. ](0[1-9]|1[0-2])[-_. ](0[1-9]|[12]\d|3[01])(?:[^0-9]|$)/);
-	if (m) return { startDate: `${m[1]}-${m[2]}-${m[3]}`, datePrecision: "day" };
-	m = s.match(/(?:^|[^0-9])((?:19|20)\d{2})[-_. ](0[1-9]|1[0-2])(?:[^0-9]|$)/);
-	if (m) return { startDate: `${m[1]}-${m[2]}-01`, startDateDisplay: `${m[1]}-${m[2]}`, datePrecision: "month" };
+	m = s.match(
+		/(?:^|[^0-9])((?:19|20)\d{2})[-_. ](0[1-9]|1[0-2])[-_. ](0[1-9]|[12]\d|3[01])(?:[^0-9]|$)/,
+	);
+	if (m)
+		return { startDate: `${m[1]}-${m[2]}-${m[3]}`, datePrecision: "day" };
+	m = s.match(
+		/(?:^|[^0-9])((?:19|20)\d{2})[-_. ](0[1-9]|1[0-2])(?:[^0-9]|$)/,
+	);
+	if (m)
+		return {
+			startDate: `${m[1]}-${m[2]}-01`,
+			startDateDisplay: `${m[1]}-${m[2]}`,
+			datePrecision: "month",
+		};
 	m = s.match(/(?:^|[^0-9])((?:19|20)\d{2})(?:[^0-9]|$)/);
-	if (m) return { startDate: `${m[1]}-01-01`, startDateDisplay: m[1], datePrecision: "year" };
+	if (m)
+		return {
+			startDate: `${m[1]}-01-01`,
+			startDateDisplay: m[1],
+			datePrecision: "year",
+		};
 	return { datePrecision: "unknown" };
 }
 
 function titleCase(s) {
-	return String(s || "").replace(/[_\-+.()[\]{}]/g, " ").replace(/\s+/g, " ").trim().replace(/\b\w/g, (c) => c.toUpperCase());
+	return String(s || "")
+		.replace(/[_\-+.()[\]{}]/g, " ")
+		.replace(/\s+/g, " ")
+		.trim()
+		.replace(/\b\w/g, (c) => c.toUpperCase());
 }
 
 function stripKnownNoise(base) {
 	return stripHashChunks(base)
-		.replace(/\.(wc3|wc4|wc5|wc6full|wc6|wc7full|wc7|wc8|wc9|pcd|pgt|pgf|pk3|pk4|pk5|pk6|pk7|pk8|pk9|pb7|pb8|pa8)$/i, "")
-		.replace(/(?:^|[^0-9])((?:19|20)\d{2})[-_. ](0[1-9]|1[0-2])[-_. ](0[1-9]|[12]\d|3[01])(?:[^0-9]|$)/g, " ")
-		.replace(/(?:^|[^0-9])((?:19|20)\d{2})[-_. ](0[1-9]|1[0-2])(?:[^0-9]|$)/g, " ")
+		.replace(
+			/\.(wc3|wc4|wc5|wc6full|wc6|wc7full|wc7|wc8|wc9|pcd|pgt|pgf|pk3|pk4|pk5|pk6|pk7|pk8|pk9|pb7|pb8|pa8)$/i,
+			"",
+		)
+		.replace(
+			/(?:^|[^0-9])((?:19|20)\d{2})[-_. ](0[1-9]|1[0-2])[-_. ](0[1-9]|[12]\d|3[01])(?:[^0-9]|$)/g,
+			" ",
+		)
+		.replace(
+			/(?:^|[^0-9])((?:19|20)\d{2})[-_. ](0[1-9]|1[0-2])(?:[^0-9]|$)/g,
+			" ",
+		)
 		.replace(/\b(19|20)\d{2}\b/g, "")
-		.replace(/\b(eng|jpn|fre|ger|ita|spa|kor|chs|cht|usa|eur|japan|korea|global|worldwide)\b/gi, "")
+		.replace(
+			/\b(eng|jpn|fre|ger|ita|spa|kor|chs|cht|usa|eur|japan|korea|global|worldwide)\b/gi,
+			"",
+		)
 		.replace(/[_\-+.()[\]{}]/g, " ")
 		.replace(/\s+/g, " ")
 		.trim();
@@ -485,8 +880,10 @@ function stripKnownNoise(base) {
 
 function inferEventTitle(filePath) {
 	const base = path.basename(filePath);
-	const cleaned = stripKnownNoise(base)
-		.replace(/^(RS|RSE|FRLG|FL|E)\s+/i, (m) => m.trim().toUpperCase() + " ");
+	const cleaned = stripKnownNoise(base).replace(
+		/^(RS|RSE|FRLG|FL|E)\s+/i,
+		(m) => m.trim().toUpperCase() + " ",
+	);
 	return titleCase(cleaned || base);
 }
 
@@ -497,14 +894,17 @@ function prettifyItemName(raw) {
 			.replace(/\bAuroraticket\b/i, "Aurora Ticket")
 			.replace(/\bEonticket\b/i, "Eon Ticket")
 			.replace(/\bMysticticket\b/i, "Mystic Ticket")
-			.replace(/\bOldseamap\b/i, "Old Sea Map")
+			.replace(/\bOldseamap\b/i, "Old Sea Map"),
 	);
 }
 
 function inferRewardFromMetadata(eventTitle, category) {
 	if (category !== "key-item") return {};
-	const raw = eventTitle.match(/\bItem\s+(.+)$/i)?.[1]
-		|| eventTitle.match(/\b(AuroraTicket|EonTicket|MysticTicket|OldSeaMap|Aurora Ticket|Eon Ticket|Mystic Ticket|Old Sea Map)\b/i)?.[1];
+	const raw =
+		eventTitle.match(/\bItem\s+(.+)$/i)?.[1] ||
+		eventTitle.match(
+			/\b(AuroraTicket|EonTicket|MysticTicket|OldSeaMap|Aurora Ticket|Eon Ticket|Mystic Ticket|Old Sea Map)\b/i,
+		)?.[1];
 	if (!raw) return {};
 	return {
 		type: "item",
@@ -516,7 +916,12 @@ function inferPokemonNameFromTitle(eventTitle, species, otList = []) {
 	const title = cleanMergedEventTitle(eventTitle);
 	const speciesName = String(species || "").trim();
 	if (!title || !speciesName) return "";
-	const match = title.match(new RegExp(`^(.*?)\\s+${speciesName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(?:\\s+Egg)?$`, "i"));
+	const match = title.match(
+		new RegExp(
+			`^(.*?)\\s+${speciesName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(?:\\s+Egg)?$`,
+			"i",
+		),
+	);
 	if (!match) return "";
 	const prefix = String(match[1] || "")
 		.replace(/\b(rs|rse|frlg|rsefl|emerald|ruby|sapphire)\b/gi, "")
@@ -526,9 +931,15 @@ function inferPokemonNameFromTitle(eventTitle, species, otList = []) {
 	const hasNonAscii = /[^\u0000-\u007f]/.test(prefix);
 	const normalizedPrefix = normalizeLookupText(prefix);
 	if (!normalizedPrefix && !hasNonAscii) return "";
-	const otValues = uniqueStrings(otList).map((entry) => normalizeLookupText(entry));
+	const otValues = uniqueStrings(otList).map((entry) =>
+		normalizeLookupText(entry),
+	);
 	if (normalizedPrefix && otValues.includes(normalizedPrefix)) return "";
-	if (normalizedPrefix && /^(egg|gift|event|distribution)$/.test(normalizedPrefix)) return "";
+	if (
+		normalizedPrefix &&
+		/^(egg|gift|event|distribution)$/.test(normalizedPrefix)
+	)
+		return "";
 	if (hasNonAscii && uniqueStrings(otList).includes(prefix)) return "";
 	return prefix;
 }
@@ -552,7 +963,9 @@ function inferNatureFromTitle(eventTitle) {
 
 function inferTidFromText(text) {
 	const source = String(text || "");
-	const match = source.match(/\b(?:tid|trainer id|id(?:\s*no)?\.?)\s*[:#-]?\s*(\d{1,5})\b/i);
+	const match = source.match(
+		/\b(?:tid|trainer id|id(?:\s*no)?\.?)\s*[:#-]?\s*(\d{1,5})\b/i,
+	);
 	if (!match) return undefined;
 	return String(match[1]).padStart(5, "0");
 }
@@ -560,7 +973,9 @@ function inferTidFromText(text) {
 function inferBallFromMetadata(eventTitle) {
 	const title = String(eventTitle || "");
 	if (/\begg\b/i.test(title)) return { ...BALL_DISPLAY.pokeball };
-	const match = title.match(/\b(master|ultra|great|poke|safari|net|dive|nest|repeat|timer|luxury|premier)\s*ball\b/i);
+	const match = title.match(
+		/\b(master|ultra|great|poke|safari|net|dive|nest|repeat|timer|luxury|premier)\s*ball\b/i,
+	);
 	if (!match) return undefined;
 	const key = `${match[1].toLowerCase()}ball`;
 	return BALL_DISPLAY[key] ? { ...BALL_DISPLAY[key] } : undefined;
@@ -580,7 +995,9 @@ function isDistinctPokemonName(name, species) {
 }
 
 function buildRewardName(name, species) {
-	return isDistinctPokemonName(name, species) ? String(name || "").trim() : undefined;
+	return isDistinctPokemonName(name, species)
+		? String(name || "").trim()
+		: undefined;
 }
 
 function isPlausibleMoveId(id) {
@@ -594,7 +1011,8 @@ function isPlausibleItemId(id) {
 function normalizeHeldItemAsset(name, slug) {
 	const displayName = String(name || "").trim();
 	const rawSlug = String(slug || slugify(displayName)).trim();
-	const isBerry = /(?:^|-)berry$/i.test(rawSlug) || /\bberry\b/i.test(displayName);
+	const isBerry =
+		/(?:^|-)berry$/i.test(rawSlug) || /\bberry\b/i.test(displayName);
 	return cleanUndefined({
 		name: displayName || undefined,
 		slug: isBerry ? rawSlug.replace(/-berry$/i, "") : rawSlug,
@@ -604,11 +1022,15 @@ function normalizeHeldItemAsset(name, slug) {
 
 async function buildPokemonAbilityList(speciesOrDex) {
 	if (!speciesOrDex) return [];
-	const pokemon = await pokeApiJson("pokemon", speciesOrDex).catch(() => null);
-	return uniqueStrings((pokemon?.abilities || [])
-		.filter((entry) => !entry.is_hidden)
-		.sort((a, b) => a.slot - b.slot)
-		.map((entry) => prettyApiName(entry?.ability?.name || "")));
+	const pokemon = await pokeApiJson("pokemon", speciesOrDex).catch(
+		() => null,
+	);
+	return uniqueStrings(
+		(pokemon?.abilities || [])
+			.filter((entry) => !entry.is_hidden)
+			.sort((a, b) => a.slot - b.slot)
+			.map((entry) => prettyApiName(entry?.ability?.name || "")),
+	);
 }
 
 async function inferHeldItemsFromTitle(eventTitle) {
@@ -641,26 +1063,43 @@ async function inferHeldItemsFromTitle(eventTitle) {
 	for (const name of uniqueNames) {
 		const item = await pokeApiJson("item", slugify(name)).catch(() => null);
 		if (!item) continue;
-		results.push(normalizeHeldItemAsset(
-			item?.names?.find((n) => n.language?.name === "en")?.name || prettyApiName(item?.name),
-			item?.name || slugify(name),
-		));
+		results.push(
+			normalizeHeldItemAsset(
+				item?.names?.find((n) => n.language?.name === "en")?.name ||
+					prettyApiName(item?.name),
+				item?.name || slugify(name),
+			),
+		);
 	}
 	return results;
 }
 
 function slugify(s) {
-	return String(s || "").normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/['’]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 120);
+	return String(s || "")
+		.normalize("NFKD")
+		.replace(/[\u0300-\u036f]/g, "")
+		.toLowerCase()
+		.replace(/['’]/g, "")
+		.replace(/[^a-z0-9]+/g, "-")
+		.replace(/^-+|-+$/g, "")
+		.slice(0, 120);
 }
 
 function inferMethod(filePath) {
 	const s = normalizeTokenText(filePath).toLowerCase();
 	if (/\bserial\b|\bcode\b|password/.test(s)) return "serial-code";
-	if (/\bwifi\b|\bwi fi\b|\binternet\b|\bnintendo network\b/.test(s)) return "internet";
+	if (/\bwifi\b|\bwi fi\b|\binternet\b|\bnintendo network\b/.test(s))
+		return "internet";
 	if (/joyspot|\blocal\b|wireless/.test(s)) return "local-wireless";
 	if (/\binfrared\b|\bir\b/.test(s)) return "infrared";
-	if (/bonus disc|bonusdisc|gamecube|colosseum|channel/.test(s)) return "bonus-disc";
-	if (/pokemon center|pokémon center|pcny|toys r us|gamestop|eb games|store|event|poképark|ポケパーク/.test(s)) return "in-person";
+	if (/bonus disc|bonusdisc|gamecube|colosseum|channel/.test(s))
+		return "bonus-disc";
+	if (
+		/pokemon center|pokémon center|pcny|toys r us|gamestop|eb games|store|event|poképark|ポケパーク/.test(
+			s,
+		)
+	)
+		return "in-person";
 	if (/save data|savedata/.test(s)) return "save-data";
 	if (/\bdlc\b|downloadable content/.test(s)) return "dlc";
 	return "unknown";
@@ -697,28 +1136,36 @@ function eventMatchesGames(eventGames, requestedGames, includeAllCompatible) {
 
 async function pokeApiJson(kind, idOrName) {
 	const key = `${kind}:${idOrName}`;
-	const cache = kind === "pokemon"
-		? pokemonCache
-		: kind === "pokemon-species"
-			? speciesCache
-			: kind === "item"
-				? itemCache
-				: moveCache;
+	const cache =
+		kind === "pokemon"
+			? pokemonCache
+			: kind === "pokemon-species"
+				? speciesCache
+				: kind === "item"
+					? itemCache
+					: moveCache;
 	if (cache.has(key)) return cache.get(key);
 	const res = await fetch(`https://pokeapi.co/api/v2/${kind}/${idOrName}`);
-	if (!res.ok) throw new Error(`PokeAPI ${kind}/${idOrName} failed ${res.status}`);
+	if (!res.ok)
+		throw new Error(`PokeAPI ${kind}/${idOrName} failed ${res.status}`);
 	const json = await res.json();
 	cache.set(key, json);
 	return json;
 }
 
 function prettyApiName(s) {
-	return String(s || "").split("-").map((p) => p ? p[0].toUpperCase() + p.slice(1) : p).join(" ");
+	return String(s || "")
+		.split("-")
+		.map((p) => (p ? p[0].toUpperCase() + p.slice(1) : p))
+		.join(" ");
 }
 
 function normalizeEventTitleForMatch(s) {
 	return normalizeLookupText(s)
-		.replace(/\b(rsefl|rselg|rse|frlg|rs|fl|fr|lg|dppthgss|dppthgss|dppt|dpp|dp|pt|hgss|hg|ss)\b/g, " ")
+		.replace(
+			/\b(rsefl|rselg|rse|frlg|rs|fl|fr|lg|dppthgss|dppthgss|dppt|dpp|dp|pt|hgss|hg|ss)\b/g,
+			" ",
+		)
 		.replace(/\b[0-9a-f]{4,8}\b/g, " ")
 		.replace(/\b\d+\s+of\s+\d+\b/g, " ")
 		.replace(/\bmystry\b/g, " mystery ")
@@ -747,7 +1194,10 @@ function normalizeLookupText(s) {
 async function loadSpeciesIndex() {
 	if (!speciesIndexPromise) {
 		speciesIndexPromise = (async () => {
-			const dexPath = path.resolve(process.cwd(), "data/natidexs/home.js");
+			const dexPath = path.resolve(
+				process.cwd(),
+				"data/natidexs/home.js",
+			);
 			const source = await fs.readFile(dexPath, "utf8");
 			const byDex = new Map();
 			const byToken = [];
@@ -778,7 +1228,8 @@ async function inferSpeciesFromTitle(title) {
 	for (const entry of byToken) {
 		if (!entry.token) continue;
 		const escaped = entry.token.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-		if (new RegExp(`(?:^| )${escaped}(?: |$)`, "i").test(normalizedTitle)) return entry;
+		if (new RegExp(`(?:^| )${escaped}(?: |$)`, "i").test(normalizedTitle))
+			return entry;
 	}
 	return null;
 }
@@ -806,18 +1257,29 @@ function growthExp(rateName, n) {
 		case "erratic":
 			if (L <= 50) return Math.floor((Math.pow(L, 3) * (100 - L)) / 50);
 			if (L <= 68) return Math.floor((Math.pow(L, 3) * (150 - L)) / 100);
-			if (L <= 98) return Math.floor((Math.pow(L, 3) * Math.floor((1911 - 10 * L) / 3)) / 500);
+			if (L <= 98)
+				return Math.floor(
+					(Math.pow(L, 3) * Math.floor((1911 - 10 * L) / 3)) / 500,
+				);
 			return Math.floor((Math.pow(L, 3) * (160 - L)) / 100);
-		case "fast": return Math.floor((4 * Math.pow(L, 3)) / 5);
+		case "fast":
+			return Math.floor((4 * Math.pow(L, 3)) / 5);
 		case "medium":
-		case "medium-fast": return Math.pow(L, 3);
-		case "medium-slow": return Math.floor((6 / 5) * Math.pow(L, 3) - 15 * Math.pow(L, 2) + 100 * L - 140);
-		case "slow": return Math.floor((5 * Math.pow(L, 3)) / 4);
+		case "medium-fast":
+			return Math.pow(L, 3);
+		case "medium-slow":
+			return Math.floor(
+				(6 / 5) * Math.pow(L, 3) - 15 * Math.pow(L, 2) + 100 * L - 140,
+			);
+		case "slow":
+			return Math.floor((5 * Math.pow(L, 3)) / 4);
 		case "fluctuating":
-			if (L <= 15) return Math.floor(Math.pow(L, 3) * ((((L + 1) / 3) + 24) / 50));
+			if (L <= 15)
+				return Math.floor(Math.pow(L, 3) * (((L + 1) / 3 + 24) / 50));
 			if (L <= 36) return Math.floor(Math.pow(L, 3) * ((L + 14) / 50));
-			return Math.floor(Math.pow(L, 3) * (((L / 2) + 32) / 50));
-		default: return Math.pow(L, 3);
+			return Math.floor(Math.pow(L, 3) * ((L / 2 + 32) / 50));
+		default:
+			return Math.pow(L, 3);
 	}
 }
 
@@ -833,26 +1295,62 @@ function levelFromExp(exp, growthRate) {
 function decodeGen3String(bytes) {
 	let out = "";
 	for (const b of bytes) {
-		if (b === 0xFF) break;
+		if (b === 0xff) break;
 		out += GEN3_CHARMAP.get(b) ?? "";
 	}
 	return out.trim();
 }
 
-function readU16LE(buf, off) { return buf[off] | (buf[off + 1] << 8); }
-function readU32LE(buf, off) { return (buf[off] | (buf[off + 1] << 8) | (buf[off + 2] << 16) | (buf[off + 3] << 24)) >>> 0; }
-function writeU32LE(buf, off, val) { buf[off] = val & 255; buf[off + 1] = (val >>> 8) & 255; buf[off + 2] = (val >>> 16) & 255; buf[off + 3] = (val >>> 24) & 255; }
+function readU16LE(buf, off) {
+	return buf[off] | (buf[off + 1] << 8);
+}
+function readU32LE(buf, off) {
+	return (
+		(buf[off] |
+			(buf[off + 1] << 8) |
+			(buf[off + 2] << 16) |
+			(buf[off + 3] << 24)) >>>
+		0
+	);
+}
+function writeU32LE(buf, off, val) {
+	buf[off] = val & 255;
+	buf[off + 1] = (val >>> 8) & 255;
+	buf[off + 2] = (val >>> 16) & 255;
+	buf[off + 3] = (val >>> 24) & 255;
+}
 
 const PK3_ORDERS = [
-	"GAEM", "GAME", "GEAM", "GEMA", "GMAE", "GMEA",
-	"AGEM", "AGME", "AEGM", "AEMG", "AMGE", "AMEG",
-	"EGAM", "EGMA", "EAGM", "EAMG", "EMGA", "EMAG",
-	"MGAE", "MGEA", "MAGE", "MAEG", "MEGA", "MEAG",
+	"GAEM",
+	"GAME",
+	"GEAM",
+	"GEMA",
+	"GMAE",
+	"GMEA",
+	"AGEM",
+	"AGME",
+	"AEGM",
+	"AEMG",
+	"AMGE",
+	"AMEG",
+	"EGAM",
+	"EGMA",
+	"EAGM",
+	"EAMG",
+	"EMGA",
+	"EMAG",
+	"MGAE",
+	"MGEA",
+	"MAGE",
+	"MAEG",
+	"MEGA",
+	"MEAG",
 ];
 
 function pk3Checksum(data) {
 	let sum = 0;
-	for (let i = 0; i < data.length; i += 2) sum = (sum + readU16LE(data, i)) & 0xffff;
+	for (let i = 0; i < data.length; i += 2)
+		sum = (sum + readU16LE(data, i)) & 0xffff;
 	return sum;
 }
 
@@ -873,10 +1371,12 @@ function readPk3Blocks(buf, personality, otFull, checksum) {
 
 	const key = (personality ^ otFull) >>> 0;
 	const dec = new Uint8Array(48);
-	for (let i = 0; i < 48; i += 4) writeU32LE(dec, i, (readU32LE(buf, 32 + i) ^ key) >>> 0);
+	for (let i = 0; i < 48; i += 4)
+		writeU32LE(dec, i, (readU32LE(buf, 32 + i) ^ key) >>> 0);
 	const order = PK3_ORDERS[personality % 24];
 	const blocks = {};
-	for (let i = 0; i < 4; i++) blocks[order[i]] = dec.slice(i * 12, i * 12 + 12);
+	for (let i = 0; i < 4; i++)
+		blocks[order[i]] = dec.slice(i * 12, i * 12 + 12);
 
 	return {
 		storageKind: "party-encrypted",
@@ -887,7 +1387,8 @@ function readPk3Blocks(buf, personality, otFull, checksum) {
 
 async function parsePk3Payload(arrayBuffer, options = {}) {
 	const buf = new Uint8Array(arrayBuffer);
-	if (buf.length < 80) throw new Error(`PK3 file too short: ${buf.length} bytes`);
+	if (buf.length < 80)
+		throw new Error(`PK3 file too short: ${buf.length} bytes`);
 
 	const personality = readU32LE(buf, 0);
 	const otFull = readU32LE(buf, 4);
@@ -897,7 +1398,12 @@ async function parsePk3Payload(arrayBuffer, options = {}) {
 	const languageId = buf[18];
 	const otName = decodeGen3String(buf.slice(20, 27));
 	const checksum = readU16LE(buf, 28);
-	const { blocks, checksumOk, storageKind } = readPk3Blocks(buf, personality, otFull, checksum);
+	const { blocks, checksumOk, storageKind } = readPk3Blocks(
+		buf,
+		personality,
+		otFull,
+		checksum,
+	);
 
 	const G = blocks.G;
 	const A = blocks.A;
@@ -907,7 +1413,12 @@ async function parsePk3Payload(arrayBuffer, options = {}) {
 	const heldItemId = readU16LE(G, 2);
 	const exp = readU32LE(G, 4);
 	const friendship = G[9];
-	const moveIds = [readU16LE(A, 0), readU16LE(A, 2), readU16LE(A, 4), readU16LE(A, 6)].filter(Boolean);
+	const moveIds = [
+		readU16LE(A, 0),
+		readU16LE(A, 2),
+		readU16LE(A, 4),
+		readU16LE(A, 6),
+	].filter(Boolean);
 
 	const originInfo = readU16LE(M, 2);
 	const metLevel = originInfo & 0x7f;
@@ -915,18 +1426,24 @@ async function parsePk3Payload(arrayBuffer, options = {}) {
 	const ivEggAbility = readU32LE(M, 4);
 	const abilityBit = (ivEggAbility >>> 31) & 1;
 
-	const shinyValue = ((tid ^ sid) ^ ((personality >>> 16) ^ (personality & 0xffff))) & 0xffff;
+	const shinyValue =
+		(tid ^ sid ^ ((personality >>> 16) ^ (personality & 0xffff))) & 0xffff;
 	const shiny = shinyValue < 8;
-	const inferredSpecies = await inferSpeciesFromTitle(options.eventTitle || "");
-	const directDexMatch = Number.isFinite(speciesId) && speciesId > 0
-		? await getSpeciesByDex(speciesId)
-		: null;
+	const inferredSpecies = await inferSpeciesFromTitle(
+		options.eventTitle || "",
+	);
+	const directDexMatch =
+		Number.isFinite(speciesId) && speciesId > 0
+			? await getSpeciesByDex(speciesId)
+			: null;
 	const looksLikeNationalDex = !!directDexMatch;
-	const speciesLookupId = inferredSpecies?.dex
-		|| directDexMatch?.dex
-		|| (storageKind === "party-encrypted" ? speciesId : undefined)
-		|| (looksLikeNationalDex ? speciesId : undefined);
-	const canUseStructuredFields = checksumOk && Number.isFinite(speciesLookupId);
+	const speciesLookupId =
+		inferredSpecies?.dex ||
+		directDexMatch?.dex ||
+		(storageKind === "party-encrypted" ? speciesId : undefined) ||
+		(looksLikeNationalDex ? speciesId : undefined);
+	const canUseStructuredFields =
+		checksumOk && Number.isFinite(speciesLookupId);
 
 	let species = null;
 	let pokemon = null;
@@ -939,14 +1456,20 @@ async function parsePk3Payload(arrayBuffer, options = {}) {
 	let ball = undefined;
 
 	if (canUseStructuredFields && Number.isFinite(speciesLookupId)) {
-		species = await pokeApiJson("pokemon-species", speciesLookupId).catch(() => null);
-		pokemon = await pokeApiJson("pokemon", speciesLookupId).catch(() => null);
-		speciesName = species?.names?.find((n) => n.language?.name === "en")?.name
-			|| prettyApiName(pokemon?.name || "")
-			|| inferredSpecies?.name
-			|| undefined;
+		species = await pokeApiJson("pokemon-species", speciesLookupId).catch(
+			() => null,
+		);
+		pokemon = await pokeApiJson("pokemon", speciesLookupId).catch(
+			() => null,
+		);
+		speciesName =
+			species?.names?.find((n) => n.language?.name === "en")?.name ||
+			prettyApiName(pokemon?.name || "") ||
+			inferredSpecies?.name ||
+			undefined;
 		const growthRate = species?.growth_rate?.name || "medium-fast";
-		if (Number.isFinite(exp) && exp >= 0) level = levelFromExp(exp, growthRate);
+		if (Number.isFinite(exp) && exp >= 0)
+			level = levelFromExp(exp, growthRate);
 		ball = GEN3_BALLS[ballId]
 			? { ...BALL_DISPLAY[GEN3_BALLS[ballId]] }
 			: { ...BALL_DISPLAY.pokeball };
@@ -955,7 +1478,9 @@ async function parsePk3Payload(arrayBuffer, options = {}) {
 			.filter((a) => !a.is_hidden)
 			.sort((a, b) => a.slot - b.slot);
 		const pickedAbility = abilities[abilityBit] || abilities[0];
-		abilityName = pickedAbility?.ability?.name ? prettyApiName(pickedAbility.ability.name) : undefined;
+		abilityName = pickedAbility?.ability?.name
+			? prettyApiName(pickedAbility.ability.name)
+			: undefined;
 
 		const genderRate = species?.gender_rate;
 		if (genderRate === -1) gender = "none";
@@ -968,17 +1493,29 @@ async function parsePk3Payload(arrayBuffer, options = {}) {
 
 		if (isPlausibleItemId(heldItemId)) {
 			heldItem = await pokeApiJson("item", heldItemId)
-				.then((item) => normalizeHeldItemAsset(
-					item?.names?.find((n) => n.language?.name === "en")?.name || prettyApiName(item?.name),
-					item?.name || slugify(item?.names?.find((n) => n.language?.name === "en")?.name || `item-${heldItemId}`),
-				))
+				.then((item) =>
+					normalizeHeldItemAsset(
+						item?.names?.find((n) => n.language?.name === "en")
+							?.name || prettyApiName(item?.name),
+						item?.name ||
+							slugify(
+								item?.names?.find(
+									(n) => n.language?.name === "en",
+								)?.name || `item-${heldItemId}`,
+							),
+					),
+				)
 				.catch(() => null);
 		}
 
 		for (const id of moveIds.filter(isPlausibleMoveId)) {
 			const move = await pokeApiJson("move", id).catch(() => null);
 			moves.push({
-				name: prettyApiName(move?.names?.find((n) => n.language?.name === "en")?.name || move?.name || `Move ${id}`),
+				name: prettyApiName(
+					move?.names?.find((n) => n.language?.name === "en")?.name ||
+						move?.name ||
+						`Move ${id}`,
+				),
 				type: prettyApiName(move?.type?.name || ""),
 			});
 		}
@@ -1021,7 +1558,8 @@ async function parsePk3Payload(arrayBuffer, options = {}) {
 			type: "pokemon",
 			species: prettyApiName(speciesName),
 			name: rewardName,
-			nationalDex: species?.id || pokemon?.id || inferredSpecies?.dex || speciesId,
+			nationalDex:
+				species?.id || pokemon?.id || inferredSpecies?.dex || speciesId,
 			level,
 			gender,
 			shiny: shiny || undefined,
@@ -1043,14 +1581,18 @@ async function maybeParsePayload(filePath, ext, args) {
 	if (ext !== ".pk3") return {};
 	try {
 		const buf = await fetchArrayBuffer(rawGithubUrl(filePath));
-		return await parsePk3Payload(buf, { eventTitle: inferEventTitle(filePath) });
+		return await parsePk3Payload(buf, {
+			eventTitle: inferEventTitle(filePath),
+		});
 	} catch (err) {
 		return {};
 	}
 }
 
 function normalizeWhitespace(value) {
-	return String(value || "").replace(/\s+/g, " ").trim();
+	return String(value || "")
+		.replace(/\s+/g, " ")
+		.trim();
 }
 
 function parseGen1Filename(filePath) {
@@ -1075,9 +1617,14 @@ function inferGen1GamesFromCode(gameCode) {
 }
 
 function inferGen1EventTitle(relativePath) {
-	const segments = String(relativePath || "").split("/").map((part) => normalizeWhitespace(part)).filter(Boolean);
+	const segments = String(relativePath || "")
+		.split("/")
+		.map((part) => normalizeWhitespace(part))
+		.filter(Boolean);
 	const folderSegments = segments.slice(0, -1);
-	const preferred = folderSegments.filter((part) => !GEN1_GENERIC_SEGMENTS.has(part.toLowerCase()));
+	const preferred = folderSegments.filter(
+		(part) => !GEN1_GENERIC_SEGMENTS.has(part.toLowerCase()),
+	);
 	return preferred.at(-1) || folderSegments.at(-1) || "Unknown Event";
 }
 
@@ -1095,26 +1642,50 @@ function isProbablyEnglishString(text) {
 }
 
 async function parsePk1Payload(buffer, filenameMeta) {
-	if (buffer.length < GEN1_OT_OFFSET + (GEN1_STRING_SIZE * 2)) return null;
+	if (buffer.length < GEN1_OT_OFFSET + GEN1_STRING_SIZE * 2) return null;
 
-	const party = buffer.subarray(GEN1_PARTY_OFFSET, GEN1_PARTY_OFFSET + GEN1_PARTY_DATA_SIZE);
-	const otBytes = buffer.subarray(GEN1_OT_OFFSET, GEN1_OT_OFFSET + GEN1_STRING_SIZE);
-	const nickBytes = buffer.subarray(GEN1_OT_OFFSET + GEN1_STRING_SIZE, GEN1_OT_OFFSET + (GEN1_STRING_SIZE * 2));
+	const party = buffer.subarray(
+		GEN1_PARTY_OFFSET,
+		GEN1_PARTY_OFFSET + GEN1_PARTY_DATA_SIZE,
+	);
+	const otBytes = buffer.subarray(
+		GEN1_OT_OFFSET,
+		GEN1_OT_OFFSET + GEN1_STRING_SIZE,
+	);
+	const nickBytes = buffer.subarray(
+		GEN1_OT_OFFSET + GEN1_STRING_SIZE,
+		GEN1_OT_OFFSET + GEN1_STRING_SIZE * 2,
+	);
 
 	const level = party[0x21] || party[0x03] || null;
 	const speciesEntry = await getSpeciesByName(filenameMeta?.species || "");
-	const moveIds = [party[0x08], party[0x09], party[0x0A], party[0x0B]].filter((id) => id > 0 && id <= 165);
+	const moveIds = [party[0x08], party[0x09], party[0x0a], party[0x0b]].filter(
+		(id) => id > 0 && id <= 165,
+	);
 	const moves = [];
 	for (const id of moveIds) {
 		const move = await pokeApiJson("move", id).catch(() => null);
-		moves.push(move ? { name: prettyApiName(move.name), type: prettyApiName(move.type?.name || "") } : { name: `Move ${id}` });
+		moves.push(
+			move
+				? {
+						name: prettyApiName(move.name),
+						type: prettyApiName(move.type?.name || ""),
+					}
+				: { name: `Move ${id}` },
+		);
 	}
 	const decodedOt = decodeEnglishGen1String(otBytes);
 	const decodedNickname = decodeEnglishGen1String(nickBytes);
 	const speciesName = speciesEntry?.name || filenameMeta?.species || null;
-	const nickname = isProbablyEnglishString(decodedNickname) ? decodedNickname : speciesName;
-	const ot = isProbablyEnglishString(decodedOt) ? decodedOt : filenameMeta?.ot || null;
-	const tid = filenameMeta?.tid || String((party[0x0C] << 8) | party[0x0D]).padStart(5, "0");
+	const nickname = isProbablyEnglishString(decodedNickname)
+		? decodedNickname
+		: speciesName;
+	const ot = isProbablyEnglishString(decodedOt)
+		? decodedOt
+		: filenameMeta?.ot || null;
+	const tid =
+		filenameMeta?.tid ||
+		String((party[0x0c] << 8) | party[0x0d]).padStart(5, "0");
 
 	return cleanUndefined({
 		level,
@@ -1131,9 +1702,19 @@ async function parsePk1Payload(buffer, filenameMeta) {
 function inferGen1Regions(title, relativePath) {
 	const haystack = `${title} ${relativePath}`.toLowerCase();
 	const regions = [];
-	const push = (code) => { if (!regions.includes(code)) regions.push(code); };
-	if (/(^|[\\/ ]|\.)(jpn|japanese)([\\/ ]|$)|space world|japan/.test(haystack)) push("JPN");
-	if (/\bu\.s\.\b|\busa\b|\bnintendo power\b|\bpok[eÃ©]mon power\b|\bpok[eÃ©] tour\b|\byoshira\b|\byoshiba\b/.test(haystack)) push("USA");
+	const push = (code) => {
+		if (!regions.includes(code)) regions.push(code);
+	};
+	if (
+		/(^|[\\/ ]|\.)(jpn|japanese)([\\/ ]|$)|space world|japan/.test(haystack)
+	)
+		push("JPN");
+	if (
+		/\bu\.s\.\b|\busa\b|\bnintendo power\b|\bpok[eÃ©]mon power\b|\bpok[eÃ©] tour\b|\byoshira\b|\byoshiba\b/.test(
+			haystack,
+		)
+	)
+		push("USA");
 	if (/\bcanadian\b|\bcanada\b/.test(haystack)) push("CAN");
 	if (/\buk\b|united kingdom|great britain/.test(haystack)) push("GBR");
 	if (/\bspain\b|\bspanish\b/.test(haystack)) push("ESP");
@@ -1141,7 +1722,12 @@ function inferGen1Regions(title, relativePath) {
 	if (/\bdenmark\b/.test(haystack)) push("DNK");
 	if (/\bfinland\b/.test(haystack)) push("FIN");
 	if (/\bnorway\b/.test(haystack)) push("NOR");
-	if (/\beurope\b|\bstadium tour\b|\bclub nintendo\b|\blinkw\b|\bluigi/.test(haystack)) push("EUR");
+	if (
+		/\beurope\b|\bstadium tour\b|\bclub nintendo\b|\blinkw\b|\bluigi/.test(
+			haystack,
+		)
+	)
+		push("EUR");
 	return regions;
 }
 
@@ -1153,10 +1739,21 @@ function inferGen1Languages(relativePath) {
 }
 
 function readableLocalPathNote(relativePath, eventTitle) {
-	const segments = String(relativePath || "").split("/").map((part) => normalizeWhitespace(part)).filter(Boolean);
+	const segments = String(relativePath || "")
+		.split("/")
+		.map((part) => normalizeWhitespace(part))
+		.filter(Boolean);
 	const folders = segments.slice(0, -1);
-	const useful = folders.filter((part) => !GEN1_GENERIC_SEGMENTS.has(part.toLowerCase()) && !/^(ENG|JPN|KOR|FRE|GER|ITA|SPA)$/i.test(part));
-	const filtered = useful.filter((part, index) => index !== useful.length - 1 || normalizeLookupText(part) !== normalizeLookupText(eventTitle));
+	const useful = folders.filter(
+		(part) =>
+			!GEN1_GENERIC_SEGMENTS.has(part.toLowerCase()) &&
+			!/^(ENG|JPN|KOR|FRE|GER|ITA|SPA)$/i.test(part),
+	);
+	const filtered = useful.filter(
+		(part, index) =>
+			index !== useful.length - 1 ||
+			normalizeLookupText(part) !== normalizeLookupText(eventTitle),
+	);
 	const parts = filtered.length ? filtered : useful;
 	return parts.length ? parts.join(" | ") : undefined;
 }
@@ -1165,17 +1762,32 @@ async function buildEventFromLocalGen1File(filePath, args) {
 	const filenameMeta = parseGen1Filename(filePath);
 	if (!filenameMeta) return null;
 
-	const games = inferGen1GamesFromCode(filenameMeta.gameCode).filter((game) => args.games.includes(game));
+	const games = inferGen1GamesFromCode(filenameMeta.gameCode).filter((game) =>
+		args.games.includes(game),
+	);
 	if (!games.length) return null;
 
 	const relativePath = toPosixPath(path.relative(args.sourceDir, filePath));
 	const eventTitle = inferGen1EventTitle(relativePath);
 	const date = inferDate(`${eventTitle} ${relativePath}`);
-	const payload = await parsePk1Payload(await fs.readFile(filePath), filenameMeta);
+	const payload = await parsePk1Payload(
+		await fs.readFile(filePath),
+		filenameMeta,
+	);
 	if (!payload) return null;
 
 	return cleanUndefined({
-		id: slugify([`gen${args.generation}`, eventTitle, payload.species, payload.ot || filenameMeta.ot, payload.nickname || payload.species].filter(Boolean).join(" ")),
+		id: slugify(
+			[
+				`gen${args.generation}`,
+				eventTitle,
+				payload.species,
+				payload.ot || filenameMeta.ot,
+				payload.nickname || payload.species,
+			]
+				.filter(Boolean)
+				.join(" "),
+		),
 		eventTitle,
 		category: "pokemon",
 		method: "in-person",
@@ -1203,14 +1815,33 @@ async function buildEventFromLocalGen1File(filePath, args) {
 }
 
 function cleanUndefined(obj) {
-	if (Array.isArray(obj)) return obj.map(cleanUndefined).filter((x) => x !== undefined && x !== null && !(Array.isArray(x) && x.length === 0));
+	if (Array.isArray(obj))
+		return obj
+			.map(cleanUndefined)
+			.filter(
+				(x) =>
+					x !== undefined &&
+					x !== null &&
+					!(Array.isArray(x) && x.length === 0),
+			);
 	if (!obj || typeof obj !== "object") return obj;
 	const out = {};
 	for (const [k, v] of Object.entries(obj)) {
 		const cleaned = cleanUndefined(v);
 		const isEmptyArray = Array.isArray(cleaned) && cleaned.length === 0;
-		const isEmptyObject = cleaned && typeof cleaned === "object" && !Array.isArray(cleaned) && Object.keys(cleaned).length === 0;
-		if (cleaned === undefined || cleaned === null || cleaned === "" || isEmptyArray || isEmptyObject) continue;
+		const isEmptyObject =
+			cleaned &&
+			typeof cleaned === "object" &&
+			!Array.isArray(cleaned) &&
+			Object.keys(cleaned).length === 0;
+		if (
+			cleaned === undefined ||
+			cleaned === null ||
+			cleaned === "" ||
+			isEmptyArray ||
+			isEmptyObject
+		)
+			continue;
 		out[k] = cleaned;
 	}
 	return out;
@@ -1234,13 +1865,22 @@ async function applyRewardFallbacks(reward, eventTitle, category) {
 		const inferredSpecies = await inferSpeciesFromTitle(eventTitle);
 		if (inferredSpecies) {
 			if (!nextReward.species) nextReward.species = inferredSpecies.name;
-			if (!Number.isFinite(nextReward.nationalDex)) nextReward.nationalDex = inferredSpecies.dex;
+			if (!Number.isFinite(nextReward.nationalDex))
+				nextReward.nationalDex = inferredSpecies.dex;
 		}
 	}
 
 	if (!nextReward.level) nextReward.level = inferLevelFromTitle(eventTitle);
-	if (!nextReward.name && nextReward.type === "pokemon" && nextReward.species) {
-		nextReward.name = inferPokemonNameFromTitle(eventTitle, nextReward.species, nextReward.ot || []);
+	if (
+		!nextReward.name &&
+		nextReward.type === "pokemon" &&
+		nextReward.species
+	) {
+		nextReward.name = inferPokemonNameFromTitle(
+			eventTitle,
+			nextReward.species,
+			nextReward.ot || [],
+		);
 	}
 	if (!Array.isArray(nextReward.nature) || !nextReward.nature.length) {
 		nextReward.nature = inferNatureFromTitle(eventTitle);
@@ -1249,11 +1889,17 @@ async function applyRewardFallbacks(reward, eventTitle, category) {
 	if (!nextReward.ball) nextReward.ball = inferBallFromMetadata(eventTitle);
 
 	if (!Array.isArray(nextReward.ability) || !nextReward.ability.length) {
-		const abilityList = await buildPokemonAbilityList(nextReward.nationalDex || nextReward.species);
+		const abilityList = await buildPokemonAbilityList(
+			nextReward.nationalDex || nextReward.species,
+		);
 		if (abilityList.length) nextReward.ability = abilityList;
 	}
 
-	if ((!Array.isArray(nextReward.heldItems) || !nextReward.heldItems.length) && nextReward.type === "pokemon") {
+	if (
+		(!Array.isArray(nextReward.heldItems) ||
+			!nextReward.heldItems.length) &&
+		nextReward.type === "pokemon"
+	) {
 		const heldItems = await inferHeldItemsFromTitle(eventTitle);
 		if (heldItems.length) nextReward.heldItems = heldItems;
 	}
@@ -1267,24 +1913,39 @@ async function buildEventFromTreeItem(item, args) {
 	const ext = getFileExtension(filePath);
 	const inferredGeneration = inferGeneration(filePath, ext);
 	const targetGeneration = String(args.generation);
-	const generationMatches = inferredGeneration === "unknown" || inferredGeneration === targetGeneration || (targetGeneration === "9_2" && inferredGeneration === "9");
+	const generationMatches =
+		inferredGeneration === "unknown" ||
+		inferredGeneration === targetGeneration ||
+		(targetGeneration === "9_2" && inferredGeneration === "9");
 	if (!generationMatches) return null;
 
 	const pathContext = inferPathContext(filePath);
 	const games = inferCompatibleGames(filePath, targetGeneration, pathContext);
-	if (!eventMatchesGames(games, args.games, args.includeAllCompatible)) return null;
+	if (!eventMatchesGames(games, args.games, args.includeAllCompatible))
+		return null;
 
 	const date = inferDate(filePath);
 	const eventTitle = inferEventTitle(filePath);
-	const category = ext.startsWith(".pk") ? "pokemon" : inferCategoryFromTitle(eventTitle);
+	const category = ext.startsWith(".pk")
+		? "pokemon"
+		: inferCategoryFromTitle(eventTitle);
 	const regions = inferRegions(filePath, pathContext);
 	const languages = inferLanguages(filePath, pathContext);
-	const method = refineMethod(inferMethod(filePath), filePath, eventTitle, pathContext);
+	const method = refineMethod(
+		inferMethod(filePath),
+		filePath,
+		eventTitle,
+		pathContext,
+	);
 	const status = inferStatus(filePath, pathContext);
 	const parsed = await maybeParsePayload(filePath, ext, args);
 	const baseReward = { type: ext.startsWith(".pk") ? "pokemon" : "unknown" };
 	const mergedReward = mergeReward(baseReward, parsed.reward);
-	const reward = await applyRewardFallbacks(mergedReward, eventTitle, category);
+	const reward = await applyRewardFallbacks(
+		mergedReward,
+		eventTitle,
+		category,
+	);
 	if (ext === ".pk3" && reward?.type === "pokemon" && !reward.ball) {
 		reward.ball = { ...BALL_DISPLAY.pokeball };
 	}
@@ -1296,7 +1957,17 @@ async function buildEventFromTreeItem(item, args) {
 	const regionForId = finalRegions?.[0] || "unknown";
 	const dateForId = date.startDateDisplay || finalStartDate || "unknown-date";
 	const speciesForId = reward?.species;
-	const id = slugify([`gen${targetGeneration}`, eventTitle, speciesForId, regionForId, dateForId].filter(Boolean).join(" "));
+	const id = slugify(
+		[
+			`gen${targetGeneration}`,
+			eventTitle,
+			speciesForId,
+			regionForId,
+			dateForId,
+		]
+			.filter(Boolean)
+			.join(" "),
+	);
 
 	const event = {
 		id,
@@ -1328,15 +1999,20 @@ function inferCategoryFromTitle(title) {
 }
 
 function inferStatus(filePath, pathContext) {
-	const text = normalizeLookupText([filePath, ...(pathContext?.segments || [])].join(" "));
-	if (/\bunreleased\b|\bprototype\b|\bbeta\b|\bdebug\b/.test(text)) return "unreleased";
+	const text = normalizeLookupText(
+		[filePath, ...(pathContext?.segments || [])].join(" "),
+	);
+	if (/\bunreleased\b|\bprototype\b|\bbeta\b|\bdebug\b/.test(text))
+		return "unreleased";
 	if (/\breleased\b/.test(text)) return "released";
 	return "unknown";
 }
 
 function refineMethod(method, filePath, eventTitle, pathContext) {
 	if (method && method !== "unknown") return method;
-	const text = normalizeLookupText([filePath, eventTitle, ...(pathContext?.collections || [])].join(" "));
+	const text = normalizeLookupText(
+		[filePath, eventTitle, ...(pathContext?.collections || [])].join(" "),
+	);
 	for (const [pattern, value] of METHOD_HINTS) {
 		if (pattern.test(text)) return value;
 	}
@@ -1347,20 +2023,30 @@ function inferObtainMethod(filePath, method) {
 	const req = [];
 	const s = String(filePath || "");
 	if (/JoySpot/i.test(s)) req.push("JoySpot distribution");
-	if (/Pokémon Center New York|Pokemon Center New York|PCNY/i.test(s)) req.push("Pokémon Center New York event distribution");
-	if (/ポケパーク|Pok[eé]Park/i.test(s)) req.push("PokéPark event distribution");
-	return cleanUndefined({ requirements: req, location: inferLocationFromPath(filePath), delivery: method });
+	if (/Pokémon Center New York|Pokemon Center New York|PCNY/i.test(s))
+		req.push("Pokémon Center New York event distribution");
+	if (/ポケパーク|Pok[eé]Park/i.test(s))
+		req.push("PokéPark event distribution");
+	return cleanUndefined({
+		requirements: req,
+		location: inferLocationFromPath(filePath),
+		delivery: method,
+	});
 }
 
 function inferLocationFromPath(filePath) {
-	if (/Pokémon Center New York|Pokemon Center New York|PCNY/i.test(filePath)) return "Pokémon Center New York";
+	if (/Pokémon Center New York|Pokemon Center New York|PCNY/i.test(filePath))
+		return "Pokémon Center New York";
 	if (/ポケパーク|Pok[eé]Park/i.test(filePath)) return "PokéPark";
 	return undefined;
 }
 
 function readablePathNote(filePath) {
 	const parts = filePath.split("/").slice(2, -1).filter(Boolean);
-	const useful = parts.filter((p) => !/^Gen \d$/i.test(p) && !/^(ENG|JPN|KOR|FRE|GER|ITA|SPA)$/i.test(p));
+	const useful = parts.filter(
+		(p) =>
+			!/^Gen \d$/i.test(p) && !/^(ENG|JPN|KOR|FRE|GER|ITA|SPA)$/i.test(p),
+	);
 	return useful.length ? useful.join(" • ") : `Imported path: ${filePath}`;
 }
 
@@ -1368,12 +2054,18 @@ function readablePathNoteClean(filePath, pathContext) {
 	const parts = pathContext?.collections?.length
 		? pathContext.collections
 		: filePath.split("/").slice(1, -1).filter(Boolean);
-	const useful = parts.filter((p) => !/^Gen \d$/i.test(p) && !/^(ENG|JPN|KOR|FRE|GER|ITA|SPA)$/i.test(p));
+	const useful = parts.filter(
+		(p) =>
+			!/^Gen \d$/i.test(p) && !/^(ENG|JPN|KOR|FRE|GER|ITA|SPA)$/i.test(p),
+	);
 	return useful.length ? useful.join(" | ") : `Imported path: ${filePath}`;
 }
 
 function jsString(value) {
-	return JSON.stringify(value, null, 2).replace(/"([^"\\]*(?:\\.[^"\\]*)*)":/g, "$1:");
+	return JSON.stringify(value, null, 2).replace(
+		/"([^"\\]*(?:\\.[^"\\]*)*)":/g,
+		"$1:",
+	);
 }
 
 function rawExpr(code) {
@@ -1387,7 +2079,9 @@ function quoteKey(key) {
 function getBallDisplayName(value) {
 	if (value?.slug) {
 		if (value.slug === "poke-ball") return "Pok\u00E9 Ball";
-		const lookup = Object.values(BALL_DISPLAY).find((ballValue) => ballValue.slug === value.slug)?.label;
+		const lookup = Object.values(BALL_DISPLAY).find(
+			(ballValue) => ballValue.slug === value.slug,
+		)?.label;
 		if (lookup) return lookup;
 	}
 	return value?.label || value?.name;
@@ -1398,7 +2092,8 @@ function toRenderable(value, parentKey = "") {
 		const items = value.map((item) => toRenderable(item, parentKey));
 		if (parentKey === "nature") {
 			const inline = items.map((item) => inlineScalar(item));
-			if (!inline.some((item) => item == null)) return rawExpr(`[${inline.join(", ")}]`);
+			if (!inline.some((item) => item == null))
+				return rawExpr(`[${inline.join(", ")}]`);
 		}
 		return items;
 	}
@@ -1406,12 +2101,17 @@ function toRenderable(value, parentKey = "") {
 
 	if (parentKey === "ball" && value.slug) {
 		const ballName = getBallDisplayName(value);
-		if (ballName) return rawExpr(`{ name: ${JSON.stringify(ballName)}, img: () => ball(${JSON.stringify(value.slug)}) }`);
+		if (ballName)
+			return rawExpr(
+				`{ name: ${JSON.stringify(ballName)}, img: () => ball(${JSON.stringify(value.slug)}) }`,
+			);
 	}
 
 	if (parentKey === "heldItems" && value.slug && value.name) {
 		const resolver = value.kind === "berry" ? "berry" : "heldItem";
-		return rawExpr(`{ name: ${JSON.stringify(value.name)}, img: () => ${resolver}(${JSON.stringify(value.slug)}) }`);
+		return rawExpr(
+			`{ name: ${JSON.stringify(value.name)}, img: () => ${resolver}(${JSON.stringify(value.slug)}) }`,
+		);
 	}
 
 	const out = {};
@@ -1421,7 +2121,8 @@ function toRenderable(value, parentKey = "") {
 
 function inlineScalar(value) {
 	if (value && typeof value === "object" && value.__raw) return value.__raw;
-	if (Array.isArray(value) || (value && typeof value === "object")) return null;
+	if (Array.isArray(value) || (value && typeof value === "object"))
+		return null;
 	return JSON.stringify(value);
 }
 
@@ -1459,13 +2160,18 @@ function renderJs(value, indent = 0) {
 	const childPad = "\t".repeat(indent + 1);
 
 	if (Array.isArray(value)) {
-		const items = value.map((item) => `${childPad}${renderJs(item, indent + 1)}`);
+		const items = value.map(
+			(item) => `${childPad}${renderJs(item, indent + 1)}`,
+		);
 		return `[\n${items.join(",\n")}\n${pad}]`;
 	}
 
 	if (value && typeof value === "object") {
 		const entries = Object.entries(value);
-		const lines = entries.map(([key, val]) => `${childPad}${quoteKey(key)}: ${renderJs(val, indent + 1)}`);
+		const lines = entries.map(
+			([key, val]) =>
+				`${childPad}${quoteKey(key)}: ${renderJs(val, indent + 1)}`,
+		);
 		return `{\n${lines.join(",\n")}\n${pad}}`;
 	}
 
@@ -1477,7 +2183,11 @@ function renderEventObject(event) {
 }
 
 function uniqueStrings(values) {
-	return [...new Set((values || []).filter(Boolean).map((value) => String(value)))];
+	return [
+		...new Set(
+			(values || []).filter(Boolean).map((value) => String(value)),
+		),
+	];
 }
 
 function uniqueObjectsByKey(values, keyFn) {
@@ -1511,9 +2221,8 @@ function collapseNatureValues(natures) {
 function eventGroupKey(event) {
 	const reward = event?.reward || {};
 	const method = event?.method || "";
-	const regionKey = method === "in-person"
-		? uniqueStrings(event?.regions).join(",")
-		: "";
+	const regionKey =
+		method === "in-person" ? uniqueStrings(event?.regions).join(",") : "";
 	return [
 		event?.category || "",
 		normalizeEventTitleForMatch(event?.eventTitle || ""),
@@ -1526,7 +2235,10 @@ function eventGroupKey(event) {
 
 function cleanMergedEventTitle(title) {
 	return String(title || "")
-		.replace(/^\s*(?:rs|rse|rselg|rsefl|frlg|fr|lg|fl|e|c|xd|dppt|dp|pt|hgss|hg|ss|bw|bw2|b2w2|xy|oras|sm|usum|swsh|bdsp|pla|sv)\b[\s-]*/i, "")
+		.replace(
+			/^\s*(?:rs|rse|rselg|rsefl|frlg|fr|lg|fl|e|c|xd|dppt|dp|pt|hgss|hg|ss|bw|bw2|b2w2|xy|oras|sm|usum|swsh|bdsp|pla|sv)\b[\s-]*/i,
+			"",
+		)
 		.replace(/\b[0-9A-F]{4,8}\b/gi, " ")
 		.replace(/\s+/g, " ")
 		.trim();
@@ -1536,15 +2248,22 @@ function buildMergedEventId(event) {
 	const reward = event?.reward || {};
 	const cleanedTitle = cleanMergedEventTitle(event?.eventTitle || "");
 	const speciesOrName = reward.species || reward.name;
-	const includeRewardInId = speciesOrName
-		&& !normalizeEventTitleForMatch(cleanedTitle).includes(normalizeLookupText(speciesOrName));
-	return slugify([
-		`gen${event?.id?.match(/^gen([^-\s]+)/)?.[1] || ""}`,
-		cleanedTitle,
-		includeRewardInId ? speciesOrName : undefined,
-		uniqueStrings(event?.regions)[0] || "unknown",
-		event?.startDateDisplay || event?.startDate || "unknown-date",
-	].filter(Boolean).join(" "));
+	const includeRewardInId =
+		speciesOrName &&
+		!normalizeEventTitleForMatch(cleanedTitle).includes(
+			normalizeLookupText(speciesOrName),
+		);
+	return slugify(
+		[
+			`gen${event?.id?.match(/^gen([^-\s]+)/)?.[1] || ""}`,
+			cleanedTitle,
+			includeRewardInId ? speciesOrName : undefined,
+			uniqueStrings(event?.regions)[0] || "unknown",
+			event?.startDateDisplay || event?.startDate || "unknown-date",
+		]
+			.filter(Boolean)
+			.join(" "),
+	);
 }
 
 function pickPreferredScalar(...values) {
@@ -1558,26 +2277,54 @@ function pickPreferredScalar(...values) {
 function mergeRewards(rewards) {
 	const merged = {
 		type: pickPreferredScalar(...rewards.map((reward) => reward?.type)),
-		species: pickPreferredScalar(...rewards.map((reward) => reward?.species)),
+		species: pickPreferredScalar(
+			...rewards.map((reward) => reward?.species),
+		),
 		name: pickPreferredScalar(...rewards.map((reward) => reward?.name)),
-		nationalDex: pickPreferredScalar(...rewards.map((reward) => reward?.nationalDex)),
+		nationalDex: pickPreferredScalar(
+			...rewards.map((reward) => reward?.nationalDex),
+		),
 		level: pickPreferredScalar(...rewards.map((reward) => reward?.level)),
 		gender: pickPreferredScalar(...rewards.map((reward) => reward?.gender)),
 		shiny: pickPreferredScalar(...rewards.map((reward) => reward?.shiny)),
 		ball: pickPreferredScalar(...rewards.map((reward) => reward?.ball)),
-		friendship: pickPreferredScalar(...rewards.map((reward) => reward?.friendship)),
-		metLevel: pickPreferredScalar(...rewards.map((reward) => reward?.metLevel)),
+		friendship: pickPreferredScalar(
+			...rewards.map((reward) => reward?.friendship),
+		),
+		metLevel: pickPreferredScalar(
+			...rewards.map((reward) => reward?.metLevel),
+		),
 	};
 
-	const genders = uniqueStrings(rewards.map((reward) => reward?.gender).filter(Boolean));
+	const genders = uniqueStrings(
+		rewards.map((reward) => reward?.gender).filter(Boolean),
+	);
 	if (genders.length > 1) merged.gender = "Random";
 
 	merged.ot = mergeStringArrays(...rewards.map((reward) => reward?.ot || []));
-	merged.tid = mergeStringArrays(...rewards.map((reward) => Array.isArray(reward?.tid) ? reward.tid : reward?.tid ? [reward.tid] : []));
-	merged.ability = mergeStringArrays(...rewards.map((reward) => reward?.ability || []));
-	merged.nature = collapseNatureValues(rewards.flatMap((reward) => reward?.nature || []));
-	merged.moves = mergeObjectArrays(rewards.map((reward) => reward?.moves || []), (move) => `${move.name}|${move.type || ""}`);
-	merged.heldItems = mergeObjectArrays(rewards.map((reward) => reward?.heldItems || []), (item) => item.slug || item.name);
+	merged.tid = mergeStringArrays(
+		...rewards.map((reward) =>
+			Array.isArray(reward?.tid)
+				? reward.tid
+				: reward?.tid
+					? [reward.tid]
+					: [],
+		),
+	);
+	merged.ability = mergeStringArrays(
+		...rewards.map((reward) => reward?.ability || []),
+	);
+	merged.nature = collapseNatureValues(
+		rewards.flatMap((reward) => reward?.nature || []),
+	);
+	merged.moves = mergeObjectArrays(
+		rewards.map((reward) => reward?.moves || []),
+		(move) => `${move.name}|${move.type || ""}`,
+	);
+	merged.heldItems = mergeObjectArrays(
+		rewards.map((reward) => reward?.heldItems || []),
+		(item) => item.slug || item.name,
+	);
 
 	return cleanUndefined(merged);
 }
@@ -1593,38 +2340,74 @@ function mergeEvents(events) {
 			continue;
 		}
 
-		group.regions = mergeStringArrays(group.regions || [], event.regions || []);
-		group.languages = mergeStringArrays(group.languages || [], event.languages || []);
+		group.regions = mergeStringArrays(
+			group.regions || [],
+			event.regions || [],
+		);
+		group.languages = mergeStringArrays(
+			group.languages || [],
+			event.languages || [],
+		);
 		group.notes = mergeStringArrays(group.notes || [], event.notes || []);
-		group.status = pickPreferredScalar(group.status === "unknown" ? undefined : group.status, event.status === "unknown" ? undefined : event.status, group.status, event.status);
+		group.status = pickPreferredScalar(
+			group.status === "unknown" ? undefined : group.status,
+			event.status === "unknown" ? undefined : event.status,
+			group.status,
+			event.status,
+		);
 		group.startDate = pickPreferredScalar(group.startDate, event.startDate);
 		group.endDate = pickPreferredScalar(group.endDate, event.endDate);
-		group.startDateDisplay = pickPreferredScalar(group.startDateDisplay, event.startDateDisplay);
-		group.datePrecision = pickPreferredScalar(group.datePrecision === "unknown" ? undefined : group.datePrecision, event.datePrecision === "unknown" ? undefined : event.datePrecision, group.datePrecision, event.datePrecision);
+		group.startDateDisplay = pickPreferredScalar(
+			group.startDateDisplay,
+			event.startDateDisplay,
+		);
+		group.datePrecision = pickPreferredScalar(
+			group.datePrecision === "unknown" ? undefined : group.datePrecision,
+			event.datePrecision === "unknown" ? undefined : event.datePrecision,
+			group.datePrecision,
+			event.datePrecision,
+		);
 		group.obtainMethod = cleanUndefined({
-			delivery: pickPreferredScalar(group.obtainMethod?.delivery, event.obtainMethod?.delivery),
-			location: pickPreferredScalar(group.obtainMethod?.location, event.obtainMethod?.location),
-			requirements: mergeStringArrays(group.obtainMethod?.requirements || [], event.obtainMethod?.requirements || []),
+			delivery: pickPreferredScalar(
+				group.obtainMethod?.delivery,
+				event.obtainMethod?.delivery,
+			),
+			location: pickPreferredScalar(
+				group.obtainMethod?.location,
+				event.obtainMethod?.location,
+			),
+			requirements: mergeStringArrays(
+				group.obtainMethod?.requirements || [],
+				event.obtainMethod?.requirements || [],
+			),
 		});
 		group.reward = mergeRewards([group.reward || {}, event.reward || {}]);
 	}
 
-	return [...groups.values()].map((event) => cleanUndefined({
-		...event,
-		eventTitle: cleanMergedEventTitle(event.eventTitle),
-		id: buildMergedEventId({
+	return [...groups.values()].map((event) =>
+		cleanUndefined({
 			...event,
 			eventTitle: cleanMergedEventTitle(event.eventTitle),
+			id: buildMergedEventId({
+				...event,
+				eventTitle: cleanMergedEventTitle(event.eventTitle),
+			}),
+			reward: mergeRewards([event.reward || {}]),
 		}),
-		reward: mergeRewards([event.reward || {}]),
-	}));
+	);
 }
 
 function renderOutput(events, args) {
-	const genValue = Number.isFinite(Number(args.generation)) ? Number(args.generation) : JSON.stringify(args.generation);
+	const genValue = Number.isFinite(Number(args.generation))
+		? Number(args.generation)
+		: JSON.stringify(args.generation);
 	const gameKeys = `[${args.games.map((game) => JSON.stringify(game)).join(", ")}]`;
-	const renderableEvents = events.map(({ games, generation, ...event }) => event);
-	const eventBlocks = renderableEvents.map((event) => `\t${renderEventObject(event)}`).join(",\n");
+	const renderableEvents = events.map(
+		({ games, generation, ...event }) => event,
+	);
+	const eventBlocks = renderableEvents
+		.map((event) => `\t${renderEventObject(event)}`)
+		.join(",\n");
 	return `// AUTO-GENERATED by scripts/scrapers/gen3-scrape.mjs
 // Review before committing. Payload-backed fields are included when the source format supports them.
 
@@ -1660,11 +2443,23 @@ defineDistributionsMany(GAME_KEYS, () => DISTRIBUTIONS);
 }
 
 function logScrapeSummary(events) {
-	const items = events.filter((event) => event.reward?.type === "item").length;
-	const withRegions = events.filter((event) => Array.isArray(event.regions) && event.regions.length).length;
-	const withLanguages = events.filter((event) => Array.isArray(event.languages) && event.languages.length).length;
-	const withHeldItems = events.filter((event) => Array.isArray(event.reward?.heldItems) && event.reward.heldItems.length).length;
-	console.log(`Summary: ${items} item events, ${withRegions} with regions, ${withLanguages} with languages, ${withHeldItems} with held items.`);
+	const items = events.filter(
+		(event) => event.reward?.type === "item",
+	).length;
+	const withRegions = events.filter(
+		(event) => Array.isArray(event.regions) && event.regions.length,
+	).length;
+	const withLanguages = events.filter(
+		(event) => Array.isArray(event.languages) && event.languages.length,
+	).length;
+	const withHeldItems = events.filter(
+		(event) =>
+			Array.isArray(event.reward?.heldItems) &&
+			event.reward.heldItems.length,
+	).length;
+	console.log(
+		`Summary: ${items} item events, ${withRegions} with regions, ${withLanguages} with languages, ${withHeldItems} with held items.`,
+	);
 }
 
 export async function runScraperCli(argv = process.argv) {
@@ -1673,25 +2468,32 @@ export async function runScraperCli(argv = process.argv) {
 
 	if (String(args.generation) === "1") {
 		const files = await walkLocalFiles(args.sourceDir, new Set([".pk1"]));
-		console.log(`Found ${files.length} local Gen 1 event files in ${args.sourceDir}`);
+		console.log(
+			`Found ${files.length} local Gen 1 event files in ${args.sourceDir}`,
+		);
 		for (const filePath of files) {
 			const event = await buildEventFromLocalGen1File(filePath, args);
 			if (event) {
 				events.push(event);
-				if (events.length % 25 === 0) console.log(`Matched/parsed ${events.length}...`);
+				if (events.length % 25 === 0)
+					console.log(`Matched/parsed ${events.length}...`);
 			}
 			if (args.max && events.length >= args.max) break;
 		}
 	} else {
 		console.log(`Fetching ${OWNER}/${REPO} tree...`);
 		const tree = await getRecursiveTree();
-		const files = tree.filter((x) => x.type === "blob").filter((x) => isReleasedPath(x.path)).filter((x) => isEventFile(x.path));
+		const files = tree
+			.filter((x) => x.type === "blob")
+			.filter((x) => isReleasedPath(x.path))
+			.filter((x) => isEventFile(x.path));
 		console.log(`Found ${files.length} likely event files.`);
 		for (const item of files) {
 			const event = await buildEventFromTreeItem(item, args);
 			if (event) {
 				events.push(event);
-				if (events.length % 25 === 0) console.log(`Matched/parsed ${events.length}...`);
+				if (events.length % 25 === 0)
+					console.log(`Matched/parsed ${events.length}...`);
 			}
 			if (args.max && events.length >= args.max) break;
 		}
@@ -1708,10 +2510,14 @@ export async function runScraperCli(argv = process.argv) {
 		return String(a.eventTitle).localeCompare(String(b.eventTitle));
 	});
 
-	console.log(`Matched ${events.length} raw files and collapsed them into ${mergedEvents.length} events for games: ${args.games.join(", ")}`);
+	console.log(
+		`Matched ${events.length} raw files and collapsed them into ${mergedEvents.length} events for games: ${args.games.join(", ")}`,
+	);
 	logScrapeSummary(mergedEvents);
 	if (args.dryRun) {
-		console.log(JSON.stringify(mergedEvents.slice(0, args.max || 10), null, 2));
+		console.log(
+			JSON.stringify(mergedEvents.slice(0, args.max || 10), null, 2),
+		);
 		return;
 	}
 	const outText = renderOutput(mergedEvents, args);
@@ -1720,7 +2526,9 @@ export async function runScraperCli(argv = process.argv) {
 	console.log(`Wrote ${args.out}`);
 }
 
-const isDirectRun = !!process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href;
+const isDirectRun =
+	!!process.argv[1] &&
+	import.meta.url === pathToFileURL(process.argv[1]).href;
 if (isDirectRun) {
 	runScraperCli().catch((err) => {
 		console.error(err);

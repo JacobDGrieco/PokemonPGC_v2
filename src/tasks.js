@@ -1,9 +1,39 @@
-import { ensureSections, buildTaskIndex, buildTaskLayoutGroups, buildTaskLayoutMeta, bootstrapTasks } from "./tasks-bootstrap.js";
-import { getTierMetaForTask, getTierSteps, formatTierTooltip, isEitherTask, isMultiTask, isTieredTask, setDescendantsDone, getEitherChoice, getDefaultEitherChoice, getMultiCheckedCount, getMultiOptions, setEitherChoice, setMultiOptionDone, eitherSyncView } from "./tasks-modes.js";
+import {
+	ensureSections,
+	buildTaskIndex,
+	buildTaskLayoutGroups,
+	buildTaskLayoutMeta,
+	bootstrapTasks,
+} from "./tasks-bootstrap.js";
+import {
+	getTierMetaForTask,
+	getTierSteps,
+	formatTierTooltip,
+	isEitherTask,
+	isMultiTask,
+	isTieredTask,
+	setDescendantsDone,
+	getEitherChoice,
+	getDefaultEitherChoice,
+	getMultiCheckedCount,
+	getMultiOptions,
+	setEitherChoice,
+	setMultiOptionDone,
+	eitherSyncView,
+} from "./tasks-modes.js";
 import { unloadSectionTasks, applySyncsFromTask } from "./tasks-sync.js";
 import { ensurePpgcRoot } from "./runtime/globals.js";
-import { hideTooltip, resolveTaskImageSrcs, attachTooltip, resolveAccentForSection } from "./tasks-visuals.js";
-import { renderTaskLayout, renderTaskList, renderTieredControls } from "./tasks-renderers.js";
+import {
+	hideTooltip,
+	resolveTaskImageSrcs,
+	attachTooltip,
+	resolveAccentForSection,
+} from "./tasks-visuals.js";
+import {
+	renderTaskLayout,
+	renderTaskList,
+	renderTieredControls,
+} from "./tasks-renderers.js";
 import { renderEitherHTML, wireEitherUI } from "./tasks-either.js";
 
 const PPGC = ensurePpgcRoot();

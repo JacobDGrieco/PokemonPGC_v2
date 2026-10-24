@@ -1,1 +1,1 @@
-export { bootstrapTasksForGame, computeSectionPct } from './progressSummary.js';
+export { bootstrapTasksForGame, computeSectionPct } from "./progressSummary.js";

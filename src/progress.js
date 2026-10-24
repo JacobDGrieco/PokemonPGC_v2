@@ -110,7 +110,6 @@ export function tierFromCount(count, tiers) {
 	return t; // 0..tiers.length
 }
 
-
 /* ===================== Games helpers ===================== */
 
 /**
@@ -165,7 +164,6 @@ export function getGameRowsForGen(genKey) {
 	return rows;
 }
 
-
 /* ===================== Section add-on meters ===================== */
 
 /**
@@ -184,7 +182,7 @@ export function getSectionAddonPcts(
 	gameKey,
 	genKey,
 	dexPctFor,
-	sectionMeters
+	sectionMeters,
 ) {
 	const pcts = [];
 
@@ -193,7 +191,7 @@ export function getSectionAddonPcts(
 			? String(gameKey).replace(/-national$/, "")
 			: String(gameKey);
 		const natKey = `${baseKey}-national`;
-		const hasNat = !!(window.DATA?.dex?.[natKey]?.length);
+		const hasNat = !!window.DATA?.dex?.[natKey]?.length;
 
 		// Prefer the variant list that matches the current gameKey, then fall back to the base.
 		const variantsCfg = window.DATA?.dexVariants?.[baseKey];

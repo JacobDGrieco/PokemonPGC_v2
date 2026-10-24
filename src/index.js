@@ -1,6 +1,10 @@
-// ------------------------------------------------------------
-// 1) Imports
-// ------------------------------------------------------------
+/**
+ * Boots the compatibility-sensitive checklist runtime after React has mounted.
+ *
+ * This module installs browser APIs, expands registered sync metadata, restores
+ * persistence, and coordinates legacy rendering. Route code imports it lazily;
+ * keep initialization order and idempotency intact when moving responsibilities.
+ */
 
 import "./registry.js";
 import "../data/bootstraps/lite.js";
@@ -18,12 +22,12 @@ import * as api from "../api.js";
 import { initLayoutSwitcher } from "./ui/layoutSwitcher.js";
 import { elements } from "./ui/dom.js";
 import { renderCrumbs } from "./ui/crumbs.js";
-import { emitPpgcUiSync } from './react-bridge/storeBridge.js';
-import { bootstrapTasksForGame } from './react-bridge/progressSummary.js';
+import { emitPpgcUiSync } from "./react-bridge/storeBridge.js";
+import { bootstrapTasksForGame } from "./react-bridge/progressSummary.js";
 import { initHistory } from "./history.js";
 import { ensurePpgcRoot } from "./runtime/globals.js";
 import { installUiGlobals } from "./runtime/uiGlobals.js";
-import { _assetPath } from "./utils/assetPath.js";
+import { assetPath } from "./utils/assetPath.js";
 import { ensureSyncSetsExpandedForGame } from "./sync.js";
 
 const PPGC = ensurePpgcRoot();
@@ -111,19 +115,45 @@ async function ensureGenDataLoaded(genKey) {
 
 	const p = (async () => {
 		switch (genKey) {
-			case "gen1": await import("../data/bootstraps/gen1.js"); break;
-			case "gen2": await import("../data/bootstraps/gen2.js"); break;
-			case "gen3": await import("../data/bootstraps/gen3.js"); break;
-			case "gen4": await import("../data/bootstraps/gen4.js"); break;
-			case "gen5": await import("../data/bootstraps/gen5.js"); break;
-			case "gen6": await import("../data/bootstraps/gen6.js"); break;
-			case "gen7": await import("../data/bootstraps/gen7.js"); break;
-			case "gen7_2": await import("../data/bootstraps/gen7_2.js"); break;
-			case "gen8": await import("../data/bootstraps/gen8.js"); break;
-			case "gen8_2": await import("../data/bootstraps/gen8_2.js"); break;
-			case "gen9": await import("../data/bootstraps/gen9.js"); break;
-			case "gen9_2": await import("../data/bootstraps/gen9_2.js"); break;
-			case "home": await import("../data/bootstraps/home.js"); break;
+			case "gen1":
+				await import("../data/bootstraps/gen1.js");
+				break;
+			case "gen2":
+				await import("../data/bootstraps/gen2.js");
+				break;
+			case "gen3":
+				await import("../data/bootstraps/gen3.js");
+				break;
+			case "gen4":
+				await import("../data/bootstraps/gen4.js");
+				break;
+			case "gen5":
+				await import("../data/bootstraps/gen5.js");
+				break;
+			case "gen6":
+				await import("../data/bootstraps/gen6.js");
+				break;
+			case "gen7":
+				await import("../data/bootstraps/gen7.js");
+				break;
+			case "gen7_2":
+				await import("../data/bootstraps/gen7_2.js");
+				break;
+			case "gen8":
+				await import("../data/bootstraps/gen8.js");
+				break;
+			case "gen8_2":
+				await import("../data/bootstraps/gen8_2.js");
+				break;
+			case "gen9":
+				await import("../data/bootstraps/gen9.js");
+				break;
+			case "gen9_2":
+				await import("../data/bootstraps/gen9_2.js");
+				break;
+			case "home":
+				await import("../data/bootstraps/home.js");
+				break;
 			default:
 				console.warn("[bootstrap] Unknown genKey:", genKey);
 		}
@@ -144,8 +174,14 @@ function ensureGenDataForState(state) {
 		const loaded = _getLoadedGensSet();
 		if (!loaded.has("home")) {
 			ensureGenDataLoaded("home")
-				.then(() => { try { renderAll(); } catch { } })
-				.catch((e) => console.debug("[bootstrap] home load failed:", e));
+				.then(() => {
+					try {
+						renderAll();
+					} catch {}
+				})
+				.catch((e) =>
+					console.debug("[bootstrap] home load failed:", e),
+				);
 			return false; // not ready yet
 		}
 		return true;
@@ -159,7 +195,11 @@ function ensureGenDataForState(state) {
 		if (loaded.has(genKey)) return true;
 
 		ensureGenDataLoaded(genKey)
-			.then(() => { try { renderAll(); } catch { } })
+			.then(() => {
+				try {
+					renderAll();
+				} catch {}
+			})
 			.catch((e) => console.debug("[bootstrap] gen load failed:", e));
 
 		return false; // not ready yet
@@ -176,7 +216,11 @@ function ensureGenDataForState(state) {
 	if (loaded.has(genKey)) return true;
 
 	ensureGenDataLoaded(genKey)
-		.then(() => { try { renderAll(); } catch { } })
+		.then(() => {
+			try {
+				renderAll();
+			} catch {}
+		})
 		.catch((e) => console.debug("[bootstrap] gen load failed:", e));
 
 	return false;
@@ -192,8 +236,8 @@ function renderAll() {
 	window.PPGC = window.PPGC || {};
 	PPGC._storeRef = store;
 	PPGC._tasksStoreRef = store.tasksStore;
-	PPGC.gen1SpriteColor = store.state.gen1SpriteMode === 'color';
-	PPGC.gen1SpriteRegion = store.state.gen1RegionMode === 'jp' ? 'jp' : 'rf';
+	PPGC.gen1SpriteColor = store.state.gen1SpriteMode === "color";
+	PPGC.gen1SpriteRegion = store.state.gen1RegionMode === "jp" ? "jp" : "rf";
 	renderCrumbs(store, elements);
 
 	const ready = ensureGenDataForState(store.state);
@@ -355,20 +399,21 @@ function resolveGameLabel(gameKey) {
 	return gameKey || "Unknown game";
 }
 
-
 function navigateToTask(sectionId, taskId = null) {
 	if (!sectionId) return;
-	const gameKey = (sectionId || '').split(':')[0] || null;
+	const gameKey = (sectionId || "").split(":")[0] || null;
 	if (gameKey) {
 		store.state.gameKey = gameKey;
 	}
 	store.state.sectionId = sectionId;
-	store.state.level = 'section';
+	store.state.level = "section";
 	renderAll();
 	if (!taskId) return;
 	requestAnimationFrame(() => {
-		const target = document.querySelector(`[data-task-id="${CSS.escape(String(taskId))}"]`);
-		target?.scrollIntoView({ block: 'center', behavior: 'smooth' });
+		const target = document.querySelector(
+			`[data-task-id="${CSS.escape(String(taskId))}"]`,
+		);
+		target?.scrollIntoView({ block: "center", behavior: "smooth" });
 	});
 }
 async function initAuthUI() {
@@ -377,7 +422,10 @@ async function initAuthUI() {
 	if (!accountBtn || !accountMenu) return;
 
 	// Wire the account button immediately — navigation doesn't need the auth overlay
-	if (!accountBtn._ppgcWired && accountBtn.dataset.reactAccountButton !== "true") {
+	if (
+		!accountBtn._ppgcWired &&
+		accountBtn.dataset.reactAccountButton !== "true"
+	) {
 		accountBtn._ppgcWired = true;
 		accountBtn.addEventListener("click", (e) => {
 			e.stopPropagation();
@@ -387,7 +435,7 @@ async function initAuthUI() {
 				if (s && s.level && s.level !== "account") {
 					PPGC._lastNonAccountState = { ...s };
 				}
-			} catch { }
+			} catch {}
 			window.location.assign("/account/general");
 		});
 	}
@@ -412,7 +460,9 @@ async function initAuthUI() {
 
 	// Close menu when clicking elsewhere
 	document.addEventListener("click", (e) => {
-		const withinAccountUi = e.target.closest("#ppgc-account-button, #ppgc-account-menu, .header-account");
+		const withinAccountUi = e.target.closest(
+			"#ppgc-account-button, #ppgc-account-menu, .header-account",
+		);
 		if (!withinAccountUi) {
 			closeAccountMenu();
 		}
@@ -421,7 +471,7 @@ async function initAuthUI() {
 	try {
 		await ensureAuthBootstrap();
 		if (currentUser) startServerAutoBackup();
-	} catch { }
+	} catch {}
 }
 
 // ------------------------------------------------------------
@@ -449,7 +499,7 @@ function runWhenIdle(fn, timeout = 1500) {
 	PPGC.ensureDistributionsLoaded = ensureDistributionsLoaded;
 })();
 
-window.__PPGC_NO_IMG__ = _assetPath('no-image.svg');
+window.__PPGC_NO_IMG__ = assetPath("no-image.svg");
 initLayoutSwitcher(renderAll);
 renderAll();
 PPGC.authBootstrapPromise = ensureAuthBootstrap();
@@ -539,7 +589,9 @@ window.addEventListener("ppgc:import:done", () => {
 		}
 
 		// Shield generic modal content areas
-		return !!el.closest("#modal, #researchModal, #collectionModal, #formsModal, #monInfoModal, #modelViewerModal");
+		return !!el.closest(
+			"#modal, #researchModal, #collectionModal, #formsModal, #monInfoModal, #modelViewerModal",
+		);
 	};
 
 	const stopIfInside = (e) => {
@@ -576,7 +628,9 @@ PPGC.resolveGameLabel = resolveGameLabel;
 PPGC.refreshCurrentUser = refreshCurrentUser;
 PPGC.ensureAuthBootstrap = ensureAuthBootstrap;
 PPGC.ensureGenDataLoaded = ensureGenDataLoaded;
-PPGC.ensureGenDataLoadedForGame = async function ensureGenDataLoadedForGame(gameKey) {
+PPGC.ensureGenDataLoadedForGame = async function ensureGenDataLoadedForGame(
+	gameKey,
+) {
 	const genKey = resolveGenKeyForGame(gameKey);
 	if (!genKey) return null;
 	await ensureGenDataLoaded(genKey);

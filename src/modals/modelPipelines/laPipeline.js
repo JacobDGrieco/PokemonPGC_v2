@@ -9,8 +9,15 @@ import {
 	swapUvChannelsIfNeeded,
 	logUvRangeOnce,
 } from "./utils.js";
-import { getModelKeyFromGlbUrl, getEyeParamsForModel, getBodyTintForModel } from "./eyes.js";
-import { makePokemonBodyMaterial, makePokemonEyeMaterial } from "./materials.js";
+import {
+	getModelKeyFromGlbUrl,
+	getEyeParamsForModel,
+	getBodyTintForModel,
+} from "./eyes.js";
+import {
+	makePokemonBodyMaterial,
+	makePokemonEyeMaterial,
+} from "./materials.js";
 
 // Map PLA/LA material names to your texture stems
 function plaStemForMaterial(matName) {
@@ -20,8 +27,10 @@ function plaStemForMaterial(matName) {
 	if (n.includes("bodyb") || n.includes("body_b")) return "body_b";
 
 	// eyes
-	if (n.includes("leye") || n.includes("l_eye") || n === "eye_l") return "eye";
-	if (n.includes("reye") || n.includes("r_eye") || n === "eye_r") return "eye";
+	if (n.includes("leye") || n.includes("l_eye") || n === "eye_l")
+		return "eye";
+	if (n.includes("reye") || n.includes("r_eye") || n === "eye_r")
+		return "eye";
 	if (n.includes("eye")) return "eye";
 
 	return null;
@@ -32,9 +41,13 @@ function deriveBellyTintFromBase(baseLinear) {
 	return baseLinear.clone().lerp(warm, 0.75);
 }
 
-export async function applyLegendsArceusTextureSetToScene(root3d, { glbUrl, variant, texDir, eyeShaderMats }) {
+export async function applyLegendsArceusTextureSetToScene(
+	root3d,
+	{ glbUrl, variant, texDir, eyeShaderMats },
+) {
 	const modelKey = getModelKeyFromGlbUrl(glbUrl);
-	if (!modelKey) throw new Error("LA: could not parse model id from glbUrl: " + glbUrl);
+	if (!modelKey)
+		throw new Error("LA: could not parse model id from glbUrl: " + glbUrl);
 
 	// ------------------------------------------------------------
 	// ✅ NEW: resolve LA texture dir based on the actual GLB filename
@@ -63,7 +76,9 @@ export async function applyLegendsArceusTextureSetToScene(root3d, { glbUrl, vari
 		eyeShaderMats,
 
 		// ✅ IMPORTANT: load the manifest from the *resolved* folder
-		textureManifest: effectiveTexDir ? await loadTextureManifest(effectiveTexDir) : null,
+		textureManifest: effectiveTexDir
+			? await loadTextureManifest(effectiveTexDir)
+			: null,
 
 		// (optional) if applyGenericTextureSetToScene still uses probing in some cases,
 		// keep a sane probe relative path that exists for LA dumps:

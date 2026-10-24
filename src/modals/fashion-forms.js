@@ -9,6 +9,7 @@ import {
 	applyFormsGridLayout,
 } from "./modal.js";
 import { cleanupFormsModal } from "./helpers.js";
+import { hideModalElement, showModalElement } from "./modal-state.js";
 
 export function setupFashionForms(store, deps) {
 	const {
@@ -52,8 +53,7 @@ export function setupFashionForms(store, deps) {
 			}
 		}
 		cleanupFormsModal();
-		formsModal.classList.remove("open");
-		formsModal.setAttribute("aria-hidden", "true");
+		hideModalElement(formsModal);
 		formsModal.setAttribute("inert", "");
 	};
 
@@ -86,8 +86,8 @@ export function setupFashionForms(store, deps) {
 		resetFormsWheelLayout(formsWheel);
 
 		const chips = forms.map((form) => {
-			const name = typeof form === "string" ? form : form?.name ?? "";
-			const id = typeof form === "string" ? form : form?.id ?? "";
+			const name = typeof form === "string" ? form : (form?.name ?? "");
+			const id = typeof form === "string" ? form : (form?.id ?? "");
 			const imgLike = typeof form === "object" ? form?.img : null;
 			const imgUrl = resolveFashionImg(imgLike, gameKey);
 
@@ -119,34 +119,51 @@ export function setupFashionForms(store, deps) {
 				const now = btn.getAttribute("aria-checked") !== "true";
 				btn.setAttribute("aria-checked", now ? "true" : "false");
 
-				const { obj: nextNode } = getFormsNode(gameKey, categoryId, item.id);
+				const { obj: nextNode } = getFormsNode(
+					gameKey,
+					categoryId,
+					item.id,
+				);
 				nextNode.forms = nextNode.forms || {};
 				nextNode.forms[name] = now;
 
 				const total = forms.length;
-				const onCount = Object.values(nextNode.forms).filter(Boolean).length;
+				const onCount = Object.values(nextNode.forms).filter(
+					Boolean,
+				).length;
 				nextNode.all = onCount === total;
 
 				setFormsNode(gameKey, categoryId, item.id, nextNode);
 				save();
 
 				const mainChk = document.querySelector(
-					`[data-fashion-main="${gameKey}:${categoryId}:${item.id}"]`
+					`[data-fashion-main="${gameKey}:${categoryId}:${item.id}"]`,
 				);
 				if (mainChk instanceof HTMLInputElement) {
 					mainChk.checked = !!nextNode.all;
 				}
 
 				const key = `${gameKey}:${categoryId}:${item.id}`;
-				document.querySelectorAll(`[data-fashion-count="${key}"]`).forEach((el) => {
-					el.textContent = `${onCount}/${total}`;
-				});
+				document
+					.querySelectorAll(`[data-fashion-count="${key}"]`)
+					.forEach((el) => {
+						el.textContent = `${onCount}/${total}`;
+					});
 
 				updateFashionSummary(gameKey, categoryId);
 				refreshSectionHeader();
-				window.PPGC?.applyTaskSyncsFromFashion?.(gameKey, categoryId, item.id);
+				window.PPGC?.applyTaskSyncsFromFashion?.(
+					gameKey,
+					categoryId,
+					item.id,
+				);
 				if (typeof applyFashionSyncForItem === "function") {
-					applyFashionSyncForItem(gameKey, categoryId, item, !!nextNode.all);
+					applyFashionSyncForItem(
+						gameKey,
+						categoryId,
+						item,
+						!!nextNode.all,
+					);
 				}
 			});
 
@@ -158,15 +175,21 @@ export function setupFashionForms(store, deps) {
 		let onResize = null;
 
 		if (useRadial) {
-			onResize = createWheelResizeHandler("fashion", dialog, formsWheel, chips, {
-				preferWidth,
-				sizeCap: 1000,
-				flattenSyForRingsGte: 3,
-				innerRadiusStrategy(minR, outerR) {
-					return Math.max(40, outerR * 0.25);
+			onResize = createWheelResizeHandler(
+				"fashion",
+				dialog,
+				formsWheel,
+				chips,
+				{
+					preferWidth,
+					sizeCap: 1000,
+					flattenSyForRingsGte: 3,
+					innerRadiusStrategy(minR, outerR) {
+						return Math.max(40, outerR * 0.25);
+					},
+					extraRingYOffset: { from: 3, factor: 1.08 },
 				},
-				extraRingYOffset: { from: 3, factor: 1.08 },
-			});
+			);
 			window.addEventListener("resize", onResize, { passive: true });
 		} else {
 			applyFormsGridLayout(formsWheel, chips, {
@@ -191,13 +214,11 @@ export function setupFashionForms(store, deps) {
 				}
 			}
 			cleanupFormsModal();
-			formsModal.classList.remove("open");
-			formsModal.setAttribute("aria-hidden", "true");
+			hideModalElement(formsModal);
 			formsModal.setAttribute("inert", "");
 		};
 
-		formsModal.classList.add("open");
-		formsModal.setAttribute("aria-hidden", "false");
+		showModalElement(formsModal);
 	}
 
 	formsModal.addEventListener("click", (e) => {

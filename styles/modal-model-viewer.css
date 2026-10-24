@@ -541,7 +541,7 @@
 	background: rgba(255, 255, 255, 0.04);
 }
 
-.ppgc-modelviewer__checkrow>span {
+.ppgc-modelviewer__checkrow > span {
 	flex: 1 1 auto;
 	min-width: 0;
 	justify-content: end;
@@ -605,7 +605,6 @@
 	opacity: 0.8;
 	white-space: nowrap;
 }
-
 
 /* ===============================
    Overlay dropdown UI (top-left)
@@ -730,7 +729,8 @@
 
 /* Stack to one column on narrow widths */
 @media (max-width: 900px) {
-	.ppgc-modelviewer__drop[data-drop-panel="assets"] .ppgc-modelviewer__meshctl {
+	.ppgc-modelviewer__drop[data-drop-panel="assets"]
+		.ppgc-modelviewer__meshctl {
 		grid-template-columns: 1fr;
 	}
 }
@@ -790,4 +790,55 @@
 .ppgc-modelviewer.is-solo .ppgc-modelviewer__overlay,
 .ppgc-modelviewer.is-solo .ppgc-modelviewer__help {
 	display: none !important;
+}
+
+@media (max-width: 900px), (pointer: coarse) {
+	#modelViewerModal {
+		padding: max(4px, env(safe-area-inset-top))
+			max(4px, env(safe-area-inset-right))
+			max(4px, env(safe-area-inset-bottom))
+			max(4px, env(safe-area-inset-left));
+	}
+
+	#modelViewerModal .modal-dialog {
+		width: 100%;
+		height: 100%;
+		max-width: 100%;
+		max-height: 100%;
+	}
+
+	.ppgc-modelviewer__select,
+	.ppgc-modelviewer__pill,
+	.ppgc-modelviewer__dropbtn,
+	.ppgc-modelviewer__minireset,
+	.ppgc-modelviewer__color {
+		min-height: var(--mobile-target-size);
+		font-size: 14px;
+	}
+
+	.ppgc-modelviewer__select {
+		height: var(--mobile-target-size);
+		min-width: min(100%, 200px);
+		max-width: 100%;
+	}
+
+	.ppgc-modelviewer__color,
+	.ppgc-modelviewer__minireset {
+		height: var(--mobile-target-size);
+	}
+
+	.ppgc-modelviewer__label,
+	.ppgc-modelviewer__opacitylabel,
+	.ppgc-modelviewer__group-title {
+		font-size: 14px;
+	}
+
+	.ppgc-modelviewer__checkrow {
+		min-height: var(--mobile-target-size);
+	}
+
+	.ppgc-modelviewer__drop[data-drop-panel="assets"]
+		.ppgc-modelviewer__meshctl {
+		max-height: 54dvh;
+	}
 }

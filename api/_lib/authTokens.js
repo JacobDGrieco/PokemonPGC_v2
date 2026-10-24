@@ -15,11 +15,18 @@ export function createRawAuthToken() {
 }
 
 export function hashAuthToken(rawToken) {
-	return crypto.createHash("sha256").update(String(rawToken || ""), "utf8").digest("hex");
+	return crypto
+		.createHash("sha256")
+		.update(String(rawToken || ""), "utf8")
+		.digest("hex");
 }
 
 export function hashRateLimitIdentity(value) {
-	return crypto.createHash("sha256").update(String(value || ""), "utf8").digest("hex").slice(0, 24);
+	return crypto
+		.createHash("sha256")
+		.update(String(value || ""), "utf8")
+		.digest("hex")
+		.slice(0, 24);
 }
 
 export function isValidRawAuthToken(rawToken) {
@@ -27,7 +34,8 @@ export function isValidRawAuthToken(rawToken) {
 }
 
 export function buildAuthActionUrl(origin, path, rawToken) {
-	if (!isValidRawAuthToken(rawToken)) throw new Error("Invalid authentication token.");
+	if (!isValidRawAuthToken(rawToken))
+		throw new Error("Invalid authentication token.");
 	const url = new URL(path, `${String(origin || "").replace(/\/+$/, "")}/`);
 	url.searchParams.set("token", rawToken);
 	return url.toString();
@@ -37,7 +45,12 @@ export function buildAuthActionUrl(origin, path, rawToken) {
  * Replaces any prior token for the same purpose. Only the digest is persisted;
  * the raw value exists long enough to be delivered through the side channel.
  */
-export async function issueAuthToken({ userId, purpose, ttlMs, now = new Date() }) {
+export async function issueAuthToken({
+	userId,
+	purpose,
+	ttlMs,
+	now = new Date(),
+}) {
 	if (!Object.values(AUTH_TOKEN_PURPOSES).includes(purpose)) {
 		throw new Error("Invalid authentication token purpose.");
 	}
@@ -47,7 +60,9 @@ export async function issueAuthToken({ userId, purpose, ttlMs, now = new Date() 
 
 	await prisma.$transaction([
 		prisma.authToken.deleteMany({ where: { userId, purpose } }),
-		prisma.authToken.create({ data: { userId, purpose, tokenHash, expiresAt } }),
+		prisma.authToken.create({
+			data: { userId, purpose, tokenHash, expiresAt },
+		}),
 	]);
 
 	return { rawToken, tokenHash, expiresAt };
@@ -55,10 +70,16 @@ export async function issueAuthToken({ userId, purpose, ttlMs, now = new Date() 
 
 export async function revokeAuthToken(rawToken) {
 	if (!isValidRawAuthToken(rawToken)) return;
-	await prisma.authToken.deleteMany({ where: { tokenHash: hashAuthToken(rawToken) } });
+	await prisma.authToken.deleteMany({
+		where: { tokenHash: hashAuthToken(rawToken) },
+	});
 }
 
-export async function wasAuthTokenIssuedRecently(userId, purpose, now = new Date()) {
+export async function wasAuthTokenIssuedRecently(
+	userId,
+	purpose,
+	now = new Date(),
+) {
 	const threshold = new Date(now.getTime() - AUTH_TOKEN_REQUEST_COOLDOWN_MS);
 	const recent = await prisma.authToken.findFirst({
 		where: {

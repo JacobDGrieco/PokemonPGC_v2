@@ -9,8 +9,15 @@ import {
 	swapUvChannelsIfNeeded,
 	logUvRangeOnce,
 } from "./utils.js";
-import { getModelKeyFromGlbUrl, getEyeParamsForModel, getBodyTintForModel } from "./eyes.js";
-import { makePokemonBodyMaterial, makePokemonEyeMaterial } from "./materials.js";
+import {
+	getModelKeyFromGlbUrl,
+	getEyeParamsForModel,
+	getBodyTintForModel,
+} from "./eyes.js";
+import {
+	makePokemonBodyMaterial,
+	makePokemonEyeMaterial,
+} from "./materials.js";
 
 function stemForMaterial(matName) {
 	const raw = String(matName || "");
@@ -21,7 +28,13 @@ function stemForMaterial(matName) {
 		.replace(/\s+/g, " ");
 
 	// eyes
-	if (n.includes("eye") || n.includes("leye") || n.includes("reye") || n.includes("l eye") || n.includes("r eye"))
+	if (
+		n.includes("eye") ||
+		n.includes("leye") ||
+		n.includes("reye") ||
+		n.includes("l eye") ||
+		n.includes("r eye")
+	)
 		return "eye";
 
 	// body A/B (prefer lettered first)
@@ -40,9 +53,13 @@ function deriveBellyTintFromBase(baseLinear) {
 	return baseLinear.clone().lerp(warm, 0.75);
 }
 
-export async function applyLegendsZATextureSetToScene(root3d, { glbUrl, variant, texDir, eyeShaderMats }) {
+export async function applyLegendsZATextureSetToScene(
+	root3d,
+	{ glbUrl, variant, texDir, eyeShaderMats },
+) {
 	const modelKey = getModelKeyFromGlbUrl(glbUrl);
-	if (!modelKey) throw new Error("LZA: could not parse model id from glbUrl: " + glbUrl);
+	if (!modelKey)
+		throw new Error("LZA: could not parse model id from glbUrl: " + glbUrl);
 
 	const isShiny = String(variant || "").toLowerCase() === "shiny";
 
@@ -78,7 +95,9 @@ export async function applyLegendsZATextureSetToScene(root3d, { glbUrl, variant,
 		eyeShaderMats,
 
 		// ✅ IMPORTANT: load the manifest from the *resolved* folder
-		textureManifest: effectiveTexDir ? await loadTextureManifest(effectiveTexDir) : null,
+		textureManifest: effectiveTexDir
+			? await loadTextureManifest(effectiveTexDir)
+			: null,
 
 		stemForMaterial,
 
@@ -97,7 +116,8 @@ export async function applyLegendsZATextureSetToScene(root3d, { glbUrl, variant,
 				return [s];
 			})();
 
-			const mk = (suffixes) => aliases.flatMap((a) => suffixes.map((sf) => `${dir}${a}${sf}`));
+			const mk = (suffixes) =>
+				aliases.flatMap((a) => suffixes.map((sf) => `${dir}${a}${sf}`));
 
 			// Eyes in LZA typically only need alb/nrm/lym (no rgn/mtl/ao in many cases)
 			if (String(stem).toLowerCase() === "eye") {

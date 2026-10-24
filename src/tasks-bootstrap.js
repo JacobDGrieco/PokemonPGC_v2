@@ -1,3 +1,8 @@
+/**
+ * Materializes authored task/section seeds into mutable per-game runtime state.
+ * Stable IDs and the seed-versus-persisted merge order are persistence
+ * contracts; bootstrap must retain user completion and trainer-party metadata.
+ */
 import { save, uid } from "./store.js";
 
 export function ensureSections(gameKey, PPGC = window.PPGC) {
@@ -7,7 +12,10 @@ export function ensureSections(gameKey, PPGC = window.PPGC) {
 	if (!arr || (!arr.length && seed.length)) {
 		PPGC._sectionsStore.set(
 			gameKey,
-			seed.map((s) => ({ id: s.id || uid(), title: s.title || "Section" }))
+			seed.map((s) => ({
+				id: s.id || uid(),
+				title: s.title || "Section",
+			})),
 		);
 		save();
 		arr = PPGC._sectionsStore.get(gameKey);
@@ -25,7 +33,8 @@ export function buildTaskIndex(tasks) {
 		for (const t of arr || []) {
 			if (!t || typeof t !== "object" || !t.id) continue;
 			map.set(t.id, { task: t, parent });
-			if (Array.isArray(t.children) && t.children.length) walk(t.children, t);
+			if (Array.isArray(t.children) && t.children.length)
+				walk(t.children, t);
 		}
 	})(tasks || []);
 	return map;
@@ -38,17 +47,28 @@ export function buildTaskLayoutMeta(rowsSpec, index, spacerId = "spacer") {
 			.map((id) => index.get(id))
 			.filter(Boolean);
 
-		const childParentIds = [...new Set(entries.map((entry) => entry.parent?.id).filter(Boolean))];
+		const childParentIds = [
+			...new Set(
+				entries.map((entry) => entry.parent?.id).filter(Boolean),
+			),
+		];
 		const mainEntries = entries.filter((entry) => !entry.parent);
-		const singleMainEntry = entries.length === 1 && mainEntries.length === 1 ? mainEntries[0] : null;
-		const hasChildren = !!(singleMainEntry?.task?.children?.length);
+		const singleMainEntry =
+			entries.length === 1 && mainEntries.length === 1
+				? mainEntries[0]
+				: null;
+		const hasChildren = !!singleMainEntry?.task?.children?.length;
 
 		return {
 			includesSubtasks: entries.some((entry) => !!entry.parent),
 			isSingleMainWithChildren: !!singleMainEntry && hasChildren,
 			mainTaskId: singleMainEntry?.task?.id || null,
-			isPureChildRow: entries.length > 0 && entries.every((entry) => !!entry.parent) && childParentIds.length === 1,
-			childParentId: childParentIds.length === 1 ? childParentIds[0] : null,
+			isPureChildRow:
+				entries.length > 0 &&
+				entries.every((entry) => !!entry.parent) &&
+				childParentIds.length === 1,
+			childParentId:
+				childParentIds.length === 1 ? childParentIds[0] : null,
 		};
 	});
 
@@ -64,13 +84,21 @@ export function buildTaskLayoutMeta(rowsSpec, index, spacerId = "spacer") {
 		let lastChildRow = i;
 		for (let j = i + 1; j < rowMeta.length; j += 1) {
 			const candidate = rowMeta[j];
-			if (!candidate.isPureChildRow || candidate.childParentId !== meta.mainTaskId) break;
+			if (
+				!candidate.isPureChildRow ||
+				candidate.childParentId !== meta.mainTaskId
+			)
+				break;
 			lastChildRow = j;
 		}
 
 		if (lastChildRow === i) continue;
 
-		decorated[i].rowClasses.push("task-lineage-row", "task-lineage-start", "task-lineage-parent");
+		decorated[i].rowClasses.push(
+			"task-lineage-row",
+			"task-lineage-start",
+			"task-lineage-parent",
+		);
 		for (let j = i + 1; j <= lastChildRow; j += 1) {
 			decorated[j].rowClasses.push(
 				"task-lineage-row",
@@ -95,7 +123,10 @@ export function buildTaskLayoutGroups(rowsSpec, index, spacerId = "spacer") {
 		if (rowMeta.rowClasses.includes("task-lineage-start")) {
 			const rowIndexes = [i];
 			let j = i + 1;
-			while (j < meta.length && meta[j]?.rowClasses?.includes("task-lineage-row")) {
+			while (
+				j < meta.length &&
+				meta[j]?.rowClasses?.includes("task-lineage-row")
+			) {
 				rowIndexes.push(j);
 				if (meta[j].rowClasses.includes("task-lineage-end")) break;
 				j += 1;
@@ -117,18 +148,39 @@ export function buildTaskLayoutGroups(rowsSpec, index, spacerId = "spacer") {
 	return { meta, groups };
 }
 
-export function bootstrapTasks(sectionId, tasksStore, { indexSectionTasks, indexDexSyncs } = {}) {
+export function bootstrapTasks(
+	sectionId,
+	tasksStore,
+	{ indexSectionTasks, indexDexSyncs } = {},
+) {
 	const seed = (window.DATA.tasks && window.DATA.tasks[sectionId]) || [];
 
 	function normalizeEitherState(eithers) {
-		if (!eithers || typeof eithers !== "object" || Array.isArray(eithers)) return eithers;
+		if (!eithers || typeof eithers !== "object" || Array.isArray(eithers))
+			return eithers;
 
-		const keys = Object.keys(eithers).filter((key) => eithers[key] && typeof eithers[key] === "object" && !Array.isArray(eithers[key]));
+		const keys = Object.keys(eithers).filter(
+			(key) =>
+				eithers[key] &&
+				typeof eithers[key] === "object" &&
+				!Array.isArray(eithers[key]),
+		);
 		const numericKeys = keys.filter((key) => /^\d+$/.test(key));
-		const hasLeft = Object.prototype.hasOwnProperty.call(eithers, "left") && eithers.left && typeof eithers.left === "object";
-		const hasRight = Object.prototype.hasOwnProperty.call(eithers, "right") && eithers.right && typeof eithers.right === "object";
+		const hasLeft =
+			Object.prototype.hasOwnProperty.call(eithers, "left") &&
+			eithers.left &&
+			typeof eithers.left === "object";
+		const hasRight =
+			Object.prototype.hasOwnProperty.call(eithers, "right") &&
+			eithers.right &&
+			typeof eithers.right === "object";
 
-		if (!hasLeft && !hasRight && numericKeys.length === 2 && keys.length === 2) {
+		if (
+			!hasLeft &&
+			!hasRight &&
+			numericKeys.length === 2 &&
+			keys.length === 2
+		) {
 			const sorted = numericKeys.map(Number).sort((a, b) => a - b);
 			return {
 				left: eithers[String(sorted[0])],
@@ -144,7 +196,8 @@ export function bootstrapTasks(sectionId, tasksStore, { indexSectionTasks, index
 			if ((!next.left || !next.right) && numericKeys.length) {
 				const sorted = numericKeys.map(Number).sort((a, b) => a - b);
 				if (!next.left) next.left = eithers[String(sorted[0])];
-				if (!next.right) next.right = eithers[String(sorted[sorted.length - 1])];
+				if (!next.right)
+					next.right = eithers[String(sorted[sorted.length - 1])];
 			}
 
 			return next;
@@ -165,7 +218,8 @@ export function bootstrapTasks(sectionId, tasksStore, { indexSectionTasks, index
 					t.done = nextDone;
 					if (Array.isArray(t.multi)) {
 						t.multi.forEach((option) => {
-							if (option && typeof option === "object") option.done = nextDone;
+							if (option && typeof option === "object")
+								option.done = nextDone;
 						});
 					}
 				}
@@ -204,13 +258,40 @@ export function bootstrapTasks(sectionId, tasksStore, { indexSectionTasks, index
 				if (!t || typeof t !== "object" || !t.id) continue;
 				const s = seedIndex.get(t.id);
 				if (s) {
-					if (s.img && !t.img) { t.img = s.img; changed = true; }
-					if (s.imgS && !t.imgS) { t.imgS = s.imgS; changed = true; }
-					if (Array.isArray(s.tags) && !Array.isArray(t.tags)) { t.tags = [...s.tags]; changed = true; }
-					if (Array.isArray(s.taskSync) && !Array.isArray(t.taskSync)) { t.taskSync = [...s.taskSync]; changed = true; }
-					if (Array.isArray(s.dexSync) && !Array.isArray(t.dexSync)) { t.dexSync = [...s.dexSync]; changed = true; }
-					if (Array.isArray(s.fashionSync) && !Array.isArray(t.fashionSync)) { t.fashionSync = [...s.fashionSync]; changed = true; }
-					if (Array.isArray(s.tiers) && !Array.isArray(t.tiers)) { t.tiers = [...s.tiers]; changed = true; }
+					if (s.img && !t.img) {
+						t.img = s.img;
+						changed = true;
+					}
+					if (s.imgS && !t.imgS) {
+						t.imgS = s.imgS;
+						changed = true;
+					}
+					if (Array.isArray(s.tags) && !Array.isArray(t.tags)) {
+						t.tags = [...s.tags];
+						changed = true;
+					}
+					if (
+						Array.isArray(s.taskSync) &&
+						!Array.isArray(t.taskSync)
+					) {
+						t.taskSync = [...s.taskSync];
+						changed = true;
+					}
+					if (Array.isArray(s.dexSync) && !Array.isArray(t.dexSync)) {
+						t.dexSync = [...s.dexSync];
+						changed = true;
+					}
+					if (
+						Array.isArray(s.fashionSync) &&
+						!Array.isArray(t.fashionSync)
+					) {
+						t.fashionSync = [...s.fashionSync];
+						changed = true;
+					}
+					if (Array.isArray(s.tiers) && !Array.isArray(t.tiers)) {
+						t.tiers = [...s.tiers];
+						changed = true;
+					}
 					if (Array.isArray(s.multi)) {
 						const seedMulti = s.multi;
 						if (!Array.isArray(t.multi)) {
@@ -218,15 +299,23 @@ export function bootstrapTasks(sectionId, tasksStore, { indexSectionTasks, index
 							changed = true;
 						} else {
 							for (const seedOpt of seedMulti) {
-								if (!seedOpt || typeof seedOpt !== "object") continue;
+								if (!seedOpt || typeof seedOpt !== "object")
+									continue;
 								const key = String(seedOpt.id);
-								let targetOpt = t.multi.find((opt) => String(opt?.id) === key);
+								let targetOpt = t.multi.find(
+									(opt) => String(opt?.id) === key,
+								);
 								if (!targetOpt) {
-									t.multi.push(JSON.parse(JSON.stringify(seedOpt)));
+									t.multi.push(
+										JSON.parse(JSON.stringify(seedOpt)),
+									);
 									changed = true;
 									continue;
 								}
-								if (seedOpt.text && !targetOpt.text) { targetOpt.text = seedOpt.text; changed = true; }
+								if (seedOpt.text && !targetOpt.text) {
+									targetOpt.text = seedOpt.text;
+									changed = true;
+								}
 							}
 						}
 					}
@@ -239,33 +328,80 @@ export function bootstrapTasks(sectionId, tasksStore, { indexSectionTasks, index
 							for (const key of Object.keys(seedEither || {})) {
 								const so = seedEither?.[key];
 								if (!so || typeof so !== "object") continue;
-								if (!t.eithers[key] || typeof t.eithers[key] !== "object") {
-									t.eithers[key] = JSON.parse(JSON.stringify(so));
+								if (
+									!t.eithers[key] ||
+									typeof t.eithers[key] !== "object"
+								) {
+									t.eithers[key] = JSON.parse(
+										JSON.stringify(so),
+									);
 									changed = true;
 									continue;
 								}
-								if (so.text && !t.eithers[key].text) { t.eithers[key].text = so.text; changed = true; }
-								for (const k of ["taskSync", "dexSync", "fashionSync"]) {
-									if (Array.isArray(so[k]) && !Array.isArray(t.eithers[key][k])) {
+								if (so.text && !t.eithers[key].text) {
+									t.eithers[key].text = so.text;
+									changed = true;
+								}
+								for (const k of [
+									"taskSync",
+									"dexSync",
+									"fashionSync",
+								]) {
+									if (
+										Array.isArray(so[k]) &&
+										!Array.isArray(t.eithers[key][k])
+									) {
 										t.eithers[key][k] = [...so[k]];
 										changed = true;
 									}
 								}
 							}
 						}
-						const normalizedEithers = normalizeEitherState(t.eithers);
+						const normalizedEithers = normalizeEitherState(
+							t.eithers,
+						);
 						if (normalizedEithers !== t.eithers) {
 							t.eithers = normalizedEithers;
 							changed = true;
 						}
 					}
-					if (s.tooltip && !t.tooltip) { t.tooltip = s.tooltip; changed = true; }
-					if (typeof s.noCenter === "boolean" && typeof t.noCenter !== "boolean") { t.noCenter = !!s.noCenter; changed = true; }
-					if (typeof s.startGame === "boolean" && typeof t.startGame !== "boolean") { t.startGame = !!s.startGame; changed = true; }
-					if (Array.isArray(s.party) && !Array.isArray(t.party)) { t.party = s.party; changed = true; }
-					if (Array.isArray(s.rematchParty) && !Array.isArray(t.rematchParty)) { t.rematchParty = s.rematchParty; changed = true; }
-					if (s.reward != null && t.reward == null) { t.reward = s.reward; changed = true; }
-					if (s.rematchReward != null && t.rematchReward == null) { t.rematchReward = s.rematchReward; changed = true; }
+					if (s.tooltip && !t.tooltip) {
+						t.tooltip = s.tooltip;
+						changed = true;
+					}
+					if (
+						typeof s.noCenter === "boolean" &&
+						typeof t.noCenter !== "boolean"
+					) {
+						t.noCenter = !!s.noCenter;
+						changed = true;
+					}
+					if (
+						typeof s.startGame === "boolean" &&
+						typeof t.startGame !== "boolean"
+					) {
+						t.startGame = !!s.startGame;
+						changed = true;
+					}
+					if (Array.isArray(s.party) && !Array.isArray(t.party)) {
+						t.party = s.party;
+						changed = true;
+					}
+					if (
+						Array.isArray(s.rematchParty) &&
+						!Array.isArray(t.rematchParty)
+					) {
+						t.rematchParty = s.rematchParty;
+						changed = true;
+					}
+					if (s.reward != null && t.reward == null) {
+						t.reward = s.reward;
+						changed = true;
+					}
+					if (s.rematchReward != null && t.rematchReward == null) {
+						t.rematchReward = s.rematchReward;
+						changed = true;
+					}
 				}
 				if (Array.isArray(t.children)) sync(t.children);
 			}
@@ -290,21 +426,29 @@ export function bootstrapTasks(sectionId, tasksStore, { indexSectionTasks, index
 		unit: t.unit || null,
 		currentTier: typeof t.currentTier === "number" ? t.currentTier : 0,
 		currentCount: typeof t.currentCount === "number" ? t.currentCount : 0,
-		multi: Array.isArray(t.multi) ? t.multi.map((opt) => ({
-			...opt,
-			done: !!opt?.done,
-		})) : undefined,
+		multi: Array.isArray(t.multi)
+			? t.multi.map((opt) => ({
+					...opt,
+					done: !!opt?.done,
+				}))
+			: undefined,
 		eithers: t.eithers ? JSON.parse(JSON.stringify(t.eithers)) : undefined,
 		tooltip: t.tooltip || null,
 		noCenter: !!t.noCenter,
-		children: Array.isArray(t.children) ? t.children.map(cloneTaskDeep) : [],
+		children: Array.isArray(t.children)
+			? t.children.map(cloneTaskDeep)
+			: [],
 		taskSync: Array.isArray(t.taskSync) ? [...t.taskSync] : undefined,
 		dexSync: Array.isArray(t.dexSync) ? [...t.dexSync] : undefined,
-		fashionSync: Array.isArray(t.fashionSync) ? [...t.fashionSync] : undefined,
+		fashionSync: Array.isArray(t.fashionSync)
+			? [...t.fashionSync]
+			: undefined,
 		tags: Array.isArray(t.tags) ? [...t.tags] : undefined,
 		startGame: t.startGame === true,
 		party: Array.isArray(t.party) ? t.party : undefined,
-		rematchParty: Array.isArray(t.rematchParty) ? t.rematchParty : undefined,
+		rematchParty: Array.isArray(t.rematchParty)
+			? t.rematchParty
+			: undefined,
 		reward: t.reward != null ? t.reward : undefined,
 		rematchReward: t.rematchReward != null ? t.rematchReward : undefined,
 	});

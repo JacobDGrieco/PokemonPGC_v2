@@ -4,7 +4,11 @@
 // Local copy of normalizeFlag from dex.js – keep in sync if you change it there.
 import { isMythicalForm } from "./dex-config.js";
 import { getDexFormsNode } from "./dex-store.js";
-import { isCompletedForGame, normalizeFlag, registerKeywordSectionMeter } from "./helpers.js";
+import {
+	isCompletedForGame,
+	normalizeFlag,
+	registerKeywordSectionMeter,
+} from "./helpers.js";
 import { isGCEASection } from "../store.js";
 
 export const PATH_OF_SOLITUDE_KEY = "__pathOfSolitude";
@@ -33,15 +37,19 @@ function _tierStatsForMon(tasks, rec = {}) {
 export function researchStatsFor(gameKey, genKey, store) {
 	void genKey;
 
-	const dex = Array.isArray(window.DATA?.dex?.[gameKey]) ? window.DATA.dex[gameKey] : [];
+	const dex = Array.isArray(window.DATA?.dex?.[gameKey])
+		? window.DATA.dex[gameKey]
+		: [];
 
 	const recAll =
 		store?.dexResearchStatus instanceof Map
-			? (store.dexResearchStatus.get(gameKey) || {})
+			? store.dexResearchStatus.get(gameKey) || {}
 			: {};
 
-	let baseTotal = 0, baseDone = 0;
-	let extraTotal = 0, extraDone = 0;
+	let baseTotal = 0,
+		baseDone = 0;
+	let extraTotal = 0,
+		extraDone = 0;
 
 	for (const mon of dex) {
 		const tasks = Array.isArray(mon?.research) ? mon.research : [];
@@ -66,12 +74,18 @@ export function researchStatsFor(gameKey, genKey, store) {
  * Compute research-task completion percentage for a game.
  */
 export function researchPctFor(gameKey, genKey, store) {
-	const { baseTotal, baseDone, extraTotal, extraDone } = researchStatsFor(gameKey, genKey, store);
+	const { baseTotal, baseDone, extraTotal, extraDone } = researchStatsFor(
+		gameKey,
+		genKey,
+		store,
+	);
 
-	const basePct = baseTotal > 0 ? Math.round((baseDone / baseTotal) * 100) : 0;
+	const basePct =
+		baseTotal > 0 ? Math.round((baseDone / baseTotal) * 100) : 0;
 	const fullTotal = baseTotal + extraTotal;
 	const fullDone = baseDone + extraDone;
-	const fullPct = fullTotal > 0 ? Math.round((fullDone / fullTotal) * 100) : 0;
+	const fullPct =
+		fullTotal > 0 ? Math.round((fullDone / fullTotal) * 100) : 0;
 
 	// If your UI expects the "extended overlay" behavior, keep it simple for now:
 	// show fullPct only once base is done, otherwise show basePct.
@@ -86,14 +100,18 @@ export function pathOfSolitudeStatsFor(gameKey, genKey, store) {
 		return { baseTotal: 0, baseDone: 0, extraTotal: 0, extraDone: 0 };
 	}
 
-	const dex = Array.isArray(window.DATA?.dex?.[gameKey]) ? window.DATA.dex[gameKey] : [];
+	const dex = Array.isArray(window.DATA?.dex?.[gameKey])
+		? window.DATA.dex[gameKey]
+		: [];
 	const recAll =
 		store?.dexResearchStatus instanceof Map
-			? (store.dexResearchStatus.get(gameKey) || {})
+			? store.dexResearchStatus.get(gameKey) || {}
 			: {};
 
-	let baseTotal = 0, baseDone = 0;
-	let extraTotal = 0, extraDone = 0;
+	let baseTotal = 0,
+		baseDone = 0;
+	let extraTotal = 0,
+		extraDone = 0;
 
 	for (const mon of dex) {
 		const rec = recAll?.[mon.id] || {};
@@ -112,7 +130,8 @@ export function pathOfSolitudeStatsFor(gameKey, genKey, store) {
 }
 
 export function pathOfSolitudePctFor(gameKey, genKey, store) {
-	const { baseTotal, baseDone, extraTotal, extraDone } = pathOfSolitudeStatsFor(gameKey, genKey, store);
+	const { baseTotal, baseDone, extraTotal, extraDone } =
+		pathOfSolitudeStatsFor(gameKey, genKey, store);
 
 	if (!baseTotal) return 0;
 
@@ -137,9 +156,9 @@ export function formsPctFor(gameKey, genKey, store) {
 	const natDex = window.DATA.dex?.[natKey] || [];
 	const haveNat = natDex.length > 0;
 
-	const formsDex = haveNat ? natDex : (window.DATA.dex?.[gameKey] || []);
+	const formsDex = haveNat ? natDex : window.DATA.dex?.[gameKey] || [];
 	const speciesWithForms = formsDex.filter(
-		(m) => Array.isArray(m.forms) && m.forms.length
+		(m) => Array.isArray(m.forms) && m.forms.length,
 	);
 
 	let baseTotal = 0,
@@ -193,7 +212,8 @@ export function attachProgressHelpers(store) {
 
 	registerKeywordSectionMeter({
 		keyword: "solitude",
-		pctFn: (gameKey, localStore) => pathOfSolitudePctFor(gameKey, null, localStore),
+		pctFn: (gameKey, localStore) =>
+			pathOfSolitudePctFor(gameKey, null, localStore),
 		flagProp: "__ppgcPathOfSolitudeMeter",
 		exposeName: "pathOfSolitudePctFor",
 	});
@@ -205,11 +225,14 @@ export function attachProgressHelpers(store) {
 	}
 
 	const hasGceaSolitudeMeter = window.PPGC.sectionMeters.some(
-		(fn) => fn && fn.__ppgcPathOfSolitudeGCEAMeter
+		(fn) => fn && fn.__ppgcPathOfSolitudeGCEAMeter,
 	);
 
 	if (!hasGceaSolitudeMeter) {
-		const meter = function legendsArceusGceaSolitudeMeter(sectionObj, gameKey) {
+		const meter = function legendsArceusGceaSolitudeMeter(
+			sectionObj,
+			gameKey,
+		) {
 			if (String(gameKey) !== "legendsarceus") return NaN;
 			if (!isGCEASection(sectionObj)) return NaN;
 

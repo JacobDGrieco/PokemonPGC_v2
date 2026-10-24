@@ -10,13 +10,13 @@ export function detectModelPipeline(glbUrl) {
 	const isSwSh = u.includes("/gen8/") && u.includes("/sword-shield/");
 	if (isSwSh) return "swsh";
 
-	const isPLA = u.includes("/gen8/") && (u.includes("/legendsarceus/"));
+	const isPLA = u.includes("/gen8/") && u.includes("/legendsarceus/");
 	if (isPLA) return "la";
 
 	const isSV = u.includes("/gen9/") && u.includes("/scarlet-violet/");
 	if (isSV) return "scvi";
 
-	const isPLZA = u.includes("/gen9/") && (u.includes("/legendsza/"));
+	const isPLZA = u.includes("/gen9/") && u.includes("/legendsza/");
 	if (isPLZA) return "lza";
 
 	return null;

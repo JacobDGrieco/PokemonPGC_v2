@@ -1,8 +1,17 @@
 import { save } from "../store.js";
 import { registerKeywordSectionMeter } from "./helpers.js";
 import { setupFashionForms } from "./fashion-forms.js";
-import { fashionPctFor, fashionSummaryCardFor, createFashionSummaryUpdater, refreshFashionSectionHeader } from "./fashion-summary.js";
-import { createApplyFashionSyncForItem, resolveFashionImg } from "./fashion-sync.js";
+import { hideModalElement, showModalElement } from "./modal-state.js";
+import {
+	fashionPctFor,
+	fashionSummaryCardFor,
+	createFashionSummaryUpdater,
+	refreshFashionSectionHeader,
+} from "./fashion-summary.js";
+import {
+	createApplyFashionSyncForItem,
+	resolveFashionImg,
+} from "./fashion-sync.js";
 import { resetScrollWithin } from "../utils/scrolling.js";
 import {
 	getGameFashion as _getGameFashion,
@@ -25,7 +34,6 @@ registerKeywordSectionMeter({
 	flagProp: "__ppgcFashionMeter",
 	exposeName: "fashionPctForGame",
 });
-
 
 /**
  * Wire up the Fashion modal and its "forms" usage of the shared forms modal.
@@ -70,17 +78,18 @@ export function wireFashionModal(store, els) {
 		return fashionModal?.dataset.view === "fashion";
 	}
 	/**
- * Sync the Fashion gender pill with current state, similar to syncGen1SpriteToggle.
- * - Only show for X/Y for now.
- * - Unchecked = male, checked = female.
- */
+	 * Sync the Fashion gender pill with current state, similar to syncGen1SpriteToggle.
+	 * - Only show for X/Y for now.
+	 * - Unchecked = male, checked = female.
+	 */
 	function syncFashionGenderToggle() {
 		if (!fashionGenderToggle) return;
 		const input = fashionGenderToggle.querySelector("input");
 		const { fashionForGame } = store.state;
 
 		// Only show in games that actually have gender-split fashion (X/Y for now)
-		const showToggle = !!fashionForGame && _gameHasGenderedFashion(fashionForGame);
+		const showToggle =
+			!!fashionForGame && _gameHasGenderedFashion(fashionForGame);
 
 		fashionGenderToggle.classList.toggle("hidden", !showToggle);
 		if (!showToggle || !input) return;
@@ -98,14 +107,13 @@ export function wireFashionModal(store, els) {
 		input.checked = gender === "female";
 	}
 
-
 	// --- Core grid rendering --------------------------------------------------
 	function renderGrid() {
 		const { fashionForGame, fashionCategory } = store.state;
 		if (!fashionForGame || !fashionCategory) return;
 
 		const cat = _getGameFashion(fashionForGame).find(
-			(c) => c.id === fashionCategory
+			(c) => c.id === fashionCategory,
 		);
 		if (!cat) return;
 
@@ -117,7 +125,7 @@ export function wireFashionModal(store, els) {
 		const gender = _getSelectedGenderForGame(store, fashionForGame);
 		if (gender) {
 			items = items.filter((it) =>
-				_itemVisibleForGender(store, fashionForGame, it)
+				_itemVisibleForGender(store, fashionForGame, it),
 			);
 		}
 
@@ -126,12 +134,22 @@ export function wireFashionModal(store, els) {
 				// --- Command mode: /true /false -----------------------------
 				if (q === "/true") {
 					items = items.filter((it) => {
-						const p = _itemProgressSplit(store, fashionForGame, fashionCategory, it);
+						const p = _itemProgressSplit(
+							store,
+							fashionForGame,
+							fashionCategory,
+							it,
+						);
 						return p.done > 0; // at least one form / main item true
 					});
 				} else if (q === "/false") {
 					items = items.filter((it) => {
-						const p = _itemProgressSplit(store, fashionForGame, fashionCategory, it);
+						const p = _itemProgressSplit(
+							store,
+							fashionForGame,
+							fashionCategory,
+							it,
+						);
 						return p.done === 0; // nothing is true (including all forms)
 					});
 				}
@@ -165,16 +183,17 @@ export function wireFashionModal(store, els) {
 			card.innerHTML = `
         <div class="thumb">
           ${(() => {
-					const url = resolveFashionImg(it.img, fashionForGame);
-					return url
-						? `<img class="sprite" alt="${it.name}" src="${url}" loading="lazy"/>`
-						: `<div style="opacity:.5;">No image</div>`;
-				})()}
+				const url = resolveFashionImg(it.img, fashionForGame);
+				return url
+					? `<img class="sprite" alt="${it.name}" src="${url}" loading="lazy"/>`
+					: `<div style="opacity:.5;">No image</div>`;
+			})()}
         </div>
         <div class="card-bd">
           <div class="name" title="${it.name}" data-id="${it.id}">${it.name}</div>
           <div class="row" style="gap:8px;align-items:center;">
-            ${hasForms
+            ${
+				hasForms
 					? `<button class="forms-launch" title="Choose forms (colors)">
                      <span class="dot"></span><span>Forms</span>
                      <span class="pill count" data-fashion-count="${fashionForGame}:${fashionCategory}:${it.id}"></span>
@@ -183,7 +202,7 @@ export function wireFashionModal(store, els) {
                      <input type="checkbox" data-fashion-main="${fashionForGame}:${fashionCategory}:${it.id}"/>
                      <span>Collected</span>
                    </label>`
-				}
+			}
           </div>
         </div>
       `;
@@ -191,24 +210,35 @@ export function wireFashionModal(store, els) {
 			const key = `${fashionForGame}:${fashionCategory}:${it.id}`;
 			const countEl = card.querySelector(`[data-fashion-count="${key}"]`);
 			if (countEl) {
-				const p = _itemProgressSplit(store, fashionForGame, fashionCategory, it);
+				const p = _itemProgressSplit(
+					store,
+					fashionForGame,
+					fashionCategory,
+					it,
+				);
 				countEl.textContent = `${p.done}/${p.total}`;
 			}
 
 			// Parent checkbox behavior (no forms)
 			if (!hasForms) {
 				const mainChk = card.querySelector(
-					`[data-fashion-main="${fashionForGame}:${fashionCategory}:${it.id}"]`
+					`[data-fashion-main="${fashionForGame}:${fashionCategory}:${it.id}"]`,
 				);
 				if (mainChk instanceof HTMLInputElement) {
 					// initial checked state based on current progress
-					const p0 = _itemProgressSplit(store, fashionForGame, fashionCategory, it);
+					const p0 = _itemProgressSplit(
+						store,
+						fashionForGame,
+						fashionCategory,
+						it,
+					);
 					mainChk.checked = p0.done > 0;
 
 					mainChk.addEventListener("change", () => {
 						const checked = mainChk.checked;
 						const catMap =
-							store.fashionStatus.get(fashionForGame) || new Map();
+							store.fashionStatus.get(fashionForGame) ||
+							new Map();
 						const rec = catMap.get(fashionCategory) || {};
 						rec[it.id] = checked;
 						catMap.set(fashionCategory, rec);
@@ -219,29 +249,44 @@ export function wireFashionModal(store, els) {
 							store,
 							fashionForGame,
 							fashionCategory,
-							it
+							it,
 						);
 						const countElInner = card.querySelector(
-							`[data-fashion-count="${key}"]`
+							`[data-fashion-count="${key}"]`,
 						);
 						if (countElInner) {
 							countElInner.textContent = `${p.done}/${p.total}`;
 						}
 
-						updateFashionSummaryCard(fashionForGame, fashionCategory);
+						updateFashionSummaryCard(
+							fashionForGame,
+							fashionCategory,
+						);
 						refreshSectionHeader();
-						window.PPGC?.applyTaskSyncsFromFashion?.(fashionForGame, fashionCategory, it.id);
-						applyFashionSyncForItem(fashionForGame, fashionCategory, it, checked);
+						window.PPGC?.applyTaskSyncsFromFashion?.(
+							fashionForGame,
+							fashionCategory,
+							it.id,
+						);
+						applyFashionSyncForItem(
+							fashionForGame,
+							fashionCategory,
+							it,
+							checked,
+						);
 					});
 				}
 			}
 
 			// Forms launcher
 			if (hasForms) {
-				card.querySelector(".forms-launch")?.addEventListener("click", (e) => {
-					e.stopPropagation();
-					openForms(fashionForGame, fashionCategory, it);
-				});
+				card.querySelector(".forms-launch")?.addEventListener(
+					"click",
+					(e) => {
+						e.stopPropagation();
+						openForms(fashionForGame, fashionCategory, it);
+					},
+				);
 			}
 
 			fashionGrid.appendChild(card);
@@ -265,7 +310,7 @@ export function wireFashionModal(store, els) {
 		syncFashionGenderToggle();
 
 		const game = (window.DATA.games?.[genKey] || []).find(
-			(g) => g.key === gameKey
+			(g) => g.key === gameKey,
 		);
 		const cat = _getGameFashion(gameKey).find((c) => c.id === categoryId);
 
@@ -278,8 +323,9 @@ export function wireFashionModal(store, els) {
 		}
 		if (fashionSelectAll) fashionSelectAll.hidden = false;
 		if (fashionClearAll) fashionClearAll.hidden = false;
-		fashionModalTitle.textContent = `Fashion — ${game ? game.label : gameKey
-			} · ${cat?.label || categoryId}`;
+		fashionModalTitle.textContent = `Fashion — ${
+			game ? game.label : gameKey
+		} · ${cat?.label || categoryId}`;
 
 		const sheet = fashionModal.querySelector(".sheet");
 		const sheetHeader = sheet?.querySelector("header");
@@ -291,8 +337,7 @@ export function wireFashionModal(store, els) {
 		renderGrid();
 
 		fashionModal.removeAttribute("inert");
-		fashionModal.setAttribute("aria-hidden", "false");
-		fashionModal.classList.add("open");
+		showModalElement(fashionModal);
 		resetScrollWithin(fashionModal);
 		document.getElementById("collectionModalClose")?.focus();
 	}
@@ -306,8 +351,7 @@ export function wireFashionModal(store, els) {
 				// ignore
 			}
 		}
-		modal.classList.remove("open");
-		modal.setAttribute("aria-hidden", "true");
+		hideModalElement(modal);
 		modal.setAttribute("inert", "");
 		modal.dataset.view = "";
 		window.PPGC.enableTaskTooltips();
@@ -319,7 +363,7 @@ export function wireFashionModal(store, els) {
 		if (!fashionForGame || !fashionCategory) return;
 
 		const cat = _getGameFashion(fashionForGame).find(
-			(c) => c.id === fashionCategory
+			(c) => c.id === fashionCategory,
 		);
 		if (!cat) return;
 
@@ -343,11 +387,16 @@ export function wireFashionModal(store, els) {
 			const hasForms = Array.isArray(it.forms) && it.forms.length > 0;
 
 			if (hasForms) {
-				const { obj } = _getFormsNode(store, fashionForGame, fashionCategory, it.id);
+				const { obj } = _getFormsNode(
+					store,
+					fashionForGame,
+					fashionCategory,
+					it.id,
+				);
 				obj.forms = obj.forms || {};
 
 				// Only touch BASE forms; leave extraCredit forms alone
-				for (const f of (it.forms || [])) {
+				for (const f of it.forms || []) {
 					if (isExtraForm(it, f)) continue;
 
 					const name = typeof f === "string" ? f : f?.name;
@@ -358,23 +407,34 @@ export function wireFashionModal(store, els) {
 				// Recompute obj.all based on BASE forms only (matches “base completion” rules)
 				let baseTotal = 0;
 				let baseDone = 0;
-				for (const f of (it.forms || [])) {
+				for (const f of it.forms || []) {
 					if (isExtraForm(it, f)) continue;
 					const name = typeof f === "string" ? f : f?.name;
 					if (!name) continue;
 					baseTotal++;
-					if (!!obj.forms[name]) baseDone++;
+					if (obj.forms[name]) baseDone++;
 				}
 				obj.all = baseTotal > 0 && baseDone === baseTotal;
 
-				_setFormsNode(store, fashionForGame, fashionCategory, it.id, obj);
+				_setFormsNode(
+					store,
+					fashionForGame,
+					fashionCategory,
+					it.id,
+					obj,
+				);
 			} else {
 				// Simple item: safe to set because we already skipped item.extraCredit above
 				rec[it.id] = !!checked;
 			}
 
 			// Only sync based on BASE toggles (extra credit untouched)
-			applyFashionSyncForItem(fashionForGame, fashionCategory, it, checked);
+			applyFashionSyncForItem(
+				fashionForGame,
+				fashionCategory,
+				it,
+				checked,
+			);
 		}
 
 		catMap.set(fashionCategory, rec);
@@ -385,7 +445,11 @@ export function wireFashionModal(store, els) {
 		refreshSectionHeader();
 
 		for (const it of cat.items) {
-			window.PPGC?.applyTaskSyncsFromFashion?.(fashionForGame, fashionCategory, it.id);
+			window.PPGC?.applyTaskSyncsFromFashion?.(
+				fashionForGame,
+				fashionCategory,
+				it.id,
+			);
 		}
 	}
 
@@ -405,7 +469,8 @@ export function wireFashionModal(store, els) {
 
 	// --- Event wiring --------------------------------------------------------
 	fashionModal.addEventListener("click", (e) => {
-		if (e.target === fashionModal && isFashionViewActive()) closeFashionModal();
+		if (e.target === fashionModal && isFashionViewActive())
+			closeFashionModal();
 	});
 	fashionModalClose.addEventListener("click", () => {
 		if (isFashionViewActive()) closeFashionModal();
@@ -457,7 +522,7 @@ export function wireFashionModal(store, els) {
 				renderGrid();
 				const cats = _getGameFashion(fashionForGame);
 				cats.forEach((c) =>
-					updateFashionSummaryCard(fashionForGame, c.id)
+					updateFashionSummaryCard(fashionForGame, c.id),
 				);
 				refreshSectionHeader();
 			});

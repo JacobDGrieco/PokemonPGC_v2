@@ -1,110 +1,169 @@
-import React from 'react';
-import { _assetPath } from '../utils/assetPath.js';
-import { store, save } from '../store.js';
-import { ensureSections } from '../react-bridge/taskApi.js';
-import { usePpgcSnapshot } from '../react-bridge/usePpgcSnapshot.js';
-import { navigateToState } from '../react-bridge/navigation.js';
-import { getVisibleSections } from '../utils/sectionVisibility.js';
+import React from "react";
+import { assetPath } from "../utils/assetPath.js";
+import { store, save } from "../store.js";
+import { ensureSections } from "../react-bridge/taskApi.js";
+import { usePpgcSnapshot } from "../react-bridge/usePpgcSnapshot.js";
+import { navigateToState } from "../react-bridge/navigation.js";
+import { getVisibleSections } from "../utils/sectionVisibility.js";
 
 function makeSidebarItems(state) {
-	const level = state?.level || 'gen';
+	const level = state?.level || "gen";
 
-	if (level === 'gen') {
+	if (level === "gen") {
 		return (window.DATA?.tabs || []).map((tab) => ({
 			key: tab.key,
 			label: tab.label,
 			active: false,
-			onClick: () => navigateToState({ level: 'game', genKey: tab.key, gameKey: null, sectionId: null }),
+			onClick: () =>
+				navigateToState({
+					level: "game",
+					genKey: tab.key,
+					gameKey: null,
+					sectionId: null,
+				}),
 		}));
 	}
 
-	if (level === 'game') {
+	if (level === "game") {
 		return (window.DATA?.games?.[state.genKey] || []).map((game) => ({
 			key: game.key,
 			label: game.label,
 			active: state.gameKey === game.key,
-			badge: store.isGameStarted?.(game.key) ? 'Started' : null,
-			icon: _assetPath(`game-icons/${game.key}.png`),
+			badge: store.isGameStarted?.(game.key) ? "Started" : null,
+			icon: assetPath(`game-icons/${game.key}.png`),
 			onClick: async () => {
 				try {
 					await window.PPGC?.ensureGenDataLoadedForGame?.(game.key);
-					const sections = getVisibleSections(game.key, ensureSections);
+					const sections = getVisibleSections(
+						game.key,
+						ensureSections,
+					);
 					navigateToState({
-						level: 'section',
+						level: "section",
 						genKey: state.genKey,
 						gameKey: game.key,
 						sectionId: sections?.[0]?.id || null,
 					});
 				} catch {
-					navigateToState({ level: 'game', genKey: state.genKey, gameKey: null, sectionId: null });
+					navigateToState({
+						level: "game",
+						genKey: state.genKey,
+						gameKey: null,
+						sectionId: null,
+					});
 				}
 			},
 		}));
 	}
 
-	if (level === 'section') {
-		return getVisibleSections(state.gameKey, ensureSections).map((section) => ({
-			key: section.id,
-			label: section.title,
-			active: state.sectionId === section.id,
-			onClick: () => navigateToState({
-				level: 'section',
-				genKey: state.genKey,
-				gameKey: state.gameKey,
-				sectionId: section.id,
+	if (level === "section") {
+		return getVisibleSections(state.gameKey, ensureSections).map(
+			(section) => ({
+				key: section.id,
+				label: section.title,
+				active: state.sectionId === section.id,
+				onClick: () =>
+					navigateToState({
+						level: "section",
+						genKey: state.genKey,
+						gameKey: state.gameKey,
+						sectionId: section.id,
+					}),
 			}),
-		}));
+		);
 	}
 
-	if (level === 'tools' || level === 'moninfo') {
-		return [{
-			key: 'info',
-			label: 'Pokémon Info Index',
-			active: level === 'tools',
-			onClick: () => navigateToState({
-				level: 'tools',
-				toolsKey: 'info',
-				genKey: null,
-				gameKey: null,
-				sectionId: null,
-				monInfoId: null,
-				monInfoGameKey: null,
-				monInfoForm: null,
-			}),
-		}];
+	if (level === "tools" || level === "moninfo") {
+		return [
+			{
+				key: "info",
+				label: "Pokémon Info Index",
+				active: level === "tools",
+				onClick: () =>
+					navigateToState({
+						level: "tools",
+						toolsKey: "info",
+						genKey: null,
+						gameKey: null,
+						sectionId: null,
+						monInfoId: null,
+						monInfoGameKey: null,
+						monInfoForm: null,
+					}),
+			},
+		];
 	}
 
-	if (level === 'account') return [];
+	if (level === "account") return [];
 
 	return [];
 }
 
 function getSidebarTitle(state) {
-	const level = state?.level || 'gen';
-	if (level === 'game') return (window.DATA?.tabs || []).find((tab) => tab.key === state.genKey)?.label || 'Games';
-	if (level === 'section') return (window.DATA?.games?.[state.genKey] || []).find((game) => game.key === state.gameKey)?.label || 'Sections';
-	if (level === 'tools' || level === 'moninfo') return 'Info/Tools';
-	if (level === 'account') return 'Account';
-	return 'Generations';
+	const level = state?.level || "gen";
+	if (level === "game")
+		return (
+			(window.DATA?.tabs || []).find((tab) => tab.key === state.genKey)
+				?.label || "Games"
+		);
+	if (level === "section")
+		return (
+			(window.DATA?.games?.[state.genKey] || []).find(
+				(game) => game.key === state.gameKey,
+			)?.label || "Sections"
+		);
+	if (level === "tools" || level === "moninfo") return "Info/Tools";
+	if (level === "account") return "Account";
+	return "Generations";
 }
 
 function canGoBack(state) {
-	return ['game', 'section', 'tools', 'moninfo', 'account'].includes(state?.level);
+	return ["game", "section", "tools", "moninfo", "account"].includes(
+		state?.level,
+	);
 }
 
 function handleBack(state) {
-	if (state?.level === 'section' && state?.genKey) {
-		navigateToState({ level: 'game', genKey: state.genKey, gameKey: null, sectionId: null });
-	} else if (state?.level === 'game') {
-		navigateToState({ level: 'gen', genKey: null, gameKey: null, sectionId: null });
-	} else if (state?.level === 'moninfo') {
-		navigateToState({ level: 'tools', toolsKey: 'info', genKey: null, gameKey: null, sectionId: null, monInfoId: null });
-	} else if (state?.level === 'tools' || state?.level === 'account') {
-		navigateToState({ level: 'gen', genKey: null, gameKey: null, sectionId: null });
+	if (state?.level === "section" && state?.genKey) {
+		navigateToState({
+			level: "game",
+			genKey: state.genKey,
+			gameKey: null,
+			sectionId: null,
+		});
+	} else if (state?.level === "game") {
+		navigateToState({
+			level: "gen",
+			genKey: null,
+			gameKey: null,
+			sectionId: null,
+		});
+	} else if (state?.level === "moninfo") {
+		navigateToState({
+			level: "tools",
+			toolsKey: "info",
+			genKey: null,
+			gameKey: null,
+			sectionId: null,
+			monInfoId: null,
+		});
+	} else if (state?.level === "tools" || state?.level === "account") {
+		navigateToState({
+			level: "gen",
+			genKey: null,
+			gameKey: null,
+			sectionId: null,
+		});
 	}
 }
 
-export function AppSidebar({ isMobile, mobileNavOpen, setMobileNavOpen, closeMobileNav }) {
+export function AppSidebar({
+	sidebarRef,
+	isMobile,
+	mobileNavOpen,
+	setMobileNavOpen,
+	closeMobileNav,
+}) {
 	const snapshot = usePpgcSnapshot();
 	const state = snapshot?.state || store.state;
 	const items = makeSidebarItems(state);
@@ -116,8 +175,8 @@ export function AppSidebar({ isMobile, mobileNavOpen, setMobileNavOpen, closeMob
 			setMobileNavOpen?.((v) => !v);
 			return;
 		}
-		const next = !document.body.classList.contains('sidebar-collapsed');
-		document.body.classList.toggle('sidebar-collapsed', next);
+		const next = !document.body.classList.contains("sidebar-collapsed");
+		document.body.classList.toggle("sidebar-collapsed", next);
 		store.state.sidebarCollapsed = next;
 		save();
 		window.PPGC?.renderAll?.();
@@ -125,22 +184,47 @@ export function AppSidebar({ isMobile, mobileNavOpen, setMobileNavOpen, closeMob
 
 	const runSidebarAction = (callback) => {
 		callback?.();
+		if (isMobile) closeMobileNav?.();
 	};
 
 	return (
-		<aside id="sidebar" className="sidebar" aria-label="Explorer" aria-hidden={isHidden ? 'true' : 'false'} data-level={state?.level || 'gen'}>
+		<aside
+			ref={sidebarRef}
+			id="sidebar"
+			className="sidebar"
+			aria-label="Explorer"
+			aria-hidden={isHidden ? "true" : "false"}
+			aria-modal={isMobile && mobileNavOpen ? "true" : undefined}
+			role={isMobile ? "dialog" : undefined}
+			inert={isHidden ? "" : undefined}
+			data-level={state?.level || "gen"}
+		>
 			<div className="sidebar-header react-sidebar-header">
-				<button id="navBack" className="back-btn" aria-label="Go back" disabled={!canGoBack(state)} onClick={() => runSidebarAction(() => handleBack(state))}>
+				<button
+					id="navBack"
+					className="back-btn"
+					aria-label="Go back"
+					disabled={!canGoBack(state)}
+					onClick={() => runSidebarAction(() => handleBack(state))}
+				>
 					←
 				</button>
-				<div id="navTitle" className="sidebar-title">{getSidebarTitle(state)}</div>
+				<div id="navTitle" className="sidebar-title">
+					{getSidebarTitle(state)}
+				</div>
 				<button
 					className="back-btn sidebar-collapse-btn"
 					type="button"
-					aria-label={isCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
+					aria-label={
+						isMobile
+							? "Close navigation"
+							: isCollapsed
+								? "Expand sidebar"
+								: "Collapse sidebar"
+					}
 					onClick={handleToggle}
 				>
-					{isCollapsed ? '›' : '‹'}
+					{isCollapsed ? "›" : "‹"}
 				</button>
 			</div>
 
@@ -148,14 +232,32 @@ export function AppSidebar({ isMobile, mobileNavOpen, setMobileNavOpen, closeMob
 				id="sideList"
 				className="dir-list react-dir-list"
 				data-item-count={items.length}
-				data-compact-icons={items.length >= 5 ? 'true' : 'false'}
+				data-compact-icons={items.length >= 5 ? "true" : "false"}
 			>
 				{items.map((item) => (
-					<button key={item.key} type="button" className={`dir-item react-dir-item ${item.active ? 'active' : ''}`} onClick={() => runSidebarAction(item.onClick)}>
+					<button
+						key={item.key}
+						type="button"
+						className={`dir-item react-dir-item ${item.active ? "active" : ""}`}
+						onClick={() => runSidebarAction(item.onClick)}
+					>
 						<div className="label">
-							{item.icon ? <span className="icon game-icon" style={{ backgroundImage: `url('${item.icon}')` }} /> : <span className="icon" />}
+							{item.icon ? (
+								<span
+									className="icon game-icon"
+									style={{
+										backgroundImage: `url('${item.icon}')`,
+									}}
+								/>
+							) : (
+								<span className="icon" />
+							)}
 							<span className="text">{item.label}</span>
-							{item.badge ? <span className="chip chip-started">{item.badge}</span> : null}
+							{item.badge ? (
+								<span className="chip chip-started">
+									{item.badge}
+								</span>
+							) : null}
 						</div>
 						<div>›</div>
 					</button>

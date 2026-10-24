@@ -1,35 +1,36 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { store } from '../store.js';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { PagesDropdown } from './nav/PagesDropdown.jsx';
-import { wireGlobalTaskSearch } from '../ui/taskSearch.js';
-import { buildAccountRoute } from '../utils/accountRoute.js';
+import React, { useEffect, useRef, useState } from "react";
+import { store } from "../store.js";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { PagesDropdown } from "./nav/PagesDropdown.jsx";
+import { wireGlobalTaskSearch } from "../ui/taskSearch.js";
+import { buildAccountRoute } from "../utils/accountRoute.js";
+import { AccountMenuControl } from "./nav/AccountMenuControl.jsx";
 
-export function AppHeader({ isMobile, mobileNavOpen }) {
+export function AppHeader({
+	headerRef,
+	isMobile,
+	mobileNavOpen,
+	setMobileNavOpen,
+	mobileNavTriggerRef,
+	canOpenNavigation,
+}) {
 	const location = useLocation();
 	const navigate = useNavigate();
-	const isChecklistsPage = location.pathname === '/checklists';
+	const isChecklistsPage = location.pathname === "/checklists";
 	const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
 	const inputRef = useRef(null);
-	const handleAccountClick = () => {
-		if (!window.PPGC?.currentUser) {
-			window.PPGC?.openAuthModal?.('login');
-			return;
-		}
-
+	const handleAuthenticatedAccountClick = () => {
 		const currentState = window.PPGC?._storeRef?.state || store.state;
-		if (currentState?.level && currentState.level !== 'account') {
+		if (currentState?.level && currentState.level !== "account") {
 			window.PPGC._lastNonAccountState = { ...currentState };
 		}
 
-		navigate(buildAccountRoute('general'));
+		navigate(buildAccountRoute("general"));
 	};
 
 	useEffect(() => {
-		document.body.classList.toggle('mobile-ui', isMobile);
-		document.body.classList.toggle('mobile-nav-open', isMobile && mobileNavOpen);
 		wireGlobalTaskSearch();
-	}, [isMobile, mobileNavOpen]);
+	}, []);
 
 	useEffect(() => {
 		if (!isMobile) {
@@ -42,18 +43,44 @@ export function AppHeader({ isMobile, mobileNavOpen }) {
 	}, [isMobile, mobileSearchOpen]);
 
 	return (
-		<header className="app-header">
+		<header ref={headerRef} className="app-header">
 			<div className="header-left">
+				{canOpenNavigation && (
+					<button
+						ref={mobileNavTriggerRef}
+						type="button"
+						className="mobile-nav-toggle"
+						aria-label={
+							mobileNavOpen
+								? "Close checklist navigation"
+								: "Open checklist navigation"
+						}
+						aria-controls="sidebar"
+						aria-expanded={mobileNavOpen}
+						onClick={() => setMobileNavOpen?.((isOpen) => !isOpen)}
+					>
+						<span aria-hidden="true" />
+						<span aria-hidden="true" />
+						<span aria-hidden="true" />
+					</button>
+				)}
 				<div className="header-brand">
 					<Link to="/" className="marketing-brand">
-						<img src="/cloud-ball.png" alt="" className="brand-icon" />
+						<img
+							src="/cloud-ball-48.webp"
+							srcSet="/cloud-ball-48.webp 1x, /cloud-ball-96.webp 2x"
+							alt=""
+							className="brand-icon"
+							width="24"
+							height="24"
+						/>
 						PokémonPGC
 					</Link>
 					<button
 						type="button"
-						className={`mobile-search-toggle ${mobileSearchOpen ? 'is-open' : ''}`}
+						className={`mobile-search-toggle ${mobileSearchOpen ? "is-open" : ""}`}
 						aria-label="Search tasks"
-						aria-expanded={mobileSearchOpen ? 'true' : 'false'}
+						aria-expanded={mobileSearchOpen ? "true" : "false"}
 						onClick={() => setMobileSearchOpen((value) => !value)}
 					>
 						<svg viewBox="0 0 24 24" aria-hidden="true">
@@ -67,7 +94,9 @@ export function AppHeader({ isMobile, mobileNavOpen }) {
 			</div>
 
 			{isChecklistsPage && (
-				<div className={`task-search-wrap ${isMobile ? 'task-search-mobile' : ''} ${mobileSearchOpen ? 'is-mobile-open' : ''}`}>
+				<div
+					className={`task-search-wrap ${isMobile ? "task-search-mobile" : ""} ${mobileSearchOpen ? "is-mobile-open" : ""}`}
+				>
 					<input
 						ref={inputRef}
 						id="taskSearchInput"
@@ -83,31 +112,22 @@ export function AppHeader({ isMobile, mobileNavOpen }) {
 						data-1p-ignore="true"
 						data-form-type="other"
 					/>
-					<div id="taskSearchResults" className="task-search-results" />
+					<div
+						id="taskSearchResults"
+						className="task-search-results"
+					/>
 				</div>
 			)}
 
-			<div className="header-account">
-				<button
-					id="ppgc-account-button"
-					type="button"
-					data-react-account-button="true"
-					aria-haspopup="dialog"
-					aria-controls="ppgc-auth-overlay"
-					title="Log in / Sign up"
-					onClick={handleAccountClick}
-				>
-					<svg viewBox="0 0 24 24" aria-hidden="true">
-						<path d="M12 11.5c1.93 0 3.5-1.79 3.5-4s-1.57-4-3.5-4-3.5 1.79-3.5 4 1.57 4 3.5 4zm0 2c-2.76 0-5.5 1.57-5.5 3.5V19h11v-2c0-1.93-2.74-3.5-5.5-3.5z" />
-					</svg>
-				</button>
-				<div id="ppgc-account-menu" className="ppgc-account-menu" hidden>
-					<button type="button" data-action="settings">Account settings</button>
-					<button type="button" data-action="logout">Log out</button>
-				</div>
-			</div>
+			<AccountMenuControl
+				onAuthenticatedClick={handleAuthenticatedAccountClick}
+			/>
 
-			<div className="breadcrumbs" id="crumbs" style={{ display: 'none' }} />
+			<div
+				className="breadcrumbs"
+				id="crumbs"
+				style={{ display: "none" }}
+			/>
 		</header>
 	);
 }

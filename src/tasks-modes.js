@@ -53,7 +53,9 @@ export function getTierSteps(t) {
 }
 
 export function describeTierSequence(nums) {
-	const seq = (Array.isArray(nums) ? nums : []).filter((n) => typeof n === "number" && Number.isFinite(n));
+	const seq = (Array.isArray(nums) ? nums : []).filter(
+		(n) => typeof n === "number" && Number.isFinite(n),
+	);
 	const n = seq.length;
 	if (!n) return "";
 	if (n === 1) return String(seq[0]);
@@ -86,8 +88,10 @@ export function formatTierTooltip(t) {
 	if (raw && raw.some((v) => Array.isArray(v))) {
 		const parts = [];
 		for (const v of raw) {
-			if (Array.isArray(v)) parts.push(describeTierSequence(v) || v.join(" · "));
-			else if (typeof v === "number" && Number.isFinite(v)) parts.push(String(v));
+			if (Array.isArray(v))
+				parts.push(describeTierSequence(v) || v.join(" · "));
+			else if (typeof v === "number" && Number.isFinite(v))
+				parts.push(String(v));
 		}
 		if (parts.length) return parts.join(" · ");
 	}
@@ -100,7 +104,9 @@ export function isEitherTask(t) {
 	if (!t) return false;
 	const src = t.eithers;
 	if (!src || typeof src !== "object") return false;
-	const entries = Object.entries(src).filter(([, v]) => v && typeof v === "object");
+	const entries = Object.entries(src).filter(
+		([, v]) => v && typeof v === "object",
+	);
 	return entries.length >= 2;
 }
 
@@ -180,7 +186,9 @@ export function getDefaultEitherChoice(task) {
 	if (src.left && typeof src.left === "object") return "left";
 	if (src.right && typeof src.right === "object") return "right";
 
-	const first = Object.entries(src).find(([, value]) => value && typeof value === "object");
+	const first = Object.entries(src).find(
+		([, value]) => value && typeof value === "object",
+	);
 	return first ? String(first[0]) : null;
 }
 
@@ -188,7 +196,9 @@ export function setEitherChoice(taskId, sideOrNull) {
 	const store = window.PPGC?._storeRef || window.store;
 	if (!store) return;
 	if (!(store.taskChoiceById instanceof Map)) {
-		store.taskChoiceById = new Map(Object.entries(store.taskChoiceById || {}));
+		store.taskChoiceById = new Map(
+			Object.entries(store.taskChoiceById || {}),
+		);
 	}
 	const key = String(taskId);
 	if (!sideOrNull) store.taskChoiceById.delete(key);
@@ -197,7 +207,11 @@ export function setEitherChoice(taskId, sideOrNull) {
 }
 
 export function eitherSyncView(task, optionKey) {
-	const opt = optionKey == null ? null : (task?.eithers || {})[String(optionKey)] || (task?.eithers || {})[optionKey];
+	const opt =
+		optionKey == null
+			? null
+			: (task?.eithers || {})[String(optionKey)] ||
+				(task?.eithers || {})[optionKey];
 	const mergeSync = (a, b) => {
 		const out = [];
 		const seen = new Set();

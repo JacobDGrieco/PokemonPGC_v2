@@ -2,23 +2,33 @@ import * as Tasks from "../tasks.js";
 
 export const ensureSections = (...args) => Tasks.ensureSections?.(...args);
 export const bootstrapTasks = (...args) => Tasks.bootstrapTasks?.(...args);
-export const setDescendantsDone = (...args) => Tasks.setDescendantsDone?.(...args);
-export const applySyncsFromTask = (...args) => Tasks.applySyncsFromTask?.(...args);
+export const setDescendantsDone = (...args) =>
+	Tasks.setDescendantsDone?.(...args);
+export const applySyncsFromTask = (...args) =>
+	Tasks.applySyncsFromTask?.(...args);
 export const attachTooltip = (...args) => Tasks.attachTooltip?.(...args);
-export const buildTaskLayoutGroups = (...args) => Tasks.buildTaskLayoutGroups?.(...args);
-export const buildTaskLayoutMeta = (...args) => Tasks.buildTaskLayoutMeta?.(...args);
+export const buildTaskLayoutGroups = (...args) =>
+	Tasks.buildTaskLayoutGroups?.(...args);
+export const buildTaskLayoutMeta = (...args) =>
+	Tasks.buildTaskLayoutMeta?.(...args);
 export const buildTaskIndex = (...args) => Tasks.buildTaskIndex?.(...args);
 export const eitherSyncView = (...args) => Tasks.eitherSyncView?.(...args);
-export const formatTierTooltip = (...args) => Tasks.formatTierTooltip?.(...args);
-export const getDefaultEitherChoice = (...args) => Tasks.getDefaultEitherChoice?.(...args);
+export const formatTierTooltip = (...args) =>
+	Tasks.formatTierTooltip?.(...args);
+export const getDefaultEitherChoice = (...args) =>
+	Tasks.getDefaultEitherChoice?.(...args);
 export const getEitherChoice = (...args) => Tasks.getEitherChoice?.(...args);
-export const getMultiCheckedCount = (...args) => Tasks.getMultiCheckedCount?.(...args);
+export const getMultiCheckedCount = (...args) =>
+	Tasks.getMultiCheckedCount?.(...args);
 export const getMultiOptions = (...args) => Tasks.getMultiOptions?.(...args);
-export const getTierMetaForTask = (...args) => Tasks.getTierMetaForTask?.(...args);
+export const getTierMetaForTask = (...args) =>
+	Tasks.getTierMetaForTask?.(...args);
 export const getTierSteps = (...args) => Tasks.getTierSteps?.(...args);
 export const isEitherTask = (...args) => Tasks.isEitherTask?.(...args);
 export const isMultiTask = (...args) => Tasks.isMultiTask?.(...args);
 export const isTieredTask = (...args) => Tasks.isTieredTask?.(...args);
-export const resolveTaskImageSrcs = (...args) => Tasks.resolveTaskImageSrcs?.(...args);
+export const resolveTaskImageSrcs = (...args) =>
+	Tasks.resolveTaskImageSrcs?.(...args);
 export const setEitherChoice = (...args) => Tasks.setEitherChoice?.(...args);
-export const setMultiOptionDone = (...args) => Tasks.setMultiOptionDone?.(...args);
+export const setMultiOptionDone = (...args) =>
+	Tasks.setMultiOptionDone?.(...args);

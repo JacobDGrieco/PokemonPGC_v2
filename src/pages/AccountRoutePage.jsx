@@ -1,8 +1,11 @@
-import React, { useEffect } from 'react';
-import { Navigate, useParams } from 'react-router-dom';
-import { AccountPage } from '../components/content/AccountPage.jsx';
-import { save, store } from '../store.js';
-import { buildAccountRoute, normalizeAccountTab } from '../utils/accountRoute.js';
+import React, { useEffect } from "react";
+import { Navigate, useParams } from "react-router-dom";
+import { AccountPage } from "../components/content/AccountPage.jsx";
+import { save, store } from "../store.js";
+import {
+	buildAccountRoute,
+	normalizeAccountTab,
+} from "../utils/accountRoute.js";
 
 export function AccountRoutePage() {
 	const params = useParams();

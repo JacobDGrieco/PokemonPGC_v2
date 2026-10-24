@@ -1,15 +1,15 @@
-import { useEffect, useState } from 'react';
-import { getPpgcUiSnapshot, subscribeToPpgcUiSync } from './storeBridge.js';
+import { useEffect, useState } from "react";
+import { getPpgcUiSnapshot, subscribeToPpgcUiSync } from "./storeBridge.js";
 
 export function usePpgcSnapshot() {
-  const [snapshot, setSnapshot] = useState(() => getPpgcUiSnapshot());
+	const [snapshot, setSnapshot] = useState(() => getPpgcUiSnapshot());
 
-  useEffect(() => {
-    setSnapshot(getPpgcUiSnapshot());
-    return subscribeToPpgcUiSync((next) => {
-      setSnapshot(next);
-    });
-  }, []);
+	useEffect(() => {
+		setSnapshot(getPpgcUiSnapshot());
+		return subscribeToPpgcUiSync((next) => {
+			setSnapshot(next);
+		});
+	}, []);
 
-  return snapshot;
+	return snapshot;
 }

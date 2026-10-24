@@ -1,9 +1,10 @@
 // dex-research-modal.js
-import { _assetPath } from '../utils/assetPath.js';
+import { assetPath } from "../utils/assetPath.js";
 import { save } from "../store.js";
 import { ensurePpgcRoot } from "../runtime/globals.js";
 import { resetScrollWithin } from "../utils/scrolling.js";
 import { emitPpgcUiSync } from "../react-bridge/storeBridge.js";
+import { hideModalElement, showModalElement } from "./modal-state.js";
 
 const PPGC = ensurePpgcRoot();
 
@@ -44,13 +45,22 @@ window.PPGC = window.PPGC || {};
 PPGC.computeResearchTierStats = function computeResearchTierStats(tasks, rec) {
 	return _computeResearchTierStats(tasks, rec);
 };
-PPGC.getMonResearchTierStats = function getMonResearchTierStats(gameKey, monId, monOrTasks, store) {
-	const tasks = Array.isArray(monOrTasks) ? monOrTasks : (Array.isArray(monOrTasks?.research) ? monOrTasks.research : []);
+PPGC.getMonResearchTierStats = function getMonResearchTierStats(
+	gameKey,
+	monId,
+	monOrTasks,
+	store,
+) {
+	const tasks = Array.isArray(monOrTasks)
+		? monOrTasks
+		: Array.isArray(monOrTasks?.research)
+			? monOrTasks.research
+			: [];
 	const recAll =
 		store?.dexResearchStatus instanceof Map
-			? (store.dexResearchStatus.get(gameKey) || {})
+			? store.dexResearchStatus.get(gameKey) || {}
 			: {};
-	const rec = (recAll && recAll[monId]) ? recAll[monId] : {};
+	const rec = recAll && recAll[monId] ? recAll[monId] : {};
 	return _computeResearchTierStats(tasks, rec);
 };
 
@@ -68,7 +78,7 @@ export function openResearchModal(gameKey, genKey, mon, store) {
 
 	researchTitle.textContent = `Research Tasks — ${mon.name}`;
 
-	const boostIconSrc = _assetPath(`tasks/gen8/legendsarceus/boost.png`);
+	const boostIconSrc = assetPath(`tasks/gen8/legendsarceus/boost.png`);
 	const MAX_TIERS = 5;
 
 	const recAll =
@@ -85,8 +95,7 @@ export function openResearchModal(gameKey, genKey, mon, store) {
 			const steps = tiers.length || 1;
 
 			const raw = rec[idx];
-			const level =
-				typeof raw === "number" ? raw : raw ? steps : 0;
+			const level = typeof raw === "number" ? raw : raw ? steps : 0;
 
 			const len = tiers.length;
 			const offset = Math.floor((MAX_TIERS - len) / 2);
@@ -145,7 +154,9 @@ export function openResearchModal(gameKey, genKey, mon, store) {
 	researchGrid
 		.querySelectorAll('input[type="range"][data-research-task]')
 		.forEach((slider) => {
-			const idx = Number(slider.getAttribute("data-research-task") || "0");
+			const idx = Number(
+				slider.getAttribute("data-research-task") || "0",
+			);
 			const steps = Number(slider.max || "1");
 
 			const apply = () => {
@@ -161,8 +172,7 @@ export function openResearchModal(gameKey, genKey, mon, store) {
 		});
 
 	researchModal.__returnFocusEl = document.activeElement;
-	researchModal.classList.add("open");
-	researchModal.setAttribute("aria-hidden", "false");
+	showModalElement(researchModal);
 	resetScrollWithin(researchModal);
 }
 
@@ -176,31 +186,40 @@ export function setupResearchModal() {
 	const closeResearchModal = () => {
 		const returnEl = researchModal.__returnFocusEl;
 		try {
-			if (document.activeElement && researchModal.contains(document.activeElement)) {
+			if (
+				document.activeElement &&
+				researchModal.contains(document.activeElement)
+			) {
 				document.activeElement.blur?.();
 			}
 			if (returnEl && typeof returnEl.focus === "function") {
 				returnEl.focus({ preventScroll: true });
 			} else {
-				document.querySelector("#app, #content, body")?.focus?.({ preventScroll: true });
+				document
+					.querySelector("#app, #content, body")
+					?.focus?.({ preventScroll: true });
 			}
-		} catch { }
+		} catch {}
 
-		researchModal.classList.remove("open");
-		researchModal.setAttribute("aria-hidden", "true");
+		hideModalElement(researchModal);
 
 		// Fire an event so other UIs (Mon Info modal) can refresh immediately
 		try {
 			const ctx = _LAST_RESEARCH_CTX;
 			if (ctx && window.store?.dexResearchStatus instanceof Map) {
-				const recAll = window.store.dexResearchStatus.get(ctx.gameKey) || {};
+				const recAll =
+					window.store.dexResearchStatus.get(ctx.gameKey) || {};
 				const rec = recAll[ctx.monId] || {};
 				const stats = _computeResearchTierStats(ctx.tasks || [], rec);
 
 				window.dispatchEvent(
 					new CustomEvent("ppgc:researchSaved", {
-						detail: { gameKey: ctx.gameKey, monId: ctx.monId, stats },
-					})
+						detail: {
+							gameKey: ctx.gameKey,
+							monId: ctx.monId,
+							stats,
+						},
+					}),
 				);
 			}
 		} catch (err) {
@@ -208,8 +227,12 @@ export function setupResearchModal() {
 		}
 
 		try {
-			emitPpgcUiSync({ state: window.store?.state || window.PPGC?._storeRef?.state || {}, loading: false });
-		} catch { }
+			emitPpgcUiSync({
+				state:
+					window.store?.state || window.PPGC?._storeRef?.state || {},
+				loading: false,
+			});
+		} catch {}
 	};
 
 	researchModal.addEventListener("click", (e) => {

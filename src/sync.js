@@ -1,9 +1,8 @@
-// src/sync.js
-//
-// Build per-entity taskSync / dexSync / fashionSync arrays from central
-// window.DATA.syncs definitions. This is a one-time "expand" step that
-// runs at startup (called from index.js) and mutates the DATA seed objects
-// before tasks/dex/fashion bootstrap.
+/**
+ * Expands central sync definitions onto task, Dex, and fashion seed records.
+ * This one-time mutation must run before feature bootstrap so every runtime
+ * record sees the same relationship graph.
+ */
 
 function _ensureArray(obj, key) {
 	if (!obj[key]) obj[key] = [];
@@ -75,11 +74,12 @@ function _findDexEntrySeed(member) {
 
 	const dexKey = _resolveDexTargetKey(
 		game,
-		member.dexType || member.dex_key || member.dexTypeKey
+		member.dexType || member.dex_key || member.dexTypeKey,
 	);
 	if (!dexKey) return null;
 
-	const list = (window.DATA && window.DATA.dex && window.DATA.dex[dexKey]) || [];
+	const list =
+		(window.DATA && window.DATA.dex && window.DATA.dex[dexKey]) || [];
 	const wanted = String(member.id);
 
 	// Primary: new string id match
@@ -92,7 +92,8 @@ function _findDexEntrySeed(member) {
 			entry = list.find(
 				(e) =>
 					e &&
-					(Number(e.localId) === n || (typeof e.id === "number" && e.id === n))
+					(Number(e.localId) === n ||
+						(typeof e.id === "number" && e.id === n)),
 			);
 		}
 	}
@@ -146,7 +147,8 @@ function _findFashionItemSeed(member) {
 	const categoryId = member.category || member.categoryId || member.dexType;
 	if (!gameKey || !categoryId) return null;
 
-	const block = window.DATA && window.DATA.fashion && window.DATA.fashion[gameKey];
+	const block =
+		window.DATA && window.DATA.fashion && window.DATA.fashion[gameKey];
 	if (!block || !Array.isArray(block.categories)) return null;
 
 	const cat = block.categories.find((c) => c && c.id === categoryId);
@@ -189,7 +191,7 @@ function _expandOneSet(set) {
 	const dexSpecies = members.filter((m) => m && m.kind === "dex");
 	const dexForms = members.filter((m) => m && m.kind === "dex-form");
 	const fashionItems = members.filter(
-		(m) => m && (m.kind === "fashion" || m.kind === "fashion-forms")
+		(m) => m && (m.kind === "fashion" || m.kind === "fashion-forms"),
 	);
 
 	// ---- Task <-> Task ---------------------------------------------------
@@ -244,7 +246,8 @@ function _expandOneSet(set) {
 			// Dex entry -> Task (store per-link oneWay opts when needed)
 			if (!isOneWay(d)) {
 				const dexTaskArr = _ensureArray(dexHit.entry, "taskSync");
-				if (isOneWay(t)) dexTaskArr.push({ id: t.id, oneWay: true, side: t.side });
+				if (isOneWay(t))
+					dexTaskArr.push({ id: t.id, oneWay: true, side: t.side });
 				else if (t.side) dexTaskArr.push({ id: t.id, side: t.side });
 				else dexTaskArr.push(t.id);
 			}
@@ -274,7 +277,8 @@ function _expandOneSet(set) {
 			if (!isOneWay(df)) {
 				const formObj = formHit.form;
 				const dexFormTaskArr = _ensureArray(formObj, "taskSync");
-				if (isOneWay(t)) dexFormTaskArr.push({ id: t.id, oneWay: true });
+				if (isOneWay(t))
+					dexFormTaskArr.push({ id: t.id, oneWay: true });
 				else dexFormTaskArr.push(t.id);
 			}
 		}
@@ -347,7 +351,8 @@ function _expandOneSet(set) {
 // Cache of which games have had their sync sets expanded this runtime.
 function _getExpandedSyncGames() {
 	window.PPGC = window.PPGC || {};
-	if (!window.PPGC._expandedSyncGames) window.PPGC._expandedSyncGames = new Set();
+	if (!window.PPGC._expandedSyncGames)
+		window.PPGC._expandedSyncGames = new Set();
 	return window.PPGC._expandedSyncGames;
 }
 
@@ -368,14 +373,17 @@ export function ensureSyncSetsExpandedForGame(gameKey) {
 			return false;
 		}
 
-		console.log("[sync] Expanding sync sets for game:", gameKey, arr.length);
+		debugLog("[sync] Expanding sync sets for game:", gameKey, arr.length);
 		for (const set of arr) {
 			_expandOneSet(set);
 		}
 		expanded.add(gameKey);
 		return true;
 	} catch (e) {
-		console.debug("[sync] ensureSyncSetsExpandedForGame failed:", e?.message || e);
+		console.debug(
+			"[sync] ensureSyncSetsExpandedForGame failed:",
+			e?.message || e,
+		);
 		return false;
 	}
 }
@@ -389,9 +397,10 @@ export function expandSyncSetsInData() {
 	const keys = Object.keys(syncsByGame);
 	if (!keys.length) return;
 
-	console.log("[sync] Expanding sync sets into DATA (ALL games).", keys.length);
+	debugLog("[sync] Expanding sync sets into DATA (ALL games).", keys.length);
 	for (const gameKey of keys) {
 		ensureSyncSetsExpandedForGame(gameKey);
 	}
-	console.log("[sync] Done expanding sync sets (ALL games).");
+	debugLog("[sync] Done expanding sync sets (ALL games).");
 }
+import { debugLog } from "./utils/debug.js";

@@ -1,200 +1,289 @@
 import { isCompletedForGame, normalizeFlag } from "./helpers.js";
 import { pathOfSolitudeStatsFor, researchStatsFor } from "./dex-progress.js";
-import { isMythicalForm as _isMythicalForm, baseOf, shortLabelForDexKey } from "./dex-config.js";
 import {
-  getDexList as _getDexList,
-  getDexFormsNode as _getDexFormsNode,
-  effectiveSpeciesStatus as _effectiveSpeciesStatus,
+	isMythicalForm as _isMythicalForm,
+	baseOf,
+	shortLabelForDexKey,
+} from "./dex-config.js";
+import {
+	getDexList as _getDexList,
+	getDexFormsNode as _getDexFormsNode,
+	effectiveSpeciesStatus as _effectiveSpeciesStatus,
 } from "./dex-store.js";
 
 function isMythicalSpecies(m) {
-  return !!m?.mythical;
+	return !!m?.mythical;
 }
 
 function computeSpeciesProgress(game, store, dexKey, dex) {
-  const baseDex = dex.filter((m) => !isMythicalSpecies(m));
-  const extraDex = dex.filter((m) => isMythicalSpecies(m));
-  const baseTotal = baseDex.length;
-  const extraTotal = extraDex.length;
-  const baseDone = baseDex.filter((m) => isCompletedForGame(game, _effectiveSpeciesStatus(store, dexKey, m))).length;
-  const extraDone = extraDex.filter((m) => isCompletedForGame(game, _effectiveSpeciesStatus(store, dexKey, m))).length;
-  const pctBase = baseTotal ? (baseDone / baseTotal) * 100 : 0;
-  const pctExtended = baseTotal ? ((baseDone + extraDone) / baseTotal) * 100 : 0;
-  const pctBar = Math.min(100, Math.max(0, Math.round((baseDone / Math.max(1, baseTotal)) * 100)));
-  const pctExtraOverlay =
-    baseTotal > 0 && baseDone === baseTotal && extraTotal > 0
-      ? (extraDone / extraTotal) * 100
-      : 0;
-  return { baseTotal, extraTotal, baseDone, extraDone, pctBase, pctExtended, pctBar, pctExtraOverlay };
+	const baseDex = dex.filter((m) => !isMythicalSpecies(m));
+	const extraDex = dex.filter((m) => isMythicalSpecies(m));
+	const baseTotal = baseDex.length;
+	const extraTotal = extraDex.length;
+	const baseDone = baseDex.filter((m) =>
+		isCompletedForGame(game, _effectiveSpeciesStatus(store, dexKey, m)),
+	).length;
+	const extraDone = extraDex.filter((m) =>
+		isCompletedForGame(game, _effectiveSpeciesStatus(store, dexKey, m)),
+	).length;
+	const pctBase = baseTotal ? (baseDone / baseTotal) * 100 : 0;
+	const pctExtended = baseTotal
+		? ((baseDone + extraDone) / baseTotal) * 100
+		: 0;
+	const pctBar = Math.min(
+		100,
+		Math.max(0, Math.round((baseDone / Math.max(1, baseTotal)) * 100)),
+	);
+	const pctExtraOverlay =
+		baseTotal > 0 && baseDone === baseTotal && extraTotal > 0
+			? (extraDone / extraTotal) * 100
+			: 0;
+	return {
+		baseTotal,
+		extraTotal,
+		baseDone,
+		extraDone,
+		pctBase,
+		pctExtended,
+		pctBar,
+		pctExtraOverlay,
+	};
 }
 
 function computeFormsProgress(game, store, nodeKey, dex) {
-  const speciesWithForms = dex.filter((m) => Array.isArray(m.forms) && m.forms.length);
-  let formsBaseTotal = 0;
-  let formsExtraTotal = 0;
-  let formsBaseDone = 0;
-  let formsExtraDone = 0;
+	const speciesWithForms = dex.filter(
+		(m) => Array.isArray(m.forms) && m.forms.length,
+	);
+	let formsBaseTotal = 0;
+	let formsExtraTotal = 0;
+	let formsBaseDone = 0;
+	let formsExtraDone = 0;
 
-  for (const m of speciesWithForms) {
-    const { node } = _getDexFormsNode(store, nodeKey, m.id);
-    for (const f of m.forms) {
-      const name = typeof f === "string" ? f : f?.name;
-      if (!name) continue;
-      const isExtra = _isMythicalForm(f);
-      const v = normalizeFlag(node.forms?.[name] || "unknown");
-      const isDone = isCompletedForGame(game, v);
-      if (isExtra) {
-        formsExtraTotal += 1;
-        if (isDone) formsExtraDone += 1;
-      } else {
-        formsBaseTotal += 1;
-        if (isDone) formsBaseDone += 1;
-      }
-    }
-  }
+	for (const m of speciesWithForms) {
+		const { node } = _getDexFormsNode(store, nodeKey, m.id);
+		for (const f of m.forms) {
+			const name = typeof f === "string" ? f : f?.name;
+			if (!name) continue;
+			const isExtra = _isMythicalForm(f);
+			const v = normalizeFlag(node.forms?.[name] || "unknown");
+			const isDone = isCompletedForGame(game, v);
+			if (isExtra) {
+				formsExtraTotal += 1;
+				if (isDone) formsExtraDone += 1;
+			} else {
+				formsBaseTotal += 1;
+				if (isDone) formsBaseDone += 1;
+			}
+		}
+	}
 
-  const formsPctBase = formsBaseTotal ? (formsBaseDone / formsBaseTotal) * 100 : 0;
-  const formsPctExtended = formsBaseTotal ? ((formsBaseDone + formsExtraDone) / formsBaseTotal) * 100 : 0;
-  const formsPctBar = Math.min(100, Math.max(0, Math.round((formsBaseDone / Math.max(1, formsBaseTotal)) * 100)));
-  const formsPctExtraOverlay =
-    formsBaseTotal > 0 && formsBaseDone === formsBaseTotal && formsExtraTotal > 0
-      ? (formsExtraDone / formsExtraTotal) * 100
-      : 0;
+	const formsPctBase = formsBaseTotal
+		? (formsBaseDone / formsBaseTotal) * 100
+		: 0;
+	const formsPctExtended = formsBaseTotal
+		? ((formsBaseDone + formsExtraDone) / formsBaseTotal) * 100
+		: 0;
+	const formsPctBar = Math.min(
+		100,
+		Math.max(
+			0,
+			Math.round((formsBaseDone / Math.max(1, formsBaseTotal)) * 100),
+		),
+	);
+	const formsPctExtraOverlay =
+		formsBaseTotal > 0 &&
+		formsBaseDone === formsBaseTotal &&
+		formsExtraTotal > 0
+			? (formsExtraDone / formsExtraTotal) * 100
+			: 0;
 
-  return {
-    formsBaseTotal,
-    formsExtraTotal,
-    formsBaseDone,
-    formsExtraDone,
-    formsPctBase,
-    formsPctExtended,
-    formsPctBar,
-    formsPctExtraOverlay,
-    haveForms: (formsBaseTotal + formsExtraTotal) > 0,
-  };
+	return {
+		formsBaseTotal,
+		formsExtraTotal,
+		formsBaseDone,
+		formsExtraDone,
+		formsPctBase,
+		formsPctExtended,
+		formsPctBar,
+		formsPctExtraOverlay,
+		haveForms: formsBaseTotal + formsExtraTotal > 0,
+	};
 }
 
 export function refreshDexSummaryMetrics(gameKey, genKey, store) {
-  const games = window.DATA.games?.[genKey] || [];
-  const game = games.find((g) => g.key === gameKey);
-  console.log(`[DEX-SUMMARY] refreshDexSummaryMetrics: gameKey="${gameKey}", genKey="${genKey}", game found=`, !!game);
-  if (!game) { console.warn(`[DEX-SUMMARY] No game found for key="${gameKey}" in gen="${genKey}". Available:`, games.map(g => g.key)); return; }
+	const games = window.DATA.games?.[genKey] || [];
+	const game = games.find((g) => g.key === gameKey);
+	debugLog(
+		`[DEX-SUMMARY] refreshDexSummaryMetrics: gameKey="${gameKey}", genKey="${genKey}", game found=`,
+		!!game,
+	);
+	if (!game) {
+		console.warn(
+			`[DEX-SUMMARY] No game found for key="${gameKey}" in gen="${genKey}". Available:`,
+			games.map((g) => g.key),
+		);
+		return;
+	}
 
-  const dex = _getDexList(gameKey);
-  const baseGameKey = String(gameKey).endsWith("-national")
-    ? String(gameKey).replace(/-national$/, "")
-    : String(gameKey);
-  const natKey = `${baseGameKey}-national`;
-  const natDex = _getDexList(natKey);
-  const haveNat = natDex.length > 0;
-  const nat = computeSpeciesProgress(game, store, natKey, natDex);
-  const formsSourceDex = haveNat ? natDex : dex;
-  const formsNodeKey = haveNat ? natKey : gameKey;
-  const forms = computeFormsProgress(game, store, formsNodeKey, formsSourceDex);
+	const dex = _getDexList(gameKey);
+	const baseGameKey = String(gameKey).endsWith("-national")
+		? String(gameKey).replace(/-national$/, "")
+		: String(gameKey);
+	const natKey = `${baseGameKey}-national`;
+	const natDex = _getDexList(natKey);
+	const haveNat = natDex.length > 0;
+	const nat = computeSpeciesProgress(game, store, natKey, natDex);
+	const formsSourceDex = haveNat ? natDex : dex;
+	const formsNodeKey = haveNat ? natKey : gameKey;
+	const forms = computeFormsProgress(
+		game,
+		store,
+		formsNodeKey,
+		formsSourceDex,
+	);
 
-  const refreshLabelAndMeter = ({ key, labelPrefix, baseDone, extraDone, baseTotal, basePct, extendedPct, pctBar, pctExtraOverlay }) => {
-    document.querySelectorAll(`[data-dex-summary-label="${key}"]`).forEach((labelEl) => {
-      const shownDone = baseDone === baseTotal ? baseDone + extraDone : baseDone;
-      const shownPct = baseDone === baseTotal ? extendedPct : basePct;
-      labelEl.textContent = `${labelPrefix}: ${shownDone} / ${baseTotal || 0} (${shownPct.toFixed(2)}%)`;
-    });
+	const refreshLabelAndMeter = ({
+		key,
+		labelPrefix,
+		baseDone,
+		extraDone,
+		baseTotal,
+		basePct,
+		extendedPct,
+		pctBar,
+		pctExtraOverlay,
+	}) => {
+		document
+			.querySelectorAll(`[data-dex-summary-label="${key}"]`)
+			.forEach((labelEl) => {
+				const shownDone =
+					baseDone === baseTotal ? baseDone + extraDone : baseDone;
+				const shownPct = baseDone === baseTotal ? extendedPct : basePct;
+				labelEl.textContent = `${labelPrefix}: ${shownDone} / ${baseTotal || 0} (${shownPct.toFixed(2)}%)`;
+			});
 
-    document.querySelectorAll(`[data-dex-summary-meter="${key}"]`).forEach((wrap) => {
-      const baseSpan = wrap.querySelector("span.base");
-      const extraSpan = wrap.querySelector("span.extra");
-      if (baseSpan) baseSpan.style.width = `${pctBar}%`;
-      if (extraSpan) extraSpan.style.width = `${pctExtraOverlay}%`;
-      if (pctExtraOverlay > 0) wrap.classList.add("has-extra");
-      else wrap.classList.remove("has-extra");
-    });
-  };
+		document
+			.querySelectorAll(`[data-dex-summary-meter="${key}"]`)
+			.forEach((wrap) => {
+				const baseSpan = wrap.querySelector("span.base");
+				const extraSpan = wrap.querySelector("span.extra");
+				if (baseSpan) baseSpan.style.width = `${pctBar}%`;
+				if (extraSpan) extraSpan.style.width = `${pctExtraOverlay}%`;
+				if (pctExtraOverlay > 0) wrap.classList.add("has-extra");
+				else wrap.classList.remove("has-extra");
+			});
+	};
 
-  if (haveNat) {
-    refreshLabelAndMeter({
-      key: `${gameKey}:national`,
-      labelPrefix: "National",
-      baseDone: nat.baseDone,
-      extraDone: nat.extraDone,
-      baseTotal: nat.baseTotal,
-      basePct: nat.pctBase,
-      extendedPct: nat.pctExtended,
-      pctBar: nat.pctBar,
-      pctExtraOverlay: nat.pctExtraOverlay,
-    });
-  }
+	if (haveNat) {
+		refreshLabelAndMeter({
+			key: `${gameKey}:national`,
+			labelPrefix: "National",
+			baseDone: nat.baseDone,
+			extraDone: nat.extraDone,
+			baseTotal: nat.baseTotal,
+			basePct: nat.pctBase,
+			extendedPct: nat.pctExtended,
+			pctBar: nat.pctBar,
+			pctExtraOverlay: nat.pctExtraOverlay,
+		});
+	}
 
-  if (forms.haveForms) {
-    refreshLabelAndMeter({
-      key: `${gameKey}:forms`,
-      labelPrefix: "Forms",
-      baseDone: forms.formsBaseDone,
-      extraDone: forms.formsExtraDone,
-      baseTotal: forms.formsBaseTotal,
-      basePct: forms.formsPctBase,
-      extendedPct: forms.formsPctExtended,
-      pctBar: forms.formsPctBar,
-      pctExtraOverlay: forms.formsPctExtraOverlay,
-    });
-  }
+	if (forms.haveForms) {
+		refreshLabelAndMeter({
+			key: `${gameKey}:forms`,
+			labelPrefix: "Forms",
+			baseDone: forms.formsBaseDone,
+			extraDone: forms.formsExtraDone,
+			baseTotal: forms.formsBaseTotal,
+			basePct: forms.formsPctBase,
+			extendedPct: forms.formsPctExtended,
+			pctBar: forms.formsPctBar,
+			pctExtraOverlay: forms.formsPctExtraOverlay,
+		});
+	}
 }
 
 export function dexSummaryCardFor(gameKey, genKey, store) {
-  const games = window.DATA.games?.[genKey] || [];
-  const game = games.find((g) => g.key === gameKey);
-  const dex = _getDexList(gameKey);
+	const games = window.DATA.games?.[genKey] || [];
+	const game = games.find((g) => g.key === gameKey);
+	const dex = _getDexList(gameKey);
 
-  if (!document.getElementById("ppgc-golden-meter-css")) {
-    const style = document.createElement("style");
-    style.id = "ppgc-golden-meter-css";
-    document.head.appendChild(style);
-  }
+	if (!document.getElementById("ppgc-golden-meter-css")) {
+		const style = document.createElement("style");
+		style.id = "ppgc-golden-meter-css";
+		document.head.appendChild(style);
+	}
 
-  const baseGameKey = String(gameKey).endsWith("-national")
-    ? String(gameKey).replace(/-national$/, "")
-    : String(gameKey);
-  const natKey = `${baseGameKey}-national`;
-  const natDex = _getDexList(natKey);
-  const variants = window.DATA.dexVariants?.[baseGameKey] || [gameKey];
-  const hasVariantsConfig =
-    Array.isArray(window.DATA.dexVariants?.[baseGameKey]) &&
-    window.DATA.dexVariants[baseGameKey].length > 1;
+	const baseGameKey = String(gameKey).endsWith("-national")
+		? String(gameKey).replace(/-national$/, "")
+		: String(gameKey);
+	const natKey = `${baseGameKey}-national`;
+	const natDex = _getDexList(natKey);
+	const variants = window.DATA.dexVariants?.[baseGameKey] || [gameKey];
+	const hasVariantsConfig =
+		Array.isArray(window.DATA.dexVariants?.[baseGameKey]) &&
+		window.DATA.dexVariants[baseGameKey].length > 1;
 
-  const nat = computeSpeciesProgress(game, store, natKey, natDex);
-  const haveNat = nat.baseTotal > 0;
-  const formsSourceDex = haveNat ? natDex : dex;
-  const formsNodeKey = haveNat ? natKey : gameKey;
-  const forms = computeFormsProgress(game, store, formsNodeKey, formsSourceDex);
+	const nat = computeSpeciesProgress(game, store, natKey, natDex);
+	const haveNat = nat.baseTotal > 0;
+	const formsSourceDex = haveNat ? natDex : dex;
+	const formsNodeKey = haveNat ? natKey : gameKey;
+	const forms = computeFormsProgress(
+		game,
+		store,
+		formsNodeKey,
+		formsSourceDex,
+	);
 
-  const research = researchStatsFor(gameKey, genKey, store);
-  const haveResearch = research.baseTotal + research.extraTotal > 0;
-  let researchPctBar = 0;
-  let researchPctExtraOverlay = 0;
-  let researchLabelPct = 0;
-  if (haveResearch) {
-    const pctBase = research.baseTotal ? (research.baseDone / research.baseTotal) * 100 : 0;
-    const pctExtended = research.baseTotal ? ((research.baseDone + research.extraDone) / research.baseTotal) * 100 : 0;
-    researchLabelPct = research.baseDone === research.baseTotal ? pctExtended : pctBase;
-    researchPctBar = Math.min(100, Math.max(0, Math.round((research.baseDone / Math.max(1, research.baseTotal)) * 100)));
-    researchPctExtraOverlay =
-      research.baseTotal > 0 && research.baseDone === research.baseTotal && research.extraTotal > 0
-        ? (research.extraDone / research.extraTotal) * 100
-        : 0;
-  }
+	const research = researchStatsFor(gameKey, genKey, store);
+	const haveResearch = research.baseTotal + research.extraTotal > 0;
+	let researchPctBar = 0;
+	let researchPctExtraOverlay = 0;
+	let researchLabelPct = 0;
+	if (haveResearch) {
+		const pctBase = research.baseTotal
+			? (research.baseDone / research.baseTotal) * 100
+			: 0;
+		const pctExtended = research.baseTotal
+			? ((research.baseDone + research.extraDone) / research.baseTotal) *
+				100
+			: 0;
+		researchLabelPct =
+			research.baseDone === research.baseTotal ? pctExtended : pctBase;
+		researchPctBar = Math.min(
+			100,
+			Math.max(
+				0,
+				Math.round(
+					(research.baseDone / Math.max(1, research.baseTotal)) * 100,
+				),
+			),
+		);
+		researchPctExtraOverlay =
+			research.baseTotal > 0 &&
+			research.baseDone === research.baseTotal &&
+			research.extraTotal > 0
+				? (research.extraDone / research.extraTotal) * 100
+				: 0;
+	}
 
-  let variantsHTML = "";
-  if (variants.length) {
-    for (const dk of variants) {
-      const d = _getDexList(dk);
-      if (!d.length) continue;
-      const variantBaseKey = baseOf(dk);
-      const label = shortLabelForDexKey(variantBaseKey, dk);
-      const stats = computeSpeciesProgress(game, store, dk, d);
-      const labelPct = stats.baseDone === stats.baseTotal ? stats.pctExtended : stats.pctBase;
-      const labelDone =
-        stats.baseDone === stats.baseTotal
-          ? `${stats.baseDone + stats.extraDone} / ${stats.baseTotal}`
-          : `${stats.baseDone}/${stats.baseTotal}`;
-      variantsHTML += `
+	let variantsHTML = "";
+	if (variants.length) {
+		for (const dk of variants) {
+			const d = _getDexList(dk);
+			if (!d.length) continue;
+			const variantBaseKey = baseOf(dk);
+			const label = shortLabelForDexKey(variantBaseKey, dk);
+			const stats = computeSpeciesProgress(game, store, dk, d);
+			const labelPct =
+				stats.baseDone === stats.baseTotal
+					? stats.pctExtended
+					: stats.pctBase;
+			const labelDone =
+				stats.baseDone === stats.baseTotal
+					? `${stats.baseDone + stats.extraDone} / ${stats.baseTotal}`
+					: `${stats.baseDone}/${stats.baseTotal}`;
+			variantsHTML += `
         <div class="small">
           ${label}:
           ${labelDone} (${labelPct.toFixed(2)}%)
@@ -204,11 +293,12 @@ export function dexSummaryCardFor(gameKey, genKey, store) {
           <span class="extra" style="width:${stats.pctExtraOverlay}%"></span>
           ${stats.pctExtraOverlay > 0 ? `<div class="extra-badge" title="Extra credit progress">+${stats.pctExtraOverlay.toFixed(0)}%</div>` : ``}
         </div>`;
-    }
-  }
+		}
+	}
 
-  const nationalHTML = haveNat && !hasVariantsConfig
-    ? `
+	const nationalHTML =
+		haveNat && !hasVariantsConfig
+			? `
       <div class="small" data-dex-summary-label="${gameKey}:national">National:
         ${nat.baseDone === nat.baseTotal ? nat.baseDone + nat.extraDone : nat.baseDone}
         / ${nat.baseTotal || 0}
@@ -219,10 +309,10 @@ export function dexSummaryCardFor(gameKey, genKey, store) {
         <span class="extra" style="width:${nat.pctExtraOverlay}%"></span>
         ${nat.pctExtraOverlay > 0 ? `<div class="extra-badge" title="Extra credit progress">+${nat.pctExtraOverlay.toFixed(0)}%</div>` : ``}
       </div>`
-    : ``;
+			: ``;
 
-  const formsHTML = forms.haveForms
-    ? `
+	const formsHTML = forms.haveForms
+		? `
       <div class="small" data-dex-summary-label="${gameKey}:forms">
         Forms:
         ${forms.formsBaseDone === forms.formsBaseTotal ? forms.formsBaseDone + forms.formsExtraDone : forms.formsBaseDone}
@@ -234,10 +324,10 @@ export function dexSummaryCardFor(gameKey, genKey, store) {
         <span class="extra" style="width:${forms.formsPctExtraOverlay}%"></span>
         ${forms.formsPctExtraOverlay > 0 ? `<div class="extra-badge" title="Extra credit progress">+${forms.formsPctExtraOverlay.toFixed(0)}%</div>` : ``}
       </div>`
-    : ``;
+		: ``;
 
-  const researchHTML = haveResearch
-    ? `
+	const researchHTML = haveResearch
+		? `
       <div class="small" data-research-label="${gameKey}">
         Research Tasks:
         ${research.baseDone === research.baseTotal ? research.baseDone + research.extraDone : research.baseDone}
@@ -249,26 +339,42 @@ export function dexSummaryCardFor(gameKey, genKey, store) {
         <span class="extra" style="width:${researchPctExtraOverlay}%"></span>
         ${researchPctExtraOverlay > 0 ? `<div class="extra-badge" title="Extra credit progress">+${researchPctExtraOverlay.toFixed(0)}%</div>` : ``}
       </div>`
-    : ``;
+		: ``;
 
-  const solitude = pathOfSolitudeStatsFor(gameKey, genKey, store);
-  const haveSolitude = solitude.baseTotal + solitude.extraTotal > 0;
-  let solitudePctBar = 0;
-  let solitudePctExtraOverlay = 0;
-  let solitudeLabelPct = 0;
-  if (haveSolitude) {
-    const pctBase = solitude.baseTotal ? (solitude.baseDone / solitude.baseTotal) * 100 : 0;
-    const pctExtended = solitude.baseTotal ? ((solitude.baseDone + solitude.extraDone) / solitude.baseTotal) * 100 : 0;
-    solitudeLabelPct = solitude.baseDone === solitude.baseTotal ? pctExtended : pctBase;
-    solitudePctBar = Math.min(100, Math.max(0, Math.round((solitude.baseDone / Math.max(1, solitude.baseTotal)) * 100)));
-    solitudePctExtraOverlay =
-      solitude.baseTotal > 0 && solitude.baseDone === solitude.baseTotal && solitude.extraTotal > 0
-        ? (solitude.extraDone / solitude.extraTotal) * 100
-        : 0;
-  }
+	const solitude = pathOfSolitudeStatsFor(gameKey, genKey, store);
+	const haveSolitude = solitude.baseTotal + solitude.extraTotal > 0;
+	let solitudePctBar = 0;
+	let solitudePctExtraOverlay = 0;
+	let solitudeLabelPct = 0;
+	if (haveSolitude) {
+		const pctBase = solitude.baseTotal
+			? (solitude.baseDone / solitude.baseTotal) * 100
+			: 0;
+		const pctExtended = solitude.baseTotal
+			? ((solitude.baseDone + solitude.extraDone) / solitude.baseTotal) *
+				100
+			: 0;
+		solitudeLabelPct =
+			solitude.baseDone === solitude.baseTotal ? pctExtended : pctBase;
+		solitudePctBar = Math.min(
+			100,
+			Math.max(
+				0,
+				Math.round(
+					(solitude.baseDone / Math.max(1, solitude.baseTotal)) * 100,
+				),
+			),
+		);
+		solitudePctExtraOverlay =
+			solitude.baseTotal > 0 &&
+			solitude.baseDone === solitude.baseTotal &&
+			solitude.extraTotal > 0
+				? (solitude.extraDone / solitude.extraTotal) * 100
+				: 0;
+	}
 
-  const solitudeHTML = haveSolitude
-    ? `
+	const solitudeHTML = haveSolitude
+		? `
       <div class="small" data-solitude-label="${gameKey}">
         Path of Solitude:
         ${solitude.baseDone === solitude.baseTotal ? solitude.baseDone + solitude.extraDone : solitude.baseDone}
@@ -280,11 +386,11 @@ export function dexSummaryCardFor(gameKey, genKey, store) {
         <span class="extra" style="width:${solitudePctExtraOverlay}%"></span>
         ${solitudePctExtraOverlay > 0 ? `<div class="extra-badge" title="Extra credit progress">+${solitudePctExtraOverlay.toFixed(0)}%</div>` : ``}
       </div>`
-    : ``;
+		: ``;
 
-  const card = document.createElement("section");
-  card.className = "card";
-  card.innerHTML = `
+	const card = document.createElement("section");
+	card.className = "card";
+	card.innerHTML = `
     <div class="card-hd"><h3>Pokédex — <span class="small">${game?.label || gameKey}</span></h3></div>
     <div class="card-bd">
       ${variantsHTML}
@@ -294,13 +400,16 @@ export function dexSummaryCardFor(gameKey, genKey, store) {
       ${solitudeHTML}
     </div>
   `;
-  return card;
+	return card;
 }
 
 export function dexPctFor(gameKey, genKey, store) {
-  const games = window.DATA.games?.[genKey] || [];
-  const game = games.find((g) => g.key === gameKey);
-  const dex = _getDexList(gameKey);
-  const stats = computeSpeciesProgress(game, store, gameKey, dex);
-  return stats.baseDone === stats.baseTotal ? stats.pctExtended : stats.pctBase;
+	const games = window.DATA.games?.[genKey] || [];
+	const game = games.find((g) => g.key === gameKey);
+	const dex = _getDexList(gameKey);
+	const stats = computeSpeciesProgress(game, store, gameKey, dex);
+	return stats.baseDone === stats.baseTotal
+		? stats.pctExtended
+		: stats.pctBase;
 }
+import { debugLog } from "../utils/debug.js";

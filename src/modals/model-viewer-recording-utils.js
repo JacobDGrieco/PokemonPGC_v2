@@ -5,7 +5,8 @@ export function pickBestWebmMime() {
 		"video/webm",
 	];
 	for (const c of candidates) {
-		if (window.MediaRecorder && MediaRecorder.isTypeSupported?.(c)) return c;
+		if (window.MediaRecorder && MediaRecorder.isTypeSupported?.(c))
+			return c;
 	}
 	return "";
 }

@@ -34,7 +34,9 @@ export function makePokemonEyeMaterial({
 			uIrisColor: { value: irisColor || new THREE.Color(0.2, 0.8, 0.2) },
 			uPupilColor: { value: pupilColor || new THREE.Color(0, 0, 0) },
 
-			uPupilCenter: { value: new THREE.Vector2(pupilCenter.x, pupilCenter.y) },
+			uPupilCenter: {
+				value: new THREE.Vector2(pupilCenter.x, pupilCenter.y),
+			},
 			uPupilRadius: { value: pupilRadius },
 			uPupilFeather: { value: pupilFeather },
 
@@ -230,7 +232,7 @@ export function makePokemonBodyMaterial({
 		map: alb || null,
 		normalMap: nrm || null,
 
-		roughness: 0.92,          // was 0.8
+		roughness: 0.92, // was 0.8
 		metalness: 0.0,
 
 		aoMap: ao || null,
@@ -274,7 +276,7 @@ varying vec2 ppgcUv;
 			`
 #include <uv_vertex>
 ppgcUv = uv;
-`
+`,
 		);
 
 		shader.fragmentShader =
@@ -332,7 +334,7 @@ vec3 hsv = rgb2hsv( diffuseColor.rgb );
 hsv.y *= uSatBoost;
 hsv.z *= uValBoost;
 diffuseColor.rgb = hsv2rgb(hsv);
-`
+`,
 		);
 
 		// 2) Roughness decode
@@ -347,7 +349,7 @@ if (uHasRgn) {
 }
 
 roughnessFactor = clamp(roughnessFactor, 0.02, 1.0);
-`
+`,
 		);
 
 		// 3) Metalness decode
@@ -360,7 +362,7 @@ if (uHasMtl) {
 	vec4 mt = texture2D(uMtl, ppgcUv);
 	metalnessFactor = clamp(mt.r, 0.0, 1.0);
 }
-`
+`,
 		);
 
 		// 4) Optional emissive
@@ -372,7 +374,7 @@ if (uHasEmi) {
 	vec3 e = texture2D(uEmi, ppgcUv).rgb;
 	totalEmissiveRadiance += e * uSpecBoost;
 }
-`
+`,
 		);
 
 		// 5) Final toon-ish quantization
@@ -392,7 +394,7 @@ float scale = (lum > 1e-5) ? (q / lum) : 1.0;
 col = mix(col, col * scale, mixAmt);
 
 gl_FragColor = vec4(col, diffuseColor.a);
-`
+`,
 		);
 
 		mat.userData._ppgcShader = shader;

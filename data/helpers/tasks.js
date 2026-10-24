@@ -1,3 +1,8 @@
+/**
+ * Data-authoring helpers for registering task trees across one or more games.
+ * Generated IDs include the game, section, and padded source IDs; their format
+ * is persisted and must remain stable across content revisions.
+ */
 import { pad3 } from './core.js';
 
 export function injectTasksMany(gameKeys, TASKS_BY_SECTION) {

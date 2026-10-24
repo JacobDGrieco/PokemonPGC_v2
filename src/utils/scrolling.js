@@ -5,15 +5,15 @@ function scrollNodeToTop(node) {
 			node.scrollTo({ top: 0, left: 0, behavior: "auto" });
 			return;
 		}
-	} catch { }
+	} catch {}
 
 	try {
 		node.scrollTop = 0;
-	} catch { }
+	} catch {}
 
 	try {
 		node.scrollLeft = 0;
-	} catch { }
+	} catch {}
 }
 
 export function resetScrollWithin(root, { includeRoot = true } = {}) {

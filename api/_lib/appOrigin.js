@@ -7,7 +7,9 @@ export function getAppOrigin(req) {
 	if (configuredOrigin) return normalizeAppOrigin(configuredOrigin);
 
 	const vercelHost = String(
-		process.env.VERCEL_PROJECT_PRODUCTION_URL || process.env.VERCEL_URL || "",
+		process.env.VERCEL_PROJECT_PRODUCTION_URL ||
+			process.env.VERCEL_URL ||
+			"",
 	).trim();
 	if (vercelHost) return normalizeAppOrigin(vercelHost, "https:");
 
@@ -16,7 +18,8 @@ export function getAppOrigin(req) {
 		if (requestHost) {
 			const localOrigin = normalizeAppOrigin(requestHost, "http:");
 			const hostname = new URL(localOrigin).hostname;
-			if (["localhost", "127.0.0.1", "::1"].includes(hostname)) return localOrigin;
+			if (["localhost", "127.0.0.1", "::1"].includes(hostname))
+				return localOrigin;
 		}
 		return "http://127.0.0.1:5173";
 	}

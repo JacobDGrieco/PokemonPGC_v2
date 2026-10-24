@@ -3,7 +3,9 @@ function isPlainObject(value) {
 }
 
 export function normalizeEmail(email) {
-	return String(email || "").trim().toLowerCase();
+	return String(email || "")
+		.trim()
+		.toLowerCase();
 }
 
 export function validateEmail(value) {
@@ -19,7 +21,10 @@ export function validatePassword(value) {
 	const password = String(value || "");
 	if (!password) return { ok: false, error: "Password required." };
 	if (password.length < 8 || password.length > 128) {
-		return { ok: false, error: "Password must be between 8 and 128 characters." };
+		return {
+			ok: false,
+			error: "Password must be between 8 and 128 characters.",
+		};
 	}
 	return { ok: true, password };
 }
@@ -32,7 +37,11 @@ export function validateCredentials(body) {
 	if (!emailResult.ok) return emailResult;
 	const passwordResult = validatePassword(body.password);
 	if (!passwordResult.ok) return passwordResult;
-	return { ok: true, email: emailResult.email, password: passwordResult.password };
+	return {
+		ok: true,
+		email: emailResult.email,
+		password: passwordResult.password,
+	};
 }
 
 export function validateIcon(icon) {
@@ -43,7 +52,10 @@ export function validateIcon(icon) {
 		return { ok: true, icon: normalized };
 	}
 
-	const isImageDataUrl = /^data:image\/(?:png|jpeg|jpg|webp|gif);base64,[a-z0-9+/=]+$/i.test(normalized);
+	const isImageDataUrl =
+		/^data:image\/(?:png|jpeg|jpg|webp|gif);base64,[a-z0-9+/=]+$/i.test(
+			normalized,
+		);
 	if (isImageDataUrl && normalized.length <= 250_000) {
 		return { ok: true, icon: normalized };
 	}

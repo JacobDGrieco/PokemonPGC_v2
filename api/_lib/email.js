@@ -23,7 +23,8 @@ function parseBoolean(value, fallback) {
 }
 
 function assertSafeHeaderValue(value, name) {
-	if (/\r|\n/.test(value)) throw new Error(`${name} contains invalid characters.`);
+	if (/\r|\n/.test(value))
+		throw new Error(`${name} contains invalid characters.`);
 }
 
 export function getSmtpConfig(env = process.env) {
@@ -88,7 +89,8 @@ function getTransport(config) {
 		config.user,
 		config.pass,
 	]);
-	if (cachedTransport && cachedTransportKey === transportKey) return cachedTransport;
+	if (cachedTransport && cachedTransportKey === transportKey)
+		return cachedTransport;
 
 	cachedTransport = nodemailer.createTransport({
 		host: config.host,

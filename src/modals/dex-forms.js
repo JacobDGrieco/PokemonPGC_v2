@@ -5,11 +5,13 @@
 // passed in as dependencies from dex.js so we avoid circular imports.
 
 import { emitPpgcUiSync } from "../react-bridge/storeBridge.js";
+import { debugLog } from "../utils/debug.js";
 import { baseOf } from "./dex-config.js";
 import { updateDexThumb } from "./dex-grid.js";
 import { getDexScrollContainer } from "./helpers.js";
 import { clampStatusForMon, pickHighestStatus } from "./helpers.js";
 import { refreshDexSummaryMetrics } from "./dex-summary.js";
+import { hideModalElement, showModalElement } from "./modal-state.js";
 
 export function setupDexFormsModal(store, deps) {
 	const {
@@ -26,17 +28,17 @@ export function setupDexFormsModal(store, deps) {
 		getFilterClassForStatus,
 		renderBadges,
 		shouldUseColorSprite,
-		getDexFormsNode,     // (gameKey, monId) => { node, map }
-		setDexFormsNode,     // (gameKey, monId, node) => void
+		getDexFormsNode, // (gameKey, monId) => { node, map }
+		setDexFormsNode, // (gameKey, monId, node) => void
 		applyDexLinksFromForm, // (gameKey, monId, formName, status) => void
-		renderDexGrid,       // function from dex.js
+		renderDexGrid, // function from dex.js
 	} = deps;
 
 	if (!formsModal || !formsWheel) {
 		// Graceful no-op if DOM isn’t there
 		return {
-			openDexForms: () => { },
-			closeDexForms: () => { },
+			openDexForms: () => {},
+			closeDexForms: () => {},
 		};
 	}
 
@@ -51,14 +53,27 @@ export function setupDexFormsModal(store, deps) {
 		typeof v === "function" ? v({ gameKey }) : v;
 
 	function refreshActiveDexCard(gameKey, mon) {
-		if (!mon) { console.warn('[DEX-FORMS] refreshActiveDexCard: mon is null, skipping'); return; }
+		if (!mon) {
+			console.warn(
+				"[DEX-FORMS] refreshActiveDexCard: mon is null, skipping",
+			);
+			return;
+		}
 		const cardKey = `${gameKey}:${mon.id}`;
 		const card = document.querySelector(`[data-dex-card-key="${cardKey}"]`);
-		console.log(`[DEX-FORMS] refreshActiveDexCard: looking for card key="${cardKey}", found=`, !!card);
+		debugLog(
+			`[DEX-FORMS] refreshActiveDexCard: looking for card key="${cardKey}", found=`,
+			!!card,
+		);
 		if (!card) {
 			// Show all card keys in DOM to diagnose mismatch
-			const allCardKeys = [...document.querySelectorAll('[data-dex-card-key]')].map(el => el.dataset.dexCardKey);
-			console.warn('[DEX-FORMS] refreshActiveDexCard: card NOT found. All card keys in DOM:', allCardKeys.slice(0, 10));
+			const allCardKeys = [
+				...document.querySelectorAll("[data-dex-card-key]"),
+			].map((el) => el.dataset.dexCardKey);
+			console.warn(
+				"[DEX-FORMS] refreshActiveDexCard: card NOT found. All card keys in DOM:",
+				allCardKeys.slice(0, 10),
+			);
 			return;
 		}
 
@@ -67,8 +82,15 @@ export function setupDexFormsModal(store, deps) {
 			const formName = typeof f === "string" ? f : f?.name;
 			return node.forms?.[formName] || "unknown";
 		});
-		const highestStatus = clampStatusForMon(mon, pickHighestStatus(formVals));
-		console.log(`[DEX-FORMS] refreshActiveDexCard: formVals=`, formVals, `→ highestStatus="${highestStatus}"`);
+		const highestStatus = clampStatusForMon(
+			mon,
+			pickHighestStatus(formVals),
+		);
+		debugLog(
+			`[DEX-FORMS] refreshActiveDexCard: formVals=`,
+			formVals,
+			`→ highestStatus="${highestStatus}"`,
+		);
 		card.dataset.status = highestStatus;
 
 		const thumb = card.querySelector(".thumb");
@@ -78,16 +100,25 @@ export function setupDexFormsModal(store, deps) {
 				mon,
 				status: highestStatus,
 				gameKey,
-				pathOfSolitudeEnabled: !!(store.dexResearchStatus.get(gameKey)?.[mon.id]?.__pathOfSolitude),
+				pathOfSolitudeEnabled:
+					!!store.dexResearchStatus.get(gameKey)?.[mon.id]
+						?.__pathOfSolitude,
 			});
 		}
 
-		const countEl = card.querySelector(`[data-dex-forms-count="${cardKey}"]`);
+		const countEl = card.querySelector(
+			`[data-dex-forms-count="${cardKey}"]`,
+		);
 		if (countEl) {
 			const total = (mon.forms || []).length;
 			const filled = (mon.forms || []).reduce((acc, f) => {
 				const formName = typeof f === "string" ? f : f?.name;
-				return acc + ((node.forms?.[formName] || "unknown") !== "unknown" ? 1 : 0);
+				return (
+					acc +
+					((node.forms?.[formName] || "unknown") !== "unknown"
+						? 1
+						: 0)
+				);
 			}, 0);
 			countEl.textContent = `${filled}/${total}`;
 		}
@@ -115,7 +146,8 @@ export function setupDexFormsModal(store, deps) {
 
 		const forms = mon.forms || [];
 		const N = forms.length;
-		const isMobileViewport = window.matchMedia?.('(max-width: 900px)')?.matches;
+		const isMobileViewport =
+			window.matchMedia?.("(max-width: 900px)")?.matches;
 		const useRadial = !isMobileViewport && N <= 7; // phones use grid to avoid radial overflow
 
 		// Body scroll behavior (same as before)
@@ -147,7 +179,7 @@ export function setupDexFormsModal(store, deps) {
 
 		// Build chips (same logic as before)
 		const chips = forms.map((form) => {
-			const name = typeof form === "string" ? form : form?.name ?? "";
+			const name = typeof form === "string" ? form : (form?.name ?? "");
 
 			const chip = document.createElement("div");
 			chip.className = "form-chip";
@@ -192,7 +224,7 @@ export function setupDexFormsModal(store, deps) {
 			} else {
 				// Other gens: keep shiny behavior
 				const shinyish = curVal === "shiny" || curVal === "shiny_alpha";
-				const pick = shinyish ? (fObj?.imgS || fObj?.img) : fObj?.img;
+				const pick = shinyish ? fObj?.imgS || fObj?.img : fObj?.img;
 
 				startSrc = valWithGame(pick || null, gameKey);
 			}
@@ -227,7 +259,7 @@ export function setupDexFormsModal(store, deps) {
 				chip.classList.remove(
 					"status-unknown",
 					"status-seen",
-					"status-normal"
+					"status-normal",
 				);
 				chip.classList.add(cls);
 			}
@@ -235,16 +267,24 @@ export function setupDexFormsModal(store, deps) {
 			updateChipState();
 
 			sel.addEventListener("change", () => {
-				console.log(`[DEX-FORMS] change fired for form="${name}", value="${sel.value}", nonce check: dataset="${formsModal.dataset.formsNonce}" vs expected="${nonce}"`);
+				debugLog(
+					`[DEX-FORMS] change fired for form="${name}", value="${sel.value}", nonce check: dataset="${formsModal.dataset.formsNonce}" vs expected="${nonce}"`,
+				);
 				if (formsModal.dataset.formsNonce !== String(nonce)) {
-					console.warn('[DEX-FORMS] change: NONCE MISMATCH, ignoring. Modal may have been reopened.');
+					console.warn(
+						"[DEX-FORMS] change: NONCE MISMATCH, ignoring. Modal may have been reopened.",
+					);
 					return;
 				}
 
 				const activeGameKey = formsModal.dataset.gameKey || gameKey;
 				const rawMonId = formsModal.dataset.monId || String(mon.id);
-				const activeMonId = /^\d+$/.test(rawMonId) ? Number(rawMonId) : rawMonId;
-				console.log(`[DEX-FORMS] change: activeGameKey="${activeGameKey}", activeMonId=${activeMonId}, newVal="${sel.value}"`);
+				const activeMonId = /^\d+$/.test(rawMonId)
+					? Number(rawMonId)
+					: rawMonId;
+				debugLog(
+					`[DEX-FORMS] change: activeGameKey="${activeGameKey}", activeMonId=${activeMonId}, newVal="${sel.value}"`,
+				);
 
 				let newVal = normalizeFlag(sel.value);
 				newVal = clampStatusForForm(mon, form, newVal);
@@ -257,19 +297,24 @@ export function setupDexFormsModal(store, deps) {
 				const total = forms.length;
 				const filled = forms.reduce((a, f) => {
 					const nm = typeof f === "string" ? f : f?.name;
-					return a +
-						(normalizeFlag(node.forms?.[nm]) !== "unknown" ? 1 : 0);
+					return (
+						a +
+						(normalizeFlag(node.forms?.[nm]) !== "unknown" ? 1 : 0)
+					);
 				}, 0);
 				node.all = filled === total;
 				setDexFormsNode(activeGameKey, activeMonId, node);
-				console.log(`[DEX-FORMS] stored node for ${activeGameKey}:${activeMonId}, forms=`, { ...node.forms });
+				debugLog(
+					`[DEX-FORMS] stored node for ${activeGameKey}:${activeMonId}, forms=`,
+					{ ...node.forms },
+				);
 
 				try {
 					applyDexLinksFromForm(
 						activeGameKey,
 						activeMonId,
 						name,
-						newVal
+						newVal,
 					);
 				} catch (e) {
 					console.error("applyDexLinksFromForm error:", e);
@@ -290,39 +335,60 @@ export function setupDexFormsModal(store, deps) {
 						const baseImgFn = fObj?.img || null;
 						const colorImgFn = fObj?.imgS || baseImgFn;
 
-						const baseImg = valWithGame(baseImgFn, activeGameKey) || im.src;
-						const colorImg = valWithGame(colorImgFn, activeGameKey) || baseImg;
+						const baseImg =
+							valWithGame(baseImgFn, activeGameKey) || im.src;
+						const colorImg =
+							valWithGame(colorImgFn, activeGameKey) || baseImg;
 
 						nextSrc = useColorForGame ? colorImg : baseImg;
 					} else {
-						const shinyish = newVal === "shiny" || newVal === "shiny_alpha";
-						const pick = shinyish ? (fObj?.imgS || fObj?.img) : fObj?.img;
+						const shinyish =
+							newVal === "shiny" || newVal === "shiny_alpha";
+						const pick = shinyish
+							? fObj?.imgS || fObj?.img
+							: fObj?.img;
 
-						nextSrc = valWithGame(pick || null, activeGameKey) || im.src;
+						nextSrc =
+							valWithGame(pick || null, activeGameKey) || im.src;
 					}
 
 					im.src = nextSrc;
 				}
 
-				console.log('[DEX-FORMS] calling refreshActiveDexCard...');
+				debugLog("[DEX-FORMS] calling refreshActiveDexCard...");
 				refreshActiveDexCard(activeGameKey, mon);
 				const summaryGameKey = baseOf(activeGameKey);
 				const summaryGenKey = formsModal.dataset.genKey || genKey;
-				console.log(`[DEX-FORMS] calling refreshDexSummaryMetrics(gameKey="${summaryGameKey}", genKey="${summaryGenKey}")`);
-				const summaryLabelEls = document.querySelectorAll(`[data-dex-summary-label="${summaryGameKey}:forms"]`);
-				const summaryMeterEls = document.querySelectorAll(`[data-dex-summary-meter="${summaryGameKey}:forms"]`);
-				console.log(`[DEX-FORMS] summary DOM elements found: labels=${summaryLabelEls.length}, meters=${summaryMeterEls.length}`);
+				debugLog(
+					`[DEX-FORMS] calling refreshDexSummaryMetrics(gameKey="${summaryGameKey}", genKey="${summaryGenKey}")`,
+				);
+				const summaryLabelEls = document.querySelectorAll(
+					`[data-dex-summary-label="${summaryGameKey}:forms"]`,
+				);
+				const summaryMeterEls = document.querySelectorAll(
+					`[data-dex-summary-meter="${summaryGameKey}:forms"]`,
+				);
+				debugLog(
+					`[DEX-FORMS] summary DOM elements found: labels=${summaryLabelEls.length}, meters=${summaryMeterEls.length}`,
+				);
 				refreshDexSummaryMetrics(summaryGameKey, summaryGenKey, store);
-				console.log('[DEX-FORMS] calling emitPpgcUiSync...');
-				emitPpgcUiSync({ state: store?.state || window.store?.state || window.PPGC?._storeRef?.state || {}, loading: false });
-				console.log('[DEX-FORMS] emitPpgcUiSync done.');
+				debugLog("[DEX-FORMS] calling emitPpgcUiSync...");
+				emitPpgcUiSync({
+					state:
+						store?.state ||
+						window.store?.state ||
+						window.PPGC?._storeRef?.state ||
+						{},
+					loading: false,
+				});
+				debugLog("[DEX-FORMS] emitPpgcUiSync done.");
 
 				try {
 					window.PPGC?.applyTaskSyncsFromForm?.(
 						activeGameKey,
 						activeMonId,
 						name,
-						newVal
+						newVal,
 					);
 				} catch {
 					/* ignore */
@@ -360,7 +426,7 @@ export function setupDexFormsModal(store, deps) {
 					preferWidth: false,
 					sizeCap: 1000,
 					flattenSyForRingsGte: 3,
-				}
+				},
 			);
 			formsModal._dexOnResize = onResize;
 			window.addEventListener("resize", onResize, { passive: true });
@@ -370,8 +436,9 @@ export function setupDexFormsModal(store, deps) {
 			formsWheel.style.height = "auto";
 			formsWheel.style.display = "grid";
 			formsWheel.style.maxWidth = "100%";
-			formsWheel.style.gridTemplateColumns =
-				isMobileViewport ? "repeat(2, minmax(0, 1fr))" : "repeat(4, minmax(0, 1fr))";
+			formsWheel.style.gridTemplateColumns = isMobileViewport
+				? "repeat(2, minmax(0, 1fr))"
+				: "repeat(4, minmax(0, 1fr))";
 			formsWheel.style.gap = "8px";
 			formsWheel.style.padding = "4px 2px 10px";
 
@@ -383,8 +450,7 @@ export function setupDexFormsModal(store, deps) {
 			});
 		}
 
-		formsModal.classList.add("open");
-		formsModal.setAttribute("aria-hidden", "false");
+		showModalElement(formsModal);
 		formsModal.removeAttribute("inert");
 	}
 
@@ -412,8 +478,7 @@ export function setupDexFormsModal(store, deps) {
 		// Drop wheel DOM so chip buttons + decoded images can GC
 		if (formsWheel) formsWheel.innerHTML = "";
 
-		formsModal.classList.remove("open");
-		formsModal.setAttribute("aria-hidden", "true");
+		hideModalElement(formsModal);
 		formsModal.setAttribute("inert", "");
 
 		// clear active-target metadata
@@ -425,7 +490,10 @@ export function setupDexFormsModal(store, deps) {
 		formsModal.__dexScrollTop = 0;
 
 		try {
-			if (document.activeElement && formsModal.contains(document.activeElement)) {
+			if (
+				document.activeElement &&
+				formsModal.contains(document.activeElement)
+			) {
 				document.activeElement.blur?.();
 			}
 			if (returnEl && typeof returnEl.focus === "function") {

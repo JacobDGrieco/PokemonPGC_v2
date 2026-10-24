@@ -12,7 +12,9 @@
 	max-width: calc(100vw - 16px);
 	opacity: 0;
 	transform: translateY(-4px);
-	transition: opacity 150ms ease-out, transform 150ms ease-out;
+	transition:
+		opacity 150ms ease-out,
+		transform 150ms ease-out;
 }
 
 .battle-card-visible {
@@ -173,7 +175,9 @@
 	flex-shrink: 0;
 	line-height: 1.4;
 	min-width: 30px;
-	transition: background 100ms, color 100ms;
+	transition:
+		background 100ms,
+		color 100ms;
 }
 
 .battle-card-btn:hover {
@@ -206,4 +210,63 @@
 	flex-direction: row;
 	gap: 4px;
 	flex-shrink: 0;
+}
+
+.battle-card-scrim {
+	position: fixed;
+	inset: 0;
+	border: 0;
+	background: rgba(2, 4, 8, 0.72);
+	z-index: 9998;
+}
+
+.battle-card-close {
+	position: sticky;
+	top: 0;
+	display: grid;
+	place-items: center;
+	width: var(--mobile-target-size);
+	height: var(--mobile-target-size);
+	margin: 0 0 8px auto;
+	border: 1px solid #4a4a5a;
+	border-radius: 999px;
+	background: #25252f;
+	color: #fff;
+	font-size: 22px;
+	cursor: pointer;
+	z-index: 1;
+}
+
+@media (max-width: 700px), (max-height: 520px) {
+	.battle-card-sheet {
+		position: fixed !important;
+		inset: auto 0 0 !important;
+		width: 100%;
+		max-width: none;
+		max-height: min(82dvh, 680px);
+		padding: 14px max(12px, env(safe-area-inset-right))
+			max(14px, env(safe-area-inset-bottom))
+			max(12px, env(safe-area-inset-left));
+		border-radius: 18px 18px 0 0;
+		overflow-y: auto;
+		z-index: 9999;
+	}
+
+	.battle-card-party,
+	.battle-card-party[data-party-size="4"] {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.battle-card-btn {
+		min-width: var(--mobile-target-size);
+		min-height: var(--mobile-target-size);
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 390px) {
+	.battle-card-party,
+	.battle-card-party[data-party-size="4"] {
+		grid-template-columns: minmax(0, 1fr);
+	}
 }

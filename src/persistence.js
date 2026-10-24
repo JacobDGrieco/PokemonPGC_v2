@@ -1,6 +1,16 @@
+/**
+ * Coordinates local snapshots, folder backup handles, and authenticated cloud
+ * saves. The layer intentionally preserves immediate local durability; changing
+ * write timing or restore precedence can lose user progress across devices.
+ */
 import { store, getAllGameKeys } from "./store.js";
 import { bootstrapTasks } from "./tasks.js";
-import { getCurrentUser, saveGameSave, fetchGameSave, fetchAllGameSaves } from "../api.js";
+import {
+	getCurrentUser,
+	saveGameSave,
+	fetchGameSave,
+	fetchAllGameSaves,
+} from "../api.js";
 
 /* ===================== IDB tiny helper ===================== */
 const DB_NAME = "ppgc-backups";
@@ -38,7 +48,8 @@ async function idbSet(key, val) {
 const DIR_KEY = "backupDirV1";
 
 async function ensureDirHandle() {
-	if (DISABLE_FS_PICKERS) throw new Error("File system access temporarily disabled");
+	if (DISABLE_FS_PICKERS)
+		throw new Error("File system access temporarily disabled");
 
 	let handle = await idbGet(DIR_KEY);
 	// Handles are structured-cloneable in IDB; permission may still need confirming
@@ -65,10 +76,12 @@ async function verifyWritePermission(handle) {
 }
 
 async function writeJsonFile(dirHandle, filename, obj) {
-	const fileHandle = await dirHandle.getFileHandle(filename, { create: true });
+	const fileHandle = await dirHandle.getFileHandle(filename, {
+		create: true,
+	});
 	const writable = await fileHandle.createWritable();
 	await writable.write(
-		new Blob([JSON.stringify(obj, null, 2)], { type: "application/json" })
+		new Blob([JSON.stringify(obj, null, 2)], { type: "application/json" }),
 	);
 	await writable.close();
 }
@@ -125,7 +138,8 @@ function collectAllFashionKeysFromData(gameKey) {
 				});
 			} else {
 				forms.forEach((f, idx) => {
-					const name = typeof f === "string" ? f : f?.name || String(idx + 1);
+					const name =
+						typeof f === "string" ? f : f?.name || String(idx + 1);
 					// If a form id exists, prefer it; else itemId-{1..N}
 					const formId =
 						typeof f === "object" && f?.id
@@ -155,7 +169,7 @@ function getDexCanonicalForms(gameKey, dexId) {
 				? f
 				: f && (f.name || f.id)
 					? String(f.name || f.id)
-					: ""
+					: "",
 		)
 		.filter(Boolean);
 }
@@ -188,25 +202,29 @@ function readTaskState(taskId) {
 	if (window.store?.getTaskState) return window.store.getTaskState(taskId);
 
 	// Fallback DOM (expects data-task-id wrapper with either a checkbox or a slider/count)
-	const root = document.querySelector(`[data-task-id="${CSS.escape(taskId)}"]`);
+	const root = document.querySelector(
+		`[data-task-id="${CSS.escape(taskId)}"]`,
+	);
 	if (!root) return { type: "check", done: false };
 
 	const slider = root.querySelector('input[type="range"]');
 	if (slider) {
 		const cc = Number.parseInt(
 			slider.getAttribute("data-current-count") || slider.value || "0",
-			10
+			10,
 		);
 		const ct = Number.parseInt(
 			slider.getAttribute("data-current-tier") || "0",
-			10
+			10,
 		);
 		return { type: "tiered", currentCount: cc, currentTier: ct };
 	}
 	const multi = root.querySelector('[data-multi="1"]');
 	if (multi) {
 		const selected = Array.from(
-			multi.querySelectorAll('input.task-multi-cb[data-option-key]:checked')
+			multi.querySelectorAll(
+				"input.task-multi-cb[data-option-key]:checked",
+			),
 		).map((el) => String(el.getAttribute("data-option-key")));
 		return { type: "multi", selected };
 	}
@@ -250,7 +268,7 @@ function readFashionState(gameKey, categoryId, itemId, formLookup) {
 			gameKey,
 			categoryId,
 			itemId,
-			formLookup
+			formLookup,
 		);
 }
 
@@ -267,12 +285,13 @@ function gameHasAmieDecor(gameKey) {
 }
 
 function gameHasDistributions(gameKey) {
-	return !!(window.DATA?.distributions?.[gameKey] || []).filter(Boolean).length;
+	return !!(window.DATA?.distributions?.[gameKey] || []).filter(Boolean)
+		.length;
 }
 
 function gameHasResearch(gameKey) {
 	return !!(window.DATA?.dex?.[gameKey] || []).some(
-		(mon) => Array.isArray(mon?.research) && mon.research.length > 0
+		(mon) => Array.isArray(mon?.research) && mon.research.length > 0,
 	);
 }
 
@@ -286,7 +305,10 @@ function gameHasCollectible(dataKey, gameKey) {
 function isDefaultTaskState(state) {
 	if (!state || typeof state !== "object") return true;
 	if (state.type === "tiered") {
-		return Number(state.currentTier || 0) <= 0 && Number(state.currentCount || 0) <= 0;
+		return (
+			Number(state.currentTier || 0) <= 0 &&
+			Number(state.currentCount || 0) <= 0
+		);
 	}
 	if (state.type === "multi") {
 		return !Array.isArray(state.selected) || state.selected.length === 0;
@@ -351,7 +373,8 @@ function resetTasksForGame(gameKey) {
 						node.currentCount = 0;
 					} else if (Array.isArray(node.multi)) {
 						node.multi.forEach((option) => {
-							if (option && typeof option === "object") option.done = false;
+							if (option && typeof option === "object")
+								option.done = false;
 						});
 						node.done = false;
 					} else {
@@ -463,7 +486,7 @@ export function collectSnapshot(gameKey) {
 				gameKey,
 				categoryId,
 				itemId,
-				formLookup
+				formLookup,
 			);
 			if (value) {
 				fashion[jsonKey] = value;
@@ -476,7 +499,7 @@ export function collectSnapshot(gameKey) {
 		const amieDecor = pruneBooleanRecord(
 			window.store?.amieDecorStatus instanceof Map
 				? window.store.amieDecorStatus.get(gameKey) || {}
-				: {}
+				: {},
 		);
 		if (hasOwnEntries(amieDecor)) snapshot.amieDecor = amieDecor;
 	}
@@ -485,16 +508,17 @@ export function collectSnapshot(gameKey) {
 		const distributions = pruneBooleanRecord(
 			window.store?.distributionsStatus instanceof Map
 				? window.store.distributionsStatus.get(gameKey) || {}
-				: {}
+				: {},
 		);
-		if (hasOwnEntries(distributions)) snapshot.distributions = distributions;
+		if (hasOwnEntries(distributions))
+			snapshot.distributions = distributions;
 	}
 
 	if (gameHasResearch(gameKey)) {
 		const research = pruneResearchSnapshot(
 			window.store?.dexResearchStatus instanceof Map
 				? window.store.dexResearchStatus.get(gameKey) || {}
-				: {}
+				: {},
 		);
 		if (hasOwnEntries(research)) snapshot.research = research;
 	}
@@ -503,12 +527,12 @@ export function collectSnapshot(gameKey) {
 		const status = pruneBooleanRecord(
 			window.store?.curryStatus instanceof Map
 				? window.store.curryStatus.get(gameKey) || {}
-				: {}
+				: {},
 		);
 		const forms = pruneCollectibleFormsRecord(
 			window.store?.curryFormsStatus instanceof Map
 				? window.store.curryFormsStatus.get(gameKey) || {}
-				: {}
+				: {},
 		);
 		if (hasOwnEntries(status) || hasOwnEntries(forms)) {
 			snapshot.curry = {};
@@ -521,12 +545,12 @@ export function collectSnapshot(gameKey) {
 		const status = pruneBooleanRecord(
 			window.store?.sandwichStatus instanceof Map
 				? window.store.sandwichStatus.get(gameKey) || {}
-				: {}
+				: {},
 		);
 		const forms = pruneCollectibleFormsRecord(
 			window.store?.sandwichFormsStatus instanceof Map
 				? window.store.sandwichFormsStatus.get(gameKey) || {}
-				: {}
+				: {},
 		);
 		if (hasOwnEntries(status) || hasOwnEntries(forms)) {
 			snapshot.sandwich = {};
@@ -539,12 +563,12 @@ export function collectSnapshot(gameKey) {
 		const status = pruneBooleanRecord(
 			window.store?.stickerStatus instanceof Map
 				? window.store.stickerStatus.get(gameKey) || {}
-				: {}
+				: {},
 		);
 		const forms = pruneCollectibleFormsRecord(
 			window.store?.stickerFormsStatus instanceof Map
 				? window.store.stickerFormsStatus.get(gameKey) || {}
-				: {}
+				: {},
 		);
 		if (hasOwnEntries(status) || hasOwnEntries(forms)) {
 			snapshot.sticker = {};
@@ -555,7 +579,6 @@ export function collectSnapshot(gameKey) {
 
 	return snapshot;
 }
-
 
 /* ===================== Backup orchestration ===================== */
 let backupTimer = null;
@@ -573,7 +596,7 @@ function getAutoBackupsEnabled() {
 function setAutoBackupsEnabled(enabled) {
 	try {
 		localStorage.setItem(AUTO_ENABLED_KEY, enabled ? "true" : "false");
-	} catch { }
+	} catch {}
 	// (re)apply scheduler immediately
 	initBackups(_lastInitOptions || { minutes: 10 });
 }
@@ -603,7 +626,7 @@ async function ensureGameDataLoadedForSnapshot(gameKey) {
 		console.debug(
 			"[PPGC server load] could not preload game data",
 			gameKey,
-			err?.message || err
+			err?.message || err,
 		);
 	}
 }
@@ -617,7 +640,7 @@ function emitServerImportDone(scope, gameKey = null, games = null) {
 				games,
 				ts: new Date().toISOString(),
 			},
-		})
+		}),
 	);
 }
 
@@ -681,18 +704,21 @@ export function initBackups({ minutes = 10 } = {}) {
 	_lastInitOptions = { minutes };
 	// Ask browser to persist storage (helps keep IDB/permissions)
 	if (navigator?.storage?.persist) {
-		navigator.storage.persist().catch(() => { });
+		navigator.storage.persist().catch(() => {});
 	}
 	if (backupTimer) clearInterval(backupTimer);
 	if (!getAutoBackupsEnabled()) {
 		backupTimer = null;
 		return;
 	}
-	backupTimer = setInterval(() => {
-		backupAllNow().catch((err) =>
-			console.debug("[PPGC backup] skipped:", err?.message || err)
-		);
-	}, Math.max(1, minutes) * 60 * 1000);
+	backupTimer = setInterval(
+		() => {
+			backupAllNow().catch((err) =>
+				console.debug("[PPGC backup] skipped:", err?.message || err),
+			);
+		},
+		Math.max(1, minutes) * 60 * 1000,
+	);
 }
 
 export async function isBackupFolderGranted() {
@@ -716,16 +742,17 @@ function emitBackupDone(gameKey) {
 	try {
 		const ts = new Date().toISOString();
 		window.dispatchEvent(
-			new CustomEvent("ppgc:backup:done", { detail: { gameKey, ts } })
+			new CustomEvent("ppgc:backup:done", { detail: { gameKey, ts } }),
 		);
 		// cache last ts for quick reads
 		localStorage.setItem("ppgc_last_backup_ts", ts);
 		localStorage.setItem("ppgc_last_backup_game", gameKey || "");
-	} catch { }
+	} catch {}
 }
 
 export async function chooseBackupFolder() {
-	if (DISABLE_FS_PICKERS) throw new Error("Manual backup folder selection disabled");
+	if (DISABLE_FS_PICKERS)
+		throw new Error("Manual backup folder selection disabled");
 
 	const dirHandle = await window.showDirectoryPicker({ id: "PPGC-Backups" });
 	const perm = await dirHandle.requestPermission({ mode: "readwrite" });
@@ -769,7 +796,7 @@ function emitCloudSyncDone(gameKey) {
 		window.dispatchEvent(
 			new CustomEvent("ppgc:cloud-sync:done", {
 				detail: { gameKey, ts },
-			})
+			}),
 		);
 	} catch {
 		// ignore event failures
@@ -788,7 +815,7 @@ function emitCloudSyncError(gameKey, err) {
 		window.dispatchEvent(
 			new CustomEvent("ppgc:cloud-sync:error", {
 				detail: { gameKey, ts, message },
-			})
+			}),
 		);
 	} catch {
 		// ignore event failures
@@ -809,7 +836,7 @@ export async function initialServerBackup() {
 		emitCloudSyncError(null, err);
 		console.error(
 			"[PPGC initial server backup] failed:",
-			err?.message || err
+			err?.message || err,
 		);
 	}
 }
@@ -835,7 +862,7 @@ export function scheduleServerSave(gameKey, delayMs = 1_500) {
 				emitCloudSyncError(gameKey || currentGameKey(), err);
 				console.error(
 					"[PPGC server change-backup] failed:",
-					err?.message || err
+					err?.message || err,
 				);
 			}
 		}, delayMs);
@@ -843,7 +870,7 @@ export function scheduleServerSave(gameKey, delayMs = 1_500) {
 		emitCloudSyncError(gameKey || currentGameKey(), err);
 		console.error(
 			"[PPGC server change-backup] schedule failed:",
-			err?.message || err
+			err?.message || err,
 		);
 	}
 }
@@ -864,25 +891,31 @@ export async function loadAllGames() {
 			try {
 				const applied = await applyServerSaveRecord(save);
 				if (applied) {
-					restoredGames.push(save.gameKey || save.data?.gameKey || null);
+					restoredGames.push(
+						save.gameKey || save.data?.gameKey || null,
+					);
 				}
 			} catch (err) {
 				console.debug(
 					"[PPGC server load-all] skipped game",
 					save?.gameKey || save?.data?.gameKey || "unknown",
-					err?.message || err
+					err?.message || err,
 				);
 			}
 		}
 
 		if (restoredGames.length) {
-			emitServerImportDone("all-server", null, restoredGames.filter(Boolean));
+			emitServerImportDone(
+				"all-server",
+				null,
+				restoredGames.filter(Boolean),
+			);
 		}
 		return;
 	} catch (err) {
 		console.debug(
 			"[PPGC server load-all] bulk load failed, falling back:",
-			err?.message || err
+			err?.message || err,
 		);
 	}
 
@@ -896,15 +929,12 @@ export async function loadAllGames() {
 				console.debug(
 					"[PPGC server load-all] skipped game",
 					gameKey,
-					err?.message || err
+					err?.message || err,
 				);
 			}
 		}
 	} catch (err) {
-		console.debug(
-			"[PPGC server load-all] failed:",
-			err?.message || err
-		);
+		console.debug("[PPGC server load-all] failed:", err?.message || err);
 	}
 }
 
@@ -923,7 +953,7 @@ export async function loadGame(gameKey) {
 		console.debug(
 			"[PPGC server load] skipped game",
 			gameKey,
-			err?.message || err
+			err?.message || err,
 		);
 	}
 }
@@ -945,7 +975,10 @@ export function startServerAutoBackup() {
 			emitCloudSyncDone(gameKey);
 		} catch (err) {
 			emitCloudSyncError(currentGameKey(), err);
-			console.error("[PPGC server auto-backup] failed:", err?.message || err);
+			console.error(
+				"[PPGC server auto-backup] failed:",
+				err?.message || err,
+			);
 		}
 	}, intervalMs);
 }
@@ -956,7 +989,6 @@ export function stopServerAutoBackup() {
 		serverAutoSaveId = null;
 	}
 }
-
 
 /* ===================== Manifest helpers ===================== */
 const MANIFEST_NAME = "ppgc.manifest.json";
@@ -978,7 +1010,9 @@ async function writeManifest(dirHandle, manifest) {
 	});
 	const writable = await fileHandle.createWritable();
 	await writable.write(
-		new Blob([JSON.stringify(manifest, null, 2)], { type: "application/json" })
+		new Blob([JSON.stringify(manifest, null, 2)], {
+			type: "application/json",
+		}),
 	);
 	await writable.close();
 }
@@ -989,7 +1023,7 @@ function makeInstanceId() {
 		(
 			c ^
 			(crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4)))
-		).toString(16)
+		).toString(16),
 	);
 }
 
@@ -1023,7 +1057,7 @@ async function sha256Hex(blobOrString) {
 /** Upsert one or more file entries: updates `.files` and `updatedAt`. */
 async function upsertManifestEntries(
 	dirHandle,
-	entries /* { [logicalKey]: { path, fileHandle? } } */
+	entries /* { [logicalKey]: { path, fileHandle? } } */,
 ) {
 	const manifest = await loadOrInitManifest(dirHandle);
 	for (const [key, info] of Object.entries(entries)) {
@@ -1085,12 +1119,16 @@ function applyTasksSnapshotToStore(tasksObj) {
 			node.currentTier = Number(snap.currentTier || 0);
 			node.currentCount = Number(snap.currentCount || 0);
 		} else if (snap.type === "multi" && Array.isArray(node.multi)) {
-			const selected = new Set((Array.isArray(snap.selected) ? snap.selected : []).map(String));
+			const selected = new Set(
+				(Array.isArray(snap.selected) ? snap.selected : []).map(String),
+			);
 			node.multi.forEach((option) => {
 				if (!option || typeof option !== "object") return;
 				option.done = selected.has(String(option.id));
 			});
-			node.done = node.multi.length > 0 && node.multi.every((option) => !!option?.done);
+			node.done =
+				node.multi.length > 0 &&
+				node.multi.every((option) => !!option?.done);
 		} else {
 			node.type = "check";
 			node.done = !!snap.done;
@@ -1134,7 +1172,9 @@ function parseFashionJsonKey(jsonKey) {
 
 			for (const item of cat.items || []) {
 				const itemId = String(item.id);
-				const itemIdSlug = itemId.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+				const itemIdSlug = itemId
+					.toLowerCase()
+					.replace(/[^a-z0-9]+/g, "-");
 				if (itemIdSlug !== itemSlug) continue;
 
 				return { gameKey: g, categoryId: catId, itemId, formSlug };
@@ -1154,7 +1194,9 @@ function mapFormSlugToName(gameKey, categoryId, itemId, formSlug) {
 	for (let idx = 0; idx < forms.length; idx++) {
 		const f = forms[idx];
 		const fid = typeof f === "object" && f?.id ? String(f.id) : null;
-		const fidSlug = fid ? fid.toLowerCase().replace(/[^a-z0-9]+/g, "-") : null;
+		const fidSlug = fid
+			? fid.toLowerCase().replace(/[^a-z0-9]+/g, "-")
+			: null;
 		if (fidSlug && fidSlug === formSlug) {
 			return typeof f === "string" ? f : f.name || String(idx + 1);
 		}
@@ -1210,7 +1252,12 @@ function applyFashionSnapshotToStore(gameKeyDefault, fashionObj) {
 			fash.set(catKey, pack);
 		} else {
 			// per-form toggle (using NAME as store’s key)
-			const formName = mapFormSlugToName(gameKey, categoryId, itemId, formSlug);
+			const formName = mapFormSlugToName(
+				gameKey,
+				categoryId,
+				itemId,
+				formSlug,
+			);
 			if (!formName) continue;
 			const pack = fashForms.get(catKey);
 			const itemPack = pack[itemKey] || { forms: {} };
@@ -1225,7 +1272,9 @@ function applyDistributionsSnapshotToStore(gameKey, distributionsObj) {
 	const map = window.store?.distributionsStatus;
 	if (!(map instanceof Map)) return;
 	const rec =
-		distributionsObj && typeof distributionsObj === "object" ? distributionsObj : {};
+		distributionsObj && typeof distributionsObj === "object"
+			? distributionsObj
+			: {};
 	map.set(gameKey, { ...rec });
 }
 
@@ -1253,13 +1302,17 @@ function applyCurrySnapshotToStore(gameKey, curryObj) {
 
 	if (statusMap instanceof Map) {
 		const rawStatus =
-			curryObj.status && typeof curryObj.status === "object" ? curryObj.status : {};
+			curryObj.status && typeof curryObj.status === "object"
+				? curryObj.status
+				: {};
 		statusMap.set(gameKey, { ...rawStatus });
 	}
 
 	if (formsMap instanceof Map) {
 		const rawForms =
-			curryObj.forms && typeof curryObj.forms === "object" ? curryObj.forms : {};
+			curryObj.forms && typeof curryObj.forms === "object"
+				? curryObj.forms
+				: {};
 		const normalized = {};
 		for (const [curryId, node] of Object.entries(rawForms)) {
 			normalized[curryId] = {
@@ -1315,10 +1368,18 @@ function applySnapshotToStore(snap) {
 		if (!snap || typeof snap !== "object") return;
 
 		const gameKey = snap.gameKey || snap.meta?.gameKey || null;
-		const version = Number(snap.version || (String(snap.meta?.version || "").replace(/^v/i, "")) || 1);
+		const version = Number(
+			snap.version ||
+				String(snap.meta?.version || "").replace(/^v/i, "") ||
+				1,
+		);
 
 		// --- Make sure all sections for this game exist in tasksStore ---
-		if (gameKey && window.store?.tasksStore && typeof bootstrapTasks === "function") {
+		if (
+			gameKey &&
+			window.store?.tasksStore &&
+			typeof bootstrapTasks === "function"
+		) {
 			const sections = window.DATA?.sections?.[gameKey] || [];
 			for (const s of sections) {
 				const sectionId = s.id;
@@ -1333,7 +1394,7 @@ function applySnapshotToStore(snap) {
 						console.debug(
 							"[PPGC import] bootstrapTasks failed for section",
 							sectionId,
-							e
+							e,
 						);
 					}
 				}
@@ -1403,7 +1464,8 @@ export async function importGameFromFolder(gameKey) {
 	const dir = await ensureDirHandle(); // or fail if permission is gone
 	const manifest = await loadOrInitManifest(dir);
 	const entry = manifest.files?.[gameKey];
-	if (!entry?.path) throw new Error(`No snapshot for ${gameKey} in manifest.`);
+	if (!entry?.path)
+		throw new Error(`No snapshot for ${gameKey} in manifest.`);
 
 	const snap = await readJsonChecked(dir, entry.path, entry.sha256);
 	applySnapshotToStore(snap);
@@ -1413,7 +1475,7 @@ export async function importGameFromFolder(gameKey) {
 	window.dispatchEvent(
 		new CustomEvent("ppgc:import:done", {
 			detail: { scope: "game", gameKey, ts: new Date().toISOString() },
-		})
+		}),
 	);
 }
 
@@ -1427,13 +1489,15 @@ export async function importAllFromFolder() {
 		const meta = await readJsonChecked(
 			dir,
 			manifest.files["meta-all"].path,
-			manifest.files["meta-all"].sha256
+			manifest.files["meta-all"].sha256,
 		);
 		games = Array.isArray(meta?.games) ? meta.games : [];
 	}
 	if (!games.length) {
 		// fallback: keys in manifest except meta-all
-		games = Object.keys(manifest.files || {}).filter((k) => k !== "meta-all");
+		games = Object.keys(manifest.files || {}).filter(
+			(k) => k !== "meta-all",
+		);
 	}
 
 	for (const g of games) {
@@ -1441,7 +1505,7 @@ export async function importAllFromFolder() {
 		const snap = await readJsonChecked(
 			dir,
 			manifest.files[g].path,
-			manifest.files[g].sha256
+			manifest.files[g].sha256,
 		);
 		applySnapshotToStore(snap);
 	}
@@ -1450,7 +1514,7 @@ export async function importAllFromFolder() {
 	window.dispatchEvent(
 		new CustomEvent("ppgc:import:done", {
 			detail: { scope: "all", games, ts: new Date().toISOString() },
-		})
+		}),
 	);
 }
 
@@ -1470,7 +1534,7 @@ export async function autoImportOnStart({ mode = "all" } = {}) {
 						Object.keys(obj.dexStatus || {}).length);
 				if (hasContent) return; // keep user's local state
 			}
-		} catch { }
+		} catch {}
 
 		// If the folder is still granted, just go
 		const granted = await isBackupFolderGranted();
@@ -1478,7 +1542,9 @@ export async function autoImportOnStart({ mode = "all" } = {}) {
 
 		if (mode === "game") {
 			const gk =
-				document.querySelector("#content")?.getAttribute("data-game-key") ||
+				document
+					.querySelector("#content")
+					?.getAttribute("data-game-key") ||
 				document.body?.getAttribute("data-game-key") ||
 				window.PPGC?.currentGameKey ||
 				null;

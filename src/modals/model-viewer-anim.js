@@ -19,9 +19,12 @@ export function parseAnimLabel(raw) {
 	else if (/battlewait/.test(baseKey)) base = "Battle Wait";
 	else if (/defaultidle/.test(baseKey)) base = "Idle";
 	else if (/battleidle/.test(baseKey)) base = "Battle Idle";
-	else if (/turn_r000|turnmove_r000|turnmove01_r000/.test(baseKey)) base = "Turn";
-	else if (/turn_l090|turnmove_l090|turnmove01_l090/.test(baseKey)) base = "Turn Left";
-	else if (/turn_r090|turnmove_r090|turnmove01_r090/.test(baseKey)) base = "Turn Right";
+	else if (/turn_r000|turnmove_r000|turnmove01_r000/.test(baseKey))
+		base = "Turn";
+	else if (/turn_l090|turnmove_l090|turnmove01_l090/.test(baseKey))
+		base = "Turn Left";
+	else if (/turn_r090|turnmove_r090|turnmove01_r090/.test(baseKey))
+		base = "Turn Right";
 	else if (/walk/.test(baseKey)) base = "Walk";
 	else if (/run/.test(baseKey)) base = "Run";
 	else if (/stepin/.test(baseKey)) base = "Step In";
@@ -64,7 +67,9 @@ export function buildAnimDisplayNames(clips) {
 		const n = (seen[p.base] = (seen[p.base] || 0) + 1);
 		const num = needsNumber ? String(n).padStart(2, "0") : "";
 		const phase = p.phase ? ` (${p.phase})` : "";
-		const label = needsNumber ? `${p.base} ${num}${phase}` : `${p.base}${phase}`;
+		const label = needsNumber
+			? `${p.base} ${num}${phase}`
+			: `${p.base}${phase}`;
 		return { label, title: p.raw };
 	});
 }
@@ -74,13 +79,20 @@ export function findPreferredAnimIndex(clips, pipeline) {
 	const p = String(pipeline || "").toLowerCase();
 	const patternsByPipeline = {
 		"3ds": [/\bmovement_idle\b/i],
-		"lgpe": [/\bwaita01\b/i],
-		"swsh": [/\bwaita01\b/i],
-		"la": [/\bdefaultwait01_loop\b/i],
-		"scvi": [/\bdefaultwait01_loop\b/i],
-		"lza": [/\bdefaultwait01_loop\b/i],
+		lgpe: [/\bwaita01\b/i],
+		swsh: [/\bwaita01\b/i],
+		la: [/\bdefaultwait01_loop\b/i],
+		scvi: [/\bdefaultwait01_loop\b/i],
+		lza: [/\bdefaultwait01_loop\b/i],
 	};
-	const fallback = [/\bwaita01\b/i, /\bmovement_idle\b/i, /\bdefaultwait01_loop\b/i, /\bdefaultwait\b/i, /\bidle\b/i, /\bwait\b/i];
+	const fallback = [
+		/\bwaita01\b/i,
+		/\bmovement_idle\b/i,
+		/\bdefaultwait01_loop\b/i,
+		/\bdefaultwait\b/i,
+		/\bidle\b/i,
+		/\bwait\b/i,
+	];
 	const patterns = patternsByPipeline[p] || fallback;
 	for (const re of patterns) {
 		const idx = clips.findIndex((c) => re.test(String(c?.name || "")));

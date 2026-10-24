@@ -1,3 +1,8 @@
+/**
+ * Installs the `PPGC.register()` data-authoring boundary and merges lazy-loaded
+ * generation chunks into `window.DATA`. Arrays replace while plain objects
+ * merge recursively; changing that rule can silently alter authored content.
+ */
 import { ensureDataRoot, ensurePpgcRoot } from "./runtime/globals.js";
 import { range } from "../data/helpers/range.js";
 
@@ -10,19 +15,33 @@ function deepMerge(target, source, path = "DATA") {
 	target = target && typeof target === "object" ? target : {};
 
 	// EXPANDER
-	if (source && typeof source === "object" && !Array.isArray(source) && source.$forGames && source.$value) {
+	if (
+		source &&
+		typeof source === "object" &&
+		!Array.isArray(source) &&
+		source.$forGames &&
+		source.$value
+	) {
 		const games = Array.isArray(source.$forGames)
 			? source.$forGames
-			: String(source.$forGames).split(/[,\|]/g).map(s => s.trim()).filter(Boolean);
+			: String(source.$forGames)
+					.split(/[,\|]/g)
+					.map((s) => s.trim())
+					.filter(Boolean);
 
-		const baseCtx = (source.$ctx && typeof source.$ctx === "object") ? source.$ctx : {};
+		const baseCtx =
+			source.$ctx && typeof source.$ctx === "object" ? source.$ctx : {};
 		const valueFn = source.$value;
 
 		for (const gameKey of games) {
 			const ctx = { ...baseCtx, gameKey };
 			const expanded = typeof valueFn === "function" ? valueFn(ctx) : {};
 
-			target[gameKey] = deepMerge(target[gameKey], expanded, `${path}.${gameKey}`);
+			target[gameKey] = deepMerge(
+				target[gameKey],
+				expanded,
+				`${path}.${gameKey}`,
+			);
 		}
 		return target;
 	}
@@ -34,10 +53,16 @@ function deepMerge(target, source, path = "DATA") {
 
 		const keys =
 			typeof rawKey === "string" && /[,\|]/.test(rawKey)
-				? rawKey.split(/[,\|]/g).map((s) => s.trim()).filter(Boolean)
+				? rawKey
+						.split(/[,\|]/g)
+						.map((s) => s.trim())
+						.filter(Boolean)
 				: [rawKey];
 
-		if (keys.length > 1 && Object.prototype.hasOwnProperty.call(target, rawKey)) {
+		if (
+			keys.length > 1 &&
+			Object.prototype.hasOwnProperty.call(target, rawKey)
+		) {
 			delete target[rawKey];
 		}
 
@@ -46,9 +71,11 @@ function deepMerge(target, source, path = "DATA") {
 
 			if (sv && typeof sv === "object" && !Array.isArray(sv)) {
 				target[key] = deepMerge(
-					tv && typeof tv === "object" && !Array.isArray(tv) ? tv : {},
+					tv && typeof tv === "object" && !Array.isArray(tv)
+						? tv
+						: {},
 					sv,
-					`${path}.${key}`
+					`${path}.${key}`,
 				);
 			} else {
 				target[key] = sv;
