@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import {
 	changeStripeSubscriptionPlan,
 	createPayPalSubscription,
@@ -14,6 +15,7 @@ import {
 } from "../config/tiers.js";
 import { PAYMENT_PROVIDER_AVAILABILITY } from "../config/paymentProviders.js";
 import { useSubscription } from "../hooks/useSubscription.js";
+import { LEGAL_VERSION } from "../../shared/legal.js";
 import { FaStripeS, FaPaypal } from "react-icons/fa";
 import "../../styles/pricing.css";
 
@@ -72,6 +74,8 @@ export function PricingPage() {
 	const [error, setError] = useState("");
 	const [notice, setNotice] = useState("");
 	const [stripeDetails, setStripeDetails] = useState(null);
+	const [hasAcceptedPurchaseTerms, setHasAcceptedPurchaseTerms] =
+		useState(false);
 
 	const hasPaidPlan = tierKey !== "free";
 	const complimentaryAccess = user?.complimentaryAccess || null;
@@ -122,9 +126,19 @@ export function PricingPage() {
 			window.PPGC?.openAuthModal?.("login");
 			return;
 		}
+		if (!hasAcceptedPurchaseTerms) {
+			setError(
+				"Confirm the recurring billing and legal terms before checkout.",
+			);
+			return;
+		}
 
 		await runAction(`stripe:${nextTierKey}`, async () => {
-			const result = await createStripeCheckoutSession(nextTierKey);
+			const result = await createStripeCheckoutSession(nextTierKey, {
+				legalAccepted: true,
+				purchaseAuthorized: true,
+				legalVersion: LEGAL_VERSION,
+			});
 			if (!result?.url) {
 				throw new Error("Stripe did not return a checkout URL.");
 			}
@@ -137,9 +151,19 @@ export function PricingPage() {
 			window.PPGC?.openAuthModal?.("login");
 			return;
 		}
+		if (!hasAcceptedPurchaseTerms) {
+			setError(
+				"Confirm the recurring billing and legal terms before checkout.",
+			);
+			return;
+		}
 
 		await runAction(`paypal:${nextTierKey}`, async () => {
-			const result = await createPayPalSubscription(nextTierKey);
+			const result = await createPayPalSubscription(nextTierKey, {
+				legalAccepted: true,
+				purchaseAuthorized: true,
+				legalVersion: LEGAL_VERSION,
+			});
 			if (!result?.url) {
 				throw new Error("PayPal did not return an approval URL.");
 			}
@@ -211,6 +235,8 @@ export function PricingPage() {
 	function renderSubscribeCell(key) {
 		const isCurrent = key === tierKey;
 		const actionDisabled = busyAction !== "";
+		const checkoutDisabled =
+			actionDisabled || (!hasPaidPlan && !hasAcceptedPurchaseTerms);
 
 		if (isCurrent) {
 			if (complimentaryAccess) {
@@ -305,7 +331,7 @@ export function PricingPage() {
 					<button
 						type="button"
 						className="pricing-pay-btn pricing-pay-stripe"
-						disabled={actionDisabled}
+						disabled={checkoutDisabled}
 						aria-label={`Subscribe to ${TIERS[key].label} with Stripe`}
 						onClick={() => handleStripeCheckout(key)}
 					>
@@ -320,7 +346,7 @@ export function PricingPage() {
 					<button
 						type="button"
 						className="pricing-pay-btn pricing-pay-paypal"
-						disabled={actionDisabled}
+						disabled={checkoutDisabled}
 						aria-label={`Subscribe to ${TIERS[key].label} with PayPal`}
 						onClick={() => handlePayPalCheckout(key)}
 					>
@@ -384,6 +410,30 @@ export function PricingPage() {
 				provider. PokemonPGC never receives your card or wallet
 				credentials.
 			</p>
+			{!hasPaidPlan && !complimentaryAccess ? (
+				<label className="pricing-purchase-consent">
+					<input
+						type="checkbox"
+						checked={hasAcceptedPurchaseTerms}
+						disabled={busyAction !== ""}
+						onChange={(event) => {
+							setHasAcceptedPurchaseTerms(event.target.checked);
+							setError("");
+						}}
+					/>
+					<span>
+						I am 18 or older, or I have a parent or legal guardian's
+						authorization. I understand Great renews at $5 monthly
+						and Ultra renews at $50 yearly until canceled. I agree
+						to the <Link to="/terms">Terms</Link>,{" "}
+						<Link to="/privacy">Privacy Policy</Link>, and{" "}
+						<Link to="/refunds">
+							Refund and Cancellation Policy
+						</Link>
+						.
+					</span>
+				</label>
+			) : null}
 			{complimentaryAccess ? (
 				<div className="pricing-alert pricing-alert--success">
 					Your {TIERS[complimentaryAccess.tier]?.label || tierKey}{" "}

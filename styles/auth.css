@@ -450,6 +450,27 @@ body.ppgc-auth-open {
 	line-height: 1.45;
 }
 
+.ppgc-auth-consent {
+	display: flex;
+	align-items: flex-start;
+	gap: 10px;
+	margin: 14px 0;
+	color: oklch(76% 0.018 255);
+	font-size: 11px;
+	line-height: 1.5;
+}
+
+.ppgc-auth-consent input {
+	width: 18px;
+	height: 18px;
+	margin: 1px 0 0;
+	flex: 0 0 auto;
+}
+
+.ppgc-auth-consent a {
+	color: oklch(82% 0.09 248);
+}
+
 @media (max-width: 700px) {
 	.ppgc-auth-overlay {
 		padding: 14px;

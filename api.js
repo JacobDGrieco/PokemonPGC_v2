@@ -73,12 +73,17 @@ async function requireOkJson(res, fallbackMessage) {
 	return payload;
 }
 
-export async function signup(email, password) {
+export async function signup(email, password, legalConsent = {}) {
 	const res = await fetch(`${API_BASE}/auth/signup`, {
 		method: "POST",
 		headers: { "Content-Type": "application/json" },
 		credentials: "include",
-		body: JSON.stringify({ email, password }),
+		body: JSON.stringify({
+			email,
+			password,
+			legalAccepted: legalConsent.legalAccepted === true,
+			legalVersion: String(legalConsent.legalVersion || ""),
+		}),
 	});
 	return safeJson(res);
 }
@@ -165,7 +170,7 @@ export async function updateMe(patch) {
 	return res.json();
 }
 
-export async function createStripeCheckoutSession(tier) {
+export async function createStripeCheckoutSession(tier, legalConsent = {}) {
 	const res = await fetch(`${API_BASE}/subscriptions/stripe/create-session`, {
 		method: "POST",
 		headers: {
@@ -173,7 +178,12 @@ export async function createStripeCheckoutSession(tier) {
 			"Idempotency-Key": createIdempotencyKey(),
 		},
 		credentials: "include",
-		body: JSON.stringify({ tier }),
+		body: JSON.stringify({
+			tier,
+			legalAccepted: legalConsent.legalAccepted === true,
+			purchaseAuthorized: legalConsent.purchaseAuthorized === true,
+			legalVersion: String(legalConsent.legalVersion || ""),
+		}),
 	});
 	return requireOkJson(res, "Failed to start Stripe checkout.");
 }
@@ -227,7 +237,7 @@ export async function verifyStripeCheckoutSession(sessionId, tier) {
 	return requireOkJson(res, "Failed to verify Stripe checkout.");
 }
 
-export async function createPayPalSubscription(tier) {
+export async function createPayPalSubscription(tier, legalConsent = {}) {
 	const res = await fetch(
 		`${API_BASE}/subscriptions/paypal/create-subscription`,
 		{
@@ -237,7 +247,12 @@ export async function createPayPalSubscription(tier) {
 				"Idempotency-Key": createIdempotencyKey(),
 			},
 			credentials: "include",
-			body: JSON.stringify({ tier }),
+			body: JSON.stringify({
+				tier,
+				legalAccepted: legalConsent.legalAccepted === true,
+				purchaseAuthorized: legalConsent.purchaseAuthorized === true,
+				legalVersion: String(legalConsent.legalVersion || ""),
+			}),
 		},
 	);
 	return requireOkJson(res, "Failed to start PayPal subscription.");

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { MarketingHeader } from "../nav/MarketingHeader.jsx";
 import { AppModals } from "../AppModals.jsx";
+import { LegalFooter } from "../legal/LegalFooter.jsx";
 
 export function MarketingShell({ children }) {
 	useEffect(() => {
@@ -15,6 +16,7 @@ export function MarketingShell({ children }) {
 		<div className="marketing-shell">
 			<MarketingHeader />
 			<main className="marketing-content">{children}</main>
+			<LegalFooter />
 			<AppModals />
 		</div>
 	);

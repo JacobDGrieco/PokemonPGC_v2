@@ -5,7 +5,9 @@ import React, {
 	useRef,
 	useState,
 } from "react";
+import { Link } from "react-router-dom";
 import * as api from "../../../api.js";
+import { LEGAL_VERSION } from "../../../shared/legal.js";
 
 const AUTH_MODES = new Set(["login", "signup"]);
 const FOCUSABLE_SELECTOR = [
@@ -41,6 +43,7 @@ export function AuthModal() {
 	const [pendingAction, setPendingAction] = useState(null);
 	const [status, setStatus] = useState(null);
 	const [canResendVerification, setCanResendVerification] = useState(false);
+	const [hasAcceptedLegalTerms, setHasAcceptedLegalTerms] = useState(false);
 	const dialogRef = useRef(null);
 	const emailInputRef = useRef(null);
 	const triggerRef = useRef(null);
@@ -50,6 +53,7 @@ export function AuthModal() {
 		setPassword("");
 		setIsPasswordVisible(false);
 		setPendingAction(null);
+		setHasAcceptedLegalTerms(false);
 
 		const trigger = triggerRef.current;
 		triggerRef.current = null;
@@ -71,6 +75,7 @@ export function AuthModal() {
 		setPendingAction(null);
 		setStatus(null);
 		setCanResendVerification(false);
+		setHasAcceptedLegalTerms(false);
 		setIsOpen(true);
 	}, []);
 
@@ -144,6 +149,7 @@ export function AuthModal() {
 		setIsPasswordVisible(false);
 		setStatus(null);
 		setCanResendVerification(false);
+		setHasAcceptedLegalTerms(false);
 	};
 
 	const handleTabKeyDown = (event) => {
@@ -226,7 +232,10 @@ export function AuthModal() {
 			const response =
 				mode === "login"
 					? await api.login(normalizedEmail, password)
-					: await api.signup(normalizedEmail, password);
+					: await api.signup(normalizedEmail, password, {
+							legalAccepted: hasAcceptedLegalTerms,
+							legalVersion: LEGAL_VERSION,
+						});
 
 			if (response?.error) {
 				setStatus({ kind: "error", message: response.error });
@@ -473,13 +482,36 @@ export function AuthModal() {
 							</div>
 
 							{!isLogin && (
-								<p
-									id="ppgc-auth-password-hint"
-									className="ppgc-auth-field-hint"
-								>
-									Use 8 to 128 characters. Spaces are
-									preserved.
-								</p>
+								<>
+									<p
+										id="ppgc-auth-password-hint"
+										className="ppgc-auth-field-hint"
+									>
+										Use 8 to 128 characters. Spaces are
+										preserved.
+									</p>
+									<label className="ppgc-auth-consent">
+										<input
+											type="checkbox"
+											checked={hasAcceptedLegalTerms}
+											disabled={isBusy}
+											onChange={(event) =>
+												setHasAcceptedLegalTerms(
+													event.target.checked,
+												)
+											}
+											required
+										/>
+										<span>
+											I am at least 13 and agree to the{" "}
+											<Link to="/terms">Terms</Link> and{" "}
+											<Link to="/privacy">
+												Privacy Policy
+											</Link>
+											.
+										</span>
+									</label>
+								</>
 							)}
 
 							<button
@@ -540,6 +572,9 @@ export function AuthModal() {
 
 					<p className="ppgc-auth-privacy">
 						Account access is used to sync your saved progress.
+						PokemonPGC is an unofficial fan project and is not
+						affiliated with or operated in partnership with Nintendo
+						or The Pokemon Company.
 					</p>
 				</div>
 			</section>

@@ -34,6 +34,7 @@ import {
 	wasAuthTokenIssuedRecently,
 } from "../_lib/authTokens.js";
 import { sendAuthEmail } from "../_lib/email.js";
+import { LEGAL_VERSION } from "../../shared/legal.js";
 
 const AUTH_ACTIONS = new Set([
 	"forgot-password",
@@ -250,7 +251,17 @@ async function handleSignup(req, res) {
 			limit.retryAfterSeconds,
 		);
 
-	const parsed = validateCredentials(await readJsonBody(req));
+	const body = await readJsonBody(req);
+	if (
+		body?.legalAccepted !== true ||
+		String(body?.legalVersion || "") !== LEGAL_VERSION
+	) {
+		return json(res, 400, {
+			error: "Agree to the current Terms and Privacy Policy to create an account.",
+		});
+	}
+
+	const parsed = validateCredentials(body);
 	if (!parsed.ok) return json(res, 400, { error: parsed.error });
 	const { email, password } = parsed;
 

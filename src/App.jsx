@@ -39,6 +39,11 @@ const AuthActionPage = lazy(() =>
 		default: module.AuthActionPage,
 	})),
 );
+const LegalPage = lazy(() =>
+	import("./pages/LegalPage.jsx").then((module) => ({
+		default: module.LegalPage,
+	})),
+);
 
 function RouteLoading() {
 	return (
@@ -97,6 +102,19 @@ export default function App() {
 							</MarketingShell>
 						}
 					/>
+					{["terms", "privacy", "refunds", "copyright"].map(
+						(document) => (
+							<Route
+								key={document}
+								path={`/${document}`}
+								element={
+									<MarketingShell>
+										<LegalPage document={document} />
+									</MarketingShell>
+								}
+							/>
+						),
+					)}
 
 					<Route path="/checklists" element={<AppShell />} />
 					<Route

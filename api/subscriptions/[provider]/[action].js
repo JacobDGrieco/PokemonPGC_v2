@@ -57,6 +57,7 @@ import {
 	recordProcessedProviderEvent,
 	wasProviderEventProcessed,
 } from "../../_lib/providerEvents.js";
+import { LEGAL_VERSION } from "../../../shared/legal.js";
 
 export const config = {
 	api: {
@@ -81,6 +82,14 @@ const SUBSCRIPTION_ACTIONS = {
 		"webhook",
 	]),
 };
+
+function hasCurrentPurchaseConsent(body) {
+	return (
+		body?.legalAccepted === true &&
+		body?.purchaseAuthorized === true &&
+		String(body?.legalVersion || "") === LEGAL_VERSION
+	);
+}
 
 const PAYPAL_SUBSCRIPTION_EVENT_TYPES = new Set([
 	"BILLING.SUBSCRIPTION.CREATED",
@@ -624,6 +633,11 @@ async function handleStripeCreateSession(req, res) {
 
 	try {
 		const body = await readJsonBody(req);
+		if (!hasCurrentPurchaseConsent(body)) {
+			return json(res, 400, {
+				error: "Confirm the recurring billing, age authorization, and current legal terms before checkout.",
+			});
+		}
 		const tierKey = normalizeTierKey(body?.tier);
 		if (!tierKey)
 			return json(res, 400, { error: "Invalid subscription tier." });
@@ -654,6 +668,14 @@ async function handleStripeCreateSession(req, res) {
 
 		const stripe = getStripeClient();
 		const origin = getAppOrigin(req);
+		const purchaseTermsAcceptedAt = new Date().toISOString();
+		const checkoutMetadata = {
+			userId: String(user.id),
+			tier: tierKey,
+			legalVersion: LEGAL_VERSION,
+			purchaseAuthorized: "true",
+			purchaseTermsAcceptedAt,
+		};
 		// Leave payment_method_types unset so Stripe Checkout can present the
 		// recurring-compatible methods enabled for this account and customer.
 		const checkoutSession = await stripe.checkout.sessions.create(
@@ -667,9 +689,9 @@ async function handleStripeCreateSession(req, res) {
 				line_items: [
 					{ price: getStripePriceIdForTier(tierKey), quantity: 1 },
 				],
-				metadata: { userId: String(user.id), tier: tierKey },
+				metadata: checkoutMetadata,
 				subscription_data: {
-					metadata: { userId: String(user.id), tier: tierKey },
+					metadata: checkoutMetadata,
 				},
 				allow_promotion_codes: true,
 			},
@@ -1063,6 +1085,11 @@ async function handlePayPalCreateSubscription(req, res) {
 
 	try {
 		const body = await readJsonBody(req);
+		if (!hasCurrentPurchaseConsent(body)) {
+			return json(res, 400, {
+				error: "Confirm the recurring billing, age authorization, and current legal terms before checkout.",
+			});
+		}
 		const tierKey = normalizeTierKey(body?.tier);
 		if (!tierKey)
 			return json(res, 400, { error: "Invalid subscription tier." });
