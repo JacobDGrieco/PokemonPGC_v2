@@ -266,6 +266,8 @@ async function handleStripeCreateSession(req, res) {
 
 		const stripe = getStripeClient();
 		const origin = getAppOrigin(req);
+		// Leave payment_method_types unset so Stripe Checkout can present the
+		// recurring-compatible methods enabled for this account and customer.
 		const checkoutSession = await stripe.checkout.sessions.create(
 			{
 				mode: "subscription",

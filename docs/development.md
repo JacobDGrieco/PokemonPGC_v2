@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-- Node.js 20.x (the repository engine contract)
+- Node.js 24.x (the repository engine contract)
 - npm
 - PostgreSQL credentials for server-backed features
 - Optional provider sandbox/SMTP/R2 credentials for integration work
@@ -49,7 +49,7 @@ Use existing helpers and neighboring game files. Keep stable IDs, register the f
 
 ## Database changes
 
-Do not edit already-applied migrations, reset production, or use `db push` as a production deployment path. The repository currently lacks a migration baseline; follow `deployment.md` and `docs/database/proposal.md`.
+Do not edit already-applied migrations, reset production, or use `db push` as a production deployment path. The repository currently lacks a migration baseline; follow [deployment](deployment.md) and the [database proposal](database/proposal.md).
 
 ## Generated files
 

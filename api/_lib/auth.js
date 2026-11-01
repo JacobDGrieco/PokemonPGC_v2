@@ -30,6 +30,9 @@ function getSecret() {
 	if (!secret) {
 		throw new Error("Missing AUTH_SECRET environment variable.");
 	}
+	if (Buffer.byteLength(secret, "utf8") < 32) {
+		throw new Error("AUTH_SECRET must be at least 32 bytes.");
+	}
 	return secret;
 }
 

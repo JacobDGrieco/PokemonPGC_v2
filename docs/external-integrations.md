@@ -12,9 +12,11 @@ Nodemailer sends verification and reset mail. TLS 1.2+, bounded timeouts, no fil
 
 Stripe creates subscription checkout sessions, verifies returned sessions, exposes Billing Portal sessions/details, and reconciles signed webhooks. Account ownership and tier are derived from server-written metadata and configured Price IDs. Use test mode until the full sandbox matrix passes.
 
+Checkout is the payment-data boundary: PokemonPGC does not collect card or wallet credentials. Because the session leaves `payment_method_types` unset, Stripe can dynamically show eligible, recurring-compatible methods enabled in the Dashboard, including cards and supported wallets. Availability depends on the Stripe account country, currency, customer device, browser, and recurring-payment compatibility.
+
 ## PayPal
 
-PayPal creates subscriptions, verifies owner/tier/Plan binding, loads details, cancels subscriptions, and verifies webhooks. Requests have a ten-second bound. Keep sandbox/live credentials, Plans, and webhook ID in the same environment.
+The standalone PayPal integration is retained for compatibility but new PayPal checkout defaults off. When enabled, it creates subscriptions, verifies owner/tier/Plan binding, loads details, cancels subscriptions, and verifies webhooks. Requests have a ten-second bound. Keep sandbox/live credentials, Plans, and webhook ID in the same environment.
 
 ## PokeAPI
 

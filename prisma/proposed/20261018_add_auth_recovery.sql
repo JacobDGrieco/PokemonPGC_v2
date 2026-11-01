@@ -1,5 +1,6 @@
--- REVIEW-ONLY additive migration proposal. Do not run without the rollout gate
--- in SMTP_AUTH_IMPLEMENTATION_PLAN.md and a verified database backup.
+-- SUPERSEDED REVIEW-ONLY PROPOSAL. Do not execute this file.
+-- The reviewed migration is prisma/migrations/20261101144000_add_auth_recovery/migration.sql
+-- and was applied after the baseline and backup gates on 2026-11-01.
 
 ALTER TABLE "User"
 	ADD COLUMN "emailVerifiedAt" TIMESTAMP(3) DEFAULT CURRENT_TIMESTAMP,

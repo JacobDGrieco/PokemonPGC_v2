@@ -29,7 +29,8 @@ function assertSafeHeaderValue(value, name) {
 
 export function getSmtpConfig(env = process.env) {
 	const host = requiredEnv(env, "SMTP_HOST");
-	const port = Number.parseInt(requiredEnv(env, "SMTP_PORT"), 10);
+	const rawPort = requiredEnv(env, "SMTP_PORT");
+	const port = /^\d+$/.test(rawPort) ? Number(rawPort) : Number.NaN;
 	const user = requiredEnv(env, "SMTP_USER");
 	const pass = requiredEnv(env, "SMTP_PASS");
 	const fromEmail = cleanEnvValue(env.SMTP_FROM_EMAIL) || user;

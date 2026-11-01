@@ -33,9 +33,13 @@ The transporter requires TLS 1.2+, bounds connection/socket time, and blocks fil
 
 All IDs must belong to the same Stripe test/live account and mode.
 
+`VITE_STRIPE_ENABLED=true` exposes the Stripe checkout control. It is public UI configuration, not authorization. Stripe Checkout dynamically presents the recurring-compatible payment methods enabled for the Stripe account and eligible for the customer.
+
 ## PayPal
 
 `PAYPAL_ENVIRONMENT` is `sandbox` or `live` (default `sandbox`). `PAYPAL_CLIENT_ID`, `PAYPAL_CLIENT_SECRET`, `PAYPAL_WEBHOOK_ID`, and `PAYPAL_PLAN_GREAT|ULTRA|MASTER` must belong to that same environment.
+
+`VITE_PAYPAL_ENABLED=false` is the default. Set it to `true` only when the standalone PayPal credentials, Plans, webhook, and sandbox acceptance matrix are complete. Existing PayPal subscription management remains available for already-bound accounts even when new checkout is hidden.
 
 ## Client/runtime URLs
 

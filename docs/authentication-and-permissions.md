@@ -16,7 +16,7 @@ The payload contains user ID, email, issue/expiry times, and `sessionVersion`. `
 - Resend replaces the prior verification token for that user.
 - Login is denied until verification succeeds.
 
-Existing-account rollout uses the schema default/backfill described in `docs/audits/SMTP_AUTH_SETUP.md`; do not accidentally mark established accounts unverified during migration.
+Existing-account rollout uses the schema default/backfill described in [SMTP and authentication setup](audits/SMTP_AUTH_SETUP.md); do not accidentally mark established accounts unverified during migration.
 
 ## Password recovery
 

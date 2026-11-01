@@ -57,4 +57,4 @@ erDiagram
 - `User` has no `updatedAt` audit field.
 - Profile icons may be large inline image data URLs.
 
-See `docs/database/current-state.md` for the original audit and `docs/database/proposal.md` for a review-only expand/migrate/contract proposal. Some historical observations in the audit were resolved by later auth/payment changes; verify against current source before acting.
+See [database current state](database/current-state.md) for the current assessment and [database proposal](database/proposal.md) for review-only rollout and future safe-additive work.

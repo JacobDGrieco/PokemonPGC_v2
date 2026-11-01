@@ -7,7 +7,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 
 const repoRoot = process.cwd();
-const markdownRoots = ["README.md", "CLAUDE.md", "docs", "scripts/README.md"];
+const markdownRoots = ["README.md", "docs", "scripts/README.md"];
 const requiredEnvironmentVariables = [
 	"APP_ORIGIN",
 	"ASSET_BASE_URL",
@@ -43,6 +43,8 @@ const requiredEnvironmentVariables = [
 	"STRIPE_WEBHOOK_SECRET",
 	"VITE_API_BASE_URL",
 	"VITE_ASSET_BASE_URL",
+	"VITE_PAYPAL_ENABLED",
+	"VITE_STRIPE_ENABLED",
 ];
 
 async function collectMarkdownFiles(targetPath) {

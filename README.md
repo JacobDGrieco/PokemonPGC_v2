@@ -13,7 +13,8 @@ PokemonPGC is an unofficial Pokemon post-game checklist, Pokedex tracker, and co
 - Local browser persistence and optional folder backup/recovery
 - Optional account-based cloud saves
 - Email verification and password recovery through SMTP
-- Stripe and PayPal subscriptions for Great, Ultra, and Master tiers
+- Stripe Checkout subscriptions for Great, Ultra, and Master tiers, with the
+  standalone PayPal path retained as an opt-in compatibility provider
 - Pokemon Red save-file parsing; other save formats are not implemented
 - On-demand 3D model viewer and generation-specific data loading
 
@@ -21,16 +22,17 @@ Some data sets and navigation destinations remain incomplete. `src/config/tiers.
 
 ## Stack
 
-- Node.js 20
+- Node.js 24
 - React 18, React Router 7, and Vite 7
 - Plain JavaScript/JSX and CSS
 - Prisma 6 with PostgreSQL
 - Vercel-style serverless API handlers
-- Nodemailer/SMTP, Stripe, PayPal, Cloudflare R2-compatible asset publishing, PokeAPI, Three.js, and Vercel Analytics
+- Nodemailer/SMTP, Stripe Checkout, optional standalone PayPal, Cloudflare
+  R2-compatible asset publishing, PokeAPI, Three.js, and Vercel Analytics
 
 ## Quick start
 
-1. Install Node.js 20 and PostgreSQL access.
+1. Install Node.js 24 and PostgreSQL access.
 2. Run `npm install`.
 3. Copy `.env.example` to `.env` and fill only the values required for the flows you will use. Never commit `.env`.
 4. Run `npm run prisma:generate`.
@@ -81,6 +83,8 @@ The client uses port 5173. The local API adapter defaults to port 3000. The app 
 - [External integrations](docs/external-integrations.md)
 - [Deployment](docs/deployment.md)
 - [Troubleshooting](docs/troubleshooting.md)
+- [SMTP and authentication rollout](docs/audits/SMTP_AUTH_SETUP.md)
+- [Subscription payments rollout](docs/audits/SUBSCRIPTION_PAYMENTS_SETUP.md)
 - [Operational scripts](scripts/README.md)
 
 ## Important limitations

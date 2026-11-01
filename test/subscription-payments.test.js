@@ -22,6 +22,8 @@ const {
 	getPayPalSubscriptionTier,
 	validatePayPalSubscriptionBinding,
 } = await import("../api/_lib/paypal.js");
+const { parsePaymentProviderFlag, PAYMENT_PROVIDER_AVAILABILITY } =
+	await import("../src/config/paymentProviders.js");
 
 function stripeSubscription(overrides = {}) {
 	return {
@@ -54,6 +56,14 @@ function paypalSubscription(overrides = {}) {
 		...overrides,
 	};
 }
+
+test("new subscriptions default to Stripe while standalone PayPal is opt-in", () => {
+	assert.equal(PAYMENT_PROVIDER_AVAILABILITY.stripe, true);
+	assert.equal(PAYMENT_PROVIDER_AVAILABILITY.paypal, false);
+	assert.equal(parsePaymentProviderFlag("yes", false), true);
+	assert.equal(parsePaymentProviderFlag("off", true), false);
+	assert.equal(parsePaymentProviderFlag("invalid", true), true);
+});
 
 test("provider user IDs accept positive safe integers only", () => {
 	assert.equal(parseProviderUserId("42"), 42);

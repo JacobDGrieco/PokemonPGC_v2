@@ -81,6 +81,16 @@ test("SMTP configuration validates ports and requires STARTTLS by default in pro
 			}),
 		/SMTP_FROM_EMAIL/,
 	);
+	assert.throws(
+		() =>
+			getSmtpConfig({
+				SMTP_HOST: "smtp.example.com",
+				SMTP_PORT: "587-extra",
+				SMTP_USER: "mailer@example.com",
+				SMTP_PASS: "secret",
+			}),
+		/SMTP_PORT/,
+	);
 });
 
 test("authentication email templates escape HTML and include a text alternative", () => {
@@ -106,6 +116,24 @@ test("session cookies carry the version required for all-device revocation", () 
 	const payload = verifySessionToken(token);
 	assert.equal(payload.userId, 42);
 	assert.equal(payload.sessionVersion, 7);
+});
+
+test("session signing rejects secrets shorter than 32 bytes", () => {
+	const originalSecret = process.env.AUTH_SECRET;
+	process.env.AUTH_SECRET = "too-short";
+	try {
+		assert.throws(
+			() =>
+				createSessionToken({
+					id: 42,
+					email: "trainer@example.com",
+					sessionVersion: 0,
+				}),
+			/AUTH_SECRET/,
+		);
+	} finally {
+		process.env.AUTH_SECRET = originalSecret;
+	}
 });
 
 test("email and password validation preserve password characters", () => {

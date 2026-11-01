@@ -11,6 +11,7 @@ import {
 	FEATURE_LABELS,
 	TIER_ORDER,
 } from "../config/tiers.js";
+import { PAYMENT_PROVIDER_AVAILABILITY } from "../config/paymentProviders.js";
 import { useSubscription } from "../hooks/useSubscription.js";
 import { FaStripeS, FaPaypal } from "react-icons/fa";
 import "../../styles/pricing.css";
@@ -185,35 +186,47 @@ export function PricingPage() {
 				</span>
 			);
 		}
+		if (
+			!PAYMENT_PROVIDER_AVAILABILITY.stripe &&
+			!PAYMENT_PROVIDER_AVAILABILITY.paypal
+		) {
+			return (
+				<span className="pricing-free-label">Checkout unavailable</span>
+			);
+		}
 
 		return (
 			<div className="pricing-payment-btns">
-				<button
-					type="button"
-					className="pricing-pay-btn pricing-pay-stripe"
-					disabled={actionDisabled}
-					aria-label={`Subscribe to ${TIERS[key].label} with Stripe`}
-					onClick={() => handleStripeCheckout(key)}
-				>
-					{busyAction === `stripe:${key}` ? (
-						"Loading..."
-					) : (
-						<FaStripeS />
-					)}
-				</button>
-				<button
-					type="button"
-					className="pricing-pay-btn pricing-pay-paypal"
-					disabled={actionDisabled}
-					aria-label={`Subscribe to ${TIERS[key].label} with PayPal`}
-					onClick={() => handlePayPalCheckout(key)}
-				>
-					{busyAction === `paypal:${key}` ? (
-						"Loading..."
-					) : (
-						<FaPaypal />
-					)}
-				</button>
+				{PAYMENT_PROVIDER_AVAILABILITY.stripe ? (
+					<button
+						type="button"
+						className="pricing-pay-btn pricing-pay-stripe"
+						disabled={actionDisabled}
+						aria-label={`Subscribe to ${TIERS[key].label} with Stripe`}
+						onClick={() => handleStripeCheckout(key)}
+					>
+						{busyAction === `stripe:${key}` ? (
+							"Loading..."
+						) : (
+							<FaStripeS />
+						)}
+					</button>
+				) : null}
+				{PAYMENT_PROVIDER_AVAILABILITY.paypal ? (
+					<button
+						type="button"
+						className="pricing-pay-btn pricing-pay-paypal"
+						disabled={actionDisabled}
+						aria-label={`Subscribe to ${TIERS[key].label} with PayPal`}
+						onClick={() => handlePayPalCheckout(key)}
+					>
+						{busyAction === `paypal:${key}` ? (
+							"Loading..."
+						) : (
+							<FaPaypal />
+						)}
+					</button>
+				) : null}
 			</div>
 		);
 	}
@@ -253,6 +266,11 @@ export function PricingPage() {
 					development and unlocks things as they release.
 				</p>
 			</div>
+			<p className="pricing-payment-note">
+				Checkout and payment details are handled by the selected payment
+				provider. PokemonPGC never receives your card or wallet
+				credentials.
+			</p>
 
 			{error ? (
 				<div className="pricing-alert pricing-alert--error">
