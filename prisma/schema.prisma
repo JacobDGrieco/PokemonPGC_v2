@@ -1,7 +1,5 @@
 datasource db {
-  provider  = "postgresql"
-  url       = env("DB_DATABASE_URL")
-  directUrl = env("DB_DATABASE_URL_UNPOOLED")
+  provider = "postgresql"
 }
 
 generator client {
@@ -23,6 +21,7 @@ model User {
   createdAt            DateTime    @default(now())
   gameSaves            GameSave[]
   authTokens           AuthToken[]
+  tierGrants           TierGrant[]
 }
 
 model AuthToken {
@@ -47,4 +46,35 @@ model GameSave {
   updatedAt DateTime @updatedAt
 
   @@unique([userId, gameKey])
+}
+
+model ProviderEvent {
+  id          Int       @id @default(autoincrement())
+  provider    String
+  eventId     String
+  eventType   String
+  objectId    String?
+  outcome     String
+  occurredAt  DateTime?
+  processedAt DateTime  @default(now())
+
+  @@unique([provider, eventId])
+  @@index([provider, processedAt])
+}
+
+model TierGrant {
+  id           Int       @id @default(autoincrement())
+  user         User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId       Int
+  tier         String
+  reason       String
+  grantedBy    String
+  grantedAt    DateTime  @default(now())
+  expiresAt    DateTime?
+  revokedAt    DateTime?
+  revokedBy    String?
+  revokeReason String?
+
+  @@index([userId, revokedAt, expiresAt])
+  @@index([grantedAt])
 }

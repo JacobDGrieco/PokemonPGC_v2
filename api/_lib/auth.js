@@ -197,23 +197,23 @@ export async function readJsonBody(req) {
 }
 
 export async function readRawBody(req) {
-	if (Buffer.isBuffer(req.body)) {
-		return req.body.toString("utf8");
-	}
-
-	if (typeof req.body === "string") {
-		return req.body;
-	}
-
-	if (req.body && typeof req.body === "object") {
-		return JSON.stringify(req.body);
-	}
-
 	const chunks = [];
-	for await (const chunk of req) {
-		chunks.push(Buffer.isBuffer(chunk) ? chunk : Buffer.from(chunk));
+	if (typeof req?.[Symbol.asyncIterator] === "function") {
+		// Vercel exposes body as a lazy parsing getter. Reading the stream first is
+		// required because re-serializing parsed JSON breaks webhook signatures.
+		for await (const chunk of req) {
+			chunks.push(Buffer.isBuffer(chunk) ? chunk : Buffer.from(chunk));
+		}
 	}
 
-	if (!chunks.length) return "";
-	return Buffer.concat(chunks).toString("utf8");
+	if (chunks.length) return Buffer.concat(chunks).toString("utf8");
+
+	// Test adapters or upstream middleware may have consumed the stream already.
+	const parsedBody = req?.body;
+	if (Buffer.isBuffer(parsedBody)) return parsedBody.toString("utf8");
+	if (typeof parsedBody === "string") return parsedBody;
+	if (parsedBody && typeof parsedBody === "object") {
+		return JSON.stringify(parsedBody);
+	}
+	return "";
 }

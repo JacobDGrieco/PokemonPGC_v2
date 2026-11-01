@@ -3,8 +3,9 @@
  * in memory; only explicitly registered game parsers are accepted and raw save
  * content is never persisted by this route.
  */
-import { json, methodNotAllowed } from "../_lib/response.js";
+import { json, methodNotAllowed, tooManyRequests } from "../_lib/response.js";
 import { getSessionFromRequest, readJsonBody } from "../_lib/auth.js";
+import { checkRateLimit, getRequestIp } from "../_lib/rateLimit.js";
 import { validateGameKey } from "../_lib/validation.js";
 import { parseSaveForGame } from "../_lib/saveImport.js";
 
@@ -16,6 +17,18 @@ export default async function handler(req, res) {
 	const session = await getSessionFromRequest(req);
 	if (!session?.userId) {
 		return json(res, 401, { error: "Not authenticated." });
+	}
+	const limit = checkRateLimit(
+		"save-import",
+		`${session.userId}:${getRequestIp(req)}`,
+		{ windowMs: 10 * 60 * 1000, max: 20 },
+	);
+	if (!limit.ok) {
+		return tooManyRequests(
+			res,
+			{ error: "Too many save imports. Please wait and try again." },
+			limit.retryAfterSeconds,
+		);
 	}
 
 	const parsedGameKey = validateGameKey(req.query?.gameKey);

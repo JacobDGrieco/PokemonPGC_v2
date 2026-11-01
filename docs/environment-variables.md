@@ -1,6 +1,6 @@
 # Environment Variables
 
-Use `.env.example` as the template. Never commit populated secret files or paste live values into issues/logs.
+This is the canonical environment contract. Create `.env` locally and add values directly in Vercel for deployed environments; do not commit populated secret files or paste live values into issues/logs. Production and Preview may share values when that is intentional. Vercel Development values are only needed for workflows such as `vercel dev` or `vercel env run --environment development`; ordinary `npm run dev` reads the local `.env`.
 
 ## Database and authentication
 
@@ -29,28 +29,28 @@ The transporter requires TLS 1.2+, bounds connection/socket time, and blocks fil
 
 ## Stripe
 
-`STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`, and `STRIPE_PRICE_GREAT|ULTRA|MASTER` are required for their respective flows. `STRIPE_PORTAL_CONFIGURATION_ID` is optional. Legacy aliases `STRIPE_WEBHOOK` and `STRIPE_PORTAL` remain readable but new environments should use the full names.
+`STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`, `STRIPE_PRICE_GREAT`, and `STRIPE_PRICE_ULTRA` are required for new checkout. Great is the $5 monthly Price and Ultra is the $50 yearly Price; both grant the same supporter access. `STRIPE_PRICE_MASTER` remains readable for provider reconciliation but new Master checkout is disabled until the lifetime product and permanent-entitlement rules are implemented. `STRIPE_PORTAL_CONFIGURATION_ID` is optional. Legacy aliases `STRIPE_WEBHOOK` and `STRIPE_PORTAL` remain readable but new environments should use the full names.
 
-All IDs must belong to the same Stripe test/live account and mode.
+All keys, Price IDs, portal configurations, webhook endpoints, and signing secrets must belong to the same Stripe test/live account and mode. Keep the full set in test mode until sandbox acceptance passes; test signing secrets cannot validate live endpoint deliveries and vice versa.
 
-`VITE_STRIPE_ENABLED=true` exposes the Stripe checkout control. It is public UI configuration, not authorization. Stripe Checkout dynamically presents the recurring-compatible payment methods enabled for the Stripe account and eligible for the customer.
+`VITE_STRIPE_ENABLED` set to `true` exposes the Stripe checkout control. It is public UI configuration, not authorization. Stripe Checkout dynamically presents the recurring-compatible payment methods enabled for the Stripe account and eligible for the customer.
 
 ## PayPal
 
-`PAYPAL_ENVIRONMENT` is `sandbox` or `live` (default `sandbox`). `PAYPAL_CLIENT_ID`, `PAYPAL_CLIENT_SECRET`, `PAYPAL_WEBHOOK_ID`, and `PAYPAL_PLAN_GREAT|ULTRA|MASTER` must belong to that same environment.
+`PAYPAL_ENVIRONMENT` is `sandbox` or `live` (default `sandbox`). `PAYPAL_CLIENT_ID`, `PAYPAL_CLIENT_SECRET`, `PAYPAL_WEBHOOK_ID`, `PAYPAL_PLAN_GREAT`, `PAYPAL_PLAN_ULTRA`, and `PAYPAL_PLAN_MASTER` must belong to that same environment.
 
-`VITE_PAYPAL_ENABLED=false` is the default. Set it to `true` only when the standalone PayPal credentials, Plans, webhook, and sandbox acceptance matrix are complete. Existing PayPal subscription management remains available for already-bound accounts even when new checkout is hidden.
+`VITE_PAYPAL_ENABLED` defaults to `false`. Set it to `true` only when the standalone PayPal credentials, Plans, webhook, and sandbox acceptance matrix are complete. Existing PayPal subscription management remains available for already-bound accounts even when new checkout is hidden.
 
 ## Client/runtime URLs
 
 - `VITE_ASSET_BASE_URL` or fallback `ASSET_BASE_URL`: prefix for externally hosted game assets.
-- `VITE_API_BASE_URL` or fallback `API_BASE_URL`: API base written at build time.
+- `VITE_API_BASE_URL`: API base written at build time. `API_BASE_URL` remains a legacy fallback but is unnecessary for same-origin Vercel deployments.
 
 The browser client uses a configured cross-origin API only on localhost; deployed browsers fall back to same-origin `/api` to preserve cookie/security assumptions. Do not put secrets in `VITE_*` variables.
 
 ## Local development aliases
 
-The preferred API port is `PPGC_API_PORT`; `API_PORT`, `PPGC_BACKEND_PORT`, and `BACKEND_PORT` remain accepted aliases in Vite configuration. Default: 3000.
+The preferred API port is `PPGC_API_PORT`; `API_PORT`, `PPGC_BACKEND_PORT`, and `BACKEND_PORT` remain accepted aliases in Vite configuration. Default: 3000. This is local-only and should not be set in Vercel.
 
 ## Operational scripts
 

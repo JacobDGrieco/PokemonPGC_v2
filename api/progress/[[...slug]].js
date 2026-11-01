@@ -3,9 +3,10 @@
  * Ownership always comes from the signed session. Snapshots are whole-document
  * upserts, so this endpoint does not provide revision/conflict semantics.
  */
-import { json, methodNotAllowed } from "../_lib/response.js";
+import { json, methodNotAllowed, tooManyRequests } from "../_lib/response.js";
 import { getSessionFromRequest, readJsonBody } from "../_lib/auth.js";
 import { prisma } from "../_lib/db.js";
+import { checkRateLimit, getRequestIp } from "../_lib/rateLimit.js";
 import {
 	getUserSaves,
 	upsertUserSave,
@@ -30,6 +31,21 @@ export default async function handler(req, res) {
 	}
 
 	return json(res, 404, { error: "Not found." });
+}
+
+function enforceProgressWriteRateLimit(req, res, userId) {
+	const limit = checkRateLimit(
+		"progress-write",
+		`${userId}:${getRequestIp(req)}`,
+		{ windowMs: 10 * 60 * 1000, max: 120 },
+	);
+	if (limit.ok) return true;
+	tooManyRequests(
+		res,
+		{ error: "Too many progress updates. Please wait and try again." },
+		limit.retryAfterSeconds,
+	);
+	return false;
 }
 
 async function handleProgressIndex(req, res) {
@@ -60,6 +76,7 @@ async function handleProgressIndexPut(req, res) {
 	if (!session?.userId) {
 		return json(res, 401, { error: "Not authenticated." });
 	}
+	if (!enforceProgressWriteRateLimit(req, res, session.userId)) return;
 
 	const body = await readJsonBody(req);
 	const gameKeyResult = validateGameKey(body?.gameKey);
@@ -143,6 +160,7 @@ async function handleProgressByGamePut(req, res) {
 	if (!parsedGameKey.ok) {
 		return json(res, 400, { error: parsedGameKey.error });
 	}
+	if (!enforceProgressWriteRateLimit(req, res, session.userId)) return;
 
 	const body = await readJsonBody(req);
 	const data = body?.data ?? body?.snapshot ?? null;

@@ -24,6 +24,11 @@ Returns service health JSON. It does not authenticate or prove every external in
 
 Credentials: email at most 254 characters; password 8-128 characters with spaces preserved. Auth token request endpoints combine process-local rate limits with a database one-minute issue cooldown.
 
+Authenticated user payloads can include `complimentaryAccess` with `tier` and
+nullable `expiresAt`. `user.tier` is the higher effective access level, while
+provider fields continue to describe billing only. Complimentary grants have no
+public API or browser mutation route.
+
 ## Progress
 
 All progress routes require a valid session. `gameKey` must match 1-64 alphanumeric/hyphen characters. Snapshot bodies accept `{data}` or compatibility `{snapshot}` and must be a plain object below the serialized size limit.
@@ -52,11 +57,12 @@ Requires authentication. Body: `{filename?,contentBase64}`. Maximum decoded payl
 
 ## Subscriptions
 
-All browser billing actions require authentication. Webhooks use provider signatures instead. Create/cancel actions are rate-limited and accept/generated idempotency evidence.
+All browser billing actions require authentication. Webhooks use provider signatures instead. Create/cancel actions are rate-limited and accept/generated idempotency evidence. Successfully processed webhook IDs are recorded in the provider-event ledger.
 
 ### Stripe
 
 - `POST /api/subscriptions/stripe/create-session` with `{tier}`
+- `POST /api/subscriptions/stripe/change-plan` with `{tier}`
 - `POST /api/subscriptions/stripe/verify` with `{sessionId,tier}`
 - `GET /api/subscriptions/stripe/details`
 - `POST /api/subscriptions/stripe/portal`
@@ -70,7 +76,9 @@ All browser billing actions require authentication. Webhooks use provider signat
 - `POST /api/subscriptions/paypal/cancel`
 - `POST /api/subscriptions/paypal/webhook` with provider verification headers/body
 
-Valid paid tier keys are `great`, `ultra`, and `master`. Provider Price/Plan mapping and owner metadata are authoritative; the browser's requested tier is never sufficient evidence by itself.
+Provider reconciliation recognizes `great`, `ultra`, and `master`. New checkout accepts only `great` (monthly) and `ultra` (yearly); both grant the same supporter feature set. Master checkout returns 409 until explicitly enabled. Provider Price/Plan mapping and owner metadata are authoritative; the browser's requested tier is never sufficient evidence by itself.
+
+For an active Stripe subscription, `change-plan` applies an upgrade immediately with Stripe payment protection and schedules a downgrade for the end of the current paid period. `{tier:"free"}` schedules cancellation at period end without removing current access. Selecting the current paid tier releases a PokemonPGC-managed downgrade or resumes an end-of-period cancellation. The application refuses to alter an unknown/external Stripe schedule. `details` includes item-level period dates plus `pendingTier` and `pendingChangeDate` when a managed change exists.
 
 ## Status conventions
 
@@ -81,7 +89,7 @@ Valid paid tier keys are `great`, `ultra`, and `master`. Provider Price/Plan map
 - 404: route/resource missing
 - 405: unsupported method with `Allow`
 - 409: account/provider conflict or provider state not yet entitled
-- 429: process-local rate limit
+- 429: process-local rate limit, with `Retry-After` when a reset time is known
 - 500: internal/provider configuration failure with a generic public message
 
 This is an implementation reference, not a versioned public API guarantee. Coordinate compatibility before changing any route, property, cookie, or status behavior.

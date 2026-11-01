@@ -5,6 +5,7 @@ import {
 	FEATURE_NAVIGATION,
 	FEATURE_ROUTES,
 	getFeatureNavigationGroups,
+	TIERS,
 } from "../src/config/tiers.js";
 import { curryPctFor } from "../src/modals/curry.js";
 import { sandwichPctFor } from "../src/modals/sandwich.js";
@@ -30,6 +31,16 @@ test("navigation routes have one entitlement-derived metadata entry", () => {
 	assert.deepEqual(groupedPages, FEATURE_NAVIGATION);
 });
 
+test("paid supporter cadences share access while Master checkout stays reserved", () => {
+	assert.deepEqual(TIERS.great.features, TIERS.ultra.features);
+	assert.deepEqual(TIERS.ultra.features, TIERS.master.features);
+	assert.equal(TIERS.great.price, "$5/mo");
+	assert.equal(TIERS.ultra.price, "$50/yr");
+	assert.equal(TIERS.great.isPurchasable, true);
+	assert.equal(TIERS.ultra.isPurchasable, true);
+	assert.equal(TIERS.master.isPurchasable, false);
+});
+
 test("account integration IDs are owned by the shared account control", async () => {
 	const accountControlSource = await readFile(
 		new URL(
@@ -51,6 +62,53 @@ test("account integration IDs are owned by the shared account control", async ()
 	assert.match(accountControlSource, /id="ppgc-account-menu"/);
 	assert.doesNotMatch(appHeaderSource, /id="ppgc-account-button"/);
 	assert.doesNotMatch(marketingHeaderSource, /id="ppgc-account-button"/);
+});
+
+test("account billing shows customer-facing dates without internal period details", async () => {
+	const accountPageSource = await readFile(
+		new URL("../src/components/content/AccountPage.jsx", import.meta.url),
+		"utf8",
+	);
+
+	assert.match(
+		accountPageSource,
+		/formatDate\(effectiveDetails\.renewalDate\)/,
+	);
+	assert.doesNotMatch(accountPageSource, /title="Period start"/);
+});
+
+test("complimentary access has an owner-only command and non-billing UI", async () => {
+	const [packageSource, adminScriptSource, pricingSource, accountSource] =
+		await Promise.all([
+			readFile(new URL("../package.json", import.meta.url), "utf8"),
+			readFile(
+				new URL("../scripts/admin-tier-access.mjs", import.meta.url),
+				"utf8",
+			),
+			readFile(
+				new URL("../src/pages/PricingPage.jsx", import.meta.url),
+				"utf8",
+			),
+			readFile(
+				new URL(
+					"../src/components/content/AccountPage.jsx",
+					import.meta.url,
+				),
+				"utf8",
+			),
+		]);
+	const packageJson = JSON.parse(packageSource);
+
+	assert.equal(
+		packageJson.scripts["admin:tier-access"],
+		"node ./scripts/admin-tier-access.mjs",
+	);
+	assert.match(adminScriptSource, /--confirm/);
+	assert.match(adminScriptSource, /--execute/);
+	assert.match(adminScriptSource, /emailVerifiedAt/);
+	assert.doesNotMatch(adminScriptSource, /createServer|\.listen\(|fetch\(/);
+	assert.match(pricingSource, /No payment is required for this access/);
+	assert.match(accountSource, /\(Complimentary\)/);
 });
 
 test("collectible adapters preserve independent percentage contracts", () => {
@@ -118,5 +176,17 @@ test("progress queries expose only required response fields", () => {
 	assert.deepEqual(USER_SAVE_WRITE_SELECT, {
 		gameKey: true,
 		updatedAt: true,
+	});
+});
+
+test("production requests use one canonical authentication host", async () => {
+	const vercelConfig = JSON.parse(
+		await readFile(new URL("../vercel.json", import.meta.url), "utf8"),
+	);
+	assert.deepEqual(vercelConfig.redirects?.[0], {
+		source: "/:path*",
+		has: [{ type: "host", value: "pokemonpgc.com" }],
+		destination: "https://www.pokemonpgc.com/:path*",
+		permanent: true,
 	});
 });

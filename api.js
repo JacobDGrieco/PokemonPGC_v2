@@ -178,6 +178,19 @@ export async function createStripeCheckoutSession(tier) {
 	return requireOkJson(res, "Failed to start Stripe checkout.");
 }
 
+export async function changeStripeSubscriptionPlan(tier) {
+	const res = await fetch(`${API_BASE}/subscriptions/stripe/change-plan`, {
+		method: "POST",
+		headers: {
+			"Content-Type": "application/json",
+			"Idempotency-Key": createIdempotencyKey(),
+		},
+		credentials: "include",
+		body: JSON.stringify({ tier }),
+	});
+	return requireOkJson(res, "Failed to change the Stripe plan.");
+}
+
 export async function createStripePortalSession() {
 	const res = await fetch(`${API_BASE}/subscriptions/stripe/portal`, {
 		method: "POST",

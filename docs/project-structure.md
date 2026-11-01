@@ -6,7 +6,7 @@
 - `api.js`: browser HTTP client. It keeps cookies same-origin and rejects a cross-origin API base outside local development.
 - `package.json`: root-only scripts; this is not a workspace/monorepo.
 - `vercel.json`: SPA rewrite and the intentional `[deploy]` commit-message build gate.
-- `.env.example`: secrets-free environment contract.
+- `docs/environment-variables.md`: canonical secrets-free environment contract; populated `.env*` files remain local-only.
 
 ## `src/`
 
@@ -42,7 +42,7 @@ Data IDs are persisted contracts. Read `data-authoring.md` before changing them.
 
 ## `prisma/`
 
-`schema.prisma` describes the current PostgreSQL target. `proposed/` contains review-only SQL, not automatically applied migrations. There is no established `prisma/migrations/` baseline.
+`schema.prisma` describes the current PostgreSQL target. `migrations/` contains the reviewed migration history; new migrations remain unapplied until their target, backup, and rollout are explicitly approved. `proposed/` contains older review-only SQL and is never applied automatically.
 
 ## `styles/`
 
@@ -51,11 +51,13 @@ Global and feature styles use semantic prefixes (`account-`, `task-`, `dex-`, `h
 ## `scripts/`, `test/`, and `docs/`
 
 - `scripts/`: operational tools; read `scripts/README.md` because several mutate files, accounts, or remote assets.
+- `scripts/admin-tier-access.mjs`: local-only complimentary access grant,
+  revocation, and history command; it deliberately has no browser/API route.
 - `test/`: Node tests for authentication/payment rules and source-level standardization/mobile contracts.
 - `docs/`: canonical handoff, architecture, operations, standards, and audits.
 
 ## Generated or local-only material
 
 - `node_modules/`, `dist/`, `.vercel/`: generated.
-- `.env*`, `test-accounts.txt`, `MEMORY.md`, local agent directories: private/local and ignored.
+- `.env*`, `ACTION_ITEMS.md`, `test-accounts.txt`, `MEMORY.md`, local agent directories: private/local and ignored.
 - `public/`: source public assets. Build-time `asset-env.js` is generated into `dist`; do not run `prepare-public.mjs` without reading its destructive warning.

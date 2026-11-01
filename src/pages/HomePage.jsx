@@ -137,17 +137,6 @@ const HERO_ORBIT_CONFIG = {
 	speed: 0.00007,
 };
 
-function tierFeaturesFor(key) {
-	const tierIndex = TIER_ORDER.indexOf(key);
-	const tier = TIERS[key];
-	const previousTier =
-		tierIndex > 0 ? TIERS[TIER_ORDER[tierIndex - 1]] : null;
-	const baseFeatures = previousTier ? previousTier.features : [];
-	return tier.features
-		.filter((feature) => !baseFeatures.includes(feature))
-		.map((feature) => FEATURE_LABELS[feature] || feature);
-}
-
 function useVisibleElapsedTime(targetRef) {
 	const elapsedTime = useMotionValue(0);
 
@@ -440,13 +429,15 @@ export function HomePage() {
 						<div className="home-tier-grid">
 							{TIER_ORDER.map((rankKey) => {
 								const tier = TIERS[rankKey];
-								const features = tierFeaturesFor(rankKey);
+								const features = tier.marketingBenefits;
 								const isActive = rankKey === tierKey;
+								const isUnavailable =
+									rankKey !== "free" && !tier.isPurchasable;
 
 								return (
 									<div
 										key={rankKey}
-										className={`home-tier-card${isActive ? " is-active" : ""}`}
+										className={`home-tier-card${isActive ? " is-active" : ""}${isUnavailable ? " is-unavailable" : ""}`}
 										style={{
 											"--tier-accent":
 												TIER_STYLES[rankKey]?.accent ||
@@ -458,7 +449,9 @@ export function HomePage() {
 												<span>
 													{tier.price === "$0"
 														? "Start here"
-														: "Unlock more"}
+														: isUnavailable
+															? "Coming later"
+															: "Full access"}
 												</span>
 												<strong>{tier.label}</strong>
 											</div>

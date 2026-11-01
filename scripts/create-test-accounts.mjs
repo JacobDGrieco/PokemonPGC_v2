@@ -67,6 +67,7 @@ async function upsertTestAccount({ tier, email, subscriptionStatus }) {
 			tier: true,
 		},
 	});
+	await prisma.tierGrant.deleteMany({ where: { userId: user.id } });
 
 	return { ...user, password };
 }

@@ -53,3 +53,14 @@ The current startup restore can fetch all saves. Do not replace it with manifest
 5. Only Stripe `active`/`trialing` and PayPal `ACTIVE` grant a paid tier. Conflicting active providers are rejected.
 
 PayPal cancellation currently removes access immediately. Stripe cancellation management is delegated to the Billing Portal.
+
+## Complimentary tier access
+
+1. The owner runs the local `admin:tier-access` command against an explicitly
+   reviewed database target; there is no HTTP admin action.
+2. The command requires an exact existing verified email, operator label,
+   reason, dry-run review, matching confirmation, and `--execute`.
+3. An active `TierGrant` combines with provider-backed `User.tier` by choosing
+   the higher rank. It never creates or modifies a Stripe/PayPal object.
+4. Grant and revoke records retain their actor, reason, timestamps, optional
+   expiration, and revocation metadata for audit history.

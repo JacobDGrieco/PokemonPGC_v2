@@ -13,10 +13,12 @@ Run commands from the repository root.
 
 ```powershell
 npm install
-Copy-Item .env.example .env
+New-Item -ItemType File .env
 npm run prisma:generate
 npm run dev
 ```
+
+Populate only the local values you need, using [the environment-variable reference](environment-variables.md). The repository intentionally does not keep a copyable environment template so placeholder files cannot be mistaken for populated configuration.
 
 `npm run dev` starts Vite on 5173 and the local Vercel-handler adapter on `PPGC_API_PORT` or 3000. Vite proxies `/api` to that adapter.
 
@@ -49,7 +51,7 @@ Use existing helpers and neighboring game files. Keep stable IDs, register the f
 
 ## Database changes
 
-Do not edit already-applied migrations, reset production, or use `db push` as a production deployment path. The repository currently lacks a migration baseline; follow [deployment](deployment.md) and the [database proposal](database/proposal.md).
+Do not edit already-applied migrations, reset production, or use `db push` as a production deployment path. Follow [deployment](deployment.md) and the [database proposal](database/proposal.md).
 
 ## Generated files
 

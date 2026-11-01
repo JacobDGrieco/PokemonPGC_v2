@@ -1,6 +1,6 @@
 /**
- * Validates local Markdown links and the documented environment-variable
- * template. This intentionally checks repository artifacts only; it does not
+ * Validates local Markdown links and the canonical environment-variable
+ * reference. This intentionally checks repository artifacts only; it does not
  * fetch external URLs or inspect populated secret files.
  */
 import fs from "node:fs/promises";
@@ -95,12 +95,16 @@ for (const markdownFile of markdownFiles) {
 	}
 }
 
-const envTemplate = await fs.readFile(
-	path.resolve(repoRoot, ".env.example"),
+const environmentReferencePath = path.resolve(
+	repoRoot,
+	"docs/environment-variables.md",
+);
+const environmentReference = await fs.readFile(
+	environmentReferencePath,
 	"utf8",
 );
 const missingEnvironmentVariables = requiredEnvironmentVariables.filter(
-	(variableName) => !new RegExp(`^${variableName}=`, "m").test(envTemplate),
+	(variableName) => !environmentReference.includes(`\`${variableName}\``),
 );
 
 if (missingLinks.length || missingEnvironmentVariables.length) {
@@ -111,7 +115,7 @@ if (missingLinks.length || missingEnvironmentVariables.length) {
 	}
 	if (missingEnvironmentVariables.length) {
 		console.error(
-			`Missing .env.example entries: ${missingEnvironmentVariables.join(", ")}`,
+			`Missing docs/environment-variables.md entries: ${missingEnvironmentVariables.join(", ")}`,
 		);
 	}
 	process.exitCode = 1;

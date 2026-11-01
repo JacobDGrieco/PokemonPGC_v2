@@ -32,6 +32,11 @@ Existing-account rollout uses the schema default/backfill described in [SMTP and
 - Billing browser actions require a valid session and verified provider owner/tier evidence.
 - Webhooks require Stripe signature construction or PayPal remote verification.
 - Paid feature visibility uses the server-serialized tier; only provider-entitled states should write a paid tier.
+- Complimentary tiers are separate `TierGrant` records. The public effective
+  tier is the higher of provider-backed access and an active, unexpired grant.
+- Grant administration has no HTTP route. The local owner command requires
+  database credentials, an exact verified email, a recorded actor/reason,
+  matching confirmation, and an explicit execution flag.
 
 Client-side tier checks improve UX but are not a substitute for server authorization on sensitive operations.
 

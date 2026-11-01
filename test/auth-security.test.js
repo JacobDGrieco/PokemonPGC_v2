@@ -16,6 +16,8 @@ const { escapeEmailHtml, getSmtpConfig, renderAuthEmail } =
 	await import("../api/_lib/email.js");
 const { validateEmail, validatePassword } =
 	await import("../api/_lib/validation.js");
+const { checkRateLimit } = await import("../api/_lib/rateLimit.js");
+const { tooManyRequests } = await import("../api/_lib/response.js");
 
 test("auth tokens are cryptographically sized, URL safe, and stored as deterministic digests", () => {
 	const rawToken = createRawAuthToken();
@@ -147,4 +149,52 @@ test("email and password validation preserve password characters", () => {
 	});
 	assert.equal(validateEmail("invalid").ok, false);
 	assert.equal(validatePassword("short").ok, false);
+});
+
+test("rate limits expose bounded retry timing and reset cleanly", () => {
+	const options = { windowMs: 10_000, max: 2, nowMs: 1_000_000 };
+	assert.deepEqual(checkRateLimit("test-auth", "trainer", options), {
+		ok: true,
+		remaining: 1,
+		resetAt: 1_010_000,
+		retryAfterSeconds: 0,
+	});
+	assert.equal(checkRateLimit("test-auth", "trainer", options).remaining, 0);
+	assert.deepEqual(checkRateLimit("test-auth", "trainer", options), {
+		ok: false,
+		remaining: 0,
+		resetAt: 1_010_000,
+		retryAfterSeconds: 10,
+	});
+	assert.equal(
+		checkRateLimit("test-auth", "trainer", {
+			...options,
+			nowMs: 1_010_000,
+		}).ok,
+		true,
+	);
+});
+
+test("429 responses include Retry-After when a reset time is known", () => {
+	const headers = new Map();
+	let responseStatus = null;
+	let responsePayload = null;
+	const response = {
+		setHeader(name, value) {
+			headers.set(name, value);
+		},
+		status(status) {
+			responseStatus = status;
+			return this;
+		},
+		json(payload) {
+			responsePayload = payload;
+			return this;
+		},
+	};
+
+	tooManyRequests(response, { error: "Slow down." }, 9.1);
+	assert.equal(responseStatus, 429);
+	assert.deepEqual(responsePayload, { error: "Slow down." });
+	assert.equal(headers.get("Retry-After"), "10");
 });

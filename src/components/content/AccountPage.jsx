@@ -49,15 +49,6 @@ function formatDate(value) {
 	}
 }
 
-function formatDateTime(value) {
-	if (!value) return "Not available";
-	try {
-		return new Date(value).toLocaleString();
-	} catch {
-		return value;
-	}
-}
-
 function formatStatus(value) {
 	if (!value) return "None";
 	return String(value)
@@ -586,6 +577,8 @@ function SubscriptionTab() {
 		status: user?.subscriptionStatus || null,
 		renewalDate: null,
 		currentPeriodStart: null,
+		pendingTier: null,
+		pendingChangeDate: null,
 		cancelAt: null,
 		canceledAt: null,
 		trialEnd: null,
@@ -595,7 +588,9 @@ function SubscriptionTab() {
 		priceId: null,
 		interval: null,
 	};
-	const plan = TIERS[effectiveDetails.tier] || TIERS.free;
+	const plan = TIERS[tierKey] || TIERS.free;
+	const billingPlan = TIERS[effectiveDetails.tier] || TIERS.free;
+	const complimentaryAccess = user?.complimentaryAccess || null;
 	const hasProvider = !!effectiveDetails.provider;
 	const isSignedIn = !!user;
 
@@ -607,7 +602,7 @@ function SubscriptionTab() {
 						<div className="settings-eyebrow">Membership</div>
 						<h2>League Rank</h2>
 						<p className="settings-lead">
-							Your current tier, renewal date, and billing
+							Your current access and any connected billing
 							details.
 						</p>
 					</div>
@@ -620,16 +615,30 @@ function SubscriptionTab() {
 					</div>
 					<div className="settings-account-actions">
 						{hasProvider &&
-						effectiveDetails.provider === "stripe" ? (
+						effectiveDetails.provider === "stripe" &&
+						!complimentaryAccess ? (
 							<button
 								className="primary"
+								type="button"
+								disabled={busyAction !== ""}
+								onClick={() =>
+									window.location.assign("/pricing")
+								}
+							>
+								Change plan
+							</button>
+						) : null}
+						{hasProvider &&
+						effectiveDetails.provider === "stripe" ? (
+							<button
+								className="ghost"
 								type="button"
 								disabled={busyAction !== ""}
 								onClick={handleStripePortal}
 							>
 								{busyAction === "stripe:portal"
 									? "Loading..."
-									: "Manage billing"}
+									: "Invoices & billing"}
 							</button>
 						) : null}
 						{hasProvider &&
@@ -645,7 +654,7 @@ function SubscriptionTab() {
 									: "Cancel PayPal"}
 							</button>
 						) : null}
-						{!hasProvider ? (
+						{!hasProvider && !complimentaryAccess ? (
 							<button
 								className="primary"
 								type="button"
@@ -673,40 +682,76 @@ function SubscriptionTab() {
 
 			<section className="settings-panel">
 				<div className="settings-section-head">
-					<h3>Billing details</h3>
-					<p>Provider and lifecycle dates for your current plan.</p>
+					<h3>Access details</h3>
+					<p>Your current rank and any provider billing schedule.</p>
 				</div>
 
 				<div className="account-subscription-list">
 					<SettingRow
 						title="Plan"
-						subtext="The plan currently attached to your account."
+						subtext={
+							complimentaryAccess
+								? "Granted directly to this account without payment."
+								: "The plan currently attached to your account."
+						}
 						control={
 							<span className="account-subscription-inline-value">
-								{plan.label} ({plan.price})
+								{plan.label}
+								{complimentaryAccess
+									? " (Complimentary)"
+									: ` (${plan.price})`}
 							</span>
 						}
 					/>
-					<SettingRow
-						title="Renewal date"
-						subtext="When the next billing cycle is expected to begin."
-						control={
-							<span className="account-subscription-inline-value">
-								{formatDateTime(effectiveDetails.renewalDate)}
-							</span>
-						}
-					/>
-					<SettingRow
-						title="Period start"
-						subtext="The start of the current paid period when the provider exposes it."
-						control={
-							<span className="account-subscription-inline-value">
-								{formatDateTime(
-									effectiveDetails.currentPeriodStart,
-								)}
-							</span>
-						}
-					/>
+					{complimentaryAccess ? (
+						<SettingRow
+							title="Access expiration"
+							subtext="Complimentary access can be revoked by the site owner."
+							control={
+								<span className="account-subscription-inline-value">
+									{complimentaryAccess.expiresAt
+										? formatDate(
+												complimentaryAccess.expiresAt,
+											)
+										: "Does not expire"}
+								</span>
+							}
+						/>
+					) : null}
+					{hasProvider && complimentaryAccess ? (
+						<SettingRow
+							title="Billing plan"
+							subtext="A separate provider subscription remains connected."
+							control={
+								<span className="account-subscription-inline-value">
+									{billingPlan.label} ({billingPlan.price})
+								</span>
+							}
+						/>
+					) : null}
+					{hasProvider ? (
+						<SettingRow
+							title="Renewal date"
+							subtext="When the next billing cycle is expected to begin."
+							control={
+								<span className="account-subscription-inline-value">
+									{formatDate(effectiveDetails.renewalDate)}
+								</span>
+							}
+						/>
+					) : null}
+					{effectiveDetails.pendingTier ? (
+						<SettingRow
+							title="Scheduled plan"
+							subtext={`Your current plan remains active until ${formatDate(effectiveDetails.pendingChangeDate)}.`}
+							control={
+								<span className="account-subscription-inline-value">
+									{TIERS[effectiveDetails.pendingTier]
+										?.label || effectiveDetails.pendingTier}
+								</span>
+							}
+						/>
+					) : null}
 				</div>
 			</section>
 

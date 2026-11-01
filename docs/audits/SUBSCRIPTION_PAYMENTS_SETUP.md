@@ -20,6 +20,7 @@ STRIPE_WEBHOOK_SECRET="whsec_value"
 STRIPE_PORTAL_CONFIGURATION_ID="bpc_optional_value"
 STRIPE_PRICE_GREAT="price_value"
 STRIPE_PRICE_ULTRA="price_value"
+# Optional: retained only for existing/future Master reconciliation
 STRIPE_PRICE_MASTER="price_value"
 ```
 
@@ -29,10 +30,12 @@ STRIPE_PRICE_MASTER="price_value"
 
 1. Create or activate the Stripe account and connect the bank account that should receive payouts.
 2. Complete Stripe's business, identity, tax, and statement-descriptor requirements.
-3. In **Product catalog**, create Great, Ultra, and Master products or recurring Prices.
-4. Copy each recurring `price_...` ID into its matching environment variable.
+3. In **Product catalog**, create a $5 monthly Great Ball recurring Price and a $50 yearly Ultra Ball recurring Price. Both grant the same supporter access.
+4. Copy those recurring `price_...` IDs into their matching environment variables. Master Ball is displayed as unavailable and cannot start checkout; do not treat a one-time Master Price as implemented lifetime access.
 5. In **Developers / API keys**, copy the test secret key first. Move to the live secret key only after sandbox acceptance.
-6. Configure the Stripe Customer Portal. Copy its `bpc_...` configuration ID if a specific configuration should be forced; otherwise leave `STRIPE_PORTAL_CONFIGURATION_ID` blank.
+6. Configure the Stripe Customer Portal for payment methods, invoices, and cancellation. Copy its `bpc_...` configuration ID if a specific configuration should be forced; otherwise leave `STRIPE_PORTAL_CONFIGURATION_ID` blank. PokemonPGC handles Great/Ultra plan selection itself.
+
+Stripe's Price update API does not accept a new base amount or recurring interval for an existing Price. Create replacement test Prices, update the two environment IDs, and optionally archive the old Prices after confirming nothing still references them. See [Stripe's Price update parameters](https://docs.stripe.com/api/prices/update).
 
 ## Configure payment methods
 
@@ -67,20 +70,36 @@ Subscribe to:
 
 Copy the endpoint signing secret into `STRIPE_WEBHOOK_SECRET`. Test and live endpoints have different secrets.
 
-The application verifies Stripe signatures and re-fetches current subscription state. It does not yet store provider event IDs in a durable billing-event ledger, so production monitoring and provider retries remain important.
+The application verifies Stripe signatures and re-fetches current subscription state. The applied `20261101190000_add_provider_event_ledger` migration adds durable event receipts without retaining raw webhook payloads or customer details. Provider monitoring and retry visibility remain required.
 
 ## Sandbox acceptance matrix
 
-- Successful checkout for each tier.
+- Successful checkout for Great monthly and Ultra yearly.
+- Direct Master checkout attempts fail with 409 while the option is reserved.
 - Ownership rejection when a Checkout Session belongs to another user.
 - Tier rejection when the configured Price does not match the requested tier.
 - Active and trialing subscriptions grant the expected tier.
 - Failed, incomplete, past-due, paused, and canceled states fail closed.
 - Duplicate and reverse-order webhook delivery converge to current Stripe state.
 - Customer Portal opens only for the authenticated Stripe customer.
+- Great-to-Ultra changes immediately and only grants Ultra after Stripe accepts the paid update.
+- An upgrade requiring authentication or a replacement payment method opens the Stripe-hosted invoice, with Customer Portal as a fallback when no invoice URL is available.
+- Ultra-to-Great retains Ultra through the paid period, displays the effective date, and changes through a tagged Stripe subscription schedule.
+- Great-to-Free and Ultra-to-Free retain paid access through the current period by setting Stripe cancellation at period end.
+- Selecting the current plan cancels a PokemonPGC-managed pending downgrade without canceling the subscription.
+- The current-plan control opens Stripe Customer Portal for cancellation and billing management.
+- Uploaded/custom account icons survive plan changes; a default or tier-managed icon follows the effective tier.
+- Renewal and period-start dates match Stripe's subscription-item period fields.
 - Cancellation and renewal update access through signed webhook delivery.
 - Checkout displays only methods Stripe confirms are eligible for recurring billing.
 
+## Public billing-date display
+
+The Account page presents renewal and scheduled-plan dates as calendar dates.
+It intentionally omits the provider's current-period start timestamp from the
+customer-facing billing panel; the API may still retain that value for provider
+reconciliation and diagnostics.
+
 ## Optional standalone PayPal
 
-Keep `VITE_PAYPAL_ENABLED=false` unless every `PAYPAL_*` variable is configured, three Plans exist in the same sandbox/live environment, the webhook is registered, and the complete PayPal acceptance matrix passes. Existing PayPal-bound users can still manage their subscription while new checkout is hidden.
+Keep `VITE_PAYPAL_ENABLED=false` unless every required `PAYPAL_*` variable is configured, Great and Ultra Plans exist in the same sandbox/live environment, the webhook is registered, and the complete PayPal acceptance matrix passes. Existing PayPal-bound users can still manage their subscription while new checkout is hidden.

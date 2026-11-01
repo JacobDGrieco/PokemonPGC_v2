@@ -87,9 +87,13 @@ function enforceEmailActionRateLimit(req, res, scope, email, max = 5) {
 		max,
 	});
 	if (limit.ok) return true;
-	tooManyRequests(res, {
-		error: "Too many requests. Please wait and try again.",
-	});
+	tooManyRequests(
+		res,
+		{
+			error: "Too many requests. Please wait and try again.",
+		},
+		limit.retryAfterSeconds,
+	);
 	return false;
 }
 
@@ -137,7 +141,12 @@ async function handleLogin(req, res) {
 			windowMs: 10 * 60 * 1000,
 			max: 20,
 		});
-		if (!limit.ok) return tooManyRequests(res);
+		if (!limit.ok)
+			return tooManyRequests(
+				res,
+				{ error: "Too many requests." },
+				limit.retryAfterSeconds,
+			);
 
 		const user = await prisma.user.findUnique({
 			where: { email },
@@ -199,6 +208,17 @@ async function handlePatchMe(req, res) {
 	const session = await getSessionFromRequest(req);
 	if (!session?.userId)
 		return json(res, 401, { error: "Not authenticated." });
+	const limit = checkRateLimit(
+		"auth-profile-update",
+		`${session.userId}:${getRequestIp(req)}`,
+		{ windowMs: 10 * 60 * 1000, max: 30 },
+	);
+	if (!limit.ok)
+		return tooManyRequests(
+			res,
+			{ error: "Too many profile updates. Please wait and try again." },
+			limit.retryAfterSeconds,
+		);
 
 	const parsed = validateIcon((await readJsonBody(req))?.icon);
 	if (!parsed.ok) return json(res, 400, { error: parsed.error });
@@ -223,7 +243,12 @@ async function handleSignup(req, res) {
 		windowMs: 10 * 60 * 1000,
 		max: 10,
 	});
-	if (!limit.ok) return tooManyRequests(res);
+	if (!limit.ok)
+		return tooManyRequests(
+			res,
+			{ error: "Too many requests." },
+			limit.retryAfterSeconds,
+		);
 
 	const parsed = validateCredentials(await readJsonBody(req));
 	if (!parsed.ok) return json(res, 400, { error: parsed.error });
@@ -390,7 +415,12 @@ async function handleVerifyEmail(req, res) {
 		windowMs: 15 * 60 * 1000,
 		max: 20,
 	});
-	if (!limit.ok) return tooManyRequests(res);
+	if (!limit.ok)
+		return tooManyRequests(
+			res,
+			{ error: "Too many requests." },
+			limit.retryAfterSeconds,
+		);
 	const rawToken = String((await readJsonBody(req))?.token || "");
 	if (!isValidRawAuthToken(rawToken))
 		return json(res, 400, {
@@ -451,7 +481,12 @@ async function handleResetPassword(req, res) {
 		windowMs: 15 * 60 * 1000,
 		max: 10,
 	});
-	if (!limit.ok) return tooManyRequests(res);
+	if (!limit.ok)
+		return tooManyRequests(
+			res,
+			{ error: "Too many requests." },
+			limit.retryAfterSeconds,
+		);
 	const body = await readJsonBody(req);
 	const rawToken = String(body?.token || "");
 	const passwordResult = validatePassword(body?.password);

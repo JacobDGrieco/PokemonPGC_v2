@@ -24,24 +24,39 @@ import {
 	verifyPayPalWebhook,
 } from "../../_lib/paypal.js";
 import {
+	buildStripeDowngradePhases,
 	buildStripeSubscriptionUpdate,
 	getStripeClient,
+	getStripeHostedInvoiceUrl,
+	getStripePendingChange,
 	getStripePortalConfigurationId,
+	getStripeScheduledTier,
 	getStripeSubscriptionOwnerId,
+	getStripeSubscriptionPeriod,
 	getStripeSubscriptionTier,
 	getStripeWebhookSecret,
+	isPokemonPgcStripeSchedule,
+	PPGC_STRIPE_SCHEDULE_METADATA_KEY,
+	PPGC_STRIPE_SCHEDULE_METADATA_VALUE,
 	validateStripeCheckoutBinding,
 } from "../../_lib/stripe.js";
 import {
+	getAutomaticTierIconUpdate,
 	getAppOrigin,
 	getPayPalPlanIdForTier,
 	getStripePriceIdForTier,
+	getSubscriptionTierRank,
 	getUserPublicSelect,
 	isEntitledSubscriptionStatus,
+	isPurchasableSubscriptionTier,
 	normalizeTierKey,
 	serializeUser,
 } from "../../_lib/subscription.js";
 import { checkRateLimit, getRequestIp } from "../../_lib/rateLimit.js";
+import {
+	recordProcessedProviderEvent,
+	wasProviderEventProcessed,
+} from "../../_lib/providerEvents.js";
 
 export const config = {
 	api: {
@@ -51,6 +66,7 @@ export const config = {
 
 const SUBSCRIPTION_ACTIONS = {
 	stripe: new Set([
+		"change-plan",
 		"create-session",
 		"details",
 		"portal",
@@ -101,14 +117,23 @@ function enforceBillingRateLimit(req, res, scope, userId, max = 12) {
 		max,
 	});
 	if (limit.ok) return true;
-	tooManyRequests(res, {
-		error: "Too many billing requests. Please wait and try again.",
-	});
+	tooManyRequests(
+		res,
+		{
+			error: "Too many billing requests. Please wait and try again.",
+		},
+		limit.retryAfterSeconds,
+	);
 	return false;
 }
 
 function publicProviderError(res, message) {
 	return json(res, 500, { error: message });
+}
+
+function getProviderEventOutcome(syncResult, fallback = "ignored") {
+	if (syncResult?.updated) return "updated";
+	return String(syncResult?.reason || fallback);
 }
 
 function hasConflictingEntitledProvider(user, incomingProvider) {
@@ -140,6 +165,7 @@ function hasConflictingEntitledSubscription(
 function getBillingUserSelect() {
 	return {
 		id: true,
+		icon: true,
 		tier: true,
 		subscriptionStatus: true,
 		stripeCustomerId: true,
@@ -161,6 +187,7 @@ export default async function handler(req, res) {
 	}
 
 	if (provider === "stripe") {
+		if (action === "change-plan") return handleStripeChangePlan(req, res);
 		if (action === "create-session")
 			return handleStripeCreateSession(req, res);
 		if (action === "details") return handleStripeDetails(req, res);
@@ -183,15 +210,17 @@ function isoFromUnixSeconds(value) {
 	return new Date(seconds * 1000).toISOString();
 }
 
-function normalizeStripeDetails(subscription, user) {
+function normalizeStripeDetails(subscription, user, schedule = null) {
+	const period = getStripeSubscriptionPeriod(subscription);
+	const pendingChange = getStripePendingChange(subscription, schedule);
 	return {
 		provider: "stripe",
 		tier: user?.tier || getStripeSubscriptionTier(subscription) || "free",
 		status: subscription?.status || user?.subscriptionStatus || null,
-		renewalDate: isoFromUnixSeconds(subscription?.current_period_end),
-		currentPeriodStart: isoFromUnixSeconds(
-			subscription?.current_period_start,
-		),
+		renewalDate: isoFromUnixSeconds(period.currentPeriodEnd),
+		currentPeriodStart: isoFromUnixSeconds(period.currentPeriodStart),
+		pendingTier: pendingChange?.tierKey || null,
+		pendingChangeDate: isoFromUnixSeconds(pendingChange?.effectiveAt),
 		cancelAt: isoFromUnixSeconds(subscription?.cancel_at),
 		canceledAt: isoFromUnixSeconds(subscription?.canceled_at),
 		trialEnd: isoFromUnixSeconds(subscription?.trial_end),
@@ -208,6 +237,13 @@ function normalizeStripeDetails(subscription, user) {
 		interval:
 			subscription?.items?.data?.[0]?.price?.recurring?.interval || null,
 	};
+}
+
+function getStripeScheduleId(subscription) {
+	if (typeof subscription?.schedule === "string") {
+		return subscription.schedule;
+	}
+	return subscription?.schedule?.id ? String(subscription.schedule.id) : null;
 }
 
 function normalizePayPalDetails(subscription, user) {
@@ -230,6 +266,353 @@ function normalizePayPalDetails(subscription, user) {
 	};
 }
 
+async function handleStripeChangePlan(req, res) {
+	if (req.method !== "POST") return methodNotAllowed(res, ["POST"]);
+
+	const session = await getSessionFromRequest(req);
+	if (!session?.userId)
+		return json(res, 401, { error: "Not authenticated." });
+	if (
+		!enforceBillingRateLimit(
+			req,
+			res,
+			"stripe-change-plan",
+			session.userId,
+			8,
+		)
+	)
+		return;
+
+	try {
+		const body = await readJsonBody(req);
+		const requestedTier = String(body?.tier || "")
+			.trim()
+			.toLowerCase();
+		const targetTier =
+			requestedTier === "free" ? "free" : normalizeTierKey(requestedTier);
+		if (
+			!targetTier ||
+			(targetTier !== "free" &&
+				!isPurchasableSubscriptionTier(targetTier))
+		) {
+			return json(res, 400, {
+				error: "Select an available subscription tier.",
+			});
+		}
+
+		const user = await prisma.user.findUnique({
+			where: { id: session.userId },
+			select: getBillingUserSelect(),
+		});
+		if (!user?.stripeSubscriptionId) {
+			return json(res, 409, {
+				error: "No active Stripe subscription was found.",
+			});
+		}
+		if (!isEntitledSubscriptionStatus("stripe", user.subscriptionStatus)) {
+			return json(res, 409, {
+				error: "The Stripe subscription is not currently active.",
+			});
+		}
+
+		const stripe = getStripeClient();
+		let subscription = await stripe.subscriptions.retrieve(
+			user.stripeSubscriptionId,
+			{ expand: ["items.data.price"] },
+		);
+		const currentTier = getStripeSubscriptionTier(subscription);
+		const ownerId = getStripeSubscriptionOwnerId(subscription);
+		const subscriptionItem = subscription?.items?.data?.[0];
+		if (
+			ownerId !== user.id ||
+			!currentTier ||
+			!subscriptionItem?.id ||
+			subscription.items.data.length !== 1
+		) {
+			return json(res, 409, {
+				error: "Stripe subscription ownership or plan could not be verified.",
+			});
+		}
+		const scheduleId = getStripeScheduleId(subscription);
+		let schedule = scheduleId
+			? await stripe.subscriptionSchedules.retrieve(scheduleId, {
+					expand: ["phases.items.price"],
+				})
+			: null;
+		if (schedule && !isPokemonPgcStripeSchedule(schedule, user.id)) {
+			return json(res, 409, {
+				error: "This subscription already has an externally managed plan schedule.",
+			});
+		}
+
+		const currentRank = getSubscriptionTierRank(currentTier);
+		const targetRank = getSubscriptionTierRank(targetTier);
+		if (targetTier === currentTier) {
+			if (subscription.cancel_at_period_end) {
+				subscription = await stripe.subscriptions.update(
+					subscription.id,
+					{
+						cancel_at_period_end: false,
+						expand: ["items.data.price"],
+					},
+					{
+						idempotencyKey: getIdempotencyKey(
+							req,
+							`stripe-resume:${user.id}:${subscription.id}`,
+						),
+					},
+				);
+			} else if (schedule && getStripeScheduledTier(schedule)) {
+				await stripe.subscriptionSchedules.release(
+					schedule.id,
+					{ preserve_cancel_date: false },
+					{
+						idempotencyKey: getIdempotencyKey(
+							req,
+							`stripe-release-schedule:${user.id}:${schedule.id}`,
+						),
+					},
+				);
+				subscription = await stripe.subscriptions.retrieve(
+					subscription.id,
+					{ expand: ["items.data.price"] },
+				);
+			} else {
+				return json(res, 409, {
+					error: "This is already the current plan.",
+				});
+			}
+			await syncStripeSubscriptionToUser({
+				userId: user.id,
+				subscription,
+				requireMetadataOwner: true,
+			});
+			const updatedUser = await prisma.user.findUnique({
+				where: { id: user.id },
+				select: getUserPublicSelect(),
+			});
+			return json(res, 200, {
+				ok: true,
+				changeType: "scheduled-change-canceled",
+				user: serializeUser(updatedUser),
+				details: normalizeStripeDetails(subscription, updatedUser),
+			});
+		}
+		if (subscription.cancel_at_period_end || subscription.cancel_at) {
+			return json(res, 409, {
+				error: "Remove the pending cancellation in Stripe before changing plans.",
+			});
+		}
+
+		if (targetTier === "free") {
+			if (schedule) {
+				await stripe.subscriptionSchedules.release(
+					schedule.id,
+					{ preserve_cancel_date: false },
+					{
+						idempotencyKey: getIdempotencyKey(
+							req,
+							`stripe-release-for-cancel:${user.id}:${schedule.id}`,
+						),
+					},
+				);
+			}
+			subscription = await stripe.subscriptions.update(
+				subscription.id,
+				{
+					cancel_at_period_end: true,
+					expand: ["items.data.price"],
+				},
+				{
+					idempotencyKey: getIdempotencyKey(
+						req,
+						`stripe-schedule-free:${user.id}:${subscription.id}`,
+					),
+				},
+			);
+			const publicUser = await prisma.user.findUnique({
+				where: { id: user.id },
+				select: getUserPublicSelect(),
+			});
+			return json(res, 200, {
+				ok: true,
+				changeType: "scheduled-downgrade",
+				user: serializeUser(publicUser),
+				details: normalizeStripeDetails(subscription, publicUser),
+			});
+		}
+
+		if (targetRank < currentRank) {
+			const targetPrice = await stripe.prices.retrieve(
+				getStripePriceIdForTier(targetTier),
+			);
+			let createdSchedule = false;
+			if (!schedule) {
+				schedule = await stripe.subscriptionSchedules.create(
+					{ from_subscription: subscription.id },
+					{
+						idempotencyKey: getIdempotencyKey(
+							req,
+							`stripe-create-schedule:${user.id}:${subscription.id}`,
+						),
+					},
+				);
+				createdSchedule = true;
+				schedule = await stripe.subscriptionSchedules.retrieve(
+					schedule.id,
+					{ expand: ["phases.items.price"] },
+				);
+			}
+
+			try {
+				schedule = await stripe.subscriptionSchedules.update(
+					schedule.id,
+					{
+						end_behavior: "release",
+						metadata: {
+							[PPGC_STRIPE_SCHEDULE_METADATA_KEY]:
+								PPGC_STRIPE_SCHEDULE_METADATA_VALUE,
+							userId: String(user.id),
+							targetTier,
+						},
+						phases: buildStripeDowngradePhases({
+							schedule,
+							subscription,
+							targetPrice,
+							userId: user.id,
+							currentTier,
+							targetTier,
+						}),
+						proration_behavior: "none",
+					},
+					{
+						idempotencyKey: getIdempotencyKey(
+							req,
+							`stripe-update-schedule:${user.id}:${targetTier}`,
+						),
+					},
+				);
+			} catch (error) {
+				if (createdSchedule) {
+					await stripe.subscriptionSchedules
+						.release(schedule.id, { preserve_cancel_date: false })
+						.catch((releaseError) =>
+							console.error(
+								"[subscriptions/stripe/change-plan] schedule cleanup failed:",
+								releaseError,
+							),
+						);
+				}
+				throw error;
+			}
+
+			const publicUser = await prisma.user.findUnique({
+				where: { id: user.id },
+				select: getUserPublicSelect(),
+			});
+			return json(res, 200, {
+				ok: true,
+				changeType: "scheduled-downgrade",
+				user: serializeUser(publicUser),
+				details: normalizeStripeDetails(
+					subscription,
+					publicUser,
+					schedule,
+				),
+			});
+		}
+
+		if (schedule) {
+			await stripe.subscriptionSchedules.release(schedule.id, {
+				preserve_cancel_date: false,
+			});
+		}
+		let updatedSubscription = await stripe.subscriptions.update(
+			subscription.id,
+			{
+				items: [
+					{
+						id: subscriptionItem.id,
+						price: getStripePriceIdForTier(targetTier),
+						quantity: 1,
+					},
+				],
+				payment_behavior: "pending_if_incomplete",
+				proration_behavior: "always_invoice",
+				expand: ["items.data.price", "latest_invoice"],
+			},
+			{
+				idempotencyKey: getIdempotencyKey(
+					req,
+					`stripe-upgrade:${user.id}:${targetTier}`,
+				),
+			},
+		);
+
+		if (updatedSubscription.pending_update) {
+			const hostedInvoiceUrl =
+				getStripeHostedInvoiceUrl(updatedSubscription);
+			if (hostedInvoiceUrl) {
+				return json(res, 200, {
+					ok: true,
+					changeType: "payment-action-required",
+					url: hostedInvoiceUrl,
+				});
+			}
+
+			// A finalized invoice normally has a hosted URL. Keep the portal as
+			// a safe fallback for asynchronous payment methods or provider delay.
+			const portalSession = await stripe.billingPortal.sessions.create({
+				customer: user.stripeCustomerId,
+				return_url: `${getAppOrigin(req)}/pricing`,
+			});
+			return json(res, 200, {
+				ok: true,
+				changeType: "payment-action-required",
+				url: portalSession.url,
+			});
+		}
+
+		// Update metadata only after the paid price update succeeds so strict
+		// price/metadata reconciliation never grants an unpaid tier.
+		updatedSubscription = await stripe.subscriptions.update(
+			updatedSubscription.id,
+			{
+				metadata: {
+					...(updatedSubscription.metadata || {}),
+					userId: String(user.id),
+					tier: targetTier,
+				},
+				expand: ["items.data.price"],
+			},
+			{
+				idempotencyKey: getIdempotencyKey(
+					req,
+					`stripe-upgrade-metadata:${user.id}:${targetTier}`,
+				),
+			},
+		);
+		await syncStripeSubscriptionToUser({
+			userId: user.id,
+			subscription: updatedSubscription,
+			requireMetadataOwner: true,
+		});
+		const updatedUser = await prisma.user.findUnique({
+			where: { id: user.id },
+			select: getUserPublicSelect(),
+		});
+		return json(res, 200, {
+			ok: true,
+			changeType: "immediate-upgrade",
+			user: serializeUser(updatedUser),
+			details: normalizeStripeDetails(updatedSubscription, updatedUser),
+		});
+	} catch (error) {
+		console.error("[subscriptions/stripe/change-plan] error:", error);
+		return publicProviderError(res, "Failed to change the Stripe plan.");
+	}
+}
+
 async function handleStripeCreateSession(req, res) {
 	if (req.method !== "POST") return methodNotAllowed(res, ["POST"]);
 
@@ -244,6 +627,11 @@ async function handleStripeCreateSession(req, res) {
 		const tierKey = normalizeTierKey(body?.tier);
 		if (!tierKey)
 			return json(res, 400, { error: "Invalid subscription tier." });
+		if (!isPurchasableSubscriptionTier(tierKey)) {
+			return json(res, 409, {
+				error: "This subscription option is not available yet.",
+			});
+		}
 
 		const user = await prisma.user.findUnique({
 			where: { id: session.userId },
@@ -467,9 +855,15 @@ async function handleStripeDetails(req, res) {
 				expand: ["items.data.price"],
 			},
 		);
+		const scheduleId = getStripeScheduleId(subscription);
+		const schedule = scheduleId
+			? await stripe.subscriptionSchedules.retrieve(scheduleId, {
+					expand: ["phases.items.price"],
+				})
+			: null;
 
 		return json(res, 200, {
-			details: normalizeStripeDetails(subscription, user),
+			details: normalizeStripeDetails(subscription, user, schedule),
 		});
 	} catch (error) {
 		console.error("[subscriptions/stripe/details] error:", error);
@@ -494,6 +888,13 @@ async function handleStripeWebhook(req, res) {
 			req.headers["stripe-signature"],
 			getStripeWebhookSecret(),
 		);
+		const eventId = String(event?.id || "").trim();
+		if (!eventId) throw new Error("Stripe event ID is missing.");
+		if (await wasProviderEventProcessed("stripe", eventId)) {
+			return json(res, 200, { received: true, duplicate: true });
+		}
+
+		let syncResult = { updated: false, reason: "ignored" };
 
 		switch (event.type) {
 			case "checkout.session.completed": {
@@ -509,7 +910,7 @@ async function handleStripeWebhook(req, res) {
 						typeof checkoutSession.subscription === "string"
 							? checkoutSession.subscription
 							: checkoutSession.subscription.id;
-					await syncStripeSubscriptionToUser({
+					syncResult = await syncStripeSubscriptionToUser({
 						userId,
 						subscriptionId: String(subscriptionId || ""),
 						requireMetadataOwner: true,
@@ -520,7 +921,7 @@ async function handleStripeWebhook(req, res) {
 			case "customer.subscription.created":
 			case "customer.subscription.updated":
 			case "customer.subscription.deleted": {
-				await syncStripeSubscriptionToUser({
+				syncResult = await syncStripeSubscriptionToUser({
 					subscriptionId: String(event.data.object.id),
 				});
 				break;
@@ -529,10 +930,31 @@ async function handleStripeWebhook(req, res) {
 				break;
 		}
 
-		return json(res, 200, { received: true });
+		const receipt = await recordProcessedProviderEvent({
+			provider: "stripe",
+			eventId,
+			eventType: event.type,
+			objectId: event?.data?.object?.id,
+			outcome: getProviderEventOutcome(syncResult),
+			occurredAt:
+				Number(event.created) > 0
+					? new Date(Number(event.created) * 1000)
+					: null,
+		});
+
+		return json(res, 200, {
+			received: true,
+			duplicate: receipt.duplicate,
+		});
 	} catch (error) {
 		console.error("[subscriptions/stripe/webhook] error:", error);
-		return json(res, 400, { error: "Invalid Stripe webhook." });
+		const isInvalidSignature =
+			error?.type === "StripeSignatureVerificationError";
+		return json(res, isInvalidSignature ? 400 : 500, {
+			error: isInvalidSignature
+				? "Invalid Stripe webhook."
+				: "Stripe webhook processing failed.",
+		});
 	}
 }
 
@@ -612,6 +1034,12 @@ async function syncStripeSubscriptionToUser({
 	const update = buildStripeSubscriptionUpdate(subscription, {
 		clearPayPal: isEntitled,
 	});
+	const nextIcon = getAutomaticTierIconUpdate({
+		currentIcon: targetUser.icon,
+		currentTier: targetUser.tier,
+		nextTier: update.tier,
+	});
+	if (nextIcon !== undefined) update.icon = nextIcon;
 	await prisma.user.update({
 		where: { id: targetUser.id },
 		data: update,
@@ -638,6 +1066,11 @@ async function handlePayPalCreateSubscription(req, res) {
 		const tierKey = normalizeTierKey(body?.tier);
 		if (!tierKey)
 			return json(res, 400, { error: "Invalid subscription tier." });
+		if (!isPurchasableSubscriptionTier(tierKey)) {
+			return json(res, 409, {
+				error: "This subscription option is not available yet.",
+			});
+		}
 
 		const user = await prisma.user.findUnique({
 			where: { id: session.userId },
@@ -757,11 +1190,18 @@ async function handlePayPalVerify(req, res) {
 			"paypal",
 			subscription.status,
 		);
+		const update = buildPayPalSubscriptionUpdate(subscription, {
+			clearStripe: isEntitled,
+		});
+		const nextIcon = getAutomaticTierIconUpdate({
+			currentIcon: currentUser.icon,
+			currentTier: currentUser.tier,
+			nextTier: update.tier,
+		});
+		if (nextIcon !== undefined) update.icon = nextIcon;
 		await prisma.user.update({
 			where: { id: session.userId },
-			data: buildPayPalSubscriptionUpdate(subscription, {
-				clearStripe: isEntitled,
-			}),
+			data: update,
 		});
 
 		const user = await prisma.user.findUnique({
@@ -843,30 +1283,58 @@ async function handlePayPalWebhook(req, res) {
 			return json(res, 400, {
 				error: "Invalid PayPal webhook signature.",
 			});
+		const eventId = String(event?.id || "").trim();
+		if (!eventId)
+			return json(res, 400, { error: "Invalid PayPal webhook." });
+		if (await wasProviderEventProcessed("paypal", eventId)) {
+			return json(res, 200, { received: true, duplicate: true });
+		}
+
+		let syncResult = { updated: false, reason: "ignored" };
 		if (
 			!PAYPAL_SUBSCRIPTION_EVENT_TYPES.has(
 				String(event?.event_type || ""),
 			)
 		) {
-			return json(res, 200, { received: true, ignored: true });
+			syncResult = { updated: false, reason: "ignored-event-type" };
+		} else {
+			const isSaleEvent = String(event?.event_type || "").startsWith(
+				"PAYMENT.SALE.",
+			);
+			const subscriptionId = String(
+				isSaleEvent
+					? event?.resource?.billing_agreement_id
+					: event?.resource?.id ||
+							event?.resource?.billing_agreement_id ||
+							"",
+			).trim();
+			syncResult = subscriptionId
+				? await syncPayPalSubscription(subscriptionId)
+				: { updated: false, reason: "missing-subscription-id" };
 		}
 
-		const isSaleEvent = String(event?.event_type || "").startsWith(
-			"PAYMENT.SALE.",
-		);
-		const subscriptionId = String(
-			isSaleEvent
-				? event?.resource?.billing_agreement_id
-				: event?.resource?.id ||
-						event?.resource?.billing_agreement_id ||
-						"",
-		).trim();
-		if (subscriptionId) await syncPayPalSubscription(subscriptionId);
+		const receipt = await recordProcessedProviderEvent({
+			provider: "paypal",
+			eventId,
+			eventType: String(event?.event_type || "unknown"),
+			objectId:
+				event?.resource?.id || event?.resource?.billing_agreement_id,
+			outcome: getProviderEventOutcome(syncResult),
+			occurredAt: event?.create_time || null,
+		});
 
-		return json(res, 200, { received: true });
+		return json(res, 200, {
+			received: true,
+			duplicate: receipt.duplicate,
+		});
 	} catch (error) {
 		console.error("[subscriptions/paypal/webhook] error:", error);
-		return json(res, 400, { error: "Invalid PayPal webhook." });
+		const isInvalidPayload = error instanceof SyntaxError;
+		return json(res, isInvalidPayload ? 400 : 500, {
+			error: isInvalidPayload
+				? "Invalid PayPal webhook."
+				: "PayPal webhook processing failed.",
+		});
 	}
 }
 
@@ -922,6 +1390,12 @@ async function syncPayPalSubscription(subscriptionId) {
 	const data = buildPayPalSubscriptionUpdate(subscription, {
 		clearStripe: isEntitled,
 	});
+	const nextIcon = getAutomaticTierIconUpdate({
+		currentIcon: targetUser.icon,
+		currentTier: targetUser.tier,
+		nextTier: data.tier,
+	});
+	if (nextIcon !== undefined) data.icon = nextIcon;
 	await prisma.user.update({ where: { id: targetUser.id }, data });
 	return {
 		updated: true,
@@ -943,7 +1417,7 @@ async function handlePayPalCancel(req, res) {
 	try {
 		const user = await prisma.user.findUnique({
 			where: { id: session.userId },
-			select: { paypalSubscriptionId: true },
+			select: getBillingUserSelect(),
 		});
 		if (!user?.paypalSubscriptionId) {
 			return json(res, 400, {
@@ -967,12 +1441,18 @@ async function handlePayPalCancel(req, res) {
 			},
 		);
 
+		const nextIcon = getAutomaticTierIconUpdate({
+			currentIcon: user.icon,
+			currentTier: user.tier,
+			nextTier: "free",
+		});
 		await prisma.user.update({
 			where: { id: session.userId },
 			data: {
 				tier: "free",
 				subscriptionStatus: "CANCELLED",
 				paypalSubscriptionId: null,
+				...(nextIcon !== undefined ? { icon: nextIcon } : {}),
 			},
 		});
 

@@ -51,7 +51,7 @@ Google can hide App Passwords for organization-managed, security-key-only, or Ad
 
 1. Open the PokemonPGC project in Vercel.
 2. Go to **Settings -> Environment Variables**.
-3. Add the database, auth, origin, and SMTP variables from `.env.example`.
+3. Add the database, auth, origin, and SMTP variables from [the environment reference](../environment-variables.md).
 4. Mark passwords, tokens, and connection strings as sensitive.
 5. Apply production credentials to Production. Use non-production credentials for Preview and Development where possible.
 6. Redeploy after changing variables; Vercel does not inject changes into an existing deployment.

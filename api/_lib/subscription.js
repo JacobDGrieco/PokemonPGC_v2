@@ -7,8 +7,18 @@ import { json } from "./response.js";
 export { getAppOrigin, normalizeAppOrigin } from "./appOrigin.js";
 
 export const SUBSCRIPTION_TIERS = ["great", "ultra", "master"];
+export const PURCHASABLE_SUBSCRIPTION_TIERS = ["great", "ultra"];
 export const STRIPE_ENTITLED_STATUSES = new Set(["active", "trialing"]);
 export const PAYPAL_ENTITLED_STATUSES = new Set(["ACTIVE"]);
+
+const ACCOUNT_TIER_ICONS = {
+	free: "default",
+	great: "great",
+	ultra: "ultra",
+	master: "master",
+};
+
+const ACCOUNT_TIER_ORDER = ["free", ...SUBSCRIPTION_TIERS];
 
 function envKey(prefix, tierKey) {
 	return `${prefix}_${String(tierKey || "").toUpperCase()}`;
@@ -19,6 +29,56 @@ export function normalizeTierKey(value) {
 		.trim()
 		.toLowerCase();
 	return SUBSCRIPTION_TIERS.includes(tierKey) ? tierKey : null;
+}
+
+export function getSubscriptionTierRank(value) {
+	return ACCOUNT_TIER_ORDER.indexOf(
+		String(value || "")
+			.trim()
+			.toLowerCase(),
+	);
+}
+
+export function getTierIcon(value) {
+	return (
+		ACCOUNT_TIER_ICONS[
+			String(value || "")
+				.trim()
+				.toLowerCase()
+		] || null
+	);
+}
+
+/**
+ * Keeps tier-managed account icons synchronized without overwriting an uploaded
+ * icon or another explicit choice. The previous tier icon is treated as managed
+ * so a later upgrade, downgrade, or cancellation can continue following rank.
+ */
+export function getAutomaticTierIconUpdate({
+	currentIcon,
+	currentTier,
+	nextTier,
+}) {
+	const nextIcon = getTierIcon(nextTier);
+	if (!nextIcon) return undefined;
+
+	const normalizedCurrentIcon =
+		String(currentIcon || "default").trim() || "default";
+	const previousTierIcon = getTierIcon(currentTier) || "default";
+	if (
+		normalizedCurrentIcon !== "default" &&
+		normalizedCurrentIcon !== previousTierIcon
+	) {
+		return undefined;
+	}
+
+	return nextIcon;
+}
+
+/** New checkout is limited separately from provider reconciliation. */
+export function isPurchasableSubscriptionTier(value) {
+	const tierKey = normalizeTierKey(value);
+	return PURCHASABLE_SUBSCRIPTION_TIERS.includes(tierKey);
 }
 
 /**
@@ -94,6 +154,47 @@ export function getTierForPayPalPlanId(planId) {
 	return null;
 }
 
+/** Returns the highest active complimentary grant, failing closed on bad data. */
+export function getActiveTierGrant(user, now = new Date()) {
+	const nowMs = new Date(now).getTime();
+	if (!Number.isFinite(nowMs)) return null;
+
+	let activeGrant = null;
+	for (const grant of Array.isArray(user?.tierGrants)
+		? user.tierGrants
+		: []) {
+		if (grant?.revokedAt) continue;
+		const tier = normalizeTierKey(grant?.tier);
+		if (!tier) continue;
+		const expiresAt = grant?.expiresAt ? new Date(grant.expiresAt) : null;
+		if (expiresAt && !Number.isFinite(expiresAt.getTime())) continue;
+		if (expiresAt && expiresAt.getTime() <= nowMs) continue;
+
+		if (
+			!activeGrant ||
+			getSubscriptionTierRank(tier) >
+				getSubscriptionTierRank(activeGrant.tier)
+		) {
+			activeGrant = { tier, expiresAt };
+		}
+	}
+
+	return activeGrant;
+}
+
+/** Resolves provider-backed and complimentary access without merging sources. */
+export function getEffectiveAccountTier(user, now = new Date()) {
+	const providerTier = ACCOUNT_TIER_ORDER.includes(user?.tier)
+		? user.tier
+		: "free";
+	const grant = getActiveTierGrant(user, now);
+	return grant &&
+		getSubscriptionTierRank(grant.tier) >
+			getSubscriptionTierRank(providerTier)
+		? grant.tier
+		: providerTier;
+}
+
 export function serializeUser(user) {
 	if (!user) return null;
 
@@ -102,14 +203,23 @@ export function serializeUser(user) {
 		: user.paypalSubscriptionId
 			? "paypal"
 			: null;
+	const complimentaryAccess = getActiveTierGrant(user);
 
 	return {
 		id: user.id,
 		email: user.email,
 		icon: user.icon,
-		tier: user.tier || "free",
+		tier: getEffectiveAccountTier(user),
 		subscriptionStatus: user.subscriptionStatus || null,
 		subscriptionProvider,
+		complimentaryAccess: complimentaryAccess
+			? {
+					tier: complimentaryAccess.tier,
+					expiresAt: complimentaryAccess.expiresAt
+						? complimentaryAccess.expiresAt.toISOString()
+						: null,
+				}
+			: null,
 		hasBillingPortal: subscriptionProvider === "stripe",
 		canCancelPayPalSubscription: subscriptionProvider === "paypal",
 	};
@@ -125,6 +235,17 @@ export function getUserPublicSelect() {
 		stripeCustomerId: true,
 		stripeSubscriptionId: true,
 		paypalSubscriptionId: true,
+		tierGrants: {
+			where: {
+				revokedAt: null,
+				OR: [{ expiresAt: null }, { expiresAt: { gt: new Date() } }],
+			},
+			select: {
+				tier: true,
+				expiresAt: true,
+				revokedAt: true,
+			},
+		},
 	};
 }
 

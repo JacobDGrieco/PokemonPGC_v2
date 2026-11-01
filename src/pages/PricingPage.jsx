@@ -1,9 +1,10 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
-	cancelPayPalSubscription,
+	changeStripeSubscriptionPlan,
 	createPayPalSubscription,
 	createStripeCheckoutSession,
 	createStripePortalSession,
+	getSubscriptionDetails,
 } from "../../api.js";
 import {
 	TIERS,
@@ -20,9 +21,9 @@ const TIER_KEYS = ["free", "great", "ultra", "master"];
 
 const TIER_TAGLINES = {
 	free: "Start here",
-	great: "Jump in",
-	ultra: "Go deep",
-	master: "Full access",
+	great: "Monthly supporter",
+	ultra: "Annual supporter",
+	master: "Coming later",
 };
 
 const ALL_FEATURES = [
@@ -43,28 +44,26 @@ const STATUS_DISPLAY = {
 	planned: { label: "Planned", className: "status-planned" },
 };
 
-function getProviderMeta(user) {
-	if (user?.subscriptionProvider === "stripe") {
-		return {
-			label: "Stripe",
-			canManage: true,
-			canCancel: false,
-		};
-	}
+function syncAuthenticatedUser(user) {
+	if (!user) return;
+	window.PPGC = window.PPGC || {};
+	window.PPGC.currentUser = user;
+	window.PPGC?.setAccountButtonIcon?.(user.icon || "default");
+	window.PPGC?.api?.setApiCurrentUser?.(user);
+	window.dispatchEvent(new CustomEvent("ppgc:auth:changed"));
+}
 
-	if (user?.subscriptionProvider === "paypal") {
-		return {
-			label: "PayPal",
-			canManage: false,
-			canCancel: true,
-		};
-	}
+function formatPlanChangeDate(value) {
+	if (!value) return "the end of the current paid period";
+	return new Date(value).toLocaleDateString(undefined, {
+		year: "numeric",
+		month: "long",
+		day: "numeric",
+	});
+}
 
-	return {
-		label: null,
-		canManage: false,
-		canCancel: false,
-	};
+function formatComplimentaryExpiration(value) {
+	return value ? formatPlanChangeDate(value) : "does not expire";
 }
 
 export function PricingPage() {
@@ -72,10 +71,37 @@ export function PricingPage() {
 	const [busyAction, setBusyAction] = useState("");
 	const [error, setError] = useState("");
 	const [notice, setNotice] = useState("");
+	const [stripeDetails, setStripeDetails] = useState(null);
 
-	const providerMeta = useMemo(() => getProviderMeta(user), [user]);
 	const hasPaidPlan = tierKey !== "free";
+	const complimentaryAccess = user?.complimentaryAccess || null;
 	const tierRank = TIER_ORDER.indexOf(tierKey);
+	const pendingTier = stripeDetails?.pendingTier || null;
+
+	useEffect(() => {
+		let cancelled = false;
+		if (user?.subscriptionProvider !== "stripe") {
+			setStripeDetails(null);
+			return undefined;
+		}
+
+		getSubscriptionDetails("stripe")
+			.then((response) => {
+				if (!cancelled) setStripeDetails(response?.details || null);
+			})
+			.catch((loadError) => {
+				if (!cancelled) {
+					setError(
+						loadError?.message ||
+							"Failed to load current plan details.",
+					);
+				}
+			});
+
+		return () => {
+			cancelled = true;
+		};
+	}, [user?.id, user?.subscriptionProvider, tierKey]);
 
 	async function runAction(actionKey, fn) {
 		setBusyAction(actionKey);
@@ -130,6 +156,48 @@ export function PricingPage() {
 		});
 	}
 
+	async function handleStripePlanChange(nextTierKey) {
+		const isCancelingScheduledChange =
+			nextTierKey === tierKey && !!pendingTier;
+		const isDowngrade = TIER_ORDER.indexOf(nextTierKey) < tierRank;
+		if (
+			isCancelingScheduledChange &&
+			!window.confirm(
+				`Keep ${TIERS[tierKey].label} and cancel the scheduled change to ${TIERS[pendingTier].label}?`,
+			)
+		) {
+			return;
+		}
+		if (
+			isDowngrade &&
+			!window.confirm(
+				`Schedule ${TIERS[nextTierKey].label} for the end of the current paid period? You will keep ${TIERS[tierKey].label} until then.`,
+			)
+		) {
+			return;
+		}
+
+		await runAction(`stripe:change:${nextTierKey}`, async () => {
+			const result = await changeStripeSubscriptionPlan(nextTierKey);
+			if (result?.url) {
+				window.location.assign(result.url);
+				return;
+			}
+			if (result?.user) syncAuthenticatedUser(result.user);
+			if (result?.details) setStripeDetails(result.details);
+
+			if (result?.changeType === "scheduled-downgrade") {
+				setNotice(
+					`${TIERS[nextTierKey].label} is scheduled for ${formatPlanChangeDate(result.details?.pendingChangeDate)}.`,
+				);
+			} else if (result?.changeType === "scheduled-change-canceled") {
+				setNotice(`You will remain on ${TIERS[tierKey].label}.`);
+			} else {
+				setNotice(`Your plan is now ${TIERS[nextTierKey].label}.`);
+			}
+		});
+	}
+
 	async function handleStripePortal() {
 		await runAction("stripe:portal", async () => {
 			const result = await createStripePortalSession();
@@ -140,51 +208,87 @@ export function PricingPage() {
 		});
 	}
 
-	async function handlePayPalCancel() {
-		if (
-			!window.confirm(
-				"Cancel your PayPal subscription and remove paid access now?",
-			)
-		)
-			return;
-		await runAction("paypal:cancel", async () => {
-			const result = await cancelPayPalSubscription();
-			if (result?.user) {
-				window.PPGC = window.PPGC || {};
-				window.PPGC.currentUser = result.user;
-				window.PPGC?.setAccountButtonIcon?.(
-					result.user.icon || "default",
-				);
-				window.PPGC?.api?.setApiCurrentUser?.(result.user);
-				window.dispatchEvent(new CustomEvent("ppgc:auth:changed"));
-			}
-			setNotice("Your PayPal subscription has been canceled.");
-		});
-	}
-
 	function renderSubscribeCell(key) {
-		if (key === "free") {
-			return <span className="pricing-free-label">-</span>;
-		}
-
 		const isCurrent = key === tierKey;
 		const actionDisabled = busyAction !== "";
-		const lockedByExistingPlan = hasPaidPlan;
-		const isLowerOrCurrentTier =
-			tierRank >= 0 && TIER_ORDER.indexOf(key) <= tierRank;
 
 		if (isCurrent) {
+			if (complimentaryAccess) {
+				return (
+					<span className="pricing-plan-pill">Current access</span>
+				);
+			}
+			if (hasPaidPlan && user?.subscriptionProvider === "stripe") {
+				return (
+					<button
+						type="button"
+						className="pricing-plan-pill pricing-current-plan-action"
+						disabled={actionDisabled}
+						aria-label="Cancel plan in Stripe"
+						onClick={handleStripePortal}
+					>
+						{busyAction === "stripe:portal" ? (
+							"Loading..."
+						) : (
+							<>
+								<span className="pricing-current-plan-label">
+									Current plan
+								</span>
+								<span className="pricing-cancel-plan-label">
+									Cancel plan
+								</span>
+							</>
+						)}
+					</button>
+				);
+			}
 			return <span className="pricing-plan-pill">Current plan</span>;
 		}
+		if (complimentaryAccess) {
+			return <span className="pricing-free-label">Granted access</span>;
+		}
+		if (key !== "free" && !TIERS[key].isPurchasable) {
+			return <span className="pricing-free-label">Coming later</span>;
+		}
 
-		if (lockedByExistingPlan) {
+		if (hasPaidPlan) {
+			if (user?.subscriptionProvider === "stripe") {
+				if (pendingTier === key) {
+					return (
+						<button
+							type="button"
+							className="pricing-action-btn"
+							disabled={actionDisabled}
+							onClick={() => handleStripePlanChange(tierKey)}
+						>
+							{busyAction === `stripe:change:${tierKey}`
+								? "Updating..."
+								: "Cancel downgrade"}
+						</button>
+					);
+				}
+				const isUpgrade = TIER_ORDER.indexOf(key) > tierRank;
+				return (
+					<button
+						type="button"
+						className="pricing-action-btn"
+						disabled={actionDisabled}
+						onClick={() => handleStripePlanChange(key)}
+					>
+						{busyAction === `stripe:change:${key}`
+							? "Updating..."
+							: isUpgrade
+								? "Upgrade now"
+								: "Downgrade"}
+					</button>
+				);
+			}
 			return (
-				<span className="pricing-free-label">
-					{isLowerOrCurrentTier
-						? "Included"
-						: "Use billing tools below"}
-				</span>
+				<span className="pricing-free-label">Manage PayPal first</span>
 			);
+		}
+		if (key === "free") {
+			return <span className="pricing-free-label">-</span>;
 		}
 		if (
 			!PAYMENT_PROVIDER_AVAILABILITY.stripe &&
@@ -238,11 +342,14 @@ export function PricingPage() {
 				{TIER_KEYS.map((key) => {
 					const tier = TIERS[key];
 					const isCurrent = key === tierKey;
+					const isUnavailable =
+						!isCurrent && key !== "free" && !tier.isPurchasable;
 					return (
 						<div
 							key={key}
-							className={`pricing-tier-card${isCurrent ? " is-current" : ""}`}
+							className={`pricing-tier-card${isCurrent ? " is-current" : ""}${isUnavailable ? " is-unavailable" : ""}`}
 							data-tier={key}
+							aria-disabled={isUnavailable || undefined}
 						>
 							<div className="ptc-ball" data-ball={key} />
 							<div className="ptc-name">{tier.label}</div>
@@ -252,6 +359,12 @@ export function PricingPage() {
 							<div className="ptc-price">{tier.price}</div>
 							{isCurrent ? (
 								<div className="ptc-badge">Your rank</div>
+							) : null}
+							{isUnavailable ? (
+								<div className="ptc-unavailable-overlay">
+									<strong>Coming later</strong>
+									<span>{tier.availabilityMessage}</span>
+								</div>
 							) : null}
 						</div>
 					);
@@ -271,6 +384,23 @@ export function PricingPage() {
 				provider. PokemonPGC never receives your card or wallet
 				credentials.
 			</p>
+			{complimentaryAccess ? (
+				<div className="pricing-alert pricing-alert--success">
+					Your {TIERS[complimentaryAccess.tier]?.label || tierKey}{" "}
+					access is complimentary and{" "}
+					{formatComplimentaryExpiration(
+						complimentaryAccess.expiresAt,
+					)}
+					. No payment is required for this access.
+				</div>
+			) : null}
+			{pendingTier ? (
+				<div className="pricing-alert pricing-alert--success">
+					Your {TIERS[pendingTier].label} plan starts on{" "}
+					{formatPlanChangeDate(stripeDetails?.pendingChangeDate)}.
+					You keep {TIERS[tierKey].label} until then.
+				</div>
+			) : null}
 
 			{error ? (
 				<div className="pricing-alert pricing-alert--error">
@@ -301,7 +431,7 @@ export function PricingPage() {
 							{TIER_KEYS.map((key) => (
 								<th
 									key={key}
-									className={`pricing-tier-col${key === tierKey ? " is-current" : ""}`}
+									className={`pricing-tier-col${key === tierKey ? " is-current" : ""}${key !== "free" && !TIERS[key].isPurchasable ? " is-unavailable" : ""}`}
 								>
 									<span className="pricing-tier-name">
 										{TIERS[key].label}
@@ -322,7 +452,7 @@ export function PricingPage() {
 							{TIER_KEYS.map((key) => (
 								<td
 									key={key}
-									className={`pricing-tier-cell${key === tierKey ? " is-current" : ""}`}
+									className={`pricing-tier-cell${key === tierKey ? " is-current" : ""}${key !== "free" && !TIERS[key].isPurchasable ? " is-unavailable" : ""}`}
 								>
 									<strong>{TIERS[key].price}</strong>
 								</td>
@@ -337,7 +467,7 @@ export function PricingPage() {
 							{TIER_KEYS.map((key) => (
 								<td
 									key={key}
-									className={`pricing-tier-cell${key === tierKey ? " is-current" : ""}`}
+									className={`pricing-tier-cell${key === tierKey ? " is-current" : ""}${key !== "free" && !TIERS[key].isPurchasable ? " is-unavailable" : ""}`}
 								>
 									{renderSubscribeCell(key)}
 								</td>
@@ -369,7 +499,7 @@ export function PricingPage() {
 										return (
 											<td
 												key={key}
-												className={`pricing-tier-cell${key === tierKey ? " is-current" : ""}`}
+												className={`pricing-tier-cell${key === tierKey ? " is-current" : ""}${key !== "free" && !TIERS[key].isPurchasable ? " is-unavailable" : ""}`}
 											>
 												{included ? (
 													<span className="pricing-check">

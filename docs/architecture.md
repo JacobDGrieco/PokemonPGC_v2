@@ -59,4 +59,4 @@ Files below `api/` run server-side. Handlers authenticate with the HMAC-signed `
 - Hybrid ownership reduces rewrite risk but requires stable bridge contracts.
 - Whole-snapshot persistence favors recovery simplicity over conflict-aware merging.
 - Serverless in-memory rate limiting is a best-effort throttle, not a distributed guarantee.
-- Billing state is summarized on `User`; there is no durable provider-event ledger.
+- Billing state is summarized on `User`; `ProviderEvent` stores bounded processed-event receipts for deduplication and incident review, not raw payloads or full subscription history.

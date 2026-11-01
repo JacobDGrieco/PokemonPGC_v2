@@ -1,47 +1,66 @@
 // Ordered from lowest to highest
 export const TIER_ORDER = ["free", "great", "ultra", "master"];
 
+const SUPPORTER_FEATURES = Object.freeze([
+	"checklists",
+	"pokemon-info",
+	"tooltips",
+	"battle-cards",
+	"guides",
+	"tools",
+	"global-stats",
+	"model-viewer",
+	"save-importing",
+]);
+
 export const TIERS = {
 	free: {
 		key: "free",
 		label: "Free",
 		price: "$0",
+		isPurchasable: false,
 		features: ["checklists"],
+		marketingBenefits: [
+			"Core game checklists",
+			"Local progress tracking",
+			"No payment required",
+		],
 	},
 	great: {
 		key: "great",
 		label: "Great",
-		price: "$2/mo",
-		features: ["checklists", "pokemon-info", "tooltips", "battle-cards"],
+		price: "$5/mo",
+		isPurchasable: true,
+		features: SUPPORTER_FEATURES,
+		marketingBenefits: [
+			"Full supporter access",
+			"Monthly billing",
+			"New features as they release",
+		],
 	},
 	ultra: {
 		key: "ultra",
 		label: "Ultra",
-		price: "$5/mo",
-		features: [
-			"checklists",
-			"pokemon-info",
-			"tooltips",
-			"battle-cards",
-			"guides",
-			"tools",
-			"global-stats",
+		price: "$50/yr",
+		isPurchasable: true,
+		features: SUPPORTER_FEATURES,
+		marketingBenefits: [
+			"Full supporter access",
+			"Annual billing",
+			"Two months free",
 		],
 	},
 	master: {
 		key: "master",
 		label: "Master",
-		price: "$10/mo",
-		features: [
-			"checklists",
-			"pokemon-info",
-			"tooltips",
-			"battle-cards",
-			"guides",
-			"tools",
-			"global-stats",
-			"model-viewer",
-			"save-importing",
+		price: "$100 lifetime",
+		isPurchasable: false,
+		availabilityMessage: "Will enable when more features are implemented.",
+		features: SUPPORTER_FEATURES,
+		marketingBenefits: [
+			"Lifetime supporter option",
+			"Reserved for a later release",
+			"More features required before launch",
 		],
 	},
 };
@@ -109,7 +128,9 @@ export function getFeatureNavigationGroups() {
 	return TIER_ORDER.map((tierKey) => {
 		const tier = TIERS[tierKey];
 		const priceLabel =
-			tier.price === "$0" ? "" : ` (${tier.price.replace("/mo", "")})`;
+			tier.price === "$0"
+				? ""
+				: ` (${tier.price.replace(/\/(?:mo|yr)$/, "")})`;
 		return {
 			tier: tierKey,
 			label: `${tier.label}${priceLabel}`,

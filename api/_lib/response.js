@@ -19,7 +19,11 @@ export function json(res, status, payload) {
 export function tooManyRequests(
 	res,
 	payload = { error: "Too many requests." },
+	retryAfterSeconds = 0,
 ) {
+	if (Number.isFinite(retryAfterSeconds) && retryAfterSeconds > 0) {
+		res.setHeader("Retry-After", String(Math.ceil(retryAfterSeconds)));
+	}
 	return json(res, 429, payload);
 }
 

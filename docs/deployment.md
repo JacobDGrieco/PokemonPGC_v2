@@ -8,16 +8,17 @@ The checked-in target is Vercel for the SPA and API handlers, PostgreSQL/Prisma 
 
 ## Production owner checklist
 
-1. Configure `APP_ORIGIN`, `AUTH_SECRET`, database URLs, SMTP, and any enabled provider variables from `.env.example`.
-2. Keep server secrets out of `VITE_*` variables.
-3. Run `npm run check` with Node 24.
-4. Verify a current database backup exists and can be restored.
-5. Restore the backup into an isolated database and rehearse the exact additive SQL/migration.
-6. Validate row counts, constraints, defaults, indexes, and application compatibility on the restored copy.
-7. Apply only the reviewed migration/SQL to the approved target, then run `npm run prisma:generate` for the deployment artifact.
-8. Configure the Stripe webhook for the exact public origin/environment. Configure the standalone PayPal webhook only when `VITE_PAYPAL_ENABLED=true`.
-9. Complete SMTP inbox, auth, provider sandbox, mobile/desktop, and cloud save acceptance tests.
-10. Deploy with an intentional `[deploy]` commit message only when every gate is approved.
+1. Configure `APP_ORIGIN`, `AUTH_SECRET`, database URLs, SMTP, and any enabled provider variables from [the environment reference](environment-variables.md).
+2. Keep `APP_ORIGIN` on `https://www.pokemonpgc.com`; `vercel.json` redirects the apex host to `www` so the host-only authentication cookie survives every Stripe return path.
+3. Keep server secrets out of `VITE_*` variables.
+4. Run `npm run check` with Node 24.
+5. Verify a current database backup exists and can be restored.
+6. Restore the backup into an isolated database and rehearse the exact additive SQL/migration.
+7. Validate row counts, constraints, defaults, indexes, and application compatibility on the restored copy.
+8. Apply only the reviewed migration to the approved target, then run `npm run prisma:generate` for the deployment artifact.
+9. Configure the Stripe webhook for the exact public origin/environment. Configure the standalone PayPal webhook only when `VITE_PAYPAL_ENABLED=true`.
+10. Complete SMTP inbox, auth, provider sandbox, mobile/desktop, and cloud save acceptance tests.
+11. Deploy with an intentional `[deploy]` commit message only when every gate is approved.
 
 Never run `prisma db push`, `prisma migrate reset`, or `deploy:prepare-db` against production.
 
@@ -30,7 +31,16 @@ Never run `prisma db push`, `prisma migrate reset`, or `deploy:prepare-db` again
 - Stripe: `POST /api/subscriptions/stripe/webhook`
 - PayPal: `POST /api/subscriptions/paypal/webhook`
 
-Use the event sets and sandbox matrix in [subscription payments setup](audits/SUBSCRIPTION_PAYMENTS_SETUP.md). Current code does not persist webhook event IDs, so production launch still needs an explicit decision on durable idempotency/history.
+Use the event sets and sandbox matrix in [subscription payments setup](audits/SUBSCRIPTION_PAYMENTS_SETUP.md). The configured database already contains `20261101190000_add_provider_event_ledger`; verify migration status separately for any other deployment target.
+
+## Complimentary access rollout
+
+`20261101223000_add_tier_grants` is additive but must be deployed before the
+application build that selects `User.tierGrants`. Verify a restorable backup,
+rehearse the SQL against an isolated copy, run `npx prisma migrate deploy` only
+against the explicitly approved target, and confirm migration status before the
+application deployment. The owner command defaults to dry-run and should be
+exercised with grant/history/revoke on an approved account after deployment.
 
 ## Rollback
 
