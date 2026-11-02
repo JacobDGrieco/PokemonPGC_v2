@@ -1,4 +1,6 @@
 import React, {
+	lazy,
+	Suspense,
 	useCallback,
 	useEffect,
 	useLayoutEffect,
@@ -7,12 +9,47 @@ import React, {
 } from "react";
 import { Link } from "react-router-dom";
 import * as api from "../../../api.js";
+import {
+	EARLIEST_SUPPORTED_BIRTH_YEAR,
+	evaluateAccountAge,
+} from "../../../shared/ageEligibility.js";
 import { LEGAL_VERSION } from "../../../shared/legal.js";
 
+const TurnstileWidget = lazy(() =>
+	import("../auth/TurnstileWidget.jsx").then((module) => ({
+		default: module.TurnstileWidget,
+	})),
+);
+
 const AUTH_MODES = new Set(["login", "signup"]);
+const SIGNUP_STEPS = Object.freeze({
+	AGE: "age",
+	ACCOUNT: "account",
+	INELIGIBLE: "ineligible",
+});
+const BIRTH_MONTHS = [
+	"January",
+	"February",
+	"March",
+	"April",
+	"May",
+	"June",
+	"July",
+	"August",
+	"September",
+	"October",
+	"November",
+	"December",
+];
+const CURRENT_UTC_YEAR = new Date().getUTCFullYear();
+const BIRTH_YEARS = Array.from(
+	{ length: CURRENT_UTC_YEAR - EARLIEST_SUPPORTED_BIRTH_YEAR + 1 },
+	(_, index) => CURRENT_UTC_YEAR - index,
+);
 const FOCUSABLE_SELECTOR = [
 	"button:not([disabled])",
 	"input:not([disabled])",
+	"select:not([disabled])",
 	"[href]",
 	'[tabindex]:not([tabindex="-1"])',
 ].join(",");
@@ -44,8 +81,14 @@ export function AuthModal() {
 	const [status, setStatus] = useState(null);
 	const [canResendVerification, setCanResendVerification] = useState(false);
 	const [hasAcceptedLegalTerms, setHasAcceptedLegalTerms] = useState(false);
+	const [signupStep, setSignupStep] = useState(SIGNUP_STEPS.AGE);
+	const [birthMonth, setBirthMonth] = useState("");
+	const [birthYear, setBirthYear] = useState("");
+	const [turnstileToken, setTurnstileToken] = useState("");
+	const [turnstileResetKey, setTurnstileResetKey] = useState(0);
 	const dialogRef = useRef(null);
 	const emailInputRef = useRef(null);
+	const birthMonthInputRef = useRef(null);
 	const triggerRef = useRef(null);
 
 	const closeDialog = useCallback(() => {
@@ -54,6 +97,10 @@ export function AuthModal() {
 		setIsPasswordVisible(false);
 		setPendingAction(null);
 		setHasAcceptedLegalTerms(false);
+		setSignupStep(SIGNUP_STEPS.AGE);
+		setBirthMonth("");
+		setBirthYear("");
+		setTurnstileToken("");
 
 		const trigger = triggerRef.current;
 		triggerRef.current = null;
@@ -76,6 +123,11 @@ export function AuthModal() {
 		setStatus(null);
 		setCanResendVerification(false);
 		setHasAcceptedLegalTerms(false);
+		setSignupStep(SIGNUP_STEPS.AGE);
+		setBirthMonth("");
+		setBirthYear("");
+		setTurnstileToken("");
+		setTurnstileResetKey((currentKey) => currentKey + 1);
 		setIsOpen(true);
 	}, []);
 
@@ -96,9 +148,13 @@ export function AuthModal() {
 		if (!isOpen) return undefined;
 
 		document.body.classList.add("ppgc-auth-open");
-		const focusFrame = window.requestAnimationFrame(() =>
-			emailInputRef.current?.focus(),
-		);
+		const focusFrame = window.requestAnimationFrame(() => {
+			if (mode === "signup" && signupStep === SIGNUP_STEPS.AGE) {
+				birthMonthInputRef.current?.focus();
+				return;
+			}
+			emailInputRef.current?.focus();
+		});
 		const handleKeyDown = (event) => {
 			if (event.key === "Escape") {
 				event.preventDefault();
@@ -140,16 +196,58 @@ export function AuthModal() {
 			document.removeEventListener("keydown", handleKeyDown);
 			document.body.classList.remove("ppgc-auth-open");
 		};
-	}, [closeDialog, isOpen]);
+	}, [closeDialog, isOpen, mode, signupStep]);
 
 	const switchMode = (nextMode) => {
 		if (pendingAction) return;
-		setMode(normalizeMode(nextMode));
+		const normalizedMode = normalizeMode(nextMode);
+		if (normalizedMode === mode) return;
+		setMode(normalizedMode);
 		setPassword("");
 		setIsPasswordVisible(false);
 		setStatus(null);
 		setCanResendVerification(false);
 		setHasAcceptedLegalTerms(false);
+		setSignupStep(SIGNUP_STEPS.AGE);
+		setBirthMonth("");
+		setBirthYear("");
+		setTurnstileToken("");
+		setTurnstileResetKey((currentKey) => currentKey + 1);
+	};
+
+	const handleAgeSubmit = (event) => {
+		event.preventDefault();
+		const ageDecision = evaluateAccountAge({ birthMonth, birthYear });
+		if (!ageDecision.valid) {
+			setStatus({
+				kind: "error",
+				message: "Enter a valid birth month and year.",
+			});
+			return;
+		}
+		if (!ageDecision.eligible) {
+			setSignupStep(SIGNUP_STEPS.INELIGIBLE);
+			setStatus({
+				kind: "error",
+				message:
+					"You are not eligible to create an account at this time.",
+			});
+			return;
+		}
+
+		setSignupStep(SIGNUP_STEPS.ACCOUNT);
+		setStatus(null);
+	};
+
+	const returnToAgeStep = () => {
+		if (pendingAction) return;
+		setSignupStep(SIGNUP_STEPS.AGE);
+		setEmail("");
+		setPassword("");
+		setHasAcceptedLegalTerms(false);
+		setStatus(null);
+		setTurnstileToken("");
+		setTurnstileResetKey((currentKey) => currentKey + 1);
 	};
 
 	const handleTabKeyDown = (event) => {
@@ -216,6 +314,13 @@ export function AuthModal() {
 
 	const handleSubmit = async (event) => {
 		event.preventDefault();
+		if (!turnstileToken) {
+			setStatus({
+				kind: "error",
+				message: "Complete bot verification before continuing.",
+			});
+			return;
+		}
 		const normalizedEmail = email.trim();
 		const action = mode === "login" ? "login" : "signup";
 		setPendingAction(action);
@@ -231,11 +336,17 @@ export function AuthModal() {
 		try {
 			const response =
 				mode === "login"
-					? await api.login(normalizedEmail, password)
-					: await api.signup(normalizedEmail, password, {
-							legalAccepted: hasAcceptedLegalTerms,
-							legalVersion: LEGAL_VERSION,
-						});
+					? await api.login(normalizedEmail, password, turnstileToken)
+					: await api.signup(
+							normalizedEmail,
+							password,
+							{
+								legalAccepted: hasAcceptedLegalTerms,
+								legalVersion: LEGAL_VERSION,
+							},
+							turnstileToken,
+							{ birthMonth, birthYear },
+						);
 
 			if (response?.error) {
 				setStatus({ kind: "error", message: response.error });
@@ -279,11 +390,15 @@ export function AuthModal() {
 			});
 		} finally {
 			setPendingAction(null);
+			setTurnstileToken("");
+			setTurnstileResetKey((currentKey) => currentKey + 1);
 		}
 	};
 
 	const isBusy = pendingAction !== null;
 	const isLogin = mode === "login";
+	const isSignupAccountStep = !isLogin && signupStep === SIGNUP_STEPS.ACCOUNT;
+	const shouldShowCredentialForm = isLogin || isSignupAccountStep;
 	const title = isLogin ? "Welcome back" : "Create your trainer account";
 	const submitLabel =
 		pendingAction === "login"
@@ -358,7 +473,9 @@ export function AuthModal() {
 						<p id="ppgc-auth-copy" className="ppgc-auth-copy">
 							{isLogin
 								? "Log in to sync and protect your checklist progress."
-								: "Use an email you can access. You will verify it before your first login."}
+								: isSignupAccountStep
+									? "Use an email you can access. You will verify it before your first login."
+									: "First, enter your birth month and year to check whether account creation is available."}
 						</p>
 					</div>
 
@@ -405,132 +522,243 @@ export function AuthModal() {
 								: "ppgc-auth-signup-tab"
 						}
 					>
-						<form id="ppgc-auth-form" onSubmit={handleSubmit}>
-							<label
-								className="ppgc-auth-field"
-								htmlFor="ppgc-auth-email"
+						{!isLogin && signupStep === SIGNUP_STEPS.AGE ? (
+							<form
+								id="ppgc-auth-age-form"
+								onSubmit={handleAgeSubmit}
 							>
-								<span>Email address</span>
-								<input
-									ref={emailInputRef}
-									id="ppgc-auth-email"
-									type="email"
-									name="email"
-									autoComplete="email"
-									inputMode="email"
-									maxLength={254}
-									value={email}
-									disabled={isBusy}
-									onChange={(event) =>
-										setEmail(event.target.value)
-									}
-									required
-								/>
-							</label>
-
-							<div className="ppgc-auth-field">
-								<label htmlFor="ppgc-auth-password">
-									Password
-								</label>
-								<div className="ppgc-auth-password-control">
+								<fieldset className="ppgc-auth-age-fieldset">
+									<legend>Birth month and year</legend>
+									<div className="ppgc-auth-age-fields">
+										<label
+											className="ppgc-auth-field"
+											htmlFor="ppgc-auth-birth-month"
+										>
+											<span>Month</span>
+											<select
+												ref={birthMonthInputRef}
+												id="ppgc-auth-birth-month"
+												name="birthMonth"
+												value={birthMonth}
+												onChange={(event) =>
+													setBirthMonth(
+														event.target.value,
+													)
+												}
+												required
+											>
+												<option value="">
+													Select month
+												</option>
+												{BIRTH_MONTHS.map(
+													(monthName, monthIndex) => (
+														<option
+															key={monthName}
+															value={
+																monthIndex + 1
+															}
+														>
+															{monthName}
+														</option>
+													),
+												)}
+											</select>
+										</label>
+										<label
+											className="ppgc-auth-field"
+											htmlFor="ppgc-auth-birth-year"
+										>
+											<span>Year</span>
+											<select
+												id="ppgc-auth-birth-year"
+												name="birthYear"
+												value={birthYear}
+												onChange={(event) =>
+													setBirthYear(
+														event.target.value,
+													)
+												}
+												required
+											>
+												<option value="">
+													Select year
+												</option>
+												{BIRTH_YEARS.map((year) => (
+													<option
+														key={year}
+														value={year}
+													>
+														{year}
+													</option>
+												))}
+											</select>
+										</label>
+									</div>
+								</fieldset>
+								<p className="ppgc-auth-age-note">
+									We use this only to decide whether signup is
+									available. PokemonPGC does not save your
+									birth month or year.
+								</p>
+								<button
+									type="submit"
+									className="ppgc-auth-primary"
+								>
+									Continue
+								</button>
+							</form>
+						) : shouldShowCredentialForm ? (
+							<form id="ppgc-auth-form" onSubmit={handleSubmit}>
+								<label
+									className="ppgc-auth-field"
+									htmlFor="ppgc-auth-email"
+								>
+									<span>Email address</span>
 									<input
-										id="ppgc-auth-password"
-										type={
-											isPasswordVisible
-												? "text"
-												: "password"
-										}
-										name="password"
-										autoComplete={
-											isLogin
-												? "current-password"
-												: "new-password"
-										}
-										minLength={8}
-										maxLength={128}
-										value={password}
+										ref={emailInputRef}
+										id="ppgc-auth-email"
+										type="email"
+										name="email"
+										autoComplete="email"
+										inputMode="email"
+										maxLength={254}
+										value={email}
 										disabled={isBusy}
 										onChange={(event) =>
-											setPassword(event.target.value)
-										}
-										aria-describedby={
-											!isLogin
-												? "ppgc-auth-password-hint"
-												: undefined
+											setEmail(event.target.value)
 										}
 										required
 									/>
-									<button
-										type="button"
-										className="ppgc-auth-password-toggle"
-										aria-label={
-											isPasswordVisible
-												? "Hide password"
-												: "Show password"
-										}
-										aria-pressed={isPasswordVisible}
-										disabled={isBusy}
-										onClick={() =>
-											setIsPasswordVisible(
-												(visible) => !visible,
-											)
-										}
-									>
-										{isPasswordVisible ? "Hide" : "Show"}
-									</button>
-								</div>
-							</div>
+								</label>
 
-							{!isLogin && (
-								<>
-									<p
-										id="ppgc-auth-password-hint"
-										className="ppgc-auth-field-hint"
-									>
-										Use 8 to 128 characters. Spaces are
-										preserved.
-									</p>
-									<label className="ppgc-auth-consent">
+								<div className="ppgc-auth-field">
+									<label htmlFor="ppgc-auth-password">
+										Password
+									</label>
+									<div className="ppgc-auth-password-control">
 										<input
-											type="checkbox"
-											checked={hasAcceptedLegalTerms}
+											id="ppgc-auth-password"
+											type={
+												isPasswordVisible
+													? "text"
+													: "password"
+											}
+											name="password"
+											autoComplete={
+												isLogin
+													? "current-password"
+													: "new-password"
+											}
+											minLength={8}
+											maxLength={128}
+											value={password}
 											disabled={isBusy}
 											onChange={(event) =>
-												setHasAcceptedLegalTerms(
-													event.target.checked,
-												)
+												setPassword(event.target.value)
+											}
+											aria-describedby={
+												!isLogin
+													? "ppgc-auth-password-hint"
+													: undefined
 											}
 											required
 										/>
-										<span>
-											I am at least 13 and agree to the{" "}
-											<Link to="/terms">Terms</Link> and{" "}
-											<Link to="/privacy">
-												Privacy Policy
-											</Link>
-											.
-										</span>
-									</label>
-								</>
-							)}
+										<button
+											type="button"
+											className="ppgc-auth-password-toggle"
+											aria-label={
+												isPasswordVisible
+													? "Hide password"
+													: "Show password"
+											}
+											aria-pressed={isPasswordVisible}
+											disabled={isBusy}
+											onClick={() =>
+												setIsPasswordVisible(
+													(visible) => !visible,
+												)
+											}
+										>
+											{isPasswordVisible
+												? "Hide"
+												: "Show"}
+										</button>
+									</div>
+								</div>
 
-							<button
-								type="submit"
-								className="ppgc-auth-primary"
-								disabled={isBusy}
-							>
-								{isBusy &&
-									["login", "signup"].includes(
-										pendingAction,
-									) && (
-										<span
-											className="ppgc-auth-spinner"
-											aria-hidden="true"
+								{!isLogin && (
+									<>
+										<p
+											id="ppgc-auth-password-hint"
+											className="ppgc-auth-field-hint"
+										>
+											Use 8 to 128 characters. Spaces are
+											preserved.
+										</p>
+										<label className="ppgc-auth-consent">
+											<input
+												type="checkbox"
+												checked={hasAcceptedLegalTerms}
+												disabled={isBusy}
+												onChange={(event) =>
+													setHasAcceptedLegalTerms(
+														event.target.checked,
+													)
+												}
+												required
+											/>
+											<span>
+												I agree to the{" "}
+												<Link to="/terms">Terms</Link>{" "}
+												and{" "}
+												<Link to="/privacy">
+													Privacy Policy
+												</Link>
+												, including the account
+												eligibility requirements.
+											</span>
+										</label>
+									</>
+								)}
+
+								{isOpen ? (
+									<Suspense
+										fallback={
+											<p className="ppgc-turnstile-status">
+												Loading bot verification…
+											</p>
+										}
+									>
+										<TurnstileWidget
+											action={
+												isLogin
+													? "auth_login"
+													: "auth_signup"
+											}
+											onTokenChange={setTurnstileToken}
+											resetKey={turnstileResetKey}
 										/>
-									)}
-								{submitLabel}
-							</button>
-						</form>
+									</Suspense>
+								) : null}
+
+								<button
+									type="submit"
+									className="ppgc-auth-primary"
+									disabled={isBusy || !turnstileToken}
+								>
+									{isBusy &&
+										["login", "signup"].includes(
+											pendingAction,
+										) && (
+											<span
+												className="ppgc-auth-spinner"
+												aria-hidden="true"
+											/>
+										)}
+									{submitLabel}
+								</button>
+							</form>
+						) : null}
 					</div>
 
 					<div className="ppgc-auth-support">
@@ -543,6 +771,15 @@ export function AuthModal() {
 								{pendingAction === "forgot"
 									? "Requesting reset..."
 									: "Forgot password?"}
+							</button>
+						)}
+						{isSignupAccountStep && (
+							<button
+								type="button"
+								disabled={isBusy}
+								onClick={returnToAgeStep}
+							>
+								Change birth month or year
 							</button>
 						)}
 						{canResendVerification && (

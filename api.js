@@ -73,7 +73,13 @@ async function requireOkJson(res, fallbackMessage) {
 	return payload;
 }
 
-export async function signup(email, password, legalConsent = {}) {
+export async function signup(
+	email,
+	password,
+	legalConsent = {},
+	turnstileToken = "",
+	ageEligibility = {},
+) {
 	const res = await fetch(`${API_BASE}/auth/signup`, {
 		method: "POST",
 		headers: { "Content-Type": "application/json" },
@@ -83,17 +89,24 @@ export async function signup(email, password, legalConsent = {}) {
 			password,
 			legalAccepted: legalConsent.legalAccepted === true,
 			legalVersion: String(legalConsent.legalVersion || ""),
+			turnstileToken: String(turnstileToken || ""),
+			birthMonth: String(ageEligibility.birthMonth || ""),
+			birthYear: String(ageEligibility.birthYear || ""),
 		}),
 	});
 	return safeJson(res);
 }
 
-export async function login(email, password) {
+export async function login(email, password, turnstileToken = "") {
 	const res = await fetch(`${API_BASE}/auth/login`, {
 		method: "POST",
 		headers: { "Content-Type": "application/json" },
 		credentials: "include",
-		body: JSON.stringify({ email, password }),
+		body: JSON.stringify({
+			email,
+			password,
+			turnstileToken: String(turnstileToken || ""),
+		}),
 	});
 	return safeJson(res);
 }

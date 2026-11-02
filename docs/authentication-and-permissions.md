@@ -10,7 +10,11 @@ The payload contains user ID, email, issue/expiry times, and `sessionVersion`. `
 
 ## Signup and email verification
 
+- Public signup begins with a neutral birth month/year screen before email and password fields are shown.
+- The shared month-based rule is checked again by the API before any account lookup or creation. The ambiguous thirteenth-birthday month remains ineligible; signup becomes available the following month.
+- Birth month/year exists only in transient component/request memory. It is not stored in the database, cookies, browser storage, analytics, or application logs.
 - Emails are trimmed/lowercased and passwords are preserved exactly after validation.
+- Login and signup require separate action-bound Cloudflare Turnstile tokens that are validated once on the server and reset after every attempt.
 - New public accounts are inserted with `emailVerifiedAt: null`.
 - Verification tokens use 32 random bytes, are stored only as SHA-256 digests, expire after 24 hours, and are single use.
 - Resend replaces the prior verification token for that user.
@@ -44,6 +48,8 @@ Client-side tier checks improve UX but are not a substitute for server authoriza
 
 `api/_lib/rateLimit.js` stores counters in process memory. This protects one warm process only; cold starts and parallel serverless instances have independent buckets. Database token cooldown limits repeat verification/reset issuance across instances, but a distributed rate-limit service is still required for a strong production abuse control.
 
+Turnstile supplements but does not replace these limits. Its public sitekey is safe for browser code; `TURNSTILE_SECRET_KEY` must remain server-only. Production authentication fails closed when verification cannot be completed. See [Turnstile setup](turnstile-setup.md).
+
 ## CSRF and origin assumptions
 
 SameSite=Lax cookies and same-origin `/api` use reduce cross-site exposure. State-changing endpoints accept JSON/POST and provider return URLs use a validated canonical origin. There is no separate CSRF token layer; do not loosen cookie/origin behavior without a security review.
@@ -52,6 +58,7 @@ SameSite=Lax cookies and same-origin `/api` use reduce cross-site exposure. Stat
 
 - SMTP delivery, SPF/DKIM/DMARC, and token-expiry/reuse tests
 - Login/signup enumeration and rate-limit tests
+- Turnstile real-key login/signup, action mismatch, expired-token, blocked-browser, and provider-outage tests
 - Cross-account progress and provider-ID rejection
 - Stripe/PayPal webhook signature and reverse-order delivery tests
 - Session invalidation across multiple browsers after password reset

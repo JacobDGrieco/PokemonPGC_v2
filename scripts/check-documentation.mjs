@@ -41,10 +41,12 @@ const requiredEnvironmentVariables = [
 	"STRIPE_PRICE_ULTRA",
 	"STRIPE_SECRET_KEY",
 	"STRIPE_WEBHOOK_SECRET",
+	"TURNSTILE_SECRET_KEY",
 	"VITE_API_BASE_URL",
 	"VITE_ASSET_BASE_URL",
 	"VITE_PAYPAL_ENABLED",
 	"VITE_STRIPE_ENABLED",
+	"VITE_TURNSTILE_SITE_KEY",
 ];
 
 async function collectMarkdownFiles(targetPath) {

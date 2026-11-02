@@ -18,10 +18,12 @@ Local durability is immediate. Cloud conflict behavior remains last-write/whole-
 
 ## Signup and verification
 
-1. `AuthModal` posts credentials to `/api/auth/signup`.
-2. The API creates an unverified user, issues a hashed one-time token, and sends an SMTP link.
-3. `/verify-email?token=...` renders `AuthActionPage`; confirmation posts to `/api/auth/verify-email`.
-4. The API consumes the token and marks the email verified; the user can then log in.
+1. `AuthModal` neutrally requests birth month/year before rendering the email and password fields. An ineligible answer stops before credentials are collected.
+2. `AuthModal` posts credentials, current legal consent, Turnstile proof, and the transient month/year answer to `/api/auth/signup`.
+3. The API independently re-evaluates eligibility before any account lookup or creation and never persists the month/year answer.
+4. The API creates an unverified user, issues a hashed one-time token, and sends an SMTP link.
+5. `/verify-email?token=...` renders `AuthActionPage`; confirmation posts to `/api/auth/verify-email`.
+6. The API consumes the token and marks the email verified; the user can then log in.
 
 Forgot/resend responses are deliberately generic to reduce account enumeration.
 

@@ -253,6 +253,13 @@ function PrivacyContent() {
 						account icon, tier, and account timestamps.
 					</li>
 					<li>
+						<strong>Account eligibility information:</strong> birth
+						month and year submitted before signup. We use these
+						values only to make the immediate eligibility decision
+						and do not save them with an account or in browser
+						storage.
+					</li>
+					<li>
 						<strong>Progress and submitted data:</strong> cloud
 						checklist/game progress, custom account images, and
 						save-file content submitted for import. Save imports are
@@ -326,6 +333,12 @@ function PrivacyContent() {
 						and support providers that process it for us;
 					</li>
 					<li>
+						Cloudflare Turnstile for signup and login abuse
+						prevention; it processes ordinary device, browser,
+						interaction, and network information needed to
+						distinguish legitimate users from automated traffic;
+					</li>
+					<li>
 						Stripe and, if enabled, PayPal to create and administer
 						subscriptions and payment records;
 					</li>
@@ -380,7 +393,9 @@ function PrivacyContent() {
 					law or legitimate business needs. Provider and operational
 					logs follow provider settings and retention practices.
 					Backup copies may persist for a limited period after primary
-					deletion.
+					deletion. Birth month and year used for the signup
+					eligibility check are not retained after the request is
+					decided.
 				</p>
 			</section>
 			<section>
@@ -397,7 +412,9 @@ function PrivacyContent() {
 				<h2>10. Children</h2>
 				<p>
 					Accounts are not intended for children under 13, and we do
-					not knowingly seek their personal information. If we learn
+					not knowingly seek their personal information. Before
+					showing the public signup fields, we use a neutral birth
+					month/year screen and do not retain that answer. If we learn
 					that personal information was collected from a child under
 					13 without legally sufficient parental consent, we will take
 					appropriate steps to delete it. Contact us if you believe
@@ -431,7 +448,8 @@ function PrivacyContent() {
 				<p>
 					We may update this Policy as the Service and law change. We
 					will post a new effective date and provide additional notice
-					when required. Contact {contactLink} with privacy questions or requests.
+					when required. Contact {contactLink} with privacy questions
+					or requests.
 				</p>
 			</section>
 		</>
@@ -549,8 +567,8 @@ function CopyrightContent() {
 			<section>
 				<h2>4. Copyright or trademark complaints</h2>
 				<p>
-					A rights holder or authorized agent may send a complaint to {contactLink}.
-					To help us evaluate it, identify the
+					A rights holder or authorized agent may send a complaint to{" "}
+					{contactLink}. To help us evaluate it, identify the
 					protected work or mark, the material at issue and its exact
 					URL, your contact information, the basis for your rights and
 					objection, and any requested action. Include statements that

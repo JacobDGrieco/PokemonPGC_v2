@@ -251,7 +251,8 @@ body.ppgc-auth-open {
 
 .ppgc-auth-close:focus-visible,
 .ppgc-auth-modal button:focus-visible,
-.ppgc-auth-modal input:focus-visible {
+.ppgc-auth-modal input:focus-visible,
+.ppgc-auth-modal select:focus-visible {
 	outline: 2px solid var(--auth-gold);
 	outline-offset: 2px;
 }
@@ -285,9 +286,30 @@ body.ppgc-auth-open {
 	color: var(--auth-text);
 }
 
-#ppgc-auth-form {
+#ppgc-auth-form,
+#ppgc-auth-age-form {
 	display: grid;
 	gap: 15px;
+}
+
+.ppgc-auth-age-fieldset {
+	min-width: 0;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.ppgc-auth-age-fieldset legend {
+	margin-bottom: 10px;
+	color: oklch(90% 0.016 255);
+	font-size: 12px;
+	font-weight: 750;
+}
+
+.ppgc-auth-age-fields {
+	display: grid;
+	grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+	gap: 12px;
 }
 
 .ppgc-auth-field {
@@ -309,11 +331,30 @@ body.ppgc-auth-open {
 	font-size: 14px;
 }
 
+.ppgc-auth-modal select {
+	width: 100%;
+	min-height: 48px;
+	padding: 11px 36px 11px 13px;
+	border: 1px solid var(--auth-border);
+	border-radius: 10px;
+	background: oklch(14% 0.016 265);
+	color: var(--auth-text);
+	font-size: 14px;
+}
+
 .ppgc-auth-modal input:hover:not(:disabled) {
 	border-color: oklch(92% 0.012 255 / 0.24);
 }
 
+.ppgc-auth-modal select:hover:not(:disabled) {
+	border-color: oklch(92% 0.012 255 / 0.24);
+}
+
 .ppgc-auth-modal input:focus-visible {
+	border-color: var(--auth-gold);
+}
+
+.ppgc-auth-modal select:focus-visible {
 	border-color: var(--auth-gold);
 }
 
@@ -352,6 +393,13 @@ body.ppgc-auth-open {
 	line-height: 1.45;
 }
 
+.ppgc-auth-age-note {
+	margin: -2px 0 0;
+	color: var(--auth-muted);
+	font-size: 11px;
+	line-height: 1.5;
+}
+
 .ppgc-auth-primary {
 	display: inline-flex;
 	align-items: center;
@@ -374,7 +422,8 @@ body.ppgc-auth-open {
 }
 
 .ppgc-auth-modal button:disabled,
-.ppgc-auth-modal input:disabled {
+.ppgc-auth-modal input:disabled,
+.ppgc-auth-modal select:disabled {
 	opacity: 0.58;
 	cursor: wait;
 }
@@ -469,6 +518,31 @@ body.ppgc-auth-open {
 
 .ppgc-auth-consent a {
 	color: oklch(82% 0.09 248);
+}
+
+.ppgc-turnstile {
+	margin: 14px 0;
+}
+
+.ppgc-turnstile-widget {
+	min-height: 1px;
+}
+
+.ppgc-turnstile-status {
+	margin: 7px 0 0;
+	color: oklch(69% 0.018 255);
+	font-size: 10px;
+	line-height: 1.4;
+}
+
+.ppgc-turnstile-status.is-verified {
+	color: var(--auth-success);
+}
+
+.ppgc-turnstile-status.is-error,
+.ppgc-turnstile-status.is-unavailable,
+.ppgc-turnstile-status.is-expired {
+	color: var(--auth-error);
 }
 
 @media (max-width: 700px) {

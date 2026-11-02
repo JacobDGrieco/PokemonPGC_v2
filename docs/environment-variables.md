@@ -13,6 +13,17 @@ This is the canonical environment contract. Create `.env` locally and add values
 
 `APP_ORIGIN` falls back to trusted Vercel URL variables and to the request origin only in non-production. Configure it explicitly in production.
 
+## Authentication bot protection
+
+| Variable                  | Required      | Scope         | Purpose                                                     |
+| ------------------------- | ------------- | ------------- | ----------------------------------------------------------- |
+| `VITE_TURNSTILE_SITE_KEY` | Deployed auth | Public client | Cloudflare Turnstile widget sitekey embedded by Vite.       |
+| `TURNSTILE_SECRET_KEY`    | Deployed auth | Server secret | Server-only key used with Cloudflare's Siteverify endpoint. |
+
+Create a managed Turnstile widget and restrict it to `pokemonpgc.com`; Cloudflare treats the root hostname as covering `www.pokemonpgc.com` and its other subdomains. Localhost automatically uses Cloudflare's published test keys when these variables are absent. Production fails closed if the real keys or canonical host information are missing, and it refuses Cloudflare's test secret.
+
+Vercel Preview deployments need a hostname explicitly allowed by the selected Turnstile widget because Cloudflare does not accept wildcard hostname entries. Prefer a stable preview alias and a separate preview widget rather than authorizing a broad shared domain. See [Turnstile setup](turnstile-setup.md).
+
 ## SMTP
 
 | Variable                  | Required                   | Default/format                                          |

@@ -40,7 +40,7 @@ These documents are operational drafts for attorney review, not a substitute for
 
 ## Age-screening decision
 
-The Terms will establish a 13+ account rule. The signup surface will link to that rule and require agreement to the Terms and Privacy Policy. It will not claim that a simple checkbox is a neutral COPPA age screen. Before live launch, counsel should decide whether the site's subject matter and character use make it general-audience, mixed-audience, or child-directed, and whether to add a neutral month/year age screen or a different compliant flow.
+The Terms establish a 13+ account rule. Public signup neutrally requests birth month/year before showing credential fields, re-checks the answer in the API, and does not retain it. The conservative month-only calculation enables signup in the month after the person turns 13. Before live launch, counsel must still decide whether the site's subject matter and character use make it general-audience, mixed-audience, or child-directed and whether screen-out is legally sufficient.
 
 ## Verification
 

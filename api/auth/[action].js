@@ -34,7 +34,12 @@ import {
 	wasAuthTokenIssuedRecently,
 } from "../_lib/authTokens.js";
 import { sendAuthEmail } from "../_lib/email.js";
+import {
+	TURNSTILE_AUTH_ACTIONS,
+	verifyTurnstileToken,
+} from "../_lib/turnstile.js";
 import { LEGAL_VERSION } from "../../shared/legal.js";
+import { evaluateAccountAge } from "../../shared/ageEligibility.js";
 
 const AUTH_ACTIONS = new Set([
 	"forgot-password",
@@ -129,10 +134,25 @@ async function issueAndSendAuthEmail({
 	}
 }
 
+async function enforceBotVerification(req, res, body, expectedAction) {
+	const verification = await verifyTurnstileToken(body?.turnstileToken, {
+		expectedAction,
+	});
+	if (verification.valid) return true;
+
+	json(res, verification.retryable ? 503 : 403, {
+		error: verification.retryable
+			? "Bot verification is temporarily unavailable. Please try again."
+			: "Bot verification failed. Please try again.",
+	});
+	return false;
+}
+
 async function handleLogin(req, res) {
 	if (req.method !== "POST") return methodNotAllowed(res, ["POST"]);
 
-	const parsed = validateCredentials(await readJsonBody(req));
+	const body = await readJsonBody(req);
+	const parsed = validateCredentials(body);
 	if (!parsed.ok) return json(res, 400, { error: parsed.error });
 
 	try {
@@ -148,6 +168,15 @@ async function handleLogin(req, res) {
 				{ error: "Too many requests." },
 				limit.retryAfterSeconds,
 			);
+		if (
+			!(await enforceBotVerification(
+				req,
+				res,
+				body,
+				TURNSTILE_AUTH_ACTIONS.login,
+			))
+		)
+			return;
 
 		const user = await prisma.user.findUnique({
 			where: { email },
@@ -252,6 +281,22 @@ async function handleSignup(req, res) {
 		);
 
 	const body = await readJsonBody(req);
+	const ageDecision = evaluateAccountAge({
+		birthMonth: body?.birthMonth,
+		birthYear: body?.birthYear,
+	});
+	if (!ageDecision.valid) {
+		return json(res, 400, {
+			error: "Enter a valid birth month and year.",
+			code: "INVALID_AGE_SCREEN",
+		});
+	}
+	if (!ageDecision.eligible) {
+		return json(res, 403, {
+			error: "You are not eligible to create an account at this time.",
+			code: "ACCOUNT_NOT_ELIGIBLE",
+		});
+	}
 	if (
 		body?.legalAccepted !== true ||
 		String(body?.legalVersion || "") !== LEGAL_VERSION
@@ -264,6 +309,15 @@ async function handleSignup(req, res) {
 	const parsed = validateCredentials(body);
 	if (!parsed.ok) return json(res, 400, { error: parsed.error });
 	const { email, password } = parsed;
+	if (
+		!(await enforceBotVerification(
+			req,
+			res,
+			body,
+			TURNSTILE_AUTH_ACTIONS.signup,
+		))
+	)
+		return;
 
 	try {
 		const existing = await prisma.user.findUnique({
