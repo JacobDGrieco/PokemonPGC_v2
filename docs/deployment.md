@@ -35,12 +35,14 @@ Use the event sets and sandbox matrix in [subscription payments setup](audits/SU
 
 ## Complimentary access rollout
 
-`20261101223000_add_tier_grants` is additive but must be deployed before the
-application build that selects `User.tierGrants`. Verify a restorable backup,
-rehearse the SQL against an isolated copy, run `npx prisma migrate deploy` only
-against the explicitly approved target, and confirm migration status before the
-application deployment. The owner command defaults to dry-run and should be
-exercised with grant/history/revoke on an approved account after deployment.
+`20261101223000_add_tier_grants` was applied and verified against the configured
+production database on 2026-11-01. Any other environment must still receive
+this additive migration before application code selects `User.tierGrants`.
+Verify a restorable backup, rehearse the SQL against an isolated copy, run
+`npx prisma migrate deploy` only against the explicitly approved target, and
+confirm migration status before deploying the application there. The owner
+command defaults to dry-run and should be exercised with grant/history/revoke
+on an approved account after deployment.
 
 ## Rollback
 

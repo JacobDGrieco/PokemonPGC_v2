@@ -1,8 +1,8 @@
 # Data Model
 
-`prisma/schema.prisma` is the checked-in PostgreSQL target. The auth and
-provider-event migrations were verified against the configured database on
-2026-11-01. The additive `TierGrant` migration is staged but not yet applied.
+`prisma/schema.prisma` is the checked-in PostgreSQL target. The auth,
+provider-event, and additive `TierGrant` migrations were verified against the
+configured production database on 2026-11-01.
 
 ```mermaid
 erDiagram

@@ -2,9 +2,9 @@
 
 ## Owner-managed complimentary tier grants
 
-Status: approved in principle by the owner on 2026-11-01; implementation is
-safe to stage locally, but the migration must be reviewed before it is applied
-to the connected database.
+Status: applied and verified against the configured production database on
+2026-11-01. See
+[the migration report](tier-grant-migration-report-2026-11-01.md).
 
 Existing design: `User.tier` is the provider-backed tier written by Stripe or
 PayPal reconciliation. Directly setting it to `master` would fabricate billing
