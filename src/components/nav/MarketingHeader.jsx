@@ -1,13 +1,11 @@
 import React from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import { PagesDropdown } from "./PagesDropdown.jsx";
+import { Link, useNavigate } from "react-router-dom";
+import { HeaderPageNavigation } from "./HeaderPageNavigation.jsx";
 import { buildAccountRoute } from "../../utils/accountRoute.js";
 import { AccountMenuControl } from "./AccountMenuControl.jsx";
 
 export function MarketingHeader() {
-	const location = useLocation();
 	const navigate = useNavigate();
-	const showPages = location.pathname !== "/";
 
 	const handleAuthenticatedAccountClick = () => {
 		navigate(buildAccountRoute("general"));
@@ -16,7 +14,11 @@ export function MarketingHeader() {
 	return (
 		<header className="marketing-header">
 			<div className="marketing-header-left">
-				<Link to="/" className="marketing-brand">
+				<Link
+					to="/checklists"
+					className="marketing-brand"
+					aria-label="Open Checklists"
+				>
 					<img
 						src="/cloud-ball-48.webp"
 						srcSet="/cloud-ball-48.webp 1x, /cloud-ball-96.webp 2x"
@@ -27,8 +29,8 @@ export function MarketingHeader() {
 					/>
 					PokémonPGC
 				</Link>
-				{showPages && <PagesDropdown />}
 			</div>
+			<HeaderPageNavigation />
 			<AccountMenuControl
 				onAuthenticatedClick={handleAuthenticatedAccountClick}
 			/>

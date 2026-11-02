@@ -29,6 +29,7 @@ import { ensurePpgcRoot } from "./runtime/globals.js";
 import { installUiGlobals } from "./runtime/uiGlobals.js";
 import { assetPath } from "./utils/assetPath.js";
 import { ensureSyncSetsExpandedForGame } from "./sync.js";
+import { TIERS, TIER_ORDER } from "./config/tiers.js";
 
 const PPGC = ensurePpgcRoot();
 installUiGlobals();
@@ -267,15 +268,34 @@ function applyAccountButtonIcon(btn, icon) {
 	btn.style.backgroundImage = isCustom ? `url("${nextIcon}")` : "";
 }
 
+/**
+ * Uses the server-serialized effective tier, which already accounts for paid
+ * and complimentary access, while failing closed to Free for unknown values.
+ */
+function resolveAccountTierKey(user) {
+	const tierKey = String(user?.tier || "free").toLowerCase();
+	return TIER_ORDER.includes(tierKey) ? tierKey : "free";
+}
+
 function updateAccountButton() {
 	const btn = document.getElementById("ppgc-account-button");
 	if (!btn) return;
 
 	const loggedIn = !!currentUser;
+	const tierKey = resolveAccountTierKey(currentUser);
+	const tierLabel = TIERS[tierKey]?.label || TIERS.free.label;
 	btn.classList.toggle("logged-in", loggedIn);
+	if (loggedIn) btn.dataset.tier = tierKey;
+	else delete btn.dataset.tier;
 	btn.title = loggedIn
-		? `Logged in as ${currentUser.email}`
+		? `Logged in as ${currentUser.email} · ${tierLabel} tier`
 		: "Log in / Sign up";
+	btn.setAttribute(
+		"aria-label",
+		loggedIn
+			? `Open account settings. Logged in as ${currentUser.email}. ${tierLabel} tier.`
+			: "Log in or sign up",
+	);
 
 	applyAccountButtonIcon(btn, currentUserIcon || "default");
 }
@@ -617,11 +637,13 @@ PPGC.completeAuthLogin = completeAuthLogin;
 PPGC.navigateToTask = navigateToTask;
 PPGC.api = api;
 PPGC.setAccountButtonIcon = (icon) => {
+	// Subscription views replace PPGC.currentUser before updating the icon.
+	// Sync that object here so the tier ring changes in the same render pass.
+	if (PPGC.currentUser) currentUser = PPGC.currentUser;
 	currentUserIcon = icon || "default";
 	if (currentUser) currentUser.icon = currentUserIcon;
 	PPGC.currentUser = currentUser;
-	const btn = document.getElementById("ppgc-account-button");
-	if (btn) applyAccountButtonIcon(btn, currentUserIcon);
+	updateAccountButton();
 };
 PPGC.handleLogout = handleLogout;
 PPGC.resolveGameLabel = resolveGameLabel;

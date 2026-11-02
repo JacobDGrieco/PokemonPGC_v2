@@ -2,6 +2,10 @@
 
 /* Floating backup + account cluster already exists; we just enhance the account btn */
 #ppgc-account-button {
+	--account-tier-ring: oklch(48% 0.018 258);
+	--account-tier-glow: oklch(8% 0.015 258 / 0.45);
+	--account-tier-ring-size: 1px;
+
 	border: none;
 	background: radial-gradient(
 		circle at 30% 30%,
@@ -20,11 +24,17 @@
 	align-self: center;
 	border-radius: 999px;
 	box-shadow:
-		0 0 0 1px #222,
-		0 0 8px rgba(0, 0, 0, 0.6);
+		0 0 0 var(--account-tier-ring-size) var(--account-tier-ring),
+		0 0 0 calc(var(--account-tier-ring-size) + 1px)
+			oklch(9% 0.012 258 / 0.92),
+		0 0 10px var(--account-tier-glow),
+		0 3px 8px oklch(3% 0.01 258 / 0.62);
 	position: relative;
 	overflow: hidden;
 	z-index: 10;
+	transition:
+		transform 160ms cubic-bezier(0.22, 1, 0.36, 1),
+		box-shadow 160ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 @media (max-width: 900px) {
@@ -46,16 +56,39 @@
 	filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.8));
 }
 
-/* When logged in, give it a subtle blue glow (League Card vibe) */
+/* The rank ring remains outside custom uploads and tier-provided ball icons. */
 #ppgc-account-button.logged-in {
-	box-shadow:
-		0 0 0 1px #2b8bff,
-		0 0 10px rgba(43, 139, 255, 0.9);
+	--account-tier-ring-size: 2px;
+}
+
+#ppgc-account-button.logged-in[data-tier="free"] {
+	--account-tier-ring: oklch(64% 0.2 26);
+	--account-tier-glow: oklch(64% 0.2 26 / 0.42);
+}
+
+#ppgc-account-button.logged-in[data-tier="great"] {
+	--account-tier-ring: oklch(67% 0.16 252);
+	--account-tier-glow: oklch(67% 0.16 252 / 0.42);
+}
+
+#ppgc-account-button.logged-in[data-tier="ultra"] {
+	--account-tier-ring: oklch(82% 0.15 88);
+	--account-tier-glow: oklch(82% 0.15 88 / 0.4);
+}
+
+#ppgc-account-button.logged-in[data-tier="master"] {
+	--account-tier-ring: oklch(69% 0.17 305);
+	--account-tier-glow: oklch(69% 0.17 305 / 0.44);
 }
 
 #ppgc-account-button:hover {
 	transform: translateY(-1px);
-	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.9);
+	box-shadow:
+		0 0 0 var(--account-tier-ring-size) var(--account-tier-ring),
+		0 0 0 calc(var(--account-tier-ring-size) + 1px)
+			oklch(9% 0.012 258 / 0.92),
+		0 0 13px var(--account-tier-glow),
+		0 5px 12px oklch(3% 0.01 258 / 0.78);
 }
 
 /* ===================== Auth overlay / modal ===================== */
@@ -1802,6 +1835,20 @@ body.ppgc-auth-open {
 		#f5c644 36%,
 		#2a2925 80%,
 		#111 81%
+	);
+}
+
+/* Master uses one purple ball treatment in legacy, settings, and header UI. */
+.account-icon-option[data-icon="master"],
+.account-avatar-chip[data-icon="master"],
+#ppgc-account-button[data-icon="master"] {
+	background: radial-gradient(
+		circle at 30% 30%,
+		oklch(96% 0.01 285) 0,
+		oklch(96% 0.01 285) 35%,
+		oklch(61% 0.2 305) 36%,
+		oklch(61% 0.2 305) 80%,
+		oklch(13% 0.02 285) 81%
 	);
 }
 

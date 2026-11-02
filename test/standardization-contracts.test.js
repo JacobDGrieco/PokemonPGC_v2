@@ -60,8 +60,51 @@ test("account integration IDs are owned by the shared account control", async ()
 
 	assert.match(accountControlSource, /id="ppgc-account-button"/);
 	assert.match(accountControlSource, /id="ppgc-account-menu"/);
+	assert.match(accountControlSource, /useSubscription\(\)/);
+	assert.match(
+		accountControlSource,
+		/data-tier=\{user \? tierKey : undefined\}/,
+	);
+	assert.match(
+		accountControlSource,
+		/data-icon=\{isCustomIcon \? "custom" : icon\}/,
+	);
 	assert.doesNotMatch(appHeaderSource, /id="ppgc-account-button"/);
 	assert.doesNotMatch(marketingHeaderSource, /id="ppgc-account-button"/);
+});
+
+test("account control exposes every effective tier through an accessible rank ring", async () => {
+	const [accountControlSource, runtimeSource, authStyles] = await Promise.all(
+		[
+			readFile(
+				new URL(
+					"../src/components/nav/AccountMenuControl.jsx",
+					import.meta.url,
+				),
+				"utf8",
+			),
+			readFile(new URL("../src/index.js", import.meta.url), "utf8"),
+			readFile(new URL("../styles/auth.css", import.meta.url), "utf8"),
+		],
+	);
+
+	assert.match(accountControlSource, /aria-label=\{accountLabel\}/);
+	assert.match(runtimeSource, /btn\.dataset\.tier = tierKey/);
+	assert.match(runtimeSource, /delete btn\.dataset\.tier/);
+	assert.match(runtimeSource, /\$\{tierLabel\} tier/);
+	assert.match(
+		runtimeSource,
+		/if \(PPGC\.currentUser\) currentUser = PPGC\.currentUser/,
+	);
+	for (const tierKey of ["free", "great", "ultra", "master"]) {
+		assert.match(
+			authStyles,
+			new RegExp(`logged-in\\[data-tier="${tierKey}"\\]`),
+		);
+	}
+	assert.match(authStyles, /--account-tier-ring-size:\s*2px/);
+	assert.match(authStyles, /\.account-avatar-chip\[data-icon="master"\]/);
+	assert.match(authStyles, /#ppgc-account-button\[data-icon="master"\]/);
 });
 
 test("account billing shows customer-facing dates without internal period details", async () => {

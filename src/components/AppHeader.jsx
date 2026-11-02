@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { store } from "../store.js";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { PagesDropdown } from "./nav/PagesDropdown.jsx";
+import { HeaderPageNavigation } from "./nav/HeaderPageNavigation.jsx";
 import { wireGlobalTaskSearch } from "../ui/taskSearch.js";
 import { buildAccountRoute } from "../utils/accountRoute.js";
 import { AccountMenuControl } from "./nav/AccountMenuControl.jsx";
@@ -65,7 +65,11 @@ export function AppHeader({
 					</button>
 				)}
 				<div className="header-brand">
-					<Link to="/" className="marketing-brand">
+					<Link
+						to="/checklists"
+						className="marketing-brand"
+						aria-label="Open Checklists"
+					>
 						<img
 							src="/cloud-ball-48.webp"
 							srcSet="/cloud-ball-48.webp 1x, /cloud-ball-96.webp 2x"
@@ -76,52 +80,58 @@ export function AppHeader({
 						/>
 						PokémonPGC
 					</Link>
-					<button
-						type="button"
-						className={`mobile-search-toggle ${mobileSearchOpen ? "is-open" : ""}`}
-						aria-label="Search tasks"
-						aria-expanded={mobileSearchOpen ? "true" : "false"}
-						onClick={() => setMobileSearchOpen((value) => !value)}
-					>
-						<svg viewBox="0 0 24 24" aria-hidden="true">
-							<circle cx="11" cy="11" r="6.5" />
-							<path d="M16 16l5 5" />
-						</svg>
-					</button>
+					{isChecklistsPage && (
+						<button
+							type="button"
+							className={`mobile-search-toggle ${mobileSearchOpen ? "is-open" : ""}`}
+							aria-label="Search tasks"
+							aria-expanded={mobileSearchOpen ? "true" : "false"}
+							onClick={() =>
+								setMobileSearchOpen((value) => !value)
+							}
+						>
+							<svg viewBox="0 0 24 24" aria-hidden="true">
+								<circle cx="11" cy="11" r="6.5" />
+								<path d="M16 16l5 5" />
+							</svg>
+						</button>
+					)}
 				</div>
-
-				<PagesDropdown />
 			</div>
 
-			{isChecklistsPage && (
-				<div
-					className={`task-search-wrap ${isMobile ? "task-search-mobile" : ""} ${mobileSearchOpen ? "is-mobile-open" : ""}`}
-				>
-					<input
-						ref={inputRef}
-						id="taskSearchInput"
-						className="task-search-input"
-						type="search"
-						placeholder="Search tasks…"
-						autoComplete="off"
-						autoCorrect="off"
-						autoCapitalize="off"
-						spellCheck="false"
-						data-gramm="false"
-						data-lpignore="true"
-						data-1p-ignore="true"
-						data-form-type="other"
-					/>
-					<div
-						id="taskSearchResults"
-						className="task-search-results"
-					/>
-				</div>
-			)}
+			<HeaderPageNavigation />
 
-			<AccountMenuControl
-				onAuthenticatedClick={handleAuthenticatedAccountClick}
-			/>
+			<div className="header-actions">
+				{isChecklistsPage && (
+					<div
+						className={`task-search-wrap ${isMobile ? "task-search-mobile" : ""} ${mobileSearchOpen ? "is-mobile-open" : ""}`}
+					>
+						<input
+							ref={inputRef}
+							id="taskSearchInput"
+							className="task-search-input"
+							type="search"
+							placeholder="Search tasks…"
+							autoComplete="off"
+							autoCorrect="off"
+							autoCapitalize="off"
+							spellCheck="false"
+							data-gramm="false"
+							data-lpignore="true"
+							data-1p-ignore="true"
+							data-form-type="other"
+						/>
+						<div
+							id="taskSearchResults"
+							className="task-search-results"
+						/>
+					</div>
+				)}
+
+				<AccountMenuControl
+					onAuthenticatedClick={handleAuthenticatedAccountClick}
+				/>
+			</div>
 
 			<div
 				className="breadcrumbs"

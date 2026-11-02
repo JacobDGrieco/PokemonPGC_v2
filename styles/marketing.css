@@ -88,6 +88,13 @@
 	gap: 12px;
 }
 
+.marketing-header > .header-center-nav {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
 .marketing-brand {
 	font-size: 18px;
 	font-weight: 700;
@@ -179,7 +186,6 @@
 		font-size: 15px;
 	}
 
-	.marketing-header .pages-dropdown-trigger,
 	.marketing-account-btn {
 		min-height: var(--mobile-target-size);
 	}

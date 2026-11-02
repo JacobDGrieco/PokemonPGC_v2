@@ -180,9 +180,9 @@ function useVisibleElapsedTime(targetRef) {
 		const observer =
 			typeof IntersectionObserver === "function" && targetRef.current
 				? new IntersectionObserver(([entry]) => {
-						isIntersecting = entry.isIntersecting;
-						syncAnimation();
-					})
+					isIntersecting = entry.isIntersecting;
+					syncAnimation();
+				})
 				: null;
 		if (observer && targetRef.current) observer.observe(targetRef.current);
 		document.addEventListener("visibilitychange", syncAnimation);
@@ -321,7 +321,7 @@ export function HomePage() {
 						Pokemon Post-Game Checklist
 					</p>
 					<h1 id="home-title" className="home-command-title">
-						From the catch screen to the checklist.
+						From the dex to the check.
 					</h1>
 					<p className="home-command-body">
 						Catch the Pokemon, watch it register, then track it
