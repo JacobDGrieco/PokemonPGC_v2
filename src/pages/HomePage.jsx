@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { motion, useMotionValue, useTransform } from "motion/react";
 import { useSubscription } from "../hooks/useSubscription.js";
@@ -9,7 +9,6 @@ import {
 	TIER_ORDER,
 } from "../config/tiers.js";
 import { assetPath } from "../utils/assetPath.js";
-import { PokeBallParticles } from "../components/common/PokeBallParticles.jsx";
 import { navigateToState } from "../react-bridge/navigation.js";
 import { save } from "../store.js";
 import "../../styles/homepage.css";
@@ -20,42 +19,36 @@ const FEATURE_TILES = [
 		description:
 			"Story beats, side objectives, dex cleanup, and postgame tasks in one run sheet.",
 		accent: "var(--home-accent-red)",
-		stat: "Core route",
 	},
 	{
 		key: "pokemon-info",
 		description:
 			"Stats, forms, abilities, and fast reference data without breaking your hunt flow.",
 		accent: "var(--home-accent-blue)",
-		stat: "Field intel",
 	},
 	{
 		key: "guides",
 		description:
 			"Late-game cleanup routes, hidden encounter notes, and region-specific direction.",
 		accent: "var(--home-accent-gold)",
-		stat: "Route notes",
 	},
 	{
 		key: "tools",
 		description:
 			"Utility surfaces for planning tricky goals, edge cases, and hard-to-spot gaps.",
 		accent: "var(--home-accent-cyan)",
-		stat: "Support gear",
 	},
 	{
 		key: "global-stats",
 		description:
 			"Community comparison once trainer-wide data and leaderboard surfaces go live.",
 		accent: "var(--home-accent-violet)",
-		stat: "League board",
 	},
 	{
 		key: "model-viewer",
 		description:
 			"Dedicated 3D inspection when you want to study a model instead of a sprite.",
 		accent: "var(--home-accent-green)",
-		stat: "Full display",
 	},
 ].map((tile) => ({
 	...tile,
@@ -65,31 +58,31 @@ const FEATURE_TILES = [
 const HERO_FLOW = [
 	{
 		key: "catch",
-		label: "Catch In-Game",
+		label: "Catch",
 		imageBase: "image1",
-		imageWidths: [480, 800],
-		width: 800,
-		height: 450,
+		imageWidths: [320, 800],
+		width: 2160,
+		height: 2160,
 		alt: "Catching a Pokémon in-game",
 		accent: "var(--home-accent-red)",
 	},
 	{
 		key: "dex",
-		label: "Log in the Dex",
+		label: "Dex",
 		imageBase: "image2",
-		imageWidths: [480, 800],
-		width: 800,
-		height: 572,
+		imageWidths: [320, 800],
+		width: 823,
+		height: 823,
 		alt: "Pokémon appearing in the Pokédex",
 		accent: "var(--home-accent-gold)",
 	},
 	{
 		key: "checklist",
-		label: "Check it off here",
+		label: "Check",
 		imageBase: "image3",
-		imageWidths: [480, 720],
-		width: 720,
-		height: 641,
+		imageWidths: [320, 578],
+		width: 578,
+		height: 578,
 		alt: "Checking off a Pokémon in the checklist",
 		accent: "var(--home-accent-cyan)",
 	},
@@ -132,10 +125,135 @@ const STORY_STEPS = [
 ];
 
 const HERO_ORBIT_CONFIG = {
-	baseRadiusX: 244,
-	baseRadiusY: 146,
-	speed: 0.00007,
+	yawRadians: (48 * Math.PI) / 180,
+	pitchRadians: (12 * Math.PI) / 180,
+	rollRadians: (-10 * Math.PI) / 180,
+	samples: 120,
+	speed: 0.000045,
 };
+
+const DEFAULT_ORBIT_VIEWPORT = { width: 720, height: 700 };
+const HERO_IMAGE_SIZES = "(max-width: 820px) 180px, 360px";
+
+function clamp(value, minimum, maximum) {
+	return Math.min(Math.max(value, minimum), maximum);
+}
+
+function smoothstep(minimum, maximum, value) {
+	const progress = clamp((value - minimum) / (maximum - minimum), 0, 1);
+	return progress * progress * (3 - 2 * progress);
+}
+
+/**
+ * Projects a point from a vertical 3D orbit into the hero stage. The same
+ * projection drives both the SVG track and every image, preventing drift.
+ */
+function projectOrbitPoint(angle, viewport = DEFAULT_ORBIT_VIEWPORT) {
+	const width = Math.max(viewport.width, 1);
+	const height = Math.max(viewport.height, 1);
+	const radius = Math.min(height * 0.34, width * 0.49);
+	const orbitX = Math.cos(angle) * radius;
+	const orbitY = Math.sin(angle) * radius;
+	const { yawRadians, pitchRadians, rollRadians } = HERO_ORBIT_CONFIG;
+
+	const yawX = orbitX * Math.cos(yawRadians);
+	const yawZ = orbitX * Math.sin(yawRadians);
+	const pitchY =
+		orbitY * Math.cos(pitchRadians) - yawZ * Math.sin(pitchRadians);
+	const pitchZ =
+		orbitY * Math.sin(pitchRadians) + yawZ * Math.cos(pitchRadians);
+	const rolledX =
+		yawX * Math.cos(rollRadians) - pitchY * Math.sin(rollRadians);
+	const rolledY =
+		yawX * Math.sin(rollRadians) + pitchY * Math.cos(rollRadians);
+	const perspectiveDistance = radius * 4.5;
+	const perspective = clamp(
+		perspectiveDistance / (perspectiveDistance - pitchZ),
+		0.72,
+		1.3,
+	);
+	const depth = clamp((pitchZ / (radius * 1.08) + 1) / 2, 0, 1);
+
+	return {
+		x: width * 0.5 + rolledX * perspective,
+		y: height * 0.51 + rolledY * perspective,
+		depth,
+		perspective,
+		orbitX: orbitX / radius,
+		orbitY: orbitY / radius,
+	};
+}
+
+/**
+ * Samples the projected circle and fades its foreground segments by depth.
+ * This avoids a hard z-index swap while the orbit passes through an image.
+ */
+function buildOrbitGeometry(viewport) {
+	const points = Array.from(
+		{ length: HERO_ORBIT_CONFIG.samples + 1 },
+		(_, index) => {
+			const angle = (index / HERO_ORBIT_CONFIG.samples) * Math.PI * 2;
+			return projectOrbitPoint(angle, viewport);
+		},
+	);
+	const path = points
+		.map(
+			(point, index) =>
+				`${index === 0 ? "M" : "L"}${point.x.toFixed(2)} ${point.y.toFixed(2)}`,
+		)
+		.join(" ");
+
+	return {
+		path: `${path} Z`,
+		frontSegments: points.slice(0, -1).map((point, index) => {
+			const nextPoint = points[index + 1];
+			const depth = (point.depth + nextPoint.depth) / 2;
+
+			return {
+				d: `M${point.x.toFixed(2)} ${point.y.toFixed(2)} L${nextPoint.x.toFixed(2)} ${nextPoint.y.toFixed(2)}`,
+				opacity: smoothstep(0.38, 0.62, depth),
+			};
+		}),
+	};
+}
+
+function useOrbitViewport(targetRef) {
+	const [viewport, setViewport] = useState(DEFAULT_ORBIT_VIEWPORT);
+
+	useEffect(() => {
+		const target = targetRef.current;
+		if (!target) return undefined;
+
+		const updateViewport = () => {
+			const bounds = target.getBoundingClientRect();
+			setViewport((currentViewport) => {
+				if (
+					Math.abs(currentViewport.width - bounds.width) < 0.5 &&
+					Math.abs(currentViewport.height - bounds.height) < 0.5
+				) {
+					return currentViewport;
+				}
+
+				return { width: bounds.width, height: bounds.height };
+			});
+		};
+
+		updateViewport();
+		const resizeObserver =
+			typeof ResizeObserver === "function"
+				? new ResizeObserver(updateViewport)
+				: null;
+		resizeObserver?.observe(target);
+		window.addEventListener("resize", updateViewport);
+
+		return () => {
+			resizeObserver?.disconnect();
+			window.removeEventListener("resize", updateViewport);
+		};
+	}, [targetRef]);
+
+	return viewport;
+}
 
 function useVisibleElapsedTime(targetRef) {
 	const elapsedTime = useMotionValue(0);
@@ -147,7 +265,6 @@ function useVisibleElapsedTime(targetRef) {
 		const reducedMotionQuery = window.matchMedia(
 			"(prefers-reduced-motion: reduce)",
 		);
-		const compactLayoutQuery = window.matchMedia("(max-width: 820px)");
 
 		const stopAnimation = () => {
 			if (animationFrameId != null)
@@ -168,8 +285,7 @@ function useVisibleElapsedTime(targetRef) {
 			const shouldAnimate =
 				isIntersecting &&
 				document.visibilityState !== "hidden" &&
-				!reducedMotionQuery.matches &&
-				!compactLayoutQuery.matches;
+				!reducedMotionQuery.matches;
 			if (shouldAnimate && animationFrameId == null) {
 				animationFrameId = window.requestAnimationFrame(tick);
 			} else if (!shouldAnimate) {
@@ -187,7 +303,6 @@ function useVisibleElapsedTime(targetRef) {
 		if (observer && targetRef.current) observer.observe(targetRef.current);
 		document.addEventListener("visibilitychange", syncAnimation);
 		reducedMotionQuery.addEventListener("change", syncAnimation);
-		compactLayoutQuery.addEventListener("change", syncAnimation);
 		syncAnimation();
 
 		return () => {
@@ -195,14 +310,77 @@ function useVisibleElapsedTime(targetRef) {
 			observer?.disconnect();
 			document.removeEventListener("visibilitychange", syncAnimation);
 			reducedMotionQuery.removeEventListener("change", syncAnimation);
-			compactLayoutQuery.removeEventListener("change", syncAnimation);
 		};
 	}, [elapsedTime, targetRef]);
 
 	return elapsedTime;
 }
 
-function OrbitingFlowCard({ entry, index, elapsedTime }) {
+function FlowPicture({ entry, index, isDecorative = false }) {
+	const [smallImageWidth, largeImageWidth] = entry.imageWidths;
+
+	return (
+		<picture aria-hidden={isDecorative || undefined}>
+			<source
+				type="image/avif"
+				srcSet={`/${entry.imageBase}-${smallImageWidth}.avif ${smallImageWidth}w, /${entry.imageBase}-${largeImageWidth}.avif ${largeImageWidth}w`}
+				sizes={HERO_IMAGE_SIZES}
+			/>
+			<source
+				type="image/webp"
+				srcSet={`/${entry.imageBase}-${smallImageWidth}.webp ${smallImageWidth}w, /${entry.imageBase}-${largeImageWidth}.webp ${largeImageWidth}w`}
+				sizes={HERO_IMAGE_SIZES}
+			/>
+			<img
+				src={`/${entry.imageBase}-${largeImageWidth}.webp`}
+				alt={isDecorative ? "" : entry.alt}
+				width={entry.width}
+				height={entry.height}
+				loading={index === 1 ? "eager" : "lazy"}
+				fetchPriority={index === 1 ? "high" : "auto"}
+				decoding="async"
+			/>
+		</picture>
+	);
+}
+
+function OrbitRing({ viewport, isForeground = false }) {
+	const geometry = useMemo(
+		() =>
+			buildOrbitGeometry({
+				width: viewport.width,
+				height: viewport.height,
+			}),
+		[viewport.height, viewport.width],
+	);
+	const layerClass = isForeground
+		? "home-orbit-ring-front"
+		: "home-orbit-ring-back";
+
+	return (
+		<svg
+			viewBox={`0 0 ${viewport.width} ${viewport.height}`}
+			className={`home-orbit-ring ${layerClass}`}
+			aria-hidden="true"
+			focusable="false"
+		>
+			{isForeground ? (
+				geometry.frontSegments.map((segment, index) => (
+					<path
+						key={index}
+						className="home-orbit-ring-pulse"
+						d={segment.d}
+						style={{ opacity: segment.opacity }}
+					/>
+				))
+			) : (
+				<path className="home-orbit-ring-base" d={geometry.path} />
+			)}
+		</svg>
+	);
+}
+
+function OrbitingFlowCard({ entry, index, elapsedTime, viewport }) {
 	const progress = useTransform(elapsedTime, (value) => {
 		const orbit =
 			index / HERO_FLOW.length - value * HERO_ORBIT_CONFIG.speed;
@@ -213,89 +391,95 @@ function OrbitingFlowCard({ entry, index, elapsedTime }) {
 		progress,
 		(value) => value * Math.PI * 2 - Math.PI / 2,
 	);
-	const radiusX = useTransform(
-		progress,
-		(value) =>
-			HERO_ORBIT_CONFIG.baseRadiusX + Math.sin(value * Math.PI * 2) * 14,
-	);
-	const radiusY = useTransform(
-		progress,
-		(value) =>
-			HERO_ORBIT_CONFIG.baseRadiusY + Math.cos(value * Math.PI * 2) * 10,
+	const projectedPoint = useTransform(angle, (currentAngle) =>
+		projectOrbitPoint(currentAngle, viewport),
 	);
 	const x = useTransform(
-		[angle, radiusX],
-		([currentAngle, currentRadiusX]) =>
-			Math.cos(currentAngle) * currentRadiusX,
+		projectedPoint,
+		(point) => point.x - viewport.width * 0.5,
 	);
 	const y = useTransform(
-		[angle, radiusY],
-		([currentAngle, currentRadiusY]) =>
-			Math.sin(currentAngle) * currentRadiusY,
+		projectedPoint,
+		(point) => point.y - viewport.height * 0.5,
 	);
-	const depth = useTransform(
-		progress,
-		(value) => (Math.cos(value * Math.PI * 2 - Math.PI / 2) + 1) / 2,
+	const scale = useTransform(projectedPoint, (point) =>
+		clamp(point.perspective * 0.92, 0.72, 1.18),
 	);
-
-	const scale = useTransform(depth, [0, 1], [0.68, 1.08]);
-	const blur = useTransform(depth, [0, 1], [3.8, 0]);
-	const opacity = useTransform(depth, [0, 1], [0.42, 1]);
-	const brightness = useTransform(depth, [0, 1], [0.72, 1.1]);
-	const zIndex = useTransform(depth, (value) => Math.round(20 + value * 30));
-	const filter = useTransform(
-		[blur, brightness],
-		([currentBlur, currentBrightness]) =>
-			`blur(${currentBlur.toFixed(2)}px) brightness(${currentBrightness.toFixed(2)})`,
+	const rotateX = useTransform(
+		projectedPoint,
+		(point) => point.orbitY * -3.5,
 	);
-	const [smallImageWidth, largeImageWidth] = entry.imageWidths;
-	const imageSizes = "(max-width: 700px) 46vw, 360px";
+	const rotateY = useTransform(projectedPoint, (point) => point.orbitX * -7);
+	const opacity = useTransform(
+		projectedPoint,
+		(point) => 0.46 + point.depth * 0.54,
+	);
+	const filter = useTransform(projectedPoint, (point) => {
+		const blur = (1 - point.depth) * 3.2;
+		const brightness = 0.74 + point.depth * 0.34;
+		return `blur(${blur.toFixed(2)}px) brightness(${brightness.toFixed(2)})`;
+	});
+	const zIndex = useTransform(projectedPoint, (point) =>
+		Math.round(20 + point.depth * 30),
+	);
+	const foregroundZIndex = useTransform(projectedPoint, (point) =>
+		Math.round(70 + point.depth * 30),
+	);
+	const cardStyle = {
+		"--flow-accent": entry.accent,
+		x,
+		y,
+		scale,
+		rotateX,
+		rotateY,
+		filter,
+		opacity,
+	};
 
 	return (
-		<div className="home-flow-card-track">
-			<motion.article
-				className={`home-flow-card home-flow-card-${entry.key}`}
-				style={{
-					"--flow-accent": entry.accent,
-					x,
-					y,
-					scale,
-					filter,
-					opacity,
-					zIndex,
-				}}
-			>
-				<div className="home-flow-card-top">
-					<span>{String(index)}</span>
-					<strong>{entry.label}</strong>
-				</div>
-				<div className="home-flow-image">
-					<div className="home-flow-image-frame">
-						<picture>
-							<source
-								type="image/avif"
-								srcSet={`/${entry.imageBase}-${smallImageWidth}.avif ${smallImageWidth}w, /${entry.imageBase}-${largeImageWidth}.avif ${largeImageWidth}w`}
-								sizes={imageSizes}
-							/>
-							<source
-								type="image/webp"
-								srcSet={`/${entry.imageBase}-${smallImageWidth}.webp ${smallImageWidth}w, /${entry.imageBase}-${largeImageWidth}.webp ${largeImageWidth}w`}
-								sizes={imageSizes}
-							/>
-							<img
-								src={`/${entry.imageBase}-${largeImageWidth}.webp`}
-								alt={entry.alt}
-								width={entry.width}
-								height={entry.height}
-								loading={index === 1 ? "eager" : "lazy"}
-								fetchPriority={index === 1 ? "high" : "auto"}
-								decoding="async"
-							/>
-						</picture>
+		<>
+			<motion.div className="home-flow-card-track" style={{ zIndex }}>
+				<motion.article
+					className={`home-flow-card home-flow-card-${entry.key}`}
+					style={cardStyle}
+				>
+					<div className="home-flow-card-top">
+						<span>{String(index)}</span>
+						<strong>{entry.label}</strong>
 					</div>
-				</div>
-			</motion.article>
-		</div>
+					<div className="home-flow-image">
+						<div className="home-flow-image-frame">
+							<FlowPicture entry={entry} index={index} />
+						</div>
+					</div>
+				</motion.article>
+			</motion.div>
+
+			<motion.div
+				className="home-flow-card-track home-flow-card-overlay-track"
+				style={{ zIndex: foregroundZIndex }}
+				aria-hidden="true"
+			>
+				<motion.div
+					className={`home-flow-card home-flow-card-overlay home-flow-card-${entry.key}`}
+					style={cardStyle}
+				>
+					<div className="home-flow-card-top">
+						<span>{String(index)}</span>
+						<strong>{entry.label}</strong>
+					</div>
+					<div className="home-flow-image">
+						<div className="home-flow-image-frame home-flow-image-foreground">
+							<FlowPicture
+								entry={entry}
+								index={index}
+								isDecorative
+							/>
+						</div>
+					</div>
+				</motion.div>
+			</motion.div>
+		</>
 	);
 }
 
@@ -305,6 +489,7 @@ export function HomePage() {
 	const userRank = TIER_ORDER.indexOf(tierKey);
 	const orbitStageRef = useRef(null);
 	const orbitElapsedTime = useVisibleElapsedTime(orbitStageRef);
+	const orbitViewport = useOrbitViewport(orbitStageRef);
 
 	return (
 		<div className="home-page">
@@ -312,14 +497,9 @@ export function HomePage() {
 				<div className="home-command-bg" aria-hidden="true">
 					<div className="home-command-gradient" />
 					<div className="home-command-grid" />
-					<div className="home-command-rays" />
-					<PokeBallParticles count={28} />
 				</div>
 
 				<div className="home-command-copy">
-					<p className="home-command-kicker">
-						Pokemon Post-Game Checklist
-					</p>
 					<h1 id="home-title" className="home-command-title">
 						From the dex to the check.
 					</h1>
@@ -350,25 +530,9 @@ export function HomePage() {
 					</div>
 				</div>
 
-				<div
-					className="home-command-stage"
-					aria-hidden="true"
-					ref={orbitStageRef}
-				>
-					<div className="home-orbit-flow">
-						<div className="home-orbit-flow-bg home-orbit-flow-bg-a" />
-						<div className="home-orbit-flow-bg home-orbit-flow-bg-b" />
-						<svg
-							viewBox="0 0 900 640"
-							className="home-orbit-lines"
-							role="presentation"
-						>
-							<ellipse cx="450" cy="322" rx="250" ry="148" />
-							<ellipse cx="450" cy="322" rx="188" ry="110" />
-						</svg>
-						<div className="home-orbit-spark home-orbit-spark-a" />
-						<div className="home-orbit-spark home-orbit-spark-b" />
-						<div className="home-orbit-spark home-orbit-spark-c" />
+				<div className="home-command-stage" aria-hidden="true">
+					<div className="home-orbit-flow" ref={orbitStageRef}>
+						<OrbitRing viewport={orbitViewport} />
 
 						{HERO_FLOW.map((entry, index) => (
 							<OrbitingFlowCard
@@ -376,132 +540,92 @@ export function HomePage() {
 								entry={entry}
 								index={index + 1}
 								elapsedTime={orbitElapsedTime}
+								viewport={orbitViewport}
 							/>
 						))}
+
+						<OrbitRing viewport={orbitViewport} isForeground />
 					</div>
 				</div>
 			</section>
 
 			<div className="home-feature-layout">
-				<div className="home-left-stack">
-					<section
-						className="home-scout-strip"
-						aria-labelledby="home-scout-title"
-					>
-						<div className="home-scout-copy">
-							<h2 id="home-scout-title">
-								Everything that matters during a real completion
-								run.
-							</h2>
-							<p>
-								Keep the obvious stuff visible, surface the
-								annoying stuff earlier, and spend less time
-								jumping between tabs trying to remember what is
-								left.
-							</p>
-						</div>
-						<div className="home-scout-metrics">
-							{HOME_FOCUS_AREAS.map((area, index) => (
-								<motion.div
-									key={area.label}
-									className="home-scout-metric"
-									initial={{ opacity: 0, y: 20 }}
-									whileInView={{ opacity: 1, y: 0 }}
-									viewport={{ once: true, margin: "-40px" }}
-									transition={{
-										duration: 0.42,
-										delay: index * 0.08,
-										ease: [0.22, 1, 0.36, 1],
-									}}
-								>
-									<strong>{area.label}</strong>
-									<span>{area.description}</span>
-								</motion.div>
-							))}
-						</div>
-					</section>
-					<section className="home-atlas-panel home-atlas-rank-panel">
-						<div className="home-rank-track">
-							<span className="home-rank-label">
-								Choose your rank
-							</span>
-						</div>
-						<div className="home-tier-grid">
-							{TIER_ORDER.map((rankKey) => {
-								const tier = TIERS[rankKey];
-								const features = tier.marketingBenefits;
-								const isActive = rankKey === tierKey;
-								const isUnavailable =
-									rankKey !== "free" && !tier.isPurchasable;
-
-								return (
-									<div
-										key={rankKey}
-										className={`home-tier-card${isActive ? " is-active" : ""}${isUnavailable ? " is-unavailable" : ""}`}
-										style={{
-											"--tier-accent":
-												TIER_STYLES[rankKey]?.accent ||
-												"var(--home-accent-gold)",
-										}}
-									>
-										<div className="home-tier-card-top">
-											<div>
-												<span>
-													{tier.price === "$0"
-														? "Start here"
-														: isUnavailable
-															? "Coming later"
-															: "Full access"}
-												</span>
-												<strong>{tier.label}</strong>
-											</div>
-											<i>{tier.price}</i>
-										</div>
-										<ul className="home-tier-feature-list">
-											{features.map((feature) => (
-												<li key={feature}>{feature}</li>
-											))}
-										</ul>
-									</div>
-								);
-							})}
-						</div>
-					</section>
-					<section className="home-atlas-copy home-atlas-panel">
-						<span className="home-section-tag">Tracking flow</span>
-						<h2 id="home-atlas-title">
-							Made for the parts of a run you come back to later.
+				<section
+					className="home-scout-strip"
+					aria-labelledby="home-scout-title"
+				>
+					<div className="home-scout-copy">
+						<h2 id="home-scout-title">
+							A completion run gets messy. Your notes do not have
+							to.
 						</h2>
 						<p>
-							Keep your place, come back cleanly, and keep
-							chipping away without losing what still matters.
+							Story detours, missing forms, postgame cleanup, and
+							that one objective you meant to revisit all stay in
+							view.
 						</p>
-						<div className="home-atlas-steps">
-							{STORY_STEPS.map((step, index) => (
-								<div key={step} className="home-atlas-step">
-									<span>
-										{String(index + 1).padStart(2, "0")}
-									</span>
-									<strong>{step}</strong>
+					</div>
+					<div className="home-scout-metrics">
+						{HOME_FOCUS_AREAS.map((area, index) => (
+							<motion.article
+								key={area.label}
+								className="home-scout-metric"
+								initial={{
+									opacity: 0,
+									x: index % 2 ? 18 : -18,
+								}}
+								whileInView={{ opacity: 1, x: 0 }}
+								viewport={{ once: true, margin: "-40px" }}
+								transition={{
+									duration: 0.4,
+									delay: index * 0.07,
+									ease: [0.22, 1, 0.36, 1],
+								}}
+							>
+								<span className="home-scout-index">
+									{String(index + 1).padStart(2, "0")}
+								</span>
+								<div>
+									<strong>{area.label}</strong>
+									<p>{area.description}</p>
 								</div>
-							))}
-						</div>
-					</section>
-				</div>
+							</motion.article>
+						))}
+					</div>
+				</section>
+
+				<section
+					className="home-atlas-copy home-atlas-panel"
+					aria-labelledby="home-atlas-title"
+				>
+					<div className="home-atlas-intro">
+						<h2 id="home-atlas-title">
+							Leave a clean trail back to every unfinished goal.
+						</h2>
+					</div>
+					<ol className="home-atlas-steps">
+						{STORY_STEPS.map((step, index) => (
+							<li key={step} className="home-atlas-step">
+								<span>
+									{String(index + 1).padStart(2, "0")}
+								</span>
+								<strong>{step}</strong>
+							</li>
+						))}
+					</ol>
+				</section>
+
 				<section
 					className="home-route-board"
 					aria-labelledby="home-route-board-title"
 				>
 					<div className="home-route-intro">
-						<span className="home-section-tag">Destinations</span>
 						<h2 id="home-route-board-title">
-							Pick the page you need next.
+							Pick a destination. Keep the run moving.
 						</h2>
 						<p>
-							Checklists stay at the center. Everything else reads
-							like support pages around the main run, with locked
-							areas still visible so the home page still feels
-							connected.
+							Checklists are the main route. Everything else stays
+							close enough to reach when a run needs deeper intel.
 						</p>
 					</div>
 
@@ -521,12 +645,12 @@ export function HomePage() {
 											isLocked ? "/pricing" : tile.path,
 										)
 									}
-									initial={{ opacity: 0, y: 28 }}
+									initial={{ opacity: 0, y: 22 }}
 									whileInView={{ opacity: 1, y: 0 }}
-									viewport={{ once: true, margin: "-60px" }}
+									viewport={{ once: true, margin: "-50px" }}
 									transition={{
-										duration: 0.45,
-										delay: index * 0.06,
+										duration: 0.38,
+										delay: index * 0.05,
 										ease: [0.22, 1, 0.36, 1],
 									}}
 								>
@@ -543,11 +667,68 @@ export function HomePage() {
 										<span>
 											{isLocked ? "Upgrade" : "Open"}
 											<i
-												className={`pi ${isLocked ? "pi-lock" : "pi-lock-open"}`}
-											></i>
+												className={`pi ${isLocked ? "pi-lock" : "pi-arrow-up-right"}`}
+												aria-hidden="true"
+											/>
 										</span>
 									</div>
 								</motion.button>
+							);
+						})}
+					</div>
+				</section>
+
+				<section
+					className="home-atlas-panel home-atlas-rank-panel"
+					aria-labelledby="home-rank-title"
+				>
+					<div className="home-rank-intro">
+						<h2 id="home-rank-title">
+							Choose how deep you want the field kit to go.
+						</h2>
+						<Link to="/pricing">Compare every rank</Link>
+					</div>
+					<div className="home-tier-grid">
+						{TIER_ORDER.map((rankKey, index) => {
+							const tier = TIERS[rankKey];
+							const features = tier.marketingBenefits;
+							const isActive = rankKey === tierKey;
+							const isUnavailable =
+								rankKey !== "free" && !tier.isPurchasable;
+
+							return (
+								<article
+									key={rankKey}
+									className={`home-tier-card${isActive ? " is-active" : ""}${isUnavailable ? " is-unavailable" : ""}`}
+									aria-label={`${tier.label}${isActive ? ", current rank" : ""}${isUnavailable ? ", coming later" : ""}`}
+									style={{
+										"--tier-accent":
+											TIER_STYLES[rankKey]?.accent ||
+											"var(--home-accent-gold)",
+									}}
+								>
+									<div
+										className="home-tier-ball"
+										aria-hidden="true"
+									>
+										<span>
+											{String(index + 1).padStart(2, "0")}
+										</span>
+									</div>
+									<div className="home-tier-card-top">
+										<strong>{tier.label}</strong>
+										<i>
+											{isUnavailable
+												? `Coming later · ${tier.price}`
+												: tier.price}
+										</i>
+									</div>
+									<ul className="home-tier-feature-list">
+										{features.map((feature) => (
+											<li key={feature}>{feature}</li>
+										))}
+									</ul>
+								</article>
 							);
 						})}
 					</div>

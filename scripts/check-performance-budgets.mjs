@@ -63,7 +63,7 @@ assertBudget("Homepage critical CSS", initialCssGzipBytes, 35 * 1024);
 const criticalImageFiles = [
 	"public/image1-800.avif",
 	"public/image2-800.avif",
-	"public/image3-720.avif",
+	"public/image3-578.avif",
 	"public/cloud-ball-96.webp",
 ];
 const criticalImageBytes = criticalImageFiles.reduce(
