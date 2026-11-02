@@ -235,59 +235,70 @@ function getEitherOptions(task) {
 	);
 }
 
+function getEitherOptionLabel(task, option, optionIndex, optionCount) {
+	const authoredLabel =
+		typeof option?.text === "string" ? option.text.trim() : "";
+	if (authoredLabel) return authoredLabel;
+
+	const titleParts = String(task?.text || "")
+		.split(/\s*\/\s*/)
+		.map((part) => part.trim())
+		.filter(Boolean);
+	if (titleParts.length === optionCount) return titleParts[optionIndex];
+	return `Choice ${optionIndex + 1}`;
+}
+
 function EitherChoices({ task, onChange }) {
 	const options = getEitherOptions(task);
 	const choice = getEitherChoice(task.id);
 
 	return (
-		<div className="task-either" data-either="1">
-			{options.map(([key, option]) => {
+		<fieldset
+			className={`task-either${options.length >= 3 ? " task-either-many" : ""}`}
+			data-either="1"
+			style={{ "--task-choice-count": options.length }}
+		>
+			<legend className="visually-hidden">
+				{task.text || "Choose one option"}
+			</legend>
+			{options.map(([key, option], optionIndex) => {
 				const active = choice != null && String(choice) === String(key);
-				const disabled = choice != null && !active;
-				const rawText =
-					typeof option?.text === "string" ? option.text : "";
-				const text = rawText.trim();
+				const text = getEitherOptionLabel(
+					task,
+					option,
+					optionIndex,
+					options.length,
+				);
 
 				return (
-					<span
+					<label
 						key={`${task.id}-${key}`}
-						className={`task-either-choice${active ? " either-active" : ""}${disabled ? " either-disabled" : ""}`}
+						className={`task-either-choice${active ? " either-active" : ""}`}
 						data-option-key={String(key)}
-						role="button"
-						tabIndex={0}
-						onClick={(event) => {
-							if (event.target.closest("input.task-either-cb"))
-								return;
-							event.preventDefault();
-							event.stopPropagation();
-							onChange(active ? null : key);
-						}}
-						onKeyDown={(event) => {
-							if (event.key !== "Enter" && event.key !== " ")
-								return;
-							event.preventDefault();
-							onChange(active ? null : key);
-						}}
+						title={text}
 					>
 						<input
-							type="checkbox"
-							className="task-either-cb"
-							data-option-key={String(key)}
+							type="radio"
+							name={`task-choice-${task.id}`}
+							value={String(key)}
 							checked={active}
-							disabled={disabled}
-							onClick={(event) => event.stopPropagation()}
+							aria-label={text}
+							onClick={(event) => {
+								event.stopPropagation();
+								if (!active) return;
+								event.preventDefault();
+								onChange(null);
+							}}
 							onChange={(event) => {
 								event.stopPropagation();
-								onChange(
-									event.currentTarget.checked ? key : null,
-								);
+								if (event.currentTarget.checked) onChange(key);
 							}}
 						/>
-						{text ? <span className="small">{text}</span> : null}
-					</span>
+						<span className="small">{text}</span>
+					</label>
 				);
 			})}
-		</div>
+		</fieldset>
 	);
 }
 
@@ -388,25 +399,13 @@ function TieredValueDisplay({
 	);
 }
 
-function TieredControls({
-	task,
-	onInputCommit,
-	onChangeCommit,
-	showValue = true,
-}) {
+function TieredControls({ task, onInputCommit, onChangeCommit }) {
 	const meta = getTierMetaForTask(task);
 	const steps = meta.steps;
 	const value = clampTierValue(task.currentTier ?? 0, steps);
 
 	return (
-		<>
-			{showValue ? (
-				<TieredValueDisplay
-					task={task}
-					onInputCommit={onInputCommit}
-					onChangeCommit={onChangeCommit}
-				/>
-			) : null}
+		<div className="tiered-controls">
 			<div className="tiered">
 				<div className="tiered-line">
 					<input
@@ -425,7 +424,12 @@ function TieredControls({
 					/>
 				</div>
 			</div>
-		</>
+			<TieredValueDisplay
+				task={task}
+				onInputCommit={onInputCommit}
+				onChangeCommit={onChangeCommit}
+			/>
+		</div>
 	);
 }
 
@@ -480,6 +484,9 @@ function TaskItem({
 
 		commit({ syncTask: task, syncValue: checked });
 		applyEitherChoiceSyncChanges(eitherChoiceChanges);
+		window.PPGC?.announceStatus?.(
+			`${task.text || "Task"} marked ${checked ? "complete" : "incomplete"}.`,
+		);
 	};
 
 	const handleEitherChange = (nextChoice) => {
@@ -503,11 +510,17 @@ function TaskItem({
 		}
 		window.PPGC?.refreshSectionHeaderPct?.();
 		onMutate?.();
+		window.PPGC?.announceStatus?.(
+			nextChoice == null
+				? `${task.text || "Choice"} cleared.`
+				: `${task.text || "Choice"} updated.`,
+		);
 	};
 
 	const handleMultiToggle = (optionKey, checked) => {
 		setMultiOptionDone(task, optionKey, checked);
 		commit({ syncTask: task, syncValue: !!task.done });
+		window.PPGC?.announceStatus?.(`${task.text || "Task"} updated.`);
 	};
 
 	const handleTierInput = (nextTier) => {
@@ -523,6 +536,9 @@ function TaskItem({
 		task.currentTier = clamped;
 		task.done = clamped >= getTierSteps(task);
 		commit({ syncTask: task, syncValue: clamped > 0 });
+		window.PPGC?.announceStatus?.(
+			`${task.text || "Task"} progress set to ${clamped} of ${getTierSteps(task)}.`,
+		);
 	};
 
 	const handleItemClick = (event) => {
@@ -564,7 +580,6 @@ function TaskItem({
 			task={task}
 			onInputCommit={handleTierInput}
 			onChangeCommit={handleTierCommit}
-			showValue={!noCenterSlider}
 		/>
 	) : null;
 
@@ -622,20 +637,21 @@ function TaskItem({
 				onClick={handleItemClick}
 			>
 				{isSubtask || (!hasChildren && !forceInline) ? imageWrap : null}
-				<label className={bodyClassName}>
-					{textBlock}
-					{noCenterSlider ? (
-						<TieredValueDisplay
-							task={task}
-							className="tiered-percent-inline"
-							onInputCommit={handleTierInput}
-							onChangeCommit={handleTierCommit}
-						/>
-					) : null}
-					{!isSubtask && (hasChildren || forceInline)
-						? imageWrap
-						: null}
-				</label>
+				{isEither || isMulti ? (
+					<div className={bodyClassName}>
+						{textBlock}
+						{!isSubtask && (hasChildren || forceInline)
+							? imageWrap
+							: null}
+					</div>
+				) : (
+					<label className={bodyClassName}>
+						{textBlock}
+						{!isSubtask && (hasChildren || forceInline)
+							? imageWrap
+							: null}
+					</label>
+				)}
 				{tieredControls}
 				{canUseBattleCards && (hasBattleCard || hasRematchCard) && (
 					<div className="battle-card-btns">

@@ -19,6 +19,25 @@
 	align-items: start;
 }
 
+/*
+ * Lightweight slots keep the full Dex scroll range stable while the runtime
+ * mounts complete cards and sprite media only near the visible viewport.
+ */
+#modal #dexGrid .dex-virtual-slot {
+	display: flex;
+	min-width: 0;
+	min-height: 270px;
+	padding-bottom: 10px;
+	box-sizing: border-box;
+}
+
+#modal #dexGrid .dex-virtual-slot > .card {
+	flex: 1 1 auto;
+	width: 100%;
+	min-width: 0;
+	margin-bottom: 0;
+}
+
 /* Curry & Sandwich grids share the same responsive layout */
 #curryGrid.grid,
 #sandwichGrid.grid,
@@ -74,7 +93,9 @@
 /* Sprite status filters */
 .thumb.status-unknown img.sprite,
 .thumb.status-unknown video.sprite {
-	filter: brightness(0);
+	filter: brightness(0) invert(42%) sepia(12%) saturate(780%)
+		hue-rotate(174deg) brightness(86%) contrast(88%);
+	opacity: 0.82;
 }
 
 .thumb.status-seen img.sprite,
@@ -145,6 +166,7 @@
 /* Flag dropdown inside Dex / Forms modal */
 .flag-select,
 .dex-scope-select {
+	color-scheme: dark;
 	background: linear-gradient(
 		180deg,
 		rgba(27, 31, 39, 0.98),
@@ -157,12 +179,21 @@
 	font-size: 13px;
 }
 
+.flag-select option,
+.dex-scope-select option {
+	background: #151a24;
+	color: #eef1f7;
+}
+
 #modal .dex-modal-header {
+	--dex-header-control-height: 44px;
 	display: grid;
-	grid-template-columns: minmax(180px, auto) minmax(0, 1fr) auto;
+	grid-template-columns:
+		minmax(220px, auto) minmax(220px, 1fr) auto
+		auto;
 	align-items: center;
-	gap: 16px;
-	padding: 16px;
+	gap: 10px;
+	padding: 12px;
 	overflow: visible;
 	background:
 		radial-gradient(
@@ -174,15 +205,18 @@
 }
 
 #modal .dex-header-title-group {
+	grid-column: 1;
 	min-width: 0;
-	display: grid;
-	gap: 3px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
 }
 
 #modal .dex-header-title-group h2 {
 	display: block;
 	margin: 0;
 	min-width: 0;
+	white-space: nowrap;
 }
 
 #modal .dex-modal-title-main {
@@ -193,26 +227,23 @@
 }
 
 #modal .dex-close-button {
-	align-self: start;
-	min-width: 38px;
-	min-height: 36px;
+	align-self: center;
+	width: var(--dex-header-control-height);
+	min-width: var(--dex-header-control-height);
 	padding-inline: 0;
-	border-radius: 10px;
 	font-size: 16px;
 	line-height: 1;
 }
 
 #modal .dex-header-search-row {
+	grid-column: 2;
 	min-width: 0;
 }
 
 #modal .dex-search-input {
 	width: 100%;
 	min-width: 0;
-	box-sizing: border-box;
-	padding: 9px 12px;
-	border-radius: 10px;
-	font-size: 13px;
+	font-weight: 400;
 }
 
 #modal .dex-scope-mount {
@@ -222,18 +253,207 @@
 }
 
 #modal .dex-scope-select {
-	width: 100%;
+	width: clamp(150px, 14vw, 190px);
 	min-width: 0;
-	padding: 6px 10px;
-	border-radius: 10px;
-	font-size: 12px;
 }
 
 #modal .dex-header-actions {
+	grid-column: 4;
 	display: inline-grid;
 	align-items: center;
-	gap: 8px;
+	gap: 6px;
 	grid-auto-flow: column;
+}
+
+#modal .dex-header-controls {
+	grid-column: 3;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 6px;
+	min-width: 0;
+	z-index: 2;
+}
+
+#modal .dex-filter-control {
+	display: inline-flex;
+	align-items: center;
+	gap: 0;
+}
+
+#modal .dex-filter-control .flag-select {
+	min-width: 138px;
+}
+
+#modal .dex-search-input,
+#modal .dex-scope-select,
+#modal .dex-filter-control .flag-select,
+#modal .dex-sync-settings > summary,
+#modal .dex-bulk-primary,
+#modal .dex-bulk-toggle,
+#modal .dex-close-button {
+	height: var(--dex-header-control-height);
+	min-height: var(--dex-header-control-height);
+	box-sizing: border-box;
+	border: 1px solid rgba(255, 255, 255, 0.12);
+	border-radius: 10px;
+	background: rgba(255, 255, 255, 0.045);
+	color: var(--text-main);
+	font-family: inherit;
+	font-size: 13px;
+	line-height: 1;
+}
+
+#modal .dex-scope-select,
+#modal .dex-filter-control .flag-select,
+#modal .dex-sync-settings > summary,
+#modal .dex-bulk-primary,
+#modal .dex-bulk-toggle {
+	font-weight: 600;
+}
+
+#modal .dex-sync-settings > summary {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	white-space: nowrap;
+}
+
+#modal .dex-sync-settings {
+	position: relative;
+}
+
+#modal .dex-sync-settings > summary {
+	padding: 0 12px;
+	cursor: pointer;
+	list-style: none;
+}
+
+#modal .dex-sync-settings > summary::-webkit-details-marker {
+	display: none;
+}
+
+#modal .dex-sync-settings[open] > summary {
+	background: rgba(255, 255, 255, 0.09);
+}
+
+#modal .dex-sync-settings-panel {
+	position: absolute;
+	top: calc(100% + 8px);
+	right: 0;
+	width: min(340px, calc(100vw - 32px));
+	display: grid;
+	gap: 10px;
+	padding: 14px;
+	border: 1px solid var(--line-soft);
+	border-radius: 12px;
+	background: rgba(12, 16, 24, 0.99);
+	box-shadow: 0 18px 36px rgba(0, 0, 0, 0.42);
+	z-index: 120;
+}
+
+#modal .dex-sync-toggle {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	min-height: 44px;
+	font-weight: 600;
+}
+
+#modal .dex-sync-toggle input {
+	width: 20px;
+	height: 20px;
+	margin: 0;
+	accent-color: var(--accent, #7fd2ff);
+}
+
+#modal .dex-sync-settings-panel p {
+	margin: 0;
+	font-size: 12px;
+	line-height: 1.45;
+	color: var(--text-muted);
+}
+
+#modal .dex-sync-reconcile {
+	min-height: 44px;
+}
+
+#modal .dex-sync-reconcile:disabled {
+	opacity: 0.48;
+	cursor: not-allowed;
+}
+
+#modal .dex-empty-state {
+	grid-column: 1 / -1;
+	margin: 0;
+	padding: 36px 18px;
+	text-align: center;
+	color: var(--text-muted);
+}
+
+/* Compact mode keeps large Pokédexes scannable without removing controls. */
+#modal[data-dex-view-mode="compact"] #dexGrid.grid {
+	grid-template-columns: minmax(0, 1fr);
+	gap: 6px;
+}
+
+#modal[data-dex-view-mode="compact"] #dexGrid .card {
+	display: grid;
+	grid-template-columns: 76px minmax(0, 1fr);
+	height: auto;
+	min-height: 76px;
+	margin: 0;
+	border-radius: 10px;
+	contain-intrinsic-size: 640px 76px;
+}
+
+#modal[data-dex-view-mode="compact"] #dexGrid .dex-virtual-slot {
+	min-height: 86px;
+}
+
+#modal[data-dex-view-mode="compact"] #dexGrid .card .thumb {
+	width: 76px;
+	height: 76px;
+	margin: 0;
+	padding: 7px;
+	box-sizing: border-box;
+}
+
+#modal[data-dex-view-mode="compact"] #dexGrid .card .thumb img,
+#modal[data-dex-view-mode="compact"] #dexGrid .card .thumb video.sprite {
+	max-width: 58px;
+	max-height: 58px;
+}
+
+#modal[data-dex-view-mode="compact"] #dexGrid .card .thumb > .name {
+	position: absolute;
+	top: 4px;
+	left: 5px;
+	justify-content: flex-start;
+	width: auto;
+	font-size: 10px;
+}
+
+#modal[data-dex-view-mode="compact"] #dexGrid .card .card-bd {
+	display: grid;
+	grid-template-columns: minmax(8rem, 1fr) minmax(9rem, 13rem);
+	align-items: center;
+	gap: 12px;
+	padding: 10px 12px;
+	text-align: left;
+}
+
+#modal[data-dex-view-mode="compact"] #dexGrid .card .card-bd > .name {
+	justify-content: flex-start;
+	font-size: 13px;
+	font-weight: 600;
+	text-align: left;
+}
+
+#modal[data-dex-view-mode="compact"] #dexGrid .card .row {
+	margin: 0;
+	justify-content: flex-end;
 }
 
 #modal .dex-bulk-split {
@@ -260,6 +480,7 @@
 #modal .dex-bulk-toggle {
 	min-width: 38px;
 	padding: 0;
+	border-left: 0;
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
 }
@@ -311,6 +532,14 @@
 }
 
 @media (max-width: 900px) {
+	#modal #dexGrid .dex-virtual-slot {
+		min-height: 200px;
+	}
+
+	#modal[data-dex-view-mode="compact"] #dexGrid .dex-virtual-slot {
+		min-height: 86px;
+	}
+
 	#modal #dexGrid.grid {
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 		gap: 6px;
@@ -322,7 +551,7 @@
 		grid-template-areas:
 			"title close"
 			"search search"
-			"actions actions";
+			"controls actions";
 		align-items: start;
 		padding: 8px 8px 6px;
 		gap: 4px 6px;
@@ -330,14 +559,13 @@
 
 	#modal .dex-header-title-group {
 		grid-area: title;
-		gap: 2px;
-		padding-top: 2px;
-		align-self: start;
+		gap: 8px;
+		align-self: center;
 	}
 
 	#modal .dex-modal-title-main {
-		font-size: 12px;
-		line-height: 1;
+		font-size: 16px;
+		line-height: 1.1;
 	}
 
 	#modal .dex-header-search-row {
@@ -345,6 +573,11 @@
 		align-self: stretch;
 		width: 100%;
 		min-width: 0;
+	}
+
+	#modal .dex-header-controls {
+		grid-area: controls;
+		justify-content: stretch;
 	}
 
 	#modal .dex-scope-select {
@@ -367,11 +600,13 @@
 
 	#modal .dex-bulk-split {
 		grid-area: actions;
-		justify-self: stretch;
-		align-self: stretch;
-		width: 100%;
+		justify-self: end;
+		align-self: center;
+		width: auto;
 		min-width: 0;
-		grid-template-columns: minmax(0, 1fr) 24px;
+		grid-template-columns: minmax(78px, auto) var(
+				--dex-header-control-height
+			);
 	}
 
 	#modal .dex-bulk-primary,
@@ -404,7 +639,7 @@
 	#modal .dex-close-button {
 		grid-area: close;
 		justify-self: end;
-		align-self: start;
+		align-self: center;
 		min-width: var(--mobile-target-size);
 		font-size: 16px;
 	}
@@ -415,9 +650,33 @@
 		max-width: 100%;
 		min-width: 0;
 	}
+
+	#modal .dex-filter-control {
+		flex: 1 1 138px;
+	}
+
+	#modal .dex-filter-control .flag-select {
+		width: 100%;
+		min-height: var(--mobile-target-size);
+		font-size: 16px;
+	}
+
+	#modal .dex-sync-settings > summary {
+		min-height: var(--mobile-target-size);
+	}
 }
 
 @media (max-width: 520px) {
+	#modal[data-dex-view-mode="compact"] #dexGrid .dex-virtual-slot {
+		min-height: 78px;
+	}
+
+	#modal[data-dex-view-mode="compact"]
+		#dexGrid
+		.dex-virtual-slot--dual-actions {
+		min-height: 116px;
+	}
+
 	#modal #dexGrid.grid {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
@@ -426,8 +685,18 @@
 		grid-template-areas:
 			"title close"
 			"search search"
+			"controls controls"
 			"actions actions";
 		align-items: start;
+	}
+
+	#modal .dex-header-title-group {
+		display: grid;
+		gap: 4px;
+	}
+
+	#modal .dex-scope-select {
+		width: 100%;
 	}
 
 	#modal .dex-header-actions {
@@ -439,6 +708,64 @@
 		justify-self: stretch;
 		width: 100%;
 		grid-template-columns: minmax(0, 1fr) 38px;
+	}
+
+	#modal .dex-header-controls {
+		align-items: stretch;
+		flex-wrap: wrap;
+	}
+
+	#modal .dex-filter-control {
+		flex: 1 1 calc(100% - 112px);
+	}
+
+	#modal .dex-sync-settings {
+		flex: 0 0 auto;
+	}
+
+	#modal .dex-sync-settings > summary {
+		min-width: 84px;
+	}
+
+	#modal .dex-sync-settings-panel {
+		position: absolute;
+		right: 0;
+		width: min(340px, calc(100vw - 32px));
+		box-sizing: border-box;
+		box-shadow: 0 18px 36px rgba(0, 0, 0, 0.42);
+	}
+
+	#modal[data-dex-view-mode="compact"] #dexGrid .card {
+		grid-template-columns: 68px minmax(0, 1fr);
+		min-height: 68px;
+	}
+
+	#modal[data-dex-view-mode="compact"] #dexGrid .card .thumb {
+		width: 68px;
+		height: 68px;
+	}
+
+	#modal[data-dex-view-mode="compact"] #dexGrid .card .thumb img,
+	#modal[data-dex-view-mode="compact"] #dexGrid .card .thumb video.sprite {
+		max-width: 50px;
+		max-height: 50px;
+	}
+
+	#modal[data-dex-view-mode="compact"] #dexGrid .card .card-bd {
+		grid-template-columns: minmax(0, 1fr);
+		gap: 5px;
+		padding: 7px 9px;
+	}
+
+	#modal[data-dex-view-mode="compact"] #dexGrid .card .row {
+		justify-content: stretch;
+	}
+
+	#modal[data-dex-view-mode="compact"] #dexGrid .card select.flag-select,
+	#modal[data-dex-view-mode="compact"] #dexGrid .card .forms-launch,
+	#modal[data-dex-view-mode="compact"] #dexGrid .card .research-launch {
+		min-height: 34px;
+		font-size: 12px;
 	}
 }
 

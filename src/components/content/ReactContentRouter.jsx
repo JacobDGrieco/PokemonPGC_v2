@@ -22,6 +22,13 @@ function handleEnterGame(genKey, gameKey) {
 	return async () => {
 		try {
 			await window.PPGC?.ensureGenDataLoadedForGame?.(gameKey);
+			store.state.recentGameKeys = [
+				gameKey,
+				...(store.state.recentGameKeys || []).filter(
+					(key) => key !== gameKey,
+				),
+			].slice(0, 8);
+			save();
 			const sections = getVisibleSections(gameKey, ensureSections);
 			navigateToState({
 				level: "section",
@@ -42,6 +49,11 @@ function handleEnterGame(genKey, gameKey) {
 
 function GenOverviewPage({ state }) {
 	const overview = useMemo(() => buildGenOverview(store), [state]);
+	const emptyMessage = {
+		started: "No games marked as started yet.",
+		favorites: "No favorite games yet.",
+		recent: "Open a game and it will appear here.",
+	}[overview.scope];
 
 	return (
 		<section className="card react-content-card">
@@ -57,36 +69,32 @@ function GenOverviewPage({ state }) {
 				<div className="pct" id="gameSummaryPct">
 					{overview.overallPct.toFixed(2)}%
 				</div>
-				<div className="row">
-					<label
-						className="small"
-						style={{
-							display: "flex",
-							alignItems: "center",
-							gap: 4,
+				<div className="row game-summary-filter-row">
+					<label className="small" htmlFor="gameSummaryScope">
+						Show
+					</label>
+					<select
+						id="gameSummaryScope"
+						className="game-summary-filter"
+						value={overview.scope}
+						onChange={(event) => {
+							store.state.gameSummaryScope = event.target.value;
+							save();
+							window.PPGC?.renderAll?.();
 						}}
 					>
-						<input
-							type="checkbox"
-							checked={overview.scope === "started"}
-							onChange={(event) => {
-								store.state.gameSummaryScope = event.target
-									.checked
-									? "started"
-									: "all";
-								save();
-								window.PPGC?.renderAll?.();
-							}}
-						/>
-						Show started games only
-					</label>
+						<option value="all">All games</option>
+						<option value="started">Started</option>
+						<option value="favorites">Favorites</option>
+						<option value="recent">Recent</option>
+					</select>
 				</div>
 			</div>
 			<div className="card-bd">
 				<div className="rings" id="gameRings">
 					{!overview.visibleGameStats.length ? (
-						<div className="small" style={{ opacity: 0.8 }}>
-							No games marked as started yet.
+						<div className="game-summary-empty small">
+							{emptyMessage || "No games match this view."}
 						</div>
 					) : (
 						overview.visibleGameStats.map((entry) => {
@@ -112,44 +120,74 @@ function GenOverviewPage({ state }) {
 											game.key,
 										)}
 									/>
-									<button
-										type="button"
-										className="button game-start-toggle react-game-start-toggle"
-										aria-pressed={
-											isStarted ? "true" : "false"
-										}
-										onClick={(event) => {
-											event.stopPropagation();
-											const next = !isStarted;
-											if (
-												typeof store.setGameStarted ===
-												"function"
-											)
-												store.setGameStarted(
-													game.key,
-													next,
-												);
-											else {
-												store.state.startedGames ||= {};
-												if (next)
-													store.state.startedGames[
+									<div className="game-summary-card-actions">
+										<button
+											type="button"
+											className="button game-favorite-toggle"
+											aria-label={`${entry.isFavorite ? "Remove" : "Add"} ${game.label} ${entry.isFavorite ? "from" : "to"} favorites`}
+											aria-pressed={entry.isFavorite}
+											title={
+												entry.isFavorite
+													? "Remove favorite"
+													: "Add favorite"
+											}
+											onClick={() => {
+												if (entry.isFavorite)
+													delete store.favoriteGames[
+														game.key
+													];
+												else
+													store.favoriteGames[
 														game.key
 													] = true;
-												else
-													delete store.state
-														.startedGames[game.key];
 												save();
-											}
-											applyGameStartSync(
-												game.key,
-												next,
-												store,
-											);
-											window.PPGC?.renderAll?.();
-										}}
-									>
-										{isStarted ? "Started" : "Not started"}
-									</button>
+												window.PPGC?.renderAll?.();
+											}}
+										>
+											<span aria-hidden="true">
+												{"\u2605"}
+											</span>
+										</button>
+										<button
+											type="button"
+											className="button game-start-toggle react-game-start-toggle"
+											aria-pressed={isStarted}
+											onClick={(event) => {
+												event.stopPropagation();
+												const next = !isStarted;
+												if (
+													typeof store.setGameStarted ===
+													"function"
+												)
+													store.setGameStarted(
+														game.key,
+														next,
+													);
+												else {
+													store.state.startedGames ||=
+														{};
+													if (next)
+														store.state.startedGames[
+															game.key
+														] = true;
+													else
+														delete store.state
+															.startedGames[
+															game.key
+														];
+													save();
+												}
+												applyGameStartSync(
+													game.key,
+													next,
+													store,
+												);
+												window.PPGC?.renderAll?.();
+											}}
+										>
+											{isStarted ? "Started" : "Start"}
+										</button>
+									</div>
 								</div>
 							);
 						})

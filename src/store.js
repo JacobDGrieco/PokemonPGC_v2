@@ -64,6 +64,9 @@ export const store = {
 		startedGames: saved.startedGames || {},
 		gameSummaryScope: saved.gameSummaryScope || "all",
 		gameSummaryAggregateMode: saved.gameSummaryAggregateMode || "all",
+		recentGameKeys: Array.isArray(saved.recentGameKeys)
+			? saved.recentGameKeys.slice(0, 8)
+			: [],
 		cachedGamePcts: saved.cachedGamePcts || {},
 		monInfoId: saved.monInfoId || null,
 		monInfoGameKey: saved.monInfoGameKey || null,
@@ -72,6 +75,20 @@ export const store = {
 		sidebarCollapsed: !!saved.sidebarCollapsed,
 		taskDensity:
 			saved.taskDensity === "comfortable" ? "comfortable" : "compact",
+		dexViewMode:
+			saved.dexViewMode === "cards" || saved.dexViewMode === "compact"
+				? saved.dexViewMode
+				: null,
+		dexToTaskSyncByGame:
+			saved.dexToTaskSyncByGame &&
+			typeof saved.dexToTaskSyncByGame === "object"
+				? saved.dexToTaskSyncByGame
+				: {},
+		taskToDexSyncByGame:
+			saved.taskToDexSyncByGame &&
+			typeof saved.taskToDexSyncByGame === "object"
+				? saved.taskToDexSyncByGame
+				: {},
 	},
 	sectionsStore: new Map(Object.entries(saved.sections || {})),
 	tasksStore: new Map(
@@ -91,6 +108,14 @@ export const store = {
 			normalizeRecordKeys(saved.taskChoiceById || {}, normalizeTaskId),
 		),
 	),
+	favoriteGames:
+		saved.favoriteGames && typeof saved.favoriteGames === "object"
+			? saved.favoriteGames
+			: {},
+	completedGames:
+		saved.completedGames && typeof saved.completedGames === "object"
+			? saved.completedGames
+			: {},
 };
 
 // Extra UI state defaults
@@ -358,6 +383,9 @@ export function save() {
 		startedGames: s.startedGames || {},
 		gameSummaryScope: s.gameSummaryScope || "all",
 		gameSummaryAggregateMode: s.gameSummaryAggregateMode || "all",
+		recentGameKeys: Array.isArray(s.recentGameKeys)
+			? s.recentGameKeys.slice(0, 8)
+			: [],
 		cachedGamePcts: s.cachedGamePcts || {},
 		monInfoId: s.monInfoId || null,
 		monInfoGameKey: s.monInfoGameKey || null,
@@ -394,6 +422,18 @@ export function save() {
 		modelViewerSolo: s.modelViewerSolo || false,
 		taskDensity:
 			s.taskDensity === "comfortable" ? "comfortable" : "compact",
+		dexViewMode:
+			s.dexViewMode === "cards" || s.dexViewMode === "compact"
+				? s.dexViewMode
+				: null,
+		dexToTaskSyncByGame:
+			s.dexToTaskSyncByGame && typeof s.dexToTaskSyncByGame === "object"
+				? s.dexToTaskSyncByGame
+				: {},
+		taskToDexSyncByGame:
+			s.taskToDexSyncByGame && typeof s.taskToDexSyncByGame === "object"
+				? s.taskToDexSyncByGame
+				: {},
 	};
 
 	try {
@@ -694,6 +734,8 @@ store.setGameStarted = function (gameKey, started) {
 				store.stickerFormsStatus = new Map();
 				store.taskProgressById = new Map();
 				store.taskChoiceById = new Map();
+				store.favoriteGames = {};
+				store.completedGames = {};
 
 				store.state = {
 					level: "gen",
@@ -710,10 +752,14 @@ store.setGameStarted = function (gameKey, started) {
 					startedGames: {},
 					gameSummaryScope: "all",
 					gameSummaryAggregateMode: "all",
+					recentGameKeys: [],
 					monInfoId: null,
 					monInfoGameKey: null,
 					monInfoForm: null,
 					taskDensity: "compact",
+					dexViewMode: null,
+					dexToTaskSyncByGame: {},
+					taskToDexSyncByGame: {},
 				};
 			} catch {
 				// ignore

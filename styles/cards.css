@@ -301,7 +301,7 @@
 .modal #dexGrid .card {
 	contain: layout paint style;
 	content-visibility: auto;
-	contain-intrinsic-size: 260px 190px;
+	contain-intrinsic-size: 190px 260px;
 }
 
 /* Turn the body into a flex column so we can pin the controls to the bottom */
@@ -393,8 +393,8 @@
 
 	.modal #dexGrid .card .thumb img,
 	.modal #dexGrid .card .thumb video.sprite {
-		max-width: 82px !important;
-		max-height: 82px !important;
+		max-width: 82px;
+		max-height: 82px;
 	}
 
 	.modal #dexGrid .card .row {

@@ -192,6 +192,11 @@ function GeneralTab() {
 	const gen1RegionMode = store.state.gen1RegionMode === "jp" ? "jp" : "rf";
 	const taskDensity =
 		store.state.taskDensity === "comfortable" ? "comfortable" : "compact";
+	const dexViewMode =
+		store.state.dexViewMode === "compact" ||
+		store.state.dexViewMode === "cards"
+			? store.state.dexViewMode
+			: "auto";
 	const { tierKey } = useSubscription();
 	const tierIcon =
 		tierKey === "free"
@@ -445,6 +450,28 @@ function GeneralTab() {
 							options={[
 								{ label: "Static", value: "static" },
 								{ label: "Animated", value: "animated" },
+							]}
+						/>
+					}
+				/>
+				<SettingRow
+					title="Pokédex Layout"
+					subtext="Auto uses compact rows on phones and cards on wider screens. You can override that behavior here."
+					control={
+						<SegmentedControl
+							ariaLabel="Pokedex card layout"
+							value={dexViewMode}
+							onChange={(value) => {
+								const nextValue =
+									value === "compact" || value === "cards"
+										? value
+										: null;
+								setStateValue("dexViewMode", nextValue);
+							}}
+							options={[
+								{ label: "Auto", value: "auto" },
+								{ label: "Cards", value: "cards" },
+								{ label: "Compact", value: "compact" },
 							]}
 						/>
 					}

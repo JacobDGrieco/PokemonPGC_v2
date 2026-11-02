@@ -11,6 +11,7 @@ import { assetPath } from "../utils/assetPath.js";
 import { _dexIdNumber } from "../../data/helpers/dex-ids.js";
 import { PATH_OF_SOLITUDE_KEY } from "./dex-progress.js";
 import { emitPpgcUiSync } from "../react-bridge/storeBridge.js";
+import { createDexVirtualGrid } from "./dex-virtual-grid.js";
 
 const PATH_OF_SOLITUDE_ICON = assetPath(
 	"tasks/gen8/legendsarceus/path-of-solitude.png",
@@ -144,13 +145,16 @@ export function renderDexCards({
 	queueDexSync,
 	applyDexLinksFromDexEntries,
 	applyDexLinksFromForm,
+	getNatIndexForGame,
 	renderDexGrid,
 	save,
 }) {
 	void openMonInfo;
 	void applyDexLinksFromForm;
 
-	dexGrid.innerHTML = "";
+	dexGrid.__dexVirtualGrid?.dispose();
+	dexGrid.__dexVirtualGrid = null;
+	dexGrid.replaceChildren();
 	const renderToken = Number(dexGrid.__renderToken || 0) + 1;
 	dexGrid.__renderToken = renderToken;
 	const researchState =
@@ -158,6 +162,13 @@ export function renderDexCards({
 			? store.dexResearchStatus.get(gameKey) || {}
 			: {};
 	const items = Array.isArray(filtered) ? filtered.slice() : [];
+	if (!items.length) {
+		const empty = document.createElement("p");
+		empty.className = "dex-empty-state";
+		empty.textContent = "No Pokédex entries match these filters.";
+		dexGrid.appendChild(empty);
+		return;
+	}
 	const defer =
 		typeof window.requestIdleCallback === "function"
 			? (cb) => window.requestIdleCallback(cb, { timeout: 250 })
@@ -386,8 +397,7 @@ export function renderDexCards({
 						gameKey,
 						changedMap: changed,
 						store,
-						getNatIndexForGame: (k) =>
-							window.PPGC?.getNatIndexForGame?.(k),
+						getNatIndexForGame,
 						renderDexGrid,
 					});
 				} catch (e) {
@@ -417,24 +427,30 @@ export function renderDexCards({
 						],
 				});
 				bindPathOfSolitudeToggle();
+				if (
+					dexGrid.closest("#modal")?.querySelector("#dexFilterStatus")
+						?.value !== "all"
+				)
+					renderDexGrid();
 			});
 		}
 
 		return card;
 	};
 
-	const BATCH_SIZE = 12;
-	const flushBatch = () => {
-		if (dexGrid.__renderToken !== renderToken) return;
-		const fragment = document.createDocumentFragment();
-		for (let i = 0; i < BATCH_SIZE && items.length; i += 1) {
-			fragment.appendChild(buildCard(items.shift()));
-		}
-		dexGrid.appendChild(fragment);
-		if (items.length) {
-			requestAnimationFrame(flushBatch);
-		}
-	};
+	dexGrid.__dexVirtualGrid = createDexVirtualGrid({
+		dexGrid,
+		items,
+		buildCard,
+		root: dexGrid.closest(".body"),
+		isCurrent: () => dexGrid.__renderToken === renderToken,
+	});
+}
 
-	flushBatch();
+/** Release virtualized media and observers when the Dex modal is not visible. */
+export function disposeDexCards(dexGrid, { clear = false } = {}) {
+	dexGrid.__renderToken = Number(dexGrid.__renderToken || 0) + 1;
+	dexGrid.__dexVirtualGrid?.dispose();
+	dexGrid.__dexVirtualGrid = null;
+	if (clear) dexGrid.replaceChildren();
 }

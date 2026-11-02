@@ -9,6 +9,10 @@ import { setDescendantsDone, setMultiDone } from "./tasks-modes.js";
 import { getSeedTaskRegistry } from "./taskRegistry.js";
 import { ensureSyncSetsExpandedForGame } from "./sync.js";
 import { ensurePpgcRoot } from "./runtime/globals.js";
+import {
+	isDexToTaskSyncEnabled,
+	isTaskToDexSyncEnabled,
+} from "./dex-task-sync-settings.js";
 
 const PPGC = ensurePpgcRoot();
 
@@ -106,7 +110,7 @@ function _ensureIndexes() {
 		});
 	}
 }
-function _setTaskCheckedById(taskId, checked) {
+function _setTaskCheckedById(taskId, checked, eitherSide = null) {
 	const id = String(taskId);
 	const storeRef = window.PPGC?._storeRef;
 	if (!storeRef) return false;
@@ -115,7 +119,15 @@ function _setTaskCheckedById(taskId, checked) {
 		const { sectionId, task } = hit;
 		const hasKids =
 			Array.isArray(task.children) && task.children.length > 0;
-		if (hasKids) setDescendantsDone(task, !!checked);
+		if (eitherSide && task.eithers && typeof task.eithers === "object") {
+			if (!(storeRef.taskChoiceById instanceof Map))
+				storeRef.taskChoiceById = new Map();
+			const currentSide = storeRef.taskChoiceById.get(id) || null;
+			if (checked) storeRef.taskChoiceById.set(id, eitherSide);
+			else if (String(currentSide) === String(eitherSide))
+				storeRef.taskChoiceById.delete(id);
+			task.done = storeRef.taskChoiceById.has(id);
+		} else if (hasKids) setDescendantsDone(task, !!checked);
 		else if (Array.isArray(task.multi) && task.multi.length)
 			setMultiDone(task, !!checked);
 		else task.done = !!checked;
@@ -140,7 +152,17 @@ function _setTaskCheckedById(taskId, checked) {
 	}
 	const reg = getSeedTaskRegistry();
 	if (!reg.has(id)) return false;
-	storeRef.taskProgressById.set(id, !!checked);
+	if (eitherSide) {
+		if (!(storeRef.taskChoiceById instanceof Map))
+			storeRef.taskChoiceById = new Map();
+		const currentSide = storeRef.taskChoiceById.get(id) || null;
+		if (checked) storeRef.taskChoiceById.set(id, eitherSide);
+		else if (String(currentSide) === String(eitherSide))
+			storeRef.taskChoiceById.delete(id);
+		storeRef.taskProgressById.set(id, storeRef.taskChoiceById.has(id));
+	} else {
+		storeRef.taskProgressById.set(id, !!checked);
+	}
 	save();
 	return true;
 }
@@ -162,14 +184,15 @@ function _isDexCompleteStatus(status) {
 
 export function applySyncsFromTask(sourceTask, value) {
 	_ensureIndexes();
+	let sourceGameKey = null;
 	try {
 		let sid = window.PPGC?._storeRef?.state?.sectionId || null;
 		if (!sid && sourceTask?.id)
 			sid =
 				_globalTaskIndex().get(String(sourceTask.id))?.sectionId ||
 				null;
-		const gk = sid ? gameKeyFromSection(sid) : null;
-		if (gk) ensureSyncSetsExpandedForGame(gk);
+		sourceGameKey = sid ? gameKeyFromSection(sid) : null;
+		if (sourceGameKey) ensureSyncSetsExpandedForGame(sourceGameKey);
 	} catch {}
 	const store = window.PPGC?._storeRef;
 	const taskTargets = new Map();
@@ -211,6 +234,8 @@ export function applySyncsFromTask(sourceTask, value) {
 			if (!value && isOneWay) continue;
 			const game = link?.game;
 			if (!game) continue;
+			if (!isTaskToDexSyncEnabled(store.state, sourceGameKey || game))
+				continue;
 			const t = String(link.dexType || "regional").toLowerCase();
 			let targetGameKey;
 			if (t === "national") targetGameKey = `${game}-national`;
@@ -371,9 +396,19 @@ export function applySyncsFromTask(sourceTask, value) {
 	}
 }
 
-export function applyDexSyncsFromDexEntries(gameKey, changedMap) {
+export function applyDexSyncsFromDexEntries(
+	gameKey,
+	changedMap,
+	{ forceOptIn = false } = {},
+) {
+	// Dex changes can originate before any checklist interaction. Index loaded
+	// React task trees here so reverse sync updates the live source of truth.
+	_ensureIndexes();
 	const dexList = window.DATA?.dex?.[gameKey] || [];
 	if (!dexList.length) return;
+	const state = window.PPGC?._storeRef?.state || {};
+	const canApplyOptInLinks =
+		forceOptIn || isDexToTaskSyncEnabled(state, gameKey);
 	for (const [idStr, status] of Object.entries(changedMap || {})) {
 		const dexId = String(idStr);
 		let entry = dexList.find((e) => e && String(e.id) === dexId);
@@ -395,19 +430,27 @@ export function applyDexSyncsFromDexEntries(gameKey, changedMap) {
 			const id = spec && typeof spec === "object" ? spec.id : spec;
 			if (id == null) continue;
 			if (
+				spec &&
+				typeof spec === "object" &&
+				spec.requiresDexToTaskOptIn === true &&
+				(!canApplyOptInLinks || !isComplete)
+			)
+				continue;
+			if (
 				!isComplete &&
 				spec &&
 				typeof spec === "object" &&
 				spec.oneWay === true
 			)
 				continue;
-			_setTaskCheckedById(id, isComplete);
+			_setTaskCheckedById(id, isComplete, spec?.side || null);
 		}
 	}
 }
 
 export function applyTaskSyncsFromForm(gameKey, entryId, formName, status) {
 	try {
+		_ensureIndexes();
 		const dexList = window.DATA?.dex?.[gameKey] || [];
 		const hitEntry = _resolveDexEntryAndKey(dexList, entryId);
 		if (!hitEntry?.entry) return;
@@ -426,10 +469,19 @@ export function applyTaskSyncsFromForm(gameKey, entryId, formName, status) {
 				: [];
 		if (!ids.length) return;
 		const checked = _isDexCompleteStatus(status);
+		const state = window.PPGC?._storeRef?.state || {};
+		const canApplyOptInLinks = isDexToTaskSyncEnabled(state, gameKey);
 		for (const taskId of ids) {
 			const id =
 				taskId && typeof taskId === "object" ? taskId.id : taskId;
 			if (id == null) continue;
+			if (
+				taskId &&
+				typeof taskId === "object" &&
+				taskId.requiresDexToTaskOptIn === true &&
+				(!canApplyOptInLinks || !checked)
+			)
+				continue;
 			if (
 				!checked &&
 				taskId &&
@@ -437,7 +489,7 @@ export function applyTaskSyncsFromForm(gameKey, entryId, formName, status) {
 				taskId.oneWay === true
 			)
 				continue;
-			_setTaskCheckedById(id, checked);
+			_setTaskCheckedById(id, checked, taskId?.side || null);
 		}
 	} catch (e) {
 		console.error("applyTaskSyncsFromForm error:", e);

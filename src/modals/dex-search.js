@@ -175,6 +175,7 @@ export function filterDexEntries({
 			const tag = raw.toLowerCase();
 			const allowedFormTags = new Set([
 				"gender",
+				"mega",
 				"regional",
 				"alolan",
 				"galarian",
@@ -342,4 +343,71 @@ export function filterDexEntries({
 		}
 		return true;
 	});
+}
+
+/**
+ * Applies the visible filter-builder fields with AND semantics.
+ *
+ * The existing command parser remains the canonical matcher for authored Dex
+ * metadata, while this adapter gives users standard controls and permits one
+ * selection from every category at the same time.
+ */
+export function filterDexEntriesByCriteria({
+	dex,
+	query,
+	filters,
+	store,
+	gameKey,
+	game,
+	monInfoForGame,
+	effectiveSpeciesStatus,
+	isCompletedForGame,
+}) {
+	const normalizedQuery = String(query || "")
+		.trim()
+		.toLowerCase();
+	let filtered = normalizedQuery
+		? dex.filter((entry) =>
+				`${entry.id} ${entry.name}`
+					.toLowerCase()
+					.includes(normalizedQuery),
+			)
+		: dex.slice();
+
+	const statusFilter = filters?.status || "all";
+	if (statusFilter !== "all") {
+		filtered = filtered.filter((entry) => {
+			const status = normalizeFlag(
+				effectiveSpeciesStatus(store, gameKey, entry),
+			);
+			if (statusFilter === "complete") {
+				return isCompletedForGame(game, status);
+			}
+			return status === normalizeFlag(statusFilter);
+		});
+	}
+
+	const commands = [
+		["form", filters?.form],
+		["species", filters?.species],
+		["type", filters?.type],
+		["evolution", filters?.evolution],
+		["location", filters?.location],
+		["stage", filters?.stage],
+	];
+	for (const [command, rawValue] of commands) {
+		const filterValue = String(rawValue || "").trim();
+		if (!filterValue || filterValue === "all") continue;
+		filtered = filterDexEntries({
+			dex: filtered,
+			parsed: parseDexSearch(`/${command} ${filterValue}`),
+			rawQ: `/${command} ${filterValue}`,
+			store,
+			gameKey,
+			monInfoForGame,
+			effectiveSpeciesStatus,
+		});
+	}
+
+	return filtered;
 }

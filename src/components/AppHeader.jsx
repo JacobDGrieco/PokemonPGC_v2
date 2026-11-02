@@ -106,6 +106,12 @@ export function AppHeader({
 					<div
 						className={`task-search-wrap ${isMobile ? "task-search-mobile" : ""} ${mobileSearchOpen ? "is-mobile-open" : ""}`}
 					>
+						<label
+							className="visually-hidden"
+							htmlFor="taskSearchInput"
+						>
+							Search checklist tasks
+						</label>
 						<input
 							ref={inputRef}
 							id="taskSearchInput"

@@ -798,7 +798,7 @@ function makeCard({ d, ctx, checked, setChecked }) {
 		<div class="dist-card-footer">
 			${
 				rec.movesNorm.length
-					? `<div class="dist-moves grid-2x2" style="margin: 20px 0px;">
+					? `<div class="dist-moves grid-2x2">
 					${[0, 1, 2, 3]
 						.map((i) => {
 							const mv = rec.movesNorm[i];
@@ -821,18 +821,14 @@ function makeCard({ d, ctx, checked, setChecked }) {
 
 			${
 				detailLines.length
-					? `<div class="dist-details" style="margin: 10px 0px;">
+					? `<div class="dist-details">
 					${detailLines
 						.map((line, index) => {
 							const cls =
 								line.kind === "main" && index === 0
 									? "line"
 									: "line small";
-							const style =
-								line.kind === "main" && index === 0
-									? ' style="margin-bottom: 20px;"'
-									: "";
-							return `<div class="${cls}"${style}>${fmt(line.text)}</div>`;
+							return `<div class="${cls}">${fmt(line.text)}</div>`;
 						})
 						.join("")}
 				</div>`

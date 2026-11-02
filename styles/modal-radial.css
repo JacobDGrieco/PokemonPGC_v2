@@ -247,3 +247,161 @@
 	object-fit: contain;
 	filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.45));
 }
+
+/* Dex forms share the main Pokédex card hierarchy instead of the radial wheel. */
+#formsModal.dex-forms-modal .modal-bd {
+	display: block;
+	padding: 12px;
+}
+
+#formsModal.dex-forms-modal .dex-forms-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+	align-items: start;
+	gap: 10px;
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+}
+
+#formsModal.dex-forms-modal .forms-wheel .dex-form-card,
+#formsModal.dex-forms-modal .forms-wheel .dex-form-card.is-set,
+#formsModal.dex-forms-modal .forms-wheel .dex-form-card:hover,
+#formsModal.dex-forms-modal .forms-wheel .dex-form-card:focus-visible {
+	position: relative;
+	transform: none;
+	display: block;
+	width: 100%;
+	min-width: 0;
+	min-height: 0;
+	height: auto;
+	padding: 10px;
+	border: 1px solid var(--line-soft);
+	border-radius: var(--radius);
+	background: var(--panel-bg);
+	box-shadow: none;
+	outline: none;
+	overflow: hidden;
+	cursor: default;
+}
+
+#formsModal.dex-forms-modal .forms-wheel .dex-form-card .chip-row {
+	display: grid;
+	grid-template-rows: auto minmax(88px, auto) auto auto;
+	justify-items: center;
+	align-content: start;
+	gap: 8px;
+	width: 100%;
+	min-width: 0;
+}
+
+#formsModal.dex-forms-modal .dex-form-code {
+	justify-self: start;
+	font-size: 11px;
+	font-weight: 700;
+	color: var(--text-muted);
+	font-variant-numeric: tabular-nums;
+}
+
+#formsModal.dex-forms-modal .forms-wheel .dex-form-thumb {
+	display: grid;
+	place-items: center;
+	width: 100%;
+	min-width: 0;
+	min-height: 88px;
+}
+
+#formsModal.dex-forms-modal .forms-wheel .dex-form-thumb > img {
+	width: min(96px, 100%) !important;
+	height: 96px !important;
+	max-width: 100% !important;
+	max-height: 96px !important;
+	object-fit: contain;
+}
+
+#formsModal.dex-forms-modal
+	.forms-wheel
+	.dex-form-card.status-unknown
+	.dex-form-thumb
+	> img {
+	filter: brightness(0) invert(42%) sepia(12%) saturate(780%)
+		hue-rotate(174deg) brightness(86%) contrast(88%);
+	opacity: 0.82;
+}
+
+#formsModal.dex-forms-modal
+	.forms-wheel
+	.dex-form-card.status-seen
+	.dex-form-thumb
+	> img {
+	filter: grayscale(100%);
+}
+
+#formsModal.dex-forms-modal
+	.forms-wheel
+	.dex-form-card.status-normal
+	.dex-form-thumb
+	> img {
+	filter: none;
+	opacity: 1;
+}
+
+#formsModal.dex-forms-modal .forms-wheel .dex-form-name {
+	width: 100%;
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 1.25;
+	color: var(--text-main);
+	text-shadow: none;
+	overflow-wrap: anywhere;
+}
+
+#formsModal.dex-forms-modal .forms-wheel .dex-form-card select {
+	min-height: 36px;
+	width: 100%;
+	background: #151a24;
+	color: #eef1f7;
+	border-color: var(--line-soft);
+}
+
+#formsModal.dex-forms-modal .forms-wheel .dex-form-card .badges {
+	top: 8px;
+	right: 8px;
+}
+
+@media (max-width: 520px) {
+	#formsModal.dex-forms-modal .modal-bd {
+		padding: 8px;
+	}
+
+	#formsModal.dex-forms-modal .dex-forms-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 8px;
+	}
+
+	#formsModal.dex-forms-modal .forms-wheel .dex-form-card {
+		padding: 8px;
+	}
+
+	#formsModal.dex-forms-modal .forms-wheel .dex-form-thumb {
+		min-height: 72px;
+	}
+
+	#formsModal.dex-forms-modal .forms-wheel .dex-form-thumb > img {
+		height: 72px !important;
+		max-height: 72px !important;
+	}
+
+	#formsModal.dex-forms-modal .forms-wheel .dex-form-card select {
+		min-height: var(--mobile-target-size);
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 360px) {
+	#formsModal.dex-forms-modal .dex-forms-grid {
+		grid-template-columns: minmax(0, 1fr);
+	}
+}

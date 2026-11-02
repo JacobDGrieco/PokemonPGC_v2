@@ -243,14 +243,18 @@ function _expandOneSet(set) {
 				arr.push(link);
 			}
 
-			// Dex entry -> Task (store per-link oneWay opts when needed)
-			if (!isOneWay(d)) {
-				const dexTaskArr = _ensureArray(dexHit.entry, "taskSync");
-				if (isOneWay(t))
-					dexTaskArr.push({ id: t.id, oneWay: true, side: t.side });
-				else if (t.side) dexTaskArr.push({ id: t.id, side: t.side });
-				else dexTaskArr.push(t.id);
+			// Dex entry -> Task. Authored one-way Dex members remain set-only and
+			// require the player's explicit per-game reverse-sync preference.
+			const dexTaskArr = _ensureArray(dexHit.entry, "taskSync");
+			const dexTaskSpec = { id: t.id };
+			if (isOneWay(t)) dexTaskSpec.oneWay = true;
+			if (t.side) dexTaskSpec.side = t.side;
+			if (isOneWay(d)) {
+				dexTaskSpec.requiresDexToTaskOptIn = true;
+				dexTaskSpec.setOnly = true;
 			}
+			if (Object.keys(dexTaskSpec).length === 1) dexTaskArr.push(t.id);
+			else dexTaskArr.push(dexTaskSpec);
 		}
 
 		// Form-level
@@ -273,14 +277,19 @@ function _expandOneSet(set) {
 				arr.push(link);
 			}
 
-			// Dex form -> Task
-			if (!isOneWay(df)) {
-				const formObj = formHit.form;
-				const dexFormTaskArr = _ensureArray(formObj, "taskSync");
-				if (isOneWay(t))
-					dexFormTaskArr.push({ id: t.id, oneWay: true });
-				else dexFormTaskArr.push(t.id);
+			// Dex form -> Task follows the same opt-in rule as species links.
+			const formObj = formHit.form;
+			const dexFormTaskArr = _ensureArray(formObj, "taskSync");
+			const dexFormTaskSpec = { id: t.id };
+			if (isOneWay(t)) dexFormTaskSpec.oneWay = true;
+			if (t.side) dexFormTaskSpec.side = t.side;
+			if (isOneWay(df)) {
+				dexFormTaskSpec.requiresDexToTaskOptIn = true;
+				dexFormTaskSpec.setOnly = true;
 			}
+			if (Object.keys(dexFormTaskSpec).length === 1)
+				dexFormTaskArr.push(t.id);
+			else dexFormTaskArr.push(dexFormTaskSpec);
 		}
 	}
 

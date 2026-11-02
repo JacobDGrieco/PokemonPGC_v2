@@ -392,6 +392,7 @@ export function initHistory({ store, renderAll }) {
 	// ---------- Back/Forward + direct hash edits ----------
 
 	window.addEventListener("popstate", (event) => {
+		window.PPGC?.dexApi?.closeForNavigation?.();
 		const snap = event.state;
 
 		if (snap && typeof snap === "object") {
@@ -418,6 +419,7 @@ export function initHistory({ store, renderAll }) {
 	});
 
 	window.addEventListener("hashchange", () => {
+		window.PPGC?.dexApi?.closeForNavigation?.();
 		applyUrlToStateFromLocation();
 		const snap = snapshotFromState();
 		try {

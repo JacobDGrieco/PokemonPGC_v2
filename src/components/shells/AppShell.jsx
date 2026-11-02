@@ -24,10 +24,25 @@ export function AppShell({ children, routeLevelOverride = null }) {
 	);
 	const [mobileNavOpen, setMobileNavOpen] = useState(false);
 	const [headerHeight, setHeaderHeight] = useState(56);
+	const [announcement, setAnnouncement] = useState({ id: 0, message: "" });
 	const headerRef = useRef(null);
 	const mobileNavTriggerRef = useRef(null);
 	const sidebarRef = useRef(null);
 	const wasMobileNavOpenRef = useRef(false);
+
+	useEffect(() => {
+		window.PPGC = window.PPGC || {};
+		const announceStatus = (message) => {
+			const text = String(message || "").trim();
+			if (!text) return;
+			setAnnouncement({ id: Date.now(), message: text });
+		};
+		window.PPGC.announceStatus = announceStatus;
+		return () => {
+			if (window.PPGC?.announceStatus === announceStatus)
+				delete window.PPGC.announceStatus;
+		};
+	}, []);
 
 	useEffect(() => {
 		const media = window.matchMedia("(max-width: 900px)");
@@ -146,6 +161,15 @@ export function AppShell({ children, routeLevelOverride = null }) {
 				mobileNavTriggerRef={mobileNavTriggerRef}
 				canOpenNavigation={routeLevel !== "account"}
 			/>
+			<div
+				key={announcement.id}
+				className="visually-hidden"
+				role="status"
+				aria-live="polite"
+				aria-atomic="true"
+			>
+				{announcement.message}
+			</div>
 			<div className="app" data-route-level={routeLevel}>
 				<AppSidebar
 					sidebarRef={sidebarRef}
@@ -165,7 +189,6 @@ export function AppShell({ children, routeLevelOverride = null }) {
 				<main
 					id="content"
 					className="content"
-					aria-live="polite"
 					inert={isMobileNavOpen ? "" : undefined}
 					aria-hidden={isMobileNavOpen ? "true" : undefined}
 					onClick={() => {

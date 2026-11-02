@@ -1,11 +1,11 @@
 import { save } from "../store.js";
 import { ensureDataRoot, ensurePpgcRoot } from "../runtime/globals.js";
 import { bootstrapTasks } from "../tasks.js";
-import { ensureMonInfoLoaded } from "../../data/mon-info/_loader.js";
 import {
 	normalizeFlag,
 	clampStatusForMon,
 	getDexScrollContainer,
+	isCompletedForGame,
 } from "./helpers.js";
 import { openMonInfo } from "./dex-mon-info.js";
 import { openResearchModal } from "./dex-research.js";
@@ -23,22 +23,29 @@ import {
 	setAllFormsForMon as _setAllFormsForMon,
 	effectiveSpeciesStatus as _effectiveSpeciesStatus,
 } from "./dex-store.js";
-import { parseDexSearch, filterDexEntries } from "./dex-search.js";
+import { filterDexEntriesByCriteria } from "./dex-search.js";
 import {
 	applyDexLinksFromDexEntries,
 	applyDexLinksFromForm,
 } from "./dex-sync.js";
 import {
-	updateDexHelpDropdown,
 	resolveInitialDexKey,
+	populateDexFilterControls,
 	populateBulkStatusSelect,
 	refreshScopeControls,
 	resetBulkStatusSelect,
 } from "./dex-ui.js";
-import { renderDexCards } from "./dex-grid.js";
+import { disposeDexCards, renderDexCards } from "./dex-grid.js";
 import { initDexModalRuntime } from "./dex-runtime.js";
 import { emitPpgcUiSync } from "../react-bridge/storeBridge.js";
 import { resetScrollWithin } from "../utils/scrolling.js";
+import {
+	isDexToTaskSyncEnabled,
+	isTaskToDexSyncEnabled,
+	setDexToTaskSyncEnabled,
+	setTaskToDexSyncEnabled,
+} from "../dex-task-sync-settings.js";
+import "../../styles/modal-dex-filter.css";
 
 ensurePpgcRoot();
 ensureDataRoot();
@@ -55,64 +62,99 @@ try {
  */
 export function wireDexModal(store, els) {
 	let _closing = false;
-	const {
-		modal,
-		modalClose,
-		dexGrid,
-		dexSearch,
-		dexSelectAll,
-		dexClearAll,
-		modalTitle,
-	} = els;
+	const { modal, modalClose, dexGrid, dexSearch, dexClearAll, modalTitle } =
+		els;
 	const bulkStatusSelect = dexClearAll;
-	let dexHelpDropdown = null;
-	const bulkMenu = modal?.querySelector("#dexBulkActionMenu");
-	const bulkToggle = modal?.querySelector("#dexBulkActionToggle");
+	const dexFilterSettings = modal?.querySelector("#dexFilterSettings");
+	const dexFilterCount = modal?.querySelector("#dexFilterCount");
+	const dexFilterClear = modal?.querySelector("#dexFilterClear");
+	const dexFilterControls = {
+		status: modal?.querySelector("#dexFilterStatus"),
+		form: modal?.querySelector("#dexFilterForm"),
+		species: modal?.querySelector("#dexFilterSpecies"),
+		type: modal?.querySelector("#dexFilterType"),
+		evolution: modal?.querySelector("#dexFilterEvolution"),
+		location: modal?.querySelector("#dexFilterLocation"),
+		stage: modal?.querySelector("#dexFilterStage"),
+	};
+	const dexViewToggle = modal?.querySelector("#dexViewToggle");
+	const taskDexSyncToggle = modal?.querySelector("#taskDexSyncToggle");
+	const dexTaskSyncToggle = modal?.querySelector("#dexTaskSyncToggle");
+	const dexTaskSyncReconcile = modal?.querySelector("#dexTaskSyncReconcile");
+	const dexStatusMessage = modal?.querySelector("#dexStatusMessage");
+	const dexSyncSettings = modal?.querySelector(".dex-sync-settings");
+	populateDexFilterControls(dexFilterControls);
 
-	function closeBulkMenu() {
-		if (!bulkMenu || !bulkToggle) return;
-		bulkMenu.hidden = true;
-		bulkToggle.setAttribute("aria-expanded", "false");
+	function announceDexStatus(message) {
+		if (dexStatusMessage) dexStatusMessage.textContent = "";
+		window.requestAnimationFrame(() => {
+			if (dexStatusMessage) dexStatusMessage.textContent = message;
+			window.PPGC?.announceStatus?.(message);
+		});
 	}
 
-	function openBulkMenu() {
-		if (!bulkMenu || !bulkToggle) return;
-		bulkMenu.hidden = false;
-		bulkToggle.setAttribute("aria-expanded", "true");
+	function resolveDexViewMode() {
+		if (
+			store.state.dexViewMode === "cards" ||
+			store.state.dexViewMode === "compact"
+		)
+			return store.state.dexViewMode;
+		return window.matchMedia("(max-width: 520px)").matches
+			? "compact"
+			: "cards";
 	}
 
-	function rebuildBulkMenu() {
-		if (!bulkMenu || !bulkStatusSelect) return;
-		bulkMenu.innerHTML = "";
-		Array.from(bulkStatusSelect.options).forEach((option) => {
-			const item = document.createElement("button");
-			item.type = "button";
-			item.className = "dex-bulk-menu-item";
-			item.role = "menuitemradio";
-			item.setAttribute(
-				"aria-checked",
-				option.value === bulkStatusSelect.value ? "true" : "false",
+	function syncDexToolbar(gameKey) {
+		const viewMode = resolveDexViewMode();
+		modal.dataset.dexViewMode = viewMode;
+		if (dexViewToggle) {
+			const isCompact = viewMode === "compact";
+			dexViewToggle.setAttribute("aria-pressed", String(isCompact));
+			dexViewToggle.textContent = isCompact
+				? "Card view"
+				: "Compact view";
+		}
+
+		const isReverseSyncEnabled = isDexToTaskSyncEnabled(
+			store.state,
+			gameKey,
+		);
+		if (dexTaskSyncToggle) dexTaskSyncToggle.checked = isReverseSyncEnabled;
+		if (taskDexSyncToggle) {
+			taskDexSyncToggle.checked = isTaskToDexSyncEnabled(
+				store.state,
+				gameKey,
 			);
-			item.dataset.value = option.value;
-			item.textContent = option.textContent || option.value;
-			item.addEventListener("click", () => {
-				bulkStatusSelect.value = option.value;
-				rebuildBulkMenu();
-				closeBulkMenu();
-			});
-			bulkMenu.appendChild(item);
-		});
+		}
+		if (dexTaskSyncReconcile)
+			dexTaskSyncReconcile.disabled = !isReverseSyncEnabled;
 	}
 
-	if (bulkToggle && !bulkToggle.dataset.wired) {
-		bulkToggle.dataset.wired = "1";
-		bulkToggle.addEventListener("click", (event) => {
-			event.stopPropagation();
-			const isExpanded =
-				bulkToggle.getAttribute("aria-expanded") === "true";
-			if (isExpanded) closeBulkMenu();
-			else openBulkMenu();
-		});
+	function getDexFilterValues() {
+		return Object.fromEntries(
+			Object.entries(dexFilterControls).map(([key, control]) => [
+				key,
+				control?.value || (key === "location" ? "" : "all"),
+			]),
+		);
+	}
+
+	function resetDexFilters() {
+		for (const [key, control] of Object.entries(dexFilterControls)) {
+			if (!control) continue;
+			control.value = key === "location" ? "" : "all";
+		}
+		updateDexFilterCount();
+	}
+
+	function updateDexFilterCount() {
+		if (!dexFilterCount) return;
+		const activeCount = Object.entries(getDexFilterValues()).filter(
+			([key, value]) =>
+				key === "location" ? String(value).trim() : value !== "all",
+		).length;
+		dexFilterCount.hidden = activeCount === 0;
+		dexFilterCount.textContent = activeCount ? String(activeCount) : "";
 	}
 
 	function _queueDexSync(gameKey, dexId, status) {
@@ -169,51 +211,26 @@ export function wireDexModal(store, els) {
 
 		const dex = _getDexList(gameKey);
 		populateBulkStatusSelect({ bulkStatusSelect, gameKey, game });
-		rebuildBulkMenu();
 		const rawQ = (dexSearch.value || "").trim();
 		const options = game
 			? game.flags
 			: ["shiny", "caught", "seen", "unknown"];
 		const statusMap = store.dexStatus.get(gameKey) || {};
 
-		dexHelpDropdown = updateDexHelpDropdown({
-			dexSearch,
-			dexHelpDropdown,
-			rawQ,
-		});
-
-		const parsedSearch = parseDexSearch(rawQ);
-		if (
-			parsedSearch.isCommandTyping &&
-			!parsedSearch.cmdMode &&
-			!parsedSearch.q.includes(" ")
-		) {
-			dexHelpDropdown = updateDexHelpDropdown({
-				dexSearch,
-				dexHelpDropdown,
-				rawQ,
-			});
-			return;
-		}
-
 		const monInfoForGame =
 			(window.DATA.monInfo && window.DATA.monInfo[gameKey]) || null;
-		const filtered = filterDexEntries({
+		const filtered = filterDexEntriesByCriteria({
 			dex,
-			parsed: parsedSearch,
-			rawQ,
+			query: rawQ,
+			filters: getDexFilterValues(),
 			store,
 			gameKey,
+			game,
 			monInfoForGame,
 			effectiveSpeciesStatus: _effectiveSpeciesStatus,
+			isCompletedForGame,
 		});
-		if (parsedSearch.isCommandTyping && !parsedSearch.cmdMode) {
-			if (!parsedSearch.q || parsedSearch.q === "/help") {
-				// show all
-			} else {
-				// incomplete commands with spaces keep full list
-			}
-		}
+		updateDexFilterCount();
 
 		renderDexCards({
 			store,
@@ -232,6 +249,7 @@ export function wireDexModal(store, els) {
 			queueDexSync: _queueDexSync,
 			applyDexLinksFromDexEntries,
 			applyDexLinksFromForm,
+			getNatIndexForGame: resolveNatIndexForGame,
 			renderDexGrid,
 			save,
 		});
@@ -295,36 +313,19 @@ export function wireDexModal(store, els) {
 		if (scrollEl) scrollEl.scrollTop = 0;
 		dexGrid.scrollTop = 0;
 		dexSearch.value = "";
-		closeBulkMenu();
-		if (dexHelpDropdown) {
-			dexHelpDropdown.style.display = "none";
-		}
-		// Ensure mon-info is loaded so Dex thumbs can be sourced from it (and animated if enabled).
-		try {
-			const _baseKey = baseOf(resolvedKey || "");
-			ensureMonInfoLoaded?.(_baseKey, store.state.monInfoForm)?.then?.(
-				() => {
-					try {
-						if (
-							modal &&
-							modal.classList.contains("open") &&
-							store.state.dexModalFor === resolvedKey
-						) {
-							renderDexGrid();
-						}
-					} catch {}
-				},
-			);
-		} catch {}
-
+		resetDexFilters();
+		if (dexFilterSettings) dexFilterSettings.open = false;
+		if (dexSyncSettings) dexSyncSettings.open = false;
+		syncDexToolbar(resolvedKey);
 		renderDexGrid();
 		modal.__returnFocusEl = document.activeElement;
 		showModalElement(modal);
 		resetScrollWithin(modal);
 		emitPpgcUiSync({ state: store.state, loading: false });
 	}
-	function closeModal() {
+	function closeModalInternal({ restoreFocus = true, render = true } = {}) {
 		if (_closing) return;
+		if (!modal || !modal.classList.contains("open")) return;
 		_closing = true;
 
 		// Hide the modal first (keep DOM stable while we work)
@@ -339,9 +340,13 @@ export function wireDexModal(store, els) {
 			}
 
 			// Restore focus to the opener (or fall back)
-			if (returnEl && typeof returnEl.focus === "function") {
+			if (
+				restoreFocus &&
+				returnEl &&
+				typeof returnEl.focus === "function"
+			) {
 				returnEl.focus({ preventScroll: true });
-			} else {
+			} else if (restoreFocus) {
 				// fallback focus target (pick something stable in your UI)
 				document
 					.querySelector("#app, #content, body")
@@ -351,16 +356,13 @@ export function wireDexModal(store, els) {
 
 		// Now hide the modal
 		hideModalElement(modal);
+		disposeDexCards(dexGrid, { clear: true });
+		if (dexSyncSettings) dexSyncSettings.open = false;
 		const scrollEl = getDexScrollContainer();
 		if (scrollEl) scrollEl.scrollTop = 0;
 		dexGrid.scrollTop = 0;
 		dexSearch.value = "";
-		closeBulkMenu();
-
-		// Hide /help dropdown if it's showing
-		if (dexHelpDropdown) {
-			dexHelpDropdown.style.display = "none";
-		}
+		if (dexFilterSettings) dexFilterSettings.open = false;
 
 		resetBulkStatusSelect(bulkStatusSelect);
 
@@ -413,10 +415,12 @@ export function wireDexModal(store, els) {
 		// Unmute and render exactly once on next frame
 		window.PPGC._suppressRenders = false;
 		requestAnimationFrame(() => {
-			try {
-				window.PPGC?.renderAll?.();
-			} catch (e) {
-				console.error(e);
+			if (render) {
+				try {
+					window.PPGC?.renderAll?.();
+				} catch (e) {
+					console.error(e);
+				}
 			}
 			_closing = false;
 		});
@@ -424,38 +428,143 @@ export function wireDexModal(store, els) {
 		window.PPGC.enableTaskTooltips();
 	}
 
-	const api = { openDexModal: openDexModal, closeModal, renderDexGrid };
+	function closeModal() {
+		closeModalInternal();
+	}
+
+	function closeForNavigation() {
+		closeModalInternal({ restoreFocus: false, render: false });
+	}
+
+	const api = {
+		openDexModal: openDexModal,
+		closeModal,
+		closeForNavigation,
+		renderDexGrid,
+	};
 	modal.addEventListener("click", (e) => {
-		if (!bulkMenu?.hidden && !e.target.closest("#dexBulkSplit")) {
-			closeBulkMenu();
-		}
 		if (e.target === modal) closeModal();
 	});
 	modalClose.addEventListener("click", closeModal);
 	document.addEventListener("keydown", (e) => {
-		if (e.key === "Escape" && !bulkMenu?.hidden) {
-			closeBulkMenu();
+		if (e.key === "Escape" && dexFilterSettings?.open) {
+			dexFilterSettings.open = false;
+			return;
+		}
+		if (e.key === "Escape" && dexSyncSettings?.open) {
+			dexSyncSettings.open = false;
 			return;
 		}
 		if (e.key === "Escape") closeModal();
 	});
 	let dexSearchRAF = null;
-	dexSearch.addEventListener("input", () => {
+	const scheduleDexRender = () => {
 		if (dexSearchRAF) cancelAnimationFrame(dexSearchRAF);
 		dexSearchRAF = requestAnimationFrame(() => {
 			renderDexGrid();
 		});
+	};
+	dexSearch.addEventListener("input", scheduleDexRender);
+	for (const [key, control] of Object.entries(dexFilterControls)) {
+		if (!control) continue;
+		const eventName = key === "location" ? "input" : "change";
+		control.addEventListener(eventName, () => {
+			updateDexFilterCount();
+			scheduleDexRender();
+		});
+	}
+	dexFilterSettings?.addEventListener("toggle", () => {
+		if (dexFilterSettings.open && dexSyncSettings) {
+			dexSyncSettings.open = false;
+		}
 	});
-	dexSelectAll.addEventListener("click", () => {
+	dexSyncSettings?.addEventListener("toggle", () => {
+		if (dexSyncSettings.open && dexFilterSettings) {
+			dexFilterSettings.open = false;
+		}
+	});
+	dexFilterClear?.addEventListener("click", () => {
+		resetDexFilters();
+		renderDexGrid();
+		dexFilterControls.status?.focus();
+	});
+	dexViewToggle?.addEventListener("click", () => {
+		store.state.dexViewMode =
+			resolveDexViewMode() === "compact" ? "cards" : "compact";
+		save();
+		syncDexToolbar(store.state.dexModalFor);
+	});
+	taskDexSyncToggle?.addEventListener("change", () => {
+		const gameKey = store.state.dexModalFor;
+		if (!gameKey) return;
+		setTaskToDexSyncEnabled(
+			store.state,
+			gameKey,
+			taskDexSyncToggle.checked,
+		);
+		save();
+		syncDexToolbar(gameKey);
+		announceDexStatus(
+			taskDexSyncToggle.checked
+				? "Checklist to Dex sync enabled for this game."
+				: "Checklist to Dex sync disabled for this game.",
+		);
+	});
+	dexTaskSyncToggle?.addEventListener("change", () => {
+		const gameKey = store.state.dexModalFor;
+		if (!gameKey) return;
+		setDexToTaskSyncEnabled(
+			store.state,
+			gameKey,
+			dexTaskSyncToggle.checked,
+		);
+		save();
+		syncDexToolbar(gameKey);
+		announceDexStatus(
+			dexTaskSyncToggle.checked
+				? "Dex to checklist sync enabled for this game."
+				: "Dex to checklist sync disabled for this game.",
+		);
+	});
+	dexTaskSyncReconcile?.addEventListener("click", () => {
+		const gameKey = store.state.dexModalFor;
+		if (!gameKey || !isDexToTaskSyncEnabled(store.state, gameKey)) return;
+		const confirmed = window.confirm(
+			"Complete linked checklist tasks for every currently Caught entry in this game's connected Pokédexes? Existing task progress will not be removed.",
+		);
+		if (!confirmed) return;
+
+		const baseKey = baseOf(gameKey);
+		const variantKeys = window.DATA?.dexVariants?.[baseKey] || [gameKey];
+		let caughtCount = 0;
+		for (const variantKey of variantKeys) {
+			const variantGame = (
+				window.DATA.games?.[store.state.genKey] || []
+			).find((entry) => entry.key === baseOf(variantKey));
+			const statusMap = store.dexStatus.get(variantKey) || {};
+			const changedMap = {};
+			for (const [entryId, status] of Object.entries(statusMap)) {
+				if (!isCompletedForGame(variantGame, status)) continue;
+				changedMap[entryId] = status;
+				caughtCount += 1;
+			}
+			window.PPGC?.applyDexSyncsFromDexEntries?.(variantKey, changedMap, {
+				forceOptIn: true,
+			});
+		}
+		save();
+		window.PPGC?.renderAll?.();
+		announceDexStatus(
+			`Applied ${caughtCount} Caught Dex entries to linked checklist tasks.`,
+		);
+	});
+	bulkStatusSelect?.addEventListener("change", () => {
 		const gameKey = store.state.dexModalFor;
 		if (!gameKey) return;
 
-		// Take the bulk status from the dropdown (default to "caught")
-		let chosen = "caught";
-		if (bulkStatusSelect && bulkStatusSelect.tagName === "SELECT") {
-			const raw = bulkStatusSelect.value;
-			if (raw) chosen = normalizeFlag(raw);
-		}
+		const rawChosen = bulkStatusSelect.value;
+		if (!rawChosen) return;
+		const chosen = normalizeFlag(rawChosen);
 
 		const dex = _getDexList(gameKey);
 		const curr = store.dexStatus.get(gameKey) || {};
@@ -562,7 +671,11 @@ export function wireDexModal(store, els) {
 
 		// NOW do a single save + re-render once
 		save();
+		bulkStatusSelect.value = "";
 		renderDexGrid();
+		announceDexStatus(
+			`Set all eligible entries to ${chosen.replace(/_/g, " ")}.`,
+		);
 	});
 
 	return api;

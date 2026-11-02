@@ -6,6 +6,7 @@
 
 import { emitPpgcUiSync } from "../react-bridge/storeBridge.js";
 import { debugLog } from "../utils/debug.js";
+import { _dexIdNumber } from "../../data/helpers/dex-ids.js";
 import { baseOf } from "./dex-config.js";
 import { updateDexThumb } from "./dex-grid.js";
 import { getDexScrollContainer } from "./helpers.js";
@@ -19,9 +20,7 @@ export function setupDexFormsModal(store, deps) {
 		formsModalClose,
 		formsWheel,
 		getGameColor,
-		computeChipScale,
 		prepFormsModal,
-		createWheelResizeHandler,
 		normalizeFlag,
 		clampStatusForForm,
 		isOptionAllowedForForm,
@@ -146,9 +145,13 @@ export function setupDexFormsModal(store, deps) {
 
 		const forms = mon.forms || [];
 		const N = forms.length;
-		const isMobileViewport =
-			window.matchMedia?.("(max-width: 900px)")?.matches;
-		const useRadial = !isMobileViewport && N <= 7; // phones use grid to avoid radial overflow
+		const dexNumber = String(
+			_dexIdNumber(mon.id, mon.localId) ?? "",
+		).padStart(3, "0");
+		formsModal.classList.add("dex-forms-modal");
+		formsWheel.classList.add("is-grid", "dex-forms-grid");
+		const title = formsModal.querySelector("#formsModalTitle");
+		if (title) title.textContent = `${mon.name || "Pokémon"} Forms`;
 
 		// Body scroll behavior (same as before)
 		const body = dialog.querySelector(".modal-bd");
@@ -166,33 +169,39 @@ export function setupDexFormsModal(store, deps) {
 			? game.flags || ["shiny", "caught", "seen", "unknown"]
 			: ["shiny", "caught", "seen", "unknown"];
 
-		// Base scaling for chips (works for both radial + grid)
-		const _scale = computeChipScale("dex", N, dialog);
-		formsWheel.style.setProperty("--form-img", `${_scale.img}px`);
-		formsWheel.style.setProperty("--chip-font", `${_scale.font}px`);
-		formsWheel.style.setProperty("--chip-pad", _scale.pad);
-
 		const { node } = getDexFormsNode(gameKey, mon.id);
 
 		// Clear any previous chips before rebuilding
 		formsWheel.innerHTML = "";
 
-		// Build chips (same logic as before)
+		// Dex forms intentionally use the same card hierarchy as the main Dex.
+		// Other collectors retain the shared radial/grid presentation.
 		const chips = forms.map((form) => {
 			const name = typeof form === "string" ? form : (form?.name ?? "");
 
 			const chip = document.createElement("div");
-			chip.className = "form-chip";
+			chip.className = "form-chip dex-form-card";
 			chip.title = name;
 			chip.setAttribute("role", "group");
+			chip.setAttribute(
+				"aria-label",
+				`${name || "Pokémon form"}, Dex number ${dexNumber}`,
+			);
 
 			const row = document.createElement("div");
 			row.className = "chip-row";
 
+			const code = document.createElement("span");
+			code.className = "dex-form-code";
+			code.textContent = `#${dexNumber}`;
+			row.appendChild(code);
+			const thumb = document.createElement("div");
+			thumb.className = "dex-form-thumb";
+			row.appendChild(thumb);
+
 			const label = document.createElement("span");
-			label.className = "chip-text";
+			label.className = "chip-text dex-form-name";
 			label.textContent = name || "?";
-			row.appendChild(label);
 
 			function updateChipState() {
 				const val = sel.value;
@@ -205,6 +214,10 @@ export function setupDexFormsModal(store, deps) {
 
 			const sel = document.createElement("select");
 			sel.className = "flag-select";
+			sel.setAttribute(
+				"aria-label",
+				`Status for ${name || "Pokémon form"}`,
+			);
 			const rawCur = node.forms?.[name] || "unknown";
 			const curVal = clampStatusForForm(mon, form, rawCur);
 			const fObj = typeof form === "object" ? form : null;
@@ -235,8 +248,9 @@ export function setupDexFormsModal(store, deps) {
 				im.src = startSrc;
 				im.alt = name;
 				im.loading = "lazy";
-				row.appendChild(im);
+				thumb.appendChild(im);
 			}
+			row.appendChild(label);
 
 			const badges = document.createElement("div");
 			badges.className = "badges";
@@ -401,54 +415,25 @@ export function setupDexFormsModal(store, deps) {
 			return chip;
 		});
 
-		// ----- Layout mode: radial vs 4-col grid -----
-		// Clean up any previous resize handler (if we had a radial one before)
+		// Dex form cards always use an intrinsic grid. This avoids radial card
+		// collisions and keeps the same scan pattern at every form count.
 		if (formsModal._dexOnResize) {
 			window.removeEventListener("resize", formsModal._dexOnResize);
 			formsModal._dexOnResize = null;
 		}
-
-		if (useRadial) {
-			// Reset any grid overrides from a previous open
-			formsWheel.style.width = "";
-			formsWheel.style.height = "";
-			formsWheel.style.display = "";
-			formsWheel.style.gridTemplateColumns = "";
-			formsWheel.style.gap = "";
-			formsWheel.style.padding = "";
-
-			const onResize = createWheelResizeHandler(
-				"dex",
-				dialog,
-				formsWheel,
-				chips,
-				{
-					preferWidth: false,
-					sizeCap: 1000,
-					flattenSyForRingsGte: 3,
-				},
-			);
-			formsModal._dexOnResize = onResize;
-			window.addEventListener("resize", onResize, { passive: true });
-		} else {
-			// 8+ forms → grid layout with 4 columns
-			formsWheel.style.width = "100%";
-			formsWheel.style.height = "auto";
-			formsWheel.style.display = "grid";
-			formsWheel.style.maxWidth = "100%";
-			formsWheel.style.gridTemplateColumns = isMobileViewport
-				? "repeat(2, minmax(0, 1fr))"
-				: "repeat(4, minmax(0, 1fr))";
-			formsWheel.style.gap = "8px";
-			formsWheel.style.padding = "4px 2px 10px";
-
-			chips.forEach((chip) => {
-				chip.style.position = "relative";
-				chip.style.transform = "none";
-				chip.style.width = "100%";
-				chip.style.height = "auto";
-			});
-		}
+		formsWheel.style.width = "100%";
+		formsWheel.style.height = "auto";
+		formsWheel.style.display = "grid";
+		formsWheel.style.maxWidth = "100%";
+		formsWheel.style.gridTemplateColumns = "";
+		formsWheel.style.gap = "";
+		formsWheel.style.padding = "";
+		chips.forEach((chip) => {
+			chip.style.position = "relative";
+			chip.style.transform = "none";
+			chip.style.width = "100%";
+			chip.style.height = "auto";
+		});
 
 		showModalElement(formsModal);
 		formsModal.removeAttribute("inert");
@@ -477,6 +462,10 @@ export function setupDexFormsModal(store, deps) {
 
 		// Drop wheel DOM so chip buttons + decoded images can GC
 		if (formsWheel) formsWheel.innerHTML = "";
+		formsWheel?.classList.remove("is-grid", "dex-forms-grid");
+		formsModal?.classList.remove("dex-forms-modal");
+		const title = formsModal?.querySelector("#formsModalTitle");
+		if (title) title.textContent = "Select Forms";
 
 		hideModalElement(formsModal);
 		formsModal.setAttribute("inert", "");

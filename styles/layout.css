@@ -644,6 +644,44 @@
 	}
 }
 
+@media (max-width: 360px) {
+	.card-hd.section-hd {
+		grid-template-columns: minmax(0, 1fr) auto;
+		grid-template-areas:
+			"title percent"
+			"actions actions";
+	}
+
+	.card-hd.section-hd h3 {
+		grid-area: title;
+	}
+
+	.card-hd.section-hd .pct {
+		grid-area: percent;
+	}
+
+	.card-hd.section-hd .react-section-actions {
+		grid-area: actions;
+		justify-self: end;
+	}
+
+	.card-hd.section-hd.game-summary-hd {
+		grid-template-areas:
+			"title percent"
+			"filters filters";
+	}
+
+	.card-hd.section-hd.game-summary-hd h3 {
+		white-space: normal;
+		line-height: 1.25;
+	}
+
+	.card-hd.section-hd.game-summary-hd .game-summary-filter-row {
+		grid-area: filters;
+		justify-self: start;
+	}
+}
+
 @media (max-width: 430px) {
 	.app-header {
 		gap: 6px;

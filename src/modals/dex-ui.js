@@ -2,6 +2,95 @@ import { normalizeFlag } from "./helpers.js";
 import { baseOf, labelForDexKey } from "./dex-config.js";
 import { getDexList as _getDexList } from "./dex-store.js";
 
+const DEX_FILTER_OPTIONS = {
+	status: [
+		["all", "Any status"],
+		["unknown", "Unknown"],
+		["seen", "Seen"],
+		["complete", "Caught or better"],
+		["caught", "Caught only"],
+		["shiny", "Shiny"],
+		["alpha", "Alpha"],
+		["shiny_alpha", "Shiny Alpha"],
+	],
+	form: [
+		["all", "Any form"],
+		["gender", "Gender"],
+		["mega", "Mega"],
+		["regional", "Any regional"],
+		["alolan", "Alolan"],
+		["galarian", "Galarian"],
+		["hisuian", "Hisuian"],
+		["paldean", "Paldean"],
+		["other", "Other"],
+	],
+	species: [
+		["all", "Any species"],
+		["starter", "Starter"],
+		["fossil", "Fossil"],
+		["pseudo", "Pseudo-legendary"],
+		["legendary", "Legendary or Mythical"],
+		["mythical", "Mythical"],
+		["mega", "Mega"],
+		["zcrystal", "Z-Crystal"],
+		["ultrabeast", "Ultra Beast"],
+		["paradox", "Paradox"],
+	],
+	type: [
+		["all", "Any type"],
+		...[
+			"Normal",
+			"Fire",
+			"Water",
+			"Electric",
+			"Grass",
+			"Ice",
+			"Fighting",
+			"Poison",
+			"Ground",
+			"Flying",
+			"Psychic",
+			"Bug",
+			"Rock",
+			"Ghost",
+			"Dragon",
+			"Dark",
+			"Steel",
+			"Fairy",
+		].map((label) => [label.toLowerCase(), label]),
+	],
+	evolution: [
+		["all", "Any method"],
+		["level", "Level"],
+		["stone", "Stone"],
+		["item", "Item"],
+		["trade", "Trade"],
+		["happiness", "Happiness"],
+		["other", "Other"],
+	],
+	stage: [
+		["all", "Any stage"],
+		["1", "Basic / Stage 1"],
+		["2", "Stage 2"],
+		["3", "Stage 3"],
+	],
+};
+
+/** Populates filter selectors only when the lazy Dex controller is loaded. */
+export function populateDexFilterControls(controls) {
+	for (const [key, options] of Object.entries(DEX_FILTER_OPTIONS)) {
+		const select = controls?.[key];
+		if (!select || select.tagName !== "SELECT") continue;
+		select.innerHTML = "";
+		for (const [value, label] of options) {
+			const option = document.createElement("option");
+			option.value = value;
+			option.textContent = label;
+			select.appendChild(option);
+		}
+	}
+}
+
 export function ensureDexHelpDropdown(dexSearch, dexHelpDropdown) {
 	if (!dexSearch || dexHelpDropdown) return dexHelpDropdown;
 	const dropdown = document.createElement("div");
@@ -90,6 +179,10 @@ export function populateBulkStatusSelect({ bulkStatusSelect, gameKey, game }) {
 		return;
 	bulkStatusSelect.innerHTML = "";
 	bulkStatusSelect.dataset.forGameKey = String(gameKey || "");
+	const prompt = document.createElement("option");
+	prompt.value = "";
+	prompt.textContent = "Set all…";
+	bulkStatusSelect.appendChild(prompt);
 	const canonicalOrder = [
 		"shiny_alpha",
 		"alpha",
@@ -115,9 +208,7 @@ export function populateBulkStatusSelect({ bulkStatusSelect, gameKey, game }) {
 			.replace(/\b\w/g, (s) => s.toUpperCase());
 		bulkStatusSelect.appendChild(opt);
 	});
-	bulkStatusSelect.value = finalFlags.includes("caught")
-		? "caught"
-		: finalFlags[0] || "";
+	bulkStatusSelect.value = "";
 }
 
 export function refreshScopeControls({
@@ -141,6 +232,7 @@ export function refreshScopeControls({
 		nextSelect = document.createElement("select");
 		nextSelect.className = "dex-scope-select";
 		nextSelect.title = "Choose Dex";
+		nextSelect.setAttribute("aria-label", "Choose Pokédex");
 		scopeMount.appendChild(nextSelect);
 		nextSelect.addEventListener("change", () =>
 			onChange?.(nextSelect.value),
@@ -159,12 +251,5 @@ export function refreshScopeControls({
 
 export function resetBulkStatusSelect(bulkStatusSelect) {
 	if (!bulkStatusSelect || bulkStatusSelect.tagName !== "SELECT") return;
-	const normalizedOptions = Array.from(bulkStatusSelect.options).map((opt) =>
-		normalizeFlag(opt.value || opt.textContent || ""),
-	);
-	if (normalizedOptions.includes("unknown")) {
-		bulkStatusSelect.value = "unknown";
-	} else if (bulkStatusSelect.options.length > 0) {
-		bulkStatusSelect.selectedIndex = bulkStatusSelect.options.length - 1;
-	}
+	bulkStatusSelect.value = "";
 }

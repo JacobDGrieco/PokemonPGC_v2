@@ -97,6 +97,8 @@ export function computeSectionPct(
 export function buildGenOverview(currentStore = store) {
 	const state = currentStore.state || {};
 	const startedMap = state.startedGames || {};
+	const favoriteMap = currentStore.favoriteGames || {};
+	const recentKeys = new Set(state.recentGameKeys || []);
 	const games = allGamesList();
 
 	const pctCache =
@@ -152,6 +154,8 @@ export function buildGenOverview(currentStore = store) {
 			basePct: Math.min(100, pct),
 			extraPct: pct > 100 ? Math.min(pct - 100, 100) : 0,
 			isStarted: !!startedMap[game.key],
+			isFavorite: !!favoriteMap[game.key],
+			isRecent: recentKeys.has(game.key),
 		};
 	});
 
@@ -196,19 +200,40 @@ export function buildGenOverview(currentStore = store) {
 		if (allBaseComplete) effectiveExtra = aggExtra;
 	}
 
+	const allowedScopes = new Set(["all", "started", "favorites", "recent"]);
+	const scope = allowedScopes.has(state.gameSummaryScope)
+		? state.gameSummaryScope
+		: "all";
+	const visibleGameStats = gameStats.filter((entry) => {
+		if (scope === "started") return entry.isStarted;
+		if (scope === "favorites") return entry.isFavorite;
+		if (scope === "recent") return entry.isRecent;
+		return true;
+	});
+	if (scope === "recent") {
+		const recentOrder = new Map(
+			(state.recentGameKeys || []).map((gameKey, index) => [
+				gameKey,
+				index,
+			]),
+		);
+		visibleGameStats.sort(
+			(a, b) =>
+				(recentOrder.get(a.game.key) ?? Number.MAX_SAFE_INTEGER) -
+				(recentOrder.get(b.game.key) ?? Number.MAX_SAFE_INTEGER),
+		);
+	}
+
 	return {
 		aggregateMode,
-		scope: state.gameSummaryScope || "all",
+		scope,
 		totalKnownGames,
 		startedCount,
 		overallBase: Math.max(0, Math.min(100, aggBase)),
 		overallExtra: Math.max(0, Math.min(100, effectiveExtra)),
 		overallPct: Math.max(0, Math.min(200, aggBase + effectiveExtra)),
 		gameStats,
-		visibleGameStats:
-			(state.gameSummaryScope || "all") === "started"
-				? gameStats.filter((entry) => entry.isStarted)
-				: gameStats,
+		visibleGameStats,
 	};
 }
 
