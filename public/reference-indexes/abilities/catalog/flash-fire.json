@@ -1,0 +1,2830 @@
+{
+	"schemaVersion": 1,
+	"id": 18,
+	"slug": "flash-fire",
+	"name": "Flash Fire",
+	"names": {
+		"de": "Feuerfänger",
+		"en": "Flash Fire",
+		"es": "Absorbe Fuego",
+		"es-419": "Absorbefuego",
+		"fr": "Torche",
+		"it": "Fuocardore",
+		"ja": "もらいび",
+		"ja-hrkt": "もらいび",
+		"ko": "타오르는불꽃",
+		"zh-hans": "引火",
+		"zh-hant": "引火"
+	},
+	"generation": 3,
+	"isMainSeries": true,
+	"effectEntries": [
+		{
+			"language": "de",
+			"effect": "Ein Pokémon mit dieser Fähigkeit ist immun gegen Feuer Attacken. Sobald es von einer Feuer Attacke getroffen wurde, erhöht sich der Schaden der eigenen Feuer Attacken um 50% bis es den Kampf verlässt. Die Fähigkeit hat keinen Effekt, wenn das Pokémon eingefroren ist. Der Bonus bleibt erhalten wenn das Pokémon eingefroren ist und wieder auftaut oder wenn es die Fähigkeit wechselt bzw. diese deaktiviert wird. Feuer Attacken ignorieren den Delegator. Der Effekt wirkt auch bei Feuer Attacken die keinen Schaden verursachen, wie z.B. Irrlicht.",
+			"shortEffect": "Schützt vor Feuer Attacken. Sobald eine Feuer Attacke blockiert wurde, erhöht sich der Schaden der eigenen Feuer Attacken um 50%."
+		},
+		{
+			"language": "en",
+			"effect": "This Pokémon is immune to Fire-type moves. Once this Pokémon has been hit by a Fire move, its own Fire moves will inflict 1.5× as much damage until it leaves battle. This ability has no effect while the Pokémon is frozen. The Fire damage bonus is retained even if the Pokémon is frozen and thawed or the ability is lost or disabled. Fire moves will ignore this Pokémon's Substitute. This ability takes effect even on non-damaging moves, i.e. Will-O-Wisp.",
+			"shortEffect": "Protects against Fire moves. Once one has been blocked, the Pokémon's own Fire moves inflict 1.5× damage until it leaves battle."
+		},
+		{
+			"language": "fr",
+			"effect": "Ce Pokémon est immunisé aux capacités de type Feu. Une fois que ce Pokémon a été touché par une capacité Feu, ses propres capacités Feu infligent 50% de dommages supplémentaires jusqu'à ce qu'il quitte le combat. Ce talent n'a pas d'effet tant que le Pokémon est gelé. Le bonus de dommages Feu est retenu même si le Pokémon est gelé et degelé ou si le talent est perdu ou désactivé. Les capacités Feu ignorent le Clonage de ce Pokémon. Ce talent prend s'active aussi sur les capacités non-offensives, i.e. Feu Follet.",
+			"shortEffect": "Protège contre les capacités Feu. Une fois qu'une a été bloquée, les propres attaques Feu du Pokémon infligent 50% de dégats supplémentaires jusqu'à ce qu'il quitte le combat."
+		}
+	],
+	"effectChanges": [
+		{
+			"versionGroup": "diamond-pearl",
+			"effectEntries": [
+				{
+					"language": "de",
+					"effect": "Irrlicht triggert die Fähigkeit nicht bei Pokémon die immun gegen Verbrennung sind.",
+					"shortEffect": ""
+				},
+				{
+					"language": "en",
+					"effect": "This Pokemon is immune to Fire-type moves, as long as it is not frozen. The first time it is hit by a Fire-type move, damage from its Fire-type attacks will be multiplied by 1.5 as long as it remains active and has this Ability. If this Pokemon has a non-volatile status condition, is a Fire type, or has a substitute, Will-O-Wisp will not activate this Ability.",
+					"shortEffect": ""
+				},
+				{
+					"language": "fr",
+					"effect": "Feu Follet ne déclenche pas ce talent pour un Pokémon immunisé à la brûlure.",
+					"shortEffect": ""
+				}
+			]
+		}
+	],
+	"descriptions": [
+		{
+			"versionGroup": "black-2-white-2",
+			"language": "en",
+			"text": "It powers up Fire-type moves if it’s hit by one."
+		},
+		{
+			"versionGroup": "black-2-white-2",
+			"language": "fr",
+			"text": "Booste capacités Feu si touché par attaques Feu."
+		},
+		{
+			"versionGroup": "black-white",
+			"language": "en",
+			"text": "It powers up Fire-type moves if it’s hit by one."
+		},
+		{
+			"versionGroup": "black-white",
+			"language": "fr",
+			"text": "Booste capacités Feu si touché par attaques Feu."
+		},
+		{
+			"versionGroup": "diamond-pearl",
+			"language": "en",
+			"text": "Powers up Fire-type moves if hit by a fire move."
+		},
+		{
+			"versionGroup": "diamond-pearl",
+			"language": "fr",
+			"text": "Booste capacités Feu si touché par attaques Feu."
+		},
+		{
+			"versionGroup": "emerald",
+			"language": "en",
+			"text": "Powers up if hit by fire."
+		},
+		{
+			"versionGroup": "emerald",
+			"language": "fr",
+			"text": "Puissance monte si brûlé."
+		},
+		{
+			"versionGroup": "firered-leafgreen",
+			"language": "en",
+			"text": "Powers up if hit by fire."
+		},
+		{
+			"versionGroup": "firered-leafgreen",
+			"language": "fr",
+			"text": "Puissance monte si brûlé."
+		},
+		{
+			"versionGroup": "heartgold-soulsilver",
+			"language": "en",
+			"text": "It powers up Fire-type moves if it’s hit by one."
+		},
+		{
+			"versionGroup": "heartgold-soulsilver",
+			"language": "fr",
+			"text": "Booste capacités Feu si touché par attaques Feu."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "de",
+			"text": "Verstärkt Feuer-Attacken, wenn es von Feuer-Attacken getroffen wird."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "en",
+			"text": "Powers up the Pokémon’s Fire-type moves if it’s hit by one."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "es",
+			"text": "Si le alcanza algún movimiento de tipo Fuego, potencia sus propios movimientos de dicho tipo."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "es-419",
+			"text": "Si le alcanza algún movimiento de tipo Fuego, potencia sus propios movimientos de dicho tipo."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "fr",
+			"text": "Lorsque le Pokémon est touché par une capacité de type Feu, il absorbe la chaleur pour renforcer ses propres capacités Feu."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "it",
+			"text": "Se il Pokémon subisce una mossa di tipo Fuoco, ne sfrutta il calore per potenziare le proprie mosse dello stesso tipo."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "ja",
+			"text": "ほのおタイプの 技を 受けると 炎を もらい 自分が 出す ほのおタイプの 技が 強くなる。"
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "ja-hrkt",
+			"text": "ほのおタイプの わざを うけると ほのおを もらい じぶんが だす ほのおタイプの わざが つよくなる。"
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "ko",
+			"text": "불꽃타입의 기술을 받으면 불꽃을 받아서 자신이 사용하는 불꽃타입의 기술이 강해진다."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "zh-hans",
+			"text": "受到火属性的招式攻击时， 吸收火焰，自己使出的 火属性招式会变强。"
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "zh-hant",
+			"text": "受到火屬性的招式攻擊時， 吸收火焰，讓自己使出的 火屬性招式變強。"
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "de",
+			"text": "Verstärkt Feuer-Attacken, wenn von Feuer-Attacken getroffen."
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "en",
+			"text": "Powers up the Pokémon’s Fire-type moves if it’s hit by one."
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "es",
+			"text": "Potencia movimientos de tipo Fuego si ha sufrido antes alguno."
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "es-419",
+			"text": "Potencia movimientos de tipo Fuego si ha sufrido antes alguno."
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "fr",
+			"text": "Booste capacités Feu si touché par attaques Feu."
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "it",
+			"text": "Potenzia le proprie mosse Fuoco se se ne subisce una."
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "ja",
+			"text": "ほのおを 受けると ほのお技が 強くなる。"
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "ja-hrkt",
+			"text": "ほのおを うけると ほのおわざが つよくなる。"
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "ko",
+			"text": "불꽃을 받으면 불꽃 기술이 강해진다."
+		},
+		{
+			"versionGroup": "platinum",
+			"language": "en",
+			"text": "Powers up Fire-type moves if hit by a fire move."
+		},
+		{
+			"versionGroup": "platinum",
+			"language": "fr",
+			"text": "Booste capacités Feu si touché par attaques Feu."
+		},
+		{
+			"versionGroup": "ruby-sapphire",
+			"language": "en",
+			"text": "Powers up if hit by fire."
+		},
+		{
+			"versionGroup": "ruby-sapphire",
+			"language": "fr",
+			"text": "Puissance monte si brûlé."
+		},
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "en",
+			"text": "If hit by a Fire-type move, the Pokémon absorbs the flames and uses them to power up its own Fire-type moves."
+		},
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "fr",
+			"text": "Lorsque le Pokémon est touché par une capacité de type Feu, il absorbe la chaleur pour renforcer ses propres capacités Feu."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "de",
+			"text": "Verstärkt Feuer-Attacken, wenn es von Feuer-Attacken getroffen wird."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "en",
+			"text": "Powers up the Pokémon’s Fire-type moves if it’s hit by one."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "es",
+			"text": "Si le alcanza algún movimiento de tipo Fuego, potencia sus propios movimientos de dicho tipo."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "es-419",
+			"text": "Si le alcanza algún movimiento de tipo Fuego, potencia sus propios movimientos de dicho tipo."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "fr",
+			"text": "Lorsque le Pokémon est touché par une capacité de type Feu, il absorbe la chaleur pour renforcer ses propres capacités Feu."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "it",
+			"text": "Se il Pokémon subisce una mossa di tipo Fuoco, ne sfrutta il calore per potenziare le proprie mosse dello stesso tipo."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "ja",
+			"text": "ほのおタイプの 技を 受けると 炎を もらい 自分が 出す ほのおタイプの 技が 強くなる。"
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "ja-hrkt",
+			"text": "ほのおタイプの わざを うけると ほのおを もらい じぶんが だす ほのおタイプの わざが つよくなる。"
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "ko",
+			"text": "불꽃타입의 기술을 받으면 불꽃을 받아서 자신이 사용하는 불꽃타입의 기술이 강해진다."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "zh-hans",
+			"text": "受到火属性的招式攻击时， 吸收火焰，自己使出的 火属性招式会变强。"
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "zh-hant",
+			"text": "受到火屬性的招式攻擊時， 吸收火焰，讓自己使出的 火屬性招式變強。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "de",
+			"text": "Verstärkt Feuer-Attacken, wenn es von Feuer-Attacken getroffen wird."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "en",
+			"text": "Powers up the Pokémon’s Fire-type moves if it’s hit by one."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es",
+			"text": "Si le alcanza algún movimiento de tipo Fuego, potencia sus propios movimientos de dicho tipo."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es-419",
+			"text": "Si le alcanza algún movimiento de tipo Fuego, potencia sus propios movimientos de dicho tipo."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "fr",
+			"text": "Lorsque le Pokémon est touché par une capacité de type Feu, il absorbe la chaleur pour renforcer ses propres capacités Feu."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "it",
+			"text": "Se il Pokémon subisce una mossa di tipo Fuoco, ne sfrutta il calore per potenziare le proprie mosse dello stesso tipo."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja",
+			"text": "ほのおタイプの 技を 受けると 炎を もらい 自分が 出す ほのおタイプの 技が 強くなる。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja-hrkt",
+			"text": "ほのおタイプの わざを うけると ほのおを もらい じぶんが だす ほのおタイプの わざが つよくなる。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ko",
+			"text": "불꽃타입의 기술을 받으면 불꽃을 받아서 자신이 사용하는 불꽃타입의 기술이 강해진다."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hans",
+			"text": "受到火属性的招式攻击时， 吸收火焰，自己使出的 火属性招式会变强。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hant",
+			"text": "受到火屬性的招式攻擊時， 吸收火焰，讓自己使出的 火屬性招式變強。"
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "de",
+			"text": "Verstärkt Feuer-Attacken, wenn es von Feuer-Attacken getroffen wird."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "en",
+			"text": "Powers up the Pokémon’s Fire-type moves if it’s hit by one."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "es",
+			"text": "Si le alcanza algún movimiento de tipo Fuego, potencia sus propios movimientos de dicho tipo."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "es-419",
+			"text": "Si le alcanza algún movimiento de tipo Fuego, potencia sus propios movimientos de dicho tipo."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "fr",
+			"text": "Lorsque le Pokémon est touché par une capacité de type Feu, il absorbe la chaleur pour renforcer ses propres capacités Feu."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "it",
+			"text": "Se il Pokémon subisce una mossa di tipo Fuoco, ne sfrutta il calore per potenziare le proprie mosse dello stesso tipo."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "ja",
+			"text": "ほのおタイプの 技を 受けると 炎を もらい 自分が 出す ほのおタイプの 技が 強くなる。"
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "ja-hrkt",
+			"text": "ほのおタイプの わざを うけると ほのおを もらい じぶんが だす ほのおタイプの わざが つよくなる。"
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "ko",
+			"text": "불꽃타입의 기술을 받으면 불꽃을 받아서 자신이 사용하는 불꽃타입의 기술이 강해진다."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "zh-hans",
+			"text": "受到火属性的招式攻击时， 吸收火焰，自己使出的 火属性招式会变强。"
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "zh-hant",
+			"text": "受到火屬性的招式攻擊時， 吸收火焰，讓自己使出的 火屬性招式變強。"
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "de",
+			"text": "Verstärkt Feuer-Attacken, wenn von Feuer-Attacken getroffen."
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "en",
+			"text": "Powers up the Pokémon’s Fire- type moves if it’s hit by one."
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "es",
+			"text": "Potencia movimientos de tipo Fuego si ha sufrido antes alguno."
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "es-419",
+			"text": "Potencia movimientos de tipo Fuego si ha sufrido antes alguno."
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "fr",
+			"text": "Booste les capacités Feu si touché par attaque Feu."
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "it",
+			"text": "Potenzia le proprie mosse Fuoco se se ne subisce una."
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "ja",
+			"text": "ほのおを 受けると ほのお技が 強くなる。"
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "ja-hrkt",
+			"text": "ほのおを うけると ほのおわざが つよくなる。"
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "ko",
+			"text": "불꽃을 받으면 불꽃 기술이 강해진다."
+		},
+		{
+			"versionGroup": "xd",
+			"language": "fr",
+			"text": "Booste capacités Feu si touché par attaques Feu."
+		}
+	],
+	"pokemon": [
+		{
+			"nationalDexId": 37,
+			"speciesName": "Vulpix",
+			"formKey": "kantonian",
+			"formName": "Kantonian",
+			"games": [
+				{
+					"profileKey": "legends-arceus",
+					"gameLabel": "Legends: Arceus",
+					"versionGroup": "legends-arceus",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "lets-go-pikachu-lets-go-eevee",
+					"gameLabel": "Let's Go Pikachu / Eevee",
+					"versionGroup": "lets-go-pikachu-lets-go-eevee",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-crown-tundra",
+					"gameLabel": "The Crown Tundra",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-indigo-disk",
+					"gameLabel": "The Indigo Disk",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-isle-of-armor",
+					"gameLabel": "The Isle of Armor",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-teal-mask",
+					"gameLabel": "The Teal Mask",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 38,
+			"speciesName": "Ninetales",
+			"formKey": "kantonian",
+			"formName": "Kantonian",
+			"games": [
+				{
+					"profileKey": "legends-arceus",
+					"gameLabel": "Legends: Arceus",
+					"versionGroup": "legends-arceus",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "legends-za",
+					"gameLabel": "Legends: Z-A",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "lets-go-pikachu-lets-go-eevee",
+					"gameLabel": "Let's Go Pikachu / Eevee",
+					"versionGroup": "lets-go-pikachu-lets-go-eevee",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "mega-dimension",
+					"gameLabel": "Mega Dimension",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-crown-tundra",
+					"gameLabel": "The Crown Tundra",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-indigo-disk",
+					"gameLabel": "The Indigo Disk",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-isle-of-armor",
+					"gameLabel": "The Isle of Armor",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-teal-mask",
+					"gameLabel": "The Teal Mask",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 58,
+			"speciesName": "Growlithe",
+			"formKey": "hisuian",
+			"formName": "Hisuian",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-indigo-disk",
+					"gameLabel": "The Indigo Disk",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-teal-mask",
+					"gameLabel": "The Teal Mask",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 58,
+			"speciesName": "Growlithe",
+			"formKey": "kantonian",
+			"formName": "Kantonian",
+			"games": [
+				{
+					"profileKey": "legends-arceus",
+					"gameLabel": "Legends: Arceus",
+					"versionGroup": "legends-arceus",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-indigo-disk",
+					"gameLabel": "The Indigo Disk",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-teal-mask",
+					"gameLabel": "The Teal Mask",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 59,
+			"speciesName": "Arcanine",
+			"formKey": "hisuian",
+			"formName": "Hisuian",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-indigo-disk",
+					"gameLabel": "The Indigo Disk",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-teal-mask",
+					"gameLabel": "The Teal Mask",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 59,
+			"speciesName": "Arcanine",
+			"formKey": "kantonian",
+			"formName": "Kantonian",
+			"games": [
+				{
+					"profileKey": "legends-arceus",
+					"gameLabel": "Legends: Arceus",
+					"versionGroup": "legends-arceus",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-indigo-disk",
+					"gameLabel": "The Indigo Disk",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-teal-mask",
+					"gameLabel": "The Teal Mask",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 77,
+			"speciesName": "Ponyta",
+			"formKey": "kantonian",
+			"formName": "Kantonian",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-crown-tundra",
+					"gameLabel": "The Crown Tundra",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-indigo-disk",
+					"gameLabel": "The Indigo Disk",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-isle-of-armor",
+					"gameLabel": "The Isle of Armor",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-teal-mask",
+					"gameLabel": "The Teal Mask",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 78,
+			"speciesName": "Rapidash",
+			"formKey": "kantonian",
+			"formName": "Kantonian",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-crown-tundra",
+					"gameLabel": "The Crown Tundra",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-indigo-disk",
+					"gameLabel": "The Indigo Disk",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-isle-of-armor",
+					"gameLabel": "The Isle of Armor",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-teal-mask",
+					"gameLabel": "The Teal Mask",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 136,
+			"speciesName": "Flareon",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "emerald",
+					"gameLabel": "Emerald",
+					"versionGroup": "emerald",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "firered-leafgreen",
+					"gameLabel": "FireRed / LeafGreen",
+					"versionGroup": "firered-leafgreen",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "legends-arceus",
+					"gameLabel": "Legends: Arceus",
+					"versionGroup": "legends-arceus",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "legends-za",
+					"gameLabel": "Legends: Z-A",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "lets-go-pikachu-lets-go-eevee",
+					"gameLabel": "Let's Go Pikachu / Eevee",
+					"versionGroup": "lets-go-pikachu-lets-go-eevee",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "mega-dimension",
+					"gameLabel": "Mega Dimension",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ruby-sapphire",
+					"gameLabel": "Ruby / Sapphire",
+					"versionGroup": "ruby-sapphire",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-crown-tundra",
+					"gameLabel": "The Crown Tundra",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-indigo-disk",
+					"gameLabel": "The Indigo Disk",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-isle-of-armor",
+					"gameLabel": "The Isle of Armor",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-teal-mask",
+					"gameLabel": "The Teal Mask",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 155,
+			"speciesName": "Cyndaquil",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "diamond-pearl",
+					"gameLabel": "Diamond / Pearl",
+					"versionGroup": "diamond-pearl",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "emerald",
+					"gameLabel": "Emerald",
+					"versionGroup": "emerald",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "firered-leafgreen",
+					"gameLabel": "FireRed / LeafGreen",
+					"versionGroup": "firered-leafgreen",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "heartgold-soulsilver",
+					"gameLabel": "HeartGold / SoulSilver",
+					"versionGroup": "heartgold-soulsilver",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "legends-arceus",
+					"gameLabel": "Legends: Arceus",
+					"versionGroup": "legends-arceus",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "legends-za",
+					"gameLabel": "Legends: Z-A",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "lets-go-pikachu-lets-go-eevee",
+					"gameLabel": "Let's Go Pikachu / Eevee",
+					"versionGroup": "lets-go-pikachu-lets-go-eevee",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "mega-dimension",
+					"gameLabel": "Mega Dimension",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "platinum",
+					"gameLabel": "Platinum",
+					"versionGroup": "platinum",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "ruby-sapphire",
+					"gameLabel": "Ruby / Sapphire",
+					"versionGroup": "ruby-sapphire",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "the-crown-tundra",
+					"gameLabel": "The Crown Tundra",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "the-indigo-disk",
+					"gameLabel": "The Indigo Disk",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "the-isle-of-armor",
+					"gameLabel": "The Isle of Armor",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "the-teal-mask",
+					"gameLabel": "The Teal Mask",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [],
+					"isHidden": true
+				}
+			]
+		},
+		{
+			"nationalDexId": 156,
+			"speciesName": "Quilava",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "diamond-pearl",
+					"gameLabel": "Diamond / Pearl",
+					"versionGroup": "diamond-pearl",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "emerald",
+					"gameLabel": "Emerald",
+					"versionGroup": "emerald",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "firered-leafgreen",
+					"gameLabel": "FireRed / LeafGreen",
+					"versionGroup": "firered-leafgreen",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "heartgold-soulsilver",
+					"gameLabel": "HeartGold / SoulSilver",
+					"versionGroup": "heartgold-soulsilver",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "legends-arceus",
+					"gameLabel": "Legends: Arceus",
+					"versionGroup": "legends-arceus",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "legends-za",
+					"gameLabel": "Legends: Z-A",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "lets-go-pikachu-lets-go-eevee",
+					"gameLabel": "Let's Go Pikachu / Eevee",
+					"versionGroup": "lets-go-pikachu-lets-go-eevee",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "mega-dimension",
+					"gameLabel": "Mega Dimension",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "platinum",
+					"gameLabel": "Platinum",
+					"versionGroup": "platinum",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "ruby-sapphire",
+					"gameLabel": "Ruby / Sapphire",
+					"versionGroup": "ruby-sapphire",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "the-crown-tundra",
+					"gameLabel": "The Crown Tundra",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "the-indigo-disk",
+					"gameLabel": "The Indigo Disk",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "the-isle-of-armor",
+					"gameLabel": "The Isle of Armor",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "the-teal-mask",
+					"gameLabel": "The Teal Mask",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [],
+					"isHidden": true
+				}
+			]
+		},
+		{
+			"nationalDexId": 157,
+			"speciesName": "Typhlosion",
+			"formKey": "hisuian",
+			"formName": "Hisuian",
+			"games": [
+				{
+					"profileKey": "legends-arceus",
+					"gameLabel": "Legends: Arceus",
+					"versionGroup": "legends-arceus",
+					"methods": [],
+					"isHidden": true
+				}
+			]
+		},
+		{
+			"nationalDexId": 157,
+			"speciesName": "Typhlosion",
+			"formKey": "johtonian",
+			"formName": "Johtonian",
+			"games": [
+				{
+					"profileKey": "legends-arceus",
+					"gameLabel": "Legends: Arceus",
+					"versionGroup": "legends-arceus",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "the-indigo-disk",
+					"gameLabel": "The Indigo Disk",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "the-teal-mask",
+					"gameLabel": "The Teal Mask",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": true
+				}
+			]
+		},
+		{
+			"nationalDexId": 228,
+			"speciesName": "Houndour",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "emerald",
+					"gameLabel": "Emerald",
+					"versionGroup": "emerald",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "firered-leafgreen",
+					"gameLabel": "FireRed / LeafGreen",
+					"versionGroup": "firered-leafgreen",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "legends-arceus",
+					"gameLabel": "Legends: Arceus",
+					"versionGroup": "legends-arceus",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "legends-za",
+					"gameLabel": "Legends: Z-A",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "lets-go-pikachu-lets-go-eevee",
+					"gameLabel": "Let's Go Pikachu / Eevee",
+					"versionGroup": "lets-go-pikachu-lets-go-eevee",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "mega-dimension",
+					"gameLabel": "Mega Dimension",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ruby-sapphire",
+					"gameLabel": "Ruby / Sapphire",
+					"versionGroup": "ruby-sapphire",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-crown-tundra",
+					"gameLabel": "The Crown Tundra",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-indigo-disk",
+					"gameLabel": "The Indigo Disk",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-isle-of-armor",
+					"gameLabel": "The Isle of Armor",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-teal-mask",
+					"gameLabel": "The Teal Mask",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 229,
+			"speciesName": "Houndoom",
+			"formKey": "female",
+			"formName": "Female",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "legends-za",
+					"gameLabel": "Legends: Z-A",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "mega-dimension",
+					"gameLabel": "Mega Dimension",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-crown-tundra",
+					"gameLabel": "The Crown Tundra",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-indigo-disk",
+					"gameLabel": "The Indigo Disk",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-isle-of-armor",
+					"gameLabel": "The Isle of Armor",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-teal-mask",
+					"gameLabel": "The Teal Mask",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 229,
+			"speciesName": "Houndoom",
+			"formKey": "male",
+			"formName": "Male",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "legends-za",
+					"gameLabel": "Legends: Z-A",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "mega-dimension",
+					"gameLabel": "Mega Dimension",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-crown-tundra",
+					"gameLabel": "The Crown Tundra",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-indigo-disk",
+					"gameLabel": "The Indigo Disk",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-isle-of-armor",
+					"gameLabel": "The Isle of Armor",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-teal-mask",
+					"gameLabel": "The Teal Mask",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 244,
+			"speciesName": "Entei",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [],
+					"isHidden": true
+				}
+			]
+		},
+		{
+			"nationalDexId": 485,
+			"speciesName": "Heatran",
+			"formKey": "normal",
+			"formName": "Normal",
+			"games": [
+				{
+					"profileKey": "legends-za",
+					"gameLabel": "Legends: Z-A",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "mega-dimension",
+					"gameLabel": "Mega Dimension",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 607,
+			"speciesName": "Litwick",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "legends-arceus",
+					"gameLabel": "Legends: Arceus",
+					"versionGroup": "legends-arceus",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "legends-za",
+					"gameLabel": "Legends: Z-A",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "lets-go-pikachu-lets-go-eevee",
+					"gameLabel": "Let's Go Pikachu / Eevee",
+					"versionGroup": "lets-go-pikachu-lets-go-eevee",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "mega-dimension",
+					"gameLabel": "Mega Dimension",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-crown-tundra",
+					"gameLabel": "The Crown Tundra",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-indigo-disk",
+					"gameLabel": "The Indigo Disk",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-isle-of-armor",
+					"gameLabel": "The Isle of Armor",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-teal-mask",
+					"gameLabel": "The Teal Mask",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 608,
+			"speciesName": "Lampent",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "legends-arceus",
+					"gameLabel": "Legends: Arceus",
+					"versionGroup": "legends-arceus",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "legends-za",
+					"gameLabel": "Legends: Z-A",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "lets-go-pikachu-lets-go-eevee",
+					"gameLabel": "Let's Go Pikachu / Eevee",
+					"versionGroup": "lets-go-pikachu-lets-go-eevee",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "mega-dimension",
+					"gameLabel": "Mega Dimension",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-crown-tundra",
+					"gameLabel": "The Crown Tundra",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-indigo-disk",
+					"gameLabel": "The Indigo Disk",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-isle-of-armor",
+					"gameLabel": "The Isle of Armor",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-teal-mask",
+					"gameLabel": "The Teal Mask",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 609,
+			"speciesName": "Chandelure",
+			"formKey": "normal",
+			"formName": "Normal",
+			"games": [
+				{
+					"profileKey": "legends-za",
+					"gameLabel": "Legends: Z-A",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "mega-dimension",
+					"gameLabel": "Mega Dimension",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 631,
+			"speciesName": "Heatmor",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "legends-arceus",
+					"gameLabel": "Legends: Arceus",
+					"versionGroup": "legends-arceus",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "legends-za",
+					"gameLabel": "Legends: Z-A",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "lets-go-pikachu-lets-go-eevee",
+					"gameLabel": "Let's Go Pikachu / Eevee",
+					"versionGroup": "lets-go-pikachu-lets-go-eevee",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "mega-dimension",
+					"gameLabel": "Mega Dimension",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-crown-tundra",
+					"gameLabel": "The Crown Tundra",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-indigo-disk",
+					"gameLabel": "The Indigo Disk",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-isle-of-armor",
+					"gameLabel": "The Isle of Armor",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-teal-mask",
+					"gameLabel": "The Teal Mask",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 837,
+			"speciesName": "Rolycoly",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "legends-arceus",
+					"gameLabel": "Legends: Arceus",
+					"versionGroup": "legends-arceus",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "legends-za",
+					"gameLabel": "Legends: Z-A",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "mega-dimension",
+					"gameLabel": "Mega Dimension",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "the-crown-tundra",
+					"gameLabel": "The Crown Tundra",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "the-indigo-disk",
+					"gameLabel": "The Indigo Disk",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "the-isle-of-armor",
+					"gameLabel": "The Isle of Armor",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "the-teal-mask",
+					"gameLabel": "The Teal Mask",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": true
+				}
+			]
+		},
+		{
+			"nationalDexId": 838,
+			"speciesName": "Carkol",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "legends-arceus",
+					"gameLabel": "Legends: Arceus",
+					"versionGroup": "legends-arceus",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "legends-za",
+					"gameLabel": "Legends: Z-A",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "mega-dimension",
+					"gameLabel": "Mega Dimension",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "the-crown-tundra",
+					"gameLabel": "The Crown Tundra",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "the-indigo-disk",
+					"gameLabel": "The Indigo Disk",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "the-isle-of-armor",
+					"gameLabel": "The Isle of Armor",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "the-teal-mask",
+					"gameLabel": "The Teal Mask",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": true
+				}
+			]
+		},
+		{
+			"nationalDexId": 839,
+			"speciesName": "Coalossal",
+			"formKey": "gigantamax",
+			"formName": "Gigantamax",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "the-crown-tundra",
+					"gameLabel": "The Crown Tundra",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "the-isle-of-armor",
+					"gameLabel": "The Isle of Armor",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": true
+				}
+			]
+		},
+		{
+			"nationalDexId": 839,
+			"speciesName": "Coalossal",
+			"formKey": "normal",
+			"formName": "Normal",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "the-crown-tundra",
+					"gameLabel": "The Crown Tundra",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "the-isle-of-armor",
+					"gameLabel": "The Isle of Armor",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": true
+				}
+			]
+		},
+		{
+			"nationalDexId": 850,
+			"speciesName": "Sizzlipede",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "legends-arceus",
+					"gameLabel": "Legends: Arceus",
+					"versionGroup": "legends-arceus",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "legends-za",
+					"gameLabel": "Legends: Z-A",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "mega-dimension",
+					"gameLabel": "Mega Dimension",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-crown-tundra",
+					"gameLabel": "The Crown Tundra",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-indigo-disk",
+					"gameLabel": "The Indigo Disk",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-isle-of-armor",
+					"gameLabel": "The Isle of Armor",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-teal-mask",
+					"gameLabel": "The Teal Mask",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 851,
+			"speciesName": "Centiskorch",
+			"formKey": "gigantamax",
+			"formName": "Gigantamax",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-crown-tundra",
+					"gameLabel": "The Crown Tundra",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-isle-of-armor",
+					"gameLabel": "The Isle of Armor",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 851,
+			"speciesName": "Centiskorch",
+			"formKey": "normal",
+			"formName": "Normal",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-crown-tundra",
+					"gameLabel": "The Crown Tundra",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-isle-of-armor",
+					"gameLabel": "The Isle of Armor",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 935,
+			"speciesName": "Charcadet",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "legends-za",
+					"gameLabel": "Legends: Z-A",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "mega-dimension",
+					"gameLabel": "Mega Dimension",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-indigo-disk",
+					"gameLabel": "The Indigo Disk",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-teal-mask",
+					"gameLabel": "The Teal Mask",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 936,
+			"speciesName": "Armarouge",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "legends-za",
+					"gameLabel": "Legends: Z-A",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "mega-dimension",
+					"gameLabel": "Mega Dimension",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-indigo-disk",
+					"gameLabel": "The Indigo Disk",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-teal-mask",
+					"gameLabel": "The Teal Mask",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 937,
+			"speciesName": "Ceruledge",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "legends-za",
+					"gameLabel": "Legends: Z-A",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "mega-dimension",
+					"gameLabel": "Mega Dimension",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-indigo-disk",
+					"gameLabel": "The Indigo Disk",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-teal-mask",
+					"gameLabel": "The Teal Mask",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				}
+			]
+		}
+	],
+	"potentialPokemon": [
+		{
+			"name": "vulpix",
+			"isHidden": false,
+			"slot": 1
+		},
+		{
+			"name": "ninetales",
+			"isHidden": false,
+			"slot": 1
+		},
+		{
+			"name": "growlithe",
+			"isHidden": false,
+			"slot": 2
+		},
+		{
+			"name": "arcanine",
+			"isHidden": false,
+			"slot": 2
+		},
+		{
+			"name": "ponyta",
+			"isHidden": false,
+			"slot": 2
+		},
+		{
+			"name": "rapidash",
+			"isHidden": false,
+			"slot": 2
+		},
+		{
+			"name": "flareon",
+			"isHidden": false,
+			"slot": 1
+		},
+		{
+			"name": "cyndaquil",
+			"isHidden": true,
+			"slot": 3
+		},
+		{
+			"name": "quilava",
+			"isHidden": true,
+			"slot": 3
+		},
+		{
+			"name": "typhlosion",
+			"isHidden": true,
+			"slot": 3
+		},
+		{
+			"name": "houndour",
+			"isHidden": false,
+			"slot": 2
+		},
+		{
+			"name": "houndoom",
+			"isHidden": false,
+			"slot": 2
+		},
+		{
+			"name": "heatran",
+			"isHidden": false,
+			"slot": 1
+		},
+		{
+			"name": "litwick",
+			"isHidden": false,
+			"slot": 1
+		},
+		{
+			"name": "lampent",
+			"isHidden": false,
+			"slot": 1
+		},
+		{
+			"name": "chandelure",
+			"isHidden": false,
+			"slot": 1
+		},
+		{
+			"name": "heatmor",
+			"isHidden": false,
+			"slot": 2
+		},
+		{
+			"name": "rolycoly",
+			"isHidden": true,
+			"slot": 3
+		},
+		{
+			"name": "carkol",
+			"isHidden": true,
+			"slot": 3
+		},
+		{
+			"name": "coalossal",
+			"isHidden": true,
+			"slot": 3
+		},
+		{
+			"name": "sizzlipede",
+			"isHidden": false,
+			"slot": 1
+		},
+		{
+			"name": "centiskorch",
+			"isHidden": false,
+			"slot": 1
+		},
+		{
+			"name": "charcadet",
+			"isHidden": false,
+			"slot": 1
+		},
+		{
+			"name": "armarouge",
+			"isHidden": false,
+			"slot": 1
+		},
+		{
+			"name": "ceruledge",
+			"isHidden": false,
+			"slot": 1
+		},
+		{
+			"name": "coalossal-gmax",
+			"isHidden": true,
+			"slot": 3
+		},
+		{
+			"name": "centiskorch-gmax",
+			"isHidden": false,
+			"slot": 1
+		},
+		{
+			"name": "growlithe-hisui",
+			"isHidden": false,
+			"slot": 2
+		},
+		{
+			"name": "arcanine-hisui",
+			"isHidden": false,
+			"slot": 2
+		}
+	],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/ability/18/",
+		"fetchedAt": "2026-11-03T06:30:19.306Z",
+		"hash": "c393b22cecc7c1678fd8fbe0429de14800835fda8b4794dc34d6e1e65e16b627"
+	}
+}

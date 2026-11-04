@@ -1,0 +1,2351 @@
+{
+	"schemaVersion": 1,
+	"id": 784,
+	"slug": "breaking-swipe",
+	"name": "Breaking Swipe",
+	"names": {
+		"de": "Breitseite",
+		"en": "Breaking Swipe",
+		"es": "Vasto Impacto",
+		"es-419": "Vasto Impacto",
+		"fr": "Abattage",
+		"it": "Vastoimpatto",
+		"ja": "ワイドブレイカー",
+		"ja-hrkt": "ワイドブレイカー",
+		"ko": "와이드브레이커",
+		"zh-hans": "广域破坏",
+		"zh-hant": "廣域破壞"
+	},
+	"generation": 8,
+	"type": "Dragon",
+	"damageClass": "Physical",
+	"power": 60,
+	"accuracy": 100,
+	"pp": 15,
+	"priority": 0,
+	"effectChance": 100,
+	"target": "All Opponents",
+	"effectEntries": [
+		{
+			"language": "en",
+			"effect": "Inflicts regular damage. Lowers the target’s Attack by one stage.",
+			"shortEffect": "Lowers the target’s Attack by one stage after inflicting damage."
+		},
+		{
+			"language": "fr",
+			"effect": "Inflige des dégâts réguliers. Diminue l'Attaque de la cible d'un niveau.",
+			"shortEffect": "Diminue l'Attaque de la cible d'un niveau après avoir infligé des dégâts."
+		}
+	],
+	"effectChanges": [],
+	"descriptions": [
+		{
+			"versionGroup": "legends-arceus",
+			"language": "en",
+			"text": "The user swings its tough tail wildly and attacks opposing Pokémon. This also lowers their Attack stats."
+		},
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "en",
+			"text": "The user swings its tough tail wildly and attacks opposing Pokémon. This also lowers their Attack stats."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "de",
+			"text": "Der Anwender schwingt heftig seinen robusten Schweif, um damit gegnerische Pokémon anzugreifen und ihren Angriffs-Wert zu senken."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "en",
+			"text": "The user swings its tough tail wildly and attacks opposing Pokémon. This also lowers their Attack stats."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es",
+			"text": "El usuario sacude violentamente su enorme cola para golpear a todos los rivales y reducir su Ataque a la par."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es-419",
+			"text": "El usuario sacude violentamente su enorme cola para golpear a todos los rivales y reducir su Ataque a la par."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "fr",
+			"text": "Le lanceur balaie violemment le camp adverse avec son immense queue. Baisse l’Attaque de la cible."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "it",
+			"text": "Chi la usa attacca i nemici intorno con la sua robusta coda riducendone l’Attacco."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja",
+			"text": "きょうじんな しっぽを 激しく ふりはらって 相手を 攻撃する。 相手の 攻撃を 下げる。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja-hrkt",
+			"text": "きょうじんな しっぽを はげしく ふりはらって あいてを こうげきする。 あいての こうげきを さげる。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ko",
+			"text": "강인한 꼬리를 세차게 휘둘러서 상대를 공격한다. 상대의 공격을 떨어뜨린다."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hans",
+			"text": "用坚韧的尾巴 猛扫对手进行攻击， 从而降低对手的攻击。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hant",
+			"text": "激烈地甩動強韌 的尾巴攻擊對手， 降低對手的攻擊。"
+		}
+	],
+	"pastValues": [],
+	"statChanges": [
+		{
+			"stat": "Attack",
+			"change": -1
+		}
+	],
+	"meta": {
+		"ailment": "None",
+		"category": "Damage Lower",
+		"minHits": null,
+		"maxHits": null,
+		"minTurns": null,
+		"maxTurns": null,
+		"drain": 0,
+		"healing": 0,
+		"critRate": 0,
+		"ailmentChance": 0,
+		"flinchChance": 0,
+		"statChance": 100
+	},
+	"machines": [
+		{
+			"versionGroup": "scarlet-violet",
+			"kind": "TM",
+			"number": 222,
+			"item": "tm222"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"kind": "TM",
+			"number": 99,
+			"item": "tm99"
+		},
+		{
+			"versionGroup": "the-indigo-disk",
+			"kind": "TM",
+			"number": 222,
+			"item": "tm222"
+		}
+	],
+	"learners": [
+		{
+			"nationalDexId": 4,
+			"speciesName": "Charmander",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 5,
+			"speciesName": "Charmeleon",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 6,
+			"speciesName": "Charizard",
+			"formKey": "normal",
+			"formName": "Normal",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 24,
+			"speciesName": "Arbok",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 95,
+			"speciesName": "Onix",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 103,
+			"speciesName": "Exeggutor",
+			"formKey": "alolan",
+			"formName": "Alolan",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 112,
+			"speciesName": "Rhydon",
+			"formKey": "female",
+			"formName": "Female",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 112,
+			"speciesName": "Rhydon",
+			"formKey": "male",
+			"formName": "Male",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 147,
+			"speciesName": "Dratini",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 148,
+			"speciesName": "Dragonair",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 151,
+			"speciesName": "Mew",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 158,
+			"speciesName": "Totodile",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 159,
+			"speciesName": "Croconaw",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 206,
+			"speciesName": "Dunsparce",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 207,
+			"speciesName": "Gligar",
+			"formKey": "female",
+			"formName": "Female",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 207,
+			"speciesName": "Gligar",
+			"formKey": "male",
+			"formName": "Male",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 208,
+			"speciesName": "Steelix",
+			"formKey": "female",
+			"formName": "Female",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 208,
+			"speciesName": "Steelix",
+			"formKey": "male",
+			"formName": "Male",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 230,
+			"speciesName": "Kingdra",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 252,
+			"speciesName": "Treecko",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 253,
+			"speciesName": "Grovyle",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 330,
+			"speciesName": "Flygon",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 336,
+			"speciesName": "Seviper",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 350,
+			"speciesName": "Milotic",
+			"formKey": "female",
+			"formName": "Female",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 350,
+			"speciesName": "Milotic",
+			"formKey": "male",
+			"formName": "Male",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 409,
+			"speciesName": "Rampardos",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 444,
+			"speciesName": "Gabite",
+			"formKey": "female",
+			"formName": "Female",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 444,
+			"speciesName": "Gabite",
+			"formKey": "male",
+			"formName": "Male",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 445,
+			"speciesName": "Garchomp",
+			"formKey": "female",
+			"formName": "Female",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 445,
+			"speciesName": "Garchomp",
+			"formKey": "male",
+			"formName": "Male",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 464,
+			"speciesName": "Rhyperior",
+			"formKey": "female",
+			"formName": "Female",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 464,
+			"speciesName": "Rhyperior",
+			"formKey": "male",
+			"formName": "Male",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 472,
+			"speciesName": "Gliscor",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 483,
+			"speciesName": "Dialga",
+			"formKey": "altered",
+			"formName": "Altered",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 484,
+			"speciesName": "Palkia",
+			"formKey": "altered",
+			"formName": "Altered",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 487,
+			"speciesName": "Giratina",
+			"formKey": "altered",
+			"formName": "Altered",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 487,
+			"speciesName": "Giratina",
+			"formKey": "origin",
+			"formName": "Origin",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 497,
+			"speciesName": "Serperior",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 552,
+			"speciesName": "Krokorok",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 553,
+			"speciesName": "Krookodile",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 610,
+			"speciesName": "Axew",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 30,
+							"order": null
+						},
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 611,
+			"speciesName": "Fraxure",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 30,
+							"order": null
+						},
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 612,
+			"speciesName": "Haxorus",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 30,
+							"order": null
+						},
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 635,
+			"speciesName": "Hydreigon",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 643,
+			"speciesName": "Reshiram",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 644,
+			"speciesName": "Zekrom",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 646,
+			"speciesName": "Kyurem",
+			"formKey": "black-kyurem",
+			"formName": "Black",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 646,
+			"speciesName": "Kyurem",
+			"formKey": "normal",
+			"formName": "Normal",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 646,
+			"speciesName": "Kyurem",
+			"formKey": "white-kyurem",
+			"formName": "White",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 695,
+			"speciesName": "Heliolisk",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 697,
+			"speciesName": "Tyrantrum",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 706,
+			"speciesName": "Goodra",
+			"formKey": "hisuian",
+			"formName": "Hisuian",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 706,
+			"speciesName": "Goodra",
+			"formKey": "kaloasian",
+			"formName": "Kalosian",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 715,
+			"speciesName": "Noivern",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 758,
+			"speciesName": "Salazzle",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 782,
+			"speciesName": "Jangmo-o",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 783,
+			"speciesName": "Hakamo-o",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 784,
+			"speciesName": "Kommo-o",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 800,
+			"speciesName": "Necrozma",
+			"formKey": "dawn-wings",
+			"formName": "Dawn Wings",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 800,
+			"speciesName": "Necrozma",
+			"formKey": "dusk-mane",
+			"formName": "Dusk Mane",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 800,
+			"speciesName": "Necrozma",
+			"formKey": "normal",
+			"formName": "Normal",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 804,
+			"speciesName": "Naganadel",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 818,
+			"speciesName": "Inteleon",
+			"formKey": "normal",
+			"formName": "Normal",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 880,
+			"speciesName": "Dracozolt",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 884,
+			"speciesName": "Duraludon",
+			"formKey": "normal",
+			"formName": "Normal",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						},
+						{
+							"method": "Level Up",
+							"level": 24,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 886,
+			"speciesName": "Drakloak",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 887,
+			"speciesName": "Dragapult",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 895,
+			"speciesName": "Regidrago",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 967,
+			"speciesName": "Cyclizar",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 14,
+							"order": null
+						},
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 982,
+			"speciesName": "Dudunsparce",
+			"formKey": "three-segment",
+			"formName": "Three-Segment",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 982,
+			"speciesName": "Dudunsparce",
+			"formKey": "two-segment",
+			"formName": "Two-Segment",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 995,
+			"speciesName": "Iron Thorns",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 1005,
+			"speciesName": "Roaring Moon",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						},
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 1007,
+			"speciesName": "Koraidon",
+			"formKey": "apex",
+			"formName": "Apex",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						},
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 2
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 1007,
+			"speciesName": "Koraidon",
+			"formKey": "limited",
+			"formName": "Limited",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 2
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 1009,
+			"speciesName": "Walking Wake",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						},
+						{
+							"method": "Level Up",
+							"level": 35,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 1018,
+			"speciesName": "Archaludon",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						},
+						{
+							"method": "Level Up",
+							"level": 24,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 1019,
+			"speciesName": "Hydrapple",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 1020,
+			"speciesName": "Gouging Fire",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 1021,
+			"speciesName": "Raging Bolt",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		}
+	],
+	"potentialPokemon": [
+		"charmander",
+		"charmeleon",
+		"charizard",
+		"arbok",
+		"onix",
+		"rhydon",
+		"dratini",
+		"dragonair",
+		"dragonite",
+		"mew",
+		"totodile",
+		"croconaw",
+		"feraligatr",
+		"ampharos",
+		"dunsparce",
+		"gligar",
+		"steelix",
+		"kingdra",
+		"tyranitar",
+		"treecko",
+		"grovyle",
+		"sceptile",
+		"flygon",
+		"altaria",
+		"seviper",
+		"milotic",
+		"salamence",
+		"latias",
+		"latios",
+		"rayquaza",
+		"rampardos",
+		"gabite",
+		"garchomp",
+		"rhyperior",
+		"gliscor",
+		"dialga",
+		"palkia",
+		"giratina-altered",
+		"serperior",
+		"krokorok",
+		"krookodile",
+		"axew",
+		"fraxure",
+		"haxorus",
+		"hydreigon",
+		"reshiram",
+		"zekrom",
+		"kyurem",
+		"heliolisk",
+		"tyrantrum",
+		"goodra",
+		"noivern",
+		"zygarde-50",
+		"salazzle",
+		"drampa",
+		"jangmo-o",
+		"hakamo-o",
+		"kommo-o",
+		"necrozma",
+		"naganadel",
+		"inteleon",
+		"dracozolt",
+		"duraludon",
+		"drakloak",
+		"dragapult",
+		"regidrago",
+		"cyclizar",
+		"dudunsparce-two-segment",
+		"iron-thorns",
+		"baxcalibur",
+		"roaring-moon",
+		"koraidon",
+		"walking-wake",
+		"archaludon",
+		"hydrapple",
+		"gouging-fire",
+		"raging-bolt",
+		"giratina-origin",
+		"kyurem-black",
+		"kyurem-white",
+		"charizard-mega-x",
+		"charizard-mega-y",
+		"ampharos-mega",
+		"tyranitar-mega",
+		"garchomp-mega",
+		"sceptile-mega",
+		"altaria-mega",
+		"steelix-mega",
+		"exeggutor-alola",
+		"zygarde-10-power-construct",
+		"zygarde-50-power-construct",
+		"zygarde-complete",
+		"necrozma-dusk",
+		"necrozma-dawn",
+		"zygarde-10",
+		"goodra-hisui",
+		"dudunsparce-three-segment",
+		"koraidon-limited-build",
+		"koraidon-sprinting-build",
+		"koraidon-swimming-build",
+		"koraidon-gliding-build",
+		"dragonite-mega",
+		"feraligatr-mega",
+		"drampa-mega"
+	],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/move/784/",
+		"fetchedAt": "2026-11-03T06:30:18.352Z",
+		"hash": "7de3861dea926b601ecf925cfeeb0fc6fb380d9bd719e8a63fb521e1954b96d1"
+	}
+}

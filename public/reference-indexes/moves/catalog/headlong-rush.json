@@ -1,0 +1,191 @@
+{
+	"schemaVersion": 1,
+	"id": 838,
+	"slug": "headlong-rush",
+	"name": "Headlong Rush",
+	"names": {
+		"de": "Schmetterramme",
+		"en": "Headlong Rush",
+		"es": "Arremetida",
+		"es-419": "Asalto Frontal",
+		"fr": "Assaut Frontal",
+		"it": "Scontro Frontale",
+		"ja": "ぶちかまし",
+		"ja-hrkt": "ぶちかまし",
+		"ko": "들이받기",
+		"zh-hans": "突飞猛扑",
+		"zh-hant": "突飛猛撲"
+	},
+	"generation": 8,
+	"type": "Ground",
+	"damageClass": "Physical",
+	"power": 120,
+	"accuracy": 100,
+	"pp": 5,
+	"priority": 0,
+	"effectChance": null,
+	"target": "Selected Pokemon",
+	"effectEntries": [],
+	"effectChanges": [],
+	"descriptions": [
+		{
+			"versionGroup": "legends-arceus",
+			"language": "en",
+			"text": "The user smashes into the target in a full-body tackle. This also lowers the user’s defensive stats."
+		},
+		{
+			"versionGroup": "legends-arceus",
+			"language": "fr",
+			"text": "Le lanceur charge l'ennemi de toutes ses forces. Baisse la puissance défensive du lanceur."
+		},
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "en",
+			"text": "The user smashes into the target in a full-body tackle. This also lowers the user’s Defense and Sp. Def stats."
+		},
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "fr",
+			"text": "Le lanceur charge la cible de toutes ses forces, ce qui baisse la Défense et la Défense Spéciale du lanceur."
+		}
+	],
+	"pastValues": [],
+	"statChanges": [],
+	"meta": null,
+	"machines": [],
+	"learners": [
+		{
+			"nationalDexId": 297,
+			"speciesName": "Hariyama",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 60,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 389,
+			"speciesName": "Torterra",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "legends-arceus",
+					"gameLabel": "Legends: Arceus",
+					"versionGroup": "legends-arceus",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 57,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 63,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 901,
+			"speciesName": "Ursaluna",
+			"formKey": "bloodmoon",
+			"formName": "Bloodmoon",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 4
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 901,
+			"speciesName": "Ursaluna",
+			"formKey": "normal",
+			"formName": "Normal",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 984,
+			"speciesName": "Great Tusk",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 91,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		}
+	],
+	"potentialPokemon": [
+		"hariyama",
+		"torterra",
+		"golurk",
+		"pangoro",
+		"ursaluna",
+		"great-tusk",
+		"ursaluna-bloodmoon",
+		"golurk-mega"
+	],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/move/838/",
+		"fetchedAt": "2026-11-03T06:30:18.840Z",
+		"hash": "d97e26fa97fb5057590b5997b1107b63a42a0608fec5297d2dc03406a7b38e21"
+	}
+}

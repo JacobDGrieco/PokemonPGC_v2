@@ -1,0 +1,633 @@
+{
+	"schemaVersion": 2,
+	"nationalDexId": 844,
+	"speciesName": "Sandaconda",
+	"formKey": "gigantamax",
+	"formName": "Gigantamax",
+	"formLabelSource": "form-catalog",
+	"profiles": [
+		{
+			"profileKey": "sword-shield",
+			"label": "Sword / Shield",
+			"appGameKeys": [
+				"sword",
+				"shield"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Sandaconda",
+				"localizedNames": {
+					"ja-hrkt": "サダイジャ",
+					"ja-roma": "Sadaija",
+					"ko": "사다이사",
+					"zh-hant": "沙螺蟒",
+					"fr": "Dunaconda",
+					"de": "Sanaconda",
+					"es": "Sandaconda",
+					"it": "Sandaconda",
+					"ja": "サダイジャ",
+					"zh-hans": "沙螺蟒",
+					"es-419": "Sandaconda"
+				},
+				"localizedFormNames": {
+					"fr": "Dunaconda Gigamax",
+					"de": "Gigadynamax-Sanaconda"
+				},
+				"localizedFormLabels": {
+					"ja-hrkt": "キョダイマックスのすがた",
+					"fr": "Forme Gigamax",
+					"de": "Gigadynamax-Form",
+					"ja": "キョダイマックスのすがた"
+				},
+				"types": [
+					"Ground"
+				],
+				"baseStats": {
+					"hp": 72,
+					"atk": 107,
+					"def": 125,
+					"spa": 65,
+					"spd": 70,
+					"spe": 71
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Sand Spit",
+					"Shed Skin",
+					"Sand Veil (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Sand Veil"
+				],
+				"eggGroups": [
+					"Ground",
+					"Dragon"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "22.0 m",
+				"weight": "1000.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 120,
+				"baseExperience": 179,
+				"habitat": "",
+				"shape": "Squiggle",
+				"color": "Green",
+				"genus": "Sand Snake Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "すなへびポケモン",
+					"ko": "모래뱀포켓몬",
+					"zh-hant": "沙蛇寶可夢",
+					"fr": "Pokémon Serpensable",
+					"de": "Sandschlangen-Pokémon",
+					"es": "Pokémon Serp. Arena",
+					"it": "Pokémon Sabbiaserpe",
+					"ja": "すなへびポケモン",
+					"zh-hans": "沙蛇宝可梦",
+					"es-419": "Pokémon Serp. Arena"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 844
+					},
+					{
+						"pokedex": "galar",
+						"number": 313
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 175
+					},
+					{
+						"pokedex": "paldea",
+						"number": 271
+					},
+					{
+						"pokedex": "champions",
+						"number": 844
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 843,
+								"natiId": 843,
+								"name": "Silicobra"
+							},
+							{
+								"id": 844,
+								"natiId": 844,
+								"name": "Sandaconda",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Galar Wild Area Max Dens Area",
+						"notes": "Max Raid, Lv. 60",
+						"games": "Sword",
+						"rate": "5%"
+					},
+					{
+						"area": "Galar Wild Area Max Dens Area",
+						"notes": "Max Raid, Lv. 60",
+						"games": "Shield",
+						"rate": "5%"
+					},
+					{
+						"area": "Dusty Bowl Max Den C",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Dusty Bowl Max Den C",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Dusty Bowl Max Den C",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Dusty Bowl Max Den C",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Dusty Bowl Max Den I",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Dusty Bowl Max Den I",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Dusty Bowl Max Den I",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Dusty Bowl Max Den I",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Shield",
+						"rate": "10%"
+					}
+				],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokemonPGC form catalog includes this game profile.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/844",
+						"fetchedAt": "2026-11-03T05:54:00.680Z",
+						"hash": "9e3cbe63d692d49f7271b9f88bcb52617f0296b1dafa1d92db2766d200f60d32"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/443/",
+						"fetchedAt": "2026-11-03T05:54:00.584Z",
+						"hash": "a0984c8e7b34614c724ce897c1823276d1b68938ecaf392e0ee460acca862b52"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/10218/",
+						"fetchedAt": "2026-11-03T05:54:00.861Z",
+						"hash": "b844ab7766753b5b91881492b136c17e5c2ad91661d83d8bdd9b429b1d7186b2"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/10218/encounters",
+						"fetchedAt": "2026-11-03T05:54:00.927Z",
+						"hash": "6b9fe73df353e16fdaaf8eccaa2e70a175f95ea212712222e1d3258f4257a99a"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/10387/",
+						"fetchedAt": "2026-11-03T05:54:00.973Z",
+						"hash": "1958f43e0aaf1112b10508dcad02452c62cf05be6484a70be17554b8acf54979"
+					}
+				],
+				"formName": "Gigantamax"
+			},
+			"flavorByGame": {
+				"sword": "When it contracts its body, over 220 pounds of sand sprays from its nose. If it ever runs out of sand, it becomes disheartened.",
+				"shield": "Its unique style of coiling allows it to blast sand out of its sand sac more efficiently."
+			},
+			"localizedFlavorByGame": {
+				"sword": {
+					"ja-hrkt": "ぜんしんを ちぢめ １００キロの すなを はなの あなから ふんしゃ。 すなが ないと よわきに なるぞ。",
+					"ko": "온몸을 수축시킨 뒤 100kg의 모래를 콧구멍으로 내뿜는다. 모래가 없으면 무기력해진다.",
+					"zh-hant": "蜷縮身體後從鼻孔裡噴射出 １００公斤的沙子。沒有了 沙子就會變得很懦弱。",
+					"fr": "Il peut expulser 100 kg de sable de ses narines en compressant tout son corps. Quand il est à court de sable, il a tendance à se dérober.",
+					"de": "Zieht es seinen ganzen Körper zusammen, kann es 100 kg Sand aus seinen Nasenlöchern feuern. Geht ihm der Sand aus, verliert es den Mut.",
+					"es": "Se retuerce para expulsar por los orificios nasales hasta 100 kg de arena. La ausencia de esta mina su ánimo.",
+					"it": "Può rimpicciolire il suo corpo espellendo dalle narici 100 kg di sabbia. Quando esaurisce la sabbia, viene preso dallo sconforto.",
+					"en": "When it contracts its body, over 220 pounds of sand sprays from its nose. If it ever runs out of sand, it becomes disheartened.",
+					"ja": "全身を 縮め １００キロの 砂を 鼻の 穴から 噴射。 砂が ないと 弱気に なるぞ。",
+					"zh-hans": "蜷缩身体后从鼻孔里喷射出 １００公斤的沙子。没有了 沙子就会变得很懦弱。",
+					"es-419": "Se retuerce para expulsar por los orificios nasales hasta 100 kg de arena. La ausencia de esta mina su ánimo."
+				},
+				"shield": {
+					"ja-hrkt": "どくとくの とぐろの まきかたは すなぶくろの すなを より こうりつ よく ふんしゃ するため なのだ。",
+					"ko": "독특한 똬리 형태는 모래주머니의 모래를 더 효율적으로 분사하기 위함이다.",
+					"zh-hant": "牠之所以會以獨特的方式 盤繞自己的身體，是為了能 更有效率地噴射沙囊中的沙子。",
+					"fr": "S’il s’enroule d’une manière aussi particulière, c’est pour optimiser l’expulsion de sable par ses narines.",
+					"de": "Es rollt sich auf diese eigentümliche Weise zusammen, damit es den Sand aus seinem Sandbeutel effizienter verschießen kann.",
+					"es": "La manera tan particular que tiene de enrollarse sobre sí mismo le permite expulsar con mayor eficacia la arena que almacena en la bolsa.",
+					"it": "Il modo particolare in cui si attorciglia su se stesso gli permette di espellere sabbia dalla sua sacca in modo più efficiente.",
+					"en": "Its unique style of coiling allows it to blast sand out of its sand sac more efficiently.",
+					"ja": "独特の とぐろの 巻き方は 砂袋の 砂を より 効率 よく 噴射 するため なのだ。",
+					"zh-hans": "它之所以会以独特的方式 盘绕自己的身体，是为了能 更高效地喷射砂囊中的沙子。",
+					"es-419": "La manera tan particular que tiene de enrollarse sobre sí mismo le permite expulsar con mayor eficacia la arena que almacena en la bolsa."
+				}
+			}
+		},
+		{
+			"profileKey": "the-isle-of-armor",
+			"label": "The Isle of Armor",
+			"appGameKeys": [
+				"swordioa",
+				"shieldioa"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Sandaconda",
+				"localizedNames": {
+					"ja-hrkt": "サダイジャ",
+					"ja-roma": "Sadaija",
+					"ko": "사다이사",
+					"zh-hant": "沙螺蟒",
+					"fr": "Dunaconda",
+					"de": "Sanaconda",
+					"es": "Sandaconda",
+					"it": "Sandaconda",
+					"ja": "サダイジャ",
+					"zh-hans": "沙螺蟒",
+					"es-419": "Sandaconda"
+				},
+				"localizedFormNames": {
+					"fr": "Dunaconda Gigamax",
+					"de": "Gigadynamax-Sanaconda"
+				},
+				"localizedFormLabels": {
+					"ja-hrkt": "キョダイマックスのすがた",
+					"fr": "Forme Gigamax",
+					"de": "Gigadynamax-Form",
+					"ja": "キョダイマックスのすがた"
+				},
+				"types": [
+					"Ground"
+				],
+				"baseStats": {
+					"hp": 72,
+					"atk": 107,
+					"def": 125,
+					"spa": 65,
+					"spd": 70,
+					"spe": 71
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Sand Spit",
+					"Shed Skin",
+					"Sand Veil (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Sand Veil"
+				],
+				"eggGroups": [
+					"Ground",
+					"Dragon"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "22.0 m",
+				"weight": "1000.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 120,
+				"baseExperience": 179,
+				"habitat": "",
+				"shape": "Squiggle",
+				"color": "Green",
+				"genus": "Sand Snake Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "すなへびポケモン",
+					"ko": "모래뱀포켓몬",
+					"zh-hant": "沙蛇寶可夢",
+					"fr": "Pokémon Serpensable",
+					"de": "Sandschlangen-Pokémon",
+					"es": "Pokémon Serp. Arena",
+					"it": "Pokémon Sabbiaserpe",
+					"ja": "すなへびポケモン",
+					"zh-hans": "沙蛇宝可梦",
+					"es-419": "Pokémon Serp. Arena"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 844
+					},
+					{
+						"pokedex": "galar",
+						"number": 313
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 175
+					},
+					{
+						"pokedex": "paldea",
+						"number": 271
+					},
+					{
+						"pokedex": "champions",
+						"number": 844
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 843,
+								"natiId": 843,
+								"name": "Silicobra"
+							},
+							{
+								"id": 844,
+								"natiId": 844,
+								"name": "Sandaconda",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokemonPGC form catalog includes this game profile.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/844",
+						"fetchedAt": "2026-11-03T05:54:00.680Z",
+						"hash": "9e3cbe63d692d49f7271b9f88bcb52617f0296b1dafa1d92db2766d200f60d32"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/443/",
+						"fetchedAt": "2026-11-03T05:54:00.584Z",
+						"hash": "a0984c8e7b34614c724ce897c1823276d1b68938ecaf392e0ee460acca862b52"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/10218/",
+						"fetchedAt": "2026-11-03T05:54:00.861Z",
+						"hash": "b844ab7766753b5b91881492b136c17e5c2ad91661d83d8bdd9b429b1d7186b2"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/10218/encounters",
+						"fetchedAt": "2026-11-03T05:54:00.927Z",
+						"hash": "6b9fe73df353e16fdaaf8eccaa2e70a175f95ea212712222e1d3258f4257a99a"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/10387/",
+						"fetchedAt": "2026-11-03T05:54:00.973Z",
+						"hash": "1958f43e0aaf1112b10508dcad02452c62cf05be6484a70be17554b8acf54979"
+					}
+				],
+				"formName": "Gigantamax"
+			},
+			"flavorByGame": {
+				"swordioa": "",
+				"shieldioa": ""
+			},
+			"localizedFlavorByGame": {
+				"swordioa": {},
+				"shieldioa": {}
+			}
+		},
+		{
+			"profileKey": "the-crown-tundra",
+			"label": "The Crown Tundra",
+			"appGameKeys": [
+				"swordct",
+				"shieldct"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Sandaconda",
+				"localizedNames": {
+					"ja-hrkt": "サダイジャ",
+					"ja-roma": "Sadaija",
+					"ko": "사다이사",
+					"zh-hant": "沙螺蟒",
+					"fr": "Dunaconda",
+					"de": "Sanaconda",
+					"es": "Sandaconda",
+					"it": "Sandaconda",
+					"ja": "サダイジャ",
+					"zh-hans": "沙螺蟒",
+					"es-419": "Sandaconda"
+				},
+				"localizedFormNames": {
+					"fr": "Dunaconda Gigamax",
+					"de": "Gigadynamax-Sanaconda"
+				},
+				"localizedFormLabels": {
+					"ja-hrkt": "キョダイマックスのすがた",
+					"fr": "Forme Gigamax",
+					"de": "Gigadynamax-Form",
+					"ja": "キョダイマックスのすがた"
+				},
+				"types": [
+					"Ground"
+				],
+				"baseStats": {
+					"hp": 72,
+					"atk": 107,
+					"def": 125,
+					"spa": 65,
+					"spd": 70,
+					"spe": 71
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Sand Spit",
+					"Shed Skin",
+					"Sand Veil (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Sand Veil"
+				],
+				"eggGroups": [
+					"Ground",
+					"Dragon"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "22.0 m",
+				"weight": "1000.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 120,
+				"baseExperience": 179,
+				"habitat": "",
+				"shape": "Squiggle",
+				"color": "Green",
+				"genus": "Sand Snake Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "すなへびポケモン",
+					"ko": "모래뱀포켓몬",
+					"zh-hant": "沙蛇寶可夢",
+					"fr": "Pokémon Serpensable",
+					"de": "Sandschlangen-Pokémon",
+					"es": "Pokémon Serp. Arena",
+					"it": "Pokémon Sabbiaserpe",
+					"ja": "すなへびポケモン",
+					"zh-hans": "沙蛇宝可梦",
+					"es-419": "Pokémon Serp. Arena"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 844
+					},
+					{
+						"pokedex": "galar",
+						"number": 313
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 175
+					},
+					{
+						"pokedex": "paldea",
+						"number": 271
+					},
+					{
+						"pokedex": "champions",
+						"number": 844
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 843,
+								"natiId": 843,
+								"name": "Silicobra"
+							},
+							{
+								"id": 844,
+								"natiId": 844,
+								"name": "Sandaconda",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokemonPGC form catalog includes this game profile.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/844",
+						"fetchedAt": "2026-11-03T05:54:00.680Z",
+						"hash": "9e3cbe63d692d49f7271b9f88bcb52617f0296b1dafa1d92db2766d200f60d32"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/443/",
+						"fetchedAt": "2026-11-03T05:54:00.584Z",
+						"hash": "a0984c8e7b34614c724ce897c1823276d1b68938ecaf392e0ee460acca862b52"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/10218/",
+						"fetchedAt": "2026-11-03T05:54:00.861Z",
+						"hash": "b844ab7766753b5b91881492b136c17e5c2ad91661d83d8bdd9b429b1d7186b2"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/10218/encounters",
+						"fetchedAt": "2026-11-03T05:54:00.927Z",
+						"hash": "6b9fe73df353e16fdaaf8eccaa2e70a175f95ea212712222e1d3258f4257a99a"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/10387/",
+						"fetchedAt": "2026-11-03T05:54:00.973Z",
+						"hash": "1958f43e0aaf1112b10508dcad02452c62cf05be6484a70be17554b8acf54979"
+					}
+				],
+				"formName": "Gigantamax"
+			},
+			"flavorByGame": {
+				"swordct": "",
+				"shieldct": ""
+			},
+			"localizedFlavorByGame": {
+				"swordct": {},
+				"shieldct": {}
+			}
+		}
+	]
+}

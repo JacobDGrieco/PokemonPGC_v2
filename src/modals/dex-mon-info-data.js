@@ -1,5 +1,10 @@
 import { ensureMonInfoLoaded } from "../../data/mon-info/_loader.js";
 import { fetchPokeApiMonInfo } from "../services/pokeApi.js";
+import {
+	gameMatchesMonInfoForm,
+	getMonInfoFormOptions,
+	resolveMonInfoFormForGame,
+} from "../utils/monInfoForms.js";
 
 export function resolveMonInfoBucket(gameKey) {
 	const byGame = window.DATA?.monInfo || {};
@@ -14,27 +19,11 @@ export function resolveMonInfoBucket(gameKey) {
 }
 
 export function gameMatches(metaGames, gameKey) {
-	if (!Array.isArray(metaGames) || !metaGames.length) return true;
-	if (!gameKey) return true;
-	const g = String(gameKey);
-	const base = g.replace(/(ioa|ct|tm|id|md)$/i, "");
-	return metaGames.includes(g) || metaGames.includes(base);
+	return gameMatchesMonInfoForm(metaGames, gameKey);
 }
 
 export function collectCatalogFormOptions(natId, gameKey) {
-	const catalogForms =
-		(natId != null && window.DATA?.formsCatalog?.[natId]) || {};
-	const formOpts = [];
-	for (const [fk, meta] of Object.entries(catalogForms)) {
-		if (meta && Array.isArray(meta.games) && meta.games.length) {
-			if (!gameMatches(meta.games, gameKey)) continue;
-		}
-		formOpts.push({
-			key: String(fk),
-			label: meta?.label ? String(meta.label) : String(fk),
-		});
-	}
-	return formOpts;
+	return getMonInfoFormOptions(natId, gameKey);
 }
 
 export function mergeInfo(base, patch) {
@@ -55,8 +44,7 @@ export async function resolveMonInfoData({ gameKey, mon, formKey = null }) {
 	const key = natId ?? mon?.id;
 	const formOpts = collectCatalogFormOptions(natId, gameKey);
 	const hasForms = formOpts.length > 0;
-	let effectiveFormKey = formKey;
-	if (!effectiveFormKey && hasForms) effectiveFormKey = formOpts[0].key;
+	const effectiveFormKey = resolveMonInfoFormForGame(natId, gameKey, formKey);
 
 	await ensureMonInfoLoaded(key, effectiveFormKey);
 

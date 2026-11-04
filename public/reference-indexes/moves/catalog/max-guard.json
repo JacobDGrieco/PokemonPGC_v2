@@ -1,0 +1,122 @@
+{
+	"schemaVersion": 1,
+	"id": 743,
+	"slug": "max-guard",
+	"name": "Max Guard",
+	"names": {
+		"de": "Dyna-Wall",
+		"en": "Max Guard",
+		"es": "Maxibarrera",
+		"es-419": "Maxibarrera",
+		"fr": "Gardomax",
+		"it": "Dynabarriera",
+		"ja": "ダイウォール",
+		"ja-hrkt": "ダイウォール",
+		"ko": "다이월",
+		"zh-hans": "极巨防壁",
+		"zh-hant": "極巨防壁"
+	},
+	"generation": 8,
+	"type": "Normal",
+	"damageClass": "Status",
+	"power": null,
+	"accuracy": null,
+	"pp": 10,
+	"priority": 4,
+	"effectChance": null,
+	"target": "User",
+	"effectEntries": [
+		{
+			"language": "en",
+			"effect": "No moves will hit the user for the remainder of this turn. If the user is last to act this turn, this move will fail. If the user successfully used Detect, Endure, Protect, Quick Guard, or Wide Guard on the last turn, this move has a 50% chance to fail. Lock-On, Mind Reader, and No Guard provide a (100 – accuracy)% chance for moves to break through this move. This does not apply to one-hit KO moves (Fissure, Guillotine, Horn Drill, and Sheer Cold); those are always blocked by this move. Thunder during Rain Dance and Blizzard during Hail have a 30% chance to break through this move. The following effects are not prevented by this move: * Acupressure from an ally * Curse’s curse effect * Delayed damage from Doom Desire and Future Sight; however, these moves will be prevented if they are used this turn * Feint, which will also end this move’s protection after it hits * Imprison * Perish Song * Shadow Force * Moves that merely copy the user, such as Transform or Psych Up This move cannot be selected by Assist or Metronome.",
+			"shortEffect": "Prevents any moves from hitting the user this turn."
+		},
+		{
+			"language": "fr",
+			"effect": "Aucune capacité ne frappera le lanceur pour le reste de ce tour. Si le lanceur est le dernier à agir ce tour, cette capacité échouera. Si le lanceur a utilisé avec succès Détection, Ténacité, Abri, Prévention, ou Garde Large le dernier tour, cette capacité a 50% de chances d'échouer. Verrouillage, Lire-Esprit, et Annule Garde fournissent (100 – accuracy)% de chances que les capacités passent à travers cette capacité. Cela ne s'applique pas aux capacités OHKO (Abîme, Guillotine, Empal’Korne, et Glaciation); celles-ci sont toujours bloquées par cette capacité. Fatal-Foudre sous Danse Pluie et Blizzard sous Grêle ont 30% de chances de passer à travers cette capacité. Les effets suivants ne sont pas empêchés par cette capacité: * Acupression d'un allié * Effet maudit de Malédiction * Dégâts retardés de Vœu Destructeur et Prescience; cependant, ces capacités seront empêchées si elles sont utilisées ce tour * Ruse, qui terminera aussi la protection de cette capacité après qu'elle frappe * Possessif * Requiem * Revenant * Capacités qui copient simplement le lanceur, comme Morphing ou Boost Cette capacité ne peut pas être sélectionnée par Assistance ou Métronome.",
+			"shortEffect": "Empêche n'importe quelle capacité de frapper le lanceur ce tour."
+		}
+	],
+	"effectChanges": [],
+	"descriptions": [
+		{
+			"versionGroup": "sword-shield",
+			"language": "de",
+			"text": "Anwender wehrt jede Attacke ab. Scheitert eventuell bei Wiederholung."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "en",
+			"text": "This move enables the user to protect itself from all attacks. Its chance of failing rises if it is used in succession."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es",
+			"text": "Frena todos los ataques, pero puede fallar si se usa repetidamente."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es-419",
+			"text": "Frena todos los ataques, pero puede fallar si se usa repetidamente."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "fr",
+			"text": "Le lanceur se protège de toutes les attaques. Peut échouer si utilisée plusieurs fois de suite."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "it",
+			"text": "Permette di eludere tutti gli attacchi. Se usata in successione può fallire."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja",
+			"text": "相手の 攻撃を まったく 受けない。 連続で だすと 失敗しやすい。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja-hrkt",
+			"text": "あいての こうげきを まったく うけない。 れんぞくで だすと しっぱい しやすい。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ko",
+			"text": "상대의 공격을 전혀 받지 않는다. 연속으로 쓰면 실패하기 쉽다."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hans",
+			"text": "完全抵挡 对手的攻击。 连续使出则容易失败。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hant",
+			"text": "完全防住對手的所有攻擊。 連續使用時容易失敗。"
+		}
+	],
+	"pastValues": [],
+	"statChanges": [],
+	"meta": {
+		"ailment": "None",
+		"category": "Unique",
+		"minHits": null,
+		"maxHits": null,
+		"minTurns": null,
+		"maxTurns": null,
+		"drain": 0,
+		"healing": 0,
+		"critRate": 0,
+		"ailmentChance": 0,
+		"flinchChance": 0,
+		"statChance": 0
+	},
+	"machines": [],
+	"learners": [],
+	"potentialPokemon": [],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/move/743/",
+		"fetchedAt": "2026-11-03T06:30:18.084Z",
+		"hash": "8f9201e218713eb640fdb2fec3f6452a0981c8c91bae57488d0beaa085443a88"
+	}
+}

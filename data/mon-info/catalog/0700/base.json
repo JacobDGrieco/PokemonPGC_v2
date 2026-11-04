@@ -1,0 +1,7361 @@
+{
+	"schemaVersion": 2,
+	"nationalDexId": 700,
+	"speciesName": "Sylveon",
+	"formKey": "base",
+	"formName": "Base",
+	"formLabelSource": "form-catalog",
+	"profiles": [
+		{
+			"profileKey": "x-y",
+			"label": "X / Y",
+			"appGameKeys": [
+				"x-national",
+				"x-central",
+				"x-coastal",
+				"x-mountain",
+				"y-national",
+				"y-central",
+				"y-coastal",
+				"y-mountain"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Sylveon",
+				"localizedNames": {
+					"ja-hrkt": "ニンフィア",
+					"ja-roma": "Nymphia",
+					"ko": "님피아",
+					"zh-hant": "仙子伊布",
+					"fr": "Nymphali",
+					"de": "Feelinara",
+					"es": "Sylveon",
+					"it": "Sylveon",
+					"ja": "ニンフィア",
+					"zh-hans": "仙子伊布",
+					"es-419": "Sylveon"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fairy"
+				],
+				"baseStats": {
+					"hp": 95,
+					"atk": 65,
+					"def": 65,
+					"spa": 110,
+					"spd": 130,
+					"spe": 60
+				},
+				"evYield": {
+					"spd": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cute Charm",
+					"Pixilate (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Pixilate"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 35,
+				"height": "1.0 m",
+				"weight": "23.5 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 184,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Pink",
+				"genus": "Intertwining Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "むすびつきポケモン",
+					"ko": "연결포켓몬",
+					"zh-hant": "連結寶可夢",
+					"fr": "Pokémon Attachant",
+					"de": "Bindungs-Pokémon",
+					"es": "Pokémon Vínculo",
+					"it": "Pokémon Legame",
+					"ja": "むすびつきポケモン",
+					"zh-hans": "连结宝可梦",
+					"es-419": "Pokémon Vínculo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 700
+					},
+					{
+						"pokedex": "kalos-coastal",
+						"number": 85
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 131
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 58
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 161
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 62
+					},
+					{
+						"pokedex": "galar",
+						"number": 204
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 82
+					},
+					{
+						"pokedex": "hisui",
+						"number": 33
+					},
+					{
+						"pokedex": "paldea",
+						"number": 187
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 108
+					},
+					{
+						"pokedex": "champions",
+						"number": 700
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 134,
+								"natiId": 134,
+								"name": "Vaporeon",
+								"method": "Use item",
+								"value": "Water Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 135,
+								"natiId": 135,
+								"name": "Jolteon",
+								"method": "Use item",
+								"value": "Thunder Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 136,
+								"natiId": 136,
+								"name": "Flareon",
+								"method": "Use item",
+								"value": "Fire Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 196,
+								"natiId": 196,
+								"name": "Espeon",
+								"method": "Level up with 220+ friendship",
+								"value": "during the day",
+								"minimumFriendship": 220,
+								"timeOfDay": "day"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 197,
+								"natiId": 197,
+								"name": "Umbreon",
+								"method": "Level up with 220+ friendship",
+								"value": "during the night",
+								"minimumFriendship": 220,
+								"timeOfDay": "night"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 470,
+								"natiId": 470,
+								"name": "Leafeon",
+								"method": "Level up near",
+								"value": "the Moss Rock in Route 20"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 471,
+								"natiId": 471,
+								"name": "Glaceon",
+								"method": "Level up near",
+								"value": "the Ice Rock in Frost Cavern"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 700,
+								"natiId": 700,
+								"name": "Sylveon",
+								"method": "Level up with 2+ affection hearts",
+								"value": "while knowing a Fairy-type move",
+								"minimumAffection": 2,
+								"knownMoveType": "Fairy"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Calm Mind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Cut",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dazzling Gleam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Echoed Voice",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psyshock",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Reflect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Retaliate",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Safeguard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						}
+					],
+					"Level Up": [
+						{
+							"name": "Disarming Voice",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Tail Whip",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Helping Hand",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Sand Attack",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Fairy Wind",
+							"level": 9,
+							"order": null
+						},
+						{
+							"name": "Quick Attack",
+							"level": 13,
+							"order": null
+						},
+						{
+							"name": "Swift",
+							"level": 17,
+							"order": null
+						},
+						{
+							"name": "Draining Kiss",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Skill Swap",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Misty Terrain",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": 33,
+							"order": null
+						},
+						{
+							"name": "Moonblast",
+							"level": 37,
+							"order": null
+						},
+						{
+							"name": "Last Resort",
+							"level": 41,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": 45,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/700",
+						"fetchedAt": "2026-11-03T05:53:50.524Z",
+						"hash": "e0c2dee5bd3dd87a3fb3daf8115c80178110a9303e9caea8585a5c1ff8cba8e6"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/67/",
+						"fetchedAt": "2026-11-03T05:53:14.942Z",
+						"hash": "48eb1dc4c41fec44e5a957e3b93af5a22511cc23a6b973ffed1b5e2eef8f778c"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/700/",
+						"fetchedAt": "2026-11-03T05:53:50.553Z",
+						"hash": "215ff351c9e19e811711a313427cfdd3753605776e77f31b80cc36c5d8b2d2d2"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/700/encounters",
+						"fetchedAt": "2026-11-03T05:53:50.581Z",
+						"hash": "4959dac3207bdab954c39b93c6fd8da2f1e8298faeae388b32884465c69e2032"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/700/",
+						"fetchedAt": "2026-11-03T05:53:50.635Z",
+						"hash": "228ad2f07546caa33543f52317b753e9308b35c49233df31e10e51af3ec64a9d"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"x-national": "It sends a soothing aura from its ribbonlike feelers to calm fights.",
+				"x-central": "It sends a soothing aura from its ribbonlike feelers to calm fights.",
+				"x-coastal": "It sends a soothing aura from its ribbonlike feelers to calm fights.",
+				"x-mountain": "It sends a soothing aura from its ribbonlike feelers to calm fights.",
+				"y-national": "It wraps its ribbonlike feelers around the arm of its beloved Trainer and walks with him or her.",
+				"y-central": "It wraps its ribbonlike feelers around the arm of its beloved Trainer and walks with him or her.",
+				"y-coastal": "It wraps its ribbonlike feelers around the arm of its beloved Trainer and walks with him or her.",
+				"y-mountain": "It wraps its ribbonlike feelers around the arm of its beloved Trainer and walks with him or her."
+			},
+			"localizedFlavorByGame": {
+				"x-national": {
+					"ja-hrkt": "リボンのような しょっかくから きもちを やわらげる はどうを おくりこみ たたかいを やめさせる。",
+					"ko": "리본 모양의 더듬이에서 마음을 온화하게 하는 파동을 보내 싸움을 그만두게 한다.",
+					"fr": "Pour arrêter le combat, il émet des ondes apaisantes avec ses rubans.",
+					"de": "Seinen bandförmigen Fühlern lässt es beruhigende Wellen entströmen, die das Ende von Kämpfen herbeiführen.",
+					"es": "A través de sus apéndices sensitivos con forma de cinta, emite unas ondas tranquilizadoras mediante las cuales detiene los combates.",
+					"it": "Le sue antenne simili a fiocchetti emettono onde dagli effetti rilassanti, grazie alle quali fa cessare le lotte.",
+					"en": "It sends a soothing aura from its ribbonlike feelers to calm fights.",
+					"ja": "リボンのような 触覚から 気持ちを 和らげる 波動を 送りこみ 戦いを やめさせる。",
+					"es-419": "A través de sus apéndices sensitivos con forma de cinta, emite unas ondas tranquilizadoras mediante las cuales detiene los combates."
+				},
+				"x-central": {
+					"ja-hrkt": "リボンのような しょっかくから きもちを やわらげる はどうを おくりこみ たたかいを やめさせる。",
+					"ko": "리본 모양의 더듬이에서 마음을 온화하게 하는 파동을 보내 싸움을 그만두게 한다.",
+					"fr": "Pour arrêter le combat, il émet des ondes apaisantes avec ses rubans.",
+					"de": "Seinen bandförmigen Fühlern lässt es beruhigende Wellen entströmen, die das Ende von Kämpfen herbeiführen.",
+					"es": "A través de sus apéndices sensitivos con forma de cinta, emite unas ondas tranquilizadoras mediante las cuales detiene los combates.",
+					"it": "Le sue antenne simili a fiocchetti emettono onde dagli effetti rilassanti, grazie alle quali fa cessare le lotte.",
+					"en": "It sends a soothing aura from its ribbonlike feelers to calm fights.",
+					"ja": "リボンのような 触覚から 気持ちを 和らげる 波動を 送りこみ 戦いを やめさせる。",
+					"es-419": "A través de sus apéndices sensitivos con forma de cinta, emite unas ondas tranquilizadoras mediante las cuales detiene los combates."
+				},
+				"x-coastal": {
+					"ja-hrkt": "リボンのような しょっかくから きもちを やわらげる はどうを おくりこみ たたかいを やめさせる。",
+					"ko": "리본 모양의 더듬이에서 마음을 온화하게 하는 파동을 보내 싸움을 그만두게 한다.",
+					"fr": "Pour arrêter le combat, il émet des ondes apaisantes avec ses rubans.",
+					"de": "Seinen bandförmigen Fühlern lässt es beruhigende Wellen entströmen, die das Ende von Kämpfen herbeiführen.",
+					"es": "A través de sus apéndices sensitivos con forma de cinta, emite unas ondas tranquilizadoras mediante las cuales detiene los combates.",
+					"it": "Le sue antenne simili a fiocchetti emettono onde dagli effetti rilassanti, grazie alle quali fa cessare le lotte.",
+					"en": "It sends a soothing aura from its ribbonlike feelers to calm fights.",
+					"ja": "リボンのような 触覚から 気持ちを 和らげる 波動を 送りこみ 戦いを やめさせる。",
+					"es-419": "A través de sus apéndices sensitivos con forma de cinta, emite unas ondas tranquilizadoras mediante las cuales detiene los combates."
+				},
+				"x-mountain": {
+					"ja-hrkt": "リボンのような しょっかくから きもちを やわらげる はどうを おくりこみ たたかいを やめさせる。",
+					"ko": "리본 모양의 더듬이에서 마음을 온화하게 하는 파동을 보내 싸움을 그만두게 한다.",
+					"fr": "Pour arrêter le combat, il émet des ondes apaisantes avec ses rubans.",
+					"de": "Seinen bandförmigen Fühlern lässt es beruhigende Wellen entströmen, die das Ende von Kämpfen herbeiführen.",
+					"es": "A través de sus apéndices sensitivos con forma de cinta, emite unas ondas tranquilizadoras mediante las cuales detiene los combates.",
+					"it": "Le sue antenne simili a fiocchetti emettono onde dagli effetti rilassanti, grazie alle quali fa cessare le lotte.",
+					"en": "It sends a soothing aura from its ribbonlike feelers to calm fights.",
+					"ja": "リボンのような 触覚から 気持ちを 和らげる 波動を 送りこみ 戦いを やめさせる。",
+					"es-419": "A través de sus apéndices sensitivos con forma de cinta, emite unas ondas tranquilizadoras mediante las cuales detiene los combates."
+				},
+				"y-national": {
+					"ja-hrkt": "だいすきな トレーナーの うでに リボンのような しょっかくを まきつけて いっしょに あるく。",
+					"ko": "좋아하는 트레이너의 팔에 리본 모양의 더듬이를 감고 함께 걷는다.",
+					"fr": "Il enroule ses rubans sensoriels autour du bras de son Dresseur adoré et chemine paisiblement à ses côtés.",
+					"de": "Es umwickelt den Arm seines geliebten Trainers mit seinen bandförmigen Fühlern und geht so mit ihm spazieren.",
+					"es": "Enrolla sus apéndices sensoriales con forma de cinta en los brazos de su querido Entrenador cuando caminan juntos.",
+					"it": "Se si affeziona particolarmente al suo Allenatore, lo accompagna circondandogli amorevolmente il braccio con le sue antenne a forma di fiocchetto.",
+					"en": "It wraps its ribbonlike feelers around the arm of its beloved Trainer and walks with him or her.",
+					"ja": "大好きな トレーナーの 腕に リボンのような 触覚を 巻きつけて 一緒に 歩く。",
+					"es-419": "Enrolla sus apéndices sensoriales con forma de cinta en los brazos de su querido Entrenador cuando caminan juntos."
+				},
+				"y-central": {
+					"ja-hrkt": "だいすきな トレーナーの うでに リボンのような しょっかくを まきつけて いっしょに あるく。",
+					"ko": "좋아하는 트레이너의 팔에 리본 모양의 더듬이를 감고 함께 걷는다.",
+					"fr": "Il enroule ses rubans sensoriels autour du bras de son Dresseur adoré et chemine paisiblement à ses côtés.",
+					"de": "Es umwickelt den Arm seines geliebten Trainers mit seinen bandförmigen Fühlern und geht so mit ihm spazieren.",
+					"es": "Enrolla sus apéndices sensoriales con forma de cinta en los brazos de su querido Entrenador cuando caminan juntos.",
+					"it": "Se si affeziona particolarmente al suo Allenatore, lo accompagna circondandogli amorevolmente il braccio con le sue antenne a forma di fiocchetto.",
+					"en": "It wraps its ribbonlike feelers around the arm of its beloved Trainer and walks with him or her.",
+					"ja": "大好きな トレーナーの 腕に リボンのような 触覚を 巻きつけて 一緒に 歩く。",
+					"es-419": "Enrolla sus apéndices sensoriales con forma de cinta en los brazos de su querido Entrenador cuando caminan juntos."
+				},
+				"y-coastal": {
+					"ja-hrkt": "だいすきな トレーナーの うでに リボンのような しょっかくを まきつけて いっしょに あるく。",
+					"ko": "좋아하는 트레이너의 팔에 리본 모양의 더듬이를 감고 함께 걷는다.",
+					"fr": "Il enroule ses rubans sensoriels autour du bras de son Dresseur adoré et chemine paisiblement à ses côtés.",
+					"de": "Es umwickelt den Arm seines geliebten Trainers mit seinen bandförmigen Fühlern und geht so mit ihm spazieren.",
+					"es": "Enrolla sus apéndices sensoriales con forma de cinta en los brazos de su querido Entrenador cuando caminan juntos.",
+					"it": "Se si affeziona particolarmente al suo Allenatore, lo accompagna circondandogli amorevolmente il braccio con le sue antenne a forma di fiocchetto.",
+					"en": "It wraps its ribbonlike feelers around the arm of its beloved Trainer and walks with him or her.",
+					"ja": "大好きな トレーナーの 腕に リボンのような 触覚を 巻きつけて 一緒に 歩く。",
+					"es-419": "Enrolla sus apéndices sensoriales con forma de cinta en los brazos de su querido Entrenador cuando caminan juntos."
+				},
+				"y-mountain": {
+					"ja-hrkt": "だいすきな トレーナーの うでに リボンのような しょっかくを まきつけて いっしょに あるく。",
+					"ko": "좋아하는 트레이너의 팔에 리본 모양의 더듬이를 감고 함께 걷는다.",
+					"fr": "Il enroule ses rubans sensoriels autour du bras de son Dresseur adoré et chemine paisiblement à ses côtés.",
+					"de": "Es umwickelt den Arm seines geliebten Trainers mit seinen bandförmigen Fühlern und geht so mit ihm spazieren.",
+					"es": "Enrolla sus apéndices sensoriales con forma de cinta en los brazos de su querido Entrenador cuando caminan juntos.",
+					"it": "Se si affeziona particolarmente al suo Allenatore, lo accompagna circondandogli amorevolmente il braccio con le sue antenne a forma di fiocchetto.",
+					"en": "It wraps its ribbonlike feelers around the arm of its beloved Trainer and walks with him or her.",
+					"ja": "大好きな トレーナーの 腕に リボンのような 触覚を 巻きつけて 一緒に 歩く。",
+					"es-419": "Enrolla sus apéndices sensoriales con forma de cinta en los brazos de su querido Entrenador cuando caminan juntos."
+				}
+			}
+		},
+		{
+			"profileKey": "omega-ruby-alpha-sapphire",
+			"label": "Omega Ruby / Alpha Sapphire",
+			"appGameKeys": [
+				"omegaruby-national",
+				"omegaruby",
+				"alphasapphire-national",
+				"alphasapphire"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Sylveon",
+				"localizedNames": {
+					"ja-hrkt": "ニンフィア",
+					"ja-roma": "Nymphia",
+					"ko": "님피아",
+					"zh-hant": "仙子伊布",
+					"fr": "Nymphali",
+					"de": "Feelinara",
+					"es": "Sylveon",
+					"it": "Sylveon",
+					"ja": "ニンフィア",
+					"zh-hans": "仙子伊布",
+					"es-419": "Sylveon"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fairy"
+				],
+				"baseStats": {
+					"hp": 95,
+					"atk": 65,
+					"def": 65,
+					"spa": 110,
+					"spd": 130,
+					"spe": 60
+				},
+				"evYield": {
+					"spd": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cute Charm",
+					"Pixilate (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Pixilate"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 35,
+				"height": "1.0 m",
+				"weight": "23.5 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 184,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Pink",
+				"genus": "Intertwining Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "むすびつきポケモン",
+					"ko": "연결포켓몬",
+					"zh-hant": "連結寶可夢",
+					"fr": "Pokémon Attachant",
+					"de": "Bindungs-Pokémon",
+					"es": "Pokémon Vínculo",
+					"it": "Pokémon Legame",
+					"ja": "むすびつきポケモン",
+					"zh-hans": "连结宝可梦",
+					"es-419": "Pokémon Vínculo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 700
+					},
+					{
+						"pokedex": "kalos-coastal",
+						"number": 85
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 131
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 58
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 161
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 62
+					},
+					{
+						"pokedex": "galar",
+						"number": 204
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 82
+					},
+					{
+						"pokedex": "hisui",
+						"number": 33
+					},
+					{
+						"pokedex": "paldea",
+						"number": 187
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 108
+					},
+					{
+						"pokedex": "champions",
+						"number": 700
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 134,
+								"natiId": 134,
+								"name": "Vaporeon",
+								"method": "Use item",
+								"value": "Water Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 135,
+								"natiId": 135,
+								"name": "Jolteon",
+								"method": "Use item",
+								"value": "Thunder Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 136,
+								"natiId": 136,
+								"name": "Flareon",
+								"method": "Use item",
+								"value": "Fire Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 196,
+								"natiId": 196,
+								"name": "Espeon",
+								"method": "Level up with 220+ friendship",
+								"value": "during the day",
+								"minimumFriendship": 220,
+								"timeOfDay": "day"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 197,
+								"natiId": 197,
+								"name": "Umbreon",
+								"method": "Level up with 220+ friendship",
+								"value": "during the night",
+								"minimumFriendship": 220,
+								"timeOfDay": "night"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 470,
+								"natiId": 470,
+								"name": "Leafeon",
+								"method": "Level up near",
+								"value": "the Moss Rock in Petalburg Woods"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 471,
+								"natiId": 471,
+								"name": "Glaceon",
+								"method": "Level up near",
+								"value": "the Ice Rock in Shoal Cave"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 700,
+								"natiId": 700,
+								"name": "Sylveon",
+								"method": "Level up with 2+ affection hearts",
+								"value": "while knowing a Fairy-type move",
+								"minimumAffection": 2,
+								"knownMoveType": "Fairy"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Calm Mind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Cut",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dazzling Gleam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Echoed Voice",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psyshock",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Reflect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Retaliate",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Safeguard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Secret Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						}
+					],
+					"Level Up": [
+						{
+							"name": "Disarming Voice",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Tail Whip",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Helping Hand",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Sand Attack",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Fairy Wind",
+							"level": 9,
+							"order": null
+						},
+						{
+							"name": "Quick Attack",
+							"level": 13,
+							"order": null
+						},
+						{
+							"name": "Swift",
+							"level": 17,
+							"order": null
+						},
+						{
+							"name": "Draining Kiss",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Skill Swap",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Misty Terrain",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": 33,
+							"order": null
+						},
+						{
+							"name": "Moonblast",
+							"level": 37,
+							"order": null
+						},
+						{
+							"name": "Last Resort",
+							"level": 41,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": 45,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Covet",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Heal Bell",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Helping Hand",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Voice",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Last Resort",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Magic Coat",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Skill Swap",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/700",
+						"fetchedAt": "2026-11-03T05:53:50.524Z",
+						"hash": "e0c2dee5bd3dd87a3fb3daf8115c80178110a9303e9caea8585a5c1ff8cba8e6"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/67/",
+						"fetchedAt": "2026-11-03T05:53:14.942Z",
+						"hash": "48eb1dc4c41fec44e5a957e3b93af5a22511cc23a6b973ffed1b5e2eef8f778c"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/700/",
+						"fetchedAt": "2026-11-03T05:53:50.553Z",
+						"hash": "215ff351c9e19e811711a313427cfdd3753605776e77f31b80cc36c5d8b2d2d2"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/700/encounters",
+						"fetchedAt": "2026-11-03T05:53:50.581Z",
+						"hash": "4959dac3207bdab954c39b93c6fd8da2f1e8298faeae388b32884465c69e2032"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/700/",
+						"fetchedAt": "2026-11-03T05:53:50.635Z",
+						"hash": "228ad2f07546caa33543f52317b753e9308b35c49233df31e10e51af3ec64a9d"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"omegaruby-national": "It sends a soothing aura from its ribbonlike feelers to calm fights.",
+				"omegaruby": "It sends a soothing aura from its ribbonlike feelers to calm fights.",
+				"alphasapphire-national": "It wraps its ribbonlike feelers around the arm of its beloved Trainer and walks with him or her.",
+				"alphasapphire": "It wraps its ribbonlike feelers around the arm of its beloved Trainer and walks with him or her."
+			},
+			"localizedFlavorByGame": {
+				"omegaruby-national": {
+					"ja-hrkt": "リボンのような しょっかくから きもちを やわらげる はどうを おくりこみ たたかいを やめさせる。",
+					"ko": "리본 모양의 더듬이에서 마음을 온화하게 하는 파동을 보내 싸움을 그만두게 한다.",
+					"fr": "Pour arrêter le combat, il émet des ondes apaisantes avec ses rubans.",
+					"de": "Seinen bandförmigen Fühlern lässt es beruhigende Wellen entströmen, die das Ende von Kämpfen herbeiführen.",
+					"es": "A través de sus apéndices sensitivos con forma de cinta, emite unas ondas tranquilizadoras mediante las cuales detiene los combates.",
+					"it": "Le sue antenne simili a fiocchetti emettono onde dagli effetti rilassanti, grazie alle quali fa cessare le lotte.",
+					"en": "It sends a soothing aura from its ribbonlike feelers to calm fights.",
+					"ja": "リボンのような 触覚から 気持ちを 和らげる 波動を 送りこみ 戦いを やめさせる。",
+					"es-419": "A través de sus apéndices sensitivos con forma de cinta, emite unas ondas tranquilizadoras mediante las cuales detiene los combates."
+				},
+				"omegaruby": {
+					"ja-hrkt": "リボンのような しょっかくから きもちを やわらげる はどうを おくりこみ たたかいを やめさせる。",
+					"ko": "리본 모양의 더듬이에서 마음을 온화하게 하는 파동을 보내 싸움을 그만두게 한다.",
+					"fr": "Pour arrêter le combat, il émet des ondes apaisantes avec ses rubans.",
+					"de": "Seinen bandförmigen Fühlern lässt es beruhigende Wellen entströmen, die das Ende von Kämpfen herbeiführen.",
+					"es": "A través de sus apéndices sensitivos con forma de cinta, emite unas ondas tranquilizadoras mediante las cuales detiene los combates.",
+					"it": "Le sue antenne simili a fiocchetti emettono onde dagli effetti rilassanti, grazie alle quali fa cessare le lotte.",
+					"en": "It sends a soothing aura from its ribbonlike feelers to calm fights.",
+					"ja": "リボンのような 触覚から 気持ちを 和らげる 波動を 送りこみ 戦いを やめさせる。",
+					"es-419": "A través de sus apéndices sensitivos con forma de cinta, emite unas ondas tranquilizadoras mediante las cuales detiene los combates."
+				},
+				"alphasapphire-national": {
+					"ja-hrkt": "だいすきな トレーナーの うでに リボンのような しょっかくを まきつけて いっしょに あるく。",
+					"ko": "좋아하는 트레이너의 팔에 리본 모양의 더듬이를 감고 함께 걷는다.",
+					"fr": "Il enroule ses rubans sensoriels autour du bras de son Dresseur adoré et chemine paisiblement à ses côtés.",
+					"de": "Es umwickelt den Arm seines geliebten Trainers mit seinen bandförmigen Fühlern und geht so mit ihm spazieren.",
+					"es": "Enrolla sus apéndices sensoriales con forma de cinta en los brazos de su querido Entrenador cuando caminan juntos.",
+					"it": "Se si affeziona particolarmente al suo Allenatore, lo accompagna circondandogli amorevolmente il braccio con le sue antenne a forma di fiocchetto.",
+					"en": "It wraps its ribbonlike feelers around the arm of its beloved Trainer and walks with him or her.",
+					"ja": "大好きな トレーナーの 腕に リボンのような 触覚を 巻きつけて 一緒に 歩く。",
+					"es-419": "Enrolla sus apéndices sensoriales con forma de cinta en los brazos de su querido Entrenador cuando caminan juntos."
+				},
+				"alphasapphire": {
+					"ja-hrkt": "だいすきな トレーナーの うでに リボンのような しょっかくを まきつけて いっしょに あるく。",
+					"ko": "좋아하는 트레이너의 팔에 리본 모양의 더듬이를 감고 함께 걷는다.",
+					"fr": "Il enroule ses rubans sensoriels autour du bras de son Dresseur adoré et chemine paisiblement à ses côtés.",
+					"de": "Es umwickelt den Arm seines geliebten Trainers mit seinen bandförmigen Fühlern und geht so mit ihm spazieren.",
+					"es": "Enrolla sus apéndices sensoriales con forma de cinta en los brazos de su querido Entrenador cuando caminan juntos.",
+					"it": "Se si affeziona particolarmente al suo Allenatore, lo accompagna circondandogli amorevolmente il braccio con le sue antenne a forma di fiocchetto.",
+					"en": "It wraps its ribbonlike feelers around the arm of its beloved Trainer and walks with him or her.",
+					"ja": "大好きな トレーナーの 腕に リボンのような 触覚を 巻きつけて 一緒に 歩く。",
+					"es-419": "Enrolla sus apéndices sensoriales con forma de cinta en los brazos de su querido Entrenador cuando caminan juntos."
+				}
+			}
+		},
+		{
+			"profileKey": "sun-moon",
+			"label": "Sun / Moon",
+			"appGameKeys": [
+				"sun-alola",
+				"sun-melemele",
+				"sun-akala",
+				"sun-ulaula",
+				"sun-poni",
+				"moon-alola",
+				"moon-melemele",
+				"moon-akala",
+				"moon-ulaula",
+				"moon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Sylveon",
+				"localizedNames": {
+					"ja-hrkt": "ニンフィア",
+					"ja-roma": "Nymphia",
+					"ko": "님피아",
+					"zh-hant": "仙子伊布",
+					"fr": "Nymphali",
+					"de": "Feelinara",
+					"es": "Sylveon",
+					"it": "Sylveon",
+					"ja": "ニンフィア",
+					"zh-hans": "仙子伊布",
+					"es-419": "Sylveon"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fairy"
+				],
+				"baseStats": {
+					"hp": 95,
+					"atk": 65,
+					"def": 65,
+					"spa": 110,
+					"spd": 130,
+					"spe": 60
+				},
+				"evYield": {
+					"spd": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cute Charm",
+					"Pixilate (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Pixilate"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 35,
+				"height": "1.0 m",
+				"weight": "23.5 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 184,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Pink",
+				"genus": "Intertwining Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "むすびつきポケモン",
+					"ko": "연결포켓몬",
+					"zh-hant": "連結寶可夢",
+					"fr": "Pokémon Attachant",
+					"de": "Bindungs-Pokémon",
+					"es": "Pokémon Vínculo",
+					"it": "Pokémon Legame",
+					"ja": "むすびつきポケモン",
+					"zh-hans": "连结宝可梦",
+					"es-419": "Pokémon Vínculo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 700
+					},
+					{
+						"pokedex": "kalos-coastal",
+						"number": 85
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 131
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 58
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 161
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 62
+					},
+					{
+						"pokedex": "galar",
+						"number": 204
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 82
+					},
+					{
+						"pokedex": "hisui",
+						"number": 33
+					},
+					{
+						"pokedex": "paldea",
+						"number": 187
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 108
+					},
+					{
+						"pokedex": "champions",
+						"number": 700
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 134,
+								"natiId": 134,
+								"name": "Vaporeon",
+								"method": "Use item",
+								"value": "Water Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 135,
+								"natiId": 135,
+								"name": "Jolteon",
+								"method": "Use item",
+								"value": "Thunder Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 136,
+								"natiId": 136,
+								"name": "Flareon",
+								"method": "Use item",
+								"value": "Fire Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 196,
+								"natiId": 196,
+								"name": "Espeon",
+								"method": "Level up with 220+ friendship",
+								"value": "during the day",
+								"minimumFriendship": 220,
+								"timeOfDay": "day"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 197,
+								"natiId": 197,
+								"name": "Umbreon",
+								"method": "Level up with 220+ friendship",
+								"value": "during the night",
+								"minimumFriendship": 220,
+								"timeOfDay": "night"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 470,
+								"natiId": 470,
+								"name": "Leafeon",
+								"method": "Level up near",
+								"value": "the Moss Rock in Lush Jungle"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 471,
+								"natiId": 471,
+								"name": "Glaceon",
+								"method": "Level up near",
+								"value": "the Ice Rock in Mount Lanakila"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 700,
+								"natiId": 700,
+								"name": "Sylveon",
+								"method": "Level up with 2+ affection hearts",
+								"value": "while knowing a Fairy-type move",
+								"minimumAffection": 2,
+								"knownMoveType": "Fairy"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Fairy Wind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fairy Wind",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Disarming Voice",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Helping Hand",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Tail Whip",
+							"level": 1,
+							"order": 5
+						},
+						{
+							"name": "Sand Attack",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Baby Doll Eyes",
+							"level": 9,
+							"order": null
+						},
+						{
+							"name": "Quick Attack",
+							"level": 13,
+							"order": null
+						},
+						{
+							"name": "Swift",
+							"level": 17,
+							"order": null
+						},
+						{
+							"name": "Draining Kiss",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Skill Swap",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Misty Terrain",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": 33,
+							"order": null
+						},
+						{
+							"name": "Moonblast",
+							"level": 37,
+							"order": null
+						},
+						{
+							"name": "Last Resort",
+							"level": 41,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": 45,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Calm Mind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dazzling Gleam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Echoed Voice",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psyshock",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Reflect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Safeguard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Work Up",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/700",
+						"fetchedAt": "2026-11-03T05:53:50.524Z",
+						"hash": "e0c2dee5bd3dd87a3fb3daf8115c80178110a9303e9caea8585a5c1ff8cba8e6"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/67/",
+						"fetchedAt": "2026-11-03T05:53:14.942Z",
+						"hash": "48eb1dc4c41fec44e5a957e3b93af5a22511cc23a6b973ffed1b5e2eef8f778c"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/700/",
+						"fetchedAt": "2026-11-03T05:53:50.553Z",
+						"hash": "215ff351c9e19e811711a313427cfdd3753605776e77f31b80cc36c5d8b2d2d2"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/700/encounters",
+						"fetchedAt": "2026-11-03T05:53:50.581Z",
+						"hash": "4959dac3207bdab954c39b93c6fd8da2f1e8298faeae388b32884465c69e2032"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/700/",
+						"fetchedAt": "2026-11-03T05:53:50.635Z",
+						"hash": "228ad2f07546caa33543f52317b753e9308b35c49233df31e10e51af3ec64a9d"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sun-alola": "Its ribbonlike feelers give off an aura that weakens hostility in its prey, causing them to let down their guard. Then it attacks.",
+				"sun-melemele": "Its ribbonlike feelers give off an aura that weakens hostility in its prey, causing them to let down their guard. Then it attacks.",
+				"sun-akala": "Its ribbonlike feelers give off an aura that weakens hostility in its prey, causing them to let down their guard. Then it attacks.",
+				"sun-ulaula": "Its ribbonlike feelers give off an aura that weakens hostility in its prey, causing them to let down their guard. Then it attacks.",
+				"sun-poni": "Its ribbonlike feelers give off an aura that weakens hostility in its prey, causing them to let down their guard. Then it attacks.",
+				"moon-alola": "When this Pokémon sights its prey, it swirls its ribbonlike feelers as a distraction. A moment later, it pounces.",
+				"moon-melemele": "When this Pokémon sights its prey, it swirls its ribbonlike feelers as a distraction. A moment later, it pounces.",
+				"moon-akala": "When this Pokémon sights its prey, it swirls its ribbonlike feelers as a distraction. A moment later, it pounces.",
+				"moon-ulaula": "When this Pokémon sights its prey, it swirls its ribbonlike feelers as a distraction. A moment later, it pounces.",
+				"moon-poni": "When this Pokémon sights its prey, it swirls its ribbonlike feelers as a distraction. A moment later, it pounces."
+			},
+			"localizedFlavorByGame": {
+				"sun-alola": {
+					"ja-hrkt": "リボンの ような しょっかく から てきいを そぐ はどうを はなち えものを ゆだんさせ おそう。",
+					"ko": "리본 같은 더듬이로부터 적의를 없애는 파동을 내보내 먹이를 방심하게 하고 덮친다.",
+					"zh-hant": "從有如蝴蝶結的觸角裡 釋放出削弱敵意的波動， 令獵物大意後襲擊對方。",
+					"fr": "Grâce à ses antennes semblables à des rubans, il peut émettre des ondes neutralisant l’hostilité et ainsi endormir la méfiance de ses proies.",
+					"de": "Seinen bandförmigen Fühlern lässt es beruhigende Wellen entströmen, um seine Beute in Sicherheit zu wiegen.",
+					"es": "Con sus apéndices sensoriales con forma de cinta, puede emitir ondas que neutralizan la hostilidad y hacen bajar la guardia a su presa.",
+					"it": "Le sue antenne simili a fiocchetti emettono onde che neutralizzano l’aggressività, riuscendo così a far abbassare la guardia alle sue prede.",
+					"en": "Its ribbonlike feelers give off an aura that weakens hostility in its prey, causing them to let down their guard. Then it attacks.",
+					"ja": "リボンの ような 触角 から 敵意を 削ぐ 波動を 放ち 獲物を 油断させ 襲う。",
+					"zh-hans": "从蝴蝶结那样的触角里 释放出削弱敌意的波动， 令猎物大意后袭击对方。",
+					"es-419": "Con sus apéndices sensoriales con forma de cinta, puede emitir ondas que neutralizan la hostilidad y hacen bajar la guardia a su presa."
+				},
+				"sun-melemele": {
+					"ja-hrkt": "リボンの ような しょっかく から てきいを そぐ はどうを はなち えものを ゆだんさせ おそう。",
+					"ko": "리본 같은 더듬이로부터 적의를 없애는 파동을 내보내 먹이를 방심하게 하고 덮친다.",
+					"zh-hant": "從有如蝴蝶結的觸角裡 釋放出削弱敵意的波動， 令獵物大意後襲擊對方。",
+					"fr": "Grâce à ses antennes semblables à des rubans, il peut émettre des ondes neutralisant l’hostilité et ainsi endormir la méfiance de ses proies.",
+					"de": "Seinen bandförmigen Fühlern lässt es beruhigende Wellen entströmen, um seine Beute in Sicherheit zu wiegen.",
+					"es": "Con sus apéndices sensoriales con forma de cinta, puede emitir ondas que neutralizan la hostilidad y hacen bajar la guardia a su presa.",
+					"it": "Le sue antenne simili a fiocchetti emettono onde che neutralizzano l’aggressività, riuscendo così a far abbassare la guardia alle sue prede.",
+					"en": "Its ribbonlike feelers give off an aura that weakens hostility in its prey, causing them to let down their guard. Then it attacks.",
+					"ja": "リボンの ような 触角 から 敵意を 削ぐ 波動を 放ち 獲物を 油断させ 襲う。",
+					"zh-hans": "从蝴蝶结那样的触角里 释放出削弱敌意的波动， 令猎物大意后袭击对方。",
+					"es-419": "Con sus apéndices sensoriales con forma de cinta, puede emitir ondas que neutralizan la hostilidad y hacen bajar la guardia a su presa."
+				},
+				"sun-akala": {
+					"ja-hrkt": "リボンの ような しょっかく から てきいを そぐ はどうを はなち えものを ゆだんさせ おそう。",
+					"ko": "리본 같은 더듬이로부터 적의를 없애는 파동을 내보내 먹이를 방심하게 하고 덮친다.",
+					"zh-hant": "從有如蝴蝶結的觸角裡 釋放出削弱敵意的波動， 令獵物大意後襲擊對方。",
+					"fr": "Grâce à ses antennes semblables à des rubans, il peut émettre des ondes neutralisant l’hostilité et ainsi endormir la méfiance de ses proies.",
+					"de": "Seinen bandförmigen Fühlern lässt es beruhigende Wellen entströmen, um seine Beute in Sicherheit zu wiegen.",
+					"es": "Con sus apéndices sensoriales con forma de cinta, puede emitir ondas que neutralizan la hostilidad y hacen bajar la guardia a su presa.",
+					"it": "Le sue antenne simili a fiocchetti emettono onde che neutralizzano l’aggressività, riuscendo così a far abbassare la guardia alle sue prede.",
+					"en": "Its ribbonlike feelers give off an aura that weakens hostility in its prey, causing them to let down their guard. Then it attacks.",
+					"ja": "リボンの ような 触角 から 敵意を 削ぐ 波動を 放ち 獲物を 油断させ 襲う。",
+					"zh-hans": "从蝴蝶结那样的触角里 释放出削弱敌意的波动， 令猎物大意后袭击对方。",
+					"es-419": "Con sus apéndices sensoriales con forma de cinta, puede emitir ondas que neutralizan la hostilidad y hacen bajar la guardia a su presa."
+				},
+				"sun-ulaula": {
+					"ja-hrkt": "リボンの ような しょっかく から てきいを そぐ はどうを はなち えものを ゆだんさせ おそう。",
+					"ko": "리본 같은 더듬이로부터 적의를 없애는 파동을 내보내 먹이를 방심하게 하고 덮친다.",
+					"zh-hant": "從有如蝴蝶結的觸角裡 釋放出削弱敵意的波動， 令獵物大意後襲擊對方。",
+					"fr": "Grâce à ses antennes semblables à des rubans, il peut émettre des ondes neutralisant l’hostilité et ainsi endormir la méfiance de ses proies.",
+					"de": "Seinen bandförmigen Fühlern lässt es beruhigende Wellen entströmen, um seine Beute in Sicherheit zu wiegen.",
+					"es": "Con sus apéndices sensoriales con forma de cinta, puede emitir ondas que neutralizan la hostilidad y hacen bajar la guardia a su presa.",
+					"it": "Le sue antenne simili a fiocchetti emettono onde che neutralizzano l’aggressività, riuscendo così a far abbassare la guardia alle sue prede.",
+					"en": "Its ribbonlike feelers give off an aura that weakens hostility in its prey, causing them to let down their guard. Then it attacks.",
+					"ja": "リボンの ような 触角 から 敵意を 削ぐ 波動を 放ち 獲物を 油断させ 襲う。",
+					"zh-hans": "从蝴蝶结那样的触角里 释放出削弱敌意的波动， 令猎物大意后袭击对方。",
+					"es-419": "Con sus apéndices sensoriales con forma de cinta, puede emitir ondas que neutralizan la hostilidad y hacen bajar la guardia a su presa."
+				},
+				"sun-poni": {
+					"ja-hrkt": "リボンの ような しょっかく から てきいを そぐ はどうを はなち えものを ゆだんさせ おそう。",
+					"ko": "리본 같은 더듬이로부터 적의를 없애는 파동을 내보내 먹이를 방심하게 하고 덮친다.",
+					"zh-hant": "從有如蝴蝶結的觸角裡 釋放出削弱敵意的波動， 令獵物大意後襲擊對方。",
+					"fr": "Grâce à ses antennes semblables à des rubans, il peut émettre des ondes neutralisant l’hostilité et ainsi endormir la méfiance de ses proies.",
+					"de": "Seinen bandförmigen Fühlern lässt es beruhigende Wellen entströmen, um seine Beute in Sicherheit zu wiegen.",
+					"es": "Con sus apéndices sensoriales con forma de cinta, puede emitir ondas que neutralizan la hostilidad y hacen bajar la guardia a su presa.",
+					"it": "Le sue antenne simili a fiocchetti emettono onde che neutralizzano l’aggressività, riuscendo così a far abbassare la guardia alle sue prede.",
+					"en": "Its ribbonlike feelers give off an aura that weakens hostility in its prey, causing them to let down their guard. Then it attacks.",
+					"ja": "リボンの ような 触角 から 敵意を 削ぐ 波動を 放ち 獲物を 油断させ 襲う。",
+					"zh-hans": "从蝴蝶结那样的触角里 释放出削弱敌意的波动， 令猎物大意后袭击对方。",
+					"es-419": "Con sus apéndices sensoriales con forma de cinta, puede emitir ondas que neutralizan la hostilidad y hacen bajar la guardia a su presa."
+				},
+				"moon-alola": {
+					"ja-hrkt": "えものを みつけると リボンじょうの しょっかくを ゆらし ゆだん させ スキが できると とびかかる。",
+					"ko": "먹이를 발견하면 리본 모양의 더듬이를 흔들어 방심하게 하고 틈이 만들어지면 덤벼든다.",
+					"zh-hant": "發現獵物後，就會搖晃 蝴蝶結形狀的觸角讓對方大意， 一旦有機可乘就會猛撲過去。",
+					"fr": "Lorsqu’il trouve une proie, il agite ses antennes en forme de rubans pour la distraire. Ensuite, il passe à l’attaque.",
+					"de": "Hat es Beute entdeckt, wedelt es mit seinen bandförmigen Fühlern, um diese abzulenken. Bei Erfolg stürzt es sich auf sie.",
+					"es": "Al detectar a una presa, agita sus apéndices sensoriales con forma de cinta para distraerla y, cuando lo consigue, se abalanza sobre ella.",
+					"it": "Individuata una preda, agita le sue antenne simili a fiocchetti per deconcentrarla e poi attacca approfittando della sua distrazione.",
+					"en": "When this Pokémon sights its prey, it swirls its ribbonlike feelers as a distraction. A moment later, it pounces.",
+					"ja": "獲物を 見つけると リボン状の 触角を 揺らし 油断 させ スキが できると 飛びかかる。",
+					"zh-hans": "发现猎物后，就会摇晃 蝴蝶结状的触角让对方大意， 一旦出现可趁之机就会猛扑过去。",
+					"es-419": "Al detectar a una presa, agita sus apéndices sensoriales con forma de cinta para distraerla y, cuando lo consigue, se abalanza sobre ella."
+				},
+				"moon-melemele": {
+					"ja-hrkt": "えものを みつけると リボンじょうの しょっかくを ゆらし ゆだん させ スキが できると とびかかる。",
+					"ko": "먹이를 발견하면 리본 모양의 더듬이를 흔들어 방심하게 하고 틈이 만들어지면 덤벼든다.",
+					"zh-hant": "發現獵物後，就會搖晃 蝴蝶結形狀的觸角讓對方大意， 一旦有機可乘就會猛撲過去。",
+					"fr": "Lorsqu’il trouve une proie, il agite ses antennes en forme de rubans pour la distraire. Ensuite, il passe à l’attaque.",
+					"de": "Hat es Beute entdeckt, wedelt es mit seinen bandförmigen Fühlern, um diese abzulenken. Bei Erfolg stürzt es sich auf sie.",
+					"es": "Al detectar a una presa, agita sus apéndices sensoriales con forma de cinta para distraerla y, cuando lo consigue, se abalanza sobre ella.",
+					"it": "Individuata una preda, agita le sue antenne simili a fiocchetti per deconcentrarla e poi attacca approfittando della sua distrazione.",
+					"en": "When this Pokémon sights its prey, it swirls its ribbonlike feelers as a distraction. A moment later, it pounces.",
+					"ja": "獲物を 見つけると リボン状の 触角を 揺らし 油断 させ スキが できると 飛びかかる。",
+					"zh-hans": "发现猎物后，就会摇晃 蝴蝶结状的触角让对方大意， 一旦出现可趁之机就会猛扑过去。",
+					"es-419": "Al detectar a una presa, agita sus apéndices sensoriales con forma de cinta para distraerla y, cuando lo consigue, se abalanza sobre ella."
+				},
+				"moon-akala": {
+					"ja-hrkt": "えものを みつけると リボンじょうの しょっかくを ゆらし ゆだん させ スキが できると とびかかる。",
+					"ko": "먹이를 발견하면 리본 모양의 더듬이를 흔들어 방심하게 하고 틈이 만들어지면 덤벼든다.",
+					"zh-hant": "發現獵物後，就會搖晃 蝴蝶結形狀的觸角讓對方大意， 一旦有機可乘就會猛撲過去。",
+					"fr": "Lorsqu’il trouve une proie, il agite ses antennes en forme de rubans pour la distraire. Ensuite, il passe à l’attaque.",
+					"de": "Hat es Beute entdeckt, wedelt es mit seinen bandförmigen Fühlern, um diese abzulenken. Bei Erfolg stürzt es sich auf sie.",
+					"es": "Al detectar a una presa, agita sus apéndices sensoriales con forma de cinta para distraerla y, cuando lo consigue, se abalanza sobre ella.",
+					"it": "Individuata una preda, agita le sue antenne simili a fiocchetti per deconcentrarla e poi attacca approfittando della sua distrazione.",
+					"en": "When this Pokémon sights its prey, it swirls its ribbonlike feelers as a distraction. A moment later, it pounces.",
+					"ja": "獲物を 見つけると リボン状の 触角を 揺らし 油断 させ スキが できると 飛びかかる。",
+					"zh-hans": "发现猎物后，就会摇晃 蝴蝶结状的触角让对方大意， 一旦出现可趁之机就会猛扑过去。",
+					"es-419": "Al detectar a una presa, agita sus apéndices sensoriales con forma de cinta para distraerla y, cuando lo consigue, se abalanza sobre ella."
+				},
+				"moon-ulaula": {
+					"ja-hrkt": "えものを みつけると リボンじょうの しょっかくを ゆらし ゆだん させ スキが できると とびかかる。",
+					"ko": "먹이를 발견하면 리본 모양의 더듬이를 흔들어 방심하게 하고 틈이 만들어지면 덤벼든다.",
+					"zh-hant": "發現獵物後，就會搖晃 蝴蝶結形狀的觸角讓對方大意， 一旦有機可乘就會猛撲過去。",
+					"fr": "Lorsqu’il trouve une proie, il agite ses antennes en forme de rubans pour la distraire. Ensuite, il passe à l’attaque.",
+					"de": "Hat es Beute entdeckt, wedelt es mit seinen bandförmigen Fühlern, um diese abzulenken. Bei Erfolg stürzt es sich auf sie.",
+					"es": "Al detectar a una presa, agita sus apéndices sensoriales con forma de cinta para distraerla y, cuando lo consigue, se abalanza sobre ella.",
+					"it": "Individuata una preda, agita le sue antenne simili a fiocchetti per deconcentrarla e poi attacca approfittando della sua distrazione.",
+					"en": "When this Pokémon sights its prey, it swirls its ribbonlike feelers as a distraction. A moment later, it pounces.",
+					"ja": "獲物を 見つけると リボン状の 触角を 揺らし 油断 させ スキが できると 飛びかかる。",
+					"zh-hans": "发现猎物后，就会摇晃 蝴蝶结状的触角让对方大意， 一旦出现可趁之机就会猛扑过去。",
+					"es-419": "Al detectar a una presa, agita sus apéndices sensoriales con forma de cinta para distraerla y, cuando lo consigue, se abalanza sobre ella."
+				},
+				"moon-poni": {
+					"ja-hrkt": "えものを みつけると リボンじょうの しょっかくを ゆらし ゆだん させ スキが できると とびかかる。",
+					"ko": "먹이를 발견하면 리본 모양의 더듬이를 흔들어 방심하게 하고 틈이 만들어지면 덤벼든다.",
+					"zh-hant": "發現獵物後，就會搖晃 蝴蝶結形狀的觸角讓對方大意， 一旦有機可乘就會猛撲過去。",
+					"fr": "Lorsqu’il trouve une proie, il agite ses antennes en forme de rubans pour la distraire. Ensuite, il passe à l’attaque.",
+					"de": "Hat es Beute entdeckt, wedelt es mit seinen bandförmigen Fühlern, um diese abzulenken. Bei Erfolg stürzt es sich auf sie.",
+					"es": "Al detectar a una presa, agita sus apéndices sensoriales con forma de cinta para distraerla y, cuando lo consigue, se abalanza sobre ella.",
+					"it": "Individuata una preda, agita le sue antenne simili a fiocchetti per deconcentrarla e poi attacca approfittando della sua distrazione.",
+					"en": "When this Pokémon sights its prey, it swirls its ribbonlike feelers as a distraction. A moment later, it pounces.",
+					"ja": "獲物を 見つけると リボン状の 触角を 揺らし 油断 させ スキが できると 飛びかかる。",
+					"zh-hans": "发现猎物后，就会摇晃 蝴蝶结状的触角让对方大意， 一旦出现可趁之机就会猛扑过去。",
+					"es-419": "Al detectar a una presa, agita sus apéndices sensoriales con forma de cinta para distraerla y, cuando lo consigue, se abalanza sobre ella."
+				}
+			}
+		},
+		{
+			"profileKey": "ultra-sun-ultra-moon",
+			"label": "Ultra Sun / Ultra Moon",
+			"appGameKeys": [
+				"ultrasun-alola",
+				"ultrasun-melemele",
+				"ultrasun-akala",
+				"ultrasun-ulaula",
+				"ultrasun-poni",
+				"ultramoon-alola",
+				"ultramoon-melemele",
+				"ultramoon-akala",
+				"ultramoon-ulaula",
+				"ultramoon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Sylveon",
+				"localizedNames": {
+					"ja-hrkt": "ニンフィア",
+					"ja-roma": "Nymphia",
+					"ko": "님피아",
+					"zh-hant": "仙子伊布",
+					"fr": "Nymphali",
+					"de": "Feelinara",
+					"es": "Sylveon",
+					"it": "Sylveon",
+					"ja": "ニンフィア",
+					"zh-hans": "仙子伊布",
+					"es-419": "Sylveon"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fairy"
+				],
+				"baseStats": {
+					"hp": 95,
+					"atk": 65,
+					"def": 65,
+					"spa": 110,
+					"spd": 130,
+					"spe": 60
+				},
+				"evYield": {
+					"spd": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cute Charm",
+					"Pixilate (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Pixilate"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 35,
+				"height": "1.0 m",
+				"weight": "23.5 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 184,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Pink",
+				"genus": "Intertwining Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "むすびつきポケモン",
+					"ko": "연결포켓몬",
+					"zh-hant": "連結寶可夢",
+					"fr": "Pokémon Attachant",
+					"de": "Bindungs-Pokémon",
+					"es": "Pokémon Vínculo",
+					"it": "Pokémon Legame",
+					"ja": "むすびつきポケモン",
+					"zh-hans": "连结宝可梦",
+					"es-419": "Pokémon Vínculo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 700
+					},
+					{
+						"pokedex": "kalos-coastal",
+						"number": 85
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 131
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 58
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 161
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 62
+					},
+					{
+						"pokedex": "galar",
+						"number": 204
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 82
+					},
+					{
+						"pokedex": "hisui",
+						"number": 33
+					},
+					{
+						"pokedex": "paldea",
+						"number": 187
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 108
+					},
+					{
+						"pokedex": "champions",
+						"number": 700
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 134,
+								"natiId": 134,
+								"name": "Vaporeon",
+								"method": "Use item",
+								"value": "Water Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 135,
+								"natiId": 135,
+								"name": "Jolteon",
+								"method": "Use item",
+								"value": "Thunder Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 136,
+								"natiId": 136,
+								"name": "Flareon",
+								"method": "Use item",
+								"value": "Fire Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 196,
+								"natiId": 196,
+								"name": "Espeon",
+								"method": "Level up with 220+ friendship",
+								"value": "during the day",
+								"minimumFriendship": 220,
+								"timeOfDay": "day"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 197,
+								"natiId": 197,
+								"name": "Umbreon",
+								"method": "Level up with 220+ friendship",
+								"value": "during the night",
+								"minimumFriendship": 220,
+								"timeOfDay": "night"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 470,
+								"natiId": 470,
+								"name": "Leafeon",
+								"method": "Level up near",
+								"value": "the Moss Rock in Lush Jungle"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 471,
+								"natiId": 471,
+								"name": "Glaceon",
+								"method": "Level up near",
+								"value": "the Ice Rock in Mount Lanakila"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 700,
+								"natiId": 700,
+								"name": "Sylveon",
+								"method": "Level up with 2+ affection hearts",
+								"value": "while knowing a Fairy-type move",
+								"minimumAffection": 2,
+								"knownMoveType": "Fairy"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Fairy Wind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fairy Wind",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Disarming Voice",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Helping Hand",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Tail Whip",
+							"level": 1,
+							"order": 5
+						},
+						{
+							"name": "Sand Attack",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Baby Doll Eyes",
+							"level": 9,
+							"order": null
+						},
+						{
+							"name": "Quick Attack",
+							"level": 13,
+							"order": null
+						},
+						{
+							"name": "Swift",
+							"level": 17,
+							"order": null
+						},
+						{
+							"name": "Draining Kiss",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Skill Swap",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Misty Terrain",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": 33,
+							"order": null
+						},
+						{
+							"name": "Moonblast",
+							"level": 37,
+							"order": null
+						},
+						{
+							"name": "Last Resort",
+							"level": 41,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": 45,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Calm Mind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dazzling Gleam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Echoed Voice",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psyshock",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Reflect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Safeguard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Work Up",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Covet",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Heal Bell",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Helping Hand",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Voice",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Laser Focus",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Last Resort",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Magic Coat",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Skill Swap",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Telekinesis",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/700",
+						"fetchedAt": "2026-11-03T05:53:50.524Z",
+						"hash": "e0c2dee5bd3dd87a3fb3daf8115c80178110a9303e9caea8585a5c1ff8cba8e6"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/67/",
+						"fetchedAt": "2026-11-03T05:53:14.942Z",
+						"hash": "48eb1dc4c41fec44e5a957e3b93af5a22511cc23a6b973ffed1b5e2eef8f778c"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/700/",
+						"fetchedAt": "2026-11-03T05:53:50.553Z",
+						"hash": "215ff351c9e19e811711a313427cfdd3753605776e77f31b80cc36c5d8b2d2d2"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/700/encounters",
+						"fetchedAt": "2026-11-03T05:53:50.581Z",
+						"hash": "4959dac3207bdab954c39b93c6fd8da2f1e8298faeae388b32884465c69e2032"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/700/",
+						"fetchedAt": "2026-11-03T05:53:50.635Z",
+						"hash": "228ad2f07546caa33543f52317b753e9308b35c49233df31e10e51af3ec64a9d"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"ultrasun-alola": "Once a fight breaks out, it will unflinchingly charge at dragon Pokémon that are many times larger than itself.",
+				"ultrasun-melemele": "Once a fight breaks out, it will unflinchingly charge at dragon Pokémon that are many times larger than itself.",
+				"ultrasun-akala": "Once a fight breaks out, it will unflinchingly charge at dragon Pokémon that are many times larger than itself.",
+				"ultrasun-ulaula": "Once a fight breaks out, it will unflinchingly charge at dragon Pokémon that are many times larger than itself.",
+				"ultrasun-poni": "Once a fight breaks out, it will unflinchingly charge at dragon Pokémon that are many times larger than itself.",
+				"ultramoon-alola": "Sylveon wraps its ribbonlike feelers around its Trainer’s arm because this touch enables it to read its Trainer’s feelings.",
+				"ultramoon-melemele": "Sylveon wraps its ribbonlike feelers around its Trainer’s arm because this touch enables it to read its Trainer’s feelings.",
+				"ultramoon-akala": "Sylveon wraps its ribbonlike feelers around its Trainer’s arm because this touch enables it to read its Trainer’s feelings.",
+				"ultramoon-ulaula": "Sylveon wraps its ribbonlike feelers around its Trainer’s arm because this touch enables it to read its Trainer’s feelings.",
+				"ultramoon-poni": "Sylveon wraps its ribbonlike feelers around its Trainer’s arm because this touch enables it to read its Trainer’s feelings."
+			},
+			"localizedFlavorByGame": {
+				"ultrasun-alola": {
+					"ja-hrkt": "ひとたび たたかいとなれば じぶんの なんばいもある ドラゴンポケモンにも いっさいひるまず とびかかっていく。",
+					"ko": "한번 싸움이 나면 자신보다 몇 배나 큰 드래곤포켓몬에게도 전혀 기죽지 않고 덤벼든다.",
+					"zh-hant": "一旦進入戰鬥狀態， 即便對手是比自己大幾倍的龍寶可夢， 也會毫不畏懼地飛撲過去。",
+					"fr": "Une fois le combat entamé, il n’hésite pas une seconde, même contre un Pokémon de type Dragon dix fois plus gros que lui.",
+					"de": "Kommt es zum Kampf, stürzt es sich furchtlos ins Gefecht, selbst wenn sein Gegner ein vielfach größeres Drachen-Pokémon ist.",
+					"es": "Cuando se enfrasca en un combate lo da todo sin titubear un segundo, aunque se enfrente a un Pokémon de tipo Dragón más grande que él.",
+					"it": "Nella lotta, parte all’attacco senza esitare un istante, anche quando si trova di fronte imponenti Pokémon di tipo Drago.",
+					"en": "Once a fight breaks out, it will unflinchingly charge at dragon Pokémon that are many times larger than itself.",
+					"ja": "ひとたび 戦いとなれば 自分の 何倍もある ドラゴンポケモンにも いっさい怯まず 飛びかかっていく。",
+					"zh-hans": "一旦进入战斗状态， 即使面对比自己大几倍的龙宝可梦， 也会毫不畏惧地飞扑过去。",
+					"es-419": "Cuando se enfrasca en un combate lo da todo sin titubear un segundo, aunque se enfrente a un Pokémon de tipo Dragón más grande que él."
+				},
+				"ultrasun-melemele": {
+					"ja-hrkt": "ひとたび たたかいとなれば じぶんの なんばいもある ドラゴンポケモンにも いっさいひるまず とびかかっていく。",
+					"ko": "한번 싸움이 나면 자신보다 몇 배나 큰 드래곤포켓몬에게도 전혀 기죽지 않고 덤벼든다.",
+					"zh-hant": "一旦進入戰鬥狀態， 即便對手是比自己大幾倍的龍寶可夢， 也會毫不畏懼地飛撲過去。",
+					"fr": "Une fois le combat entamé, il n’hésite pas une seconde, même contre un Pokémon de type Dragon dix fois plus gros que lui.",
+					"de": "Kommt es zum Kampf, stürzt es sich furchtlos ins Gefecht, selbst wenn sein Gegner ein vielfach größeres Drachen-Pokémon ist.",
+					"es": "Cuando se enfrasca en un combate lo da todo sin titubear un segundo, aunque se enfrente a un Pokémon de tipo Dragón más grande que él.",
+					"it": "Nella lotta, parte all’attacco senza esitare un istante, anche quando si trova di fronte imponenti Pokémon di tipo Drago.",
+					"en": "Once a fight breaks out, it will unflinchingly charge at dragon Pokémon that are many times larger than itself.",
+					"ja": "ひとたび 戦いとなれば 自分の 何倍もある ドラゴンポケモンにも いっさい怯まず 飛びかかっていく。",
+					"zh-hans": "一旦进入战斗状态， 即使面对比自己大几倍的龙宝可梦， 也会毫不畏惧地飞扑过去。",
+					"es-419": "Cuando se enfrasca en un combate lo da todo sin titubear un segundo, aunque se enfrente a un Pokémon de tipo Dragón más grande que él."
+				},
+				"ultrasun-akala": {
+					"ja-hrkt": "ひとたび たたかいとなれば じぶんの なんばいもある ドラゴンポケモンにも いっさいひるまず とびかかっていく。",
+					"ko": "한번 싸움이 나면 자신보다 몇 배나 큰 드래곤포켓몬에게도 전혀 기죽지 않고 덤벼든다.",
+					"zh-hant": "一旦進入戰鬥狀態， 即便對手是比自己大幾倍的龍寶可夢， 也會毫不畏懼地飛撲過去。",
+					"fr": "Une fois le combat entamé, il n’hésite pas une seconde, même contre un Pokémon de type Dragon dix fois plus gros que lui.",
+					"de": "Kommt es zum Kampf, stürzt es sich furchtlos ins Gefecht, selbst wenn sein Gegner ein vielfach größeres Drachen-Pokémon ist.",
+					"es": "Cuando se enfrasca en un combate lo da todo sin titubear un segundo, aunque se enfrente a un Pokémon de tipo Dragón más grande que él.",
+					"it": "Nella lotta, parte all’attacco senza esitare un istante, anche quando si trova di fronte imponenti Pokémon di tipo Drago.",
+					"en": "Once a fight breaks out, it will unflinchingly charge at dragon Pokémon that are many times larger than itself.",
+					"ja": "ひとたび 戦いとなれば 自分の 何倍もある ドラゴンポケモンにも いっさい怯まず 飛びかかっていく。",
+					"zh-hans": "一旦进入战斗状态， 即使面对比自己大几倍的龙宝可梦， 也会毫不畏惧地飞扑过去。",
+					"es-419": "Cuando se enfrasca en un combate lo da todo sin titubear un segundo, aunque se enfrente a un Pokémon de tipo Dragón más grande que él."
+				},
+				"ultrasun-ulaula": {
+					"ja-hrkt": "ひとたび たたかいとなれば じぶんの なんばいもある ドラゴンポケモンにも いっさいひるまず とびかかっていく。",
+					"ko": "한번 싸움이 나면 자신보다 몇 배나 큰 드래곤포켓몬에게도 전혀 기죽지 않고 덤벼든다.",
+					"zh-hant": "一旦進入戰鬥狀態， 即便對手是比自己大幾倍的龍寶可夢， 也會毫不畏懼地飛撲過去。",
+					"fr": "Une fois le combat entamé, il n’hésite pas une seconde, même contre un Pokémon de type Dragon dix fois plus gros que lui.",
+					"de": "Kommt es zum Kampf, stürzt es sich furchtlos ins Gefecht, selbst wenn sein Gegner ein vielfach größeres Drachen-Pokémon ist.",
+					"es": "Cuando se enfrasca en un combate lo da todo sin titubear un segundo, aunque se enfrente a un Pokémon de tipo Dragón más grande que él.",
+					"it": "Nella lotta, parte all’attacco senza esitare un istante, anche quando si trova di fronte imponenti Pokémon di tipo Drago.",
+					"en": "Once a fight breaks out, it will unflinchingly charge at dragon Pokémon that are many times larger than itself.",
+					"ja": "ひとたび 戦いとなれば 自分の 何倍もある ドラゴンポケモンにも いっさい怯まず 飛びかかっていく。",
+					"zh-hans": "一旦进入战斗状态， 即使面对比自己大几倍的龙宝可梦， 也会毫不畏惧地飞扑过去。",
+					"es-419": "Cuando se enfrasca en un combate lo da todo sin titubear un segundo, aunque se enfrente a un Pokémon de tipo Dragón más grande que él."
+				},
+				"ultrasun-poni": {
+					"ja-hrkt": "ひとたび たたかいとなれば じぶんの なんばいもある ドラゴンポケモンにも いっさいひるまず とびかかっていく。",
+					"ko": "한번 싸움이 나면 자신보다 몇 배나 큰 드래곤포켓몬에게도 전혀 기죽지 않고 덤벼든다.",
+					"zh-hant": "一旦進入戰鬥狀態， 即便對手是比自己大幾倍的龍寶可夢， 也會毫不畏懼地飛撲過去。",
+					"fr": "Une fois le combat entamé, il n’hésite pas une seconde, même contre un Pokémon de type Dragon dix fois plus gros que lui.",
+					"de": "Kommt es zum Kampf, stürzt es sich furchtlos ins Gefecht, selbst wenn sein Gegner ein vielfach größeres Drachen-Pokémon ist.",
+					"es": "Cuando se enfrasca en un combate lo da todo sin titubear un segundo, aunque se enfrente a un Pokémon de tipo Dragón más grande que él.",
+					"it": "Nella lotta, parte all’attacco senza esitare un istante, anche quando si trova di fronte imponenti Pokémon di tipo Drago.",
+					"en": "Once a fight breaks out, it will unflinchingly charge at dragon Pokémon that are many times larger than itself.",
+					"ja": "ひとたび 戦いとなれば 自分の 何倍もある ドラゴンポケモンにも いっさい怯まず 飛びかかっていく。",
+					"zh-hans": "一旦进入战斗状态， 即使面对比自己大几倍的龙宝可梦， 也会毫不畏惧地飞扑过去。",
+					"es-419": "Cuando se enfrasca en un combate lo da todo sin titubear un segundo, aunque se enfrente a un Pokémon de tipo Dragón más grande que él."
+				},
+				"ultramoon-alola": {
+					"ja-hrkt": "トレーナーの うでに リボンじょうの しょっかくを まきつけてくる。 ふれると きもちが わかる からだ。",
+					"ko": "트레이너의 팔에 리본 모양의 더듬이를 휘감는다. 닿으면 기분을 알 수 있기 때문이다.",
+					"zh-hant": "會用緞帶般的觸角纏住 訓練家的手臂，因為牠可以 透過觸碰來得知對方的心情。",
+					"fr": "Enrouler l’une de ses antennes en forme de ruban autour du bras de son Dresseur lui permet de connaître ses sentiments.",
+					"de": "Feelinara umwickelt den Arm seines Trainers mit seinen bandförmigen Fühlern, da es so spüren kann, wie es ihm geht.",
+					"es": "Al rodear el brazo de su Entrenador con los apéndices sensoriales en forma de cintas, es capaz de comprender sus sentimientos.",
+					"it": "Avvolge le sue antenne simili a fiocchetti intorno al braccio dell’Allenatore per comprendere i suoi sentimenti.",
+					"en": "Sylveon wraps its ribbonlike feelers around its Trainer’s arm because this touch enables it to read its Trainer’s feelings.",
+					"ja": "トレーナーの 腕に リボン状の 触角を 巻きつけてくる。 触れると 気持ちが わかる からだ。",
+					"zh-hans": "会用缎带般的触角缠住训练家的手臂。 因为只要触碰后就能知道对方的心情。",
+					"es-419": "Al rodear el brazo de su Entrenador con los apéndices sensoriales en forma de cintas, es capaz de comprender sus sentimientos."
+				},
+				"ultramoon-melemele": {
+					"ja-hrkt": "トレーナーの うでに リボンじょうの しょっかくを まきつけてくる。 ふれると きもちが わかる からだ。",
+					"ko": "트레이너의 팔에 리본 모양의 더듬이를 휘감는다. 닿으면 기분을 알 수 있기 때문이다.",
+					"zh-hant": "會用緞帶般的觸角纏住 訓練家的手臂，因為牠可以 透過觸碰來得知對方的心情。",
+					"fr": "Enrouler l’une de ses antennes en forme de ruban autour du bras de son Dresseur lui permet de connaître ses sentiments.",
+					"de": "Feelinara umwickelt den Arm seines Trainers mit seinen bandförmigen Fühlern, da es so spüren kann, wie es ihm geht.",
+					"es": "Al rodear el brazo de su Entrenador con los apéndices sensoriales en forma de cintas, es capaz de comprender sus sentimientos.",
+					"it": "Avvolge le sue antenne simili a fiocchetti intorno al braccio dell’Allenatore per comprendere i suoi sentimenti.",
+					"en": "Sylveon wraps its ribbonlike feelers around its Trainer’s arm because this touch enables it to read its Trainer’s feelings.",
+					"ja": "トレーナーの 腕に リボン状の 触角を 巻きつけてくる。 触れると 気持ちが わかる からだ。",
+					"zh-hans": "会用缎带般的触角缠住训练家的手臂。 因为只要触碰后就能知道对方的心情。",
+					"es-419": "Al rodear el brazo de su Entrenador con los apéndices sensoriales en forma de cintas, es capaz de comprender sus sentimientos."
+				},
+				"ultramoon-akala": {
+					"ja-hrkt": "トレーナーの うでに リボンじょうの しょっかくを まきつけてくる。 ふれると きもちが わかる からだ。",
+					"ko": "트레이너의 팔에 리본 모양의 더듬이를 휘감는다. 닿으면 기분을 알 수 있기 때문이다.",
+					"zh-hant": "會用緞帶般的觸角纏住 訓練家的手臂，因為牠可以 透過觸碰來得知對方的心情。",
+					"fr": "Enrouler l’une de ses antennes en forme de ruban autour du bras de son Dresseur lui permet de connaître ses sentiments.",
+					"de": "Feelinara umwickelt den Arm seines Trainers mit seinen bandförmigen Fühlern, da es so spüren kann, wie es ihm geht.",
+					"es": "Al rodear el brazo de su Entrenador con los apéndices sensoriales en forma de cintas, es capaz de comprender sus sentimientos.",
+					"it": "Avvolge le sue antenne simili a fiocchetti intorno al braccio dell’Allenatore per comprendere i suoi sentimenti.",
+					"en": "Sylveon wraps its ribbonlike feelers around its Trainer’s arm because this touch enables it to read its Trainer’s feelings.",
+					"ja": "トレーナーの 腕に リボン状の 触角を 巻きつけてくる。 触れると 気持ちが わかる からだ。",
+					"zh-hans": "会用缎带般的触角缠住训练家的手臂。 因为只要触碰后就能知道对方的心情。",
+					"es-419": "Al rodear el brazo de su Entrenador con los apéndices sensoriales en forma de cintas, es capaz de comprender sus sentimientos."
+				},
+				"ultramoon-ulaula": {
+					"ja-hrkt": "トレーナーの うでに リボンじょうの しょっかくを まきつけてくる。 ふれると きもちが わかる からだ。",
+					"ko": "트레이너의 팔에 리본 모양의 더듬이를 휘감는다. 닿으면 기분을 알 수 있기 때문이다.",
+					"zh-hant": "會用緞帶般的觸角纏住 訓練家的手臂，因為牠可以 透過觸碰來得知對方的心情。",
+					"fr": "Enrouler l’une de ses antennes en forme de ruban autour du bras de son Dresseur lui permet de connaître ses sentiments.",
+					"de": "Feelinara umwickelt den Arm seines Trainers mit seinen bandförmigen Fühlern, da es so spüren kann, wie es ihm geht.",
+					"es": "Al rodear el brazo de su Entrenador con los apéndices sensoriales en forma de cintas, es capaz de comprender sus sentimientos.",
+					"it": "Avvolge le sue antenne simili a fiocchetti intorno al braccio dell’Allenatore per comprendere i suoi sentimenti.",
+					"en": "Sylveon wraps its ribbonlike feelers around its Trainer’s arm because this touch enables it to read its Trainer’s feelings.",
+					"ja": "トレーナーの 腕に リボン状の 触角を 巻きつけてくる。 触れると 気持ちが わかる からだ。",
+					"zh-hans": "会用缎带般的触角缠住训练家的手臂。 因为只要触碰后就能知道对方的心情。",
+					"es-419": "Al rodear el brazo de su Entrenador con los apéndices sensoriales en forma de cintas, es capaz de comprender sus sentimientos."
+				},
+				"ultramoon-poni": {
+					"ja-hrkt": "トレーナーの うでに リボンじょうの しょっかくを まきつけてくる。 ふれると きもちが わかる からだ。",
+					"ko": "트레이너의 팔에 리본 모양의 더듬이를 휘감는다. 닿으면 기분을 알 수 있기 때문이다.",
+					"zh-hant": "會用緞帶般的觸角纏住 訓練家的手臂，因為牠可以 透過觸碰來得知對方的心情。",
+					"fr": "Enrouler l’une de ses antennes en forme de ruban autour du bras de son Dresseur lui permet de connaître ses sentiments.",
+					"de": "Feelinara umwickelt den Arm seines Trainers mit seinen bandförmigen Fühlern, da es so spüren kann, wie es ihm geht.",
+					"es": "Al rodear el brazo de su Entrenador con los apéndices sensoriales en forma de cintas, es capaz de comprender sus sentimientos.",
+					"it": "Avvolge le sue antenne simili a fiocchetti intorno al braccio dell’Allenatore per comprendere i suoi sentimenti.",
+					"en": "Sylveon wraps its ribbonlike feelers around its Trainer’s arm because this touch enables it to read its Trainer’s feelings.",
+					"ja": "トレーナーの 腕に リボン状の 触角を 巻きつけてくる。 触れると 気持ちが わかる からだ。",
+					"zh-hans": "会用缎带般的触角缠住训练家的手臂。 因为只要触碰后就能知道对方的心情。",
+					"es-419": "Al rodear el brazo de su Entrenador con los apéndices sensoriales en forma de cintas, es capaz de comprender sus sentimientos."
+				}
+			}
+		},
+		{
+			"profileKey": "lets-go-pikachu-lets-go-eevee",
+			"label": "Let's Go Pikachu / Eevee",
+			"appGameKeys": [
+				"letsgopikachu",
+				"letsgoeevee"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Sylveon",
+				"localizedNames": {
+					"ja-hrkt": "ニンフィア",
+					"ja-roma": "Nymphia",
+					"ko": "님피아",
+					"zh-hant": "仙子伊布",
+					"fr": "Nymphali",
+					"de": "Feelinara",
+					"es": "Sylveon",
+					"it": "Sylveon",
+					"ja": "ニンフィア",
+					"zh-hans": "仙子伊布",
+					"es-419": "Sylveon"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fairy"
+				],
+				"baseStats": {
+					"hp": 95,
+					"atk": 65,
+					"def": 65,
+					"spa": 110,
+					"spd": 130,
+					"spe": 60
+				},
+				"evYield": {
+					"spd": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cute Charm",
+					"Pixilate (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Pixilate"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 35,
+				"height": "1.0 m",
+				"weight": "23.5 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 184,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Pink",
+				"genus": "Intertwining Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "むすびつきポケモン",
+					"ko": "연결포켓몬",
+					"zh-hant": "連結寶可夢",
+					"fr": "Pokémon Attachant",
+					"de": "Bindungs-Pokémon",
+					"es": "Pokémon Vínculo",
+					"it": "Pokémon Legame",
+					"ja": "むすびつきポケモン",
+					"zh-hans": "连结宝可梦",
+					"es-419": "Pokémon Vínculo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 700
+					},
+					{
+						"pokedex": "kalos-coastal",
+						"number": 85
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 131
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 58
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 161
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 62
+					},
+					{
+						"pokedex": "galar",
+						"number": 204
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 82
+					},
+					{
+						"pokedex": "hisui",
+						"number": 33
+					},
+					{
+						"pokedex": "paldea",
+						"number": 187
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 108
+					},
+					{
+						"pokedex": "champions",
+						"number": 700
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 134,
+								"natiId": 134,
+								"name": "Vaporeon",
+								"method": "Use item",
+								"value": "Water Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 135,
+								"natiId": 135,
+								"name": "Jolteon",
+								"method": "Use item",
+								"value": "Thunder Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 136,
+								"natiId": 136,
+								"name": "Flareon",
+								"method": "Use item",
+								"value": "Fire Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/700",
+						"fetchedAt": "2026-11-03T05:53:50.524Z",
+						"hash": "e0c2dee5bd3dd87a3fb3daf8115c80178110a9303e9caea8585a5c1ff8cba8e6"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/67/",
+						"fetchedAt": "2026-11-03T05:53:14.942Z",
+						"hash": "48eb1dc4c41fec44e5a957e3b93af5a22511cc23a6b973ffed1b5e2eef8f778c"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/700/",
+						"fetchedAt": "2026-11-03T05:53:50.553Z",
+						"hash": "215ff351c9e19e811711a313427cfdd3753605776e77f31b80cc36c5d8b2d2d2"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/700/encounters",
+						"fetchedAt": "2026-11-03T05:53:50.581Z",
+						"hash": "4959dac3207bdab954c39b93c6fd8da2f1e8298faeae388b32884465c69e2032"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/700/",
+						"fetchedAt": "2026-11-03T05:53:50.635Z",
+						"hash": "228ad2f07546caa33543f52317b753e9308b35c49233df31e10e51af3ec64a9d"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"letsgopikachu": "",
+				"letsgoeevee": ""
+			},
+			"localizedFlavorByGame": {
+				"letsgopikachu": {},
+				"letsgoeevee": {}
+			}
+		},
+		{
+			"profileKey": "sword-shield",
+			"label": "Sword / Shield",
+			"appGameKeys": [
+				"sword",
+				"shield"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Sylveon",
+				"localizedNames": {
+					"ja-hrkt": "ニンフィア",
+					"ja-roma": "Nymphia",
+					"ko": "님피아",
+					"zh-hant": "仙子伊布",
+					"fr": "Nymphali",
+					"de": "Feelinara",
+					"es": "Sylveon",
+					"it": "Sylveon",
+					"ja": "ニンフィア",
+					"zh-hans": "仙子伊布",
+					"es-419": "Sylveon"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fairy"
+				],
+				"baseStats": {
+					"hp": 95,
+					"atk": 65,
+					"def": 65,
+					"spa": 110,
+					"spd": 130,
+					"spe": 60
+				},
+				"evYield": {
+					"spd": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cute Charm",
+					"Pixilate (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Pixilate"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 35,
+				"height": "1.0 m",
+				"weight": "23.5 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 184,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Pink",
+				"genus": "Intertwining Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "むすびつきポケモン",
+					"ko": "연결포켓몬",
+					"zh-hant": "連結寶可夢",
+					"fr": "Pokémon Attachant",
+					"de": "Bindungs-Pokémon",
+					"es": "Pokémon Vínculo",
+					"it": "Pokémon Legame",
+					"ja": "むすびつきポケモン",
+					"zh-hans": "连结宝可梦",
+					"es-419": "Pokémon Vínculo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 700
+					},
+					{
+						"pokedex": "kalos-coastal",
+						"number": 85
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 131
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 58
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 161
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 62
+					},
+					{
+						"pokedex": "galar",
+						"number": 204
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 82
+					},
+					{
+						"pokedex": "hisui",
+						"number": 33
+					},
+					{
+						"pokedex": "paldea",
+						"number": 187
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 108
+					},
+					{
+						"pokedex": "champions",
+						"number": 700
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 134,
+								"natiId": 134,
+								"name": "Vaporeon",
+								"method": "Use item",
+								"value": "Water Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 135,
+								"natiId": 135,
+								"name": "Jolteon",
+								"method": "Use item",
+								"value": "Thunder Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 136,
+								"natiId": 136,
+								"name": "Flareon",
+								"method": "Use item",
+								"value": "Fire Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 196,
+								"natiId": 196,
+								"name": "Espeon",
+								"method": "Level up with 160+ friendship",
+								"value": "during the day",
+								"minimumFriendship": 160,
+								"timeOfDay": "day"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 197,
+								"natiId": 197,
+								"name": "Umbreon",
+								"method": "Level up with 160+ friendship",
+								"value": "during the night",
+								"minimumFriendship": 160,
+								"timeOfDay": "night"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 470,
+								"natiId": 470,
+								"name": "Leafeon",
+								"method": "Use item",
+								"value": "Leaf Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 471,
+								"natiId": 471,
+								"name": "Glaceon",
+								"method": "Use item",
+								"value": "Ice Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 700,
+								"natiId": 700,
+								"name": "Sylveon",
+								"method": "Level up with 160+ friendship",
+								"value": "while knowing a Fairy-type move",
+								"minimumFriendship": 160,
+								"knownMoveType": "Fairy"
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Lake Of Outrage Area",
+						"notes": "Wanderer, Lv. 56",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Lake Of Outrage Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Lake Of Outrage Area",
+						"notes": "Wanderer, Lv. 56",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Lake Of Outrage Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Lake Of Outrage Max Den D",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Sword",
+						"rate": "5%"
+					},
+					{
+						"area": "Lake Of Outrage Max Den D",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Shield",
+						"rate": "5%"
+					}
+				],
+				"moves": {
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Baton Pass",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Body Slam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Calm Mind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Charm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dazzling Gleam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Draining Kiss",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endure",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fake Tears",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Focus Energy",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Helping Hand",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Voice",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Magical Leaf",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Misty Terrain",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Mystical Fire",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Pay Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Play Rough",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psyshock",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Reflect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Retaliate",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Safeguard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Skill Swap",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Stored Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swift",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Weather Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Work Up",
+							"level": null,
+							"order": null
+						}
+					],
+					"Level Up": [
+						{
+							"name": "Disarming Voice",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Disarming Voice",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Covet",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Bite",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Copycat",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Baton Pass",
+							"level": 1,
+							"order": 5
+						},
+						{
+							"name": "Take Down",
+							"level": 1,
+							"order": 6
+						},
+						{
+							"name": "Charm",
+							"level": 1,
+							"order": 7
+						},
+						{
+							"name": "Double Edge",
+							"level": 1,
+							"order": 8
+						},
+						{
+							"name": "Helping Hand",
+							"level": 1,
+							"order": 9
+						},
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 10
+						},
+						{
+							"name": "Growl",
+							"level": 1,
+							"order": 11
+						},
+						{
+							"name": "Tail Whip",
+							"level": 1,
+							"order": 12
+						},
+						{
+							"name": "Sand Attack",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Quick Attack",
+							"level": 10,
+							"order": null
+						},
+						{
+							"name": "Baby Doll Eyes",
+							"level": 15,
+							"order": null
+						},
+						{
+							"name": "Swift",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Draining Kiss",
+							"level": 30,
+							"order": null
+						},
+						{
+							"name": "Misty Terrain",
+							"level": 35,
+							"order": null
+						},
+						{
+							"name": "Skill Swap",
+							"level": 40,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": 45,
+							"order": null
+						},
+						{
+							"name": "Moonblast",
+							"level": 50,
+							"order": null
+						},
+						{
+							"name": "Last Resort",
+							"level": 55,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Misty Explosion",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/700",
+						"fetchedAt": "2026-11-03T05:53:50.524Z",
+						"hash": "e0c2dee5bd3dd87a3fb3daf8115c80178110a9303e9caea8585a5c1ff8cba8e6"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/67/",
+						"fetchedAt": "2026-11-03T05:53:14.942Z",
+						"hash": "48eb1dc4c41fec44e5a957e3b93af5a22511cc23a6b973ffed1b5e2eef8f778c"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/700/",
+						"fetchedAt": "2026-11-03T05:53:50.553Z",
+						"hash": "215ff351c9e19e811711a313427cfdd3753605776e77f31b80cc36c5d8b2d2d2"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/700/encounters",
+						"fetchedAt": "2026-11-03T05:53:50.581Z",
+						"hash": "4959dac3207bdab954c39b93c6fd8da2f1e8298faeae388b32884465c69e2032"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/700/",
+						"fetchedAt": "2026-11-03T05:53:50.635Z",
+						"hash": "228ad2f07546caa33543f52317b753e9308b35c49233df31e10e51af3ec64a9d"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sword": "By releasing enmity-erasing waves from its ribbonlike feelers, Sylveon stops any conflict.",
+				"shield": "There’s a Galarian fairy tale that describes a beautiful Sylveon vanquishing a dreadful dragon Pokémon."
+			},
+			"localizedFlavorByGame": {
+				"sword": {
+					"ja-hrkt": "リボンのような しょっかくから てきいを けす はどうを はっして あらそいを やめさせる。",
+					"ko": "리본 모양의 더듬이로부터 적의를 없애는 파동을 내보내 싸움을 그만두게 한다.",
+					"zh-hant": "會從蝴蝶結般的觸角裡 釋放能夠消除敵意的波動， 藉此平息紛爭。",
+					"fr": "Grâce à ses antennes semblables à des rubans, il peut émettre des ondes neutralisant l’hostilité et ainsi mettre fin aux querelles.",
+					"de": "Mit seinen bandförmigen Fühlern sendet es Wellen aus, die feindselige Gefühle verklingen lassen. So legt es Streitereien bei.",
+					"es": "Con sus apéndices sensoriales en forma de cinta, puede emitir ondas que neutralizan la hostilidad y detener así cualquier contienda.",
+					"it": "Fa cessare le lotte grazie alle antenne simili a fiocchetti, che emettono onde in grado di placare le ostilità.",
+					"en": "By releasing enmity-erasing waves from its ribbonlike feelers, Sylveon stops any conflict.",
+					"ja": "リボンのような 触角から 敵意を 消す 波動を 発して 争いを やめさせる。",
+					"zh-hans": "会从蝴蝶结般的触角里 释放能够消除敌意的波动， 借此平息纷争。",
+					"es-419": "Con sus apéndices sensoriales en forma de cinta, puede emitir ondas que neutralizan la hostilidad y detener así cualquier contienda."
+				},
+				"shield": {
+					"ja-hrkt": "おそろしい ドラゴンポケモンを うつくしい ニンフィアが たいじする どうわが ガラルちほうに のこる。",
+					"ko": "무서운 드래곤포켓몬을 아름다운 님피아가 퇴치하는 동화가 가라르지방에 남아 있다.",
+					"zh-hant": "伽勒爾地區的童話中有著 美麗的仙子伊布擊退了 可怕的龍寶可夢的故事。",
+					"fr": "Un conte de Galar relate la victoire d’un beau Nymphali sur un terrible Pokémon Dragon.",
+					"de": "Ein in der Galar-Region überliefertes Märchen erzählt von einem bildhübschen Feelinara, das ein grässliches Drachen-Pokémon bezwingt.",
+					"es": "En un cuento infantil de Galar se narra la victoria de un Sylveon de extraordinaria belleza sobre un temible Pokémon de tipo Dragón.",
+					"it": "Una favola di Galar narra di un Sylveon di rara bellezza che sconfisse uno spaventoso Pokémon di tipo Drago.",
+					"en": "There’s a Galarian fairy tale that describes a beautiful Sylveon vanquishing a dreadful dragon Pokémon.",
+					"ja": "恐ろしい ドラゴンポケモンを 美しい ニンフィアが 退治する 童話が ガラル地方に 残る。",
+					"zh-hans": "伽勒尔地区的童话中有着 美丽的仙子伊布击退了 可怕的龙宝可梦的故事。",
+					"es-419": "En un cuento infantil de Galar se narra la victoria de un Sylveon de extraordinaria belleza sobre un temible Pokémon de tipo Dragón."
+				}
+			}
+		},
+		{
+			"profileKey": "the-isle-of-armor",
+			"label": "The Isle of Armor",
+			"appGameKeys": [
+				"swordioa",
+				"shieldioa"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Sylveon",
+				"localizedNames": {
+					"ja-hrkt": "ニンフィア",
+					"ja-roma": "Nymphia",
+					"ko": "님피아",
+					"zh-hant": "仙子伊布",
+					"fr": "Nymphali",
+					"de": "Feelinara",
+					"es": "Sylveon",
+					"it": "Sylveon",
+					"ja": "ニンフィア",
+					"zh-hans": "仙子伊布",
+					"es-419": "Sylveon"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fairy"
+				],
+				"baseStats": {
+					"hp": 95,
+					"atk": 65,
+					"def": 65,
+					"spa": 110,
+					"spd": 130,
+					"spe": 60
+				},
+				"evYield": {
+					"spd": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cute Charm",
+					"Pixilate (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Pixilate"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 35,
+				"height": "1.0 m",
+				"weight": "23.5 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 184,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Pink",
+				"genus": "Intertwining Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "むすびつきポケモン",
+					"ko": "연결포켓몬",
+					"zh-hant": "連結寶可夢",
+					"fr": "Pokémon Attachant",
+					"de": "Bindungs-Pokémon",
+					"es": "Pokémon Vínculo",
+					"it": "Pokémon Legame",
+					"ja": "むすびつきポケモン",
+					"zh-hans": "连结宝可梦",
+					"es-419": "Pokémon Vínculo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 700
+					},
+					{
+						"pokedex": "kalos-coastal",
+						"number": 85
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 131
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 58
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 161
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 62
+					},
+					{
+						"pokedex": "galar",
+						"number": 204
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 82
+					},
+					{
+						"pokedex": "hisui",
+						"number": 33
+					},
+					{
+						"pokedex": "paldea",
+						"number": 187
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 108
+					},
+					{
+						"pokedex": "champions",
+						"number": 700
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 134,
+								"natiId": 134,
+								"name": "Vaporeon",
+								"method": "Use item",
+								"value": "Water Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 135,
+								"natiId": 135,
+								"name": "Jolteon",
+								"method": "Use item",
+								"value": "Thunder Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 136,
+								"natiId": 136,
+								"name": "Flareon",
+								"method": "Use item",
+								"value": "Fire Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 196,
+								"natiId": 196,
+								"name": "Espeon",
+								"method": "Level up with 160+ friendship",
+								"value": "during the day",
+								"minimumFriendship": 160,
+								"timeOfDay": "day"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 197,
+								"natiId": 197,
+								"name": "Umbreon",
+								"method": "Level up with 160+ friendship",
+								"value": "during the night",
+								"minimumFriendship": 160,
+								"timeOfDay": "night"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 470,
+								"natiId": 470,
+								"name": "Leafeon",
+								"method": "Use item",
+								"value": "Leaf Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 471,
+								"natiId": 471,
+								"name": "Glaceon",
+								"method": "Use item",
+								"value": "Ice Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 700,
+								"natiId": 700,
+								"name": "Sylveon",
+								"method": "Level up with 160+ friendship",
+								"value": "while knowing a Fairy-type move",
+								"minimumFriendship": 160,
+								"knownMoveType": "Fairy"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/700",
+						"fetchedAt": "2026-11-03T05:53:50.524Z",
+						"hash": "e0c2dee5bd3dd87a3fb3daf8115c80178110a9303e9caea8585a5c1ff8cba8e6"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/67/",
+						"fetchedAt": "2026-11-03T05:53:14.942Z",
+						"hash": "48eb1dc4c41fec44e5a957e3b93af5a22511cc23a6b973ffed1b5e2eef8f778c"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/700/",
+						"fetchedAt": "2026-11-03T05:53:50.553Z",
+						"hash": "215ff351c9e19e811711a313427cfdd3753605776e77f31b80cc36c5d8b2d2d2"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/700/encounters",
+						"fetchedAt": "2026-11-03T05:53:50.581Z",
+						"hash": "4959dac3207bdab954c39b93c6fd8da2f1e8298faeae388b32884465c69e2032"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/700/",
+						"fetchedAt": "2026-11-03T05:53:50.635Z",
+						"hash": "228ad2f07546caa33543f52317b753e9308b35c49233df31e10e51af3ec64a9d"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordioa": "",
+				"shieldioa": ""
+			},
+			"localizedFlavorByGame": {
+				"swordioa": {},
+				"shieldioa": {}
+			}
+		},
+		{
+			"profileKey": "the-crown-tundra",
+			"label": "The Crown Tundra",
+			"appGameKeys": [
+				"swordct",
+				"shieldct"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Sylveon",
+				"localizedNames": {
+					"ja-hrkt": "ニンフィア",
+					"ja-roma": "Nymphia",
+					"ko": "님피아",
+					"zh-hant": "仙子伊布",
+					"fr": "Nymphali",
+					"de": "Feelinara",
+					"es": "Sylveon",
+					"it": "Sylveon",
+					"ja": "ニンフィア",
+					"zh-hans": "仙子伊布",
+					"es-419": "Sylveon"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fairy"
+				],
+				"baseStats": {
+					"hp": 95,
+					"atk": 65,
+					"def": 65,
+					"spa": 110,
+					"spd": 130,
+					"spe": 60
+				},
+				"evYield": {
+					"spd": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cute Charm",
+					"Pixilate (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Pixilate"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 35,
+				"height": "1.0 m",
+				"weight": "23.5 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 184,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Pink",
+				"genus": "Intertwining Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "むすびつきポケモン",
+					"ko": "연결포켓몬",
+					"zh-hant": "連結寶可夢",
+					"fr": "Pokémon Attachant",
+					"de": "Bindungs-Pokémon",
+					"es": "Pokémon Vínculo",
+					"it": "Pokémon Legame",
+					"ja": "むすびつきポケモン",
+					"zh-hans": "连结宝可梦",
+					"es-419": "Pokémon Vínculo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 700
+					},
+					{
+						"pokedex": "kalos-coastal",
+						"number": 85
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 131
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 58
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 161
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 62
+					},
+					{
+						"pokedex": "galar",
+						"number": 204
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 82
+					},
+					{
+						"pokedex": "hisui",
+						"number": 33
+					},
+					{
+						"pokedex": "paldea",
+						"number": 187
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 108
+					},
+					{
+						"pokedex": "champions",
+						"number": 700
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 134,
+								"natiId": 134,
+								"name": "Vaporeon",
+								"method": "Use item",
+								"value": "Water Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 135,
+								"natiId": 135,
+								"name": "Jolteon",
+								"method": "Use item",
+								"value": "Thunder Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 136,
+								"natiId": 136,
+								"name": "Flareon",
+								"method": "Use item",
+								"value": "Fire Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 196,
+								"natiId": 196,
+								"name": "Espeon",
+								"method": "Level up with 160+ friendship",
+								"value": "during the day",
+								"minimumFriendship": 160,
+								"timeOfDay": "day"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 197,
+								"natiId": 197,
+								"name": "Umbreon",
+								"method": "Level up with 160+ friendship",
+								"value": "during the night",
+								"minimumFriendship": 160,
+								"timeOfDay": "night"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 470,
+								"natiId": 470,
+								"name": "Leafeon",
+								"method": "Use item",
+								"value": "Leaf Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 471,
+								"natiId": 471,
+								"name": "Glaceon",
+								"method": "Use item",
+								"value": "Ice Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 700,
+								"natiId": 700,
+								"name": "Sylveon",
+								"method": "Level up with 160+ friendship",
+								"value": "while knowing a Fairy-type move",
+								"minimumFriendship": 160,
+								"knownMoveType": "Fairy"
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Giants Bed Area",
+						"notes": "Wanderer, Lv. 63",
+						"games": "The Crown Tundra Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Giants Bed Area",
+						"notes": "Wanderer, Lv. 63",
+						"games": "The Crown Tundra Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Ballimere Lake Max Den K",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "The Crown Tundra Sword",
+						"rate": "4%"
+					},
+					{
+						"area": "Ballimere Lake Max Den K",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "The Crown Tundra Sword",
+						"rate": "4%"
+					},
+					{
+						"area": "Ballimere Lake Max Den K",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "The Crown Tundra Sword",
+						"rate": "8%"
+					},
+					{
+						"area": "Ballimere Lake Max Den K",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "The Crown Tundra Sword",
+						"rate": "8%"
+					},
+					{
+						"area": "Ballimere Lake Max Den K",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Crown Tundra Sword",
+						"rate": "11%"
+					},
+					{
+						"area": "Ballimere Lake Max Den K",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Crown Tundra Sword",
+						"rate": "11%"
+					},
+					{
+						"area": "Ballimere Lake Max Den K",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "The Crown Tundra Shield",
+						"rate": "4%"
+					},
+					{
+						"area": "Ballimere Lake Max Den K",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "The Crown Tundra Shield",
+						"rate": "4%"
+					},
+					{
+						"area": "Ballimere Lake Max Den K",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "The Crown Tundra Shield",
+						"rate": "8%"
+					},
+					{
+						"area": "Ballimere Lake Max Den K",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "The Crown Tundra Shield",
+						"rate": "8%"
+					},
+					{
+						"area": "Ballimere Lake Max Den K",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Crown Tundra Shield",
+						"rate": "11%"
+					},
+					{
+						"area": "Ballimere Lake Max Den K",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Crown Tundra Shield",
+						"rate": "11%"
+					}
+				],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/700",
+						"fetchedAt": "2026-11-03T05:53:50.524Z",
+						"hash": "e0c2dee5bd3dd87a3fb3daf8115c80178110a9303e9caea8585a5c1ff8cba8e6"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/67/",
+						"fetchedAt": "2026-11-03T05:53:14.942Z",
+						"hash": "48eb1dc4c41fec44e5a957e3b93af5a22511cc23a6b973ffed1b5e2eef8f778c"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/700/",
+						"fetchedAt": "2026-11-03T05:53:50.553Z",
+						"hash": "215ff351c9e19e811711a313427cfdd3753605776e77f31b80cc36c5d8b2d2d2"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/700/encounters",
+						"fetchedAt": "2026-11-03T05:53:50.581Z",
+						"hash": "4959dac3207bdab954c39b93c6fd8da2f1e8298faeae388b32884465c69e2032"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/700/",
+						"fetchedAt": "2026-11-03T05:53:50.635Z",
+						"hash": "228ad2f07546caa33543f52317b753e9308b35c49233df31e10e51af3ec64a9d"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordct": "",
+				"shieldct": ""
+			},
+			"localizedFlavorByGame": {
+				"swordct": {},
+				"shieldct": {}
+			}
+		},
+		{
+			"profileKey": "brilliant-diamond-shining-pearl",
+			"label": "Brilliant Diamond / Shining Pearl",
+			"appGameKeys": [
+				"brilliantdiamond-national",
+				"brilliantdiamond",
+				"shiningpearl-national",
+				"shiningpearl"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Sylveon",
+				"localizedNames": {
+					"ja-hrkt": "ニンフィア",
+					"ja-roma": "Nymphia",
+					"ko": "님피아",
+					"zh-hant": "仙子伊布",
+					"fr": "Nymphali",
+					"de": "Feelinara",
+					"es": "Sylveon",
+					"it": "Sylveon",
+					"ja": "ニンフィア",
+					"zh-hans": "仙子伊布",
+					"es-419": "Sylveon"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fairy"
+				],
+				"baseStats": {
+					"hp": 95,
+					"atk": 65,
+					"def": 65,
+					"spa": 110,
+					"spd": 130,
+					"spe": 60
+				},
+				"evYield": {
+					"spd": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cute Charm",
+					"Pixilate (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Pixilate"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 35,
+				"height": "1.0 m",
+				"weight": "23.5 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 184,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Pink",
+				"genus": "Intertwining Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "むすびつきポケモン",
+					"ko": "연결포켓몬",
+					"zh-hant": "連結寶可夢",
+					"fr": "Pokémon Attachant",
+					"de": "Bindungs-Pokémon",
+					"es": "Pokémon Vínculo",
+					"it": "Pokémon Legame",
+					"ja": "むすびつきポケモン",
+					"zh-hans": "连结宝可梦",
+					"es-419": "Pokémon Vínculo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 700
+					},
+					{
+						"pokedex": "kalos-coastal",
+						"number": 85
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 131
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 58
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 161
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 62
+					},
+					{
+						"pokedex": "galar",
+						"number": 204
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 82
+					},
+					{
+						"pokedex": "hisui",
+						"number": 33
+					},
+					{
+						"pokedex": "paldea",
+						"number": 187
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 108
+					},
+					{
+						"pokedex": "champions",
+						"number": 700
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 134,
+								"natiId": 134,
+								"name": "Vaporeon",
+								"method": "Use item",
+								"value": "Water Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 135,
+								"natiId": 135,
+								"name": "Jolteon",
+								"method": "Use item",
+								"value": "Thunder Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 136,
+								"natiId": 136,
+								"name": "Flareon",
+								"method": "Use item",
+								"value": "Fire Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 196,
+								"natiId": 196,
+								"name": "Espeon",
+								"method": "Level up with 160+ friendship",
+								"value": "during the day",
+								"minimumFriendship": 160,
+								"timeOfDay": "day"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 197,
+								"natiId": 197,
+								"name": "Umbreon",
+								"method": "Level up with 160+ friendship",
+								"value": "during the night",
+								"minimumFriendship": 160,
+								"timeOfDay": "night"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 470,
+								"natiId": 470,
+								"name": "Leafeon",
+								"method": "Level up near",
+								"value": "the Moss Rock in Eterna Forest",
+								"alternatives": [
+									{
+										"method": "Use item",
+										"value": "Leaf Stone"
+									}
+								]
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 471,
+								"natiId": 471,
+								"name": "Glaceon",
+								"method": "Level up near",
+								"value": "the Ice Rock in Route 217"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/700",
+						"fetchedAt": "2026-11-03T05:53:50.524Z",
+						"hash": "e0c2dee5bd3dd87a3fb3daf8115c80178110a9303e9caea8585a5c1ff8cba8e6"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/67/",
+						"fetchedAt": "2026-11-03T05:53:14.942Z",
+						"hash": "48eb1dc4c41fec44e5a957e3b93af5a22511cc23a6b973ffed1b5e2eef8f778c"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/700/",
+						"fetchedAt": "2026-11-03T05:53:50.553Z",
+						"hash": "215ff351c9e19e811711a313427cfdd3753605776e77f31b80cc36c5d8b2d2d2"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/700/encounters",
+						"fetchedAt": "2026-11-03T05:53:50.581Z",
+						"hash": "4959dac3207bdab954c39b93c6fd8da2f1e8298faeae388b32884465c69e2032"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/700/",
+						"fetchedAt": "2026-11-03T05:53:50.635Z",
+						"hash": "228ad2f07546caa33543f52317b753e9308b35c49233df31e10e51af3ec64a9d"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"brilliantdiamond-national": "",
+				"brilliantdiamond": "",
+				"shiningpearl-national": "",
+				"shiningpearl": ""
+			},
+			"localizedFlavorByGame": {
+				"brilliantdiamond-national": {},
+				"brilliantdiamond": {},
+				"shiningpearl-national": {},
+				"shiningpearl": {}
+			}
+		},
+		{
+			"profileKey": "legends-arceus",
+			"label": "Legends: Arceus",
+			"appGameKeys": [
+				"legendsarceus"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Sylveon",
+				"localizedNames": {
+					"ja-hrkt": "ニンフィア",
+					"ja-roma": "Nymphia",
+					"ko": "님피아",
+					"zh-hant": "仙子伊布",
+					"fr": "Nymphali",
+					"de": "Feelinara",
+					"es": "Sylveon",
+					"it": "Sylveon",
+					"ja": "ニンフィア",
+					"zh-hans": "仙子伊布",
+					"es-419": "Sylveon"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fairy"
+				],
+				"baseStats": {
+					"hp": 95,
+					"atk": 65,
+					"def": 65,
+					"spa": 110,
+					"spd": 130,
+					"spe": 60
+				},
+				"evYield": {
+					"spd": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cute Charm",
+					"Pixilate (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Pixilate"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 35,
+				"height": "1.0 m",
+				"weight": "23.5 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 184,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Pink",
+				"genus": "Intertwining Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "むすびつきポケモン",
+					"ko": "연결포켓몬",
+					"zh-hant": "連結寶可夢",
+					"fr": "Pokémon Attachant",
+					"de": "Bindungs-Pokémon",
+					"es": "Pokémon Vínculo",
+					"it": "Pokémon Legame",
+					"ja": "むすびつきポケモン",
+					"zh-hans": "连结宝可梦",
+					"es-419": "Pokémon Vínculo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 700
+					},
+					{
+						"pokedex": "kalos-coastal",
+						"number": 85
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 131
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 58
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 161
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 62
+					},
+					{
+						"pokedex": "galar",
+						"number": 204
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 82
+					},
+					{
+						"pokedex": "hisui",
+						"number": 33
+					},
+					{
+						"pokedex": "paldea",
+						"number": 187
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 108
+					},
+					{
+						"pokedex": "champions",
+						"number": 700
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 134,
+								"natiId": 134,
+								"name": "Vaporeon",
+								"method": "Use item",
+								"value": "Water Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 135,
+								"natiId": 135,
+								"name": "Jolteon",
+								"method": "Use item",
+								"value": "Thunder Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 136,
+								"natiId": 136,
+								"name": "Flareon",
+								"method": "Use item",
+								"value": "Fire Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 196,
+								"natiId": 196,
+								"name": "Espeon",
+								"method": "Level up with 160+ friendship",
+								"value": "during the day",
+								"minimumFriendship": 160,
+								"timeOfDay": "day"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 197,
+								"natiId": 197,
+								"name": "Umbreon",
+								"method": "Level up with 160+ friendship",
+								"value": "during the night",
+								"minimumFriendship": 160,
+								"timeOfDay": "night"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 470,
+								"natiId": 470,
+								"name": "Leafeon",
+								"method": "Level up near",
+								"value": "the Moss Rock in the forest west of The Heartwood",
+								"alternatives": [
+									{
+										"method": "Use item",
+										"value": "Leaf Stone"
+									}
+								]
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 471,
+								"natiId": 471,
+								"name": "Glaceon",
+								"method": "Level up near",
+								"value": "the Ice Rock in Icepeak Cavern",
+								"alternatives": [
+									{
+										"method": "Use item",
+										"value": "Ice Stone"
+									}
+								]
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 700,
+								"natiId": 700,
+								"name": "Sylveon",
+								"method": "Level up with 160+ friendship",
+								"value": "while knowing a Fairy-type move",
+								"minimumFriendship": 160,
+								"knownMoveType": "Fairy"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Fairy Wind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": null
+						},
+						{
+							"name": "Quick Attack",
+							"level": 6,
+							"order": null
+						},
+						{
+							"name": "Swift",
+							"level": 11,
+							"order": null
+						},
+						{
+							"name": "Baby Doll Eyes",
+							"level": 18,
+							"order": null
+						},
+						{
+							"name": "Mimic",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Play Rough",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Calm Mind",
+							"level": 34,
+							"order": null
+						},
+						{
+							"name": "Double Edge",
+							"level": 43,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/700",
+						"fetchedAt": "2026-11-03T05:53:50.524Z",
+						"hash": "e0c2dee5bd3dd87a3fb3daf8115c80178110a9303e9caea8585a5c1ff8cba8e6"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/67/",
+						"fetchedAt": "2026-11-03T05:53:14.942Z",
+						"hash": "48eb1dc4c41fec44e5a957e3b93af5a22511cc23a6b973ffed1b5e2eef8f778c"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/700/",
+						"fetchedAt": "2026-11-03T05:53:50.553Z",
+						"hash": "215ff351c9e19e811711a313427cfdd3753605776e77f31b80cc36c5d8b2d2d2"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/700/encounters",
+						"fetchedAt": "2026-11-03T05:53:50.581Z",
+						"hash": "4959dac3207bdab954c39b93c6fd8da2f1e8298faeae388b32884465c69e2032"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/700/",
+						"fetchedAt": "2026-11-03T05:53:50.635Z",
+						"hash": "228ad2f07546caa33543f52317b753e9308b35c49233df31e10e51af3ec64a9d"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendsarceus": "It emits a soothing aura from its ribbon-shaped organs. It wraps these appendages around quarrelers to instantly restore calm to the situation."
+			},
+			"localizedFlavorByGame": {
+				"legendsarceus": {
+					"en": "It emits a soothing aura from its ribbon-shaped organs. It wraps these appendages around quarrelers to instantly restore calm to the situation."
+				}
+			}
+		},
+		{
+			"profileKey": "scarlet-violet",
+			"label": "Scarlet / Violet",
+			"appGameKeys": [
+				"scarlet",
+				"violet"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Sylveon",
+				"localizedNames": {
+					"ja-hrkt": "ニンフィア",
+					"ja-roma": "Nymphia",
+					"ko": "님피아",
+					"zh-hant": "仙子伊布",
+					"fr": "Nymphali",
+					"de": "Feelinara",
+					"es": "Sylveon",
+					"it": "Sylveon",
+					"ja": "ニンフィア",
+					"zh-hans": "仙子伊布",
+					"es-419": "Sylveon"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fairy"
+				],
+				"baseStats": {
+					"hp": 95,
+					"atk": 65,
+					"def": 65,
+					"spa": 110,
+					"spd": 130,
+					"spe": 60
+				},
+				"evYield": {
+					"spd": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cute Charm",
+					"Pixilate (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Pixilate"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 35,
+				"height": "1.0 m",
+				"weight": "23.5 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 184,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Pink",
+				"genus": "Intertwining Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "むすびつきポケモン",
+					"ko": "연결포켓몬",
+					"zh-hant": "連結寶可夢",
+					"fr": "Pokémon Attachant",
+					"de": "Bindungs-Pokémon",
+					"es": "Pokémon Vínculo",
+					"it": "Pokémon Legame",
+					"ja": "むすびつきポケモン",
+					"zh-hans": "连结宝可梦",
+					"es-419": "Pokémon Vínculo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 700
+					},
+					{
+						"pokedex": "kalos-coastal",
+						"number": 85
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 131
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 58
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 161
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 62
+					},
+					{
+						"pokedex": "galar",
+						"number": 204
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 82
+					},
+					{
+						"pokedex": "hisui",
+						"number": 33
+					},
+					{
+						"pokedex": "paldea",
+						"number": 187
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 108
+					},
+					{
+						"pokedex": "champions",
+						"number": 700
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 134,
+								"natiId": 134,
+								"name": "Vaporeon",
+								"method": "Use item",
+								"value": "Water Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 135,
+								"natiId": 135,
+								"name": "Jolteon",
+								"method": "Use item",
+								"value": "Thunder Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 136,
+								"natiId": 136,
+								"name": "Flareon",
+								"method": "Use item",
+								"value": "Fire Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 196,
+								"natiId": 196,
+								"name": "Espeon",
+								"method": "Level up with 160+ friendship",
+								"value": "during the day",
+								"minimumFriendship": 160,
+								"timeOfDay": "day"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 197,
+								"natiId": 197,
+								"name": "Umbreon",
+								"method": "Level up with 160+ friendship",
+								"value": "during the night",
+								"minimumFriendship": 160,
+								"timeOfDay": "night"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 470,
+								"natiId": 470,
+								"name": "Leafeon",
+								"method": "Use item",
+								"value": "Leaf Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 471,
+								"natiId": 471,
+								"name": "Glaceon",
+								"method": "Use item",
+								"value": "Ice Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 700,
+								"natiId": 700,
+								"name": "Sylveon",
+								"method": "Level up with 160+ friendship",
+								"value": "while knowing a Fairy-type move",
+								"minimumFriendship": 160,
+								"knownMoveType": "Fairy"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Disarming Voice",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Baton Pass",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Take Down",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Double Edge",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Tail Whip",
+							"level": 1,
+							"order": 5
+						},
+						{
+							"name": "Bite",
+							"level": 1,
+							"order": 6
+						},
+						{
+							"name": "Growl",
+							"level": 1,
+							"order": 7
+						},
+						{
+							"name": "Copycat",
+							"level": 1,
+							"order": 8
+						},
+						{
+							"name": "Covet",
+							"level": 1,
+							"order": 9
+						},
+						{
+							"name": "Charm",
+							"level": 1,
+							"order": 10
+						},
+						{
+							"name": "Helping Hand",
+							"level": 1,
+							"order": 11
+						},
+						{
+							"name": "Sand Attack",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Quick Attack",
+							"level": 10,
+							"order": null
+						},
+						{
+							"name": "Baby Doll Eyes",
+							"level": 15,
+							"order": null
+						},
+						{
+							"name": "Swift",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Draining Kiss",
+							"level": 30,
+							"order": null
+						},
+						{
+							"name": "Misty Terrain",
+							"level": 35,
+							"order": null
+						},
+						{
+							"name": "Skill Swap",
+							"level": 40,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": 45,
+							"order": null
+						},
+						{
+							"name": "Moonblast",
+							"level": 50,
+							"order": null
+						},
+						{
+							"name": "Last Resort",
+							"level": 55,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Alluring Voice",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Baton Pass",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Body Slam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Calm Mind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Charm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Curse",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dazzling Gleam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Disarming Voice",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Edge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Draining Kiss",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endure",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fake Tears",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Helping Hand",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Voice",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Magical Leaf",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Misty Explosion",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Misty Terrain",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Play Rough",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psychic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psyshock",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Reflect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Roar",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Skill Swap",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Stored Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swift",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Take Down",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Tera Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Trailblaze",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Weather Ball",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/700",
+						"fetchedAt": "2026-11-03T05:53:50.524Z",
+						"hash": "e0c2dee5bd3dd87a3fb3daf8115c80178110a9303e9caea8585a5c1ff8cba8e6"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/67/",
+						"fetchedAt": "2026-11-03T05:53:14.942Z",
+						"hash": "48eb1dc4c41fec44e5a957e3b93af5a22511cc23a6b973ffed1b5e2eef8f778c"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/700/",
+						"fetchedAt": "2026-11-03T05:53:50.553Z",
+						"hash": "215ff351c9e19e811711a313427cfdd3753605776e77f31b80cc36c5d8b2d2d2"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/700/encounters",
+						"fetchedAt": "2026-11-03T05:53:50.581Z",
+						"hash": "4959dac3207bdab954c39b93c6fd8da2f1e8298faeae388b32884465c69e2032"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/700/",
+						"fetchedAt": "2026-11-03T05:53:50.635Z",
+						"hash": "228ad2f07546caa33543f52317b753e9308b35c49233df31e10e51af3ec64a9d"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlet": "",
+				"violet": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlet": {},
+				"violet": {}
+			}
+		},
+		{
+			"profileKey": "the-teal-mask",
+			"label": "The Teal Mask",
+			"appGameKeys": [
+				"scarlettm",
+				"violettm"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Sylveon",
+				"localizedNames": {
+					"ja-hrkt": "ニンフィア",
+					"ja-roma": "Nymphia",
+					"ko": "님피아",
+					"zh-hant": "仙子伊布",
+					"fr": "Nymphali",
+					"de": "Feelinara",
+					"es": "Sylveon",
+					"it": "Sylveon",
+					"ja": "ニンフィア",
+					"zh-hans": "仙子伊布",
+					"es-419": "Sylveon"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fairy"
+				],
+				"baseStats": {
+					"hp": 95,
+					"atk": 65,
+					"def": 65,
+					"spa": 110,
+					"spd": 130,
+					"spe": 60
+				},
+				"evYield": {
+					"spd": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cute Charm",
+					"Pixilate (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Pixilate"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 35,
+				"height": "1.0 m",
+				"weight": "23.5 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 184,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Pink",
+				"genus": "Intertwining Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "むすびつきポケモン",
+					"ko": "연결포켓몬",
+					"zh-hant": "連結寶可夢",
+					"fr": "Pokémon Attachant",
+					"de": "Bindungs-Pokémon",
+					"es": "Pokémon Vínculo",
+					"it": "Pokémon Legame",
+					"ja": "むすびつきポケモン",
+					"zh-hans": "连结宝可梦",
+					"es-419": "Pokémon Vínculo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 700
+					},
+					{
+						"pokedex": "kalos-coastal",
+						"number": 85
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 131
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 58
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 161
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 62
+					},
+					{
+						"pokedex": "galar",
+						"number": 204
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 82
+					},
+					{
+						"pokedex": "hisui",
+						"number": 33
+					},
+					{
+						"pokedex": "paldea",
+						"number": 187
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 108
+					},
+					{
+						"pokedex": "champions",
+						"number": 700
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 134,
+								"natiId": 134,
+								"name": "Vaporeon",
+								"method": "Use item",
+								"value": "Water Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 135,
+								"natiId": 135,
+								"name": "Jolteon",
+								"method": "Use item",
+								"value": "Thunder Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 136,
+								"natiId": 136,
+								"name": "Flareon",
+								"method": "Use item",
+								"value": "Fire Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 196,
+								"natiId": 196,
+								"name": "Espeon",
+								"method": "Level up with 160+ friendship",
+								"value": "during the day",
+								"minimumFriendship": 160,
+								"timeOfDay": "day"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 197,
+								"natiId": 197,
+								"name": "Umbreon",
+								"method": "Level up with 160+ friendship",
+								"value": "during the night",
+								"minimumFriendship": 160,
+								"timeOfDay": "night"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 470,
+								"natiId": 470,
+								"name": "Leafeon",
+								"method": "Use item",
+								"value": "Leaf Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 471,
+								"natiId": 471,
+								"name": "Glaceon",
+								"method": "Use item",
+								"value": "Ice Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 700,
+								"natiId": 700,
+								"name": "Sylveon",
+								"method": "Level up with 160+ friendship",
+								"value": "while knowing a Fairy-type move",
+								"minimumFriendship": 160,
+								"knownMoveType": "Fairy"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/700",
+						"fetchedAt": "2026-11-03T05:53:50.524Z",
+						"hash": "e0c2dee5bd3dd87a3fb3daf8115c80178110a9303e9caea8585a5c1ff8cba8e6"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/67/",
+						"fetchedAt": "2026-11-03T05:53:14.942Z",
+						"hash": "48eb1dc4c41fec44e5a957e3b93af5a22511cc23a6b973ffed1b5e2eef8f778c"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/700/",
+						"fetchedAt": "2026-11-03T05:53:50.553Z",
+						"hash": "215ff351c9e19e811711a313427cfdd3753605776e77f31b80cc36c5d8b2d2d2"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/700/encounters",
+						"fetchedAt": "2026-11-03T05:53:50.581Z",
+						"hash": "4959dac3207bdab954c39b93c6fd8da2f1e8298faeae388b32884465c69e2032"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/700/",
+						"fetchedAt": "2026-11-03T05:53:50.635Z",
+						"hash": "228ad2f07546caa33543f52317b753e9308b35c49233df31e10e51af3ec64a9d"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlettm": "",
+				"violettm": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlettm": {},
+				"violettm": {}
+			}
+		},
+		{
+			"profileKey": "the-indigo-disk",
+			"label": "The Indigo Disk",
+			"appGameKeys": [
+				"scarletid",
+				"violetid"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Sylveon",
+				"localizedNames": {
+					"ja-hrkt": "ニンフィア",
+					"ja-roma": "Nymphia",
+					"ko": "님피아",
+					"zh-hant": "仙子伊布",
+					"fr": "Nymphali",
+					"de": "Feelinara",
+					"es": "Sylveon",
+					"it": "Sylveon",
+					"ja": "ニンフィア",
+					"zh-hans": "仙子伊布",
+					"es-419": "Sylveon"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fairy"
+				],
+				"baseStats": {
+					"hp": 95,
+					"atk": 65,
+					"def": 65,
+					"spa": 110,
+					"spd": 130,
+					"spe": 60
+				},
+				"evYield": {
+					"spd": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cute Charm",
+					"Pixilate (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Pixilate"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 35,
+				"height": "1.0 m",
+				"weight": "23.5 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 184,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Pink",
+				"genus": "Intertwining Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "むすびつきポケモン",
+					"ko": "연결포켓몬",
+					"zh-hant": "連結寶可夢",
+					"fr": "Pokémon Attachant",
+					"de": "Bindungs-Pokémon",
+					"es": "Pokémon Vínculo",
+					"it": "Pokémon Legame",
+					"ja": "むすびつきポケモン",
+					"zh-hans": "连结宝可梦",
+					"es-419": "Pokémon Vínculo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 700
+					},
+					{
+						"pokedex": "kalos-coastal",
+						"number": 85
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 131
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 58
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 161
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 62
+					},
+					{
+						"pokedex": "galar",
+						"number": 204
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 82
+					},
+					{
+						"pokedex": "hisui",
+						"number": 33
+					},
+					{
+						"pokedex": "paldea",
+						"number": 187
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 108
+					},
+					{
+						"pokedex": "champions",
+						"number": 700
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 134,
+								"natiId": 134,
+								"name": "Vaporeon",
+								"method": "Use item",
+								"value": "Water Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 135,
+								"natiId": 135,
+								"name": "Jolteon",
+								"method": "Use item",
+								"value": "Thunder Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 136,
+								"natiId": 136,
+								"name": "Flareon",
+								"method": "Use item",
+								"value": "Fire Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 196,
+								"natiId": 196,
+								"name": "Espeon",
+								"method": "Level up with 160+ friendship",
+								"value": "during the day",
+								"minimumFriendship": 160,
+								"timeOfDay": "day"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 197,
+								"natiId": 197,
+								"name": "Umbreon",
+								"method": "Level up with 160+ friendship",
+								"value": "during the night",
+								"minimumFriendship": 160,
+								"timeOfDay": "night"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 470,
+								"natiId": 470,
+								"name": "Leafeon",
+								"method": "Use item",
+								"value": "Leaf Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 471,
+								"natiId": 471,
+								"name": "Glaceon",
+								"method": "Use item",
+								"value": "Ice Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 700,
+								"natiId": 700,
+								"name": "Sylveon",
+								"method": "Level up with 160+ friendship",
+								"value": "while knowing a Fairy-type move",
+								"minimumFriendship": 160,
+								"knownMoveType": "Fairy"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/700",
+						"fetchedAt": "2026-11-03T05:53:50.524Z",
+						"hash": "e0c2dee5bd3dd87a3fb3daf8115c80178110a9303e9caea8585a5c1ff8cba8e6"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/67/",
+						"fetchedAt": "2026-11-03T05:53:14.942Z",
+						"hash": "48eb1dc4c41fec44e5a957e3b93af5a22511cc23a6b973ffed1b5e2eef8f778c"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/700/",
+						"fetchedAt": "2026-11-03T05:53:50.553Z",
+						"hash": "215ff351c9e19e811711a313427cfdd3753605776e77f31b80cc36c5d8b2d2d2"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/700/encounters",
+						"fetchedAt": "2026-11-03T05:53:50.581Z",
+						"hash": "4959dac3207bdab954c39b93c6fd8da2f1e8298faeae388b32884465c69e2032"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/700/",
+						"fetchedAt": "2026-11-03T05:53:50.635Z",
+						"hash": "228ad2f07546caa33543f52317b753e9308b35c49233df31e10e51af3ec64a9d"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarletid": "",
+				"violetid": ""
+			},
+			"localizedFlavorByGame": {
+				"scarletid": {},
+				"violetid": {}
+			}
+		},
+		{
+			"profileKey": "legends-za",
+			"label": "Legends: Z-A",
+			"appGameKeys": [
+				"legendsza"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Sylveon",
+				"localizedNames": {
+					"ja-hrkt": "ニンフィア",
+					"ja-roma": "Nymphia",
+					"ko": "님피아",
+					"zh-hant": "仙子伊布",
+					"fr": "Nymphali",
+					"de": "Feelinara",
+					"es": "Sylveon",
+					"it": "Sylveon",
+					"ja": "ニンフィア",
+					"zh-hans": "仙子伊布",
+					"es-419": "Sylveon"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fairy"
+				],
+				"baseStats": {
+					"hp": 95,
+					"atk": 65,
+					"def": 65,
+					"spa": 110,
+					"spd": 130,
+					"spe": 60
+				},
+				"evYield": {
+					"spd": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cute Charm",
+					"Pixilate (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Pixilate"
+				],
+				"eggGroups": [
+					"Field"
+				],
+				"expGroup": "Medium Fast",
+				"hatchCounter": 35,
+				"height": "1 m",
+				"weight": "23.5 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 184,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Pink",
+				"genus": "Intertwining Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "むすびつきポケモン",
+					"ko": "연결포켓몬",
+					"zh-hant": "連結寶可夢",
+					"fr": "Pokémon Attachant",
+					"de": "Bindungs-Pokémon",
+					"es": "Pokémon Vínculo",
+					"it": "Pokémon Legame",
+					"ja": "むすびつきポケモン",
+					"zh-hans": "连结宝可梦",
+					"es-419": "Pokémon Vínculo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 700
+					},
+					{
+						"pokedex": "kalos-coastal",
+						"number": 85
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 131
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 58
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 161
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 62
+					},
+					{
+						"pokedex": "galar",
+						"number": 204
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 82
+					},
+					{
+						"pokedex": "hisui",
+						"number": 33
+					},
+					{
+						"pokedex": "paldea",
+						"number": 187
+					},
+					{
+						"pokedex": "champions",
+						"number": 700
+					},
+					{
+						"pokedex": "lumiose",
+						"number": 108
+					}
+				],
+				"alphaMove": "Psychic",
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 134,
+								"natiId": 134,
+								"name": "Vaporeon",
+								"method": "Use item",
+								"value": "Water Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 135,
+								"natiId": 135,
+								"name": "Jolteon",
+								"method": "Use item",
+								"value": "Thunder Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 136,
+								"natiId": 136,
+								"name": "Flareon",
+								"method": "Use item",
+								"value": "Fire Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 196,
+								"natiId": 196,
+								"name": "Espeon",
+								"method": "Level up with 160+ friendship",
+								"value": "during the day",
+								"minimumFriendship": 160,
+								"timeOfDay": "day"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 197,
+								"natiId": 197,
+								"name": "Umbreon",
+								"method": "Level up with 160+ friendship",
+								"value": "during the night",
+								"minimumFriendship": 160,
+								"timeOfDay": "night"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 470,
+								"natiId": 470,
+								"name": "Leafeon",
+								"method": "Use item",
+								"value": "Leaf Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 471,
+								"natiId": 471,
+								"name": "Glaceon",
+								"method": "Use item",
+								"value": "Ice Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 700,
+								"natiId": 700,
+								"name": "Sylveon",
+								"method": "Level up with 160+ friendship",
+								"value": "while knowing a Fairy-type move",
+								"minimumFriendship": 160,
+								"knownMoveType": "Fairy"
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Wild Zone 20",
+						"notes": "",
+						"games": "Legends: Z-A"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 6
+						},
+						{
+							"name": "Tail Whip",
+							"level": 1,
+							"order": 7
+						},
+						{
+							"name": "Bite",
+							"level": 1,
+							"order": 8
+						},
+						{
+							"name": "Growl",
+							"level": 1,
+							"order": 9
+						},
+						{
+							"name": "Quick Attack",
+							"level": 10,
+							"order": 10
+						},
+						{
+							"name": "Disarming Voice",
+							"level": 15,
+							"order": 11
+						},
+						{
+							"name": "Light Screen",
+							"level": 25,
+							"order": 12
+						},
+						{
+							"name": "Draining Kiss",
+							"level": 30,
+							"order": 13
+						},
+						{
+							"name": "Dazzling Gleam",
+							"level": 35,
+							"order": 14
+						},
+						{
+							"name": "Hyper Voice",
+							"level": 40,
+							"order": 15
+						},
+						{
+							"name": "Fake Tears",
+							"level": 45,
+							"order": 16
+						},
+						{
+							"name": "Moonblast",
+							"level": 50,
+							"order": 17
+						}
+					],
+					"Machine": [
+						{
+							"name": "Psyshock",
+							"machine": "TM003",
+							"order": 1
+						},
+						{
+							"name": "Roar",
+							"machine": "TM005",
+							"order": 2
+						},
+						{
+							"name": "Calm Mind",
+							"machine": "TM006",
+							"order": 3
+						},
+						{
+							"name": "Light Screen",
+							"machine": "TM016",
+							"order": 4
+						},
+						{
+							"name": "Protect",
+							"machine": "TM017",
+							"order": 5
+						},
+						{
+							"name": "Swift",
+							"machine": "TM027",
+							"order": 6
+						},
+						{
+							"name": "Dig",
+							"machine": "TM028",
+							"order": 7
+						},
+						{
+							"name": "Reflect",
+							"machine": "TM031",
+							"order": 8
+						},
+						{
+							"name": "Body Slam",
+							"machine": "TM033",
+							"order": 9
+						},
+						{
+							"name": "Endure",
+							"machine": "TM035",
+							"order": 10
+						},
+						{
+							"name": "Hyper Beam",
+							"machine": "TM044",
+							"order": 11
+						},
+						{
+							"name": "Giga Impact",
+							"machine": "TM055",
+							"order": 12
+						},
+						{
+							"name": "Double-Edge",
+							"machine": "TM056",
+							"order": 13
+						},
+						{
+							"name": "Psychic",
+							"machine": "TM063",
+							"order": 14
+						},
+						{
+							"name": "Hyper Voice",
+							"machine": "TM071",
+							"order": 15
+						},
+						{
+							"name": "Shadow Ball",
+							"machine": "TM074",
+							"order": 16
+						},
+						{
+							"name": "Substitute",
+							"machine": "TM085",
+							"order": 17
+						},
+						{
+							"name": "Iron Tail",
+							"machine": "TM087",
+							"order": 18
+						},
+						{
+							"name": "Curse",
+							"machine": "TM091",
+							"order": 19
+						},
+						{
+							"name": "Dazzling Gleam",
+							"machine": "TM092",
+							"order": 20
+						},
+						{
+							"name": "Taunt",
+							"machine": "TM095",
+							"order": 21
+						},
+						{
+							"name": "Facade",
+							"machine": "TM109",
+							"order": 22
+						},
+						{
+							"name": "Trailblaze",
+							"machine": "TM115",
+							"order": 23
+						},
+						{
+							"name": "Mimic",
+							"machine": "TM125",
+							"order": 24
+						},
+						{
+							"name": "Skull Bash",
+							"machine": "TM146",
+							"order": 25
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Project Pokemon's Z-A game-data export assigns this form regional Dex #108."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/700",
+						"fetchedAt": "2026-11-03T05:53:50.524Z",
+						"hash": "e0c2dee5bd3dd87a3fb3daf8115c80178110a9303e9caea8585a5c1ff8cba8e6"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/67/",
+						"fetchedAt": "2026-11-03T05:53:14.942Z",
+						"hash": "48eb1dc4c41fec44e5a957e3b93af5a22511cc23a6b973ffed1b5e2eef8f778c"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/700/",
+						"fetchedAt": "2026-11-03T05:53:50.553Z",
+						"hash": "215ff351c9e19e811711a313427cfdd3753605776e77f31b80cc36c5d8b2d2d2"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/700/encounters",
+						"fetchedAt": "2026-11-03T05:53:50.581Z",
+						"hash": "4959dac3207bdab954c39b93c6fd8da2f1e8298faeae388b32884465c69e2032"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/700/",
+						"fetchedAt": "2026-11-03T05:53:50.635Z",
+						"hash": "228ad2f07546caa33543f52317b753e9308b35c49233df31e10e51af3ec64a9d"
+					},
+					{
+						"type": "legends-za-personal-data",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/personal.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c00215459c764ba65d879d6503a7337ad80b338171ab4713d1c6f52b4517e36f"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "719eff37d8f2f404d163f81d23b2c921ac323a7b00304e502ca37d69a3375b1d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/French/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "1b658102e791558a1bb317563b7a3aaab8cebc1c7517aa7f5d5c0e708e93d626"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/German/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5f1e419ae3b84ab18cb05b972569e629ff0bff96d928468c52c536b02dc6cf9d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Italian/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "e0bd40a2f4b7678afb82f959b7b1f3503590bd13884daf94bd5813fea832067c"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/JPN/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5c2c9784278c5d13f3ba376e4338cef21923d68faec9b8498175c21180825f24"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Korean/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c83545726b0b0b803295f52448510c15adaab3e6ce248adba23b5ad0d0344216"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/LATAM/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "01d046caf7553d97a3c275465bce97ecedae26a67674a40b5c751a56b3b4d52d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Simp_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "09495dacb0d16eb6e91aa1d67eb1ed682d0682303719811eeb1c6877bb9e7ca2"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Spanish/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "b3fafb97fe85165bd65fdd732ce1e4cee880ffe5035632269787ce859735b358"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Trad_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c446ae3e93760fc4af895427508ed852511201723f8cac84121330747e8c3cd0"
+					},
+					{
+						"type": "legends-za-locations",
+						"url": "https://www.serebii.net/pokedex-sv/sylveon/",
+						"fetchedAt": "2026-11-04T05:47:08.409Z",
+						"hash": "3c2c8319f177119af0f0bb4d2b738ed7ffbf9c74714dc76fcc02f30d417ac489"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendsza": "It wraps its ribbonlike feelers around the arm of its beloved Trainer and walks with them."
+			},
+			"localizedFlavorByGame": {
+				"legendsza": {
+					"en": "It wraps its ribbonlike feelers around the arm of its beloved Trainer and walks with them.",
+					"fr": "Il enroule ses antennes en forme de ruban autour du bras de son partenaire adoré et chemine à ses côtés.",
+					"de": "Es umwickelt den Arm seines geliebten Trainers mit seinen bandförmigen Fühlern und geht so mit ihm spazieren.",
+					"it": "Cammina fianco a fianco con il suo amato Allenatore cingendogli il braccio con le antenne a forma di fiocchetto.",
+					"ja": "大好きな トレーナーの 腕に リボンのような 触角を 巻きつけて 一緒に 歩く。",
+					"ko": "좋아하는 트레이너의 팔에 리본 모양의 더듬이를 감고 함께 걷는다.",
+					"es-419": "Enrolla sus apéndices sensoriales con forma de cinta alrededor del brazo de su querido Entrenador cuando caminan juntos.",
+					"zh-hans": "用缎带般的触角挽住 非常喜爱的训练家的手臂， 一起步行。",
+					"es": "Enrolla sus apéndices sensoriales con forma de cinta en el brazo de su querido Entrenador cuando caminan juntos.",
+					"zh-hant": "用緞帶般的觸角挽著 最喜歡的訓練家的手臂， 一起行動。"
+				}
+			}
+		},
+		{
+			"profileKey": "mega-dimension",
+			"label": "Mega Dimension",
+			"appGameKeys": [
+				"legendszamd"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Sylveon",
+				"localizedNames": {
+					"ja-hrkt": "ニンフィア",
+					"ja-roma": "Nymphia",
+					"ko": "님피아",
+					"zh-hant": "仙子伊布",
+					"fr": "Nymphali",
+					"de": "Feelinara",
+					"es": "Sylveon",
+					"it": "Sylveon",
+					"ja": "ニンフィア",
+					"zh-hans": "仙子伊布",
+					"es-419": "Sylveon"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fairy"
+				],
+				"baseStats": {
+					"hp": 95,
+					"atk": 65,
+					"def": 65,
+					"spa": 110,
+					"spd": 130,
+					"spe": 60
+				},
+				"evYield": {
+					"spd": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cute Charm",
+					"Pixilate (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Pixilate"
+				],
+				"eggGroups": [
+					"Field"
+				],
+				"expGroup": "Medium Fast",
+				"hatchCounter": 35,
+				"height": "1 m",
+				"weight": "23.5 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 184,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Pink",
+				"genus": "Intertwining Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "むすびつきポケモン",
+					"ko": "연결포켓몬",
+					"zh-hant": "連結寶可夢",
+					"fr": "Pokémon Attachant",
+					"de": "Bindungs-Pokémon",
+					"es": "Pokémon Vínculo",
+					"it": "Pokémon Legame",
+					"ja": "むすびつきポケモン",
+					"zh-hans": "连结宝可梦",
+					"es-419": "Pokémon Vínculo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 700
+					},
+					{
+						"pokedex": "kalos-coastal",
+						"number": 85
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 131
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 58
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 161
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 62
+					},
+					{
+						"pokedex": "galar",
+						"number": 204
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 82
+					},
+					{
+						"pokedex": "hisui",
+						"number": 33
+					},
+					{
+						"pokedex": "paldea",
+						"number": 187
+					},
+					{
+						"pokedex": "champions",
+						"number": 700
+					},
+					{
+						"pokedex": "lumiose",
+						"number": 108
+					}
+				],
+				"alphaMove": "Psychic",
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 134,
+								"natiId": 134,
+								"name": "Vaporeon",
+								"method": "Use item",
+								"value": "Water Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 135,
+								"natiId": 135,
+								"name": "Jolteon",
+								"method": "Use item",
+								"value": "Thunder Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 136,
+								"natiId": 136,
+								"name": "Flareon",
+								"method": "Use item",
+								"value": "Fire Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 196,
+								"natiId": 196,
+								"name": "Espeon",
+								"method": "Level up with 160+ friendship",
+								"value": "during the day",
+								"minimumFriendship": 160,
+								"timeOfDay": "day"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 197,
+								"natiId": 197,
+								"name": "Umbreon",
+								"method": "Level up with 160+ friendship",
+								"value": "during the night",
+								"minimumFriendship": 160,
+								"timeOfDay": "night"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 470,
+								"natiId": 470,
+								"name": "Leafeon",
+								"method": "Use item",
+								"value": "Leaf Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 471,
+								"natiId": 471,
+								"name": "Glaceon",
+								"method": "Use item",
+								"value": "Ice Stone"
+							}
+						],
+						[
+							{
+								"id": 133,
+								"natiId": 133,
+								"name": "Eevee"
+							},
+							{
+								"id": 700,
+								"natiId": 700,
+								"name": "Sylveon",
+								"method": "Level up with 160+ friendship",
+								"value": "while knowing a Fairy-type move",
+								"minimumFriendship": 160,
+								"knownMoveType": "Fairy"
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Wild Zone 20",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Hyperspace Lumiose",
+						"notes": "Normal (5 Star), Fairy (4 Star)",
+						"games": "Legends: Z-A Mega Dimension"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 6
+						},
+						{
+							"name": "Tail Whip",
+							"level": 1,
+							"order": 7
+						},
+						{
+							"name": "Bite",
+							"level": 1,
+							"order": 8
+						},
+						{
+							"name": "Growl",
+							"level": 1,
+							"order": 9
+						},
+						{
+							"name": "Quick Attack",
+							"level": 10,
+							"order": 10
+						},
+						{
+							"name": "Disarming Voice",
+							"level": 15,
+							"order": 11
+						},
+						{
+							"name": "Light Screen",
+							"level": 25,
+							"order": 12
+						},
+						{
+							"name": "Draining Kiss",
+							"level": 30,
+							"order": 13
+						},
+						{
+							"name": "Dazzling Gleam",
+							"level": 35,
+							"order": 14
+						},
+						{
+							"name": "Hyper Voice",
+							"level": 40,
+							"order": 15
+						},
+						{
+							"name": "Fake Tears",
+							"level": 45,
+							"order": 16
+						},
+						{
+							"name": "Moonblast",
+							"level": 50,
+							"order": 17
+						}
+					],
+					"Machine": [
+						{
+							"name": "Psyshock",
+							"machine": "TM003",
+							"order": 1
+						},
+						{
+							"name": "Roar",
+							"machine": "TM005",
+							"order": 2
+						},
+						{
+							"name": "Calm Mind",
+							"machine": "TM006",
+							"order": 3
+						},
+						{
+							"name": "Light Screen",
+							"machine": "TM016",
+							"order": 4
+						},
+						{
+							"name": "Protect",
+							"machine": "TM017",
+							"order": 5
+						},
+						{
+							"name": "Swift",
+							"machine": "TM027",
+							"order": 6
+						},
+						{
+							"name": "Dig",
+							"machine": "TM028",
+							"order": 7
+						},
+						{
+							"name": "Reflect",
+							"machine": "TM031",
+							"order": 8
+						},
+						{
+							"name": "Body Slam",
+							"machine": "TM033",
+							"order": 9
+						},
+						{
+							"name": "Endure",
+							"machine": "TM035",
+							"order": 10
+						},
+						{
+							"name": "Hyper Beam",
+							"machine": "TM044",
+							"order": 11
+						},
+						{
+							"name": "Giga Impact",
+							"machine": "TM055",
+							"order": 12
+						},
+						{
+							"name": "Double-Edge",
+							"machine": "TM056",
+							"order": 13
+						},
+						{
+							"name": "Psychic",
+							"machine": "TM063",
+							"order": 14
+						},
+						{
+							"name": "Hyper Voice",
+							"machine": "TM071",
+							"order": 15
+						},
+						{
+							"name": "Shadow Ball",
+							"machine": "TM074",
+							"order": 16
+						},
+						{
+							"name": "Substitute",
+							"machine": "TM085",
+							"order": 17
+						},
+						{
+							"name": "Iron Tail",
+							"machine": "TM087",
+							"order": 18
+						},
+						{
+							"name": "Curse",
+							"machine": "TM091",
+							"order": 19
+						},
+						{
+							"name": "Dazzling Gleam",
+							"machine": "TM092",
+							"order": 20
+						},
+						{
+							"name": "Taunt",
+							"machine": "TM095",
+							"order": 21
+						},
+						{
+							"name": "Facade",
+							"machine": "TM109",
+							"order": 22
+						},
+						{
+							"name": "Trailblaze",
+							"machine": "TM115",
+							"order": 23
+						},
+						{
+							"name": "Mimic",
+							"machine": "TM125",
+							"order": 24
+						},
+						{
+							"name": "Skull Bash",
+							"machine": "TM146",
+							"order": 25
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Project Pokemon's Z-A game-data export assigns this form regional Dex #108."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/700",
+						"fetchedAt": "2026-11-03T05:53:50.524Z",
+						"hash": "e0c2dee5bd3dd87a3fb3daf8115c80178110a9303e9caea8585a5c1ff8cba8e6"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/67/",
+						"fetchedAt": "2026-11-03T05:53:14.942Z",
+						"hash": "48eb1dc4c41fec44e5a957e3b93af5a22511cc23a6b973ffed1b5e2eef8f778c"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/700/",
+						"fetchedAt": "2026-11-03T05:53:50.553Z",
+						"hash": "215ff351c9e19e811711a313427cfdd3753605776e77f31b80cc36c5d8b2d2d2"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/700/encounters",
+						"fetchedAt": "2026-11-03T05:53:50.581Z",
+						"hash": "4959dac3207bdab954c39b93c6fd8da2f1e8298faeae388b32884465c69e2032"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/700/",
+						"fetchedAt": "2026-11-03T05:53:50.635Z",
+						"hash": "228ad2f07546caa33543f52317b753e9308b35c49233df31e10e51af3ec64a9d"
+					},
+					{
+						"type": "legends-za-personal-data",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/personal.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c00215459c764ba65d879d6503a7337ad80b338171ab4713d1c6f52b4517e36f"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "719eff37d8f2f404d163f81d23b2c921ac323a7b00304e502ca37d69a3375b1d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/French/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "1b658102e791558a1bb317563b7a3aaab8cebc1c7517aa7f5d5c0e708e93d626"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/German/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5f1e419ae3b84ab18cb05b972569e629ff0bff96d928468c52c536b02dc6cf9d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Italian/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "e0bd40a2f4b7678afb82f959b7b1f3503590bd13884daf94bd5813fea832067c"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/JPN/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5c2c9784278c5d13f3ba376e4338cef21923d68faec9b8498175c21180825f24"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Korean/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c83545726b0b0b803295f52448510c15adaab3e6ce248adba23b5ad0d0344216"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/LATAM/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "01d046caf7553d97a3c275465bce97ecedae26a67674a40b5c751a56b3b4d52d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Simp_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "09495dacb0d16eb6e91aa1d67eb1ed682d0682303719811eeb1c6877bb9e7ca2"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Spanish/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "b3fafb97fe85165bd65fdd732ce1e4cee880ffe5035632269787ce859735b358"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Trad_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c446ae3e93760fc4af895427508ed852511201723f8cac84121330747e8c3cd0"
+					},
+					{
+						"type": "legends-za-locations",
+						"url": "https://www.serebii.net/pokedex-sv/sylveon/",
+						"fetchedAt": "2026-11-04T05:47:08.409Z",
+						"hash": "3c2c8319f177119af0f0bb4d2b738ed7ffbf9c74714dc76fcc02f30d417ac489"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendszamd": "It wraps its ribbonlike feelers around the arm of its beloved Trainer and walks with them."
+			},
+			"localizedFlavorByGame": {
+				"legendszamd": {
+					"en": "It wraps its ribbonlike feelers around the arm of its beloved Trainer and walks with them.",
+					"fr": "Il enroule ses antennes en forme de ruban autour du bras de son partenaire adoré et chemine à ses côtés.",
+					"de": "Es umwickelt den Arm seines geliebten Trainers mit seinen bandförmigen Fühlern und geht so mit ihm spazieren.",
+					"it": "Cammina fianco a fianco con il suo amato Allenatore cingendogli il braccio con le antenne a forma di fiocchetto.",
+					"ja": "大好きな トレーナーの 腕に リボンのような 触角を 巻きつけて 一緒に 歩く。",
+					"ko": "좋아하는 트레이너의 팔에 리본 모양의 더듬이를 감고 함께 걷는다.",
+					"es-419": "Enrolla sus apéndices sensoriales con forma de cinta alrededor del brazo de su querido Entrenador cuando caminan juntos.",
+					"zh-hans": "用缎带般的触角挽住 非常喜爱的训练家的手臂， 一起步行。",
+					"es": "Enrolla sus apéndices sensoriales con forma de cinta en el brazo de su querido Entrenador cuando caminan juntos.",
+					"zh-hant": "用緞帶般的觸角挽著 最喜歡的訓練家的手臂， 一起行動。"
+				}
+			}
+		}
+	]
+}

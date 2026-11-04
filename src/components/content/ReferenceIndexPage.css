@@ -1,0 +1,481 @@
+/** Styles are loaded only with the lazy Move and Ability reference page. */
+.reference-index-page,
+.reference-detail-page {
+	display: grid;
+	gap: 18px;
+}
+
+.reference-index-header,
+.reference-detail-header,
+.reference-pokemon-heading {
+	display: flex;
+	align-items: end;
+	justify-content: space-between;
+	gap: 24px;
+}
+
+.reference-index-kicker {
+	margin: 0 0 5px;
+	font-size: 11px;
+	font-weight: 750;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	opacity: 0.65;
+}
+
+.reference-index-summary,
+.reference-pokemon-heading p {
+	max-width: 68ch;
+	margin: 7px 0 0;
+	opacity: 0.72;
+}
+
+.reference-index-controls {
+	display: flex;
+	align-items: end;
+	gap: 10px;
+}
+
+.reference-index-controls label,
+.reference-language-control,
+.reference-pokemon-heading label {
+	display: grid;
+	gap: 5px;
+	font-size: 12px;
+	font-weight: 650;
+}
+
+.reference-index-controls input {
+	width: min(360px, 42vw);
+}
+
+.reference-index-controls input,
+.reference-index-controls select,
+.reference-language-control select,
+.reference-pokemon-heading input,
+.reference-pokemon-heading select {
+	min-height: 44px;
+}
+
+.reference-index-count {
+	margin: 0;
+	font-size: 13px;
+	opacity: 0.7;
+}
+
+.reference-index-list {
+	display: grid;
+}
+
+.reference-index-list.is-move-grid,
+.reference-index-list.is-ability-grid {
+	grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+	gap: 12px;
+}
+
+.reference-move-card,
+.reference-ability-card {
+	position: relative;
+	display: grid;
+	border: 1px solid var(--line-strong);
+	border-radius: 12px;
+	overflow: clip;
+	background: linear-gradient(180deg, var(--surface-2), var(--surface-1));
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+	color: inherit;
+	text-align: center;
+	cursor: pointer;
+	transition:
+		transform 160ms ease-out,
+		border-color 160ms ease-out,
+		background 160ms ease-out,
+		box-shadow 160ms ease-out;
+}
+
+.reference-move-card:hover,
+.reference-move-card:focus-visible,
+.reference-ability-card:hover,
+.reference-ability-card:focus-visible {
+	transform: translateY(-2px);
+	border-color: color-mix(
+		in srgb,
+		var(--focus-ring-color) 52%,
+		var(--line-strong)
+	);
+	background: linear-gradient(180deg, var(--surface-3), var(--surface-2));
+	box-shadow: 0 12px 26px rgba(0, 0, 0, 0.28);
+}
+
+.reference-move-card {
+	min-height: 116px;
+	padding: 18px 14px 52px;
+	place-items: start center;
+}
+
+.reference-move-card-name {
+	justify-self: center;
+	font-size: 15px;
+	line-height: 1.25;
+	text-wrap: balance;
+}
+
+.reference-move-card-meta {
+	position: absolute;
+	inset: auto 0 0;
+	min-height: 42px;
+	padding: 7px 12px;
+	display: grid;
+	grid-template-columns: auto auto minmax(28px, auto);
+	gap: 12px;
+	align-items: center;
+	justify-content: center;
+	border-top: 1px solid var(--line-soft);
+	background: color-mix(in srgb, var(--surface-3) 82%, var(--surface-1));
+}
+
+.reference-move-card-power {
+	min-width: 28px;
+	font-size: 14px;
+	font-variant-numeric: tabular-nums;
+	text-align: center;
+}
+
+.reference-ability-card {
+	min-height: 76px;
+	padding: 16px 14px;
+	place-items: center;
+}
+
+.reference-ability-card-name {
+	font-size: 15px;
+	line-height: 1.25;
+	text-wrap: balance;
+}
+
+.reference-move-metric-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.reference-move-type-icon {
+	display: block;
+	width: auto;
+	height: 22px;
+	max-width: 78px;
+	object-fit: contain;
+}
+
+.reference-move-category-icon {
+	display: block;
+	width: 24px;
+	height: 24px;
+	object-fit: contain;
+}
+
+.reference-move-metric-icon {
+	min-width: 76px;
+	min-height: 44px;
+}
+
+.reference-move-type-icon.is-detail {
+	height: 28px;
+	max-width: 96px;
+}
+
+.reference-move-category-icon.is-detail {
+	width: 32px;
+	height: 32px;
+}
+
+.reference-load-more {
+	justify-self: center;
+	min-height: 44px;
+}
+
+.reference-detail-back {
+	justify-self: start;
+	min-height: 44px;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	color: var(--accent);
+	font: inherit;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.reference-move-metrics {
+	display: flex;
+	align-items: stretch;
+	gap: 8px;
+	flex-wrap: wrap;
+}
+
+.reference-move-metrics > span:not(.reference-move-metric-icon) {
+	min-width: 76px;
+	padding: 8px 10px;
+	display: grid;
+	gap: 2px;
+	border: 1px solid var(--border);
+	border-radius: 10px;
+	background: color-mix(in srgb, var(--panel) 92%, transparent);
+}
+
+.reference-move-metrics small {
+	font-size: 10px;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	opacity: 0.65;
+}
+
+.reference-language-control {
+	min-width: min(260px, 42vw);
+	margin-left: auto;
+}
+
+.reference-effect-heading {
+	display: flex;
+	align-items: end;
+	justify-content: space-between;
+	gap: 24px;
+}
+
+.reference-localized-name {
+	margin-top: 4px;
+	font-size: 13px;
+	opacity: 0.7;
+}
+
+.reference-detail-section {
+	display: grid;
+	gap: 12px;
+	padding-block: 4px 18px;
+	border-bottom: 1px solid var(--line-soft);
+}
+
+.reference-detail-section h3,
+.reference-detail-section p {
+	margin: 0;
+}
+
+.reference-effect-copy {
+	max-width: 75ch;
+	display: grid;
+	gap: 8px;
+	line-height: 1.65;
+}
+
+.reference-description-list,
+.reference-machine-list {
+	display: grid;
+	gap: 1px;
+	background: var(--line-soft);
+	border: 1px solid var(--line-soft);
+	border-radius: 12px;
+	overflow: clip;
+}
+
+.reference-description-row,
+.reference-machine-row {
+	background: var(--surface-2);
+}
+
+.reference-description-row {
+	display: grid;
+	grid-template-columns: minmax(160px, 0.35fr) 1fr;
+	gap: 16px;
+	padding: 11px 13px;
+	line-height: 1.5;
+}
+
+.reference-game-label {
+	display: inline-grid;
+	gap: 1px;
+	line-height: 1.15;
+}
+
+.reference-machine-list {
+	grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+	gap: 8px;
+	padding: 8px;
+	background: color-mix(in srgb, var(--surface-2) 88%, transparent);
+}
+
+.reference-machine-row {
+	min-height: 52px;
+	display: grid;
+	grid-template-columns: 32px auto 1fr;
+	gap: 8px;
+	align-items: center;
+	padding: 8px;
+	border-radius: 8px;
+}
+
+.reference-machine-row img {
+	width: 30px;
+	height: 30px;
+	object-fit: contain;
+	image-rendering: pixelated;
+}
+
+.reference-machine-row span {
+	font-size: 12px;
+	opacity: 0.72;
+}
+
+.reference-pokemon-heading h3 {
+	margin: 0;
+}
+
+.reference-pokemon-filters {
+	display: flex;
+	align-items: end;
+	gap: 10px;
+}
+
+.reference-pokemon-filters input {
+	width: min(260px, 32vw);
+}
+
+.reference-pokemon-filters select {
+	width: min(260px, 30vw);
+}
+
+.reference-pokemon-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	gap: 12px;
+}
+
+.reference-pokemon-card {
+	display: grid;
+	grid-template-rows: auto 1fr;
+	border: 1px solid var(--line-strong);
+	border-radius: 12px;
+	overflow: clip;
+	background: linear-gradient(180deg, var(--surface-2), var(--surface-1));
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.reference-pokemon-card-identity {
+	min-height: 80px;
+	padding: 12px 14px;
+	display: grid;
+	grid-template-columns: 56px minmax(0, 1fr);
+	gap: 12px;
+	align-items: center;
+}
+
+.reference-pokemon-card-identity > img {
+	object-fit: contain;
+	image-rendering: pixelated;
+}
+
+.reference-pokemon-card-identity > div,
+.reference-pokemon-card-game {
+	display: grid;
+	gap: 3px;
+}
+
+.reference-pokemon-card-identity span,
+.reference-pokemon-card-game span {
+	font-size: 12px;
+	opacity: 0.72;
+}
+
+.reference-pokemon-card-game {
+	min-height: 58px;
+	padding: 10px 14px;
+	align-content: center;
+	border-top: 1px solid var(--line-soft);
+	background: color-mix(in srgb, var(--surface-3) 82%, var(--surface-1));
+}
+
+.reference-pokemon-empty {
+	grid-column: 1 / -1;
+	padding: 28px 16px;
+	text-align: center;
+	opacity: 0.72;
+}
+
+@media (max-width: 760px) {
+	.reference-index-header,
+	.reference-detail-header,
+	.reference-pokemon-heading {
+		align-items: stretch;
+		flex-direction: column;
+		gap: 14px;
+	}
+
+	.reference-index-controls {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) minmax(120px, 0.45fr);
+	}
+
+	.reference-index-controls input {
+		width: 100%;
+	}
+
+	.reference-description-row > strong {
+		grid-column: 1 / -1;
+	}
+
+	.reference-description-row > span {
+		grid-column: 1 / -1;
+	}
+
+	.reference-pokemon-filters {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) minmax(180px, 0.7fr);
+	}
+
+	.reference-pokemon-filters input,
+	.reference-pokemon-filters select {
+		width: 100%;
+	}
+}
+
+@media (max-width: 430px) {
+	.reference-index-list.is-move-grid,
+	.reference-index-list.is-ability-grid {
+		grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
+		gap: 10px;
+	}
+
+	.reference-move-card {
+		min-height: 108px;
+		padding-inline: 10px;
+	}
+
+	.reference-move-card-meta {
+		gap: 9px;
+		padding-inline: 9px;
+	}
+
+	.reference-index-controls {
+		grid-template-columns: 1fr;
+	}
+
+	.reference-effect-heading {
+		align-items: stretch;
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	.reference-language-control {
+		width: 100%;
+		min-width: 0;
+		margin-left: 0;
+	}
+
+	.reference-pokemon-filters,
+	.reference-pokemon-list {
+		grid-template-columns: 1fr;
+	}
+
+	.reference-move-metrics > span:not(.reference-move-metric-icon) {
+		min-width: calc(50% - 8px);
+		flex: 1 1 calc(50% - 8px);
+	}
+}

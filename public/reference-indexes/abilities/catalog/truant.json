@@ -1,0 +1,935 @@
+{
+	"schemaVersion": 1,
+	"id": 54,
+	"slug": "truant",
+	"name": "Truant",
+	"names": {
+		"de": "Schnarchnase",
+		"en": "Truant",
+		"es": "Ausente",
+		"es-419": "Ausente",
+		"fr": "Absentéisme",
+		"it": "Pigrone",
+		"ja": "なまけ",
+		"ja-hrkt": "なまけ",
+		"ko": "게으름",
+		"zh-hans": "懒惰",
+		"zh-hant": "懶惰"
+	},
+	"generation": 3,
+	"isMainSeries": true,
+	"effectEntries": [
+		{
+			"language": "de",
+			"effect": "Pokémon mit dieser Fähigkeit überspringen jede zweite Runde statt eine Attacke einzusetzen (\"faulenzen\"). Faulenzen unterbricht Attacken die über mehrere Runden gehen genauso wie Paralyse, Zurückschrecken usw. Die meisten dieser Attacken, wie Geduld oder Walzer, werden einfach abgebrochen, wenn das Pokémon faulenzt. Attacken nach denen eine Runde aufgeladen werden muss, wie Hyperstrahl, müssen nicht aufgeladen werden, Attacken mit Vorbereitungsrunde, wie Fliegen, werden nicht abgebrochen. Attacken die mehrere Runden dauern aber bei einem Fehlschlag nicht enden, wie Wutanfall, Aufruhr, oder jede von Zugabe erzwungene Attacke, enden nicht, wenn das Pokémon faulenzt. Wenn das Pokémon verwirrt ist, wird die Verwirrung nicht beachtet beim Faulenzen, das Pokémon verletzt sich nicht selbst und die Verwirrung endet nicht früher deswegen. Wenn das Pokémon versucht sich zu bewegen aber von Paralyse oder Erdanziehung daran gehindert wird, zählt das trotzdem als erfolgreich und es wird die nächste Runde faulenzen. Wenn es nicht versucht sich zu bewegen, weil es beispielsweise schläft oder eingefroren ist, wird das was es versucht hat verschoben bis zum nächsten Versuch, der eine Attacke oder faulenzen sein kann, abhängig davon, was es zuletzt tat. Diese Fähigkeit kann nicht mit Sorgensamen ausgetauscht werden, aber mit Magensäfte deaktiviert, mit Rollenspiel geändert oder mit Fähigkeitstausch getauscht werden.",
+			"shortEffect": "Überspringt jede zweite Runde."
+		},
+		{
+			"language": "en",
+			"effect": "Every second turn on which this Pokémon should attempt to use a move, it will instead do nothing (\"loaf around\"). Loafing around interrupts moves that take multiple turns the same way paralysis, flinching, etc do. Most such moves, for example Bide or Rollout, are simply cut off upon loafing around. Attacks with a recharge turn, such as Hyper Beam, do not have to recharge; attacks with a preparation turn, such as Fly, do not end up being used. Moves that are forced over multiple turns and keep going through failure, such as Outrage, Uproar, or any move forced by Encore, keep going as usual. If this Pokémon is confused, its confusion is not checked when loafing around; the Pokémon cannot hurt itself, and its confusion does not end or come closer to ending. If this Pokémon attempts to move but fails, e.g. because of paralysis or Gravity, it still counts as having moved and will loaf around the next turn. If it does not attempt to move, e.g. because it is asleep or frozen, whatever it would have done will be postponed until its next attempt; that is, it will either loaf around or move as usual, depending on what it last did. This ability cannot be changed with Worry Seed, but it can be disabled with Gastro Acid, changed with Role Play, or traded away with Skill Swap.",
+			"shortEffect": "Skips every second turn."
+		},
+		{
+			"language": "fr",
+			"effect": "Tous les seconds tours où ce Pokémon devrait tenter d’utiliser une capacité, il ne fera rien à la place (\"paresse\"). Paresser interrompt les capacités qui prennent plusieurs tours de la même manière que la paralysie, l’apeurement, etc font. La plupart de telles capacités, par exemple Patience ou Roulade, sont simplement interrompus en paressant. Les attaques avec un tour de recharge, telles que Ultralaser, n’ont pas à se recharger; les attaques avec un tour de préparation, telles que Vol, finissent par ne pas être utilisées. Les capacités forcées sur plusieurs tours et continuent malgré l’échec, telles que Colère, Brouhaha, ou n’importe quelle capacité forcée par Encore, continuent comme d’habitude. Si ce Pokémon est confus, sa confusion n’est pas vérifiée en paressant; le Pokémon ne peut pas se blesser, et sa confusion ne prend pas fin et ne se rapproche pas de la fin. Si ce Pokémon tente d’agir mais échoue, e.g. à cause de la paralysie ou Gravité, cela compte toujours comme ayant agi et paressera au prochain tour. S’il ne tente pas d’agir, e.g. parce qu’il est endormi ou gelé, peu importe ce qu’il aurait fait sera reporté à sa prochaine tentative; c’est-à-dire, il paressera ou agira normalement, selon ce qu’il a fait en dernier. Ce talent ne peut pas être changé avec Soucigraine, mais il peut être désactivé avec Suc Digestif, changé avec Imitation, ou échangé avec Échange.",
+			"shortEffect": "Passe tous les seconds tours."
+		}
+	],
+	"effectChanges": [],
+	"descriptions": [
+		{
+			"versionGroup": "black-2-white-2",
+			"language": "en",
+			"text": "Pokémon can’t attack on consecutive turns."
+		},
+		{
+			"versionGroup": "black-2-white-2",
+			"language": "fr",
+			"text": "Le Pokémon ne frappe qu'un tour sur deux."
+		},
+		{
+			"versionGroup": "black-white",
+			"language": "en",
+			"text": "Pokémon can’t attack on consecutive turns."
+		},
+		{
+			"versionGroup": "black-white",
+			"language": "fr",
+			"text": "Le Pokémon ne frappe qu'un tour sur deux."
+		},
+		{
+			"versionGroup": "diamond-pearl",
+			"language": "en",
+			"text": "The Pokémon can’t attack on consecutive turns."
+		},
+		{
+			"versionGroup": "diamond-pearl",
+			"language": "fr",
+			"text": "Le Pokémon ne frappe qu'un tour sur deux."
+		},
+		{
+			"versionGroup": "emerald",
+			"language": "en",
+			"text": "Moves only every two turns."
+		},
+		{
+			"versionGroup": "emerald",
+			"language": "fr",
+			"text": "Frappe tous les 2 tours."
+		},
+		{
+			"versionGroup": "firered-leafgreen",
+			"language": "en",
+			"text": "Moves only every two turns."
+		},
+		{
+			"versionGroup": "firered-leafgreen",
+			"language": "fr",
+			"text": "Frappe tous les 2 tours."
+		},
+		{
+			"versionGroup": "heartgold-soulsilver",
+			"language": "en",
+			"text": "Pokémon can’t attack on consecutive turns."
+		},
+		{
+			"versionGroup": "heartgold-soulsilver",
+			"language": "fr",
+			"text": "Le Pokémon ne frappe qu'un tour sur deux."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "de",
+			"text": "Das Pokémon muss nach Einsatz einer Attacke eine Runde lang aussetzen."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "en",
+			"text": "The Pokémon can’t use a move if it had used a move on the previous turn."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "es",
+			"text": "Al ejecutar un movimiento, el Pokémon descansará en el turno siguiente."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "es-419",
+			"text": "Al ejecutar un movimiento, el Pokémon descansará en el turno siguiente."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "fr",
+			"text": "Lorsque le Pokémon utilise une capacité, il passe le tour suivant à paresser."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "it",
+			"text": "Quando il Pokémon usa una mossa, nel turno successivo si riposerà."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "ja",
+			"text": "技を 出すと つぎの ターンは 休んでしまう。"
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "ja-hrkt",
+			"text": "わざを だすと つぎの ターンは やすんでしまう。"
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "ko",
+			"text": "기술을 사용하면 다음 턴은 쉰다."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "zh-hans",
+			"text": "如果使出招式， 下一回合就会休息。"
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "zh-hant",
+			"text": "如果使出招式， 下一回合就需要休息。"
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "de",
+			"text": "Greift nur alle zwei Runden an."
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "en",
+			"text": "The Pokémon can’t attack on consecutive turns."
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "es",
+			"text": "El Pokémon no atacará en turnos consecutivos."
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "es-419",
+			"text": "El Pokémon no atacará en turnos consecutivos."
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "fr",
+			"text": "Le Pokémon ne frappe qu'un tour sur deux."
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "it",
+			"text": "Il Pokémon attacca un turno sì e uno no."
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "ja",
+			"text": "攻撃が 連続で だせない。"
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "ja-hrkt",
+			"text": "こうげきが れんぞくで だせない。"
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "ko",
+			"text": "연속으로 공격할 수 없다."
+		},
+		{
+			"versionGroup": "platinum",
+			"language": "en",
+			"text": "The Pokémon can’t attack on consecutive turns."
+		},
+		{
+			"versionGroup": "platinum",
+			"language": "fr",
+			"text": "Le Pokémon ne frappe qu'un tour sur deux."
+		},
+		{
+			"versionGroup": "ruby-sapphire",
+			"language": "en",
+			"text": "Moves only every two turns."
+		},
+		{
+			"versionGroup": "ruby-sapphire",
+			"language": "fr",
+			"text": "Frappe tous les 2 tours."
+		},
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "en",
+			"text": "Each time the Pokémon uses a move, it spends the next turn loafing around."
+		},
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "fr",
+			"text": "Lorsque le Pokémon utilise une capacité, il passe le tour suivant à paresser."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "de",
+			"text": "Das Pokémon muss nach Einsatz einer Attacke eine Runde lang aussetzen."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "en",
+			"text": "The Pokémon can’t use a move the following turn if it uses one."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "es",
+			"text": "Al ejecutar un movimiento, el Pokémon descansará en el turno siguiente."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "es-419",
+			"text": "Al ejecutar un movimiento, el Pokémon descansará en el turno siguiente."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "fr",
+			"text": "Lorsque le Pokémon utilise une capacité, il passe le tour suivant à paresser."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "it",
+			"text": "Quando il Pokémon usa una mossa, nel turno successivo si riposerà."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "ja",
+			"text": "技を 出すと つぎの ターンは 休んでしまう。"
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "ja-hrkt",
+			"text": "わざを だすと つぎの ターンは やすんでしまう。"
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "ko",
+			"text": "기술을 사용하면 다음 턴은 쉰다."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "zh-hans",
+			"text": "如果使出招式， 下一回合就会休息。"
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "zh-hant",
+			"text": "如果使出招式， 下一回合就需要休息。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "de",
+			"text": "Das Pokémon muss nach Einsatz einer Attacke eine Runde lang aussetzen."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "en",
+			"text": "The Pokémon can’t use a move if it had used a move on the previous turn."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es",
+			"text": "Al ejecutar un movimiento, descansará en el turno siguiente."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es-419",
+			"text": "Al ejecutar un movimiento, descansará en el turno siguiente."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "fr",
+			"text": "Lorsque le Pokémon utilise une capacité, il passe le tour suivant à paresser."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "it",
+			"text": "Quando il Pokémon usa una mossa, nel turno successivo si riposerà."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja",
+			"text": "技を 出すと 次の ターンは 休んでしまう。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja-hrkt",
+			"text": "わざを だすと つぎの ターンは やすんでしまう。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ko",
+			"text": "기술을 사용하면 다음 턴은 쉰다."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hans",
+			"text": "如果使出招式， 下一回合就会休息。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hant",
+			"text": "如果使出招式， 下一回合就需要休息。"
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "de",
+			"text": "Das Pokémon muss nach Einsatz einer Attacke eine Runde lang aussetzen."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "en",
+			"text": "The Pokémon can’t use a move the following turn if it uses one."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "es",
+			"text": "Al ejecutar un movimiento, el Pokémon descansará en el turno siguiente."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "es-419",
+			"text": "Al ejecutar un movimiento, el Pokémon descansará en el turno siguiente."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "fr",
+			"text": "Lorsque le Pokémon utilise une capacité, il passe le tour suivant à paresser."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "it",
+			"text": "Quando il Pokémon usa una mossa, nel turno successivo si riposerà."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "ja",
+			"text": "技を 出すと つぎの ターンは 休んでしまう。"
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "ja-hrkt",
+			"text": "わざを だすと つぎの ターンは やすんでしまう。"
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "ko",
+			"text": "기술을 사용하면 다음 턴은 쉰다."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "zh-hans",
+			"text": "如果使出招式， 下一回合就会休息。"
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "zh-hant",
+			"text": "如果使出招式， 下一回合就需要休息。"
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "de",
+			"text": "Greift nur alle zwei Runden an."
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "en",
+			"text": "The Pokémon can’t attack on consecutive turns."
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "es",
+			"text": "El Pokémon no atacará en turnos consecutivos."
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "es-419",
+			"text": "El Pokémon no atacará en turnos consecutivos."
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "fr",
+			"text": "Le Pokémon ne frappe qu'un tour sur deux."
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "it",
+			"text": "Il Pokémon attacca un turno sì e uno no."
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "ja",
+			"text": "攻撃が 連続で だせない。"
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "ja-hrkt",
+			"text": "こうげきが れんぞくで だせない。"
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "ko",
+			"text": "연속으로 공격할 수 없다."
+		},
+		{
+			"versionGroup": "xd",
+			"language": "fr",
+			"text": "Le Pokémon ne frappe qu'un tour sur deux."
+		}
+	],
+	"pokemon": [
+		{
+			"nationalDexId": 287,
+			"speciesName": "Slakoth",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "diamond-pearl",
+					"gameLabel": "Diamond / Pearl",
+					"versionGroup": "diamond-pearl",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "emerald",
+					"gameLabel": "Emerald",
+					"versionGroup": "emerald",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "firered-leafgreen",
+					"gameLabel": "FireRed / LeafGreen",
+					"versionGroup": "firered-leafgreen",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "heartgold-soulsilver",
+					"gameLabel": "HeartGold / SoulSilver",
+					"versionGroup": "heartgold-soulsilver",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "legends-arceus",
+					"gameLabel": "Legends: Arceus",
+					"versionGroup": "legends-arceus",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "legends-za",
+					"gameLabel": "Legends: Z-A",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "lets-go-pikachu-lets-go-eevee",
+					"gameLabel": "Let's Go Pikachu / Eevee",
+					"versionGroup": "lets-go-pikachu-lets-go-eevee",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "mega-dimension",
+					"gameLabel": "Mega Dimension",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "platinum",
+					"gameLabel": "Platinum",
+					"versionGroup": "platinum",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ruby-sapphire",
+					"gameLabel": "Ruby / Sapphire",
+					"versionGroup": "ruby-sapphire",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-crown-tundra",
+					"gameLabel": "The Crown Tundra",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-indigo-disk",
+					"gameLabel": "The Indigo Disk",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-isle-of-armor",
+					"gameLabel": "The Isle of Armor",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-teal-mask",
+					"gameLabel": "The Teal Mask",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 289,
+			"speciesName": "Slaking",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "diamond-pearl",
+					"gameLabel": "Diamond / Pearl",
+					"versionGroup": "diamond-pearl",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "emerald",
+					"gameLabel": "Emerald",
+					"versionGroup": "emerald",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "firered-leafgreen",
+					"gameLabel": "FireRed / LeafGreen",
+					"versionGroup": "firered-leafgreen",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "heartgold-soulsilver",
+					"gameLabel": "HeartGold / SoulSilver",
+					"versionGroup": "heartgold-soulsilver",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "legends-arceus",
+					"gameLabel": "Legends: Arceus",
+					"versionGroup": "legends-arceus",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "legends-za",
+					"gameLabel": "Legends: Z-A",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "lets-go-pikachu-lets-go-eevee",
+					"gameLabel": "Let's Go Pikachu / Eevee",
+					"versionGroup": "lets-go-pikachu-lets-go-eevee",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "mega-dimension",
+					"gameLabel": "Mega Dimension",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "platinum",
+					"gameLabel": "Platinum",
+					"versionGroup": "platinum",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ruby-sapphire",
+					"gameLabel": "Ruby / Sapphire",
+					"versionGroup": "ruby-sapphire",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-crown-tundra",
+					"gameLabel": "The Crown Tundra",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-indigo-disk",
+					"gameLabel": "The Indigo Disk",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-isle-of-armor",
+					"gameLabel": "The Isle of Armor",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-teal-mask",
+					"gameLabel": "The Teal Mask",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 632,
+			"speciesName": "Durant",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "legends-arceus",
+					"gameLabel": "Legends: Arceus",
+					"versionGroup": "legends-arceus",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "legends-za",
+					"gameLabel": "Legends: Z-A",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "lets-go-pikachu-lets-go-eevee",
+					"gameLabel": "Let's Go Pikachu / Eevee",
+					"versionGroup": "lets-go-pikachu-lets-go-eevee",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "mega-dimension",
+					"gameLabel": "Mega Dimension",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "the-crown-tundra",
+					"gameLabel": "The Crown Tundra",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "the-indigo-disk",
+					"gameLabel": "The Indigo Disk",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "the-isle-of-armor",
+					"gameLabel": "The Isle of Armor",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "the-teal-mask",
+					"gameLabel": "The Teal Mask",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [],
+					"isHidden": true
+				}
+			]
+		}
+	],
+	"potentialPokemon": [
+		{
+			"name": "slakoth",
+			"isHidden": false,
+			"slot": 1
+		},
+		{
+			"name": "slaking",
+			"isHidden": false,
+			"slot": 1
+		},
+		{
+			"name": "durant",
+			"isHidden": true,
+			"slot": 3
+		}
+	],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/ability/54/",
+		"fetchedAt": "2026-11-03T06:30:19.444Z",
+		"hash": "57d6461a2fe8b42ea5c3dd3dd178ab40ae960f2a68a2e837042d2fb129c17053"
+	}
+}

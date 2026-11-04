@@ -105,14 +105,16 @@ export function _sprite(gen, game, id, form, shiny, frontBack, thumbIcon, animat
   path += `${folder}/`;
 
   path += pad4(id);
-  path += form ? `-${formKeyToSuffix(Number(id), form)}` : '';
+  const formSuffix = form ? formKeyToSuffix(Number(id), form) : null;
+  path += formSuffix ? `-${formSuffix}` : '';
   path += gen === 5 && animated ? '.gif' : animated ? '.webm' : '.png';
 
   return path;
 }
 
 export function _menuSprite(gen, game, id, formKey, type) {
-  const form = formKey ? `-${formKeyToSuffix(Number(id), formKey)}` : '';
+  const formSuffix = formKey ? formKeyToSuffix(Number(id), formKey) : null;
+  const form = formSuffix ? `-${formSuffix}` : '';
 
   if (gen < 2) return _assetPath(`sprites/gen${gen}/menu-sprites/${type}.png`);
   if (gen < 6) return _assetPath(`sprites/gen${gen}/menu-sprites/${pad4(id)}${form}.png`);

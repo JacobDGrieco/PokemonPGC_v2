@@ -1,0 +1,4696 @@
+{
+	"schemaVersion": 2,
+	"nationalDexId": 679,
+	"speciesName": "Honedge",
+	"formKey": "base",
+	"formName": "Base",
+	"formLabelSource": "form-catalog",
+	"profiles": [
+		{
+			"profileKey": "x-y",
+			"label": "X / Y",
+			"appGameKeys": [
+				"x-national",
+				"x-central",
+				"x-coastal",
+				"x-mountain",
+				"y-national",
+				"y-central",
+				"y-coastal",
+				"y-mountain"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Honedge",
+				"localizedNames": {
+					"ja-hrkt": "ヒトツキ",
+					"ja-roma": "Hitotsuki",
+					"ko": "단칼빙",
+					"zh-hant": "獨劍鞘",
+					"fr": "Monorpale",
+					"de": "Gramokles",
+					"es": "Honedge",
+					"it": "Honedge",
+					"ja": "ヒトツキ",
+					"zh-hans": "独剑鞘",
+					"es-419": "Honedge"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Steel",
+					"Ghost"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 80,
+					"def": 100,
+					"spa": 35,
+					"spd": 37,
+					"spe": 28
+				},
+				"evYield": {
+					"def": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"No Guard"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.8 m",
+				"weight": "2.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 180,
+				"baseExperience": 65,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "Brown",
+				"genus": "Sword Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "とうけんポケモン",
+					"ko": "도검포켓몬",
+					"zh-hant": "刀劍寶可夢",
+					"fr": "Pokémon Glaive",
+					"de": "Klingenkraft-Pokémon",
+					"es": "Pokémon Tizona",
+					"it": "Pokémon Armabianca",
+					"ja": "とうけんポケモン",
+					"zh-hans": "刀剑宝可梦",
+					"es-419": "Pokémon Tizona"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 679
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 117
+					},
+					{
+						"pokedex": "galar",
+						"number": 330
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 71
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 679,
+								"natiId": 679,
+								"name": "Honedge"
+							},
+							{
+								"id": 680,
+								"natiId": 680,
+								"name": "Doublade",
+								"method": "Level",
+								"value": 35
+							},
+							{
+								"id": 681,
+								"natiId": 681,
+								"name": "Aegislash",
+								"method": "Use item",
+								"value": "Dusk Stone"
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Kalos Route 6 Area",
+						"notes": "Rough Terrain, Lv. 11",
+						"games": "X",
+						"rate": "10%"
+					},
+					{
+						"area": "Kalos Route 6 Area",
+						"notes": "Rough Terrain, Lv. 12",
+						"games": "X",
+						"rate": "5%"
+					},
+					{
+						"area": "Kalos Route 6 Area",
+						"notes": "Rough Terrain, Lv. 11",
+						"games": "Y",
+						"rate": "10%"
+					},
+					{
+						"area": "Kalos Route 6 Area",
+						"notes": "Rough Terrain, Lv. 12",
+						"games": "Y",
+						"rate": "5%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Swords Dance",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Fury Cutter",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Metal Sound",
+							"level": 8,
+							"order": null
+						},
+						{
+							"name": "Pursuit",
+							"level": 13,
+							"order": null
+						},
+						{
+							"name": "Autotomize",
+							"level": 18,
+							"order": null
+						},
+						{
+							"name": "Shadow Sneak",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Aerial Ace",
+							"level": 22,
+							"order": null
+						},
+						{
+							"name": "Retaliate",
+							"level": 26,
+							"order": null
+						},
+						{
+							"name": "Slash",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Iron Defense",
+							"level": 32,
+							"order": null
+						},
+						{
+							"name": "Night Slash",
+							"level": 35,
+							"order": null
+						},
+						{
+							"name": "Power Trick",
+							"level": 39,
+							"order": null
+						},
+						{
+							"name": "Iron Head",
+							"level": 42,
+							"order": null
+						},
+						{
+							"name": "Sacred Sword",
+							"level": 47,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Aerial Ace",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Brick Break",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Cut",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "False Swipe",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash Cannon",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Gyro Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Reflect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Retaliate",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Slide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Smash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Claw",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swords Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						}
+					],
+					"Egg": [
+						{
+							"name": "Destiny Bond",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Metal Sound",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Sneak",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wide Guard",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/679",
+						"fetchedAt": "2026-11-03T05:53:49.182Z",
+						"hash": "90e5b52c14f433f720b1f2fe032b46dffe28d7bb8bfc9a64b24c98afc54b2ace"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/349/",
+						"fetchedAt": "2026-11-03T05:53:49.205Z",
+						"hash": "1e669f4dcd34a1b2a5b090a83e0b007594899a9b18dfd3508c1ccb03dc207e59"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/679/",
+						"fetchedAt": "2026-11-03T05:53:49.228Z",
+						"hash": "faf8b4b07aef55393332923695da623a389fc8414b4a57ef130ced9e19bb0cfb"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/679/encounters",
+						"fetchedAt": "2026-11-03T05:53:49.258Z",
+						"hash": "740e8d5e11da751b7f13fad7dba50be890b75b726a0c50f97877a41ad49f34a1"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/679/",
+						"fetchedAt": "2026-11-03T05:53:49.318Z",
+						"hash": "e3ac369830162f3b009fc2f4bbfc57e32e576154f0830c15d92141ebf6bd4c7c"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"x-national": "Apparently this Pokémon is born when a departed spirit inhabits a sword. It attaches itself to people and drinks their life force.",
+				"x-central": "Apparently this Pokémon is born when a departed spirit inhabits a sword. It attaches itself to people and drinks their life force.",
+				"x-coastal": "Apparently this Pokémon is born when a departed spirit inhabits a sword. It attaches itself to people and drinks their life force.",
+				"x-mountain": "Apparently this Pokémon is born when a departed spirit inhabits a sword. It attaches itself to people and drinks their life force.",
+				"y-national": "If anyone dares to grab its hilt, it wraps a blue cloth around that person’s arm and drains that person’s life energy completely.",
+				"y-central": "If anyone dares to grab its hilt, it wraps a blue cloth around that person’s arm and drains that person’s life energy completely.",
+				"y-coastal": "If anyone dares to grab its hilt, it wraps a blue cloth around that person’s arm and drains that person’s life energy completely.",
+				"y-mountain": "If anyone dares to grab its hilt, it wraps a blue cloth around that person’s arm and drains that person’s life energy completely."
+			},
+			"localizedFlavorByGame": {
+				"x-national": {
+					"ja-hrkt": "ししゃの たましいが こだいの つるぎに やどって うまれたらしい。 ひとに とりつき いのちを すう。",
+					"ko": "죽은 자의 혼이 고대의 검에 깃들어 태어났다고 한다. 사람에게 씌어 생명을 빨아들인다.",
+					"fr": "Ce Pokémon naît quand l’âme d’un défunt prend possession d’une épée ancienne. Il s’accroche aux humains pour absorber leur énergie vitale.",
+					"de": "Dieses Pokémon wird geboren, wenn die Seele eines Verstorbenen sich in einem Schwert festsetzt. Es heftet sich an Menschen und saugt deren Lebenskraft aus.",
+					"es": "Cuentan que este Pokémon nace cuando el espíritu de un difunto toma posesión de una espada antigua. Se aferra a las personas y absorbe su energía.",
+					"it": "Sembra sia nato quando uno spirito si impossessò di un’antica spada. Si lega agli esseri umani per assorbirne la forza vitale.",
+					"en": "Apparently this Pokémon is born when a departed spirit inhabits a sword. It attaches itself to people and drinks their life force.",
+					"ja": "死者の 魂が 古代の 剣に 宿って 生まれたらしい。 人に とりつき 命を 吸う。",
+					"es-419": "Cuentan que este Pokémon nace cuando el espíritu de un difunto toma posesión de una espada antigua. Se aferra a las personas y absorbe su energía."
+				},
+				"x-central": {
+					"ja-hrkt": "ししゃの たましいが こだいの つるぎに やどって うまれたらしい。 ひとに とりつき いのちを すう。",
+					"ko": "죽은 자의 혼이 고대의 검에 깃들어 태어났다고 한다. 사람에게 씌어 생명을 빨아들인다.",
+					"fr": "Ce Pokémon naît quand l’âme d’un défunt prend possession d’une épée ancienne. Il s’accroche aux humains pour absorber leur énergie vitale.",
+					"de": "Dieses Pokémon wird geboren, wenn die Seele eines Verstorbenen sich in einem Schwert festsetzt. Es heftet sich an Menschen und saugt deren Lebenskraft aus.",
+					"es": "Cuentan que este Pokémon nace cuando el espíritu de un difunto toma posesión de una espada antigua. Se aferra a las personas y absorbe su energía.",
+					"it": "Sembra sia nato quando uno spirito si impossessò di un’antica spada. Si lega agli esseri umani per assorbirne la forza vitale.",
+					"en": "Apparently this Pokémon is born when a departed spirit inhabits a sword. It attaches itself to people and drinks their life force.",
+					"ja": "死者の 魂が 古代の 剣に 宿って 生まれたらしい。 人に とりつき 命を 吸う。",
+					"es-419": "Cuentan que este Pokémon nace cuando el espíritu de un difunto toma posesión de una espada antigua. Se aferra a las personas y absorbe su energía."
+				},
+				"x-coastal": {
+					"ja-hrkt": "ししゃの たましいが こだいの つるぎに やどって うまれたらしい。 ひとに とりつき いのちを すう。",
+					"ko": "죽은 자의 혼이 고대의 검에 깃들어 태어났다고 한다. 사람에게 씌어 생명을 빨아들인다.",
+					"fr": "Ce Pokémon naît quand l’âme d’un défunt prend possession d’une épée ancienne. Il s’accroche aux humains pour absorber leur énergie vitale.",
+					"de": "Dieses Pokémon wird geboren, wenn die Seele eines Verstorbenen sich in einem Schwert festsetzt. Es heftet sich an Menschen und saugt deren Lebenskraft aus.",
+					"es": "Cuentan que este Pokémon nace cuando el espíritu de un difunto toma posesión de una espada antigua. Se aferra a las personas y absorbe su energía.",
+					"it": "Sembra sia nato quando uno spirito si impossessò di un’antica spada. Si lega agli esseri umani per assorbirne la forza vitale.",
+					"en": "Apparently this Pokémon is born when a departed spirit inhabits a sword. It attaches itself to people and drinks their life force.",
+					"ja": "死者の 魂が 古代の 剣に 宿って 生まれたらしい。 人に とりつき 命を 吸う。",
+					"es-419": "Cuentan que este Pokémon nace cuando el espíritu de un difunto toma posesión de una espada antigua. Se aferra a las personas y absorbe su energía."
+				},
+				"x-mountain": {
+					"ja-hrkt": "ししゃの たましいが こだいの つるぎに やどって うまれたらしい。 ひとに とりつき いのちを すう。",
+					"ko": "죽은 자의 혼이 고대의 검에 깃들어 태어났다고 한다. 사람에게 씌어 생명을 빨아들인다.",
+					"fr": "Ce Pokémon naît quand l’âme d’un défunt prend possession d’une épée ancienne. Il s’accroche aux humains pour absorber leur énergie vitale.",
+					"de": "Dieses Pokémon wird geboren, wenn die Seele eines Verstorbenen sich in einem Schwert festsetzt. Es heftet sich an Menschen und saugt deren Lebenskraft aus.",
+					"es": "Cuentan que este Pokémon nace cuando el espíritu de un difunto toma posesión de una espada antigua. Se aferra a las personas y absorbe su energía.",
+					"it": "Sembra sia nato quando uno spirito si impossessò di un’antica spada. Si lega agli esseri umani per assorbirne la forza vitale.",
+					"en": "Apparently this Pokémon is born when a departed spirit inhabits a sword. It attaches itself to people and drinks their life force.",
+					"ja": "死者の 魂が 古代の 剣に 宿って 生まれたらしい。 人に とりつき 命を 吸う。",
+					"es-419": "Cuentan que este Pokémon nace cuando el espíritu de un difunto toma posesión de una espada antigua. Se aferra a las personas y absorbe su energía."
+				},
+				"y-national": {
+					"ja-hrkt": "つるぎの つかを にぎった ひとの うでに あおい ぬのを まきつけて たおれるまで いのちを すいとる。",
+					"ko": "검의 자루를 잡은 사람의 팔에 파란 천을 감아서 쓰러질 때까지 목숨을 빨아들인다.",
+					"fr": "Si quelqu’un s’aventure à l’empoigner, il enroule son étoffe bleue autour du bras de l’infortuné et aspire son énergie vitale jusqu’à ce que ce dernier s’écroule.",
+					"de": "Es wickelt ein blaues Tuch um den Arm von Menschen, die seinen Schwertgriff ergreifen, und absorbiert deren Lebensenergie, bis sie zusammenbrechen.",
+					"es": "Si alguien osa empuñarlo, se enrolla en el brazo del desafortunado con su paño azul y le absorbe toda la energía hasta que pierde el sentido.",
+					"it": "Avvolge il drappo blu attorno al braccio di chiunque si azzardi a impugnarne l’elsa e assorbe la sua energia fino a fargli perdere i sensi.",
+					"en": "If anyone dares to grab its hilt, it wraps a blue cloth around that person’s arm and drains that person’s life energy completely.",
+					"ja": "剣の 柄を 握った 人の 腕に 青い 布を 巻きつけて 倒れるまで 命を 吸い取る。",
+					"es-419": "Si alguien osa empuñarlo, se enrolla en el brazo del desafortunado con su paño azul y le absorbe toda la energía hasta que pierde el sentido."
+				},
+				"y-central": {
+					"ja-hrkt": "つるぎの つかを にぎった ひとの うでに あおい ぬのを まきつけて たおれるまで いのちを すいとる。",
+					"ko": "검의 자루를 잡은 사람의 팔에 파란 천을 감아서 쓰러질 때까지 목숨을 빨아들인다.",
+					"fr": "Si quelqu’un s’aventure à l’empoigner, il enroule son étoffe bleue autour du bras de l’infortuné et aspire son énergie vitale jusqu’à ce que ce dernier s’écroule.",
+					"de": "Es wickelt ein blaues Tuch um den Arm von Menschen, die seinen Schwertgriff ergreifen, und absorbiert deren Lebensenergie, bis sie zusammenbrechen.",
+					"es": "Si alguien osa empuñarlo, se enrolla en el brazo del desafortunado con su paño azul y le absorbe toda la energía hasta que pierde el sentido.",
+					"it": "Avvolge il drappo blu attorno al braccio di chiunque si azzardi a impugnarne l’elsa e assorbe la sua energia fino a fargli perdere i sensi.",
+					"en": "If anyone dares to grab its hilt, it wraps a blue cloth around that person’s arm and drains that person’s life energy completely.",
+					"ja": "剣の 柄を 握った 人の 腕に 青い 布を 巻きつけて 倒れるまで 命を 吸い取る。",
+					"es-419": "Si alguien osa empuñarlo, se enrolla en el brazo del desafortunado con su paño azul y le absorbe toda la energía hasta que pierde el sentido."
+				},
+				"y-coastal": {
+					"ja-hrkt": "つるぎの つかを にぎった ひとの うでに あおい ぬのを まきつけて たおれるまで いのちを すいとる。",
+					"ko": "검의 자루를 잡은 사람의 팔에 파란 천을 감아서 쓰러질 때까지 목숨을 빨아들인다.",
+					"fr": "Si quelqu’un s’aventure à l’empoigner, il enroule son étoffe bleue autour du bras de l’infortuné et aspire son énergie vitale jusqu’à ce que ce dernier s’écroule.",
+					"de": "Es wickelt ein blaues Tuch um den Arm von Menschen, die seinen Schwertgriff ergreifen, und absorbiert deren Lebensenergie, bis sie zusammenbrechen.",
+					"es": "Si alguien osa empuñarlo, se enrolla en el brazo del desafortunado con su paño azul y le absorbe toda la energía hasta que pierde el sentido.",
+					"it": "Avvolge il drappo blu attorno al braccio di chiunque si azzardi a impugnarne l’elsa e assorbe la sua energia fino a fargli perdere i sensi.",
+					"en": "If anyone dares to grab its hilt, it wraps a blue cloth around that person’s arm and drains that person’s life energy completely.",
+					"ja": "剣の 柄を 握った 人の 腕に 青い 布を 巻きつけて 倒れるまで 命を 吸い取る。",
+					"es-419": "Si alguien osa empuñarlo, se enrolla en el brazo del desafortunado con su paño azul y le absorbe toda la energía hasta que pierde el sentido."
+				},
+				"y-mountain": {
+					"ja-hrkt": "つるぎの つかを にぎった ひとの うでに あおい ぬのを まきつけて たおれるまで いのちを すいとる。",
+					"ko": "검의 자루를 잡은 사람의 팔에 파란 천을 감아서 쓰러질 때까지 목숨을 빨아들인다.",
+					"fr": "Si quelqu’un s’aventure à l’empoigner, il enroule son étoffe bleue autour du bras de l’infortuné et aspire son énergie vitale jusqu’à ce que ce dernier s’écroule.",
+					"de": "Es wickelt ein blaues Tuch um den Arm von Menschen, die seinen Schwertgriff ergreifen, und absorbiert deren Lebensenergie, bis sie zusammenbrechen.",
+					"es": "Si alguien osa empuñarlo, se enrolla en el brazo del desafortunado con su paño azul y le absorbe toda la energía hasta que pierde el sentido.",
+					"it": "Avvolge il drappo blu attorno al braccio di chiunque si azzardi a impugnarne l’elsa e assorbe la sua energia fino a fargli perdere i sensi.",
+					"en": "If anyone dares to grab its hilt, it wraps a blue cloth around that person’s arm and drains that person’s life energy completely.",
+					"ja": "剣の 柄を 握った 人の 腕に 青い 布を 巻きつけて 倒れるまで 命を 吸い取る。",
+					"es-419": "Si alguien osa empuñarlo, se enrolla en el brazo del desafortunado con su paño azul y le absorbe toda la energía hasta que pierde el sentido."
+				}
+			}
+		},
+		{
+			"profileKey": "omega-ruby-alpha-sapphire",
+			"label": "Omega Ruby / Alpha Sapphire",
+			"appGameKeys": [
+				"omegaruby-national",
+				"omegaruby",
+				"alphasapphire-national",
+				"alphasapphire"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Honedge",
+				"localizedNames": {
+					"ja-hrkt": "ヒトツキ",
+					"ja-roma": "Hitotsuki",
+					"ko": "단칼빙",
+					"zh-hant": "獨劍鞘",
+					"fr": "Monorpale",
+					"de": "Gramokles",
+					"es": "Honedge",
+					"it": "Honedge",
+					"ja": "ヒトツキ",
+					"zh-hans": "独剑鞘",
+					"es-419": "Honedge"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Steel",
+					"Ghost"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 80,
+					"def": 100,
+					"spa": 35,
+					"spd": 37,
+					"spe": 28
+				},
+				"evYield": {
+					"def": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"No Guard"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.8 m",
+				"weight": "2.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 180,
+				"baseExperience": 65,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "Brown",
+				"genus": "Sword Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "とうけんポケモン",
+					"ko": "도검포켓몬",
+					"zh-hant": "刀劍寶可夢",
+					"fr": "Pokémon Glaive",
+					"de": "Klingenkraft-Pokémon",
+					"es": "Pokémon Tizona",
+					"it": "Pokémon Armabianca",
+					"ja": "とうけんポケモン",
+					"zh-hans": "刀剑宝可梦",
+					"es-419": "Pokémon Tizona"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 679
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 117
+					},
+					{
+						"pokedex": "galar",
+						"number": 330
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 71
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 679,
+								"natiId": 679,
+								"name": "Honedge"
+							},
+							{
+								"id": 680,
+								"natiId": 680,
+								"name": "Doublade",
+								"method": "Level",
+								"value": 35
+							},
+							{
+								"id": 681,
+								"natiId": 681,
+								"name": "Aegislash",
+								"method": "Use item",
+								"value": "Dusk Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Swords Dance",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Fury Cutter",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Metal Sound",
+							"level": 8,
+							"order": null
+						},
+						{
+							"name": "Pursuit",
+							"level": 13,
+							"order": null
+						},
+						{
+							"name": "Autotomize",
+							"level": 18,
+							"order": null
+						},
+						{
+							"name": "Shadow Sneak",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Aerial Ace",
+							"level": 22,
+							"order": null
+						},
+						{
+							"name": "Retaliate",
+							"level": 26,
+							"order": null
+						},
+						{
+							"name": "Slash",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Iron Defense",
+							"level": 32,
+							"order": null
+						},
+						{
+							"name": "Night Slash",
+							"level": 35,
+							"order": null
+						},
+						{
+							"name": "Power Trick",
+							"level": 39,
+							"order": null
+						},
+						{
+							"name": "Iron Head",
+							"level": 42,
+							"order": null
+						},
+						{
+							"name": "Sacred Sword",
+							"level": 47,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Aerial Ace",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Brick Break",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Cut",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "False Swipe",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash Cannon",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Gyro Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Reflect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Retaliate",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Slide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Smash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Secret Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Claw",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swords Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "After You",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Defense",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Head",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Magnet Rise",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shock Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Spite",
+							"level": null,
+							"order": null
+						}
+					],
+					"Egg": [
+						{
+							"name": "Destiny Bond",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Metal Sound",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Sneak",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wide Guard",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/679",
+						"fetchedAt": "2026-11-03T05:53:49.182Z",
+						"hash": "90e5b52c14f433f720b1f2fe032b46dffe28d7bb8bfc9a64b24c98afc54b2ace"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/349/",
+						"fetchedAt": "2026-11-03T05:53:49.205Z",
+						"hash": "1e669f4dcd34a1b2a5b090a83e0b007594899a9b18dfd3508c1ccb03dc207e59"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/679/",
+						"fetchedAt": "2026-11-03T05:53:49.228Z",
+						"hash": "faf8b4b07aef55393332923695da623a389fc8414b4a57ef130ced9e19bb0cfb"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/679/encounters",
+						"fetchedAt": "2026-11-03T05:53:49.258Z",
+						"hash": "740e8d5e11da751b7f13fad7dba50be890b75b726a0c50f97877a41ad49f34a1"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/679/",
+						"fetchedAt": "2026-11-03T05:53:49.318Z",
+						"hash": "e3ac369830162f3b009fc2f4bbfc57e32e576154f0830c15d92141ebf6bd4c7c"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"omegaruby-national": "Apparently this Pokémon is born when a departed spirit inhabits a sword. It attaches itself to people and drinks their life force.",
+				"omegaruby": "Apparently this Pokémon is born when a departed spirit inhabits a sword. It attaches itself to people and drinks their life force.",
+				"alphasapphire-national": "If anyone dares to grab its hilt, it wraps a blue cloth around that person’s arm and drains that person’s life energy completely.",
+				"alphasapphire": "If anyone dares to grab its hilt, it wraps a blue cloth around that person’s arm and drains that person’s life energy completely."
+			},
+			"localizedFlavorByGame": {
+				"omegaruby-national": {
+					"ja-hrkt": "ししゃの たましいが こだいの つるぎに やどって うまれたらしい。 ひとに とりつき いのちを すう。",
+					"ko": "죽은 자의 혼이 고대의 검에 깃들어 태어났다고 한다. 사람에게 씌어 생명을 빨아들인다.",
+					"fr": "Ce Pokémon naît quand l’âme d’un défunt prend possession d’une épée ancienne. Il s’accroche aux humains pour absorber leur énergie vitale.",
+					"de": "Dieses Pokémon wird geboren, wenn die Seele eines Verstorbenen sich in einem Schwert festsetzt. Es heftet sich an Menschen und saugt deren Lebenskraft aus.",
+					"es": "Cuentan que este Pokémon nace cuando el espíritu de un difunto toma posesión de una espada antigua. Se aferra a las personas y absorbe su energía.",
+					"it": "Sembra sia nato quando uno spirito si impossessò di un’antica spada. Si lega agli esseri umani per assorbirne la forza vitale.",
+					"en": "Apparently this Pokémon is born when a departed spirit inhabits a sword. It attaches itself to people and drinks their life force.",
+					"ja": "死者の 魂が 古代の 剣に 宿って 生まれたらしい。 人に とりつき 命を 吸う。",
+					"es-419": "Cuentan que este Pokémon nace cuando el espíritu de un difunto toma posesión de una espada antigua. Se aferra a las personas y absorbe su energía."
+				},
+				"omegaruby": {
+					"ja-hrkt": "ししゃの たましいが こだいの つるぎに やどって うまれたらしい。 ひとに とりつき いのちを すう。",
+					"ko": "죽은 자의 혼이 고대의 검에 깃들어 태어났다고 한다. 사람에게 씌어 생명을 빨아들인다.",
+					"fr": "Ce Pokémon naît quand l’âme d’un défunt prend possession d’une épée ancienne. Il s’accroche aux humains pour absorber leur énergie vitale.",
+					"de": "Dieses Pokémon wird geboren, wenn die Seele eines Verstorbenen sich in einem Schwert festsetzt. Es heftet sich an Menschen und saugt deren Lebenskraft aus.",
+					"es": "Cuentan que este Pokémon nace cuando el espíritu de un difunto toma posesión de una espada antigua. Se aferra a las personas y absorbe su energía.",
+					"it": "Sembra sia nato quando uno spirito si impossessò di un’antica spada. Si lega agli esseri umani per assorbirne la forza vitale.",
+					"en": "Apparently this Pokémon is born when a departed spirit inhabits a sword. It attaches itself to people and drinks their life force.",
+					"ja": "死者の 魂が 古代の 剣に 宿って 生まれたらしい。 人に とりつき 命を 吸う。",
+					"es-419": "Cuentan que este Pokémon nace cuando el espíritu de un difunto toma posesión de una espada antigua. Se aferra a las personas y absorbe su energía."
+				},
+				"alphasapphire-national": {
+					"ja-hrkt": "つるぎの つかを にぎった ひとの うでに あおい ぬのを まきつけて たおれるまで いのちを すいとる。",
+					"ko": "검의 자루를 잡은 사람의 팔에 파란 천을 감아서 쓰러질 때까지 목숨을 빨아들인다.",
+					"fr": "Si quelqu’un s’aventure à l’empoigner, il enroule son étoffe bleue autour du bras de l’infortuné et aspire son énergie vitale jusqu’à ce que ce dernier s’écroule.",
+					"de": "Es wickelt ein blaues Tuch um den Arm von Menschen, die seinen Schwertgriff ergreifen, und absorbiert deren Lebensenergie, bis sie zusammenbrechen.",
+					"es": "Si alguien osa empuñarlo, se enrolla en el brazo del desafortunado con su paño azul y le absorbe toda la energía hasta que pierde el sentido.",
+					"it": "Avvolge il drappo blu attorno al braccio di chiunque si azzardi a impugnarne l’elsa e assorbe la sua energia fino a fargli perdere i sensi.",
+					"en": "If anyone dares to grab its hilt, it wraps a blue cloth around that person’s arm and drains that person’s life energy completely.",
+					"ja": "剣の 柄を 握った 人の 腕に 青い 布を 巻きつけて 倒れるまで 命を 吸い取る。",
+					"es-419": "Si alguien osa empuñarlo, se enrolla en el brazo del desafortunado con su paño azul y le absorbe toda la energía hasta que pierde el sentido."
+				},
+				"alphasapphire": {
+					"ja-hrkt": "つるぎの つかを にぎった ひとの うでに あおい ぬのを まきつけて たおれるまで いのちを すいとる。",
+					"ko": "검의 자루를 잡은 사람의 팔에 파란 천을 감아서 쓰러질 때까지 목숨을 빨아들인다.",
+					"fr": "Si quelqu’un s’aventure à l’empoigner, il enroule son étoffe bleue autour du bras de l’infortuné et aspire son énergie vitale jusqu’à ce que ce dernier s’écroule.",
+					"de": "Es wickelt ein blaues Tuch um den Arm von Menschen, die seinen Schwertgriff ergreifen, und absorbiert deren Lebensenergie, bis sie zusammenbrechen.",
+					"es": "Si alguien osa empuñarlo, se enrolla en el brazo del desafortunado con su paño azul y le absorbe toda la energía hasta que pierde el sentido.",
+					"it": "Avvolge il drappo blu attorno al braccio di chiunque si azzardi a impugnarne l’elsa e assorbe la sua energia fino a fargli perdere i sensi.",
+					"en": "If anyone dares to grab its hilt, it wraps a blue cloth around that person’s arm and drains that person’s life energy completely.",
+					"ja": "剣の 柄を 握った 人の 腕に 青い 布を 巻きつけて 倒れるまで 命を 吸い取る。",
+					"es-419": "Si alguien osa empuñarlo, se enrolla en el brazo del desafortunado con su paño azul y le absorbe toda la energía hasta que pierde el sentido."
+				}
+			}
+		},
+		{
+			"profileKey": "sun-moon",
+			"label": "Sun / Moon",
+			"appGameKeys": [
+				"sun-alola",
+				"sun-melemele",
+				"sun-akala",
+				"sun-ulaula",
+				"sun-poni",
+				"moon-alola",
+				"moon-melemele",
+				"moon-akala",
+				"moon-ulaula",
+				"moon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Honedge",
+				"localizedNames": {
+					"ja-hrkt": "ヒトツキ",
+					"ja-roma": "Hitotsuki",
+					"ko": "단칼빙",
+					"zh-hant": "獨劍鞘",
+					"fr": "Monorpale",
+					"de": "Gramokles",
+					"es": "Honedge",
+					"it": "Honedge",
+					"ja": "ヒトツキ",
+					"zh-hans": "独剑鞘",
+					"es-419": "Honedge"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Steel",
+					"Ghost"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 80,
+					"def": 100,
+					"spa": 35,
+					"spd": 37,
+					"spe": 28
+				},
+				"evYield": {
+					"def": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"No Guard"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.8 m",
+				"weight": "2.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 180,
+				"baseExperience": 65,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "Brown",
+				"genus": "Sword Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "とうけんポケモン",
+					"ko": "도검포켓몬",
+					"zh-hant": "刀劍寶可夢",
+					"fr": "Pokémon Glaive",
+					"de": "Klingenkraft-Pokémon",
+					"es": "Pokémon Tizona",
+					"it": "Pokémon Armabianca",
+					"ja": "とうけんポケモン",
+					"zh-hans": "刀剑宝可梦",
+					"es-419": "Pokémon Tizona"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 679
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 117
+					},
+					{
+						"pokedex": "galar",
+						"number": 330
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 71
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 679,
+								"natiId": 679,
+								"name": "Honedge"
+							},
+							{
+								"id": 680,
+								"natiId": 680,
+								"name": "Doublade",
+								"method": "Level",
+								"value": 35
+							},
+							{
+								"id": 681,
+								"natiId": 681,
+								"name": "Aegislash",
+								"method": "Use item",
+								"value": "Dusk Stone"
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Akala Outskirts Area",
+						"notes": "Island Scan, Lv. 23",
+						"games": "Sun",
+						"rate": "100%"
+					},
+					{
+						"area": "Akala Outskirts Area",
+						"notes": "Island Scan, Lv. 23",
+						"games": "Moon",
+						"rate": "100%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Swords Dance",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Fury Cutter",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Metal Sound",
+							"level": 8,
+							"order": null
+						},
+						{
+							"name": "Pursuit",
+							"level": 13,
+							"order": null
+						},
+						{
+							"name": "Autotomize",
+							"level": 18,
+							"order": null
+						},
+						{
+							"name": "Shadow Sneak",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Aerial Ace",
+							"level": 22,
+							"order": null
+						},
+						{
+							"name": "Retaliate",
+							"level": 26,
+							"order": null
+						},
+						{
+							"name": "Slash",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Iron Defense",
+							"level": 32,
+							"order": null
+						},
+						{
+							"name": "Night Slash",
+							"level": 35,
+							"order": null
+						},
+						{
+							"name": "Power Trick",
+							"level": 39,
+							"order": null
+						},
+						{
+							"name": "Iron Head",
+							"level": 42,
+							"order": null
+						},
+						{
+							"name": "Sacred Sword",
+							"level": 47,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Aerial Ace",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Brick Break",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Brutal Swing",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "False Swipe",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash Cannon",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Gyro Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Reflect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Slide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Claw",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swords Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						}
+					],
+					"Egg": [
+						{
+							"name": "Destiny Bond",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Metal Sound",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Sneak",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wide Guard",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/679",
+						"fetchedAt": "2026-11-03T05:53:49.182Z",
+						"hash": "90e5b52c14f433f720b1f2fe032b46dffe28d7bb8bfc9a64b24c98afc54b2ace"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/349/",
+						"fetchedAt": "2026-11-03T05:53:49.205Z",
+						"hash": "1e669f4dcd34a1b2a5b090a83e0b007594899a9b18dfd3508c1ccb03dc207e59"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/679/",
+						"fetchedAt": "2026-11-03T05:53:49.228Z",
+						"hash": "faf8b4b07aef55393332923695da623a389fc8414b4a57ef130ced9e19bb0cfb"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/679/encounters",
+						"fetchedAt": "2026-11-03T05:53:49.258Z",
+						"hash": "740e8d5e11da751b7f13fad7dba50be890b75b726a0c50f97877a41ad49f34a1"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/679/",
+						"fetchedAt": "2026-11-03T05:53:49.318Z",
+						"hash": "e3ac369830162f3b009fc2f4bbfc57e32e576154f0830c15d92141ebf6bd4c7c"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sun-alola": "",
+				"sun-melemele": "",
+				"sun-akala": "",
+				"sun-ulaula": "",
+				"sun-poni": "",
+				"moon-alola": "",
+				"moon-melemele": "",
+				"moon-akala": "",
+				"moon-ulaula": "",
+				"moon-poni": ""
+			},
+			"localizedFlavorByGame": {
+				"sun-alola": {},
+				"sun-melemele": {},
+				"sun-akala": {},
+				"sun-ulaula": {},
+				"sun-poni": {},
+				"moon-alola": {},
+				"moon-melemele": {},
+				"moon-akala": {},
+				"moon-ulaula": {},
+				"moon-poni": {}
+			}
+		},
+		{
+			"profileKey": "ultra-sun-ultra-moon",
+			"label": "Ultra Sun / Ultra Moon",
+			"appGameKeys": [
+				"ultrasun-alola",
+				"ultrasun-melemele",
+				"ultrasun-akala",
+				"ultrasun-ulaula",
+				"ultrasun-poni",
+				"ultramoon-alola",
+				"ultramoon-melemele",
+				"ultramoon-akala",
+				"ultramoon-ulaula",
+				"ultramoon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Honedge",
+				"localizedNames": {
+					"ja-hrkt": "ヒトツキ",
+					"ja-roma": "Hitotsuki",
+					"ko": "단칼빙",
+					"zh-hant": "獨劍鞘",
+					"fr": "Monorpale",
+					"de": "Gramokles",
+					"es": "Honedge",
+					"it": "Honedge",
+					"ja": "ヒトツキ",
+					"zh-hans": "独剑鞘",
+					"es-419": "Honedge"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Steel",
+					"Ghost"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 80,
+					"def": 100,
+					"spa": 35,
+					"spd": 37,
+					"spe": 28
+				},
+				"evYield": {
+					"def": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"No Guard"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.8 m",
+				"weight": "2.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 180,
+				"baseExperience": 65,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "Brown",
+				"genus": "Sword Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "とうけんポケモン",
+					"ko": "도검포켓몬",
+					"zh-hant": "刀劍寶可夢",
+					"fr": "Pokémon Glaive",
+					"de": "Klingenkraft-Pokémon",
+					"es": "Pokémon Tizona",
+					"it": "Pokémon Armabianca",
+					"ja": "とうけんポケモン",
+					"zh-hans": "刀剑宝可梦",
+					"es-419": "Pokémon Tizona"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 679
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 117
+					},
+					{
+						"pokedex": "galar",
+						"number": 330
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 71
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 679,
+								"natiId": 679,
+								"name": "Honedge"
+							},
+							{
+								"id": 680,
+								"natiId": 680,
+								"name": "Doublade",
+								"method": "Level",
+								"value": 35
+							},
+							{
+								"id": 681,
+								"natiId": 681,
+								"name": "Aegislash",
+								"method": "Use item",
+								"value": "Dusk Stone"
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Akala Outskirts Area",
+						"notes": "Island Scan, Lv. 24",
+						"games": "Ultra Sun",
+						"rate": "100%"
+					},
+					{
+						"area": "Akala Outskirts Area",
+						"notes": "Island Scan, Lv. 24",
+						"games": "Ultra Moon",
+						"rate": "100%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Swords Dance",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Fury Cutter",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Metal Sound",
+							"level": 8,
+							"order": null
+						},
+						{
+							"name": "Pursuit",
+							"level": 13,
+							"order": null
+						},
+						{
+							"name": "Autotomize",
+							"level": 18,
+							"order": null
+						},
+						{
+							"name": "Shadow Sneak",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Aerial Ace",
+							"level": 22,
+							"order": null
+						},
+						{
+							"name": "Retaliate",
+							"level": 26,
+							"order": null
+						},
+						{
+							"name": "Slash",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Iron Defense",
+							"level": 32,
+							"order": null
+						},
+						{
+							"name": "Night Slash",
+							"level": 35,
+							"order": null
+						},
+						{
+							"name": "Power Trick",
+							"level": 39,
+							"order": null
+						},
+						{
+							"name": "Iron Head",
+							"level": 42,
+							"order": null
+						},
+						{
+							"name": "Sacred Sword",
+							"level": 47,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Aerial Ace",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Brick Break",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Brutal Swing",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "False Swipe",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash Cannon",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Gyro Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Reflect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Slide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Claw",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swords Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "After You",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Defense",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Head",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Laser Focus",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Magnet Rise",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shock Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Spite",
+							"level": null,
+							"order": null
+						}
+					],
+					"Egg": [
+						{
+							"name": "Destiny Bond",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Metal Sound",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Sneak",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wide Guard",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/679",
+						"fetchedAt": "2026-11-03T05:53:49.182Z",
+						"hash": "90e5b52c14f433f720b1f2fe032b46dffe28d7bb8bfc9a64b24c98afc54b2ace"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/349/",
+						"fetchedAt": "2026-11-03T05:53:49.205Z",
+						"hash": "1e669f4dcd34a1b2a5b090a83e0b007594899a9b18dfd3508c1ccb03dc207e59"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/679/",
+						"fetchedAt": "2026-11-03T05:53:49.228Z",
+						"hash": "faf8b4b07aef55393332923695da623a389fc8414b4a57ef130ced9e19bb0cfb"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/679/encounters",
+						"fetchedAt": "2026-11-03T05:53:49.258Z",
+						"hash": "740e8d5e11da751b7f13fad7dba50be890b75b726a0c50f97877a41ad49f34a1"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/679/",
+						"fetchedAt": "2026-11-03T05:53:49.318Z",
+						"hash": "e3ac369830162f3b009fc2f4bbfc57e32e576154f0830c15d92141ebf6bd4c7c"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"ultrasun-alola": "",
+				"ultrasun-melemele": "",
+				"ultrasun-akala": "",
+				"ultrasun-ulaula": "",
+				"ultrasun-poni": "",
+				"ultramoon-alola": "",
+				"ultramoon-melemele": "",
+				"ultramoon-akala": "",
+				"ultramoon-ulaula": "",
+				"ultramoon-poni": ""
+			},
+			"localizedFlavorByGame": {
+				"ultrasun-alola": {},
+				"ultrasun-melemele": {},
+				"ultrasun-akala": {},
+				"ultrasun-ulaula": {},
+				"ultrasun-poni": {},
+				"ultramoon-alola": {},
+				"ultramoon-melemele": {},
+				"ultramoon-akala": {},
+				"ultramoon-ulaula": {},
+				"ultramoon-poni": {}
+			}
+		},
+		{
+			"profileKey": "lets-go-pikachu-lets-go-eevee",
+			"label": "Let's Go Pikachu / Eevee",
+			"appGameKeys": [
+				"letsgopikachu",
+				"letsgoeevee"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Honedge",
+				"localizedNames": {
+					"ja-hrkt": "ヒトツキ",
+					"ja-roma": "Hitotsuki",
+					"ko": "단칼빙",
+					"zh-hant": "獨劍鞘",
+					"fr": "Monorpale",
+					"de": "Gramokles",
+					"es": "Honedge",
+					"it": "Honedge",
+					"ja": "ヒトツキ",
+					"zh-hans": "独剑鞘",
+					"es-419": "Honedge"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Steel",
+					"Ghost"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 80,
+					"def": 100,
+					"spa": 35,
+					"spd": 37,
+					"spe": 28
+				},
+				"evYield": {
+					"def": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"No Guard"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.8 m",
+				"weight": "2.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 180,
+				"baseExperience": 65,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "Brown",
+				"genus": "Sword Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "とうけんポケモン",
+					"ko": "도검포켓몬",
+					"zh-hant": "刀劍寶可夢",
+					"fr": "Pokémon Glaive",
+					"de": "Klingenkraft-Pokémon",
+					"es": "Pokémon Tizona",
+					"it": "Pokémon Armabianca",
+					"ja": "とうけんポケモン",
+					"zh-hans": "刀剑宝可梦",
+					"es-419": "Pokémon Tizona"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 679
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 117
+					},
+					{
+						"pokedex": "galar",
+						"number": 330
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 71
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 679,
+								"natiId": 679,
+								"name": "Honedge"
+							},
+							{
+								"id": 680,
+								"natiId": 680,
+								"name": "Doublade",
+								"method": "Level",
+								"value": 35
+							},
+							{
+								"id": 681,
+								"natiId": 681,
+								"name": "Aegislash",
+								"method": "Use item",
+								"value": "Dusk Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/679",
+						"fetchedAt": "2026-11-03T05:53:49.182Z",
+						"hash": "90e5b52c14f433f720b1f2fe032b46dffe28d7bb8bfc9a64b24c98afc54b2ace"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/349/",
+						"fetchedAt": "2026-11-03T05:53:49.205Z",
+						"hash": "1e669f4dcd34a1b2a5b090a83e0b007594899a9b18dfd3508c1ccb03dc207e59"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/679/",
+						"fetchedAt": "2026-11-03T05:53:49.228Z",
+						"hash": "faf8b4b07aef55393332923695da623a389fc8414b4a57ef130ced9e19bb0cfb"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/679/encounters",
+						"fetchedAt": "2026-11-03T05:53:49.258Z",
+						"hash": "740e8d5e11da751b7f13fad7dba50be890b75b726a0c50f97877a41ad49f34a1"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/679/",
+						"fetchedAt": "2026-11-03T05:53:49.318Z",
+						"hash": "e3ac369830162f3b009fc2f4bbfc57e32e576154f0830c15d92141ebf6bd4c7c"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"letsgopikachu": "",
+				"letsgoeevee": ""
+			},
+			"localizedFlavorByGame": {
+				"letsgopikachu": {},
+				"letsgoeevee": {}
+			}
+		},
+		{
+			"profileKey": "sword-shield",
+			"label": "Sword / Shield",
+			"appGameKeys": [
+				"sword",
+				"shield"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Honedge",
+				"localizedNames": {
+					"ja-hrkt": "ヒトツキ",
+					"ja-roma": "Hitotsuki",
+					"ko": "단칼빙",
+					"zh-hant": "獨劍鞘",
+					"fr": "Monorpale",
+					"de": "Gramokles",
+					"es": "Honedge",
+					"it": "Honedge",
+					"ja": "ヒトツキ",
+					"zh-hans": "独剑鞘",
+					"es-419": "Honedge"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Steel",
+					"Ghost"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 80,
+					"def": 100,
+					"spa": 35,
+					"spd": 37,
+					"spe": 28
+				},
+				"evYield": {
+					"def": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"No Guard"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.8 m",
+				"weight": "2.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 180,
+				"baseExperience": 65,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "Brown",
+				"genus": "Sword Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "とうけんポケモン",
+					"ko": "도검포켓몬",
+					"zh-hant": "刀劍寶可夢",
+					"fr": "Pokémon Glaive",
+					"de": "Klingenkraft-Pokémon",
+					"es": "Pokémon Tizona",
+					"it": "Pokémon Armabianca",
+					"ja": "とうけんポケモン",
+					"zh-hans": "刀剑宝可梦",
+					"es-419": "Pokémon Tizona"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 679
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 117
+					},
+					{
+						"pokedex": "galar",
+						"number": 330
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 71
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 679,
+								"natiId": 679,
+								"name": "Honedge"
+							},
+							{
+								"id": 680,
+								"natiId": 680,
+								"name": "Doublade",
+								"method": "Level",
+								"value": 35
+							},
+							{
+								"id": 681,
+								"natiId": 681,
+								"name": "Aegislash",
+								"method": "Use item",
+								"value": "Dusk Stone"
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Hammerlocke Hills Area",
+						"notes": "Walk, Lv. 28-30",
+						"games": "Sword",
+						"rate": "15%"
+					},
+					{
+						"area": "Hammerlocke Hills Area",
+						"notes": "Walk, Lv. 60",
+						"games": "Sword",
+						"rate": "15%"
+					},
+					{
+						"area": "Hammerlocke Hills Area",
+						"notes": "Overworld, Lv. 29-31",
+						"games": "Sword",
+						"rate": "44%"
+					},
+					{
+						"area": "Hammerlocke Hills Area",
+						"notes": "Overworld, Lv. 60",
+						"games": "Sword",
+						"rate": "44%"
+					},
+					{
+						"area": "Hammerlocke Hills Area",
+						"notes": "Walk, Lv. 28-30",
+						"games": "Shield",
+						"rate": "15%"
+					},
+					{
+						"area": "Hammerlocke Hills Area",
+						"notes": "Walk, Lv. 60",
+						"games": "Shield",
+						"rate": "15%"
+					},
+					{
+						"area": "Hammerlocke Hills Area",
+						"notes": "Overworld, Lv. 29-31",
+						"games": "Shield",
+						"rate": "44%"
+					},
+					{
+						"area": "Hammerlocke Hills Area",
+						"notes": "Overworld, Lv. 60",
+						"games": "Shield",
+						"rate": "44%"
+					},
+					{
+						"area": "Watchtower Ruins Max Den C",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Watchtower Ruins Max Den C",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Giants Seat Max Den D",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Giants Seat Max Den D",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Giants Seat Max Den D",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Giants Seat Max Den D",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Stony Wilderness Max Den E",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Stony Wilderness Max Den H",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Stony Wilderness Max Den H",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Stony Wilderness Max Den H",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Stony Wilderness Max Den H",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Dusty Bowl Max Den D",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Dusty Bowl Max Den D",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Dusty Bowl Max Den D",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Dusty Bowl Max Den D",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Shield",
+						"rate": "30%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Fury Cutter",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Shadow Sneak",
+							"level": 4,
+							"order": null
+						},
+						{
+							"name": "Autotomize",
+							"level": 8,
+							"order": null
+						},
+						{
+							"name": "Aerial Ace",
+							"level": 12,
+							"order": null
+						},
+						{
+							"name": "Metal Sound",
+							"level": 16,
+							"order": null
+						},
+						{
+							"name": "Slash",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Night Slash",
+							"level": 24,
+							"order": null
+						},
+						{
+							"name": "Retaliate",
+							"level": 28,
+							"order": null
+						},
+						{
+							"name": "Iron Defense",
+							"level": 32,
+							"order": null
+						},
+						{
+							"name": "Iron Head",
+							"level": 36,
+							"order": null
+						},
+						{
+							"name": "Power Trick",
+							"level": 40,
+							"order": null
+						},
+						{
+							"name": "Swords Dance",
+							"level": 44,
+							"order": null
+						},
+						{
+							"name": "Sacred Sword",
+							"level": 48,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Brick Break",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Brutal Swing",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Close Combat",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endure",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "False Swipe",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash Cannon",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Gyro Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Defense",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Head",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psycho Cut",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Reflect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Retaliate",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Reversal",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Slide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Screech",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Claw",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Blade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swords Dance",
+							"level": null,
+							"order": null
+						}
+					],
+					"Egg": [
+						{
+							"name": "Block",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Destiny Bond",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wide Guard",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Steel Beam",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/679",
+						"fetchedAt": "2026-11-03T05:53:49.182Z",
+						"hash": "90e5b52c14f433f720b1f2fe032b46dffe28d7bb8bfc9a64b24c98afc54b2ace"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/349/",
+						"fetchedAt": "2026-11-03T05:53:49.205Z",
+						"hash": "1e669f4dcd34a1b2a5b090a83e0b007594899a9b18dfd3508c1ccb03dc207e59"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/679/",
+						"fetchedAt": "2026-11-03T05:53:49.228Z",
+						"hash": "faf8b4b07aef55393332923695da623a389fc8414b4a57ef130ced9e19bb0cfb"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/679/encounters",
+						"fetchedAt": "2026-11-03T05:53:49.258Z",
+						"hash": "740e8d5e11da751b7f13fad7dba50be890b75b726a0c50f97877a41ad49f34a1"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/679/",
+						"fetchedAt": "2026-11-03T05:53:49.318Z",
+						"hash": "e3ac369830162f3b009fc2f4bbfc57e32e576154f0830c15d92141ebf6bd4c7c"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sword": "Honedge’s soul once belonged to a person who was killed a long time ago by the sword that makes up Honedge’s body.",
+				"shield": "The blue eye on the sword’s handguard is the true body of Honedge. With its old cloth, it drains people’s lives away."
+			},
+			"localizedFlavorByGame": {
+				"sword": {
+					"ja-hrkt": "おおむかし この つるぎに よって ころされた にんげんの たましいが ヒトツキの たましいに なっている。",
+					"ko": "먼 옛날에 이 검에 의해 죽은 인간의 영혼이 단칼빙의 영혼이 되었다.",
+					"zh-hant": "很久以前因這把劍 而喪命之人的靈魂 成為了獨劍鞘的靈魂。",
+					"fr": "L’âme de Monorpale est celle d’un humain qui a été tué il y a fort longtemps, par la même lame qui forme maintenant son corps.",
+					"de": "Seine Seele ist die eines Menschen, der vor langer Zeit durch dieses Schwert getötet wurde.",
+					"es": "Su alma es la de un ser humano que poseyó la misma espada que lo abatió en tiempos remotos.",
+					"it": "La sua anima è quella di un essere umano ucciso tanto tempo fa dalla spada che ora forma il suo corpo.",
+					"en": "Honedge’s soul once belonged to a person who was killed a long time ago by the sword that makes up Honedge’s body.",
+					"ja": "大昔 この 剣に よって 殺された 人間の 魂が ヒトツキの 魂に なっている。",
+					"zh-hans": "很久以前因这把剑 而丧命之人的灵魂 成为了独剑鞘的灵魂。",
+					"es-419": "Su alma es la de un ser humano que poseyó la misma espada que lo abatió en tiempos remotos."
+				},
+				"shield": {
+					"ja-hrkt": "つるぎの つばの あおい めだまが ヒトツキの ほんたい。 ふるびた ぬので ひとの せいきを すいとる。",
+					"ko": "검의 가드 부분에 있는 푸른 눈동자가 단칼빙의 본체다. 낡은 천으로 사람의 생기를 빨아들인다.",
+					"zh-hant": "獨劍鞘護手上的 藍色眼珠是牠的本體。 會用陳舊的布吸取人類的精氣。",
+					"fr": "L’œil bleu sur la garde de la lame est le véritable corps de Monorpale. Il aspire l’énergie vitale des gens avec son étoffe usée par le temps.",
+					"de": "Das blaue Auge auf der Parierstange ist sein wahrer Körper. Mithilfe eines alten Tuchs absorbiert es die Lebenskraft von Menschen.",
+					"es": "El ojo azul de la empuñadura es su verdadero cuerpo. Absorbe la energía vital de las personas con su paño de aspecto andrajoso.",
+					"it": "L’occhio blu sull’elsa della spada è il suo vero corpo. Usa il drappo consunto per assorbire la forza vitale degli uomini.",
+					"en": "The blue eye on the sword’s handguard is the true body of Honedge. With its old cloth, it drains people’s lives away.",
+					"ja": "剣の 鍔の 青い 目玉が ヒトツキの 本体。 古びた 布で 人の 生気を 吸い取る。",
+					"zh-hans": "独剑鞘剑格上的 蓝色眼珠是它的本体。 会用陈旧的布吸取人类的精气。",
+					"es-419": "El ojo azul de la empuñadura es su verdadero cuerpo. Absorbe la energía vital de las personas con su paño de aspecto andrajoso."
+				}
+			}
+		},
+		{
+			"profileKey": "the-isle-of-armor",
+			"label": "The Isle of Armor",
+			"appGameKeys": [
+				"swordioa",
+				"shieldioa"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Honedge",
+				"localizedNames": {
+					"ja-hrkt": "ヒトツキ",
+					"ja-roma": "Hitotsuki",
+					"ko": "단칼빙",
+					"zh-hant": "獨劍鞘",
+					"fr": "Monorpale",
+					"de": "Gramokles",
+					"es": "Honedge",
+					"it": "Honedge",
+					"ja": "ヒトツキ",
+					"zh-hans": "独剑鞘",
+					"es-419": "Honedge"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Steel",
+					"Ghost"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 80,
+					"def": 100,
+					"spa": 35,
+					"spd": 37,
+					"spe": 28
+				},
+				"evYield": {
+					"def": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"No Guard"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.8 m",
+				"weight": "2.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 180,
+				"baseExperience": 65,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "Brown",
+				"genus": "Sword Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "とうけんポケモン",
+					"ko": "도검포켓몬",
+					"zh-hant": "刀劍寶可夢",
+					"fr": "Pokémon Glaive",
+					"de": "Klingenkraft-Pokémon",
+					"es": "Pokémon Tizona",
+					"it": "Pokémon Armabianca",
+					"ja": "とうけんポケモン",
+					"zh-hans": "刀剑宝可梦",
+					"es-419": "Pokémon Tizona"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 679
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 117
+					},
+					{
+						"pokedex": "galar",
+						"number": 330
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 71
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 679,
+								"natiId": 679,
+								"name": "Honedge"
+							},
+							{
+								"id": 680,
+								"natiId": 680,
+								"name": "Doublade",
+								"method": "Level",
+								"value": 35
+							},
+							{
+								"id": 681,
+								"natiId": 681,
+								"name": "Aegislash",
+								"method": "Use item",
+								"value": "Dusk Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/679",
+						"fetchedAt": "2026-11-03T05:53:49.182Z",
+						"hash": "90e5b52c14f433f720b1f2fe032b46dffe28d7bb8bfc9a64b24c98afc54b2ace"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/349/",
+						"fetchedAt": "2026-11-03T05:53:49.205Z",
+						"hash": "1e669f4dcd34a1b2a5b090a83e0b007594899a9b18dfd3508c1ccb03dc207e59"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/679/",
+						"fetchedAt": "2026-11-03T05:53:49.228Z",
+						"hash": "faf8b4b07aef55393332923695da623a389fc8414b4a57ef130ced9e19bb0cfb"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/679/encounters",
+						"fetchedAt": "2026-11-03T05:53:49.258Z",
+						"hash": "740e8d5e11da751b7f13fad7dba50be890b75b726a0c50f97877a41ad49f34a1"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/679/",
+						"fetchedAt": "2026-11-03T05:53:49.318Z",
+						"hash": "e3ac369830162f3b009fc2f4bbfc57e32e576154f0830c15d92141ebf6bd4c7c"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordioa": "",
+				"shieldioa": ""
+			},
+			"localizedFlavorByGame": {
+				"swordioa": {},
+				"shieldioa": {}
+			}
+		},
+		{
+			"profileKey": "the-crown-tundra",
+			"label": "The Crown Tundra",
+			"appGameKeys": [
+				"swordct",
+				"shieldct"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Honedge",
+				"localizedNames": {
+					"ja-hrkt": "ヒトツキ",
+					"ja-roma": "Hitotsuki",
+					"ko": "단칼빙",
+					"zh-hant": "獨劍鞘",
+					"fr": "Monorpale",
+					"de": "Gramokles",
+					"es": "Honedge",
+					"it": "Honedge",
+					"ja": "ヒトツキ",
+					"zh-hans": "独剑鞘",
+					"es-419": "Honedge"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Steel",
+					"Ghost"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 80,
+					"def": 100,
+					"spa": 35,
+					"spd": 37,
+					"spe": 28
+				},
+				"evYield": {
+					"def": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"No Guard"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.8 m",
+				"weight": "2.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 180,
+				"baseExperience": 65,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "Brown",
+				"genus": "Sword Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "とうけんポケモン",
+					"ko": "도검포켓몬",
+					"zh-hant": "刀劍寶可夢",
+					"fr": "Pokémon Glaive",
+					"de": "Klingenkraft-Pokémon",
+					"es": "Pokémon Tizona",
+					"it": "Pokémon Armabianca",
+					"ja": "とうけんポケモン",
+					"zh-hans": "刀剑宝可梦",
+					"es-419": "Pokémon Tizona"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 679
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 117
+					},
+					{
+						"pokedex": "galar",
+						"number": 330
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 71
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 679,
+								"natiId": 679,
+								"name": "Honedge"
+							},
+							{
+								"id": 680,
+								"natiId": 680,
+								"name": "Doublade",
+								"method": "Level",
+								"value": 35
+							},
+							{
+								"id": 681,
+								"natiId": 681,
+								"name": "Aegislash",
+								"method": "Use item",
+								"value": "Dusk Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/679",
+						"fetchedAt": "2026-11-03T05:53:49.182Z",
+						"hash": "90e5b52c14f433f720b1f2fe032b46dffe28d7bb8bfc9a64b24c98afc54b2ace"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/349/",
+						"fetchedAt": "2026-11-03T05:53:49.205Z",
+						"hash": "1e669f4dcd34a1b2a5b090a83e0b007594899a9b18dfd3508c1ccb03dc207e59"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/679/",
+						"fetchedAt": "2026-11-03T05:53:49.228Z",
+						"hash": "faf8b4b07aef55393332923695da623a389fc8414b4a57ef130ced9e19bb0cfb"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/679/encounters",
+						"fetchedAt": "2026-11-03T05:53:49.258Z",
+						"hash": "740e8d5e11da751b7f13fad7dba50be890b75b726a0c50f97877a41ad49f34a1"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/679/",
+						"fetchedAt": "2026-11-03T05:53:49.318Z",
+						"hash": "e3ac369830162f3b009fc2f4bbfc57e32e576154f0830c15d92141ebf6bd4c7c"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordct": "",
+				"shieldct": ""
+			},
+			"localizedFlavorByGame": {
+				"swordct": {},
+				"shieldct": {}
+			}
+		},
+		{
+			"profileKey": "brilliant-diamond-shining-pearl",
+			"label": "Brilliant Diamond / Shining Pearl",
+			"appGameKeys": [
+				"brilliantdiamond-national",
+				"brilliantdiamond",
+				"shiningpearl-national",
+				"shiningpearl"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Honedge",
+				"localizedNames": {
+					"ja-hrkt": "ヒトツキ",
+					"ja-roma": "Hitotsuki",
+					"ko": "단칼빙",
+					"zh-hant": "獨劍鞘",
+					"fr": "Monorpale",
+					"de": "Gramokles",
+					"es": "Honedge",
+					"it": "Honedge",
+					"ja": "ヒトツキ",
+					"zh-hans": "独剑鞘",
+					"es-419": "Honedge"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Steel",
+					"Ghost"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 80,
+					"def": 100,
+					"spa": 35,
+					"spd": 37,
+					"spe": 28
+				},
+				"evYield": {
+					"def": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"No Guard"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.8 m",
+				"weight": "2.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 180,
+				"baseExperience": 65,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "Brown",
+				"genus": "Sword Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "とうけんポケモン",
+					"ko": "도검포켓몬",
+					"zh-hant": "刀劍寶可夢",
+					"fr": "Pokémon Glaive",
+					"de": "Klingenkraft-Pokémon",
+					"es": "Pokémon Tizona",
+					"it": "Pokémon Armabianca",
+					"ja": "とうけんポケモン",
+					"zh-hans": "刀剑宝可梦",
+					"es-419": "Pokémon Tizona"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 679
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 117
+					},
+					{
+						"pokedex": "galar",
+						"number": 330
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 71
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 679,
+								"natiId": 679,
+								"name": "Honedge"
+							},
+							{
+								"id": 680,
+								"natiId": 680,
+								"name": "Doublade",
+								"method": "Level",
+								"value": 35
+							},
+							{
+								"id": 681,
+								"natiId": 681,
+								"name": "Aegislash",
+								"method": "Use item",
+								"value": "Dusk Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/679",
+						"fetchedAt": "2026-11-03T05:53:49.182Z",
+						"hash": "90e5b52c14f433f720b1f2fe032b46dffe28d7bb8bfc9a64b24c98afc54b2ace"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/349/",
+						"fetchedAt": "2026-11-03T05:53:49.205Z",
+						"hash": "1e669f4dcd34a1b2a5b090a83e0b007594899a9b18dfd3508c1ccb03dc207e59"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/679/",
+						"fetchedAt": "2026-11-03T05:53:49.228Z",
+						"hash": "faf8b4b07aef55393332923695da623a389fc8414b4a57ef130ced9e19bb0cfb"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/679/encounters",
+						"fetchedAt": "2026-11-03T05:53:49.258Z",
+						"hash": "740e8d5e11da751b7f13fad7dba50be890b75b726a0c50f97877a41ad49f34a1"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/679/",
+						"fetchedAt": "2026-11-03T05:53:49.318Z",
+						"hash": "e3ac369830162f3b009fc2f4bbfc57e32e576154f0830c15d92141ebf6bd4c7c"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"brilliantdiamond-national": "",
+				"brilliantdiamond": "",
+				"shiningpearl-national": "",
+				"shiningpearl": ""
+			},
+			"localizedFlavorByGame": {
+				"brilliantdiamond-national": {},
+				"brilliantdiamond": {},
+				"shiningpearl-national": {},
+				"shiningpearl": {}
+			}
+		},
+		{
+			"profileKey": "legends-arceus",
+			"label": "Legends: Arceus",
+			"appGameKeys": [
+				"legendsarceus"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Honedge",
+				"localizedNames": {
+					"ja-hrkt": "ヒトツキ",
+					"ja-roma": "Hitotsuki",
+					"ko": "단칼빙",
+					"zh-hant": "獨劍鞘",
+					"fr": "Monorpale",
+					"de": "Gramokles",
+					"es": "Honedge",
+					"it": "Honedge",
+					"ja": "ヒトツキ",
+					"zh-hans": "独剑鞘",
+					"es-419": "Honedge"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Steel",
+					"Ghost"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 80,
+					"def": 100,
+					"spa": 35,
+					"spd": 37,
+					"spe": 28
+				},
+				"evYield": {
+					"def": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"No Guard"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.8 m",
+				"weight": "2.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 180,
+				"baseExperience": 65,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "Brown",
+				"genus": "Sword Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "とうけんポケモン",
+					"ko": "도검포켓몬",
+					"zh-hant": "刀劍寶可夢",
+					"fr": "Pokémon Glaive",
+					"de": "Klingenkraft-Pokémon",
+					"es": "Pokémon Tizona",
+					"it": "Pokémon Armabianca",
+					"ja": "とうけんポケモン",
+					"zh-hans": "刀剑宝可梦",
+					"es-419": "Pokémon Tizona"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 679
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 117
+					},
+					{
+						"pokedex": "galar",
+						"number": 330
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 71
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 679,
+								"natiId": 679,
+								"name": "Honedge"
+							},
+							{
+								"id": 680,
+								"natiId": 680,
+								"name": "Doublade",
+								"method": "Level",
+								"value": 35
+							},
+							{
+								"id": 681,
+								"natiId": 681,
+								"name": "Aegislash",
+								"method": "Use item",
+								"value": "Dusk Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/679",
+						"fetchedAt": "2026-11-03T05:53:49.182Z",
+						"hash": "90e5b52c14f433f720b1f2fe032b46dffe28d7bb8bfc9a64b24c98afc54b2ace"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/349/",
+						"fetchedAt": "2026-11-03T05:53:49.205Z",
+						"hash": "1e669f4dcd34a1b2a5b090a83e0b007594899a9b18dfd3508c1ccb03dc207e59"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/679/",
+						"fetchedAt": "2026-11-03T05:53:49.228Z",
+						"hash": "faf8b4b07aef55393332923695da623a389fc8414b4a57ef130ced9e19bb0cfb"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/679/encounters",
+						"fetchedAt": "2026-11-03T05:53:49.258Z",
+						"hash": "740e8d5e11da751b7f13fad7dba50be890b75b726a0c50f97877a41ad49f34a1"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/679/",
+						"fetchedAt": "2026-11-03T05:53:49.318Z",
+						"hash": "e3ac369830162f3b009fc2f4bbfc57e32e576154f0830c15d92141ebf6bd4c7c"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendsarceus": ""
+			},
+			"localizedFlavorByGame": {
+				"legendsarceus": {}
+			}
+		},
+		{
+			"profileKey": "scarlet-violet",
+			"label": "Scarlet / Violet",
+			"appGameKeys": [
+				"scarlet",
+				"violet"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Honedge",
+				"localizedNames": {
+					"ja-hrkt": "ヒトツキ",
+					"ja-roma": "Hitotsuki",
+					"ko": "단칼빙",
+					"zh-hant": "獨劍鞘",
+					"fr": "Monorpale",
+					"de": "Gramokles",
+					"es": "Honedge",
+					"it": "Honedge",
+					"ja": "ヒトツキ",
+					"zh-hans": "独剑鞘",
+					"es-419": "Honedge"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Steel",
+					"Ghost"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 80,
+					"def": 100,
+					"spa": 35,
+					"spd": 37,
+					"spe": 28
+				},
+				"evYield": {
+					"def": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"No Guard"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.8 m",
+				"weight": "2.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 180,
+				"baseExperience": 65,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "Brown",
+				"genus": "Sword Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "とうけんポケモン",
+					"ko": "도검포켓몬",
+					"zh-hant": "刀劍寶可夢",
+					"fr": "Pokémon Glaive",
+					"de": "Klingenkraft-Pokémon",
+					"es": "Pokémon Tizona",
+					"it": "Pokémon Armabianca",
+					"ja": "とうけんポケモン",
+					"zh-hans": "刀剑宝可梦",
+					"es-419": "Pokémon Tizona"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 679
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 117
+					},
+					{
+						"pokedex": "galar",
+						"number": 330
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 71
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 679,
+								"natiId": 679,
+								"name": "Honedge"
+							},
+							{
+								"id": 680,
+								"natiId": 680,
+								"name": "Doublade",
+								"method": "Level",
+								"value": 35
+							},
+							{
+								"id": 681,
+								"natiId": 681,
+								"name": "Aegislash",
+								"method": "Use item",
+								"value": "Dusk Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/679",
+						"fetchedAt": "2026-11-03T05:53:49.182Z",
+						"hash": "90e5b52c14f433f720b1f2fe032b46dffe28d7bb8bfc9a64b24c98afc54b2ace"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/349/",
+						"fetchedAt": "2026-11-03T05:53:49.205Z",
+						"hash": "1e669f4dcd34a1b2a5b090a83e0b007594899a9b18dfd3508c1ccb03dc207e59"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/679/",
+						"fetchedAt": "2026-11-03T05:53:49.228Z",
+						"hash": "faf8b4b07aef55393332923695da623a389fc8414b4a57ef130ced9e19bb0cfb"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/679/encounters",
+						"fetchedAt": "2026-11-03T05:53:49.258Z",
+						"hash": "740e8d5e11da751b7f13fad7dba50be890b75b726a0c50f97877a41ad49f34a1"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/679/",
+						"fetchedAt": "2026-11-03T05:53:49.318Z",
+						"hash": "e3ac369830162f3b009fc2f4bbfc57e32e576154f0830c15d92141ebf6bd4c7c"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlet": "",
+				"violet": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlet": {},
+				"violet": {}
+			}
+		},
+		{
+			"profileKey": "the-teal-mask",
+			"label": "The Teal Mask",
+			"appGameKeys": [
+				"scarlettm",
+				"violettm"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Honedge",
+				"localizedNames": {
+					"ja-hrkt": "ヒトツキ",
+					"ja-roma": "Hitotsuki",
+					"ko": "단칼빙",
+					"zh-hant": "獨劍鞘",
+					"fr": "Monorpale",
+					"de": "Gramokles",
+					"es": "Honedge",
+					"it": "Honedge",
+					"ja": "ヒトツキ",
+					"zh-hans": "独剑鞘",
+					"es-419": "Honedge"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Steel",
+					"Ghost"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 80,
+					"def": 100,
+					"spa": 35,
+					"spd": 37,
+					"spe": 28
+				},
+				"evYield": {
+					"def": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"No Guard"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.8 m",
+				"weight": "2.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 180,
+				"baseExperience": 65,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "Brown",
+				"genus": "Sword Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "とうけんポケモン",
+					"ko": "도검포켓몬",
+					"zh-hant": "刀劍寶可夢",
+					"fr": "Pokémon Glaive",
+					"de": "Klingenkraft-Pokémon",
+					"es": "Pokémon Tizona",
+					"it": "Pokémon Armabianca",
+					"ja": "とうけんポケモン",
+					"zh-hans": "刀剑宝可梦",
+					"es-419": "Pokémon Tizona"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 679
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 117
+					},
+					{
+						"pokedex": "galar",
+						"number": 330
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 71
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 679,
+								"natiId": 679,
+								"name": "Honedge"
+							},
+							{
+								"id": 680,
+								"natiId": 680,
+								"name": "Doublade",
+								"method": "Level",
+								"value": 35
+							},
+							{
+								"id": 681,
+								"natiId": 681,
+								"name": "Aegislash",
+								"method": "Use item",
+								"value": "Dusk Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/679",
+						"fetchedAt": "2026-11-03T05:53:49.182Z",
+						"hash": "90e5b52c14f433f720b1f2fe032b46dffe28d7bb8bfc9a64b24c98afc54b2ace"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/349/",
+						"fetchedAt": "2026-11-03T05:53:49.205Z",
+						"hash": "1e669f4dcd34a1b2a5b090a83e0b007594899a9b18dfd3508c1ccb03dc207e59"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/679/",
+						"fetchedAt": "2026-11-03T05:53:49.228Z",
+						"hash": "faf8b4b07aef55393332923695da623a389fc8414b4a57ef130ced9e19bb0cfb"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/679/encounters",
+						"fetchedAt": "2026-11-03T05:53:49.258Z",
+						"hash": "740e8d5e11da751b7f13fad7dba50be890b75b726a0c50f97877a41ad49f34a1"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/679/",
+						"fetchedAt": "2026-11-03T05:53:49.318Z",
+						"hash": "e3ac369830162f3b009fc2f4bbfc57e32e576154f0830c15d92141ebf6bd4c7c"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlettm": "",
+				"violettm": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlettm": {},
+				"violettm": {}
+			}
+		},
+		{
+			"profileKey": "the-indigo-disk",
+			"label": "The Indigo Disk",
+			"appGameKeys": [
+				"scarletid",
+				"violetid"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Honedge",
+				"localizedNames": {
+					"ja-hrkt": "ヒトツキ",
+					"ja-roma": "Hitotsuki",
+					"ko": "단칼빙",
+					"zh-hant": "獨劍鞘",
+					"fr": "Monorpale",
+					"de": "Gramokles",
+					"es": "Honedge",
+					"it": "Honedge",
+					"ja": "ヒトツキ",
+					"zh-hans": "独剑鞘",
+					"es-419": "Honedge"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Steel",
+					"Ghost"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 80,
+					"def": 100,
+					"spa": 35,
+					"spd": 37,
+					"spe": 28
+				},
+				"evYield": {
+					"def": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"No Guard"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.8 m",
+				"weight": "2.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 180,
+				"baseExperience": 65,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "Brown",
+				"genus": "Sword Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "とうけんポケモン",
+					"ko": "도검포켓몬",
+					"zh-hant": "刀劍寶可夢",
+					"fr": "Pokémon Glaive",
+					"de": "Klingenkraft-Pokémon",
+					"es": "Pokémon Tizona",
+					"it": "Pokémon Armabianca",
+					"ja": "とうけんポケモン",
+					"zh-hans": "刀剑宝可梦",
+					"es-419": "Pokémon Tizona"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 679
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 117
+					},
+					{
+						"pokedex": "galar",
+						"number": 330
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 71
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 679,
+								"natiId": 679,
+								"name": "Honedge"
+							},
+							{
+								"id": 680,
+								"natiId": 680,
+								"name": "Doublade",
+								"method": "Level",
+								"value": 35
+							},
+							{
+								"id": 681,
+								"natiId": 681,
+								"name": "Aegislash",
+								"method": "Use item",
+								"value": "Dusk Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/679",
+						"fetchedAt": "2026-11-03T05:53:49.182Z",
+						"hash": "90e5b52c14f433f720b1f2fe032b46dffe28d7bb8bfc9a64b24c98afc54b2ace"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/349/",
+						"fetchedAt": "2026-11-03T05:53:49.205Z",
+						"hash": "1e669f4dcd34a1b2a5b090a83e0b007594899a9b18dfd3508c1ccb03dc207e59"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/679/",
+						"fetchedAt": "2026-11-03T05:53:49.228Z",
+						"hash": "faf8b4b07aef55393332923695da623a389fc8414b4a57ef130ced9e19bb0cfb"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/679/encounters",
+						"fetchedAt": "2026-11-03T05:53:49.258Z",
+						"hash": "740e8d5e11da751b7f13fad7dba50be890b75b726a0c50f97877a41ad49f34a1"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/679/",
+						"fetchedAt": "2026-11-03T05:53:49.318Z",
+						"hash": "e3ac369830162f3b009fc2f4bbfc57e32e576154f0830c15d92141ebf6bd4c7c"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarletid": "",
+				"violetid": ""
+			},
+			"localizedFlavorByGame": {
+				"scarletid": {},
+				"violetid": {}
+			}
+		},
+		{
+			"profileKey": "legends-za",
+			"label": "Legends: Z-A",
+			"appGameKeys": [
+				"legendsza"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Honedge",
+				"localizedNames": {
+					"ja-hrkt": "ヒトツキ",
+					"ja-roma": "Hitotsuki",
+					"ko": "단칼빙",
+					"zh-hant": "獨劍鞘",
+					"fr": "Monorpale",
+					"de": "Gramokles",
+					"es": "Honedge",
+					"it": "Honedge",
+					"ja": "ヒトツキ",
+					"zh-hans": "独剑鞘",
+					"es-419": "Honedge"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Steel",
+					"Ghost"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 80,
+					"def": 100,
+					"spa": 35,
+					"spd": 37,
+					"spe": 28
+				},
+				"evYield": {
+					"def": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"No Guard",
+					"No Guard (Hidden)"
+				],
+				"hiddenAbilities": [
+					"No Guard"
+				],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium Fast",
+				"hatchCounter": 20,
+				"height": "0.8 m",
+				"weight": "2 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 180,
+				"baseExperience": 65,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "Brown",
+				"genus": "Sword Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "とうけんポケモン",
+					"ko": "도검포켓몬",
+					"zh-hant": "刀劍寶可夢",
+					"fr": "Pokémon Glaive",
+					"de": "Klingenkraft-Pokémon",
+					"es": "Pokémon Tizona",
+					"it": "Pokémon Armabianca",
+					"ja": "とうけんポケモン",
+					"zh-hans": "刀剑宝可梦",
+					"es-419": "Pokémon Tizona"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 679
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 117
+					},
+					{
+						"pokedex": "galar",
+						"number": 330
+					},
+					{
+						"pokedex": "lumiose",
+						"number": 71
+					}
+				],
+				"alphaMove": "Headbutt",
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 679,
+								"natiId": 679,
+								"name": "Honedge"
+							},
+							{
+								"id": 680,
+								"natiId": 680,
+								"name": "Doublade",
+								"method": "Level",
+								"value": 35
+							},
+							{
+								"id": 681,
+								"natiId": 681,
+								"name": "Aegislash",
+								"method": "Use item",
+								"value": "Dusk Stone"
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Wild Zone 4",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Lysandre Labs",
+						"notes": "",
+						"games": "Legends: Z-A"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Screech",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Shadow Sneak",
+							"level": 4,
+							"order": 4
+						},
+						{
+							"name": "Aerial Ace",
+							"level": 12,
+							"order": 5
+						},
+						{
+							"name": "Metal Sound",
+							"level": 16,
+							"order": 6
+						},
+						{
+							"name": "Slash",
+							"level": 20,
+							"order": 7
+						},
+						{
+							"name": "Psycho Cut",
+							"level": 22,
+							"order": 8
+						},
+						{
+							"name": "Shadow Claw",
+							"level": 24,
+							"order": 9
+						},
+						{
+							"name": "Iron Defense",
+							"level": 32,
+							"order": 10
+						},
+						{
+							"name": "Iron Head",
+							"level": 38,
+							"order": 11
+						},
+						{
+							"name": "Swords Dance",
+							"level": 44,
+							"order": 12
+						}
+					],
+					"Machine": [
+						{
+							"name": "Headbutt",
+							"machine": "TM001",
+							"order": 1
+						},
+						{
+							"name": "Brick Break",
+							"machine": "TM010",
+							"order": 2
+						},
+						{
+							"name": "Rock Slide",
+							"machine": "TM012",
+							"order": 3
+						},
+						{
+							"name": "Protect",
+							"machine": "TM017",
+							"order": 4
+						},
+						{
+							"name": "Aerial Ace",
+							"machine": "TM022",
+							"order": 5
+						},
+						{
+							"name": "Swords Dance",
+							"machine": "TM030",
+							"order": 6
+						},
+						{
+							"name": "Reflect",
+							"machine": "TM031",
+							"order": 7
+						},
+						{
+							"name": "Night Slash",
+							"machine": "TM034",
+							"order": 8
+						},
+						{
+							"name": "Iron Head",
+							"machine": "TM058",
+							"order": 9
+						},
+						{
+							"name": "Shadow Claw",
+							"machine": "TM061",
+							"order": 10
+						},
+						{
+							"name": "Iron Defense",
+							"machine": "TM080",
+							"order": 11
+						},
+						{
+							"name": "Flash Cannon",
+							"machine": "TM084",
+							"order": 12
+						},
+						{
+							"name": "Substitute",
+							"machine": "TM085",
+							"order": 13
+						},
+						{
+							"name": "Close Combat",
+							"machine": "TM107",
+							"order": 14
+						},
+						{
+							"name": "Facade",
+							"machine": "TM109",
+							"order": 15
+						},
+						{
+							"name": "False Swipe",
+							"machine": "TM122",
+							"order": 16
+						},
+						{
+							"name": "Solar Blade",
+							"machine": "TM152",
+							"order": 17
+						},
+						{
+							"name": "Steel Beam",
+							"machine": "TM157",
+							"order": 18
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Project Pokemon's Z-A game-data export assigns this form regional Dex #71."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/679",
+						"fetchedAt": "2026-11-03T05:53:49.182Z",
+						"hash": "90e5b52c14f433f720b1f2fe032b46dffe28d7bb8bfc9a64b24c98afc54b2ace"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/349/",
+						"fetchedAt": "2026-11-03T05:53:49.205Z",
+						"hash": "1e669f4dcd34a1b2a5b090a83e0b007594899a9b18dfd3508c1ccb03dc207e59"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/679/",
+						"fetchedAt": "2026-11-03T05:53:49.228Z",
+						"hash": "faf8b4b07aef55393332923695da623a389fc8414b4a57ef130ced9e19bb0cfb"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/679/encounters",
+						"fetchedAt": "2026-11-03T05:53:49.258Z",
+						"hash": "740e8d5e11da751b7f13fad7dba50be890b75b726a0c50f97877a41ad49f34a1"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/679/",
+						"fetchedAt": "2026-11-03T05:53:49.318Z",
+						"hash": "e3ac369830162f3b009fc2f4bbfc57e32e576154f0830c15d92141ebf6bd4c7c"
+					},
+					{
+						"type": "legends-za-personal-data",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/personal.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c00215459c764ba65d879d6503a7337ad80b338171ab4713d1c6f52b4517e36f"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "719eff37d8f2f404d163f81d23b2c921ac323a7b00304e502ca37d69a3375b1d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/French/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "1b658102e791558a1bb317563b7a3aaab8cebc1c7517aa7f5d5c0e708e93d626"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/German/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5f1e419ae3b84ab18cb05b972569e629ff0bff96d928468c52c536b02dc6cf9d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Italian/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "e0bd40a2f4b7678afb82f959b7b1f3503590bd13884daf94bd5813fea832067c"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/JPN/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5c2c9784278c5d13f3ba376e4338cef21923d68faec9b8498175c21180825f24"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Korean/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c83545726b0b0b803295f52448510c15adaab3e6ce248adba23b5ad0d0344216"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/LATAM/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "01d046caf7553d97a3c275465bce97ecedae26a67674a40b5c751a56b3b4d52d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Simp_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "09495dacb0d16eb6e91aa1d67eb1ed682d0682303719811eeb1c6877bb9e7ca2"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Spanish/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "b3fafb97fe85165bd65fdd732ce1e4cee880ffe5035632269787ce859735b358"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Trad_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c446ae3e93760fc4af895427508ed852511201723f8cac84121330747e8c3cd0"
+					},
+					{
+						"type": "legends-za-locations",
+						"url": "https://www.serebii.net/pokedex-sv/honedge/",
+						"fetchedAt": "2026-11-04T05:47:08.243Z",
+						"hash": "594378315c1c52e3c949079f74620e0878a8cb930b67fa3805b2d4dd4a1d5a7f"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendsza": "Apparently Honedge was born when a departed spirit began inhabiting an ancient sword. It attaches itself to people and drinks their life force."
+			},
+			"localizedFlavorByGame": {
+				"legendsza": {
+					"en": "Apparently Honedge was born when a departed spirit began inhabiting an ancient sword. It attaches itself to people and drinks their life force.",
+					"fr": "Il serait né de l’âme d’un défunt ayant pris possession d’une épée ancienne. Il s’accroche aux humains pour absorber leur énergie vitale.",
+					"de": "Dieses Pokémon wurde offenbar geboren, als die Seele eines Verstorbenen sich in einem Schwert niedergelassen hat. Es heftet sich an Menschen und saugt deren Lebenskraft aus.",
+					"it": "Sembra sia nato quando uno spirito si impossessò di un’antica spada. Si lega agli esseri umani per assorbirne la forza vitale.",
+					"ja": "死者の 魂が 古代の 剣に 宿って 生まれたらしい。 人に とりつき 命を 吸う。",
+					"ko": "죽은 자의 혼이 고대의 검에 깃들어 태어났다고 한다. 사람에게 씌어 생명을 빨아들인다.",
+					"es-419": "Cuentan que este Pokémon nace cuando el espíritu de un difunto toma posesión de una espada antigua. Se aferra a las personas y absorbe su energía.",
+					"zh-hans": "好像是死者的灵魂寄宿在 古剑上转生而成。 会附在人类身上吸食生命。",
+					"es": "Cuentan que este Pokémon nace cuando el espíritu de un difunto toma posesión de una espada antigua. Se aferra a las personas y absorbe su energía.",
+					"zh-hant": "似乎是死者的靈魂寄宿在 古代的劍上而誕生。 會附在人類身上吸取生命。"
+				}
+			}
+		},
+		{
+			"profileKey": "mega-dimension",
+			"label": "Mega Dimension",
+			"appGameKeys": [
+				"legendszamd"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Honedge",
+				"localizedNames": {
+					"ja-hrkt": "ヒトツキ",
+					"ja-roma": "Hitotsuki",
+					"ko": "단칼빙",
+					"zh-hant": "獨劍鞘",
+					"fr": "Monorpale",
+					"de": "Gramokles",
+					"es": "Honedge",
+					"it": "Honedge",
+					"ja": "ヒトツキ",
+					"zh-hans": "独剑鞘",
+					"es-419": "Honedge"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Steel",
+					"Ghost"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 80,
+					"def": 100,
+					"spa": 35,
+					"spd": 37,
+					"spe": 28
+				},
+				"evYield": {
+					"def": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"No Guard",
+					"No Guard (Hidden)"
+				],
+				"hiddenAbilities": [
+					"No Guard"
+				],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium Fast",
+				"hatchCounter": 20,
+				"height": "0.8 m",
+				"weight": "2 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 180,
+				"baseExperience": 65,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "Brown",
+				"genus": "Sword Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "とうけんポケモン",
+					"ko": "도검포켓몬",
+					"zh-hant": "刀劍寶可夢",
+					"fr": "Pokémon Glaive",
+					"de": "Klingenkraft-Pokémon",
+					"es": "Pokémon Tizona",
+					"it": "Pokémon Armabianca",
+					"ja": "とうけんポケモン",
+					"zh-hans": "刀剑宝可梦",
+					"es-419": "Pokémon Tizona"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 679
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 117
+					},
+					{
+						"pokedex": "galar",
+						"number": 330
+					},
+					{
+						"pokedex": "lumiose",
+						"number": 71
+					}
+				],
+				"alphaMove": "Headbutt",
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 679,
+								"natiId": 679,
+								"name": "Honedge"
+							},
+							{
+								"id": 680,
+								"natiId": 680,
+								"name": "Doublade",
+								"method": "Level",
+								"value": 35
+							},
+							{
+								"id": 681,
+								"natiId": 681,
+								"name": "Aegislash",
+								"method": "Use item",
+								"value": "Dusk Stone"
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Wild Zone 4",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Lysandre Labs",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Hyperspace Lumiose",
+						"notes": "Steel (2 Star), Steel (3 Star)",
+						"games": "Legends: Z-A Mega Dimension"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Screech",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Shadow Sneak",
+							"level": 4,
+							"order": 4
+						},
+						{
+							"name": "Aerial Ace",
+							"level": 12,
+							"order": 5
+						},
+						{
+							"name": "Metal Sound",
+							"level": 16,
+							"order": 6
+						},
+						{
+							"name": "Slash",
+							"level": 20,
+							"order": 7
+						},
+						{
+							"name": "Psycho Cut",
+							"level": 22,
+							"order": 8
+						},
+						{
+							"name": "Shadow Claw",
+							"level": 24,
+							"order": 9
+						},
+						{
+							"name": "Iron Defense",
+							"level": 32,
+							"order": 10
+						},
+						{
+							"name": "Iron Head",
+							"level": 38,
+							"order": 11
+						},
+						{
+							"name": "Swords Dance",
+							"level": 44,
+							"order": 12
+						}
+					],
+					"Machine": [
+						{
+							"name": "Headbutt",
+							"machine": "TM001",
+							"order": 1
+						},
+						{
+							"name": "Brick Break",
+							"machine": "TM010",
+							"order": 2
+						},
+						{
+							"name": "Rock Slide",
+							"machine": "TM012",
+							"order": 3
+						},
+						{
+							"name": "Protect",
+							"machine": "TM017",
+							"order": 4
+						},
+						{
+							"name": "Aerial Ace",
+							"machine": "TM022",
+							"order": 5
+						},
+						{
+							"name": "Swords Dance",
+							"machine": "TM030",
+							"order": 6
+						},
+						{
+							"name": "Reflect",
+							"machine": "TM031",
+							"order": 7
+						},
+						{
+							"name": "Night Slash",
+							"machine": "TM034",
+							"order": 8
+						},
+						{
+							"name": "Iron Head",
+							"machine": "TM058",
+							"order": 9
+						},
+						{
+							"name": "Shadow Claw",
+							"machine": "TM061",
+							"order": 10
+						},
+						{
+							"name": "Iron Defense",
+							"machine": "TM080",
+							"order": 11
+						},
+						{
+							"name": "Flash Cannon",
+							"machine": "TM084",
+							"order": 12
+						},
+						{
+							"name": "Substitute",
+							"machine": "TM085",
+							"order": 13
+						},
+						{
+							"name": "Close Combat",
+							"machine": "TM107",
+							"order": 14
+						},
+						{
+							"name": "Facade",
+							"machine": "TM109",
+							"order": 15
+						},
+						{
+							"name": "False Swipe",
+							"machine": "TM122",
+							"order": 16
+						},
+						{
+							"name": "Solar Blade",
+							"machine": "TM152",
+							"order": 17
+						},
+						{
+							"name": "Steel Beam",
+							"machine": "TM157",
+							"order": 18
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Project Pokemon's Z-A game-data export assigns this form regional Dex #71."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/679",
+						"fetchedAt": "2026-11-03T05:53:49.182Z",
+						"hash": "90e5b52c14f433f720b1f2fe032b46dffe28d7bb8bfc9a64b24c98afc54b2ace"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/349/",
+						"fetchedAt": "2026-11-03T05:53:49.205Z",
+						"hash": "1e669f4dcd34a1b2a5b090a83e0b007594899a9b18dfd3508c1ccb03dc207e59"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/679/",
+						"fetchedAt": "2026-11-03T05:53:49.228Z",
+						"hash": "faf8b4b07aef55393332923695da623a389fc8414b4a57ef130ced9e19bb0cfb"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/679/encounters",
+						"fetchedAt": "2026-11-03T05:53:49.258Z",
+						"hash": "740e8d5e11da751b7f13fad7dba50be890b75b726a0c50f97877a41ad49f34a1"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/679/",
+						"fetchedAt": "2026-11-03T05:53:49.318Z",
+						"hash": "e3ac369830162f3b009fc2f4bbfc57e32e576154f0830c15d92141ebf6bd4c7c"
+					},
+					{
+						"type": "legends-za-personal-data",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/personal.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c00215459c764ba65d879d6503a7337ad80b338171ab4713d1c6f52b4517e36f"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "719eff37d8f2f404d163f81d23b2c921ac323a7b00304e502ca37d69a3375b1d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/French/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "1b658102e791558a1bb317563b7a3aaab8cebc1c7517aa7f5d5c0e708e93d626"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/German/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5f1e419ae3b84ab18cb05b972569e629ff0bff96d928468c52c536b02dc6cf9d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Italian/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "e0bd40a2f4b7678afb82f959b7b1f3503590bd13884daf94bd5813fea832067c"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/JPN/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5c2c9784278c5d13f3ba376e4338cef21923d68faec9b8498175c21180825f24"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Korean/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c83545726b0b0b803295f52448510c15adaab3e6ce248adba23b5ad0d0344216"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/LATAM/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "01d046caf7553d97a3c275465bce97ecedae26a67674a40b5c751a56b3b4d52d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Simp_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "09495dacb0d16eb6e91aa1d67eb1ed682d0682303719811eeb1c6877bb9e7ca2"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Spanish/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "b3fafb97fe85165bd65fdd732ce1e4cee880ffe5035632269787ce859735b358"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Trad_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c446ae3e93760fc4af895427508ed852511201723f8cac84121330747e8c3cd0"
+					},
+					{
+						"type": "legends-za-locations",
+						"url": "https://www.serebii.net/pokedex-sv/honedge/",
+						"fetchedAt": "2026-11-04T05:47:08.243Z",
+						"hash": "594378315c1c52e3c949079f74620e0878a8cb930b67fa3805b2d4dd4a1d5a7f"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendszamd": "Apparently Honedge was born when a departed spirit began inhabiting an ancient sword. It attaches itself to people and drinks their life force."
+			},
+			"localizedFlavorByGame": {
+				"legendszamd": {
+					"en": "Apparently Honedge was born when a departed spirit began inhabiting an ancient sword. It attaches itself to people and drinks their life force.",
+					"fr": "Il serait né de l’âme d’un défunt ayant pris possession d’une épée ancienne. Il s’accroche aux humains pour absorber leur énergie vitale.",
+					"de": "Dieses Pokémon wurde offenbar geboren, als die Seele eines Verstorbenen sich in einem Schwert niedergelassen hat. Es heftet sich an Menschen und saugt deren Lebenskraft aus.",
+					"it": "Sembra sia nato quando uno spirito si impossessò di un’antica spada. Si lega agli esseri umani per assorbirne la forza vitale.",
+					"ja": "死者の 魂が 古代の 剣に 宿って 生まれたらしい。 人に とりつき 命を 吸う。",
+					"ko": "죽은 자의 혼이 고대의 검에 깃들어 태어났다고 한다. 사람에게 씌어 생명을 빨아들인다.",
+					"es-419": "Cuentan que este Pokémon nace cuando el espíritu de un difunto toma posesión de una espada antigua. Se aferra a las personas y absorbe su energía.",
+					"zh-hans": "好像是死者的灵魂寄宿在 古剑上转生而成。 会附在人类身上吸食生命。",
+					"es": "Cuentan que este Pokémon nace cuando el espíritu de un difunto toma posesión de una espada antigua. Se aferra a las personas y absorbe su energía.",
+					"zh-hant": "似乎是死者的靈魂寄宿在 古代的劍上而誕生。 會附在人類身上吸取生命。"
+				}
+			}
+		}
+	]
+}

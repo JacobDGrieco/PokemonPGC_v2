@@ -1,0 +1,4934 @@
+{
+	"schemaVersion": 2,
+	"nationalDexId": 268,
+	"speciesName": "Cascoon",
+	"formKey": "base",
+	"formName": "Base",
+	"formLabelSource": "form-catalog",
+	"profiles": [
+		{
+			"profileKey": "ruby-sapphire",
+			"label": "Ruby / Sapphire",
+			"appGameKeys": [
+				"ruby-national",
+				"ruby",
+				"sapphire-national",
+				"sapphire"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Cascoon",
+				"localizedNames": {
+					"ja-hrkt": "マユルド",
+					"ja-roma": "Mayuld",
+					"ko": "카스쿤",
+					"zh-hant": "盾甲繭",
+					"fr": "Blindalys",
+					"de": "Panekon",
+					"es": "Cascoon",
+					"it": "Cascoon",
+					"ja": "マユルド",
+					"zh-hans": "盾甲茧",
+					"es-419": "Cascoon"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 35,
+					"def": 55,
+					"spa": 25,
+					"spd": 25,
+					"spe": 15
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.7 m",
+				"weight": "11.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Ball",
+				"color": "Purple",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 268
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "original-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "extended-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "hisui",
+						"number": 21
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 266,
+								"natiId": 266,
+								"name": "Silcoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 267,
+								"natiId": 267,
+								"name": "Beautifly",
+								"method": "Level",
+								"value": 10
+							}
+						],
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 268,
+								"natiId": 268,
+								"name": "Cascoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 269,
+								"natiId": 269,
+								"name": "Dustox",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Petalburg Woods Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Ruby",
+						"rate": "10%"
+					},
+					{
+						"area": "Petalburg Woods Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Sapphire",
+						"rate": "10%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": null
+						},
+						{
+							"name": "Harden",
+							"level": 7,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/268",
+						"fetchedAt": "2026-11-03T05:53:23.634Z",
+						"hash": "85113bfe625044315ae3812c71669eb151fbda931ffcdd6fb739dc4ffe407808"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/135/",
+						"fetchedAt": "2026-11-03T05:53:23.406Z",
+						"hash": "9eb8272d91e72ef1ac99ef55b2f6d7d574397b51f19748d90990908427f84609"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/",
+						"fetchedAt": "2026-11-03T05:53:23.666Z",
+						"hash": "a0cfcab20e5d738cea53c52a3cc4b5aa8481f6042ed440f5ad87b9b70f1601ed"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/encounters",
+						"fetchedAt": "2026-11-03T05:53:23.722Z",
+						"hash": "4557d7e5a903ac015d03789a6b7c243ff6cb74af8e74ac2fe4c7abf249e85ea5"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/268/",
+						"fetchedAt": "2026-11-03T05:53:23.797Z",
+						"hash": "42b4eb2eee642b4fa6b71ed9049e928d42a7009285c5f14f0c574c845dd67cbf"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"ruby-national": "CASCOON makes its protective cocoon by wrapping its body entirely with a fine silk from its mouth. Once the silk goes around its body, it hardens. This POKéMON prepares for its evolution inside the cocoon.",
+				"ruby": "CASCOON makes its protective cocoon by wrapping its body entirely with a fine silk from its mouth. Once the silk goes around its body, it hardens. This POKéMON prepares for its evolution inside the cocoon.",
+				"sapphire-national": "If it is attacked, CASCOON remains motionless however badly it may be hurt. It does so because if it were to move, its body would be weak upon evolution. This POKéMON will also not forget the pain it endured.",
+				"sapphire": "If it is attacked, CASCOON remains motionless however badly it may be hurt. It does so because if it were to move, its body would be weak upon evolution. This POKéMON will also not forget the pain it endured."
+			},
+			"localizedFlavorByGame": {
+				"ruby-national": {
+					"en": "CASCOON makes its protective cocoon by wrapping its body entirely with a fine silk from its mouth. Once the silk goes around its body, it hardens. This POKéMON prepares for its evolution inside the cocoon."
+				},
+				"ruby": {
+					"en": "CASCOON makes its protective cocoon by wrapping its body entirely with a fine silk from its mouth. Once the silk goes around its body, it hardens. This POKéMON prepares for its evolution inside the cocoon."
+				},
+				"sapphire-national": {
+					"en": "If it is attacked, CASCOON remains motionless however badly it may be hurt. It does so because if it were to move, its body would be weak upon evolution. This POKéMON will also not forget the pain it endured."
+				},
+				"sapphire": {
+					"en": "If it is attacked, CASCOON remains motionless however badly it may be hurt. It does so because if it were to move, its body would be weak upon evolution. This POKéMON will also not forget the pain it endured."
+				}
+			}
+		},
+		{
+			"profileKey": "emerald",
+			"label": "Emerald",
+			"appGameKeys": [
+				"emerald-national",
+				"emerald"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Cascoon",
+				"localizedNames": {
+					"ja-hrkt": "マユルド",
+					"ja-roma": "Mayuld",
+					"ko": "카스쿤",
+					"zh-hant": "盾甲繭",
+					"fr": "Blindalys",
+					"de": "Panekon",
+					"es": "Cascoon",
+					"it": "Cascoon",
+					"ja": "マユルド",
+					"zh-hans": "盾甲茧",
+					"es-419": "Cascoon"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 35,
+					"def": 55,
+					"spa": 25,
+					"spd": 25,
+					"spe": 15
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.7 m",
+				"weight": "11.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Ball",
+				"color": "Purple",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 268
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "original-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "extended-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "hisui",
+						"number": 21
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 266,
+								"natiId": 266,
+								"name": "Silcoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 267,
+								"natiId": 267,
+								"name": "Beautifly",
+								"method": "Level",
+								"value": 10
+							}
+						],
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 268,
+								"natiId": 268,
+								"name": "Cascoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 269,
+								"natiId": 269,
+								"name": "Dustox",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Petalburg Woods Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Emerald",
+						"rate": "10%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": null
+						},
+						{
+							"name": "Harden",
+							"level": 7,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/268",
+						"fetchedAt": "2026-11-03T05:53:23.634Z",
+						"hash": "85113bfe625044315ae3812c71669eb151fbda931ffcdd6fb739dc4ffe407808"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/135/",
+						"fetchedAt": "2026-11-03T05:53:23.406Z",
+						"hash": "9eb8272d91e72ef1ac99ef55b2f6d7d574397b51f19748d90990908427f84609"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/",
+						"fetchedAt": "2026-11-03T05:53:23.666Z",
+						"hash": "a0cfcab20e5d738cea53c52a3cc4b5aa8481f6042ed440f5ad87b9b70f1601ed"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/encounters",
+						"fetchedAt": "2026-11-03T05:53:23.722Z",
+						"hash": "4557d7e5a903ac015d03789a6b7c243ff6cb74af8e74ac2fe4c7abf249e85ea5"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/268/",
+						"fetchedAt": "2026-11-03T05:53:23.797Z",
+						"hash": "42b4eb2eee642b4fa6b71ed9049e928d42a7009285c5f14f0c574c845dd67cbf"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"emerald-national": "To avoid detection by its enemies, it hides motionlessly beneath large leaves and in the gaps of branches. It also attaches dead leaves to its body for camouflage.",
+				"emerald": "To avoid detection by its enemies, it hides motionlessly beneath large leaves and in the gaps of branches. It also attaches dead leaves to its body for camouflage."
+			},
+			"localizedFlavorByGame": {
+				"emerald-national": {
+					"en": "To avoid detection by its enemies, it hides motionlessly beneath large leaves and in the gaps of branches. It also attaches dead leaves to its body for camouflage."
+				},
+				"emerald": {
+					"en": "To avoid detection by its enemies, it hides motionlessly beneath large leaves and in the gaps of branches. It also attaches dead leaves to its body for camouflage."
+				}
+			}
+		},
+		{
+			"profileKey": "firered-leafgreen",
+			"label": "FireRed / LeafGreen",
+			"appGameKeys": [
+				"firered-national",
+				"firered",
+				"leafgreen-national",
+				"leafgreen"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Cascoon",
+				"localizedNames": {
+					"ja-hrkt": "マユルド",
+					"ja-roma": "Mayuld",
+					"ko": "카스쿤",
+					"zh-hant": "盾甲繭",
+					"fr": "Blindalys",
+					"de": "Panekon",
+					"es": "Cascoon",
+					"it": "Cascoon",
+					"ja": "マユルド",
+					"zh-hans": "盾甲茧",
+					"es-419": "Cascoon"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 35,
+					"def": 55,
+					"spa": 25,
+					"spd": 25,
+					"spe": 15
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.7 m",
+				"weight": "11.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Ball",
+				"color": "Purple",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 268
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "original-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "extended-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "hisui",
+						"number": 21
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 266,
+								"natiId": 266,
+								"name": "Silcoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 267,
+								"natiId": 267,
+								"name": "Beautifly",
+								"method": "Level",
+								"value": 10
+							}
+						],
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 268,
+								"natiId": 268,
+								"name": "Cascoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 269,
+								"natiId": 269,
+								"name": "Dustox",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": null
+						},
+						{
+							"name": "Harden",
+							"level": 7,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/268",
+						"fetchedAt": "2026-11-03T05:53:23.634Z",
+						"hash": "85113bfe625044315ae3812c71669eb151fbda931ffcdd6fb739dc4ffe407808"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/135/",
+						"fetchedAt": "2026-11-03T05:53:23.406Z",
+						"hash": "9eb8272d91e72ef1ac99ef55b2f6d7d574397b51f19748d90990908427f84609"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/",
+						"fetchedAt": "2026-11-03T05:53:23.666Z",
+						"hash": "a0cfcab20e5d738cea53c52a3cc4b5aa8481f6042ed440f5ad87b9b70f1601ed"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/encounters",
+						"fetchedAt": "2026-11-03T05:53:23.722Z",
+						"hash": "4557d7e5a903ac015d03789a6b7c243ff6cb74af8e74ac2fe4c7abf249e85ea5"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/268/",
+						"fetchedAt": "2026-11-03T05:53:23.797Z",
+						"hash": "42b4eb2eee642b4fa6b71ed9049e928d42a7009285c5f14f0c574c845dd67cbf"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"firered-national": "Its body, which is made of soft silk, hardens over time. When cracks appear, evolution is near.",
+				"firered": "Its body, which is made of soft silk, hardens over time. When cracks appear, evolution is near.",
+				"leafgreen-national": "Its body, which is made of soft silk, hardens over time. When cracks appear, evolution is near.",
+				"leafgreen": "Its body, which is made of soft silk, hardens over time. When cracks appear, evolution is near."
+			},
+			"localizedFlavorByGame": {
+				"firered-national": {
+					"en": "Its body, which is made of soft silk, hardens over time. When cracks appear, evolution is near."
+				},
+				"firered": {
+					"en": "Its body, which is made of soft silk, hardens over time. When cracks appear, evolution is near."
+				},
+				"leafgreen-national": {
+					"en": "Its body, which is made of soft silk, hardens over time. When cracks appear, evolution is near."
+				},
+				"leafgreen": {
+					"en": "Its body, which is made of soft silk, hardens over time. When cracks appear, evolution is near."
+				}
+			}
+		},
+		{
+			"profileKey": "diamond-pearl",
+			"label": "Diamond / Pearl",
+			"appGameKeys": [
+				"diamond-national",
+				"diamond",
+				"pearl-national",
+				"pearl"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Cascoon",
+				"localizedNames": {
+					"ja-hrkt": "マユルド",
+					"ja-roma": "Mayuld",
+					"ko": "카스쿤",
+					"zh-hant": "盾甲繭",
+					"fr": "Blindalys",
+					"de": "Panekon",
+					"es": "Cascoon",
+					"it": "Cascoon",
+					"ja": "マユルド",
+					"zh-hans": "盾甲茧",
+					"es-419": "Cascoon"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 35,
+					"def": 55,
+					"spa": 25,
+					"spd": 25,
+					"spe": 15
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.7 m",
+				"weight": "11.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Ball",
+				"color": "Purple",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 268
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "original-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "extended-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "hisui",
+						"number": 21
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 266,
+								"natiId": 266,
+								"name": "Silcoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 267,
+								"natiId": 267,
+								"name": "Beautifly",
+								"method": "Level",
+								"value": 10
+							}
+						],
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 268,
+								"natiId": 268,
+								"name": "Cascoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 269,
+								"natiId": 269,
+								"name": "Dustox",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Valley Windworks Area",
+						"notes": "Honey Tree, Lv. 5-15",
+						"games": "Pearl",
+						"rate": "20%"
+					},
+					{
+						"area": "Eterna Forest Area",
+						"notes": "Walk, Lv. 10",
+						"games": "Pearl",
+						"rate": "20%"
+					},
+					{
+						"area": "Eterna Forest Area",
+						"notes": "Honey Tree, Lv. 5-15",
+						"games": "Pearl",
+						"rate": "20%"
+					},
+					{
+						"area": "Fuego Ironworks Area",
+						"notes": "Honey Tree, Lv. 5-15",
+						"games": "Pearl",
+						"rate": "20%"
+					},
+					{
+						"area": "Sinnoh Route 205 South Towards Floaroma Town",
+						"notes": "Honey Tree, Lv. 5-15",
+						"games": "Pearl",
+						"rate": "20%"
+					},
+					{
+						"area": "Sinnoh Route 205 East Towards Eterna City",
+						"notes": "Honey Tree, Lv. 5-15",
+						"games": "Pearl",
+						"rate": "20%"
+					},
+					{
+						"area": "Sinnoh Route 206 Area",
+						"notes": "Honey Tree, Lv. 5-15",
+						"games": "Pearl",
+						"rate": "20%"
+					},
+					{
+						"area": "Sinnoh Route 207 Area",
+						"notes": "Honey Tree, Lv. 5-15",
+						"games": "Pearl",
+						"rate": "20%"
+					},
+					{
+						"area": "Sinnoh Route 208 Area",
+						"notes": "Honey Tree, Lv. 5-15",
+						"games": "Pearl",
+						"rate": "20%"
+					},
+					{
+						"area": "Sinnoh Route 209 Area",
+						"notes": "Honey Tree, Lv. 5-15",
+						"games": "Pearl",
+						"rate": "20%"
+					},
+					{
+						"area": "Sinnoh Route 210 South Towards Solaceon Town",
+						"notes": "Honey Tree, Lv. 5-15",
+						"games": "Pearl",
+						"rate": "20%"
+					},
+					{
+						"area": "Sinnoh Route 210 West Towards Celestic Town",
+						"notes": "Honey Tree, Lv. 5-15",
+						"games": "Pearl",
+						"rate": "20%"
+					},
+					{
+						"area": "Sinnoh Route 211 East Towards Celestic Town",
+						"notes": "Honey Tree, Lv. 5-15",
+						"games": "Pearl",
+						"rate": "20%"
+					},
+					{
+						"area": "Sinnoh Route 212 North Towards Hearthome City",
+						"notes": "Honey Tree, Lv. 5-15",
+						"games": "Pearl",
+						"rate": "20%"
+					},
+					{
+						"area": "Sinnoh Route 212 East Towards Pastoria City",
+						"notes": "Honey Tree, Lv. 5-15",
+						"games": "Pearl",
+						"rate": "20%"
+					},
+					{
+						"area": "Sinnoh Route 213 Area",
+						"notes": "Honey Tree, Lv. 5-15",
+						"games": "Pearl",
+						"rate": "20%"
+					},
+					{
+						"area": "Sinnoh Route 214 Area",
+						"notes": "Honey Tree, Lv. 5-15",
+						"games": "Pearl",
+						"rate": "20%"
+					},
+					{
+						"area": "Sinnoh Route 215 Area",
+						"notes": "Honey Tree, Lv. 5-15",
+						"games": "Pearl",
+						"rate": "20%"
+					},
+					{
+						"area": "Sinnoh Route 218 Area",
+						"notes": "Honey Tree, Lv. 5-15",
+						"games": "Pearl",
+						"rate": "20%"
+					},
+					{
+						"area": "Sinnoh Route 221 Area",
+						"notes": "Honey Tree, Lv. 5-15",
+						"games": "Pearl",
+						"rate": "20%"
+					},
+					{
+						"area": "Sinnoh Route 222 Area",
+						"notes": "Honey Tree, Lv. 5-15",
+						"games": "Pearl",
+						"rate": "20%"
+					},
+					{
+						"area": "Floaroma Meadow Area",
+						"notes": "Honey Tree, Lv. 5-15",
+						"games": "Pearl",
+						"rate": "20%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": null
+						},
+						{
+							"name": "Harden",
+							"level": 7,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/268",
+						"fetchedAt": "2026-11-03T05:53:23.634Z",
+						"hash": "85113bfe625044315ae3812c71669eb151fbda931ffcdd6fb739dc4ffe407808"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/135/",
+						"fetchedAt": "2026-11-03T05:53:23.406Z",
+						"hash": "9eb8272d91e72ef1ac99ef55b2f6d7d574397b51f19748d90990908427f84609"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/",
+						"fetchedAt": "2026-11-03T05:53:23.666Z",
+						"hash": "a0cfcab20e5d738cea53c52a3cc4b5aa8481f6042ed440f5ad87b9b70f1601ed"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/encounters",
+						"fetchedAt": "2026-11-03T05:53:23.722Z",
+						"hash": "4557d7e5a903ac015d03789a6b7c243ff6cb74af8e74ac2fe4c7abf249e85ea5"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/268/",
+						"fetchedAt": "2026-11-03T05:53:23.797Z",
+						"hash": "42b4eb2eee642b4fa6b71ed9049e928d42a7009285c5f14f0c574c845dd67cbf"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"diamond-national": "It is hot inside its cocoon. All the cells in its body create the energy for it to evolve.",
+				"diamond": "It is hot inside its cocoon. All the cells in its body create the energy for it to evolve.",
+				"pearl-national": "Encased within its tough cocoon, it endures attacks. It never forgets the appearance of its foes.",
+				"pearl": "Encased within its tough cocoon, it endures attacks. It never forgets the appearance of its foes."
+			},
+			"localizedFlavorByGame": {
+				"diamond-national": {
+					"en": "It is hot inside its cocoon. All the cells in its body create the energy for it to evolve."
+				},
+				"diamond": {
+					"en": "It is hot inside its cocoon. All the cells in its body create the energy for it to evolve."
+				},
+				"pearl-national": {
+					"en": "Encased within its tough cocoon, it endures attacks. It never forgets the appearance of its foes."
+				},
+				"pearl": {
+					"en": "Encased within its tough cocoon, it endures attacks. It never forgets the appearance of its foes."
+				}
+			}
+		},
+		{
+			"profileKey": "platinum",
+			"label": "Platinum",
+			"appGameKeys": [
+				"platinum-national",
+				"platinum"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Cascoon",
+				"localizedNames": {
+					"ja-hrkt": "マユルド",
+					"ja-roma": "Mayuld",
+					"ko": "카스쿤",
+					"zh-hant": "盾甲繭",
+					"fr": "Blindalys",
+					"de": "Panekon",
+					"es": "Cascoon",
+					"it": "Cascoon",
+					"ja": "マユルド",
+					"zh-hans": "盾甲茧",
+					"es-419": "Cascoon"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 35,
+					"def": 55,
+					"spa": 25,
+					"spd": 25,
+					"spe": 15
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.7 m",
+				"weight": "11.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Ball",
+				"color": "Purple",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 268
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "original-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "extended-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "hisui",
+						"number": 21
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 266,
+								"natiId": 266,
+								"name": "Silcoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 267,
+								"natiId": 267,
+								"name": "Beautifly",
+								"method": "Level",
+								"value": 10
+							}
+						],
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 268,
+								"natiId": 268,
+								"name": "Cascoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 269,
+								"natiId": 269,
+								"name": "Dustox",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Eterna Forest Area",
+						"notes": "Walk, Lv. 12",
+						"games": "Platinum",
+						"rate": "5%"
+					},
+					{
+						"area": "Sinnoh Route 205 East Towards Eterna City",
+						"notes": "Walk, Lv. 14",
+						"games": "Platinum",
+						"rate": "10%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": null
+						},
+						{
+							"name": "Harden",
+							"level": 7,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Iron Defense",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/268",
+						"fetchedAt": "2026-11-03T05:53:23.634Z",
+						"hash": "85113bfe625044315ae3812c71669eb151fbda931ffcdd6fb739dc4ffe407808"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/135/",
+						"fetchedAt": "2026-11-03T05:53:23.406Z",
+						"hash": "9eb8272d91e72ef1ac99ef55b2f6d7d574397b51f19748d90990908427f84609"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/",
+						"fetchedAt": "2026-11-03T05:53:23.666Z",
+						"hash": "a0cfcab20e5d738cea53c52a3cc4b5aa8481f6042ed440f5ad87b9b70f1601ed"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/encounters",
+						"fetchedAt": "2026-11-03T05:53:23.722Z",
+						"hash": "4557d7e5a903ac015d03789a6b7c243ff6cb74af8e74ac2fe4c7abf249e85ea5"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/268/",
+						"fetchedAt": "2026-11-03T05:53:23.797Z",
+						"hash": "42b4eb2eee642b4fa6b71ed9049e928d42a7009285c5f14f0c574c845dd67cbf"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"platinum-national": "It never forgets any attack it endured while in the cocoon. After evolution, it seeks payback.",
+				"platinum": "It never forgets any attack it endured while in the cocoon. After evolution, it seeks payback."
+			},
+			"localizedFlavorByGame": {
+				"platinum-national": {
+					"en": "It never forgets any attack it endured while in the cocoon. After evolution, it seeks payback."
+				},
+				"platinum": {
+					"en": "It never forgets any attack it endured while in the cocoon. After evolution, it seeks payback."
+				}
+			}
+		},
+		{
+			"profileKey": "heartgold-soulsilver",
+			"label": "HeartGold / SoulSilver",
+			"appGameKeys": [
+				"heartgold-national",
+				"heartgold",
+				"soulsilver-national",
+				"soulsilver"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Cascoon",
+				"localizedNames": {
+					"ja-hrkt": "マユルド",
+					"ja-roma": "Mayuld",
+					"ko": "카스쿤",
+					"zh-hant": "盾甲繭",
+					"fr": "Blindalys",
+					"de": "Panekon",
+					"es": "Cascoon",
+					"it": "Cascoon",
+					"ja": "マユルド",
+					"zh-hans": "盾甲茧",
+					"es-419": "Cascoon"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 35,
+					"def": 55,
+					"spa": 25,
+					"spd": 25,
+					"spe": 15
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.7 m",
+				"weight": "11.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Ball",
+				"color": "Purple",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 268
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "original-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "extended-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "hisui",
+						"number": 21
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 266,
+								"natiId": 266,
+								"name": "Silcoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 267,
+								"natiId": 267,
+								"name": "Beautifly",
+								"method": "Level",
+								"value": 10
+							}
+						],
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 268,
+								"natiId": 268,
+								"name": "Cascoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 269,
+								"natiId": 269,
+								"name": "Dustox",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "National Park Area",
+						"notes": "Walk, Lv. 24-36",
+						"games": "Heartgold",
+						"rate": "10%"
+					},
+					{
+						"area": "National Park Area",
+						"notes": "Walk, Lv. 24-36",
+						"games": "Soulsilver",
+						"rate": "10%"
+					}
+				],
+				"moves": {
+					"Tutor": [
+						{
+							"name": "Bug Bite",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Defense",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "String Shot",
+							"level": null,
+							"order": null
+						}
+					],
+					"Level Up": [
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": null
+						},
+						{
+							"name": "Harden",
+							"level": 7,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/268",
+						"fetchedAt": "2026-11-03T05:53:23.634Z",
+						"hash": "85113bfe625044315ae3812c71669eb151fbda931ffcdd6fb739dc4ffe407808"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/135/",
+						"fetchedAt": "2026-11-03T05:53:23.406Z",
+						"hash": "9eb8272d91e72ef1ac99ef55b2f6d7d574397b51f19748d90990908427f84609"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/",
+						"fetchedAt": "2026-11-03T05:53:23.666Z",
+						"hash": "a0cfcab20e5d738cea53c52a3cc4b5aa8481f6042ed440f5ad87b9b70f1601ed"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/encounters",
+						"fetchedAt": "2026-11-03T05:53:23.722Z",
+						"hash": "4557d7e5a903ac015d03789a6b7c243ff6cb74af8e74ac2fe4c7abf249e85ea5"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/268/",
+						"fetchedAt": "2026-11-03T05:53:23.797Z",
+						"hash": "42b4eb2eee642b4fa6b71ed9049e928d42a7009285c5f14f0c574c845dd67cbf"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"heartgold-national": "It endures attacks with patience, because the more pain before evolution, the sturdier it becomes.",
+				"heartgold": "It endures attacks with patience, because the more pain before evolution, the sturdier it becomes.",
+				"soulsilver-national": "It endures attacks with patience, because the more pain before evolution, the sturdier it becomes.",
+				"soulsilver": "It endures attacks with patience, because the more pain before evolution, the sturdier it becomes."
+			},
+			"localizedFlavorByGame": {
+				"heartgold-national": {
+					"en": "It endures attacks with patience, because the more pain before evolution, the sturdier it becomes."
+				},
+				"heartgold": {
+					"en": "It endures attacks with patience, because the more pain before evolution, the sturdier it becomes."
+				},
+				"soulsilver-national": {
+					"en": "It endures attacks with patience, because the more pain before evolution, the sturdier it becomes."
+				},
+				"soulsilver": {
+					"en": "It endures attacks with patience, because the more pain before evolution, the sturdier it becomes."
+				}
+			}
+		},
+		{
+			"profileKey": "black-white",
+			"label": "Black / White",
+			"appGameKeys": [
+				"black-national",
+				"black",
+				"white-national",
+				"white"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Cascoon",
+				"localizedNames": {
+					"ja-hrkt": "マユルド",
+					"ja-roma": "Mayuld",
+					"ko": "카스쿤",
+					"zh-hant": "盾甲繭",
+					"fr": "Blindalys",
+					"de": "Panekon",
+					"es": "Cascoon",
+					"it": "Cascoon",
+					"ja": "マユルド",
+					"zh-hans": "盾甲茧",
+					"es-419": "Cascoon"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 35,
+					"def": 55,
+					"spa": 25,
+					"spd": 25,
+					"spe": 15
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.7 m",
+				"weight": "11.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Ball",
+				"color": "Purple",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 268
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "original-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "extended-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "hisui",
+						"number": 21
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 266,
+								"natiId": 266,
+								"name": "Silcoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 267,
+								"natiId": 267,
+								"name": "Beautifly",
+								"method": "Level",
+								"value": 10
+							}
+						],
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 268,
+								"natiId": 268,
+								"name": "Cascoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 269,
+								"natiId": 269,
+								"name": "Dustox",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": null
+						},
+						{
+							"name": "Harden",
+							"level": 7,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/268",
+						"fetchedAt": "2026-11-03T05:53:23.634Z",
+						"hash": "85113bfe625044315ae3812c71669eb151fbda931ffcdd6fb739dc4ffe407808"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/135/",
+						"fetchedAt": "2026-11-03T05:53:23.406Z",
+						"hash": "9eb8272d91e72ef1ac99ef55b2f6d7d574397b51f19748d90990908427f84609"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/",
+						"fetchedAt": "2026-11-03T05:53:23.666Z",
+						"hash": "a0cfcab20e5d738cea53c52a3cc4b5aa8481f6042ed440f5ad87b9b70f1601ed"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/encounters",
+						"fetchedAt": "2026-11-03T05:53:23.722Z",
+						"hash": "4557d7e5a903ac015d03789a6b7c243ff6cb74af8e74ac2fe4c7abf249e85ea5"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/268/",
+						"fetchedAt": "2026-11-03T05:53:23.797Z",
+						"hash": "42b4eb2eee642b4fa6b71ed9049e928d42a7009285c5f14f0c574c845dd67cbf"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"black-national": "It never forgets any attack it endured while in the cocoon. After evolution, it seeks payback.",
+				"black": "It never forgets any attack it endured while in the cocoon. After evolution, it seeks payback.",
+				"white-national": "It never forgets any attack it endured while in the cocoon. After evolution, it seeks payback.",
+				"white": "It never forgets any attack it endured while in the cocoon. After evolution, it seeks payback."
+			},
+			"localizedFlavorByGame": {
+				"black-national": {
+					"fr": "Rancunier, il n’oublie aucune des attaques subies dans le cocon et se venge une fois qu’il a évolué.",
+					"en": "It never forgets any attack it endured while in the cocoon. After evolution, it seeks payback."
+				},
+				"black": {
+					"fr": "Rancunier, il n’oublie aucune des attaques subies dans le cocon et se venge une fois qu’il a évolué.",
+					"en": "It never forgets any attack it endured while in the cocoon. After evolution, it seeks payback."
+				},
+				"white-national": {
+					"fr": "Rancunier, il n’oublie aucune des attaques subies dans le cocon et se venge une fois qu’il a évolué.",
+					"en": "It never forgets any attack it endured while in the cocoon. After evolution, it seeks payback."
+				},
+				"white": {
+					"fr": "Rancunier, il n’oublie aucune des attaques subies dans le cocon et se venge une fois qu’il a évolué.",
+					"en": "It never forgets any attack it endured while in the cocoon. After evolution, it seeks payback."
+				}
+			}
+		},
+		{
+			"profileKey": "black-2-white-2",
+			"label": "Black 2 / White 2",
+			"appGameKeys": [
+				"black2-national",
+				"black2",
+				"white2-national",
+				"white2"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Cascoon",
+				"localizedNames": {
+					"ja-hrkt": "マユルド",
+					"ja-roma": "Mayuld",
+					"ko": "카스쿤",
+					"zh-hant": "盾甲繭",
+					"fr": "Blindalys",
+					"de": "Panekon",
+					"es": "Cascoon",
+					"it": "Cascoon",
+					"ja": "マユルド",
+					"zh-hans": "盾甲茧",
+					"es-419": "Cascoon"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 35,
+					"def": 55,
+					"spa": 25,
+					"spd": 25,
+					"spe": 15
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.7 m",
+				"weight": "11.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Ball",
+				"color": "Purple",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 268
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "original-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "extended-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "hisui",
+						"number": 21
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 266,
+								"natiId": 266,
+								"name": "Silcoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 267,
+								"natiId": 267,
+								"name": "Beautifly",
+								"method": "Level",
+								"value": 10
+							}
+						],
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 268,
+								"natiId": 268,
+								"name": "Cascoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 269,
+								"natiId": 269,
+								"name": "Dustox",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": null
+						},
+						{
+							"name": "Harden",
+							"level": 7,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Bug Bite",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Electroweb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Defense",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/268",
+						"fetchedAt": "2026-11-03T05:53:23.634Z",
+						"hash": "85113bfe625044315ae3812c71669eb151fbda931ffcdd6fb739dc4ffe407808"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/135/",
+						"fetchedAt": "2026-11-03T05:53:23.406Z",
+						"hash": "9eb8272d91e72ef1ac99ef55b2f6d7d574397b51f19748d90990908427f84609"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/",
+						"fetchedAt": "2026-11-03T05:53:23.666Z",
+						"hash": "a0cfcab20e5d738cea53c52a3cc4b5aa8481f6042ed440f5ad87b9b70f1601ed"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/encounters",
+						"fetchedAt": "2026-11-03T05:53:23.722Z",
+						"hash": "4557d7e5a903ac015d03789a6b7c243ff6cb74af8e74ac2fe4c7abf249e85ea5"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/268/",
+						"fetchedAt": "2026-11-03T05:53:23.797Z",
+						"hash": "42b4eb2eee642b4fa6b71ed9049e928d42a7009285c5f14f0c574c845dd67cbf"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"black2-national": "It never forgets any attack it endured while in the cocoon. After evolution, it seeks payback.",
+				"black2": "It never forgets any attack it endured while in the cocoon. After evolution, it seeks payback.",
+				"white2-national": "It never forgets any attack it endured while in the cocoon. After evolution, it seeks payback.",
+				"white2": "It never forgets any attack it endured while in the cocoon. After evolution, it seeks payback."
+			},
+			"localizedFlavorByGame": {
+				"black2-national": {
+					"en": "It never forgets any attack it endured while in the cocoon. After evolution, it seeks payback."
+				},
+				"black2": {
+					"en": "It never forgets any attack it endured while in the cocoon. After evolution, it seeks payback."
+				},
+				"white2-national": {
+					"en": "It never forgets any attack it endured while in the cocoon. After evolution, it seeks payback."
+				},
+				"white2": {
+					"en": "It never forgets any attack it endured while in the cocoon. After evolution, it seeks payback."
+				}
+			}
+		},
+		{
+			"profileKey": "x-y",
+			"label": "X / Y",
+			"appGameKeys": [
+				"x-national",
+				"x-central",
+				"x-coastal",
+				"x-mountain",
+				"y-national",
+				"y-central",
+				"y-coastal",
+				"y-mountain"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Cascoon",
+				"localizedNames": {
+					"ja-hrkt": "マユルド",
+					"ja-roma": "Mayuld",
+					"ko": "카스쿤",
+					"zh-hant": "盾甲繭",
+					"fr": "Blindalys",
+					"de": "Panekon",
+					"es": "Cascoon",
+					"it": "Cascoon",
+					"ja": "マユルド",
+					"zh-hans": "盾甲茧",
+					"es-419": "Cascoon"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 35,
+					"def": 55,
+					"spa": 25,
+					"spd": 25,
+					"spe": 15
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.7 m",
+				"weight": "11.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Ball",
+				"color": "Purple",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 268
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "original-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "extended-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "hisui",
+						"number": 21
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 266,
+								"natiId": 266,
+								"name": "Silcoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 267,
+								"natiId": 267,
+								"name": "Beautifly",
+								"method": "Level",
+								"value": 10
+							}
+						],
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 268,
+								"natiId": 268,
+								"name": "Cascoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 269,
+								"natiId": 269,
+								"name": "Dustox",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Friend Safari Poison",
+						"notes": "Walk, Lv. 30",
+						"games": "X",
+						"rate": "33%"
+					},
+					{
+						"area": "Friend Safari Poison",
+						"notes": "Walk, Lv. 30",
+						"games": "Y",
+						"rate": "33%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": null
+						},
+						{
+							"name": "Harden",
+							"level": 7,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/268",
+						"fetchedAt": "2026-11-03T05:53:23.634Z",
+						"hash": "85113bfe625044315ae3812c71669eb151fbda931ffcdd6fb739dc4ffe407808"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/135/",
+						"fetchedAt": "2026-11-03T05:53:23.406Z",
+						"hash": "9eb8272d91e72ef1ac99ef55b2f6d7d574397b51f19748d90990908427f84609"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/",
+						"fetchedAt": "2026-11-03T05:53:23.666Z",
+						"hash": "a0cfcab20e5d738cea53c52a3cc4b5aa8481f6042ed440f5ad87b9b70f1601ed"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/encounters",
+						"fetchedAt": "2026-11-03T05:53:23.722Z",
+						"hash": "4557d7e5a903ac015d03789a6b7c243ff6cb74af8e74ac2fe4c7abf249e85ea5"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/268/",
+						"fetchedAt": "2026-11-03T05:53:23.797Z",
+						"hash": "42b4eb2eee642b4fa6b71ed9049e928d42a7009285c5f14f0c574c845dd67cbf"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"x-national": "Its body, which is made of soft silk, hardens over time. When cracks appear, evolution is near.",
+				"x-central": "Its body, which is made of soft silk, hardens over time. When cracks appear, evolution is near.",
+				"x-coastal": "Its body, which is made of soft silk, hardens over time. When cracks appear, evolution is near.",
+				"x-mountain": "Its body, which is made of soft silk, hardens over time. When cracks appear, evolution is near.",
+				"y-national": "It never forgets any attack it endured while in the cocoon. After evolution, it seeks payback.",
+				"y-central": "It never forgets any attack it endured while in the cocoon. After evolution, it seeks payback.",
+				"y-coastal": "It never forgets any attack it endured while in the cocoon. After evolution, it seeks payback.",
+				"y-mountain": "It never forgets any attack it endured while in the cocoon. After evolution, it seeks payback."
+			},
+			"localizedFlavorByGame": {
+				"x-national": {
+					"ja-hrkt": "やわらかい いとで できた からだは じかんと ともに かたくなっていく。 ひびわれると しんかは まぢかだ。",
+					"ko": "부드러운 실로 된 몸은 시간이 지나면서 단단해진다. 진화가 임박하면 갈라지기 시작한다.",
+					"fr": "Son corps, constitué de soie fine, durcit avec le temps. Si vous voyez apparaître des fissures, c’est qu’il va très bientôt évoluer.",
+					"de": "Sein aus weicher Seide bestehender Körper erhärtet mit der Zeit. Sobald Risse sichtbar sind, steht die Entwicklung kurz bevor.",
+					"es": "Está formado por seda que se endurece poco a poco. Si se resquebraja el capullo, está a punto de evolucionar.",
+					"it": "Il corpo di soffice seta si indurisce nel corso del tempo. Quando appaiono crepe, l’evoluzione è vicina.",
+					"en": "Its body, which is made of soft silk, hardens over time. When cracks appear, evolution is near.",
+					"ja": "やわらかい 糸で できた 体は 時間と ともに 硬くなっていく。 ひび割れると 進化は 間近だ。",
+					"es-419": "Está formado por seda que se endurece poco a poco. Si se resquebraja el capullo, está a punto de evolucionar."
+				},
+				"x-central": {
+					"ja-hrkt": "やわらかい いとで できた からだは じかんと ともに かたくなっていく。 ひびわれると しんかは まぢかだ。",
+					"ko": "부드러운 실로 된 몸은 시간이 지나면서 단단해진다. 진화가 임박하면 갈라지기 시작한다.",
+					"fr": "Son corps, constitué de soie fine, durcit avec le temps. Si vous voyez apparaître des fissures, c’est qu’il va très bientôt évoluer.",
+					"de": "Sein aus weicher Seide bestehender Körper erhärtet mit der Zeit. Sobald Risse sichtbar sind, steht die Entwicklung kurz bevor.",
+					"es": "Está formado por seda que se endurece poco a poco. Si se resquebraja el capullo, está a punto de evolucionar.",
+					"it": "Il corpo di soffice seta si indurisce nel corso del tempo. Quando appaiono crepe, l’evoluzione è vicina.",
+					"en": "Its body, which is made of soft silk, hardens over time. When cracks appear, evolution is near.",
+					"ja": "やわらかい 糸で できた 体は 時間と ともに 硬くなっていく。 ひび割れると 進化は 間近だ。",
+					"es-419": "Está formado por seda que se endurece poco a poco. Si se resquebraja el capullo, está a punto de evolucionar."
+				},
+				"x-coastal": {
+					"ja-hrkt": "やわらかい いとで できた からだは じかんと ともに かたくなっていく。 ひびわれると しんかは まぢかだ。",
+					"ko": "부드러운 실로 된 몸은 시간이 지나면서 단단해진다. 진화가 임박하면 갈라지기 시작한다.",
+					"fr": "Son corps, constitué de soie fine, durcit avec le temps. Si vous voyez apparaître des fissures, c’est qu’il va très bientôt évoluer.",
+					"de": "Sein aus weicher Seide bestehender Körper erhärtet mit der Zeit. Sobald Risse sichtbar sind, steht die Entwicklung kurz bevor.",
+					"es": "Está formado por seda que se endurece poco a poco. Si se resquebraja el capullo, está a punto de evolucionar.",
+					"it": "Il corpo di soffice seta si indurisce nel corso del tempo. Quando appaiono crepe, l’evoluzione è vicina.",
+					"en": "Its body, which is made of soft silk, hardens over time. When cracks appear, evolution is near.",
+					"ja": "やわらかい 糸で できた 体は 時間と ともに 硬くなっていく。 ひび割れると 進化は 間近だ。",
+					"es-419": "Está formado por seda que se endurece poco a poco. Si se resquebraja el capullo, está a punto de evolucionar."
+				},
+				"x-mountain": {
+					"ja-hrkt": "やわらかい いとで できた からだは じかんと ともに かたくなっていく。 ひびわれると しんかは まぢかだ。",
+					"ko": "부드러운 실로 된 몸은 시간이 지나면서 단단해진다. 진화가 임박하면 갈라지기 시작한다.",
+					"fr": "Son corps, constitué de soie fine, durcit avec le temps. Si vous voyez apparaître des fissures, c’est qu’il va très bientôt évoluer.",
+					"de": "Sein aus weicher Seide bestehender Körper erhärtet mit der Zeit. Sobald Risse sichtbar sind, steht die Entwicklung kurz bevor.",
+					"es": "Está formado por seda que se endurece poco a poco. Si se resquebraja el capullo, está a punto de evolucionar.",
+					"it": "Il corpo di soffice seta si indurisce nel corso del tempo. Quando appaiono crepe, l’evoluzione è vicina.",
+					"en": "Its body, which is made of soft silk, hardens over time. When cracks appear, evolution is near.",
+					"ja": "やわらかい 糸で できた 体は 時間と ともに 硬くなっていく。 ひび割れると 進化は 間近だ。",
+					"es-419": "Está formado por seda que se endurece poco a poco. Si se resquebraja el capullo, está a punto de evolucionar."
+				},
+				"y-national": {
+					"ja-hrkt": "マユに こもっている あいだに うけた こうげきは しんかしても わすれずに かならず しかえしする。",
+					"ko": "고치에 들어가 있는 사이에 받은 공격은 진화해도 잊지 않고 반드시 앙갚음한다.",
+					"fr": "Rancunier, il n’oublie aucune des attaques subies dans le cocon et se venge une fois qu’il a évolué.",
+					"de": "Es vergisst keinen Angriff, den es im Kokon erdulden musste. Nach der Entwicklung sinnt es auf Rache.",
+					"es": "Jamás olvida a quienes lo atacaron mientras estaba en su capullo. Cuando evoluciona, busca venganza.",
+					"it": "Non dimentica mai gli attacchi subiti dentro il bozzolo. Dopo l’evoluzione cerca di vendicarsi.",
+					"en": "It never forgets any attack it endured while in the cocoon. After evolution, it seeks payback.",
+					"ja": "マユに こもっている あいだに 受けた 攻撃は 進化しても 忘れずに かならず 仕返しする。",
+					"es-419": "Jamás olvida a quienes lo atacaron mientras estaba en su capullo. Cuando evoluciona, busca venganza."
+				},
+				"y-central": {
+					"ja-hrkt": "マユに こもっている あいだに うけた こうげきは しんかしても わすれずに かならず しかえしする。",
+					"ko": "고치에 들어가 있는 사이에 받은 공격은 진화해도 잊지 않고 반드시 앙갚음한다.",
+					"fr": "Rancunier, il n’oublie aucune des attaques subies dans le cocon et se venge une fois qu’il a évolué.",
+					"de": "Es vergisst keinen Angriff, den es im Kokon erdulden musste. Nach der Entwicklung sinnt es auf Rache.",
+					"es": "Jamás olvida a quienes lo atacaron mientras estaba en su capullo. Cuando evoluciona, busca venganza.",
+					"it": "Non dimentica mai gli attacchi subiti dentro il bozzolo. Dopo l’evoluzione cerca di vendicarsi.",
+					"en": "It never forgets any attack it endured while in the cocoon. After evolution, it seeks payback.",
+					"ja": "マユに こもっている あいだに 受けた 攻撃は 進化しても 忘れずに かならず 仕返しする。",
+					"es-419": "Jamás olvida a quienes lo atacaron mientras estaba en su capullo. Cuando evoluciona, busca venganza."
+				},
+				"y-coastal": {
+					"ja-hrkt": "マユに こもっている あいだに うけた こうげきは しんかしても わすれずに かならず しかえしする。",
+					"ko": "고치에 들어가 있는 사이에 받은 공격은 진화해도 잊지 않고 반드시 앙갚음한다.",
+					"fr": "Rancunier, il n’oublie aucune des attaques subies dans le cocon et se venge une fois qu’il a évolué.",
+					"de": "Es vergisst keinen Angriff, den es im Kokon erdulden musste. Nach der Entwicklung sinnt es auf Rache.",
+					"es": "Jamás olvida a quienes lo atacaron mientras estaba en su capullo. Cuando evoluciona, busca venganza.",
+					"it": "Non dimentica mai gli attacchi subiti dentro il bozzolo. Dopo l’evoluzione cerca di vendicarsi.",
+					"en": "It never forgets any attack it endured while in the cocoon. After evolution, it seeks payback.",
+					"ja": "マユに こもっている あいだに 受けた 攻撃は 進化しても 忘れずに かならず 仕返しする。",
+					"es-419": "Jamás olvida a quienes lo atacaron mientras estaba en su capullo. Cuando evoluciona, busca venganza."
+				},
+				"y-mountain": {
+					"ja-hrkt": "マユに こもっている あいだに うけた こうげきは しんかしても わすれずに かならず しかえしする。",
+					"ko": "고치에 들어가 있는 사이에 받은 공격은 진화해도 잊지 않고 반드시 앙갚음한다.",
+					"fr": "Rancunier, il n’oublie aucune des attaques subies dans le cocon et se venge une fois qu’il a évolué.",
+					"de": "Es vergisst keinen Angriff, den es im Kokon erdulden musste. Nach der Entwicklung sinnt es auf Rache.",
+					"es": "Jamás olvida a quienes lo atacaron mientras estaba en su capullo. Cuando evoluciona, busca venganza.",
+					"it": "Non dimentica mai gli attacchi subiti dentro il bozzolo. Dopo l’evoluzione cerca di vendicarsi.",
+					"en": "It never forgets any attack it endured while in the cocoon. After evolution, it seeks payback.",
+					"ja": "マユに こもっている あいだに 受けた 攻撃は 進化しても 忘れずに かならず 仕返しする。",
+					"es-419": "Jamás olvida a quienes lo atacaron mientras estaba en su capullo. Cuando evoluciona, busca venganza."
+				}
+			}
+		},
+		{
+			"profileKey": "omega-ruby-alpha-sapphire",
+			"label": "Omega Ruby / Alpha Sapphire",
+			"appGameKeys": [
+				"omegaruby-national",
+				"omegaruby",
+				"alphasapphire-national",
+				"alphasapphire"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Cascoon",
+				"localizedNames": {
+					"ja-hrkt": "マユルド",
+					"ja-roma": "Mayuld",
+					"ko": "카스쿤",
+					"zh-hant": "盾甲繭",
+					"fr": "Blindalys",
+					"de": "Panekon",
+					"es": "Cascoon",
+					"it": "Cascoon",
+					"ja": "マユルド",
+					"zh-hans": "盾甲茧",
+					"es-419": "Cascoon"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 35,
+					"def": 55,
+					"spa": 25,
+					"spd": 25,
+					"spe": 15
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.7 m",
+				"weight": "11.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Ball",
+				"color": "Purple",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 268
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "original-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "extended-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "hisui",
+						"number": 21
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 266,
+								"natiId": 266,
+								"name": "Silcoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 267,
+								"natiId": 267,
+								"name": "Beautifly",
+								"method": "Level",
+								"value": 10
+							}
+						],
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 268,
+								"natiId": 268,
+								"name": "Cascoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 269,
+								"natiId": 269,
+								"name": "Dustox",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": null
+						},
+						{
+							"name": "Harden",
+							"level": 7,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Bug Bite",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Electroweb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Defense",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/268",
+						"fetchedAt": "2026-11-03T05:53:23.634Z",
+						"hash": "85113bfe625044315ae3812c71669eb151fbda931ffcdd6fb739dc4ffe407808"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/135/",
+						"fetchedAt": "2026-11-03T05:53:23.406Z",
+						"hash": "9eb8272d91e72ef1ac99ef55b2f6d7d574397b51f19748d90990908427f84609"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/",
+						"fetchedAt": "2026-11-03T05:53:23.666Z",
+						"hash": "a0cfcab20e5d738cea53c52a3cc4b5aa8481f6042ed440f5ad87b9b70f1601ed"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/encounters",
+						"fetchedAt": "2026-11-03T05:53:23.722Z",
+						"hash": "4557d7e5a903ac015d03789a6b7c243ff6cb74af8e74ac2fe4c7abf249e85ea5"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/268/",
+						"fetchedAt": "2026-11-03T05:53:23.797Z",
+						"hash": "42b4eb2eee642b4fa6b71ed9049e928d42a7009285c5f14f0c574c845dd67cbf"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"omegaruby-national": "Cascoon makes its protective cocoon by wrapping its body entirely with a fine silk from its mouth. Once the silk goes around its body, it hardens. This Pokémon prepares for its evolution inside the cocoon.",
+				"omegaruby": "Cascoon makes its protective cocoon by wrapping its body entirely with a fine silk from its mouth. Once the silk goes around its body, it hardens. This Pokémon prepares for its evolution inside the cocoon.",
+				"alphasapphire-national": "If it is attacked, Cascoon remains motionless however badly it may be hurt. It does so because if it were to move, its body would be weak upon evolution. This Pokémon will also not forget the pain it endured.",
+				"alphasapphire": "If it is attacked, Cascoon remains motionless however badly it may be hurt. It does so because if it were to move, its body would be weak upon evolution. This Pokémon will also not forget the pain it endured."
+			},
+			"localizedFlavorByGame": {
+				"omegaruby-national": {
+					"ja-hrkt": "マユルドの からだは くちから だした ほそい いとが からだを つつみ かたくなった もの。 マユの なかで しんかの じゅんびを している。",
+					"ko": "카스쿤의 몸은 입에서 나온 가는 실이 몸을 둘러싸 딱딱해진 것이다. 고치 안에서 진화의 준비를 하고 있다.",
+					"fr": "Blindalys fabrique son cocon protecteur en s’enveloppant dans la soie qui sort de sa bouche. Une fois la soie autour de son corps, elle se met à durcir. Ce Pokémon prépare son évolution à l’intérieur du cocon.",
+					"de": "Panekon baut seinen schützenden Kokon, indem es seinen Körper mit feiner Seide einwickelt, die aus seinem Mund austritt. Wenn sein Körper mit Seide bedeckt ist, wird diese hart. Im Kokon wartet es auf seine Entwicklung.",
+					"es": "Cascoon forma el capullo que lo protege enrollándose por completo en la seda que libera por la boca. Cuando está totalmente recubierto, se prepara para evolucionar en el interior del capullo.",
+					"it": "Cascoon crea il bozzolo protettivo avvolgendo interamente il proprio corpo con finissima seta secreta dalla bocca. Successivamente la seta si indurisce. A questo punto Cascoon si prepara all’evoluzione.",
+					"en": "Cascoon makes its protective cocoon by wrapping its body entirely with a fine silk from its mouth. Once the silk goes around its body, it hardens. This Pokémon prepares for its evolution inside the cocoon.",
+					"ja": "マユルドの 体は 口から 出した 細い 糸が 体を 包み 硬くなった もの。 マユの 中で 進化の 準備を している。",
+					"es-419": "Cascoon forma el capullo que lo protege enrollándose por completo en la seda que libera por la boca. Cuando está totalmente recubierto, se prepara para evolucionar en el interior del capullo."
+				},
+				"omegaruby": {
+					"ja-hrkt": "マユルドの からだは くちから だした ほそい いとが からだを つつみ かたくなった もの。 マユの なかで しんかの じゅんびを している。",
+					"ko": "카스쿤의 몸은 입에서 나온 가는 실이 몸을 둘러싸 딱딱해진 것이다. 고치 안에서 진화의 준비를 하고 있다.",
+					"fr": "Blindalys fabrique son cocon protecteur en s’enveloppant dans la soie qui sort de sa bouche. Une fois la soie autour de son corps, elle se met à durcir. Ce Pokémon prépare son évolution à l’intérieur du cocon.",
+					"de": "Panekon baut seinen schützenden Kokon, indem es seinen Körper mit feiner Seide einwickelt, die aus seinem Mund austritt. Wenn sein Körper mit Seide bedeckt ist, wird diese hart. Im Kokon wartet es auf seine Entwicklung.",
+					"es": "Cascoon forma el capullo que lo protege enrollándose por completo en la seda que libera por la boca. Cuando está totalmente recubierto, se prepara para evolucionar en el interior del capullo.",
+					"it": "Cascoon crea il bozzolo protettivo avvolgendo interamente il proprio corpo con finissima seta secreta dalla bocca. Successivamente la seta si indurisce. A questo punto Cascoon si prepara all’evoluzione.",
+					"en": "Cascoon makes its protective cocoon by wrapping its body entirely with a fine silk from its mouth. Once the silk goes around its body, it hardens. This Pokémon prepares for its evolution inside the cocoon.",
+					"ja": "マユルドの 体は 口から 出した 細い 糸が 体を 包み 硬くなった もの。 マユの 中で 進化の 準備を している。",
+					"es-419": "Cascoon forma el capullo que lo protege enrollándose por completo en la seda que libera por la boca. Cuando está totalmente recubierto, se prepara para evolucionar en el interior del capullo."
+				},
+				"alphasapphire-national": {
+					"ja-hrkt": "うごくと つよい からだに しんか できないので どんなに いためつけられても じっと している。 そのとき うけた いたみは ずっと わすれない。",
+					"ko": "움직이면 튼튼한 몸으로 진화할 수 없어서 아무리 괴롭혀도 가만히 있는다. 그때 느낀 아픔을 계속 잊지 않는다.",
+					"fr": "Lorsqu’il est attaqué, Blindalys reste immobile, même s’il a très mal. En effet, s’il bougeait, son corps serait affaibli lors de son évolution. En revanche, ce Pokémon n’oubliera pas la douleur endurée.",
+					"de": "Wenn es angegriffen wird, bewegt sich Panekon in keiner Weise, egal, wie schwer es dabei verletzt wird. Wenn es sich bewegen würde, wäre sein Körper zu schwach für seine Entwicklung. Die Schmerzen allerdings vergisst es nie.",
+					"es": "Si atacan a Cascoon, se queda inmóvil aunque le hayan hecho mucho daño, puesto que, si se moviera, perdería fuerzas para evolucionar. Nunca olvida el daño que le han hecho.",
+					"it": "In caso di aggressione Cascoon rimane immobile indipendentemente dalla violenza dell’attacco subito. Questo lo aiuta a evitare di indebolire il suo corpo in vista dell’evoluzione. Non dimentica mai il dolore provato.",
+					"en": "If it is attacked, Cascoon remains motionless however badly it may be hurt. It does so because if it were to move, its body would be weak upon evolution. This Pokémon will also not forget the pain it endured.",
+					"ja": "動くと 強い 体に 進化 できないので どんなに 痛めつけられても じっと している。 そのとき 受けた 痛みは ずっと 忘れない。",
+					"es-419": "Si atacan a Cascoon, se queda inmóvil aunque le hayan hecho mucho daño, puesto que, si se moviera, perdería fuerzas para evolucionar. Nunca olvida el daño que le han hecho."
+				},
+				"alphasapphire": {
+					"ja-hrkt": "うごくと つよい からだに しんか できないので どんなに いためつけられても じっと している。 そのとき うけた いたみは ずっと わすれない。",
+					"ko": "움직이면 튼튼한 몸으로 진화할 수 없어서 아무리 괴롭혀도 가만히 있는다. 그때 느낀 아픔을 계속 잊지 않는다.",
+					"fr": "Lorsqu’il est attaqué, Blindalys reste immobile, même s’il a très mal. En effet, s’il bougeait, son corps serait affaibli lors de son évolution. En revanche, ce Pokémon n’oubliera pas la douleur endurée.",
+					"de": "Wenn es angegriffen wird, bewegt sich Panekon in keiner Weise, egal, wie schwer es dabei verletzt wird. Wenn es sich bewegen würde, wäre sein Körper zu schwach für seine Entwicklung. Die Schmerzen allerdings vergisst es nie.",
+					"es": "Si atacan a Cascoon, se queda inmóvil aunque le hayan hecho mucho daño, puesto que, si se moviera, perdería fuerzas para evolucionar. Nunca olvida el daño que le han hecho.",
+					"it": "In caso di aggressione Cascoon rimane immobile indipendentemente dalla violenza dell’attacco subito. Questo lo aiuta a evitare di indebolire il suo corpo in vista dell’evoluzione. Non dimentica mai il dolore provato.",
+					"en": "If it is attacked, Cascoon remains motionless however badly it may be hurt. It does so because if it were to move, its body would be weak upon evolution. This Pokémon will also not forget the pain it endured.",
+					"ja": "動くと 強い 体に 進化 できないので どんなに 痛めつけられても じっと している。 そのとき 受けた 痛みは ずっと 忘れない。",
+					"es-419": "Si atacan a Cascoon, se queda inmóvil aunque le hayan hecho mucho daño, puesto que, si se moviera, perdería fuerzas para evolucionar. Nunca olvida el daño que le han hecho."
+				}
+			}
+		},
+		{
+			"profileKey": "sun-moon",
+			"label": "Sun / Moon",
+			"appGameKeys": [
+				"sun-alola",
+				"sun-melemele",
+				"sun-akala",
+				"sun-ulaula",
+				"sun-poni",
+				"moon-alola",
+				"moon-melemele",
+				"moon-akala",
+				"moon-ulaula",
+				"moon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Cascoon",
+				"localizedNames": {
+					"ja-hrkt": "マユルド",
+					"ja-roma": "Mayuld",
+					"ko": "카스쿤",
+					"zh-hant": "盾甲繭",
+					"fr": "Blindalys",
+					"de": "Panekon",
+					"es": "Cascoon",
+					"it": "Cascoon",
+					"ja": "マユルド",
+					"zh-hans": "盾甲茧",
+					"es-419": "Cascoon"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 35,
+					"def": 55,
+					"spa": 25,
+					"spd": 25,
+					"spe": 15
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.7 m",
+				"weight": "11.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Ball",
+				"color": "Purple",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 268
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "original-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "extended-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "hisui",
+						"number": 21
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 266,
+								"natiId": 266,
+								"name": "Silcoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 267,
+								"natiId": 267,
+								"name": "Beautifly",
+								"method": "Level",
+								"value": 10
+							}
+						],
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 268,
+								"natiId": 268,
+								"name": "Cascoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 269,
+								"natiId": 269,
+								"name": "Dustox",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Harden",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/268",
+						"fetchedAt": "2026-11-03T05:53:23.634Z",
+						"hash": "85113bfe625044315ae3812c71669eb151fbda931ffcdd6fb739dc4ffe407808"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/135/",
+						"fetchedAt": "2026-11-03T05:53:23.406Z",
+						"hash": "9eb8272d91e72ef1ac99ef55b2f6d7d574397b51f19748d90990908427f84609"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/",
+						"fetchedAt": "2026-11-03T05:53:23.666Z",
+						"hash": "a0cfcab20e5d738cea53c52a3cc4b5aa8481f6042ed440f5ad87b9b70f1601ed"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/encounters",
+						"fetchedAt": "2026-11-03T05:53:23.722Z",
+						"hash": "4557d7e5a903ac015d03789a6b7c243ff6cb74af8e74ac2fe4c7abf249e85ea5"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/268/",
+						"fetchedAt": "2026-11-03T05:53:23.797Z",
+						"hash": "42b4eb2eee642b4fa6b71ed9049e928d42a7009285c5f14f0c574c845dd67cbf"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sun-alola": "",
+				"sun-melemele": "",
+				"sun-akala": "",
+				"sun-ulaula": "",
+				"sun-poni": "",
+				"moon-alola": "",
+				"moon-melemele": "",
+				"moon-akala": "",
+				"moon-ulaula": "",
+				"moon-poni": ""
+			},
+			"localizedFlavorByGame": {
+				"sun-alola": {},
+				"sun-melemele": {},
+				"sun-akala": {},
+				"sun-ulaula": {},
+				"sun-poni": {},
+				"moon-alola": {},
+				"moon-melemele": {},
+				"moon-akala": {},
+				"moon-ulaula": {},
+				"moon-poni": {}
+			}
+		},
+		{
+			"profileKey": "ultra-sun-ultra-moon",
+			"label": "Ultra Sun / Ultra Moon",
+			"appGameKeys": [
+				"ultrasun-alola",
+				"ultrasun-melemele",
+				"ultrasun-akala",
+				"ultrasun-ulaula",
+				"ultrasun-poni",
+				"ultramoon-alola",
+				"ultramoon-melemele",
+				"ultramoon-akala",
+				"ultramoon-ulaula",
+				"ultramoon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Cascoon",
+				"localizedNames": {
+					"ja-hrkt": "マユルド",
+					"ja-roma": "Mayuld",
+					"ko": "카스쿤",
+					"zh-hant": "盾甲繭",
+					"fr": "Blindalys",
+					"de": "Panekon",
+					"es": "Cascoon",
+					"it": "Cascoon",
+					"ja": "マユルド",
+					"zh-hans": "盾甲茧",
+					"es-419": "Cascoon"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 35,
+					"def": 55,
+					"spa": 25,
+					"spd": 25,
+					"spe": 15
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.7 m",
+				"weight": "11.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Ball",
+				"color": "Purple",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 268
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "original-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "extended-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "hisui",
+						"number": 21
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 266,
+								"natiId": 266,
+								"name": "Silcoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 267,
+								"natiId": 267,
+								"name": "Beautifly",
+								"method": "Level",
+								"value": 10
+							}
+						],
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 268,
+								"natiId": 268,
+								"name": "Cascoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 269,
+								"natiId": 269,
+								"name": "Dustox",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Harden",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Bug Bite",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Electroweb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Defense",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/268",
+						"fetchedAt": "2026-11-03T05:53:23.634Z",
+						"hash": "85113bfe625044315ae3812c71669eb151fbda931ffcdd6fb739dc4ffe407808"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/135/",
+						"fetchedAt": "2026-11-03T05:53:23.406Z",
+						"hash": "9eb8272d91e72ef1ac99ef55b2f6d7d574397b51f19748d90990908427f84609"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/",
+						"fetchedAt": "2026-11-03T05:53:23.666Z",
+						"hash": "a0cfcab20e5d738cea53c52a3cc4b5aa8481f6042ed440f5ad87b9b70f1601ed"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/encounters",
+						"fetchedAt": "2026-11-03T05:53:23.722Z",
+						"hash": "4557d7e5a903ac015d03789a6b7c243ff6cb74af8e74ac2fe4c7abf249e85ea5"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/268/",
+						"fetchedAt": "2026-11-03T05:53:23.797Z",
+						"hash": "42b4eb2eee642b4fa6b71ed9049e928d42a7009285c5f14f0c574c845dd67cbf"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"ultrasun-alola": "",
+				"ultrasun-melemele": "",
+				"ultrasun-akala": "",
+				"ultrasun-ulaula": "",
+				"ultrasun-poni": "",
+				"ultramoon-alola": "",
+				"ultramoon-melemele": "",
+				"ultramoon-akala": "",
+				"ultramoon-ulaula": "",
+				"ultramoon-poni": ""
+			},
+			"localizedFlavorByGame": {
+				"ultrasun-alola": {},
+				"ultrasun-melemele": {},
+				"ultrasun-akala": {},
+				"ultrasun-ulaula": {},
+				"ultrasun-poni": {},
+				"ultramoon-alola": {},
+				"ultramoon-melemele": {},
+				"ultramoon-akala": {},
+				"ultramoon-ulaula": {},
+				"ultramoon-poni": {}
+			}
+		},
+		{
+			"profileKey": "lets-go-pikachu-lets-go-eevee",
+			"label": "Let's Go Pikachu / Eevee",
+			"appGameKeys": [
+				"letsgopikachu",
+				"letsgoeevee"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Cascoon",
+				"localizedNames": {
+					"ja-hrkt": "マユルド",
+					"ja-roma": "Mayuld",
+					"ko": "카스쿤",
+					"zh-hant": "盾甲繭",
+					"fr": "Blindalys",
+					"de": "Panekon",
+					"es": "Cascoon",
+					"it": "Cascoon",
+					"ja": "マユルド",
+					"zh-hans": "盾甲茧",
+					"es-419": "Cascoon"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 35,
+					"def": 55,
+					"spa": 25,
+					"spd": 25,
+					"spe": 15
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.7 m",
+				"weight": "11.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Ball",
+				"color": "Purple",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 268
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "original-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "extended-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "hisui",
+						"number": 21
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 266,
+								"natiId": 266,
+								"name": "Silcoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 267,
+								"natiId": 267,
+								"name": "Beautifly",
+								"method": "Level",
+								"value": 10
+							}
+						],
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 268,
+								"natiId": 268,
+								"name": "Cascoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 269,
+								"natiId": 269,
+								"name": "Dustox",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/268",
+						"fetchedAt": "2026-11-03T05:53:23.634Z",
+						"hash": "85113bfe625044315ae3812c71669eb151fbda931ffcdd6fb739dc4ffe407808"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/135/",
+						"fetchedAt": "2026-11-03T05:53:23.406Z",
+						"hash": "9eb8272d91e72ef1ac99ef55b2f6d7d574397b51f19748d90990908427f84609"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/",
+						"fetchedAt": "2026-11-03T05:53:23.666Z",
+						"hash": "a0cfcab20e5d738cea53c52a3cc4b5aa8481f6042ed440f5ad87b9b70f1601ed"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/encounters",
+						"fetchedAt": "2026-11-03T05:53:23.722Z",
+						"hash": "4557d7e5a903ac015d03789a6b7c243ff6cb74af8e74ac2fe4c7abf249e85ea5"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/268/",
+						"fetchedAt": "2026-11-03T05:53:23.797Z",
+						"hash": "42b4eb2eee642b4fa6b71ed9049e928d42a7009285c5f14f0c574c845dd67cbf"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"letsgopikachu": "",
+				"letsgoeevee": ""
+			},
+			"localizedFlavorByGame": {
+				"letsgopikachu": {},
+				"letsgoeevee": {}
+			}
+		},
+		{
+			"profileKey": "sword-shield",
+			"label": "Sword / Shield",
+			"appGameKeys": [
+				"sword",
+				"shield"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Cascoon",
+				"localizedNames": {
+					"ja-hrkt": "マユルド",
+					"ja-roma": "Mayuld",
+					"ko": "카스쿤",
+					"zh-hant": "盾甲繭",
+					"fr": "Blindalys",
+					"de": "Panekon",
+					"es": "Cascoon",
+					"it": "Cascoon",
+					"ja": "マユルド",
+					"zh-hans": "盾甲茧",
+					"es-419": "Cascoon"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 35,
+					"def": 55,
+					"spa": 25,
+					"spd": 25,
+					"spe": 15
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.7 m",
+				"weight": "11.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Ball",
+				"color": "Purple",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 268
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "original-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "extended-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "hisui",
+						"number": 21
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 266,
+								"natiId": 266,
+								"name": "Silcoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 267,
+								"natiId": 267,
+								"name": "Beautifly",
+								"method": "Level",
+								"value": 10
+							}
+						],
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 268,
+								"natiId": 268,
+								"name": "Cascoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 269,
+								"natiId": 269,
+								"name": "Dustox",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/268",
+						"fetchedAt": "2026-11-03T05:53:23.634Z",
+						"hash": "85113bfe625044315ae3812c71669eb151fbda931ffcdd6fb739dc4ffe407808"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/135/",
+						"fetchedAt": "2026-11-03T05:53:23.406Z",
+						"hash": "9eb8272d91e72ef1ac99ef55b2f6d7d574397b51f19748d90990908427f84609"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/",
+						"fetchedAt": "2026-11-03T05:53:23.666Z",
+						"hash": "a0cfcab20e5d738cea53c52a3cc4b5aa8481f6042ed440f5ad87b9b70f1601ed"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/encounters",
+						"fetchedAt": "2026-11-03T05:53:23.722Z",
+						"hash": "4557d7e5a903ac015d03789a6b7c243ff6cb74af8e74ac2fe4c7abf249e85ea5"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/268/",
+						"fetchedAt": "2026-11-03T05:53:23.797Z",
+						"hash": "42b4eb2eee642b4fa6b71ed9049e928d42a7009285c5f14f0c574c845dd67cbf"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sword": "",
+				"shield": ""
+			},
+			"localizedFlavorByGame": {
+				"sword": {},
+				"shield": {}
+			}
+		},
+		{
+			"profileKey": "the-isle-of-armor",
+			"label": "The Isle of Armor",
+			"appGameKeys": [
+				"swordioa",
+				"shieldioa"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Cascoon",
+				"localizedNames": {
+					"ja-hrkt": "マユルド",
+					"ja-roma": "Mayuld",
+					"ko": "카스쿤",
+					"zh-hant": "盾甲繭",
+					"fr": "Blindalys",
+					"de": "Panekon",
+					"es": "Cascoon",
+					"it": "Cascoon",
+					"ja": "マユルド",
+					"zh-hans": "盾甲茧",
+					"es-419": "Cascoon"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 35,
+					"def": 55,
+					"spa": 25,
+					"spd": 25,
+					"spe": 15
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.7 m",
+				"weight": "11.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Ball",
+				"color": "Purple",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 268
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "original-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "extended-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "hisui",
+						"number": 21
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 266,
+								"natiId": 266,
+								"name": "Silcoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 267,
+								"natiId": 267,
+								"name": "Beautifly",
+								"method": "Level",
+								"value": 10
+							}
+						],
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 268,
+								"natiId": 268,
+								"name": "Cascoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 269,
+								"natiId": 269,
+								"name": "Dustox",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/268",
+						"fetchedAt": "2026-11-03T05:53:23.634Z",
+						"hash": "85113bfe625044315ae3812c71669eb151fbda931ffcdd6fb739dc4ffe407808"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/135/",
+						"fetchedAt": "2026-11-03T05:53:23.406Z",
+						"hash": "9eb8272d91e72ef1ac99ef55b2f6d7d574397b51f19748d90990908427f84609"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/",
+						"fetchedAt": "2026-11-03T05:53:23.666Z",
+						"hash": "a0cfcab20e5d738cea53c52a3cc4b5aa8481f6042ed440f5ad87b9b70f1601ed"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/encounters",
+						"fetchedAt": "2026-11-03T05:53:23.722Z",
+						"hash": "4557d7e5a903ac015d03789a6b7c243ff6cb74af8e74ac2fe4c7abf249e85ea5"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/268/",
+						"fetchedAt": "2026-11-03T05:53:23.797Z",
+						"hash": "42b4eb2eee642b4fa6b71ed9049e928d42a7009285c5f14f0c574c845dd67cbf"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordioa": "",
+				"shieldioa": ""
+			},
+			"localizedFlavorByGame": {
+				"swordioa": {},
+				"shieldioa": {}
+			}
+		},
+		{
+			"profileKey": "the-crown-tundra",
+			"label": "The Crown Tundra",
+			"appGameKeys": [
+				"swordct",
+				"shieldct"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Cascoon",
+				"localizedNames": {
+					"ja-hrkt": "マユルド",
+					"ja-roma": "Mayuld",
+					"ko": "카스쿤",
+					"zh-hant": "盾甲繭",
+					"fr": "Blindalys",
+					"de": "Panekon",
+					"es": "Cascoon",
+					"it": "Cascoon",
+					"ja": "マユルド",
+					"zh-hans": "盾甲茧",
+					"es-419": "Cascoon"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 35,
+					"def": 55,
+					"spa": 25,
+					"spd": 25,
+					"spe": 15
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.7 m",
+				"weight": "11.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Ball",
+				"color": "Purple",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 268
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "original-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "extended-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "hisui",
+						"number": 21
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 266,
+								"natiId": 266,
+								"name": "Silcoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 267,
+								"natiId": 267,
+								"name": "Beautifly",
+								"method": "Level",
+								"value": 10
+							}
+						],
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 268,
+								"natiId": 268,
+								"name": "Cascoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 269,
+								"natiId": 269,
+								"name": "Dustox",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/268",
+						"fetchedAt": "2026-11-03T05:53:23.634Z",
+						"hash": "85113bfe625044315ae3812c71669eb151fbda931ffcdd6fb739dc4ffe407808"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/135/",
+						"fetchedAt": "2026-11-03T05:53:23.406Z",
+						"hash": "9eb8272d91e72ef1ac99ef55b2f6d7d574397b51f19748d90990908427f84609"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/",
+						"fetchedAt": "2026-11-03T05:53:23.666Z",
+						"hash": "a0cfcab20e5d738cea53c52a3cc4b5aa8481f6042ed440f5ad87b9b70f1601ed"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/encounters",
+						"fetchedAt": "2026-11-03T05:53:23.722Z",
+						"hash": "4557d7e5a903ac015d03789a6b7c243ff6cb74af8e74ac2fe4c7abf249e85ea5"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/268/",
+						"fetchedAt": "2026-11-03T05:53:23.797Z",
+						"hash": "42b4eb2eee642b4fa6b71ed9049e928d42a7009285c5f14f0c574c845dd67cbf"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordct": "",
+				"shieldct": ""
+			},
+			"localizedFlavorByGame": {
+				"swordct": {},
+				"shieldct": {}
+			}
+		},
+		{
+			"profileKey": "brilliant-diamond-shining-pearl",
+			"label": "Brilliant Diamond / Shining Pearl",
+			"appGameKeys": [
+				"brilliantdiamond-national",
+				"brilliantdiamond",
+				"shiningpearl-national",
+				"shiningpearl"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Cascoon",
+				"localizedNames": {
+					"ja-hrkt": "マユルド",
+					"ja-roma": "Mayuld",
+					"ko": "카스쿤",
+					"zh-hant": "盾甲繭",
+					"fr": "Blindalys",
+					"de": "Panekon",
+					"es": "Cascoon",
+					"it": "Cascoon",
+					"ja": "マユルド",
+					"zh-hans": "盾甲茧",
+					"es-419": "Cascoon"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 35,
+					"def": 55,
+					"spa": 25,
+					"spd": 25,
+					"spe": 15
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.7 m",
+				"weight": "11.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Ball",
+				"color": "Purple",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 268
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "original-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "extended-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "hisui",
+						"number": 21
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 266,
+								"natiId": 266,
+								"name": "Silcoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 267,
+								"natiId": 267,
+								"name": "Beautifly",
+								"method": "Level",
+								"value": 10
+							}
+						],
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 268,
+								"natiId": 268,
+								"name": "Cascoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 269,
+								"natiId": 269,
+								"name": "Dustox",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Harden",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/268",
+						"fetchedAt": "2026-11-03T05:53:23.634Z",
+						"hash": "85113bfe625044315ae3812c71669eb151fbda931ffcdd6fb739dc4ffe407808"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/135/",
+						"fetchedAt": "2026-11-03T05:53:23.406Z",
+						"hash": "9eb8272d91e72ef1ac99ef55b2f6d7d574397b51f19748d90990908427f84609"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/",
+						"fetchedAt": "2026-11-03T05:53:23.666Z",
+						"hash": "a0cfcab20e5d738cea53c52a3cc4b5aa8481f6042ed440f5ad87b9b70f1601ed"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/encounters",
+						"fetchedAt": "2026-11-03T05:53:23.722Z",
+						"hash": "4557d7e5a903ac015d03789a6b7c243ff6cb74af8e74ac2fe4c7abf249e85ea5"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/268/",
+						"fetchedAt": "2026-11-03T05:53:23.797Z",
+						"hash": "42b4eb2eee642b4fa6b71ed9049e928d42a7009285c5f14f0c574c845dd67cbf"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"brilliantdiamond-national": "",
+				"brilliantdiamond": "",
+				"shiningpearl-national": "",
+				"shiningpearl": ""
+			},
+			"localizedFlavorByGame": {
+				"brilliantdiamond-national": {},
+				"brilliantdiamond": {},
+				"shiningpearl-national": {},
+				"shiningpearl": {}
+			}
+		},
+		{
+			"profileKey": "legends-arceus",
+			"label": "Legends: Arceus",
+			"appGameKeys": [
+				"legendsarceus"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Cascoon",
+				"localizedNames": {
+					"ja-hrkt": "マユルド",
+					"ja-roma": "Mayuld",
+					"ko": "카스쿤",
+					"zh-hant": "盾甲繭",
+					"fr": "Blindalys",
+					"de": "Panekon",
+					"es": "Cascoon",
+					"it": "Cascoon",
+					"ja": "マユルド",
+					"zh-hans": "盾甲茧",
+					"es-419": "Cascoon"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 35,
+					"def": 55,
+					"spa": 25,
+					"spd": 25,
+					"spe": 15
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.7 m",
+				"weight": "11.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Ball",
+				"color": "Purple",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 268
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "original-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "extended-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "hisui",
+						"number": 21
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 266,
+								"natiId": 266,
+								"name": "Silcoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 267,
+								"natiId": 267,
+								"name": "Beautifly",
+								"method": "Level",
+								"value": 10
+							}
+						],
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 268,
+								"natiId": 268,
+								"name": "Cascoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 269,
+								"natiId": 269,
+								"name": "Dustox",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Iron Defense",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Poison Sting",
+							"level": 1,
+							"order": null
+						},
+						{
+							"name": "Tackle",
+							"level": 6,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/268",
+						"fetchedAt": "2026-11-03T05:53:23.634Z",
+						"hash": "85113bfe625044315ae3812c71669eb151fbda931ffcdd6fb739dc4ffe407808"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/135/",
+						"fetchedAt": "2026-11-03T05:53:23.406Z",
+						"hash": "9eb8272d91e72ef1ac99ef55b2f6d7d574397b51f19748d90990908427f84609"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/",
+						"fetchedAt": "2026-11-03T05:53:23.666Z",
+						"hash": "a0cfcab20e5d738cea53c52a3cc4b5aa8481f6042ed440f5ad87b9b70f1601ed"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/encounters",
+						"fetchedAt": "2026-11-03T05:53:23.722Z",
+						"hash": "4557d7e5a903ac015d03789a6b7c243ff6cb74af8e74ac2fe4c7abf249e85ea5"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/268/",
+						"fetchedAt": "2026-11-03T05:53:23.797Z",
+						"hash": "42b4eb2eee642b4fa6b71ed9049e928d42a7009285c5f14f0c574c845dd67cbf"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendsarceus": "The silk coating its body is thin but sufficiently strong. Cascoon's silk has a luster and texture superior to that of Silcoon's, and clothes made using Cascoon silk are regarded as top-notch."
+			},
+			"localizedFlavorByGame": {
+				"legendsarceus": {
+					"en": "The silk coating its body is thin but sufficiently strong. Cascoon's silk has a luster and texture superior to that of Silcoon's, and clothes made using Cascoon silk are regarded as top-notch."
+				}
+			}
+		},
+		{
+			"profileKey": "scarlet-violet",
+			"label": "Scarlet / Violet",
+			"appGameKeys": [
+				"scarlet",
+				"violet"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Cascoon",
+				"localizedNames": {
+					"ja-hrkt": "マユルド",
+					"ja-roma": "Mayuld",
+					"ko": "카스쿤",
+					"zh-hant": "盾甲繭",
+					"fr": "Blindalys",
+					"de": "Panekon",
+					"es": "Cascoon",
+					"it": "Cascoon",
+					"ja": "マユルド",
+					"zh-hans": "盾甲茧",
+					"es-419": "Cascoon"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 35,
+					"def": 55,
+					"spa": 25,
+					"spd": 25,
+					"spe": 15
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.7 m",
+				"weight": "11.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Ball",
+				"color": "Purple",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 268
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "original-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "extended-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "hisui",
+						"number": 21
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 266,
+								"natiId": 266,
+								"name": "Silcoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 267,
+								"natiId": 267,
+								"name": "Beautifly",
+								"method": "Level",
+								"value": 10
+							}
+						],
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 268,
+								"natiId": 268,
+								"name": "Cascoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 269,
+								"natiId": 269,
+								"name": "Dustox",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/268",
+						"fetchedAt": "2026-11-03T05:53:23.634Z",
+						"hash": "85113bfe625044315ae3812c71669eb151fbda931ffcdd6fb739dc4ffe407808"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/135/",
+						"fetchedAt": "2026-11-03T05:53:23.406Z",
+						"hash": "9eb8272d91e72ef1ac99ef55b2f6d7d574397b51f19748d90990908427f84609"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/",
+						"fetchedAt": "2026-11-03T05:53:23.666Z",
+						"hash": "a0cfcab20e5d738cea53c52a3cc4b5aa8481f6042ed440f5ad87b9b70f1601ed"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/encounters",
+						"fetchedAt": "2026-11-03T05:53:23.722Z",
+						"hash": "4557d7e5a903ac015d03789a6b7c243ff6cb74af8e74ac2fe4c7abf249e85ea5"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/268/",
+						"fetchedAt": "2026-11-03T05:53:23.797Z",
+						"hash": "42b4eb2eee642b4fa6b71ed9049e928d42a7009285c5f14f0c574c845dd67cbf"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlet": "",
+				"violet": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlet": {},
+				"violet": {}
+			}
+		},
+		{
+			"profileKey": "the-teal-mask",
+			"label": "The Teal Mask",
+			"appGameKeys": [
+				"scarlettm",
+				"violettm"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Cascoon",
+				"localizedNames": {
+					"ja-hrkt": "マユルド",
+					"ja-roma": "Mayuld",
+					"ko": "카스쿤",
+					"zh-hant": "盾甲繭",
+					"fr": "Blindalys",
+					"de": "Panekon",
+					"es": "Cascoon",
+					"it": "Cascoon",
+					"ja": "マユルド",
+					"zh-hans": "盾甲茧",
+					"es-419": "Cascoon"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 35,
+					"def": 55,
+					"spa": 25,
+					"spd": 25,
+					"spe": 15
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.7 m",
+				"weight": "11.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Ball",
+				"color": "Purple",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 268
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "original-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "extended-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "hisui",
+						"number": 21
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 266,
+								"natiId": 266,
+								"name": "Silcoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 267,
+								"natiId": 267,
+								"name": "Beautifly",
+								"method": "Level",
+								"value": 10
+							}
+						],
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 268,
+								"natiId": 268,
+								"name": "Cascoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 269,
+								"natiId": 269,
+								"name": "Dustox",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/268",
+						"fetchedAt": "2026-11-03T05:53:23.634Z",
+						"hash": "85113bfe625044315ae3812c71669eb151fbda931ffcdd6fb739dc4ffe407808"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/135/",
+						"fetchedAt": "2026-11-03T05:53:23.406Z",
+						"hash": "9eb8272d91e72ef1ac99ef55b2f6d7d574397b51f19748d90990908427f84609"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/",
+						"fetchedAt": "2026-11-03T05:53:23.666Z",
+						"hash": "a0cfcab20e5d738cea53c52a3cc4b5aa8481f6042ed440f5ad87b9b70f1601ed"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/encounters",
+						"fetchedAt": "2026-11-03T05:53:23.722Z",
+						"hash": "4557d7e5a903ac015d03789a6b7c243ff6cb74af8e74ac2fe4c7abf249e85ea5"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/268/",
+						"fetchedAt": "2026-11-03T05:53:23.797Z",
+						"hash": "42b4eb2eee642b4fa6b71ed9049e928d42a7009285c5f14f0c574c845dd67cbf"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlettm": "",
+				"violettm": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlettm": {},
+				"violettm": {}
+			}
+		},
+		{
+			"profileKey": "the-indigo-disk",
+			"label": "The Indigo Disk",
+			"appGameKeys": [
+				"scarletid",
+				"violetid"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Cascoon",
+				"localizedNames": {
+					"ja-hrkt": "マユルド",
+					"ja-roma": "Mayuld",
+					"ko": "카스쿤",
+					"zh-hant": "盾甲繭",
+					"fr": "Blindalys",
+					"de": "Panekon",
+					"es": "Cascoon",
+					"it": "Cascoon",
+					"ja": "マユルド",
+					"zh-hans": "盾甲茧",
+					"es-419": "Cascoon"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 35,
+					"def": 55,
+					"spa": 25,
+					"spd": 25,
+					"spe": 15
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.7 m",
+				"weight": "11.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Ball",
+				"color": "Purple",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 268
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "original-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "extended-sinnoh",
+						"number": 51
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 17
+					},
+					{
+						"pokedex": "hisui",
+						"number": 21
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 266,
+								"natiId": 266,
+								"name": "Silcoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 267,
+								"natiId": 267,
+								"name": "Beautifly",
+								"method": "Level",
+								"value": 10
+							}
+						],
+						[
+							{
+								"id": 265,
+								"natiId": 265,
+								"name": "Wurmple"
+							},
+							{
+								"id": 268,
+								"natiId": 268,
+								"name": "Cascoon",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 269,
+								"natiId": 269,
+								"name": "Dustox",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/268",
+						"fetchedAt": "2026-11-03T05:53:23.634Z",
+						"hash": "85113bfe625044315ae3812c71669eb151fbda931ffcdd6fb739dc4ffe407808"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/135/",
+						"fetchedAt": "2026-11-03T05:53:23.406Z",
+						"hash": "9eb8272d91e72ef1ac99ef55b2f6d7d574397b51f19748d90990908427f84609"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/",
+						"fetchedAt": "2026-11-03T05:53:23.666Z",
+						"hash": "a0cfcab20e5d738cea53c52a3cc4b5aa8481f6042ed440f5ad87b9b70f1601ed"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/268/encounters",
+						"fetchedAt": "2026-11-03T05:53:23.722Z",
+						"hash": "4557d7e5a903ac015d03789a6b7c243ff6cb74af8e74ac2fe4c7abf249e85ea5"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/268/",
+						"fetchedAt": "2026-11-03T05:53:23.797Z",
+						"hash": "42b4eb2eee642b4fa6b71ed9049e928d42a7009285c5f14f0c574c845dd67cbf"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarletid": "",
+				"violetid": ""
+			},
+			"localizedFlavorByGame": {
+				"scarletid": {},
+				"violetid": {}
+			}
+		}
+	]
+}

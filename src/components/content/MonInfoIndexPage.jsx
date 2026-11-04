@@ -1,17 +1,23 @@
 import { useMemo, useState } from "react";
-import { assetPath } from "../../utils/assetPath.js";
 import { navigateToState } from "../../react-bridge/navigation.js";
 import {
 	getHomeDexMons,
 	pad4,
 	pickPreferredGameForMon,
 } from "../../react-bridge/monInfo.js";
+import {
+	advancePokemonSpriteFallback,
+	pokemonSpriteCandidates,
+} from "../../utils/pokemonSprite.js";
 
 const INITIAL_MON_COUNT = 120;
 const MON_COUNT_INCREMENT = 120;
 
 export function MonInfoIndexPage() {
-	const mons = useMemo(() => getHomeDexMons(), []);
+	const homeDex = window.DATA?.dex?.home;
+	// HOME is loaded lazily for the dedicated Info route. Rebuild the list when
+	// that registry array arrives instead of preserving an early empty snapshot.
+	const mons = useMemo(() => getHomeDexMons(homeDex), [homeDex]);
 	const [searchQuery, setSearchQuery] = useState("");
 	const [visibleMonCount, setVisibleMonCount] = useState(INITIAL_MON_COUNT);
 	const normalizedQuery = searchQuery.trim().toLowerCase();
@@ -61,6 +67,14 @@ export function MonInfoIndexPage() {
 				{visibleMons.map((mon) => {
 					const paddedId = pad4(mon.natiId);
 					const displayName = mon.name || `#${paddedId}`;
+					const preferredGameKey = pickPreferredGameForMon(
+						mon.natiId,
+						null,
+					);
+					const homeSpriteCandidates = pokemonSpriteCandidates({
+						nationalDexId: mon.natiId,
+						allGames: true,
+					});
 					return (
 						<button
 							key={mon.natiId}
@@ -73,10 +87,7 @@ export function MonInfoIndexPage() {
 									gameKey: null,
 									sectionId: null,
 									monInfoId: mon.natiId,
-									monInfoGameKey: pickPreferredGameForMon(
-										mon.natiId,
-										null,
-									),
+									monInfoGameKey: preferredGameKey,
 									monInfoForm: null,
 									toolsKey: "info",
 								})
@@ -85,14 +96,19 @@ export function MonInfoIndexPage() {
 							<div className="moninfo-card-id">#{paddedId}</div>
 							<img
 								className="moninfo-card-img"
-								src={assetPath(
-									`sprites/pokemon_home/base-front/${paddedId}.png`,
-								)}
+								src={homeSpriteCandidates[0]}
 								alt={`${displayName}, National Dex ${mon.natiId}`}
 								width="128"
 								height="128"
 								loading="lazy"
 								decoding="async"
+								data-sprite-candidate-index="0"
+								onError={(event) =>
+									advancePokemonSpriteFallback(
+										event,
+										homeSpriteCandidates,
+									)
+								}
 							/>
 							<div className="moninfo-card-name">
 								{displayName}

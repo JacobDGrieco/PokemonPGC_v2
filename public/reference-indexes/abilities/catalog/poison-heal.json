@@ -1,0 +1,842 @@
+{
+	"schemaVersion": 1,
+	"id": 90,
+	"slug": "poison-heal",
+	"name": "Poison Heal",
+	"names": {
+		"de": "Aufheber",
+		"en": "Poison Heal",
+		"es": "Antídoto",
+		"es-419": "Antídoto",
+		"fr": "Soin Poison",
+		"it": "Velencura",
+		"ja": "ポイズンヒール",
+		"ja-hrkt": "ポイズンヒール",
+		"ko": "포이즌힐",
+		"zh-hans": "毒疗",
+		"zh-hant": "毒療"
+	},
+	"generation": 4,
+	"isMainSeries": true,
+	"effectEntries": [
+		{
+			"language": "de",
+			"effect": "Wenn ein Pokémon mit dieser Fähigkeit vergiftet ist, erhält es anstatt Schaden zu erleiden 1/8 seiner maximalen KP nach jeder Runde. Das gilt auch für schwere Vergiftung.",
+			"shortEffect": "Heilt jede Runde 1/8 der max KP wenn vergiftet."
+		},
+		{
+			"language": "en",
+			"effect": "If this Pokémon is poisoned, it will heal for 1/8 of its maximum HP after each turn rather than taking damage. This includes bad poison.",
+			"shortEffect": "Heals for 1/8 max HP after each turn when poisoned in place of damage."
+		},
+		{
+			"language": "fr",
+			"effect": "Si ce Pokémon est empoisonné, il sera soigné d'1/8 de ses PV maximum après chaque tour plutôt que de subir des dégâts. Cela inclut le poison grave.",
+			"shortEffect": "Soigne 1/8 des PV max après chaque tour quand empoisonné à la place de recevoir des dégâts."
+		}
+	],
+	"effectChanges": [
+		{
+			"versionGroup": "black-white",
+			"effectEntries": [
+				{
+					"language": "de",
+					"effect": "Vergiftung schadet dem Pokémon außerhalb vom Kampf.",
+					"shortEffect": ""
+				},
+				{
+					"language": "en",
+					"effect": "If this Pokémon is poisoned, it will heal for 1/8 of its maximum HP after each turn rather than taking damage. This includes bad poison. This ability does not prevent poison damage while outside of a battle.",
+					"shortEffect": ""
+				},
+				{
+					"language": "fr",
+					"effect": "Le poison continue d'infliger des dégâts au Pokémon en dehors du combat.",
+					"shortEffect": ""
+				}
+			]
+		}
+	],
+	"descriptions": [
+		{
+			"versionGroup": "black-2-white-2",
+			"language": "en",
+			"text": "Restores HP if the Pokémon is poisoned."
+		},
+		{
+			"versionGroup": "black-2-white-2",
+			"language": "fr",
+			"text": "Restaure des PV si le Pokémon est empoisonné."
+		},
+		{
+			"versionGroup": "black-white",
+			"language": "en",
+			"text": "Restores HP if the Pokémon is poisoned."
+		},
+		{
+			"versionGroup": "black-white",
+			"language": "fr",
+			"text": "Restaure des PV si le Pokémon est empoisonné."
+		},
+		{
+			"versionGroup": "diamond-pearl",
+			"language": "en",
+			"text": "Restores HP if the Pokémon is poisoned."
+		},
+		{
+			"versionGroup": "diamond-pearl",
+			"language": "fr",
+			"text": "Restaure des PV si le Pokémon est empoisonné."
+		},
+		{
+			"versionGroup": "heartgold-soulsilver",
+			"language": "en",
+			"text": "Restores HP if the Pokémon is poisoned."
+		},
+		{
+			"versionGroup": "heartgold-soulsilver",
+			"language": "fr",
+			"text": "Restaure des PV si le Pokémon est empoisonné."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "de",
+			"text": "Das Pokémon erleidet keinen Schaden durch Vergiftung, sondern regeneriert KP."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "en",
+			"text": "Restores HP if the Pokémon is poisoned instead of losing HP."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "es",
+			"text": "Si el Pokémon resulta envenenado, recupera PS en vez de perderlos."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "es-419",
+			"text": "Si el Pokémon resulta envenenado, recupera PS en vez de perderlos."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "fr",
+			"text": "Quand le Pokémon est empoisonné, il regagne des PV au lieu d’en perdre."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "it",
+			"text": "Il Pokémon recupera PS anziché perderli se è avvelenato."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "ja",
+			"text": "どく状態に なると ＨＰが 減らずに 増えていく。"
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "ja-hrkt",
+			"text": "どくじょうたいに なると ＨＰが へらずに ふえていく。"
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "ko",
+			"text": "독 상태가 되면 HP가 줄지 않고 증가한다."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "zh-hans",
+			"text": "变为中毒状态时， HP不会减少，反而会增加起来。"
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "zh-hant",
+			"text": "陷入中毒狀態時， HP不會減少，反而會漸漸增加。"
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "de",
+			"text": "Heilt bei Vergiftungen KP."
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "en",
+			"text": "Restores HP if the Pokémon is poisoned."
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "es",
+			"text": "Recupera PS si el Pokémon ha sido envenenado."
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "es-419",
+			"text": "Recupera PS si el Pokémon ha sido envenenado."
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "fr",
+			"text": "Restaure des PV si le Pokémon est empoisonné."
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "it",
+			"text": "Ridà PS se il Pokémon è avvelenato."
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "ja",
+			"text": "どく状態に なると ＨＰを 回復する。"
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "ja-hrkt",
+			"text": "どくじょうたいに なると ＨＰを かいふくする。"
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "ko",
+			"text": "독 상태가 되면 HP를 회복한다."
+		},
+		{
+			"versionGroup": "platinum",
+			"language": "en",
+			"text": "Restores HP if the Pokémon is poisoned."
+		},
+		{
+			"versionGroup": "platinum",
+			"language": "fr",
+			"text": "Restaure des PV si le Pokémon est empoisonné."
+		},
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "en",
+			"text": "If poisoned, the Pokémon has its HP restored instead of taking damage."
+		},
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "fr",
+			"text": "Quand le Pokémon est empoisonné, il regagne des PV\\nau lieu d’en perdre."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "de",
+			"text": "Das Pokémon erleidet keinen Schaden durch Vergiftung, sondern regeneriert KP."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "en",
+			"text": "Restores HP if the Pokémon is poisoned, instead of losing HP."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "es",
+			"text": "Si el Pokémon resulta envenenado, recupera PS en vez de perderlos."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "es-419",
+			"text": "Si el Pokémon resulta envenenado, recupera PS en vez de perderlos."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "fr",
+			"text": "Quand le Pokémon est empoisonné, il regagne des PV au lieu d'en perdre."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "it",
+			"text": "Il Pokémon recupera PS anziché perderli se è avvelenato."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "ja",
+			"text": "どく状態に なると ＨＰが 減らずに 増えていく。"
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "ja-hrkt",
+			"text": "どくじょうたいに なると ＨＰが へらずに ふえていく。"
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "ko",
+			"text": "독 상태가 되면 HP가 줄지 않고 증가한다."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "zh-hans",
+			"text": "变为中毒状态时， ＨＰ不会减少，反而会增加起来。"
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "zh-hant",
+			"text": "陷入中毒狀態時， ＨＰ不會減少，反而會漸漸增加。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "de",
+			"text": "Das Pokémon erleidet keinen Schaden durch Vergiftung, sondern regeneriert KP."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "en",
+			"text": "Restores HP if the Pokémon is poisoned instead of losing HP."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es",
+			"text": "Si resulta envenenado, recupera PS en vez de perderlos."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es-419",
+			"text": "Si resulta envenenado, recupera PS en vez de perderlos."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "fr",
+			"text": "Quand le Pokémon est empoisonné, il regagne des PV au lieu d'en perdre."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "it",
+			"text": "Se il Pokémon è avvelenato, recupera PS anziché perderli."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja",
+			"text": "どく状態に なると ＨＰが 減らずに 増えていく。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja-hrkt",
+			"text": "どくじょうたいに なると ＨＰが へらずに ふえていく。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ko",
+			"text": "독 상태가 되면 HP가 줄지 않고 증가한다."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hans",
+			"text": "变为中毒状态时， ＨＰ不会减少，反而会增加起来。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hant",
+			"text": "陷入中毒狀態時， ＨＰ不會減少，反而會漸漸增加。"
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "de",
+			"text": "Das Pokémon erleidet keinen Schaden durch Vergiftung, sondern regeneriert KP."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "en",
+			"text": "Restores HP if the Pokémon is poisoned, instead of losing HP."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "es",
+			"text": "Si el Pokémon resulta envenenado, recupera PS en vez de perderlos."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "es-419",
+			"text": "Si el Pokémon resulta envenenado, recupera PS en vez de perderlos."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "fr",
+			"text": "Quand le Pokémon est empoisonné, il regagne des PV au lieu d'en perdre."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "it",
+			"text": "Il Pokémon recupera PS anziché perderli se è avvelenato."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "ja",
+			"text": "どく状態に なると ＨＰが 減らずに 増えていく。"
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "ja-hrkt",
+			"text": "どくじょうたいに なると ＨＰが へらずに ふえていく。"
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "ko",
+			"text": "독 상태가 되면 HP가 줄지 않고 증가한다."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "zh-hans",
+			"text": "变为中毒状态时， ＨＰ不会减少，反而会增加起来。"
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "zh-hant",
+			"text": "陷入中毒狀態時， ＨＰ不會減少，反而會漸漸增加。"
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "de",
+			"text": "Heilt bei Vergiftungen KP."
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "en",
+			"text": "Restores HP if the Pokémon is poisoned."
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "es",
+			"text": "Recupera PS si el Pokémon ha sido envenenado."
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "es-419",
+			"text": "Recupera PS si el Pokémon ha sido envenenado."
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "fr",
+			"text": "Restaure des PV si le Pokémon est empoisonné."
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "it",
+			"text": "Ridà PS se il Pokémon è avvelenato."
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "ja",
+			"text": "どく状態に なると ＨＰを 回復する。"
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "ja-hrkt",
+			"text": "どくじょうたいに なると ＨＰを かいふくする。"
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "ko",
+			"text": "독 상태가 되면 HP를 회복한다."
+		},
+		{
+			"versionGroup": "xd",
+			"language": "fr",
+			"text": "Restaure des PV si le Pokémon est empoisonné."
+		}
+	],
+	"pokemon": [
+		{
+			"nationalDexId": 285,
+			"speciesName": "Shroomish",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "legends-arceus",
+					"gameLabel": "Legends: Arceus",
+					"versionGroup": "legends-arceus",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "legends-za",
+					"gameLabel": "Legends: Z-A",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "lets-go-pikachu-lets-go-eevee",
+					"gameLabel": "Let's Go Pikachu / Eevee",
+					"versionGroup": "lets-go-pikachu-lets-go-eevee",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "mega-dimension",
+					"gameLabel": "Mega Dimension",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-crown-tundra",
+					"gameLabel": "The Crown Tundra",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-indigo-disk",
+					"gameLabel": "The Indigo Disk",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-isle-of-armor",
+					"gameLabel": "The Isle of Armor",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-teal-mask",
+					"gameLabel": "The Teal Mask",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 286,
+			"speciesName": "Breloom",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "legends-arceus",
+					"gameLabel": "Legends: Arceus",
+					"versionGroup": "legends-arceus",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "legends-za",
+					"gameLabel": "Legends: Z-A",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "lets-go-pikachu-lets-go-eevee",
+					"gameLabel": "Let's Go Pikachu / Eevee",
+					"versionGroup": "lets-go-pikachu-lets-go-eevee",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "mega-dimension",
+					"gameLabel": "Mega Dimension",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-crown-tundra",
+					"gameLabel": "The Crown Tundra",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-indigo-disk",
+					"gameLabel": "The Indigo Disk",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-isle-of-armor",
+					"gameLabel": "The Isle of Armor",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-teal-mask",
+					"gameLabel": "The Teal Mask",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 472,
+			"speciesName": "Gliscor",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "legends-arceus",
+					"gameLabel": "Legends: Arceus",
+					"versionGroup": "legends-arceus",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "legends-za",
+					"gameLabel": "Legends: Z-A",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "lets-go-pikachu-lets-go-eevee",
+					"gameLabel": "Let's Go Pikachu / Eevee",
+					"versionGroup": "lets-go-pikachu-lets-go-eevee",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "mega-dimension",
+					"gameLabel": "Mega Dimension",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "the-crown-tundra",
+					"gameLabel": "The Crown Tundra",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "the-indigo-disk",
+					"gameLabel": "The Indigo Disk",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "the-isle-of-armor",
+					"gameLabel": "The Isle of Armor",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "the-teal-mask",
+					"gameLabel": "The Teal Mask",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [],
+					"isHidden": true
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [],
+					"isHidden": true
+				}
+			]
+		}
+	],
+	"potentialPokemon": [
+		{
+			"name": "shroomish",
+			"isHidden": false,
+			"slot": 2
+		},
+		{
+			"name": "breloom",
+			"isHidden": false,
+			"slot": 2
+		},
+		{
+			"name": "gliscor",
+			"isHidden": true,
+			"slot": 3
+		}
+	],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/ability/90/",
+		"fetchedAt": "2026-11-03T06:30:19.573Z",
+		"hash": "2170def9f1cf824595ea7929e8da4fff8922602881075451ad833e8434da0b59"
+	}
+}

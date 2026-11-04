@@ -1,0 +1,6829 @@
+{
+	"schemaVersion": 2,
+	"nationalDexId": 14,
+	"speciesName": "Kakuna",
+	"formKey": "base",
+	"formName": "Base",
+	"formLabelSource": "form-catalog",
+	"profiles": [
+		{
+			"profileKey": "red-blue",
+			"label": "Red / Blue",
+			"appGameKeys": [
+				"red",
+				"blue"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Kakuna",
+				"localizedNames": {
+					"ja-hrkt": "コクーン",
+					"ja-roma": "Cocoon",
+					"ko": "딱충이",
+					"zh-hant": "鐵殼蛹",
+					"fr": "Coconfort",
+					"de": "Kokuna",
+					"es": "Kakuna",
+					"it": "Kakuna",
+					"ja": "コクーン",
+					"zh-hans": "铁壳蛹",
+					"es-419": "Kakuna"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 25,
+					"def": 50,
+					"spe": 35,
+					"spc": 25
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "10.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Squiggle",
+				"color": "Yellow",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 14
+					},
+					{
+						"pokedex": "kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 27
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 19
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Kanto Route 24 Area",
+						"notes": "Walk, Lv. 8",
+						"games": "Red",
+						"rate": "20%"
+					},
+					{
+						"area": "Kanto Route 25 Area",
+						"notes": "Walk, Lv. 9",
+						"games": "Red",
+						"rate": "20%"
+					},
+					{
+						"area": "Kanto Route 25 Area",
+						"notes": "Walk, Lv. 7",
+						"games": "Blue",
+						"rate": "4%"
+					},
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Red",
+						"rate": "20%"
+					},
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Walk, Lv. 4",
+						"games": "Red",
+						"rate": "10%"
+					},
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Walk, Lv. 6",
+						"games": "Red",
+						"rate": "10%"
+					},
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Walk, Lv. 4",
+						"games": "Blue",
+						"rate": "5%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/14",
+						"fetchedAt": "2026-11-03T05:53:06.915Z",
+						"hash": "1f23d9e168ba550fe1b615b1c248e9d30fab8f6fb4f4cb608ae71d2249effe41"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/",
+						"fetchedAt": "2026-11-03T05:53:06.948Z",
+						"hash": "3ea75327d372b32e72543253fadf1f8c9572dbfac8a9e0e283dd63350c445175"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.983Z",
+						"hash": "63bf60a40e1e342200a15a0554add7e5b276ad5018f9049f179fdf124413e811"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/14/",
+						"fetchedAt": "2026-11-03T05:53:07.025Z",
+						"hash": "4ea57728183b193f5fadf64afc35019cccc0f6c39da7c5614daf29323e031bea"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"red": "Almost incapable of moving, this POKéMON can only harden its shell to protect itself from predators.",
+				"blue": "Almost incapable of moving, this POKéMON can only harden its shell to protect itself from predators."
+			},
+			"localizedFlavorByGame": {
+				"red": {
+					"en": "Almost incapable of moving, this POKéMON can only harden its shell to protect itself from predators."
+				},
+				"blue": {
+					"en": "Almost incapable of moving, this POKéMON can only harden its shell to protect itself from predators."
+				}
+			}
+		},
+		{
+			"profileKey": "red-green-japan",
+			"label": "Green",
+			"appGameKeys": [
+				"green"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Kakuna",
+				"localizedNames": {
+					"ja-hrkt": "コクーン",
+					"ja-roma": "Cocoon",
+					"ko": "딱충이",
+					"zh-hant": "鐵殼蛹",
+					"fr": "Coconfort",
+					"de": "Kokuna",
+					"es": "Kakuna",
+					"it": "Kakuna",
+					"ja": "コクーン",
+					"zh-hans": "铁壳蛹",
+					"es-419": "Kakuna"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 25,
+					"def": 50,
+					"spe": 35,
+					"spc": 25
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "10.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Squiggle",
+				"color": "Yellow",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 14
+					},
+					{
+						"pokedex": "kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 27
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 19
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Kanto Route 24 Area",
+						"notes": "Walk, Lv. 8",
+						"games": "Red Japan",
+						"rate": "20%"
+					},
+					{
+						"area": "Kanto Route 25 Area",
+						"notes": "Walk, Lv. 9",
+						"games": "Red Japan",
+						"rate": "20%"
+					},
+					{
+						"area": "Kanto Route 25 Area",
+						"notes": "Walk, Lv. 7",
+						"games": "Green Japan",
+						"rate": "4%"
+					},
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Red Japan",
+						"rate": "20%"
+					},
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Walk, Lv. 4",
+						"games": "Red Japan",
+						"rate": "10%"
+					},
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Walk, Lv. 6",
+						"games": "Red Japan",
+						"rate": "10%"
+					},
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Walk, Lv. 4",
+						"games": "Green Japan",
+						"rate": "5%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/14",
+						"fetchedAt": "2026-11-03T05:53:06.915Z",
+						"hash": "1f23d9e168ba550fe1b615b1c248e9d30fab8f6fb4f4cb608ae71d2249effe41"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/",
+						"fetchedAt": "2026-11-03T05:53:06.948Z",
+						"hash": "3ea75327d372b32e72543253fadf1f8c9572dbfac8a9e0e283dd63350c445175"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.983Z",
+						"hash": "63bf60a40e1e342200a15a0554add7e5b276ad5018f9049f179fdf124413e811"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/14/",
+						"fetchedAt": "2026-11-03T05:53:07.025Z",
+						"hash": "4ea57728183b193f5fadf64afc35019cccc0f6c39da7c5614daf29323e031bea"
+					},
+					{
+						"type": "japanese-pokedex-species",
+						"url": "https://raw.githubusercontent.com/towakey/pokedex/master/pokedex/Red_Green_Blue_Pikachu/Red_Green_Blue_Pikachu.json#dex-0014",
+						"fetchedAt": "2026-11-03T05:53:07.026Z",
+						"hash": "16d09d5b867b70ff85b1c7ee2b8da31c329b82863ec0dc82c1ac3c44660ef369"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"green": "おとなの からだを つくるための いちじてきな じょうたい。じぶんでは ほとんど うごけない。"
+			},
+			"localizedFlavorByGame": {
+				"green": {
+					"ja": "おとなの からだを つくるための いちじてきな じょうたい。じぶんでは ほとんど うごけない。"
+				}
+			}
+		},
+		{
+			"profileKey": "yellow",
+			"label": "Yellow",
+			"appGameKeys": [
+				"yellow"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Kakuna",
+				"localizedNames": {
+					"ja-hrkt": "コクーン",
+					"ja-roma": "Cocoon",
+					"ko": "딱충이",
+					"zh-hant": "鐵殼蛹",
+					"fr": "Coconfort",
+					"de": "Kokuna",
+					"es": "Kakuna",
+					"it": "Kakuna",
+					"ja": "コクーン",
+					"zh-hans": "铁壳蛹",
+					"es-419": "Kakuna"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 25,
+					"def": 50,
+					"spe": 35,
+					"spc": 25
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "10.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Squiggle",
+				"color": "Yellow",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 14
+					},
+					{
+						"pokedex": "kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 27
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 19
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/14",
+						"fetchedAt": "2026-11-03T05:53:06.915Z",
+						"hash": "1f23d9e168ba550fe1b615b1c248e9d30fab8f6fb4f4cb608ae71d2249effe41"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/",
+						"fetchedAt": "2026-11-03T05:53:06.948Z",
+						"hash": "3ea75327d372b32e72543253fadf1f8c9572dbfac8a9e0e283dd63350c445175"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.983Z",
+						"hash": "63bf60a40e1e342200a15a0554add7e5b276ad5018f9049f179fdf124413e811"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/14/",
+						"fetchedAt": "2026-11-03T05:53:07.025Z",
+						"hash": "4ea57728183b193f5fadf64afc35019cccc0f6c39da7c5614daf29323e031bea"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"yellow": "Able to move only slightly. When endangered, it may stick out its stinger and poison its enemy."
+			},
+			"localizedFlavorByGame": {
+				"yellow": {
+					"en": "Able to move only slightly. When endangered, it may stick out its stinger and poison its enemy."
+				}
+			}
+		},
+		{
+			"profileKey": "gold-silver",
+			"label": "Gold / Silver",
+			"appGameKeys": [
+				"gold",
+				"silver"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Kakuna",
+				"localizedNames": {
+					"ja-hrkt": "コクーン",
+					"ja-roma": "Cocoon",
+					"ko": "딱충이",
+					"zh-hant": "鐵殼蛹",
+					"fr": "Coconfort",
+					"de": "Kokuna",
+					"es": "Kakuna",
+					"it": "Kakuna",
+					"ja": "コクーン",
+					"zh-hans": "铁壳蛹",
+					"es-419": "Kakuna"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 25,
+					"def": 50,
+					"spa": 25,
+					"spd": 25,
+					"spe": 35
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "10.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Squiggle",
+				"color": "Yellow",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 14
+					},
+					{
+						"pokedex": "kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 27
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 19
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Johto Route 30 Area",
+						"notes": "Walk, Lv. 4",
+						"games": "Silver",
+						"rate": "10%"
+					},
+					{
+						"area": "Johto Route 30 Area",
+						"notes": "Walk, Lv. 4",
+						"games": "Silver",
+						"rate": "10%"
+					},
+					{
+						"area": "Johto Route 30 Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Silver",
+						"rate": "4%"
+					},
+					{
+						"area": "Johto Route 30 Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Silver",
+						"rate": "1%"
+					},
+					{
+						"area": "Johto Route 31 Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Silver",
+						"rate": "10%"
+					},
+					{
+						"area": "Johto Route 31 Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Silver",
+						"rate": "10%"
+					},
+					{
+						"area": "Johto Route 31 Area",
+						"notes": "Walk, Lv. 6",
+						"games": "Silver",
+						"rate": "4%"
+					},
+					{
+						"area": "Johto Route 31 Area",
+						"notes": "Walk, Lv. 6",
+						"games": "Silver",
+						"rate": "1%"
+					},
+					{
+						"area": "Ilex Forest Area",
+						"notes": "Walk, Lv. 6",
+						"games": "Silver",
+						"rate": "30%"
+					},
+					{
+						"area": "Ilex Forest Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Silver",
+						"rate": "20%"
+					},
+					{
+						"area": "Ilex Forest Area",
+						"notes": "Walk, Lv. 6",
+						"games": "Silver",
+						"rate": "10%"
+					},
+					{
+						"area": "Ilex Forest Area",
+						"notes": "Headbutt Low, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Ilex Forest Area",
+						"notes": "Headbutt Normal, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Johto Route 34 Area",
+						"notes": "Headbutt Low, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Johto Route 34 Area",
+						"notes": "Headbutt Normal, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Johto Route 35 Area",
+						"notes": "Headbutt Low, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Johto Route 35 Area",
+						"notes": "Headbutt Normal, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "National Park Area",
+						"notes": "Walk, Lv. 10",
+						"games": "Silver",
+						"rate": "30%"
+					},
+					{
+						"area": "National Park Area",
+						"notes": "Walk, Lv. 10",
+						"games": "Silver",
+						"rate": "30%"
+					},
+					{
+						"area": "Johto Route 36 Area",
+						"notes": "Headbutt Low, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Johto Route 36 Area",
+						"notes": "Headbutt Normal, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Johto Route 37 Area",
+						"notes": "Headbutt Low, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Johto Route 37 Area",
+						"notes": "Headbutt Normal, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Johto Route 38 Area",
+						"notes": "Headbutt Low, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Johto Route 38 Area",
+						"notes": "Headbutt Normal, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Johto Route 39 Area",
+						"notes": "Headbutt Low, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Johto Route 39 Area",
+						"notes": "Headbutt Normal, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Lake Of Rage Area",
+						"notes": "Headbutt Low, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Lake Of Rage Area",
+						"notes": "Headbutt Normal, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Kanto Route 26 Area",
+						"notes": "Headbutt Low, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Kanto Route 26 Area",
+						"notes": "Headbutt Normal, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Kanto Route 27 Area",
+						"notes": "Headbutt Low, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Kanto Route 27 Area",
+						"notes": "Headbutt Normal, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Kanto Route 2 South Towards Viridian City",
+						"notes": "Walk, Lv. 5",
+						"games": "Silver",
+						"rate": "20%"
+					},
+					{
+						"area": "Kanto Route 2 South Towards Viridian City",
+						"notes": "Walk, Lv. 5",
+						"games": "Silver",
+						"rate": "20%"
+					},
+					{
+						"area": "Azalea Town Area",
+						"notes": "Headbutt Low, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Azalea Town Area",
+						"notes": "Headbutt Normal, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": null
+						},
+						{
+							"name": "Harden",
+							"level": 7,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/14",
+						"fetchedAt": "2026-11-03T05:53:06.915Z",
+						"hash": "1f23d9e168ba550fe1b615b1c248e9d30fab8f6fb4f4cb608ae71d2249effe41"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/",
+						"fetchedAt": "2026-11-03T05:53:06.948Z",
+						"hash": "3ea75327d372b32e72543253fadf1f8c9572dbfac8a9e0e283dd63350c445175"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.983Z",
+						"hash": "63bf60a40e1e342200a15a0554add7e5b276ad5018f9049f179fdf124413e811"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/14/",
+						"fetchedAt": "2026-11-03T05:53:07.025Z",
+						"hash": "4ea57728183b193f5fadf64afc35019cccc0f6c39da7c5614daf29323e031bea"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"gold": "Although it is a cocoon, it can move a little. It can extend its poison barb if it is attacked.",
+				"silver": "From this form, it will grow into an adult. As its body becomes soft­ er, the external shell hardens."
+			},
+			"localizedFlavorByGame": {
+				"gold": {
+					"en": "Although it is a cocoon, it can move a little. It can extend its poison barb if it is attacked."
+				},
+				"silver": {
+					"en": "From this form, it will grow into an adult. As its body becomes soft­ er, the external shell hardens."
+				}
+			}
+		},
+		{
+			"profileKey": "crystal",
+			"label": "Crystal",
+			"appGameKeys": [
+				"crystal"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Kakuna",
+				"localizedNames": {
+					"ja-hrkt": "コクーン",
+					"ja-roma": "Cocoon",
+					"ko": "딱충이",
+					"zh-hant": "鐵殼蛹",
+					"fr": "Coconfort",
+					"de": "Kokuna",
+					"es": "Kakuna",
+					"it": "Kakuna",
+					"ja": "コクーン",
+					"zh-hans": "铁壳蛹",
+					"es-419": "Kakuna"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 25,
+					"def": 50,
+					"spa": 25,
+					"spd": 25,
+					"spe": 35
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "10.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Squiggle",
+				"color": "Yellow",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 14
+					},
+					{
+						"pokedex": "kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 27
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 19
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Ilex Forest Area",
+						"notes": "Walk, Lv. 7",
+						"games": "Crystal",
+						"rate": "10%"
+					},
+					{
+						"area": "Ilex Forest Area",
+						"notes": "Walk, Lv. 7",
+						"games": "Crystal",
+						"rate": "10%"
+					},
+					{
+						"area": "Ilex Forest Area",
+						"notes": "Headbutt High, Lv. 10",
+						"games": "Crystal",
+						"rate": "5%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": null
+						},
+						{
+							"name": "Harden",
+							"level": 7,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/14",
+						"fetchedAt": "2026-11-03T05:53:06.915Z",
+						"hash": "1f23d9e168ba550fe1b615b1c248e9d30fab8f6fb4f4cb608ae71d2249effe41"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/",
+						"fetchedAt": "2026-11-03T05:53:06.948Z",
+						"hash": "3ea75327d372b32e72543253fadf1f8c9572dbfac8a9e0e283dd63350c445175"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.983Z",
+						"hash": "63bf60a40e1e342200a15a0554add7e5b276ad5018f9049f179fdf124413e811"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/14/",
+						"fetchedAt": "2026-11-03T05:53:07.025Z",
+						"hash": "4ea57728183b193f5fadf64afc35019cccc0f6c39da7c5614daf29323e031bea"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"crystal": "Nearly incapable of movement, it leans against stout trees while waiting for its evolution."
+			},
+			"localizedFlavorByGame": {
+				"crystal": {
+					"en": "Nearly incapable of movement, it leans against stout trees while waiting for its evolution."
+				}
+			}
+		},
+		{
+			"profileKey": "ruby-sapphire",
+			"label": "Ruby / Sapphire",
+			"appGameKeys": [
+				"ruby-national",
+				"ruby",
+				"sapphire-national",
+				"sapphire"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Kakuna",
+				"localizedNames": {
+					"ja-hrkt": "コクーン",
+					"ja-roma": "Cocoon",
+					"ko": "딱충이",
+					"zh-hant": "鐵殼蛹",
+					"fr": "Coconfort",
+					"de": "Kokuna",
+					"es": "Kakuna",
+					"it": "Kakuna",
+					"ja": "コクーン",
+					"zh-hans": "铁壳蛹",
+					"es-419": "Kakuna"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 25,
+					"def": 50,
+					"spa": 25,
+					"spd": 25,
+					"spe": 35
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "10.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Squiggle",
+				"color": "Yellow",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 14
+					},
+					{
+						"pokedex": "kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 27
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 19
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": null
+						},
+						{
+							"name": "Harden",
+							"level": 7,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/14",
+						"fetchedAt": "2026-11-03T05:53:06.915Z",
+						"hash": "1f23d9e168ba550fe1b615b1c248e9d30fab8f6fb4f4cb608ae71d2249effe41"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/",
+						"fetchedAt": "2026-11-03T05:53:06.948Z",
+						"hash": "3ea75327d372b32e72543253fadf1f8c9572dbfac8a9e0e283dd63350c445175"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.983Z",
+						"hash": "63bf60a40e1e342200a15a0554add7e5b276ad5018f9049f179fdf124413e811"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/14/",
+						"fetchedAt": "2026-11-03T05:53:07.025Z",
+						"hash": "4ea57728183b193f5fadf64afc35019cccc0f6c39da7c5614daf29323e031bea"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"ruby-national": "KAKUNA remains virtually immobile as it clings to a tree. However, on the inside, it is extremely busy as it prepares for its coming evolution. This is evident from how hot the shell becomes to the touch.",
+				"ruby": "KAKUNA remains virtually immobile as it clings to a tree. However, on the inside, it is extremely busy as it prepares for its coming evolution. This is evident from how hot the shell becomes to the touch.",
+				"sapphire-national": "KAKUNA remains virtually immobile as it clings to a tree. However, on the inside, it is extremely busy as it prepares for its coming evolution. This is evident from how hot the shell becomes to the touch.",
+				"sapphire": "KAKUNA remains virtually immobile as it clings to a tree. However, on the inside, it is extremely busy as it prepares for its coming evolution. This is evident from how hot the shell becomes to the touch."
+			},
+			"localizedFlavorByGame": {
+				"ruby-national": {
+					"en": "KAKUNA remains virtually immobile as it clings to a tree. However, on the inside, it is extremely busy as it prepares for its coming evolution. This is evident from how hot the shell becomes to the touch."
+				},
+				"ruby": {
+					"en": "KAKUNA remains virtually immobile as it clings to a tree. However, on the inside, it is extremely busy as it prepares for its coming evolution. This is evident from how hot the shell becomes to the touch."
+				},
+				"sapphire-national": {
+					"en": "KAKUNA remains virtually immobile as it clings to a tree. However, on the inside, it is extremely busy as it prepares for its coming evolution. This is evident from how hot the shell becomes to the touch."
+				},
+				"sapphire": {
+					"en": "KAKUNA remains virtually immobile as it clings to a tree. However, on the inside, it is extremely busy as it prepares for its coming evolution. This is evident from how hot the shell becomes to the touch."
+				}
+			}
+		},
+		{
+			"profileKey": "emerald",
+			"label": "Emerald",
+			"appGameKeys": [
+				"emerald-national",
+				"emerald"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Kakuna",
+				"localizedNames": {
+					"ja-hrkt": "コクーン",
+					"ja-roma": "Cocoon",
+					"ko": "딱충이",
+					"zh-hant": "鐵殼蛹",
+					"fr": "Coconfort",
+					"de": "Kokuna",
+					"es": "Kakuna",
+					"it": "Kakuna",
+					"ja": "コクーン",
+					"zh-hans": "铁壳蛹",
+					"es-419": "Kakuna"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 25,
+					"def": 50,
+					"spa": 25,
+					"spd": 25,
+					"spe": 35
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "10.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Squiggle",
+				"color": "Yellow",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 14
+					},
+					{
+						"pokedex": "kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 27
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 19
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": null
+						},
+						{
+							"name": "Harden",
+							"level": 7,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/14",
+						"fetchedAt": "2026-11-03T05:53:06.915Z",
+						"hash": "1f23d9e168ba550fe1b615b1c248e9d30fab8f6fb4f4cb608ae71d2249effe41"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/",
+						"fetchedAt": "2026-11-03T05:53:06.948Z",
+						"hash": "3ea75327d372b32e72543253fadf1f8c9572dbfac8a9e0e283dd63350c445175"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.983Z",
+						"hash": "63bf60a40e1e342200a15a0554add7e5b276ad5018f9049f179fdf124413e811"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/14/",
+						"fetchedAt": "2026-11-03T05:53:07.025Z",
+						"hash": "4ea57728183b193f5fadf64afc35019cccc0f6c39da7c5614daf29323e031bea"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"emerald-national": "It remains virtually immobile while it clings to a tree. However, on the inside, it busily prepares for evolution. This is evident from how hot its shell becomes.",
+				"emerald": "It remains virtually immobile while it clings to a tree. However, on the inside, it busily prepares for evolution. This is evident from how hot its shell becomes."
+			},
+			"localizedFlavorByGame": {
+				"emerald-national": {
+					"en": "It remains virtually immobile while it clings to a tree. However, on the inside, it busily prepares for evolution. This is evident from how hot its shell becomes."
+				},
+				"emerald": {
+					"en": "It remains virtually immobile while it clings to a tree. However, on the inside, it busily prepares for evolution. This is evident from how hot its shell becomes."
+				}
+			}
+		},
+		{
+			"profileKey": "firered-leafgreen",
+			"label": "FireRed / LeafGreen",
+			"appGameKeys": [
+				"firered-national",
+				"firered",
+				"leafgreen-national",
+				"leafgreen"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Kakuna",
+				"localizedNames": {
+					"ja-hrkt": "コクーン",
+					"ja-roma": "Cocoon",
+					"ko": "딱충이",
+					"zh-hant": "鐵殼蛹",
+					"fr": "Coconfort",
+					"de": "Kokuna",
+					"es": "Kakuna",
+					"it": "Kakuna",
+					"ja": "コクーン",
+					"zh-hans": "铁壳蛹",
+					"es-419": "Kakuna"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 25,
+					"def": 50,
+					"spa": 25,
+					"spd": 25,
+					"spe": 35
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "10.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Squiggle",
+				"color": "Yellow",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 14
+					},
+					{
+						"pokedex": "kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 27
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 19
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Kanto Route 24 Area",
+						"notes": "Walk, Lv. 8",
+						"games": "Firered",
+						"rate": "4%"
+					},
+					{
+						"area": "Kanto Route 24 Area",
+						"notes": "Walk, Lv. 8",
+						"games": "Leafgreen",
+						"rate": "1%"
+					},
+					{
+						"area": "Kanto Route 25 Area",
+						"notes": "Walk, Lv. 9",
+						"games": "Firered",
+						"rate": "4%"
+					},
+					{
+						"area": "Kanto Route 25 Area",
+						"notes": "Walk, Lv. 9",
+						"games": "Leafgreen",
+						"rate": "1%"
+					},
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Firered",
+						"rate": "5%"
+					},
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Walk, Lv. 4",
+						"games": "Firered",
+						"rate": "4%"
+					},
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Walk, Lv. 6",
+						"games": "Firered",
+						"rate": "1%"
+					},
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Leafgreen",
+						"rate": "5%"
+					},
+					{
+						"area": "Pattern Bush Area",
+						"notes": "Walk, Lv. 9",
+						"games": "Firered",
+						"rate": "20%"
+					},
+					{
+						"area": "Pattern Bush Area",
+						"notes": "Walk, Lv. 9",
+						"games": "Leafgreen",
+						"rate": "20%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": null
+						},
+						{
+							"name": "Harden",
+							"level": 7,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/14",
+						"fetchedAt": "2026-11-03T05:53:06.915Z",
+						"hash": "1f23d9e168ba550fe1b615b1c248e9d30fab8f6fb4f4cb608ae71d2249effe41"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/",
+						"fetchedAt": "2026-11-03T05:53:06.948Z",
+						"hash": "3ea75327d372b32e72543253fadf1f8c9572dbfac8a9e0e283dd63350c445175"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.983Z",
+						"hash": "63bf60a40e1e342200a15a0554add7e5b276ad5018f9049f179fdf124413e811"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/14/",
+						"fetchedAt": "2026-11-03T05:53:07.025Z",
+						"hash": "4ea57728183b193f5fadf64afc35019cccc0f6c39da7c5614daf29323e031bea"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"firered-national": "This POKéMON is in a temporary stage while making its body. It is almost completely unable to move on its own.",
+				"firered": "This POKéMON is in a temporary stage while making its body. It is almost completely unable to move on its own.",
+				"leafgreen-national": "Almost incapable of moving, this POKéMON can only harden its shell to protect itself when it is in danger.",
+				"leafgreen": "Almost incapable of moving, this POKéMON can only harden its shell to protect itself when it is in danger."
+			},
+			"localizedFlavorByGame": {
+				"firered-national": {
+					"en": "This POKéMON is in a temporary stage while making its body. It is almost completely unable to move on its own."
+				},
+				"firered": {
+					"en": "This POKéMON is in a temporary stage while making its body. It is almost completely unable to move on its own."
+				},
+				"leafgreen-national": {
+					"en": "Almost incapable of moving, this POKéMON can only harden its shell to protect itself when it is in danger."
+				},
+				"leafgreen": {
+					"en": "Almost incapable of moving, this POKéMON can only harden its shell to protect itself when it is in danger."
+				}
+			}
+		},
+		{
+			"profileKey": "diamond-pearl",
+			"label": "Diamond / Pearl",
+			"appGameKeys": [
+				"diamond-national",
+				"diamond",
+				"pearl-national",
+				"pearl"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Kakuna",
+				"localizedNames": {
+					"ja-hrkt": "コクーン",
+					"ja-roma": "Cocoon",
+					"ko": "딱충이",
+					"zh-hant": "鐵殼蛹",
+					"fr": "Coconfort",
+					"de": "Kokuna",
+					"es": "Kakuna",
+					"it": "Kakuna",
+					"ja": "コクーン",
+					"zh-hans": "铁壳蛹",
+					"es-419": "Kakuna"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 25,
+					"def": 50,
+					"spa": 25,
+					"spd": 25,
+					"spe": 35
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "10.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Squiggle",
+				"color": "Yellow",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 14
+					},
+					{
+						"pokedex": "kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 27
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 19
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Eterna Forest Area",
+						"notes": "Walk, Lv. 12",
+						"games": "Diamond",
+						"rate": "4%"
+					},
+					{
+						"area": "Eterna Forest Area",
+						"notes": "Walk, Lv. 12",
+						"games": "Diamond",
+						"rate": "4%"
+					},
+					{
+						"area": "Eterna Forest Area",
+						"notes": "Walk, Lv. 12",
+						"games": "Pearl",
+						"rate": "4%"
+					},
+					{
+						"area": "Eterna Forest Area",
+						"notes": "Walk, Lv. 12",
+						"games": "Pearl",
+						"rate": "4%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": null
+						},
+						{
+							"name": "Harden",
+							"level": 7,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/14",
+						"fetchedAt": "2026-11-03T05:53:06.915Z",
+						"hash": "1f23d9e168ba550fe1b615b1c248e9d30fab8f6fb4f4cb608ae71d2249effe41"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/",
+						"fetchedAt": "2026-11-03T05:53:06.948Z",
+						"hash": "3ea75327d372b32e72543253fadf1f8c9572dbfac8a9e0e283dd63350c445175"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.983Z",
+						"hash": "63bf60a40e1e342200a15a0554add7e5b276ad5018f9049f179fdf124413e811"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/14/",
+						"fetchedAt": "2026-11-03T05:53:07.025Z",
+						"hash": "4ea57728183b193f5fadf64afc35019cccc0f6c39da7c5614daf29323e031bea"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"diamond-national": "While awaiting evolution, it hides from predators under leaves and in nooks of branches.",
+				"diamond": "While awaiting evolution, it hides from predators under leaves and in nooks of branches.",
+				"pearl-national": "While awaiting evolution, it hides from predators under leaves and in nooks of branches.",
+				"pearl": "While awaiting evolution, it hides from predators under leaves and in nooks of branches."
+			},
+			"localizedFlavorByGame": {
+				"diamond-national": {
+					"en": "While awaiting evolution, it hides from predators under leaves and in nooks of branches."
+				},
+				"diamond": {
+					"en": "While awaiting evolution, it hides from predators under leaves and in nooks of branches."
+				},
+				"pearl-national": {
+					"en": "While awaiting evolution, it hides from predators under leaves and in nooks of branches."
+				},
+				"pearl": {
+					"en": "While awaiting evolution, it hides from predators under leaves and in nooks of branches."
+				}
+			}
+		},
+		{
+			"profileKey": "platinum",
+			"label": "Platinum",
+			"appGameKeys": [
+				"platinum-national",
+				"platinum"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Kakuna",
+				"localizedNames": {
+					"ja-hrkt": "コクーン",
+					"ja-roma": "Cocoon",
+					"ko": "딱충이",
+					"zh-hant": "鐵殼蛹",
+					"fr": "Coconfort",
+					"de": "Kokuna",
+					"es": "Kakuna",
+					"it": "Kakuna",
+					"ja": "コクーン",
+					"zh-hans": "铁壳蛹",
+					"es-419": "Kakuna"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 25,
+					"def": 50,
+					"spa": 25,
+					"spd": 25,
+					"spe": 35
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "10.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Squiggle",
+				"color": "Yellow",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 14
+					},
+					{
+						"pokedex": "kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 27
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 19
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Eterna Forest Area",
+						"notes": "Walk, Lv. 13",
+						"games": "Platinum",
+						"rate": "4%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": null
+						},
+						{
+							"name": "Harden",
+							"level": 7,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Iron Defense",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/14",
+						"fetchedAt": "2026-11-03T05:53:06.915Z",
+						"hash": "1f23d9e168ba550fe1b615b1c248e9d30fab8f6fb4f4cb608ae71d2249effe41"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/",
+						"fetchedAt": "2026-11-03T05:53:06.948Z",
+						"hash": "3ea75327d372b32e72543253fadf1f8c9572dbfac8a9e0e283dd63350c445175"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.983Z",
+						"hash": "63bf60a40e1e342200a15a0554add7e5b276ad5018f9049f179fdf124413e811"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/14/",
+						"fetchedAt": "2026-11-03T05:53:07.025Z",
+						"hash": "4ea57728183b193f5fadf64afc35019cccc0f6c39da7c5614daf29323e031bea"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"platinum-national": "While awaiting evolution, it hides from predators under leaves and in nooks of branches.",
+				"platinum": "While awaiting evolution, it hides from predators under leaves and in nooks of branches."
+			},
+			"localizedFlavorByGame": {
+				"platinum-national": {
+					"en": "While awaiting evolution, it hides from predators under leaves and in nooks of branches."
+				},
+				"platinum": {
+					"en": "While awaiting evolution, it hides from predators under leaves and in nooks of branches."
+				}
+			}
+		},
+		{
+			"profileKey": "heartgold-soulsilver",
+			"label": "HeartGold / SoulSilver",
+			"appGameKeys": [
+				"heartgold-national",
+				"heartgold",
+				"soulsilver-national",
+				"soulsilver"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Kakuna",
+				"localizedNames": {
+					"ja-hrkt": "コクーン",
+					"ja-roma": "Cocoon",
+					"ko": "딱충이",
+					"zh-hant": "鐵殼蛹",
+					"fr": "Coconfort",
+					"de": "Kokuna",
+					"es": "Kakuna",
+					"it": "Kakuna",
+					"ja": "コクーン",
+					"zh-hans": "铁壳蛹",
+					"es-419": "Kakuna"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 25,
+					"def": 50,
+					"spa": 25,
+					"spd": 25,
+					"spe": 35
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "10.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Squiggle",
+				"color": "Yellow",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 14
+					},
+					{
+						"pokedex": "kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 27
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 19
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Johto Route 30 Area",
+						"notes": "Walk, Lv. 4",
+						"games": "Soulsilver",
+						"rate": "5%"
+					},
+					{
+						"area": "Johto Route 30 Area",
+						"notes": "Walk, Lv. 4",
+						"games": "Soulsilver",
+						"rate": "5%"
+					},
+					{
+						"area": "Johto Route 30 Area",
+						"notes": "Walk, Lv. 4",
+						"games": "Soulsilver",
+						"rate": "5%"
+					},
+					{
+						"area": "Johto Route 30 Area",
+						"notes": "Walk, Lv. 4",
+						"games": "Soulsilver",
+						"rate": "5%"
+					},
+					{
+						"area": "Johto Route 30 Area",
+						"notes": "Walk, Lv. 4",
+						"games": "Soulsilver",
+						"rate": "4%"
+					},
+					{
+						"area": "Johto Route 30 Area",
+						"notes": "Walk, Lv. 4",
+						"games": "Soulsilver",
+						"rate": "1%"
+					},
+					{
+						"area": "Johto Route 31 Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Soulsilver",
+						"rate": "5%"
+					},
+					{
+						"area": "Johto Route 31 Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Soulsilver",
+						"rate": "5%"
+					},
+					{
+						"area": "Johto Route 31 Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Soulsilver",
+						"rate": "5%"
+					},
+					{
+						"area": "Johto Route 31 Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Soulsilver",
+						"rate": "5%"
+					},
+					{
+						"area": "Johto Route 31 Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Soulsilver",
+						"rate": "4%"
+					},
+					{
+						"area": "Johto Route 31 Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Soulsilver",
+						"rate": "1%"
+					},
+					{
+						"area": "Ilex Forest Area",
+						"notes": "Walk, Lv. 6",
+						"games": "Soulsilver",
+						"rate": "20%"
+					},
+					{
+						"area": "Ilex Forest Area",
+						"notes": "Walk, Lv. 6",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Ilex Forest Area",
+						"notes": "Walk, Lv. 6",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Ilex Forest Area",
+						"notes": "Walk, Lv. 6",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Ilex Forest Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Soulsilver",
+						"rate": "5%"
+					},
+					{
+						"area": "Ilex Forest Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Soulsilver",
+						"rate": "5%"
+					},
+					{
+						"area": "Ilex Forest Area",
+						"notes": "Headbutt, Lv. 3-5",
+						"games": "Soulsilver",
+						"rate": "5%"
+					},
+					{
+						"area": "Ilex Forest Area",
+						"notes": "Headbutt, Lv. 3-5",
+						"games": "Soulsilver",
+						"rate": "5%"
+					},
+					{
+						"area": "National Park Area",
+						"notes": "Walk, Lv. 9-18",
+						"games": "Heartgold",
+						"rate": "10%"
+					},
+					{
+						"area": "National Park Area",
+						"notes": "Walk, Lv. 26-36",
+						"games": "Heartgold",
+						"rate": "10%"
+					},
+					{
+						"area": "National Park Area",
+						"notes": "Walk, Lv. 10",
+						"games": "Soulsilver",
+						"rate": "20%"
+					},
+					{
+						"area": "National Park Area",
+						"notes": "Walk, Lv. 10",
+						"games": "Soulsilver",
+						"rate": "20%"
+					},
+					{
+						"area": "National Park Area",
+						"notes": "Walk, Lv. 10",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "National Park Area",
+						"notes": "Walk, Lv. 10",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "National Park Area",
+						"notes": "Walk, Lv. 9-18",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "National Park Area",
+						"notes": "Walk, Lv. 26-36",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Johto Route 47 Area",
+						"notes": "Headbutt, Lv. 25-28",
+						"games": "Soulsilver",
+						"rate": "50%"
+					},
+					{
+						"area": "Kanto Route 2 South Towards Viridian City",
+						"notes": "Walk, Lv. 3",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Kanto Route 2 South Towards Viridian City",
+						"notes": "Walk, Lv. 5",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Kanto Route 2 South Towards Viridian City",
+						"notes": "Walk, Lv. 5",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Kanto Route 2 South Towards Viridian City",
+						"notes": "Walk, Lv. 5",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Kanto Route 2 South Towards Viridian City",
+						"notes": "Walk, Lv. 5",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Kanto Route 2 South Towards Viridian City",
+						"notes": "Walk, Lv. 7",
+						"games": "Soulsilver",
+						"rate": "1%"
+					},
+					{
+						"area": "Kanto Route 2 North Towards Pewter City",
+						"notes": "Walk, Lv. 3",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Kanto Route 2 North Towards Pewter City",
+						"notes": "Walk, Lv. 5",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Kanto Route 2 North Towards Pewter City",
+						"notes": "Walk, Lv. 5",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Kanto Route 2 North Towards Pewter City",
+						"notes": "Walk, Lv. 5",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Kanto Route 2 North Towards Pewter City",
+						"notes": "Walk, Lv. 5",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Kanto Route 2 North Towards Pewter City",
+						"notes": "Walk, Lv. 7",
+						"games": "Soulsilver",
+						"rate": "1%"
+					},
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Walk, Lv. 3",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Walk, Lv. 3",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Soulsilver",
+						"rate": "10%"
+					}
+				],
+				"moves": {
+					"Tutor": [
+						{
+							"name": "Bug Bite",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Defense",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "String Shot",
+							"level": null,
+							"order": null
+						}
+					],
+					"Level Up": [
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": null
+						},
+						{
+							"name": "Harden",
+							"level": 7,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/14",
+						"fetchedAt": "2026-11-03T05:53:06.915Z",
+						"hash": "1f23d9e168ba550fe1b615b1c248e9d30fab8f6fb4f4cb608ae71d2249effe41"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/",
+						"fetchedAt": "2026-11-03T05:53:06.948Z",
+						"hash": "3ea75327d372b32e72543253fadf1f8c9572dbfac8a9e0e283dd63350c445175"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.983Z",
+						"hash": "63bf60a40e1e342200a15a0554add7e5b276ad5018f9049f179fdf124413e811"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/14/",
+						"fetchedAt": "2026-11-03T05:53:07.025Z",
+						"hash": "4ea57728183b193f5fadf64afc35019cccc0f6c39da7c5614daf29323e031bea"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"heartgold-national": "Although it is a cocoon, it can move a little. It can extend its poison barb if it is attacked.",
+				"heartgold": "Although it is a cocoon, it can move a little. It can extend its poison barb if it is attacked.",
+				"soulsilver-national": "From this form, it will grow into an adult. As its body becomes softer, the external shell hardens.",
+				"soulsilver": "From this form, it will grow into an adult. As its body becomes softer, the external shell hardens."
+			},
+			"localizedFlavorByGame": {
+				"heartgold-national": {
+					"en": "Although it is a cocoon, it can move a little. It can extend its poison barb if it is attacked."
+				},
+				"heartgold": {
+					"en": "Although it is a cocoon, it can move a little. It can extend its poison barb if it is attacked."
+				},
+				"soulsilver-national": {
+					"en": "From this form, it will grow into an adult. As its body becomes softer, the external shell hardens."
+				},
+				"soulsilver": {
+					"en": "From this form, it will grow into an adult. As its body becomes softer, the external shell hardens."
+				}
+			}
+		},
+		{
+			"profileKey": "black-white",
+			"label": "Black / White",
+			"appGameKeys": [
+				"black-national",
+				"black",
+				"white-national",
+				"white"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Kakuna",
+				"localizedNames": {
+					"ja-hrkt": "コクーン",
+					"ja-roma": "Cocoon",
+					"ko": "딱충이",
+					"zh-hant": "鐵殼蛹",
+					"fr": "Coconfort",
+					"de": "Kokuna",
+					"es": "Kakuna",
+					"it": "Kakuna",
+					"ja": "コクーン",
+					"zh-hans": "铁壳蛹",
+					"es-419": "Kakuna"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 25,
+					"def": 50,
+					"spa": 25,
+					"spd": 25,
+					"spe": 35
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "10.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Squiggle",
+				"color": "Yellow",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 14
+					},
+					{
+						"pokedex": "kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 27
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 19
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Unova Route 12 Area",
+						"notes": "Walk, Lv. 48",
+						"games": "Black",
+						"rate": "10%"
+					},
+					{
+						"area": "Unova Route 12 Area",
+						"notes": "Dark Grass, Lv. 59",
+						"games": "Black",
+						"rate": "10%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": null
+						},
+						{
+							"name": "Harden",
+							"level": 7,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/14",
+						"fetchedAt": "2026-11-03T05:53:06.915Z",
+						"hash": "1f23d9e168ba550fe1b615b1c248e9d30fab8f6fb4f4cb608ae71d2249effe41"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/",
+						"fetchedAt": "2026-11-03T05:53:06.948Z",
+						"hash": "3ea75327d372b32e72543253fadf1f8c9572dbfac8a9e0e283dd63350c445175"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.983Z",
+						"hash": "63bf60a40e1e342200a15a0554add7e5b276ad5018f9049f179fdf124413e811"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/14/",
+						"fetchedAt": "2026-11-03T05:53:07.025Z",
+						"hash": "4ea57728183b193f5fadf64afc35019cccc0f6c39da7c5614daf29323e031bea"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"black-national": "While awaiting evolution, it hides from predators under leaves and in nooks of branches.",
+				"black": "While awaiting evolution, it hides from predators under leaves and in nooks of branches.",
+				"white-national": "While awaiting evolution, it hides from predators under leaves and in nooks of branches.",
+				"white": "While awaiting evolution, it hides from predators under leaves and in nooks of branches."
+			},
+			"localizedFlavorByGame": {
+				"black-national": {
+					"fr": "Il se cache sous les feuilles et les branches pour fuir les prédateurs en attendant d’évoluer.",
+					"en": "While awaiting evolution, it hides from predators under leaves and in nooks of branches."
+				},
+				"black": {
+					"fr": "Il se cache sous les feuilles et les branches pour fuir les prédateurs en attendant d’évoluer.",
+					"en": "While awaiting evolution, it hides from predators under leaves and in nooks of branches."
+				},
+				"white-national": {
+					"fr": "Il se cache sous les feuilles et les branches pour fuir les prédateurs en attendant d’évoluer.",
+					"en": "While awaiting evolution, it hides from predators under leaves and in nooks of branches."
+				},
+				"white": {
+					"fr": "Il se cache sous les feuilles et les branches pour fuir les prédateurs en attendant d’évoluer.",
+					"en": "While awaiting evolution, it hides from predators under leaves and in nooks of branches."
+				}
+			}
+		},
+		{
+			"profileKey": "black-2-white-2",
+			"label": "Black 2 / White 2",
+			"appGameKeys": [
+				"black2-national",
+				"black2",
+				"white2-national",
+				"white2"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Kakuna",
+				"localizedNames": {
+					"ja-hrkt": "コクーン",
+					"ja-roma": "Cocoon",
+					"ko": "딱충이",
+					"zh-hant": "鐵殼蛹",
+					"fr": "Coconfort",
+					"de": "Kokuna",
+					"es": "Kakuna",
+					"it": "Kakuna",
+					"ja": "コクーン",
+					"zh-hans": "铁壳蛹",
+					"es-419": "Kakuna"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 25,
+					"def": 50,
+					"spa": 25,
+					"spd": 25,
+					"spe": 35
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "10.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Squiggle",
+				"color": "Yellow",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 14
+					},
+					{
+						"pokedex": "kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 27
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 19
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": null
+						},
+						{
+							"name": "Harden",
+							"level": 7,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Bug Bite",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Electroweb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Defense",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/14",
+						"fetchedAt": "2026-11-03T05:53:06.915Z",
+						"hash": "1f23d9e168ba550fe1b615b1c248e9d30fab8f6fb4f4cb608ae71d2249effe41"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/",
+						"fetchedAt": "2026-11-03T05:53:06.948Z",
+						"hash": "3ea75327d372b32e72543253fadf1f8c9572dbfac8a9e0e283dd63350c445175"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.983Z",
+						"hash": "63bf60a40e1e342200a15a0554add7e5b276ad5018f9049f179fdf124413e811"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/14/",
+						"fetchedAt": "2026-11-03T05:53:07.025Z",
+						"hash": "4ea57728183b193f5fadf64afc35019cccc0f6c39da7c5614daf29323e031bea"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"black2-national": "While awaiting evolution, it hides from predators under leaves and in nooks of branches.",
+				"black2": "While awaiting evolution, it hides from predators under leaves and in nooks of branches.",
+				"white2-national": "While awaiting evolution, it hides from predators under leaves and in nooks of branches.",
+				"white2": "While awaiting evolution, it hides from predators under leaves and in nooks of branches."
+			},
+			"localizedFlavorByGame": {
+				"black2-national": {
+					"en": "While awaiting evolution, it hides from predators under leaves and in nooks of branches."
+				},
+				"black2": {
+					"en": "While awaiting evolution, it hides from predators under leaves and in nooks of branches."
+				},
+				"white2-national": {
+					"en": "While awaiting evolution, it hides from predators under leaves and in nooks of branches."
+				},
+				"white2": {
+					"en": "While awaiting evolution, it hides from predators under leaves and in nooks of branches."
+				}
+			}
+		},
+		{
+			"profileKey": "x-y",
+			"label": "X / Y",
+			"appGameKeys": [
+				"x-national",
+				"x-central",
+				"x-coastal",
+				"x-mountain",
+				"y-national",
+				"y-central",
+				"y-coastal",
+				"y-mountain"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Kakuna",
+				"localizedNames": {
+					"ja-hrkt": "コクーン",
+					"ja-roma": "Cocoon",
+					"ko": "딱충이",
+					"zh-hant": "鐵殼蛹",
+					"fr": "Coconfort",
+					"de": "Kokuna",
+					"es": "Kakuna",
+					"it": "Kakuna",
+					"ja": "コクーン",
+					"zh-hans": "铁壳蛹",
+					"es-419": "Kakuna"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 25,
+					"def": 50,
+					"spa": 25,
+					"spd": 25,
+					"spe": 35
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "10.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Squiggle",
+				"color": "Yellow",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 14
+					},
+					{
+						"pokedex": "kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 27
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 19
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Santalune Forest Area",
+						"notes": "Walk, Lv. 4",
+						"games": "X",
+						"rate": "4%"
+					},
+					{
+						"area": "Friend Safari Poison",
+						"notes": "Walk, Lv. 30",
+						"games": "X",
+						"rate": "33%"
+					},
+					{
+						"area": "Friend Safari Poison",
+						"notes": "Walk, Lv. 30",
+						"games": "Y",
+						"rate": "33%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": null
+						},
+						{
+							"name": "Harden",
+							"level": 7,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/14",
+						"fetchedAt": "2026-11-03T05:53:06.915Z",
+						"hash": "1f23d9e168ba550fe1b615b1c248e9d30fab8f6fb4f4cb608ae71d2249effe41"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/",
+						"fetchedAt": "2026-11-03T05:53:06.948Z",
+						"hash": "3ea75327d372b32e72543253fadf1f8c9572dbfac8a9e0e283dd63350c445175"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.983Z",
+						"hash": "63bf60a40e1e342200a15a0554add7e5b276ad5018f9049f179fdf124413e811"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/14/",
+						"fetchedAt": "2026-11-03T05:53:07.025Z",
+						"hash": "4ea57728183b193f5fadf64afc35019cccc0f6c39da7c5614daf29323e031bea"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"x-national": "Almost incapable of moving, this Pokémon can only harden its shell to protect itself when it is in danger.",
+				"x-central": "Almost incapable of moving, this Pokémon can only harden its shell to protect itself when it is in danger.",
+				"x-coastal": "Almost incapable of moving, this Pokémon can only harden its shell to protect itself when it is in danger.",
+				"x-mountain": "Almost incapable of moving, this Pokémon can only harden its shell to protect itself when it is in danger.",
+				"y-national": "While awaiting evolution, it hides from predators under leaves and in nooks of branches.",
+				"y-central": "While awaiting evolution, it hides from predators under leaves and in nooks of branches.",
+				"y-coastal": "While awaiting evolution, it hides from predators under leaves and in nooks of branches.",
+				"y-mountain": "While awaiting evolution, it hides from predators under leaves and in nooks of branches."
+			},
+			"localizedFlavorByGame": {
+				"x-national": {
+					"ja-hrkt": "じぶんでは ほとんど うごけないが あぶないときは かたくなって みを まもっているようだ。",
+					"ko": "스스로는 거의 움직일 수 없지만 위험할 때는 단단해져서 몸을 보호하고 있는 것 같다.",
+					"fr": "Incapable de se déplacer de lui-même, il se défend en durcissant sa carapace.",
+					"de": "Dieses Pokémon kann sich kaum bewegen. Bei drohender Gefahr verhärtet es seinen Panzer.",
+					"es": "Casi incapaz de moverse, este Pokémon solo puede endurecer su caparazón para protegerse.",
+					"it": "Quasi incapace di muoversi, questo Pokémon può solo indurire il proprio guscio per proteggersi.",
+					"en": "Almost incapable of moving, this Pokémon can only harden its shell to protect itself when it is in danger.",
+					"ja": "自分では ほとんど 動けないが 危ないときは 硬くなって 身を守っているようだ。",
+					"es-419": "Casi incapaz de moverse, este Pokémon solo puede endurecer su caparazón para protegerse."
+				},
+				"x-central": {
+					"ja-hrkt": "じぶんでは ほとんど うごけないが あぶないときは かたくなって みを まもっているようだ。",
+					"ko": "스스로는 거의 움직일 수 없지만 위험할 때는 단단해져서 몸을 보호하고 있는 것 같다.",
+					"fr": "Incapable de se déplacer de lui-même, il se défend en durcissant sa carapace.",
+					"de": "Dieses Pokémon kann sich kaum bewegen. Bei drohender Gefahr verhärtet es seinen Panzer.",
+					"es": "Casi incapaz de moverse, este Pokémon solo puede endurecer su caparazón para protegerse.",
+					"it": "Quasi incapace di muoversi, questo Pokémon può solo indurire il proprio guscio per proteggersi.",
+					"en": "Almost incapable of moving, this Pokémon can only harden its shell to protect itself when it is in danger.",
+					"ja": "自分では ほとんど 動けないが 危ないときは 硬くなって 身を守っているようだ。",
+					"es-419": "Casi incapaz de moverse, este Pokémon solo puede endurecer su caparazón para protegerse."
+				},
+				"x-coastal": {
+					"ja-hrkt": "じぶんでは ほとんど うごけないが あぶないときは かたくなって みを まもっているようだ。",
+					"ko": "스스로는 거의 움직일 수 없지만 위험할 때는 단단해져서 몸을 보호하고 있는 것 같다.",
+					"fr": "Incapable de se déplacer de lui-même, il se défend en durcissant sa carapace.",
+					"de": "Dieses Pokémon kann sich kaum bewegen. Bei drohender Gefahr verhärtet es seinen Panzer.",
+					"es": "Casi incapaz de moverse, este Pokémon solo puede endurecer su caparazón para protegerse.",
+					"it": "Quasi incapace di muoversi, questo Pokémon può solo indurire il proprio guscio per proteggersi.",
+					"en": "Almost incapable of moving, this Pokémon can only harden its shell to protect itself when it is in danger.",
+					"ja": "自分では ほとんど 動けないが 危ないときは 硬くなって 身を守っているようだ。",
+					"es-419": "Casi incapaz de moverse, este Pokémon solo puede endurecer su caparazón para protegerse."
+				},
+				"x-mountain": {
+					"ja-hrkt": "じぶんでは ほとんど うごけないが あぶないときは かたくなって みを まもっているようだ。",
+					"ko": "스스로는 거의 움직일 수 없지만 위험할 때는 단단해져서 몸을 보호하고 있는 것 같다.",
+					"fr": "Incapable de se déplacer de lui-même, il se défend en durcissant sa carapace.",
+					"de": "Dieses Pokémon kann sich kaum bewegen. Bei drohender Gefahr verhärtet es seinen Panzer.",
+					"es": "Casi incapaz de moverse, este Pokémon solo puede endurecer su caparazón para protegerse.",
+					"it": "Quasi incapace di muoversi, questo Pokémon può solo indurire il proprio guscio per proteggersi.",
+					"en": "Almost incapable of moving, this Pokémon can only harden its shell to protect itself when it is in danger.",
+					"ja": "自分では ほとんど 動けないが 危ないときは 硬くなって 身を守っているようだ。",
+					"es-419": "Casi incapaz de moverse, este Pokémon solo puede endurecer su caparazón para protegerse."
+				},
+				"y-national": {
+					"ja-hrkt": "てんてきに みつからないように はっぱの うらや えだの すきまに かくれて しんかの ときを まつ。",
+					"ko": "천적에게 발견되지 않도록 잎사귀 뒷면이나 가지의 틈새에 숨어서 진화할 때를 기다린다.",
+					"fr": "Il se cache sous les feuilles et les branches pour fuir les prédateurs en attendant d’évoluer.",
+					"de": "Während es auf seine Entwicklung wartet, versteckt es sich unter Blättern und zwischen Ästen.",
+					"es": "Se esconde de sus atacantes entre las ramas de los árboles mientras espera a evolucionar.",
+					"it": "Si nasconde dai predatori dietro le foglie e fra i rami, in attesa dell’evoluzione.",
+					"en": "While awaiting evolution, it hides from predators under leaves and in nooks of branches.",
+					"ja": "天敵に 見つからないように 葉っぱの 裏や 枝の すきまに 隠れて 進化の ときを 待つ。",
+					"es-419": "Se esconde de sus atacantes entre las ramas de los árboles mientras espera a evolucionar."
+				},
+				"y-central": {
+					"ja-hrkt": "てんてきに みつからないように はっぱの うらや えだの すきまに かくれて しんかの ときを まつ。",
+					"ko": "천적에게 발견되지 않도록 잎사귀 뒷면이나 가지의 틈새에 숨어서 진화할 때를 기다린다.",
+					"fr": "Il se cache sous les feuilles et les branches pour fuir les prédateurs en attendant d’évoluer.",
+					"de": "Während es auf seine Entwicklung wartet, versteckt es sich unter Blättern und zwischen Ästen.",
+					"es": "Se esconde de sus atacantes entre las ramas de los árboles mientras espera a evolucionar.",
+					"it": "Si nasconde dai predatori dietro le foglie e fra i rami, in attesa dell’evoluzione.",
+					"en": "While awaiting evolution, it hides from predators under leaves and in nooks of branches.",
+					"ja": "天敵に 見つからないように 葉っぱの 裏や 枝の すきまに 隠れて 進化の ときを 待つ。",
+					"es-419": "Se esconde de sus atacantes entre las ramas de los árboles mientras espera a evolucionar."
+				},
+				"y-coastal": {
+					"ja-hrkt": "てんてきに みつからないように はっぱの うらや えだの すきまに かくれて しんかの ときを まつ。",
+					"ko": "천적에게 발견되지 않도록 잎사귀 뒷면이나 가지의 틈새에 숨어서 진화할 때를 기다린다.",
+					"fr": "Il se cache sous les feuilles et les branches pour fuir les prédateurs en attendant d’évoluer.",
+					"de": "Während es auf seine Entwicklung wartet, versteckt es sich unter Blättern und zwischen Ästen.",
+					"es": "Se esconde de sus atacantes entre las ramas de los árboles mientras espera a evolucionar.",
+					"it": "Si nasconde dai predatori dietro le foglie e fra i rami, in attesa dell’evoluzione.",
+					"en": "While awaiting evolution, it hides from predators under leaves and in nooks of branches.",
+					"ja": "天敵に 見つからないように 葉っぱの 裏や 枝の すきまに 隠れて 進化の ときを 待つ。",
+					"es-419": "Se esconde de sus atacantes entre las ramas de los árboles mientras espera a evolucionar."
+				},
+				"y-mountain": {
+					"ja-hrkt": "てんてきに みつからないように はっぱの うらや えだの すきまに かくれて しんかの ときを まつ。",
+					"ko": "천적에게 발견되지 않도록 잎사귀 뒷면이나 가지의 틈새에 숨어서 진화할 때를 기다린다.",
+					"fr": "Il se cache sous les feuilles et les branches pour fuir les prédateurs en attendant d’évoluer.",
+					"de": "Während es auf seine Entwicklung wartet, versteckt es sich unter Blättern und zwischen Ästen.",
+					"es": "Se esconde de sus atacantes entre las ramas de los árboles mientras espera a evolucionar.",
+					"it": "Si nasconde dai predatori dietro le foglie e fra i rami, in attesa dell’evoluzione.",
+					"en": "While awaiting evolution, it hides from predators under leaves and in nooks of branches.",
+					"ja": "天敵に 見つからないように 葉っぱの 裏や 枝の すきまに 隠れて 進化の ときを 待つ。",
+					"es-419": "Se esconde de sus atacantes entre las ramas de los árboles mientras espera a evolucionar."
+				}
+			}
+		},
+		{
+			"profileKey": "omega-ruby-alpha-sapphire",
+			"label": "Omega Ruby / Alpha Sapphire",
+			"appGameKeys": [
+				"omegaruby-national",
+				"omegaruby",
+				"alphasapphire-national",
+				"alphasapphire"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Kakuna",
+				"localizedNames": {
+					"ja-hrkt": "コクーン",
+					"ja-roma": "Cocoon",
+					"ko": "딱충이",
+					"zh-hant": "鐵殼蛹",
+					"fr": "Coconfort",
+					"de": "Kokuna",
+					"es": "Kakuna",
+					"it": "Kakuna",
+					"ja": "コクーン",
+					"zh-hans": "铁壳蛹",
+					"es-419": "Kakuna"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 25,
+					"def": 50,
+					"spa": 25,
+					"spd": 25,
+					"spe": 35
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "10.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Squiggle",
+				"color": "Yellow",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 14
+					},
+					{
+						"pokedex": "kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 27
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 19
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": null
+						},
+						{
+							"name": "Harden",
+							"level": 7,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Bug Bite",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Electroweb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Defense",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/14",
+						"fetchedAt": "2026-11-03T05:53:06.915Z",
+						"hash": "1f23d9e168ba550fe1b615b1c248e9d30fab8f6fb4f4cb608ae71d2249effe41"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/",
+						"fetchedAt": "2026-11-03T05:53:06.948Z",
+						"hash": "3ea75327d372b32e72543253fadf1f8c9572dbfac8a9e0e283dd63350c445175"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.983Z",
+						"hash": "63bf60a40e1e342200a15a0554add7e5b276ad5018f9049f179fdf124413e811"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/14/",
+						"fetchedAt": "2026-11-03T05:53:07.025Z",
+						"hash": "4ea57728183b193f5fadf64afc35019cccc0f6c39da7c5614daf29323e031bea"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"omegaruby-national": "Kakuna remains virtually immobile as it clings to a tree. However, on the inside, it is extremely busy as it prepares for its coming evolution. This is evident from how hot the shell becomes to the touch.",
+				"omegaruby": "Kakuna remains virtually immobile as it clings to a tree. However, on the inside, it is extremely busy as it prepares for its coming evolution. This is evident from how hot the shell becomes to the touch.",
+				"alphasapphire-national": "Kakuna remains virtually immobile as it clings to a tree. However, on the inside, it is extremely busy as it prepares for its coming evolution. This is evident from how hot the shell becomes to the touch.",
+				"alphasapphire": "Kakuna remains virtually immobile as it clings to a tree. However, on the inside, it is extremely busy as it prepares for its coming evolution. This is evident from how hot the shell becomes to the touch."
+			},
+			"localizedFlavorByGame": {
+				"omegaruby-national": {
+					"ja-hrkt": "ほとんど うごかず きに つかまっているが なかでは しんかの じゅんびで おおいそがし。 その しょうこに からだが あつくなっているぞ。",
+					"ko": "거의 움직이지 않고 나무에 매달려 있지만 내부는 진화 준비로 굉장히 바쁜 상태다. 그 증거로 몸이 뜨거워져 있다.",
+					"fr": "Coconfort est la plupart du temps immobile et reste accroché à un arbre. Cependant, intérieurement, il est très actif, car il se prépare pour sa prochaine évolution. En touchant sa carapace, on peut sentir sa chaleur.",
+					"de": "Kokuna bewegt sich kaum, wenn es an einem Baum haftet. In seinem Inneren jedoch regt sich einiges, da es sich auf seine bevorstehende Entwicklung vorbereitet. Dabei wird seine Schale sehr heiß.",
+					"es": "Kakuna permanece prácticamente inmóvil al encaramarse a los árboles, aunque la actividad interna de su organismo tiene un ritmo frenético, pues se prepara para su evolución. Prueba de esto es la alta temperatura de su caparazón.",
+					"it": "Kakuna rimane praticamente immobile abbarbicato agli alberi. Tuttavia, internamente è intento a preparare la sua futura evoluzione. Lo si può capire dall’intensità del calore sviluppato dal guscio.",
+					"en": "Kakuna remains virtually immobile as it clings to a tree. However, on the inside, it is extremely busy as it prepares for its coming evolution. This is evident from how hot the shell becomes to the touch.",
+					"ja": "ほとんど 動かず 木に つかまっているが 中では 進化の 準備で 大忙し。 その 証拠に 体が 熱くなっているぞ。",
+					"es-419": "Kakuna permanece prácticamente inmóvil al encaramarse a los árboles, aunque la actividad interna de su organismo tiene un ritmo frenético, pues se prepara para su evolución. Prueba de esto es la alta temperatura de su caparazón."
+				},
+				"omegaruby": {
+					"ja-hrkt": "ほとんど うごかず きに つかまっているが なかでは しんかの じゅんびで おおいそがし。 その しょうこに からだが あつくなっているぞ。",
+					"ko": "거의 움직이지 않고 나무에 매달려 있지만 내부는 진화 준비로 굉장히 바쁜 상태다. 그 증거로 몸이 뜨거워져 있다.",
+					"fr": "Coconfort est la plupart du temps immobile et reste accroché à un arbre. Cependant, intérieurement, il est très actif, car il se prépare pour sa prochaine évolution. En touchant sa carapace, on peut sentir sa chaleur.",
+					"de": "Kokuna bewegt sich kaum, wenn es an einem Baum haftet. In seinem Inneren jedoch regt sich einiges, da es sich auf seine bevorstehende Entwicklung vorbereitet. Dabei wird seine Schale sehr heiß.",
+					"es": "Kakuna permanece prácticamente inmóvil al encaramarse a los árboles, aunque la actividad interna de su organismo tiene un ritmo frenético, pues se prepara para su evolución. Prueba de esto es la alta temperatura de su caparazón.",
+					"it": "Kakuna rimane praticamente immobile abbarbicato agli alberi. Tuttavia, internamente è intento a preparare la sua futura evoluzione. Lo si può capire dall’intensità del calore sviluppato dal guscio.",
+					"en": "Kakuna remains virtually immobile as it clings to a tree. However, on the inside, it is extremely busy as it prepares for its coming evolution. This is evident from how hot the shell becomes to the touch.",
+					"ja": "ほとんど 動かず 木に つかまっているが 中では 進化の 準備で 大忙し。 その 証拠に 体が 熱くなっているぞ。",
+					"es-419": "Kakuna permanece prácticamente inmóvil al encaramarse a los árboles, aunque la actividad interna de su organismo tiene un ritmo frenético, pues se prepara para su evolución. Prueba de esto es la alta temperatura de su caparazón."
+				},
+				"alphasapphire-national": {
+					"ja-hrkt": "ほとんど うごかず きに つかまっているが なかでは しんかの じゅんびで おおいそがし。 その しょうこに からだが あつくなっているぞ。",
+					"ko": "거의 움직이지 않고 나무에 매달려 있지만 내부는 진화 준비로 굉장히 바쁜 상태다. 그 증거로 몸이 뜨거워져 있다.",
+					"fr": "Coconfort est la plupart du temps immobile et reste accroché à un arbre. Cependant, intérieurement, il est très actif, car il se prépare pour sa prochaine évolution. En touchant sa carapace, on peut sentir sa chaleur.",
+					"de": "Kokuna bewegt sich kaum, wenn es sich an einen Baum heftet. In seinem Inneren jedoch regt sich einiges, da es sich auf seine bevorstehende Entwicklung vorbereitet. Dabei wird seine Schale sehr heiß.",
+					"es": "Kakuna permanece prácticamente inmóvil al encaramarse a los árboles, aunque la actividad interna de su organismo tiene un ritmo frenético, pues se prepara para su evolución. Prueba de esto es la alta temperatura de su caparazón.",
+					"it": "Kakuna rimane praticamente immobile abbarbicato agli alberi. Tuttavia, internamente è intento a preparare la sua futura evoluzione. Lo si può capire dall’intensità del calore sviluppato dal guscio.",
+					"en": "Kakuna remains virtually immobile as it clings to a tree. However, on the inside, it is extremely busy as it prepares for its coming evolution. This is evident from how hot the shell becomes to the touch.",
+					"ja": "ほとんど 動かず 木に つかまっているが 中では 進化の 準備で 大忙し。 その 証拠に 体が 熱くなっているぞ。",
+					"es-419": "Kakuna permanece prácticamente inmóvil al encaramarse a los árboles, aunque la actividad interna de su organismo tiene un ritmo frenético, pues se prepara para su evolución. Prueba de esto es la alta temperatura de su caparazón."
+				},
+				"alphasapphire": {
+					"ja-hrkt": "ほとんど うごかず きに つかまっているが なかでは しんかの じゅんびで おおいそがし。 その しょうこに からだが あつくなっているぞ。",
+					"ko": "거의 움직이지 않고 나무에 매달려 있지만 내부는 진화 준비로 굉장히 바쁜 상태다. 그 증거로 몸이 뜨거워져 있다.",
+					"fr": "Coconfort est la plupart du temps immobile et reste accroché à un arbre. Cependant, intérieurement, il est très actif, car il se prépare pour sa prochaine évolution. En touchant sa carapace, on peut sentir sa chaleur.",
+					"de": "Kokuna bewegt sich kaum, wenn es sich an einen Baum heftet. In seinem Inneren jedoch regt sich einiges, da es sich auf seine bevorstehende Entwicklung vorbereitet. Dabei wird seine Schale sehr heiß.",
+					"es": "Kakuna permanece prácticamente inmóvil al encaramarse a los árboles, aunque la actividad interna de su organismo tiene un ritmo frenético, pues se prepara para su evolución. Prueba de esto es la alta temperatura de su caparazón.",
+					"it": "Kakuna rimane praticamente immobile abbarbicato agli alberi. Tuttavia, internamente è intento a preparare la sua futura evoluzione. Lo si può capire dall’intensità del calore sviluppato dal guscio.",
+					"en": "Kakuna remains virtually immobile as it clings to a tree. However, on the inside, it is extremely busy as it prepares for its coming evolution. This is evident from how hot the shell becomes to the touch.",
+					"ja": "ほとんど 動かず 木に つかまっているが 中では 進化の 準備で 大忙し。 その 証拠に 体が 熱くなっているぞ。",
+					"es-419": "Kakuna permanece prácticamente inmóvil al encaramarse a los árboles, aunque la actividad interna de su organismo tiene un ritmo frenético, pues se prepara para su evolución. Prueba de esto es la alta temperatura de su caparazón."
+				}
+			}
+		},
+		{
+			"profileKey": "sun-moon",
+			"label": "Sun / Moon",
+			"appGameKeys": [
+				"sun-alola",
+				"sun-melemele",
+				"sun-akala",
+				"sun-ulaula",
+				"sun-poni",
+				"moon-alola",
+				"moon-melemele",
+				"moon-akala",
+				"moon-ulaula",
+				"moon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Kakuna",
+				"localizedNames": {
+					"ja-hrkt": "コクーン",
+					"ja-roma": "Cocoon",
+					"ko": "딱충이",
+					"zh-hant": "鐵殼蛹",
+					"fr": "Coconfort",
+					"de": "Kokuna",
+					"es": "Kakuna",
+					"it": "Kakuna",
+					"ja": "コクーン",
+					"zh-hans": "铁壳蛹",
+					"es-419": "Kakuna"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 25,
+					"def": 50,
+					"spa": 25,
+					"spd": 25,
+					"spe": 35
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "10.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Squiggle",
+				"color": "Yellow",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 14
+					},
+					{
+						"pokedex": "kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 27
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 19
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Harden",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/14",
+						"fetchedAt": "2026-11-03T05:53:06.915Z",
+						"hash": "1f23d9e168ba550fe1b615b1c248e9d30fab8f6fb4f4cb608ae71d2249effe41"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/",
+						"fetchedAt": "2026-11-03T05:53:06.948Z",
+						"hash": "3ea75327d372b32e72543253fadf1f8c9572dbfac8a9e0e283dd63350c445175"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.983Z",
+						"hash": "63bf60a40e1e342200a15a0554add7e5b276ad5018f9049f179fdf124413e811"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/14/",
+						"fetchedAt": "2026-11-03T05:53:07.025Z",
+						"hash": "4ea57728183b193f5fadf64afc35019cccc0f6c39da7c5614daf29323e031bea"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sun-alola": "",
+				"sun-melemele": "",
+				"sun-akala": "",
+				"sun-ulaula": "",
+				"sun-poni": "",
+				"moon-alola": "",
+				"moon-melemele": "",
+				"moon-akala": "",
+				"moon-ulaula": "",
+				"moon-poni": ""
+			},
+			"localizedFlavorByGame": {
+				"sun-alola": {},
+				"sun-melemele": {},
+				"sun-akala": {},
+				"sun-ulaula": {},
+				"sun-poni": {},
+				"moon-alola": {},
+				"moon-melemele": {},
+				"moon-akala": {},
+				"moon-ulaula": {},
+				"moon-poni": {}
+			}
+		},
+		{
+			"profileKey": "ultra-sun-ultra-moon",
+			"label": "Ultra Sun / Ultra Moon",
+			"appGameKeys": [
+				"ultrasun-alola",
+				"ultrasun-melemele",
+				"ultrasun-akala",
+				"ultrasun-ulaula",
+				"ultrasun-poni",
+				"ultramoon-alola",
+				"ultramoon-melemele",
+				"ultramoon-akala",
+				"ultramoon-ulaula",
+				"ultramoon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Kakuna",
+				"localizedNames": {
+					"ja-hrkt": "コクーン",
+					"ja-roma": "Cocoon",
+					"ko": "딱충이",
+					"zh-hant": "鐵殼蛹",
+					"fr": "Coconfort",
+					"de": "Kokuna",
+					"es": "Kakuna",
+					"it": "Kakuna",
+					"ja": "コクーン",
+					"zh-hans": "铁壳蛹",
+					"es-419": "Kakuna"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 25,
+					"def": 50,
+					"spa": 25,
+					"spd": 25,
+					"spe": 35
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "10.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Squiggle",
+				"color": "Yellow",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 14
+					},
+					{
+						"pokedex": "kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 27
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 19
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Harden",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Bug Bite",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Electroweb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Defense",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/14",
+						"fetchedAt": "2026-11-03T05:53:06.915Z",
+						"hash": "1f23d9e168ba550fe1b615b1c248e9d30fab8f6fb4f4cb608ae71d2249effe41"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/",
+						"fetchedAt": "2026-11-03T05:53:06.948Z",
+						"hash": "3ea75327d372b32e72543253fadf1f8c9572dbfac8a9e0e283dd63350c445175"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.983Z",
+						"hash": "63bf60a40e1e342200a15a0554add7e5b276ad5018f9049f179fdf124413e811"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/14/",
+						"fetchedAt": "2026-11-03T05:53:07.025Z",
+						"hash": "4ea57728183b193f5fadf64afc35019cccc0f6c39da7c5614daf29323e031bea"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"ultrasun-alola": "",
+				"ultrasun-melemele": "",
+				"ultrasun-akala": "",
+				"ultrasun-ulaula": "",
+				"ultrasun-poni": "",
+				"ultramoon-alola": "",
+				"ultramoon-melemele": "",
+				"ultramoon-akala": "",
+				"ultramoon-ulaula": "",
+				"ultramoon-poni": ""
+			},
+			"localizedFlavorByGame": {
+				"ultrasun-alola": {},
+				"ultrasun-melemele": {},
+				"ultrasun-akala": {},
+				"ultrasun-ulaula": {},
+				"ultrasun-poni": {},
+				"ultramoon-alola": {},
+				"ultramoon-melemele": {},
+				"ultramoon-akala": {},
+				"ultramoon-ulaula": {},
+				"ultramoon-poni": {}
+			}
+		},
+		{
+			"profileKey": "lets-go-pikachu-lets-go-eevee",
+			"label": "Let's Go Pikachu / Eevee",
+			"appGameKeys": [
+				"letsgopikachu",
+				"letsgoeevee"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Kakuna",
+				"localizedNames": {
+					"ja-hrkt": "コクーン",
+					"ja-roma": "Cocoon",
+					"ko": "딱충이",
+					"zh-hant": "鐵殼蛹",
+					"fr": "Coconfort",
+					"de": "Kokuna",
+					"es": "Kakuna",
+					"it": "Kakuna",
+					"ja": "コクーン",
+					"zh-hans": "铁壳蛹",
+					"es-419": "Kakuna"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 25,
+					"def": 50,
+					"spa": 25,
+					"spd": 25,
+					"spe": 35
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "10.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Squiggle",
+				"color": "Yellow",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 14
+					},
+					{
+						"pokedex": "kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 27
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 19
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Overworld, Lv. 3-6",
+						"games": "Lets Go Pikachu",
+						"rate": "100%"
+					},
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Overworld, Lv. 3-6",
+						"games": "Lets Go Eevee",
+						"rate": "100%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Harden",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/14",
+						"fetchedAt": "2026-11-03T05:53:06.915Z",
+						"hash": "1f23d9e168ba550fe1b615b1c248e9d30fab8f6fb4f4cb608ae71d2249effe41"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/",
+						"fetchedAt": "2026-11-03T05:53:06.948Z",
+						"hash": "3ea75327d372b32e72543253fadf1f8c9572dbfac8a9e0e283dd63350c445175"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.983Z",
+						"hash": "63bf60a40e1e342200a15a0554add7e5b276ad5018f9049f179fdf124413e811"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/14/",
+						"fetchedAt": "2026-11-03T05:53:07.025Z",
+						"hash": "4ea57728183b193f5fadf64afc35019cccc0f6c39da7c5614daf29323e031bea"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"letsgopikachu": "Able to move only slightly. When endangered, it may stick out its stinger and poison its enemy.",
+				"letsgoeevee": "Able to move only slightly. When endangered, it may stick out its stinger and poison its enemy."
+			},
+			"localizedFlavorByGame": {
+				"letsgopikachu": {
+					"ja-hrkt": "じぶんでは ほとんど うごけないが あぶなくなると ハリをだして どくを あたえることも あるらしい。",
+					"ko": "스스로는 거의 움직일 수 없지만 위험해지면 침을 세워서 독을 뿜을 때도 있는 듯하다.",
+					"zh-hant": "雖然幾乎動也動不了， 但如果遭遇到了危險， 有時似乎會豎起毒刺來反抗。",
+					"fr": "Il peut à peine bouger. Quand il est menacé, il sort parfois son aiguillon pour empoisonner ses ennemis.",
+					"de": "Obwohl es sich kaum bewegen kann, ist es bei Gefahr in der Lage, einen Stachel auszufahren, mit dem es seine Gegner vergiftet.",
+					"es": "Aunque es casi incapaz de moverse, en caso de sentirse amenazado puede envenenar a los enemigos con su aguijón.",
+					"it": "È molto limitato nei movimenti. Se si sente minacciato, estrae il pungiglione e avvelena il nemico.",
+					"en": "Able to move only slightly. When endangered, it may stick out its stinger and poison its enemy.",
+					"ja": "自分では ほとんど 動けないが 危なくなると ハリを出して 毒を 与えることも あるらしい。",
+					"zh-hans": "虽然几乎动也动不了， 但是如果遇到了危险， 有时似乎会竖起毒刺来反抗。",
+					"es-419": "Aunque es casi incapaz de moverse, en caso de sentirse amenazado puede envenenar a los enemigos con su aguijón."
+				},
+				"letsgoeevee": {
+					"ja-hrkt": "じぶんでは ほとんど うごけないが あぶなくなると ハリをだして どくを あたえることも あるらしい。",
+					"ko": "스스로는 거의 움직일 수 없지만 위험해지면 침을 세워서 독을 뿜을 때도 있는 듯하다.",
+					"zh-hant": "雖然幾乎動也動不了， 但如果遭遇到了危險， 有時似乎會豎起毒刺來反抗。",
+					"fr": "Il peut à peine bouger. Quand il est menacé, il sort parfois son aiguillon pour empoisonner ses ennemis.",
+					"de": "Obwohl es sich kaum bewegen kann, ist es bei Gefahr in der Lage, einen Stachel auszufahren, mit dem es seine Gegner vergiftet.",
+					"es": "Aunque es casi incapaz de moverse, en caso de sentirse amenazado puede envenenar a los enemigos con su aguijón.",
+					"it": "È molto limitato nei movimenti. Se si sente minacciato, estrae il pungiglione e avvelena il nemico.",
+					"en": "Able to move only slightly. When endangered, it may stick out its stinger and poison its enemy.",
+					"ja": "自分では ほとんど 動けないが 危なくなると ハリを出して 毒を 与えることも あるらしい。",
+					"zh-hans": "虽然几乎动也动不了， 但是如果遇到了危险， 有时似乎会竖起毒刺来反抗。",
+					"es-419": "Aunque es casi incapaz de moverse, en caso de sentirse amenazado puede envenenar a los enemigos con su aguijón."
+				}
+			}
+		},
+		{
+			"profileKey": "sword-shield",
+			"label": "Sword / Shield",
+			"appGameKeys": [
+				"sword",
+				"shield"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Kakuna",
+				"localizedNames": {
+					"ja-hrkt": "コクーン",
+					"ja-roma": "Cocoon",
+					"ko": "딱충이",
+					"zh-hant": "鐵殼蛹",
+					"fr": "Coconfort",
+					"de": "Kokuna",
+					"es": "Kakuna",
+					"it": "Kakuna",
+					"ja": "コクーン",
+					"zh-hans": "铁壳蛹",
+					"es-419": "Kakuna"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 25,
+					"def": 50,
+					"spa": 25,
+					"spd": 25,
+					"spe": 35
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "10.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Squiggle",
+				"color": "Yellow",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 14
+					},
+					{
+						"pokedex": "kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 27
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 19
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/14",
+						"fetchedAt": "2026-11-03T05:53:06.915Z",
+						"hash": "1f23d9e168ba550fe1b615b1c248e9d30fab8f6fb4f4cb608ae71d2249effe41"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/",
+						"fetchedAt": "2026-11-03T05:53:06.948Z",
+						"hash": "3ea75327d372b32e72543253fadf1f8c9572dbfac8a9e0e283dd63350c445175"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.983Z",
+						"hash": "63bf60a40e1e342200a15a0554add7e5b276ad5018f9049f179fdf124413e811"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/14/",
+						"fetchedAt": "2026-11-03T05:53:07.025Z",
+						"hash": "4ea57728183b193f5fadf64afc35019cccc0f6c39da7c5614daf29323e031bea"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sword": "",
+				"shield": ""
+			},
+			"localizedFlavorByGame": {
+				"sword": {},
+				"shield": {}
+			}
+		},
+		{
+			"profileKey": "the-isle-of-armor",
+			"label": "The Isle of Armor",
+			"appGameKeys": [
+				"swordioa",
+				"shieldioa"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Kakuna",
+				"localizedNames": {
+					"ja-hrkt": "コクーン",
+					"ja-roma": "Cocoon",
+					"ko": "딱충이",
+					"zh-hant": "鐵殼蛹",
+					"fr": "Coconfort",
+					"de": "Kokuna",
+					"es": "Kakuna",
+					"it": "Kakuna",
+					"ja": "コクーン",
+					"zh-hans": "铁壳蛹",
+					"es-419": "Kakuna"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 25,
+					"def": 50,
+					"spa": 25,
+					"spd": 25,
+					"spe": 35
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "10.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Squiggle",
+				"color": "Yellow",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 14
+					},
+					{
+						"pokedex": "kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 27
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 19
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/14",
+						"fetchedAt": "2026-11-03T05:53:06.915Z",
+						"hash": "1f23d9e168ba550fe1b615b1c248e9d30fab8f6fb4f4cb608ae71d2249effe41"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/",
+						"fetchedAt": "2026-11-03T05:53:06.948Z",
+						"hash": "3ea75327d372b32e72543253fadf1f8c9572dbfac8a9e0e283dd63350c445175"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.983Z",
+						"hash": "63bf60a40e1e342200a15a0554add7e5b276ad5018f9049f179fdf124413e811"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/14/",
+						"fetchedAt": "2026-11-03T05:53:07.025Z",
+						"hash": "4ea57728183b193f5fadf64afc35019cccc0f6c39da7c5614daf29323e031bea"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordioa": "",
+				"shieldioa": ""
+			},
+			"localizedFlavorByGame": {
+				"swordioa": {},
+				"shieldioa": {}
+			}
+		},
+		{
+			"profileKey": "the-crown-tundra",
+			"label": "The Crown Tundra",
+			"appGameKeys": [
+				"swordct",
+				"shieldct"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Kakuna",
+				"localizedNames": {
+					"ja-hrkt": "コクーン",
+					"ja-roma": "Cocoon",
+					"ko": "딱충이",
+					"zh-hant": "鐵殼蛹",
+					"fr": "Coconfort",
+					"de": "Kokuna",
+					"es": "Kakuna",
+					"it": "Kakuna",
+					"ja": "コクーン",
+					"zh-hans": "铁壳蛹",
+					"es-419": "Kakuna"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 25,
+					"def": 50,
+					"spa": 25,
+					"spd": 25,
+					"spe": 35
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "10.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Squiggle",
+				"color": "Yellow",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 14
+					},
+					{
+						"pokedex": "kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 27
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 19
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/14",
+						"fetchedAt": "2026-11-03T05:53:06.915Z",
+						"hash": "1f23d9e168ba550fe1b615b1c248e9d30fab8f6fb4f4cb608ae71d2249effe41"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/",
+						"fetchedAt": "2026-11-03T05:53:06.948Z",
+						"hash": "3ea75327d372b32e72543253fadf1f8c9572dbfac8a9e0e283dd63350c445175"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.983Z",
+						"hash": "63bf60a40e1e342200a15a0554add7e5b276ad5018f9049f179fdf124413e811"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/14/",
+						"fetchedAt": "2026-11-03T05:53:07.025Z",
+						"hash": "4ea57728183b193f5fadf64afc35019cccc0f6c39da7c5614daf29323e031bea"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordct": "",
+				"shieldct": ""
+			},
+			"localizedFlavorByGame": {
+				"swordct": {},
+				"shieldct": {}
+			}
+		},
+		{
+			"profileKey": "brilliant-diamond-shining-pearl",
+			"label": "Brilliant Diamond / Shining Pearl",
+			"appGameKeys": [
+				"brilliantdiamond-national",
+				"brilliantdiamond",
+				"shiningpearl-national",
+				"shiningpearl"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Kakuna",
+				"localizedNames": {
+					"ja-hrkt": "コクーン",
+					"ja-roma": "Cocoon",
+					"ko": "딱충이",
+					"zh-hant": "鐵殼蛹",
+					"fr": "Coconfort",
+					"de": "Kokuna",
+					"es": "Kakuna",
+					"it": "Kakuna",
+					"ja": "コクーン",
+					"zh-hans": "铁壳蛹",
+					"es-419": "Kakuna"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 25,
+					"def": 50,
+					"spa": 25,
+					"spd": 25,
+					"spe": 35
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "10.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Squiggle",
+				"color": "Yellow",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 14
+					},
+					{
+						"pokedex": "kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 27
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 19
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Harden",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/14",
+						"fetchedAt": "2026-11-03T05:53:06.915Z",
+						"hash": "1f23d9e168ba550fe1b615b1c248e9d30fab8f6fb4f4cb608ae71d2249effe41"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/",
+						"fetchedAt": "2026-11-03T05:53:06.948Z",
+						"hash": "3ea75327d372b32e72543253fadf1f8c9572dbfac8a9e0e283dd63350c445175"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.983Z",
+						"hash": "63bf60a40e1e342200a15a0554add7e5b276ad5018f9049f179fdf124413e811"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/14/",
+						"fetchedAt": "2026-11-03T05:53:07.025Z",
+						"hash": "4ea57728183b193f5fadf64afc35019cccc0f6c39da7c5614daf29323e031bea"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"brilliantdiamond-national": "",
+				"brilliantdiamond": "",
+				"shiningpearl-national": "",
+				"shiningpearl": ""
+			},
+			"localizedFlavorByGame": {
+				"brilliantdiamond-national": {},
+				"brilliantdiamond": {},
+				"shiningpearl-national": {},
+				"shiningpearl": {}
+			}
+		},
+		{
+			"profileKey": "legends-arceus",
+			"label": "Legends: Arceus",
+			"appGameKeys": [
+				"legendsarceus"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Kakuna",
+				"localizedNames": {
+					"ja-hrkt": "コクーン",
+					"ja-roma": "Cocoon",
+					"ko": "딱충이",
+					"zh-hant": "鐵殼蛹",
+					"fr": "Coconfort",
+					"de": "Kokuna",
+					"es": "Kakuna",
+					"it": "Kakuna",
+					"ja": "コクーン",
+					"zh-hans": "铁壳蛹",
+					"es-419": "Kakuna"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 25,
+					"def": 50,
+					"spa": 25,
+					"spd": 25,
+					"spe": 35
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "10.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Squiggle",
+				"color": "Yellow",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 14
+					},
+					{
+						"pokedex": "kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 27
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 19
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/14",
+						"fetchedAt": "2026-11-03T05:53:06.915Z",
+						"hash": "1f23d9e168ba550fe1b615b1c248e9d30fab8f6fb4f4cb608ae71d2249effe41"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/",
+						"fetchedAt": "2026-11-03T05:53:06.948Z",
+						"hash": "3ea75327d372b32e72543253fadf1f8c9572dbfac8a9e0e283dd63350c445175"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.983Z",
+						"hash": "63bf60a40e1e342200a15a0554add7e5b276ad5018f9049f179fdf124413e811"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/14/",
+						"fetchedAt": "2026-11-03T05:53:07.025Z",
+						"hash": "4ea57728183b193f5fadf64afc35019cccc0f6c39da7c5614daf29323e031bea"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendsarceus": ""
+			},
+			"localizedFlavorByGame": {
+				"legendsarceus": {}
+			}
+		},
+		{
+			"profileKey": "scarlet-violet",
+			"label": "Scarlet / Violet",
+			"appGameKeys": [
+				"scarlet",
+				"violet"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Kakuna",
+				"localizedNames": {
+					"ja-hrkt": "コクーン",
+					"ja-roma": "Cocoon",
+					"ko": "딱충이",
+					"zh-hant": "鐵殼蛹",
+					"fr": "Coconfort",
+					"de": "Kokuna",
+					"es": "Kakuna",
+					"it": "Kakuna",
+					"ja": "コクーン",
+					"zh-hans": "铁壳蛹",
+					"es-419": "Kakuna"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 25,
+					"def": 50,
+					"spa": 25,
+					"spd": 25,
+					"spe": 35
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "10.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Squiggle",
+				"color": "Yellow",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 14
+					},
+					{
+						"pokedex": "kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 27
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 19
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/14",
+						"fetchedAt": "2026-11-03T05:53:06.915Z",
+						"hash": "1f23d9e168ba550fe1b615b1c248e9d30fab8f6fb4f4cb608ae71d2249effe41"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/",
+						"fetchedAt": "2026-11-03T05:53:06.948Z",
+						"hash": "3ea75327d372b32e72543253fadf1f8c9572dbfac8a9e0e283dd63350c445175"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.983Z",
+						"hash": "63bf60a40e1e342200a15a0554add7e5b276ad5018f9049f179fdf124413e811"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/14/",
+						"fetchedAt": "2026-11-03T05:53:07.025Z",
+						"hash": "4ea57728183b193f5fadf64afc35019cccc0f6c39da7c5614daf29323e031bea"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlet": "",
+				"violet": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlet": {},
+				"violet": {}
+			}
+		},
+		{
+			"profileKey": "the-teal-mask",
+			"label": "The Teal Mask",
+			"appGameKeys": [
+				"scarlettm",
+				"violettm"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Kakuna",
+				"localizedNames": {
+					"ja-hrkt": "コクーン",
+					"ja-roma": "Cocoon",
+					"ko": "딱충이",
+					"zh-hant": "鐵殼蛹",
+					"fr": "Coconfort",
+					"de": "Kokuna",
+					"es": "Kakuna",
+					"it": "Kakuna",
+					"ja": "コクーン",
+					"zh-hans": "铁壳蛹",
+					"es-419": "Kakuna"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 25,
+					"def": 50,
+					"spa": 25,
+					"spd": 25,
+					"spe": 35
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "10.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Squiggle",
+				"color": "Yellow",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 14
+					},
+					{
+						"pokedex": "kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 27
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 19
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/14",
+						"fetchedAt": "2026-11-03T05:53:06.915Z",
+						"hash": "1f23d9e168ba550fe1b615b1c248e9d30fab8f6fb4f4cb608ae71d2249effe41"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/",
+						"fetchedAt": "2026-11-03T05:53:06.948Z",
+						"hash": "3ea75327d372b32e72543253fadf1f8c9572dbfac8a9e0e283dd63350c445175"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.983Z",
+						"hash": "63bf60a40e1e342200a15a0554add7e5b276ad5018f9049f179fdf124413e811"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/14/",
+						"fetchedAt": "2026-11-03T05:53:07.025Z",
+						"hash": "4ea57728183b193f5fadf64afc35019cccc0f6c39da7c5614daf29323e031bea"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlettm": "",
+				"violettm": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlettm": {},
+				"violettm": {}
+			}
+		},
+		{
+			"profileKey": "the-indigo-disk",
+			"label": "The Indigo Disk",
+			"appGameKeys": [
+				"scarletid",
+				"violetid"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Kakuna",
+				"localizedNames": {
+					"ja-hrkt": "コクーン",
+					"ja-roma": "Cocoon",
+					"ko": "딱충이",
+					"zh-hant": "鐵殼蛹",
+					"fr": "Coconfort",
+					"de": "Kokuna",
+					"es": "Kakuna",
+					"it": "Kakuna",
+					"ja": "コクーン",
+					"zh-hans": "铁壳蛹",
+					"es-419": "Kakuna"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 25,
+					"def": 50,
+					"spa": 25,
+					"spd": 25,
+					"spe": 35
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "10.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Squiggle",
+				"color": "Yellow",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 14
+					},
+					{
+						"pokedex": "kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 27
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 19
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/14",
+						"fetchedAt": "2026-11-03T05:53:06.915Z",
+						"hash": "1f23d9e168ba550fe1b615b1c248e9d30fab8f6fb4f4cb608ae71d2249effe41"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/",
+						"fetchedAt": "2026-11-03T05:53:06.948Z",
+						"hash": "3ea75327d372b32e72543253fadf1f8c9572dbfac8a9e0e283dd63350c445175"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.983Z",
+						"hash": "63bf60a40e1e342200a15a0554add7e5b276ad5018f9049f179fdf124413e811"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/14/",
+						"fetchedAt": "2026-11-03T05:53:07.025Z",
+						"hash": "4ea57728183b193f5fadf64afc35019cccc0f6c39da7c5614daf29323e031bea"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarletid": "",
+				"violetid": ""
+			},
+			"localizedFlavorByGame": {
+				"scarletid": {},
+				"violetid": {}
+			}
+		},
+		{
+			"profileKey": "legends-za",
+			"label": "Legends: Z-A",
+			"appGameKeys": [
+				"legendsza"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Kakuna",
+				"localizedNames": {
+					"ja-hrkt": "コクーン",
+					"ja-roma": "Cocoon",
+					"ko": "딱충이",
+					"zh-hant": "鐵殼蛹",
+					"fr": "Coconfort",
+					"de": "Kokuna",
+					"es": "Kakuna",
+					"it": "Kakuna",
+					"ja": "コクーン",
+					"zh-hans": "铁壳蛹",
+					"es-419": "Kakuna"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 25,
+					"def": 50,
+					"spa": 25,
+					"spd": 25,
+					"spe": 35
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin",
+					"Shed Skin (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Shed Skin"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium Fast",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "10 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Squiggle",
+				"color": "Yellow",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 14
+					},
+					{
+						"pokedex": "kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 27
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "lumiose",
+						"number": 19
+					}
+				],
+				"alphaMove": "Electroweb",
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Wild Zone 2",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Wild Zone 7",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Bleu District",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Jaune District",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Magenta District",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Rouge District",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Vert District",
+						"notes": "",
+						"games": "Legends: Z-A"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Poison Sting",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "String Shot",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Harden",
+							"level": 7,
+							"order": 3
+						}
+					],
+					"Machine": [
+						{
+							"name": "Iron Defense",
+							"machine": "TM080",
+							"order": 1
+						},
+						{
+							"name": "Electroweb",
+							"machine": "TM101",
+							"order": 2
+						},
+						{
+							"name": "Facade",
+							"machine": "TM109",
+							"order": 3
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Project Pokemon's Z-A game-data export assigns this form regional Dex #19."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/14",
+						"fetchedAt": "2026-11-03T05:53:06.915Z",
+						"hash": "1f23d9e168ba550fe1b615b1c248e9d30fab8f6fb4f4cb608ae71d2249effe41"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/",
+						"fetchedAt": "2026-11-03T05:53:06.948Z",
+						"hash": "3ea75327d372b32e72543253fadf1f8c9572dbfac8a9e0e283dd63350c445175"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.983Z",
+						"hash": "63bf60a40e1e342200a15a0554add7e5b276ad5018f9049f179fdf124413e811"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/14/",
+						"fetchedAt": "2026-11-03T05:53:07.025Z",
+						"hash": "4ea57728183b193f5fadf64afc35019cccc0f6c39da7c5614daf29323e031bea"
+					},
+					{
+						"type": "legends-za-personal-data",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/personal.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c00215459c764ba65d879d6503a7337ad80b338171ab4713d1c6f52b4517e36f"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "719eff37d8f2f404d163f81d23b2c921ac323a7b00304e502ca37d69a3375b1d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/French/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "1b658102e791558a1bb317563b7a3aaab8cebc1c7517aa7f5d5c0e708e93d626"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/German/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5f1e419ae3b84ab18cb05b972569e629ff0bff96d928468c52c536b02dc6cf9d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Italian/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "e0bd40a2f4b7678afb82f959b7b1f3503590bd13884daf94bd5813fea832067c"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/JPN/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5c2c9784278c5d13f3ba376e4338cef21923d68faec9b8498175c21180825f24"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Korean/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c83545726b0b0b803295f52448510c15adaab3e6ce248adba23b5ad0d0344216"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/LATAM/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "01d046caf7553d97a3c275465bce97ecedae26a67674a40b5c751a56b3b4d52d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Simp_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "09495dacb0d16eb6e91aa1d67eb1ed682d0682303719811eeb1c6877bb9e7ca2"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Spanish/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "b3fafb97fe85165bd65fdd732ce1e4cee880ffe5035632269787ce859735b358"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Trad_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c446ae3e93760fc4af895427508ed852511201723f8cac84121330747e8c3cd0"
+					},
+					{
+						"type": "legends-za-locations",
+						"url": "https://www.serebii.net/pokedex-sv/kakuna/",
+						"fetchedAt": "2026-11-04T05:47:08.254Z",
+						"hash": "446bed202359f3dbcbe013e544c1754e391fc2dabeac3b629ba001d64371663a"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendsza": "Almost incapable of moving, this Pokémon can only harden its shell to protect itself when it is in danger."
+			},
+			"localizedFlavorByGame": {
+				"legendsza": {
+					"en": "Almost incapable of moving, this Pokémon can only harden its shell to protect itself when it is in danger.",
+					"fr": "Presque incapable de se déplacer par ses propres moyens, il se protège en durcissant sa carapace quand il est en danger.",
+					"de": "Dieses Pokémon kann sich zwar kaum bewegen, aber bei drohender Gefahr scheint es sich zu seinem Schutz zu verhärten.",
+					"it": "È quasi incapace di muoversi, e quando è in pericolo può indurire il proprio guscio per proteggersi.",
+					"ja": "自分では ほとんど 動けないが 危ないときは 硬くなって 身を守っているようだ。",
+					"ko": "스스로는 거의 움직일 수 없지만 위험할 때는 단단해져서 몸을 보호하고 있는 것 같다.",
+					"es-419": "Como es casi incapaz de moverse, este Pokémon solo puede endurecer su caparazón para protegerse.",
+					"zh-hans": "虽然只靠自己几乎无法行动， 但在遇到危险的时候， 好像会让外壳变硬并以此来保护自己。",
+					"es": "Casi incapaz de moverse, este Pokémon solo puede endurecer su caparazón para protegerse.",
+					"zh-hant": "雖然只靠自己幾乎無法行動， 但在遇到危險的時候 好像會讓外殼變硬來保護自己。"
+				}
+			}
+		},
+		{
+			"profileKey": "mega-dimension",
+			"label": "Mega Dimension",
+			"appGameKeys": [
+				"legendszamd"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Kakuna",
+				"localizedNames": {
+					"ja-hrkt": "コクーン",
+					"ja-roma": "Cocoon",
+					"ko": "딱충이",
+					"zh-hant": "鐵殼蛹",
+					"fr": "Coconfort",
+					"de": "Kokuna",
+					"es": "Kakuna",
+					"it": "Kakuna",
+					"ja": "コクーン",
+					"zh-hans": "铁壳蛹",
+					"es-419": "Kakuna"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 25,
+					"def": 50,
+					"spa": 25,
+					"spd": 25,
+					"spe": 35
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin",
+					"Shed Skin (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Shed Skin"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium Fast",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "10 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 72,
+				"habitat": "Forest",
+				"shape": "Squiggle",
+				"color": "Yellow",
+				"genus": "Cocoon Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "さなぎポケモン",
+					"ko": "번데기포켓몬",
+					"zh-hant": "蛹寶可夢",
+					"fr": "Pokémon Cocon",
+					"de": "Kokon",
+					"es": "Pokémon Capullo",
+					"it": "Pokémon Bozzolo",
+					"ja": "さなぎポケモン",
+					"zh-hans": "蛹宝可梦",
+					"es-419": "Pokémon Capullo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 14
+					},
+					{
+						"pokedex": "kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 28
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 27
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 14
+					},
+					{
+						"pokedex": "lumiose",
+						"number": 19
+					}
+				],
+				"alphaMove": "Electroweb",
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Wild Zone 2",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Wild Zone 7",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Bleu District",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Jaune District",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Magenta District",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Rouge District",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Vert District",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Hyperspace Lumiose",
+						"notes": "Poison (4 Star), Bug (1 Star), Bug (4 Star)",
+						"games": "Legends: Z-A Mega Dimension"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Poison Sting",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "String Shot",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Harden",
+							"level": 7,
+							"order": 3
+						}
+					],
+					"Machine": [
+						{
+							"name": "Iron Defense",
+							"machine": "TM080",
+							"order": 1
+						},
+						{
+							"name": "Electroweb",
+							"machine": "TM101",
+							"order": 2
+						},
+						{
+							"name": "Facade",
+							"machine": "TM109",
+							"order": 3
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Project Pokemon's Z-A game-data export assigns this form regional Dex #19."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/14",
+						"fetchedAt": "2026-11-03T05:53:06.915Z",
+						"hash": "1f23d9e168ba550fe1b615b1c248e9d30fab8f6fb4f4cb608ae71d2249effe41"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/",
+						"fetchedAt": "2026-11-03T05:53:06.948Z",
+						"hash": "3ea75327d372b32e72543253fadf1f8c9572dbfac8a9e0e283dd63350c445175"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/14/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.983Z",
+						"hash": "63bf60a40e1e342200a15a0554add7e5b276ad5018f9049f179fdf124413e811"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/14/",
+						"fetchedAt": "2026-11-03T05:53:07.025Z",
+						"hash": "4ea57728183b193f5fadf64afc35019cccc0f6c39da7c5614daf29323e031bea"
+					},
+					{
+						"type": "legends-za-personal-data",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/personal.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c00215459c764ba65d879d6503a7337ad80b338171ab4713d1c6f52b4517e36f"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "719eff37d8f2f404d163f81d23b2c921ac323a7b00304e502ca37d69a3375b1d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/French/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "1b658102e791558a1bb317563b7a3aaab8cebc1c7517aa7f5d5c0e708e93d626"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/German/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5f1e419ae3b84ab18cb05b972569e629ff0bff96d928468c52c536b02dc6cf9d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Italian/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "e0bd40a2f4b7678afb82f959b7b1f3503590bd13884daf94bd5813fea832067c"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/JPN/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5c2c9784278c5d13f3ba376e4338cef21923d68faec9b8498175c21180825f24"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Korean/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c83545726b0b0b803295f52448510c15adaab3e6ce248adba23b5ad0d0344216"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/LATAM/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "01d046caf7553d97a3c275465bce97ecedae26a67674a40b5c751a56b3b4d52d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Simp_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "09495dacb0d16eb6e91aa1d67eb1ed682d0682303719811eeb1c6877bb9e7ca2"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Spanish/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "b3fafb97fe85165bd65fdd732ce1e4cee880ffe5035632269787ce859735b358"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Trad_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c446ae3e93760fc4af895427508ed852511201723f8cac84121330747e8c3cd0"
+					},
+					{
+						"type": "legends-za-locations",
+						"url": "https://www.serebii.net/pokedex-sv/kakuna/",
+						"fetchedAt": "2026-11-04T05:47:08.254Z",
+						"hash": "446bed202359f3dbcbe013e544c1754e391fc2dabeac3b629ba001d64371663a"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendszamd": "Almost incapable of moving, this Pokémon can only harden its shell to protect itself when it is in danger."
+			},
+			"localizedFlavorByGame": {
+				"legendszamd": {
+					"en": "Almost incapable of moving, this Pokémon can only harden its shell to protect itself when it is in danger.",
+					"fr": "Presque incapable de se déplacer par ses propres moyens, il se protège en durcissant sa carapace quand il est en danger.",
+					"de": "Dieses Pokémon kann sich zwar kaum bewegen, aber bei drohender Gefahr scheint es sich zu seinem Schutz zu verhärten.",
+					"it": "È quasi incapace di muoversi, e quando è in pericolo può indurire il proprio guscio per proteggersi.",
+					"ja": "自分では ほとんど 動けないが 危ないときは 硬くなって 身を守っているようだ。",
+					"ko": "스스로는 거의 움직일 수 없지만 위험할 때는 단단해져서 몸을 보호하고 있는 것 같다.",
+					"es-419": "Como es casi incapaz de moverse, este Pokémon solo puede endurecer su caparazón para protegerse.",
+					"zh-hans": "虽然只靠自己几乎无法行动， 但在遇到危险的时候， 好像会让外壳变硬并以此来保护自己。",
+					"es": "Casi incapaz de moverse, este Pokémon solo puede endurecer su caparazón para protegerse.",
+					"zh-hant": "雖然只靠自己幾乎無法行動， 但在遇到危險的時候 好像會讓外殼變硬來保護自己。"
+				}
+			}
+		}
+	]
+}

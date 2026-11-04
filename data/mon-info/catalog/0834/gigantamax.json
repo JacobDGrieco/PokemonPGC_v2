@@ -1,0 +1,614 @@
+{
+	"schemaVersion": 2,
+	"nationalDexId": 834,
+	"speciesName": "Drednaw",
+	"formKey": "gigantamax",
+	"formName": "Gigantamax",
+	"formLabelSource": "form-catalog",
+	"profiles": [
+		{
+			"profileKey": "sword-shield",
+			"label": "Sword / Shield",
+			"appGameKeys": [
+				"sword",
+				"shield"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Drednaw",
+				"localizedNames": {
+					"ja-hrkt": "カジリガメ",
+					"ja-roma": "Kajirigame",
+					"ko": "갈가부기",
+					"zh-hant": "暴噬龜",
+					"fr": "Torgamord",
+					"de": "Kamalm",
+					"es": "Drednaw",
+					"it": "Drednaw",
+					"ja": "カジリガメ",
+					"zh-hans": "暴噬龟",
+					"es-419": "Drednaw"
+				},
+				"localizedFormNames": {
+					"fr": "Torgamord Gigamax",
+					"de": "Gigadynamax-Kamalm"
+				},
+				"localizedFormLabels": {
+					"ja-hrkt": "キョダイマックスのすがた",
+					"fr": "Forme Gigamax",
+					"de": "Gigadynamax-Form",
+					"ja": "キョダイマックスのすがた"
+				},
+				"types": [
+					"Water",
+					"Rock"
+				],
+				"baseStats": {
+					"hp": 90,
+					"atk": 115,
+					"def": 90,
+					"spa": 48,
+					"spd": 68,
+					"spe": 74
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Strong Jaw",
+					"Shell Armor",
+					"Swift Swim (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Swift Swim"
+				],
+				"eggGroups": [
+					"Monster",
+					"Water1"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "24.0 m",
+				"weight": "1000.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 75,
+				"baseExperience": 170,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Green",
+				"genus": "Bite Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "かみつきポケモン",
+					"ko": "물어뜯기포켓몬",
+					"zh-hant": "緊咬寶可夢",
+					"fr": "Pokémon Morsure",
+					"de": "Biss-Pokémon",
+					"es": "Pokémon Mordisco",
+					"it": "Pokémon Morso",
+					"ja": "かみつきポケモン",
+					"zh-hans": "紧咬宝可梦",
+					"es-419": "Pokémon Mordisco"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 834
+					},
+					{
+						"pokedex": "galar",
+						"number": 43
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 57
+					},
+					{
+						"pokedex": "paldea",
+						"number": 58
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 184
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 833,
+								"natiId": 833,
+								"name": "Chewtle"
+							},
+							{
+								"id": 834,
+								"natiId": 834,
+								"name": "Drednaw",
+								"method": "Level",
+								"value": 22
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Galar Wild Area Max Dens Area",
+						"notes": "Max Raid, Lv. 60",
+						"games": "Sword",
+						"rate": "5%"
+					},
+					{
+						"area": "Galar Wild Area Max Dens Area",
+						"notes": "Max Raid, Lv. 60",
+						"games": "Shield",
+						"rate": "5%"
+					},
+					{
+						"area": "Giants Cap Max Den D",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Sword",
+						"rate": "5%"
+					},
+					{
+						"area": "Giants Cap Max Den D",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Shield",
+						"rate": "5%"
+					}
+				],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokemonPGC form catalog includes this game profile.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/834",
+						"fetchedAt": "2026-11-03T05:54:00.001Z",
+						"hash": "d31208f4cff984a8f27eff96844a83464c3ee6aecef1d9b6384e7b00e6ff5844"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/439/",
+						"fetchedAt": "2026-11-03T05:53:59.993Z",
+						"hash": "defe3fe8960814471ab5fe53629a2068cf3ecb9b0f49f57d940cddf138d7dbb4"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/10214/",
+						"fetchedAt": "2026-11-03T05:54:00.172Z",
+						"hash": "cb141c66b966e4fabcfc1cfc19e0c590da27c583729ad50b00759ced40c7e040"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/10214/encounters",
+						"fetchedAt": "2026-11-03T05:54:00.228Z",
+						"hash": "1893dd156a83f73e3eaaa2c3618f9ec6da4ad0c8e76c128bd0fed4d8c45de1b7"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/10383/",
+						"fetchedAt": "2026-11-03T05:54:00.265Z",
+						"hash": "fbca0e1179bbb16a677d10a7e4b3d209bba1bd5f35179b2792ea50a407ab7599"
+					}
+				],
+				"formName": "Gigantamax"
+			},
+			"flavorByGame": {
+				"sword": "With jaws that can shear through steel rods, this highly aggressive Pokémon chomps down on its unfortunate prey.",
+				"shield": "This Pokémon rapidly extends its retractable neck to sink its sharp fangs into distant enemies and take them down."
+			},
+			"localizedFlavorByGame": {
+				"sword": {
+					"ja-hrkt": "きょうぼうな せいしつ。 てつぼうを かみちぎる ほどの アゴの ちからで えものに ばくりと かみつく。",
+					"ko": "흉포한 성질을 가졌다. 철봉을 물어뜯어 버릴 정도의 턱 힘으로 먹이를 덥석 물어버린다.",
+					"zh-hant": "性情凶暴的寶可夢。 會用能咬斷鐵棍的顎部 大口咬住獵物。",
+					"fr": "De nature très violente, il mord fermement ses proies avec sa mâchoire, assez puissante pour broyer une barre de fer.",
+					"de": "Dieses von Natur aus aggressive Pokémon beißt seine Beute mit seinem kräftigen Kiefer, der selbst Eisenstangen zermalmen kann.",
+					"es": "Un Pokémon de temperamento feroz que atenaza a su presa con sus fuertes mandíbulas, capaces de destrozar una barra de hierro.",
+					"it": "Ha una natura estremamente feroce e addenta le prede con la sua mascella, così potente da poter sbriciolare sbarre di ferro.",
+					"en": "With jaws that can shear through steel rods, this highly aggressive Pokémon chomps down on its unfortunate prey.",
+					"ja": "狂暴な 性質。 鉄棒を 噛み千切る ほどの 顎の 力で 獲物に ばくりと 噛みつく。",
+					"zh-hans": "性格凶暴的宝可梦。 会用能咬断铁棍的颚部 大口咬住猎物。",
+					"es-419": "Un Pokémon de temperamento feroz que atenaza a su presa con sus fuertes mandíbulas, capaces de destrozar una barra de hierro."
+				},
+				"shield": {
+					"ja-hrkt": "くびが のびちぢみする。 はなれた ところから くびを いっきに のばし するどい キバで てきを しとめる。",
+					"ko": "목을 자유자재로 늘이고 줄인다. 떨어져 있는 곳에서 목을 단번에 늘여 날카로운 이빨로 적의 숨통을 끊는다.",
+					"zh-hant": "頸部可以伸縮。 能從遠處迅速伸長頸部， 用銳利的牙齒解決對手。",
+					"fr": "Son cou extensible lui permet d’atteindre des ennemis éloignés en un instant pour leur porter un coup décisif avec ses crocs aiguisés.",
+					"de": "Sein streckbarer Hals ermöglicht es ihm, auch entfernte Gegner zu erreichen, die es dann mit seinen scharfen Zähnen ausschaltet.",
+					"es": "Su cuello extensible le permite alcanzar a los rivales a distancia. Hundiendo sus afilados dientes, les da el golpe de gracia.",
+					"it": "Ha un collo retrattile. Tenendosi a distanza dal nemico, lo estende all’improvviso per dare il colpo di grazia con i denti aguzzi.",
+					"en": "This Pokémon rapidly extends its retractable neck to sink its sharp fangs into distant enemies and take them down.",
+					"ja": "首が 伸び縮みする。 離れた ところから 首を 一気に 伸ばし 鋭い キバで 敵を しとめる。",
+					"zh-hans": "颈部可以伸缩。 能从远处迅速伸长颈部， 用锐利的牙齿解决对手。",
+					"es-419": "Su cuello extensible le permite alcanzar a los rivales a distancia. Hundiendo sus afilados dientes, les da el golpe de gracia."
+				}
+			}
+		},
+		{
+			"profileKey": "the-isle-of-armor",
+			"label": "The Isle of Armor",
+			"appGameKeys": [
+				"swordioa",
+				"shieldioa"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Drednaw",
+				"localizedNames": {
+					"ja-hrkt": "カジリガメ",
+					"ja-roma": "Kajirigame",
+					"ko": "갈가부기",
+					"zh-hant": "暴噬龜",
+					"fr": "Torgamord",
+					"de": "Kamalm",
+					"es": "Drednaw",
+					"it": "Drednaw",
+					"ja": "カジリガメ",
+					"zh-hans": "暴噬龟",
+					"es-419": "Drednaw"
+				},
+				"localizedFormNames": {
+					"fr": "Torgamord Gigamax",
+					"de": "Gigadynamax-Kamalm"
+				},
+				"localizedFormLabels": {
+					"ja-hrkt": "キョダイマックスのすがた",
+					"fr": "Forme Gigamax",
+					"de": "Gigadynamax-Form",
+					"ja": "キョダイマックスのすがた"
+				},
+				"types": [
+					"Water",
+					"Rock"
+				],
+				"baseStats": {
+					"hp": 90,
+					"atk": 115,
+					"def": 90,
+					"spa": 48,
+					"spd": 68,
+					"spe": 74
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Strong Jaw",
+					"Shell Armor",
+					"Swift Swim (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Swift Swim"
+				],
+				"eggGroups": [
+					"Monster",
+					"Water1"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "24.0 m",
+				"weight": "1000.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 75,
+				"baseExperience": 170,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Green",
+				"genus": "Bite Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "かみつきポケモン",
+					"ko": "물어뜯기포켓몬",
+					"zh-hant": "緊咬寶可夢",
+					"fr": "Pokémon Morsure",
+					"de": "Biss-Pokémon",
+					"es": "Pokémon Mordisco",
+					"it": "Pokémon Morso",
+					"ja": "かみつきポケモン",
+					"zh-hans": "紧咬宝可梦",
+					"es-419": "Pokémon Mordisco"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 834
+					},
+					{
+						"pokedex": "galar",
+						"number": 43
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 57
+					},
+					{
+						"pokedex": "paldea",
+						"number": 58
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 184
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 833,
+								"natiId": 833,
+								"name": "Chewtle"
+							},
+							{
+								"id": 834,
+								"natiId": 834,
+								"name": "Drednaw",
+								"method": "Level",
+								"value": 22
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Courageous Cavern Max Den C",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Courageous Cavern Max Den C",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "20%"
+					}
+				],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokemonPGC form catalog includes this game profile.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/834",
+						"fetchedAt": "2026-11-03T05:54:00.001Z",
+						"hash": "d31208f4cff984a8f27eff96844a83464c3ee6aecef1d9b6384e7b00e6ff5844"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/439/",
+						"fetchedAt": "2026-11-03T05:53:59.993Z",
+						"hash": "defe3fe8960814471ab5fe53629a2068cf3ecb9b0f49f57d940cddf138d7dbb4"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/10214/",
+						"fetchedAt": "2026-11-03T05:54:00.172Z",
+						"hash": "cb141c66b966e4fabcfc1cfc19e0c590da27c583729ad50b00759ced40c7e040"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/10214/encounters",
+						"fetchedAt": "2026-11-03T05:54:00.228Z",
+						"hash": "1893dd156a83f73e3eaaa2c3618f9ec6da4ad0c8e76c128bd0fed4d8c45de1b7"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/10383/",
+						"fetchedAt": "2026-11-03T05:54:00.265Z",
+						"hash": "fbca0e1179bbb16a677d10a7e4b3d209bba1bd5f35179b2792ea50a407ab7599"
+					}
+				],
+				"formName": "Gigantamax"
+			},
+			"flavorByGame": {
+				"swordioa": "",
+				"shieldioa": ""
+			},
+			"localizedFlavorByGame": {
+				"swordioa": {},
+				"shieldioa": {}
+			}
+		},
+		{
+			"profileKey": "the-crown-tundra",
+			"label": "The Crown Tundra",
+			"appGameKeys": [
+				"swordct",
+				"shieldct"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Drednaw",
+				"localizedNames": {
+					"ja-hrkt": "カジリガメ",
+					"ja-roma": "Kajirigame",
+					"ko": "갈가부기",
+					"zh-hant": "暴噬龜",
+					"fr": "Torgamord",
+					"de": "Kamalm",
+					"es": "Drednaw",
+					"it": "Drednaw",
+					"ja": "カジリガメ",
+					"zh-hans": "暴噬龟",
+					"es-419": "Drednaw"
+				},
+				"localizedFormNames": {
+					"fr": "Torgamord Gigamax",
+					"de": "Gigadynamax-Kamalm"
+				},
+				"localizedFormLabels": {
+					"ja-hrkt": "キョダイマックスのすがた",
+					"fr": "Forme Gigamax",
+					"de": "Gigadynamax-Form",
+					"ja": "キョダイマックスのすがた"
+				},
+				"types": [
+					"Water",
+					"Rock"
+				],
+				"baseStats": {
+					"hp": 90,
+					"atk": 115,
+					"def": 90,
+					"spa": 48,
+					"spd": 68,
+					"spe": 74
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Strong Jaw",
+					"Shell Armor",
+					"Swift Swim (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Swift Swim"
+				],
+				"eggGroups": [
+					"Monster",
+					"Water1"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "24.0 m",
+				"weight": "1000.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 75,
+				"baseExperience": 170,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Green",
+				"genus": "Bite Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "かみつきポケモン",
+					"ko": "물어뜯기포켓몬",
+					"zh-hant": "緊咬寶可夢",
+					"fr": "Pokémon Morsure",
+					"de": "Biss-Pokémon",
+					"es": "Pokémon Mordisco",
+					"it": "Pokémon Morso",
+					"ja": "かみつきポケモン",
+					"zh-hans": "紧咬宝可梦",
+					"es-419": "Pokémon Mordisco"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 834
+					},
+					{
+						"pokedex": "galar",
+						"number": 43
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 57
+					},
+					{
+						"pokedex": "paldea",
+						"number": 58
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 184
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 833,
+								"natiId": 833,
+								"name": "Chewtle"
+							},
+							{
+								"id": 834,
+								"natiId": 834,
+								"name": "Drednaw",
+								"method": "Level",
+								"value": 22
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokemonPGC form catalog includes this game profile.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/834",
+						"fetchedAt": "2026-11-03T05:54:00.001Z",
+						"hash": "d31208f4cff984a8f27eff96844a83464c3ee6aecef1d9b6384e7b00e6ff5844"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/439/",
+						"fetchedAt": "2026-11-03T05:53:59.993Z",
+						"hash": "defe3fe8960814471ab5fe53629a2068cf3ecb9b0f49f57d940cddf138d7dbb4"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/10214/",
+						"fetchedAt": "2026-11-03T05:54:00.172Z",
+						"hash": "cb141c66b966e4fabcfc1cfc19e0c590da27c583729ad50b00759ced40c7e040"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/10214/encounters",
+						"fetchedAt": "2026-11-03T05:54:00.228Z",
+						"hash": "1893dd156a83f73e3eaaa2c3618f9ec6da4ad0c8e76c128bd0fed4d8c45de1b7"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/10383/",
+						"fetchedAt": "2026-11-03T05:54:00.265Z",
+						"hash": "fbca0e1179bbb16a677d10a7e4b3d209bba1bd5f35179b2792ea50a407ab7599"
+					}
+				],
+				"formName": "Gigantamax"
+			},
+			"flavorByGame": {
+				"swordct": "",
+				"shieldct": ""
+			},
+			"localizedFlavorByGame": {
+				"swordct": {},
+				"shieldct": {}
+			}
+		}
+	]
+}

@@ -1,0 +1,1002 @@
+{
+	"schemaVersion": 1,
+	"id": 668,
+	"slug": "strength-sap",
+	"name": "Strength Sap",
+	"names": {
+		"de": "Kraftabsorber",
+		"en": "Strength Sap",
+		"es": "Absorbefuerza",
+		"es-419": "Absorbefuerza",
+		"fr": "Vole-Force",
+		"it": "Assorbiforza",
+		"ja": "ちからをすいとる",
+		"ja-hrkt": "ちからをすいとる",
+		"ko": "힘흡수",
+		"zh-hans": "吸取力量",
+		"zh-hant": "吸取力量"
+	},
+	"generation": 7,
+	"type": "Grass",
+	"damageClass": "Status",
+	"power": null,
+	"accuracy": 100,
+	"pp": 10,
+	"priority": 0,
+	"effectChance": 100,
+	"target": "Selected Pokemon",
+	"effectEntries": [
+		{
+			"language": "en",
+			"effect": "Lowers the target’s Attack by one stage. Heals the user by the target’s current Attack, including modifiers, but not including this move’s Attack-lowering effect. If the target’s Attack is already at -6, this move will fail. In any other situation that would prevent a stat modification, the healing will still succeed.",
+			"shortEffect": "Heals the user by the target’s current Attack stat and lowers the target’s Attack by one stage."
+		},
+		{
+			"language": "fr",
+			"effect": "Diminue l'Attaque de la cible d'un niveau. Soigne le lanceur de l'Attaque actuelle de la cible, incluant les modifications, mais n'incluant pas l'effet de baisse d'Attaque de cette capacité. Si l'Attaque de la cible est déjà à -6, cette capacité échouera. Dans n'importe quelle autre situation qui empêcherait une modification de stat, le soin restera un succès.",
+			"shortEffect": "Soigne le lanceur de la stat d'Attaque actuelle de la cible et diminue l'Attaque de la cible d'un niveau."
+		}
+	],
+	"effectChanges": [],
+	"descriptions": [
+		{
+			"versionGroup": "legends-arceus",
+			"language": "en",
+			"text": "The user restores its HP by the same amount as the target's Attack stat. It also lowers the target's Attack stat."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "de",
+			"text": "Ein Angriff, der die KP des Anwenders um die Höhe des Angriffs-Werts des Zieles heilt. Anschließend wird der Angriff des Zieles gesenkt."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "en",
+			"text": "The user restores its HP by the same amount as the target’s Attack stat. It also lowers the target’s Attack stat."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "es",
+			"text": "Restaura una cantidad de PS equivalente al valor de Ataque del rival, que además verá reducida esta característica."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "es-419",
+			"text": "Restaura una cantidad de PS equivalente al valor de Ataque del rival, que además verá reducida esta característica."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "fr",
+			"text": "Rend au lanceur une quantité de PV équivalente à la stat d’Attaque de la cible, puis baisse celle-ci."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "it",
+			"text": "Fa recuperare una quantità di PS pari all’Attacco del bersaglio, che vedrà diminuire questa statistica."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "ja",
+			"text": "相手の 攻撃力と 同じだけ 自分の ＨＰを 回復する。 そして 相手の 攻撃を さげる。"
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "ja-hrkt",
+			"text": "あいての こうげきりょくと おなじだけ じぶんの ＨＰを かいふくする。 そして あいての こうげきを さげる。"
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "ko",
+			"text": "상대 공격력과 동일하게 자신의 HP를 회복한다. 그리고 상대의 공격을 떨어뜨린다."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "zh-hans",
+			"text": "给自己回复和对手攻击力 相同数值的HP， 然后降低对手的攻击。"
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "zh-hant",
+			"text": "將自己的HP回復到和 對手的攻擊力相同。 然後降低對手的攻擊。"
+		},
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "en",
+			"text": "The user restores its own HP by the same amount as the target's Attack stat. It then lowers the target's Attack stat."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "de",
+			"text": "Ein Angriff, der die KP des Anwenders um die Höhe des Angriffs-Werts des Zieles heilt. Anschließend wird der Angriff des Zieles gesenkt."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "en",
+			"text": "The user restores its HP by the same amount as the target’s Attack stat. It also lowers the target’s Attack stat."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "es",
+			"text": "Restaura una cantidad de PS equivalente al valor de Ataque del rival, que además verá reducida esta característica."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "es-419",
+			"text": "Restaura una cantidad de PS equivalente al valor de Ataque del rival, que además verá reducida esta característica."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "fr",
+			"text": "Rend au lanceur une quantité de PV équivalente à la stat d’Attaque de la cible, puis baisse celle-ci."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "it",
+			"text": "Fa recuperare una quantità di PS pari all’Attacco del bersaglio, che vedrà diminuire questa statistica."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "ja",
+			"text": "相手の 攻撃力と 同じだけ 自分の ＨＰを 回復する。 そして 相手の 攻撃を さげる。"
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "ja-hrkt",
+			"text": "あいての こうげきりょくと おなじだけ じぶんの ＨＰを かいふくする。 そして あいての こうげきを さげる。"
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "ko",
+			"text": "상대 공격력과 동일하게 자신의 HP를 회복한다. 그리고 상대의 공격을 떨어뜨린다."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "zh-hans",
+			"text": "给自己回复和对手攻击力 相同数值的ＨＰ， 然后降低对手的攻击。"
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "zh-hant",
+			"text": "將自己的ＨＰ回復到和 對手的攻擊力相同。 然後降低對手的攻擊。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "de",
+			"text": "Ein Angriff, der die KP des Anwenders um die Höhe des Angriffs-Werts des Zieles heilt. Anschließend wird der Angriff des Zieles gesenkt."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "en",
+			"text": "The user restores its HP by the same amount as the target’s Attack stat. It also lowers the target’s Attack stat."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es",
+			"text": "Restaura una cantidad de PS equivalente al valor de Ataque del rival, que además verá reducida esta característica."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es-419",
+			"text": "Restaura una cantidad de PS equivalente al valor de Ataque del rival, que además verá reducida esta característica."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "fr",
+			"text": "Rend au lanceur une quantité de PV équivalente à la stat d’Attaque de la cible, puis baisse celle-ci."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "it",
+			"text": "Fa recuperare una quantità di PS pari all’Attacco del bersaglio, che vedrà diminuire questa statistica."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja",
+			"text": "相手の 攻撃力と 同じだけ 自分の ＨＰを 回復する。 そして 相手の 攻撃を さげる。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja-hrkt",
+			"text": "あいての こうげきりょくと おなじだけ じぶんの ＨＰを かいふくする。 そして あいての こうげきを さげる。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ko",
+			"text": "상대 공격력과 동일하게 자신의 HP를 회복한다. 그리고 상대의 공격을 떨어뜨린다."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hans",
+			"text": "给自己回复和对手攻击力 相同数值的ＨＰ， 然后降低对手的攻击。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hant",
+			"text": "將自己的ＨＰ回復到和 對手的攻擊力相同。 然後降低對手的攻擊。"
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "de",
+			"text": "Ein Angriff, der die KP des Anwenders um die Höhe des Angriffs-Werts des Zieles heilt. Anschließend wird der Angriff des Zieles gesenkt."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "en",
+			"text": "The user restores its HP by the same amount as the target’s Attack stat. It also lowers the target’s Attack stat."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "es",
+			"text": "Restaura una cantidad de PS equivalente al valor de Ataque del rival, que además verá reducida esta característica."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "es-419",
+			"text": "Restaura una cantidad de PS equivalente al valor de Ataque del rival, que además verá reducida esta característica."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "fr",
+			"text": "Rend au lanceur une quantité de PV équivalente à la stat d’Attaque de la cible, puis baisse celle-ci."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "it",
+			"text": "Fa recuperare una quantità di PS pari all’Attacco del bersaglio, che vedrà diminuire questa statistica."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "ja",
+			"text": "相手の 攻撃力と 同じだけ 自分の ＨＰを 回復する。 そして 相手の 攻撃を さげる。"
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "ja-hrkt",
+			"text": "あいての こうげきりょくと おなじだけ じぶんの ＨＰを かいふくする。 そして あいての こうげきを さげる。"
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "ko",
+			"text": "상대 공격력과 동일하게 자신의 HP를 회복한다. 그리고 상대의 공격을 떨어뜨린다."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "zh-hans",
+			"text": "给自己回复和对手攻击力 相同数值的ＨＰ， 然后降低对手的攻击。"
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "zh-hant",
+			"text": "將自己的ＨＰ回復到和 對手的攻擊力相同。 然後降低對手的攻擊。"
+		}
+	],
+	"pastValues": [],
+	"statChanges": [
+		{
+			"stat": "Attack",
+			"change": -1
+		}
+	],
+	"meta": {
+		"ailment": "None",
+		"category": "Unique",
+		"minHits": null,
+		"maxHits": null,
+		"minTurns": null,
+		"maxTurns": null,
+		"drain": 0,
+		"healing": 0,
+		"critRate": 0,
+		"ailmentChance": 0,
+		"flinchChance": 0,
+		"statChance": 100
+	},
+	"machines": [],
+	"learners": [
+		{
+			"nationalDexId": 43,
+			"speciesName": "Oddish",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 44,
+			"speciesName": "Gloom",
+			"formKey": "female",
+			"formName": "Female",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 44,
+			"speciesName": "Gloom",
+			"formKey": "male",
+			"formName": "Male",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 45,
+			"speciesName": "Vileplume",
+			"formKey": "female",
+			"formName": "Female",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 45,
+			"speciesName": "Vileplume",
+			"formKey": "male",
+			"formName": "Male",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 69,
+			"speciesName": "Bellsprout",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 70,
+			"speciesName": "Weepinbell",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 182,
+			"speciesName": "Bellossom",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 187,
+			"speciesName": "Hoppip",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 222,
+			"speciesName": "Corsola",
+			"formKey": "galarian",
+			"formName": "Galarian",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 35,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 426,
+			"speciesName": "Drifblim",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 6
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 2
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 2
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 592,
+			"speciesName": "Frillish",
+			"formKey": "female",
+			"formName": "Female",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 592,
+			"speciesName": "Frillish",
+			"formKey": "male",
+			"formName": "Male",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 755,
+			"speciesName": "Morelull",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 32,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 25,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 32,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 756,
+			"speciesName": "Shiinotic",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 35,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 27,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 35,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 855,
+			"speciesName": "Polteageist",
+			"formKey": "antique",
+			"formName": "Antique",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 5
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 2
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 855,
+			"speciesName": "Polteageist",
+			"formKey": "phony",
+			"formName": "Phony",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 5
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 2
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 864,
+			"speciesName": "Cursola",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 35,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 928,
+			"speciesName": "Smoliv",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 946,
+			"speciesName": "Bramblin",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 947,
+			"speciesName": "Brambleghast",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 1013,
+			"speciesName": "Sinistcha",
+			"formKey": "masterpiece",
+			"formName": "Masterpiece",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 42,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 1013,
+			"speciesName": "Sinistcha",
+			"formKey": "unremarkable",
+			"formName": "Unremarkable",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 42,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		}
+	],
+	"potentialPokemon": [
+		"oddish",
+		"gloom",
+		"vileplume",
+		"bellsprout",
+		"weepinbell",
+		"victreebel",
+		"bellossom",
+		"hoppip",
+		"drifblim",
+		"frillish-male",
+		"morelull",
+		"shiinotic",
+		"polteageist",
+		"cursola",
+		"smoliv",
+		"bramblin",
+		"brambleghast",
+		"sinistcha",
+		"corsola-galar",
+		"victreebel-mega"
+	],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/move/668/",
+		"fetchedAt": "2026-11-03T06:30:17.420Z",
+		"hash": "8d649d836e9b90bc58a6da3de7287da79c5dc881704cf3d84892ebb1b96ce409"
+	}
+}

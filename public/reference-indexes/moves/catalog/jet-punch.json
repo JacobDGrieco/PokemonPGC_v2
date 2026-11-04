@@ -1,0 +1,99 @@
+{
+	"schemaVersion": 1,
+	"id": 857,
+	"slug": "jet-punch",
+	"name": "Jet Punch",
+	"names": {
+		"de": "Düsenhieb",
+		"en": "Jet Punch",
+		"es": "Puño Jet",
+		"es-419": "Puño Jet",
+		"fr": "Poing Sonique",
+		"it": "Pugnojet",
+		"ja": "ジェットパンチ",
+		"ja-hrkt": "ジェットパンチ",
+		"ko": "제트펀치",
+		"zh-hans": "喷射拳",
+		"zh-hant": "噴射拳"
+	},
+	"generation": 9,
+	"type": "Water",
+	"damageClass": "Physical",
+	"power": 60,
+	"accuracy": 100,
+	"pp": 15,
+	"priority": 1,
+	"effectChance": null,
+	"target": "Selected Pokemon",
+	"effectEntries": [],
+	"effectChanges": [],
+	"descriptions": [
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "en",
+			"text": "The user summons a torrent around its fist and punches at blinding speed. This move always goes first."
+		},
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "fr",
+			"text": "Le lanceur enveloppe son poing d'un torrent furieux et attaque si rapidement qu'on peine à le discerner. Frappe en priorité."
+		}
+	],
+	"pastValues": [],
+	"statChanges": [],
+	"meta": null,
+	"machines": [],
+	"learners": [
+		{
+			"nationalDexId": 964,
+			"speciesName": "Palafin",
+			"formKey": "hero",
+			"formName": "Hero",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 1
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 964,
+			"speciesName": "Palafin",
+			"formKey": "zero",
+			"formName": "Zero",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 1
+						}
+					],
+					"isHidden": false
+				}
+			]
+		}
+	],
+	"potentialPokemon": [
+		"palafin-zero",
+		"palafin-hero"
+	],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/move/857/",
+		"fetchedAt": "2026-11-03T06:30:18.865Z",
+		"hash": "1ada3acb47c05a5b150f6823c29a779109ab02b6a7531c62c1af7f82e4d11e1e"
+	}
+}

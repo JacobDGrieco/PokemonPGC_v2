@@ -1,0 +1,4934 @@
+{
+	"schemaVersion": 2,
+	"nationalDexId": 657,
+	"speciesName": "Frogadier",
+	"formKey": "base",
+	"formName": "Base",
+	"formLabelSource": "form-catalog",
+	"profiles": [
+		{
+			"profileKey": "x-y",
+			"label": "X / Y",
+			"appGameKeys": [
+				"x-national",
+				"x-central",
+				"x-coastal",
+				"x-mountain",
+				"y-national",
+				"y-central",
+				"y-coastal",
+				"y-mountain"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Frogadier",
+				"localizedNames": {
+					"ja-hrkt": "ゲコガシラ",
+					"ja-roma": "Gekogashira",
+					"ko": "개굴반장",
+					"zh-hant": "呱頭蛙",
+					"fr": "Croâporal",
+					"de": "Amphizel",
+					"es": "Frogadier",
+					"it": "Frogadier",
+					"ja": "ゲコガシラ",
+					"zh-hans": "呱头蛙",
+					"es-419": "Frogadier"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water"
+				],
+				"baseStats": {
+					"hp": 54,
+					"atk": 63,
+					"def": 52,
+					"spa": 83,
+					"spd": 56,
+					"spe": 97
+				},
+				"evYield": {
+					"spe": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Torrent",
+					"Protean (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Protean"
+				],
+				"eggGroups": [
+					"Water1"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "10.9 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 142,
+				"habitat": "",
+				"shape": "Humanoid",
+				"color": "Blue",
+				"genus": "Bubble Frog Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "あわがえるポケモン",
+					"ko": "거품개구리포켓몬",
+					"zh-hant": "泡蛙寶可夢",
+					"fr": "Pokémon Crapobulle",
+					"de": "Blubbfrosch",
+					"es": "Pokémon Burburrana",
+					"it": "Pokémon Schiumorana",
+					"ja": "あわがえるポケモン",
+					"zh-hans": "泡蛙宝可梦",
+					"es-419": "Pokémon Burburrana"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 657
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 8
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 216
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 210
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 656,
+								"natiId": 656,
+								"name": "Froakie"
+							},
+							{
+								"id": 657,
+								"natiId": 657,
+								"name": "Frogadier",
+								"method": "Level",
+								"value": 16
+							},
+							{
+								"id": 658,
+								"natiId": 658,
+								"name": "Greninja",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Friend Safari Water",
+						"notes": "Walk, Lv. 30",
+						"games": "X",
+						"rate": "33%"
+					},
+					{
+						"area": "Friend Safari Water",
+						"notes": "Walk, Lv. 30",
+						"games": "Y",
+						"rate": "33%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Pound",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Growl",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Bubble",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Quick Attack",
+							"level": 8,
+							"order": null
+						},
+						{
+							"name": "Lick",
+							"level": 10,
+							"order": null
+						},
+						{
+							"name": "Water Pulse",
+							"level": 14,
+							"order": null
+						},
+						{
+							"name": "Smokescreen",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": 23,
+							"order": null
+						},
+						{
+							"name": "Fling",
+							"level": 28,
+							"order": null
+						},
+						{
+							"name": "Smack Down",
+							"level": 33,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": 38,
+							"order": null
+						},
+						{
+							"name": "Bounce",
+							"level": 44,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": 48,
+							"order": null
+						},
+						{
+							"name": "Hydro Pump",
+							"level": 55,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Acrobatics",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Aerial Ace",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Blizzard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Cut",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dark Pulse",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Echoed Voice",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fling",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Grass Knot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ice Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Power Up Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Slide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Smash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Tomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Scald",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Smack Down",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Strength",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Surf",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Taunt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "U Turn",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Waterfall",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Water Pledge",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/657",
+						"fetchedAt": "2026-11-03T05:53:46.999Z",
+						"hash": "d2d31ae3a87cfc510612057a96b04762770a142c81d3b7d9a0a2e76e988a097d"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/339/",
+						"fetchedAt": "2026-11-03T05:53:47.027Z",
+						"hash": "0677ebc2aaff1ba922e70dd5703c9fbcfff6532a5ed94668ee59b0a601cf35ce"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/657/",
+						"fetchedAt": "2026-11-03T05:53:47.055Z",
+						"hash": "d31dce8f29817a7337de16b2cddc5e331f5f4ce0cee25c8142a8bbbbb4050e7b"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/657/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.085Z",
+						"hash": "e8bf5a1c6e63b9a7e7c227cd38fc6d883227c863a715b14907bcc6aed394a90d"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/657/",
+						"fetchedAt": "2026-11-03T05:53:47.138Z",
+						"hash": "207d3d61e812237a1e3ee0eba3fb0e5aacea23cbdc92e28cf9ba24d28493f907"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"x-national": "It can throw bubble-covered pebbles with precise control, hitting empty cans up to a hundred feet away.",
+				"x-central": "It can throw bubble-covered pebbles with precise control, hitting empty cans up to a hundred feet away.",
+				"x-coastal": "It can throw bubble-covered pebbles with precise control, hitting empty cans up to a hundred feet away.",
+				"x-mountain": "It can throw bubble-covered pebbles with precise control, hitting empty cans up to a hundred feet away.",
+				"y-national": "Its swiftness is unparalleled. It can scale a tower of more than 2,000 feet in a minute’s time.",
+				"y-central": "Its swiftness is unparalleled. It can scale a tower of more than 2,000 feet in a minute’s time.",
+				"y-coastal": "Its swiftness is unparalleled. It can scale a tower of more than 2,000 feet in a minute’s time.",
+				"y-mountain": "Its swiftness is unparalleled. It can scale a tower of more than 2,000 feet in a minute’s time."
+			},
+			"localizedFlavorByGame": {
+				"x-national": {
+					"ja-hrkt": "あわで つつんだ こいしを なげる わざを つかう。３０メートル さきの あきかんに あてる コントロール。",
+					"ko": "거품으로 싸인 돌멩이를 던지는 기술을 쓴다. 30m 앞에 있는 빈 캔을 맞출 정도로 컨트롤이 좋다.",
+					"fr": "Il est capable de lancer des pierres recouvertes de mousse avec une précision suffisante pour toucher une canette vide à 30 m.",
+					"de": "Es kann kleine in Blasen gehüllte Steine mit solcher Präzision werfen, dass es selbst 30 m entfernte Dosen problemlos trifft.",
+					"es": "Puede lanzar piedras envueltas en burbujas con tal puntería, que acierta latas vacías a 30 metros de distancia.",
+					"it": "Lancia dei sassi racchiusi in bolle di schiuma. È talmente preciso da riuscire a colpire una lattina vuota a 30 m di distanza.",
+					"en": "It can throw bubble-covered pebbles with precise control, hitting empty cans up to a hundred feet away.",
+					"ja": "泡で 包んだ 小石を 投げる 技を 使う。３０メートル 先の 空き缶に 当てる コントロール。",
+					"es-419": "Puede lanzar piedras envueltas en burbujas con tal puntería, que acierta latas vacías a 30 metros de distancia."
+				},
+				"x-central": {
+					"ja-hrkt": "あわで つつんだ こいしを なげる わざを つかう。３０メートル さきの あきかんに あてる コントロール。",
+					"ko": "거품으로 싸인 돌멩이를 던지는 기술을 쓴다. 30m 앞에 있는 빈 캔을 맞출 정도로 컨트롤이 좋다.",
+					"fr": "Il est capable de lancer des pierres recouvertes de mousse avec une précision suffisante pour toucher une canette vide à 30 m.",
+					"de": "Es kann kleine in Blasen gehüllte Steine mit solcher Präzision werfen, dass es selbst 30 m entfernte Dosen problemlos trifft.",
+					"es": "Puede lanzar piedras envueltas en burbujas con tal puntería, que acierta latas vacías a 30 metros de distancia.",
+					"it": "Lancia dei sassi racchiusi in bolle di schiuma. È talmente preciso da riuscire a colpire una lattina vuota a 30 m di distanza.",
+					"en": "It can throw bubble-covered pebbles with precise control, hitting empty cans up to a hundred feet away.",
+					"ja": "泡で 包んだ 小石を 投げる 技を 使う。３０メートル 先の 空き缶に 当てる コントロール。",
+					"es-419": "Puede lanzar piedras envueltas en burbujas con tal puntería, que acierta latas vacías a 30 metros de distancia."
+				},
+				"x-coastal": {
+					"ja-hrkt": "あわで つつんだ こいしを なげる わざを つかう。３０メートル さきの あきかんに あてる コントロール。",
+					"ko": "거품으로 싸인 돌멩이를 던지는 기술을 쓴다. 30m 앞에 있는 빈 캔을 맞출 정도로 컨트롤이 좋다.",
+					"fr": "Il est capable de lancer des pierres recouvertes de mousse avec une précision suffisante pour toucher une canette vide à 30 m.",
+					"de": "Es kann kleine in Blasen gehüllte Steine mit solcher Präzision werfen, dass es selbst 30 m entfernte Dosen problemlos trifft.",
+					"es": "Puede lanzar piedras envueltas en burbujas con tal puntería, que acierta latas vacías a 30 metros de distancia.",
+					"it": "Lancia dei sassi racchiusi in bolle di schiuma. È talmente preciso da riuscire a colpire una lattina vuota a 30 m di distanza.",
+					"en": "It can throw bubble-covered pebbles with precise control, hitting empty cans up to a hundred feet away.",
+					"ja": "泡で 包んだ 小石を 投げる 技を 使う。３０メートル 先の 空き缶に 当てる コントロール。",
+					"es-419": "Puede lanzar piedras envueltas en burbujas con tal puntería, que acierta latas vacías a 30 metros de distancia."
+				},
+				"x-mountain": {
+					"ja-hrkt": "あわで つつんだ こいしを なげる わざを つかう。３０メートル さきの あきかんに あてる コントロール。",
+					"ko": "거품으로 싸인 돌멩이를 던지는 기술을 쓴다. 30m 앞에 있는 빈 캔을 맞출 정도로 컨트롤이 좋다.",
+					"fr": "Il est capable de lancer des pierres recouvertes de mousse avec une précision suffisante pour toucher une canette vide à 30 m.",
+					"de": "Es kann kleine in Blasen gehüllte Steine mit solcher Präzision werfen, dass es selbst 30 m entfernte Dosen problemlos trifft.",
+					"es": "Puede lanzar piedras envueltas en burbujas con tal puntería, que acierta latas vacías a 30 metros de distancia.",
+					"it": "Lancia dei sassi racchiusi in bolle di schiuma. È talmente preciso da riuscire a colpire una lattina vuota a 30 m di distanza.",
+					"en": "It can throw bubble-covered pebbles with precise control, hitting empty cans up to a hundred feet away.",
+					"ja": "泡で 包んだ 小石を 投げる 技を 使う。３０メートル 先の 空き缶に 当てる コントロール。",
+					"es-419": "Puede lanzar piedras envueltas en burbujas con tal puntería, que acierta latas vacías a 30 metros de distancia."
+				},
+				"y-national": {
+					"ja-hrkt": "みがるさは だれにも まけない。 ６００メートルを こえる タワーの てっぺんまで １ぷんで のぼりきる。",
+					"ko": "누구보다도 가벼운 몸을 갖고 있다. 600m를 넘는 타워의 꼭대기까지 1분이면 올라간다.",
+					"fr": "Son agilité est incomparable. Il peut gravir une tour de 600 m de haut en moins d’une minute.",
+					"de": "Seine Flinkheit sucht ihresgleichen. Es kann einen 600 m hohen Turm in weniger als einer Minute erklimmen.",
+					"es": "Su agilidad no tiene parangón. De hecho, es capaz de escalar una torre de más de 600 metros en tan solo un minuto.",
+					"it": "Grazie alla sua straordinaria agilità, è in grado di scalare una torre alta più di 600 m in meno di un minuto.",
+					"en": "Its swiftness is unparalleled. It can scale a tower of more than 2,000 feet in a minute’s time.",
+					"ja": "身軽さは だれにも 負けない。 ６００メートルを 超える タワーの 天辺まで １分で 登りきる。",
+					"es-419": "Su agilidad no tiene parangón. De hecho, es capaz de escalar una torre de más de 600 metros en tan solo un minuto."
+				},
+				"y-central": {
+					"ja-hrkt": "みがるさは だれにも まけない。 ６００メートルを こえる タワーの てっぺんまで １ぷんで のぼりきる。",
+					"ko": "누구보다도 가벼운 몸을 갖고 있다. 600m를 넘는 타워의 꼭대기까지 1분이면 올라간다.",
+					"fr": "Son agilité est incomparable. Il peut gravir une tour de 600 m de haut en moins d’une minute.",
+					"de": "Seine Flinkheit sucht ihresgleichen. Es kann einen 600 m hohen Turm in weniger als einer Minute erklimmen.",
+					"es": "Su agilidad no tiene parangón. De hecho, es capaz de escalar una torre de más de 600 metros en tan solo un minuto.",
+					"it": "Grazie alla sua straordinaria agilità, è in grado di scalare una torre alta più di 600 m in meno di un minuto.",
+					"en": "Its swiftness is unparalleled. It can scale a tower of more than 2,000 feet in a minute’s time.",
+					"ja": "身軽さは だれにも 負けない。 ６００メートルを 超える タワーの 天辺まで １分で 登りきる。",
+					"es-419": "Su agilidad no tiene parangón. De hecho, es capaz de escalar una torre de más de 600 metros en tan solo un minuto."
+				},
+				"y-coastal": {
+					"ja-hrkt": "みがるさは だれにも まけない。 ６００メートルを こえる タワーの てっぺんまで １ぷんで のぼりきる。",
+					"ko": "누구보다도 가벼운 몸을 갖고 있다. 600m를 넘는 타워의 꼭대기까지 1분이면 올라간다.",
+					"fr": "Son agilité est incomparable. Il peut gravir une tour de 600 m de haut en moins d’une minute.",
+					"de": "Seine Flinkheit sucht ihresgleichen. Es kann einen 600 m hohen Turm in weniger als einer Minute erklimmen.",
+					"es": "Su agilidad no tiene parangón. De hecho, es capaz de escalar una torre de más de 600 metros en tan solo un minuto.",
+					"it": "Grazie alla sua straordinaria agilità, è in grado di scalare una torre alta più di 600 m in meno di un minuto.",
+					"en": "Its swiftness is unparalleled. It can scale a tower of more than 2,000 feet in a minute’s time.",
+					"ja": "身軽さは だれにも 負けない。 ６００メートルを 超える タワーの 天辺まで １分で 登りきる。",
+					"es-419": "Su agilidad no tiene parangón. De hecho, es capaz de escalar una torre de más de 600 metros en tan solo un minuto."
+				},
+				"y-mountain": {
+					"ja-hrkt": "みがるさは だれにも まけない。 ６００メートルを こえる タワーの てっぺんまで １ぷんで のぼりきる。",
+					"ko": "누구보다도 가벼운 몸을 갖고 있다. 600m를 넘는 타워의 꼭대기까지 1분이면 올라간다.",
+					"fr": "Son agilité est incomparable. Il peut gravir une tour de 600 m de haut en moins d’une minute.",
+					"de": "Seine Flinkheit sucht ihresgleichen. Es kann einen 600 m hohen Turm in weniger als einer Minute erklimmen.",
+					"es": "Su agilidad no tiene parangón. De hecho, es capaz de escalar una torre de más de 600 metros en tan solo un minuto.",
+					"it": "Grazie alla sua straordinaria agilità, è in grado di scalare una torre alta più di 600 m in meno di un minuto.",
+					"en": "Its swiftness is unparalleled. It can scale a tower of more than 2,000 feet in a minute’s time.",
+					"ja": "身軽さは だれにも 負けない。 ６００メートルを 超える タワーの 天辺まで １分で 登りきる。",
+					"es-419": "Su agilidad no tiene parangón. De hecho, es capaz de escalar una torre de más de 600 metros en tan solo un minuto."
+				}
+			}
+		},
+		{
+			"profileKey": "omega-ruby-alpha-sapphire",
+			"label": "Omega Ruby / Alpha Sapphire",
+			"appGameKeys": [
+				"omegaruby-national",
+				"omegaruby",
+				"alphasapphire-national",
+				"alphasapphire"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Frogadier",
+				"localizedNames": {
+					"ja-hrkt": "ゲコガシラ",
+					"ja-roma": "Gekogashira",
+					"ko": "개굴반장",
+					"zh-hant": "呱頭蛙",
+					"fr": "Croâporal",
+					"de": "Amphizel",
+					"es": "Frogadier",
+					"it": "Frogadier",
+					"ja": "ゲコガシラ",
+					"zh-hans": "呱头蛙",
+					"es-419": "Frogadier"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water"
+				],
+				"baseStats": {
+					"hp": 54,
+					"atk": 63,
+					"def": 52,
+					"spa": 83,
+					"spd": 56,
+					"spe": 97
+				},
+				"evYield": {
+					"spe": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Torrent",
+					"Protean (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Protean"
+				],
+				"eggGroups": [
+					"Water1"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "10.9 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 142,
+				"habitat": "",
+				"shape": "Humanoid",
+				"color": "Blue",
+				"genus": "Bubble Frog Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "あわがえるポケモン",
+					"ko": "거품개구리포켓몬",
+					"zh-hant": "泡蛙寶可夢",
+					"fr": "Pokémon Crapobulle",
+					"de": "Blubbfrosch",
+					"es": "Pokémon Burburrana",
+					"it": "Pokémon Schiumorana",
+					"ja": "あわがえるポケモン",
+					"zh-hans": "泡蛙宝可梦",
+					"es-419": "Pokémon Burburrana"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 657
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 8
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 216
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 210
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 656,
+								"natiId": 656,
+								"name": "Froakie"
+							},
+							{
+								"id": 657,
+								"natiId": 657,
+								"name": "Frogadier",
+								"method": "Level",
+								"value": 16
+							},
+							{
+								"id": 658,
+								"natiId": 658,
+								"name": "Greninja",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Pound",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Growl",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Bubble",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Quick Attack",
+							"level": 8,
+							"order": null
+						},
+						{
+							"name": "Lick",
+							"level": 10,
+							"order": null
+						},
+						{
+							"name": "Water Pulse",
+							"level": 14,
+							"order": null
+						},
+						{
+							"name": "Smokescreen",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": 23,
+							"order": null
+						},
+						{
+							"name": "Fling",
+							"level": 28,
+							"order": null
+						},
+						{
+							"name": "Smack Down",
+							"level": 33,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": 38,
+							"order": null
+						},
+						{
+							"name": "Bounce",
+							"level": 44,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": 48,
+							"order": null
+						},
+						{
+							"name": "Hydro Pump",
+							"level": 55,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Bounce",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Gunk Shot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ice Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Icy Wind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Low Kick",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Role Play",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snatch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Spite",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Water Pledge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Water Pulse",
+							"level": null,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Acrobatics",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Aerial Ace",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Blizzard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Cut",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dark Pulse",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dive",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Echoed Voice",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fling",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Grass Knot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ice Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Power Up Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Slide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Smash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Tomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Scald",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Secret Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Smack Down",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Strength",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Surf",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Taunt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "U Turn",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Waterfall",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/657",
+						"fetchedAt": "2026-11-03T05:53:46.999Z",
+						"hash": "d2d31ae3a87cfc510612057a96b04762770a142c81d3b7d9a0a2e76e988a097d"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/339/",
+						"fetchedAt": "2026-11-03T05:53:47.027Z",
+						"hash": "0677ebc2aaff1ba922e70dd5703c9fbcfff6532a5ed94668ee59b0a601cf35ce"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/657/",
+						"fetchedAt": "2026-11-03T05:53:47.055Z",
+						"hash": "d31dce8f29817a7337de16b2cddc5e331f5f4ce0cee25c8142a8bbbbb4050e7b"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/657/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.085Z",
+						"hash": "e8bf5a1c6e63b9a7e7c227cd38fc6d883227c863a715b14907bcc6aed394a90d"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/657/",
+						"fetchedAt": "2026-11-03T05:53:47.138Z",
+						"hash": "207d3d61e812237a1e3ee0eba3fb0e5aacea23cbdc92e28cf9ba24d28493f907"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"omegaruby-national": "It can throw bubble-covered pebbles with precise control, hitting empty cans up to a hundred feet away.",
+				"omegaruby": "It can throw bubble-covered pebbles with precise control, hitting empty cans up to a hundred feet away.",
+				"alphasapphire-national": "Its swiftness is unparalleled. It can scale a tower of more than 2,000 feet in a minute’s time.",
+				"alphasapphire": "Its swiftness is unparalleled. It can scale a tower of more than 2,000 feet in a minute’s time."
+			},
+			"localizedFlavorByGame": {
+				"omegaruby-national": {
+					"ja-hrkt": "あわで つつんだ こいしを なげる わざを つかう。３０メートル さきの あきかんに あてる コントロール。",
+					"ko": "거품으로 싸인 돌멩이를 던지는 기술을 쓴다. 30m 앞에 있는 빈 캔을 맞힐 정도로 컨트롤이 좋다.",
+					"fr": "Il est capable de lancer des pierres recouvertes de mousse avec une précision suffisante pour toucher une canette vide à 30 m.",
+					"de": "Es kann kleine in Blasen gehüllte Steine mit solcher Präzision werfen, dass es selbst 30 m entfernte Dosen problemlos trifft.",
+					"es": "Puede lanzar piedras envueltas en burbujas con tal puntería que acierta latas vacías a 30 metros de distancia.",
+					"it": "Lancia dei sassi racchiusi in bolle di schiuma. È talmente preciso da riuscire a colpire una lattina vuota a 30 m di distanza.",
+					"en": "It can throw bubble-covered pebbles with precise control, hitting empty cans up to a hundred feet away.",
+					"ja": "泡で 包んだ 小石を 投げる 技を 使う。３０メートル 先の 空き缶に 当てる コントロール。",
+					"es-419": "Puede lanzar piedras envueltas en burbujas con tal puntería que acierta latas vacías a 30 metros de distancia."
+				},
+				"omegaruby": {
+					"ja-hrkt": "あわで つつんだ こいしを なげる わざを つかう。３０メートル さきの あきかんに あてる コントロール。",
+					"ko": "거품으로 싸인 돌멩이를 던지는 기술을 쓴다. 30m 앞에 있는 빈 캔을 맞힐 정도로 컨트롤이 좋다.",
+					"fr": "Il est capable de lancer des pierres recouvertes de mousse avec une précision suffisante pour toucher une canette vide à 30 m.",
+					"de": "Es kann kleine in Blasen gehüllte Steine mit solcher Präzision werfen, dass es selbst 30 m entfernte Dosen problemlos trifft.",
+					"es": "Puede lanzar piedras envueltas en burbujas con tal puntería que acierta latas vacías a 30 metros de distancia.",
+					"it": "Lancia dei sassi racchiusi in bolle di schiuma. È talmente preciso da riuscire a colpire una lattina vuota a 30 m di distanza.",
+					"en": "It can throw bubble-covered pebbles with precise control, hitting empty cans up to a hundred feet away.",
+					"ja": "泡で 包んだ 小石を 投げる 技を 使う。３０メートル 先の 空き缶に 当てる コントロール。",
+					"es-419": "Puede lanzar piedras envueltas en burbujas con tal puntería que acierta latas vacías a 30 metros de distancia."
+				},
+				"alphasapphire-national": {
+					"ja-hrkt": "みがるさは だれにも まけない。 ６００メートルを こえる タワーの てっぺんまで １ぷんで のぼりきる。",
+					"ko": "누구보다도 가벼운 몸을 갖고 있다. 600m를 넘는 타워의 꼭대기까지 1분이면 올라간다.",
+					"fr": "Son agilité est incomparable. Il peut gravir une tour de 600 m de haut en moins d’une minute.",
+					"de": "Seine Flinkheit sucht ihresgleichen. Es kann einen 600 m hohen Turm in weniger als einer Minute erklimmen.",
+					"es": "Su agilidad no tiene parangón. De hecho, es capaz de escalar una torre de más de 600 metros en tan solo un minuto.",
+					"it": "Grazie alla sua straordinaria agilità, è in grado di scalare una torre alta più di 600 m in meno di un minuto.",
+					"en": "Its swiftness is unparalleled. It can scale a tower of more than 2,000 feet in a minute’s time.",
+					"ja": "身軽さは だれにも 負けない。 ６００メートルを 超える タワーの 天辺まで １分で 登りきる。",
+					"es-419": "Su agilidad no tiene parangón. De hecho, es capaz de escalar una torre de más de 600 metros en tan solo un minuto."
+				},
+				"alphasapphire": {
+					"ja-hrkt": "みがるさは だれにも まけない。 ６００メートルを こえる タワーの てっぺんまで １ぷんで のぼりきる。",
+					"ko": "누구보다도 가벼운 몸을 갖고 있다. 600m를 넘는 타워의 꼭대기까지 1분이면 올라간다.",
+					"fr": "Son agilité est incomparable. Il peut gravir une tour de 600 m de haut en moins d’une minute.",
+					"de": "Seine Flinkheit sucht ihresgleichen. Es kann einen 600 m hohen Turm in weniger als einer Minute erklimmen.",
+					"es": "Su agilidad no tiene parangón. De hecho, es capaz de escalar una torre de más de 600 metros en tan solo un minuto.",
+					"it": "Grazie alla sua straordinaria agilità, è in grado di scalare una torre alta più di 600 m in meno di un minuto.",
+					"en": "Its swiftness is unparalleled. It can scale a tower of more than 2,000 feet in a minute’s time.",
+					"ja": "身軽さは だれにも 負けない。 ６００メートルを 超える タワーの 天辺まで １分で 登りきる。",
+					"es-419": "Su agilidad no tiene parangón. De hecho, es capaz de escalar una torre de más de 600 metros en tan solo un minuto."
+				}
+			}
+		},
+		{
+			"profileKey": "sun-moon",
+			"label": "Sun / Moon",
+			"appGameKeys": [
+				"sun-alola",
+				"sun-melemele",
+				"sun-akala",
+				"sun-ulaula",
+				"sun-poni",
+				"moon-alola",
+				"moon-melemele",
+				"moon-akala",
+				"moon-ulaula",
+				"moon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Frogadier",
+				"localizedNames": {
+					"ja-hrkt": "ゲコガシラ",
+					"ja-roma": "Gekogashira",
+					"ko": "개굴반장",
+					"zh-hant": "呱頭蛙",
+					"fr": "Croâporal",
+					"de": "Amphizel",
+					"es": "Frogadier",
+					"it": "Frogadier",
+					"ja": "ゲコガシラ",
+					"zh-hans": "呱头蛙",
+					"es-419": "Frogadier"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water"
+				],
+				"baseStats": {
+					"hp": 54,
+					"atk": 63,
+					"def": 52,
+					"spa": 83,
+					"spd": 56,
+					"spe": 97
+				},
+				"evYield": {
+					"spe": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Torrent",
+					"Protean (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Protean"
+				],
+				"eggGroups": [
+					"Water1"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "10.9 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 142,
+				"habitat": "",
+				"shape": "Humanoid",
+				"color": "Blue",
+				"genus": "Bubble Frog Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "あわがえるポケモン",
+					"ko": "거품개구리포켓몬",
+					"zh-hant": "泡蛙寶可夢",
+					"fr": "Pokémon Crapobulle",
+					"de": "Blubbfrosch",
+					"es": "Pokémon Burburrana",
+					"it": "Pokémon Schiumorana",
+					"ja": "あわがえるポケモン",
+					"zh-hans": "泡蛙宝可梦",
+					"es-419": "Pokémon Burburrana"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 657
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 8
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 216
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 210
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 656,
+								"natiId": 656,
+								"name": "Froakie"
+							},
+							{
+								"id": 657,
+								"natiId": 657,
+								"name": "Frogadier",
+								"method": "Level",
+								"value": 16
+							},
+							{
+								"id": 658,
+								"natiId": 658,
+								"name": "Greninja",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Pound",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Growl",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Bubble",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Bubble",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Quick Attack",
+							"level": 8,
+							"order": null
+						},
+						{
+							"name": "Lick",
+							"level": 10,
+							"order": null
+						},
+						{
+							"name": "Water Pulse",
+							"level": 14,
+							"order": null
+						},
+						{
+							"name": "Smokescreen",
+							"level": 19,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": 23,
+							"order": null
+						},
+						{
+							"name": "Fling",
+							"level": 28,
+							"order": null
+						},
+						{
+							"name": "Smack Down",
+							"level": 33,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": 40,
+							"order": null
+						},
+						{
+							"name": "Bounce",
+							"level": 45,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": 50,
+							"order": null
+						},
+						{
+							"name": "Hydro Pump",
+							"level": 56,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Acrobatics",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Aerial Ace",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Blizzard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dark Pulse",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Echoed Voice",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fling",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Grass Knot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ice Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Slide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Tomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Scald",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Smack Down",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Surf",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Taunt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "U Turn",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Waterfall",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Work Up",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Water Pledge",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/657",
+						"fetchedAt": "2026-11-03T05:53:46.999Z",
+						"hash": "d2d31ae3a87cfc510612057a96b04762770a142c81d3b7d9a0a2e76e988a097d"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/339/",
+						"fetchedAt": "2026-11-03T05:53:47.027Z",
+						"hash": "0677ebc2aaff1ba922e70dd5703c9fbcfff6532a5ed94668ee59b0a601cf35ce"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/657/",
+						"fetchedAt": "2026-11-03T05:53:47.055Z",
+						"hash": "d31dce8f29817a7337de16b2cddc5e331f5f4ce0cee25c8142a8bbbbb4050e7b"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/657/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.085Z",
+						"hash": "e8bf5a1c6e63b9a7e7c227cd38fc6d883227c863a715b14907bcc6aed394a90d"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/657/",
+						"fetchedAt": "2026-11-03T05:53:47.138Z",
+						"hash": "207d3d61e812237a1e3ee0eba3fb0e5aacea23cbdc92e28cf9ba24d28493f907"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sun-alola": "",
+				"sun-melemele": "",
+				"sun-akala": "",
+				"sun-ulaula": "",
+				"sun-poni": "",
+				"moon-alola": "",
+				"moon-melemele": "",
+				"moon-akala": "",
+				"moon-ulaula": "",
+				"moon-poni": ""
+			},
+			"localizedFlavorByGame": {
+				"sun-alola": {},
+				"sun-melemele": {},
+				"sun-akala": {},
+				"sun-ulaula": {},
+				"sun-poni": {},
+				"moon-alola": {},
+				"moon-melemele": {},
+				"moon-akala": {},
+				"moon-ulaula": {},
+				"moon-poni": {}
+			}
+		},
+		{
+			"profileKey": "ultra-sun-ultra-moon",
+			"label": "Ultra Sun / Ultra Moon",
+			"appGameKeys": [
+				"ultrasun-alola",
+				"ultrasun-melemele",
+				"ultrasun-akala",
+				"ultrasun-ulaula",
+				"ultrasun-poni",
+				"ultramoon-alola",
+				"ultramoon-melemele",
+				"ultramoon-akala",
+				"ultramoon-ulaula",
+				"ultramoon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Frogadier",
+				"localizedNames": {
+					"ja-hrkt": "ゲコガシラ",
+					"ja-roma": "Gekogashira",
+					"ko": "개굴반장",
+					"zh-hant": "呱頭蛙",
+					"fr": "Croâporal",
+					"de": "Amphizel",
+					"es": "Frogadier",
+					"it": "Frogadier",
+					"ja": "ゲコガシラ",
+					"zh-hans": "呱头蛙",
+					"es-419": "Frogadier"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water"
+				],
+				"baseStats": {
+					"hp": 54,
+					"atk": 63,
+					"def": 52,
+					"spa": 83,
+					"spd": 56,
+					"spe": 97
+				},
+				"evYield": {
+					"spe": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Torrent",
+					"Protean (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Protean"
+				],
+				"eggGroups": [
+					"Water1"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "10.9 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 142,
+				"habitat": "",
+				"shape": "Humanoid",
+				"color": "Blue",
+				"genus": "Bubble Frog Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "あわがえるポケモン",
+					"ko": "거품개구리포켓몬",
+					"zh-hant": "泡蛙寶可夢",
+					"fr": "Pokémon Crapobulle",
+					"de": "Blubbfrosch",
+					"es": "Pokémon Burburrana",
+					"it": "Pokémon Schiumorana",
+					"ja": "あわがえるポケモン",
+					"zh-hans": "泡蛙宝可梦",
+					"es-419": "Pokémon Burburrana"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 657
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 8
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 216
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 210
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 656,
+								"natiId": 656,
+								"name": "Froakie"
+							},
+							{
+								"id": 657,
+								"natiId": 657,
+								"name": "Frogadier",
+								"method": "Level",
+								"value": 16
+							},
+							{
+								"id": 658,
+								"natiId": 658,
+								"name": "Greninja",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Pound",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Growl",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Bubble",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Bubble",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Quick Attack",
+							"level": 8,
+							"order": null
+						},
+						{
+							"name": "Lick",
+							"level": 10,
+							"order": null
+						},
+						{
+							"name": "Water Pulse",
+							"level": 14,
+							"order": null
+						},
+						{
+							"name": "Smokescreen",
+							"level": 19,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": 23,
+							"order": null
+						},
+						{
+							"name": "Fling",
+							"level": 28,
+							"order": null
+						},
+						{
+							"name": "Smack Down",
+							"level": 33,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": 40,
+							"order": null
+						},
+						{
+							"name": "Bounce",
+							"level": 45,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": 50,
+							"order": null
+						},
+						{
+							"name": "Hydro Pump",
+							"level": 56,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Bounce",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Gunk Shot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ice Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Icy Wind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Low Kick",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Role Play",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snatch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Spite",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Water Pledge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Water Pulse",
+							"level": null,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Acrobatics",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Aerial Ace",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Blizzard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dark Pulse",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Echoed Voice",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fling",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Grass Knot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ice Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Slide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Tomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Scald",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Smack Down",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Surf",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Taunt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "U Turn",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Waterfall",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Work Up",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/657",
+						"fetchedAt": "2026-11-03T05:53:46.999Z",
+						"hash": "d2d31ae3a87cfc510612057a96b04762770a142c81d3b7d9a0a2e76e988a097d"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/339/",
+						"fetchedAt": "2026-11-03T05:53:47.027Z",
+						"hash": "0677ebc2aaff1ba922e70dd5703c9fbcfff6532a5ed94668ee59b0a601cf35ce"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/657/",
+						"fetchedAt": "2026-11-03T05:53:47.055Z",
+						"hash": "d31dce8f29817a7337de16b2cddc5e331f5f4ce0cee25c8142a8bbbbb4050e7b"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/657/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.085Z",
+						"hash": "e8bf5a1c6e63b9a7e7c227cd38fc6d883227c863a715b14907bcc6aed394a90d"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/657/",
+						"fetchedAt": "2026-11-03T05:53:47.138Z",
+						"hash": "207d3d61e812237a1e3ee0eba3fb0e5aacea23cbdc92e28cf9ba24d28493f907"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"ultrasun-alola": "",
+				"ultrasun-melemele": "",
+				"ultrasun-akala": "",
+				"ultrasun-ulaula": "",
+				"ultrasun-poni": "",
+				"ultramoon-alola": "",
+				"ultramoon-melemele": "",
+				"ultramoon-akala": "",
+				"ultramoon-ulaula": "",
+				"ultramoon-poni": ""
+			},
+			"localizedFlavorByGame": {
+				"ultrasun-alola": {},
+				"ultrasun-melemele": {},
+				"ultrasun-akala": {},
+				"ultrasun-ulaula": {},
+				"ultrasun-poni": {},
+				"ultramoon-alola": {},
+				"ultramoon-melemele": {},
+				"ultramoon-akala": {},
+				"ultramoon-ulaula": {},
+				"ultramoon-poni": {}
+			}
+		},
+		{
+			"profileKey": "lets-go-pikachu-lets-go-eevee",
+			"label": "Let's Go Pikachu / Eevee",
+			"appGameKeys": [
+				"letsgopikachu",
+				"letsgoeevee"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Frogadier",
+				"localizedNames": {
+					"ja-hrkt": "ゲコガシラ",
+					"ja-roma": "Gekogashira",
+					"ko": "개굴반장",
+					"zh-hant": "呱頭蛙",
+					"fr": "Croâporal",
+					"de": "Amphizel",
+					"es": "Frogadier",
+					"it": "Frogadier",
+					"ja": "ゲコガシラ",
+					"zh-hans": "呱头蛙",
+					"es-419": "Frogadier"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water"
+				],
+				"baseStats": {
+					"hp": 54,
+					"atk": 63,
+					"def": 52,
+					"spa": 83,
+					"spd": 56,
+					"spe": 97
+				},
+				"evYield": {
+					"spe": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Torrent",
+					"Protean (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Protean"
+				],
+				"eggGroups": [
+					"Water1"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "10.9 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 142,
+				"habitat": "",
+				"shape": "Humanoid",
+				"color": "Blue",
+				"genus": "Bubble Frog Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "あわがえるポケモン",
+					"ko": "거품개구리포켓몬",
+					"zh-hant": "泡蛙寶可夢",
+					"fr": "Pokémon Crapobulle",
+					"de": "Blubbfrosch",
+					"es": "Pokémon Burburrana",
+					"it": "Pokémon Schiumorana",
+					"ja": "あわがえるポケモン",
+					"zh-hans": "泡蛙宝可梦",
+					"es-419": "Pokémon Burburrana"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 657
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 8
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 216
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 210
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 656,
+								"natiId": 656,
+								"name": "Froakie"
+							},
+							{
+								"id": 657,
+								"natiId": 657,
+								"name": "Frogadier",
+								"method": "Level",
+								"value": 16
+							},
+							{
+								"id": 658,
+								"natiId": 658,
+								"name": "Greninja",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/657",
+						"fetchedAt": "2026-11-03T05:53:46.999Z",
+						"hash": "d2d31ae3a87cfc510612057a96b04762770a142c81d3b7d9a0a2e76e988a097d"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/339/",
+						"fetchedAt": "2026-11-03T05:53:47.027Z",
+						"hash": "0677ebc2aaff1ba922e70dd5703c9fbcfff6532a5ed94668ee59b0a601cf35ce"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/657/",
+						"fetchedAt": "2026-11-03T05:53:47.055Z",
+						"hash": "d31dce8f29817a7337de16b2cddc5e331f5f4ce0cee25c8142a8bbbbb4050e7b"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/657/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.085Z",
+						"hash": "e8bf5a1c6e63b9a7e7c227cd38fc6d883227c863a715b14907bcc6aed394a90d"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/657/",
+						"fetchedAt": "2026-11-03T05:53:47.138Z",
+						"hash": "207d3d61e812237a1e3ee0eba3fb0e5aacea23cbdc92e28cf9ba24d28493f907"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"letsgopikachu": "",
+				"letsgoeevee": ""
+			},
+			"localizedFlavorByGame": {
+				"letsgopikachu": {},
+				"letsgoeevee": {}
+			}
+		},
+		{
+			"profileKey": "sword-shield",
+			"label": "Sword / Shield",
+			"appGameKeys": [
+				"sword",
+				"shield"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Frogadier",
+				"localizedNames": {
+					"ja-hrkt": "ゲコガシラ",
+					"ja-roma": "Gekogashira",
+					"ko": "개굴반장",
+					"zh-hant": "呱頭蛙",
+					"fr": "Croâporal",
+					"de": "Amphizel",
+					"es": "Frogadier",
+					"it": "Frogadier",
+					"ja": "ゲコガシラ",
+					"zh-hans": "呱头蛙",
+					"es-419": "Frogadier"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water"
+				],
+				"baseStats": {
+					"hp": 54,
+					"atk": 63,
+					"def": 52,
+					"spa": 83,
+					"spd": 56,
+					"spe": 97
+				},
+				"evYield": {
+					"spe": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Torrent",
+					"Protean (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Protean"
+				],
+				"eggGroups": [
+					"Water1"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "10.9 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 142,
+				"habitat": "",
+				"shape": "Humanoid",
+				"color": "Blue",
+				"genus": "Bubble Frog Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "あわがえるポケモン",
+					"ko": "거품개구리포켓몬",
+					"zh-hant": "泡蛙寶可夢",
+					"fr": "Pokémon Crapobulle",
+					"de": "Blubbfrosch",
+					"es": "Pokémon Burburrana",
+					"it": "Pokémon Schiumorana",
+					"ja": "あわがえるポケモン",
+					"zh-hans": "泡蛙宝可梦",
+					"es-419": "Pokémon Burburrana"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 657
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 8
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 216
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 210
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 656,
+								"natiId": 656,
+								"name": "Froakie"
+							},
+							{
+								"id": 657,
+								"natiId": 657,
+								"name": "Frogadier",
+								"method": "Level",
+								"value": 16
+							},
+							{
+								"id": 658,
+								"natiId": 658,
+								"name": "Greninja",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/657",
+						"fetchedAt": "2026-11-03T05:53:46.999Z",
+						"hash": "d2d31ae3a87cfc510612057a96b04762770a142c81d3b7d9a0a2e76e988a097d"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/339/",
+						"fetchedAt": "2026-11-03T05:53:47.027Z",
+						"hash": "0677ebc2aaff1ba922e70dd5703c9fbcfff6532a5ed94668ee59b0a601cf35ce"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/657/",
+						"fetchedAt": "2026-11-03T05:53:47.055Z",
+						"hash": "d31dce8f29817a7337de16b2cddc5e331f5f4ce0cee25c8142a8bbbbb4050e7b"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/657/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.085Z",
+						"hash": "e8bf5a1c6e63b9a7e7c227cd38fc6d883227c863a715b14907bcc6aed394a90d"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/657/",
+						"fetchedAt": "2026-11-03T05:53:47.138Z",
+						"hash": "207d3d61e812237a1e3ee0eba3fb0e5aacea23cbdc92e28cf9ba24d28493f907"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sword": "",
+				"shield": ""
+			},
+			"localizedFlavorByGame": {
+				"sword": {},
+				"shield": {}
+			}
+		},
+		{
+			"profileKey": "the-isle-of-armor",
+			"label": "The Isle of Armor",
+			"appGameKeys": [
+				"swordioa",
+				"shieldioa"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Frogadier",
+				"localizedNames": {
+					"ja-hrkt": "ゲコガシラ",
+					"ja-roma": "Gekogashira",
+					"ko": "개굴반장",
+					"zh-hant": "呱頭蛙",
+					"fr": "Croâporal",
+					"de": "Amphizel",
+					"es": "Frogadier",
+					"it": "Frogadier",
+					"ja": "ゲコガシラ",
+					"zh-hans": "呱头蛙",
+					"es-419": "Frogadier"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water"
+				],
+				"baseStats": {
+					"hp": 54,
+					"atk": 63,
+					"def": 52,
+					"spa": 83,
+					"spd": 56,
+					"spe": 97
+				},
+				"evYield": {
+					"spe": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Torrent",
+					"Protean (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Protean"
+				],
+				"eggGroups": [
+					"Water1"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "10.9 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 142,
+				"habitat": "",
+				"shape": "Humanoid",
+				"color": "Blue",
+				"genus": "Bubble Frog Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "あわがえるポケモン",
+					"ko": "거품개구리포켓몬",
+					"zh-hant": "泡蛙寶可夢",
+					"fr": "Pokémon Crapobulle",
+					"de": "Blubbfrosch",
+					"es": "Pokémon Burburrana",
+					"it": "Pokémon Schiumorana",
+					"ja": "あわがえるポケモン",
+					"zh-hans": "泡蛙宝可梦",
+					"es-419": "Pokémon Burburrana"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 657
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 8
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 216
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 210
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 656,
+								"natiId": 656,
+								"name": "Froakie"
+							},
+							{
+								"id": 657,
+								"natiId": 657,
+								"name": "Frogadier",
+								"method": "Level",
+								"value": 16
+							},
+							{
+								"id": 658,
+								"natiId": 658,
+								"name": "Greninja",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/657",
+						"fetchedAt": "2026-11-03T05:53:46.999Z",
+						"hash": "d2d31ae3a87cfc510612057a96b04762770a142c81d3b7d9a0a2e76e988a097d"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/339/",
+						"fetchedAt": "2026-11-03T05:53:47.027Z",
+						"hash": "0677ebc2aaff1ba922e70dd5703c9fbcfff6532a5ed94668ee59b0a601cf35ce"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/657/",
+						"fetchedAt": "2026-11-03T05:53:47.055Z",
+						"hash": "d31dce8f29817a7337de16b2cddc5e331f5f4ce0cee25c8142a8bbbbb4050e7b"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/657/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.085Z",
+						"hash": "e8bf5a1c6e63b9a7e7c227cd38fc6d883227c863a715b14907bcc6aed394a90d"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/657/",
+						"fetchedAt": "2026-11-03T05:53:47.138Z",
+						"hash": "207d3d61e812237a1e3ee0eba3fb0e5aacea23cbdc92e28cf9ba24d28493f907"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordioa": "",
+				"shieldioa": ""
+			},
+			"localizedFlavorByGame": {
+				"swordioa": {},
+				"shieldioa": {}
+			}
+		},
+		{
+			"profileKey": "the-crown-tundra",
+			"label": "The Crown Tundra",
+			"appGameKeys": [
+				"swordct",
+				"shieldct"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Frogadier",
+				"localizedNames": {
+					"ja-hrkt": "ゲコガシラ",
+					"ja-roma": "Gekogashira",
+					"ko": "개굴반장",
+					"zh-hant": "呱頭蛙",
+					"fr": "Croâporal",
+					"de": "Amphizel",
+					"es": "Frogadier",
+					"it": "Frogadier",
+					"ja": "ゲコガシラ",
+					"zh-hans": "呱头蛙",
+					"es-419": "Frogadier"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water"
+				],
+				"baseStats": {
+					"hp": 54,
+					"atk": 63,
+					"def": 52,
+					"spa": 83,
+					"spd": 56,
+					"spe": 97
+				},
+				"evYield": {
+					"spe": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Torrent",
+					"Protean (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Protean"
+				],
+				"eggGroups": [
+					"Water1"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "10.9 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 142,
+				"habitat": "",
+				"shape": "Humanoid",
+				"color": "Blue",
+				"genus": "Bubble Frog Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "あわがえるポケモン",
+					"ko": "거품개구리포켓몬",
+					"zh-hant": "泡蛙寶可夢",
+					"fr": "Pokémon Crapobulle",
+					"de": "Blubbfrosch",
+					"es": "Pokémon Burburrana",
+					"it": "Pokémon Schiumorana",
+					"ja": "あわがえるポケモン",
+					"zh-hans": "泡蛙宝可梦",
+					"es-419": "Pokémon Burburrana"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 657
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 8
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 216
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 210
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 656,
+								"natiId": 656,
+								"name": "Froakie"
+							},
+							{
+								"id": 657,
+								"natiId": 657,
+								"name": "Frogadier",
+								"method": "Level",
+								"value": 16
+							},
+							{
+								"id": 658,
+								"natiId": 658,
+								"name": "Greninja",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/657",
+						"fetchedAt": "2026-11-03T05:53:46.999Z",
+						"hash": "d2d31ae3a87cfc510612057a96b04762770a142c81d3b7d9a0a2e76e988a097d"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/339/",
+						"fetchedAt": "2026-11-03T05:53:47.027Z",
+						"hash": "0677ebc2aaff1ba922e70dd5703c9fbcfff6532a5ed94668ee59b0a601cf35ce"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/657/",
+						"fetchedAt": "2026-11-03T05:53:47.055Z",
+						"hash": "d31dce8f29817a7337de16b2cddc5e331f5f4ce0cee25c8142a8bbbbb4050e7b"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/657/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.085Z",
+						"hash": "e8bf5a1c6e63b9a7e7c227cd38fc6d883227c863a715b14907bcc6aed394a90d"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/657/",
+						"fetchedAt": "2026-11-03T05:53:47.138Z",
+						"hash": "207d3d61e812237a1e3ee0eba3fb0e5aacea23cbdc92e28cf9ba24d28493f907"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordct": "",
+				"shieldct": ""
+			},
+			"localizedFlavorByGame": {
+				"swordct": {},
+				"shieldct": {}
+			}
+		},
+		{
+			"profileKey": "brilliant-diamond-shining-pearl",
+			"label": "Brilliant Diamond / Shining Pearl",
+			"appGameKeys": [
+				"brilliantdiamond-national",
+				"brilliantdiamond",
+				"shiningpearl-national",
+				"shiningpearl"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Frogadier",
+				"localizedNames": {
+					"ja-hrkt": "ゲコガシラ",
+					"ja-roma": "Gekogashira",
+					"ko": "개굴반장",
+					"zh-hant": "呱頭蛙",
+					"fr": "Croâporal",
+					"de": "Amphizel",
+					"es": "Frogadier",
+					"it": "Frogadier",
+					"ja": "ゲコガシラ",
+					"zh-hans": "呱头蛙",
+					"es-419": "Frogadier"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water"
+				],
+				"baseStats": {
+					"hp": 54,
+					"atk": 63,
+					"def": 52,
+					"spa": 83,
+					"spd": 56,
+					"spe": 97
+				},
+				"evYield": {
+					"spe": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Torrent",
+					"Protean (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Protean"
+				],
+				"eggGroups": [
+					"Water1"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "10.9 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 142,
+				"habitat": "",
+				"shape": "Humanoid",
+				"color": "Blue",
+				"genus": "Bubble Frog Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "あわがえるポケモン",
+					"ko": "거품개구리포켓몬",
+					"zh-hant": "泡蛙寶可夢",
+					"fr": "Pokémon Crapobulle",
+					"de": "Blubbfrosch",
+					"es": "Pokémon Burburrana",
+					"it": "Pokémon Schiumorana",
+					"ja": "あわがえるポケモン",
+					"zh-hans": "泡蛙宝可梦",
+					"es-419": "Pokémon Burburrana"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 657
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 8
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 216
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 210
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 656,
+								"natiId": 656,
+								"name": "Froakie"
+							},
+							{
+								"id": 657,
+								"natiId": 657,
+								"name": "Frogadier",
+								"method": "Level",
+								"value": 16
+							},
+							{
+								"id": 658,
+								"natiId": 658,
+								"name": "Greninja",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/657",
+						"fetchedAt": "2026-11-03T05:53:46.999Z",
+						"hash": "d2d31ae3a87cfc510612057a96b04762770a142c81d3b7d9a0a2e76e988a097d"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/339/",
+						"fetchedAt": "2026-11-03T05:53:47.027Z",
+						"hash": "0677ebc2aaff1ba922e70dd5703c9fbcfff6532a5ed94668ee59b0a601cf35ce"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/657/",
+						"fetchedAt": "2026-11-03T05:53:47.055Z",
+						"hash": "d31dce8f29817a7337de16b2cddc5e331f5f4ce0cee25c8142a8bbbbb4050e7b"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/657/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.085Z",
+						"hash": "e8bf5a1c6e63b9a7e7c227cd38fc6d883227c863a715b14907bcc6aed394a90d"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/657/",
+						"fetchedAt": "2026-11-03T05:53:47.138Z",
+						"hash": "207d3d61e812237a1e3ee0eba3fb0e5aacea23cbdc92e28cf9ba24d28493f907"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"brilliantdiamond-national": "",
+				"brilliantdiamond": "",
+				"shiningpearl-national": "",
+				"shiningpearl": ""
+			},
+			"localizedFlavorByGame": {
+				"brilliantdiamond-national": {},
+				"brilliantdiamond": {},
+				"shiningpearl-national": {},
+				"shiningpearl": {}
+			}
+		},
+		{
+			"profileKey": "legends-arceus",
+			"label": "Legends: Arceus",
+			"appGameKeys": [
+				"legendsarceus"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Frogadier",
+				"localizedNames": {
+					"ja-hrkt": "ゲコガシラ",
+					"ja-roma": "Gekogashira",
+					"ko": "개굴반장",
+					"zh-hant": "呱頭蛙",
+					"fr": "Croâporal",
+					"de": "Amphizel",
+					"es": "Frogadier",
+					"it": "Frogadier",
+					"ja": "ゲコガシラ",
+					"zh-hans": "呱头蛙",
+					"es-419": "Frogadier"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water"
+				],
+				"baseStats": {
+					"hp": 54,
+					"atk": 63,
+					"def": 52,
+					"spa": 83,
+					"spd": 56,
+					"spe": 97
+				},
+				"evYield": {
+					"spe": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Torrent",
+					"Protean (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Protean"
+				],
+				"eggGroups": [
+					"Water1"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "10.9 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 142,
+				"habitat": "",
+				"shape": "Humanoid",
+				"color": "Blue",
+				"genus": "Bubble Frog Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "あわがえるポケモン",
+					"ko": "거품개구리포켓몬",
+					"zh-hant": "泡蛙寶可夢",
+					"fr": "Pokémon Crapobulle",
+					"de": "Blubbfrosch",
+					"es": "Pokémon Burburrana",
+					"it": "Pokémon Schiumorana",
+					"ja": "あわがえるポケモン",
+					"zh-hans": "泡蛙宝可梦",
+					"es-419": "Pokémon Burburrana"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 657
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 8
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 216
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 210
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 656,
+								"natiId": 656,
+								"name": "Froakie"
+							},
+							{
+								"id": 657,
+								"natiId": 657,
+								"name": "Frogadier",
+								"method": "Level",
+								"value": 16
+							},
+							{
+								"id": 658,
+								"natiId": 658,
+								"name": "Greninja",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/657",
+						"fetchedAt": "2026-11-03T05:53:46.999Z",
+						"hash": "d2d31ae3a87cfc510612057a96b04762770a142c81d3b7d9a0a2e76e988a097d"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/339/",
+						"fetchedAt": "2026-11-03T05:53:47.027Z",
+						"hash": "0677ebc2aaff1ba922e70dd5703c9fbcfff6532a5ed94668ee59b0a601cf35ce"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/657/",
+						"fetchedAt": "2026-11-03T05:53:47.055Z",
+						"hash": "d31dce8f29817a7337de16b2cddc5e331f5f4ce0cee25c8142a8bbbbb4050e7b"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/657/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.085Z",
+						"hash": "e8bf5a1c6e63b9a7e7c227cd38fc6d883227c863a715b14907bcc6aed394a90d"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/657/",
+						"fetchedAt": "2026-11-03T05:53:47.138Z",
+						"hash": "207d3d61e812237a1e3ee0eba3fb0e5aacea23cbdc92e28cf9ba24d28493f907"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendsarceus": ""
+			},
+			"localizedFlavorByGame": {
+				"legendsarceus": {}
+			}
+		},
+		{
+			"profileKey": "scarlet-violet",
+			"label": "Scarlet / Violet",
+			"appGameKeys": [
+				"scarlet",
+				"violet"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Frogadier",
+				"localizedNames": {
+					"ja-hrkt": "ゲコガシラ",
+					"ja-roma": "Gekogashira",
+					"ko": "개굴반장",
+					"zh-hant": "呱頭蛙",
+					"fr": "Croâporal",
+					"de": "Amphizel",
+					"es": "Frogadier",
+					"it": "Frogadier",
+					"ja": "ゲコガシラ",
+					"zh-hans": "呱头蛙",
+					"es-419": "Frogadier"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water"
+				],
+				"baseStats": {
+					"hp": 54,
+					"atk": 63,
+					"def": 52,
+					"spa": 83,
+					"spd": 56,
+					"spe": 97
+				},
+				"evYield": {
+					"spe": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Torrent",
+					"Protean (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Protean"
+				],
+				"eggGroups": [
+					"Water1"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "10.9 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 142,
+				"habitat": "",
+				"shape": "Humanoid",
+				"color": "Blue",
+				"genus": "Bubble Frog Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "あわがえるポケモン",
+					"ko": "거품개구리포켓몬",
+					"zh-hant": "泡蛙寶可夢",
+					"fr": "Pokémon Crapobulle",
+					"de": "Blubbfrosch",
+					"es": "Pokémon Burburrana",
+					"it": "Pokémon Schiumorana",
+					"ja": "あわがえるポケモン",
+					"zh-hans": "泡蛙宝可梦",
+					"es-419": "Pokémon Burburrana"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 657
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 8
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 216
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 210
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 656,
+								"natiId": 656,
+								"name": "Froakie"
+							},
+							{
+								"id": 657,
+								"natiId": 657,
+								"name": "Frogadier",
+								"method": "Level",
+								"value": 16
+							},
+							{
+								"id": 658,
+								"natiId": 658,
+								"name": "Greninja",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Pound",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Growl",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Water Gun",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Quick Attack",
+							"level": 8,
+							"order": null
+						},
+						{
+							"name": "Lick",
+							"level": 10,
+							"order": null
+						},
+						{
+							"name": "Water Pulse",
+							"level": 14,
+							"order": null
+						},
+						{
+							"name": "Smokescreen",
+							"level": 19,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": 23,
+							"order": null
+						},
+						{
+							"name": "Fling",
+							"level": 28,
+							"order": null
+						},
+						{
+							"name": "Smack Down",
+							"level": 33,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": 40,
+							"order": null
+						},
+						{
+							"name": "Bounce",
+							"level": 45,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": 50,
+							"order": null
+						},
+						{
+							"name": "Hydro Pump",
+							"level": 56,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Acrobatics",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Aerial Ace",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Blizzard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Chilling Water",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endure",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "False Swipe",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fling",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Grass Knot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Gunk Shot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Helping Hand",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hydro Pump",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ice Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ice Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Icy Wind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Liquidation",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Low Kick",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Mud Shot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Mud Slap",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Slide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Tomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Smack Down",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snowscape",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Spikes",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Surf",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swift",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swords Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Take Down",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Taunt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Tera Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic Spikes",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Trailblaze",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "U Turn",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Water Pledge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Water Pulse",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Waterfall",
+							"level": null,
+							"order": null
+						}
+					],
+					"Egg": [
+						{
+							"name": "Counter",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Retaliate",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Spikes",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Switcheroo",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic Spikes",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/657",
+						"fetchedAt": "2026-11-03T05:53:46.999Z",
+						"hash": "d2d31ae3a87cfc510612057a96b04762770a142c81d3b7d9a0a2e76e988a097d"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/339/",
+						"fetchedAt": "2026-11-03T05:53:47.027Z",
+						"hash": "0677ebc2aaff1ba922e70dd5703c9fbcfff6532a5ed94668ee59b0a601cf35ce"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/657/",
+						"fetchedAt": "2026-11-03T05:53:47.055Z",
+						"hash": "d31dce8f29817a7337de16b2cddc5e331f5f4ce0cee25c8142a8bbbbb4050e7b"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/657/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.085Z",
+						"hash": "e8bf5a1c6e63b9a7e7c227cd38fc6d883227c863a715b14907bcc6aed394a90d"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/657/",
+						"fetchedAt": "2026-11-03T05:53:47.138Z",
+						"hash": "207d3d61e812237a1e3ee0eba3fb0e5aacea23cbdc92e28cf9ba24d28493f907"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlet": "",
+				"violet": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlet": {},
+				"violet": {}
+			}
+		},
+		{
+			"profileKey": "the-teal-mask",
+			"label": "The Teal Mask",
+			"appGameKeys": [
+				"scarlettm",
+				"violettm"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Frogadier",
+				"localizedNames": {
+					"ja-hrkt": "ゲコガシラ",
+					"ja-roma": "Gekogashira",
+					"ko": "개굴반장",
+					"zh-hant": "呱頭蛙",
+					"fr": "Croâporal",
+					"de": "Amphizel",
+					"es": "Frogadier",
+					"it": "Frogadier",
+					"ja": "ゲコガシラ",
+					"zh-hans": "呱头蛙",
+					"es-419": "Frogadier"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water"
+				],
+				"baseStats": {
+					"hp": 54,
+					"atk": 63,
+					"def": 52,
+					"spa": 83,
+					"spd": 56,
+					"spe": 97
+				},
+				"evYield": {
+					"spe": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Torrent",
+					"Protean (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Protean"
+				],
+				"eggGroups": [
+					"Water1"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "10.9 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 142,
+				"habitat": "",
+				"shape": "Humanoid",
+				"color": "Blue",
+				"genus": "Bubble Frog Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "あわがえるポケモン",
+					"ko": "거품개구리포켓몬",
+					"zh-hant": "泡蛙寶可夢",
+					"fr": "Pokémon Crapobulle",
+					"de": "Blubbfrosch",
+					"es": "Pokémon Burburrana",
+					"it": "Pokémon Schiumorana",
+					"ja": "あわがえるポケモン",
+					"zh-hans": "泡蛙宝可梦",
+					"es-419": "Pokémon Burburrana"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 657
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 8
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 216
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 210
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 656,
+								"natiId": 656,
+								"name": "Froakie"
+							},
+							{
+								"id": 657,
+								"natiId": 657,
+								"name": "Frogadier",
+								"method": "Level",
+								"value": 16
+							},
+							{
+								"id": 658,
+								"natiId": 658,
+								"name": "Greninja",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/657",
+						"fetchedAt": "2026-11-03T05:53:46.999Z",
+						"hash": "d2d31ae3a87cfc510612057a96b04762770a142c81d3b7d9a0a2e76e988a097d"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/339/",
+						"fetchedAt": "2026-11-03T05:53:47.027Z",
+						"hash": "0677ebc2aaff1ba922e70dd5703c9fbcfff6532a5ed94668ee59b0a601cf35ce"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/657/",
+						"fetchedAt": "2026-11-03T05:53:47.055Z",
+						"hash": "d31dce8f29817a7337de16b2cddc5e331f5f4ce0cee25c8142a8bbbbb4050e7b"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/657/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.085Z",
+						"hash": "e8bf5a1c6e63b9a7e7c227cd38fc6d883227c863a715b14907bcc6aed394a90d"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/657/",
+						"fetchedAt": "2026-11-03T05:53:47.138Z",
+						"hash": "207d3d61e812237a1e3ee0eba3fb0e5aacea23cbdc92e28cf9ba24d28493f907"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlettm": "",
+				"violettm": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlettm": {},
+				"violettm": {}
+			}
+		},
+		{
+			"profileKey": "the-indigo-disk",
+			"label": "The Indigo Disk",
+			"appGameKeys": [
+				"scarletid",
+				"violetid"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Frogadier",
+				"localizedNames": {
+					"ja-hrkt": "ゲコガシラ",
+					"ja-roma": "Gekogashira",
+					"ko": "개굴반장",
+					"zh-hant": "呱頭蛙",
+					"fr": "Croâporal",
+					"de": "Amphizel",
+					"es": "Frogadier",
+					"it": "Frogadier",
+					"ja": "ゲコガシラ",
+					"zh-hans": "呱头蛙",
+					"es-419": "Frogadier"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water"
+				],
+				"baseStats": {
+					"hp": 54,
+					"atk": 63,
+					"def": 52,
+					"spa": 83,
+					"spd": 56,
+					"spe": 97
+				},
+				"evYield": {
+					"spe": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Torrent",
+					"Protean (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Protean"
+				],
+				"eggGroups": [
+					"Water1"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "10.9 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 142,
+				"habitat": "",
+				"shape": "Humanoid",
+				"color": "Blue",
+				"genus": "Bubble Frog Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "あわがえるポケモン",
+					"ko": "거품개구리포켓몬",
+					"zh-hant": "泡蛙寶可夢",
+					"fr": "Pokémon Crapobulle",
+					"de": "Blubbfrosch",
+					"es": "Pokémon Burburrana",
+					"it": "Pokémon Schiumorana",
+					"ja": "あわがえるポケモン",
+					"zh-hans": "泡蛙宝可梦",
+					"es-419": "Pokémon Burburrana"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 657
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 8
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 216
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 210
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 656,
+								"natiId": 656,
+								"name": "Froakie"
+							},
+							{
+								"id": 657,
+								"natiId": 657,
+								"name": "Frogadier",
+								"method": "Level",
+								"value": 16
+							},
+							{
+								"id": 658,
+								"natiId": 658,
+								"name": "Greninja",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/657",
+						"fetchedAt": "2026-11-03T05:53:46.999Z",
+						"hash": "d2d31ae3a87cfc510612057a96b04762770a142c81d3b7d9a0a2e76e988a097d"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/339/",
+						"fetchedAt": "2026-11-03T05:53:47.027Z",
+						"hash": "0677ebc2aaff1ba922e70dd5703c9fbcfff6532a5ed94668ee59b0a601cf35ce"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/657/",
+						"fetchedAt": "2026-11-03T05:53:47.055Z",
+						"hash": "d31dce8f29817a7337de16b2cddc5e331f5f4ce0cee25c8142a8bbbbb4050e7b"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/657/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.085Z",
+						"hash": "e8bf5a1c6e63b9a7e7c227cd38fc6d883227c863a715b14907bcc6aed394a90d"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/657/",
+						"fetchedAt": "2026-11-03T05:53:47.138Z",
+						"hash": "207d3d61e812237a1e3ee0eba3fb0e5aacea23cbdc92e28cf9ba24d28493f907"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarletid": "",
+				"violetid": ""
+			},
+			"localizedFlavorByGame": {
+				"scarletid": {},
+				"violetid": {}
+			}
+		},
+		{
+			"profileKey": "legends-za",
+			"label": "Legends: Z-A",
+			"appGameKeys": [
+				"legendsza"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Frogadier",
+				"localizedNames": {
+					"ja-hrkt": "ゲコガシラ",
+					"ja-roma": "Gekogashira",
+					"ko": "개굴반장",
+					"zh-hant": "呱頭蛙",
+					"fr": "Croâporal",
+					"de": "Amphizel",
+					"es": "Frogadier",
+					"it": "Frogadier",
+					"ja": "ゲコガシラ",
+					"zh-hans": "呱头蛙",
+					"es-419": "Frogadier"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water"
+				],
+				"baseStats": {
+					"hp": 54,
+					"atk": 63,
+					"def": 52,
+					"spa": 83,
+					"spd": 56,
+					"spe": 97
+				},
+				"evYield": {
+					"spe": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Torrent",
+					"Protean (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Protean"
+				],
+				"eggGroups": [
+					"Water1"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "10.9 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 142,
+				"habitat": "",
+				"shape": "Humanoid",
+				"color": "Blue",
+				"genus": "Bubble Frog Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "あわがえるポケモン",
+					"ko": "거품개구리포켓몬",
+					"zh-hant": "泡蛙寶可夢",
+					"fr": "Pokémon Crapobulle",
+					"de": "Blubbfrosch",
+					"es": "Pokémon Burburrana",
+					"it": "Pokémon Schiumorana",
+					"ja": "あわがえるポケモン",
+					"zh-hans": "泡蛙宝可梦",
+					"es-419": "Pokémon Burburrana"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 657
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 8
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 216
+					},
+					{
+						"pokedex": "lumiose",
+						"number": 210
+					}
+				],
+				"alphaMove": "Ice Beam",
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 656,
+								"natiId": 656,
+								"name": "Froakie"
+							},
+							{
+								"id": 657,
+								"natiId": 657,
+								"name": "Frogadier",
+								"method": "Level",
+								"value": 16
+							},
+							{
+								"id": 658,
+								"natiId": 658,
+								"name": "Greninja",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Evolve Froakie",
+						"notes": "",
+						"games": "Legends: Z-A"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Growl",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Water Gun",
+							"level": 5,
+							"order": 3
+						},
+						{
+							"name": "Quick Attack",
+							"level": 8,
+							"order": 4
+						},
+						{
+							"name": "Lick",
+							"level": 10,
+							"order": 5
+						},
+						{
+							"name": "Bubble Beam",
+							"level": 14,
+							"order": 6
+						},
+						{
+							"name": "Smokescreen",
+							"level": 18,
+							"order": 7
+						},
+						{
+							"name": "Aerial Ace",
+							"level": 23,
+							"order": 8
+						},
+						{
+							"name": "Shadow Sneak",
+							"level": 28,
+							"order": 9
+						},
+						{
+							"name": "Substitute",
+							"level": 35,
+							"order": 10
+						},
+						{
+							"name": "Night Slash",
+							"level": 38,
+							"order": 11
+						},
+						{
+							"name": "Bounce",
+							"level": 43,
+							"order": 12
+						},
+						{
+							"name": "Double Team",
+							"level": 51,
+							"order": 13
+						},
+						{
+							"name": "Hydro Pump",
+							"level": 57,
+							"order": 14
+						}
+					],
+					"Machine": [
+						{
+							"name": "Headbutt",
+							"machine": "TM001",
+							"order": 1
+						},
+						{
+							"name": "Flip Turn",
+							"machine": "TM009",
+							"order": 2
+						},
+						{
+							"name": "Brick Break",
+							"machine": "TM010",
+							"order": 3
+						},
+						{
+							"name": "Rock Slide",
+							"machine": "TM012",
+							"order": 4
+						},
+						{
+							"name": "Ice Beam",
+							"machine": "TM013",
+							"order": 5
+						},
+						{
+							"name": "Protect",
+							"machine": "TM017",
+							"order": 6
+						},
+						{
+							"name": "Aerial Ace",
+							"machine": "TM022",
+							"order": 7
+						},
+						{
+							"name": "Ice Punch",
+							"machine": "TM024",
+							"order": 8
+						},
+						{
+							"name": "Swift",
+							"machine": "TM027",
+							"order": 9
+						},
+						{
+							"name": "Dig",
+							"machine": "TM028",
+							"order": 10
+						},
+						{
+							"name": "Swords Dance",
+							"machine": "TM030",
+							"order": 11
+						},
+						{
+							"name": "Double Team",
+							"machine": "TM032",
+							"order": 12
+						},
+						{
+							"name": "Night Slash",
+							"machine": "TM034",
+							"order": 13
+						},
+						{
+							"name": "Endure",
+							"machine": "TM035",
+							"order": 14
+						},
+						{
+							"name": "Rock Tomb",
+							"machine": "TM036",
+							"order": 15
+						},
+						{
+							"name": "Water Pulse",
+							"machine": "TM041",
+							"order": 16
+						},
+						{
+							"name": "Icy Wind",
+							"machine": "TM049",
+							"order": 17
+						},
+						{
+							"name": "Surf",
+							"machine": "TM073",
+							"order": 18
+						},
+						{
+							"name": "Liquidation",
+							"machine": "TM076",
+							"order": 19
+						},
+						{
+							"name": "U-turn",
+							"machine": "TM082",
+							"order": 20
+						},
+						{
+							"name": "Nasty Plot",
+							"machine": "TM083",
+							"order": 21
+						},
+						{
+							"name": "Substitute",
+							"machine": "TM085",
+							"order": 22
+						},
+						{
+							"name": "Spikes",
+							"machine": "TM088",
+							"order": 23
+						},
+						{
+							"name": "Toxic Spikes",
+							"machine": "TM089",
+							"order": 24
+						},
+						{
+							"name": "Dark Pulse",
+							"machine": "TM090",
+							"order": 25
+						},
+						{
+							"name": "Taunt",
+							"machine": "TM095",
+							"order": 26
+						},
+						{
+							"name": "Hydro Pump",
+							"machine": "TM096",
+							"order": 27
+						},
+						{
+							"name": "Waterfall",
+							"machine": "TM098",
+							"order": 28
+						},
+						{
+							"name": "Gunk Shot",
+							"machine": "TM100",
+							"order": 29
+						},
+						{
+							"name": "Blizzard",
+							"machine": "TM105",
+							"order": 30
+						},
+						{
+							"name": "Facade",
+							"machine": "TM109",
+							"order": 31
+						},
+						{
+							"name": "Chilling Water",
+							"machine": "TM110",
+							"order": 32
+						},
+						{
+							"name": "Trailblaze",
+							"machine": "TM115",
+							"order": 33
+						},
+						{
+							"name": "False Swipe",
+							"machine": "TM122",
+							"order": 34
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Project Pokemon's Z-A game-data export assigns this form regional Dex #210."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/657",
+						"fetchedAt": "2026-11-03T05:53:46.999Z",
+						"hash": "d2d31ae3a87cfc510612057a96b04762770a142c81d3b7d9a0a2e76e988a097d"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/339/",
+						"fetchedAt": "2026-11-03T05:53:47.027Z",
+						"hash": "0677ebc2aaff1ba922e70dd5703c9fbcfff6532a5ed94668ee59b0a601cf35ce"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/657/",
+						"fetchedAt": "2026-11-03T05:53:47.055Z",
+						"hash": "d31dce8f29817a7337de16b2cddc5e331f5f4ce0cee25c8142a8bbbbb4050e7b"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/657/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.085Z",
+						"hash": "e8bf5a1c6e63b9a7e7c227cd38fc6d883227c863a715b14907bcc6aed394a90d"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/657/",
+						"fetchedAt": "2026-11-03T05:53:47.138Z",
+						"hash": "207d3d61e812237a1e3ee0eba3fb0e5aacea23cbdc92e28cf9ba24d28493f907"
+					},
+					{
+						"type": "legends-za-personal-data",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/personal.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c00215459c764ba65d879d6503a7337ad80b338171ab4713d1c6f52b4517e36f"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "719eff37d8f2f404d163f81d23b2c921ac323a7b00304e502ca37d69a3375b1d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/French/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "1b658102e791558a1bb317563b7a3aaab8cebc1c7517aa7f5d5c0e708e93d626"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/German/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5f1e419ae3b84ab18cb05b972569e629ff0bff96d928468c52c536b02dc6cf9d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Italian/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "e0bd40a2f4b7678afb82f959b7b1f3503590bd13884daf94bd5813fea832067c"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/JPN/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5c2c9784278c5d13f3ba376e4338cef21923d68faec9b8498175c21180825f24"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Korean/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c83545726b0b0b803295f52448510c15adaab3e6ce248adba23b5ad0d0344216"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/LATAM/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "01d046caf7553d97a3c275465bce97ecedae26a67674a40b5c751a56b3b4d52d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Simp_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "09495dacb0d16eb6e91aa1d67eb1ed682d0682303719811eeb1c6877bb9e7ca2"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Spanish/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "b3fafb97fe85165bd65fdd732ce1e4cee880ffe5035632269787ce859735b358"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Trad_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c446ae3e93760fc4af895427508ed852511201723f8cac84121330747e8c3cd0"
+					},
+					{
+						"type": "legends-za-locations",
+						"url": "https://www.serebii.net/pokedex-sv/frogadier/",
+						"fetchedAt": "2026-11-04T05:47:08.194Z",
+						"hash": "09b21522fb6e6dc1a772ec3a174854cb5c9cddfd5d20540cb88da4ce9ebbae02"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendsza": "Its swiftness is unparalleled. It can scale a tower of more than 2,000 feet in a minute’s time."
+			},
+			"localizedFlavorByGame": {
+				"legendsza": {
+					"en": "Its swiftness is unparalleled. It can scale a tower of more than 2,000 feet in a minute’s time.",
+					"fr": "Son agilité est incomparable. Il peut gravir une tour de 600 m de haut en une minute.",
+					"de": "Seine Flinkheit sucht ihresgleichen. Es kann einen über 600 m hohen Turm innerhalb einer Minute erklimmen.",
+					"it": "Ha un’agilità impareggiabile. È in grado di scalare una torre alta più di 600 m in un minuto.",
+					"ja": "身軽さは だれにも 負けない。 ６００メートルを 超える タワーの 天辺まで １分で 登りきる。",
+					"ko": "누구보다도 몸놀림이 가볍다. 600m를 넘는 타워의 꼭대기까지 1분이면 올라간다.",
+					"es-419": "Su agilidad es incomparable. Es capaz de escalar una torre de más de 600 m en tan solo un minuto.",
+					"zh-hans": "灵巧的身体不输给任何人。 只需１分钟就能登上 超过６００米高的塔顶。",
+					"es": "Su agilidad no tiene parangón. Es capaz de escalar una torre de más de 600 m en tan solo un minuto.",
+					"zh-hant": "靈巧的動作不會輸給任何人。 只需１分鐘就能登上 超過６００公尺高的塔頂。"
+				}
+			}
+		},
+		{
+			"profileKey": "mega-dimension",
+			"label": "Mega Dimension",
+			"appGameKeys": [
+				"legendszamd"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Frogadier",
+				"localizedNames": {
+					"ja-hrkt": "ゲコガシラ",
+					"ja-roma": "Gekogashira",
+					"ko": "개굴반장",
+					"zh-hant": "呱頭蛙",
+					"fr": "Croâporal",
+					"de": "Amphizel",
+					"es": "Frogadier",
+					"it": "Frogadier",
+					"ja": "ゲコガシラ",
+					"zh-hans": "呱头蛙",
+					"es-419": "Frogadier"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water"
+				],
+				"baseStats": {
+					"hp": 54,
+					"atk": 63,
+					"def": 52,
+					"spa": 83,
+					"spd": 56,
+					"spe": 97
+				},
+				"evYield": {
+					"spe": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Torrent",
+					"Protean (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Protean"
+				],
+				"eggGroups": [
+					"Water1"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "10.9 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 142,
+				"habitat": "",
+				"shape": "Humanoid",
+				"color": "Blue",
+				"genus": "Bubble Frog Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "あわがえるポケモン",
+					"ko": "거품개구리포켓몬",
+					"zh-hant": "泡蛙寶可夢",
+					"fr": "Pokémon Crapobulle",
+					"de": "Blubbfrosch",
+					"es": "Pokémon Burburrana",
+					"it": "Pokémon Schiumorana",
+					"ja": "あわがえるポケモン",
+					"zh-hans": "泡蛙宝可梦",
+					"es-419": "Pokémon Burburrana"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 657
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 8
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 216
+					},
+					{
+						"pokedex": "lumiose",
+						"number": 210
+					}
+				],
+				"alphaMove": "Ice Beam",
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 656,
+								"natiId": 656,
+								"name": "Froakie"
+							},
+							{
+								"id": 657,
+								"natiId": 657,
+								"name": "Frogadier",
+								"method": "Level",
+								"value": 16
+							},
+							{
+								"id": 658,
+								"natiId": 658,
+								"name": "Greninja",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Evolve Froakie",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Hyperspace Lumiose",
+						"notes": "Water (3 Star), Water (4 Star), Dark (4 Star)",
+						"games": "Legends: Z-A Mega Dimension"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Growl",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Water Gun",
+							"level": 5,
+							"order": 3
+						},
+						{
+							"name": "Quick Attack",
+							"level": 8,
+							"order": 4
+						},
+						{
+							"name": "Lick",
+							"level": 10,
+							"order": 5
+						},
+						{
+							"name": "Bubble Beam",
+							"level": 14,
+							"order": 6
+						},
+						{
+							"name": "Smokescreen",
+							"level": 18,
+							"order": 7
+						},
+						{
+							"name": "Aerial Ace",
+							"level": 23,
+							"order": 8
+						},
+						{
+							"name": "Shadow Sneak",
+							"level": 28,
+							"order": 9
+						},
+						{
+							"name": "Substitute",
+							"level": 35,
+							"order": 10
+						},
+						{
+							"name": "Night Slash",
+							"level": 38,
+							"order": 11
+						},
+						{
+							"name": "Bounce",
+							"level": 43,
+							"order": 12
+						},
+						{
+							"name": "Double Team",
+							"level": 51,
+							"order": 13
+						},
+						{
+							"name": "Hydro Pump",
+							"level": 57,
+							"order": 14
+						}
+					],
+					"Machine": [
+						{
+							"name": "Headbutt",
+							"machine": "TM001",
+							"order": 1
+						},
+						{
+							"name": "Flip Turn",
+							"machine": "TM009",
+							"order": 2
+						},
+						{
+							"name": "Brick Break",
+							"machine": "TM010",
+							"order": 3
+						},
+						{
+							"name": "Rock Slide",
+							"machine": "TM012",
+							"order": 4
+						},
+						{
+							"name": "Ice Beam",
+							"machine": "TM013",
+							"order": 5
+						},
+						{
+							"name": "Protect",
+							"machine": "TM017",
+							"order": 6
+						},
+						{
+							"name": "Aerial Ace",
+							"machine": "TM022",
+							"order": 7
+						},
+						{
+							"name": "Ice Punch",
+							"machine": "TM024",
+							"order": 8
+						},
+						{
+							"name": "Swift",
+							"machine": "TM027",
+							"order": 9
+						},
+						{
+							"name": "Dig",
+							"machine": "TM028",
+							"order": 10
+						},
+						{
+							"name": "Swords Dance",
+							"machine": "TM030",
+							"order": 11
+						},
+						{
+							"name": "Double Team",
+							"machine": "TM032",
+							"order": 12
+						},
+						{
+							"name": "Night Slash",
+							"machine": "TM034",
+							"order": 13
+						},
+						{
+							"name": "Endure",
+							"machine": "TM035",
+							"order": 14
+						},
+						{
+							"name": "Rock Tomb",
+							"machine": "TM036",
+							"order": 15
+						},
+						{
+							"name": "Water Pulse",
+							"machine": "TM041",
+							"order": 16
+						},
+						{
+							"name": "Icy Wind",
+							"machine": "TM049",
+							"order": 17
+						},
+						{
+							"name": "Surf",
+							"machine": "TM073",
+							"order": 18
+						},
+						{
+							"name": "Liquidation",
+							"machine": "TM076",
+							"order": 19
+						},
+						{
+							"name": "U-turn",
+							"machine": "TM082",
+							"order": 20
+						},
+						{
+							"name": "Nasty Plot",
+							"machine": "TM083",
+							"order": 21
+						},
+						{
+							"name": "Substitute",
+							"machine": "TM085",
+							"order": 22
+						},
+						{
+							"name": "Spikes",
+							"machine": "TM088",
+							"order": 23
+						},
+						{
+							"name": "Toxic Spikes",
+							"machine": "TM089",
+							"order": 24
+						},
+						{
+							"name": "Dark Pulse",
+							"machine": "TM090",
+							"order": 25
+						},
+						{
+							"name": "Taunt",
+							"machine": "TM095",
+							"order": 26
+						},
+						{
+							"name": "Hydro Pump",
+							"machine": "TM096",
+							"order": 27
+						},
+						{
+							"name": "Waterfall",
+							"machine": "TM098",
+							"order": 28
+						},
+						{
+							"name": "Gunk Shot",
+							"machine": "TM100",
+							"order": 29
+						},
+						{
+							"name": "Blizzard",
+							"machine": "TM105",
+							"order": 30
+						},
+						{
+							"name": "Facade",
+							"machine": "TM109",
+							"order": 31
+						},
+						{
+							"name": "Chilling Water",
+							"machine": "TM110",
+							"order": 32
+						},
+						{
+							"name": "Trailblaze",
+							"machine": "TM115",
+							"order": 33
+						},
+						{
+							"name": "False Swipe",
+							"machine": "TM122",
+							"order": 34
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Project Pokemon's Z-A game-data export assigns this form regional Dex #210."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/657",
+						"fetchedAt": "2026-11-03T05:53:46.999Z",
+						"hash": "d2d31ae3a87cfc510612057a96b04762770a142c81d3b7d9a0a2e76e988a097d"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/339/",
+						"fetchedAt": "2026-11-03T05:53:47.027Z",
+						"hash": "0677ebc2aaff1ba922e70dd5703c9fbcfff6532a5ed94668ee59b0a601cf35ce"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/657/",
+						"fetchedAt": "2026-11-03T05:53:47.055Z",
+						"hash": "d31dce8f29817a7337de16b2cddc5e331f5f4ce0cee25c8142a8bbbbb4050e7b"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/657/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.085Z",
+						"hash": "e8bf5a1c6e63b9a7e7c227cd38fc6d883227c863a715b14907bcc6aed394a90d"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/657/",
+						"fetchedAt": "2026-11-03T05:53:47.138Z",
+						"hash": "207d3d61e812237a1e3ee0eba3fb0e5aacea23cbdc92e28cf9ba24d28493f907"
+					},
+					{
+						"type": "legends-za-personal-data",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/personal.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c00215459c764ba65d879d6503a7337ad80b338171ab4713d1c6f52b4517e36f"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "719eff37d8f2f404d163f81d23b2c921ac323a7b00304e502ca37d69a3375b1d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/French/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "1b658102e791558a1bb317563b7a3aaab8cebc1c7517aa7f5d5c0e708e93d626"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/German/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5f1e419ae3b84ab18cb05b972569e629ff0bff96d928468c52c536b02dc6cf9d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Italian/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "e0bd40a2f4b7678afb82f959b7b1f3503590bd13884daf94bd5813fea832067c"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/JPN/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5c2c9784278c5d13f3ba376e4338cef21923d68faec9b8498175c21180825f24"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Korean/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c83545726b0b0b803295f52448510c15adaab3e6ce248adba23b5ad0d0344216"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/LATAM/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "01d046caf7553d97a3c275465bce97ecedae26a67674a40b5c751a56b3b4d52d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Simp_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "09495dacb0d16eb6e91aa1d67eb1ed682d0682303719811eeb1c6877bb9e7ca2"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Spanish/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "b3fafb97fe85165bd65fdd732ce1e4cee880ffe5035632269787ce859735b358"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Trad_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c446ae3e93760fc4af895427508ed852511201723f8cac84121330747e8c3cd0"
+					},
+					{
+						"type": "legends-za-locations",
+						"url": "https://www.serebii.net/pokedex-sv/frogadier/",
+						"fetchedAt": "2026-11-04T05:47:08.194Z",
+						"hash": "09b21522fb6e6dc1a772ec3a174854cb5c9cddfd5d20540cb88da4ce9ebbae02"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendszamd": "Its swiftness is unparalleled. It can scale a tower of more than 2,000 feet in a minute’s time."
+			},
+			"localizedFlavorByGame": {
+				"legendszamd": {
+					"en": "Its swiftness is unparalleled. It can scale a tower of more than 2,000 feet in a minute’s time.",
+					"fr": "Son agilité est incomparable. Il peut gravir une tour de 600 m de haut en une minute.",
+					"de": "Seine Flinkheit sucht ihresgleichen. Es kann einen über 600 m hohen Turm innerhalb einer Minute erklimmen.",
+					"it": "Ha un’agilità impareggiabile. È in grado di scalare una torre alta più di 600 m in un minuto.",
+					"ja": "身軽さは だれにも 負けない。 ６００メートルを 超える タワーの 天辺まで １分で 登りきる。",
+					"ko": "누구보다도 몸놀림이 가볍다. 600m를 넘는 타워의 꼭대기까지 1분이면 올라간다.",
+					"es-419": "Su agilidad es incomparable. Es capaz de escalar una torre de más de 600 m en tan solo un minuto.",
+					"zh-hans": "灵巧的身体不输给任何人。 只需１分钟就能登上 超过６００米高的塔顶。",
+					"es": "Su agilidad no tiene parangón. Es capaz de escalar una torre de más de 600 m en tan solo un minuto.",
+					"zh-hant": "靈巧的動作不會輸給任何人。 只需１分鐘就能登上 超過６００公尺高的塔頂。"
+				}
+			}
+		}
+	]
+}

@@ -1,6 +1,18 @@
-import { assetPath } from "../utils/assetPath.js";
 import { ensureMonInfoLoaded } from "../../data/mon-info/_loader.js";
 import { fetchPokeApiMonInfo } from "../services/pokeApi.js";
+import {
+	enrichMoveGroups,
+	loadMoveReferenceManifest,
+} from "../utils/moveReference.js";
+import {
+	getMonInfoFormOptions,
+	resolveMonInfoFormForGame,
+} from "../utils/monInfoForms.js";
+import { pokemonSpriteCandidates } from "../utils/pokemonSprite.js";
+import { normalizeEvolutionPaths as normalizeSharedEvolutionPaths } from "../utils/monInfoEvolution.js";
+import { normalizeMonInfoLocations } from "../utils/monInfoLocations.js";
+
+export { getMonInfoFormOptions } from "../utils/monInfoForms.js";
 
 function resolveMonInfoBucket(gameKey) {
 	const byGame = window.DATA?.monInfo || {};
@@ -12,14 +24,6 @@ function resolveMonInfoBucket(gameKey) {
 		}
 	}
 	return null;
-}
-
-function gameMatches(metaGames, gk) {
-	if (!Array.isArray(metaGames) || !metaGames.length) return true;
-	if (!gk) return true;
-	const g = String(gk);
-	const base = g.replace(/(ioa|ct|tm|id|md)$/i, "");
-	return metaGames.includes(g) || metaGames.includes(base);
 }
 
 function mergeInfo(base, patch) {
@@ -202,26 +206,6 @@ export function computeTypeDefenseBuckets(types) {
 	return rows;
 }
 
-export function getMonInfoFormOptions(natiId, gameKey) {
-	const catalogForms =
-		(natiId != null && window.DATA?.formsCatalog?.[natiId]) || {};
-	const formOpts = [];
-	for (const [fk, meta] of Object.entries(catalogForms)) {
-		if (
-			meta &&
-			Array.isArray(meta.games) &&
-			meta.games.length &&
-			!gameMatches(meta.games, gameKey)
-		)
-			continue;
-		formOpts.push({
-			key: String(fk),
-			label: meta?.label ? String(meta.label) : String(fk),
-		});
-	}
-	return formOpts;
-}
-
 export function normalizeMovesForRender(moves) {
 	if (!moves || typeof moves !== "object") return [];
 	return Object.entries(moves)
@@ -233,40 +217,10 @@ export function normalizeMovesForRender(moves) {
 }
 
 export function normalizeLocationsForRender(locations) {
-	if (!Array.isArray(locations)) return [];
-	return locations
-		.map((loc, index) => {
-			if (typeof loc === "string")
-				return { key: `loc-${index}`, area: "", notes: loc, extra: "" };
-			return {
-				key: `loc-${index}`,
-				area: loc?.area || "",
-				notes: loc?.notes || "",
-				extra: loc?.games || loc?.method || loc?.rate || "",
-			};
-		})
-		.filter((loc) => loc.area || loc.notes || loc.extra);
+	return normalizeMonInfoLocations(locations);
 }
 
-export function normalizeEvolutionPaths(evoObj) {
-	if (!evoObj) return [];
-	if (Array.isArray(evoObj.paths))
-		return evoObj.paths.filter((p) => Array.isArray(p) && p.length);
-	if (Array.isArray(evoObj.chain)) {
-		if (!Array.isArray(evoObj.chain[0]))
-			return [evoObj.chain.filter(Boolean)];
-		return evoObj.chain
-			.map((p) => p.filter(Boolean))
-			.filter((p) => p.length);
-	}
-	if (Array.isArray(evoObj.branches))
-		return evoObj.branches
-			.map((p) => p.filter(Boolean))
-			.filter((p) => p.length);
-	if (Array.isArray(evoObj))
-		return evoObj.map((p) => p.filter(Boolean)).filter((p) => p.length);
-	return [];
-}
+export const normalizeEvolutionPaths = normalizeSharedEvolutionPaths;
 
 export async function resolveMonInfoData({
 	gameKey,
@@ -276,9 +230,7 @@ export async function resolveMonInfoData({
 	const natId = mon?.natiId ?? mon?.natId ?? mon?.nationalId ?? null;
 	const key = natId ?? mon?.id;
 	const formOptions = getMonInfoFormOptions(natId, gameKey);
-	let effectiveFormKey = formKey;
-	if (!effectiveFormKey && formOptions.length)
-		effectiveFormKey = formOptions[0].key;
+	const effectiveFormKey = resolveMonInfoFormForGame(natId, gameKey, formKey);
 
 	await ensureMonInfoLoaded(key, effectiveFormKey);
 
@@ -297,17 +249,29 @@ export async function resolveMonInfoData({
 			? await fetchPokeApiMonInfo(natId)
 			: null;
 	const resolvedInfo = mergeInfo(fallbackInfo, effectiveInfo);
+	const moveManifest = resolvedInfo?.moves
+		? await loadMoveReferenceManifest()
+		: null;
+	const enrichedMoves = enrichMoveGroups(
+		resolvedInfo?.moves,
+		gameKey,
+		moveManifest,
+	);
 	const types = resolvedInfo?.types || mon?.types || [];
-	const spriteSrc =
-		resolvedInfo?.sprites?.front ||
-		(natId != null
-			? assetPath(
-					`sprites/pokemon_home/base-front/${String(natId).padStart(4, "0")}.png`,
-				)
-			: null) ||
-		mon?.img ||
-		null;
+	const spriteCandidates = [
+		resolvedInfo?.sprites?.front,
+		...pokemonSpriteCandidates({
+			nationalDexId: natId,
+			formKey: effectiveFormKey,
+			gameKey,
+		}),
+		mon?.img,
+	].filter((candidate, index, candidates) =>
+		candidate ? candidates.indexOf(candidate) === index : false,
+	);
+	const spriteSrc = spriteCandidates[0] || null;
 	const baseStats = resolvedInfo?.baseStats || mon?.baseStats || null;
+	const evYield = resolvedInfo?.evYield || null;
 	const battle = resolvedInfo?.battle || {};
 	const profile = {
 		abilities: resolvedInfo?.abilities || [],
@@ -352,15 +316,17 @@ export async function resolveMonInfoData({
 		resolvedInfo,
 		fallbackInfo,
 		effectiveInfo,
-		hasLocalInfo: !!info,
+		hasLocalInfo: Boolean(info || formOverride),
 		formOptions,
 		effectiveFormKey,
 		spriteSrc,
+		spriteCandidates,
 		types,
 		baseStats,
+		evYield,
 		profile,
 		evolutionPaths: normalizeEvolutionPaths(resolvedInfo?.evolution),
-		moves: normalizeMovesForRender(resolvedInfo?.moves),
+		moves: normalizeMovesForRender(enrichedMoves),
 		locations: normalizeLocationsForRender(resolvedInfo?.locations),
 		typeDefenses: computeTypeDefenseBuckets(types),
 	};

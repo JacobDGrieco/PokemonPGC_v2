@@ -1,10 +1,8 @@
-import { assetPath } from "../utils/assetPath.js";
 import { _dexIdNumber } from "../../data/helpers/dex-ids.js";
 import { resolveMonInfoData } from "./dex-mon-info-data.js";
 import {
 	renderCompletionTopHtml,
 	renderEvolutionHtml,
-	renderEvRadar,
 	renderLocationsHtml,
 	renderMovesHtml,
 	renderNotesHtml,
@@ -21,10 +19,11 @@ import {
 } from "./dex-mon-info-assets.js";
 import { resetScrollWithin, scrollElementToTop } from "../utils/scrolling.js";
 import { hideModalElement, showModalElement } from "./modal-state.js";
-
-function pad4(value) {
-	return String(value).padStart(4, "0");
-}
+import {
+	enrichMoveGroups,
+	loadMoveReferenceManifest,
+} from "../utils/moveReference.js";
+import { pokemonSpriteCandidates } from "../utils/pokemonSprite.js";
 
 export async function renderMonInfoInto({
 	gameKey,
@@ -91,15 +90,23 @@ export async function renderMonInfoInto({
 	const abilities = resolvedInfo?.abilities || [];
 	const eggGroups = resolvedInfo?.eggGroups || [];
 	const evo = resolvedInfo?.evolution || null;
-	const moves = resolvedInfo?.moves || {};
+	const moveManifest = resolvedInfo?.moves
+		? await loadMoveReferenceManifest()
+		: null;
+	const moves = enrichMoveGroups(
+		resolvedInfo?.moves || {},
+		gameKey,
+		moveManifest,
+	);
 	const locations = resolvedInfo?.locations || [];
 	const dexList = window.DATA?.dex?.[gameKey] || [];
-	const homeSprite =
-		natId != null
-			? assetPath(`sprites/pokemon_home/base-front/${pad4(natId)}.png`)
-			: null;
+	const gameSprite = pokemonSpriteCandidates({
+		nationalDexId: natId,
+		formKey: effectiveFormKey,
+		gameKey,
+	})[0];
 	const spriteSrc =
-		resolvedInfo?.sprites?.front || homeSprite || mon.img || null;
+		resolvedInfo?.sprites?.front || gameSprite || mon.img || null;
 
 	const statusFromCard = (() => {
 		const c = sourceCard;
@@ -123,18 +130,18 @@ export async function renderMonInfoInto({
 		return null;
 	})();
 
+	const evObj = resolvedInfo?.evYield || null;
 	let statsHtml = "";
 	if (baseStats) {
-		statsHtml = renderStatsRadar(baseStats);
-	}
-
-	const evObj = resolvedInfo?.evYield || null;
-	if (evObj) {
-		statsHtml += renderEvRadar(evObj);
+		statsHtml = renderStatsRadar(baseStats, evObj);
 	}
 
 	const chartHtml = renderTypeChart(types);
-	const evoHtml = renderEvolutionHtml(evo, dexList);
+	const evoHtml = renderEvolutionHtml(evo, dexList, {
+		gameKey,
+		currentNatiId: natId,
+		currentFormKey: effectiveFormKey,
+	});
 	const locationsHtml = renderLocationsHtml({ locations, resolvedInfo });
 	const movesHtml = renderMovesHtml({ moves, gameKey });
 	const hasInfo = !!resolvedInfo;
@@ -324,11 +331,10 @@ export async function renderMonInfoInto({
 					? `
 			<div class="mon-info-form">
 			  <select id="monInfoFormSelect" class="mon-info-form-select">
-				<option value="" ${!formKey ? "selected" : ""}></option>
 				${formOpts
 					.map(
 						(o) =>
-							`<option value="${o.key}" ${formKey === o.key ? "selected" : ""}>${o.label}</option>`,
+							`<option value="${o.key}" ${effectiveFormKey === o.key ? "selected" : ""}>${o.label}</option>`,
 					)
 					.join("")}
 			  </select>
@@ -388,19 +394,38 @@ export async function renderMonInfoInto({
 	const formSel = monInfoBody.querySelector("#monInfoFormSelect");
 	if (formSel) {
 		formSel.onchange = async () => {
-			const chosen = formSel.value || null;
+			const chosen = formSel.value;
 
 			await renderMonInfoInto({
 				gameKey,
 				genKey,
 				mon,
-				formKey: chosen, // null => blank UI, but will load first form silently
+				formKey: chosen,
 				titleEl,
 				bodyEl,
 				sourceCard,
 			});
 			scrollElementToTop(monInfoBody);
 		};
+	}
+
+	// Evolution nodes leave the modal and open the same dedicated Mon Info route
+	// used by index cards, preserving an authored or inferred target form.
+	for (const evolutionNode of monInfoBody.querySelectorAll(
+		"[data-evolution-id]",
+	)) {
+		evolutionNode.addEventListener("click", () => {
+			const targetId = Number(evolutionNode.dataset.evolutionId);
+			if (!targetId) return;
+			const targetFormKey = evolutionNode.dataset.evolutionForm || null;
+			window.PPGC?.navigateTo?.(
+				"moninfo",
+				targetId,
+				gameKey,
+				targetFormKey,
+			);
+			window.PPGC?.dexApi?.closeForNavigation?.();
+		});
 	}
 
 	wireAssetsTabs(monInfoBody);

@@ -1,0 +1,146 @@
+{
+	"schemaVersion": 1,
+	"id": 779,
+	"slug": "snap-trap",
+	"name": "Snap Trap",
+	"names": {
+		"de": "Fangeisen",
+		"en": "Snap Trap",
+		"es": "Cepo",
+		"es-419": "Trampa Presión",
+		"fr": "Troquenard",
+		"it": "Tagliola",
+		"ja": "トラバサミ",
+		"ja-hrkt": "トラバサミ",
+		"ko": "집게덫",
+		"zh-hans": "捕兽夹",
+		"zh-hant": "捕獸夾"
+	},
+	"generation": 8,
+	"type": "Grass",
+	"damageClass": "Physical",
+	"power": 35,
+	"accuracy": 100,
+	"pp": 15,
+	"priority": 0,
+	"effectChance": 100,
+	"target": "Selected Pokemon",
+	"effectEntries": [
+		{
+			"language": "en",
+			"effect": "Inflicts regular damage. For the next 2–5 turns, the target cannot leave the field and is damaged for 1/16 its max HP at the end of each turn. The user continues to use other moves during this time. If the user leaves the field, this effect ends. Has a 3/8 chance each to hit 2 or 3 times, and a 1/8 chance each to hit 4 or 5 times. Averages to 3 hits per use. Rapid Spin cancels this effect.",
+			"shortEffect": "Prevents the target from fleeing and inflicts damage for 2-5 turns."
+		},
+		{
+			"language": "fr",
+			"effect": "Inflige des dégâts réguliers. Pour les 2-5 prochains tours, la cible ne peut pas quitter le terrain et subit 1/16 de ses PV max en dégâts à la fin de chaque tour. Le lanceur continue d'utiliser d'autres capacités pendant ce temps. Si le lanceur quitte le terrain, cet effet prend fin. A 3/8 chance chacune de frapper 2 ou 3 fois, et 1/8 chance chacune de frapper 4 ou 5 fois. Moyenne à 3 coups par utilisation. Tour Rapide annule cet effet.",
+			"shortEffect": "Empêche la cible de fuir et inflige des dégâts pendant 2-5 tours."
+		}
+	],
+	"effectChanges": [],
+	"descriptions": [
+		{
+			"versionGroup": "sword-shield",
+			"language": "de",
+			"text": "Das Ziel wird vier bis fünf Runden lang in einem Fangeisen festgehalten und angegriffen."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "en",
+			"text": "The user snares the target in a snap trap for four to five turns."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es",
+			"text": "Cepo que atrapa al objetivo durante cuatro o cinco turnos y le causa daño mientras se encuentra preso."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es-419",
+			"text": "Cepo que atrapa al objetivo durante cuatro o cinco turnos y le causa daño mientras se encuentra preso."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "fr",
+			"text": "Le lanceur piège sa cible dans son Troquenard d’acier et lui inflige des dégâts pendant quatre ou cinq tours."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "it",
+			"text": "Chi la usa intrappola il bersaglio in una tagliola e lo attacca per quattro o cinque turni."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja",
+			"text": "トラバサミで 捕らえて ４－５ターンの 間 相手を はさんで 攻撃する。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja-hrkt",
+			"text": "トラバサミで とらえて ４－５ターンの あいだ あいてを はさんで こうげきする。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ko",
+			"text": "집게덫으로 붙잡은 뒤 4-5턴 동안 상대를 끼워서 공격한다."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hans",
+			"text": "使用捕兽夹， 在４～５回合内， 夹住对手进行攻击。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hant",
+			"text": "用捕獸夾， 在４～５回合內 夾住對手進行攻擊。"
+		}
+	],
+	"pastValues": [],
+	"statChanges": [],
+	"meta": {
+		"ailment": "Trap",
+		"category": "Damage Ailment",
+		"minHits": null,
+		"maxHits": null,
+		"minTurns": 5,
+		"maxTurns": 6,
+		"drain": 0,
+		"healing": 0,
+		"critRate": 0,
+		"ailmentChance": 100,
+		"flinchChance": 0,
+		"statChance": 0
+	},
+	"machines": [],
+	"learners": [
+		{
+			"nationalDexId": 618,
+			"speciesName": "Stunfisk",
+			"formKey": "galarian",
+			"formName": "Galarian",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 45,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		}
+	],
+	"potentialPokemon": [
+		"stunfisk-galar"
+	],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/move/779/",
+		"fetchedAt": "2026-11-03T06:30:18.319Z",
+		"hash": "c978d56957825ae2eed247fde237abd103a7080803b3f0ed178ca7f639ffadd1"
+	}
+}

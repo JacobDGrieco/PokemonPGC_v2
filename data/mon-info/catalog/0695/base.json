@@ -1,0 +1,5050 @@
+{
+	"schemaVersion": 2,
+	"nationalDexId": 695,
+	"speciesName": "Heliolisk",
+	"formKey": "base",
+	"formName": "Base",
+	"formLabelSource": "form-catalog",
+	"profiles": [
+		{
+			"profileKey": "x-y",
+			"label": "X / Y",
+			"appGameKeys": [
+				"x-national",
+				"x-central",
+				"x-coastal",
+				"x-mountain",
+				"y-national",
+				"y-central",
+				"y-coastal",
+				"y-mountain"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Heliolisk",
+				"localizedNames": {
+					"ja-hrkt": "エレザード",
+					"ja-roma": "Elezard",
+					"ko": "일레도리자드",
+					"zh-hant": "光電傘蜥",
+					"fr": "Iguolta",
+					"de": "Elezard",
+					"es": "Heliolisk",
+					"it": "Heliolisk",
+					"ja": "エレザード",
+					"zh-hans": "光电伞蜥",
+					"es-419": "Heliolisk"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric",
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 62,
+					"atk": 55,
+					"def": 52,
+					"spa": 109,
+					"spd": 94,
+					"spe": 109
+				},
+				"evYield": {
+					"spa": 1,
+					"spe": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Dry Skin",
+					"Sand Veil",
+					"Solar Power (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Solar Power"
+				],
+				"eggGroups": [
+					"Monster",
+					"Dragon"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.0 m",
+				"weight": "21.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 75,
+				"baseExperience": 168,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Yellow",
+				"genus": "Generator Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "はつでんポケモン",
+					"ko": "발전포켓몬",
+					"zh-hant": "發電寶可夢",
+					"fr": "Pokémon Générateur",
+					"de": "Generatoren-Pokémon",
+					"es": "Pokémon Generador",
+					"it": "Pokémon Generatore",
+					"ja": "はつでんポケモン",
+					"zh-hans": "发电宝可梦",
+					"es-419": "Pokémon Generador"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 695
+					},
+					{
+						"pokedex": "kalos-coastal",
+						"number": 47
+					},
+					{
+						"pokedex": "galar",
+						"number": 319
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 203
+					},
+					{
+						"pokedex": "champions",
+						"number": 695
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 694,
+								"natiId": 694,
+								"name": "Helioptile"
+							},
+							{
+								"id": 695,
+								"natiId": 695,
+								"name": "Heliolisk",
+								"method": "Use item",
+								"value": "Sun Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Eerie Impulse",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Electrify",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Razor Wind",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Quick Attack",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Thunder",
+							"level": 1,
+							"order": 5
+						},
+						{
+							"name": "Charge",
+							"level": 1,
+							"order": 6
+						},
+						{
+							"name": "Parabolic Charge",
+							"level": 1,
+							"order": 7
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bulldoze",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Charge Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Cut",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dark Pulse",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dragon Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Focus Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Grass Knot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Low Sweep",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Slide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Tomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sandstorm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Surf",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "U Turn",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Volt Switch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/695",
+						"fetchedAt": "2026-11-03T05:53:50.283Z",
+						"hash": "cbf7e9e68bf9c260e4860fee322d0c056530b1bb3867f52ac4202677dc580e13"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/356/",
+						"fetchedAt": "2026-11-03T05:53:50.288Z",
+						"hash": "e34448ce8ad6b781830781979e336621eb8d42f8c2efb15824de5d84e7b50452"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/695/",
+						"fetchedAt": "2026-11-03T05:53:50.317Z",
+						"hash": "873f3c16df0d3f59d77f63086dc79c4602845825a0e0c63a55b703538e9c8dda"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/695/encounters",
+						"fetchedAt": "2026-11-03T05:53:50.367Z",
+						"hash": "d6ce97d0273a97bd6b5015b6c2df670237d690191af739c7ed044490bdd11f9f"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/695/",
+						"fetchedAt": "2026-11-03T05:53:50.420Z",
+						"hash": "40f913a7b7dfcb1f804e8d49fe2ae2c159a465ee7165a707728f14dffa7ff497"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"x-national": "They flare their frills and generate energy. A single Heliolisk can generate sufficient electricity to power a skyscraper.",
+				"x-central": "They flare their frills and generate energy. A single Heliolisk can generate sufficient electricity to power a skyscraper.",
+				"x-coastal": "They flare their frills and generate energy. A single Heliolisk can generate sufficient electricity to power a skyscraper.",
+				"x-mountain": "They flare their frills and generate energy. A single Heliolisk can generate sufficient electricity to power a skyscraper.",
+				"y-national": "It stimulates its muscles with electricity, boosting the strength in its legs and enabling it to run 100 yards in five seconds.",
+				"y-central": "It stimulates its muscles with electricity, boosting the strength in its legs and enabling it to run 100 yards in five seconds.",
+				"y-coastal": "It stimulates its muscles with electricity, boosting the strength in its legs and enabling it to run 100 yards in five seconds.",
+				"y-mountain": "It stimulates its muscles with electricity, boosting the strength in its legs and enabling it to run 100 yards in five seconds."
+			},
+			"localizedFlavorByGame": {
+				"x-national": {
+					"ja-hrkt": "エリマキを ひろげて はつでんする。 エレザード １ぴきで こうそうビルで ひつような でんきを つくれるのだ。",
+					"ko": "목의 깃을 펼쳐 발전한다. 일레도리자드 1마리로 고층 빌딩에 필요한 전기를 만들어 낼 수 있다.",
+					"fr": "L’électricité que produit un seul Iguolta en agitant sa collerette suffit à alimenter un immeuble entier.",
+					"de": "Die Strommenge, die ein Elezard mit ausgebreiteten Hautlappen durch Umwandlung von Sonnenstrahlen erzeugt, genügt zur Versorgung eines Wolkenkratzers.",
+					"es": "Extiende su gorguera y genera energía eléctrica suficiente para cubrir el consumo de electricidad de un rascacielos entero.",
+					"it": "Può produrre energia elettrica aprendo il collare. Un solo Pokémon di questa specie sarebbe in grado di illuminare un intero grattacielo.",
+					"en": "They flare their frills and generate energy. A single Heliolisk can generate sufficient electricity to power a skyscraper.",
+					"ja": "エリマキを 広げて 発電する。 エレザード １匹で 高層ビルで 必要な 電気を 作れるのだ。",
+					"es-419": "Extiende su gorguera y genera energía eléctrica suficiente para cubrir el consumo de electricidad de un rascacielos entero."
+				},
+				"x-central": {
+					"ja-hrkt": "エリマキを ひろげて はつでんする。 エレザード １ぴきで こうそうビルで ひつような でんきを つくれるのだ。",
+					"ko": "목의 깃을 펼쳐 발전한다. 일레도리자드 1마리로 고층 빌딩에 필요한 전기를 만들어 낼 수 있다.",
+					"fr": "L’électricité que produit un seul Iguolta en agitant sa collerette suffit à alimenter un immeuble entier.",
+					"de": "Die Strommenge, die ein Elezard mit ausgebreiteten Hautlappen durch Umwandlung von Sonnenstrahlen erzeugt, genügt zur Versorgung eines Wolkenkratzers.",
+					"es": "Extiende su gorguera y genera energía eléctrica suficiente para cubrir el consumo de electricidad de un rascacielos entero.",
+					"it": "Può produrre energia elettrica aprendo il collare. Un solo Pokémon di questa specie sarebbe in grado di illuminare un intero grattacielo.",
+					"en": "They flare their frills and generate energy. A single Heliolisk can generate sufficient electricity to power a skyscraper.",
+					"ja": "エリマキを 広げて 発電する。 エレザード １匹で 高層ビルで 必要な 電気を 作れるのだ。",
+					"es-419": "Extiende su gorguera y genera energía eléctrica suficiente para cubrir el consumo de electricidad de un rascacielos entero."
+				},
+				"x-coastal": {
+					"ja-hrkt": "エリマキを ひろげて はつでんする。 エレザード １ぴきで こうそうビルで ひつような でんきを つくれるのだ。",
+					"ko": "목의 깃을 펼쳐 발전한다. 일레도리자드 1마리로 고층 빌딩에 필요한 전기를 만들어 낼 수 있다.",
+					"fr": "L’électricité que produit un seul Iguolta en agitant sa collerette suffit à alimenter un immeuble entier.",
+					"de": "Die Strommenge, die ein Elezard mit ausgebreiteten Hautlappen durch Umwandlung von Sonnenstrahlen erzeugt, genügt zur Versorgung eines Wolkenkratzers.",
+					"es": "Extiende su gorguera y genera energía eléctrica suficiente para cubrir el consumo de electricidad de un rascacielos entero.",
+					"it": "Può produrre energia elettrica aprendo il collare. Un solo Pokémon di questa specie sarebbe in grado di illuminare un intero grattacielo.",
+					"en": "They flare their frills and generate energy. A single Heliolisk can generate sufficient electricity to power a skyscraper.",
+					"ja": "エリマキを 広げて 発電する。 エレザード １匹で 高層ビルで 必要な 電気を 作れるのだ。",
+					"es-419": "Extiende su gorguera y genera energía eléctrica suficiente para cubrir el consumo de electricidad de un rascacielos entero."
+				},
+				"x-mountain": {
+					"ja-hrkt": "エリマキを ひろげて はつでんする。 エレザード １ぴきで こうそうビルで ひつような でんきを つくれるのだ。",
+					"ko": "목의 깃을 펼쳐 발전한다. 일레도리자드 1마리로 고층 빌딩에 필요한 전기를 만들어 낼 수 있다.",
+					"fr": "L’électricité que produit un seul Iguolta en agitant sa collerette suffit à alimenter un immeuble entier.",
+					"de": "Die Strommenge, die ein Elezard mit ausgebreiteten Hautlappen durch Umwandlung von Sonnenstrahlen erzeugt, genügt zur Versorgung eines Wolkenkratzers.",
+					"es": "Extiende su gorguera y genera energía eléctrica suficiente para cubrir el consumo de electricidad de un rascacielos entero.",
+					"it": "Può produrre energia elettrica aprendo il collare. Un solo Pokémon di questa specie sarebbe in grado di illuminare un intero grattacielo.",
+					"en": "They flare their frills and generate energy. A single Heliolisk can generate sufficient electricity to power a skyscraper.",
+					"ja": "エリマキを 広げて 発電する。 エレザード １匹で 高層ビルで 必要な 電気を 作れるのだ。",
+					"es-419": "Extiende su gorguera y genera energía eléctrica suficiente para cubrir el consumo de electricidad de un rascacielos entero."
+				},
+				"y-national": {
+					"ja-hrkt": "でんきで きんにくを しげきすると １００メートルを ５びょうで はしる きゃくりょくに パワーアップする。",
+					"ko": "전기로 근육을 자극하면 100m를 5초 만에 달리는 다릿심으로 파워가 올라간다.",
+					"fr": "Il augmente sa puissance motrice en stimulant les muscles de ses pattes avec des décharges électriques. Il peut ainsi parcourir 100 m en 5 s.",
+					"de": "Es stimuliert seine Beinmuskulatur mit Strom, wodurch es ihm gelingt, 100 m in fünf Sekunden zurückzulegen.",
+					"es": "Si estimula sus músculos a base de electricidad, sus piernas alcanzan una potencia tal que puede recorrer 100 metros en apenas cinco segundos.",
+					"it": "Stimolando i suoi muscoli con l’elettricità riesce a percorrere 100 m in 5 secondi.",
+					"en": "It stimulates its muscles with electricity, boosting the strength in its legs and enabling it to run 100 yards in five seconds.",
+					"ja": "電気で 筋肉を 刺激すると １００メートルを ５秒で 走る 脚力に パワーアップする。",
+					"es-419": "Si estimula sus músculos a base de electricidad, sus piernas alcanzan una potencia tal que puede recorrer 100 metros en apenas cinco segundos."
+				},
+				"y-central": {
+					"ja-hrkt": "でんきで きんにくを しげきすると １００メートルを ５びょうで はしる きゃくりょくに パワーアップする。",
+					"ko": "전기로 근육을 자극하면 100m를 5초 만에 달리는 다릿심으로 파워가 올라간다.",
+					"fr": "Il augmente sa puissance motrice en stimulant les muscles de ses pattes avec des décharges électriques. Il peut ainsi parcourir 100 m en 5 s.",
+					"de": "Es stimuliert seine Beinmuskulatur mit Strom, wodurch es ihm gelingt, 100 m in fünf Sekunden zurückzulegen.",
+					"es": "Si estimula sus músculos a base de electricidad, sus piernas alcanzan una potencia tal que puede recorrer 100 metros en apenas cinco segundos.",
+					"it": "Stimolando i suoi muscoli con l’elettricità riesce a percorrere 100 m in 5 secondi.",
+					"en": "It stimulates its muscles with electricity, boosting the strength in its legs and enabling it to run 100 yards in five seconds.",
+					"ja": "電気で 筋肉を 刺激すると １００メートルを ５秒で 走る 脚力に パワーアップする。",
+					"es-419": "Si estimula sus músculos a base de electricidad, sus piernas alcanzan una potencia tal que puede recorrer 100 metros en apenas cinco segundos."
+				},
+				"y-coastal": {
+					"ja-hrkt": "でんきで きんにくを しげきすると １００メートルを ５びょうで はしる きゃくりょくに パワーアップする。",
+					"ko": "전기로 근육을 자극하면 100m를 5초 만에 달리는 다릿심으로 파워가 올라간다.",
+					"fr": "Il augmente sa puissance motrice en stimulant les muscles de ses pattes avec des décharges électriques. Il peut ainsi parcourir 100 m en 5 s.",
+					"de": "Es stimuliert seine Beinmuskulatur mit Strom, wodurch es ihm gelingt, 100 m in fünf Sekunden zurückzulegen.",
+					"es": "Si estimula sus músculos a base de electricidad, sus piernas alcanzan una potencia tal que puede recorrer 100 metros en apenas cinco segundos.",
+					"it": "Stimolando i suoi muscoli con l’elettricità riesce a percorrere 100 m in 5 secondi.",
+					"en": "It stimulates its muscles with electricity, boosting the strength in its legs and enabling it to run 100 yards in five seconds.",
+					"ja": "電気で 筋肉を 刺激すると １００メートルを ５秒で 走る 脚力に パワーアップする。",
+					"es-419": "Si estimula sus músculos a base de electricidad, sus piernas alcanzan una potencia tal que puede recorrer 100 metros en apenas cinco segundos."
+				},
+				"y-mountain": {
+					"ja-hrkt": "でんきで きんにくを しげきすると １００メートルを ５びょうで はしる きゃくりょくに パワーアップする。",
+					"ko": "전기로 근육을 자극하면 100m를 5초 만에 달리는 다릿심으로 파워가 올라간다.",
+					"fr": "Il augmente sa puissance motrice en stimulant les muscles de ses pattes avec des décharges électriques. Il peut ainsi parcourir 100 m en 5 s.",
+					"de": "Es stimuliert seine Beinmuskulatur mit Strom, wodurch es ihm gelingt, 100 m in fünf Sekunden zurückzulegen.",
+					"es": "Si estimula sus músculos a base de electricidad, sus piernas alcanzan una potencia tal que puede recorrer 100 metros en apenas cinco segundos.",
+					"it": "Stimolando i suoi muscoli con l’elettricità riesce a percorrere 100 m in 5 secondi.",
+					"en": "It stimulates its muscles with electricity, boosting the strength in its legs and enabling it to run 100 yards in five seconds.",
+					"ja": "電気で 筋肉を 刺激すると １００メートルを ５秒で 走る 脚力に パワーアップする。",
+					"es-419": "Si estimula sus músculos a base de electricidad, sus piernas alcanzan una potencia tal que puede recorrer 100 metros en apenas cinco segundos."
+				}
+			}
+		},
+		{
+			"profileKey": "omega-ruby-alpha-sapphire",
+			"label": "Omega Ruby / Alpha Sapphire",
+			"appGameKeys": [
+				"omegaruby-national",
+				"omegaruby",
+				"alphasapphire-national",
+				"alphasapphire"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Heliolisk",
+				"localizedNames": {
+					"ja-hrkt": "エレザード",
+					"ja-roma": "Elezard",
+					"ko": "일레도리자드",
+					"zh-hant": "光電傘蜥",
+					"fr": "Iguolta",
+					"de": "Elezard",
+					"es": "Heliolisk",
+					"it": "Heliolisk",
+					"ja": "エレザード",
+					"zh-hans": "光电伞蜥",
+					"es-419": "Heliolisk"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric",
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 62,
+					"atk": 55,
+					"def": 52,
+					"spa": 109,
+					"spd": 94,
+					"spe": 109
+				},
+				"evYield": {
+					"spa": 1,
+					"spe": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Dry Skin",
+					"Sand Veil",
+					"Solar Power (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Solar Power"
+				],
+				"eggGroups": [
+					"Monster",
+					"Dragon"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.0 m",
+				"weight": "21.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 75,
+				"baseExperience": 168,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Yellow",
+				"genus": "Generator Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "はつでんポケモン",
+					"ko": "발전포켓몬",
+					"zh-hant": "發電寶可夢",
+					"fr": "Pokémon Générateur",
+					"de": "Generatoren-Pokémon",
+					"es": "Pokémon Generador",
+					"it": "Pokémon Generatore",
+					"ja": "はつでんポケモン",
+					"zh-hans": "发电宝可梦",
+					"es-419": "Pokémon Generador"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 695
+					},
+					{
+						"pokedex": "kalos-coastal",
+						"number": 47
+					},
+					{
+						"pokedex": "galar",
+						"number": 319
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 203
+					},
+					{
+						"pokedex": "champions",
+						"number": 695
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 694,
+								"natiId": 694,
+								"name": "Helioptile"
+							},
+							{
+								"id": 695,
+								"natiId": 695,
+								"name": "Heliolisk",
+								"method": "Use item",
+								"value": "Sun Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Tutor": [
+						{
+							"name": "Dragon Pulse",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Electroweb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fire Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Voice",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Low Kick",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Magnet Rise",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shock Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Signal Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Punch",
+							"level": null,
+							"order": null
+						}
+					],
+					"Level Up": [
+						{
+							"name": "Eerie Impulse",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Electrify",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Razor Wind",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Quick Attack",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Thunder",
+							"level": 1,
+							"order": 5
+						},
+						{
+							"name": "Charge",
+							"level": 1,
+							"order": 6
+						},
+						{
+							"name": "Parabolic Charge",
+							"level": 1,
+							"order": 7
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bulldoze",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Charge Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Cut",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dark Pulse",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dragon Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Focus Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Grass Knot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Low Sweep",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Slide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Tomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sandstorm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Secret Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Surf",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "U Turn",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Volt Switch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/695",
+						"fetchedAt": "2026-11-03T05:53:50.283Z",
+						"hash": "cbf7e9e68bf9c260e4860fee322d0c056530b1bb3867f52ac4202677dc580e13"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/356/",
+						"fetchedAt": "2026-11-03T05:53:50.288Z",
+						"hash": "e34448ce8ad6b781830781979e336621eb8d42f8c2efb15824de5d84e7b50452"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/695/",
+						"fetchedAt": "2026-11-03T05:53:50.317Z",
+						"hash": "873f3c16df0d3f59d77f63086dc79c4602845825a0e0c63a55b703538e9c8dda"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/695/encounters",
+						"fetchedAt": "2026-11-03T05:53:50.367Z",
+						"hash": "d6ce97d0273a97bd6b5015b6c2df670237d690191af739c7ed044490bdd11f9f"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/695/",
+						"fetchedAt": "2026-11-03T05:53:50.420Z",
+						"hash": "40f913a7b7dfcb1f804e8d49fe2ae2c159a465ee7165a707728f14dffa7ff497"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"omegaruby-national": "They flare their frills and generate energy. A single Heliolisk can generate sufficient electricity to power a skyscraper.",
+				"omegaruby": "They flare their frills and generate energy. A single Heliolisk can generate sufficient electricity to power a skyscraper.",
+				"alphasapphire-national": "It stimulates its muscles with electricity, boosting the strength in its legs and enabling it to run 100 yards in five seconds.",
+				"alphasapphire": "It stimulates its muscles with electricity, boosting the strength in its legs and enabling it to run 100 yards in five seconds."
+			},
+			"localizedFlavorByGame": {
+				"omegaruby-national": {
+					"ja-hrkt": "エリマキを ひろげて はつでんする。 エレザード １ぴきで こうそうビルで ひつような でんきを つくれるのだ。",
+					"ko": "목의 깃을 펼쳐 발전한다. 일레도리자드 1마리로 고층 빌딩에 필요한 전기를 만들어 낼 수 있다.",
+					"fr": "L’électricité que produit un seul Iguolta en agitant sa collerette suffit à alimenter un immeuble entier.",
+					"de": "Die Strommenge, die ein Elezard mit ausgebreiteten Hautlappen durch Umwandlung von Sonnenstrahlen erzeugt, genügt zur Versorgung eines Wolkenkratzers.",
+					"es": "Extiende su gorguera y genera energía eléctrica suficiente para cubrir el consumo de electricidad de un rascacielos entero.",
+					"it": "Può produrre energia elettrica aprendo il collare. Un solo Pokémon di questa specie sarebbe in grado di illuminare un intero grattacielo.",
+					"en": "They flare their frills and generate energy. A single Heliolisk can generate sufficient electricity to power a skyscraper.",
+					"ja": "エリマキを 広げて 発電する。 エレザード １匹で 高層ビルで 必要な 電気を 作れるのだ。",
+					"es-419": "Extiende su gorguera y genera energía eléctrica suficiente para cubrir el consumo de electricidad de un rascacielos entero."
+				},
+				"omegaruby": {
+					"ja-hrkt": "エリマキを ひろげて はつでんする。 エレザード １ぴきで こうそうビルで ひつような でんきを つくれるのだ。",
+					"ko": "목의 깃을 펼쳐 발전한다. 일레도리자드 1마리로 고층 빌딩에 필요한 전기를 만들어 낼 수 있다.",
+					"fr": "L’électricité que produit un seul Iguolta en agitant sa collerette suffit à alimenter un immeuble entier.",
+					"de": "Die Strommenge, die ein Elezard mit ausgebreiteten Hautlappen durch Umwandlung von Sonnenstrahlen erzeugt, genügt zur Versorgung eines Wolkenkratzers.",
+					"es": "Extiende su gorguera y genera energía eléctrica suficiente para cubrir el consumo de electricidad de un rascacielos entero.",
+					"it": "Può produrre energia elettrica aprendo il collare. Un solo Pokémon di questa specie sarebbe in grado di illuminare un intero grattacielo.",
+					"en": "They flare their frills and generate energy. A single Heliolisk can generate sufficient electricity to power a skyscraper.",
+					"ja": "エリマキを 広げて 発電する。 エレザード １匹で 高層ビルで 必要な 電気を 作れるのだ。",
+					"es-419": "Extiende su gorguera y genera energía eléctrica suficiente para cubrir el consumo de electricidad de un rascacielos entero."
+				},
+				"alphasapphire-national": {
+					"ja-hrkt": "でんきで きんにくを しげきすると １００メートルを ５びょうで はしる きゃくりょくに パワーアップする。",
+					"ko": "전기로 근육을 자극하면 100m를 5초 만에 달리는 다릿심으로 파워가 올라간다.",
+					"fr": "Il augmente sa puissance motrice en stimulant les muscles de ses pattes avec des décharges électriques. Il peut ainsi parcourir 100 m en 5 s.",
+					"de": "Es stimuliert seine Beinmuskulatur mit Strom, wodurch es ihm gelingt, 100 m in fünf Sekunden zurückzulegen.",
+					"es": "Si estimula sus músculos a base de electricidad, sus piernas alcanzan una potencia tal que puede recorrer 100 metros en apenas cinco segundos.",
+					"it": "Stimolando i suoi muscoli con l’elettricità riesce a percorrere 100 m in 5 secondi.",
+					"en": "It stimulates its muscles with electricity, boosting the strength in its legs and enabling it to run 100 yards in five seconds.",
+					"ja": "電気で 筋肉を 刺激すると １００メートルを ５秒で 走る 脚力に パワーアップする。",
+					"es-419": "Si estimula sus músculos a base de electricidad, sus piernas alcanzan una potencia tal que puede recorrer 100 metros en apenas cinco segundos."
+				},
+				"alphasapphire": {
+					"ja-hrkt": "でんきで きんにくを しげきすると １００メートルを ５びょうで はしる きゃくりょくに パワーアップする。",
+					"ko": "전기로 근육을 자극하면 100m를 5초 만에 달리는 다릿심으로 파워가 올라간다.",
+					"fr": "Il augmente sa puissance motrice en stimulant les muscles de ses pattes avec des décharges électriques. Il peut ainsi parcourir 100 m en 5 s.",
+					"de": "Es stimuliert seine Beinmuskulatur mit Strom, wodurch es ihm gelingt, 100 m in fünf Sekunden zurückzulegen.",
+					"es": "Si estimula sus músculos a base de electricidad, sus piernas alcanzan una potencia tal que puede recorrer 100 metros en apenas cinco segundos.",
+					"it": "Stimolando i suoi muscoli con l’elettricità riesce a percorrere 100 m in 5 secondi.",
+					"en": "It stimulates its muscles with electricity, boosting the strength in its legs and enabling it to run 100 yards in five seconds.",
+					"ja": "電気で 筋肉を 刺激すると １００メートルを ５秒で 走る 脚力に パワーアップする。",
+					"es-419": "Si estimula sus músculos a base de electricidad, sus piernas alcanzan una potencia tal que puede recorrer 100 metros en apenas cinco segundos."
+				}
+			}
+		},
+		{
+			"profileKey": "sun-moon",
+			"label": "Sun / Moon",
+			"appGameKeys": [
+				"sun-alola",
+				"sun-melemele",
+				"sun-akala",
+				"sun-ulaula",
+				"sun-poni",
+				"moon-alola",
+				"moon-melemele",
+				"moon-akala",
+				"moon-ulaula",
+				"moon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Heliolisk",
+				"localizedNames": {
+					"ja-hrkt": "エレザード",
+					"ja-roma": "Elezard",
+					"ko": "일레도리자드",
+					"zh-hant": "光電傘蜥",
+					"fr": "Iguolta",
+					"de": "Elezard",
+					"es": "Heliolisk",
+					"it": "Heliolisk",
+					"ja": "エレザード",
+					"zh-hans": "光电伞蜥",
+					"es-419": "Heliolisk"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric",
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 62,
+					"atk": 55,
+					"def": 52,
+					"spa": 109,
+					"spd": 94,
+					"spe": 109
+				},
+				"evYield": {
+					"spa": 1,
+					"spe": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Dry Skin",
+					"Sand Veil",
+					"Solar Power (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Solar Power"
+				],
+				"eggGroups": [
+					"Monster",
+					"Dragon"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.0 m",
+				"weight": "21.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 75,
+				"baseExperience": 168,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Yellow",
+				"genus": "Generator Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "はつでんポケモン",
+					"ko": "발전포켓몬",
+					"zh-hant": "發電寶可夢",
+					"fr": "Pokémon Générateur",
+					"de": "Generatoren-Pokémon",
+					"es": "Pokémon Generador",
+					"it": "Pokémon Generatore",
+					"ja": "はつでんポケモン",
+					"zh-hans": "发电宝可梦",
+					"es-419": "Pokémon Generador"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 695
+					},
+					{
+						"pokedex": "kalos-coastal",
+						"number": 47
+					},
+					{
+						"pokedex": "galar",
+						"number": 319
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 203
+					},
+					{
+						"pokedex": "champions",
+						"number": 695
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 694,
+								"natiId": 694,
+								"name": "Helioptile"
+							},
+							{
+								"id": 695,
+								"natiId": 695,
+								"name": "Heliolisk",
+								"method": "Use item",
+								"value": "Sun Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Eerie Impulse",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Electrify",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Razor Wind",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Quick Attack",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Thunder",
+							"level": 1,
+							"order": 5
+						},
+						{
+							"name": "Charge",
+							"level": 1,
+							"order": 6
+						},
+						{
+							"name": "Parabolic Charge",
+							"level": 1,
+							"order": 7
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Brutal Swing",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bulldoze",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Charge Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dark Pulse",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dragon Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Focus Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Grass Knot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Low Sweep",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Slide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Tomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sandstorm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Surf",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "U Turn",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Volt Switch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/695",
+						"fetchedAt": "2026-11-03T05:53:50.283Z",
+						"hash": "cbf7e9e68bf9c260e4860fee322d0c056530b1bb3867f52ac4202677dc580e13"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/356/",
+						"fetchedAt": "2026-11-03T05:53:50.288Z",
+						"hash": "e34448ce8ad6b781830781979e336621eb8d42f8c2efb15824de5d84e7b50452"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/695/",
+						"fetchedAt": "2026-11-03T05:53:50.317Z",
+						"hash": "873f3c16df0d3f59d77f63086dc79c4602845825a0e0c63a55b703538e9c8dda"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/695/encounters",
+						"fetchedAt": "2026-11-03T05:53:50.367Z",
+						"hash": "d6ce97d0273a97bd6b5015b6c2df670237d690191af739c7ed044490bdd11f9f"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/695/",
+						"fetchedAt": "2026-11-03T05:53:50.420Z",
+						"hash": "40f913a7b7dfcb1f804e8d49fe2ae2c159a465ee7165a707728f14dffa7ff497"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sun-alola": "",
+				"sun-melemele": "",
+				"sun-akala": "",
+				"sun-ulaula": "",
+				"sun-poni": "",
+				"moon-alola": "",
+				"moon-melemele": "",
+				"moon-akala": "",
+				"moon-ulaula": "",
+				"moon-poni": ""
+			},
+			"localizedFlavorByGame": {
+				"sun-alola": {},
+				"sun-melemele": {},
+				"sun-akala": {},
+				"sun-ulaula": {},
+				"sun-poni": {},
+				"moon-alola": {},
+				"moon-melemele": {},
+				"moon-akala": {},
+				"moon-ulaula": {},
+				"moon-poni": {}
+			}
+		},
+		{
+			"profileKey": "ultra-sun-ultra-moon",
+			"label": "Ultra Sun / Ultra Moon",
+			"appGameKeys": [
+				"ultrasun-alola",
+				"ultrasun-melemele",
+				"ultrasun-akala",
+				"ultrasun-ulaula",
+				"ultrasun-poni",
+				"ultramoon-alola",
+				"ultramoon-melemele",
+				"ultramoon-akala",
+				"ultramoon-ulaula",
+				"ultramoon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Heliolisk",
+				"localizedNames": {
+					"ja-hrkt": "エレザード",
+					"ja-roma": "Elezard",
+					"ko": "일레도리자드",
+					"zh-hant": "光電傘蜥",
+					"fr": "Iguolta",
+					"de": "Elezard",
+					"es": "Heliolisk",
+					"it": "Heliolisk",
+					"ja": "エレザード",
+					"zh-hans": "光电伞蜥",
+					"es-419": "Heliolisk"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric",
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 62,
+					"atk": 55,
+					"def": 52,
+					"spa": 109,
+					"spd": 94,
+					"spe": 109
+				},
+				"evYield": {
+					"spa": 1,
+					"spe": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Dry Skin",
+					"Sand Veil",
+					"Solar Power (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Solar Power"
+				],
+				"eggGroups": [
+					"Monster",
+					"Dragon"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.0 m",
+				"weight": "21.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 75,
+				"baseExperience": 168,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Yellow",
+				"genus": "Generator Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "はつでんポケモン",
+					"ko": "발전포켓몬",
+					"zh-hant": "發電寶可夢",
+					"fr": "Pokémon Générateur",
+					"de": "Generatoren-Pokémon",
+					"es": "Pokémon Generador",
+					"it": "Pokémon Generatore",
+					"ja": "はつでんポケモン",
+					"zh-hans": "发电宝可梦",
+					"es-419": "Pokémon Generador"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 695
+					},
+					{
+						"pokedex": "kalos-coastal",
+						"number": 47
+					},
+					{
+						"pokedex": "galar",
+						"number": 319
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 203
+					},
+					{
+						"pokedex": "champions",
+						"number": 695
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 694,
+								"natiId": 694,
+								"name": "Helioptile"
+							},
+							{
+								"id": 695,
+								"natiId": 695,
+								"name": "Heliolisk",
+								"method": "Use item",
+								"value": "Sun Stone"
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Ultra Space Wilds Crag",
+						"notes": "Static, Lv. 60",
+						"games": "Ultra Sun",
+						"rate": "15%"
+					},
+					{
+						"area": "Ultra Space Wilds Crag",
+						"notes": "Static, Lv. 60",
+						"games": "Ultra Moon",
+						"rate": "15%"
+					}
+				],
+				"moves": {
+					"Tutor": [
+						{
+							"name": "Ally Switch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dragon Pulse",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Electroweb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fire Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Voice",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Low Kick",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Magnet Rise",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shock Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Signal Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Punch",
+							"level": null,
+							"order": null
+						}
+					],
+					"Level Up": [
+						{
+							"name": "Eerie Impulse",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Electrify",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Razor Wind",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Quick Attack",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Thunder",
+							"level": 1,
+							"order": 5
+						},
+						{
+							"name": "Charge",
+							"level": 1,
+							"order": 6
+						},
+						{
+							"name": "Parabolic Charge",
+							"level": 1,
+							"order": 7
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Brutal Swing",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bulldoze",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Charge Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dark Pulse",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dragon Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Focus Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Grass Knot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Low Sweep",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Slide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Tomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sandstorm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Surf",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "U Turn",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Volt Switch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/695",
+						"fetchedAt": "2026-11-03T05:53:50.283Z",
+						"hash": "cbf7e9e68bf9c260e4860fee322d0c056530b1bb3867f52ac4202677dc580e13"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/356/",
+						"fetchedAt": "2026-11-03T05:53:50.288Z",
+						"hash": "e34448ce8ad6b781830781979e336621eb8d42f8c2efb15824de5d84e7b50452"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/695/",
+						"fetchedAt": "2026-11-03T05:53:50.317Z",
+						"hash": "873f3c16df0d3f59d77f63086dc79c4602845825a0e0c63a55b703538e9c8dda"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/695/encounters",
+						"fetchedAt": "2026-11-03T05:53:50.367Z",
+						"hash": "d6ce97d0273a97bd6b5015b6c2df670237d690191af739c7ed044490bdd11f9f"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/695/",
+						"fetchedAt": "2026-11-03T05:53:50.420Z",
+						"hash": "40f913a7b7dfcb1f804e8d49fe2ae2c159a465ee7165a707728f14dffa7ff497"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"ultrasun-alola": "",
+				"ultrasun-melemele": "",
+				"ultrasun-akala": "",
+				"ultrasun-ulaula": "",
+				"ultrasun-poni": "",
+				"ultramoon-alola": "",
+				"ultramoon-melemele": "",
+				"ultramoon-akala": "",
+				"ultramoon-ulaula": "",
+				"ultramoon-poni": ""
+			},
+			"localizedFlavorByGame": {
+				"ultrasun-alola": {},
+				"ultrasun-melemele": {},
+				"ultrasun-akala": {},
+				"ultrasun-ulaula": {},
+				"ultrasun-poni": {},
+				"ultramoon-alola": {},
+				"ultramoon-melemele": {},
+				"ultramoon-akala": {},
+				"ultramoon-ulaula": {},
+				"ultramoon-poni": {}
+			}
+		},
+		{
+			"profileKey": "lets-go-pikachu-lets-go-eevee",
+			"label": "Let's Go Pikachu / Eevee",
+			"appGameKeys": [
+				"letsgopikachu",
+				"letsgoeevee"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Heliolisk",
+				"localizedNames": {
+					"ja-hrkt": "エレザード",
+					"ja-roma": "Elezard",
+					"ko": "일레도리자드",
+					"zh-hant": "光電傘蜥",
+					"fr": "Iguolta",
+					"de": "Elezard",
+					"es": "Heliolisk",
+					"it": "Heliolisk",
+					"ja": "エレザード",
+					"zh-hans": "光电伞蜥",
+					"es-419": "Heliolisk"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric",
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 62,
+					"atk": 55,
+					"def": 52,
+					"spa": 109,
+					"spd": 94,
+					"spe": 109
+				},
+				"evYield": {
+					"spa": 1,
+					"spe": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Dry Skin",
+					"Sand Veil",
+					"Solar Power (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Solar Power"
+				],
+				"eggGroups": [
+					"Monster",
+					"Dragon"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.0 m",
+				"weight": "21.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 75,
+				"baseExperience": 168,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Yellow",
+				"genus": "Generator Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "はつでんポケモン",
+					"ko": "발전포켓몬",
+					"zh-hant": "發電寶可夢",
+					"fr": "Pokémon Générateur",
+					"de": "Generatoren-Pokémon",
+					"es": "Pokémon Generador",
+					"it": "Pokémon Generatore",
+					"ja": "はつでんポケモン",
+					"zh-hans": "发电宝可梦",
+					"es-419": "Pokémon Generador"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 695
+					},
+					{
+						"pokedex": "kalos-coastal",
+						"number": 47
+					},
+					{
+						"pokedex": "galar",
+						"number": 319
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 203
+					},
+					{
+						"pokedex": "champions",
+						"number": 695
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 694,
+								"natiId": 694,
+								"name": "Helioptile"
+							},
+							{
+								"id": 695,
+								"natiId": 695,
+								"name": "Heliolisk",
+								"method": "Use item",
+								"value": "Sun Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/695",
+						"fetchedAt": "2026-11-03T05:53:50.283Z",
+						"hash": "cbf7e9e68bf9c260e4860fee322d0c056530b1bb3867f52ac4202677dc580e13"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/356/",
+						"fetchedAt": "2026-11-03T05:53:50.288Z",
+						"hash": "e34448ce8ad6b781830781979e336621eb8d42f8c2efb15824de5d84e7b50452"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/695/",
+						"fetchedAt": "2026-11-03T05:53:50.317Z",
+						"hash": "873f3c16df0d3f59d77f63086dc79c4602845825a0e0c63a55b703538e9c8dda"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/695/encounters",
+						"fetchedAt": "2026-11-03T05:53:50.367Z",
+						"hash": "d6ce97d0273a97bd6b5015b6c2df670237d690191af739c7ed044490bdd11f9f"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/695/",
+						"fetchedAt": "2026-11-03T05:53:50.420Z",
+						"hash": "40f913a7b7dfcb1f804e8d49fe2ae2c159a465ee7165a707728f14dffa7ff497"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"letsgopikachu": "",
+				"letsgoeevee": ""
+			},
+			"localizedFlavorByGame": {
+				"letsgopikachu": {},
+				"letsgoeevee": {}
+			}
+		},
+		{
+			"profileKey": "sword-shield",
+			"label": "Sword / Shield",
+			"appGameKeys": [
+				"sword",
+				"shield"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Heliolisk",
+				"localizedNames": {
+					"ja-hrkt": "エレザード",
+					"ja-roma": "Elezard",
+					"ko": "일레도리자드",
+					"zh-hant": "光電傘蜥",
+					"fr": "Iguolta",
+					"de": "Elezard",
+					"es": "Heliolisk",
+					"it": "Heliolisk",
+					"ja": "エレザード",
+					"zh-hans": "光电伞蜥",
+					"es-419": "Heliolisk"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric",
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 62,
+					"atk": 55,
+					"def": 52,
+					"spa": 109,
+					"spd": 94,
+					"spe": 109
+				},
+				"evYield": {
+					"spa": 1,
+					"spe": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Dry Skin",
+					"Sand Veil",
+					"Solar Power (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Solar Power"
+				],
+				"eggGroups": [
+					"Monster",
+					"Dragon"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.0 m",
+				"weight": "21.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 75,
+				"baseExperience": 168,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Yellow",
+				"genus": "Generator Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "はつでんポケモン",
+					"ko": "발전포켓몬",
+					"zh-hant": "發電寶可夢",
+					"fr": "Pokémon Générateur",
+					"de": "Generatoren-Pokémon",
+					"es": "Pokémon Generador",
+					"it": "Pokémon Generatore",
+					"ja": "はつでんポケモン",
+					"zh-hans": "发电宝可梦",
+					"es-419": "Pokémon Generador"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 695
+					},
+					{
+						"pokedex": "kalos-coastal",
+						"number": 47
+					},
+					{
+						"pokedex": "galar",
+						"number": 319
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 203
+					},
+					{
+						"pokedex": "champions",
+						"number": 695
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 694,
+								"natiId": 694,
+								"name": "Helioptile"
+							},
+							{
+								"id": 695,
+								"natiId": 695,
+								"name": "Heliolisk",
+								"method": "Use item",
+								"value": "Sun Stone"
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Rolling Fields Max Den A",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Sword",
+						"rate": "15%"
+					},
+					{
+						"area": "Rolling Fields Max Den A",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Rolling Fields Max Den A",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Shield",
+						"rate": "15%"
+					},
+					{
+						"area": "Rolling Fields Max Den A",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "East Lake Axewell Max Den C",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Sword",
+						"rate": "15%"
+					},
+					{
+						"area": "East Lake Axewell Max Den C",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "East Lake Axewell Max Den C",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Shield",
+						"rate": "15%"
+					},
+					{
+						"area": "East Lake Axewell Max Den C",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Giants Mirror Max Den C",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Giants Mirror Max Den C",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Giants Mirror Max Den C",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Giants Mirror Max Den C",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Giants Mirror Max Den C",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Giants Mirror Max Den C",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Giants Mirror Max Den C",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Giants Mirror Max Den C",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Giants Mirror Max Den C",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Giants Mirror Max Den C",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Lake Of Outrage Max Den B",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Lake Of Outrage Max Den B",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Lake Of Outrage Max Den B",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Lake Of Outrage Max Den B",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Lake Of Outrage Max Den B",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Lake Of Outrage Max Den B",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Shield",
+						"rate": "30%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Eerie Impulse",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Discharge",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Quick Attack",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Charge",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Bulldoze",
+							"level": 1,
+							"order": 5
+						},
+						{
+							"name": "Volt Switch",
+							"level": 1,
+							"order": 6
+						},
+						{
+							"name": "Parabolic Charge",
+							"level": 1,
+							"order": 7
+						},
+						{
+							"name": "Thunder Wave",
+							"level": 1,
+							"order": 8
+						},
+						{
+							"name": "Thunderbolt",
+							"level": 1,
+							"order": 9
+						},
+						{
+							"name": "Electrify",
+							"level": 1,
+							"order": 10
+						},
+						{
+							"name": "Thunder",
+							"level": 1,
+							"order": 11
+						},
+						{
+							"name": "Mud Slap",
+							"level": 1,
+							"order": 12
+						},
+						{
+							"name": "Tail Whip",
+							"level": 1,
+							"order": 13
+						},
+						{
+							"name": "Pound",
+							"level": 1,
+							"order": 14
+						},
+						{
+							"name": "Thunder Shock",
+							"level": 1,
+							"order": 15
+						}
+					],
+					"Machine": [
+						{
+							"name": "Agility",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ally Switch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Breaking Swipe",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Brutal Swing",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bulldoze",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dark Pulse",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dragon Pulse",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Eerie Impulse",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Electric Terrain",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Electro Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Electroweb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endure",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fire Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Focus Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Grass Knot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Voice",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Low Kick",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Low Sweep",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Mega Kick",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Mega Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Slide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Tomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sandstorm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Surf",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swift",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "U Turn",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Volt Switch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Weather Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Rising Voltage",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Scale Shot",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/695",
+						"fetchedAt": "2026-11-03T05:53:50.283Z",
+						"hash": "cbf7e9e68bf9c260e4860fee322d0c056530b1bb3867f52ac4202677dc580e13"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/356/",
+						"fetchedAt": "2026-11-03T05:53:50.288Z",
+						"hash": "e34448ce8ad6b781830781979e336621eb8d42f8c2efb15824de5d84e7b50452"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/695/",
+						"fetchedAt": "2026-11-03T05:53:50.317Z",
+						"hash": "873f3c16df0d3f59d77f63086dc79c4602845825a0e0c63a55b703538e9c8dda"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/695/encounters",
+						"fetchedAt": "2026-11-03T05:53:50.367Z",
+						"hash": "d6ce97d0273a97bd6b5015b6c2df670237d690191af739c7ed044490bdd11f9f"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/695/",
+						"fetchedAt": "2026-11-03T05:53:50.420Z",
+						"hash": "40f913a7b7dfcb1f804e8d49fe2ae2c159a465ee7165a707728f14dffa7ff497"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sword": "A now-vanished desert culture treasured these Pokémon. Appropriately, when Heliolisk came to the Galar region, treasure came with them.",
+				"shield": "One Heliolisk basking in the sun with its frill outspread is all it would take to produce enough electricity to power a city."
+			},
+			"localizedFlavorByGame": {
+				"sword": {
+					"ja-hrkt": "かつて ほろびた さばくの くにで だいじに されていた。 ざいほうと ともに ガラルちほうへ やってきた。",
+					"ko": "과거에 멸망한 사막 나라에서 소중하게 여겼었다. 보물과 함께 가라르지방에 오게 됐다.",
+					"zh-hant": "在如今已滅亡的沙漠之國 曾經是人們珍視的對象。 和財寶一起來到了伽勒爾地區。",
+					"fr": "Il était révéré dans un royaume des sables aujourd’hui disparu. Il est arrivé à Galar dans une cargaison de pierres précieuses.",
+					"de": "Es wurde in einem Wüstenreich, das vor langer Zeit unterging, sehr respektiert. Zusammen mit dessen Schätzen gelangte es in die Galar-Region.",
+					"es": "Venerado por una antigua civilización del desierto, ahora desaparecida, llegó a Galar junto a sus tesoros y reliquias.",
+					"it": "Un tempo era tenuto in grande considerazione in un paese desertico ormai scomparso. È giunto a Galar in casse contenenti tesori.",
+					"en": "A now-vanished desert culture treasured these Pokémon. Appropriately, when Heliolisk came to the Galar region, treasure came with them.",
+					"ja": "かつて 滅びた 砂漠の 国で 大事に されていた。 財宝と ともに ガラル地方へ やってきた。",
+					"zh-hans": "在如今已灭亡的沙漠之国 曾经是人们珍视的对象。 和财宝一起来到了伽勒尔地区。",
+					"es-419": "Venerado por una antigua civilización del desierto, ahora desaparecida, llegó a Galar junto a sus tesoros y reliquias."
+				},
+				"shield": {
+					"ja-hrkt": "えりまきを ひろげて たいようこうを あびると だいとかいで つかわれる でんきを １ぴきで はつでんする。",
+					"ko": "깃을 펼쳐 태양광을 받으면 대도시에서 사용할 수 있는 전기를 혼자서 발전한다.",
+					"zh-hant": "如果展開頸傘沐浴陽光， 單憑１隻光電傘蜥就能 製造出大城市所需的電力。",
+					"fr": "Lorsqu’il déploie sa collerette pour emmagasiner la lumière du soleil, il génère à lui seul assez d’électricité pour alimenter une grande ville.",
+					"de": "Stellt es seine kragenartigen Hautlappen auf und absorbiert damit Sonnenlicht, kann ein Elezard genug Strom für eine Großstadt produzieren.",
+					"es": "Al extender su gorguera y exponerse a la luz solar, genera la energía eléctrica suficiente para cubrir el consumo de una metrópoli entera.",
+					"it": "L’energia prodotta da un Heliolisk quando apre il suo collare in un luogo soleggiato è sufficiente a soddisfare il fabbisogno di una metropoli.",
+					"en": "One Heliolisk basking in the sun with its frill outspread is all it would take to produce enough electricity to power a city.",
+					"ja": "襟巻を 広げて 太陽光を 浴びると 大都会で 使われる 電気を １匹で 発電する。",
+					"zh-hans": "如果展开颈伞沐浴阳光， 单凭１只光电伞蜥就能 制造出大城市所需的电力。",
+					"es-419": "Al extender su gorguera y exponerse a la luz solar, genera la energía eléctrica suficiente para cubrir el consumo de una metrópoli entera."
+				}
+			}
+		},
+		{
+			"profileKey": "the-isle-of-armor",
+			"label": "The Isle of Armor",
+			"appGameKeys": [
+				"swordioa",
+				"shieldioa"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Heliolisk",
+				"localizedNames": {
+					"ja-hrkt": "エレザード",
+					"ja-roma": "Elezard",
+					"ko": "일레도리자드",
+					"zh-hant": "光電傘蜥",
+					"fr": "Iguolta",
+					"de": "Elezard",
+					"es": "Heliolisk",
+					"it": "Heliolisk",
+					"ja": "エレザード",
+					"zh-hans": "光电伞蜥",
+					"es-419": "Heliolisk"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric",
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 62,
+					"atk": 55,
+					"def": 52,
+					"spa": 109,
+					"spd": 94,
+					"spe": 109
+				},
+				"evYield": {
+					"spa": 1,
+					"spe": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Dry Skin",
+					"Sand Veil",
+					"Solar Power (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Solar Power"
+				],
+				"eggGroups": [
+					"Monster",
+					"Dragon"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.0 m",
+				"weight": "21.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 75,
+				"baseExperience": 168,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Yellow",
+				"genus": "Generator Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "はつでんポケモン",
+					"ko": "발전포켓몬",
+					"zh-hant": "發電寶可夢",
+					"fr": "Pokémon Générateur",
+					"de": "Generatoren-Pokémon",
+					"es": "Pokémon Generador",
+					"it": "Pokémon Generatore",
+					"ja": "はつでんポケモン",
+					"zh-hans": "发电宝可梦",
+					"es-419": "Pokémon Generador"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 695
+					},
+					{
+						"pokedex": "kalos-coastal",
+						"number": 47
+					},
+					{
+						"pokedex": "galar",
+						"number": 319
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 203
+					},
+					{
+						"pokedex": "champions",
+						"number": 695
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 694,
+								"natiId": 694,
+								"name": "Helioptile"
+							},
+							{
+								"id": 695,
+								"natiId": 695,
+								"name": "Heliolisk",
+								"method": "Use item",
+								"value": "Sun Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/695",
+						"fetchedAt": "2026-11-03T05:53:50.283Z",
+						"hash": "cbf7e9e68bf9c260e4860fee322d0c056530b1bb3867f52ac4202677dc580e13"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/356/",
+						"fetchedAt": "2026-11-03T05:53:50.288Z",
+						"hash": "e34448ce8ad6b781830781979e336621eb8d42f8c2efb15824de5d84e7b50452"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/695/",
+						"fetchedAt": "2026-11-03T05:53:50.317Z",
+						"hash": "873f3c16df0d3f59d77f63086dc79c4602845825a0e0c63a55b703538e9c8dda"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/695/encounters",
+						"fetchedAt": "2026-11-03T05:53:50.367Z",
+						"hash": "d6ce97d0273a97bd6b5015b6c2df670237d690191af739c7ed044490bdd11f9f"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/695/",
+						"fetchedAt": "2026-11-03T05:53:50.420Z",
+						"hash": "40f913a7b7dfcb1f804e8d49fe2ae2c159a465ee7165a707728f14dffa7ff497"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordioa": "",
+				"shieldioa": ""
+			},
+			"localizedFlavorByGame": {
+				"swordioa": {},
+				"shieldioa": {}
+			}
+		},
+		{
+			"profileKey": "the-crown-tundra",
+			"label": "The Crown Tundra",
+			"appGameKeys": [
+				"swordct",
+				"shieldct"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Heliolisk",
+				"localizedNames": {
+					"ja-hrkt": "エレザード",
+					"ja-roma": "Elezard",
+					"ko": "일레도리자드",
+					"zh-hant": "光電傘蜥",
+					"fr": "Iguolta",
+					"de": "Elezard",
+					"es": "Heliolisk",
+					"it": "Heliolisk",
+					"ja": "エレザード",
+					"zh-hans": "光电伞蜥",
+					"es-419": "Heliolisk"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric",
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 62,
+					"atk": 55,
+					"def": 52,
+					"spa": 109,
+					"spd": 94,
+					"spe": 109
+				},
+				"evYield": {
+					"spa": 1,
+					"spe": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Dry Skin",
+					"Sand Veil",
+					"Solar Power (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Solar Power"
+				],
+				"eggGroups": [
+					"Monster",
+					"Dragon"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.0 m",
+				"weight": "21.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 75,
+				"baseExperience": 168,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Yellow",
+				"genus": "Generator Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "はつでんポケモン",
+					"ko": "발전포켓몬",
+					"zh-hant": "發電寶可夢",
+					"fr": "Pokémon Générateur",
+					"de": "Generatoren-Pokémon",
+					"es": "Pokémon Generador",
+					"it": "Pokémon Generatore",
+					"ja": "はつでんポケモン",
+					"zh-hans": "发电宝可梦",
+					"es-419": "Pokémon Generador"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 695
+					},
+					{
+						"pokedex": "kalos-coastal",
+						"number": 47
+					},
+					{
+						"pokedex": "galar",
+						"number": 319
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 203
+					},
+					{
+						"pokedex": "champions",
+						"number": 695
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 694,
+								"natiId": 694,
+								"name": "Helioptile"
+							},
+							{
+								"id": 695,
+								"natiId": 695,
+								"name": "Heliolisk",
+								"method": "Use item",
+								"value": "Sun Stone"
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Max Lair Area",
+						"notes": "Dynamax Adventure, Lv. 65",
+						"games": "The Crown Tundra Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Max Lair Area",
+						"notes": "Dynamax Adventure, Lv. 65",
+						"games": "The Crown Tundra Shield",
+						"rate": "100%"
+					}
+				],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/695",
+						"fetchedAt": "2026-11-03T05:53:50.283Z",
+						"hash": "cbf7e9e68bf9c260e4860fee322d0c056530b1bb3867f52ac4202677dc580e13"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/356/",
+						"fetchedAt": "2026-11-03T05:53:50.288Z",
+						"hash": "e34448ce8ad6b781830781979e336621eb8d42f8c2efb15824de5d84e7b50452"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/695/",
+						"fetchedAt": "2026-11-03T05:53:50.317Z",
+						"hash": "873f3c16df0d3f59d77f63086dc79c4602845825a0e0c63a55b703538e9c8dda"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/695/encounters",
+						"fetchedAt": "2026-11-03T05:53:50.367Z",
+						"hash": "d6ce97d0273a97bd6b5015b6c2df670237d690191af739c7ed044490bdd11f9f"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/695/",
+						"fetchedAt": "2026-11-03T05:53:50.420Z",
+						"hash": "40f913a7b7dfcb1f804e8d49fe2ae2c159a465ee7165a707728f14dffa7ff497"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordct": "",
+				"shieldct": ""
+			},
+			"localizedFlavorByGame": {
+				"swordct": {},
+				"shieldct": {}
+			}
+		},
+		{
+			"profileKey": "brilliant-diamond-shining-pearl",
+			"label": "Brilliant Diamond / Shining Pearl",
+			"appGameKeys": [
+				"brilliantdiamond-national",
+				"brilliantdiamond",
+				"shiningpearl-national",
+				"shiningpearl"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Heliolisk",
+				"localizedNames": {
+					"ja-hrkt": "エレザード",
+					"ja-roma": "Elezard",
+					"ko": "일레도리자드",
+					"zh-hant": "光電傘蜥",
+					"fr": "Iguolta",
+					"de": "Elezard",
+					"es": "Heliolisk",
+					"it": "Heliolisk",
+					"ja": "エレザード",
+					"zh-hans": "光电伞蜥",
+					"es-419": "Heliolisk"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric",
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 62,
+					"atk": 55,
+					"def": 52,
+					"spa": 109,
+					"spd": 94,
+					"spe": 109
+				},
+				"evYield": {
+					"spa": 1,
+					"spe": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Dry Skin",
+					"Sand Veil",
+					"Solar Power (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Solar Power"
+				],
+				"eggGroups": [
+					"Monster",
+					"Dragon"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.0 m",
+				"weight": "21.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 75,
+				"baseExperience": 168,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Yellow",
+				"genus": "Generator Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "はつでんポケモン",
+					"ko": "발전포켓몬",
+					"zh-hant": "發電寶可夢",
+					"fr": "Pokémon Générateur",
+					"de": "Generatoren-Pokémon",
+					"es": "Pokémon Generador",
+					"it": "Pokémon Generatore",
+					"ja": "はつでんポケモン",
+					"zh-hans": "发电宝可梦",
+					"es-419": "Pokémon Generador"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 695
+					},
+					{
+						"pokedex": "kalos-coastal",
+						"number": 47
+					},
+					{
+						"pokedex": "galar",
+						"number": 319
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 203
+					},
+					{
+						"pokedex": "champions",
+						"number": 695
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 694,
+								"natiId": 694,
+								"name": "Helioptile"
+							},
+							{
+								"id": 695,
+								"natiId": 695,
+								"name": "Heliolisk",
+								"method": "Use item",
+								"value": "Sun Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/695",
+						"fetchedAt": "2026-11-03T05:53:50.283Z",
+						"hash": "cbf7e9e68bf9c260e4860fee322d0c056530b1bb3867f52ac4202677dc580e13"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/356/",
+						"fetchedAt": "2026-11-03T05:53:50.288Z",
+						"hash": "e34448ce8ad6b781830781979e336621eb8d42f8c2efb15824de5d84e7b50452"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/695/",
+						"fetchedAt": "2026-11-03T05:53:50.317Z",
+						"hash": "873f3c16df0d3f59d77f63086dc79c4602845825a0e0c63a55b703538e9c8dda"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/695/encounters",
+						"fetchedAt": "2026-11-03T05:53:50.367Z",
+						"hash": "d6ce97d0273a97bd6b5015b6c2df670237d690191af739c7ed044490bdd11f9f"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/695/",
+						"fetchedAt": "2026-11-03T05:53:50.420Z",
+						"hash": "40f913a7b7dfcb1f804e8d49fe2ae2c159a465ee7165a707728f14dffa7ff497"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"brilliantdiamond-national": "",
+				"brilliantdiamond": "",
+				"shiningpearl-national": "",
+				"shiningpearl": ""
+			},
+			"localizedFlavorByGame": {
+				"brilliantdiamond-national": {},
+				"brilliantdiamond": {},
+				"shiningpearl-national": {},
+				"shiningpearl": {}
+			}
+		},
+		{
+			"profileKey": "legends-arceus",
+			"label": "Legends: Arceus",
+			"appGameKeys": [
+				"legendsarceus"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Heliolisk",
+				"localizedNames": {
+					"ja-hrkt": "エレザード",
+					"ja-roma": "Elezard",
+					"ko": "일레도리자드",
+					"zh-hant": "光電傘蜥",
+					"fr": "Iguolta",
+					"de": "Elezard",
+					"es": "Heliolisk",
+					"it": "Heliolisk",
+					"ja": "エレザード",
+					"zh-hans": "光电伞蜥",
+					"es-419": "Heliolisk"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric",
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 62,
+					"atk": 55,
+					"def": 52,
+					"spa": 109,
+					"spd": 94,
+					"spe": 109
+				},
+				"evYield": {
+					"spa": 1,
+					"spe": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Dry Skin",
+					"Sand Veil",
+					"Solar Power (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Solar Power"
+				],
+				"eggGroups": [
+					"Monster",
+					"Dragon"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.0 m",
+				"weight": "21.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 75,
+				"baseExperience": 168,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Yellow",
+				"genus": "Generator Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "はつでんポケモン",
+					"ko": "발전포켓몬",
+					"zh-hant": "發電寶可夢",
+					"fr": "Pokémon Générateur",
+					"de": "Generatoren-Pokémon",
+					"es": "Pokémon Generador",
+					"it": "Pokémon Generatore",
+					"ja": "はつでんポケモン",
+					"zh-hans": "发电宝可梦",
+					"es-419": "Pokémon Generador"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 695
+					},
+					{
+						"pokedex": "kalos-coastal",
+						"number": 47
+					},
+					{
+						"pokedex": "galar",
+						"number": 319
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 203
+					},
+					{
+						"pokedex": "champions",
+						"number": 695
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 694,
+								"natiId": 694,
+								"name": "Helioptile"
+							},
+							{
+								"id": 695,
+								"natiId": 695,
+								"name": "Heliolisk",
+								"method": "Use item",
+								"value": "Sun Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/695",
+						"fetchedAt": "2026-11-03T05:53:50.283Z",
+						"hash": "cbf7e9e68bf9c260e4860fee322d0c056530b1bb3867f52ac4202677dc580e13"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/356/",
+						"fetchedAt": "2026-11-03T05:53:50.288Z",
+						"hash": "e34448ce8ad6b781830781979e336621eb8d42f8c2efb15824de5d84e7b50452"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/695/",
+						"fetchedAt": "2026-11-03T05:53:50.317Z",
+						"hash": "873f3c16df0d3f59d77f63086dc79c4602845825a0e0c63a55b703538e9c8dda"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/695/encounters",
+						"fetchedAt": "2026-11-03T05:53:50.367Z",
+						"hash": "d6ce97d0273a97bd6b5015b6c2df670237d690191af739c7ed044490bdd11f9f"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/695/",
+						"fetchedAt": "2026-11-03T05:53:50.420Z",
+						"hash": "40f913a7b7dfcb1f804e8d49fe2ae2c159a465ee7165a707728f14dffa7ff497"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendsarceus": ""
+			},
+			"localizedFlavorByGame": {
+				"legendsarceus": {}
+			}
+		},
+		{
+			"profileKey": "scarlet-violet",
+			"label": "Scarlet / Violet",
+			"appGameKeys": [
+				"scarlet",
+				"violet"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Heliolisk",
+				"localizedNames": {
+					"ja-hrkt": "エレザード",
+					"ja-roma": "Elezard",
+					"ko": "일레도리자드",
+					"zh-hant": "光電傘蜥",
+					"fr": "Iguolta",
+					"de": "Elezard",
+					"es": "Heliolisk",
+					"it": "Heliolisk",
+					"ja": "エレザード",
+					"zh-hans": "光电伞蜥",
+					"es-419": "Heliolisk"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric",
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 62,
+					"atk": 55,
+					"def": 52,
+					"spa": 109,
+					"spd": 94,
+					"spe": 109
+				},
+				"evYield": {
+					"spa": 1,
+					"spe": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Dry Skin",
+					"Sand Veil",
+					"Solar Power (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Solar Power"
+				],
+				"eggGroups": [
+					"Monster",
+					"Dragon"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.0 m",
+				"weight": "21.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 75,
+				"baseExperience": 168,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Yellow",
+				"genus": "Generator Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "はつでんポケモン",
+					"ko": "발전포켓몬",
+					"zh-hant": "發電寶可夢",
+					"fr": "Pokémon Générateur",
+					"de": "Generatoren-Pokémon",
+					"es": "Pokémon Generador",
+					"it": "Pokémon Generatore",
+					"ja": "はつでんポケモン",
+					"zh-hans": "发电宝可梦",
+					"es-419": "Pokémon Generador"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 695
+					},
+					{
+						"pokedex": "kalos-coastal",
+						"number": 47
+					},
+					{
+						"pokedex": "galar",
+						"number": 319
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 203
+					},
+					{
+						"pokedex": "champions",
+						"number": 695
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 694,
+								"natiId": 694,
+								"name": "Helioptile"
+							},
+							{
+								"id": 695,
+								"natiId": 695,
+								"name": "Heliolisk",
+								"method": "Use item",
+								"value": "Sun Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/695",
+						"fetchedAt": "2026-11-03T05:53:50.283Z",
+						"hash": "cbf7e9e68bf9c260e4860fee322d0c056530b1bb3867f52ac4202677dc580e13"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/356/",
+						"fetchedAt": "2026-11-03T05:53:50.288Z",
+						"hash": "e34448ce8ad6b781830781979e336621eb8d42f8c2efb15824de5d84e7b50452"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/695/",
+						"fetchedAt": "2026-11-03T05:53:50.317Z",
+						"hash": "873f3c16df0d3f59d77f63086dc79c4602845825a0e0c63a55b703538e9c8dda"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/695/encounters",
+						"fetchedAt": "2026-11-03T05:53:50.367Z",
+						"hash": "d6ce97d0273a97bd6b5015b6c2df670237d690191af739c7ed044490bdd11f9f"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/695/",
+						"fetchedAt": "2026-11-03T05:53:50.420Z",
+						"hash": "40f913a7b7dfcb1f804e8d49fe2ae2c159a465ee7165a707728f14dffa7ff497"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlet": "",
+				"violet": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlet": {},
+				"violet": {}
+			}
+		},
+		{
+			"profileKey": "the-teal-mask",
+			"label": "The Teal Mask",
+			"appGameKeys": [
+				"scarlettm",
+				"violettm"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Heliolisk",
+				"localizedNames": {
+					"ja-hrkt": "エレザード",
+					"ja-roma": "Elezard",
+					"ko": "일레도리자드",
+					"zh-hant": "光電傘蜥",
+					"fr": "Iguolta",
+					"de": "Elezard",
+					"es": "Heliolisk",
+					"it": "Heliolisk",
+					"ja": "エレザード",
+					"zh-hans": "光电伞蜥",
+					"es-419": "Heliolisk"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric",
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 62,
+					"atk": 55,
+					"def": 52,
+					"spa": 109,
+					"spd": 94,
+					"spe": 109
+				},
+				"evYield": {
+					"spa": 1,
+					"spe": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Dry Skin",
+					"Sand Veil",
+					"Solar Power (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Solar Power"
+				],
+				"eggGroups": [
+					"Monster",
+					"Dragon"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.0 m",
+				"weight": "21.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 75,
+				"baseExperience": 168,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Yellow",
+				"genus": "Generator Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "はつでんポケモン",
+					"ko": "발전포켓몬",
+					"zh-hant": "發電寶可夢",
+					"fr": "Pokémon Générateur",
+					"de": "Generatoren-Pokémon",
+					"es": "Pokémon Generador",
+					"it": "Pokémon Generatore",
+					"ja": "はつでんポケモン",
+					"zh-hans": "发电宝可梦",
+					"es-419": "Pokémon Generador"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 695
+					},
+					{
+						"pokedex": "kalos-coastal",
+						"number": 47
+					},
+					{
+						"pokedex": "galar",
+						"number": 319
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 203
+					},
+					{
+						"pokedex": "champions",
+						"number": 695
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 694,
+								"natiId": 694,
+								"name": "Helioptile"
+							},
+							{
+								"id": 695,
+								"natiId": 695,
+								"name": "Heliolisk",
+								"method": "Use item",
+								"value": "Sun Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/695",
+						"fetchedAt": "2026-11-03T05:53:50.283Z",
+						"hash": "cbf7e9e68bf9c260e4860fee322d0c056530b1bb3867f52ac4202677dc580e13"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/356/",
+						"fetchedAt": "2026-11-03T05:53:50.288Z",
+						"hash": "e34448ce8ad6b781830781979e336621eb8d42f8c2efb15824de5d84e7b50452"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/695/",
+						"fetchedAt": "2026-11-03T05:53:50.317Z",
+						"hash": "873f3c16df0d3f59d77f63086dc79c4602845825a0e0c63a55b703538e9c8dda"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/695/encounters",
+						"fetchedAt": "2026-11-03T05:53:50.367Z",
+						"hash": "d6ce97d0273a97bd6b5015b6c2df670237d690191af739c7ed044490bdd11f9f"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/695/",
+						"fetchedAt": "2026-11-03T05:53:50.420Z",
+						"hash": "40f913a7b7dfcb1f804e8d49fe2ae2c159a465ee7165a707728f14dffa7ff497"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlettm": "",
+				"violettm": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlettm": {},
+				"violettm": {}
+			}
+		},
+		{
+			"profileKey": "the-indigo-disk",
+			"label": "The Indigo Disk",
+			"appGameKeys": [
+				"scarletid",
+				"violetid"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Heliolisk",
+				"localizedNames": {
+					"ja-hrkt": "エレザード",
+					"ja-roma": "Elezard",
+					"ko": "일레도리자드",
+					"zh-hant": "光電傘蜥",
+					"fr": "Iguolta",
+					"de": "Elezard",
+					"es": "Heliolisk",
+					"it": "Heliolisk",
+					"ja": "エレザード",
+					"zh-hans": "光电伞蜥",
+					"es-419": "Heliolisk"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric",
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 62,
+					"atk": 55,
+					"def": 52,
+					"spa": 109,
+					"spd": 94,
+					"spe": 109
+				},
+				"evYield": {
+					"spa": 1,
+					"spe": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Dry Skin",
+					"Sand Veil",
+					"Solar Power (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Solar Power"
+				],
+				"eggGroups": [
+					"Monster",
+					"Dragon"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.0 m",
+				"weight": "21.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 75,
+				"baseExperience": 168,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Yellow",
+				"genus": "Generator Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "はつでんポケモン",
+					"ko": "발전포켓몬",
+					"zh-hant": "發電寶可夢",
+					"fr": "Pokémon Générateur",
+					"de": "Generatoren-Pokémon",
+					"es": "Pokémon Generador",
+					"it": "Pokémon Generatore",
+					"ja": "はつでんポケモン",
+					"zh-hans": "发电宝可梦",
+					"es-419": "Pokémon Generador"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 695
+					},
+					{
+						"pokedex": "kalos-coastal",
+						"number": 47
+					},
+					{
+						"pokedex": "galar",
+						"number": 319
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 203
+					},
+					{
+						"pokedex": "champions",
+						"number": 695
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 694,
+								"natiId": 694,
+								"name": "Helioptile"
+							},
+							{
+								"id": 695,
+								"natiId": 695,
+								"name": "Heliolisk",
+								"method": "Use item",
+								"value": "Sun Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/695",
+						"fetchedAt": "2026-11-03T05:53:50.283Z",
+						"hash": "cbf7e9e68bf9c260e4860fee322d0c056530b1bb3867f52ac4202677dc580e13"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/356/",
+						"fetchedAt": "2026-11-03T05:53:50.288Z",
+						"hash": "e34448ce8ad6b781830781979e336621eb8d42f8c2efb15824de5d84e7b50452"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/695/",
+						"fetchedAt": "2026-11-03T05:53:50.317Z",
+						"hash": "873f3c16df0d3f59d77f63086dc79c4602845825a0e0c63a55b703538e9c8dda"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/695/encounters",
+						"fetchedAt": "2026-11-03T05:53:50.367Z",
+						"hash": "d6ce97d0273a97bd6b5015b6c2df670237d690191af739c7ed044490bdd11f9f"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/695/",
+						"fetchedAt": "2026-11-03T05:53:50.420Z",
+						"hash": "40f913a7b7dfcb1f804e8d49fe2ae2c159a465ee7165a707728f14dffa7ff497"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarletid": "",
+				"violetid": ""
+			},
+			"localizedFlavorByGame": {
+				"scarletid": {},
+				"violetid": {}
+			}
+		},
+		{
+			"profileKey": "legends-za",
+			"label": "Legends: Z-A",
+			"appGameKeys": [
+				"legendsza"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Heliolisk",
+				"localizedNames": {
+					"ja-hrkt": "エレザード",
+					"ja-roma": "Elezard",
+					"ko": "일레도리자드",
+					"zh-hant": "光電傘蜥",
+					"fr": "Iguolta",
+					"de": "Elezard",
+					"es": "Heliolisk",
+					"it": "Heliolisk",
+					"ja": "エレザード",
+					"zh-hans": "光电伞蜥",
+					"es-419": "Heliolisk"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric",
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 62,
+					"atk": 55,
+					"def": 52,
+					"spa": 109,
+					"spd": 94,
+					"spe": 109
+				},
+				"evYield": {
+					"spa": 1,
+					"spe": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Dry Skin",
+					"Sand Veil",
+					"Solar Power (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Solar Power"
+				],
+				"eggGroups": [
+					"Monster",
+					"Dragon"
+				],
+				"expGroup": "Medium Fast",
+				"hatchCounter": 20,
+				"height": "1 m",
+				"weight": "21 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 75,
+				"baseExperience": 168,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Yellow",
+				"genus": "Generator Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "はつでんポケモン",
+					"ko": "발전포켓몬",
+					"zh-hant": "發電寶可夢",
+					"fr": "Pokémon Générateur",
+					"de": "Generatoren-Pokémon",
+					"es": "Pokémon Generador",
+					"it": "Pokémon Generatore",
+					"ja": "はつでんポケモン",
+					"zh-hans": "发电宝可梦",
+					"es-419": "Pokémon Generador"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 695
+					},
+					{
+						"pokedex": "kalos-coastal",
+						"number": 47
+					},
+					{
+						"pokedex": "galar",
+						"number": 319
+					},
+					{
+						"pokedex": "champions",
+						"number": 695
+					},
+					{
+						"pokedex": "lumiose",
+						"number": 203
+					}
+				],
+				"alphaMove": "Surf",
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 694,
+								"natiId": 694,
+								"name": "Helioptile"
+							},
+							{
+								"id": 695,
+								"natiId": 695,
+								"name": "Heliolisk",
+								"method": "Use item",
+								"value": "Sun Stone"
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Wild Zone 20",
+						"notes": "",
+						"games": "Legends: Z-A"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Tail Whip",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Thunder Shock",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Thunder Wave",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Quick Attack",
+							"level": 12,
+							"order": 5
+						},
+						{
+							"name": "Swift",
+							"level": 15,
+							"order": 6
+						},
+						{
+							"name": "Parabolic Charge",
+							"level": 20,
+							"order": 7
+						},
+						{
+							"name": "Bulldoze",
+							"level": 24,
+							"order": 8
+						},
+						{
+							"name": "Volt Switch",
+							"level": 28,
+							"order": 9
+						},
+						{
+							"name": "Breaking Swipe",
+							"level": 30,
+							"order": 10
+						},
+						{
+							"name": "Morning Sun",
+							"level": 32,
+							"order": 11
+						},
+						{
+							"name": "Thunderbolt",
+							"level": 36,
+							"order": 12
+						},
+						{
+							"name": "Charge",
+							"level": 42,
+							"order": 13
+						},
+						{
+							"name": "Thunder",
+							"level": 50,
+							"order": 14
+						}
+					],
+					"Machine": [
+						{
+							"name": "Thunder Wave",
+							"machine": "TM008",
+							"order": 1
+						},
+						{
+							"name": "Rock Slide",
+							"machine": "TM012",
+							"order": 2
+						},
+						{
+							"name": "Light Screen",
+							"machine": "TM016",
+							"order": 3
+						},
+						{
+							"name": "Protect",
+							"machine": "TM017",
+							"order": 4
+						},
+						{
+							"name": "Thunder Punch",
+							"machine": "TM023",
+							"order": 5
+						},
+						{
+							"name": "Swift",
+							"machine": "TM027",
+							"order": 6
+						},
+						{
+							"name": "Dig",
+							"machine": "TM028",
+							"order": 7
+						},
+						{
+							"name": "Fire Punch",
+							"machine": "TM029",
+							"order": 8
+						},
+						{
+							"name": "Endure",
+							"machine": "TM035",
+							"order": 9
+						},
+						{
+							"name": "Rock Tomb",
+							"machine": "TM036",
+							"order": 10
+						},
+						{
+							"name": "Discharge",
+							"machine": "TM039",
+							"order": 11
+						},
+						{
+							"name": "Hyper Beam",
+							"machine": "TM044",
+							"order": 12
+						},
+						{
+							"name": "Agility",
+							"machine": "TM047",
+							"order": 13
+						},
+						{
+							"name": "Giga Impact",
+							"machine": "TM055",
+							"order": 14
+						},
+						{
+							"name": "Solar Beam",
+							"machine": "TM064",
+							"order": 15
+						},
+						{
+							"name": "Volt Switch",
+							"machine": "TM066",
+							"order": 16
+						},
+						{
+							"name": "Thunderbolt",
+							"machine": "TM067",
+							"order": 17
+						},
+						{
+							"name": "Hyper Voice",
+							"machine": "TM071",
+							"order": 18
+						},
+						{
+							"name": "Surf",
+							"machine": "TM073",
+							"order": 19
+						},
+						{
+							"name": "Dragon Pulse",
+							"machine": "TM075",
+							"order": 20
+						},
+						{
+							"name": "Bulldoze",
+							"machine": "TM078",
+							"order": 21
+						},
+						{
+							"name": "U-turn",
+							"machine": "TM082",
+							"order": 22
+						},
+						{
+							"name": "Substitute",
+							"machine": "TM085",
+							"order": 23
+						},
+						{
+							"name": "Wild Charge",
+							"machine": "TM086",
+							"order": 24
+						},
+						{
+							"name": "Iron Tail",
+							"machine": "TM087",
+							"order": 25
+						},
+						{
+							"name": "Dark Pulse",
+							"machine": "TM090",
+							"order": 26
+						},
+						{
+							"name": "Electroweb",
+							"machine": "TM101",
+							"order": 27
+						},
+						{
+							"name": "Focus Blast",
+							"machine": "TM102",
+							"order": 28
+						},
+						{
+							"name": "Thunder",
+							"machine": "TM106",
+							"order": 29
+						},
+						{
+							"name": "Facade",
+							"machine": "TM109",
+							"order": 30
+						},
+						{
+							"name": "Low Sweep",
+							"machine": "TM113",
+							"order": 31
+						},
+						{
+							"name": "Seed Bomb",
+							"machine": "TM128",
+							"order": 32
+						},
+						{
+							"name": "Charge Beam",
+							"machine": "TM130",
+							"order": 33
+						},
+						{
+							"name": "Scale Shot",
+							"machine": "TM143",
+							"order": 34
+						},
+						{
+							"name": "Razor Wind",
+							"machine": "TM145",
+							"order": 35
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Project Pokemon's Z-A game-data export assigns this form regional Dex #203."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/695",
+						"fetchedAt": "2026-11-03T05:53:50.283Z",
+						"hash": "cbf7e9e68bf9c260e4860fee322d0c056530b1bb3867f52ac4202677dc580e13"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/356/",
+						"fetchedAt": "2026-11-03T05:53:50.288Z",
+						"hash": "e34448ce8ad6b781830781979e336621eb8d42f8c2efb15824de5d84e7b50452"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/695/",
+						"fetchedAt": "2026-11-03T05:53:50.317Z",
+						"hash": "873f3c16df0d3f59d77f63086dc79c4602845825a0e0c63a55b703538e9c8dda"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/695/encounters",
+						"fetchedAt": "2026-11-03T05:53:50.367Z",
+						"hash": "d6ce97d0273a97bd6b5015b6c2df670237d690191af739c7ed044490bdd11f9f"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/695/",
+						"fetchedAt": "2026-11-03T05:53:50.420Z",
+						"hash": "40f913a7b7dfcb1f804e8d49fe2ae2c159a465ee7165a707728f14dffa7ff497"
+					},
+					{
+						"type": "legends-za-personal-data",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/personal.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c00215459c764ba65d879d6503a7337ad80b338171ab4713d1c6f52b4517e36f"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "719eff37d8f2f404d163f81d23b2c921ac323a7b00304e502ca37d69a3375b1d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/French/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "1b658102e791558a1bb317563b7a3aaab8cebc1c7517aa7f5d5c0e708e93d626"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/German/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5f1e419ae3b84ab18cb05b972569e629ff0bff96d928468c52c536b02dc6cf9d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Italian/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "e0bd40a2f4b7678afb82f959b7b1f3503590bd13884daf94bd5813fea832067c"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/JPN/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5c2c9784278c5d13f3ba376e4338cef21923d68faec9b8498175c21180825f24"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Korean/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c83545726b0b0b803295f52448510c15adaab3e6ce248adba23b5ad0d0344216"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/LATAM/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "01d046caf7553d97a3c275465bce97ecedae26a67674a40b5c751a56b3b4d52d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Simp_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "09495dacb0d16eb6e91aa1d67eb1ed682d0682303719811eeb1c6877bb9e7ca2"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Spanish/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "b3fafb97fe85165bd65fdd732ce1e4cee880ffe5035632269787ce859735b358"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Trad_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c446ae3e93760fc4af895427508ed852511201723f8cac84121330747e8c3cd0"
+					},
+					{
+						"type": "legends-za-locations",
+						"url": "https://www.serebii.net/pokedex-sv/heliolisk/",
+						"fetchedAt": "2026-11-04T05:47:08.238Z",
+						"hash": "863da2c9d04be62e189ee3dbb7ffbc467743a4fbe2f0ddd6f1168e4d190071da"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendsza": "They flare their frills and generate energy. A single Heliolisk can generate sufficient electricity to power a skyscraper."
+			},
+			"localizedFlavorByGame": {
+				"legendsza": {
+					"en": "They flare their frills and generate energy. A single Heliolisk can generate sufficient electricity to power a skyscraper.",
+					"fr": "L’électricité que produit un seul Iguolta en déployant sa collerette suffit à alimenter un immeuble entier.",
+					"de": "Es stellt seinen Kragen auf und erzeugt so Strom. Ein einzelnes Elezard generiert genug Elektrizität, um einen ganzen Wolkenkratzer zu versorgen.",
+					"it": "Apre il collare per produrre energia elettrica. Un singolo esemplare è in grado di fornire di elettricità un intero grattacielo.",
+					"ja": "エリマキを 広げて 発電する。 エレザード １匹で 高層ビルで 必要な 電気を 作れるのだ。",
+					"ko": "목의 깃을 펼쳐 발전한다. 일레도리자드 1마리로 고층 빌딩에 필요한 전기를 만들어 낼 수 있다.",
+					"es-419": "Extiende la gorguera y genera suficiente energía como para cubrir el consumo de electricidad de un rascacielos entero.",
+					"zh-hans": "会张开颈伞发电。 １只光电伞蜥就能制造出 一栋高层建筑所必需的电。",
+					"es": "Extiende la gorguera y genera energía eléctrica suficiente para cubrir el consumo de electricidad de un rascacielos entero.",
+					"zh-hant": "會張開頸傘發電。 只要１隻光電傘蜥就可以 產生一棟摩天大樓所需的電力。"
+				}
+			}
+		},
+		{
+			"profileKey": "mega-dimension",
+			"label": "Mega Dimension",
+			"appGameKeys": [
+				"legendszamd"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Heliolisk",
+				"localizedNames": {
+					"ja-hrkt": "エレザード",
+					"ja-roma": "Elezard",
+					"ko": "일레도리자드",
+					"zh-hant": "光電傘蜥",
+					"fr": "Iguolta",
+					"de": "Elezard",
+					"es": "Heliolisk",
+					"it": "Heliolisk",
+					"ja": "エレザード",
+					"zh-hans": "光电伞蜥",
+					"es-419": "Heliolisk"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric",
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 62,
+					"atk": 55,
+					"def": 52,
+					"spa": 109,
+					"spd": 94,
+					"spe": 109
+				},
+				"evYield": {
+					"spa": 1,
+					"spe": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Dry Skin",
+					"Sand Veil",
+					"Solar Power (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Solar Power"
+				],
+				"eggGroups": [
+					"Monster",
+					"Dragon"
+				],
+				"expGroup": "Medium Fast",
+				"hatchCounter": 20,
+				"height": "1 m",
+				"weight": "21 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 75,
+				"baseExperience": 168,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Yellow",
+				"genus": "Generator Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "はつでんポケモン",
+					"ko": "발전포켓몬",
+					"zh-hant": "發電寶可夢",
+					"fr": "Pokémon Générateur",
+					"de": "Generatoren-Pokémon",
+					"es": "Pokémon Generador",
+					"it": "Pokémon Generatore",
+					"ja": "はつでんポケモン",
+					"zh-hans": "发电宝可梦",
+					"es-419": "Pokémon Generador"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 695
+					},
+					{
+						"pokedex": "kalos-coastal",
+						"number": 47
+					},
+					{
+						"pokedex": "galar",
+						"number": 319
+					},
+					{
+						"pokedex": "champions",
+						"number": 695
+					},
+					{
+						"pokedex": "lumiose",
+						"number": 203
+					}
+				],
+				"alphaMove": "Surf",
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 694,
+								"natiId": 694,
+								"name": "Helioptile"
+							},
+							{
+								"id": 695,
+								"natiId": 695,
+								"name": "Heliolisk",
+								"method": "Use item",
+								"value": "Sun Stone"
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Wild Zone 20",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Hyperspace Lumiose",
+						"notes": "Normal (4 Star), Electric (4 Star)",
+						"games": "Legends: Z-A Mega Dimension"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Tail Whip",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Thunder Shock",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Thunder Wave",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Quick Attack",
+							"level": 12,
+							"order": 5
+						},
+						{
+							"name": "Swift",
+							"level": 15,
+							"order": 6
+						},
+						{
+							"name": "Parabolic Charge",
+							"level": 20,
+							"order": 7
+						},
+						{
+							"name": "Bulldoze",
+							"level": 24,
+							"order": 8
+						},
+						{
+							"name": "Volt Switch",
+							"level": 28,
+							"order": 9
+						},
+						{
+							"name": "Breaking Swipe",
+							"level": 30,
+							"order": 10
+						},
+						{
+							"name": "Morning Sun",
+							"level": 32,
+							"order": 11
+						},
+						{
+							"name": "Thunderbolt",
+							"level": 36,
+							"order": 12
+						},
+						{
+							"name": "Charge",
+							"level": 42,
+							"order": 13
+						},
+						{
+							"name": "Thunder",
+							"level": 50,
+							"order": 14
+						}
+					],
+					"Machine": [
+						{
+							"name": "Thunder Wave",
+							"machine": "TM008",
+							"order": 1
+						},
+						{
+							"name": "Rock Slide",
+							"machine": "TM012",
+							"order": 2
+						},
+						{
+							"name": "Light Screen",
+							"machine": "TM016",
+							"order": 3
+						},
+						{
+							"name": "Protect",
+							"machine": "TM017",
+							"order": 4
+						},
+						{
+							"name": "Thunder Punch",
+							"machine": "TM023",
+							"order": 5
+						},
+						{
+							"name": "Swift",
+							"machine": "TM027",
+							"order": 6
+						},
+						{
+							"name": "Dig",
+							"machine": "TM028",
+							"order": 7
+						},
+						{
+							"name": "Fire Punch",
+							"machine": "TM029",
+							"order": 8
+						},
+						{
+							"name": "Endure",
+							"machine": "TM035",
+							"order": 9
+						},
+						{
+							"name": "Rock Tomb",
+							"machine": "TM036",
+							"order": 10
+						},
+						{
+							"name": "Discharge",
+							"machine": "TM039",
+							"order": 11
+						},
+						{
+							"name": "Hyper Beam",
+							"machine": "TM044",
+							"order": 12
+						},
+						{
+							"name": "Agility",
+							"machine": "TM047",
+							"order": 13
+						},
+						{
+							"name": "Giga Impact",
+							"machine": "TM055",
+							"order": 14
+						},
+						{
+							"name": "Solar Beam",
+							"machine": "TM064",
+							"order": 15
+						},
+						{
+							"name": "Volt Switch",
+							"machine": "TM066",
+							"order": 16
+						},
+						{
+							"name": "Thunderbolt",
+							"machine": "TM067",
+							"order": 17
+						},
+						{
+							"name": "Hyper Voice",
+							"machine": "TM071",
+							"order": 18
+						},
+						{
+							"name": "Surf",
+							"machine": "TM073",
+							"order": 19
+						},
+						{
+							"name": "Dragon Pulse",
+							"machine": "TM075",
+							"order": 20
+						},
+						{
+							"name": "Bulldoze",
+							"machine": "TM078",
+							"order": 21
+						},
+						{
+							"name": "U-turn",
+							"machine": "TM082",
+							"order": 22
+						},
+						{
+							"name": "Substitute",
+							"machine": "TM085",
+							"order": 23
+						},
+						{
+							"name": "Wild Charge",
+							"machine": "TM086",
+							"order": 24
+						},
+						{
+							"name": "Iron Tail",
+							"machine": "TM087",
+							"order": 25
+						},
+						{
+							"name": "Dark Pulse",
+							"machine": "TM090",
+							"order": 26
+						},
+						{
+							"name": "Electroweb",
+							"machine": "TM101",
+							"order": 27
+						},
+						{
+							"name": "Focus Blast",
+							"machine": "TM102",
+							"order": 28
+						},
+						{
+							"name": "Thunder",
+							"machine": "TM106",
+							"order": 29
+						},
+						{
+							"name": "Facade",
+							"machine": "TM109",
+							"order": 30
+						},
+						{
+							"name": "Low Sweep",
+							"machine": "TM113",
+							"order": 31
+						},
+						{
+							"name": "Seed Bomb",
+							"machine": "TM128",
+							"order": 32
+						},
+						{
+							"name": "Charge Beam",
+							"machine": "TM130",
+							"order": 33
+						},
+						{
+							"name": "Scale Shot",
+							"machine": "TM143",
+							"order": 34
+						},
+						{
+							"name": "Razor Wind",
+							"machine": "TM145",
+							"order": 35
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Project Pokemon's Z-A game-data export assigns this form regional Dex #203."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/695",
+						"fetchedAt": "2026-11-03T05:53:50.283Z",
+						"hash": "cbf7e9e68bf9c260e4860fee322d0c056530b1bb3867f52ac4202677dc580e13"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/356/",
+						"fetchedAt": "2026-11-03T05:53:50.288Z",
+						"hash": "e34448ce8ad6b781830781979e336621eb8d42f8c2efb15824de5d84e7b50452"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/695/",
+						"fetchedAt": "2026-11-03T05:53:50.317Z",
+						"hash": "873f3c16df0d3f59d77f63086dc79c4602845825a0e0c63a55b703538e9c8dda"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/695/encounters",
+						"fetchedAt": "2026-11-03T05:53:50.367Z",
+						"hash": "d6ce97d0273a97bd6b5015b6c2df670237d690191af739c7ed044490bdd11f9f"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/695/",
+						"fetchedAt": "2026-11-03T05:53:50.420Z",
+						"hash": "40f913a7b7dfcb1f804e8d49fe2ae2c159a465ee7165a707728f14dffa7ff497"
+					},
+					{
+						"type": "legends-za-personal-data",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/personal.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c00215459c764ba65d879d6503a7337ad80b338171ab4713d1c6f52b4517e36f"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "719eff37d8f2f404d163f81d23b2c921ac323a7b00304e502ca37d69a3375b1d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/French/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "1b658102e791558a1bb317563b7a3aaab8cebc1c7517aa7f5d5c0e708e93d626"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/German/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5f1e419ae3b84ab18cb05b972569e629ff0bff96d928468c52c536b02dc6cf9d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Italian/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "e0bd40a2f4b7678afb82f959b7b1f3503590bd13884daf94bd5813fea832067c"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/JPN/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5c2c9784278c5d13f3ba376e4338cef21923d68faec9b8498175c21180825f24"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Korean/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c83545726b0b0b803295f52448510c15adaab3e6ce248adba23b5ad0d0344216"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/LATAM/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "01d046caf7553d97a3c275465bce97ecedae26a67674a40b5c751a56b3b4d52d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Simp_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "09495dacb0d16eb6e91aa1d67eb1ed682d0682303719811eeb1c6877bb9e7ca2"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Spanish/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "b3fafb97fe85165bd65fdd732ce1e4cee880ffe5035632269787ce859735b358"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Trad_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c446ae3e93760fc4af895427508ed852511201723f8cac84121330747e8c3cd0"
+					},
+					{
+						"type": "legends-za-locations",
+						"url": "https://www.serebii.net/pokedex-sv/heliolisk/",
+						"fetchedAt": "2026-11-04T05:47:08.238Z",
+						"hash": "863da2c9d04be62e189ee3dbb7ffbc467743a4fbe2f0ddd6f1168e4d190071da"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendszamd": "They flare their frills and generate energy. A single Heliolisk can generate sufficient electricity to power a skyscraper."
+			},
+			"localizedFlavorByGame": {
+				"legendszamd": {
+					"en": "They flare their frills and generate energy. A single Heliolisk can generate sufficient electricity to power a skyscraper.",
+					"fr": "L’électricité que produit un seul Iguolta en déployant sa collerette suffit à alimenter un immeuble entier.",
+					"de": "Es stellt seinen Kragen auf und erzeugt so Strom. Ein einzelnes Elezard generiert genug Elektrizität, um einen ganzen Wolkenkratzer zu versorgen.",
+					"it": "Apre il collare per produrre energia elettrica. Un singolo esemplare è in grado di fornire di elettricità un intero grattacielo.",
+					"ja": "エリマキを 広げて 発電する。 エレザード １匹で 高層ビルで 必要な 電気を 作れるのだ。",
+					"ko": "목의 깃을 펼쳐 발전한다. 일레도리자드 1마리로 고층 빌딩에 필요한 전기를 만들어 낼 수 있다.",
+					"es-419": "Extiende la gorguera y genera suficiente energía como para cubrir el consumo de electricidad de un rascacielos entero.",
+					"zh-hans": "会张开颈伞发电。 １只光电伞蜥就能制造出 一栋高层建筑所必需的电。",
+					"es": "Extiende la gorguera y genera energía eléctrica suficiente para cubrir el consumo de electricidad de un rascacielos entero.",
+					"zh-hant": "會張開頸傘發電。 只要１隻光電傘蜥就可以 產生一棟摩天大樓所需的電力。"
+				}
+			}
+		}
+	]
+}

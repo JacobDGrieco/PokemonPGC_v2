@@ -1,0 +1,168 @@
+{
+	"schemaVersion": 1,
+	"id": 795,
+	"slug": "eternabeam",
+	"name": "Eternabeam",
+	"names": {
+		"de": "Unendynastrahlen",
+		"en": "Eternabeam",
+		"es": "Rayo Infinito",
+		"es-419": "Rayo Infinito",
+		"fr": "Laser Infinimax",
+		"it": "Raggio Infinito",
+		"ja": "ムゲンダイビーム",
+		"ja-hrkt": "ムゲンダイビーム",
+		"ko": "무한다이빔",
+		"zh-hans": "无极光束",
+		"zh-hant": "無極光束"
+	},
+	"generation": 8,
+	"type": "Dragon",
+	"damageClass": "Special",
+	"power": 160,
+	"accuracy": 90,
+	"pp": 5,
+	"priority": 0,
+	"effectChance": 100,
+	"target": "Selected Pokemon",
+	"effectEntries": [
+		{
+			"language": "en",
+			"effect": "Inflicts regular damage. User loses its next turn to \"recharge\", and cannot attack or switch out during that turn.",
+			"shortEffect": "User foregoes its next turn to recharge."
+		},
+		{
+			"language": "fr",
+			"effect": "Inflige des dégâts réguliers. Le lanceur passe son prochain tour pour \"se recharger\", et ne peut pas attaquer ou se retirer pendant ce tour.",
+			"shortEffect": "Le lanceur passe son prochain tour pour se recharger."
+		}
+	],
+	"effectChanges": [],
+	"descriptions": [
+		{
+			"versionGroup": "sword-shield",
+			"language": "de",
+			"text": "Der mächtigste Angriff, über den Endynalos in seiner ursprünglichen Form verfügt. In der nächsten Runde kann der Anwender nicht handeln."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "en",
+			"text": "This is Eternatus’s most powerful attack in its original form. The user can’t move on the next turn."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es",
+			"text": "Este es el mayor ataque de Eternatus una vez adquirida su forma original. No puede moverse en el turno siguiente."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es-419",
+			"text": "Este es el mayor ataque de Eternatus una vez adquirida su forma original. No puede moverse en el turno siguiente."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "fr",
+			"text": "L’attaque la plus puissante d’Éthernatos sous sa forme originelle. S’il l’utilise, il devra se reposer au tour suivant."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "it",
+			"text": "È l’attacco più potente di Eternatus quando assume la sua forma originale. Nel turno successivo non può agire."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja",
+			"text": "本来の 姿と なった ムゲンダイナ 最大の 攻撃。 次の ターンは 動けなくなる。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja-hrkt",
+			"text": "ほんらいの すがたと なった ムゲンダイナ さいだいの こうげき。 つぎの ターンは うごけなくなる。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ko",
+			"text": "본래의 모습이 된 무한다이노 최대의 공격. 다음 턴은 움직일 수 없다."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hans",
+			"text": "无极汰那变回原来的样子后， 发动的最强攻击。 下一回合自己将无法动弹。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hant",
+			"text": "無極汰那變回 本來樣子時的最強攻擊。 下一回合自己將無法動彈。"
+		}
+	],
+	"pastValues": [],
+	"statChanges": [],
+	"meta": {
+		"ailment": "None",
+		"category": "Damage",
+		"minHits": null,
+		"maxHits": null,
+		"minTurns": null,
+		"maxTurns": null,
+		"drain": 0,
+		"healing": 0,
+		"critRate": 0,
+		"ailmentChance": 0,
+		"flinchChance": 0,
+		"statChance": 0
+	},
+	"machines": [],
+	"learners": [
+		{
+			"nationalDexId": 890,
+			"speciesName": "Eternatus",
+			"formKey": "eternamax",
+			"formName": "Eternamax",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 88,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 890,
+			"speciesName": "Eternatus",
+			"formKey": "normal",
+			"formName": "Normal",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 88,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		}
+	],
+	"potentialPokemon": [
+		"eternatus",
+		"eternatus-eternamax"
+	],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/move/795/",
+		"fetchedAt": "2026-11-03T06:30:18.508Z",
+		"hash": "b49577abdb89bb3808e6ce199c3f8f87aa3d8b04f60b0b7b499fb74306043148"
+	}
+}

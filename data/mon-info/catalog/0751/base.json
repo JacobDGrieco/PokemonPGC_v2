@@ -1,0 +1,4201 @@
+{
+	"schemaVersion": 2,
+	"nationalDexId": 751,
+	"speciesName": "Dewpider",
+	"formKey": "base",
+	"formName": "Base",
+	"formLabelSource": "form-catalog",
+	"profiles": [
+		{
+			"profileKey": "sun-moon",
+			"label": "Sun / Moon",
+			"appGameKeys": [
+				"sun-alola",
+				"sun-melemele",
+				"sun-akala",
+				"sun-ulaula",
+				"sun-poni",
+				"moon-alola",
+				"moon-melemele",
+				"moon-akala",
+				"moon-ulaula",
+				"moon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Dewpider",
+				"localizedNames": {
+					"ja-hrkt": "シズクモ",
+					"ja-roma": "Shizukumo",
+					"ko": "물거미",
+					"zh-hant": "滴蛛",
+					"fr": "Araqua",
+					"de": "Araqua",
+					"es": "Dewpider",
+					"it": "Dewpider",
+					"ja": "シズクモ",
+					"zh-hans": "滴蛛",
+					"es-419": "Dewpider"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water",
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 38,
+					"atk": 40,
+					"def": 52,
+					"spa": 40,
+					"spd": 72,
+					"spe": 27
+				},
+				"evYield": {
+					"spd": 1
+				},
+				"generation": 7,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Water Bubble",
+					"Water Absorb (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Water Absorb"
+				],
+				"eggGroups": [
+					"Water1",
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "4.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 200,
+				"baseExperience": 54,
+				"habitat": "",
+				"shape": "Legs",
+				"color": "Green",
+				"genus": "Water Bubble Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "すいほうポケモン",
+					"ko": "수포포켓몬",
+					"zh-hant": "水泡寶可夢",
+					"fr": "Pokémon Aquabulle",
+					"de": "Wasserblasen-Pokémon",
+					"es": "Pokémon Pompa",
+					"it": "Pokémon Bolladacqua",
+					"ja": "すいほうポケモン",
+					"zh-hans": "水泡宝可梦",
+					"es-419": "Pokémon Pompa"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 751
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 141
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 68
+					},
+					{
+						"pokedex": "original-ulaula",
+						"number": 62
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 174
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 75
+					},
+					{
+						"pokedex": "updated-ulaula",
+						"number": 68
+					},
+					{
+						"pokedex": "galar",
+						"number": 214
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 91
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 90
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 751,
+								"natiId": 751,
+								"name": "Dewpider"
+							},
+							{
+								"id": 752,
+								"natiId": 752,
+								"name": "Araquanid",
+								"method": "Level",
+								"value": 22
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Brooklet Hill North",
+						"notes": "Walk, Lv. 14-17",
+						"games": "Sun",
+						"rate": "10%"
+					},
+					{
+						"area": "Brooklet Hill North",
+						"notes": "Surf, Lv. 14-17",
+						"games": "Sun",
+						"rate": "40%"
+					},
+					{
+						"area": "Brooklet Hill North",
+						"notes": "Walk, Lv. 14-17",
+						"games": "Moon",
+						"rate": "10%"
+					},
+					{
+						"area": "Brooklet Hill North",
+						"notes": "Surf, Lv. 14-17",
+						"games": "Moon",
+						"rate": "40%"
+					},
+					{
+						"area": "Brooklet Hill South",
+						"notes": "Walk, Lv. 14-17",
+						"games": "Sun",
+						"rate": "20%"
+					},
+					{
+						"area": "Brooklet Hill South",
+						"notes": "Surf, Lv. 14-17",
+						"games": "Sun",
+						"rate": "40%"
+					},
+					{
+						"area": "Brooklet Hill South",
+						"notes": "Walk, Lv. 14-17",
+						"games": "Moon",
+						"rate": "20%"
+					},
+					{
+						"area": "Brooklet Hill South",
+						"notes": "Surf, Lv. 14-17",
+						"games": "Moon",
+						"rate": "40%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Water Sport",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Bubble",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Infestation",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Spider Web",
+							"level": 8,
+							"order": null
+						},
+						{
+							"name": "Bug Bite",
+							"level": 13,
+							"order": null
+						},
+						{
+							"name": "Bubble Beam",
+							"level": 16,
+							"order": null
+						},
+						{
+							"name": "Bite",
+							"level": 21,
+							"order": null
+						},
+						{
+							"name": "Aqua Ring",
+							"level": 24,
+							"order": null
+						},
+						{
+							"name": "Leech Life",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Crunch",
+							"level": 32,
+							"order": null
+						},
+						{
+							"name": "Lunge",
+							"level": 37,
+							"order": null
+						},
+						{
+							"name": "Mirror Coat",
+							"level": 40,
+							"order": null
+						},
+						{
+							"name": "Liquidation",
+							"level": 45,
+							"order": null
+						},
+						{
+							"name": "Entrainment",
+							"level": 48,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Blizzard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frost Breath",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ice Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Infestation",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Leech Life",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Poison Jab",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Scald",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Surf",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Waterfall",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "X Scissor",
+							"level": null,
+							"order": null
+						}
+					],
+					"Egg": [
+						{
+							"name": "Aurora Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Power Split",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Spit Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Stockpile",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Sun Moon."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/751",
+						"fetchedAt": "2026-11-03T05:53:54.136Z",
+						"hash": "77be126d029954c1c0b3f92b806d78fc915ee4b7b94afaa76bec861d2842315c"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/387/",
+						"fetchedAt": "2026-11-03T05:53:54.164Z",
+						"hash": "ee6f72e30bd85323e51899cc7880bd9be20572be4a2898c07edd40991bbd3d4a"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/751/",
+						"fetchedAt": "2026-11-03T05:53:54.187Z",
+						"hash": "069aaf60e06ecc62fb5612e800bb85f3a448c663de14242c5077d5e59cd09e87"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/751/encounters",
+						"fetchedAt": "2026-11-03T05:53:54.254Z",
+						"hash": "e9db2ac171b83158816bc2450ac12f4a34c48bf05d910ec3f864a9b1f5e0a403"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/751/",
+						"fetchedAt": "2026-11-03T05:53:54.305Z",
+						"hash": "cd9c29b7b5c07f0397ed32bf6a6d476d37fa943312ccd36de9af2a86c067699a"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sun-alola": "It crawls onto the land in search of food. Its water bubble allows it to breathe and protects its soft head.",
+				"sun-melemele": "It crawls onto the land in search of food. Its water bubble allows it to breathe and protects its soft head.",
+				"sun-akala": "It crawls onto the land in search of food. Its water bubble allows it to breathe and protects its soft head.",
+				"sun-ulaula": "It crawls onto the land in search of food. Its water bubble allows it to breathe and protects its soft head.",
+				"sun-poni": "It crawls onto the land in search of food. Its water bubble allows it to breathe and protects its soft head.",
+				"moon-alola": "When it comes across enemies or potential prey, this Pokémon smashes its water-bubble-covered head into them.",
+				"moon-melemele": "When it comes across enemies or potential prey, this Pokémon smashes its water-bubble-covered head into them.",
+				"moon-akala": "When it comes across enemies or potential prey, this Pokémon smashes its water-bubble-covered head into them.",
+				"moon-ulaula": "When it comes across enemies or potential prey, this Pokémon smashes its water-bubble-covered head into them.",
+				"moon-poni": "When it comes across enemies or potential prey, this Pokémon smashes its water-bubble-covered head into them."
+			},
+			"localizedFlavorByGame": {
+				"sun-alola": {
+					"ja-hrkt": "エサを もとめ ちじょうに あがる。 すいほうを かぶるのは こきゅうと やわらかい あたまを まもるため。",
+					"ko": "먹이를 찾아서 지상으로 올라온다. 수포를 뒤집어쓴 것은 호흡과 부드러운 머리를 보호하기 위해서다.",
+					"zh-hant": "為了尋找食物而到地上來。 戴著水泡是為了呼吸， 以及保護柔軟的頭部。",
+					"fr": "Il lui arrive d’aller chercher sa nourriture sur la terre ferme. Sa bulle lui sert alors aussi bien à respirer qu’à protéger sa tête molle.",
+					"de": "Die Futtersuche treibt es an Land. Eine Wasserblase versorgt es mit Atemluft und schützt zugleich seinen weichen Kopf.",
+					"es": "Emerge a la superficie para alimentarse. La burbuja con la que se rodea le sirve para respirar y proteger su delicada cabeza.",
+					"it": "Sale sulla terraferma in cerca di prede. La sua bolla d’acqua gli permette di respirare e protegge la sua testa molle.",
+					"en": "It crawls onto the land in search of food. Its water bubble allows it to breathe and protects its soft head.",
+					"ja": "餌を 求め 地上に あがる。 水泡を 被るのは 呼吸と 柔らかい 頭を 守るため。",
+					"zh-hans": "为了寻找食物而到地面上来。 戴着水泡是为了呼吸， 以及保护柔软的头部。",
+					"es-419": "Emerge a la superficie para alimentarse. La burbuja con la que se rodea le sirve para respirar y proteger su delicada cabeza."
+				},
+				"sun-melemele": {
+					"ja-hrkt": "エサを もとめ ちじょうに あがる。 すいほうを かぶるのは こきゅうと やわらかい あたまを まもるため。",
+					"ko": "먹이를 찾아서 지상으로 올라온다. 수포를 뒤집어쓴 것은 호흡과 부드러운 머리를 보호하기 위해서다.",
+					"zh-hant": "為了尋找食物而到地上來。 戴著水泡是為了呼吸， 以及保護柔軟的頭部。",
+					"fr": "Il lui arrive d’aller chercher sa nourriture sur la terre ferme. Sa bulle lui sert alors aussi bien à respirer qu’à protéger sa tête molle.",
+					"de": "Die Futtersuche treibt es an Land. Eine Wasserblase versorgt es mit Atemluft und schützt zugleich seinen weichen Kopf.",
+					"es": "Emerge a la superficie para alimentarse. La burbuja con la que se rodea le sirve para respirar y proteger su delicada cabeza.",
+					"it": "Sale sulla terraferma in cerca di prede. La sua bolla d’acqua gli permette di respirare e protegge la sua testa molle.",
+					"en": "It crawls onto the land in search of food. Its water bubble allows it to breathe and protects its soft head.",
+					"ja": "餌を 求め 地上に あがる。 水泡を 被るのは 呼吸と 柔らかい 頭を 守るため。",
+					"zh-hans": "为了寻找食物而到地面上来。 戴着水泡是为了呼吸， 以及保护柔软的头部。",
+					"es-419": "Emerge a la superficie para alimentarse. La burbuja con la que se rodea le sirve para respirar y proteger su delicada cabeza."
+				},
+				"sun-akala": {
+					"ja-hrkt": "エサを もとめ ちじょうに あがる。 すいほうを かぶるのは こきゅうと やわらかい あたまを まもるため。",
+					"ko": "먹이를 찾아서 지상으로 올라온다. 수포를 뒤집어쓴 것은 호흡과 부드러운 머리를 보호하기 위해서다.",
+					"zh-hant": "為了尋找食物而到地上來。 戴著水泡是為了呼吸， 以及保護柔軟的頭部。",
+					"fr": "Il lui arrive d’aller chercher sa nourriture sur la terre ferme. Sa bulle lui sert alors aussi bien à respirer qu’à protéger sa tête molle.",
+					"de": "Die Futtersuche treibt es an Land. Eine Wasserblase versorgt es mit Atemluft und schützt zugleich seinen weichen Kopf.",
+					"es": "Emerge a la superficie para alimentarse. La burbuja con la que se rodea le sirve para respirar y proteger su delicada cabeza.",
+					"it": "Sale sulla terraferma in cerca di prede. La sua bolla d’acqua gli permette di respirare e protegge la sua testa molle.",
+					"en": "It crawls onto the land in search of food. Its water bubble allows it to breathe and protects its soft head.",
+					"ja": "餌を 求め 地上に あがる。 水泡を 被るのは 呼吸と 柔らかい 頭を 守るため。",
+					"zh-hans": "为了寻找食物而到地面上来。 戴着水泡是为了呼吸， 以及保护柔软的头部。",
+					"es-419": "Emerge a la superficie para alimentarse. La burbuja con la que se rodea le sirve para respirar y proteger su delicada cabeza."
+				},
+				"sun-ulaula": {
+					"ja-hrkt": "エサを もとめ ちじょうに あがる。 すいほうを かぶるのは こきゅうと やわらかい あたまを まもるため。",
+					"ko": "먹이를 찾아서 지상으로 올라온다. 수포를 뒤집어쓴 것은 호흡과 부드러운 머리를 보호하기 위해서다.",
+					"zh-hant": "為了尋找食物而到地上來。 戴著水泡是為了呼吸， 以及保護柔軟的頭部。",
+					"fr": "Il lui arrive d’aller chercher sa nourriture sur la terre ferme. Sa bulle lui sert alors aussi bien à respirer qu’à protéger sa tête molle.",
+					"de": "Die Futtersuche treibt es an Land. Eine Wasserblase versorgt es mit Atemluft und schützt zugleich seinen weichen Kopf.",
+					"es": "Emerge a la superficie para alimentarse. La burbuja con la que se rodea le sirve para respirar y proteger su delicada cabeza.",
+					"it": "Sale sulla terraferma in cerca di prede. La sua bolla d’acqua gli permette di respirare e protegge la sua testa molle.",
+					"en": "It crawls onto the land in search of food. Its water bubble allows it to breathe and protects its soft head.",
+					"ja": "餌を 求め 地上に あがる。 水泡を 被るのは 呼吸と 柔らかい 頭を 守るため。",
+					"zh-hans": "为了寻找食物而到地面上来。 戴着水泡是为了呼吸， 以及保护柔软的头部。",
+					"es-419": "Emerge a la superficie para alimentarse. La burbuja con la que se rodea le sirve para respirar y proteger su delicada cabeza."
+				},
+				"sun-poni": {
+					"ja-hrkt": "エサを もとめ ちじょうに あがる。 すいほうを かぶるのは こきゅうと やわらかい あたまを まもるため。",
+					"ko": "먹이를 찾아서 지상으로 올라온다. 수포를 뒤집어쓴 것은 호흡과 부드러운 머리를 보호하기 위해서다.",
+					"zh-hant": "為了尋找食物而到地上來。 戴著水泡是為了呼吸， 以及保護柔軟的頭部。",
+					"fr": "Il lui arrive d’aller chercher sa nourriture sur la terre ferme. Sa bulle lui sert alors aussi bien à respirer qu’à protéger sa tête molle.",
+					"de": "Die Futtersuche treibt es an Land. Eine Wasserblase versorgt es mit Atemluft und schützt zugleich seinen weichen Kopf.",
+					"es": "Emerge a la superficie para alimentarse. La burbuja con la que se rodea le sirve para respirar y proteger su delicada cabeza.",
+					"it": "Sale sulla terraferma in cerca di prede. La sua bolla d’acqua gli permette di respirare e protegge la sua testa molle.",
+					"en": "It crawls onto the land in search of food. Its water bubble allows it to breathe and protects its soft head.",
+					"ja": "餌を 求め 地上に あがる。 水泡を 被るのは 呼吸と 柔らかい 頭を 守るため。",
+					"zh-hans": "为了寻找食物而到地面上来。 戴着水泡是为了呼吸， 以及保护柔软的头部。",
+					"es-419": "Emerge a la superficie para alimentarse. La burbuja con la que se rodea le sirve para respirar y proteger su delicada cabeza."
+				},
+				"moon-alola": {
+					"ja-hrkt": "えものや てきを みつけると あたまに かぶった すいほうを はじいて みずを ぶつけるぞ。",
+					"ko": "먹이나 적을 발견하면 머리에 쓴 수포를 튕겨서 물을 맞힌다.",
+					"zh-hant": "發現獵物或敵人後， 會將頭上戴著的水泡彈出去， 用水進行攻擊。",
+					"fr": "Dès qu’il tombe sur une proie ou un prédateur, il ouvre les hostilités en lui lançant de l’eau provenant de la bulle qui entoure sa tête.",
+					"de": "Wenn es Beute oder Feinde erspäht hat, lässt es die Wasserblase auf seinem Kopf platzen und bespritzt sein Gegenüber mit Wasser.",
+					"es": "Si se topa con una presa o un enemigo, le lanza un chorro de agua desde la burbuja con la que se protege la cabeza.",
+					"it": "Quando avvista delle prede o dei nemici, li attacca scagliando contro di loro l’acqua della bolla che ha in testa.",
+					"en": "When it comes across enemies or potential prey, this Pokémon smashes its water-bubble-covered head into them.",
+					"ja": "獲物や 敵を 見つけると 頭に 被った 水泡を 弾いて 水を ぶつけるぞ。",
+					"zh-hans": "发现猎物或敌人后， 会将头上戴着的水泡弹出， 将水砸出去。",
+					"es-419": "Si se topa con una presa o un enemigo, le lanza un chorro de agua desde la burbuja con la que se protege la cabeza."
+				},
+				"moon-melemele": {
+					"ja-hrkt": "えものや てきを みつけると あたまに かぶった すいほうを はじいて みずを ぶつけるぞ。",
+					"ko": "먹이나 적을 발견하면 머리에 쓴 수포를 튕겨서 물을 맞힌다.",
+					"zh-hant": "發現獵物或敵人後， 會將頭上戴著的水泡彈出去， 用水進行攻擊。",
+					"fr": "Dès qu’il tombe sur une proie ou un prédateur, il ouvre les hostilités en lui lançant de l’eau provenant de la bulle qui entoure sa tête.",
+					"de": "Wenn es Beute oder Feinde erspäht hat, lässt es die Wasserblase auf seinem Kopf platzen und bespritzt sein Gegenüber mit Wasser.",
+					"es": "Si se topa con una presa o un enemigo, le lanza un chorro de agua desde la burbuja con la que se protege la cabeza.",
+					"it": "Quando avvista delle prede o dei nemici, li attacca scagliando contro di loro l’acqua della bolla che ha in testa.",
+					"en": "When it comes across enemies or potential prey, this Pokémon smashes its water-bubble-covered head into them.",
+					"ja": "獲物や 敵を 見つけると 頭に 被った 水泡を 弾いて 水を ぶつけるぞ。",
+					"zh-hans": "发现猎物或敌人后， 会将头上戴着的水泡弹出， 将水砸出去。",
+					"es-419": "Si se topa con una presa o un enemigo, le lanza un chorro de agua desde la burbuja con la que se protege la cabeza."
+				},
+				"moon-akala": {
+					"ja-hrkt": "えものや てきを みつけると あたまに かぶった すいほうを はじいて みずを ぶつけるぞ。",
+					"ko": "먹이나 적을 발견하면 머리에 쓴 수포를 튕겨서 물을 맞힌다.",
+					"zh-hant": "發現獵物或敵人後， 會將頭上戴著的水泡彈出去， 用水進行攻擊。",
+					"fr": "Dès qu’il tombe sur une proie ou un prédateur, il ouvre les hostilités en lui lançant de l’eau provenant de la bulle qui entoure sa tête.",
+					"de": "Wenn es Beute oder Feinde erspäht hat, lässt es die Wasserblase auf seinem Kopf platzen und bespritzt sein Gegenüber mit Wasser.",
+					"es": "Si se topa con una presa o un enemigo, le lanza un chorro de agua desde la burbuja con la que se protege la cabeza.",
+					"it": "Quando avvista delle prede o dei nemici, li attacca scagliando contro di loro l’acqua della bolla che ha in testa.",
+					"en": "When it comes across enemies or potential prey, this Pokémon smashes its water-bubble-covered head into them.",
+					"ja": "獲物や 敵を 見つけると 頭に 被った 水泡を 弾いて 水を ぶつけるぞ。",
+					"zh-hans": "发现猎物或敌人后， 会将头上戴着的水泡弹出， 将水砸出去。",
+					"es-419": "Si se topa con una presa o un enemigo, le lanza un chorro de agua desde la burbuja con la que se protege la cabeza."
+				},
+				"moon-ulaula": {
+					"ja-hrkt": "えものや てきを みつけると あたまに かぶった すいほうを はじいて みずを ぶつけるぞ。",
+					"ko": "먹이나 적을 발견하면 머리에 쓴 수포를 튕겨서 물을 맞힌다.",
+					"zh-hant": "發現獵物或敵人後， 會將頭上戴著的水泡彈出去， 用水進行攻擊。",
+					"fr": "Dès qu’il tombe sur une proie ou un prédateur, il ouvre les hostilités en lui lançant de l’eau provenant de la bulle qui entoure sa tête.",
+					"de": "Wenn es Beute oder Feinde erspäht hat, lässt es die Wasserblase auf seinem Kopf platzen und bespritzt sein Gegenüber mit Wasser.",
+					"es": "Si se topa con una presa o un enemigo, le lanza un chorro de agua desde la burbuja con la que se protege la cabeza.",
+					"it": "Quando avvista delle prede o dei nemici, li attacca scagliando contro di loro l’acqua della bolla che ha in testa.",
+					"en": "When it comes across enemies or potential prey, this Pokémon smashes its water-bubble-covered head into them.",
+					"ja": "獲物や 敵を 見つけると 頭に 被った 水泡を 弾いて 水を ぶつけるぞ。",
+					"zh-hans": "发现猎物或敌人后， 会将头上戴着的水泡弹出， 将水砸出去。",
+					"es-419": "Si se topa con una presa o un enemigo, le lanza un chorro de agua desde la burbuja con la que se protege la cabeza."
+				},
+				"moon-poni": {
+					"ja-hrkt": "えものや てきを みつけると あたまに かぶった すいほうを はじいて みずを ぶつけるぞ。",
+					"ko": "먹이나 적을 발견하면 머리에 쓴 수포를 튕겨서 물을 맞힌다.",
+					"zh-hant": "發現獵物或敵人後， 會將頭上戴著的水泡彈出去， 用水進行攻擊。",
+					"fr": "Dès qu’il tombe sur une proie ou un prédateur, il ouvre les hostilités en lui lançant de l’eau provenant de la bulle qui entoure sa tête.",
+					"de": "Wenn es Beute oder Feinde erspäht hat, lässt es die Wasserblase auf seinem Kopf platzen und bespritzt sein Gegenüber mit Wasser.",
+					"es": "Si se topa con una presa o un enemigo, le lanza un chorro de agua desde la burbuja con la que se protege la cabeza.",
+					"it": "Quando avvista delle prede o dei nemici, li attacca scagliando contro di loro l’acqua della bolla che ha in testa.",
+					"en": "When it comes across enemies or potential prey, this Pokémon smashes its water-bubble-covered head into them.",
+					"ja": "獲物や 敵を 見つけると 頭に 被った 水泡を 弾いて 水を ぶつけるぞ。",
+					"zh-hans": "发现猎物或敌人后， 会将头上戴着的水泡弹出， 将水砸出去。",
+					"es-419": "Si se topa con una presa o un enemigo, le lanza un chorro de agua desde la burbuja con la que se protege la cabeza."
+				}
+			}
+		},
+		{
+			"profileKey": "ultra-sun-ultra-moon",
+			"label": "Ultra Sun / Ultra Moon",
+			"appGameKeys": [
+				"ultrasun-alola",
+				"ultrasun-melemele",
+				"ultrasun-akala",
+				"ultrasun-ulaula",
+				"ultrasun-poni",
+				"ultramoon-alola",
+				"ultramoon-melemele",
+				"ultramoon-akala",
+				"ultramoon-ulaula",
+				"ultramoon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Dewpider",
+				"localizedNames": {
+					"ja-hrkt": "シズクモ",
+					"ja-roma": "Shizukumo",
+					"ko": "물거미",
+					"zh-hant": "滴蛛",
+					"fr": "Araqua",
+					"de": "Araqua",
+					"es": "Dewpider",
+					"it": "Dewpider",
+					"ja": "シズクモ",
+					"zh-hans": "滴蛛",
+					"es-419": "Dewpider"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water",
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 38,
+					"atk": 40,
+					"def": 52,
+					"spa": 40,
+					"spd": 72,
+					"spe": 27
+				},
+				"evYield": {
+					"spd": 1
+				},
+				"generation": 7,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Water Bubble",
+					"Water Absorb (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Water Absorb"
+				],
+				"eggGroups": [
+					"Water1",
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "4.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 200,
+				"baseExperience": 54,
+				"habitat": "",
+				"shape": "Legs",
+				"color": "Green",
+				"genus": "Water Bubble Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "すいほうポケモン",
+					"ko": "수포포켓몬",
+					"zh-hant": "水泡寶可夢",
+					"fr": "Pokémon Aquabulle",
+					"de": "Wasserblasen-Pokémon",
+					"es": "Pokémon Pompa",
+					"it": "Pokémon Bolladacqua",
+					"ja": "すいほうポケモン",
+					"zh-hans": "水泡宝可梦",
+					"es-419": "Pokémon Pompa"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 751
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 141
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 68
+					},
+					{
+						"pokedex": "original-ulaula",
+						"number": 62
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 174
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 75
+					},
+					{
+						"pokedex": "updated-ulaula",
+						"number": 68
+					},
+					{
+						"pokedex": "galar",
+						"number": 214
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 91
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 90
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 751,
+								"natiId": 751,
+								"name": "Dewpider"
+							},
+							{
+								"id": 752,
+								"natiId": 752,
+								"name": "Araquanid",
+								"method": "Level",
+								"value": 22
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Brooklet Hill North",
+						"notes": "Surf, Lv. 14-17",
+						"games": "Ultra Sun",
+						"rate": "40%"
+					},
+					{
+						"area": "Brooklet Hill North",
+						"notes": "Walk, Lv. 14-17",
+						"games": "Ultra Sun",
+						"rate": "20%"
+					},
+					{
+						"area": "Brooklet Hill North",
+						"notes": "Surf, Lv. 14-17",
+						"games": "Ultra Moon",
+						"rate": "40%"
+					},
+					{
+						"area": "Brooklet Hill North",
+						"notes": "Walk, Lv. 14-17",
+						"games": "Ultra Moon",
+						"rate": "20%"
+					},
+					{
+						"area": "Brooklet Hill South",
+						"notes": "Walk, Lv. 14-17",
+						"games": "Ultra Sun",
+						"rate": "20%"
+					},
+					{
+						"area": "Brooklet Hill South",
+						"notes": "Surf, Lv. 14-17",
+						"games": "Ultra Sun",
+						"rate": "40%"
+					},
+					{
+						"area": "Brooklet Hill South",
+						"notes": "Walk, Lv. 14-17",
+						"games": "Ultra Moon",
+						"rate": "20%"
+					},
+					{
+						"area": "Brooklet Hill South",
+						"notes": "Surf, Lv. 14-17",
+						"games": "Ultra Moon",
+						"rate": "40%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Water Sport",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Bubble",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Infestation",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Spider Web",
+							"level": 8,
+							"order": null
+						},
+						{
+							"name": "Bug Bite",
+							"level": 13,
+							"order": null
+						},
+						{
+							"name": "Bubble Beam",
+							"level": 16,
+							"order": null
+						},
+						{
+							"name": "Bite",
+							"level": 21,
+							"order": null
+						},
+						{
+							"name": "Aqua Ring",
+							"level": 24,
+							"order": null
+						},
+						{
+							"name": "Leech Life",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Crunch",
+							"level": 32,
+							"order": null
+						},
+						{
+							"name": "Lunge",
+							"level": 37,
+							"order": null
+						},
+						{
+							"name": "Mirror Coat",
+							"level": 40,
+							"order": null
+						},
+						{
+							"name": "Liquidation",
+							"level": 45,
+							"order": null
+						},
+						{
+							"name": "Entrainment",
+							"level": 48,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Blizzard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frost Breath",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ice Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Infestation",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Leech Life",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Poison Jab",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Scald",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Surf",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Waterfall",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "X Scissor",
+							"level": null,
+							"order": null
+						}
+					],
+					"Egg": [
+						{
+							"name": "Aurora Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Power Split",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Spit Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sticky Web",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Stockpile",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Bug Bite",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Drain",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Icy Wind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Defense",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Liquidation",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Magic Coat",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Magic Room",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Signal Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Water Pulse",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wonder Room",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Sun Moon."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/751",
+						"fetchedAt": "2026-11-03T05:53:54.136Z",
+						"hash": "77be126d029954c1c0b3f92b806d78fc915ee4b7b94afaa76bec861d2842315c"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/387/",
+						"fetchedAt": "2026-11-03T05:53:54.164Z",
+						"hash": "ee6f72e30bd85323e51899cc7880bd9be20572be4a2898c07edd40991bbd3d4a"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/751/",
+						"fetchedAt": "2026-11-03T05:53:54.187Z",
+						"hash": "069aaf60e06ecc62fb5612e800bb85f3a448c663de14242c5077d5e59cd09e87"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/751/encounters",
+						"fetchedAt": "2026-11-03T05:53:54.254Z",
+						"hash": "e9db2ac171b83158816bc2450ac12f4a34c48bf05d910ec3f864a9b1f5e0a403"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/751/",
+						"fetchedAt": "2026-11-03T05:53:54.305Z",
+						"hash": "cd9c29b7b5c07f0397ed32bf6a6d476d37fa943312ccd36de9af2a86c067699a"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"ultrasun-alola": "When two Dewpider meet, they display their water bubbles to each other. Then the one with the smaller bubble gets out of the other’s way.",
+				"ultrasun-melemele": "When two Dewpider meet, they display their water bubbles to each other. Then the one with the smaller bubble gets out of the other’s way.",
+				"ultrasun-akala": "When two Dewpider meet, they display their water bubbles to each other. Then the one with the smaller bubble gets out of the other’s way.",
+				"ultrasun-ulaula": "When two Dewpider meet, they display their water bubbles to each other. Then the one with the smaller bubble gets out of the other’s way.",
+				"ultrasun-poni": "When two Dewpider meet, they display their water bubbles to each other. Then the one with the smaller bubble gets out of the other’s way.",
+				"ultramoon-alola": "It can only breathe oxygen that has dissolved in water, so it wears a water bubble on its head when it walks around on land.",
+				"ultramoon-melemele": "It can only breathe oxygen that has dissolved in water, so it wears a water bubble on its head when it walks around on land.",
+				"ultramoon-akala": "It can only breathe oxygen that has dissolved in water, so it wears a water bubble on its head when it walks around on land.",
+				"ultramoon-ulaula": "It can only breathe oxygen that has dissolved in water, so it wears a water bubble on its head when it walks around on land.",
+				"ultramoon-poni": "It can only breathe oxygen that has dissolved in water, so it wears a water bubble on its head when it walks around on land."
+			},
+			"localizedFlavorByGame": {
+				"ultrasun-alola": {
+					"ja-hrkt": "シズクモどうしが であうと あたまの すいほうを じまんし アピールする。 ちいさな ほうが みちを ゆずる。",
+					"ko": "물거미끼리 만나면 머리의 수포를 자랑하며 어필한다. 작은 쪽이 뒤로 물러난다.",
+					"zh-hant": "滴蛛們在與同類相遇時， 會互相炫耀自己頭上的水泡， 水泡小的一方會乖乖讓路。",
+					"fr": "Quand deux Araqua se croisent, ils comparent la taille de leur bulle. Celui qui a la plus petite doit céder le passage.",
+					"de": "Stehen sich zwei Araqua im Weg, vergleichen sie die Wasserblasen auf ihrem Kopf. Das mit der kleineren Blase macht dann dem anderen Platz.",
+					"es": "Si se encuentran dos ejemplares de la especie, comparan el tamaño de sus burbujas. El perdedor ha de ceder el paso.",
+					"it": "Quando due Dewpider si incontrano, mettono in mostra con orgoglio la bolla sulla loro testa. Chi ha quella più piccola cede il passo.",
+					"en": "When two Dewpider meet, they display their water bubbles to each other. Then the one with the smaller bubble gets out of the other’s way.",
+					"ja": "シズクモ同士が 出会うと 頭の 水泡を 自慢し アピールする。 小さな 方が 道を 譲る。",
+					"zh-hans": "如果滴蛛同类之间相遇， 它们会自豪地用头上的水泡炫耀。 水泡小的一方就会让路。",
+					"es-419": "Si se encuentran dos ejemplares de la especie, comparan el tamaño de sus burbujas. El perdedor ha de ceder el paso."
+				},
+				"ultrasun-melemele": {
+					"ja-hrkt": "シズクモどうしが であうと あたまの すいほうを じまんし アピールする。 ちいさな ほうが みちを ゆずる。",
+					"ko": "물거미끼리 만나면 머리의 수포를 자랑하며 어필한다. 작은 쪽이 뒤로 물러난다.",
+					"zh-hant": "滴蛛們在與同類相遇時， 會互相炫耀自己頭上的水泡， 水泡小的一方會乖乖讓路。",
+					"fr": "Quand deux Araqua se croisent, ils comparent la taille de leur bulle. Celui qui a la plus petite doit céder le passage.",
+					"de": "Stehen sich zwei Araqua im Weg, vergleichen sie die Wasserblasen auf ihrem Kopf. Das mit der kleineren Blase macht dann dem anderen Platz.",
+					"es": "Si se encuentran dos ejemplares de la especie, comparan el tamaño de sus burbujas. El perdedor ha de ceder el paso.",
+					"it": "Quando due Dewpider si incontrano, mettono in mostra con orgoglio la bolla sulla loro testa. Chi ha quella più piccola cede il passo.",
+					"en": "When two Dewpider meet, they display their water bubbles to each other. Then the one with the smaller bubble gets out of the other’s way.",
+					"ja": "シズクモ同士が 出会うと 頭の 水泡を 自慢し アピールする。 小さな 方が 道を 譲る。",
+					"zh-hans": "如果滴蛛同类之间相遇， 它们会自豪地用头上的水泡炫耀。 水泡小的一方就会让路。",
+					"es-419": "Si se encuentran dos ejemplares de la especie, comparan el tamaño de sus burbujas. El perdedor ha de ceder el paso."
+				},
+				"ultrasun-akala": {
+					"ja-hrkt": "シズクモどうしが であうと あたまの すいほうを じまんし アピールする。 ちいさな ほうが みちを ゆずる。",
+					"ko": "물거미끼리 만나면 머리의 수포를 자랑하며 어필한다. 작은 쪽이 뒤로 물러난다.",
+					"zh-hant": "滴蛛們在與同類相遇時， 會互相炫耀自己頭上的水泡， 水泡小的一方會乖乖讓路。",
+					"fr": "Quand deux Araqua se croisent, ils comparent la taille de leur bulle. Celui qui a la plus petite doit céder le passage.",
+					"de": "Stehen sich zwei Araqua im Weg, vergleichen sie die Wasserblasen auf ihrem Kopf. Das mit der kleineren Blase macht dann dem anderen Platz.",
+					"es": "Si se encuentran dos ejemplares de la especie, comparan el tamaño de sus burbujas. El perdedor ha de ceder el paso.",
+					"it": "Quando due Dewpider si incontrano, mettono in mostra con orgoglio la bolla sulla loro testa. Chi ha quella più piccola cede il passo.",
+					"en": "When two Dewpider meet, they display their water bubbles to each other. Then the one with the smaller bubble gets out of the other’s way.",
+					"ja": "シズクモ同士が 出会うと 頭の 水泡を 自慢し アピールする。 小さな 方が 道を 譲る。",
+					"zh-hans": "如果滴蛛同类之间相遇， 它们会自豪地用头上的水泡炫耀。 水泡小的一方就会让路。",
+					"es-419": "Si se encuentran dos ejemplares de la especie, comparan el tamaño de sus burbujas. El perdedor ha de ceder el paso."
+				},
+				"ultrasun-ulaula": {
+					"ja-hrkt": "シズクモどうしが であうと あたまの すいほうを じまんし アピールする。 ちいさな ほうが みちを ゆずる。",
+					"ko": "물거미끼리 만나면 머리의 수포를 자랑하며 어필한다. 작은 쪽이 뒤로 물러난다.",
+					"zh-hant": "滴蛛們在與同類相遇時， 會互相炫耀自己頭上的水泡， 水泡小的一方會乖乖讓路。",
+					"fr": "Quand deux Araqua se croisent, ils comparent la taille de leur bulle. Celui qui a la plus petite doit céder le passage.",
+					"de": "Stehen sich zwei Araqua im Weg, vergleichen sie die Wasserblasen auf ihrem Kopf. Das mit der kleineren Blase macht dann dem anderen Platz.",
+					"es": "Si se encuentran dos ejemplares de la especie, comparan el tamaño de sus burbujas. El perdedor ha de ceder el paso.",
+					"it": "Quando due Dewpider si incontrano, mettono in mostra con orgoglio la bolla sulla loro testa. Chi ha quella più piccola cede il passo.",
+					"en": "When two Dewpider meet, they display their water bubbles to each other. Then the one with the smaller bubble gets out of the other’s way.",
+					"ja": "シズクモ同士が 出会うと 頭の 水泡を 自慢し アピールする。 小さな 方が 道を 譲る。",
+					"zh-hans": "如果滴蛛同类之间相遇， 它们会自豪地用头上的水泡炫耀。 水泡小的一方就会让路。",
+					"es-419": "Si se encuentran dos ejemplares de la especie, comparan el tamaño de sus burbujas. El perdedor ha de ceder el paso."
+				},
+				"ultrasun-poni": {
+					"ja-hrkt": "シズクモどうしが であうと あたまの すいほうを じまんし アピールする。 ちいさな ほうが みちを ゆずる。",
+					"ko": "물거미끼리 만나면 머리의 수포를 자랑하며 어필한다. 작은 쪽이 뒤로 물러난다.",
+					"zh-hant": "滴蛛們在與同類相遇時， 會互相炫耀自己頭上的水泡， 水泡小的一方會乖乖讓路。",
+					"fr": "Quand deux Araqua se croisent, ils comparent la taille de leur bulle. Celui qui a la plus petite doit céder le passage.",
+					"de": "Stehen sich zwei Araqua im Weg, vergleichen sie die Wasserblasen auf ihrem Kopf. Das mit der kleineren Blase macht dann dem anderen Platz.",
+					"es": "Si se encuentran dos ejemplares de la especie, comparan el tamaño de sus burbujas. El perdedor ha de ceder el paso.",
+					"it": "Quando due Dewpider si incontrano, mettono in mostra con orgoglio la bolla sulla loro testa. Chi ha quella più piccola cede il passo.",
+					"en": "When two Dewpider meet, they display their water bubbles to each other. Then the one with the smaller bubble gets out of the other’s way.",
+					"ja": "シズクモ同士が 出会うと 頭の 水泡を 自慢し アピールする。 小さな 方が 道を 譲る。",
+					"zh-hans": "如果滴蛛同类之间相遇， 它们会自豪地用头上的水泡炫耀。 水泡小的一方就会让路。",
+					"es-419": "Si se encuentran dos ejemplares de la especie, comparan el tamaño de sus burbujas. El perdedor ha de ceder el paso."
+				},
+				"ultramoon-alola": {
+					"ja-hrkt": "みずの なかに とけた さんそしか すえないので すいほうを かぶって りくちを あるきまわるのだ。",
+					"ko": "물속에 녹아 있는 산소로만 호흡할 수 있어서 수포를 쓰고 육지를 돌아다닌다.",
+					"zh-hant": "因為只能吸收溶解在 水中的氧氣，所以在陸地上 走動時會戴著水泡。",
+					"fr": "L’oxygène contenu dans l’eau étant le seul qu’il puisse respirer, il met toujours sa tête dans une bulle quand il est sur la terre ferme.",
+					"de": "Es kann nur Sauerstoff einatmen, der in Wasser gelöst ist. Deshalb hüllt es seinen Kopf immer in eine Wasserblase, wenn es an Land geht.",
+					"es": "Solo puede respirar el oxígeno presente en el agua, por lo que utiliza una burbuja para respirar en tierra firme.",
+					"it": "Può respirare solo l’ossigeno contenuto nell’acqua. Sulla terraferma, tiene sempre la testa dentro la sua bolla.",
+					"en": "It can only breathe oxygen that has dissolved in water, so it wears a water bubble on its head when it walks around on land.",
+					"ja": "水の 中に 溶けた 酸素しか 吸えないので 水泡を 被って 陸地を 歩きまわるのだ。",
+					"zh-hans": "因为只吸收溶解在水中的氧气， 所以会戴着水泡在陆地上到处走。",
+					"es-419": "Solo puede respirar el oxígeno presente en el agua, por lo que utiliza una burbuja para respirar en tierra firme."
+				},
+				"ultramoon-melemele": {
+					"ja-hrkt": "みずの なかに とけた さんそしか すえないので すいほうを かぶって りくちを あるきまわるのだ。",
+					"ko": "물속에 녹아 있는 산소로만 호흡할 수 있어서 수포를 쓰고 육지를 돌아다닌다.",
+					"zh-hant": "因為只能吸收溶解在 水中的氧氣，所以在陸地上 走動時會戴著水泡。",
+					"fr": "L’oxygène contenu dans l’eau étant le seul qu’il puisse respirer, il met toujours sa tête dans une bulle quand il est sur la terre ferme.",
+					"de": "Es kann nur Sauerstoff einatmen, der in Wasser gelöst ist. Deshalb hüllt es seinen Kopf immer in eine Wasserblase, wenn es an Land geht.",
+					"es": "Solo puede respirar el oxígeno presente en el agua, por lo que utiliza una burbuja para respirar en tierra firme.",
+					"it": "Può respirare solo l’ossigeno contenuto nell’acqua. Sulla terraferma, tiene sempre la testa dentro la sua bolla.",
+					"en": "It can only breathe oxygen that has dissolved in water, so it wears a water bubble on its head when it walks around on land.",
+					"ja": "水の 中に 溶けた 酸素しか 吸えないので 水泡を 被って 陸地を 歩きまわるのだ。",
+					"zh-hans": "因为只吸收溶解在水中的氧气， 所以会戴着水泡在陆地上到处走。",
+					"es-419": "Solo puede respirar el oxígeno presente en el agua, por lo que utiliza una burbuja para respirar en tierra firme."
+				},
+				"ultramoon-akala": {
+					"ja-hrkt": "みずの なかに とけた さんそしか すえないので すいほうを かぶって りくちを あるきまわるのだ。",
+					"ko": "물속에 녹아 있는 산소로만 호흡할 수 있어서 수포를 쓰고 육지를 돌아다닌다.",
+					"zh-hant": "因為只能吸收溶解在 水中的氧氣，所以在陸地上 走動時會戴著水泡。",
+					"fr": "L’oxygène contenu dans l’eau étant le seul qu’il puisse respirer, il met toujours sa tête dans une bulle quand il est sur la terre ferme.",
+					"de": "Es kann nur Sauerstoff einatmen, der in Wasser gelöst ist. Deshalb hüllt es seinen Kopf immer in eine Wasserblase, wenn es an Land geht.",
+					"es": "Solo puede respirar el oxígeno presente en el agua, por lo que utiliza una burbuja para respirar en tierra firme.",
+					"it": "Può respirare solo l’ossigeno contenuto nell’acqua. Sulla terraferma, tiene sempre la testa dentro la sua bolla.",
+					"en": "It can only breathe oxygen that has dissolved in water, so it wears a water bubble on its head when it walks around on land.",
+					"ja": "水の 中に 溶けた 酸素しか 吸えないので 水泡を 被って 陸地を 歩きまわるのだ。",
+					"zh-hans": "因为只吸收溶解在水中的氧气， 所以会戴着水泡在陆地上到处走。",
+					"es-419": "Solo puede respirar el oxígeno presente en el agua, por lo que utiliza una burbuja para respirar en tierra firme."
+				},
+				"ultramoon-ulaula": {
+					"ja-hrkt": "みずの なかに とけた さんそしか すえないので すいほうを かぶって りくちを あるきまわるのだ。",
+					"ko": "물속에 녹아 있는 산소로만 호흡할 수 있어서 수포를 쓰고 육지를 돌아다닌다.",
+					"zh-hant": "因為只能吸收溶解在 水中的氧氣，所以在陸地上 走動時會戴著水泡。",
+					"fr": "L’oxygène contenu dans l’eau étant le seul qu’il puisse respirer, il met toujours sa tête dans une bulle quand il est sur la terre ferme.",
+					"de": "Es kann nur Sauerstoff einatmen, der in Wasser gelöst ist. Deshalb hüllt es seinen Kopf immer in eine Wasserblase, wenn es an Land geht.",
+					"es": "Solo puede respirar el oxígeno presente en el agua, por lo que utiliza una burbuja para respirar en tierra firme.",
+					"it": "Può respirare solo l’ossigeno contenuto nell’acqua. Sulla terraferma, tiene sempre la testa dentro la sua bolla.",
+					"en": "It can only breathe oxygen that has dissolved in water, so it wears a water bubble on its head when it walks around on land.",
+					"ja": "水の 中に 溶けた 酸素しか 吸えないので 水泡を 被って 陸地を 歩きまわるのだ。",
+					"zh-hans": "因为只吸收溶解在水中的氧气， 所以会戴着水泡在陆地上到处走。",
+					"es-419": "Solo puede respirar el oxígeno presente en el agua, por lo que utiliza una burbuja para respirar en tierra firme."
+				},
+				"ultramoon-poni": {
+					"ja-hrkt": "みずの なかに とけた さんそしか すえないので すいほうを かぶって りくちを あるきまわるのだ。",
+					"ko": "물속에 녹아 있는 산소로만 호흡할 수 있어서 수포를 쓰고 육지를 돌아다닌다.",
+					"zh-hant": "因為只能吸收溶解在 水中的氧氣，所以在陸地上 走動時會戴著水泡。",
+					"fr": "L’oxygène contenu dans l’eau étant le seul qu’il puisse respirer, il met toujours sa tête dans une bulle quand il est sur la terre ferme.",
+					"de": "Es kann nur Sauerstoff einatmen, der in Wasser gelöst ist. Deshalb hüllt es seinen Kopf immer in eine Wasserblase, wenn es an Land geht.",
+					"es": "Solo puede respirar el oxígeno presente en el agua, por lo que utiliza una burbuja para respirar en tierra firme.",
+					"it": "Può respirare solo l’ossigeno contenuto nell’acqua. Sulla terraferma, tiene sempre la testa dentro la sua bolla.",
+					"en": "It can only breathe oxygen that has dissolved in water, so it wears a water bubble on its head when it walks around on land.",
+					"ja": "水の 中に 溶けた 酸素しか 吸えないので 水泡を 被って 陸地を 歩きまわるのだ。",
+					"zh-hans": "因为只吸收溶解在水中的氧气， 所以会戴着水泡在陆地上到处走。",
+					"es-419": "Solo puede respirar el oxígeno presente en el agua, por lo que utiliza una burbuja para respirar en tierra firme."
+				}
+			}
+		},
+		{
+			"profileKey": "lets-go-pikachu-lets-go-eevee",
+			"label": "Let's Go Pikachu / Eevee",
+			"appGameKeys": [
+				"letsgopikachu",
+				"letsgoeevee"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Dewpider",
+				"localizedNames": {
+					"ja-hrkt": "シズクモ",
+					"ja-roma": "Shizukumo",
+					"ko": "물거미",
+					"zh-hant": "滴蛛",
+					"fr": "Araqua",
+					"de": "Araqua",
+					"es": "Dewpider",
+					"it": "Dewpider",
+					"ja": "シズクモ",
+					"zh-hans": "滴蛛",
+					"es-419": "Dewpider"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water",
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 38,
+					"atk": 40,
+					"def": 52,
+					"spa": 40,
+					"spd": 72,
+					"spe": 27
+				},
+				"evYield": {
+					"spd": 1
+				},
+				"generation": 7,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Water Bubble",
+					"Water Absorb (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Water Absorb"
+				],
+				"eggGroups": [
+					"Water1",
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "4.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 200,
+				"baseExperience": 54,
+				"habitat": "",
+				"shape": "Legs",
+				"color": "Green",
+				"genus": "Water Bubble Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "すいほうポケモン",
+					"ko": "수포포켓몬",
+					"zh-hant": "水泡寶可夢",
+					"fr": "Pokémon Aquabulle",
+					"de": "Wasserblasen-Pokémon",
+					"es": "Pokémon Pompa",
+					"it": "Pokémon Bolladacqua",
+					"ja": "すいほうポケモン",
+					"zh-hans": "水泡宝可梦",
+					"es-419": "Pokémon Pompa"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 751
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 141
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 68
+					},
+					{
+						"pokedex": "original-ulaula",
+						"number": 62
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 174
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 75
+					},
+					{
+						"pokedex": "updated-ulaula",
+						"number": 68
+					},
+					{
+						"pokedex": "galar",
+						"number": 214
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 91
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 90
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 751,
+								"natiId": 751,
+								"name": "Dewpider"
+							},
+							{
+								"id": 752,
+								"natiId": 752,
+								"name": "Araquanid",
+								"method": "Level",
+								"value": 22
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sun Moon."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/751",
+						"fetchedAt": "2026-11-03T05:53:54.136Z",
+						"hash": "77be126d029954c1c0b3f92b806d78fc915ee4b7b94afaa76bec861d2842315c"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/387/",
+						"fetchedAt": "2026-11-03T05:53:54.164Z",
+						"hash": "ee6f72e30bd85323e51899cc7880bd9be20572be4a2898c07edd40991bbd3d4a"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/751/",
+						"fetchedAt": "2026-11-03T05:53:54.187Z",
+						"hash": "069aaf60e06ecc62fb5612e800bb85f3a448c663de14242c5077d5e59cd09e87"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/751/encounters",
+						"fetchedAt": "2026-11-03T05:53:54.254Z",
+						"hash": "e9db2ac171b83158816bc2450ac12f4a34c48bf05d910ec3f864a9b1f5e0a403"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/751/",
+						"fetchedAt": "2026-11-03T05:53:54.305Z",
+						"hash": "cd9c29b7b5c07f0397ed32bf6a6d476d37fa943312ccd36de9af2a86c067699a"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"letsgopikachu": "",
+				"letsgoeevee": ""
+			},
+			"localizedFlavorByGame": {
+				"letsgopikachu": {},
+				"letsgoeevee": {}
+			}
+		},
+		{
+			"profileKey": "sword-shield",
+			"label": "Sword / Shield",
+			"appGameKeys": [
+				"sword",
+				"shield"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Dewpider",
+				"localizedNames": {
+					"ja-hrkt": "シズクモ",
+					"ja-roma": "Shizukumo",
+					"ko": "물거미",
+					"zh-hant": "滴蛛",
+					"fr": "Araqua",
+					"de": "Araqua",
+					"es": "Dewpider",
+					"it": "Dewpider",
+					"ja": "シズクモ",
+					"zh-hans": "滴蛛",
+					"es-419": "Dewpider"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water",
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 38,
+					"atk": 40,
+					"def": 52,
+					"spa": 40,
+					"spd": 72,
+					"spe": 27
+				},
+				"evYield": {
+					"spd": 1
+				},
+				"generation": 7,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Water Bubble",
+					"Water Absorb (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Water Absorb"
+				],
+				"eggGroups": [
+					"Water1",
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "4.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 200,
+				"baseExperience": 54,
+				"habitat": "",
+				"shape": "Legs",
+				"color": "Green",
+				"genus": "Water Bubble Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "すいほうポケモン",
+					"ko": "수포포켓몬",
+					"zh-hant": "水泡寶可夢",
+					"fr": "Pokémon Aquabulle",
+					"de": "Wasserblasen-Pokémon",
+					"es": "Pokémon Pompa",
+					"it": "Pokémon Bolladacqua",
+					"ja": "すいほうポケモン",
+					"zh-hans": "水泡宝可梦",
+					"es-419": "Pokémon Pompa"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 751
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 141
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 68
+					},
+					{
+						"pokedex": "original-ulaula",
+						"number": 62
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 174
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 75
+					},
+					{
+						"pokedex": "updated-ulaula",
+						"number": 68
+					},
+					{
+						"pokedex": "galar",
+						"number": 214
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 91
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 90
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 751,
+								"natiId": 751,
+								"name": "Dewpider"
+							},
+							{
+								"id": 752,
+								"natiId": 752,
+								"name": "Araquanid",
+								"method": "Level",
+								"value": 22
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Galar Route 5 Area",
+						"notes": "Walk, Lv. 16-18",
+						"games": "Sword",
+						"rate": "5%"
+					},
+					{
+						"area": "Galar Route 5 Area",
+						"notes": "Walk, Lv. 16-18",
+						"games": "Shield",
+						"rate": "5%"
+					},
+					{
+						"area": "Motostoke Riverbank Area",
+						"notes": "Overworld, Lv. 26-28",
+						"games": "Sword",
+						"rate": "5%"
+					},
+					{
+						"area": "Motostoke Riverbank Area",
+						"notes": "Overworld, Lv. 60",
+						"games": "Sword",
+						"rate": "5%"
+					},
+					{
+						"area": "Motostoke Riverbank Area",
+						"notes": "Overworld, Lv. 28-30",
+						"games": "Shield",
+						"rate": "5%"
+					},
+					{
+						"area": "Motostoke Riverbank Area",
+						"notes": "Overworld, Lv. 60",
+						"games": "Shield",
+						"rate": "5%"
+					},
+					{
+						"area": "Stony Wilderness Main",
+						"notes": "Overworld, Lv. 28-30",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Stony Wilderness Main",
+						"notes": "Overworld, Lv. 60",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Stony Wilderness Main",
+						"notes": "Overworld, Lv. 28-30",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Stony Wilderness Main",
+						"notes": "Overworld, Lv. 60",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Stony Wilderness Main",
+						"notes": "Overworld, Lv. 28-30",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Stony Wilderness Main",
+						"notes": "Overworld, Lv. 60",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Stony Wilderness Main",
+						"notes": "Overworld, Lv. 28-30",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Stony Wilderness Main",
+						"notes": "Overworld, Lv. 60",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Stony Wilderness Area 2",
+						"notes": "Overworld, Lv. 28-30",
+						"games": "Sword",
+						"rate": "45%"
+					},
+					{
+						"area": "Stony Wilderness Area 2",
+						"notes": "Overworld, Lv. 60",
+						"games": "Sword",
+						"rate": "45%"
+					},
+					{
+						"area": "Stony Wilderness Area 2",
+						"notes": "Overworld, Lv. 28-30",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Stony Wilderness Area 2",
+						"notes": "Overworld, Lv. 60",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Stony Wilderness Area 2",
+						"notes": "Overworld, Lv. 28-30",
+						"games": "Shield",
+						"rate": "45%"
+					},
+					{
+						"area": "Stony Wilderness Area 2",
+						"notes": "Overworld, Lv. 60",
+						"games": "Shield",
+						"rate": "45%"
+					},
+					{
+						"area": "Stony Wilderness Area 2",
+						"notes": "Overworld, Lv. 28-30",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Stony Wilderness Area 2",
+						"notes": "Overworld, Lv. 60",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Stony Wilderness Area 3",
+						"notes": "Overworld, Lv. 28-30",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Stony Wilderness Area 3",
+						"notes": "Overworld, Lv. 60",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Stony Wilderness Area 3",
+						"notes": "Overworld, Lv. 28-30",
+						"games": "Sword",
+						"rate": "45%"
+					},
+					{
+						"area": "Stony Wilderness Area 3",
+						"notes": "Overworld, Lv. 60",
+						"games": "Sword",
+						"rate": "45%"
+					},
+					{
+						"area": "Stony Wilderness Area 3",
+						"notes": "Overworld, Lv. 28-30",
+						"games": "Shield",
+						"rate": "50%"
+					},
+					{
+						"area": "Stony Wilderness Area 3",
+						"notes": "Overworld, Lv. 60",
+						"games": "Shield",
+						"rate": "50%"
+					},
+					{
+						"area": "Stony Wilderness Area 3",
+						"notes": "Overworld, Lv. 28-30",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Stony Wilderness Area 3",
+						"notes": "Overworld, Lv. 60",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Rolling Fields Max Den E",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Rolling Fields Max Den E",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Rolling Fields Max Den E",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Rolling Fields Max Den E",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Rolling Fields Max Den F",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Rolling Fields Max Den F",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Rolling Fields Max Den F",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Rolling Fields Max Den F",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Rolling Fields Max Den G",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Rolling Fields Max Den G",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Rolling Fields Max Den G",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Rolling Fields Max Den G",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Dappled Grove Max Den B",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Dappled Grove Max Den B",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Dappled Grove Max Den B",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Dappled Grove Max Den B",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "West Lake Axewell Max Den A",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "2%"
+					},
+					{
+						"area": "West Lake Axewell Max Den A",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "2%"
+					},
+					{
+						"area": "West Lake Axewell Max Den C",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "2%"
+					},
+					{
+						"area": "West Lake Axewell Max Den C",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "2%"
+					},
+					{
+						"area": "South Lake Miloch Max Den A",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "South Lake Miloch Max Den A",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "South Lake Miloch Max Den A",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "South Lake Miloch Max Den A",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "South Lake Miloch Max Den C",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "South Lake Miloch Max Den C",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "South Lake Miloch Max Den C",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "South Lake Miloch Max Den C",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Bridge Field Max Den G",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Bridge Field Max Den G",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Bridge Field Max Den G",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Bridge Field Max Den G",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Bridge Field Max Den H",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Bridge Field Max Den H",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Bridge Field Max Den H",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Bridge Field Max Den H",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Bridge Field Max Den I",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Bridge Field Max Den I",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Bridge Field Max Den I",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Bridge Field Max Den I",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Dusty Bowl Max Den E",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "2%"
+					},
+					{
+						"area": "Dusty Bowl Max Den E",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "2%"
+					},
+					{
+						"area": "Lake Of Outrage Max Den A",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Lake Of Outrage Max Den A",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Lake Of Outrage Max Den A",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Lake Of Outrage Max Den A",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "30%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Water Gun",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Infestation",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Bug Bite",
+							"level": 4,
+							"order": null
+						},
+						{
+							"name": "Bite",
+							"level": 8,
+							"order": null
+						},
+						{
+							"name": "Bubble Beam",
+							"level": 12,
+							"order": null
+						},
+						{
+							"name": "Aqua Ring",
+							"level": 16,
+							"order": null
+						},
+						{
+							"name": "Headbutt",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Crunch",
+							"level": 24,
+							"order": null
+						},
+						{
+							"name": "Soak",
+							"level": 28,
+							"order": null
+						},
+						{
+							"name": "Entrainment",
+							"level": 32,
+							"order": null
+						},
+						{
+							"name": "Lunge",
+							"level": 36,
+							"order": null
+						},
+						{
+							"name": "Liquidation",
+							"level": 40,
+							"order": null
+						},
+						{
+							"name": "Leech Life",
+							"level": 44,
+							"order": null
+						},
+						{
+							"name": "Mirror Coat",
+							"level": 48,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Blizzard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bug Buzz",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Crunch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endure",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Drain",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ice Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Icy Wind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Defense",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Leech Life",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Liquidation",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Magic Room",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Poison Jab",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Scald",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Surf",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Waterfall",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wonder Room",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "X Scissor",
+							"level": null,
+							"order": null
+						}
+					],
+					"Egg": [
+						{
+							"name": "Power Split",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Spit Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sticky Web",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Stockpile",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Skitter Smack",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Sun Moon."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/751",
+						"fetchedAt": "2026-11-03T05:53:54.136Z",
+						"hash": "77be126d029954c1c0b3f92b806d78fc915ee4b7b94afaa76bec861d2842315c"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/387/",
+						"fetchedAt": "2026-11-03T05:53:54.164Z",
+						"hash": "ee6f72e30bd85323e51899cc7880bd9be20572be4a2898c07edd40991bbd3d4a"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/751/",
+						"fetchedAt": "2026-11-03T05:53:54.187Z",
+						"hash": "069aaf60e06ecc62fb5612e800bb85f3a448c663de14242c5077d5e59cd09e87"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/751/encounters",
+						"fetchedAt": "2026-11-03T05:53:54.254Z",
+						"hash": "e9db2ac171b83158816bc2450ac12f4a34c48bf05d910ec3f864a9b1f5e0a403"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/751/",
+						"fetchedAt": "2026-11-03T05:53:54.305Z",
+						"hash": "cd9c29b7b5c07f0397ed32bf6a6d476d37fa943312ccd36de9af2a86c067699a"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sword": "It forms a water bubble at the rear of its body and then covers its head with it. Meeting another Dewpider means comparing water-bubble sizes.",
+				"shield": "Dewpider normally lives underwater. When it comes onto land in search of food, it takes water with it in the form of a bubble on its head."
+			},
+			"localizedFlavorByGame": {
+				"sword": {
+					"ja-hrkt": "おしりで すいほうを ふくらませて あたまを つつむ。 なかまどうしで すいほうの おおきさを くらべる。",
+					"ko": "엉덩이로 수포를 부풀려서 머리를 감싼다. 동료끼리 수포의 크기를 비교한다.",
+					"zh-hant": "用臀部讓水泡膨脹， 並包裹住自己的頭部。 會和同類比拼水泡的大小。",
+					"fr": "Il enveloppe sa tête dans une bulle d’eau qu’il a gonflée avec son abdomen. Il aime en comparer la taille avec celles de ses congénères.",
+					"de": "Mit dem Hinterleib füllt es eine Wasserblase auf und hüllt seinen Kopf darin ein. Trifft es andere Araqua, vergleichen sie ihre Wasserblasengröße.",
+					"es": "Crea una burbuja de agua con el abdomen y se cubre la cabeza con ella. Si dos ejemplares se encuentran, comparan el tamaño de sus burbujas.",
+					"it": "Con l’addome gonfia una bolla d’acqua in cui tiene infilata la testa. Fa a gara con gli altri Dewpider a chi ha la bolla più grande.",
+					"en": "It forms a water bubble at the rear of its body and then covers its head with it. Meeting another Dewpider means comparing water-bubble sizes.",
+					"ja": "お尻で 水泡を 膨らませて 頭を 包む。 仲間同士で 水泡の 大きさを 比べる。",
+					"zh-hans": "用臀部让水泡膨胀， 并包裹住自己的头部。 会和同类比拼水泡的大小。",
+					"es-419": "Crea una burbuja de agua con el abdomen y se cubre la cabeza con ella. Si dos ejemplares se encuentran, comparan el tamaño de sus burbujas."
+				},
+				"shield": {
+					"ja-hrkt": "ふだんは みずの なかで せいかつ しているが エサを さがしに りくに あがるときは すいほうを かぶる。",
+					"ko": "평소에는 물속에서 생활하지만 먹이를 찾으러 육지로 올라올 때는 수포를 뒤집어쓴다.",
+					"zh-hant": "平時生活在水中， 也會戴上水泡去 陸地上尋找食物。",
+					"fr": "Il vit principalement dans l’eau, mais s’il a besoin de s’aventurer sur la terre ferme pour chasser ses proies, il protège sa tête avec une bulle d’eau.",
+					"de": "Es verlässt das Wasser nur selten. Wenn es auf Futtersuche an Land kommt, hüllt es seinen Kopf in eine Wasserblase.",
+					"es": "Vive bajo el agua y, cuando emerge a tierra firme en busca de presas, se recubre la cabeza con una burbuja.",
+					"it": "Vive principalmente in acqua. Quando sale sulla terraferma in cerca di cibo ricopre la sua testa con una bolla d’acqua.",
+					"en": "Dewpider normally lives underwater. When it comes onto land in search of food, it takes water with it in the form of a bubble on its head.",
+					"ja": "普段は 水の 中で 生活 しているが エサを 探しに 陸に 上がるときは 水泡を かぶる。",
+					"zh-hans": "平时生活在水中， 也会戴上水泡去 陆地上寻找食物。",
+					"es-419": "Vive bajo el agua y, cuando emerge a tierra firme en busca de presas, se recubre la cabeza con una burbuja."
+				}
+			}
+		},
+		{
+			"profileKey": "the-isle-of-armor",
+			"label": "The Isle of Armor",
+			"appGameKeys": [
+				"swordioa",
+				"shieldioa"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Dewpider",
+				"localizedNames": {
+					"ja-hrkt": "シズクモ",
+					"ja-roma": "Shizukumo",
+					"ko": "물거미",
+					"zh-hant": "滴蛛",
+					"fr": "Araqua",
+					"de": "Araqua",
+					"es": "Dewpider",
+					"it": "Dewpider",
+					"ja": "シズクモ",
+					"zh-hans": "滴蛛",
+					"es-419": "Dewpider"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water",
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 38,
+					"atk": 40,
+					"def": 52,
+					"spa": 40,
+					"spd": 72,
+					"spe": 27
+				},
+				"evYield": {
+					"spd": 1
+				},
+				"generation": 7,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Water Bubble",
+					"Water Absorb (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Water Absorb"
+				],
+				"eggGroups": [
+					"Water1",
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "4.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 200,
+				"baseExperience": 54,
+				"habitat": "",
+				"shape": "Legs",
+				"color": "Green",
+				"genus": "Water Bubble Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "すいほうポケモン",
+					"ko": "수포포켓몬",
+					"zh-hant": "水泡寶可夢",
+					"fr": "Pokémon Aquabulle",
+					"de": "Wasserblasen-Pokémon",
+					"es": "Pokémon Pompa",
+					"it": "Pokémon Bolladacqua",
+					"ja": "すいほうポケモン",
+					"zh-hans": "水泡宝可梦",
+					"es-419": "Pokémon Pompa"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 751
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 141
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 68
+					},
+					{
+						"pokedex": "original-ulaula",
+						"number": 62
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 174
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 75
+					},
+					{
+						"pokedex": "updated-ulaula",
+						"number": 68
+					},
+					{
+						"pokedex": "galar",
+						"number": 214
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 91
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 90
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 751,
+								"natiId": 751,
+								"name": "Dewpider"
+							},
+							{
+								"id": 752,
+								"natiId": 752,
+								"name": "Araquanid",
+								"method": "Level",
+								"value": 22
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Fields Of Honor Max Den G",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "The Isle Of Armor Sword",
+						"rate": "40%"
+					},
+					{
+						"area": "Fields Of Honor Max Den G",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "The Isle Of Armor Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Fields Of Honor Max Den G",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "The Isle Of Armor Shield",
+						"rate": "40%"
+					},
+					{
+						"area": "Fields Of Honor Max Den G",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "The Isle Of Armor Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Soothing Wetlands Max Den I",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "The Isle Of Armor Sword",
+						"rate": "40%"
+					},
+					{
+						"area": "Soothing Wetlands Max Den I",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "The Isle Of Armor Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Soothing Wetlands Max Den I",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "The Isle Of Armor Shield",
+						"rate": "40%"
+					},
+					{
+						"area": "Soothing Wetlands Max Den I",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "The Isle Of Armor Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Courageous Cavern Max Den E",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "The Isle Of Armor Sword",
+						"rate": "40%"
+					},
+					{
+						"area": "Courageous Cavern Max Den E",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "The Isle Of Armor Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Courageous Cavern Max Den E",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "The Isle Of Armor Shield",
+						"rate": "40%"
+					},
+					{
+						"area": "Courageous Cavern Max Den E",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "The Isle Of Armor Shield",
+						"rate": "25%"
+					}
+				],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Sun Moon."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/751",
+						"fetchedAt": "2026-11-03T05:53:54.136Z",
+						"hash": "77be126d029954c1c0b3f92b806d78fc915ee4b7b94afaa76bec861d2842315c"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/387/",
+						"fetchedAt": "2026-11-03T05:53:54.164Z",
+						"hash": "ee6f72e30bd85323e51899cc7880bd9be20572be4a2898c07edd40991bbd3d4a"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/751/",
+						"fetchedAt": "2026-11-03T05:53:54.187Z",
+						"hash": "069aaf60e06ecc62fb5612e800bb85f3a448c663de14242c5077d5e59cd09e87"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/751/encounters",
+						"fetchedAt": "2026-11-03T05:53:54.254Z",
+						"hash": "e9db2ac171b83158816bc2450ac12f4a34c48bf05d910ec3f864a9b1f5e0a403"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/751/",
+						"fetchedAt": "2026-11-03T05:53:54.305Z",
+						"hash": "cd9c29b7b5c07f0397ed32bf6a6d476d37fa943312ccd36de9af2a86c067699a"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordioa": "",
+				"shieldioa": ""
+			},
+			"localizedFlavorByGame": {
+				"swordioa": {},
+				"shieldioa": {}
+			}
+		},
+		{
+			"profileKey": "the-crown-tundra",
+			"label": "The Crown Tundra",
+			"appGameKeys": [
+				"swordct",
+				"shieldct"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Dewpider",
+				"localizedNames": {
+					"ja-hrkt": "シズクモ",
+					"ja-roma": "Shizukumo",
+					"ko": "물거미",
+					"zh-hant": "滴蛛",
+					"fr": "Araqua",
+					"de": "Araqua",
+					"es": "Dewpider",
+					"it": "Dewpider",
+					"ja": "シズクモ",
+					"zh-hans": "滴蛛",
+					"es-419": "Dewpider"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water",
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 38,
+					"atk": 40,
+					"def": 52,
+					"spa": 40,
+					"spd": 72,
+					"spe": 27
+				},
+				"evYield": {
+					"spd": 1
+				},
+				"generation": 7,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Water Bubble",
+					"Water Absorb (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Water Absorb"
+				],
+				"eggGroups": [
+					"Water1",
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "4.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 200,
+				"baseExperience": 54,
+				"habitat": "",
+				"shape": "Legs",
+				"color": "Green",
+				"genus": "Water Bubble Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "すいほうポケモン",
+					"ko": "수포포켓몬",
+					"zh-hant": "水泡寶可夢",
+					"fr": "Pokémon Aquabulle",
+					"de": "Wasserblasen-Pokémon",
+					"es": "Pokémon Pompa",
+					"it": "Pokémon Bolladacqua",
+					"ja": "すいほうポケモン",
+					"zh-hans": "水泡宝可梦",
+					"es-419": "Pokémon Pompa"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 751
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 141
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 68
+					},
+					{
+						"pokedex": "original-ulaula",
+						"number": 62
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 174
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 75
+					},
+					{
+						"pokedex": "updated-ulaula",
+						"number": 68
+					},
+					{
+						"pokedex": "galar",
+						"number": 214
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 91
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 90
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 751,
+								"natiId": 751,
+								"name": "Dewpider"
+							},
+							{
+								"id": 752,
+								"natiId": 752,
+								"name": "Araquanid",
+								"method": "Level",
+								"value": 22
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "19%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "19%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "19%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "19%"
+					},
+					{
+						"area": "Frigid Sea Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Frigid Sea Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Frigid Sea Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Frigid Sea Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Giants Bed Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Giants Bed Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "18%"
+					},
+					{
+						"area": "Giants Bed Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Giants Bed Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "18%"
+					},
+					{
+						"area": "Giants Foot Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Giants Foot Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Giants Foot Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Giants Foot Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Old Cemetery Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "18%"
+					},
+					{
+						"area": "Old Cemetery Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "15%"
+					},
+					{
+						"area": "Old Cemetery Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "18%"
+					},
+					{
+						"area": "Old Cemetery Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "15%"
+					},
+					{
+						"area": "Three Point Pass Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Three Point Pass Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Three Point Pass Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Three Point Pass Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "25%"
+					}
+				],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Sun Moon."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/751",
+						"fetchedAt": "2026-11-03T05:53:54.136Z",
+						"hash": "77be126d029954c1c0b3f92b806d78fc915ee4b7b94afaa76bec861d2842315c"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/387/",
+						"fetchedAt": "2026-11-03T05:53:54.164Z",
+						"hash": "ee6f72e30bd85323e51899cc7880bd9be20572be4a2898c07edd40991bbd3d4a"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/751/",
+						"fetchedAt": "2026-11-03T05:53:54.187Z",
+						"hash": "069aaf60e06ecc62fb5612e800bb85f3a448c663de14242c5077d5e59cd09e87"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/751/encounters",
+						"fetchedAt": "2026-11-03T05:53:54.254Z",
+						"hash": "e9db2ac171b83158816bc2450ac12f4a34c48bf05d910ec3f864a9b1f5e0a403"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/751/",
+						"fetchedAt": "2026-11-03T05:53:54.305Z",
+						"hash": "cd9c29b7b5c07f0397ed32bf6a6d476d37fa943312ccd36de9af2a86c067699a"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordct": "",
+				"shieldct": ""
+			},
+			"localizedFlavorByGame": {
+				"swordct": {},
+				"shieldct": {}
+			}
+		},
+		{
+			"profileKey": "brilliant-diamond-shining-pearl",
+			"label": "Brilliant Diamond / Shining Pearl",
+			"appGameKeys": [
+				"brilliantdiamond-national",
+				"brilliantdiamond",
+				"shiningpearl-national",
+				"shiningpearl"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Dewpider",
+				"localizedNames": {
+					"ja-hrkt": "シズクモ",
+					"ja-roma": "Shizukumo",
+					"ko": "물거미",
+					"zh-hant": "滴蛛",
+					"fr": "Araqua",
+					"de": "Araqua",
+					"es": "Dewpider",
+					"it": "Dewpider",
+					"ja": "シズクモ",
+					"zh-hans": "滴蛛",
+					"es-419": "Dewpider"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water",
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 38,
+					"atk": 40,
+					"def": 52,
+					"spa": 40,
+					"spd": 72,
+					"spe": 27
+				},
+				"evYield": {
+					"spd": 1
+				},
+				"generation": 7,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Water Bubble",
+					"Water Absorb (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Water Absorb"
+				],
+				"eggGroups": [
+					"Water1",
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "4.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 200,
+				"baseExperience": 54,
+				"habitat": "",
+				"shape": "Legs",
+				"color": "Green",
+				"genus": "Water Bubble Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "すいほうポケモン",
+					"ko": "수포포켓몬",
+					"zh-hant": "水泡寶可夢",
+					"fr": "Pokémon Aquabulle",
+					"de": "Wasserblasen-Pokémon",
+					"es": "Pokémon Pompa",
+					"it": "Pokémon Bolladacqua",
+					"ja": "すいほうポケモン",
+					"zh-hans": "水泡宝可梦",
+					"es-419": "Pokémon Pompa"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 751
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 141
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 68
+					},
+					{
+						"pokedex": "original-ulaula",
+						"number": 62
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 174
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 75
+					},
+					{
+						"pokedex": "updated-ulaula",
+						"number": 68
+					},
+					{
+						"pokedex": "galar",
+						"number": 214
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 91
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 90
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 751,
+								"natiId": 751,
+								"name": "Dewpider"
+							},
+							{
+								"id": 752,
+								"natiId": 752,
+								"name": "Araquanid",
+								"method": "Level",
+								"value": 22
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sun Moon."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/751",
+						"fetchedAt": "2026-11-03T05:53:54.136Z",
+						"hash": "77be126d029954c1c0b3f92b806d78fc915ee4b7b94afaa76bec861d2842315c"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/387/",
+						"fetchedAt": "2026-11-03T05:53:54.164Z",
+						"hash": "ee6f72e30bd85323e51899cc7880bd9be20572be4a2898c07edd40991bbd3d4a"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/751/",
+						"fetchedAt": "2026-11-03T05:53:54.187Z",
+						"hash": "069aaf60e06ecc62fb5612e800bb85f3a448c663de14242c5077d5e59cd09e87"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/751/encounters",
+						"fetchedAt": "2026-11-03T05:53:54.254Z",
+						"hash": "e9db2ac171b83158816bc2450ac12f4a34c48bf05d910ec3f864a9b1f5e0a403"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/751/",
+						"fetchedAt": "2026-11-03T05:53:54.305Z",
+						"hash": "cd9c29b7b5c07f0397ed32bf6a6d476d37fa943312ccd36de9af2a86c067699a"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"brilliantdiamond-national": "",
+				"brilliantdiamond": "",
+				"shiningpearl-national": "",
+				"shiningpearl": ""
+			},
+			"localizedFlavorByGame": {
+				"brilliantdiamond-national": {},
+				"brilliantdiamond": {},
+				"shiningpearl-national": {},
+				"shiningpearl": {}
+			}
+		},
+		{
+			"profileKey": "legends-arceus",
+			"label": "Legends: Arceus",
+			"appGameKeys": [
+				"legendsarceus"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Dewpider",
+				"localizedNames": {
+					"ja-hrkt": "シズクモ",
+					"ja-roma": "Shizukumo",
+					"ko": "물거미",
+					"zh-hant": "滴蛛",
+					"fr": "Araqua",
+					"de": "Araqua",
+					"es": "Dewpider",
+					"it": "Dewpider",
+					"ja": "シズクモ",
+					"zh-hans": "滴蛛",
+					"es-419": "Dewpider"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water",
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 38,
+					"atk": 40,
+					"def": 52,
+					"spa": 40,
+					"spd": 72,
+					"spe": 27
+				},
+				"evYield": {
+					"spd": 1
+				},
+				"generation": 7,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Water Bubble",
+					"Water Absorb (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Water Absorb"
+				],
+				"eggGroups": [
+					"Water1",
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "4.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 200,
+				"baseExperience": 54,
+				"habitat": "",
+				"shape": "Legs",
+				"color": "Green",
+				"genus": "Water Bubble Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "すいほうポケモン",
+					"ko": "수포포켓몬",
+					"zh-hant": "水泡寶可夢",
+					"fr": "Pokémon Aquabulle",
+					"de": "Wasserblasen-Pokémon",
+					"es": "Pokémon Pompa",
+					"it": "Pokémon Bolladacqua",
+					"ja": "すいほうポケモン",
+					"zh-hans": "水泡宝可梦",
+					"es-419": "Pokémon Pompa"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 751
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 141
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 68
+					},
+					{
+						"pokedex": "original-ulaula",
+						"number": 62
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 174
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 75
+					},
+					{
+						"pokedex": "updated-ulaula",
+						"number": 68
+					},
+					{
+						"pokedex": "galar",
+						"number": 214
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 91
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 90
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 751,
+								"natiId": 751,
+								"name": "Dewpider"
+							},
+							{
+								"id": 752,
+								"natiId": 752,
+								"name": "Araquanid",
+								"method": "Level",
+								"value": 22
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sun Moon."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/751",
+						"fetchedAt": "2026-11-03T05:53:54.136Z",
+						"hash": "77be126d029954c1c0b3f92b806d78fc915ee4b7b94afaa76bec861d2842315c"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/387/",
+						"fetchedAt": "2026-11-03T05:53:54.164Z",
+						"hash": "ee6f72e30bd85323e51899cc7880bd9be20572be4a2898c07edd40991bbd3d4a"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/751/",
+						"fetchedAt": "2026-11-03T05:53:54.187Z",
+						"hash": "069aaf60e06ecc62fb5612e800bb85f3a448c663de14242c5077d5e59cd09e87"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/751/encounters",
+						"fetchedAt": "2026-11-03T05:53:54.254Z",
+						"hash": "e9db2ac171b83158816bc2450ac12f4a34c48bf05d910ec3f864a9b1f5e0a403"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/751/",
+						"fetchedAt": "2026-11-03T05:53:54.305Z",
+						"hash": "cd9c29b7b5c07f0397ed32bf6a6d476d37fa943312ccd36de9af2a86c067699a"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendsarceus": ""
+			},
+			"localizedFlavorByGame": {
+				"legendsarceus": {}
+			}
+		},
+		{
+			"profileKey": "scarlet-violet",
+			"label": "Scarlet / Violet",
+			"appGameKeys": [
+				"scarlet",
+				"violet"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Dewpider",
+				"localizedNames": {
+					"ja-hrkt": "シズクモ",
+					"ja-roma": "Shizukumo",
+					"ko": "물거미",
+					"zh-hant": "滴蛛",
+					"fr": "Araqua",
+					"de": "Araqua",
+					"es": "Dewpider",
+					"it": "Dewpider",
+					"ja": "シズクモ",
+					"zh-hans": "滴蛛",
+					"es-419": "Dewpider"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water",
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 38,
+					"atk": 40,
+					"def": 52,
+					"spa": 40,
+					"spd": 72,
+					"spe": 27
+				},
+				"evYield": {
+					"spd": 1
+				},
+				"generation": 7,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Water Bubble",
+					"Water Absorb (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Water Absorb"
+				],
+				"eggGroups": [
+					"Water1",
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "4.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 200,
+				"baseExperience": 54,
+				"habitat": "",
+				"shape": "Legs",
+				"color": "Green",
+				"genus": "Water Bubble Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "すいほうポケモン",
+					"ko": "수포포켓몬",
+					"zh-hant": "水泡寶可夢",
+					"fr": "Pokémon Aquabulle",
+					"de": "Wasserblasen-Pokémon",
+					"es": "Pokémon Pompa",
+					"it": "Pokémon Bolladacqua",
+					"ja": "すいほうポケモン",
+					"zh-hans": "水泡宝可梦",
+					"es-419": "Pokémon Pompa"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 751
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 141
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 68
+					},
+					{
+						"pokedex": "original-ulaula",
+						"number": 62
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 174
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 75
+					},
+					{
+						"pokedex": "updated-ulaula",
+						"number": 68
+					},
+					{
+						"pokedex": "galar",
+						"number": 214
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 91
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 90
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 751,
+								"natiId": 751,
+								"name": "Dewpider"
+							},
+							{
+								"id": 752,
+								"natiId": 752,
+								"name": "Araquanid",
+								"method": "Level",
+								"value": 22
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Water Gun",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Infestation",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Bug Bite",
+							"level": 4,
+							"order": null
+						},
+						{
+							"name": "Bite",
+							"level": 8,
+							"order": null
+						},
+						{
+							"name": "Bubble Beam",
+							"level": 12,
+							"order": null
+						},
+						{
+							"name": "Aqua Ring",
+							"level": 16,
+							"order": null
+						},
+						{
+							"name": "Headbutt",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Crunch",
+							"level": 24,
+							"order": null
+						},
+						{
+							"name": "Soak",
+							"level": 28,
+							"order": null
+						},
+						{
+							"name": "Entrainment",
+							"level": 32,
+							"order": null
+						},
+						{
+							"name": "Lunge",
+							"level": 36,
+							"order": null
+						},
+						{
+							"name": "Liquidation",
+							"level": 40,
+							"order": null
+						},
+						{
+							"name": "Leech Life",
+							"level": 44,
+							"order": null
+						},
+						{
+							"name": "Mirror Coat",
+							"level": 48,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Blizzard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bug Bite",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bug Buzz",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Chilling Water",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Crunch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endeavor",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endure",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Drain",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hydro Pump",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ice Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Icy Wind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Defense",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Leech Life",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Liquidation",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Lunge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Poison Jab",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Pounce",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Skitter Smack",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Surf",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Tera Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Trailblaze",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Water Pulse",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Waterfall",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "X Scissor",
+							"level": null,
+							"order": null
+						}
+					],
+					"Egg": [
+						{
+							"name": "Power Split",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Spit Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sticky Web",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Stockpile",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sun Moon."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/751",
+						"fetchedAt": "2026-11-03T05:53:54.136Z",
+						"hash": "77be126d029954c1c0b3f92b806d78fc915ee4b7b94afaa76bec861d2842315c"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/387/",
+						"fetchedAt": "2026-11-03T05:53:54.164Z",
+						"hash": "ee6f72e30bd85323e51899cc7880bd9be20572be4a2898c07edd40991bbd3d4a"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/751/",
+						"fetchedAt": "2026-11-03T05:53:54.187Z",
+						"hash": "069aaf60e06ecc62fb5612e800bb85f3a448c663de14242c5077d5e59cd09e87"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/751/encounters",
+						"fetchedAt": "2026-11-03T05:53:54.254Z",
+						"hash": "e9db2ac171b83158816bc2450ac12f4a34c48bf05d910ec3f864a9b1f5e0a403"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/751/",
+						"fetchedAt": "2026-11-03T05:53:54.305Z",
+						"hash": "cd9c29b7b5c07f0397ed32bf6a6d476d37fa943312ccd36de9af2a86c067699a"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlet": "",
+				"violet": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlet": {},
+				"violet": {}
+			}
+		},
+		{
+			"profileKey": "the-teal-mask",
+			"label": "The Teal Mask",
+			"appGameKeys": [
+				"scarlettm",
+				"violettm"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Dewpider",
+				"localizedNames": {
+					"ja-hrkt": "シズクモ",
+					"ja-roma": "Shizukumo",
+					"ko": "물거미",
+					"zh-hant": "滴蛛",
+					"fr": "Araqua",
+					"de": "Araqua",
+					"es": "Dewpider",
+					"it": "Dewpider",
+					"ja": "シズクモ",
+					"zh-hans": "滴蛛",
+					"es-419": "Dewpider"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water",
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 38,
+					"atk": 40,
+					"def": 52,
+					"spa": 40,
+					"spd": 72,
+					"spe": 27
+				},
+				"evYield": {
+					"spd": 1
+				},
+				"generation": 7,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Water Bubble",
+					"Water Absorb (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Water Absorb"
+				],
+				"eggGroups": [
+					"Water1",
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "4.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 200,
+				"baseExperience": 54,
+				"habitat": "",
+				"shape": "Legs",
+				"color": "Green",
+				"genus": "Water Bubble Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "すいほうポケモン",
+					"ko": "수포포켓몬",
+					"zh-hant": "水泡寶可夢",
+					"fr": "Pokémon Aquabulle",
+					"de": "Wasserblasen-Pokémon",
+					"es": "Pokémon Pompa",
+					"it": "Pokémon Bolladacqua",
+					"ja": "すいほうポケモン",
+					"zh-hans": "水泡宝可梦",
+					"es-419": "Pokémon Pompa"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 751
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 141
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 68
+					},
+					{
+						"pokedex": "original-ulaula",
+						"number": 62
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 174
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 75
+					},
+					{
+						"pokedex": "updated-ulaula",
+						"number": 68
+					},
+					{
+						"pokedex": "galar",
+						"number": 214
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 91
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 90
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 751,
+								"natiId": 751,
+								"name": "Dewpider"
+							},
+							{
+								"id": 752,
+								"natiId": 752,
+								"name": "Araquanid",
+								"method": "Level",
+								"value": 22
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sun Moon."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/751",
+						"fetchedAt": "2026-11-03T05:53:54.136Z",
+						"hash": "77be126d029954c1c0b3f92b806d78fc915ee4b7b94afaa76bec861d2842315c"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/387/",
+						"fetchedAt": "2026-11-03T05:53:54.164Z",
+						"hash": "ee6f72e30bd85323e51899cc7880bd9be20572be4a2898c07edd40991bbd3d4a"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/751/",
+						"fetchedAt": "2026-11-03T05:53:54.187Z",
+						"hash": "069aaf60e06ecc62fb5612e800bb85f3a448c663de14242c5077d5e59cd09e87"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/751/encounters",
+						"fetchedAt": "2026-11-03T05:53:54.254Z",
+						"hash": "e9db2ac171b83158816bc2450ac12f4a34c48bf05d910ec3f864a9b1f5e0a403"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/751/",
+						"fetchedAt": "2026-11-03T05:53:54.305Z",
+						"hash": "cd9c29b7b5c07f0397ed32bf6a6d476d37fa943312ccd36de9af2a86c067699a"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlettm": "",
+				"violettm": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlettm": {},
+				"violettm": {}
+			}
+		},
+		{
+			"profileKey": "the-indigo-disk",
+			"label": "The Indigo Disk",
+			"appGameKeys": [
+				"scarletid",
+				"violetid"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Dewpider",
+				"localizedNames": {
+					"ja-hrkt": "シズクモ",
+					"ja-roma": "Shizukumo",
+					"ko": "물거미",
+					"zh-hant": "滴蛛",
+					"fr": "Araqua",
+					"de": "Araqua",
+					"es": "Dewpider",
+					"it": "Dewpider",
+					"ja": "シズクモ",
+					"zh-hans": "滴蛛",
+					"es-419": "Dewpider"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water",
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 38,
+					"atk": 40,
+					"def": 52,
+					"spa": 40,
+					"spd": 72,
+					"spe": 27
+				},
+				"evYield": {
+					"spd": 1
+				},
+				"generation": 7,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Water Bubble",
+					"Water Absorb (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Water Absorb"
+				],
+				"eggGroups": [
+					"Water1",
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "4.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 200,
+				"baseExperience": 54,
+				"habitat": "",
+				"shape": "Legs",
+				"color": "Green",
+				"genus": "Water Bubble Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "すいほうポケモン",
+					"ko": "수포포켓몬",
+					"zh-hant": "水泡寶可夢",
+					"fr": "Pokémon Aquabulle",
+					"de": "Wasserblasen-Pokémon",
+					"es": "Pokémon Pompa",
+					"it": "Pokémon Bolladacqua",
+					"ja": "すいほうポケモン",
+					"zh-hans": "水泡宝可梦",
+					"es-419": "Pokémon Pompa"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 751
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 141
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 68
+					},
+					{
+						"pokedex": "original-ulaula",
+						"number": 62
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 174
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 75
+					},
+					{
+						"pokedex": "updated-ulaula",
+						"number": 68
+					},
+					{
+						"pokedex": "galar",
+						"number": 214
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 91
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 90
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 751,
+								"natiId": 751,
+								"name": "Dewpider"
+							},
+							{
+								"id": 752,
+								"natiId": 752,
+								"name": "Araquanid",
+								"method": "Level",
+								"value": 22
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sun Moon."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/751",
+						"fetchedAt": "2026-11-03T05:53:54.136Z",
+						"hash": "77be126d029954c1c0b3f92b806d78fc915ee4b7b94afaa76bec861d2842315c"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/387/",
+						"fetchedAt": "2026-11-03T05:53:54.164Z",
+						"hash": "ee6f72e30bd85323e51899cc7880bd9be20572be4a2898c07edd40991bbd3d4a"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/751/",
+						"fetchedAt": "2026-11-03T05:53:54.187Z",
+						"hash": "069aaf60e06ecc62fb5612e800bb85f3a448c663de14242c5077d5e59cd09e87"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/751/encounters",
+						"fetchedAt": "2026-11-03T05:53:54.254Z",
+						"hash": "e9db2ac171b83158816bc2450ac12f4a34c48bf05d910ec3f864a9b1f5e0a403"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/751/",
+						"fetchedAt": "2026-11-03T05:53:54.305Z",
+						"hash": "cd9c29b7b5c07f0397ed32bf6a6d476d37fa943312ccd36de9af2a86c067699a"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarletid": "",
+				"violetid": ""
+			},
+			"localizedFlavorByGame": {
+				"scarletid": {},
+				"violetid": {}
+			}
+		}
+	]
+}

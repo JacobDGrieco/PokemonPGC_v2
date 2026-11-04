@@ -1,0 +1,5534 @@
+{
+	"schemaVersion": 2,
+	"nationalDexId": 603,
+	"speciesName": "Eelektrik",
+	"formKey": "base",
+	"formName": "Base",
+	"formLabelSource": "form-catalog",
+	"profiles": [
+		{
+			"profileKey": "black-white",
+			"label": "Black / White",
+			"appGameKeys": [
+				"black-national",
+				"black",
+				"white-national",
+				"white"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Eelektrik",
+				"localizedNames": {
+					"ja-hrkt": "シビビール",
+					"ja-roma": "Shibibeel",
+					"ko": "저리릴",
+					"zh-hant": "麻麻鰻",
+					"fr": "Lampéroie",
+					"de": "Zapplalek",
+					"es": "Eelektrik",
+					"it": "Eelektrik",
+					"ja": "シビビール",
+					"zh-hans": "麻麻鳗",
+					"es-419": "Eelektrik"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric"
+				],
+				"baseStats": {
+					"hp": 65,
+					"atk": 85,
+					"def": 70,
+					"spa": 75,
+					"spd": 70,
+					"spe": 40
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Levitate"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Indeterminate"
+				],
+				"expGroup": "Slow",
+				"hatchCounter": 20,
+				"height": "1.2 m",
+				"weight": "22.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 142,
+				"habitat": "",
+				"shape": "Fish",
+				"color": "Blue",
+				"genus": "EleFish Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "でんきうおポケモン",
+					"ko": "전기물고기포켓몬",
+					"zh-hant": "電魚寶可夢",
+					"fr": "Pokémon Électrophore",
+					"de": "Stromfisch",
+					"es": "Pokémon Electropez",
+					"it": "Pokémon Elettropesce",
+					"ja": "でんきうおポケモン",
+					"zh-hans": "电鱼宝可梦",
+					"es-419": "Pokémon Electropez"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 603
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 109
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 178
+					},
+					{
+						"pokedex": "paldea",
+						"number": 342
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 176
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 135
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 143
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 602,
+								"natiId": 602,
+								"name": "Tynamo"
+							},
+							{
+								"id": 603,
+								"natiId": 603,
+								"name": "Eelektrik",
+								"method": "Level",
+								"value": 39
+							},
+							{
+								"id": 604,
+								"natiId": 604,
+								"name": "Eelektross",
+								"method": "Use item",
+								"value": "Thunder Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Headbutt",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Thunder Wave",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Spark",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Charge Beam",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Bind",
+							"level": 9,
+							"order": null
+						},
+						{
+							"name": "Acid",
+							"level": 19,
+							"order": null
+						},
+						{
+							"name": "Discharge",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Crunch",
+							"level": 39,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": 44,
+							"order": null
+						},
+						{
+							"name": "Acid Spray",
+							"level": 49,
+							"order": null
+						},
+						{
+							"name": "Coil",
+							"level": 54,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": 59,
+							"order": null
+						},
+						{
+							"name": "Gastro Acid",
+							"level": 64,
+							"order": null
+						},
+						{
+							"name": "Zap Cannon",
+							"level": 69,
+							"order": null
+						},
+						{
+							"name": "Thrash",
+							"level": 74,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Acrobatics",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Charge Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash Cannon",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "U Turn",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Volt Switch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/603",
+						"fetchedAt": "2026-11-03T05:53:43.713Z",
+						"hash": "2f75aa758d1d9999b0668dcee5abab41cf9d5ec3be24f0b20e8e65d9dd3dcb1c"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/306/",
+						"fetchedAt": "2026-11-03T05:53:43.721Z",
+						"hash": "fcb2f7b1bd863f5bfae4da4a22d04ff87eb9b5f6e27b68e256854852fb66f214"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/603/",
+						"fetchedAt": "2026-11-03T05:53:43.748Z",
+						"hash": "1305a8d5ef9e6fd4427d47250ac61940cd57e4f664198ce3812247d7f9c311a5"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/603/encounters",
+						"fetchedAt": "2026-11-03T05:53:43.799Z",
+						"hash": "f918959912d330ef8ee22794c9efba19d4bd9ee526633b90a4e68053e65b53df"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/603/",
+						"fetchedAt": "2026-11-03T05:53:43.851Z",
+						"hash": "72e0edca9d25c631a3ba370896c785bfd2b7febb7e830c65b96a8f6ef8cc78e7"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"black-national": "They coil around foes and shock them with electricity-generating organs that seem simply to be circular patterns.",
+				"black": "They coil around foes and shock them with electricity-generating organs that seem simply to be circular patterns.",
+				"white-national": "These Pokémon have a big appetite. When they spot their prey, they attack it and paralyze it with electricity.",
+				"white": "These Pokémon have a big appetite. When they spot their prey, they attack it and paralyze it with electricity."
+			},
+			"localizedFlavorByGame": {
+				"black-national": {
+					"fr": "Ses taches rondes émettent de l’électricité. Il s’enroule autour de ses proies et les électrocute.",
+					"en": "They coil around foes and shock them with electricity-generating organs that seem simply to be circular patterns."
+				},
+				"black": {
+					"fr": "Ses taches rondes émettent de l’électricité. Il s’enroule autour de ses proies et les électrocute.",
+					"en": "They coil around foes and shock them with electricity-generating organs that seem simply to be circular patterns."
+				},
+				"white-national": {
+					"fr": "Un Pokémon doté d’un gros appétit. Il paralyse ses proies avec des décharges électriques avant de les manger.",
+					"en": "These Pokémon have a big appetite. When they spot their prey, they attack it and paralyze it with electricity."
+				},
+				"white": {
+					"fr": "Un Pokémon doté d’un gros appétit. Il paralyse ses proies avec des décharges électriques avant de les manger.",
+					"en": "These Pokémon have a big appetite. When they spot their prey, they attack it and paralyze it with electricity."
+				}
+			}
+		},
+		{
+			"profileKey": "black-2-white-2",
+			"label": "Black 2 / White 2",
+			"appGameKeys": [
+				"black2-national",
+				"black2",
+				"white2-national",
+				"white2"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Eelektrik",
+				"localizedNames": {
+					"ja-hrkt": "シビビール",
+					"ja-roma": "Shibibeel",
+					"ko": "저리릴",
+					"zh-hant": "麻麻鰻",
+					"fr": "Lampéroie",
+					"de": "Zapplalek",
+					"es": "Eelektrik",
+					"it": "Eelektrik",
+					"ja": "シビビール",
+					"zh-hans": "麻麻鳗",
+					"es-419": "Eelektrik"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric"
+				],
+				"baseStats": {
+					"hp": 65,
+					"atk": 85,
+					"def": 70,
+					"spa": 75,
+					"spd": 70,
+					"spe": 40
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Levitate"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Indeterminate"
+				],
+				"expGroup": "Slow",
+				"hatchCounter": 20,
+				"height": "1.2 m",
+				"weight": "22.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 142,
+				"habitat": "",
+				"shape": "Fish",
+				"color": "Blue",
+				"genus": "EleFish Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "でんきうおポケモン",
+					"ko": "전기물고기포켓몬",
+					"zh-hant": "電魚寶可夢",
+					"fr": "Pokémon Électrophore",
+					"de": "Stromfisch",
+					"es": "Pokémon Electropez",
+					"it": "Pokémon Elettropesce",
+					"ja": "でんきうおポケモン",
+					"zh-hans": "电鱼宝可梦",
+					"es-419": "Pokémon Electropez"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 603
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 109
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 178
+					},
+					{
+						"pokedex": "paldea",
+						"number": 342
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 176
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 135
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 143
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 602,
+								"natiId": 602,
+								"name": "Tynamo"
+							},
+							{
+								"id": 603,
+								"natiId": 603,
+								"name": "Eelektrik",
+								"method": "Level",
+								"value": 39
+							},
+							{
+								"id": 604,
+								"natiId": 604,
+								"name": "Eelektross",
+								"method": "Use item",
+								"value": "Thunder Stone"
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Seaside Cave B1f",
+						"notes": "Walk, Lv. 42",
+						"games": "Black 2",
+						"rate": "5%"
+					},
+					{
+						"area": "Seaside Cave B1f",
+						"notes": "Walk, Lv. 42",
+						"games": "White 2",
+						"rate": "5%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Headbutt",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Thunder Wave",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Spark",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Charge Beam",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Bind",
+							"level": 9,
+							"order": null
+						},
+						{
+							"name": "Acid",
+							"level": 19,
+							"order": null
+						},
+						{
+							"name": "Discharge",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Crunch",
+							"level": 39,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": 44,
+							"order": null
+						},
+						{
+							"name": "Acid Spray",
+							"level": 49,
+							"order": null
+						},
+						{
+							"name": "Coil",
+							"level": 54,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": 59,
+							"order": null
+						},
+						{
+							"name": "Gastro Acid",
+							"level": 64,
+							"order": null
+						},
+						{
+							"name": "Zap Cannon",
+							"level": 69,
+							"order": null
+						},
+						{
+							"name": "Thrash",
+							"level": 74,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Aqua Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bounce",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Gastro Acid",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Drain",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Knock Off",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Magnet Rise",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Signal Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Super Fang",
+							"level": null,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Acrobatics",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Charge Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash Cannon",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "U Turn",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Volt Switch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/603",
+						"fetchedAt": "2026-11-03T05:53:43.713Z",
+						"hash": "2f75aa758d1d9999b0668dcee5abab41cf9d5ec3be24f0b20e8e65d9dd3dcb1c"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/306/",
+						"fetchedAt": "2026-11-03T05:53:43.721Z",
+						"hash": "fcb2f7b1bd863f5bfae4da4a22d04ff87eb9b5f6e27b68e256854852fb66f214"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/603/",
+						"fetchedAt": "2026-11-03T05:53:43.748Z",
+						"hash": "1305a8d5ef9e6fd4427d47250ac61940cd57e4f664198ce3812247d7f9c311a5"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/603/encounters",
+						"fetchedAt": "2026-11-03T05:53:43.799Z",
+						"hash": "f918959912d330ef8ee22794c9efba19d4bd9ee526633b90a4e68053e65b53df"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/603/",
+						"fetchedAt": "2026-11-03T05:53:43.851Z",
+						"hash": "72e0edca9d25c631a3ba370896c785bfd2b7febb7e830c65b96a8f6ef8cc78e7"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"black2-national": "It wraps itself around its prey and paralyzes it with electricity from the round spots on its sides. Then it chomps.",
+				"black2": "It wraps itself around its prey and paralyzes it with electricity from the round spots on its sides. Then it chomps.",
+				"white2-national": "It wraps itself around its prey and paralyzes it with electricity from the round spots on its sides. Then it chomps.",
+				"white2": "It wraps itself around its prey and paralyzes it with electricity from the round spots on its sides. Then it chomps."
+			},
+			"localizedFlavorByGame": {
+				"black2-national": {
+					"en": "It wraps itself around its prey and paralyzes it with electricity from the round spots on its sides. Then it chomps."
+				},
+				"black2": {
+					"en": "It wraps itself around its prey and paralyzes it with electricity from the round spots on its sides. Then it chomps."
+				},
+				"white2-national": {
+					"en": "It wraps itself around its prey and paralyzes it with electricity from the round spots on its sides. Then it chomps."
+				},
+				"white2": {
+					"en": "It wraps itself around its prey and paralyzes it with electricity from the round spots on its sides. Then it chomps."
+				}
+			}
+		},
+		{
+			"profileKey": "x-y",
+			"label": "X / Y",
+			"appGameKeys": [
+				"x-national",
+				"x-central",
+				"x-coastal",
+				"x-mountain",
+				"y-national",
+				"y-central",
+				"y-coastal",
+				"y-mountain"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Eelektrik",
+				"localizedNames": {
+					"ja-hrkt": "シビビール",
+					"ja-roma": "Shibibeel",
+					"ko": "저리릴",
+					"zh-hant": "麻麻鰻",
+					"fr": "Lampéroie",
+					"de": "Zapplalek",
+					"es": "Eelektrik",
+					"it": "Eelektrik",
+					"ja": "シビビール",
+					"zh-hans": "麻麻鳗",
+					"es-419": "Eelektrik"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric"
+				],
+				"baseStats": {
+					"hp": 65,
+					"atk": 85,
+					"def": 70,
+					"spa": 75,
+					"spd": 70,
+					"spe": 40
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Levitate"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Indeterminate"
+				],
+				"expGroup": "Slow",
+				"hatchCounter": 20,
+				"height": "1.2 m",
+				"weight": "22.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 142,
+				"habitat": "",
+				"shape": "Fish",
+				"color": "Blue",
+				"genus": "EleFish Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "でんきうおポケモン",
+					"ko": "전기물고기포켓몬",
+					"zh-hant": "電魚寶可夢",
+					"fr": "Pokémon Électrophore",
+					"de": "Stromfisch",
+					"es": "Pokémon Electropez",
+					"it": "Pokémon Elettropesce",
+					"ja": "でんきうおポケモン",
+					"zh-hans": "电鱼宝可梦",
+					"es-419": "Pokémon Electropez"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 603
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 109
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 178
+					},
+					{
+						"pokedex": "paldea",
+						"number": 342
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 176
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 135
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 143
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 602,
+								"natiId": 602,
+								"name": "Tynamo"
+							},
+							{
+								"id": 603,
+								"natiId": 603,
+								"name": "Eelektrik",
+								"method": "Level",
+								"value": 39
+							},
+							{
+								"id": 604,
+								"natiId": 604,
+								"name": "Eelektross",
+								"method": "Use item",
+								"value": "Thunder Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Headbutt",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Thunder Wave",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Spark",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Charge Beam",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Bind",
+							"level": 9,
+							"order": null
+						},
+						{
+							"name": "Acid",
+							"level": 19,
+							"order": null
+						},
+						{
+							"name": "Discharge",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Crunch",
+							"level": 39,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": 44,
+							"order": null
+						},
+						{
+							"name": "Acid Spray",
+							"level": 49,
+							"order": null
+						},
+						{
+							"name": "Coil",
+							"level": 54,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": 59,
+							"order": null
+						},
+						{
+							"name": "Gastro Acid",
+							"level": 64,
+							"order": null
+						},
+						{
+							"name": "Zap Cannon",
+							"level": 69,
+							"order": null
+						},
+						{
+							"name": "Thrash",
+							"level": 74,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Acrobatics",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Charge Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash Cannon",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "U Turn",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Volt Switch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/603",
+						"fetchedAt": "2026-11-03T05:53:43.713Z",
+						"hash": "2f75aa758d1d9999b0668dcee5abab41cf9d5ec3be24f0b20e8e65d9dd3dcb1c"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/306/",
+						"fetchedAt": "2026-11-03T05:53:43.721Z",
+						"hash": "fcb2f7b1bd863f5bfae4da4a22d04ff87eb9b5f6e27b68e256854852fb66f214"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/603/",
+						"fetchedAt": "2026-11-03T05:53:43.748Z",
+						"hash": "1305a8d5ef9e6fd4427d47250ac61940cd57e4f664198ce3812247d7f9c311a5"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/603/encounters",
+						"fetchedAt": "2026-11-03T05:53:43.799Z",
+						"hash": "f918959912d330ef8ee22794c9efba19d4bd9ee526633b90a4e68053e65b53df"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/603/",
+						"fetchedAt": "2026-11-03T05:53:43.851Z",
+						"hash": "72e0edca9d25c631a3ba370896c785bfd2b7febb7e830c65b96a8f6ef8cc78e7"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"x-national": "It wraps itself around its prey and paralyzes it with electricity from the round spots on its sides. Then it chomps.",
+				"x-central": "It wraps itself around its prey and paralyzes it with electricity from the round spots on its sides. Then it chomps.",
+				"x-coastal": "It wraps itself around its prey and paralyzes it with electricity from the round spots on its sides. Then it chomps.",
+				"x-mountain": "It wraps itself around its prey and paralyzes it with electricity from the round spots on its sides. Then it chomps.",
+				"y-national": "These Pokémon have a big appetite. When they spot their prey, they attack it and paralyze it with electricity.",
+				"y-central": "These Pokémon have a big appetite. When they spot their prey, they attack it and paralyze it with electricity.",
+				"y-coastal": "These Pokémon have a big appetite. When they spot their prey, they attack it and paralyze it with electricity.",
+				"y-mountain": "These Pokémon have a big appetite. When they spot their prey, they attack it and paralyze it with electricity."
+			},
+			"localizedFlavorByGame": {
+				"x-national": {
+					"ja-hrkt": "あいてに まきつき まるい はんてんから でんきを ながして しびれたところを まるかじりする。",
+					"ko": "상대를 휘감고 동그란 반점에서 전기를 흘려보내 마비시킨 뒤 통째로 문다.",
+					"fr": "Ses taches émettent de l’électricité quand il s’enroule autour de ses proies pour les paralyser avant de les dévorer.",
+					"de": "Schlingt sich um Gegner, lähmt sie über die rund gemaserten Flächen an seinem Körper mit Strom und beißt beherzt zu.",
+					"es": "Se enrolla alrededor de su presa, la paraliza con la electricidad de sus marcas circulares y le asesta mordiscos.",
+					"it": "Si avvinghia alla preda e la paralizza rilasciando elettricità dalle macchie tonde, poi la ingoia intera.",
+					"en": "It wraps itself around its prey and paralyzes it with electricity from the round spots on its sides. Then it chomps.",
+					"ja": "相手に 巻きつき まるい はん点から 電気を 流して しびれたところを まるかじりする。",
+					"es-419": "Se enrolla alrededor de su presa, la paraliza con la electricidad de sus marcas circulares y le asesta mordiscos."
+				},
+				"x-central": {
+					"ja-hrkt": "あいてに まきつき まるい はんてんから でんきを ながして しびれたところを まるかじりする。",
+					"ko": "상대를 휘감고 동그란 반점에서 전기를 흘려보내 마비시킨 뒤 통째로 문다.",
+					"fr": "Ses taches émettent de l’électricité quand il s’enroule autour de ses proies pour les paralyser avant de les dévorer.",
+					"de": "Schlingt sich um Gegner, lähmt sie über die rund gemaserten Flächen an seinem Körper mit Strom und beißt beherzt zu.",
+					"es": "Se enrolla alrededor de su presa, la paraliza con la electricidad de sus marcas circulares y le asesta mordiscos.",
+					"it": "Si avvinghia alla preda e la paralizza rilasciando elettricità dalle macchie tonde, poi la ingoia intera.",
+					"en": "It wraps itself around its prey and paralyzes it with electricity from the round spots on its sides. Then it chomps.",
+					"ja": "相手に 巻きつき まるい はん点から 電気を 流して しびれたところを まるかじりする。",
+					"es-419": "Se enrolla alrededor de su presa, la paraliza con la electricidad de sus marcas circulares y le asesta mordiscos."
+				},
+				"x-coastal": {
+					"ja-hrkt": "あいてに まきつき まるい はんてんから でんきを ながして しびれたところを まるかじりする。",
+					"ko": "상대를 휘감고 동그란 반점에서 전기를 흘려보내 마비시킨 뒤 통째로 문다.",
+					"fr": "Ses taches émettent de l’électricité quand il s’enroule autour de ses proies pour les paralyser avant de les dévorer.",
+					"de": "Schlingt sich um Gegner, lähmt sie über die rund gemaserten Flächen an seinem Körper mit Strom und beißt beherzt zu.",
+					"es": "Se enrolla alrededor de su presa, la paraliza con la electricidad de sus marcas circulares y le asesta mordiscos.",
+					"it": "Si avvinghia alla preda e la paralizza rilasciando elettricità dalle macchie tonde, poi la ingoia intera.",
+					"en": "It wraps itself around its prey and paralyzes it with electricity from the round spots on its sides. Then it chomps.",
+					"ja": "相手に 巻きつき まるい はん点から 電気を 流して しびれたところを まるかじりする。",
+					"es-419": "Se enrolla alrededor de su presa, la paraliza con la electricidad de sus marcas circulares y le asesta mordiscos."
+				},
+				"x-mountain": {
+					"ja-hrkt": "あいてに まきつき まるい はんてんから でんきを ながして しびれたところを まるかじりする。",
+					"ko": "상대를 휘감고 동그란 반점에서 전기를 흘려보내 마비시킨 뒤 통째로 문다.",
+					"fr": "Ses taches émettent de l’électricité quand il s’enroule autour de ses proies pour les paralyser avant de les dévorer.",
+					"de": "Schlingt sich um Gegner, lähmt sie über die rund gemaserten Flächen an seinem Körper mit Strom und beißt beherzt zu.",
+					"es": "Se enrolla alrededor de su presa, la paraliza con la electricidad de sus marcas circulares y le asesta mordiscos.",
+					"it": "Si avvinghia alla preda e la paralizza rilasciando elettricità dalle macchie tonde, poi la ingoia intera.",
+					"en": "It wraps itself around its prey and paralyzes it with electricity from the round spots on its sides. Then it chomps.",
+					"ja": "相手に 巻きつき まるい はん点から 電気を 流して しびれたところを まるかじりする。",
+					"es-419": "Se enrolla alrededor de su presa, la paraliza con la electricidad de sus marcas circulares y le asesta mordiscos."
+				},
+				"y-national": {
+					"ja-hrkt": "しょくよく おうせいな ポケモン。 えものを みつけると おそいかかり でんきで しびれさせてから たべる。",
+					"ko": "식욕이 왕성한 포켓몬이다. 먹이를 발견하면 덮쳐서 전기로 마비시킨 후 먹는다.",
+					"fr": "Un Pokémon doté d’un gros appétit. Il paralyse ses proies avec des décharges électriques avant de les manger.",
+					"de": "Hat es seine Beute erspäht, lähmt es sie mit Elektrizität und verspeist sie anschließend.",
+					"es": "Pokémon de apetito voraz. En cuanto encuentra una presa, la paraliza con electricidad y la engulle.",
+					"it": "Pokémon dal grande appetito. Quando attacca, immobilizza il nemico paralizzandolo con l’elettricità.",
+					"en": "These Pokémon have a big appetite. When they spot their prey, they attack it and paralyze it with electricity.",
+					"ja": "食欲 旺盛な ポケモン。 獲物を 見つけると 襲いかかり 電気で しびれさせてから 食べる。",
+					"es-419": "Pokémon de apetito voraz. En cuanto encuentra una presa, la paraliza con electricidad y la engulle."
+				},
+				"y-central": {
+					"ja-hrkt": "しょくよく おうせいな ポケモン。 えものを みつけると おそいかかり でんきで しびれさせてから たべる。",
+					"ko": "식욕이 왕성한 포켓몬이다. 먹이를 발견하면 덮쳐서 전기로 마비시킨 후 먹는다.",
+					"fr": "Un Pokémon doté d’un gros appétit. Il paralyse ses proies avec des décharges électriques avant de les manger.",
+					"de": "Hat es seine Beute erspäht, lähmt es sie mit Elektrizität und verspeist sie anschließend.",
+					"es": "Pokémon de apetito voraz. En cuanto encuentra una presa, la paraliza con electricidad y la engulle.",
+					"it": "Pokémon dal grande appetito. Quando attacca, immobilizza il nemico paralizzandolo con l’elettricità.",
+					"en": "These Pokémon have a big appetite. When they spot their prey, they attack it and paralyze it with electricity.",
+					"ja": "食欲 旺盛な ポケモン。 獲物を 見つけると 襲いかかり 電気で しびれさせてから 食べる。",
+					"es-419": "Pokémon de apetito voraz. En cuanto encuentra una presa, la paraliza con electricidad y la engulle."
+				},
+				"y-coastal": {
+					"ja-hrkt": "しょくよく おうせいな ポケモン。 えものを みつけると おそいかかり でんきで しびれさせてから たべる。",
+					"ko": "식욕이 왕성한 포켓몬이다. 먹이를 발견하면 덮쳐서 전기로 마비시킨 후 먹는다.",
+					"fr": "Un Pokémon doté d’un gros appétit. Il paralyse ses proies avec des décharges électriques avant de les manger.",
+					"de": "Hat es seine Beute erspäht, lähmt es sie mit Elektrizität und verspeist sie anschließend.",
+					"es": "Pokémon de apetito voraz. En cuanto encuentra una presa, la paraliza con electricidad y la engulle.",
+					"it": "Pokémon dal grande appetito. Quando attacca, immobilizza il nemico paralizzandolo con l’elettricità.",
+					"en": "These Pokémon have a big appetite. When they spot their prey, they attack it and paralyze it with electricity.",
+					"ja": "食欲 旺盛な ポケモン。 獲物を 見つけると 襲いかかり 電気で しびれさせてから 食べる。",
+					"es-419": "Pokémon de apetito voraz. En cuanto encuentra una presa, la paraliza con electricidad y la engulle."
+				},
+				"y-mountain": {
+					"ja-hrkt": "しょくよく おうせいな ポケモン。 えものを みつけると おそいかかり でんきで しびれさせてから たべる。",
+					"ko": "식욕이 왕성한 포켓몬이다. 먹이를 발견하면 덮쳐서 전기로 마비시킨 후 먹는다.",
+					"fr": "Un Pokémon doté d’un gros appétit. Il paralyse ses proies avec des décharges électriques avant de les manger.",
+					"de": "Hat es seine Beute erspäht, lähmt es sie mit Elektrizität und verspeist sie anschließend.",
+					"es": "Pokémon de apetito voraz. En cuanto encuentra una presa, la paraliza con electricidad y la engulle.",
+					"it": "Pokémon dal grande appetito. Quando attacca, immobilizza il nemico paralizzandolo con l’elettricità.",
+					"en": "These Pokémon have a big appetite. When they spot their prey, they attack it and paralyze it with electricity.",
+					"ja": "食欲 旺盛な ポケモン。 獲物を 見つけると 襲いかかり 電気で しびれさせてから 食べる。",
+					"es-419": "Pokémon de apetito voraz. En cuanto encuentra una presa, la paraliza con electricidad y la engulle."
+				}
+			}
+		},
+		{
+			"profileKey": "omega-ruby-alpha-sapphire",
+			"label": "Omega Ruby / Alpha Sapphire",
+			"appGameKeys": [
+				"omegaruby-national",
+				"omegaruby",
+				"alphasapphire-national",
+				"alphasapphire"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Eelektrik",
+				"localizedNames": {
+					"ja-hrkt": "シビビール",
+					"ja-roma": "Shibibeel",
+					"ko": "저리릴",
+					"zh-hant": "麻麻鰻",
+					"fr": "Lampéroie",
+					"de": "Zapplalek",
+					"es": "Eelektrik",
+					"it": "Eelektrik",
+					"ja": "シビビール",
+					"zh-hans": "麻麻鳗",
+					"es-419": "Eelektrik"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric"
+				],
+				"baseStats": {
+					"hp": 65,
+					"atk": 85,
+					"def": 70,
+					"spa": 75,
+					"spd": 70,
+					"spe": 40
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Levitate"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Indeterminate"
+				],
+				"expGroup": "Slow",
+				"hatchCounter": 20,
+				"height": "1.2 m",
+				"weight": "22.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 142,
+				"habitat": "",
+				"shape": "Fish",
+				"color": "Blue",
+				"genus": "EleFish Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "でんきうおポケモン",
+					"ko": "전기물고기포켓몬",
+					"zh-hant": "電魚寶可夢",
+					"fr": "Pokémon Électrophore",
+					"de": "Stromfisch",
+					"es": "Pokémon Electropez",
+					"it": "Pokémon Elettropesce",
+					"ja": "でんきうおポケモン",
+					"zh-hans": "电鱼宝可梦",
+					"es-419": "Pokémon Electropez"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 603
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 109
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 178
+					},
+					{
+						"pokedex": "paldea",
+						"number": 342
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 176
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 135
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 143
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 602,
+								"natiId": 602,
+								"name": "Tynamo"
+							},
+							{
+								"id": 603,
+								"natiId": 603,
+								"name": "Eelektrik",
+								"method": "Level",
+								"value": 39
+							},
+							{
+								"id": 604,
+								"natiId": 604,
+								"name": "Eelektross",
+								"method": "Use item",
+								"value": "Thunder Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Headbutt",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Thunder Wave",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Spark",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Charge Beam",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Bind",
+							"level": 9,
+							"order": null
+						},
+						{
+							"name": "Acid",
+							"level": 19,
+							"order": null
+						},
+						{
+							"name": "Discharge",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Crunch",
+							"level": 39,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": 44,
+							"order": null
+						},
+						{
+							"name": "Acid Spray",
+							"level": 49,
+							"order": null
+						},
+						{
+							"name": "Coil",
+							"level": 54,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": 59,
+							"order": null
+						},
+						{
+							"name": "Gastro Acid",
+							"level": 64,
+							"order": null
+						},
+						{
+							"name": "Zap Cannon",
+							"level": 69,
+							"order": null
+						},
+						{
+							"name": "Thrash",
+							"level": 74,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Aqua Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bounce",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Gastro Acid",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Drain",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Knock Off",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Magnet Rise",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shock Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Signal Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Super Fang",
+							"level": null,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Acrobatics",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Charge Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash Cannon",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Secret Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "U Turn",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Volt Switch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/603",
+						"fetchedAt": "2026-11-03T05:53:43.713Z",
+						"hash": "2f75aa758d1d9999b0668dcee5abab41cf9d5ec3be24f0b20e8e65d9dd3dcb1c"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/306/",
+						"fetchedAt": "2026-11-03T05:53:43.721Z",
+						"hash": "fcb2f7b1bd863f5bfae4da4a22d04ff87eb9b5f6e27b68e256854852fb66f214"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/603/",
+						"fetchedAt": "2026-11-03T05:53:43.748Z",
+						"hash": "1305a8d5ef9e6fd4427d47250ac61940cd57e4f664198ce3812247d7f9c311a5"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/603/encounters",
+						"fetchedAt": "2026-11-03T05:53:43.799Z",
+						"hash": "f918959912d330ef8ee22794c9efba19d4bd9ee526633b90a4e68053e65b53df"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/603/",
+						"fetchedAt": "2026-11-03T05:53:43.851Z",
+						"hash": "72e0edca9d25c631a3ba370896c785bfd2b7febb7e830c65b96a8f6ef8cc78e7"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"omegaruby-national": "It wraps itself around its prey and paralyzes it with electricity from the round spots on its sides. Then it chomps.",
+				"omegaruby": "It wraps itself around its prey and paralyzes it with electricity from the round spots on its sides. Then it chomps.",
+				"alphasapphire-national": "These Pokémon have a big appetite. When they spot their prey, they attack it and paralyze it with electricity.",
+				"alphasapphire": "These Pokémon have a big appetite. When they spot their prey, they attack it and paralyze it with electricity."
+			},
+			"localizedFlavorByGame": {
+				"omegaruby-national": {
+					"ja-hrkt": "あいてに まきつき まるい はんてんから でんきを ながして しびれたところを まるかじりする。",
+					"ko": "상대를 휘감고 동그란 반점에서 전기를 흘려보내 마비시킨 뒤 통째로 문다.",
+					"fr": "Ses taches émettent de l’électricité quand il s’enroule autour de ses proies pour les paralyser avant de les dévorer.",
+					"de": "Schlingt sich um Gegner, lähmt sie über die rund gemaserten Flächen an seinem Körper mit Strom und beißt beherzt zu.",
+					"es": "Se enrolla alrededor de su presa, la paraliza con la electricidad de sus marcas circulares y le asesta mordiscos.",
+					"it": "Si avvinghia alla preda e la paralizza rilasciando elettricità dalle macchie tonde, poi la ingoia intera.",
+					"en": "It wraps itself around its prey and paralyzes it with electricity from the round spots on its sides. Then it chomps.",
+					"ja": "相手に 巻きつき まるい はん点から 電気を 流して しびれたところを まるかじりする。",
+					"es-419": "Se enrolla alrededor de su presa, la paraliza con la electricidad de sus marcas circulares y le asesta mordiscos."
+				},
+				"omegaruby": {
+					"ja-hrkt": "あいてに まきつき まるい はんてんから でんきを ながして しびれたところを まるかじりする。",
+					"ko": "상대를 휘감고 동그란 반점에서 전기를 흘려보내 마비시킨 뒤 통째로 문다.",
+					"fr": "Ses taches émettent de l’électricité quand il s’enroule autour de ses proies pour les paralyser avant de les dévorer.",
+					"de": "Schlingt sich um Gegner, lähmt sie über die rund gemaserten Flächen an seinem Körper mit Strom und beißt beherzt zu.",
+					"es": "Se enrolla alrededor de su presa, la paraliza con la electricidad de sus marcas circulares y le asesta mordiscos.",
+					"it": "Si avvinghia alla preda e la paralizza rilasciando elettricità dalle macchie tonde, poi la ingoia intera.",
+					"en": "It wraps itself around its prey and paralyzes it with electricity from the round spots on its sides. Then it chomps.",
+					"ja": "相手に 巻きつき まるい はん点から 電気を 流して しびれたところを まるかじりする。",
+					"es-419": "Se enrolla alrededor de su presa, la paraliza con la electricidad de sus marcas circulares y le asesta mordiscos."
+				},
+				"alphasapphire-national": {
+					"ja-hrkt": "しょくよく おうせいな ポケモン。 えものを みつけると おそいかかり でんきで しびれさせてから たべる。",
+					"ko": "식욕이 왕성한 포켓몬이다. 먹이를 발견하면 덮쳐서 전기로 마비시킨 후 먹는다.",
+					"fr": "Un Pokémon doté d’un gros appétit. Il paralyse ses proies avec des décharges électriques avant de les manger.",
+					"de": "Hat es seine Beute erspäht, lähmt es sie mit Elektrizität und verspeist sie anschließend.",
+					"es": "Pokémon de apetito voraz. En cuanto encuentra una presa, la paraliza con electricidad y la engulle.",
+					"it": "Pokémon dal grande appetito. Quando attacca, immobilizza il nemico paralizzandolo con l’elettricità.",
+					"en": "These Pokémon have a big appetite. When they spot their prey, they attack it and paralyze it with electricity.",
+					"ja": "食欲 旺盛な ポケモン。 獲物を 見つけると 襲いかかり 電気で しびれさせてから 食べる。",
+					"es-419": "Pokémon de apetito voraz. En cuanto encuentra una presa, la paraliza con electricidad y la engulle."
+				},
+				"alphasapphire": {
+					"ja-hrkt": "しょくよく おうせいな ポケモン。 えものを みつけると おそいかかり でんきで しびれさせてから たべる。",
+					"ko": "식욕이 왕성한 포켓몬이다. 먹이를 발견하면 덮쳐서 전기로 마비시킨 후 먹는다.",
+					"fr": "Un Pokémon doté d’un gros appétit. Il paralyse ses proies avec des décharges électriques avant de les manger.",
+					"de": "Hat es seine Beute erspäht, lähmt es sie mit Elektrizität und verspeist sie anschließend.",
+					"es": "Pokémon de apetito voraz. En cuanto encuentra una presa, la paraliza con electricidad y la engulle.",
+					"it": "Pokémon dal grande appetito. Quando attacca, immobilizza il nemico paralizzandolo con l’elettricità.",
+					"en": "These Pokémon have a big appetite. When they spot their prey, they attack it and paralyze it with electricity.",
+					"ja": "食欲 旺盛な ポケモン。 獲物を 見つけると 襲いかかり 電気で しびれさせてから 食べる。",
+					"es-419": "Pokémon de apetito voraz. En cuanto encuentra una presa, la paraliza con electricidad y la engulle."
+				}
+			}
+		},
+		{
+			"profileKey": "sun-moon",
+			"label": "Sun / Moon",
+			"appGameKeys": [
+				"sun-alola",
+				"sun-melemele",
+				"sun-akala",
+				"sun-ulaula",
+				"sun-poni",
+				"moon-alola",
+				"moon-melemele",
+				"moon-akala",
+				"moon-ulaula",
+				"moon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Eelektrik",
+				"localizedNames": {
+					"ja-hrkt": "シビビール",
+					"ja-roma": "Shibibeel",
+					"ko": "저리릴",
+					"zh-hant": "麻麻鰻",
+					"fr": "Lampéroie",
+					"de": "Zapplalek",
+					"es": "Eelektrik",
+					"it": "Eelektrik",
+					"ja": "シビビール",
+					"zh-hans": "麻麻鳗",
+					"es-419": "Eelektrik"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric"
+				],
+				"baseStats": {
+					"hp": 65,
+					"atk": 85,
+					"def": 70,
+					"spa": 75,
+					"spd": 70,
+					"spe": 40
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Levitate"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Indeterminate"
+				],
+				"expGroup": "Slow",
+				"hatchCounter": 20,
+				"height": "1.2 m",
+				"weight": "22.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 142,
+				"habitat": "",
+				"shape": "Fish",
+				"color": "Blue",
+				"genus": "EleFish Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "でんきうおポケモン",
+					"ko": "전기물고기포켓몬",
+					"zh-hant": "電魚寶可夢",
+					"fr": "Pokémon Électrophore",
+					"de": "Stromfisch",
+					"es": "Pokémon Electropez",
+					"it": "Pokémon Elettropesce",
+					"ja": "でんきうおポケモン",
+					"zh-hans": "电鱼宝可梦",
+					"es-419": "Pokémon Electropez"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 603
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 109
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 178
+					},
+					{
+						"pokedex": "paldea",
+						"number": 342
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 176
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 135
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 143
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 602,
+								"natiId": 602,
+								"name": "Tynamo"
+							},
+							{
+								"id": 603,
+								"natiId": 603,
+								"name": "Eelektrik",
+								"method": "Level",
+								"value": 39
+							},
+							{
+								"id": 604,
+								"natiId": 604,
+								"name": "Eelektross",
+								"method": "Use item",
+								"value": "Thunder Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Crunch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Crunch",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Headbutt",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Thunder Wave",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Spark",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Charge Beam",
+							"level": 1,
+							"order": 5
+						},
+						{
+							"name": "Bind",
+							"level": 9,
+							"order": null
+						},
+						{
+							"name": "Acid",
+							"level": 19,
+							"order": null
+						},
+						{
+							"name": "Discharge",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": 44,
+							"order": null
+						},
+						{
+							"name": "Acid Spray",
+							"level": 49,
+							"order": null
+						},
+						{
+							"name": "Coil",
+							"level": 54,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": 59,
+							"order": null
+						},
+						{
+							"name": "Gastro Acid",
+							"level": 64,
+							"order": null
+						},
+						{
+							"name": "Zap Cannon",
+							"level": 69,
+							"order": null
+						},
+						{
+							"name": "Thrash",
+							"level": 74,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Acrobatics",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Charge Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash Cannon",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "U Turn",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Volt Switch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/603",
+						"fetchedAt": "2026-11-03T05:53:43.713Z",
+						"hash": "2f75aa758d1d9999b0668dcee5abab41cf9d5ec3be24f0b20e8e65d9dd3dcb1c"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/306/",
+						"fetchedAt": "2026-11-03T05:53:43.721Z",
+						"hash": "fcb2f7b1bd863f5bfae4da4a22d04ff87eb9b5f6e27b68e256854852fb66f214"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/603/",
+						"fetchedAt": "2026-11-03T05:53:43.748Z",
+						"hash": "1305a8d5ef9e6fd4427d47250ac61940cd57e4f664198ce3812247d7f9c311a5"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/603/encounters",
+						"fetchedAt": "2026-11-03T05:53:43.799Z",
+						"hash": "f918959912d330ef8ee22794c9efba19d4bd9ee526633b90a4e68053e65b53df"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/603/",
+						"fetchedAt": "2026-11-03T05:53:43.851Z",
+						"hash": "72e0edca9d25c631a3ba370896c785bfd2b7febb7e830c65b96a8f6ef8cc78e7"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sun-alola": "",
+				"sun-melemele": "",
+				"sun-akala": "",
+				"sun-ulaula": "",
+				"sun-poni": "",
+				"moon-alola": "",
+				"moon-melemele": "",
+				"moon-akala": "",
+				"moon-ulaula": "",
+				"moon-poni": ""
+			},
+			"localizedFlavorByGame": {
+				"sun-alola": {},
+				"sun-melemele": {},
+				"sun-akala": {},
+				"sun-ulaula": {},
+				"sun-poni": {},
+				"moon-alola": {},
+				"moon-melemele": {},
+				"moon-akala": {},
+				"moon-ulaula": {},
+				"moon-poni": {}
+			}
+		},
+		{
+			"profileKey": "ultra-sun-ultra-moon",
+			"label": "Ultra Sun / Ultra Moon",
+			"appGameKeys": [
+				"ultrasun-alola",
+				"ultrasun-melemele",
+				"ultrasun-akala",
+				"ultrasun-ulaula",
+				"ultrasun-poni",
+				"ultramoon-alola",
+				"ultramoon-melemele",
+				"ultramoon-akala",
+				"ultramoon-ulaula",
+				"ultramoon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Eelektrik",
+				"localizedNames": {
+					"ja-hrkt": "シビビール",
+					"ja-roma": "Shibibeel",
+					"ko": "저리릴",
+					"zh-hant": "麻麻鰻",
+					"fr": "Lampéroie",
+					"de": "Zapplalek",
+					"es": "Eelektrik",
+					"it": "Eelektrik",
+					"ja": "シビビール",
+					"zh-hans": "麻麻鳗",
+					"es-419": "Eelektrik"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric"
+				],
+				"baseStats": {
+					"hp": 65,
+					"atk": 85,
+					"def": 70,
+					"spa": 75,
+					"spd": 70,
+					"spe": 40
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Levitate"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Indeterminate"
+				],
+				"expGroup": "Slow",
+				"hatchCounter": 20,
+				"height": "1.2 m",
+				"weight": "22.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 142,
+				"habitat": "",
+				"shape": "Fish",
+				"color": "Blue",
+				"genus": "EleFish Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "でんきうおポケモン",
+					"ko": "전기물고기포켓몬",
+					"zh-hant": "電魚寶可夢",
+					"fr": "Pokémon Électrophore",
+					"de": "Stromfisch",
+					"es": "Pokémon Electropez",
+					"it": "Pokémon Elettropesce",
+					"ja": "でんきうおポケモン",
+					"zh-hans": "电鱼宝可梦",
+					"es-419": "Pokémon Electropez"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 603
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 109
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 178
+					},
+					{
+						"pokedex": "paldea",
+						"number": 342
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 176
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 135
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 143
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 602,
+								"natiId": 602,
+								"name": "Tynamo"
+							},
+							{
+								"id": 603,
+								"natiId": 603,
+								"name": "Eelektrik",
+								"method": "Level",
+								"value": 39
+							},
+							{
+								"id": 604,
+								"natiId": 604,
+								"name": "Eelektross",
+								"method": "Use item",
+								"value": "Thunder Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Crunch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Crunch",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Headbutt",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Thunder Wave",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Spark",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Charge Beam",
+							"level": 1,
+							"order": 5
+						},
+						{
+							"name": "Bind",
+							"level": 9,
+							"order": null
+						},
+						{
+							"name": "Acid",
+							"level": 19,
+							"order": null
+						},
+						{
+							"name": "Discharge",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": 44,
+							"order": null
+						},
+						{
+							"name": "Acid Spray",
+							"level": 49,
+							"order": null
+						},
+						{
+							"name": "Coil",
+							"level": 54,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": 59,
+							"order": null
+						},
+						{
+							"name": "Gastro Acid",
+							"level": 64,
+							"order": null
+						},
+						{
+							"name": "Zap Cannon",
+							"level": 69,
+							"order": null
+						},
+						{
+							"name": "Thrash",
+							"level": 74,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Aqua Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bounce",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Gastro Acid",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Drain",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Knock Off",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Magnet Rise",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shock Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Signal Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Super Fang",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Throat Chop",
+							"level": null,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Acrobatics",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Charge Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash Cannon",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "U Turn",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Volt Switch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/603",
+						"fetchedAt": "2026-11-03T05:53:43.713Z",
+						"hash": "2f75aa758d1d9999b0668dcee5abab41cf9d5ec3be24f0b20e8e65d9dd3dcb1c"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/306/",
+						"fetchedAt": "2026-11-03T05:53:43.721Z",
+						"hash": "fcb2f7b1bd863f5bfae4da4a22d04ff87eb9b5f6e27b68e256854852fb66f214"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/603/",
+						"fetchedAt": "2026-11-03T05:53:43.748Z",
+						"hash": "1305a8d5ef9e6fd4427d47250ac61940cd57e4f664198ce3812247d7f9c311a5"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/603/encounters",
+						"fetchedAt": "2026-11-03T05:53:43.799Z",
+						"hash": "f918959912d330ef8ee22794c9efba19d4bd9ee526633b90a4e68053e65b53df"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/603/",
+						"fetchedAt": "2026-11-03T05:53:43.851Z",
+						"hash": "72e0edca9d25c631a3ba370896c785bfd2b7febb7e830c65b96a8f6ef8cc78e7"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"ultrasun-alola": "",
+				"ultrasun-melemele": "",
+				"ultrasun-akala": "",
+				"ultrasun-ulaula": "",
+				"ultrasun-poni": "",
+				"ultramoon-alola": "",
+				"ultramoon-melemele": "",
+				"ultramoon-akala": "",
+				"ultramoon-ulaula": "",
+				"ultramoon-poni": ""
+			},
+			"localizedFlavorByGame": {
+				"ultrasun-alola": {},
+				"ultrasun-melemele": {},
+				"ultrasun-akala": {},
+				"ultrasun-ulaula": {},
+				"ultrasun-poni": {},
+				"ultramoon-alola": {},
+				"ultramoon-melemele": {},
+				"ultramoon-akala": {},
+				"ultramoon-ulaula": {},
+				"ultramoon-poni": {}
+			}
+		},
+		{
+			"profileKey": "lets-go-pikachu-lets-go-eevee",
+			"label": "Let's Go Pikachu / Eevee",
+			"appGameKeys": [
+				"letsgopikachu",
+				"letsgoeevee"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Eelektrik",
+				"localizedNames": {
+					"ja-hrkt": "シビビール",
+					"ja-roma": "Shibibeel",
+					"ko": "저리릴",
+					"zh-hant": "麻麻鰻",
+					"fr": "Lampéroie",
+					"de": "Zapplalek",
+					"es": "Eelektrik",
+					"it": "Eelektrik",
+					"ja": "シビビール",
+					"zh-hans": "麻麻鳗",
+					"es-419": "Eelektrik"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric"
+				],
+				"baseStats": {
+					"hp": 65,
+					"atk": 85,
+					"def": 70,
+					"spa": 75,
+					"spd": 70,
+					"spe": 40
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Levitate"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Indeterminate"
+				],
+				"expGroup": "Slow",
+				"hatchCounter": 20,
+				"height": "1.2 m",
+				"weight": "22.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 142,
+				"habitat": "",
+				"shape": "Fish",
+				"color": "Blue",
+				"genus": "EleFish Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "でんきうおポケモン",
+					"ko": "전기물고기포켓몬",
+					"zh-hant": "電魚寶可夢",
+					"fr": "Pokémon Électrophore",
+					"de": "Stromfisch",
+					"es": "Pokémon Electropez",
+					"it": "Pokémon Elettropesce",
+					"ja": "でんきうおポケモン",
+					"zh-hans": "电鱼宝可梦",
+					"es-419": "Pokémon Electropez"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 603
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 109
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 178
+					},
+					{
+						"pokedex": "paldea",
+						"number": 342
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 176
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 135
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 143
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 602,
+								"natiId": 602,
+								"name": "Tynamo"
+							},
+							{
+								"id": 603,
+								"natiId": 603,
+								"name": "Eelektrik",
+								"method": "Level",
+								"value": 39
+							},
+							{
+								"id": 604,
+								"natiId": 604,
+								"name": "Eelektross",
+								"method": "Use item",
+								"value": "Thunder Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/603",
+						"fetchedAt": "2026-11-03T05:53:43.713Z",
+						"hash": "2f75aa758d1d9999b0668dcee5abab41cf9d5ec3be24f0b20e8e65d9dd3dcb1c"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/306/",
+						"fetchedAt": "2026-11-03T05:53:43.721Z",
+						"hash": "fcb2f7b1bd863f5bfae4da4a22d04ff87eb9b5f6e27b68e256854852fb66f214"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/603/",
+						"fetchedAt": "2026-11-03T05:53:43.748Z",
+						"hash": "1305a8d5ef9e6fd4427d47250ac61940cd57e4f664198ce3812247d7f9c311a5"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/603/encounters",
+						"fetchedAt": "2026-11-03T05:53:43.799Z",
+						"hash": "f918959912d330ef8ee22794c9efba19d4bd9ee526633b90a4e68053e65b53df"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/603/",
+						"fetchedAt": "2026-11-03T05:53:43.851Z",
+						"hash": "72e0edca9d25c631a3ba370896c785bfd2b7febb7e830c65b96a8f6ef8cc78e7"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"letsgopikachu": "",
+				"letsgoeevee": ""
+			},
+			"localizedFlavorByGame": {
+				"letsgopikachu": {},
+				"letsgoeevee": {}
+			}
+		},
+		{
+			"profileKey": "sword-shield",
+			"label": "Sword / Shield",
+			"appGameKeys": [
+				"sword",
+				"shield"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Eelektrik",
+				"localizedNames": {
+					"ja-hrkt": "シビビール",
+					"ja-roma": "Shibibeel",
+					"ko": "저리릴",
+					"zh-hant": "麻麻鰻",
+					"fr": "Lampéroie",
+					"de": "Zapplalek",
+					"es": "Eelektrik",
+					"it": "Eelektrik",
+					"ja": "シビビール",
+					"zh-hans": "麻麻鳗",
+					"es-419": "Eelektrik"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric"
+				],
+				"baseStats": {
+					"hp": 65,
+					"atk": 85,
+					"def": 70,
+					"spa": 75,
+					"spd": 70,
+					"spe": 40
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Levitate"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Indeterminate"
+				],
+				"expGroup": "Slow",
+				"hatchCounter": 20,
+				"height": "1.2 m",
+				"weight": "22.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 142,
+				"habitat": "",
+				"shape": "Fish",
+				"color": "Blue",
+				"genus": "EleFish Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "でんきうおポケモン",
+					"ko": "전기물고기포켓몬",
+					"zh-hant": "電魚寶可夢",
+					"fr": "Pokémon Électrophore",
+					"de": "Stromfisch",
+					"es": "Pokémon Electropez",
+					"it": "Pokémon Elettropesce",
+					"ja": "でんきうおポケモン",
+					"zh-hans": "电鱼宝可梦",
+					"es-419": "Pokémon Electropez"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 603
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 109
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 178
+					},
+					{
+						"pokedex": "paldea",
+						"number": 342
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 176
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 135
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 143
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 602,
+								"natiId": 602,
+								"name": "Tynamo"
+							},
+							{
+								"id": 603,
+								"natiId": 603,
+								"name": "Eelektrik",
+								"method": "Level",
+								"value": 39
+							},
+							{
+								"id": 604,
+								"natiId": 604,
+								"name": "Eelektross",
+								"method": "Use item",
+								"value": "Thunder Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/603",
+						"fetchedAt": "2026-11-03T05:53:43.713Z",
+						"hash": "2f75aa758d1d9999b0668dcee5abab41cf9d5ec3be24f0b20e8e65d9dd3dcb1c"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/306/",
+						"fetchedAt": "2026-11-03T05:53:43.721Z",
+						"hash": "fcb2f7b1bd863f5bfae4da4a22d04ff87eb9b5f6e27b68e256854852fb66f214"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/603/",
+						"fetchedAt": "2026-11-03T05:53:43.748Z",
+						"hash": "1305a8d5ef9e6fd4427d47250ac61940cd57e4f664198ce3812247d7f9c311a5"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/603/encounters",
+						"fetchedAt": "2026-11-03T05:53:43.799Z",
+						"hash": "f918959912d330ef8ee22794c9efba19d4bd9ee526633b90a4e68053e65b53df"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/603/",
+						"fetchedAt": "2026-11-03T05:53:43.851Z",
+						"hash": "72e0edca9d25c631a3ba370896c785bfd2b7febb7e830c65b96a8f6ef8cc78e7"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sword": "",
+				"shield": ""
+			},
+			"localizedFlavorByGame": {
+				"sword": {},
+				"shield": {}
+			}
+		},
+		{
+			"profileKey": "the-isle-of-armor",
+			"label": "The Isle of Armor",
+			"appGameKeys": [
+				"swordioa",
+				"shieldioa"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Eelektrik",
+				"localizedNames": {
+					"ja-hrkt": "シビビール",
+					"ja-roma": "Shibibeel",
+					"ko": "저리릴",
+					"zh-hant": "麻麻鰻",
+					"fr": "Lampéroie",
+					"de": "Zapplalek",
+					"es": "Eelektrik",
+					"it": "Eelektrik",
+					"ja": "シビビール",
+					"zh-hans": "麻麻鳗",
+					"es-419": "Eelektrik"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric"
+				],
+				"baseStats": {
+					"hp": 65,
+					"atk": 85,
+					"def": 70,
+					"spa": 75,
+					"spd": 70,
+					"spe": 40
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Levitate"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Indeterminate"
+				],
+				"expGroup": "Slow",
+				"hatchCounter": 20,
+				"height": "1.2 m",
+				"weight": "22.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 142,
+				"habitat": "",
+				"shape": "Fish",
+				"color": "Blue",
+				"genus": "EleFish Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "でんきうおポケモン",
+					"ko": "전기물고기포켓몬",
+					"zh-hant": "電魚寶可夢",
+					"fr": "Pokémon Électrophore",
+					"de": "Stromfisch",
+					"es": "Pokémon Electropez",
+					"it": "Pokémon Elettropesce",
+					"ja": "でんきうおポケモン",
+					"zh-hans": "电鱼宝可梦",
+					"es-419": "Pokémon Electropez"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 603
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 109
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 178
+					},
+					{
+						"pokedex": "paldea",
+						"number": 342
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 176
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 135
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 143
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 602,
+								"natiId": 602,
+								"name": "Tynamo"
+							},
+							{
+								"id": 603,
+								"natiId": 603,
+								"name": "Eelektrik",
+								"method": "Level",
+								"value": 39
+							},
+							{
+								"id": 604,
+								"natiId": 604,
+								"name": "Eelektross",
+								"method": "Use item",
+								"value": "Thunder Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/603",
+						"fetchedAt": "2026-11-03T05:53:43.713Z",
+						"hash": "2f75aa758d1d9999b0668dcee5abab41cf9d5ec3be24f0b20e8e65d9dd3dcb1c"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/306/",
+						"fetchedAt": "2026-11-03T05:53:43.721Z",
+						"hash": "fcb2f7b1bd863f5bfae4da4a22d04ff87eb9b5f6e27b68e256854852fb66f214"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/603/",
+						"fetchedAt": "2026-11-03T05:53:43.748Z",
+						"hash": "1305a8d5ef9e6fd4427d47250ac61940cd57e4f664198ce3812247d7f9c311a5"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/603/encounters",
+						"fetchedAt": "2026-11-03T05:53:43.799Z",
+						"hash": "f918959912d330ef8ee22794c9efba19d4bd9ee526633b90a4e68053e65b53df"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/603/",
+						"fetchedAt": "2026-11-03T05:53:43.851Z",
+						"hash": "72e0edca9d25c631a3ba370896c785bfd2b7febb7e830c65b96a8f6ef8cc78e7"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordioa": "",
+				"shieldioa": ""
+			},
+			"localizedFlavorByGame": {
+				"swordioa": {},
+				"shieldioa": {}
+			}
+		},
+		{
+			"profileKey": "the-crown-tundra",
+			"label": "The Crown Tundra",
+			"appGameKeys": [
+				"swordct",
+				"shieldct"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Eelektrik",
+				"localizedNames": {
+					"ja-hrkt": "シビビール",
+					"ja-roma": "Shibibeel",
+					"ko": "저리릴",
+					"zh-hant": "麻麻鰻",
+					"fr": "Lampéroie",
+					"de": "Zapplalek",
+					"es": "Eelektrik",
+					"it": "Eelektrik",
+					"ja": "シビビール",
+					"zh-hans": "麻麻鳗",
+					"es-419": "Eelektrik"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric"
+				],
+				"baseStats": {
+					"hp": 65,
+					"atk": 85,
+					"def": 70,
+					"spa": 75,
+					"spd": 70,
+					"spe": 40
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Levitate"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Indeterminate"
+				],
+				"expGroup": "Slow",
+				"hatchCounter": 20,
+				"height": "1.2 m",
+				"weight": "22.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 142,
+				"habitat": "",
+				"shape": "Fish",
+				"color": "Blue",
+				"genus": "EleFish Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "でんきうおポケモン",
+					"ko": "전기물고기포켓몬",
+					"zh-hant": "電魚寶可夢",
+					"fr": "Pokémon Électrophore",
+					"de": "Stromfisch",
+					"es": "Pokémon Electropez",
+					"it": "Pokémon Elettropesce",
+					"ja": "でんきうおポケモン",
+					"zh-hans": "电鱼宝可梦",
+					"es-419": "Pokémon Electropez"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 603
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 109
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 178
+					},
+					{
+						"pokedex": "paldea",
+						"number": 342
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 176
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 135
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 143
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 602,
+								"natiId": 602,
+								"name": "Tynamo"
+							},
+							{
+								"id": 603,
+								"natiId": 603,
+								"name": "Eelektrik",
+								"method": "Level",
+								"value": 39
+							},
+							{
+								"id": 604,
+								"natiId": 604,
+								"name": "Eelektross",
+								"method": "Use item",
+								"value": "Thunder Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/603",
+						"fetchedAt": "2026-11-03T05:53:43.713Z",
+						"hash": "2f75aa758d1d9999b0668dcee5abab41cf9d5ec3be24f0b20e8e65d9dd3dcb1c"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/306/",
+						"fetchedAt": "2026-11-03T05:53:43.721Z",
+						"hash": "fcb2f7b1bd863f5bfae4da4a22d04ff87eb9b5f6e27b68e256854852fb66f214"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/603/",
+						"fetchedAt": "2026-11-03T05:53:43.748Z",
+						"hash": "1305a8d5ef9e6fd4427d47250ac61940cd57e4f664198ce3812247d7f9c311a5"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/603/encounters",
+						"fetchedAt": "2026-11-03T05:53:43.799Z",
+						"hash": "f918959912d330ef8ee22794c9efba19d4bd9ee526633b90a4e68053e65b53df"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/603/",
+						"fetchedAt": "2026-11-03T05:53:43.851Z",
+						"hash": "72e0edca9d25c631a3ba370896c785bfd2b7febb7e830c65b96a8f6ef8cc78e7"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordct": "",
+				"shieldct": ""
+			},
+			"localizedFlavorByGame": {
+				"swordct": {},
+				"shieldct": {}
+			}
+		},
+		{
+			"profileKey": "brilliant-diamond-shining-pearl",
+			"label": "Brilliant Diamond / Shining Pearl",
+			"appGameKeys": [
+				"brilliantdiamond-national",
+				"brilliantdiamond",
+				"shiningpearl-national",
+				"shiningpearl"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Eelektrik",
+				"localizedNames": {
+					"ja-hrkt": "シビビール",
+					"ja-roma": "Shibibeel",
+					"ko": "저리릴",
+					"zh-hant": "麻麻鰻",
+					"fr": "Lampéroie",
+					"de": "Zapplalek",
+					"es": "Eelektrik",
+					"it": "Eelektrik",
+					"ja": "シビビール",
+					"zh-hans": "麻麻鳗",
+					"es-419": "Eelektrik"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric"
+				],
+				"baseStats": {
+					"hp": 65,
+					"atk": 85,
+					"def": 70,
+					"spa": 75,
+					"spd": 70,
+					"spe": 40
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Levitate"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Indeterminate"
+				],
+				"expGroup": "Slow",
+				"hatchCounter": 20,
+				"height": "1.2 m",
+				"weight": "22.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 142,
+				"habitat": "",
+				"shape": "Fish",
+				"color": "Blue",
+				"genus": "EleFish Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "でんきうおポケモン",
+					"ko": "전기물고기포켓몬",
+					"zh-hant": "電魚寶可夢",
+					"fr": "Pokémon Électrophore",
+					"de": "Stromfisch",
+					"es": "Pokémon Electropez",
+					"it": "Pokémon Elettropesce",
+					"ja": "でんきうおポケモン",
+					"zh-hans": "电鱼宝可梦",
+					"es-419": "Pokémon Electropez"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 603
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 109
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 178
+					},
+					{
+						"pokedex": "paldea",
+						"number": 342
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 176
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 135
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 143
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 602,
+								"natiId": 602,
+								"name": "Tynamo"
+							},
+							{
+								"id": 603,
+								"natiId": 603,
+								"name": "Eelektrik",
+								"method": "Level",
+								"value": 39
+							},
+							{
+								"id": 604,
+								"natiId": 604,
+								"name": "Eelektross",
+								"method": "Use item",
+								"value": "Thunder Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/603",
+						"fetchedAt": "2026-11-03T05:53:43.713Z",
+						"hash": "2f75aa758d1d9999b0668dcee5abab41cf9d5ec3be24f0b20e8e65d9dd3dcb1c"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/306/",
+						"fetchedAt": "2026-11-03T05:53:43.721Z",
+						"hash": "fcb2f7b1bd863f5bfae4da4a22d04ff87eb9b5f6e27b68e256854852fb66f214"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/603/",
+						"fetchedAt": "2026-11-03T05:53:43.748Z",
+						"hash": "1305a8d5ef9e6fd4427d47250ac61940cd57e4f664198ce3812247d7f9c311a5"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/603/encounters",
+						"fetchedAt": "2026-11-03T05:53:43.799Z",
+						"hash": "f918959912d330ef8ee22794c9efba19d4bd9ee526633b90a4e68053e65b53df"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/603/",
+						"fetchedAt": "2026-11-03T05:53:43.851Z",
+						"hash": "72e0edca9d25c631a3ba370896c785bfd2b7febb7e830c65b96a8f6ef8cc78e7"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"brilliantdiamond-national": "",
+				"brilliantdiamond": "",
+				"shiningpearl-national": "",
+				"shiningpearl": ""
+			},
+			"localizedFlavorByGame": {
+				"brilliantdiamond-national": {},
+				"brilliantdiamond": {},
+				"shiningpearl-national": {},
+				"shiningpearl": {}
+			}
+		},
+		{
+			"profileKey": "legends-arceus",
+			"label": "Legends: Arceus",
+			"appGameKeys": [
+				"legendsarceus"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Eelektrik",
+				"localizedNames": {
+					"ja-hrkt": "シビビール",
+					"ja-roma": "Shibibeel",
+					"ko": "저리릴",
+					"zh-hant": "麻麻鰻",
+					"fr": "Lampéroie",
+					"de": "Zapplalek",
+					"es": "Eelektrik",
+					"it": "Eelektrik",
+					"ja": "シビビール",
+					"zh-hans": "麻麻鳗",
+					"es-419": "Eelektrik"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric"
+				],
+				"baseStats": {
+					"hp": 65,
+					"atk": 85,
+					"def": 70,
+					"spa": 75,
+					"spd": 70,
+					"spe": 40
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Levitate"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Indeterminate"
+				],
+				"expGroup": "Slow",
+				"hatchCounter": 20,
+				"height": "1.2 m",
+				"weight": "22.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 142,
+				"habitat": "",
+				"shape": "Fish",
+				"color": "Blue",
+				"genus": "EleFish Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "でんきうおポケモン",
+					"ko": "전기물고기포켓몬",
+					"zh-hant": "電魚寶可夢",
+					"fr": "Pokémon Électrophore",
+					"de": "Stromfisch",
+					"es": "Pokémon Electropez",
+					"it": "Pokémon Elettropesce",
+					"ja": "でんきうおポケモン",
+					"zh-hans": "电鱼宝可梦",
+					"es-419": "Pokémon Electropez"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 603
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 109
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 178
+					},
+					{
+						"pokedex": "paldea",
+						"number": 342
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 176
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 135
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 143
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 602,
+								"natiId": 602,
+								"name": "Tynamo"
+							},
+							{
+								"id": 603,
+								"natiId": 603,
+								"name": "Eelektrik",
+								"method": "Level",
+								"value": 39
+							},
+							{
+								"id": 604,
+								"natiId": 604,
+								"name": "Eelektross",
+								"method": "Use item",
+								"value": "Thunder Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/603",
+						"fetchedAt": "2026-11-03T05:53:43.713Z",
+						"hash": "2f75aa758d1d9999b0668dcee5abab41cf9d5ec3be24f0b20e8e65d9dd3dcb1c"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/306/",
+						"fetchedAt": "2026-11-03T05:53:43.721Z",
+						"hash": "fcb2f7b1bd863f5bfae4da4a22d04ff87eb9b5f6e27b68e256854852fb66f214"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/603/",
+						"fetchedAt": "2026-11-03T05:53:43.748Z",
+						"hash": "1305a8d5ef9e6fd4427d47250ac61940cd57e4f664198ce3812247d7f9c311a5"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/603/encounters",
+						"fetchedAt": "2026-11-03T05:53:43.799Z",
+						"hash": "f918959912d330ef8ee22794c9efba19d4bd9ee526633b90a4e68053e65b53df"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/603/",
+						"fetchedAt": "2026-11-03T05:53:43.851Z",
+						"hash": "72e0edca9d25c631a3ba370896c785bfd2b7febb7e830c65b96a8f6ef8cc78e7"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendsarceus": ""
+			},
+			"localizedFlavorByGame": {
+				"legendsarceus": {}
+			}
+		},
+		{
+			"profileKey": "scarlet-violet",
+			"label": "Scarlet / Violet",
+			"appGameKeys": [
+				"scarlet",
+				"violet"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Eelektrik",
+				"localizedNames": {
+					"ja-hrkt": "シビビール",
+					"ja-roma": "Shibibeel",
+					"ko": "저리릴",
+					"zh-hant": "麻麻鰻",
+					"fr": "Lampéroie",
+					"de": "Zapplalek",
+					"es": "Eelektrik",
+					"it": "Eelektrik",
+					"ja": "シビビール",
+					"zh-hans": "麻麻鳗",
+					"es-419": "Eelektrik"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric"
+				],
+				"baseStats": {
+					"hp": 65,
+					"atk": 85,
+					"def": 70,
+					"spa": 75,
+					"spd": 70,
+					"spe": 40
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Levitate"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Indeterminate"
+				],
+				"expGroup": "Slow",
+				"hatchCounter": 20,
+				"height": "1.2 m",
+				"weight": "22.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 142,
+				"habitat": "",
+				"shape": "Fish",
+				"color": "Blue",
+				"genus": "EleFish Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "でんきうおポケモン",
+					"ko": "전기물고기포켓몬",
+					"zh-hant": "電魚寶可夢",
+					"fr": "Pokémon Électrophore",
+					"de": "Stromfisch",
+					"es": "Pokémon Electropez",
+					"it": "Pokémon Elettropesce",
+					"ja": "でんきうおポケモン",
+					"zh-hans": "电鱼宝可梦",
+					"es-419": "Pokémon Electropez"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 603
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 109
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 178
+					},
+					{
+						"pokedex": "paldea",
+						"number": 342
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 176
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 135
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 143
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 602,
+								"natiId": 602,
+								"name": "Tynamo"
+							},
+							{
+								"id": 603,
+								"natiId": 603,
+								"name": "Eelektrik",
+								"method": "Level",
+								"value": 39
+							},
+							{
+								"id": 604,
+								"natiId": 604,
+								"name": "Eelektross",
+								"method": "Use item",
+								"value": "Thunder Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Crunch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Headbutt",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Thunder Wave",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Spark",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Charge Beam",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Bind",
+							"level": 9,
+							"order": null
+						},
+						{
+							"name": "Acid",
+							"level": 19,
+							"order": null
+						},
+						{
+							"name": "Discharge",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": 44,
+							"order": null
+						},
+						{
+							"name": "Acid Spray",
+							"level": 49,
+							"order": null
+						},
+						{
+							"name": "Coil",
+							"level": 54,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": 59,
+							"order": null
+						},
+						{
+							"name": "Gastro Acid",
+							"level": 64,
+							"order": null
+						},
+						{
+							"name": "Zap Cannon",
+							"level": 69,
+							"order": null
+						},
+						{
+							"name": "Thrash",
+							"level": 74,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Acid Spray",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Acrobatics",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Body Slam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Charge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Charge Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Crunch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Eerie Impulse",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Electric Terrain",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Electro Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Electroweb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endure",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash Cannon",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Drain",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Knock Off",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Lunge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Scary Face",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Super Fang",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Take Down",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Tera Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Throat Chop",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Fang",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "U Turn",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Volt Switch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/603",
+						"fetchedAt": "2026-11-03T05:53:43.713Z",
+						"hash": "2f75aa758d1d9999b0668dcee5abab41cf9d5ec3be24f0b20e8e65d9dd3dcb1c"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/306/",
+						"fetchedAt": "2026-11-03T05:53:43.721Z",
+						"hash": "fcb2f7b1bd863f5bfae4da4a22d04ff87eb9b5f6e27b68e256854852fb66f214"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/603/",
+						"fetchedAt": "2026-11-03T05:53:43.748Z",
+						"hash": "1305a8d5ef9e6fd4427d47250ac61940cd57e4f664198ce3812247d7f9c311a5"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/603/encounters",
+						"fetchedAt": "2026-11-03T05:53:43.799Z",
+						"hash": "f918959912d330ef8ee22794c9efba19d4bd9ee526633b90a4e68053e65b53df"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/603/",
+						"fetchedAt": "2026-11-03T05:53:43.851Z",
+						"hash": "72e0edca9d25c631a3ba370896c785bfd2b7febb7e830c65b96a8f6ef8cc78e7"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlet": "",
+				"violet": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlet": {},
+				"violet": {}
+			}
+		},
+		{
+			"profileKey": "the-teal-mask",
+			"label": "The Teal Mask",
+			"appGameKeys": [
+				"scarlettm",
+				"violettm"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Eelektrik",
+				"localizedNames": {
+					"ja-hrkt": "シビビール",
+					"ja-roma": "Shibibeel",
+					"ko": "저리릴",
+					"zh-hant": "麻麻鰻",
+					"fr": "Lampéroie",
+					"de": "Zapplalek",
+					"es": "Eelektrik",
+					"it": "Eelektrik",
+					"ja": "シビビール",
+					"zh-hans": "麻麻鳗",
+					"es-419": "Eelektrik"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric"
+				],
+				"baseStats": {
+					"hp": 65,
+					"atk": 85,
+					"def": 70,
+					"spa": 75,
+					"spd": 70,
+					"spe": 40
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Levitate"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Indeterminate"
+				],
+				"expGroup": "Slow",
+				"hatchCounter": 20,
+				"height": "1.2 m",
+				"weight": "22.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 142,
+				"habitat": "",
+				"shape": "Fish",
+				"color": "Blue",
+				"genus": "EleFish Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "でんきうおポケモン",
+					"ko": "전기물고기포켓몬",
+					"zh-hant": "電魚寶可夢",
+					"fr": "Pokémon Électrophore",
+					"de": "Stromfisch",
+					"es": "Pokémon Electropez",
+					"it": "Pokémon Elettropesce",
+					"ja": "でんきうおポケモン",
+					"zh-hans": "电鱼宝可梦",
+					"es-419": "Pokémon Electropez"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 603
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 109
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 178
+					},
+					{
+						"pokedex": "paldea",
+						"number": 342
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 176
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 135
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 143
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 602,
+								"natiId": 602,
+								"name": "Tynamo"
+							},
+							{
+								"id": 603,
+								"natiId": 603,
+								"name": "Eelektrik",
+								"method": "Level",
+								"value": 39
+							},
+							{
+								"id": 604,
+								"natiId": 604,
+								"name": "Eelektross",
+								"method": "Use item",
+								"value": "Thunder Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/603",
+						"fetchedAt": "2026-11-03T05:53:43.713Z",
+						"hash": "2f75aa758d1d9999b0668dcee5abab41cf9d5ec3be24f0b20e8e65d9dd3dcb1c"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/306/",
+						"fetchedAt": "2026-11-03T05:53:43.721Z",
+						"hash": "fcb2f7b1bd863f5bfae4da4a22d04ff87eb9b5f6e27b68e256854852fb66f214"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/603/",
+						"fetchedAt": "2026-11-03T05:53:43.748Z",
+						"hash": "1305a8d5ef9e6fd4427d47250ac61940cd57e4f664198ce3812247d7f9c311a5"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/603/encounters",
+						"fetchedAt": "2026-11-03T05:53:43.799Z",
+						"hash": "f918959912d330ef8ee22794c9efba19d4bd9ee526633b90a4e68053e65b53df"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/603/",
+						"fetchedAt": "2026-11-03T05:53:43.851Z",
+						"hash": "72e0edca9d25c631a3ba370896c785bfd2b7febb7e830c65b96a8f6ef8cc78e7"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlettm": "",
+				"violettm": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlettm": {},
+				"violettm": {}
+			}
+		},
+		{
+			"profileKey": "the-indigo-disk",
+			"label": "The Indigo Disk",
+			"appGameKeys": [
+				"scarletid",
+				"violetid"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Eelektrik",
+				"localizedNames": {
+					"ja-hrkt": "シビビール",
+					"ja-roma": "Shibibeel",
+					"ko": "저리릴",
+					"zh-hant": "麻麻鰻",
+					"fr": "Lampéroie",
+					"de": "Zapplalek",
+					"es": "Eelektrik",
+					"it": "Eelektrik",
+					"ja": "シビビール",
+					"zh-hans": "麻麻鳗",
+					"es-419": "Eelektrik"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric"
+				],
+				"baseStats": {
+					"hp": 65,
+					"atk": 85,
+					"def": 70,
+					"spa": 75,
+					"spd": 70,
+					"spe": 40
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Levitate"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Indeterminate"
+				],
+				"expGroup": "Slow",
+				"hatchCounter": 20,
+				"height": "1.2 m",
+				"weight": "22.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 142,
+				"habitat": "",
+				"shape": "Fish",
+				"color": "Blue",
+				"genus": "EleFish Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "でんきうおポケモン",
+					"ko": "전기물고기포켓몬",
+					"zh-hant": "電魚寶可夢",
+					"fr": "Pokémon Électrophore",
+					"de": "Stromfisch",
+					"es": "Pokémon Electropez",
+					"it": "Pokémon Elettropesce",
+					"ja": "でんきうおポケモン",
+					"zh-hans": "电鱼宝可梦",
+					"es-419": "Pokémon Electropez"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 603
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 109
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 178
+					},
+					{
+						"pokedex": "paldea",
+						"number": 342
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 176
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 135
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 143
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 602,
+								"natiId": 602,
+								"name": "Tynamo"
+							},
+							{
+								"id": 603,
+								"natiId": 603,
+								"name": "Eelektrik",
+								"method": "Level",
+								"value": 39
+							},
+							{
+								"id": 604,
+								"natiId": 604,
+								"name": "Eelektross",
+								"method": "Use item",
+								"value": "Thunder Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/603",
+						"fetchedAt": "2026-11-03T05:53:43.713Z",
+						"hash": "2f75aa758d1d9999b0668dcee5abab41cf9d5ec3be24f0b20e8e65d9dd3dcb1c"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/306/",
+						"fetchedAt": "2026-11-03T05:53:43.721Z",
+						"hash": "fcb2f7b1bd863f5bfae4da4a22d04ff87eb9b5f6e27b68e256854852fb66f214"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/603/",
+						"fetchedAt": "2026-11-03T05:53:43.748Z",
+						"hash": "1305a8d5ef9e6fd4427d47250ac61940cd57e4f664198ce3812247d7f9c311a5"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/603/encounters",
+						"fetchedAt": "2026-11-03T05:53:43.799Z",
+						"hash": "f918959912d330ef8ee22794c9efba19d4bd9ee526633b90a4e68053e65b53df"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/603/",
+						"fetchedAt": "2026-11-03T05:53:43.851Z",
+						"hash": "72e0edca9d25c631a3ba370896c785bfd2b7febb7e830c65b96a8f6ef8cc78e7"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarletid": "",
+				"violetid": ""
+			},
+			"localizedFlavorByGame": {
+				"scarletid": {},
+				"violetid": {}
+			}
+		},
+		{
+			"profileKey": "legends-za",
+			"label": "Legends: Z-A",
+			"appGameKeys": [
+				"legendsza"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Eelektrik",
+				"localizedNames": {
+					"ja-hrkt": "シビビール",
+					"ja-roma": "Shibibeel",
+					"ko": "저리릴",
+					"zh-hant": "麻麻鰻",
+					"fr": "Lampéroie",
+					"de": "Zapplalek",
+					"es": "Eelektrik",
+					"it": "Eelektrik",
+					"ja": "シビビール",
+					"zh-hans": "麻麻鳗",
+					"es-419": "Eelektrik"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric"
+				],
+				"baseStats": {
+					"hp": 65,
+					"atk": 85,
+					"def": 70,
+					"spa": 75,
+					"spd": 70,
+					"spe": 40
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Levitate",
+					"Levitate (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Levitate"
+				],
+				"eggGroups": [
+					"Amorphous"
+				],
+				"expGroup": "Slow",
+				"hatchCounter": 20,
+				"height": "1.2 m",
+				"weight": "22 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 142,
+				"habitat": "",
+				"shape": "Fish",
+				"color": "Blue",
+				"genus": "EleFish Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "でんきうおポケモン",
+					"ko": "전기물고기포켓몬",
+					"zh-hant": "電魚寶可夢",
+					"fr": "Pokémon Électrophore",
+					"de": "Stromfisch",
+					"es": "Pokémon Electropez",
+					"it": "Pokémon Elettropesce",
+					"ja": "でんきうおポケモン",
+					"zh-hans": "电鱼宝可梦",
+					"es-419": "Pokémon Electropez"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 603
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 109
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 178
+					},
+					{
+						"pokedex": "paldea",
+						"number": 342
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 176
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 135
+					},
+					{
+						"pokedex": "lumiose",
+						"number": 143
+					}
+				],
+				"alphaMove": "U-turn",
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 602,
+								"natiId": 602,
+								"name": "Tynamo"
+							},
+							{
+								"id": 603,
+								"natiId": 603,
+								"name": "Eelektrik",
+								"method": "Level",
+								"value": 39
+							},
+							{
+								"id": 604,
+								"natiId": 604,
+								"name": "Eelektross",
+								"method": "Use item",
+								"value": "Thunder Stone"
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Evolve Tynamo",
+						"notes": "",
+						"games": "Legends: Z-A"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Headbutt",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Thunder Wave",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Spark",
+							"level": 1,
+							"order": 5
+						},
+						{
+							"name": "Take Down",
+							"level": 18,
+							"order": 6
+						},
+						{
+							"name": "Discharge",
+							"level": 29,
+							"order": 7
+						},
+						{
+							"name": "Eerie Impulse",
+							"level": 33,
+							"order": 8
+						},
+						{
+							"name": "Charge",
+							"level": 39,
+							"order": 9
+						},
+						{
+							"name": "Thunderbolt",
+							"level": 44,
+							"order": 10
+						},
+						{
+							"name": "Wild Charge",
+							"level": 46,
+							"order": 11
+						},
+						{
+							"name": "Zap Cannon",
+							"level": 48,
+							"order": 12
+						},
+						{
+							"name": "Super Fang",
+							"level": 50,
+							"order": 13
+						}
+					],
+					"Machine": [
+						{
+							"name": "Headbutt",
+							"machine": "TM001",
+							"order": 1
+						},
+						{
+							"name": "Thunder Wave",
+							"machine": "TM008",
+							"order": 2
+						},
+						{
+							"name": "Light Screen",
+							"machine": "TM016",
+							"order": 3
+						},
+						{
+							"name": "Protect",
+							"machine": "TM017",
+							"order": 4
+						},
+						{
+							"name": "Thunder Fang",
+							"machine": "TM021",
+							"order": 5
+						},
+						{
+							"name": "Crunch",
+							"machine": "TM025",
+							"order": 6
+						},
+						{
+							"name": "Body Slam",
+							"machine": "TM033",
+							"order": 7
+						},
+						{
+							"name": "Endure",
+							"machine": "TM035",
+							"order": 8
+						},
+						{
+							"name": "Discharge",
+							"machine": "TM039",
+							"order": 9
+						},
+						{
+							"name": "Giga Drain",
+							"machine": "TM042",
+							"order": 10
+						},
+						{
+							"name": "Volt Switch",
+							"machine": "TM066",
+							"order": 11
+						},
+						{
+							"name": "Thunderbolt",
+							"machine": "TM067",
+							"order": 12
+						},
+						{
+							"name": "U-turn",
+							"machine": "TM082",
+							"order": 13
+						},
+						{
+							"name": "Flash Cannon",
+							"machine": "TM084",
+							"order": 14
+						},
+						{
+							"name": "Substitute",
+							"machine": "TM085",
+							"order": 15
+						},
+						{
+							"name": "Wild Charge",
+							"machine": "TM086",
+							"order": 16
+						},
+						{
+							"name": "Thunder",
+							"machine": "TM106",
+							"order": 17
+						},
+						{
+							"name": "Facade",
+							"machine": "TM109",
+							"order": 18
+						},
+						{
+							"name": "Acid Spray",
+							"machine": "TM112",
+							"order": 19
+						},
+						{
+							"name": "Charge Beam",
+							"machine": "TM130",
+							"order": 20
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Project Pokemon's Z-A game-data export assigns this form regional Dex #143."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/603",
+						"fetchedAt": "2026-11-03T05:53:43.713Z",
+						"hash": "2f75aa758d1d9999b0668dcee5abab41cf9d5ec3be24f0b20e8e65d9dd3dcb1c"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/306/",
+						"fetchedAt": "2026-11-03T05:53:43.721Z",
+						"hash": "fcb2f7b1bd863f5bfae4da4a22d04ff87eb9b5f6e27b68e256854852fb66f214"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/603/",
+						"fetchedAt": "2026-11-03T05:53:43.748Z",
+						"hash": "1305a8d5ef9e6fd4427d47250ac61940cd57e4f664198ce3812247d7f9c311a5"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/603/encounters",
+						"fetchedAt": "2026-11-03T05:53:43.799Z",
+						"hash": "f918959912d330ef8ee22794c9efba19d4bd9ee526633b90a4e68053e65b53df"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/603/",
+						"fetchedAt": "2026-11-03T05:53:43.851Z",
+						"hash": "72e0edca9d25c631a3ba370896c785bfd2b7febb7e830c65b96a8f6ef8cc78e7"
+					},
+					{
+						"type": "legends-za-personal-data",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/personal.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c00215459c764ba65d879d6503a7337ad80b338171ab4713d1c6f52b4517e36f"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "719eff37d8f2f404d163f81d23b2c921ac323a7b00304e502ca37d69a3375b1d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/French/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "1b658102e791558a1bb317563b7a3aaab8cebc1c7517aa7f5d5c0e708e93d626"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/German/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5f1e419ae3b84ab18cb05b972569e629ff0bff96d928468c52c536b02dc6cf9d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Italian/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "e0bd40a2f4b7678afb82f959b7b1f3503590bd13884daf94bd5813fea832067c"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/JPN/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5c2c9784278c5d13f3ba376e4338cef21923d68faec9b8498175c21180825f24"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Korean/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c83545726b0b0b803295f52448510c15adaab3e6ce248adba23b5ad0d0344216"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/LATAM/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "01d046caf7553d97a3c275465bce97ecedae26a67674a40b5c751a56b3b4d52d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Simp_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "09495dacb0d16eb6e91aa1d67eb1ed682d0682303719811eeb1c6877bb9e7ca2"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Spanish/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "b3fafb97fe85165bd65fdd732ce1e4cee880ffe5035632269787ce859735b358"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Trad_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c446ae3e93760fc4af895427508ed852511201723f8cac84121330747e8c3cd0"
+					},
+					{
+						"type": "legends-za-locations",
+						"url": "https://www.serebii.net/pokedex-sv/eelektrik/",
+						"fetchedAt": "2026-11-04T05:47:08.151Z",
+						"hash": "b0e1c7d7472a61c34a037bf5be343d0c031938f6e247ba4312e7c0c1ce404679"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendsza": "It wraps itself around its prey and paralyzes them with electricity from the round spots on its sides. Then it chomps."
+			},
+			"localizedFlavorByGame": {
+				"legendsza": {
+					"en": "It wraps itself around its prey and paralyzes them with electricity from the round spots on its sides. Then it chomps.",
+					"fr": "Il s’enroule autour de sa proie et utilise le courant émis par les taches rondes de son corps pour la paralyser, avant de la mordre violemment.",
+					"de": "Es umschlingt seine Gegner und lähmt sie, indem es an seinen runden Flecken Strom entlädt. Dann beißt es mit Wucht zu.",
+					"it": "Si avvinghia alla preda e la paralizza rilasciando elettricità dalle macchie tonde, poi la addenta violentemente.",
+					"ja": "相手に 巻きつき まるい はん点から 電気を 流して しびれたところを まるかじりする。",
+					"ko": "상대를 휘감고 동그란 반점에서 전기를 흘려 보내 마비시킨 뒤 통째로 문다.",
+					"es-419": "Se enrolla alrededor de su presa, la paraliza con la electricidad de sus marcas circulares y luego la muerde con fuerza.",
+					"zh-hans": "缠住对手，从圆圆的斑点 放出电流通过对方身体， 使其麻痹后啃食。",
+					"es": "Se enrolla alrededor de su presa, la paraliza con la electricidad de sus marcas circulares y la muerde con fuerza.",
+					"zh-hant": "纏住對手，從圓圓的斑點 放出電流使對手麻痺後， 再加以啃食。"
+				}
+			}
+		},
+		{
+			"profileKey": "mega-dimension",
+			"label": "Mega Dimension",
+			"appGameKeys": [
+				"legendszamd"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Eelektrik",
+				"localizedNames": {
+					"ja-hrkt": "シビビール",
+					"ja-roma": "Shibibeel",
+					"ko": "저리릴",
+					"zh-hant": "麻麻鰻",
+					"fr": "Lampéroie",
+					"de": "Zapplalek",
+					"es": "Eelektrik",
+					"it": "Eelektrik",
+					"ja": "シビビール",
+					"zh-hans": "麻麻鳗",
+					"es-419": "Eelektrik"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric"
+				],
+				"baseStats": {
+					"hp": 65,
+					"atk": 85,
+					"def": 70,
+					"spa": 75,
+					"spd": 70,
+					"spe": 40
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Levitate",
+					"Levitate (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Levitate"
+				],
+				"eggGroups": [
+					"Amorphous"
+				],
+				"expGroup": "Slow",
+				"hatchCounter": 20,
+				"height": "1.2 m",
+				"weight": "22 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 142,
+				"habitat": "",
+				"shape": "Fish",
+				"color": "Blue",
+				"genus": "EleFish Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "でんきうおポケモン",
+					"ko": "전기물고기포켓몬",
+					"zh-hant": "電魚寶可夢",
+					"fr": "Pokémon Électrophore",
+					"de": "Stromfisch",
+					"es": "Pokémon Electropez",
+					"it": "Pokémon Elettropesce",
+					"ja": "でんきうおポケモン",
+					"zh-hans": "电鱼宝可梦",
+					"es-419": "Pokémon Electropez"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 603
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 109
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 178
+					},
+					{
+						"pokedex": "paldea",
+						"number": 342
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 176
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 135
+					},
+					{
+						"pokedex": "lumiose",
+						"number": 143
+					}
+				],
+				"alphaMove": "U-turn",
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 602,
+								"natiId": 602,
+								"name": "Tynamo"
+							},
+							{
+								"id": 603,
+								"natiId": 603,
+								"name": "Eelektrik",
+								"method": "Level",
+								"value": 39
+							},
+							{
+								"id": 604,
+								"natiId": 604,
+								"name": "Eelektross",
+								"method": "Use item",
+								"value": "Thunder Stone"
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Evolve Tynamo",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Hyperspace Lumiose",
+						"notes": "Electric (3 Star), Electric (4 Star)",
+						"games": "Legends: Z-A Mega Dimension"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Headbutt",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Thunder Wave",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Spark",
+							"level": 1,
+							"order": 5
+						},
+						{
+							"name": "Take Down",
+							"level": 18,
+							"order": 6
+						},
+						{
+							"name": "Discharge",
+							"level": 29,
+							"order": 7
+						},
+						{
+							"name": "Eerie Impulse",
+							"level": 33,
+							"order": 8
+						},
+						{
+							"name": "Charge",
+							"level": 39,
+							"order": 9
+						},
+						{
+							"name": "Thunderbolt",
+							"level": 44,
+							"order": 10
+						},
+						{
+							"name": "Wild Charge",
+							"level": 46,
+							"order": 11
+						},
+						{
+							"name": "Zap Cannon",
+							"level": 48,
+							"order": 12
+						},
+						{
+							"name": "Super Fang",
+							"level": 50,
+							"order": 13
+						}
+					],
+					"Machine": [
+						{
+							"name": "Headbutt",
+							"machine": "TM001",
+							"order": 1
+						},
+						{
+							"name": "Thunder Wave",
+							"machine": "TM008",
+							"order": 2
+						},
+						{
+							"name": "Light Screen",
+							"machine": "TM016",
+							"order": 3
+						},
+						{
+							"name": "Protect",
+							"machine": "TM017",
+							"order": 4
+						},
+						{
+							"name": "Thunder Fang",
+							"machine": "TM021",
+							"order": 5
+						},
+						{
+							"name": "Crunch",
+							"machine": "TM025",
+							"order": 6
+						},
+						{
+							"name": "Body Slam",
+							"machine": "TM033",
+							"order": 7
+						},
+						{
+							"name": "Endure",
+							"machine": "TM035",
+							"order": 8
+						},
+						{
+							"name": "Discharge",
+							"machine": "TM039",
+							"order": 9
+						},
+						{
+							"name": "Giga Drain",
+							"machine": "TM042",
+							"order": 10
+						},
+						{
+							"name": "Volt Switch",
+							"machine": "TM066",
+							"order": 11
+						},
+						{
+							"name": "Thunderbolt",
+							"machine": "TM067",
+							"order": 12
+						},
+						{
+							"name": "U-turn",
+							"machine": "TM082",
+							"order": 13
+						},
+						{
+							"name": "Flash Cannon",
+							"machine": "TM084",
+							"order": 14
+						},
+						{
+							"name": "Substitute",
+							"machine": "TM085",
+							"order": 15
+						},
+						{
+							"name": "Wild Charge",
+							"machine": "TM086",
+							"order": 16
+						},
+						{
+							"name": "Thunder",
+							"machine": "TM106",
+							"order": 17
+						},
+						{
+							"name": "Facade",
+							"machine": "TM109",
+							"order": 18
+						},
+						{
+							"name": "Acid Spray",
+							"machine": "TM112",
+							"order": 19
+						},
+						{
+							"name": "Charge Beam",
+							"machine": "TM130",
+							"order": 20
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Project Pokemon's Z-A game-data export assigns this form regional Dex #143."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/603",
+						"fetchedAt": "2026-11-03T05:53:43.713Z",
+						"hash": "2f75aa758d1d9999b0668dcee5abab41cf9d5ec3be24f0b20e8e65d9dd3dcb1c"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/306/",
+						"fetchedAt": "2026-11-03T05:53:43.721Z",
+						"hash": "fcb2f7b1bd863f5bfae4da4a22d04ff87eb9b5f6e27b68e256854852fb66f214"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/603/",
+						"fetchedAt": "2026-11-03T05:53:43.748Z",
+						"hash": "1305a8d5ef9e6fd4427d47250ac61940cd57e4f664198ce3812247d7f9c311a5"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/603/encounters",
+						"fetchedAt": "2026-11-03T05:53:43.799Z",
+						"hash": "f918959912d330ef8ee22794c9efba19d4bd9ee526633b90a4e68053e65b53df"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/603/",
+						"fetchedAt": "2026-11-03T05:53:43.851Z",
+						"hash": "72e0edca9d25c631a3ba370896c785bfd2b7febb7e830c65b96a8f6ef8cc78e7"
+					},
+					{
+						"type": "legends-za-personal-data",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/personal.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c00215459c764ba65d879d6503a7337ad80b338171ab4713d1c6f52b4517e36f"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "719eff37d8f2f404d163f81d23b2c921ac323a7b00304e502ca37d69a3375b1d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/French/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "1b658102e791558a1bb317563b7a3aaab8cebc1c7517aa7f5d5c0e708e93d626"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/German/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5f1e419ae3b84ab18cb05b972569e629ff0bff96d928468c52c536b02dc6cf9d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Italian/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "e0bd40a2f4b7678afb82f959b7b1f3503590bd13884daf94bd5813fea832067c"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/JPN/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5c2c9784278c5d13f3ba376e4338cef21923d68faec9b8498175c21180825f24"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Korean/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c83545726b0b0b803295f52448510c15adaab3e6ce248adba23b5ad0d0344216"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/LATAM/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "01d046caf7553d97a3c275465bce97ecedae26a67674a40b5c751a56b3b4d52d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Simp_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "09495dacb0d16eb6e91aa1d67eb1ed682d0682303719811eeb1c6877bb9e7ca2"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Spanish/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "b3fafb97fe85165bd65fdd732ce1e4cee880ffe5035632269787ce859735b358"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Trad_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c446ae3e93760fc4af895427508ed852511201723f8cac84121330747e8c3cd0"
+					},
+					{
+						"type": "legends-za-locations",
+						"url": "https://www.serebii.net/pokedex-sv/eelektrik/",
+						"fetchedAt": "2026-11-04T05:47:08.151Z",
+						"hash": "b0e1c7d7472a61c34a037bf5be343d0c031938f6e247ba4312e7c0c1ce404679"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendszamd": "It wraps itself around its prey and paralyzes them with electricity from the round spots on its sides. Then it chomps."
+			},
+			"localizedFlavorByGame": {
+				"legendszamd": {
+					"en": "It wraps itself around its prey and paralyzes them with electricity from the round spots on its sides. Then it chomps.",
+					"fr": "Il s’enroule autour de sa proie et utilise le courant émis par les taches rondes de son corps pour la paralyser, avant de la mordre violemment.",
+					"de": "Es umschlingt seine Gegner und lähmt sie, indem es an seinen runden Flecken Strom entlädt. Dann beißt es mit Wucht zu.",
+					"it": "Si avvinghia alla preda e la paralizza rilasciando elettricità dalle macchie tonde, poi la addenta violentemente.",
+					"ja": "相手に 巻きつき まるい はん点から 電気を 流して しびれたところを まるかじりする。",
+					"ko": "상대를 휘감고 동그란 반점에서 전기를 흘려 보내 마비시킨 뒤 통째로 문다.",
+					"es-419": "Se enrolla alrededor de su presa, la paraliza con la electricidad de sus marcas circulares y luego la muerde con fuerza.",
+					"zh-hans": "缠住对手，从圆圆的斑点 放出电流通过对方身体， 使其麻痹后啃食。",
+					"es": "Se enrolla alrededor de su presa, la paraliza con la electricidad de sus marcas circulares y la muerde con fuerza.",
+					"zh-hant": "纏住對手，從圓圓的斑點 放出電流使對手麻痺後， 再加以啃食。"
+				}
+			}
+		}
+	]
+}

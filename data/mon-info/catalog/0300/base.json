@@ -1,0 +1,8464 @@
+{
+	"schemaVersion": 2,
+	"nationalDexId": 300,
+	"speciesName": "Skitty",
+	"formKey": "base",
+	"formName": "Base",
+	"formLabelSource": "form-catalog",
+	"profiles": [
+		{
+			"profileKey": "ruby-sapphire",
+			"label": "Ruby / Sapphire",
+			"appGameKeys": [
+				"ruby-national",
+				"ruby",
+				"sapphire-national",
+				"sapphire"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Skitty",
+				"localizedNames": {
+					"ja-hrkt": "エネコ",
+					"ja-roma": "Eneco",
+					"ko": "에나비",
+					"zh-hant": "向尾喵",
+					"fr": "Skitty",
+					"de": "Eneco",
+					"es": "Skitty",
+					"it": "Skitty",
+					"ja": "エネコ",
+					"zh-hans": "向尾喵",
+					"es-419": "Skitty"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 45,
+					"def": 45,
+					"spa": 35,
+					"spd": 35,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Ground",
+					"Fairy"
+				],
+				"expGroup": "Fast",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "11.0 kg",
+				"genderRatio": "25% male / 75% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 52,
+				"habitat": "Forest",
+				"shape": "Quadruped",
+				"color": "Pink",
+				"genus": "Kitten Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こねこポケモン",
+					"ko": "작은고양이포켓몬",
+					"zh-hant": "小貓寶可夢",
+					"fr": "Pokémon Chaton",
+					"de": "Kätzchen",
+					"es": "Pokémon Gatito",
+					"it": "Pokémon Micio",
+					"ja": "こねこポケモン",
+					"zh-hans": "小猫宝可梦",
+					"es-419": "Pokémon Gatito"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 300
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 61
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 78
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 78
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 63
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 300,
+								"natiId": 300,
+								"name": "Skitty"
+							},
+							{
+								"id": 301,
+								"natiId": 301,
+								"name": "Delcatty",
+								"method": "Use item",
+								"value": "Moon Stone"
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Hoenn Route 116 Area",
+						"notes": "Walk, Lv. 7",
+						"games": "Ruby",
+						"rate": "1%"
+					},
+					{
+						"area": "Hoenn Route 116 Area",
+						"notes": "Walk, Lv. 8",
+						"games": "Ruby",
+						"rate": "1%"
+					},
+					{
+						"area": "Hoenn Route 116 Area",
+						"notes": "Walk, Lv. 7",
+						"games": "Sapphire",
+						"rate": "1%"
+					},
+					{
+						"area": "Hoenn Route 116 Area",
+						"notes": "Walk, Lv. 8",
+						"games": "Sapphire",
+						"rate": "1%"
+					},
+					{
+						"area": "Fortree City Area",
+						"notes": "Npc Trade, Lv. 5-100",
+						"games": "Ruby",
+						"rate": "100%"
+					},
+					{
+						"area": "Fortree City Area",
+						"notes": "Npc Trade, Lv. 5-100",
+						"games": "Sapphire",
+						"rate": "100%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Growl",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Tail Whip",
+							"level": 3,
+							"order": null
+						},
+						{
+							"name": "Attract",
+							"level": 7,
+							"order": null
+						},
+						{
+							"name": "Sing",
+							"level": 13,
+							"order": null
+						},
+						{
+							"name": "Double Slap",
+							"level": 15,
+							"order": null
+						},
+						{
+							"name": "Assist",
+							"level": 19,
+							"order": null
+						},
+						{
+							"name": "Charm",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Feint Attack",
+							"level": 27,
+							"order": null
+						},
+						{
+							"name": "Covet",
+							"level": 31,
+							"order": null
+						},
+						{
+							"name": "Heal Bell",
+							"level": 37,
+							"order": null
+						},
+						{
+							"name": "Double Edge",
+							"level": 39,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Blizzard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Calm Mind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ice Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Safeguard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Secret Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shock Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Water Pulse",
+							"level": null,
+							"order": null
+						}
+					],
+					"Egg": [
+						{
+							"name": "Baton Pass",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fake Tears",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Helping Hand",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Tickle",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Uproar",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wish",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/300",
+						"fetchedAt": "2026-11-03T05:53:25.353Z",
+						"hash": "9ca8a064aa1ed40df93bf181262d9140a5ab8c80934bda7afa32fecd90cde3b7"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/148/",
+						"fetchedAt": "2026-11-03T05:53:25.396Z",
+						"hash": "320ab3df26115b667a161eff6db7a42a18b3c8087c7a3591acdc0dd2c78e6151"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/",
+						"fetchedAt": "2026-11-03T05:53:25.430Z",
+						"hash": "d21506d833304227f110e97014789a69578e8ed6d55b02195ca657f64e95b5a4"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/encounters",
+						"fetchedAt": "2026-11-03T05:53:25.482Z",
+						"hash": "344363094a99f45e7ad2d6ba467672a8102906154e10d88542c1f8137b061d6e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/300/",
+						"fetchedAt": "2026-11-03T05:53:25.534Z",
+						"hash": "58df1f37a680b645008ecbd07e89a024e393dfe771c3b8df0ed8e33958246c61"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"ruby-national": "SKITTY has the habit of becoming fascinated by moving objects and chasing them around. This POKéMON is known to chase after its own tail and become dizzy.",
+				"ruby": "SKITTY has the habit of becoming fascinated by moving objects and chasing them around. This POKéMON is known to chase after its own tail and become dizzy.",
+				"sapphire-national": "SKITTY is known to chase around playfully after its own tail. In the wild, this POKéMON lives in holes in the trees of forests. It is very popular as a pet because of its adorable looks.",
+				"sapphire": "SKITTY is known to chase around playfully after its own tail. In the wild, this POKéMON lives in holes in the trees of forests. It is very popular as a pet because of its adorable looks."
+			},
+			"localizedFlavorByGame": {
+				"ruby-national": {
+					"en": "SKITTY has the habit of becoming fascinated by moving objects and chasing them around. This POKéMON is known to chase after its own tail and become dizzy."
+				},
+				"ruby": {
+					"en": "SKITTY has the habit of becoming fascinated by moving objects and chasing them around. This POKéMON is known to chase after its own tail and become dizzy."
+				},
+				"sapphire-national": {
+					"en": "SKITTY is known to chase around playfully after its own tail. In the wild, this POKéMON lives in holes in the trees of forests. It is very popular as a pet because of its adorable looks."
+				},
+				"sapphire": {
+					"en": "SKITTY is known to chase around playfully after its own tail. In the wild, this POKéMON lives in holes in the trees of forests. It is very popular as a pet because of its adorable looks."
+				}
+			}
+		},
+		{
+			"profileKey": "emerald",
+			"label": "Emerald",
+			"appGameKeys": [
+				"emerald-national",
+				"emerald"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Skitty",
+				"localizedNames": {
+					"ja-hrkt": "エネコ",
+					"ja-roma": "Eneco",
+					"ko": "에나비",
+					"zh-hant": "向尾喵",
+					"fr": "Skitty",
+					"de": "Eneco",
+					"es": "Skitty",
+					"it": "Skitty",
+					"ja": "エネコ",
+					"zh-hans": "向尾喵",
+					"es-419": "Skitty"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 45,
+					"def": 45,
+					"spa": 35,
+					"spd": 35,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Ground",
+					"Fairy"
+				],
+				"expGroup": "Fast",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "11.0 kg",
+				"genderRatio": "25% male / 75% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 52,
+				"habitat": "Forest",
+				"shape": "Quadruped",
+				"color": "Pink",
+				"genus": "Kitten Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こねこポケモン",
+					"ko": "작은고양이포켓몬",
+					"zh-hant": "小貓寶可夢",
+					"fr": "Pokémon Chaton",
+					"de": "Kätzchen",
+					"es": "Pokémon Gatito",
+					"it": "Pokémon Micio",
+					"ja": "こねこポケモン",
+					"zh-hans": "小猫宝可梦",
+					"es-419": "Pokémon Gatito"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 300
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 61
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 78
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 78
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 63
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 300,
+								"natiId": 300,
+								"name": "Skitty"
+							},
+							{
+								"id": 301,
+								"natiId": 301,
+								"name": "Delcatty",
+								"method": "Use item",
+								"value": "Moon Stone"
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Hoenn Route 116 Area",
+						"notes": "Walk, Lv. 7",
+						"games": "Emerald",
+						"rate": "1%"
+					},
+					{
+						"area": "Hoenn Route 116 Area",
+						"notes": "Walk, Lv. 8",
+						"games": "Emerald",
+						"rate": "1%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Growl",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Tail Whip",
+							"level": 3,
+							"order": null
+						},
+						{
+							"name": "Attract",
+							"level": 7,
+							"order": null
+						},
+						{
+							"name": "Sing",
+							"level": 13,
+							"order": null
+						},
+						{
+							"name": "Double Slap",
+							"level": 15,
+							"order": null
+						},
+						{
+							"name": "Assist",
+							"level": 19,
+							"order": null
+						},
+						{
+							"name": "Charm",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Feint Attack",
+							"level": 27,
+							"order": null
+						},
+						{
+							"name": "Covet",
+							"level": 31,
+							"order": null
+						},
+						{
+							"name": "Heal Bell",
+							"level": 37,
+							"order": null
+						},
+						{
+							"name": "Double Edge",
+							"level": 39,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Body Slam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Defense Curl",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Edge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endure",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Icy Wind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Mimic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Mud Slap",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rollout",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swift",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": null,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Blizzard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Calm Mind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ice Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Safeguard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Secret Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shock Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Water Pulse",
+							"level": null,
+							"order": null
+						}
+					],
+					"Egg": [
+						{
+							"name": "Baton Pass",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fake Tears",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Helping Hand",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Tickle",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Uproar",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wish",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/300",
+						"fetchedAt": "2026-11-03T05:53:25.353Z",
+						"hash": "9ca8a064aa1ed40df93bf181262d9140a5ab8c80934bda7afa32fecd90cde3b7"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/148/",
+						"fetchedAt": "2026-11-03T05:53:25.396Z",
+						"hash": "320ab3df26115b667a161eff6db7a42a18b3c8087c7a3591acdc0dd2c78e6151"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/",
+						"fetchedAt": "2026-11-03T05:53:25.430Z",
+						"hash": "d21506d833304227f110e97014789a69578e8ed6d55b02195ca657f64e95b5a4"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/encounters",
+						"fetchedAt": "2026-11-03T05:53:25.482Z",
+						"hash": "344363094a99f45e7ad2d6ba467672a8102906154e10d88542c1f8137b061d6e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/300/",
+						"fetchedAt": "2026-11-03T05:53:25.534Z",
+						"hash": "58df1f37a680b645008ecbd07e89a024e393dfe771c3b8df0ed8e33958246c61"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"emerald-national": "A SKITTY’s adorably cute behavior makes it highly popular. In battle, it makes its tail puff out. It threatens foes with a sharp growl.",
+				"emerald": "A SKITTY’s adorably cute behavior makes it highly popular. In battle, it makes its tail puff out. It threatens foes with a sharp growl."
+			},
+			"localizedFlavorByGame": {
+				"emerald-national": {
+					"en": "A SKITTY’s adorably cute behavior makes it highly popular. In battle, it makes its tail puff out. It threatens foes with a sharp growl."
+				},
+				"emerald": {
+					"en": "A SKITTY’s adorably cute behavior makes it highly popular. In battle, it makes its tail puff out. It threatens foes with a sharp growl."
+				}
+			}
+		},
+		{
+			"profileKey": "firered-leafgreen",
+			"label": "FireRed / LeafGreen",
+			"appGameKeys": [
+				"firered-national",
+				"firered",
+				"leafgreen-national",
+				"leafgreen"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Skitty",
+				"localizedNames": {
+					"ja-hrkt": "エネコ",
+					"ja-roma": "Eneco",
+					"ko": "에나비",
+					"zh-hant": "向尾喵",
+					"fr": "Skitty",
+					"de": "Eneco",
+					"es": "Skitty",
+					"it": "Skitty",
+					"ja": "エネコ",
+					"zh-hans": "向尾喵",
+					"es-419": "Skitty"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 45,
+					"def": 45,
+					"spa": 35,
+					"spd": 35,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Ground",
+					"Fairy"
+				],
+				"expGroup": "Fast",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "11.0 kg",
+				"genderRatio": "25% male / 75% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 52,
+				"habitat": "Forest",
+				"shape": "Quadruped",
+				"color": "Pink",
+				"genus": "Kitten Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こねこポケモン",
+					"ko": "작은고양이포켓몬",
+					"zh-hant": "小貓寶可夢",
+					"fr": "Pokémon Chaton",
+					"de": "Kätzchen",
+					"es": "Pokémon Gatito",
+					"it": "Pokémon Micio",
+					"ja": "こねこポケモン",
+					"zh-hans": "小猫宝可梦",
+					"es-419": "Pokémon Gatito"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 300
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 61
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 78
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 78
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 63
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 300,
+								"natiId": 300,
+								"name": "Skitty"
+							},
+							{
+								"id": 301,
+								"natiId": 301,
+								"name": "Delcatty",
+								"method": "Use item",
+								"value": "Moon Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Growl",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Tail Whip",
+							"level": 3,
+							"order": null
+						},
+						{
+							"name": "Attract",
+							"level": 7,
+							"order": null
+						},
+						{
+							"name": "Sing",
+							"level": 13,
+							"order": null
+						},
+						{
+							"name": "Double Slap",
+							"level": 15,
+							"order": null
+						},
+						{
+							"name": "Assist",
+							"level": 19,
+							"order": null
+						},
+						{
+							"name": "Charm",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Feint Attack",
+							"level": 27,
+							"order": null
+						},
+						{
+							"name": "Covet",
+							"level": 31,
+							"order": null
+						},
+						{
+							"name": "Heal Bell",
+							"level": 37,
+							"order": null
+						},
+						{
+							"name": "Double Edge",
+							"level": 39,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Body Slam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Edge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Mimic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": null,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Blizzard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Calm Mind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ice Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Safeguard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Secret Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shock Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Water Pulse",
+							"level": null,
+							"order": null
+						}
+					],
+					"Egg": [
+						{
+							"name": "Baton Pass",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fake Tears",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Helping Hand",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Tickle",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Uproar",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wish",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/300",
+						"fetchedAt": "2026-11-03T05:53:25.353Z",
+						"hash": "9ca8a064aa1ed40df93bf181262d9140a5ab8c80934bda7afa32fecd90cde3b7"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/148/",
+						"fetchedAt": "2026-11-03T05:53:25.396Z",
+						"hash": "320ab3df26115b667a161eff6db7a42a18b3c8087c7a3591acdc0dd2c78e6151"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/",
+						"fetchedAt": "2026-11-03T05:53:25.430Z",
+						"hash": "d21506d833304227f110e97014789a69578e8ed6d55b02195ca657f64e95b5a4"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/encounters",
+						"fetchedAt": "2026-11-03T05:53:25.482Z",
+						"hash": "344363094a99f45e7ad2d6ba467672a8102906154e10d88542c1f8137b061d6e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/300/",
+						"fetchedAt": "2026-11-03T05:53:25.534Z",
+						"hash": "58df1f37a680b645008ecbd07e89a024e393dfe771c3b8df0ed8e33958246c61"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"firered-national": "It is said to be difficult to earn its trust. However, it is extremely popular for its cute looks and behavior.",
+				"firered": "It is said to be difficult to earn its trust. However, it is extremely popular for its cute looks and behavior.",
+				"leafgreen-national": "It is said to be difficult to earn its trust. However, it is extremely popular for its cute looks and behavior.",
+				"leafgreen": "It is said to be difficult to earn its trust. However, it is extremely popular for its cute looks and behavior."
+			},
+			"localizedFlavorByGame": {
+				"firered-national": {
+					"en": "It is said to be difficult to earn its trust. However, it is extremely popular for its cute looks and behavior."
+				},
+				"firered": {
+					"en": "It is said to be difficult to earn its trust. However, it is extremely popular for its cute looks and behavior."
+				},
+				"leafgreen-national": {
+					"en": "It is said to be difficult to earn its trust. However, it is extremely popular for its cute looks and behavior."
+				},
+				"leafgreen": {
+					"en": "It is said to be difficult to earn its trust. However, it is extremely popular for its cute looks and behavior."
+				}
+			}
+		},
+		{
+			"profileKey": "diamond-pearl",
+			"label": "Diamond / Pearl",
+			"appGameKeys": [
+				"diamond-national",
+				"diamond",
+				"pearl-national",
+				"pearl"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Skitty",
+				"localizedNames": {
+					"ja-hrkt": "エネコ",
+					"ja-roma": "Eneco",
+					"ko": "에나비",
+					"zh-hant": "向尾喵",
+					"fr": "Skitty",
+					"de": "Eneco",
+					"es": "Skitty",
+					"it": "Skitty",
+					"ja": "エネコ",
+					"zh-hans": "向尾喵",
+					"es-419": "Skitty"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 45,
+					"def": 45,
+					"spa": 35,
+					"spd": 35,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Ground",
+					"Fairy"
+				],
+				"expGroup": "Fast",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "11.0 kg",
+				"genderRatio": "25% male / 75% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 52,
+				"habitat": "Forest",
+				"shape": "Quadruped",
+				"color": "Pink",
+				"genus": "Kitten Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こねこポケモン",
+					"ko": "작은고양이포켓몬",
+					"zh-hant": "小貓寶可夢",
+					"fr": "Pokémon Chaton",
+					"de": "Kätzchen",
+					"es": "Pokémon Gatito",
+					"it": "Pokémon Micio",
+					"ja": "こねこポケモン",
+					"zh-hans": "小猫宝可梦",
+					"es-419": "Pokémon Gatito"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 300
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 61
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 78
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 78
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 63
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 300,
+								"natiId": 300,
+								"name": "Skitty"
+							},
+							{
+								"id": 301,
+								"natiId": 301,
+								"name": "Delcatty",
+								"method": "Use item",
+								"value": "Moon Stone"
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Sinnoh Route 222 Area",
+						"notes": "Walk, Lv. 40",
+						"games": "Diamond",
+						"rate": "20%"
+					},
+					{
+						"area": "Sinnoh Route 222 Area",
+						"notes": "Walk, Lv. 40",
+						"games": "Diamond",
+						"rate": "20%"
+					},
+					{
+						"area": "Sinnoh Route 222 Area",
+						"notes": "Walk, Lv. 40",
+						"games": "Pearl",
+						"rate": "20%"
+					},
+					{
+						"area": "Sinnoh Route 222 Area",
+						"notes": "Walk, Lv. 40",
+						"games": "Pearl",
+						"rate": "20%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Fake Out",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Growl",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Tail Whip",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Attract",
+							"level": 4,
+							"order": null
+						},
+						{
+							"name": "Sing",
+							"level": 8,
+							"order": null
+						},
+						{
+							"name": "Copycat",
+							"level": 11,
+							"order": null
+						},
+						{
+							"name": "Double Slap",
+							"level": 15,
+							"order": null
+						},
+						{
+							"name": "Assist",
+							"level": 18,
+							"order": null
+						},
+						{
+							"name": "Charm",
+							"level": 22,
+							"order": null
+						},
+						{
+							"name": "Feint Attack",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Wake Up Slap",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Covet",
+							"level": 32,
+							"order": null
+						},
+						{
+							"name": "Heal Bell",
+							"level": 36,
+							"order": null
+						},
+						{
+							"name": "Double Edge",
+							"level": 39,
+							"order": null
+						},
+						{
+							"name": "Captivate",
+							"level": 42,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Blizzard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Calm Mind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Captivate",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Charge Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endure",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Grass Knot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ice Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Natural Gift",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Payback",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Safeguard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Secret Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shock Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Water Pulse",
+							"level": null,
+							"order": null
+						}
+					],
+					"Egg": [
+						{
+							"name": "Baton Pass",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fake Out",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fake Tears",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Helping Hand",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Last Resort",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sucker Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Tickle",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Uproar",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wish",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Zen Headbutt",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/300",
+						"fetchedAt": "2026-11-03T05:53:25.353Z",
+						"hash": "9ca8a064aa1ed40df93bf181262d9140a5ab8c80934bda7afa32fecd90cde3b7"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/148/",
+						"fetchedAt": "2026-11-03T05:53:25.396Z",
+						"hash": "320ab3df26115b667a161eff6db7a42a18b3c8087c7a3591acdc0dd2c78e6151"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/",
+						"fetchedAt": "2026-11-03T05:53:25.430Z",
+						"hash": "d21506d833304227f110e97014789a69578e8ed6d55b02195ca657f64e95b5a4"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/encounters",
+						"fetchedAt": "2026-11-03T05:53:25.482Z",
+						"hash": "344363094a99f45e7ad2d6ba467672a8102906154e10d88542c1f8137b061d6e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/300/",
+						"fetchedAt": "2026-11-03T05:53:25.534Z",
+						"hash": "58df1f37a680b645008ecbd07e89a024e393dfe771c3b8df0ed8e33958246c61"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"diamond-national": "It can’t stop itself from chasing moving things, and it runs in a circle, chasing its own tail.",
+				"diamond": "It can’t stop itself from chasing moving things, and it runs in a circle, chasing its own tail.",
+				"pearl-national": "It can’t stop itself from chasing moving things, and it runs in a circle, chasing its own tail.",
+				"pearl": "It can’t stop itself from chasing moving things, and it runs in a circle, chasing its own tail."
+			},
+			"localizedFlavorByGame": {
+				"diamond-national": {
+					"en": "It can’t stop itself from chasing moving things, and it runs in a circle, chasing its own tail."
+				},
+				"diamond": {
+					"en": "It can’t stop itself from chasing moving things, and it runs in a circle, chasing its own tail."
+				},
+				"pearl-national": {
+					"en": "It can’t stop itself from chasing moving things, and it runs in a circle, chasing its own tail."
+				},
+				"pearl": {
+					"en": "It can’t stop itself from chasing moving things, and it runs in a circle, chasing its own tail."
+				}
+			}
+		},
+		{
+			"profileKey": "platinum",
+			"label": "Platinum",
+			"appGameKeys": [
+				"platinum-national",
+				"platinum"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Skitty",
+				"localizedNames": {
+					"ja-hrkt": "エネコ",
+					"ja-roma": "Eneco",
+					"ko": "에나비",
+					"zh-hant": "向尾喵",
+					"fr": "Skitty",
+					"de": "Eneco",
+					"es": "Skitty",
+					"it": "Skitty",
+					"ja": "エネコ",
+					"zh-hans": "向尾喵",
+					"es-419": "Skitty"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 45,
+					"def": 45,
+					"spa": 35,
+					"spd": 35,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Ground",
+					"Fairy"
+				],
+				"expGroup": "Fast",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "11.0 kg",
+				"genderRatio": "25% male / 75% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 52,
+				"habitat": "Forest",
+				"shape": "Quadruped",
+				"color": "Pink",
+				"genus": "Kitten Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こねこポケモン",
+					"ko": "작은고양이포켓몬",
+					"zh-hant": "小貓寶可夢",
+					"fr": "Pokémon Chaton",
+					"de": "Kätzchen",
+					"es": "Pokémon Gatito",
+					"it": "Pokémon Micio",
+					"ja": "こねこポケモン",
+					"zh-hans": "小猫宝可梦",
+					"es-419": "Pokémon Gatito"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 300
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 61
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 78
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 78
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 63
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 300,
+								"natiId": 300,
+								"name": "Skitty"
+							},
+							{
+								"id": 301,
+								"natiId": 301,
+								"name": "Delcatty",
+								"method": "Use item",
+								"value": "Moon Stone"
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Sinnoh Route 222 Area",
+						"notes": "Walk, Lv. 39",
+						"games": "Platinum",
+						"rate": "20%"
+					},
+					{
+						"area": "Sinnoh Route 222 Area",
+						"notes": "Walk, Lv. 40",
+						"games": "Platinum",
+						"rate": "20%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Fake Out",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Growl",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Tail Whip",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Foresight",
+							"level": 4,
+							"order": null
+						},
+						{
+							"name": "Attract",
+							"level": 8,
+							"order": null
+						},
+						{
+							"name": "Sing",
+							"level": 11,
+							"order": null
+						},
+						{
+							"name": "Double Slap",
+							"level": 15,
+							"order": null
+						},
+						{
+							"name": "Copycat",
+							"level": 18,
+							"order": null
+						},
+						{
+							"name": "Assist",
+							"level": 22,
+							"order": null
+						},
+						{
+							"name": "Charm",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Feint Attack",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Wake Up Slap",
+							"level": 32,
+							"order": null
+						},
+						{
+							"name": "Covet",
+							"level": 36,
+							"order": null
+						},
+						{
+							"name": "Heal Bell",
+							"level": 39,
+							"order": null
+						},
+						{
+							"name": "Double Edge",
+							"level": 42,
+							"order": null
+						},
+						{
+							"name": "Captivate",
+							"level": 46,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Blizzard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Calm Mind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Captivate",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Charge Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endure",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Grass Knot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ice Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Natural Gift",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Payback",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Safeguard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Secret Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shock Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Water Pulse",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Helping Hand",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Icy Wind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Last Resort",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Mud Slap",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rollout",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sucker Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swift",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Zen Headbutt",
+							"level": null,
+							"order": null
+						}
+					],
+					"Egg": [
+						{
+							"name": "Baton Pass",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fake Out",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fake Tears",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Helping Hand",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Last Resort",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sucker Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Tickle",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Uproar",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wish",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Zen Headbutt",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/300",
+						"fetchedAt": "2026-11-03T05:53:25.353Z",
+						"hash": "9ca8a064aa1ed40df93bf181262d9140a5ab8c80934bda7afa32fecd90cde3b7"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/148/",
+						"fetchedAt": "2026-11-03T05:53:25.396Z",
+						"hash": "320ab3df26115b667a161eff6db7a42a18b3c8087c7a3591acdc0dd2c78e6151"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/",
+						"fetchedAt": "2026-11-03T05:53:25.430Z",
+						"hash": "d21506d833304227f110e97014789a69578e8ed6d55b02195ca657f64e95b5a4"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/encounters",
+						"fetchedAt": "2026-11-03T05:53:25.482Z",
+						"hash": "344363094a99f45e7ad2d6ba467672a8102906154e10d88542c1f8137b061d6e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/300/",
+						"fetchedAt": "2026-11-03T05:53:25.534Z",
+						"hash": "58df1f37a680b645008ecbd07e89a024e393dfe771c3b8df0ed8e33958246c61"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"platinum-national": "It can’t stop itself from chasing moving things, and it runs in a circle, chasing its own tail.",
+				"platinum": "It can’t stop itself from chasing moving things, and it runs in a circle, chasing its own tail."
+			},
+			"localizedFlavorByGame": {
+				"platinum-national": {
+					"en": "It can’t stop itself from chasing moving things, and it runs in a circle, chasing its own tail."
+				},
+				"platinum": {
+					"en": "It can’t stop itself from chasing moving things, and it runs in a circle, chasing its own tail."
+				}
+			}
+		},
+		{
+			"profileKey": "heartgold-soulsilver",
+			"label": "HeartGold / SoulSilver",
+			"appGameKeys": [
+				"heartgold-national",
+				"heartgold",
+				"soulsilver-national",
+				"soulsilver"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Skitty",
+				"localizedNames": {
+					"ja-hrkt": "エネコ",
+					"ja-roma": "Eneco",
+					"ko": "에나비",
+					"zh-hant": "向尾喵",
+					"fr": "Skitty",
+					"de": "Eneco",
+					"es": "Skitty",
+					"it": "Skitty",
+					"ja": "エネコ",
+					"zh-hans": "向尾喵",
+					"es-419": "Skitty"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 45,
+					"def": 45,
+					"spa": 35,
+					"spd": 35,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Ground",
+					"Fairy"
+				],
+				"expGroup": "Fast",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "11.0 kg",
+				"genderRatio": "25% male / 75% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 52,
+				"habitat": "Forest",
+				"shape": "Quadruped",
+				"color": "Pink",
+				"genus": "Kitten Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こねこポケモン",
+					"ko": "작은고양이포켓몬",
+					"zh-hant": "小貓寶可夢",
+					"fr": "Pokémon Chaton",
+					"de": "Kätzchen",
+					"es": "Pokémon Gatito",
+					"it": "Pokémon Micio",
+					"ja": "こねこポケモン",
+					"zh-hans": "小猫宝可梦",
+					"es-419": "Pokémon Gatito"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 300
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 61
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 78
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 78
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 63
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 300,
+								"natiId": 300,
+								"name": "Skitty"
+							},
+							{
+								"id": 301,
+								"natiId": 301,
+								"name": "Delcatty",
+								"method": "Use item",
+								"value": "Moon Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Fake Out",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Growl",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Tail Whip",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Foresight",
+							"level": 4,
+							"order": null
+						},
+						{
+							"name": "Attract",
+							"level": 8,
+							"order": null
+						},
+						{
+							"name": "Sing",
+							"level": 11,
+							"order": null
+						},
+						{
+							"name": "Double Slap",
+							"level": 15,
+							"order": null
+						},
+						{
+							"name": "Copycat",
+							"level": 18,
+							"order": null
+						},
+						{
+							"name": "Assist",
+							"level": 22,
+							"order": null
+						},
+						{
+							"name": "Charm",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Feint Attack",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Wake Up Slap",
+							"level": 32,
+							"order": null
+						},
+						{
+							"name": "Covet",
+							"level": 36,
+							"order": null
+						},
+						{
+							"name": "Heal Bell",
+							"level": 39,
+							"order": null
+						},
+						{
+							"name": "Double Edge",
+							"level": 42,
+							"order": null
+						},
+						{
+							"name": "Captivate",
+							"level": 46,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Headbutt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Heal Bell",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Helping Hand",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Icy Wind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Last Resort",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Mud Slap",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rollout",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sucker Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swift",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Zen Headbutt",
+							"level": null,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Blizzard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Calm Mind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Captivate",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Charge Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endure",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Grass Knot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ice Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Natural Gift",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Payback",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Safeguard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Secret Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shock Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Water Pulse",
+							"level": null,
+							"order": null
+						}
+					],
+					"Egg": [
+						{
+							"name": "Baton Pass",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fake Out",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fake Tears",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Helping Hand",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Last Resort",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Mud Bomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sucker Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Tickle",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Uproar",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wish",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Zen Headbutt",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/300",
+						"fetchedAt": "2026-11-03T05:53:25.353Z",
+						"hash": "9ca8a064aa1ed40df93bf181262d9140a5ab8c80934bda7afa32fecd90cde3b7"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/148/",
+						"fetchedAt": "2026-11-03T05:53:25.396Z",
+						"hash": "320ab3df26115b667a161eff6db7a42a18b3c8087c7a3591acdc0dd2c78e6151"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/",
+						"fetchedAt": "2026-11-03T05:53:25.430Z",
+						"hash": "d21506d833304227f110e97014789a69578e8ed6d55b02195ca657f64e95b5a4"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/encounters",
+						"fetchedAt": "2026-11-03T05:53:25.482Z",
+						"hash": "344363094a99f45e7ad2d6ba467672a8102906154e10d88542c1f8137b061d6e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/300/",
+						"fetchedAt": "2026-11-03T05:53:25.534Z",
+						"hash": "58df1f37a680b645008ecbd07e89a024e393dfe771c3b8df0ed8e33958246c61"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"heartgold-national": "It’s adorable when it chases its own tail. It’s difficult to earn its trust.",
+				"heartgold": "It’s adorable when it chases its own tail. It’s difficult to earn its trust.",
+				"soulsilver-national": "It’s adorable when it chases its own tail. It’s difficult to earn its trust.",
+				"soulsilver": "It’s adorable when it chases its own tail. It’s difficult to earn its trust."
+			},
+			"localizedFlavorByGame": {
+				"heartgold-national": {
+					"en": "It’s adorable when it chases its own tail. It’s difficult to earn its trust."
+				},
+				"heartgold": {
+					"en": "It’s adorable when it chases its own tail. It’s difficult to earn its trust."
+				},
+				"soulsilver-national": {
+					"en": "It’s adorable when it chases its own tail. It’s difficult to earn its trust."
+				},
+				"soulsilver": {
+					"en": "It’s adorable when it chases its own tail. It’s difficult to earn its trust."
+				}
+			}
+		},
+		{
+			"profileKey": "black-white",
+			"label": "Black / White",
+			"appGameKeys": [
+				"black-national",
+				"black",
+				"white-national",
+				"white"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Skitty",
+				"localizedNames": {
+					"ja-hrkt": "エネコ",
+					"ja-roma": "Eneco",
+					"ko": "에나비",
+					"zh-hant": "向尾喵",
+					"fr": "Skitty",
+					"de": "Eneco",
+					"es": "Skitty",
+					"it": "Skitty",
+					"ja": "エネコ",
+					"zh-hans": "向尾喵",
+					"es-419": "Skitty"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 45,
+					"def": 45,
+					"spa": 35,
+					"spd": 35,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cute Charm",
+					"Normalize",
+					"Wonder Skin (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Wonder Skin"
+				],
+				"eggGroups": [
+					"Ground",
+					"Fairy"
+				],
+				"expGroup": "Fast",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "11.0 kg",
+				"genderRatio": "25% male / 75% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 52,
+				"habitat": "Forest",
+				"shape": "Quadruped",
+				"color": "Pink",
+				"genus": "Kitten Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こねこポケモン",
+					"ko": "작은고양이포켓몬",
+					"zh-hant": "小貓寶可夢",
+					"fr": "Pokémon Chaton",
+					"de": "Kätzchen",
+					"es": "Pokémon Gatito",
+					"it": "Pokémon Micio",
+					"ja": "こねこポケモン",
+					"zh-hans": "小猫宝可梦",
+					"es-419": "Pokémon Gatito"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 300
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 61
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 78
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 78
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 63
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 300,
+								"natiId": 300,
+								"name": "Skitty"
+							},
+							{
+								"id": 301,
+								"natiId": 301,
+								"name": "Delcatty",
+								"method": "Use item",
+								"value": "Moon Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Fake Out",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Growl",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Tail Whip",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Foresight",
+							"level": 4,
+							"order": null
+						},
+						{
+							"name": "Attract",
+							"level": 8,
+							"order": null
+						},
+						{
+							"name": "Sing",
+							"level": 11,
+							"order": null
+						},
+						{
+							"name": "Double Slap",
+							"level": 15,
+							"order": null
+						},
+						{
+							"name": "Copycat",
+							"level": 18,
+							"order": null
+						},
+						{
+							"name": "Assist",
+							"level": 22,
+							"order": null
+						},
+						{
+							"name": "Charm",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Feint Attack",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Wake Up Slap",
+							"level": 32,
+							"order": null
+						},
+						{
+							"name": "Covet",
+							"level": 36,
+							"order": null
+						},
+						{
+							"name": "Heal Bell",
+							"level": 39,
+							"order": null
+						},
+						{
+							"name": "Double Edge",
+							"level": 42,
+							"order": null
+						},
+						{
+							"name": "Captivate",
+							"level": 46,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Blizzard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Calm Mind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Charge Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Echoed Voice",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Grass Knot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ice Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Payback",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Retaliate",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Safeguard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Work Up",
+							"level": null,
+							"order": null
+						}
+					],
+					"Egg": [
+						{
+							"name": "Baton Pass",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Captivate",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fake Out",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fake Tears",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Helping Hand",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Last Resort",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Mud Bomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Simple Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sucker Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Tickle",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Uproar",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wish",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Zen Headbutt",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/300",
+						"fetchedAt": "2026-11-03T05:53:25.353Z",
+						"hash": "9ca8a064aa1ed40df93bf181262d9140a5ab8c80934bda7afa32fecd90cde3b7"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/148/",
+						"fetchedAt": "2026-11-03T05:53:25.396Z",
+						"hash": "320ab3df26115b667a161eff6db7a42a18b3c8087c7a3591acdc0dd2c78e6151"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/",
+						"fetchedAt": "2026-11-03T05:53:25.430Z",
+						"hash": "d21506d833304227f110e97014789a69578e8ed6d55b02195ca657f64e95b5a4"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/encounters",
+						"fetchedAt": "2026-11-03T05:53:25.482Z",
+						"hash": "344363094a99f45e7ad2d6ba467672a8102906154e10d88542c1f8137b061d6e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/300/",
+						"fetchedAt": "2026-11-03T05:53:25.534Z",
+						"hash": "58df1f37a680b645008ecbd07e89a024e393dfe771c3b8df0ed8e33958246c61"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"black-national": "It can’t stop itself from chasing moving things, and it runs in a circle, chasing its own tail.",
+				"black": "It can’t stop itself from chasing moving things, and it runs in a circle, chasing its own tail.",
+				"white-national": "It can’t stop itself from chasing moving things, and it runs in a circle, chasing its own tail.",
+				"white": "It can’t stop itself from chasing moving things, and it runs in a circle, chasing its own tail."
+			},
+			"localizedFlavorByGame": {
+				"black-national": {
+					"fr": "Il poursuit tout ce qui bouge. On le voit parfois courir en cercle, chassant sa propre queue.",
+					"en": "It can’t stop itself from chasing moving things, and it runs in a circle, chasing its own tail."
+				},
+				"black": {
+					"fr": "Il poursuit tout ce qui bouge. On le voit parfois courir en cercle, chassant sa propre queue.",
+					"en": "It can’t stop itself from chasing moving things, and it runs in a circle, chasing its own tail."
+				},
+				"white-national": {
+					"fr": "Il poursuit tout ce qui bouge. On le voit parfois courir en cercle, chassant sa propre queue.",
+					"en": "It can’t stop itself from chasing moving things, and it runs in a circle, chasing its own tail."
+				},
+				"white": {
+					"fr": "Il poursuit tout ce qui bouge. On le voit parfois courir en cercle, chassant sa propre queue.",
+					"en": "It can’t stop itself from chasing moving things, and it runs in a circle, chasing its own tail."
+				}
+			}
+		},
+		{
+			"profileKey": "black-2-white-2",
+			"label": "Black 2 / White 2",
+			"appGameKeys": [
+				"black2-national",
+				"black2",
+				"white2-national",
+				"white2"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Skitty",
+				"localizedNames": {
+					"ja-hrkt": "エネコ",
+					"ja-roma": "Eneco",
+					"ko": "에나비",
+					"zh-hant": "向尾喵",
+					"fr": "Skitty",
+					"de": "Eneco",
+					"es": "Skitty",
+					"it": "Skitty",
+					"ja": "エネコ",
+					"zh-hans": "向尾喵",
+					"es-419": "Skitty"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 45,
+					"def": 45,
+					"spa": 35,
+					"spd": 35,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cute Charm",
+					"Normalize",
+					"Wonder Skin (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Wonder Skin"
+				],
+				"eggGroups": [
+					"Ground",
+					"Fairy"
+				],
+				"expGroup": "Fast",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "11.0 kg",
+				"genderRatio": "25% male / 75% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 52,
+				"habitat": "Forest",
+				"shape": "Quadruped",
+				"color": "Pink",
+				"genus": "Kitten Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こねこポケモン",
+					"ko": "작은고양이포켓몬",
+					"zh-hant": "小貓寶可夢",
+					"fr": "Pokémon Chaton",
+					"de": "Kätzchen",
+					"es": "Pokémon Gatito",
+					"it": "Pokémon Micio",
+					"ja": "こねこポケモン",
+					"zh-hans": "小猫宝可梦",
+					"es-419": "Pokémon Gatito"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 300
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 61
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 78
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 78
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 63
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 300,
+								"natiId": 300,
+								"name": "Skitty"
+							},
+							{
+								"id": 301,
+								"natiId": 301,
+								"name": "Delcatty",
+								"method": "Use item",
+								"value": "Moon Stone"
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Castelia City Area",
+						"notes": "Dark Grass, Lv. 16",
+						"games": "White 2",
+						"rate": "10%"
+					},
+					{
+						"area": "Castelia City Area",
+						"notes": "Dark Grass, Lv. 17",
+						"games": "White 2",
+						"rate": "5%"
+					},
+					{
+						"area": "Castelia City Area",
+						"notes": "Walk, Lv. 15",
+						"games": "White 2",
+						"rate": "10%"
+					},
+					{
+						"area": "Castelia City Area",
+						"notes": "Walk, Lv. 16",
+						"games": "White 2",
+						"rate": "5%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Fake Out",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Growl",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Tail Whip",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Foresight",
+							"level": 4,
+							"order": null
+						},
+						{
+							"name": "Attract",
+							"level": 8,
+							"order": null
+						},
+						{
+							"name": "Sing",
+							"level": 11,
+							"order": null
+						},
+						{
+							"name": "Double Slap",
+							"level": 15,
+							"order": null
+						},
+						{
+							"name": "Copycat",
+							"level": 18,
+							"order": null
+						},
+						{
+							"name": "Assist",
+							"level": 22,
+							"order": null
+						},
+						{
+							"name": "Charm",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Feint Attack",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Wake Up Slap",
+							"level": 32,
+							"order": null
+						},
+						{
+							"name": "Covet",
+							"level": 36,
+							"order": null
+						},
+						{
+							"name": "Heal Bell",
+							"level": 39,
+							"order": null
+						},
+						{
+							"name": "Double Edge",
+							"level": 42,
+							"order": null
+						},
+						{
+							"name": "Captivate",
+							"level": 46,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Blizzard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Calm Mind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Charge Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Echoed Voice",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Grass Knot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ice Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Payback",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Retaliate",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Safeguard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Work Up",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Covet",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Heal Bell",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Helping Hand",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Voice",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Icy Wind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Last Resort",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Uproar",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Zen Headbutt",
+							"level": null,
+							"order": null
+						}
+					],
+					"Egg": [
+						{
+							"name": "Baton Pass",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Captivate",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fake Out",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fake Tears",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Helping Hand",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Last Resort",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Mud Bomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Simple Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sucker Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Tickle",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Uproar",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wish",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Zen Headbutt",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/300",
+						"fetchedAt": "2026-11-03T05:53:25.353Z",
+						"hash": "9ca8a064aa1ed40df93bf181262d9140a5ab8c80934bda7afa32fecd90cde3b7"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/148/",
+						"fetchedAt": "2026-11-03T05:53:25.396Z",
+						"hash": "320ab3df26115b667a161eff6db7a42a18b3c8087c7a3591acdc0dd2c78e6151"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/",
+						"fetchedAt": "2026-11-03T05:53:25.430Z",
+						"hash": "d21506d833304227f110e97014789a69578e8ed6d55b02195ca657f64e95b5a4"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/encounters",
+						"fetchedAt": "2026-11-03T05:53:25.482Z",
+						"hash": "344363094a99f45e7ad2d6ba467672a8102906154e10d88542c1f8137b061d6e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/300/",
+						"fetchedAt": "2026-11-03T05:53:25.534Z",
+						"hash": "58df1f37a680b645008ecbd07e89a024e393dfe771c3b8df0ed8e33958246c61"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"black2-national": "It shows its cute side by chasing its own tail until it gets dizzy.",
+				"black2": "It shows its cute side by chasing its own tail until it gets dizzy.",
+				"white2-national": "It shows its cute side by chasing its own tail until it gets dizzy.",
+				"white2": "It shows its cute side by chasing its own tail until it gets dizzy."
+			},
+			"localizedFlavorByGame": {
+				"black2-national": {
+					"en": "It shows its cute side by chasing its own tail until it gets dizzy."
+				},
+				"black2": {
+					"en": "It shows its cute side by chasing its own tail until it gets dizzy."
+				},
+				"white2-national": {
+					"en": "It shows its cute side by chasing its own tail until it gets dizzy."
+				},
+				"white2": {
+					"en": "It shows its cute side by chasing its own tail until it gets dizzy."
+				}
+			}
+		},
+		{
+			"profileKey": "x-y",
+			"label": "X / Y",
+			"appGameKeys": [
+				"x-national",
+				"x-central",
+				"x-coastal",
+				"x-mountain",
+				"y-national",
+				"y-central",
+				"y-coastal",
+				"y-mountain"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Skitty",
+				"localizedNames": {
+					"ja-hrkt": "エネコ",
+					"ja-roma": "Eneco",
+					"ko": "에나비",
+					"zh-hant": "向尾喵",
+					"fr": "Skitty",
+					"de": "Eneco",
+					"es": "Skitty",
+					"it": "Skitty",
+					"ja": "エネコ",
+					"zh-hans": "向尾喵",
+					"es-419": "Skitty"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 45,
+					"def": 45,
+					"spa": 35,
+					"spd": 35,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cute Charm",
+					"Normalize",
+					"Wonder Skin (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Wonder Skin"
+				],
+				"eggGroups": [
+					"Ground",
+					"Fairy"
+				],
+				"expGroup": "Fast",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "11.0 kg",
+				"genderRatio": "25% male / 75% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 52,
+				"habitat": "Forest",
+				"shape": "Quadruped",
+				"color": "Pink",
+				"genus": "Kitten Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こねこポケモン",
+					"ko": "작은고양이포켓몬",
+					"zh-hant": "小貓寶可夢",
+					"fr": "Pokémon Chaton",
+					"de": "Kätzchen",
+					"es": "Pokémon Gatito",
+					"it": "Pokémon Micio",
+					"ja": "こねこポケモン",
+					"zh-hans": "小猫宝可梦",
+					"es-419": "Pokémon Gatito"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 300
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 61
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 78
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 78
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 63
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 300,
+								"natiId": 300,
+								"name": "Skitty"
+							},
+							{
+								"id": 301,
+								"natiId": 301,
+								"name": "Delcatty",
+								"method": "Use item",
+								"value": "Moon Stone"
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Kalos Route 4 Area",
+						"notes": "Yellow Flowers, Lv. 8",
+						"games": "X",
+						"rate": "10%"
+					},
+					{
+						"area": "Kalos Route 4 Area",
+						"notes": "Red Flowers, Lv. 8",
+						"games": "X",
+						"rate": "10%"
+					},
+					{
+						"area": "Kalos Route 4 Area",
+						"notes": "Yellow Flowers, Lv. 8",
+						"games": "Y",
+						"rate": "10%"
+					},
+					{
+						"area": "Kalos Route 4 Area",
+						"notes": "Red Flowers, Lv. 8",
+						"games": "Y",
+						"rate": "10%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Fake Out",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Growl",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Tail Whip",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Foresight",
+							"level": 4,
+							"order": null
+						},
+						{
+							"name": "Attract",
+							"level": 8,
+							"order": null
+						},
+						{
+							"name": "Sing",
+							"level": 11,
+							"order": null
+						},
+						{
+							"name": "Double Slap",
+							"level": 15,
+							"order": null
+						},
+						{
+							"name": "Copycat",
+							"level": 18,
+							"order": null
+						},
+						{
+							"name": "Assist",
+							"level": 22,
+							"order": null
+						},
+						{
+							"name": "Charm",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Feint Attack",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Wake Up Slap",
+							"level": 32,
+							"order": null
+						},
+						{
+							"name": "Covet",
+							"level": 36,
+							"order": null
+						},
+						{
+							"name": "Heal Bell",
+							"level": 39,
+							"order": null
+						},
+						{
+							"name": "Double Edge",
+							"level": 42,
+							"order": null
+						},
+						{
+							"name": "Captivate",
+							"level": 46,
+							"order": null
+						},
+						{
+							"name": "Play Rough",
+							"level": 49,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Blizzard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Calm Mind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Charge Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Echoed Voice",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Grass Knot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ice Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Payback",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Retaliate",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Safeguard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": null,
+							"order": null
+						}
+					],
+					"Egg": [
+						{
+							"name": "Baton Pass",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Captivate",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Cosmic Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fake Out",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fake Tears",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Helping Hand",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Last Resort",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Mud Bomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Simple Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sucker Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Tickle",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Uproar",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wish",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Zen Headbutt",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/300",
+						"fetchedAt": "2026-11-03T05:53:25.353Z",
+						"hash": "9ca8a064aa1ed40df93bf181262d9140a5ab8c80934bda7afa32fecd90cde3b7"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/148/",
+						"fetchedAt": "2026-11-03T05:53:25.396Z",
+						"hash": "320ab3df26115b667a161eff6db7a42a18b3c8087c7a3591acdc0dd2c78e6151"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/",
+						"fetchedAt": "2026-11-03T05:53:25.430Z",
+						"hash": "d21506d833304227f110e97014789a69578e8ed6d55b02195ca657f64e95b5a4"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/encounters",
+						"fetchedAt": "2026-11-03T05:53:25.482Z",
+						"hash": "344363094a99f45e7ad2d6ba467672a8102906154e10d88542c1f8137b061d6e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/300/",
+						"fetchedAt": "2026-11-03T05:53:25.534Z",
+						"hash": "58df1f37a680b645008ecbd07e89a024e393dfe771c3b8df0ed8e33958246c61"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"x-national": "It can’t stop itself from chasing moving things, and it runs in a circle, chasing its own tail.",
+				"x-central": "It can’t stop itself from chasing moving things, and it runs in a circle, chasing its own tail.",
+				"x-coastal": "It can’t stop itself from chasing moving things, and it runs in a circle, chasing its own tail.",
+				"x-mountain": "It can’t stop itself from chasing moving things, and it runs in a circle, chasing its own tail.",
+				"y-national": "It shows its cute side by chasing its own tail until it gets dizzy.",
+				"y-central": "It shows its cute side by chasing its own tail until it gets dizzy.",
+				"y-coastal": "It shows its cute side by chasing its own tail until it gets dizzy.",
+				"y-mountain": "It shows its cute side by chasing its own tail until it gets dizzy."
+			},
+			"localizedFlavorByGame": {
+				"x-national": {
+					"ja-hrkt": "うごくものを つい おってしまう。 じぶんの しっぽを おいかけて おなじ ばしょを グルグル まわる。",
+					"ko": "움직이는 것을 무심코 쫓아간다. 자신의 꼬리를 쫓아서 똑같은 장소를 빙글빙글 돈다.",
+					"fr": "Il poursuit tout ce qui bouge. On le voit parfois courir en cercle, chassant sa propre queue.",
+					"de": "Es muss Dinge, die sich bewegen, einfach jagen. Es rennt oft im Kreis und jagt seinen eigenen Schweif.",
+					"es": "No puede evitar ir tras las cosas que se mueven. Hasta corre en círculos persiguiéndose la cola.",
+					"it": "Non riesce a evitare di inseguire tutto ciò che si muove e corre in tondo a caccia della propria coda.",
+					"en": "It can’t stop itself from chasing moving things, and it runs in a circle, chasing its own tail.",
+					"ja": "動くものを つい 追ってしまう。 自分の 尻尾を 追いかけて 同じ 場所を グルグル 回る。",
+					"es-419": "No puede evitar ir tras las cosas que se mueven. Hasta corre en círculos persiguiéndose la cola."
+				},
+				"x-central": {
+					"ja-hrkt": "うごくものを つい おってしまう。 じぶんの しっぽを おいかけて おなじ ばしょを グルグル まわる。",
+					"ko": "움직이는 것을 무심코 쫓아간다. 자신의 꼬리를 쫓아서 똑같은 장소를 빙글빙글 돈다.",
+					"fr": "Il poursuit tout ce qui bouge. On le voit parfois courir en cercle, chassant sa propre queue.",
+					"de": "Es muss Dinge, die sich bewegen, einfach jagen. Es rennt oft im Kreis und jagt seinen eigenen Schweif.",
+					"es": "No puede evitar ir tras las cosas que se mueven. Hasta corre en círculos persiguiéndose la cola.",
+					"it": "Non riesce a evitare di inseguire tutto ciò che si muove e corre in tondo a caccia della propria coda.",
+					"en": "It can’t stop itself from chasing moving things, and it runs in a circle, chasing its own tail.",
+					"ja": "動くものを つい 追ってしまう。 自分の 尻尾を 追いかけて 同じ 場所を グルグル 回る。",
+					"es-419": "No puede evitar ir tras las cosas que se mueven. Hasta corre en círculos persiguiéndose la cola."
+				},
+				"x-coastal": {
+					"ja-hrkt": "うごくものを つい おってしまう。 じぶんの しっぽを おいかけて おなじ ばしょを グルグル まわる。",
+					"ko": "움직이는 것을 무심코 쫓아간다. 자신의 꼬리를 쫓아서 똑같은 장소를 빙글빙글 돈다.",
+					"fr": "Il poursuit tout ce qui bouge. On le voit parfois courir en cercle, chassant sa propre queue.",
+					"de": "Es muss Dinge, die sich bewegen, einfach jagen. Es rennt oft im Kreis und jagt seinen eigenen Schweif.",
+					"es": "No puede evitar ir tras las cosas que se mueven. Hasta corre en círculos persiguiéndose la cola.",
+					"it": "Non riesce a evitare di inseguire tutto ciò che si muove e corre in tondo a caccia della propria coda.",
+					"en": "It can’t stop itself from chasing moving things, and it runs in a circle, chasing its own tail.",
+					"ja": "動くものを つい 追ってしまう。 自分の 尻尾を 追いかけて 同じ 場所を グルグル 回る。",
+					"es-419": "No puede evitar ir tras las cosas que se mueven. Hasta corre en círculos persiguiéndose la cola."
+				},
+				"x-mountain": {
+					"ja-hrkt": "うごくものを つい おってしまう。 じぶんの しっぽを おいかけて おなじ ばしょを グルグル まわる。",
+					"ko": "움직이는 것을 무심코 쫓아간다. 자신의 꼬리를 쫓아서 똑같은 장소를 빙글빙글 돈다.",
+					"fr": "Il poursuit tout ce qui bouge. On le voit parfois courir en cercle, chassant sa propre queue.",
+					"de": "Es muss Dinge, die sich bewegen, einfach jagen. Es rennt oft im Kreis und jagt seinen eigenen Schweif.",
+					"es": "No puede evitar ir tras las cosas que se mueven. Hasta corre en círculos persiguiéndose la cola.",
+					"it": "Non riesce a evitare di inseguire tutto ciò che si muove e corre in tondo a caccia della propria coda.",
+					"en": "It can’t stop itself from chasing moving things, and it runs in a circle, chasing its own tail.",
+					"ja": "動くものを つい 追ってしまう。 自分の 尻尾を 追いかけて 同じ 場所を グルグル 回る。",
+					"es-419": "No puede evitar ir tras las cosas que se mueven. Hasta corre en círculos persiguiéndose la cola."
+				},
+				"y-national": {
+					"ja-hrkt": "じぶんの しっぽを おいかけて あそんでいると めを まわすといった かわいらしい いちめんを みせる。",
+					"ko": "자신의 꼬리를 쫓아서 놀고 있으면 눈이 핑 돌고 마는 귀여운 일면을 보인다.",
+					"fr": "Un Pokémon très mignon qui aime parfois courir en cercle en chassant sa propre queue.",
+					"de": "Es zeigt gerne seine niedliche Seite, indem es seinen eigenen Schweif jagt, bis ihm schwindlig wird.",
+					"es": "Le gusta jugar persiguiéndose la cola hasta que se marea, mostrando así su lado más mono.",
+					"it": "È davvero carino quando barcolla per i giramenti di testa, dopo aver cercato di mordersi la coda.",
+					"en": "It shows its cute side by chasing its own tail until it gets dizzy.",
+					"ja": "自分の 尻尾を 追いかけて 遊んでいると 目を 回すといった 可愛らしい 一面を みせる。",
+					"es-419": "Le gusta jugar persiguiéndose la cola hasta que se marea, mostrando así su lado más mono."
+				},
+				"y-central": {
+					"ja-hrkt": "じぶんの しっぽを おいかけて あそんでいると めを まわすといった かわいらしい いちめんを みせる。",
+					"ko": "자신의 꼬리를 쫓아서 놀고 있으면 눈이 핑 돌고 마는 귀여운 일면을 보인다.",
+					"fr": "Un Pokémon très mignon qui aime parfois courir en cercle en chassant sa propre queue.",
+					"de": "Es zeigt gerne seine niedliche Seite, indem es seinen eigenen Schweif jagt, bis ihm schwindlig wird.",
+					"es": "Le gusta jugar persiguiéndose la cola hasta que se marea, mostrando así su lado más mono.",
+					"it": "È davvero carino quando barcolla per i giramenti di testa, dopo aver cercato di mordersi la coda.",
+					"en": "It shows its cute side by chasing its own tail until it gets dizzy.",
+					"ja": "自分の 尻尾を 追いかけて 遊んでいると 目を 回すといった 可愛らしい 一面を みせる。",
+					"es-419": "Le gusta jugar persiguiéndose la cola hasta que se marea, mostrando así su lado más mono."
+				},
+				"y-coastal": {
+					"ja-hrkt": "じぶんの しっぽを おいかけて あそんでいると めを まわすといった かわいらしい いちめんを みせる。",
+					"ko": "자신의 꼬리를 쫓아서 놀고 있으면 눈이 핑 돌고 마는 귀여운 일면을 보인다.",
+					"fr": "Un Pokémon très mignon qui aime parfois courir en cercle en chassant sa propre queue.",
+					"de": "Es zeigt gerne seine niedliche Seite, indem es seinen eigenen Schweif jagt, bis ihm schwindlig wird.",
+					"es": "Le gusta jugar persiguiéndose la cola hasta que se marea, mostrando así su lado más mono.",
+					"it": "È davvero carino quando barcolla per i giramenti di testa, dopo aver cercato di mordersi la coda.",
+					"en": "It shows its cute side by chasing its own tail until it gets dizzy.",
+					"ja": "自分の 尻尾を 追いかけて 遊んでいると 目を 回すといった 可愛らしい 一面を みせる。",
+					"es-419": "Le gusta jugar persiguiéndose la cola hasta que se marea, mostrando así su lado más mono."
+				},
+				"y-mountain": {
+					"ja-hrkt": "じぶんの しっぽを おいかけて あそんでいると めを まわすといった かわいらしい いちめんを みせる。",
+					"ko": "자신의 꼬리를 쫓아서 놀고 있으면 눈이 핑 돌고 마는 귀여운 일면을 보인다.",
+					"fr": "Un Pokémon très mignon qui aime parfois courir en cercle en chassant sa propre queue.",
+					"de": "Es zeigt gerne seine niedliche Seite, indem es seinen eigenen Schweif jagt, bis ihm schwindlig wird.",
+					"es": "Le gusta jugar persiguiéndose la cola hasta que se marea, mostrando así su lado más mono.",
+					"it": "È davvero carino quando barcolla per i giramenti di testa, dopo aver cercato di mordersi la coda.",
+					"en": "It shows its cute side by chasing its own tail until it gets dizzy.",
+					"ja": "自分の 尻尾を 追いかけて 遊んでいると 目を 回すといった 可愛らしい 一面を みせる。",
+					"es-419": "Le gusta jugar persiguiéndose la cola hasta que se marea, mostrando así su lado más mono."
+				}
+			}
+		},
+		{
+			"profileKey": "omega-ruby-alpha-sapphire",
+			"label": "Omega Ruby / Alpha Sapphire",
+			"appGameKeys": [
+				"omegaruby-national",
+				"omegaruby",
+				"alphasapphire-national",
+				"alphasapphire"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Skitty",
+				"localizedNames": {
+					"ja-hrkt": "エネコ",
+					"ja-roma": "Eneco",
+					"ko": "에나비",
+					"zh-hant": "向尾喵",
+					"fr": "Skitty",
+					"de": "Eneco",
+					"es": "Skitty",
+					"it": "Skitty",
+					"ja": "エネコ",
+					"zh-hans": "向尾喵",
+					"es-419": "Skitty"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 45,
+					"def": 45,
+					"spa": 35,
+					"spd": 35,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cute Charm",
+					"Normalize",
+					"Wonder Skin (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Wonder Skin"
+				],
+				"eggGroups": [
+					"Ground",
+					"Fairy"
+				],
+				"expGroup": "Fast",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "11.0 kg",
+				"genderRatio": "25% male / 75% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 52,
+				"habitat": "Forest",
+				"shape": "Quadruped",
+				"color": "Pink",
+				"genus": "Kitten Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こねこポケモン",
+					"ko": "작은고양이포켓몬",
+					"zh-hant": "小貓寶可夢",
+					"fr": "Pokémon Chaton",
+					"de": "Kätzchen",
+					"es": "Pokémon Gatito",
+					"it": "Pokémon Micio",
+					"ja": "こねこポケモン",
+					"zh-hans": "小猫宝可梦",
+					"es-419": "Pokémon Gatito"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 300
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 61
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 78
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 78
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 63
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 300,
+								"natiId": 300,
+								"name": "Skitty"
+							},
+							{
+								"id": 301,
+								"natiId": 301,
+								"name": "Delcatty",
+								"method": "Use item",
+								"value": "Moon Stone"
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Hoenn Route 116 Area",
+						"notes": "Horde, Lv. 4",
+						"games": "Omega Ruby",
+						"rate": "5%"
+					},
+					{
+						"area": "Hoenn Route 116 Area",
+						"notes": "Horde, Lv. 4",
+						"games": "Alpha Sapphire",
+						"rate": "5%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Fake Out",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Growl",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Tail Whip",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Foresight",
+							"level": 4,
+							"order": null
+						},
+						{
+							"name": "Sing",
+							"level": 7,
+							"order": null
+						},
+						{
+							"name": "Attract",
+							"level": 10,
+							"order": null
+						},
+						{
+							"name": "Disarming Voice",
+							"level": 13,
+							"order": null
+						},
+						{
+							"name": "Double Slap",
+							"level": 16,
+							"order": null
+						},
+						{
+							"name": "Copycat",
+							"level": 19,
+							"order": null
+						},
+						{
+							"name": "Feint Attack",
+							"level": 22,
+							"order": null
+						},
+						{
+							"name": "Charm",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Wake Up Slap",
+							"level": 28,
+							"order": null
+						},
+						{
+							"name": "Assist",
+							"level": 31,
+							"order": null
+						},
+						{
+							"name": "Covet",
+							"level": 34,
+							"order": null
+						},
+						{
+							"name": "Heal Bell",
+							"level": 37,
+							"order": null
+						},
+						{
+							"name": "Double Edge",
+							"level": 40,
+							"order": null
+						},
+						{
+							"name": "Captivate",
+							"level": 43,
+							"order": null
+						},
+						{
+							"name": "Play Rough",
+							"level": 46,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Blizzard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Calm Mind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Charge Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Echoed Voice",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Grass Knot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ice Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Payback",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Retaliate",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Safeguard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Secret Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Covet",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Heal Bell",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Helping Hand",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Voice",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Icy Wind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Last Resort",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shock Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Uproar",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Water Pulse",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Zen Headbutt",
+							"level": null,
+							"order": null
+						}
+					],
+					"Egg": [
+						{
+							"name": "Baton Pass",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Captivate",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Cosmic Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fake Out",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fake Tears",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Helping Hand",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Last Resort",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Mud Bomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Simple Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sucker Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Tickle",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Uproar",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wish",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Zen Headbutt",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/300",
+						"fetchedAt": "2026-11-03T05:53:25.353Z",
+						"hash": "9ca8a064aa1ed40df93bf181262d9140a5ab8c80934bda7afa32fecd90cde3b7"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/148/",
+						"fetchedAt": "2026-11-03T05:53:25.396Z",
+						"hash": "320ab3df26115b667a161eff6db7a42a18b3c8087c7a3591acdc0dd2c78e6151"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/",
+						"fetchedAt": "2026-11-03T05:53:25.430Z",
+						"hash": "d21506d833304227f110e97014789a69578e8ed6d55b02195ca657f64e95b5a4"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/encounters",
+						"fetchedAt": "2026-11-03T05:53:25.482Z",
+						"hash": "344363094a99f45e7ad2d6ba467672a8102906154e10d88542c1f8137b061d6e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/300/",
+						"fetchedAt": "2026-11-03T05:53:25.534Z",
+						"hash": "58df1f37a680b645008ecbd07e89a024e393dfe771c3b8df0ed8e33958246c61"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"omegaruby-national": "Skitty has the habit of becoming fascinated by moving objects and chasing them around. This Pokémon is known to chase after its own tail and become dizzy.",
+				"omegaruby": "Skitty has the habit of becoming fascinated by moving objects and chasing them around. This Pokémon is known to chase after its own tail and become dizzy.",
+				"alphasapphire-national": "Skitty is known to chase around playfully after its own tail. In the wild, this Pokémon lives in holes in the trees of forests. It is very popular as a pet because of its adorable looks.",
+				"alphasapphire": "Skitty is known to chase around playfully after its own tail. In the wild, this Pokémon lives in holes in the trees of forests. It is very popular as a pet because of its adorable looks."
+			},
+			"localizedFlavorByGame": {
+				"omegaruby-national": {
+					"ja-hrkt": "うごく ものを みつけると むちゅうに なって おいかけまわす しゅうせいを もつ ポケモン。 じぶんの シッポを おいかけて めを まわす。",
+					"ko": "움직이는 것을 발견하면 푹 빠져서 뒤쫓아 가는 습성을 지닌 포켓몬이다. 자기 꼬리를 쫓다 현기증을 일으킨다.",
+					"fr": "Skitty a pris l’habitude de pourchasser les objets mobiles qui le fascinent. On sait que ce Pokémon court souvent après sa queue, jusqu’à ce qu’il ait la tête qui tourne.",
+					"de": "Eneco ist fasziniert von Dingen, die sich bewegen, und jagt ihnen hinterher. Dieses Pokémon jagt häufig seinen eigenen Schweif, sodass ihm schwindlig wird.",
+					"es": "A Skitty le encanta mover cosas e ir detrás de ellas. Es de todos sabido que se dedica a ir detrás de su propia cola y que, al final, acaba mareándose.",
+					"it": "Skitty ha l’abitudine di lasciarsi ammaliare dagli oggetti in movimento e seguirli dando loro la caccia. Questo Pokémon è noto anche per rincorrere la sua stessa coda fino a rimanere stordito.",
+					"en": "Skitty has the habit of becoming fascinated by moving objects and chasing them around. This Pokémon is known to chase after its own tail and become dizzy.",
+					"ja": "動く ものを 見つけると 夢中に なって 追いかけ回す 習性を 持つ ポケモン。 自分の シッポを 追いかけて 目を 回す。",
+					"es-419": "A Skitty le encanta mover cosas e ir detrás de ellas. Es de todos sabido que se dedica a ir detrás de su propia cola y que, al final, acaba mareándose."
+				},
+				"omegaruby": {
+					"ja-hrkt": "うごく ものを みつけると むちゅうに なって おいかけまわす しゅうせいを もつ ポケモン。 じぶんの シッポを おいかけて めを まわす。",
+					"ko": "움직이는 것을 발견하면 푹 빠져서 뒤쫓아 가는 습성을 지닌 포켓몬이다. 자기 꼬리를 쫓다 현기증을 일으킨다.",
+					"fr": "Skitty a pris l’habitude de pourchasser les objets mobiles qui le fascinent. On sait que ce Pokémon court souvent après sa queue, jusqu’à ce qu’il ait la tête qui tourne.",
+					"de": "Eneco ist fasziniert von Dingen, die sich bewegen, und jagt ihnen hinterher. Dieses Pokémon jagt häufig seinen eigenen Schweif, sodass ihm schwindlig wird.",
+					"es": "A Skitty le encanta mover cosas e ir detrás de ellas. Es de todos sabido que se dedica a ir detrás de su propia cola y que, al final, acaba mareándose.",
+					"it": "Skitty ha l’abitudine di lasciarsi ammaliare dagli oggetti in movimento e seguirli dando loro la caccia. Questo Pokémon è noto anche per rincorrere la sua stessa coda fino a rimanere stordito.",
+					"en": "Skitty has the habit of becoming fascinated by moving objects and chasing them around. This Pokémon is known to chase after its own tail and become dizzy.",
+					"ja": "動く ものを 見つけると 夢中に なって 追いかけ回す 習性を 持つ ポケモン。 自分の シッポを 追いかけて 目を 回す。",
+					"es-419": "A Skitty le encanta mover cosas e ir detrás de ellas. Es de todos sabido que se dedica a ir detrás de su propia cola y que, al final, acaba mareándose."
+				},
+				"alphasapphire-national": {
+					"ja-hrkt": "じぶんの シッポを おいかけまわす ポケモン。 やせいは もりの じゅもくの あなで くらす。 あいくるしい かおで ペットとして だいにんき。",
+					"ko": "자신의 꼬리를 쫓아다니는 포켓몬이다. 야생에서는 숲의 나무 구멍에서 산다. 귀염성 있는 얼굴 때문에 애완동물로 인기가 높다.",
+					"fr": "On sait que Skitty court souvent après sa queue. À l’état sauvage, ce Pokémon vit dans les cavités des arbres de la forêt. Il est tellement adorable qu’il a un grand succès comme animal de compagnie.",
+					"de": "Eneco jagt spielerisch seinen eigenen Schweif. In der Wildnis lebt dieses Pokémon in den Löchern von Bäumen. Es ist als Haustier sehr beliebt, da es bezaubernd aussieht.",
+					"es": "Skitty es conocido por la costumbre que tiene de juguetear y de intentar pillarse la cola. En estado salvaje, habita en las cavidades de los troncos de los árboles del bosque. Es la mascota de muchos por lo dulce que parece.",
+					"it": "Skitty è noto per il suo movimento rotatorio inteso a mordere la propria coda. Allo stato brado, vive all’interno di tronchi cavi nella foresta. È molto amato come animale domestico grazie all’aspetto estremamente dolce.",
+					"en": "Skitty is known to chase around playfully after its own tail. In the wild, this Pokémon lives in holes in the trees of forests. It is very popular as a pet because of its adorable looks.",
+					"ja": "自分の シッポを 追いかけ回す ポケモン。 野生は 森の 樹木の 穴で 暮らす。 愛くるしい 顔で ペットとして 大人気。",
+					"es-419": "Skitty es conocido por la costumbre que tiene de juguetear y de intentar pillarse la cola. En estado salvaje, habita en las cavidades de los troncos de los árboles del bosque. Es la mascota de muchos por lo dulce que parece."
+				},
+				"alphasapphire": {
+					"ja-hrkt": "じぶんの シッポを おいかけまわす ポケモン。 やせいは もりの じゅもくの あなで くらす。 あいくるしい かおで ペットとして だいにんき。",
+					"ko": "자신의 꼬리를 쫓아다니는 포켓몬이다. 야생에서는 숲의 나무 구멍에서 산다. 귀염성 있는 얼굴 때문에 애완동물로 인기가 높다.",
+					"fr": "On sait que Skitty court souvent après sa queue. À l’état sauvage, ce Pokémon vit dans les cavités des arbres de la forêt. Il est tellement adorable qu’il a un grand succès comme animal de compagnie.",
+					"de": "Eneco jagt spielerisch seinen eigenen Schweif. In der Wildnis lebt dieses Pokémon in den Löchern von Bäumen. Es ist als Haustier sehr beliebt, da es bezaubernd aussieht.",
+					"es": "Skitty es conocido por la costumbre que tiene de juguetear y de intentar pillarse la cola. En estado salvaje, habita en las cavidades de los troncos de los árboles del bosque. Es la mascota de muchos por lo dulce que parece.",
+					"it": "Skitty è noto per il suo movimento rotatorio inteso a mordere la propria coda. Allo stato brado, vive all’interno di tronchi cavi nella foresta. È molto amato come animale domestico grazie all’aspetto estremamente dolce.",
+					"en": "Skitty is known to chase around playfully after its own tail. In the wild, this Pokémon lives in holes in the trees of forests. It is very popular as a pet because of its adorable looks.",
+					"ja": "自分の シッポを 追いかけ回す ポケモン。 野生は 森の 樹木の 穴で 暮らす。 愛くるしい 顔で ペットとして 大人気。",
+					"es-419": "Skitty es conocido por la costumbre que tiene de juguetear y de intentar pillarse la cola. En estado salvaje, habita en las cavidades de los troncos de los árboles del bosque. Es la mascota de muchos por lo dulce que parece."
+				}
+			}
+		},
+		{
+			"profileKey": "sun-moon",
+			"label": "Sun / Moon",
+			"appGameKeys": [
+				"sun-alola",
+				"sun-melemele",
+				"sun-akala",
+				"sun-ulaula",
+				"sun-poni",
+				"moon-alola",
+				"moon-melemele",
+				"moon-akala",
+				"moon-ulaula",
+				"moon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Skitty",
+				"localizedNames": {
+					"ja-hrkt": "エネコ",
+					"ja-roma": "Eneco",
+					"ko": "에나비",
+					"zh-hant": "向尾喵",
+					"fr": "Skitty",
+					"de": "Eneco",
+					"es": "Skitty",
+					"it": "Skitty",
+					"ja": "エネコ",
+					"zh-hans": "向尾喵",
+					"es-419": "Skitty"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 45,
+					"def": 45,
+					"spa": 35,
+					"spd": 35,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cute Charm",
+					"Normalize",
+					"Wonder Skin (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Wonder Skin"
+				],
+				"eggGroups": [
+					"Ground",
+					"Fairy"
+				],
+				"expGroup": "Fast",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "11.0 kg",
+				"genderRatio": "25% male / 75% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 52,
+				"habitat": "Forest",
+				"shape": "Quadruped",
+				"color": "Pink",
+				"genus": "Kitten Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こねこポケモン",
+					"ko": "작은고양이포켓몬",
+					"zh-hant": "小貓寶可夢",
+					"fr": "Pokémon Chaton",
+					"de": "Kätzchen",
+					"es": "Pokémon Gatito",
+					"it": "Pokémon Micio",
+					"ja": "こねこポケモン",
+					"zh-hans": "小猫宝可梦",
+					"es-419": "Pokémon Gatito"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 300
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 61
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 78
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 78
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 63
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 300,
+								"natiId": 300,
+								"name": "Skitty"
+							},
+							{
+								"id": 301,
+								"natiId": 301,
+								"name": "Delcatty",
+								"method": "Use item",
+								"value": "Moon Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Fake Out",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Growl",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Tail Whip",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Foresight",
+							"level": 4,
+							"order": null
+						},
+						{
+							"name": "Sing",
+							"level": 7,
+							"order": null
+						},
+						{
+							"name": "Attract",
+							"level": 10,
+							"order": null
+						},
+						{
+							"name": "Disarming Voice",
+							"level": 13,
+							"order": null
+						},
+						{
+							"name": "Double Slap",
+							"level": 16,
+							"order": null
+						},
+						{
+							"name": "Copycat",
+							"level": 19,
+							"order": null
+						},
+						{
+							"name": "Feint Attack",
+							"level": 22,
+							"order": null
+						},
+						{
+							"name": "Charm",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Wake Up Slap",
+							"level": 28,
+							"order": null
+						},
+						{
+							"name": "Assist",
+							"level": 31,
+							"order": null
+						},
+						{
+							"name": "Covet",
+							"level": 34,
+							"order": null
+						},
+						{
+							"name": "Heal Bell",
+							"level": 37,
+							"order": null
+						},
+						{
+							"name": "Double Edge",
+							"level": 40,
+							"order": null
+						},
+						{
+							"name": "Captivate",
+							"level": 43,
+							"order": null
+						},
+						{
+							"name": "Play Rough",
+							"level": 46,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Blizzard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Calm Mind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Charge Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Echoed Voice",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Grass Knot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ice Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Payback",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Safeguard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Work Up",
+							"level": null,
+							"order": null
+						}
+					],
+					"Egg": [
+						{
+							"name": "Baton Pass",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Captivate",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Cosmic Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fake Out",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fake Tears",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Helping Hand",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Last Resort",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Mud Bomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Simple Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sucker Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Tickle",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Uproar",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wish",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Zen Headbutt",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/300",
+						"fetchedAt": "2026-11-03T05:53:25.353Z",
+						"hash": "9ca8a064aa1ed40df93bf181262d9140a5ab8c80934bda7afa32fecd90cde3b7"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/148/",
+						"fetchedAt": "2026-11-03T05:53:25.396Z",
+						"hash": "320ab3df26115b667a161eff6db7a42a18b3c8087c7a3591acdc0dd2c78e6151"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/",
+						"fetchedAt": "2026-11-03T05:53:25.430Z",
+						"hash": "d21506d833304227f110e97014789a69578e8ed6d55b02195ca657f64e95b5a4"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/encounters",
+						"fetchedAt": "2026-11-03T05:53:25.482Z",
+						"hash": "344363094a99f45e7ad2d6ba467672a8102906154e10d88542c1f8137b061d6e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/300/",
+						"fetchedAt": "2026-11-03T05:53:25.534Z",
+						"hash": "58df1f37a680b645008ecbd07e89a024e393dfe771c3b8df0ed8e33958246c61"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sun-alola": "",
+				"sun-melemele": "",
+				"sun-akala": "",
+				"sun-ulaula": "",
+				"sun-poni": "",
+				"moon-alola": "",
+				"moon-melemele": "",
+				"moon-akala": "",
+				"moon-ulaula": "",
+				"moon-poni": ""
+			},
+			"localizedFlavorByGame": {
+				"sun-alola": {},
+				"sun-melemele": {},
+				"sun-akala": {},
+				"sun-ulaula": {},
+				"sun-poni": {},
+				"moon-alola": {},
+				"moon-melemele": {},
+				"moon-akala": {},
+				"moon-ulaula": {},
+				"moon-poni": {}
+			}
+		},
+		{
+			"profileKey": "ultra-sun-ultra-moon",
+			"label": "Ultra Sun / Ultra Moon",
+			"appGameKeys": [
+				"ultrasun-alola",
+				"ultrasun-melemele",
+				"ultrasun-akala",
+				"ultrasun-ulaula",
+				"ultrasun-poni",
+				"ultramoon-alola",
+				"ultramoon-melemele",
+				"ultramoon-akala",
+				"ultramoon-ulaula",
+				"ultramoon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Skitty",
+				"localizedNames": {
+					"ja-hrkt": "エネコ",
+					"ja-roma": "Eneco",
+					"ko": "에나비",
+					"zh-hant": "向尾喵",
+					"fr": "Skitty",
+					"de": "Eneco",
+					"es": "Skitty",
+					"it": "Skitty",
+					"ja": "エネコ",
+					"zh-hans": "向尾喵",
+					"es-419": "Skitty"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 45,
+					"def": 45,
+					"spa": 35,
+					"spd": 35,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cute Charm",
+					"Normalize",
+					"Wonder Skin (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Wonder Skin"
+				],
+				"eggGroups": [
+					"Ground",
+					"Fairy"
+				],
+				"expGroup": "Fast",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "11.0 kg",
+				"genderRatio": "25% male / 75% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 52,
+				"habitat": "Forest",
+				"shape": "Quadruped",
+				"color": "Pink",
+				"genus": "Kitten Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こねこポケモン",
+					"ko": "작은고양이포켓몬",
+					"zh-hant": "小貓寶可夢",
+					"fr": "Pokémon Chaton",
+					"de": "Kätzchen",
+					"es": "Pokémon Gatito",
+					"it": "Pokémon Micio",
+					"ja": "こねこポケモン",
+					"zh-hans": "小猫宝可梦",
+					"es-419": "Pokémon Gatito"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 300
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 61
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 78
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 78
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 63
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 300,
+								"natiId": 300,
+								"name": "Skitty"
+							},
+							{
+								"id": 301,
+								"natiId": 301,
+								"name": "Delcatty",
+								"method": "Use item",
+								"value": "Moon Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Fake Out",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Growl",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Tail Whip",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Foresight",
+							"level": 4,
+							"order": null
+						},
+						{
+							"name": "Sing",
+							"level": 7,
+							"order": null
+						},
+						{
+							"name": "Attract",
+							"level": 10,
+							"order": null
+						},
+						{
+							"name": "Disarming Voice",
+							"level": 13,
+							"order": null
+						},
+						{
+							"name": "Double Slap",
+							"level": 16,
+							"order": null
+						},
+						{
+							"name": "Copycat",
+							"level": 19,
+							"order": null
+						},
+						{
+							"name": "Feint Attack",
+							"level": 22,
+							"order": null
+						},
+						{
+							"name": "Charm",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Wake Up Slap",
+							"level": 28,
+							"order": null
+						},
+						{
+							"name": "Assist",
+							"level": 31,
+							"order": null
+						},
+						{
+							"name": "Covet",
+							"level": 34,
+							"order": null
+						},
+						{
+							"name": "Heal Bell",
+							"level": 37,
+							"order": null
+						},
+						{
+							"name": "Double Edge",
+							"level": 40,
+							"order": null
+						},
+						{
+							"name": "Captivate",
+							"level": 43,
+							"order": null
+						},
+						{
+							"name": "Play Rough",
+							"level": 46,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Blizzard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Calm Mind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Charge Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Echoed Voice",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Grass Knot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ice Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Payback",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Safeguard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Work Up",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Covet",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Heal Bell",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Helping Hand",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Voice",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Icy Wind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Last Resort",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shock Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Uproar",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Water Pulse",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Zen Headbutt",
+							"level": null,
+							"order": null
+						}
+					],
+					"Egg": [
+						{
+							"name": "Baton Pass",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Captivate",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Cosmic Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fake Out",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fake Tears",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Helping Hand",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Last Resort",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Mud Bomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Simple Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sucker Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Tickle",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Uproar",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wish",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Zen Headbutt",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/300",
+						"fetchedAt": "2026-11-03T05:53:25.353Z",
+						"hash": "9ca8a064aa1ed40df93bf181262d9140a5ab8c80934bda7afa32fecd90cde3b7"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/148/",
+						"fetchedAt": "2026-11-03T05:53:25.396Z",
+						"hash": "320ab3df26115b667a161eff6db7a42a18b3c8087c7a3591acdc0dd2c78e6151"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/",
+						"fetchedAt": "2026-11-03T05:53:25.430Z",
+						"hash": "d21506d833304227f110e97014789a69578e8ed6d55b02195ca657f64e95b5a4"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/encounters",
+						"fetchedAt": "2026-11-03T05:53:25.482Z",
+						"hash": "344363094a99f45e7ad2d6ba467672a8102906154e10d88542c1f8137b061d6e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/300/",
+						"fetchedAt": "2026-11-03T05:53:25.534Z",
+						"hash": "58df1f37a680b645008ecbd07e89a024e393dfe771c3b8df0ed8e33958246c61"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"ultrasun-alola": "",
+				"ultrasun-melemele": "",
+				"ultrasun-akala": "",
+				"ultrasun-ulaula": "",
+				"ultrasun-poni": "",
+				"ultramoon-alola": "",
+				"ultramoon-melemele": "",
+				"ultramoon-akala": "",
+				"ultramoon-ulaula": "",
+				"ultramoon-poni": ""
+			},
+			"localizedFlavorByGame": {
+				"ultrasun-alola": {},
+				"ultrasun-melemele": {},
+				"ultrasun-akala": {},
+				"ultrasun-ulaula": {},
+				"ultrasun-poni": {},
+				"ultramoon-alola": {},
+				"ultramoon-melemele": {},
+				"ultramoon-akala": {},
+				"ultramoon-ulaula": {},
+				"ultramoon-poni": {}
+			}
+		},
+		{
+			"profileKey": "lets-go-pikachu-lets-go-eevee",
+			"label": "Let's Go Pikachu / Eevee",
+			"appGameKeys": [
+				"letsgopikachu",
+				"letsgoeevee"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Skitty",
+				"localizedNames": {
+					"ja-hrkt": "エネコ",
+					"ja-roma": "Eneco",
+					"ko": "에나비",
+					"zh-hant": "向尾喵",
+					"fr": "Skitty",
+					"de": "Eneco",
+					"es": "Skitty",
+					"it": "Skitty",
+					"ja": "エネコ",
+					"zh-hans": "向尾喵",
+					"es-419": "Skitty"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 45,
+					"def": 45,
+					"spa": 35,
+					"spd": 35,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cute Charm",
+					"Normalize",
+					"Wonder Skin (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Wonder Skin"
+				],
+				"eggGroups": [
+					"Ground",
+					"Fairy"
+				],
+				"expGroup": "Fast",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "11.0 kg",
+				"genderRatio": "25% male / 75% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 52,
+				"habitat": "Forest",
+				"shape": "Quadruped",
+				"color": "Pink",
+				"genus": "Kitten Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こねこポケモン",
+					"ko": "작은고양이포켓몬",
+					"zh-hant": "小貓寶可夢",
+					"fr": "Pokémon Chaton",
+					"de": "Kätzchen",
+					"es": "Pokémon Gatito",
+					"it": "Pokémon Micio",
+					"ja": "こねこポケモン",
+					"zh-hans": "小猫宝可梦",
+					"es-419": "Pokémon Gatito"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 300
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 61
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 78
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 78
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 63
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 300,
+								"natiId": 300,
+								"name": "Skitty"
+							},
+							{
+								"id": 301,
+								"natiId": 301,
+								"name": "Delcatty",
+								"method": "Use item",
+								"value": "Moon Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/300",
+						"fetchedAt": "2026-11-03T05:53:25.353Z",
+						"hash": "9ca8a064aa1ed40df93bf181262d9140a5ab8c80934bda7afa32fecd90cde3b7"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/148/",
+						"fetchedAt": "2026-11-03T05:53:25.396Z",
+						"hash": "320ab3df26115b667a161eff6db7a42a18b3c8087c7a3591acdc0dd2c78e6151"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/",
+						"fetchedAt": "2026-11-03T05:53:25.430Z",
+						"hash": "d21506d833304227f110e97014789a69578e8ed6d55b02195ca657f64e95b5a4"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/encounters",
+						"fetchedAt": "2026-11-03T05:53:25.482Z",
+						"hash": "344363094a99f45e7ad2d6ba467672a8102906154e10d88542c1f8137b061d6e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/300/",
+						"fetchedAt": "2026-11-03T05:53:25.534Z",
+						"hash": "58df1f37a680b645008ecbd07e89a024e393dfe771c3b8df0ed8e33958246c61"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"letsgopikachu": "",
+				"letsgoeevee": ""
+			},
+			"localizedFlavorByGame": {
+				"letsgopikachu": {},
+				"letsgoeevee": {}
+			}
+		},
+		{
+			"profileKey": "sword-shield",
+			"label": "Sword / Shield",
+			"appGameKeys": [
+				"sword",
+				"shield"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Skitty",
+				"localizedNames": {
+					"ja-hrkt": "エネコ",
+					"ja-roma": "Eneco",
+					"ko": "에나비",
+					"zh-hant": "向尾喵",
+					"fr": "Skitty",
+					"de": "Eneco",
+					"es": "Skitty",
+					"it": "Skitty",
+					"ja": "エネコ",
+					"zh-hans": "向尾喵",
+					"es-419": "Skitty"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 45,
+					"def": 45,
+					"spa": 35,
+					"spd": 35,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cute Charm",
+					"Normalize",
+					"Wonder Skin (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Wonder Skin"
+				],
+				"eggGroups": [
+					"Ground",
+					"Fairy"
+				],
+				"expGroup": "Fast",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "11.0 kg",
+				"genderRatio": "25% male / 75% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 52,
+				"habitat": "Forest",
+				"shape": "Quadruped",
+				"color": "Pink",
+				"genus": "Kitten Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こねこポケモン",
+					"ko": "작은고양이포켓몬",
+					"zh-hant": "小貓寶可夢",
+					"fr": "Pokémon Chaton",
+					"de": "Kätzchen",
+					"es": "Pokémon Gatito",
+					"it": "Pokémon Micio",
+					"ja": "こねこポケモン",
+					"zh-hans": "小猫宝可梦",
+					"es-419": "Pokémon Gatito"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 300
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 61
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 78
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 78
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 63
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 300,
+								"natiId": 300,
+								"name": "Skitty"
+							},
+							{
+								"id": 301,
+								"natiId": 301,
+								"name": "Delcatty",
+								"method": "Use item",
+								"value": "Moon Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/300",
+						"fetchedAt": "2026-11-03T05:53:25.353Z",
+						"hash": "9ca8a064aa1ed40df93bf181262d9140a5ab8c80934bda7afa32fecd90cde3b7"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/148/",
+						"fetchedAt": "2026-11-03T05:53:25.396Z",
+						"hash": "320ab3df26115b667a161eff6db7a42a18b3c8087c7a3591acdc0dd2c78e6151"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/",
+						"fetchedAt": "2026-11-03T05:53:25.430Z",
+						"hash": "d21506d833304227f110e97014789a69578e8ed6d55b02195ca657f64e95b5a4"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/encounters",
+						"fetchedAt": "2026-11-03T05:53:25.482Z",
+						"hash": "344363094a99f45e7ad2d6ba467672a8102906154e10d88542c1f8137b061d6e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/300/",
+						"fetchedAt": "2026-11-03T05:53:25.534Z",
+						"hash": "58df1f37a680b645008ecbd07e89a024e393dfe771c3b8df0ed8e33958246c61"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sword": "",
+				"shield": ""
+			},
+			"localizedFlavorByGame": {
+				"sword": {},
+				"shield": {}
+			}
+		},
+		{
+			"profileKey": "the-isle-of-armor",
+			"label": "The Isle of Armor",
+			"appGameKeys": [
+				"swordioa",
+				"shieldioa"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Skitty",
+				"localizedNames": {
+					"ja-hrkt": "エネコ",
+					"ja-roma": "Eneco",
+					"ko": "에나비",
+					"zh-hant": "向尾喵",
+					"fr": "Skitty",
+					"de": "Eneco",
+					"es": "Skitty",
+					"it": "Skitty",
+					"ja": "エネコ",
+					"zh-hans": "向尾喵",
+					"es-419": "Skitty"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 45,
+					"def": 45,
+					"spa": 35,
+					"spd": 35,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cute Charm",
+					"Normalize",
+					"Wonder Skin (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Wonder Skin"
+				],
+				"eggGroups": [
+					"Ground",
+					"Fairy"
+				],
+				"expGroup": "Fast",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "11.0 kg",
+				"genderRatio": "25% male / 75% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 52,
+				"habitat": "Forest",
+				"shape": "Quadruped",
+				"color": "Pink",
+				"genus": "Kitten Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こねこポケモン",
+					"ko": "작은고양이포켓몬",
+					"zh-hant": "小貓寶可夢",
+					"fr": "Pokémon Chaton",
+					"de": "Kätzchen",
+					"es": "Pokémon Gatito",
+					"it": "Pokémon Micio",
+					"ja": "こねこポケモン",
+					"zh-hans": "小猫宝可梦",
+					"es-419": "Pokémon Gatito"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 300
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 61
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 78
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 78
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 63
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 300,
+								"natiId": 300,
+								"name": "Skitty"
+							},
+							{
+								"id": 301,
+								"natiId": 301,
+								"name": "Delcatty",
+								"method": "Use item",
+								"value": "Moon Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/300",
+						"fetchedAt": "2026-11-03T05:53:25.353Z",
+						"hash": "9ca8a064aa1ed40df93bf181262d9140a5ab8c80934bda7afa32fecd90cde3b7"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/148/",
+						"fetchedAt": "2026-11-03T05:53:25.396Z",
+						"hash": "320ab3df26115b667a161eff6db7a42a18b3c8087c7a3591acdc0dd2c78e6151"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/",
+						"fetchedAt": "2026-11-03T05:53:25.430Z",
+						"hash": "d21506d833304227f110e97014789a69578e8ed6d55b02195ca657f64e95b5a4"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/encounters",
+						"fetchedAt": "2026-11-03T05:53:25.482Z",
+						"hash": "344363094a99f45e7ad2d6ba467672a8102906154e10d88542c1f8137b061d6e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/300/",
+						"fetchedAt": "2026-11-03T05:53:25.534Z",
+						"hash": "58df1f37a680b645008ecbd07e89a024e393dfe771c3b8df0ed8e33958246c61"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordioa": "",
+				"shieldioa": ""
+			},
+			"localizedFlavorByGame": {
+				"swordioa": {},
+				"shieldioa": {}
+			}
+		},
+		{
+			"profileKey": "the-crown-tundra",
+			"label": "The Crown Tundra",
+			"appGameKeys": [
+				"swordct",
+				"shieldct"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Skitty",
+				"localizedNames": {
+					"ja-hrkt": "エネコ",
+					"ja-roma": "Eneco",
+					"ko": "에나비",
+					"zh-hant": "向尾喵",
+					"fr": "Skitty",
+					"de": "Eneco",
+					"es": "Skitty",
+					"it": "Skitty",
+					"ja": "エネコ",
+					"zh-hans": "向尾喵",
+					"es-419": "Skitty"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 45,
+					"def": 45,
+					"spa": 35,
+					"spd": 35,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cute Charm",
+					"Normalize",
+					"Wonder Skin (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Wonder Skin"
+				],
+				"eggGroups": [
+					"Ground",
+					"Fairy"
+				],
+				"expGroup": "Fast",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "11.0 kg",
+				"genderRatio": "25% male / 75% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 52,
+				"habitat": "Forest",
+				"shape": "Quadruped",
+				"color": "Pink",
+				"genus": "Kitten Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こねこポケモン",
+					"ko": "작은고양이포켓몬",
+					"zh-hant": "小貓寶可夢",
+					"fr": "Pokémon Chaton",
+					"de": "Kätzchen",
+					"es": "Pokémon Gatito",
+					"it": "Pokémon Micio",
+					"ja": "こねこポケモン",
+					"zh-hans": "小猫宝可梦",
+					"es-419": "Pokémon Gatito"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 300
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 61
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 78
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 78
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 63
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 300,
+								"natiId": 300,
+								"name": "Skitty"
+							},
+							{
+								"id": 301,
+								"natiId": 301,
+								"name": "Delcatty",
+								"method": "Use item",
+								"value": "Moon Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/300",
+						"fetchedAt": "2026-11-03T05:53:25.353Z",
+						"hash": "9ca8a064aa1ed40df93bf181262d9140a5ab8c80934bda7afa32fecd90cde3b7"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/148/",
+						"fetchedAt": "2026-11-03T05:53:25.396Z",
+						"hash": "320ab3df26115b667a161eff6db7a42a18b3c8087c7a3591acdc0dd2c78e6151"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/",
+						"fetchedAt": "2026-11-03T05:53:25.430Z",
+						"hash": "d21506d833304227f110e97014789a69578e8ed6d55b02195ca657f64e95b5a4"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/encounters",
+						"fetchedAt": "2026-11-03T05:53:25.482Z",
+						"hash": "344363094a99f45e7ad2d6ba467672a8102906154e10d88542c1f8137b061d6e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/300/",
+						"fetchedAt": "2026-11-03T05:53:25.534Z",
+						"hash": "58df1f37a680b645008ecbd07e89a024e393dfe771c3b8df0ed8e33958246c61"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordct": "",
+				"shieldct": ""
+			},
+			"localizedFlavorByGame": {
+				"swordct": {},
+				"shieldct": {}
+			}
+		},
+		{
+			"profileKey": "brilliant-diamond-shining-pearl",
+			"label": "Brilliant Diamond / Shining Pearl",
+			"appGameKeys": [
+				"brilliantdiamond-national",
+				"brilliantdiamond",
+				"shiningpearl-national",
+				"shiningpearl"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Skitty",
+				"localizedNames": {
+					"ja-hrkt": "エネコ",
+					"ja-roma": "Eneco",
+					"ko": "에나비",
+					"zh-hant": "向尾喵",
+					"fr": "Skitty",
+					"de": "Eneco",
+					"es": "Skitty",
+					"it": "Skitty",
+					"ja": "エネコ",
+					"zh-hans": "向尾喵",
+					"es-419": "Skitty"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 45,
+					"def": 45,
+					"spa": 35,
+					"spd": 35,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cute Charm",
+					"Normalize",
+					"Wonder Skin (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Wonder Skin"
+				],
+				"eggGroups": [
+					"Ground",
+					"Fairy"
+				],
+				"expGroup": "Fast",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "11.0 kg",
+				"genderRatio": "25% male / 75% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 52,
+				"habitat": "Forest",
+				"shape": "Quadruped",
+				"color": "Pink",
+				"genus": "Kitten Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こねこポケモン",
+					"ko": "작은고양이포켓몬",
+					"zh-hant": "小貓寶可夢",
+					"fr": "Pokémon Chaton",
+					"de": "Kätzchen",
+					"es": "Pokémon Gatito",
+					"it": "Pokémon Micio",
+					"ja": "こねこポケモン",
+					"zh-hans": "小猫宝可梦",
+					"es-419": "Pokémon Gatito"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 300
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 61
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 78
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 78
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 63
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 300,
+								"natiId": 300,
+								"name": "Skitty"
+							},
+							{
+								"id": 301,
+								"natiId": 301,
+								"name": "Delcatty",
+								"method": "Use item",
+								"value": "Moon Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Fake Out",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Growl",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Tail Whip",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Tackle",
+							"level": 4,
+							"order": null
+						},
+						{
+							"name": "Sing",
+							"level": 7,
+							"order": null
+						},
+						{
+							"name": "Attract",
+							"level": 10,
+							"order": null
+						},
+						{
+							"name": "Disarming Voice",
+							"level": 13,
+							"order": null
+						},
+						{
+							"name": "Fury Swipes",
+							"level": 16,
+							"order": null
+						},
+						{
+							"name": "Copycat",
+							"level": 19,
+							"order": null
+						},
+						{
+							"name": "Payback",
+							"level": 22,
+							"order": null
+						},
+						{
+							"name": "Charm",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": 31,
+							"order": null
+						},
+						{
+							"name": "Covet",
+							"level": 34,
+							"order": null
+						},
+						{
+							"name": "Heal Bell",
+							"level": 37,
+							"order": null
+						},
+						{
+							"name": "Double Edge",
+							"level": 40,
+							"order": null
+						},
+						{
+							"name": "Baby Doll Eyes",
+							"level": 43,
+							"order": null
+						},
+						{
+							"name": "Play Rough",
+							"level": 46,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Blizzard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Calm Mind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Charge Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endure",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Grass Knot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ice Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Nasty Plot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Payback",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Safeguard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shock Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Water Pulse",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Work Up",
+							"level": null,
+							"order": null
+						}
+					],
+					"Egg": [
+						{
+							"name": "Baton Pass",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Cosmic Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fake Out",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fake Tears",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Helping Hand",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Last Resort",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Simple Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sucker Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Tickle",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Uproar",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wish",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Zen Headbutt",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/300",
+						"fetchedAt": "2026-11-03T05:53:25.353Z",
+						"hash": "9ca8a064aa1ed40df93bf181262d9140a5ab8c80934bda7afa32fecd90cde3b7"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/148/",
+						"fetchedAt": "2026-11-03T05:53:25.396Z",
+						"hash": "320ab3df26115b667a161eff6db7a42a18b3c8087c7a3591acdc0dd2c78e6151"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/",
+						"fetchedAt": "2026-11-03T05:53:25.430Z",
+						"hash": "d21506d833304227f110e97014789a69578e8ed6d55b02195ca657f64e95b5a4"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/encounters",
+						"fetchedAt": "2026-11-03T05:53:25.482Z",
+						"hash": "344363094a99f45e7ad2d6ba467672a8102906154e10d88542c1f8137b061d6e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/300/",
+						"fetchedAt": "2026-11-03T05:53:25.534Z",
+						"hash": "58df1f37a680b645008ecbd07e89a024e393dfe771c3b8df0ed8e33958246c61"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"brilliantdiamond-national": "",
+				"brilliantdiamond": "",
+				"shiningpearl-national": "",
+				"shiningpearl": ""
+			},
+			"localizedFlavorByGame": {
+				"brilliantdiamond-national": {},
+				"brilliantdiamond": {},
+				"shiningpearl-national": {},
+				"shiningpearl": {}
+			}
+		},
+		{
+			"profileKey": "legends-arceus",
+			"label": "Legends: Arceus",
+			"appGameKeys": [
+				"legendsarceus"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Skitty",
+				"localizedNames": {
+					"ja-hrkt": "エネコ",
+					"ja-roma": "Eneco",
+					"ko": "에나비",
+					"zh-hant": "向尾喵",
+					"fr": "Skitty",
+					"de": "Eneco",
+					"es": "Skitty",
+					"it": "Skitty",
+					"ja": "エネコ",
+					"zh-hans": "向尾喵",
+					"es-419": "Skitty"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 45,
+					"def": 45,
+					"spa": 35,
+					"spd": 35,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cute Charm",
+					"Normalize",
+					"Wonder Skin (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Wonder Skin"
+				],
+				"eggGroups": [
+					"Ground",
+					"Fairy"
+				],
+				"expGroup": "Fast",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "11.0 kg",
+				"genderRatio": "25% male / 75% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 52,
+				"habitat": "Forest",
+				"shape": "Quadruped",
+				"color": "Pink",
+				"genus": "Kitten Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こねこポケモン",
+					"ko": "작은고양이포켓몬",
+					"zh-hant": "小貓寶可夢",
+					"fr": "Pokémon Chaton",
+					"de": "Kätzchen",
+					"es": "Pokémon Gatito",
+					"it": "Pokémon Micio",
+					"ja": "こねこポケモン",
+					"zh-hans": "小猫宝可梦",
+					"es-419": "Pokémon Gatito"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 300
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 61
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 78
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 78
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 63
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 300,
+								"natiId": 300,
+								"name": "Skitty"
+							},
+							{
+								"id": 301,
+								"natiId": 301,
+								"name": "Delcatty",
+								"method": "Use item",
+								"value": "Moon Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/300",
+						"fetchedAt": "2026-11-03T05:53:25.353Z",
+						"hash": "9ca8a064aa1ed40df93bf181262d9140a5ab8c80934bda7afa32fecd90cde3b7"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/148/",
+						"fetchedAt": "2026-11-03T05:53:25.396Z",
+						"hash": "320ab3df26115b667a161eff6db7a42a18b3c8087c7a3591acdc0dd2c78e6151"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/",
+						"fetchedAt": "2026-11-03T05:53:25.430Z",
+						"hash": "d21506d833304227f110e97014789a69578e8ed6d55b02195ca657f64e95b5a4"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/encounters",
+						"fetchedAt": "2026-11-03T05:53:25.482Z",
+						"hash": "344363094a99f45e7ad2d6ba467672a8102906154e10d88542c1f8137b061d6e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/300/",
+						"fetchedAt": "2026-11-03T05:53:25.534Z",
+						"hash": "58df1f37a680b645008ecbd07e89a024e393dfe771c3b8df0ed8e33958246c61"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendsarceus": ""
+			},
+			"localizedFlavorByGame": {
+				"legendsarceus": {}
+			}
+		},
+		{
+			"profileKey": "scarlet-violet",
+			"label": "Scarlet / Violet",
+			"appGameKeys": [
+				"scarlet",
+				"violet"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Skitty",
+				"localizedNames": {
+					"ja-hrkt": "エネコ",
+					"ja-roma": "Eneco",
+					"ko": "에나비",
+					"zh-hant": "向尾喵",
+					"fr": "Skitty",
+					"de": "Eneco",
+					"es": "Skitty",
+					"it": "Skitty",
+					"ja": "エネコ",
+					"zh-hans": "向尾喵",
+					"es-419": "Skitty"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 45,
+					"def": 45,
+					"spa": 35,
+					"spd": 35,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cute Charm",
+					"Normalize",
+					"Wonder Skin (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Wonder Skin"
+				],
+				"eggGroups": [
+					"Ground",
+					"Fairy"
+				],
+				"expGroup": "Fast",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "11.0 kg",
+				"genderRatio": "25% male / 75% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 52,
+				"habitat": "Forest",
+				"shape": "Quadruped",
+				"color": "Pink",
+				"genus": "Kitten Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こねこポケモン",
+					"ko": "작은고양이포켓몬",
+					"zh-hant": "小貓寶可夢",
+					"fr": "Pokémon Chaton",
+					"de": "Kätzchen",
+					"es": "Pokémon Gatito",
+					"it": "Pokémon Micio",
+					"ja": "こねこポケモン",
+					"zh-hans": "小猫宝可梦",
+					"es-419": "Pokémon Gatito"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 300
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 61
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 78
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 78
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 63
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 300,
+								"natiId": 300,
+								"name": "Skitty"
+							},
+							{
+								"id": 301,
+								"natiId": 301,
+								"name": "Delcatty",
+								"method": "Use item",
+								"value": "Moon Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/300",
+						"fetchedAt": "2026-11-03T05:53:25.353Z",
+						"hash": "9ca8a064aa1ed40df93bf181262d9140a5ab8c80934bda7afa32fecd90cde3b7"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/148/",
+						"fetchedAt": "2026-11-03T05:53:25.396Z",
+						"hash": "320ab3df26115b667a161eff6db7a42a18b3c8087c7a3591acdc0dd2c78e6151"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/",
+						"fetchedAt": "2026-11-03T05:53:25.430Z",
+						"hash": "d21506d833304227f110e97014789a69578e8ed6d55b02195ca657f64e95b5a4"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/encounters",
+						"fetchedAt": "2026-11-03T05:53:25.482Z",
+						"hash": "344363094a99f45e7ad2d6ba467672a8102906154e10d88542c1f8137b061d6e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/300/",
+						"fetchedAt": "2026-11-03T05:53:25.534Z",
+						"hash": "58df1f37a680b645008ecbd07e89a024e393dfe771c3b8df0ed8e33958246c61"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlet": "",
+				"violet": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlet": {},
+				"violet": {}
+			}
+		},
+		{
+			"profileKey": "the-teal-mask",
+			"label": "The Teal Mask",
+			"appGameKeys": [
+				"scarlettm",
+				"violettm"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Skitty",
+				"localizedNames": {
+					"ja-hrkt": "エネコ",
+					"ja-roma": "Eneco",
+					"ko": "에나비",
+					"zh-hant": "向尾喵",
+					"fr": "Skitty",
+					"de": "Eneco",
+					"es": "Skitty",
+					"it": "Skitty",
+					"ja": "エネコ",
+					"zh-hans": "向尾喵",
+					"es-419": "Skitty"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 45,
+					"def": 45,
+					"spa": 35,
+					"spd": 35,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cute Charm",
+					"Normalize",
+					"Wonder Skin (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Wonder Skin"
+				],
+				"eggGroups": [
+					"Ground",
+					"Fairy"
+				],
+				"expGroup": "Fast",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "11.0 kg",
+				"genderRatio": "25% male / 75% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 52,
+				"habitat": "Forest",
+				"shape": "Quadruped",
+				"color": "Pink",
+				"genus": "Kitten Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こねこポケモン",
+					"ko": "작은고양이포켓몬",
+					"zh-hant": "小貓寶可夢",
+					"fr": "Pokémon Chaton",
+					"de": "Kätzchen",
+					"es": "Pokémon Gatito",
+					"it": "Pokémon Micio",
+					"ja": "こねこポケモン",
+					"zh-hans": "小猫宝可梦",
+					"es-419": "Pokémon Gatito"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 300
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 61
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 78
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 78
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 63
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 300,
+								"natiId": 300,
+								"name": "Skitty"
+							},
+							{
+								"id": 301,
+								"natiId": 301,
+								"name": "Delcatty",
+								"method": "Use item",
+								"value": "Moon Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/300",
+						"fetchedAt": "2026-11-03T05:53:25.353Z",
+						"hash": "9ca8a064aa1ed40df93bf181262d9140a5ab8c80934bda7afa32fecd90cde3b7"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/148/",
+						"fetchedAt": "2026-11-03T05:53:25.396Z",
+						"hash": "320ab3df26115b667a161eff6db7a42a18b3c8087c7a3591acdc0dd2c78e6151"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/",
+						"fetchedAt": "2026-11-03T05:53:25.430Z",
+						"hash": "d21506d833304227f110e97014789a69578e8ed6d55b02195ca657f64e95b5a4"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/encounters",
+						"fetchedAt": "2026-11-03T05:53:25.482Z",
+						"hash": "344363094a99f45e7ad2d6ba467672a8102906154e10d88542c1f8137b061d6e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/300/",
+						"fetchedAt": "2026-11-03T05:53:25.534Z",
+						"hash": "58df1f37a680b645008ecbd07e89a024e393dfe771c3b8df0ed8e33958246c61"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlettm": "",
+				"violettm": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlettm": {},
+				"violettm": {}
+			}
+		},
+		{
+			"profileKey": "the-indigo-disk",
+			"label": "The Indigo Disk",
+			"appGameKeys": [
+				"scarletid",
+				"violetid"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Skitty",
+				"localizedNames": {
+					"ja-hrkt": "エネコ",
+					"ja-roma": "Eneco",
+					"ko": "에나비",
+					"zh-hant": "向尾喵",
+					"fr": "Skitty",
+					"de": "Eneco",
+					"es": "Skitty",
+					"it": "Skitty",
+					"ja": "エネコ",
+					"zh-hans": "向尾喵",
+					"es-419": "Skitty"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 50,
+					"atk": 45,
+					"def": 45,
+					"spa": 35,
+					"spd": 35,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cute Charm",
+					"Normalize",
+					"Wonder Skin (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Wonder Skin"
+				],
+				"eggGroups": [
+					"Ground",
+					"Fairy"
+				],
+				"expGroup": "Fast",
+				"hatchCounter": 15,
+				"height": "0.6 m",
+				"weight": "11.0 kg",
+				"genderRatio": "25% male / 75% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 52,
+				"habitat": "Forest",
+				"shape": "Quadruped",
+				"color": "Pink",
+				"genus": "Kitten Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こねこポケモン",
+					"ko": "작은고양이포켓몬",
+					"zh-hant": "小貓寶可夢",
+					"fr": "Pokémon Chaton",
+					"de": "Kätzchen",
+					"es": "Pokémon Gatito",
+					"it": "Pokémon Micio",
+					"ja": "こねこポケモン",
+					"zh-hans": "小猫宝可梦",
+					"es-419": "Pokémon Gatito"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 300
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 61
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 78
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 78
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 63
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 300,
+								"natiId": 300,
+								"name": "Skitty"
+							},
+							{
+								"id": 301,
+								"natiId": 301,
+								"name": "Delcatty",
+								"method": "Use item",
+								"value": "Moon Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/300",
+						"fetchedAt": "2026-11-03T05:53:25.353Z",
+						"hash": "9ca8a064aa1ed40df93bf181262d9140a5ab8c80934bda7afa32fecd90cde3b7"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/148/",
+						"fetchedAt": "2026-11-03T05:53:25.396Z",
+						"hash": "320ab3df26115b667a161eff6db7a42a18b3c8087c7a3591acdc0dd2c78e6151"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/",
+						"fetchedAt": "2026-11-03T05:53:25.430Z",
+						"hash": "d21506d833304227f110e97014789a69578e8ed6d55b02195ca657f64e95b5a4"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/300/encounters",
+						"fetchedAt": "2026-11-03T05:53:25.482Z",
+						"hash": "344363094a99f45e7ad2d6ba467672a8102906154e10d88542c1f8137b061d6e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/300/",
+						"fetchedAt": "2026-11-03T05:53:25.534Z",
+						"hash": "58df1f37a680b645008ecbd07e89a024e393dfe771c3b8df0ed8e33958246c61"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarletid": "",
+				"violetid": ""
+			},
+			"localizedFlavorByGame": {
+				"scarletid": {},
+				"violetid": {}
+			}
+		}
+	]
+}

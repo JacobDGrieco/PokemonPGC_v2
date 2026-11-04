@@ -1,0 +1,82 @@
+{
+	"schemaVersion": 1,
+	"id": 855,
+	"slug": "lumina-crash",
+	"name": "Lumina Crash",
+	"names": {
+		"de": "Lichteinschlag",
+		"en": "Lumina Crash",
+		"es": "Fotocolisión",
+		"es-419": "Fotocolisión",
+		"fr": "Lumino-Impact",
+		"it": "Fotocollisione",
+		"ja": "ルミナコリジョン",
+		"ja-hrkt": "ルミナコリジョン",
+		"ko": "루미나콜리전",
+		"zh-hans": "琉光冲激",
+		"zh-hant": "琉光衝激"
+	},
+	"generation": 9,
+	"type": "Psychic",
+	"damageClass": "Special",
+	"power": 80,
+	"accuracy": 100,
+	"pp": 10,
+	"priority": 0,
+	"effectChance": null,
+	"target": "Selected Pokemon",
+	"effectEntries": [],
+	"effectChanges": [],
+	"descriptions": [
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "en",
+			"text": "The user attacks by unleashing a peculiar light that even affects the mind. This also harshly lowers the target's Sp. Def stat."
+		},
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "fr",
+			"text": "Le lanceur attaque en émettant une étrange lumière qui ébranle l'esprit de la cible. Cela baisse beaucoup la Défense Spéciale de la cible."
+		}
+	],
+	"pastValues": [],
+	"statChanges": [
+		{
+			"stat": "Special Defense",
+			"change": -2
+		}
+	],
+	"meta": null,
+	"machines": [],
+	"learners": [
+		{
+			"nationalDexId": 956,
+			"speciesName": "Espathra",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		}
+	],
+	"potentialPokemon": [
+		"espathra"
+	],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/move/855/",
+		"fetchedAt": "2026-11-03T06:30:18.862Z",
+		"hash": "6dcde2cf94c8e6dcbeb5dfb799fe607d4931fdf36cf780673a5b74e053675314"
+	}
+}

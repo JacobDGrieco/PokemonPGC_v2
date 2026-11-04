@@ -1,0 +1,2392 @@
+{
+	"schemaVersion": 2,
+	"nationalDexId": 840,
+	"speciesName": "Applin",
+	"formKey": "base",
+	"formName": "Base",
+	"formLabelSource": "form-catalog",
+	"profiles": [
+		{
+			"profileKey": "sword-shield",
+			"label": "Sword / Shield",
+			"appGameKeys": [
+				"sword",
+				"shield"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Applin",
+				"localizedNames": {
+					"ja-hrkt": "カジッチュ",
+					"ja-roma": "Kajicchu",
+					"ko": "과사삭벌레",
+					"zh-hant": "啃果蟲",
+					"fr": "Verpom",
+					"de": "Knapfel",
+					"es": "Applin",
+					"it": "Applin",
+					"ja": "カジッチュ",
+					"zh-hans": "啃果虫",
+					"es-419": "Applin"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Grass",
+					"Dragon"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 40,
+					"def": 80,
+					"spa": 40,
+					"spd": 40,
+					"spe": 20
+				},
+				"evYield": {
+					"def": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Ripen",
+					"Gluttony",
+					"Bulletproof (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Bulletproof"
+				],
+				"eggGroups": [
+					"Plant",
+					"Dragon"
+				],
+				"expGroup": "Slow Then Very Fast",
+				"hatchCounter": 20,
+				"height": "0.2 m",
+				"weight": "0.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 255,
+				"baseExperience": 52,
+				"habitat": "",
+				"shape": "Squiggle",
+				"color": "Green",
+				"genus": "Apple Core Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "りんごぐらしポケモン",
+					"ko": "사과살이포켓몬",
+					"zh-hant": "蘋果居寶可夢",
+					"fr": "Pokémon Nid Pomme",
+					"de": "Apfelhaus-Pokémon",
+					"es": "Pokémon Manzanido",
+					"it": "Pokémon Pomicolo",
+					"ja": "りんごぐらしポケモン",
+					"zh-hans": "苹果居宝可梦",
+					"es-419": "Pokémon Manzanido"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 840
+					},
+					{
+						"pokedex": "galar",
+						"number": 205
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 19
+					},
+					{
+						"pokedex": "paldea",
+						"number": 108
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 33
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 840,
+								"natiId": 840,
+								"name": "Applin"
+							},
+							{
+								"id": 841,
+								"natiId": 841,
+								"name": "Flapple",
+								"method": "Use item",
+								"value": "Tart Apple"
+							}
+						],
+						[
+							{
+								"id": 840,
+								"natiId": 840,
+								"name": "Applin"
+							},
+							{
+								"id": 842,
+								"natiId": 842,
+								"name": "Appletun",
+								"method": "Use item",
+								"value": "Sweet Apple"
+							}
+						],
+						[
+							{
+								"id": 840,
+								"natiId": 840,
+								"name": "Applin"
+							},
+							{
+								"id": 1011,
+								"natiId": 1011,
+								"name": "Dipplin",
+								"method": "Use item",
+								"value": "Syrupy Apple"
+							},
+							{
+								"id": 1019,
+								"natiId": 1019,
+								"name": "Hydrapple",
+								"method": "Know move",
+								"value": "Dragon Cheer"
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Galar Route 5 Area",
+						"notes": "Walk, Lv. 16-18",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Galar Route 5 Area",
+						"notes": "Walk, Lv. 16-18",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Dusty Bowl Area",
+						"notes": "Walk, Lv. 40-45",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Dusty Bowl Area",
+						"notes": "Walk, Lv. 60",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Dusty Bowl Area",
+						"notes": "Walk, Lv. 40-45",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Dusty Bowl Area",
+						"notes": "Walk, Lv. 60",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Giants Mirror Main",
+						"notes": "Walk, Lv. 26-28",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Giants Mirror Main",
+						"notes": "Walk, Lv. 60",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Giants Mirror Main",
+						"notes": "Walk, Lv. 26-28",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Giants Mirror Main",
+						"notes": "Walk, Lv. 60",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Stony Wilderness Main",
+						"notes": "Walk, Lv. 26-28",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Stony Wilderness Main",
+						"notes": "Walk, Lv. 60",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Stony Wilderness Main",
+						"notes": "Walk, Lv. 26-28",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Stony Wilderness Main",
+						"notes": "Walk, Lv. 60",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Rolling Fields Max Den D",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Rolling Fields Max Den D",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Dappled Grove Max Den D",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Dappled Grove Max Den D",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Sword",
+						"rate": "40%"
+					},
+					{
+						"area": "Dappled Grove Max Den D",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Dappled Grove Max Den D",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Shield",
+						"rate": "40%"
+					},
+					{
+						"area": "Dappled Grove Max Den E",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Dappled Grove Max Den E",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Sword",
+						"rate": "40%"
+					},
+					{
+						"area": "Dappled Grove Max Den E",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Dappled Grove Max Den E",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Shield",
+						"rate": "40%"
+					},
+					{
+						"area": "Axews Eye Max Den A",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Axews Eye Max Den A",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Axews Eye Max Den A",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Sword",
+						"rate": "40%"
+					},
+					{
+						"area": "Axews Eye Max Den A",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Axews Eye Max Den A",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Axews Eye Max Den A",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Axews Eye Max Den A",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Shield",
+						"rate": "40%"
+					},
+					{
+						"area": "Axews Eye Max Den A",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Bridge Field Max Den C",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Bridge Field Max Den C",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Bridge Field Max Den C",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Bridge Field Max Den C",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Stony Wilderness Max Den J",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Stony Wilderness Max Den J",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Stony Wilderness Max Den J",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Stony Wilderness Max Den J",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Giants Mirror Max Den E",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Giants Mirror Max Den E",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Giants Mirror Max Den E",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Giants Mirror Max Den E",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "30%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Withdraw",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Astonish",
+							"level": 1,
+							"order": 2
+						}
+					],
+					"Egg": [
+						{
+							"name": "Defense Curl",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Recycle",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rollout",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sucker Punch",
+							"level": null,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Draco Meteor",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Grassy Glide",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/840",
+						"fetchedAt": "2026-11-03T05:54:00.323Z",
+						"hash": "c853ddd83b95f7043e74be282a4216d98e7374a61dd0a9db3e8e13d7567d547e"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/442/",
+						"fetchedAt": "2026-11-03T05:54:00.362Z",
+						"hash": "264120f37c31b853bcdcc4b74b28f39e891fb0e7c6526bcadc06a8dfcfb69f92"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/840/",
+						"fetchedAt": "2026-11-03T05:54:00.386Z",
+						"hash": "e48535ee6f7552ac3a353307f3d1508a29ee421fce74c31cb6787c9318b1498a"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/840/encounters",
+						"fetchedAt": "2026-11-03T05:54:00.446Z",
+						"hash": "14d06ec940dde21613ddbe4254e821bea08f6d5670f87e716f9573fdedcade51"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/840/",
+						"fetchedAt": "2026-11-03T05:54:00.502Z",
+						"hash": "696d2f3a1635cc929bb89ffc7ccb8fdff66000d0b83010686dcfd33f114e31a0"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sword": "It spends its entire life inside an apple. It hides from its natural enemies, bird Pokémon, by pretending it’s just an apple and nothing more.",
+				"shield": "As soon as it’s born, it burrows into an apple. Not only does the apple serve as its food source, but the flavor of the fruit determines its evolution."
+			},
+			"localizedFlavorByGame": {
+				"sword": {
+					"ja-hrkt": "いっしょう りんごの なかで くらし てんてきの とりポケモンに であうと りんごの ふりをして みをまもる。",
+					"ko": "평생을 사과 속에서 지내며 천적인 새포켓몬과 마주치면 사과인 척을 해서 몸을 지킨다.",
+					"zh-hant": "終其一生都在蘋果裡度過。 遇到天敵鳥寶可夢時， 會裝成蘋果保護自己。",
+					"fr": "Il vit toujours dans sa pomme. S’il croise un Pokémon oiseau, son prédateur naturel, il se fait passer pour un simple fruit pour se protéger.",
+					"de": "Es verbringt sein ganzes Leben im Inneren eines Apfels. Um sich vor Vogel-Pokémon, seinen Fressfeinden, zu schützen, imitiert es einen Apfel.",
+					"es": "Habita durante toda su vida en el interior de una manzana. Finge ser una fruta para protegerse de los Pokémon pájaro, sus enemigos naturales.",
+					"it": "Passa la vita all’interno di un pomo. Quando si imbatte in Pokémon alati, suoi nemici naturali, si protegge fingendosi un semplice frutto.",
+					"en": "It spends its entire life inside an apple. It hides from its natural enemies, bird Pokémon, by pretending it’s just an apple and nothing more.",
+					"ja": "一生 りんごの 中で 暮らし 天敵の 鳥ポケモンに 出会うと りんごの 振りをして 身を守る。",
+					"zh-hans": "终其一生都在苹果里度过。 遇到天敌鸟宝可梦时， 会装成苹果保护自己。",
+					"es-419": "Habita durante toda su vida en el interior de una manzana. Finge ser una fruta para protegerse de los Pokémon pájaro, sus enemigos naturales."
+				},
+				"shield": {
+					"ja-hrkt": "うまれると りんごに もぐりこむ。 なかみを たべながら せいちょうし りんごの あじが しんかを きめる。",
+					"ko": "태어나면 사과 안으로 숨어든다. 안을 파먹으면서 성장하고 사과 맛이 진화를 결정한다.",
+					"zh-hant": "一出生就躲進了蘋果中， 一邊吃果肉一邊成長。 進化方向依蘋果的味道而定。",
+					"fr": "À la naissance, il s’installe dans une pomme et grandit en se nourrissant de sa chair. Son évolution dépend de la saveur du fruit.",
+					"de": "Nach der Geburt kriecht es sofort in einen Apfel und verspeist dessen Inneres, um zu wachsen. Seine Entwicklung hängt von dessen Aroma ab.",
+					"es": "Nada más nacer se refugia en una manzana, cuyo interior va devorando a medida que crece. El sabor de la fruta determina la evolución.",
+					"it": "Quando nasce si intrufola in un pomo e cresce mangiandone la polpa. Si evolve in modo diverso a seconda del gusto del frutto.",
+					"en": "As soon as it’s born, it burrows into an apple. Not only does the apple serve as its food source, but the flavor of the fruit determines its evolution.",
+					"ja": "生まれると りんごに 潜りこむ。 中身を 食べながら 成長し りんごの 味が 進化を 決める。",
+					"zh-hans": "一出生就躲进了苹果中。 一边吃果肉一边成长。 进化方向因苹果的味道而定。",
+					"es-419": "Nada más nacer se refugia en una manzana, cuyo interior va devorando a medida que crece. El sabor de la fruta determina la evolución."
+				}
+			}
+		},
+		{
+			"profileKey": "the-isle-of-armor",
+			"label": "The Isle of Armor",
+			"appGameKeys": [
+				"swordioa",
+				"shieldioa"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Applin",
+				"localizedNames": {
+					"ja-hrkt": "カジッチュ",
+					"ja-roma": "Kajicchu",
+					"ko": "과사삭벌레",
+					"zh-hant": "啃果蟲",
+					"fr": "Verpom",
+					"de": "Knapfel",
+					"es": "Applin",
+					"it": "Applin",
+					"ja": "カジッチュ",
+					"zh-hans": "啃果虫",
+					"es-419": "Applin"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Grass",
+					"Dragon"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 40,
+					"def": 80,
+					"spa": 40,
+					"spd": 40,
+					"spe": 20
+				},
+				"evYield": {
+					"def": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Ripen",
+					"Gluttony",
+					"Bulletproof (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Bulletproof"
+				],
+				"eggGroups": [
+					"Plant",
+					"Dragon"
+				],
+				"expGroup": "Slow Then Very Fast",
+				"hatchCounter": 20,
+				"height": "0.2 m",
+				"weight": "0.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 255,
+				"baseExperience": 52,
+				"habitat": "",
+				"shape": "Squiggle",
+				"color": "Green",
+				"genus": "Apple Core Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "りんごぐらしポケモン",
+					"ko": "사과살이포켓몬",
+					"zh-hant": "蘋果居寶可夢",
+					"fr": "Pokémon Nid Pomme",
+					"de": "Apfelhaus-Pokémon",
+					"es": "Pokémon Manzanido",
+					"it": "Pokémon Pomicolo",
+					"ja": "りんごぐらしポケモン",
+					"zh-hans": "苹果居宝可梦",
+					"es-419": "Pokémon Manzanido"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 840
+					},
+					{
+						"pokedex": "galar",
+						"number": 205
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 19
+					},
+					{
+						"pokedex": "paldea",
+						"number": 108
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 33
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 840,
+								"natiId": 840,
+								"name": "Applin"
+							},
+							{
+								"id": 841,
+								"natiId": 841,
+								"name": "Flapple",
+								"method": "Use item",
+								"value": "Tart Apple"
+							}
+						],
+						[
+							{
+								"id": 840,
+								"natiId": 840,
+								"name": "Applin"
+							},
+							{
+								"id": 842,
+								"natiId": 842,
+								"name": "Appletun",
+								"method": "Use item",
+								"value": "Sweet Apple"
+							}
+						],
+						[
+							{
+								"id": 840,
+								"natiId": 840,
+								"name": "Applin"
+							},
+							{
+								"id": 1011,
+								"natiId": 1011,
+								"name": "Dipplin",
+								"method": "Use item",
+								"value": "Syrupy Apple"
+							},
+							{
+								"id": 1019,
+								"natiId": 1019,
+								"name": "Hydrapple",
+								"method": "Know move",
+								"value": "Dragon Cheer"
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Challenge Beach Area",
+						"notes": "Berry Trees, Lv. 13-18",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Beach Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Beach Area",
+						"notes": "Berry Trees, Lv. 13-18",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Beach Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Fields Of Honor Area",
+						"notes": "Berry Trees, Lv. 13-18",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Fields Of Honor Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Fields Of Honor Area",
+						"notes": "Berry Trees, Lv. 13-18",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Fields Of Honor Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Forest Of Focus Area",
+						"notes": "Berry Trees, Lv. 13-18",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Forest Of Focus Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Forest Of Focus Area",
+						"notes": "Berry Trees, Lv. 13-18",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Forest Of Focus Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Insular Sea Area",
+						"notes": "Berry Trees, Lv. 43-48",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Insular Sea Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Insular Sea Area",
+						"notes": "Berry Trees, Lv. 43-48",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Insular Sea Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Loop Lagoon Area",
+						"notes": "Berry Trees, Lv. 19-24",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Loop Lagoon Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Loop Lagoon Area",
+						"notes": "Berry Trees, Lv. 19-24",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Loop Lagoon Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Soothing Wetlands Area",
+						"notes": "Berry Trees, Lv. 13-18",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Soothing Wetlands Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Soothing Wetlands Area",
+						"notes": "Berry Trees, Lv. 13-18",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Soothing Wetlands Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Stepping Stone Sea Main",
+						"notes": "Berry Trees, Lv. 43-48",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Stepping Stone Sea Main",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Stepping Stone Sea Main",
+						"notes": "Berry Trees, Lv. 43-48",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Stepping Stone Sea Main",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Training Lowlands Area",
+						"notes": "Berry Trees, Lv. 16-21",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Training Lowlands Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Training Lowlands Area",
+						"notes": "Berry Trees, Lv. 16-21",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Training Lowlands Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Workout Sea Area",
+						"notes": "Berry Trees, Lv. 43-48",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Workout Sea Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Workout Sea Area",
+						"notes": "Berry Trees, Lv. 43-48",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Workout Sea Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Loop Lagoon Max Den D",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "The Isle Of Armor Sword",
+						"rate": "60%"
+					},
+					{
+						"area": "Loop Lagoon Max Den D",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "The Isle Of Armor Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Loop Lagoon Max Den D",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Loop Lagoon Max Den D",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "The Isle Of Armor Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Loop Lagoon Max Den D",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "The Isle Of Armor Sword",
+						"rate": "50%"
+					},
+					{
+						"area": "Loop Lagoon Max Den D",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "The Isle Of Armor Shield",
+						"rate": "60%"
+					},
+					{
+						"area": "Loop Lagoon Max Den D",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "The Isle Of Armor Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Loop Lagoon Max Den D",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Loop Lagoon Max Den D",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "The Isle Of Armor Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Loop Lagoon Max Den D",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "The Isle Of Armor Shield",
+						"rate": "50%"
+					},
+					{
+						"area": "Workout Sea Max Den F",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "The Isle Of Armor Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Workout Sea Max Den F",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Workout Sea Max Den F",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "The Isle Of Armor Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Workout Sea Max Den F",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Honeycalm Sea Max Den A",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "The Isle Of Armor Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Honeycalm Sea Max Den A",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Honeycalm Sea Max Den A",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "The Isle Of Armor Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Honeycalm Sea Max Den A",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					}
+				],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/840",
+						"fetchedAt": "2026-11-03T05:54:00.323Z",
+						"hash": "c853ddd83b95f7043e74be282a4216d98e7374a61dd0a9db3e8e13d7567d547e"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/442/",
+						"fetchedAt": "2026-11-03T05:54:00.362Z",
+						"hash": "264120f37c31b853bcdcc4b74b28f39e891fb0e7c6526bcadc06a8dfcfb69f92"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/840/",
+						"fetchedAt": "2026-11-03T05:54:00.386Z",
+						"hash": "e48535ee6f7552ac3a353307f3d1508a29ee421fce74c31cb6787c9318b1498a"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/840/encounters",
+						"fetchedAt": "2026-11-03T05:54:00.446Z",
+						"hash": "14d06ec940dde21613ddbe4254e821bea08f6d5670f87e716f9573fdedcade51"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/840/",
+						"fetchedAt": "2026-11-03T05:54:00.502Z",
+						"hash": "696d2f3a1635cc929bb89ffc7ccb8fdff66000d0b83010686dcfd33f114e31a0"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordioa": "",
+				"shieldioa": ""
+			},
+			"localizedFlavorByGame": {
+				"swordioa": {},
+				"shieldioa": {}
+			}
+		},
+		{
+			"profileKey": "the-crown-tundra",
+			"label": "The Crown Tundra",
+			"appGameKeys": [
+				"swordct",
+				"shieldct"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Applin",
+				"localizedNames": {
+					"ja-hrkt": "カジッチュ",
+					"ja-roma": "Kajicchu",
+					"ko": "과사삭벌레",
+					"zh-hant": "啃果蟲",
+					"fr": "Verpom",
+					"de": "Knapfel",
+					"es": "Applin",
+					"it": "Applin",
+					"ja": "カジッチュ",
+					"zh-hans": "啃果虫",
+					"es-419": "Applin"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Grass",
+					"Dragon"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 40,
+					"def": 80,
+					"spa": 40,
+					"spd": 40,
+					"spe": 20
+				},
+				"evYield": {
+					"def": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Ripen",
+					"Gluttony",
+					"Bulletproof (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Bulletproof"
+				],
+				"eggGroups": [
+					"Plant",
+					"Dragon"
+				],
+				"expGroup": "Slow Then Very Fast",
+				"hatchCounter": 20,
+				"height": "0.2 m",
+				"weight": "0.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 255,
+				"baseExperience": 52,
+				"habitat": "",
+				"shape": "Squiggle",
+				"color": "Green",
+				"genus": "Apple Core Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "りんごぐらしポケモン",
+					"ko": "사과살이포켓몬",
+					"zh-hant": "蘋果居寶可夢",
+					"fr": "Pokémon Nid Pomme",
+					"de": "Apfelhaus-Pokémon",
+					"es": "Pokémon Manzanido",
+					"it": "Pokémon Pomicolo",
+					"ja": "りんごぐらしポケモン",
+					"zh-hans": "苹果居宝可梦",
+					"es-419": "Pokémon Manzanido"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 840
+					},
+					{
+						"pokedex": "galar",
+						"number": 205
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 19
+					},
+					{
+						"pokedex": "paldea",
+						"number": 108
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 33
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 840,
+								"natiId": 840,
+								"name": "Applin"
+							},
+							{
+								"id": 841,
+								"natiId": 841,
+								"name": "Flapple",
+								"method": "Use item",
+								"value": "Tart Apple"
+							}
+						],
+						[
+							{
+								"id": 840,
+								"natiId": 840,
+								"name": "Applin"
+							},
+							{
+								"id": 842,
+								"natiId": 842,
+								"name": "Appletun",
+								"method": "Use item",
+								"value": "Sweet Apple"
+							}
+						],
+						[
+							{
+								"id": 840,
+								"natiId": 840,
+								"name": "Applin"
+							},
+							{
+								"id": 1011,
+								"natiId": 1011,
+								"name": "Dipplin",
+								"method": "Use item",
+								"value": "Syrupy Apple"
+							},
+							{
+								"id": 1019,
+								"natiId": 1019,
+								"name": "Hydrapple",
+								"method": "Know move",
+								"value": "Dragon Cheer"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/840",
+						"fetchedAt": "2026-11-03T05:54:00.323Z",
+						"hash": "c853ddd83b95f7043e74be282a4216d98e7374a61dd0a9db3e8e13d7567d547e"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/442/",
+						"fetchedAt": "2026-11-03T05:54:00.362Z",
+						"hash": "264120f37c31b853bcdcc4b74b28f39e891fb0e7c6526bcadc06a8dfcfb69f92"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/840/",
+						"fetchedAt": "2026-11-03T05:54:00.386Z",
+						"hash": "e48535ee6f7552ac3a353307f3d1508a29ee421fce74c31cb6787c9318b1498a"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/840/encounters",
+						"fetchedAt": "2026-11-03T05:54:00.446Z",
+						"hash": "14d06ec940dde21613ddbe4254e821bea08f6d5670f87e716f9573fdedcade51"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/840/",
+						"fetchedAt": "2026-11-03T05:54:00.502Z",
+						"hash": "696d2f3a1635cc929bb89ffc7ccb8fdff66000d0b83010686dcfd33f114e31a0"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordct": "",
+				"shieldct": ""
+			},
+			"localizedFlavorByGame": {
+				"swordct": {},
+				"shieldct": {}
+			}
+		},
+		{
+			"profileKey": "brilliant-diamond-shining-pearl",
+			"label": "Brilliant Diamond / Shining Pearl",
+			"appGameKeys": [
+				"brilliantdiamond-national",
+				"brilliantdiamond",
+				"shiningpearl-national",
+				"shiningpearl"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Applin",
+				"localizedNames": {
+					"ja-hrkt": "カジッチュ",
+					"ja-roma": "Kajicchu",
+					"ko": "과사삭벌레",
+					"zh-hant": "啃果蟲",
+					"fr": "Verpom",
+					"de": "Knapfel",
+					"es": "Applin",
+					"it": "Applin",
+					"ja": "カジッチュ",
+					"zh-hans": "啃果虫",
+					"es-419": "Applin"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Grass",
+					"Dragon"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 40,
+					"def": 80,
+					"spa": 40,
+					"spd": 40,
+					"spe": 20
+				},
+				"evYield": {
+					"def": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Ripen",
+					"Gluttony",
+					"Bulletproof (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Bulletproof"
+				],
+				"eggGroups": [
+					"Plant",
+					"Dragon"
+				],
+				"expGroup": "Slow Then Very Fast",
+				"hatchCounter": 20,
+				"height": "0.2 m",
+				"weight": "0.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 255,
+				"baseExperience": 52,
+				"habitat": "",
+				"shape": "Squiggle",
+				"color": "Green",
+				"genus": "Apple Core Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "りんごぐらしポケモン",
+					"ko": "사과살이포켓몬",
+					"zh-hant": "蘋果居寶可夢",
+					"fr": "Pokémon Nid Pomme",
+					"de": "Apfelhaus-Pokémon",
+					"es": "Pokémon Manzanido",
+					"it": "Pokémon Pomicolo",
+					"ja": "りんごぐらしポケモン",
+					"zh-hans": "苹果居宝可梦",
+					"es-419": "Pokémon Manzanido"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 840
+					},
+					{
+						"pokedex": "galar",
+						"number": 205
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 19
+					},
+					{
+						"pokedex": "paldea",
+						"number": 108
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 33
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 840,
+								"natiId": 840,
+								"name": "Applin"
+							},
+							{
+								"id": 841,
+								"natiId": 841,
+								"name": "Flapple",
+								"method": "Use item",
+								"value": "Tart Apple"
+							}
+						],
+						[
+							{
+								"id": 840,
+								"natiId": 840,
+								"name": "Applin"
+							},
+							{
+								"id": 842,
+								"natiId": 842,
+								"name": "Appletun",
+								"method": "Use item",
+								"value": "Sweet Apple"
+							}
+						],
+						[
+							{
+								"id": 840,
+								"natiId": 840,
+								"name": "Applin"
+							},
+							{
+								"id": 1011,
+								"natiId": 1011,
+								"name": "Dipplin",
+								"method": "Use item",
+								"value": "Syrupy Apple"
+							},
+							{
+								"id": 1019,
+								"natiId": 1019,
+								"name": "Hydrapple",
+								"method": "Know move",
+								"value": "Dragon Cheer"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/840",
+						"fetchedAt": "2026-11-03T05:54:00.323Z",
+						"hash": "c853ddd83b95f7043e74be282a4216d98e7374a61dd0a9db3e8e13d7567d547e"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/442/",
+						"fetchedAt": "2026-11-03T05:54:00.362Z",
+						"hash": "264120f37c31b853bcdcc4b74b28f39e891fb0e7c6526bcadc06a8dfcfb69f92"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/840/",
+						"fetchedAt": "2026-11-03T05:54:00.386Z",
+						"hash": "e48535ee6f7552ac3a353307f3d1508a29ee421fce74c31cb6787c9318b1498a"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/840/encounters",
+						"fetchedAt": "2026-11-03T05:54:00.446Z",
+						"hash": "14d06ec940dde21613ddbe4254e821bea08f6d5670f87e716f9573fdedcade51"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/840/",
+						"fetchedAt": "2026-11-03T05:54:00.502Z",
+						"hash": "696d2f3a1635cc929bb89ffc7ccb8fdff66000d0b83010686dcfd33f114e31a0"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"brilliantdiamond-national": "",
+				"brilliantdiamond": "",
+				"shiningpearl-national": "",
+				"shiningpearl": ""
+			},
+			"localizedFlavorByGame": {
+				"brilliantdiamond-national": {},
+				"brilliantdiamond": {},
+				"shiningpearl-national": {},
+				"shiningpearl": {}
+			}
+		},
+		{
+			"profileKey": "legends-arceus",
+			"label": "Legends: Arceus",
+			"appGameKeys": [
+				"legendsarceus"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Applin",
+				"localizedNames": {
+					"ja-hrkt": "カジッチュ",
+					"ja-roma": "Kajicchu",
+					"ko": "과사삭벌레",
+					"zh-hant": "啃果蟲",
+					"fr": "Verpom",
+					"de": "Knapfel",
+					"es": "Applin",
+					"it": "Applin",
+					"ja": "カジッチュ",
+					"zh-hans": "啃果虫",
+					"es-419": "Applin"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Grass",
+					"Dragon"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 40,
+					"def": 80,
+					"spa": 40,
+					"spd": 40,
+					"spe": 20
+				},
+				"evYield": {
+					"def": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Ripen",
+					"Gluttony",
+					"Bulletproof (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Bulletproof"
+				],
+				"eggGroups": [
+					"Plant",
+					"Dragon"
+				],
+				"expGroup": "Slow Then Very Fast",
+				"hatchCounter": 20,
+				"height": "0.2 m",
+				"weight": "0.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 255,
+				"baseExperience": 52,
+				"habitat": "",
+				"shape": "Squiggle",
+				"color": "Green",
+				"genus": "Apple Core Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "りんごぐらしポケモン",
+					"ko": "사과살이포켓몬",
+					"zh-hant": "蘋果居寶可夢",
+					"fr": "Pokémon Nid Pomme",
+					"de": "Apfelhaus-Pokémon",
+					"es": "Pokémon Manzanido",
+					"it": "Pokémon Pomicolo",
+					"ja": "りんごぐらしポケモン",
+					"zh-hans": "苹果居宝可梦",
+					"es-419": "Pokémon Manzanido"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 840
+					},
+					{
+						"pokedex": "galar",
+						"number": 205
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 19
+					},
+					{
+						"pokedex": "paldea",
+						"number": 108
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 33
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 840,
+								"natiId": 840,
+								"name": "Applin"
+							},
+							{
+								"id": 841,
+								"natiId": 841,
+								"name": "Flapple",
+								"method": "Use item",
+								"value": "Tart Apple"
+							}
+						],
+						[
+							{
+								"id": 840,
+								"natiId": 840,
+								"name": "Applin"
+							},
+							{
+								"id": 842,
+								"natiId": 842,
+								"name": "Appletun",
+								"method": "Use item",
+								"value": "Sweet Apple"
+							}
+						],
+						[
+							{
+								"id": 840,
+								"natiId": 840,
+								"name": "Applin"
+							},
+							{
+								"id": 1011,
+								"natiId": 1011,
+								"name": "Dipplin",
+								"method": "Use item",
+								"value": "Syrupy Apple"
+							},
+							{
+								"id": 1019,
+								"natiId": 1019,
+								"name": "Hydrapple",
+								"method": "Know move",
+								"value": "Dragon Cheer"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/840",
+						"fetchedAt": "2026-11-03T05:54:00.323Z",
+						"hash": "c853ddd83b95f7043e74be282a4216d98e7374a61dd0a9db3e8e13d7567d547e"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/442/",
+						"fetchedAt": "2026-11-03T05:54:00.362Z",
+						"hash": "264120f37c31b853bcdcc4b74b28f39e891fb0e7c6526bcadc06a8dfcfb69f92"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/840/",
+						"fetchedAt": "2026-11-03T05:54:00.386Z",
+						"hash": "e48535ee6f7552ac3a353307f3d1508a29ee421fce74c31cb6787c9318b1498a"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/840/encounters",
+						"fetchedAt": "2026-11-03T05:54:00.446Z",
+						"hash": "14d06ec940dde21613ddbe4254e821bea08f6d5670f87e716f9573fdedcade51"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/840/",
+						"fetchedAt": "2026-11-03T05:54:00.502Z",
+						"hash": "696d2f3a1635cc929bb89ffc7ccb8fdff66000d0b83010686dcfd33f114e31a0"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendsarceus": ""
+			},
+			"localizedFlavorByGame": {
+				"legendsarceus": {}
+			}
+		},
+		{
+			"profileKey": "scarlet-violet",
+			"label": "Scarlet / Violet",
+			"appGameKeys": [
+				"scarlet",
+				"violet"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Applin",
+				"localizedNames": {
+					"ja-hrkt": "カジッチュ",
+					"ja-roma": "Kajicchu",
+					"ko": "과사삭벌레",
+					"zh-hant": "啃果蟲",
+					"fr": "Verpom",
+					"de": "Knapfel",
+					"es": "Applin",
+					"it": "Applin",
+					"ja": "カジッチュ",
+					"zh-hans": "啃果虫",
+					"es-419": "Applin"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Grass",
+					"Dragon"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 40,
+					"def": 80,
+					"spa": 40,
+					"spd": 40,
+					"spe": 20
+				},
+				"evYield": {
+					"def": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Ripen",
+					"Gluttony",
+					"Bulletproof (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Bulletproof"
+				],
+				"eggGroups": [
+					"Plant",
+					"Dragon"
+				],
+				"expGroup": "Slow Then Very Fast",
+				"hatchCounter": 20,
+				"height": "0.2 m",
+				"weight": "0.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 255,
+				"baseExperience": 52,
+				"habitat": "",
+				"shape": "Squiggle",
+				"color": "Green",
+				"genus": "Apple Core Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "りんごぐらしポケモン",
+					"ko": "사과살이포켓몬",
+					"zh-hant": "蘋果居寶可夢",
+					"fr": "Pokémon Nid Pomme",
+					"de": "Apfelhaus-Pokémon",
+					"es": "Pokémon Manzanido",
+					"it": "Pokémon Pomicolo",
+					"ja": "りんごぐらしポケモン",
+					"zh-hans": "苹果居宝可梦",
+					"es-419": "Pokémon Manzanido"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 840
+					},
+					{
+						"pokedex": "galar",
+						"number": 205
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 19
+					},
+					{
+						"pokedex": "paldea",
+						"number": 108
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 33
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 840,
+								"natiId": 840,
+								"name": "Applin"
+							},
+							{
+								"id": 841,
+								"natiId": 841,
+								"name": "Flapple",
+								"method": "Use item",
+								"value": "Tart Apple"
+							}
+						],
+						[
+							{
+								"id": 840,
+								"natiId": 840,
+								"name": "Applin"
+							},
+							{
+								"id": 842,
+								"natiId": 842,
+								"name": "Appletun",
+								"method": "Use item",
+								"value": "Sweet Apple"
+							}
+						],
+						[
+							{
+								"id": 840,
+								"natiId": 840,
+								"name": "Applin"
+							},
+							{
+								"id": 1011,
+								"natiId": 1011,
+								"name": "Dipplin",
+								"method": "Use item",
+								"value": "Syrupy Apple"
+							},
+							{
+								"id": 1019,
+								"natiId": 1019,
+								"name": "Hydrapple",
+								"method": "Know move",
+								"value": "Dragon Cheer"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Astonish",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Withdraw",
+							"level": 1,
+							"order": 2
+						}
+					],
+					"Egg": [
+						{
+							"name": "Defense Curl",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Recycle",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rollout",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sucker Punch",
+							"level": null,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Pounce",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Tera Blast",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/840",
+						"fetchedAt": "2026-11-03T05:54:00.323Z",
+						"hash": "c853ddd83b95f7043e74be282a4216d98e7374a61dd0a9db3e8e13d7567d547e"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/442/",
+						"fetchedAt": "2026-11-03T05:54:00.362Z",
+						"hash": "264120f37c31b853bcdcc4b74b28f39e891fb0e7c6526bcadc06a8dfcfb69f92"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/840/",
+						"fetchedAt": "2026-11-03T05:54:00.386Z",
+						"hash": "e48535ee6f7552ac3a353307f3d1508a29ee421fce74c31cb6787c9318b1498a"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/840/encounters",
+						"fetchedAt": "2026-11-03T05:54:00.446Z",
+						"hash": "14d06ec940dde21613ddbe4254e821bea08f6d5670f87e716f9573fdedcade51"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/840/",
+						"fetchedAt": "2026-11-03T05:54:00.502Z",
+						"hash": "696d2f3a1635cc929bb89ffc7ccb8fdff66000d0b83010686dcfd33f114e31a0"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlet": "",
+				"violet": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlet": {},
+				"violet": {}
+			}
+		},
+		{
+			"profileKey": "the-teal-mask",
+			"label": "The Teal Mask",
+			"appGameKeys": [
+				"scarlettm",
+				"violettm"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Applin",
+				"localizedNames": {
+					"ja-hrkt": "カジッチュ",
+					"ja-roma": "Kajicchu",
+					"ko": "과사삭벌레",
+					"zh-hant": "啃果蟲",
+					"fr": "Verpom",
+					"de": "Knapfel",
+					"es": "Applin",
+					"it": "Applin",
+					"ja": "カジッチュ",
+					"zh-hans": "啃果虫",
+					"es-419": "Applin"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Grass",
+					"Dragon"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 40,
+					"def": 80,
+					"spa": 40,
+					"spd": 40,
+					"spe": 20
+				},
+				"evYield": {
+					"def": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Ripen",
+					"Gluttony",
+					"Bulletproof (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Bulletproof"
+				],
+				"eggGroups": [
+					"Plant",
+					"Dragon"
+				],
+				"expGroup": "Slow Then Very Fast",
+				"hatchCounter": 20,
+				"height": "0.2 m",
+				"weight": "0.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 255,
+				"baseExperience": 52,
+				"habitat": "",
+				"shape": "Squiggle",
+				"color": "Green",
+				"genus": "Apple Core Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "りんごぐらしポケモン",
+					"ko": "사과살이포켓몬",
+					"zh-hant": "蘋果居寶可夢",
+					"fr": "Pokémon Nid Pomme",
+					"de": "Apfelhaus-Pokémon",
+					"es": "Pokémon Manzanido",
+					"it": "Pokémon Pomicolo",
+					"ja": "りんごぐらしポケモン",
+					"zh-hans": "苹果居宝可梦",
+					"es-419": "Pokémon Manzanido"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 840
+					},
+					{
+						"pokedex": "galar",
+						"number": 205
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 19
+					},
+					{
+						"pokedex": "paldea",
+						"number": 108
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 33
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 840,
+								"natiId": 840,
+								"name": "Applin"
+							},
+							{
+								"id": 841,
+								"natiId": 841,
+								"name": "Flapple",
+								"method": "Use item",
+								"value": "Tart Apple"
+							}
+						],
+						[
+							{
+								"id": 840,
+								"natiId": 840,
+								"name": "Applin"
+							},
+							{
+								"id": 842,
+								"natiId": 842,
+								"name": "Appletun",
+								"method": "Use item",
+								"value": "Sweet Apple"
+							}
+						],
+						[
+							{
+								"id": 840,
+								"natiId": 840,
+								"name": "Applin"
+							},
+							{
+								"id": 1011,
+								"natiId": 1011,
+								"name": "Dipplin",
+								"method": "Use item",
+								"value": "Syrupy Apple"
+							},
+							{
+								"id": 1019,
+								"natiId": 1019,
+								"name": "Hydrapple",
+								"method": "Know move",
+								"value": "Dragon Cheer"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/840",
+						"fetchedAt": "2026-11-03T05:54:00.323Z",
+						"hash": "c853ddd83b95f7043e74be282a4216d98e7374a61dd0a9db3e8e13d7567d547e"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/442/",
+						"fetchedAt": "2026-11-03T05:54:00.362Z",
+						"hash": "264120f37c31b853bcdcc4b74b28f39e891fb0e7c6526bcadc06a8dfcfb69f92"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/840/",
+						"fetchedAt": "2026-11-03T05:54:00.386Z",
+						"hash": "e48535ee6f7552ac3a353307f3d1508a29ee421fce74c31cb6787c9318b1498a"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/840/encounters",
+						"fetchedAt": "2026-11-03T05:54:00.446Z",
+						"hash": "14d06ec940dde21613ddbe4254e821bea08f6d5670f87e716f9573fdedcade51"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/840/",
+						"fetchedAt": "2026-11-03T05:54:00.502Z",
+						"hash": "696d2f3a1635cc929bb89ffc7ccb8fdff66000d0b83010686dcfd33f114e31a0"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlettm": "",
+				"violettm": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlettm": {},
+				"violettm": {}
+			}
+		},
+		{
+			"profileKey": "the-indigo-disk",
+			"label": "The Indigo Disk",
+			"appGameKeys": [
+				"scarletid",
+				"violetid"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Applin",
+				"localizedNames": {
+					"ja-hrkt": "カジッチュ",
+					"ja-roma": "Kajicchu",
+					"ko": "과사삭벌레",
+					"zh-hant": "啃果蟲",
+					"fr": "Verpom",
+					"de": "Knapfel",
+					"es": "Applin",
+					"it": "Applin",
+					"ja": "カジッチュ",
+					"zh-hans": "啃果虫",
+					"es-419": "Applin"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Grass",
+					"Dragon"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 40,
+					"def": 80,
+					"spa": 40,
+					"spd": 40,
+					"spe": 20
+				},
+				"evYield": {
+					"def": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Ripen",
+					"Gluttony",
+					"Bulletproof (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Bulletproof"
+				],
+				"eggGroups": [
+					"Plant",
+					"Dragon"
+				],
+				"expGroup": "Slow Then Very Fast",
+				"hatchCounter": 20,
+				"height": "0.2 m",
+				"weight": "0.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 255,
+				"baseExperience": 52,
+				"habitat": "",
+				"shape": "Squiggle",
+				"color": "Green",
+				"genus": "Apple Core Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "りんごぐらしポケモン",
+					"ko": "사과살이포켓몬",
+					"zh-hant": "蘋果居寶可夢",
+					"fr": "Pokémon Nid Pomme",
+					"de": "Apfelhaus-Pokémon",
+					"es": "Pokémon Manzanido",
+					"it": "Pokémon Pomicolo",
+					"ja": "りんごぐらしポケモン",
+					"zh-hans": "苹果居宝可梦",
+					"es-419": "Pokémon Manzanido"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 840
+					},
+					{
+						"pokedex": "galar",
+						"number": 205
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 19
+					},
+					{
+						"pokedex": "paldea",
+						"number": 108
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 33
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 840,
+								"natiId": 840,
+								"name": "Applin"
+							},
+							{
+								"id": 841,
+								"natiId": 841,
+								"name": "Flapple",
+								"method": "Use item",
+								"value": "Tart Apple"
+							}
+						],
+						[
+							{
+								"id": 840,
+								"natiId": 840,
+								"name": "Applin"
+							},
+							{
+								"id": 842,
+								"natiId": 842,
+								"name": "Appletun",
+								"method": "Use item",
+								"value": "Sweet Apple"
+							}
+						],
+						[
+							{
+								"id": 840,
+								"natiId": 840,
+								"name": "Applin"
+							},
+							{
+								"id": 1011,
+								"natiId": 1011,
+								"name": "Dipplin",
+								"method": "Use item",
+								"value": "Syrupy Apple"
+							},
+							{
+								"id": 1019,
+								"natiId": 1019,
+								"name": "Hydrapple",
+								"method": "Know move",
+								"value": "Dragon Cheer"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/840",
+						"fetchedAt": "2026-11-03T05:54:00.323Z",
+						"hash": "c853ddd83b95f7043e74be282a4216d98e7374a61dd0a9db3e8e13d7567d547e"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/442/",
+						"fetchedAt": "2026-11-03T05:54:00.362Z",
+						"hash": "264120f37c31b853bcdcc4b74b28f39e891fb0e7c6526bcadc06a8dfcfb69f92"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/840/",
+						"fetchedAt": "2026-11-03T05:54:00.386Z",
+						"hash": "e48535ee6f7552ac3a353307f3d1508a29ee421fce74c31cb6787c9318b1498a"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/840/encounters",
+						"fetchedAt": "2026-11-03T05:54:00.446Z",
+						"hash": "14d06ec940dde21613ddbe4254e821bea08f6d5670f87e716f9573fdedcade51"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/840/",
+						"fetchedAt": "2026-11-03T05:54:00.502Z",
+						"hash": "696d2f3a1635cc929bb89ffc7ccb8fdff66000d0b83010686dcfd33f114e31a0"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarletid": "",
+				"violetid": ""
+			},
+			"localizedFlavorByGame": {
+				"scarletid": {},
+				"violetid": {}
+			}
+		}
+	]
+}

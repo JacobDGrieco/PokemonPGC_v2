@@ -1,0 +1,174 @@
+{
+	"schemaVersion": 1,
+	"id": 823,
+	"slug": "thunderous-kick",
+	"name": "Thunderous Kick",
+	"names": {
+		"de": "Donnernder Tritt",
+		"en": "Thunderous Kick",
+		"es": "Patada Relámpago",
+		"es-419": "Patada Relámpago",
+		"fr": "Coup Fulgurant",
+		"it": "Calcio Tonante",
+		"ja": "らいめいげり",
+		"ja-hrkt": "らいめいげり",
+		"ko": "천둥차기",
+		"zh-hans": "雷鸣蹴击",
+		"zh-hant": "雷鳴蹴擊"
+	},
+	"generation": 8,
+	"type": "Fighting",
+	"damageClass": "Physical",
+	"power": 90,
+	"accuracy": 100,
+	"pp": 10,
+	"priority": 0,
+	"effectChance": 100,
+	"target": "Selected Pokemon",
+	"effectEntries": [
+		{
+			"language": "en",
+			"effect": "Inflicts regular damage. Lowers the target’s Defense by one stage.",
+			"shortEffect": "Lowers the target’s Defense by one stage after inflicting damage."
+		},
+		{
+			"language": "fr",
+			"effect": "Inflige des dégâts réguliers. Diminue la Défense de la cible d'un niveau.",
+			"shortEffect": "Diminue la Défense de la cible d'un niveau après avoir infligé des dégâts."
+		}
+	],
+	"effectChanges": [],
+	"descriptions": [
+		{
+			"versionGroup": "legends-arceus",
+			"language": "en",
+			"text": "The user overwhelms the target with lightning-like movement before delivering a kick. This also lowers the target's Defense stat."
+		},
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "en",
+			"text": "The user overwhelms the target with lightning-like movement before delivering a kick. This also lowers the target's Defense stat."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "de",
+			"text": "Der Anwender bringt das Ziel mit blitzschnellen Bewegungen durcheinander und tritt dann zu. Senkt die Verteidigung des Zieles."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "en",
+			"text": "The user overwhelms the target with lightning-like movement before delivering a kick. This also lowers the target’s Defense stat."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es",
+			"text": "El usuario desconcierta al rival con movimientos centelleantes y le propina una patada. Baja la Defensa del objetivo."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es-419",
+			"text": "El usuario desconcierta al rival con movimientos centelleantes y le propina una patada. Baja la Defensa del objetivo."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "fr",
+			"text": "Le lanceur assène un coup de pied à la cible à la vitesse de l’éclair. Baisse aussi la Défense de la cible."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "it",
+			"text": "Il Pokémon sferra calci al bersaglio dopo averlo distratto con movimenti fulminei, riducendone la Difesa."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja",
+			"text": "雷の ような 動きで 相手を 翻弄しながら キックする。 相手の 防御を さげる。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja-hrkt",
+			"text": "かみなりの ような うごきで あいてを ほんろう しながら キックする。 あいての ぼうぎょを さげる。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ko",
+			"text": "번개 같은 움직임으로 상대를 농락하며 킥을 날린다. 상대의 방어를 떨어뜨린다."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hans",
+			"text": "以雷电般的动作 戏耍对手的同时使出脚踢。 可降低对手的防御。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hant",
+			"text": "以雷電般的動作 一邊戲弄對手一邊使出踢擊。 可降低對手的防禦。"
+		}
+	],
+	"pastValues": [],
+	"statChanges": [
+		{
+			"stat": "Defense",
+			"change": -1
+		}
+	],
+	"meta": {
+		"ailment": "None",
+		"category": "Damage Lower",
+		"minHits": null,
+		"maxHits": null,
+		"minTurns": null,
+		"maxTurns": null,
+		"drain": 0,
+		"healing": 0,
+		"critRate": 0,
+		"ailmentChance": 0,
+		"flinchChance": 0,
+		"statChance": 100
+	},
+	"machines": [],
+	"learners": [
+		{
+			"nationalDexId": 145,
+			"speciesName": "Zapdos",
+			"formKey": "galarian",
+			"formName": "Galarian",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 45,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 45,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		}
+	],
+	"potentialPokemon": [
+		"zapdos-galar"
+	],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/move/823/",
+		"fetchedAt": "2026-11-03T06:30:18.696Z",
+		"hash": "0cc5018d1ec7adfe5ef3f7a892399a5720004fc1d48455b6bf509fc848d76bf8"
+	}
+}

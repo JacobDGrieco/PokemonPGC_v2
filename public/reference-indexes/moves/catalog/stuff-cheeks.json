@@ -1,0 +1,272 @@
+{
+	"schemaVersion": 1,
+	"id": 747,
+	"slug": "stuff-cheeks",
+	"name": "Stuff Cheeks",
+	"names": {
+		"de": "Backenstopfer",
+		"en": "Stuff Cheeks",
+		"es": "Atiborramiento",
+		"es-419": "Atiborramiento",
+		"fr": "Garde-à-Joues",
+		"it": "Riempiguance",
+		"ja": "ほおばる",
+		"ja-hrkt": "ほおばる",
+		"ko": "볼가득넣기",
+		"zh-hans": "大快朵颐",
+		"zh-hant": "大快朵頤"
+	},
+	"generation": 8,
+	"type": "Normal",
+	"damageClass": "Status",
+	"power": null,
+	"accuracy": null,
+	"pp": 10,
+	"priority": 0,
+	"effectChance": 100,
+	"target": "User",
+	"effectEntries": [
+		{
+			"language": "en",
+			"effect": "This move cannot be used unless the user is holding a berry. The user consumes a berry, activates its effects, and raises its defense by 2 stages. This effect works even if Embargo or Magic Room are in effect.",
+			"shortEffect": "User consumes berry and raises its defense by 2 stages."
+		}
+	],
+	"effectChanges": [],
+	"descriptions": [
+		{
+			"versionGroup": "legends-arceus",
+			"language": "en",
+			"text": "The user eats its held Berry, then sharply raises its Defense stat."
+		},
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "en",
+			"text": "The user eats its held Berry, then sharply boosts its Defense stat."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "de",
+			"text": "Der Anwender frisst die Beere, die er trägt, wodurch seine Verteidigung stark erhöht wird."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "en",
+			"text": "The user eats its held Berry, then sharply raises its Defense stat."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es",
+			"text": "El usuario ingiere la baya que lleva equipada para aumentar mucho su Defensa."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es-419",
+			"text": "El usuario ingiere la baya que lleva equipada para aumentar mucho su Defensa."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "fr",
+			"text": "Le lanceur mange la Baie qu’il tient, ce qui augmente beaucoup sa Défense."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "it",
+			"text": "Se chi la usa ha con sé una bacca, la mangia e la sua Difesa aumenta di molto."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja",
+			"text": "持っている きのみを 食べて 防御を ぐーんと あげる。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja-hrkt",
+			"text": "もっている きのみを たべて ぼうぎょを ぐーんと あげる。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ko",
+			"text": "지니고 있는 나무열매를 먹고 방어를 크게 올린다."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hans",
+			"text": "吃掉携带的树果， 大幅提高防御。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hant",
+			"text": "吃掉攜帶的樹果， 大幅提高自己的防禦。"
+		}
+	],
+	"pastValues": [],
+	"statChanges": [
+		{
+			"stat": "Defense",
+			"change": 2
+		}
+	],
+	"meta": {
+		"ailment": "None",
+		"category": "Net Good Stats",
+		"minHits": null,
+		"maxHits": null,
+		"minTurns": null,
+		"maxTurns": null,
+		"drain": 0,
+		"healing": 0,
+		"critRate": 0,
+		"ailmentChance": 0,
+		"flinchChance": 0,
+		"statChance": 100
+	},
+	"machines": [],
+	"learners": [
+		{
+			"nationalDexId": 316,
+			"speciesName": "Gulpin",
+			"formKey": "female",
+			"formName": "Female",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 316,
+			"speciesName": "Gulpin",
+			"formKey": "male",
+			"formName": "Male",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 819,
+			"speciesName": "Skwovet",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 10,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 10,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 820,
+			"speciesName": "Greedent",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 4
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 5
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 915,
+			"speciesName": "Lechonk",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		}
+	],
+	"potentialPokemon": [
+		"gulpin",
+		"simisage",
+		"simisear",
+		"simipour",
+		"skwovet",
+		"greedent",
+		"lechonk"
+	],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/move/747/",
+		"fetchedAt": "2026-11-03T06:30:18.115Z",
+		"hash": "da16f643f6c6041121b81a63cc69807df37ffc30773848799d0dbf8fc0d1ad75"
+	}
+}

@@ -1,0 +1,2508 @@
+{
+	"schemaVersion": 1,
+	"id": 288,
+	"slug": "grudge",
+	"name": "Grudge",
+	"names": {
+		"de": "Nachspiel",
+		"en": "Grudge",
+		"es": "Rabia",
+		"es-419": "Rabia",
+		"fr": "Rancune",
+		"it": "Rancore",
+		"ja": "おんねん",
+		"ja-hrkt": "おんねん",
+		"ko": "원념",
+		"zh-hans": "怨念",
+		"zh-hant": "怨念"
+	},
+	"generation": 3,
+	"type": "Ghost",
+	"damageClass": "Status",
+	"power": null,
+	"accuracy": null,
+	"pp": 5,
+	"priority": 0,
+	"effectChance": null,
+	"target": "User",
+	"effectEntries": [
+		{
+			"language": "en",
+			"effect": "If the user faints before it next acts, the move that fainted it will have its PP dropped to 0. End-of-turn damage does not trigger this effect.",
+			"shortEffect": "If the user faints this turn, the PP of the move that fainted it drops to 0."
+		},
+		{
+			"language": "fr",
+			"effect": "Si le lanceur est mis KO avant sa prochaine action, la capacité qui l'a mis KO aura ses PP descendus à 0. Les dégâts de fin de tour ne déclenchent pas cet effet.",
+			"shortEffect": "Si le lanceur est mis KO ce tour, les PP de la capacité qui l'a mis KO tombent à 0."
+		}
+	],
+	"effectChanges": [],
+	"descriptions": [
+		{
+			"versionGroup": "black-2-white-2",
+			"language": "en",
+			"text": "If the user faints, the user’s grudge fully depletes the PP of the opponent’s move that knocked it out."
+		},
+		{
+			"versionGroup": "black-white",
+			"language": "en",
+			"text": "If the user faints, the user’s grudge fully depletes the PP of the opponent’s move that knocked it out."
+		},
+		{
+			"versionGroup": "black-white",
+			"language": "fr",
+			"text": "Si le lanceur est mis K.O., sa rancune épuise les PP de la capacité utilisée pour le mettre K.O."
+		},
+		{
+			"versionGroup": "diamond-pearl",
+			"language": "en",
+			"text": "If the user faints, the user’s grudge fully depletes the PP of the foe’s move that knocked it out."
+		},
+		{
+			"versionGroup": "emerald",
+			"language": "en",
+			"text": "If the user faints, deletes all PP of foe’s last move."
+		},
+		{
+			"versionGroup": "firered-leafgreen",
+			"language": "en",
+			"text": "If the user faints, this move deletes the PP of the move that finished it."
+		},
+		{
+			"versionGroup": "heartgold-soulsilver",
+			"language": "en",
+			"text": "If the user faints, the user’s grudge fully depletes the PP of the foe’s move that knocked it out."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "de",
+			"text": "Bei K.O. des Anwenders werden die AP der Attacke, durch die er besiegt wurde, auf 0 herabgesetzt."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "en",
+			"text": "If the user faints, the user’s grudge fully depletes the PP of the opponent’s move that knocked it out."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "es",
+			"text": "Si el usuario se debilita al recibir un ataque, todos los PP de este último ataque serán eliminados."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "es-419",
+			"text": "Si el usuario se debilita al recibir un ataque, todos los PP de este último ataque serán eliminados."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "fr",
+			"text": "Si le lanceur est mis K.O., sa rancune épuise les PP de la capacité utilisée par l’ennemi pour le mettre K.O."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "it",
+			"text": "Se chi la usa va KO, i PP della mossa nemica che lo ha messo fuori gioco si azzerano."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "ja",
+			"text": "相手の 技で ひんしに されたとき おんねんを かけて その技の ＰＰを ０に する。"
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "ja-hrkt",
+			"text": "あいての わざで ひんしに されたとき おんねんを かけて そのわざの ＰＰを ０に する。"
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "ko",
+			"text": "상대의 기술로 기절하면 원념을 담아 그 기술의 PP를 0으로 만든다."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "zh-hans",
+			"text": "因对手的招式而陷入濒死时 给对手施加怨念， 让该招式的PP变成０。"
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "zh-hant",
+			"text": "因為對手的招式而陷入瀕死時， 施加怨念， 讓該招式的PP變成０。"
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "de",
+			"text": "Bei K.O. des Anwenders werden die AP der Attacke, durch die er besiegt wurde, auf 0 herabgesetzt."
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "en",
+			"text": "If the user faints, the user’s grudge fully depletes the PP of the opponent’s move that knocked it out."
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "es",
+			"text": "Si el usuario se debilita al recibir un ataque, todos los PP de este último ataque serán eliminados."
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "es-419",
+			"text": "Si el usuario se debilita al recibir un ataque, todos los PP de este último ataque serán eliminados."
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "fr",
+			"text": "Si le lanceur est mis K.O., sa rancune épuise les PP de la capacité utilisée par l’ennemi pour le mettre K.O."
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "it",
+			"text": "Se chi la usa va KO, i PP della mossa nemica che lo ha messo fuori gioco si azzerano."
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "ja",
+			"text": "相手の 技で ひんしに されたとき おんねんを かけて その技の ＰＰを ０に する。"
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "ja-hrkt",
+			"text": "あいての わざで ひんしに されたとき おんねんを かけて そのわざの ＰＰを ０に する。"
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "ko",
+			"text": "상대의 기술로 기절하면 원념을 담아 그 기술의 PP를 0으로 만든다."
+		},
+		{
+			"versionGroup": "platinum",
+			"language": "en",
+			"text": "If the user faints, the user’s grudge fully depletes the PP of the foe’s move that knocked it out."
+		},
+		{
+			"versionGroup": "ruby-sapphire",
+			"language": "en",
+			"text": "If the user faints, deletes the PP of the final move."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "de",
+			"text": "Bei K.O. des Anwenders werden die AP der Attacke, durch die er besiegt wurde, auf 0 herabgesetzt."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "en",
+			"text": "If the user faints, the user’s grudge fully depletes the PP of the opponent’s move that knocked it out."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "es",
+			"text": "Si el usuario se debilita al recibir un ataque, todos los PP de este último ataque serán eliminados."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "es-419",
+			"text": "Si el usuario se debilita al recibir un ataque, todos los PP de este último ataque serán eliminados."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "fr",
+			"text": "Si le lanceur est mis K.O., sa rancune épuise les PP de la capacité utilisée par l’ennemi pour le mettre K.O."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "it",
+			"text": "Se chi la usa va KO, i PP della mossa nemica che lo ha messo fuori gioco si azzerano."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "ja",
+			"text": "相手の 技で ひんしに されたとき おんねんを かけて その技の ＰＰを ０に する。"
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "ja-hrkt",
+			"text": "あいての わざで ひんしに されたとき おんねんを かけて そのわざの ＰＰを ０に する。"
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "ko",
+			"text": "상대의 기술로 기절하면 원념을 담아 그 기술의 PP를 0으로 만든다."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "zh-hans",
+			"text": "因对手的招式而陷入濒死时 给对手施加怨念， 让该招式的ＰＰ变成０。"
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "zh-hant",
+			"text": "因為對手的招式而陷入瀕死時， 施加怨念， 讓該招式的ＰＰ變成０。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "de",
+			"text": "Bei K.O. des Anwenders werden die AP der Attacke, durch die er besiegt wurde, auf 0 herabgesetzt."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "en",
+			"text": "If the user faints, the user’s grudge fully depletes the PP of the opponent’s move that knocked it out."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es",
+			"text": "Si el usuario se debilita al recibir un ataque, todos los PP de este último ataque serán eliminados."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es-419",
+			"text": "Si el usuario se debilita al recibir un ataque, todos los PP de este último ataque serán eliminados."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "fr",
+			"text": "Si le lanceur est mis K.O., sa rancune épuise les PP de la capacité utilisée par l’ennemi pour le mettre K.O."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "it",
+			"text": "Se chi la usa va KO, i PP della mossa nemica che lo ha messo fuori gioco si azzerano."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja",
+			"text": "相手の 技で ひんしに されたとき おんねんを かけて その技の ＰＰを ０に する。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja-hrkt",
+			"text": "あいての わざで ひんしに されたとき おんねんを かけて そのわざの ＰＰを ０に する。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ko",
+			"text": "상대의 기술로 기절하면 원념을 담아 그 기술의 PP를 0으로 만든다."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hans",
+			"text": "因对手的招式而陷入濒死时 给对手施加怨念， 让该招式的ＰＰ变成０。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hant",
+			"text": "因為對手的招式而陷入瀕死時， 施加怨念， 讓該招式的ＰＰ變成０。"
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "de",
+			"text": "Bei K.O. des Anwenders werden die AP der Attacke, durch die er besiegt wurde, auf 0 herabgesetzt."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "en",
+			"text": "If the user faints, the user’s grudge fully depletes the PP of the opponent’s move that knocked it out."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "es",
+			"text": "Si el usuario se debilita al recibir un ataque, todos los PP de este último ataque serán eliminados."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "es-419",
+			"text": "Si el usuario se debilita al recibir un ataque, todos los PP de este último ataque serán eliminados."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "fr",
+			"text": "Si le lanceur est mis K.O., sa rancune épuise les PP de la capacité utilisée par l’ennemi pour le mettre K.O."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "it",
+			"text": "Se chi la usa va KO, i PP della mossa nemica che lo ha messo fuori gioco si azzerano."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "ja",
+			"text": "相手の 技で ひんしに されたとき おんねんを かけて その技の ＰＰを ０に する。"
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "ja-hrkt",
+			"text": "あいての わざで ひんしに されたとき おんねんを かけて そのわざの ＰＰを ０に する。"
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "ko",
+			"text": "상대의 기술로 기절하면 원념을 담아 그 기술의 PP를 0으로 만든다."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "zh-hans",
+			"text": "因对手的招式而陷入濒死时 给对手施加怨念， 让该招式的ＰＰ变成０。"
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "zh-hant",
+			"text": "因為對手的招式而陷入瀕死時， 施加怨念， 讓該招式的ＰＰ變成０。"
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "de",
+			"text": "Bei K.O. des Anwenders werden die AP der Attacke, durch die er besiegt wurde, auf 0 herabgesetzt."
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "en",
+			"text": "If the user faints, the user’s grudge fully depletes the PP of the opponent’s move that knocked it out."
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "es",
+			"text": "Si el usuario se debilita al recibir un ataque, todos los PP de este último ataque serán eliminados."
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "es-419",
+			"text": "Si el usuario se debilita al recibir un ataque, todos los PP de este último ataque serán eliminados."
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "fr",
+			"text": "Si le lanceur est mis K.O., sa rancune épuise les PP de la capacité utilisée par l’ennemi pour le mettre K.O."
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "it",
+			"text": "Se chi la usa va KO, i PP della mossa nemica che lo ha messo fuori gioco si azzerano."
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "ja",
+			"text": "相手の 技で ひんしに されたとき おんねんを かけて その技の ＰＰを ０に する。"
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "ja-hrkt",
+			"text": "あいての わざで ひんしに されたとき おんねんを かけて そのわざの ＰＰを ０に する。"
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "ko",
+			"text": "상대의 기술로 기절하면 원념을 담아 그 기술의 PP를 0으로 만든다."
+		}
+	],
+	"pastValues": [],
+	"statChanges": [],
+	"meta": {
+		"ailment": "None",
+		"category": "Unique",
+		"minHits": null,
+		"maxHits": null,
+		"minTurns": null,
+		"maxTurns": null,
+		"drain": 0,
+		"healing": 0,
+		"critRate": 0,
+		"ailmentChance": 0,
+		"flinchChance": 0,
+		"statChance": 0
+	},
+	"machines": [],
+	"learners": [
+		{
+			"nationalDexId": 37,
+			"speciesName": "Vulpix",
+			"formKey": "alolan",
+			"formName": "Alolan",
+			"games": [
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 44,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 52,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 44,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 37,
+			"speciesName": "Vulpix",
+			"formKey": "kantonian",
+			"formName": "Kantonian",
+			"games": [
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 44,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 52,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 44,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 38,
+			"speciesName": "Ninetales",
+			"formKey": "alolan",
+			"formName": "Alolan",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 13
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 38,
+			"speciesName": "Ninetales",
+			"formKey": "kantonian",
+			"formName": "Kantonian",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 13
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 92,
+			"speciesName": "Gastly",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "diamond-pearl",
+					"gameLabel": "Diamond / Pearl",
+					"versionGroup": "diamond-pearl",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "emerald",
+					"gameLabel": "Emerald",
+					"versionGroup": "emerald",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "firered-leafgreen",
+					"gameLabel": "FireRed / LeafGreen",
+					"versionGroup": "firered-leafgreen",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "heartgold-soulsilver",
+					"gameLabel": "HeartGold / SoulSilver",
+					"versionGroup": "heartgold-soulsilver",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "platinum",
+					"gameLabel": "Platinum",
+					"versionGroup": "platinum",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ruby-sapphire",
+					"gameLabel": "Ruby / Sapphire",
+					"versionGroup": "ruby-sapphire",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 109,
+			"speciesName": "Koffing",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "diamond-pearl",
+					"gameLabel": "Diamond / Pearl",
+					"versionGroup": "diamond-pearl",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "heartgold-soulsilver",
+					"gameLabel": "HeartGold / SoulSilver",
+					"versionGroup": "heartgold-soulsilver",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "platinum",
+					"gameLabel": "Platinum",
+					"versionGroup": "platinum",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 200,
+			"speciesName": "Misdreavus",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 50,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 50,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 50,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "diamond-pearl",
+					"gameLabel": "Diamond / Pearl",
+					"versionGroup": "diamond-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 46,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "emerald",
+					"gameLabel": "Emerald",
+					"versionGroup": "emerald",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 53,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "firered-leafgreen",
+					"gameLabel": "FireRed / LeafGreen",
+					"versionGroup": "firered-leafgreen",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 53,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "heartgold-soulsilver",
+					"gameLabel": "HeartGold / SoulSilver",
+					"versionGroup": "heartgold-soulsilver",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 46,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 50,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "platinum",
+					"gameLabel": "Platinum",
+					"versionGroup": "platinum",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 46,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ruby-sapphire",
+					"gameLabel": "Ruby / Sapphire",
+					"versionGroup": "ruby-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 53,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 50,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 50,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 50,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 222,
+			"speciesName": "Corsola",
+			"formKey": "galarian",
+			"formName": "Galarian",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 50,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 280,
+			"speciesName": "Ralts",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "diamond-pearl",
+					"gameLabel": "Diamond / Pearl",
+					"versionGroup": "diamond-pearl",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "heartgold-soulsilver",
+					"gameLabel": "HeartGold / SoulSilver",
+					"versionGroup": "heartgold-soulsilver",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "platinum",
+					"gameLabel": "Platinum",
+					"versionGroup": "platinum",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 292,
+			"speciesName": "Shedinja",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 45,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 45,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 3
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "diamond-pearl",
+					"gameLabel": "Diamond / Pearl",
+					"versionGroup": "diamond-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 45,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "emerald",
+					"gameLabel": "Emerald",
+					"versionGroup": "emerald",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 45,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "firered-leafgreen",
+					"gameLabel": "FireRed / LeafGreen",
+					"versionGroup": "firered-leafgreen",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 45,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "heartgold-soulsilver",
+					"gameLabel": "HeartGold / SoulSilver",
+					"versionGroup": "heartgold-soulsilver",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 45,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 37,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "platinum",
+					"gameLabel": "Platinum",
+					"versionGroup": "platinum",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 45,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ruby-sapphire",
+					"gameLabel": "Ruby / Sapphire",
+					"versionGroup": "ruby-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 45,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 37,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 2
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 37,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 43,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 353,
+			"speciesName": "Shuppet",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 46,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 50,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 46,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "diamond-pearl",
+					"gameLabel": "Diamond / Pearl",
+					"versionGroup": "diamond-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 46,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "emerald",
+					"gameLabel": "Emerald",
+					"versionGroup": "emerald",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 56,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "firered-leafgreen",
+					"gameLabel": "FireRed / LeafGreen",
+					"versionGroup": "firered-leafgreen",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 56,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "heartgold-soulsilver",
+					"gameLabel": "HeartGold / SoulSilver",
+					"versionGroup": "heartgold-soulsilver",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 46,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 46,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "platinum",
+					"gameLabel": "Platinum",
+					"versionGroup": "platinum",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 46,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ruby-sapphire",
+					"gameLabel": "Ruby / Sapphire",
+					"versionGroup": "ruby-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 56,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 46,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 46,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 46,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 354,
+			"speciesName": "Banette",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 52,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 66,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 52,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "diamond-pearl",
+					"gameLabel": "Diamond / Pearl",
+					"versionGroup": "diamond-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 58,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "emerald",
+					"gameLabel": "Emerald",
+					"versionGroup": "emerald",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 64,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "firered-leafgreen",
+					"gameLabel": "FireRed / LeafGreen",
+					"versionGroup": "firered-leafgreen",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 64,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "heartgold-soulsilver",
+					"gameLabel": "HeartGold / SoulSilver",
+					"versionGroup": "heartgold-soulsilver",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 58,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 52,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "platinum",
+					"gameLabel": "Platinum",
+					"versionGroup": "platinum",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 58,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ruby-sapphire",
+					"gameLabel": "Ruby / Sapphire",
+					"versionGroup": "ruby-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 64,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 52,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 52,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 52,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 355,
+			"speciesName": "Duskull",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "diamond-pearl",
+					"gameLabel": "Diamond / Pearl",
+					"versionGroup": "diamond-pearl",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "emerald",
+					"gameLabel": "Emerald",
+					"versionGroup": "emerald",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "firered-leafgreen",
+					"gameLabel": "FireRed / LeafGreen",
+					"versionGroup": "firered-leafgreen",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "heartgold-soulsilver",
+					"gameLabel": "HeartGold / SoulSilver",
+					"versionGroup": "heartgold-soulsilver",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "platinum",
+					"gameLabel": "Platinum",
+					"versionGroup": "platinum",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ruby-sapphire",
+					"gameLabel": "Ruby / Sapphire",
+					"versionGroup": "ruby-sapphire",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 429,
+			"speciesName": "Mismagius",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 5
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 442,
+			"speciesName": "Spiritomb",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "diamond-pearl",
+					"gameLabel": "Diamond / Pearl",
+					"versionGroup": "diamond-pearl",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "heartgold-soulsilver",
+					"gameLabel": "HeartGold / SoulSilver",
+					"versionGroup": "heartgold-soulsilver",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "platinum",
+					"gameLabel": "Platinum",
+					"versionGroup": "platinum",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 562,
+			"speciesName": "Yamask",
+			"formKey": "unovian",
+			"formName": "Unovian",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 32,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 563,
+			"speciesName": "Cofagrigus",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 45,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 45,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 45,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 45,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 32,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 45,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 45,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 708,
+			"speciesName": "Phantump",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 778,
+			"speciesName": "Mimikyu",
+			"formKey": "busted",
+			"formName": "Busted",
+			"games": [
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 778,
+			"speciesName": "Mimikyu",
+			"formKey": "disguised",
+			"formName": "Disguised",
+			"games": [
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 864,
+			"speciesName": "Cursola",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 50,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 885,
+			"speciesName": "Dreepy",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		}
+	],
+	"potentialPokemon": [
+		"vulpix",
+		"ninetales",
+		"gastly",
+		"koffing",
+		"misdreavus",
+		"ralts",
+		"shedinja",
+		"shuppet",
+		"banette",
+		"duskull",
+		"mismagius",
+		"spiritomb",
+		"yamask",
+		"cofagrigus",
+		"phantump",
+		"mimikyu-disguised",
+		"cursola",
+		"dreepy",
+		"banette-mega",
+		"vulpix-alola",
+		"ninetales-alola",
+		"mimikyu-busted",
+		"corsola-galar"
+	],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/move/288/",
+		"fetchedAt": "2026-11-03T06:30:15.641Z",
+		"hash": "8ec288856cfecb047ecfa5c8774255e0522587438e6ddd3b12e42d519c84ef1e"
+	}
+}

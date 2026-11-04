@@ -1,0 +1,185 @@
+{
+	"schemaVersion": 1,
+	"id": 821,
+	"slug": "freezing-glare",
+	"name": "Freezing Glare",
+	"names": {
+		"de": "Eisiger Blick",
+		"en": "Freezing Glare",
+		"es": "Mirada Heladora",
+		"es-419": "Mirada Glacial",
+		"fr": "Regard Glaçant",
+		"it": "Sguardo Gelido",
+		"ja": "いてつくしせん",
+		"ja-hrkt": "いてつくしせん",
+		"ko": "얼어붙는시선",
+		"zh-hans": "冰冷视线",
+		"zh-hant": "冰冷視線"
+	},
+	"generation": 8,
+	"type": "Psychic",
+	"damageClass": "Special",
+	"power": 90,
+	"accuracy": 100,
+	"pp": 10,
+	"priority": 0,
+	"effectChance": 10,
+	"target": "Selected Pokemon",
+	"effectEntries": [
+		{
+			"language": "en",
+			"effect": "Inflicts regular damage. Has a chance to freeze the target. During Hail, this move has 100% accuracy. It also has a (100 - accuracy)% chance to break through the protection of Protect and Detect.",
+			"shortEffect": "Has a chance to freeze the target."
+		},
+		{
+			"language": "fr",
+			"effect": "Inflige des dégâts réguliers. A une chance de geler la cible. Sous Grêle, cette capacité a 100% de puissance. Elle a aussi (100 - accuracy)% de chances de passre à travers la protection de Abri et Détection.",
+			"shortEffect": "A une chance de geler la cible."
+		}
+	],
+	"effectChanges": [
+		{
+			"versionGroup": "diamond-pearl",
+			"effectEntries": [
+				{
+					"language": "en",
+					"effect": "Does not interact with Hail.",
+					"shortEffect": ""
+				},
+				{
+					"language": "fr",
+					"effect": "N’interagit pas avec Grêle.",
+					"shortEffect": ""
+				}
+			]
+		}
+	],
+	"descriptions": [
+		{
+			"versionGroup": "legends-arceus",
+			"language": "en",
+			"text": "The user shoots its psychic power from its eyes to attack. This may also leave the target frozen."
+		},
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "en",
+			"text": "The user shoots its psychic power from its eyes to attack. This may also leave the target frozen."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "de",
+			"text": "Der Anwender greift das Ziel mit Psycho-Kräften an, die er aus seinen Augen abschießt. Das Ziel friert eventuell ein."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "en",
+			"text": "The user shoots its psychic power from its eyes to attack. This may also leave the target frozen."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es",
+			"text": "A través de sus ojos emite poderes psíquicos con los que ataca al objetivo, al que puede llegar a congelar."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es-419",
+			"text": "A través de sus ojos emite poderes psíquicos con los que ataca al objetivo, al que puede llegar a congelar."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "fr",
+			"text": "Les yeux du lanceur tirent des rayons psychiques. Peut aussi geler l’ennemi."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "it",
+			"text": "Il Pokémon attacca rilasciando energia psichica dagli occhi. Può congelare il bersaglio."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja",
+			"text": "両目から サイコパワーを 撃ちだして 攻撃する。 こおり状態に することが ある。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja-hrkt",
+			"text": "りょうめから サイコパワーを うちだして こうげきする。 こおり じょうたいに することが ある。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ko",
+			"text": "두 눈에서 사이코 파워를 발사해서 공격한다. 얼음 상태로 만들 때가 있다."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hans",
+			"text": "从双眼发射精神力量进行攻击。 有时会让对手陷入冰冻状态。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hant",
+			"text": "從雙眼釋放出精神力量進行攻擊。 有時會讓對手陷入冰凍狀態。"
+		}
+	],
+	"pastValues": [],
+	"statChanges": [],
+	"meta": {
+		"ailment": "Freeze",
+		"category": "Damage Ailment",
+		"minHits": null,
+		"maxHits": null,
+		"minTurns": null,
+		"maxTurns": null,
+		"drain": 0,
+		"healing": 0,
+		"critRate": 0,
+		"ailmentChance": 10,
+		"flinchChance": 0,
+		"statChance": 0
+	},
+	"machines": [],
+	"learners": [
+		{
+			"nationalDexId": 144,
+			"speciesName": "Articuno",
+			"formKey": "galarian",
+			"formName": "Galarian",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 45,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 45,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		}
+	],
+	"potentialPokemon": [
+		"articuno-galar"
+	],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/move/821/",
+		"fetchedAt": "2026-11-03T06:30:18.657Z",
+		"hash": "0a25f0b3b06b47ab85c0be6454e3664cdd86eb34f9dc4633f4e55d564d343c9f"
+	}
+}

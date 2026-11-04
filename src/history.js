@@ -37,6 +37,7 @@ export function initHistory({ store, renderAll }) {
 			monInfoGameKey: s.monInfoGameKey || null,
 			monInfoForm: s.monInfoForm || null,
 			toolsKey: s.toolsKey || "info",
+			referenceSlug: s.referenceSlug || null,
 		};
 	}
 
@@ -90,7 +91,12 @@ export function initHistory({ store, renderAll }) {
 
 		if (lvl === "tools") {
 			const tool = s.toolsKey || "info";
-			return `#/tools/${encodeURIComponent(tool)}`;
+			const referenceSlug = s.referenceSlug
+				? encodeURIComponent(String(s.referenceSlug))
+				: "";
+			return referenceSlug && (tool === "moves" || tool === "abilities")
+				? `#/tools/${encodeURIComponent(tool)}/${referenceSlug}`
+				: `#/tools/${encodeURIComponent(tool)}`;
 		}
 
 		if (lvl === "moninfo") {
@@ -132,6 +138,7 @@ export function initHistory({ store, renderAll }) {
 			monInfoId: null,
 			monInfoGameKey: null,
 			monInfoForm: null,
+			referenceSlug: null,
 		};
 
 		if (route === "section") {
@@ -168,6 +175,10 @@ export function initHistory({ store, renderAll }) {
 					? monInfoGameKeyFromPrettySlug(gSlug)
 					: null;
 				next.monInfoForm = f || null;
+			} else if (tool === "moves" || tool === "abilities") {
+				next.level = "tools";
+				next.toolsKey = tool;
+				next.referenceSlug = n;
 			} else {
 				// Unknown tool with extra path → just land on tool root
 				next.level = "tools";
@@ -281,6 +292,13 @@ export function initHistory({ store, renderAll }) {
 				? normalizeSectionId(patch.sectionId || null) || null
 				: store.state.sectionId,
 		};
+		if (
+			!Object.prototype.hasOwnProperty.call(patch, "referenceSlug") &&
+			(Object.prototype.hasOwnProperty.call(patch, "level") ||
+				Object.prototype.hasOwnProperty.call(patch, "toolsKey"))
+		) {
+			nextPatch.referenceSlug = null;
+		}
 		Object.assign(store.state, nextPatch);
 
 		const url = basePath() + buildPrettyHashFromState(store.state);
@@ -408,6 +426,8 @@ export function initHistory({ store, renderAll }) {
 						: null,
 				monInfoGameKey: snap.monInfoGameKey || null,
 				monInfoForm: snap.monInfoForm || null,
+				toolsKey: snap.toolsKey || "info",
+				referenceSlug: snap.referenceSlug || null,
 			});
 		} else {
 			applyUrlToStateFromLocation();

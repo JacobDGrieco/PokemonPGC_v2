@@ -1,0 +1,99 @@
+{
+	"schemaVersion": 1,
+	"id": 864,
+	"slug": "salt-cure",
+	"name": "Salt Cure",
+	"names": {
+		"de": "Pökelsalz",
+		"en": "Salt Cure",
+		"es": "Salazón",
+		"es-419": "Salación",
+		"fr": "Salaison",
+		"it": "Sotto Sale",
+		"ja": "しおづけ",
+		"ja-hrkt": "しおづけ",
+		"ko": "소금절이",
+		"zh-hans": "盐腌",
+		"zh-hant": "鹽醃"
+	},
+	"generation": 9,
+	"type": "Rock",
+	"damageClass": "Physical",
+	"power": 40,
+	"accuracy": 100,
+	"pp": 15,
+	"priority": 0,
+	"effectChance": null,
+	"target": "Selected Pokemon",
+	"effectEntries": [],
+	"effectChanges": [],
+	"descriptions": [
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "en",
+			"text": "The user salt cures the target, inflicting damage every turn. Steel and Water types are more strongly affected by this move."
+		},
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "fr",
+			"text": "Le lanceur couvre la cible de sel, ce qui lui inflige des dégâts à chaque tour. Si la cible est de type Acier ou Eau, ces dégâts sont plus élevés."
+		}
+	],
+	"pastValues": [],
+	"statChanges": [],
+	"meta": null,
+	"machines": [],
+	"learners": [
+		{
+			"nationalDexId": 933,
+			"speciesName": "Naclstack",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 934,
+			"speciesName": "Garganacl",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 24,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		}
+	],
+	"potentialPokemon": [
+		"naclstack",
+		"garganacl"
+	],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/move/864/",
+		"fetchedAt": "2026-11-03T06:30:18.903Z",
+		"hash": "bfe760c19914ca02e7974b2032a781a9f06520fd82fc02d817b383912fbe8391"
+	}
+}

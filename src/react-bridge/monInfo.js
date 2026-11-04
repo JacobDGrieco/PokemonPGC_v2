@@ -1,4 +1,5 @@
 import { ensureMonInfoLoaded } from "../../data/mon-info/_loader.js";
+import { getMonInfoManifestSpecies } from "../../data/mon-info/manifest.js";
 
 export const MONINFO_GAME_PRIORITY = [
 	"legendsza",
@@ -146,6 +147,11 @@ export function findGameKeysForMonInfoNati(natiId) {
 
 	const byGame = window.DATA?.monInfo || {};
 	const found = new Set();
+	const manifestSpecies = getMonInfoManifestSpecies(natId);
+	for (const gameKey of manifestSpecies?.gameKeys || []) found.add(gameKey);
+	for (const form of Object.values(manifestSpecies?.forms || {})) {
+		for (const gameKey of form.gameKeys || []) found.add(gameKey);
+	}
 
 	for (const gameKey of Object.keys(byGame)) {
 		if (String(gameKey).startsWith("$")) continue;
@@ -158,8 +164,7 @@ export function findGameKeysForMonInfoNati(natiId) {
 	return found.size ? Array.from(found) : Object.keys(byGame);
 }
 
-export function getHomeDexMons() {
-	const homeDex = window.DATA?.dex?.home || [];
+export function getHomeDexMons(homeDex = window.DATA?.dex?.home || []) {
 	return (Array.isArray(homeDex) ? homeDex : [])
 		.map((mon) => ({
 			natiId: Number(mon?.natiId ?? mon?.id ?? 0),
@@ -172,6 +177,8 @@ export function getHomeDexMons() {
 export async function getMonInfoDisplayName(natiId) {
 	const natId = Number(natiId);
 	if (!natId) return "";
+	const manifestName = getMonInfoManifestSpecies(natId)?.name;
+	if (manifestName) return manifestName;
 
 	await ensureMonInfoLoaded(natId, null);
 
@@ -180,7 +187,8 @@ export async function getMonInfoDisplayName(natiId) {
 		for (const bucket of Object.values(byGame)) {
 			if (!bucket || typeof bucket !== "object") continue;
 			const record = bucket[natId] || bucket[String(natId)];
-			if (record?.name) return String(record.name);
+			if (record?.displayName || record?.name)
+				return String(record.displayName || record.name);
 		}
 	} catch {}
 

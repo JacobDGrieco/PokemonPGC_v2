@@ -1,7 +1,35 @@
-import React, { useEffect, useState } from "react";
-import { assetPath } from "../../utils/assetPath.js";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { pad4 } from "../../react-bridge/monInfo.js";
 import { resolveMonInfoData } from "../../react-bridge/monInfoData.js";
+import {
+	advancePokemonSpriteFallback,
+	pokemonSpriteCandidates,
+} from "../../utils/pokemonSprite.js";
+import {
+	buildMonInfoStatSeries,
+	MON_INFO_STAT_LABEL_RADIUS_OFFSET,
+	MON_INFO_STAT_VIEW_BOX,
+} from "../../utils/monInfoStats.js";
+import { parseMonInfoGenderRatio } from "../../utils/monInfoProfile.js";
+import {
+	moveGroupDisplayLabel,
+	moveMetadataParts,
+	moveTypeIconSource,
+	referenceEntryHref,
+} from "../../utils/moveReference.js";
+import {
+	buildEeveeEvolutionWheel,
+	buildEvolutionForest,
+	evolutionRequirementPresentation,
+	evolutionTargetId,
+	resolveEvolutionTargetForm,
+} from "../../utils/monInfoEvolution.js";
+
+// Keep the evolution tree off the homepage bundle; Vite deduplicates this
+// stylesheet with the legacy modal's matching lazy import.
+if (typeof document !== "undefined") {
+	void import("../../../styles/mon-info-evolution.css");
+}
 
 function TypePill({ type }) {
 	return (
@@ -11,103 +39,154 @@ function TypePill({ type }) {
 	);
 }
 
+function GenderRatioValue({ value }) {
+	const ratio = parseMonInfoGenderRatio(value);
+	if (!ratio) return null;
+	if (ratio.text) return <div className="value">{ratio.text}</div>;
+	return (
+		<div
+			className="value"
+			aria-label={`${ratio.male}% male, ${ratio.female}% female`}
+		>
+			<span style={{ color: "oklch(72% 0.16 250)" }}>
+				<span aria-hidden="true">♂</span> {ratio.male}%
+			</span>{" "}
+			<span aria-hidden="true">/</span>{" "}
+			<span style={{ color: "oklch(76% 0.16 350)" }}>
+				<span aria-hidden="true">♀</span> {ratio.female}%
+			</span>
+		</div>
+	);
+}
+
+function ProfileItem({ label, value }) {
+	return (
+		<div className="mon-info-profile-item">
+			<div className="label">{label}</div>
+			{label === "Gender Ratio" ? (
+				<GenderRatioValue value={value} />
+			) : Array.isArray(value) ? (
+				<div className="value value--stacked">
+					{value.map((item) =>
+						label === "Abilities" ? (
+							<a
+								key={`${label}-${item}`}
+								className="value-line mon-info-reference-link"
+								href={referenceEntryHref("abilities", item)}
+							>
+								{item}
+							</a>
+						) : (
+							<span
+								key={`${label}-${item}`}
+								className="value-line"
+							>
+								{item}
+							</span>
+						),
+					)}
+				</div>
+			) : (
+				<div className="value">{value}</div>
+			)}
+		</div>
+	);
+}
+
+function visibleProfileRows(rows) {
+	return rows.filter(
+		([, value]) =>
+			value != null &&
+			value !== "" &&
+			(!Array.isArray(value) || value.length),
+	);
+}
+
 function ProfileCard({ profile }) {
-	const rows = [
+	const primaryRows = visibleProfileRows([
 		["Abilities", profile.abilities],
 		["Egg Groups", profile.eggGroups],
-		["Exp Growth", profile.expGroup],
 		["Base Egg Steps", profile.baseEggSteps],
-		["Height", profile.height],
-		["Weight", profile.weight],
-		["Gender Ratio", profile.genderRatio],
+		["Catch Rate", profile.captureRate],
 		[
 			"Base Friendship",
 			profile.baseFriendship != null
 				? `${profile.baseFriendship} / 255`
 				: null,
 		],
-		["Capture Rate", profile.captureRate],
+		["Exp Growth", profile.expGroup],
+	]);
+	const secondaryRows = visibleProfileRows([
+		["Height", profile.height],
+		["Weight", profile.weight],
+		["Gender Ratio", profile.genderRatio],
 		["Base Experience", profile.baseExperience],
 		["Habitat", profile.habitat],
 		["Shape", profile.shape],
 		["Color", profile.color],
 		["Species", profile.genus],
-	].filter(
-		([, value]) =>
-			value != null &&
-			value !== "" &&
-			(!Array.isArray(value) || value.length),
-	);
+	]);
 
-	if (!rows.length) return null;
+	if (!primaryRows.length && !secondaryRows.length) return null;
 
 	return (
 		<div className="mon-info-block mon-info-profile">
 			<h3>Profile</h3>
 			<div className="mon-info-profile-grid">
-				{rows.map(([label, value]) => (
-					<div key={label} className="mon-info-profile-item">
-						<div className="label">{label}</div>
-						{Array.isArray(value) ? (
-							<div className="value value--stacked">
-								{value.map((item) => (
-									<span
-										key={`${label}-${item}`}
-										className="value-line"
-									>
-										{item}
-									</span>
-								))}
-							</div>
-						) : (
-							<div className="value">{value}</div>
-						)}
-					</div>
-				))}
+				<div className="mon-info-profile-column is-primary">
+					{primaryRows.map(([label, value]) => (
+						<ProfileItem key={label} label={label} value={value} />
+					))}
+				</div>
+				<div className="mon-info-profile-column is-secondary">
+					{secondaryRows.map(([label, value]) => (
+						<ProfileItem key={label} label={label} value={value} />
+					))}
+				</div>
 			</div>
 		</div>
 	);
 }
 
-function StatsRadar({ stats }) {
-	const labels = ["HP", "Atk", "Def", "Spe", "SpD", "SpA"];
-	const order = ["hp", "atk", "def", "spe", "spd", "spa"];
-	const values = order.map((key) => Number(stats?.[key] ?? 0));
+function StatsRadar({ stats, evYield }) {
+	const statSeries = buildMonInfoStatSeries(stats, evYield);
+	const values = statSeries.map((stat) => stat.value);
 	if (!values.some((v) => Number.isFinite(v) && v > 0)) return null;
 	const maxVal = Math.max(...values, 1);
 	const total = values.reduce((sum, v) => sum + v, 0);
 	const center = 50;
 	const radius = 65;
-	const points = values.map((v, idx) => {
+	const labelRadius = radius + MON_INFO_STAT_LABEL_RADIUS_OFFSET;
+	const points = statSeries.map((stat, idx) => {
+		const v = stat.value;
 		const ratio = v / maxVal;
 		const r = radius * ratio;
-		const angle = -Math.PI / 2 + (idx * 2 * Math.PI) / order.length;
+		const angle = -Math.PI / 2 + (idx * 2 * Math.PI) / statSeries.length;
 		return {
+			...stat,
 			x: center + r * Math.cos(angle),
 			y: center + r * Math.sin(angle),
 			angle,
 			r,
-			value: v,
-			label: labels[idx],
 		};
 	});
 	const gridLevels = [0.33, 0.66, 1];
 	return (
 		<div className="mon-info-block mon-info-stats">
-			<h3>Base Stats</h3>
+			<h3>Base Stats and EV Yield</h3>
 			<div className="mon-info-stats-graph">
 				<svg
-					viewBox="-25 -25 150 150"
+					viewBox={MON_INFO_STAT_VIEW_BOX}
 					className="mon-info-stats-radar"
 					aria-hidden="true"
 				>
 					{gridLevels.map((lvl) => {
-						const pts = order
+						const pts = statSeries
 							.map((_, i) => {
 								const r = radius * lvl;
 								const angle =
 									-Math.PI / 2 +
-									(i * 2 * Math.PI) / order.length;
+									(i * 2 * Math.PI) / statSeries.length;
 								return `${(center + r * Math.cos(angle)).toFixed(1)},${(center + r * Math.sin(angle)).toFixed(1)}`;
 							})
 							.join(" ");
@@ -135,35 +214,29 @@ function StatsRadar({ stats }) {
 						/>
 					))}
 					{points.map((p) => {
-						const lx = center + (radius + 12) * Math.cos(p.angle);
-						const ly = center + (radius + 12) * Math.sin(p.angle);
+						const lx = center + labelRadius * Math.cos(p.angle);
+						const ly = center + labelRadius * Math.sin(p.angle);
 						return (
-							<text
-								key={`lbl-${p.label}`}
-								x={lx.toFixed(1)}
-								y={ly.toFixed(1)}
-								className="stat-label"
-								textAnchor="middle"
-								dominantBaseline="central"
-							>
-								{p.label}
-							</text>
-						);
-					})}
-					{points.map((p) => {
-						const nx = center + p.r * 0.7 * Math.cos(p.angle);
-						const ny = center + p.r * 0.7 * Math.sin(p.angle);
-						return (
-							<text
-								key={`val-${p.label}`}
-								x={nx.toFixed(1)}
-								y={ny.toFixed(1)}
-								className="stat-value"
-								textAnchor="middle"
-								dominantBaseline="central"
-							>
-								{p.value}
-							</text>
+							<React.Fragment key={`stat-${p.key}`}>
+								<text
+									x={lx.toFixed(1)}
+									y={ly.toFixed(1)}
+									className="stat-label"
+									textAnchor="middle"
+									dominantBaseline="central"
+								>
+									{p.label}
+								</text>
+								<text
+									x={lx.toFixed(1)}
+									y={(ly + 9).toFixed(1)}
+									className="stat-value"
+									textAnchor="middle"
+									dominantBaseline="central"
+								>
+									{p.displayValue}
+								</text>
+							</React.Fragment>
 						);
 					})}
 					<text
@@ -261,50 +334,300 @@ function TypeDefenseCard({ rows }) {
 	);
 }
 
-function EvolutionCard({ paths }) {
-	if (!paths?.length) return null;
-	const methodLabel = (step) => {
-		if (!step) return "";
-		const m = step.method != null ? String(step.method) : "";
-		const v = step.value != null ? step.value : null;
-		if (!m && step.level != null) return `Lv. ${step.level}`;
-		if (!m) return step.trigger || "";
-		if (m.toLowerCase() === "level")
-			return v != null ? `Lv. ${v}` : "Level";
-		if (v == null || v === "") return m;
-		return `${m}: ${v}`;
-	};
+function connectorDirection(branchIndex, branchCount) {
+	const midpoint = (branchCount - 1) / 2;
+	if (branchIndex < midpoint) return "up";
+	if (branchIndex > midpoint) return "down";
+	return "straight";
+}
 
+function EvolutionRequirement({ step, gameKey, direction, style = undefined }) {
+	const presentation = evolutionRequirementPresentation(step, gameKey);
+	if (!presentation.label && !presentation.item) return null;
+	return (
+		<span
+			className={`evolution-requirement is-${direction}${presentation.item ? " has-item" : ""}`}
+			style={style}
+		>
+			{presentation.item ? (
+				<img
+					key={presentation.item.src}
+					className="evolution-item-icon"
+					src={presentation.item.src}
+					alt=""
+					title={presentation.item.name}
+					loading="lazy"
+					hidden={false}
+					onLoad={(event) => {
+						event.currentTarget.hidden = false;
+					}}
+				/>
+			) : null}
+			<span className="evolution-requirement-copy">
+				<strong>{presentation.label}</strong>
+				{presentation.detail ? (
+					<small>{presentation.detail}</small>
+				) : null}
+			</span>
+		</span>
+	);
+}
+
+function EvolutionConnector({ step, gameKey, direction }) {
+	const path =
+		direction === "up"
+			? "M4 64 L104 8"
+			: direction === "down"
+				? "M4 8 L104 64"
+				: "M4 36 L104 36";
+	const arrowhead =
+		direction === "up"
+			? "84,8 104,8 95,26"
+			: direction === "down"
+				? "84,64 104,64 95,46"
+				: "86,24 104,36 86,48";
+	return (
+		<div className={`evolution-connector is-${direction}`}>
+			<EvolutionRequirement
+				step={step}
+				gameKey={gameKey}
+				direction={direction}
+			/>
+			<svg
+				className="evolution-arrow"
+				viewBox="0 0 108 72"
+				preserveAspectRatio="none"
+				aria-hidden="true"
+			>
+				<path d={path} />
+				<polyline points={arrowhead} />
+			</svg>
+		</div>
+	);
+}
+
+function EvolutionNodeButton({
+	node,
+	gameKey,
+	currentNatiId,
+	currentFormKey,
+	onNavigate,
+}) {
+	const targetId = evolutionTargetId(node.step);
+	const targetFormKey = resolveEvolutionTargetForm({
+		step: node.step,
+		gameKey,
+		currentFormKey,
+	});
+	const spriteCandidates = pokemonSpriteCandidates({
+		nationalDexId: targetId,
+		formKey: targetFormKey,
+		gameKey,
+	});
+	const isCurrent =
+		targetId === Number(currentNatiId) &&
+		(!targetFormKey || targetFormKey === currentFormKey);
+	return (
+		<button
+			type="button"
+			className={`evolution-node${isCurrent ? " is-current" : ""}`}
+			aria-current={isCurrent ? "page" : undefined}
+			disabled={!targetId}
+			onClick={() => onNavigate?.(targetId, targetFormKey)}
+		>
+			{spriteCandidates[0] ? (
+				<img
+					className="evolution-pokemon-icon"
+					src={spriteCandidates[0]}
+					alt=""
+					loading="lazy"
+					data-sprite-candidate-index="0"
+					onError={(event) =>
+						advancePokemonSpriteFallback(event, spriteCandidates)
+					}
+				/>
+			) : null}
+			<span className="evolution-name">
+				{node.step?.name || `#${targetId || "?"}`}
+			</span>
+		</button>
+	);
+}
+
+function EvolutionTreeNode({
+	node,
+	gameKey,
+	currentNatiId,
+	currentFormKey,
+	onNavigate,
+}) {
+	const branchCount = node.children.length;
+
+	return (
+		<div className="evolution-tree-node-wrap">
+			<EvolutionNodeButton
+				node={node}
+				gameKey={gameKey}
+				currentNatiId={currentNatiId}
+				currentFormKey={currentFormKey}
+				onNavigate={onNavigate}
+			/>
+			{branchCount ? (
+				<div
+					className={`evolution-branches${branchCount > 1 ? " is-split" : ""}`}
+				>
+					{node.children.map((child, branchIndex) => {
+						const direction = connectorDirection(
+							branchIndex,
+							branchCount,
+						);
+						return (
+							<div key={child.key} className="evolution-branch">
+								<EvolutionConnector
+									step={child.step}
+									gameKey={gameKey}
+									direction={direction}
+								/>
+								<EvolutionTreeNode
+									node={child}
+									gameKey={gameKey}
+									currentNatiId={currentNatiId}
+									currentFormKey={currentFormKey}
+									onNavigate={onNavigate}
+								/>
+							</div>
+						);
+					})}
+				</div>
+			) : null}
+		</div>
+	);
+}
+
+function EeveeEvolutionWheel({
+	layout,
+	gameKey,
+	currentNatiId,
+	currentFormKey,
+	onNavigate,
+}) {
+	return (
+		<div
+			className="evolution-wheel"
+			style={{ width: layout.size, height: layout.size }}
+		>
+			<svg
+				className="evolution-wheel-arrows"
+				viewBox={`0 0 ${layout.size} ${layout.size}`}
+				aria-hidden="true"
+			>
+				{layout.branches.map((branch) => (
+					<g key={branch.node.key}>
+						<line
+							x1={branch.startX}
+							y1={branch.startY}
+							x2={branch.endX}
+							y2={branch.endY}
+						/>
+						<polyline points={branch.arrowPoints} />
+					</g>
+				))}
+			</svg>
+			<div
+				className="evolution-wheel-node is-center"
+				style={{ left: layout.center, top: layout.center }}
+			>
+				<EvolutionNodeButton
+					node={layout.root}
+					gameKey={gameKey}
+					currentNatiId={currentNatiId}
+					currentFormKey={currentFormKey}
+					onNavigate={onNavigate}
+				/>
+			</div>
+			{layout.branches.map((branch) => (
+				<React.Fragment key={branch.node.key}>
+					<EvolutionRequirement
+						step={branch.node.step}
+						gameKey={gameKey}
+						direction="radial"
+						style={{ left: branch.labelX, top: branch.labelY }}
+					/>
+					<div
+						className="evolution-wheel-node"
+						style={{ left: branch.nodeX, top: branch.nodeY }}
+					>
+						<EvolutionNodeButton
+							node={branch.node}
+							gameKey={gameKey}
+							currentNatiId={currentNatiId}
+							currentFormKey={currentFormKey}
+							onNavigate={onNavigate}
+						/>
+					</div>
+				</React.Fragment>
+			))}
+		</div>
+	);
+}
+
+function EvolutionCard({
+	evolution,
+	gameKey,
+	currentNatiId,
+	currentFormKey,
+	onNavigate,
+}) {
+	const forest = useMemo(
+		() => buildEvolutionForest(evolution, { gameKey }),
+		[evolution, gameKey],
+	);
+	const wheelLayout = useMemo(
+		() => buildEeveeEvolutionWheel(forest),
+		[forest],
+	);
+	const scrollRef = useRef(null);
+	useEffect(() => {
+		const scrollElement = scrollRef.current;
+		if (!wheelLayout || !scrollElement) return undefined;
+		const frame = requestAnimationFrame(() => {
+			scrollElement.scrollLeft = Math.max(
+				0,
+				(scrollElement.scrollWidth - scrollElement.clientWidth) / 2,
+			);
+		});
+		return () => cancelAnimationFrame(frame);
+	}, [gameKey, wheelLayout]);
+	if (!forest.length) return null;
 	return (
 		<div className="mon-info-block mon-info-evolution">
 			<h3>Evolution</h3>
-			<div className="react-evo-list">
-				{paths.map((path, pathIndex) => (
-					<div key={`path-${pathIndex}`} className="react-evo-path">
-						{path.map((step, idx) => (
-							<React.Fragment
-								key={`${pathIndex}-${step?.id || step?.name || idx}`}
-							>
-								{idx > 0 ? (
-									<div className="react-evo-link">
-										{methodLabel(step)}
-									</div>
-								) : null}
-								<div className="react-evo-node">
-									<img
-										src={assetPath(
-											`sprites/pokemon_home/menu_sprites/${pad4(step?.natiId || step?.id || 0)}.png`,
-										)}
-										alt=""
-									/>
-									<div className="react-evo-name">
-										{step?.name || `#${step?.id || "?"}`}
-									</div>
-								</div>
-							</React.Fragment>
+			<div
+				ref={scrollRef}
+				className={`evolution-tree-scroll${wheelLayout ? " has-wheel" : ""}`}
+			>
+				{wheelLayout ? (
+					<EeveeEvolutionWheel
+						layout={wheelLayout}
+						gameKey={gameKey}
+						currentNatiId={currentNatiId}
+						currentFormKey={currentFormKey}
+						onNavigate={onNavigate}
+					/>
+				) : (
+					<div className="evolution-forest">
+						{forest.map((root) => (
+							<EvolutionTreeNode
+								key={root.key}
+								node={root}
+								gameKey={gameKey}
+								currentNatiId={currentNatiId}
+								currentFormKey={currentFormKey}
+								onNavigate={onNavigate}
+							/>
 						))}
 					</div>
-				))}
+				)}
 			</div>
 		</div>
 	);
@@ -339,7 +662,12 @@ function MovesCard({ moves }) {
 			<div className="react-moves-groups">
 				{moves.map((group) => (
 					<div key={group.learnMethod} className="react-moves-group">
-						<h4>{group.learnMethod}</h4>
+						<h4>
+							{moveGroupDisplayLabel(
+								group.learnMethod,
+								group.entries,
+							)}
+						</h4>
 						<div className="react-moves-chips">
 							{group.entries.map((entry, index) => {
 								const label =
@@ -349,27 +677,34 @@ function MovesCard({ moves }) {
 											entry?.move ||
 											`Move ${index + 1}`;
 								const meta =
-									typeof entry === "object"
-										? [
-												entry?.level != null
-													? `Lv. ${entry.level}`
-													: "",
-												entry?.type || "",
-												entry?.power != null
-													? `Pow ${entry.power}`
-													: "",
-											]
-												.filter(Boolean)
-												.join(" • ")
-										: "";
+									moveMetadataParts(entry).join(" • ");
+								const typeIconSrc = moveTypeIconSource(
+									entry?.type,
+								);
 								return (
-									<div
+									<a
 										key={`${group.learnMethod}-${label}-${index}`}
 										className="react-move-chip"
+										href={referenceEntryHref(
+											"moves",
+											label,
+										)}
 									>
-										<span>{label}</span>
+										<span className="react-move-label">
+											{typeIconSrc ? (
+												<img
+													className="react-move-type-icon"
+													src={typeIconSrc}
+													alt={`${entry.type} type`}
+													title={`${entry.type} type`}
+													loading="lazy"
+													height={20}
+												/>
+											) : null}
+											<span>{label}</span>
+										</span>
 										{meta ? <small>{meta}</small> : null}
-									</div>
+									</a>
 								);
 							})}
 						</div>
@@ -380,7 +715,13 @@ function MovesCard({ moves }) {
 	);
 }
 
-export function MonInfoBody({ gameKey, mon, formKey, onFormChange }) {
+export function MonInfoBody({
+	gameKey,
+	mon,
+	formKey,
+	onFormChange,
+	onEvolutionNavigate,
+}) {
 	const [data, setData] = useState(null);
 	const [loading, setLoading] = useState(true);
 
@@ -429,15 +770,13 @@ export function MonInfoBody({ gameKey, mon, formKey, onFormChange }) {
 							src={data.spriteSrc}
 							alt={displayName}
 							loading="lazy"
-							onError={(e) => {
-								if (
-									e.target.src !==
-									(window.__PPGC_NO_IMG__ || "/no-image.svg")
+							data-sprite-candidate-index="0"
+							onError={(event) =>
+								advancePokemonSpriteFallback(
+									event,
+									data.spriteCandidates || [data.spriteSrc],
 								)
-									e.target.src =
-										window.__PPGC_NO_IMG__ ||
-										"/no-image.svg";
-							}}
+							}
 						/>
 					</div>
 				) : null}
@@ -457,14 +796,14 @@ export function MonInfoBody({ gameKey, mon, formKey, onFormChange }) {
 								<div className="mon-info-form">
 									<select
 										className="mon-info-form-select"
-										value={formKey || ""}
+										value={
+											data.effectiveFormKey ||
+											data.formOptions[0].key
+										}
 										onChange={(event) =>
-											onFormChange?.(
-												event.target.value || null,
-											)
+											onFormChange?.(event.target.value)
 										}
 									>
-										<option value=""></option>
 										{data.formOptions.map((option) => (
 											<option
 												key={option.key}
@@ -488,12 +827,18 @@ export function MonInfoBody({ gameKey, mon, formKey, onFormChange }) {
 			<div className="mon-info-layout">
 				<aside className="mon-info-col mon-info-col--summary">
 					<TypeDefenseCard rows={data.typeDefenses} />
-					<StatsRadar stats={data.baseStats} />
+					<StatsRadar stats={data.baseStats} evYield={data.evYield} />
 				</aside>
 
 				<section className="mon-info-col mon-info-col--details">
 					<ProfileCard profile={data.profile} />
-					<EvolutionCard paths={data.evolutionPaths} />
+					<EvolutionCard
+						evolution={data.resolvedInfo?.evolution}
+						gameKey={gameKey}
+						currentNatiId={data.natId}
+						currentFormKey={data.effectiveFormKey}
+						onNavigate={onEvolutionNavigate}
+					/>
 					<LocationsCard locations={data.locations} />
 					<MovesCard moves={data.moves} />
 				</section>

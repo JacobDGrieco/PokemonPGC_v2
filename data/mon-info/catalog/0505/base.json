@@ -1,0 +1,6663 @@
+{
+	"schemaVersion": 2,
+	"nationalDexId": 505,
+	"speciesName": "Watchog",
+	"formKey": "base",
+	"formName": "Base",
+	"formLabelSource": "form-catalog",
+	"profiles": [
+		{
+			"profileKey": "black-white",
+			"label": "Black / White",
+			"appGameKeys": [
+				"black-national",
+				"black",
+				"white-national",
+				"white"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Watchog",
+				"localizedNames": {
+					"ja-hrkt": "ミルホッグ",
+					"ja-roma": "Miruhog",
+					"ko": "보르그",
+					"zh-hant": "步哨鼠",
+					"fr": "Miradar",
+					"de": "Kukmarda",
+					"es": "Watchog",
+					"it": "Watchog",
+					"ja": "ミルホッグ",
+					"zh-hans": "步哨鼠",
+					"es-419": "Watchog"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 85,
+					"def": 69,
+					"spa": 60,
+					"spd": 69,
+					"spe": 77
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Illuminate",
+					"Keen Eye",
+					"Analytic (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Analytic"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.1 m",
+				"weight": "27.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 147,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Lookout Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けいかいポケモン",
+					"ko": "경계포켓몬",
+					"zh-hant": "警戒寶可夢",
+					"fr": "Pokémon Vigilant",
+					"de": "Wachsamkeit",
+					"es": "Pokémon Alerta",
+					"it": "Pokémon Sentinella",
+					"ja": "けいかいポケモン",
+					"zh-hans": "警戒宝可梦",
+					"es-419": "Pokémon Alerta"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 505
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 11
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 11
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 47
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 28
+					},
+					{
+						"pokedex": "champions",
+						"number": 505
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 504,
+								"natiId": 504,
+								"name": "Patrat"
+							},
+							{
+								"id": 505,
+								"natiId": 505,
+								"name": "Watchog",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Dreamyard Area",
+						"notes": "Dark Grass, Lv. 47",
+						"games": "Black",
+						"rate": "20%"
+					},
+					{
+						"area": "Dreamyard Area",
+						"notes": "Dark Grass, Lv. 47",
+						"games": "White",
+						"rate": "20%"
+					},
+					{
+						"area": "P2 Laboratory Area",
+						"notes": "Walk, Lv. 28",
+						"games": "Black",
+						"rate": "20%"
+					},
+					{
+						"area": "P2 Laboratory Area",
+						"notes": "Walk, Lv. 29",
+						"games": "Black",
+						"rate": "10%"
+					},
+					{
+						"area": "P2 Laboratory Area",
+						"notes": "Walk, Lv. 30",
+						"games": "Black",
+						"rate": "5%"
+					},
+					{
+						"area": "P2 Laboratory Area",
+						"notes": "Walk, Lv. 31",
+						"games": "Black",
+						"rate": "1%"
+					},
+					{
+						"area": "P2 Laboratory Area",
+						"notes": "Walk, Lv. 28",
+						"games": "White",
+						"rate": "20%"
+					},
+					{
+						"area": "P2 Laboratory Area",
+						"notes": "Walk, Lv. 29",
+						"games": "White",
+						"rate": "10%"
+					},
+					{
+						"area": "P2 Laboratory Area",
+						"notes": "Walk, Lv. 30",
+						"games": "White",
+						"rate": "5%"
+					},
+					{
+						"area": "P2 Laboratory Area",
+						"notes": "Walk, Lv. 31",
+						"games": "White",
+						"rate": "1%"
+					},
+					{
+						"area": "Unova Route 1 Area",
+						"notes": "Dark Grass, Lv. 32",
+						"games": "Black",
+						"rate": "20%"
+					},
+					{
+						"area": "Unova Route 1 Area",
+						"notes": "Dark Grass, Lv. 33",
+						"games": "Black",
+						"rate": "10%"
+					},
+					{
+						"area": "Unova Route 1 Area",
+						"notes": "Dark Grass, Lv. 34",
+						"games": "Black",
+						"rate": "5%"
+					},
+					{
+						"area": "Unova Route 1 Area",
+						"notes": "Dark Grass, Lv. 35",
+						"games": "Black",
+						"rate": "1%"
+					},
+					{
+						"area": "Unova Route 1 Area",
+						"notes": "Dark Grass, Lv. 32",
+						"games": "White",
+						"rate": "20%"
+					},
+					{
+						"area": "Unova Route 1 Area",
+						"notes": "Dark Grass, Lv. 33",
+						"games": "White",
+						"rate": "10%"
+					},
+					{
+						"area": "Unova Route 1 Area",
+						"notes": "Dark Grass, Lv. 34",
+						"games": "White",
+						"rate": "5%"
+					},
+					{
+						"area": "Unova Route 1 Area",
+						"notes": "Dark Grass, Lv. 35",
+						"games": "White",
+						"rate": "1%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Walk, Lv. 27",
+						"games": "Black",
+						"rate": "10%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Walk, Lv. 28",
+						"games": "Black",
+						"rate": "5%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Walk, Lv. 29",
+						"games": "Black",
+						"rate": "4%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Walk, Lv. 29",
+						"games": "Black",
+						"rate": "1%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Dark Grass, Lv. 31",
+						"games": "Black",
+						"rate": "10%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Dark Grass, Lv. 32",
+						"games": "Black",
+						"rate": "5%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Dark Grass, Lv. 33",
+						"games": "Black",
+						"rate": "4%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Dark Grass, Lv. 33",
+						"games": "Black",
+						"rate": "1%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Walk, Lv. 27",
+						"games": "White",
+						"rate": "10%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Walk, Lv. 28",
+						"games": "White",
+						"rate": "5%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Walk, Lv. 29",
+						"games": "White",
+						"rate": "4%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Walk, Lv. 29",
+						"games": "White",
+						"rate": "1%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Dark Grass, Lv. 31",
+						"games": "White",
+						"rate": "10%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Dark Grass, Lv. 32",
+						"games": "White",
+						"rate": "5%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Dark Grass, Lv. 33",
+						"games": "White",
+						"rate": "4%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Dark Grass, Lv. 33",
+						"games": "White",
+						"rate": "1%"
+					},
+					{
+						"area": "Unova Route 15 Area",
+						"notes": "Dark Grass, Lv. 60",
+						"games": "Black",
+						"rate": "4%"
+					},
+					{
+						"area": "Unova Route 15 Area",
+						"notes": "Dark Grass, Lv. 60",
+						"games": "Black",
+						"rate": "1%"
+					},
+					{
+						"area": "Unova Route 15 Area",
+						"notes": "Dark Grass, Lv. 60",
+						"games": "White",
+						"rate": "4%"
+					},
+					{
+						"area": "Unova Route 15 Area",
+						"notes": "Dark Grass, Lv. 60",
+						"games": "White",
+						"rate": "1%"
+					},
+					{
+						"area": "Unova Route 18 Area",
+						"notes": "Walk, Lv. 28",
+						"games": "Black",
+						"rate": "10%"
+					},
+					{
+						"area": "Unova Route 18 Area",
+						"notes": "Walk, Lv. 30",
+						"games": "Black",
+						"rate": "10%"
+					},
+					{
+						"area": "Unova Route 18 Area",
+						"notes": "Dark Grass, Lv. 32",
+						"games": "Black",
+						"rate": "10%"
+					},
+					{
+						"area": "Unova Route 18 Area",
+						"notes": "Dark Grass, Lv. 34",
+						"games": "Black",
+						"rate": "10%"
+					},
+					{
+						"area": "Unova Route 18 Area",
+						"notes": "Walk, Lv. 28",
+						"games": "White",
+						"rate": "10%"
+					},
+					{
+						"area": "Unova Route 18 Area",
+						"notes": "Walk, Lv. 30",
+						"games": "White",
+						"rate": "10%"
+					},
+					{
+						"area": "Unova Route 18 Area",
+						"notes": "Dark Grass, Lv. 32",
+						"games": "White",
+						"rate": "10%"
+					},
+					{
+						"area": "Unova Route 18 Area",
+						"notes": "Dark Grass, Lv. 34",
+						"games": "White",
+						"rate": "10%"
+					}
+				],
+				"moves": {
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Cut",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flamethrower",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fling",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Focus Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Grass Knot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Retaliate",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Smash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Strength",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swords Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Work Up",
+							"level": null,
+							"order": null
+						}
+					],
+					"Level Up": [
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Leer",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Bite",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Low Kick",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Leer",
+							"level": 3,
+							"order": null
+						},
+						{
+							"name": "Bite",
+							"level": 6,
+							"order": null
+						},
+						{
+							"name": "Bide",
+							"level": 8,
+							"order": null
+						},
+						{
+							"name": "Detect",
+							"level": 11,
+							"order": null
+						},
+						{
+							"name": "Sand Attack",
+							"level": 13,
+							"order": null
+						},
+						{
+							"name": "Crunch",
+							"level": 16,
+							"order": null
+						},
+						{
+							"name": "Hypnosis",
+							"level": 18,
+							"order": null
+						},
+						{
+							"name": "Confuse Ray",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Super Fang",
+							"level": 22,
+							"order": null
+						},
+						{
+							"name": "After You",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Hyper Fang",
+							"level": 32,
+							"order": null
+						},
+						{
+							"name": "Mean Look",
+							"level": 36,
+							"order": null
+						},
+						{
+							"name": "Baton Pass",
+							"level": 39,
+							"order": null
+						},
+						{
+							"name": "Slam",
+							"level": 43,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/505",
+						"fetchedAt": "2026-11-03T05:53:37.869Z",
+						"hash": "e664ab84cfdfc720e4bd9c141c863340e6355b2d83126b801175a21f08e84475"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/259/",
+						"fetchedAt": "2026-11-03T05:53:37.851Z",
+						"hash": "2eac0f30f3d748b425b103b11fa1b8d462d13e5066cb2eb13bc6aff1dd0599b5"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/505/",
+						"fetchedAt": "2026-11-03T05:53:37.907Z",
+						"hash": "cdd84526aa7125dad36df0062d66a7470a1c513cac28915cc4dbdbcacfbd1ef0"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/505/encounters",
+						"fetchedAt": "2026-11-03T05:53:37.939Z",
+						"hash": "2fe752a2502161ac9b126fb45de1b8f484485469467ff1d27ff301c299ec9df0"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/505/",
+						"fetchedAt": "2026-11-03T05:53:37.992Z",
+						"hash": "e215a36173b35e3ca5a3598e0ba971c6c93ce7992dbd24479c233acf4b78456e"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"black-national": "When they see an enemy, their tails stand high, and they spit the seeds of berries stored in their cheek pouches.",
+				"black": "When they see an enemy, their tails stand high, and they spit the seeds of berries stored in their cheek pouches.",
+				"white-national": "They make the patterns on their bodies shine in order to threaten predators. Keen eyesight lets them see in the dark.",
+				"white": "They make the patterns on their bodies shine in order to threaten predators. Keen eyesight lets them see in the dark."
+			},
+			"localizedFlavorByGame": {
+				"black-national": {
+					"fr": "Il attaque en crachant les graines des Baies qu’il accumule dans ses bajoues. S’il voit un ennemi, il dresse la queue.",
+					"en": "When they see an enemy, their tails stand high, and they spit the seeds of berries stored in their cheek pouches."
+				},
+				"black": {
+					"fr": "Il attaque en crachant les graines des Baies qu’il accumule dans ses bajoues. S’il voit un ennemi, il dresse la queue.",
+					"en": "When they see an enemy, their tails stand high, and they spit the seeds of berries stored in their cheek pouches."
+				},
+				"white-national": {
+					"fr": "Il intimide l’ennemi en faisant briller les motifs de son pelage. Ses yeux peuvent voir même dans l’obscurité.",
+					"en": "They make the patterns on their bodies shine in order to threaten predators. Keen eyesight lets them see in the dark."
+				},
+				"white": {
+					"fr": "Il intimide l’ennemi en faisant briller les motifs de son pelage. Ses yeux peuvent voir même dans l’obscurité.",
+					"en": "They make the patterns on their bodies shine in order to threaten predators. Keen eyesight lets them see in the dark."
+				}
+			}
+		},
+		{
+			"profileKey": "black-2-white-2",
+			"label": "Black 2 / White 2",
+			"appGameKeys": [
+				"black2-national",
+				"black2",
+				"white2-national",
+				"white2"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Watchog",
+				"localizedNames": {
+					"ja-hrkt": "ミルホッグ",
+					"ja-roma": "Miruhog",
+					"ko": "보르그",
+					"zh-hant": "步哨鼠",
+					"fr": "Miradar",
+					"de": "Kukmarda",
+					"es": "Watchog",
+					"it": "Watchog",
+					"ja": "ミルホッグ",
+					"zh-hans": "步哨鼠",
+					"es-419": "Watchog"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 85,
+					"def": 69,
+					"spa": 60,
+					"spd": 69,
+					"spe": 77
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Illuminate",
+					"Keen Eye",
+					"Analytic (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Analytic"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.1 m",
+				"weight": "27.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 147,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Lookout Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けいかいポケモン",
+					"ko": "경계포켓몬",
+					"zh-hant": "警戒寶可夢",
+					"fr": "Pokémon Vigilant",
+					"de": "Wachsamkeit",
+					"es": "Pokémon Alerta",
+					"it": "Pokémon Sentinella",
+					"ja": "けいかいポケモン",
+					"zh-hans": "警戒宝可梦",
+					"es-419": "Pokémon Alerta"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 505
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 11
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 11
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 47
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 28
+					},
+					{
+						"pokedex": "champions",
+						"number": 505
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 504,
+								"natiId": 504,
+								"name": "Patrat"
+							},
+							{
+								"id": 505,
+								"natiId": 505,
+								"name": "Watchog",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Dreamyard Area",
+						"notes": "Dark Grass, Lv. 64",
+						"games": "Black 2",
+						"rate": "20%"
+					},
+					{
+						"area": "Dreamyard Area",
+						"notes": "Dark Grass, Lv. 67",
+						"games": "Black 2",
+						"rate": "4%"
+					},
+					{
+						"area": "Dreamyard Area",
+						"notes": "Dark Grass, Lv. 67",
+						"games": "Black 2",
+						"rate": "1%"
+					},
+					{
+						"area": "Dreamyard Area",
+						"notes": "Walk, Lv. 56",
+						"games": "Black 2",
+						"rate": "20%"
+					},
+					{
+						"area": "Dreamyard Area",
+						"notes": "Walk, Lv. 59",
+						"games": "Black 2",
+						"rate": "4%"
+					},
+					{
+						"area": "Dreamyard Area",
+						"notes": "Walk, Lv. 59",
+						"games": "Black 2",
+						"rate": "1%"
+					},
+					{
+						"area": "Dreamyard Area",
+						"notes": "Dark Grass, Lv. 64",
+						"games": "White 2",
+						"rate": "20%"
+					},
+					{
+						"area": "Dreamyard Area",
+						"notes": "Dark Grass, Lv. 67",
+						"games": "White 2",
+						"rate": "4%"
+					},
+					{
+						"area": "Dreamyard Area",
+						"notes": "Dark Grass, Lv. 67",
+						"games": "White 2",
+						"rate": "1%"
+					},
+					{
+						"area": "Dreamyard Area",
+						"notes": "Walk, Lv. 56",
+						"games": "White 2",
+						"rate": "20%"
+					},
+					{
+						"area": "Dreamyard Area",
+						"notes": "Walk, Lv. 59",
+						"games": "White 2",
+						"rate": "4%"
+					},
+					{
+						"area": "Dreamyard Area",
+						"notes": "Walk, Lv. 59",
+						"games": "White 2",
+						"rate": "1%"
+					},
+					{
+						"area": "Dreamyard B1f",
+						"notes": "Dark Grass, Lv. 65",
+						"games": "Black 2",
+						"rate": "10%"
+					},
+					{
+						"area": "Dreamyard B1f",
+						"notes": "Dark Grass, Lv. 65",
+						"games": "White 2",
+						"rate": "10%"
+					},
+					{
+						"area": "P2 Laboratory Area",
+						"notes": "Walk, Lv. 56",
+						"games": "Black 2",
+						"rate": "20%"
+					},
+					{
+						"area": "P2 Laboratory Area",
+						"notes": "Walk, Lv. 56",
+						"games": "White 2",
+						"rate": "20%"
+					},
+					{
+						"area": "Unova Route 1 Area",
+						"notes": "Dark Grass, Lv. 64",
+						"games": "Black 2",
+						"rate": "20%"
+					},
+					{
+						"area": "Unova Route 1 Area",
+						"notes": "Dark Grass, Lv. 66",
+						"games": "Black 2",
+						"rate": "10%"
+					},
+					{
+						"area": "Unova Route 1 Area",
+						"notes": "Dark Grass, Lv. 67",
+						"games": "Black 2",
+						"rate": "5%"
+					},
+					{
+						"area": "Unova Route 1 Area",
+						"notes": "Dark Grass, Lv. 67",
+						"games": "Black 2",
+						"rate": "4%"
+					},
+					{
+						"area": "Unova Route 1 Area",
+						"notes": "Dark Grass, Lv. 67",
+						"games": "Black 2",
+						"rate": "1%"
+					},
+					{
+						"area": "Unova Route 1 Area",
+						"notes": "Walk, Lv. 56",
+						"games": "Black 2",
+						"rate": "20%"
+					},
+					{
+						"area": "Unova Route 1 Area",
+						"notes": "Walk, Lv. 58",
+						"games": "Black 2",
+						"rate": "10%"
+					},
+					{
+						"area": "Unova Route 1 Area",
+						"notes": "Walk, Lv. 59",
+						"games": "Black 2",
+						"rate": "5%"
+					},
+					{
+						"area": "Unova Route 1 Area",
+						"notes": "Walk, Lv. 59",
+						"games": "Black 2",
+						"rate": "4%"
+					},
+					{
+						"area": "Unova Route 1 Area",
+						"notes": "Walk, Lv. 59",
+						"games": "Black 2",
+						"rate": "1%"
+					},
+					{
+						"area": "Unova Route 1 Area",
+						"notes": "Dark Grass, Lv. 64",
+						"games": "White 2",
+						"rate": "20%"
+					},
+					{
+						"area": "Unova Route 1 Area",
+						"notes": "Dark Grass, Lv. 66",
+						"games": "White 2",
+						"rate": "10%"
+					},
+					{
+						"area": "Unova Route 1 Area",
+						"notes": "Dark Grass, Lv. 67",
+						"games": "White 2",
+						"rate": "5%"
+					},
+					{
+						"area": "Unova Route 1 Area",
+						"notes": "Dark Grass, Lv. 67",
+						"games": "White 2",
+						"rate": "4%"
+					},
+					{
+						"area": "Unova Route 1 Area",
+						"notes": "Dark Grass, Lv. 67",
+						"games": "White 2",
+						"rate": "1%"
+					},
+					{
+						"area": "Unova Route 1 Area",
+						"notes": "Walk, Lv. 56",
+						"games": "White 2",
+						"rate": "20%"
+					},
+					{
+						"area": "Unova Route 1 Area",
+						"notes": "Walk, Lv. 58",
+						"games": "White 2",
+						"rate": "10%"
+					},
+					{
+						"area": "Unova Route 1 Area",
+						"notes": "Walk, Lv. 59",
+						"games": "White 2",
+						"rate": "5%"
+					},
+					{
+						"area": "Unova Route 1 Area",
+						"notes": "Walk, Lv. 59",
+						"games": "White 2",
+						"rate": "4%"
+					},
+					{
+						"area": "Unova Route 1 Area",
+						"notes": "Walk, Lv. 59",
+						"games": "White 2",
+						"rate": "1%"
+					},
+					{
+						"area": "Unova Route 2 Area",
+						"notes": "Walk, Lv. 56",
+						"games": "Black 2",
+						"rate": "20%"
+					},
+					{
+						"area": "Unova Route 2 Area",
+						"notes": "Walk, Lv. 59",
+						"games": "Black 2",
+						"rate": "5%"
+					},
+					{
+						"area": "Unova Route 2 Area",
+						"notes": "Walk, Lv. 59",
+						"games": "Black 2",
+						"rate": "4%"
+					},
+					{
+						"area": "Unova Route 2 Area",
+						"notes": "Walk, Lv. 59",
+						"games": "Black 2",
+						"rate": "1%"
+					},
+					{
+						"area": "Unova Route 2 Area",
+						"notes": "Walk, Lv. 56",
+						"games": "White 2",
+						"rate": "20%"
+					},
+					{
+						"area": "Unova Route 2 Area",
+						"notes": "Walk, Lv. 59",
+						"games": "White 2",
+						"rate": "5%"
+					},
+					{
+						"area": "Unova Route 2 Area",
+						"notes": "Walk, Lv. 59",
+						"games": "White 2",
+						"rate": "4%"
+					},
+					{
+						"area": "Unova Route 2 Area",
+						"notes": "Walk, Lv. 59",
+						"games": "White 2",
+						"rate": "1%"
+					},
+					{
+						"area": "Unova Route 3 Area",
+						"notes": "Dark Grass, Lv. 63",
+						"games": "Black 2",
+						"rate": "20%"
+					},
+					{
+						"area": "Unova Route 3 Area",
+						"notes": "Walk, Lv. 55",
+						"games": "Black 2",
+						"rate": "20%"
+					},
+					{
+						"area": "Unova Route 3 Area",
+						"notes": "Dark Grass, Lv. 63",
+						"games": "White 2",
+						"rate": "20%"
+					},
+					{
+						"area": "Unova Route 3 Area",
+						"notes": "Walk, Lv. 55",
+						"games": "White 2",
+						"rate": "20%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Dark Grass, Lv. 34",
+						"games": "Black 2",
+						"rate": "10%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Dark Grass, Lv. 36",
+						"games": "Black 2",
+						"rate": "4%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Dark Grass, Lv. 36",
+						"games": "Black 2",
+						"rate": "4%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Dark Grass, Lv. 36",
+						"games": "Black 2",
+						"rate": "4%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Dark Grass, Lv. 36",
+						"games": "Black 2",
+						"rate": "1%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Dark Grass, Lv. 36",
+						"games": "Black 2",
+						"rate": "1%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Dark Grass, Lv. 36",
+						"games": "Black 2",
+						"rate": "1%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Walk, Lv. 31",
+						"games": "Black 2",
+						"rate": "10%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Walk, Lv. 33",
+						"games": "Black 2",
+						"rate": "4%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Walk, Lv. 33",
+						"games": "Black 2",
+						"rate": "4%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Walk, Lv. 33",
+						"games": "Black 2",
+						"rate": "4%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Walk, Lv. 33",
+						"games": "Black 2",
+						"rate": "1%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Walk, Lv. 33",
+						"games": "Black 2",
+						"rate": "1%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Walk, Lv. 33",
+						"games": "Black 2",
+						"rate": "1%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Dark Grass, Lv. 34",
+						"games": "White 2",
+						"rate": "10%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Dark Grass, Lv. 36",
+						"games": "White 2",
+						"rate": "4%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Dark Grass, Lv. 36",
+						"games": "White 2",
+						"rate": "4%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Dark Grass, Lv. 36",
+						"games": "White 2",
+						"rate": "4%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Dark Grass, Lv. 36",
+						"games": "White 2",
+						"rate": "1%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Dark Grass, Lv. 36",
+						"games": "White 2",
+						"rate": "1%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Dark Grass, Lv. 36",
+						"games": "White 2",
+						"rate": "1%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Walk, Lv. 31",
+						"games": "White 2",
+						"rate": "10%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Walk, Lv. 33",
+						"games": "White 2",
+						"rate": "4%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Walk, Lv. 33",
+						"games": "White 2",
+						"rate": "4%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Walk, Lv. 33",
+						"games": "White 2",
+						"rate": "4%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Walk, Lv. 33",
+						"games": "White 2",
+						"rate": "1%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Walk, Lv. 33",
+						"games": "White 2",
+						"rate": "1%"
+					},
+					{
+						"area": "Unova Route 7 Area",
+						"notes": "Walk, Lv. 33",
+						"games": "White 2",
+						"rate": "1%"
+					},
+					{
+						"area": "Unova Route 18 Area",
+						"notes": "Dark Grass, Lv. 64",
+						"games": "Black 2",
+						"rate": "10%"
+					},
+					{
+						"area": "Unova Route 18 Area",
+						"notes": "Walk, Lv. 56",
+						"games": "Black 2",
+						"rate": "10%"
+					},
+					{
+						"area": "Unova Route 18 Area",
+						"notes": "Dark Grass, Lv. 64",
+						"games": "White 2",
+						"rate": "10%"
+					},
+					{
+						"area": "Unova Route 18 Area",
+						"notes": "Walk, Lv. 56",
+						"games": "White 2",
+						"rate": "10%"
+					},
+					{
+						"area": "Unova Route 2 Hidden Grotto",
+						"notes": "Hidden Grotto, Lv. 55-59",
+						"games": "Black 2",
+						"rate": "75%"
+					},
+					{
+						"area": "Unova Route 2 Hidden Grotto",
+						"notes": "Hidden Grotto, Lv. 55-59",
+						"games": "White 2",
+						"rate": "75%"
+					},
+					{
+						"area": "Unova Route 7 Hidden Grotto",
+						"notes": "Hidden Grotto, Lv. 30-34",
+						"games": "Black 2",
+						"rate": "20%"
+					},
+					{
+						"area": "Unova Route 7 Hidden Grotto",
+						"notes": "Hidden Grotto, Lv. 30-34",
+						"games": "White 2",
+						"rate": "20%"
+					}
+				],
+				"moves": {
+					"Tutor": [
+						{
+							"name": "After You",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Aqua Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Covet",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endeavor",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fire Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Gunk Shot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Helping Hand",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ice Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Knock Off",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Last Resort",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Low Kick",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Seed Bomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Signal Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Super Fang",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Zen Headbutt",
+							"level": null,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Cut",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flamethrower",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fling",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Focus Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Grass Knot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Retaliate",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Smash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Strength",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swords Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Work Up",
+							"level": null,
+							"order": null
+						}
+					],
+					"Level Up": [
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Leer",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Bite",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Low Kick",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Leer",
+							"level": 3,
+							"order": null
+						},
+						{
+							"name": "Bite",
+							"level": 6,
+							"order": null
+						},
+						{
+							"name": "Bide",
+							"level": 8,
+							"order": null
+						},
+						{
+							"name": "Detect",
+							"level": 11,
+							"order": null
+						},
+						{
+							"name": "Sand Attack",
+							"level": 13,
+							"order": null
+						},
+						{
+							"name": "Crunch",
+							"level": 16,
+							"order": null
+						},
+						{
+							"name": "Hypnosis",
+							"level": 18,
+							"order": null
+						},
+						{
+							"name": "Confuse Ray",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Super Fang",
+							"level": 22,
+							"order": null
+						},
+						{
+							"name": "After You",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Hyper Fang",
+							"level": 32,
+							"order": null
+						},
+						{
+							"name": "Mean Look",
+							"level": 36,
+							"order": null
+						},
+						{
+							"name": "Baton Pass",
+							"level": 39,
+							"order": null
+						},
+						{
+							"name": "Slam",
+							"level": 43,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/505",
+						"fetchedAt": "2026-11-03T05:53:37.869Z",
+						"hash": "e664ab84cfdfc720e4bd9c141c863340e6355b2d83126b801175a21f08e84475"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/259/",
+						"fetchedAt": "2026-11-03T05:53:37.851Z",
+						"hash": "2eac0f30f3d748b425b103b11fa1b8d462d13e5066cb2eb13bc6aff1dd0599b5"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/505/",
+						"fetchedAt": "2026-11-03T05:53:37.907Z",
+						"hash": "cdd84526aa7125dad36df0062d66a7470a1c513cac28915cc4dbdbcacfbd1ef0"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/505/encounters",
+						"fetchedAt": "2026-11-03T05:53:37.939Z",
+						"hash": "2fe752a2502161ac9b126fb45de1b8f484485469467ff1d27ff301c299ec9df0"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/505/",
+						"fetchedAt": "2026-11-03T05:53:37.992Z",
+						"hash": "e215a36173b35e3ca5a3598e0ba971c6c93ce7992dbd24479c233acf4b78456e"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"black2-national": "Using luminescent matter, it makes its eyes and body glow and stuns attacking opponents.",
+				"black2": "Using luminescent matter, it makes its eyes and body glow and stuns attacking opponents.",
+				"white2-national": "Using luminescent matter, it makes its eyes and body glow and stuns attacking opponents.",
+				"white2": "Using luminescent matter, it makes its eyes and body glow and stuns attacking opponents."
+			},
+			"localizedFlavorByGame": {
+				"black2-national": {
+					"en": "Using luminescent matter, it makes its eyes and body glow and stuns attacking opponents."
+				},
+				"black2": {
+					"en": "Using luminescent matter, it makes its eyes and body glow and stuns attacking opponents."
+				},
+				"white2-national": {
+					"en": "Using luminescent matter, it makes its eyes and body glow and stuns attacking opponents."
+				},
+				"white2": {
+					"en": "Using luminescent matter, it makes its eyes and body glow and stuns attacking opponents."
+				}
+			}
+		},
+		{
+			"profileKey": "x-y",
+			"label": "X / Y",
+			"appGameKeys": [
+				"x-national",
+				"x-central",
+				"x-coastal",
+				"x-mountain",
+				"y-national",
+				"y-central",
+				"y-coastal",
+				"y-mountain"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Watchog",
+				"localizedNames": {
+					"ja-hrkt": "ミルホッグ",
+					"ja-roma": "Miruhog",
+					"ko": "보르그",
+					"zh-hant": "步哨鼠",
+					"fr": "Miradar",
+					"de": "Kukmarda",
+					"es": "Watchog",
+					"it": "Watchog",
+					"ja": "ミルホッグ",
+					"zh-hans": "步哨鼠",
+					"es-419": "Watchog"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 85,
+					"def": 69,
+					"spa": 60,
+					"spd": 69,
+					"spe": 77
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Illuminate",
+					"Keen Eye",
+					"Analytic (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Analytic"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.1 m",
+				"weight": "27.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 147,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Lookout Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けいかいポケモン",
+					"ko": "경계포켓몬",
+					"zh-hant": "警戒寶可夢",
+					"fr": "Pokémon Vigilant",
+					"de": "Wachsamkeit",
+					"es": "Pokémon Alerta",
+					"it": "Pokémon Sentinella",
+					"ja": "けいかいポケモン",
+					"zh-hans": "警戒宝可梦",
+					"es-419": "Pokémon Alerta"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 505
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 11
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 11
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 47
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 28
+					},
+					{
+						"pokedex": "champions",
+						"number": 505
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 504,
+								"natiId": 504,
+								"name": "Patrat"
+							},
+							{
+								"id": 505,
+								"natiId": 505,
+								"name": "Watchog",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Kalos Route 15 Area",
+						"notes": "Walk, Lv. 36",
+						"games": "X",
+						"rate": "10%"
+					},
+					{
+						"area": "Kalos Route 15 Area",
+						"notes": "Red Flowers, Lv. 34",
+						"games": "X",
+						"rate": "10%"
+					},
+					{
+						"area": "Kalos Route 15 Area",
+						"notes": "Red Flowers, Lv. 35",
+						"games": "X",
+						"rate": "10%"
+					},
+					{
+						"area": "Kalos Route 15 Area",
+						"notes": "Red Flowers, Lv. 36",
+						"games": "X",
+						"rate": "10%"
+					},
+					{
+						"area": "Kalos Route 15 Area",
+						"notes": "Walk, Lv. 36",
+						"games": "Y",
+						"rate": "10%"
+					},
+					{
+						"area": "Kalos Route 15 Area",
+						"notes": "Red Flowers, Lv. 34",
+						"games": "Y",
+						"rate": "10%"
+					},
+					{
+						"area": "Kalos Route 15 Area",
+						"notes": "Red Flowers, Lv. 35",
+						"games": "Y",
+						"rate": "10%"
+					},
+					{
+						"area": "Kalos Route 15 Area",
+						"notes": "Red Flowers, Lv. 36",
+						"games": "Y",
+						"rate": "10%"
+					}
+				],
+				"moves": {
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Cut",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flamethrower",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fling",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Focus Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Grass Knot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Power Up Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Retaliate",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Smash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Strength",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swords Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						}
+					],
+					"Level Up": [
+						{
+							"name": "Rototiller",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Leer",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Bite",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Low Kick",
+							"level": 1,
+							"order": 5
+						},
+						{
+							"name": "Leer",
+							"level": 3,
+							"order": null
+						},
+						{
+							"name": "Bite",
+							"level": 6,
+							"order": null
+						},
+						{
+							"name": "Bide",
+							"level": 8,
+							"order": null
+						},
+						{
+							"name": "Detect",
+							"level": 11,
+							"order": null
+						},
+						{
+							"name": "Sand Attack",
+							"level": 13,
+							"order": null
+						},
+						{
+							"name": "Crunch",
+							"level": 16,
+							"order": null
+						},
+						{
+							"name": "Hypnosis",
+							"level": 18,
+							"order": null
+						},
+						{
+							"name": "Confuse Ray",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Super Fang",
+							"level": 22,
+							"order": null
+						},
+						{
+							"name": "After You",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Hyper Fang",
+							"level": 32,
+							"order": null
+						},
+						{
+							"name": "Mean Look",
+							"level": 36,
+							"order": null
+						},
+						{
+							"name": "Baton Pass",
+							"level": 39,
+							"order": null
+						},
+						{
+							"name": "Slam",
+							"level": 43,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/505",
+						"fetchedAt": "2026-11-03T05:53:37.869Z",
+						"hash": "e664ab84cfdfc720e4bd9c141c863340e6355b2d83126b801175a21f08e84475"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/259/",
+						"fetchedAt": "2026-11-03T05:53:37.851Z",
+						"hash": "2eac0f30f3d748b425b103b11fa1b8d462d13e5066cb2eb13bc6aff1dd0599b5"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/505/",
+						"fetchedAt": "2026-11-03T05:53:37.907Z",
+						"hash": "cdd84526aa7125dad36df0062d66a7470a1c513cac28915cc4dbdbcacfbd1ef0"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/505/encounters",
+						"fetchedAt": "2026-11-03T05:53:37.939Z",
+						"hash": "2fe752a2502161ac9b126fb45de1b8f484485469467ff1d27ff301c299ec9df0"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/505/",
+						"fetchedAt": "2026-11-03T05:53:37.992Z",
+						"hash": "e215a36173b35e3ca5a3598e0ba971c6c93ce7992dbd24479c233acf4b78456e"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"x-national": "Using luminescent matter, it makes its eyes and body glow and stuns attacking opponents.",
+				"x-central": "Using luminescent matter, it makes its eyes and body glow and stuns attacking opponents.",
+				"x-coastal": "Using luminescent matter, it makes its eyes and body glow and stuns attacking opponents.",
+				"x-mountain": "Using luminescent matter, it makes its eyes and body glow and stuns attacking opponents.",
+				"y-national": "When they see an enemy, their tails stand high, and they spit the seeds of berries stored in their cheek pouches.",
+				"y-central": "When they see an enemy, their tails stand high, and they spit the seeds of berries stored in their cheek pouches.",
+				"y-coastal": "When they see an enemy, their tails stand high, and they spit the seeds of berries stored in their cheek pouches.",
+				"y-mountain": "When they see an enemy, their tails stand high, and they spit the seeds of berries stored in their cheek pouches."
+			},
+			"localizedFlavorByGame": {
+				"x-national": {
+					"ja-hrkt": "たいないの はっこうぶっしつで めだまや からだを ひからせ おそってきた てきを ひるませる。",
+					"ko": "체내의 발광물질로 눈이나 몸을 빛나게 하여 습격해 온 상대를 풀이 죽게 만든다.",
+					"fr": "Il intimide l’ennemi en faisant briller son pelage et ses yeux grâce à une substance à l’intérieur de son corps.",
+					"de": "Es kann mit einer körpereigenen Substanz seine Augen und seinen Torso aufleuchten lassen, um Gegner zu erschrecken.",
+					"es": "Los componentes luminiscentes de su interior hacen que sus ojos y su cuerpo brillen, y así intimida a sus rivales.",
+					"it": "Fa tentennare il nemico facendo brillare occhi e pelliccia grazie a una sostanza fluorescente contenuta nel suo corpo.",
+					"en": "Using luminescent matter, it makes its eyes and body glow and stuns attacking opponents.",
+					"ja": "体内の 発光物質で 目玉や 体を 光らせ 襲ってきた 敵を ひるませる。",
+					"es-419": "Los componentes luminiscentes de su interior hacen que sus ojos y su cuerpo brillen, y así intimida a sus rivales."
+				},
+				"x-central": {
+					"ja-hrkt": "たいないの はっこうぶっしつで めだまや からだを ひからせ おそってきた てきを ひるませる。",
+					"ko": "체내의 발광물질로 눈이나 몸을 빛나게 하여 습격해 온 상대를 풀이 죽게 만든다.",
+					"fr": "Il intimide l’ennemi en faisant briller son pelage et ses yeux grâce à une substance à l’intérieur de son corps.",
+					"de": "Es kann mit einer körpereigenen Substanz seine Augen und seinen Torso aufleuchten lassen, um Gegner zu erschrecken.",
+					"es": "Los componentes luminiscentes de su interior hacen que sus ojos y su cuerpo brillen, y así intimida a sus rivales.",
+					"it": "Fa tentennare il nemico facendo brillare occhi e pelliccia grazie a una sostanza fluorescente contenuta nel suo corpo.",
+					"en": "Using luminescent matter, it makes its eyes and body glow and stuns attacking opponents.",
+					"ja": "体内の 発光物質で 目玉や 体を 光らせ 襲ってきた 敵を ひるませる。",
+					"es-419": "Los componentes luminiscentes de su interior hacen que sus ojos y su cuerpo brillen, y así intimida a sus rivales."
+				},
+				"x-coastal": {
+					"ja-hrkt": "たいないの はっこうぶっしつで めだまや からだを ひからせ おそってきた てきを ひるませる。",
+					"ko": "체내의 발광물질로 눈이나 몸을 빛나게 하여 습격해 온 상대를 풀이 죽게 만든다.",
+					"fr": "Il intimide l’ennemi en faisant briller son pelage et ses yeux grâce à une substance à l’intérieur de son corps.",
+					"de": "Es kann mit einer körpereigenen Substanz seine Augen und seinen Torso aufleuchten lassen, um Gegner zu erschrecken.",
+					"es": "Los componentes luminiscentes de su interior hacen que sus ojos y su cuerpo brillen, y así intimida a sus rivales.",
+					"it": "Fa tentennare il nemico facendo brillare occhi e pelliccia grazie a una sostanza fluorescente contenuta nel suo corpo.",
+					"en": "Using luminescent matter, it makes its eyes and body glow and stuns attacking opponents.",
+					"ja": "体内の 発光物質で 目玉や 体を 光らせ 襲ってきた 敵を ひるませる。",
+					"es-419": "Los componentes luminiscentes de su interior hacen que sus ojos y su cuerpo brillen, y así intimida a sus rivales."
+				},
+				"x-mountain": {
+					"ja-hrkt": "たいないの はっこうぶっしつで めだまや からだを ひからせ おそってきた てきを ひるませる。",
+					"ko": "체내의 발광물질로 눈이나 몸을 빛나게 하여 습격해 온 상대를 풀이 죽게 만든다.",
+					"fr": "Il intimide l’ennemi en faisant briller son pelage et ses yeux grâce à une substance à l’intérieur de son corps.",
+					"de": "Es kann mit einer körpereigenen Substanz seine Augen und seinen Torso aufleuchten lassen, um Gegner zu erschrecken.",
+					"es": "Los componentes luminiscentes de su interior hacen que sus ojos y su cuerpo brillen, y así intimida a sus rivales.",
+					"it": "Fa tentennare il nemico facendo brillare occhi e pelliccia grazie a una sostanza fluorescente contenuta nel suo corpo.",
+					"en": "Using luminescent matter, it makes its eyes and body glow and stuns attacking opponents.",
+					"ja": "体内の 発光物質で 目玉や 体を 光らせ 襲ってきた 敵を ひるませる。",
+					"es-419": "Los componentes luminiscentes de su interior hacen que sus ojos y su cuerpo brillen, y así intimida a sus rivales."
+				},
+				"y-national": {
+					"ja-hrkt": "ほっぺの ふくろに ためた きのみの タネを とばして こうげき。てきを はっけんすると しっぽを たてる。",
+					"ko": "뺨의 주머니에 모아둔 나무열매의 씨앗을 날려서 공격한다. 적을 발견하면 꼬리를 세운다.",
+					"fr": "Il attaque en crachant les graines des Baies qu’il accumule dans ses bajoues. S’il voit un ennemi, il dresse la queue.",
+					"de": "Bespuckt Gegner mit Kernen von Beeren aus seinen Backentaschen. Erspäht es einen Feind, richtet es den Schweif auf.",
+					"es": "Ataca lanzando las semillas de las bayas que acumula en sus mofletes. Su cola se tensa al avistar a un enemigo.",
+					"it": "Attacca sparando i semi delle bacche che ha accumulato nelle guance. Se avvista il nemico, drizza la coda.",
+					"en": "When they see an enemy, their tails stand high, and they spit the seeds of berries stored in their cheek pouches.",
+					"ja": "ほほ袋に ためた 木の実の タネを 飛ばして 攻撃。 敵を 発見すると 尻尾を 立てる。",
+					"es-419": "Ataca lanzando las semillas de las bayas que acumula en sus mofletes. Su cola se tensa al avistar a un enemigo."
+				},
+				"y-central": {
+					"ja-hrkt": "ほっぺの ふくろに ためた きのみの タネを とばして こうげき。てきを はっけんすると しっぽを たてる。",
+					"ko": "뺨의 주머니에 모아둔 나무열매의 씨앗을 날려서 공격한다. 적을 발견하면 꼬리를 세운다.",
+					"fr": "Il attaque en crachant les graines des Baies qu’il accumule dans ses bajoues. S’il voit un ennemi, il dresse la queue.",
+					"de": "Bespuckt Gegner mit Kernen von Beeren aus seinen Backentaschen. Erspäht es einen Feind, richtet es den Schweif auf.",
+					"es": "Ataca lanzando las semillas de las bayas que acumula en sus mofletes. Su cola se tensa al avistar a un enemigo.",
+					"it": "Attacca sparando i semi delle bacche che ha accumulato nelle guance. Se avvista il nemico, drizza la coda.",
+					"en": "When they see an enemy, their tails stand high, and they spit the seeds of berries stored in their cheek pouches.",
+					"ja": "ほほ袋に ためた 木の実の タネを 飛ばして 攻撃。 敵を 発見すると 尻尾を 立てる。",
+					"es-419": "Ataca lanzando las semillas de las bayas que acumula en sus mofletes. Su cola se tensa al avistar a un enemigo."
+				},
+				"y-coastal": {
+					"ja-hrkt": "ほっぺの ふくろに ためた きのみの タネを とばして こうげき。てきを はっけんすると しっぽを たてる。",
+					"ko": "뺨의 주머니에 모아둔 나무열매의 씨앗을 날려서 공격한다. 적을 발견하면 꼬리를 세운다.",
+					"fr": "Il attaque en crachant les graines des Baies qu’il accumule dans ses bajoues. S’il voit un ennemi, il dresse la queue.",
+					"de": "Bespuckt Gegner mit Kernen von Beeren aus seinen Backentaschen. Erspäht es einen Feind, richtet es den Schweif auf.",
+					"es": "Ataca lanzando las semillas de las bayas que acumula en sus mofletes. Su cola se tensa al avistar a un enemigo.",
+					"it": "Attacca sparando i semi delle bacche che ha accumulato nelle guance. Se avvista il nemico, drizza la coda.",
+					"en": "When they see an enemy, their tails stand high, and they spit the seeds of berries stored in their cheek pouches.",
+					"ja": "ほほ袋に ためた 木の実の タネを 飛ばして 攻撃。 敵を 発見すると 尻尾を 立てる。",
+					"es-419": "Ataca lanzando las semillas de las bayas que acumula en sus mofletes. Su cola se tensa al avistar a un enemigo."
+				},
+				"y-mountain": {
+					"ja-hrkt": "ほっぺの ふくろに ためた きのみの タネを とばして こうげき。てきを はっけんすると しっぽを たてる。",
+					"ko": "뺨의 주머니에 모아둔 나무열매의 씨앗을 날려서 공격한다. 적을 발견하면 꼬리를 세운다.",
+					"fr": "Il attaque en crachant les graines des Baies qu’il accumule dans ses bajoues. S’il voit un ennemi, il dresse la queue.",
+					"de": "Bespuckt Gegner mit Kernen von Beeren aus seinen Backentaschen. Erspäht es einen Feind, richtet es den Schweif auf.",
+					"es": "Ataca lanzando las semillas de las bayas que acumula en sus mofletes. Su cola se tensa al avistar a un enemigo.",
+					"it": "Attacca sparando i semi delle bacche che ha accumulato nelle guance. Se avvista il nemico, drizza la coda.",
+					"en": "When they see an enemy, their tails stand high, and they spit the seeds of berries stored in their cheek pouches.",
+					"ja": "ほほ袋に ためた 木の実の タネを 飛ばして 攻撃。 敵を 発見すると 尻尾を 立てる。",
+					"es-419": "Ataca lanzando las semillas de las bayas que acumula en sus mofletes. Su cola se tensa al avistar a un enemigo."
+				}
+			}
+		},
+		{
+			"profileKey": "omega-ruby-alpha-sapphire",
+			"label": "Omega Ruby / Alpha Sapphire",
+			"appGameKeys": [
+				"omegaruby-national",
+				"omegaruby",
+				"alphasapphire-national",
+				"alphasapphire"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Watchog",
+				"localizedNames": {
+					"ja-hrkt": "ミルホッグ",
+					"ja-roma": "Miruhog",
+					"ko": "보르그",
+					"zh-hant": "步哨鼠",
+					"fr": "Miradar",
+					"de": "Kukmarda",
+					"es": "Watchog",
+					"it": "Watchog",
+					"ja": "ミルホッグ",
+					"zh-hans": "步哨鼠",
+					"es-419": "Watchog"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 85,
+					"def": 69,
+					"spa": 60,
+					"spd": 69,
+					"spe": 77
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Illuminate",
+					"Keen Eye",
+					"Analytic (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Analytic"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.1 m",
+				"weight": "27.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 147,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Lookout Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けいかいポケモン",
+					"ko": "경계포켓몬",
+					"zh-hant": "警戒寶可夢",
+					"fr": "Pokémon Vigilant",
+					"de": "Wachsamkeit",
+					"es": "Pokémon Alerta",
+					"it": "Pokémon Sentinella",
+					"ja": "けいかいポケモン",
+					"zh-hans": "警戒宝可梦",
+					"es-419": "Pokémon Alerta"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 505
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 11
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 11
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 47
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 28
+					},
+					{
+						"pokedex": "champions",
+						"number": 505
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 504,
+								"natiId": 504,
+								"name": "Patrat"
+							},
+							{
+								"id": 505,
+								"natiId": 505,
+								"name": "Watchog",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Tutor": [
+						{
+							"name": "After You",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Aqua Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Covet",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endeavor",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fire Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Focus Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Gunk Shot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Helping Hand",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ice Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Knock Off",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Last Resort",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Low Kick",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Seed Bomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shock Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Signal Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Super Fang",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Zen Headbutt",
+							"level": null,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Cut",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flamethrower",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fling",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Focus Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Grass Knot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Power Up Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Retaliate",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Smash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Secret Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Strength",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swords Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						}
+					],
+					"Level Up": [
+						{
+							"name": "Rototiller",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Leer",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Bite",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Low Kick",
+							"level": 1,
+							"order": 5
+						},
+						{
+							"name": "Leer",
+							"level": 3,
+							"order": null
+						},
+						{
+							"name": "Bite",
+							"level": 6,
+							"order": null
+						},
+						{
+							"name": "Bide",
+							"level": 8,
+							"order": null
+						},
+						{
+							"name": "Detect",
+							"level": 11,
+							"order": null
+						},
+						{
+							"name": "Sand Attack",
+							"level": 13,
+							"order": null
+						},
+						{
+							"name": "Crunch",
+							"level": 16,
+							"order": null
+						},
+						{
+							"name": "Hypnosis",
+							"level": 18,
+							"order": null
+						},
+						{
+							"name": "Confuse Ray",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Super Fang",
+							"level": 22,
+							"order": null
+						},
+						{
+							"name": "After You",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Hyper Fang",
+							"level": 32,
+							"order": null
+						},
+						{
+							"name": "Mean Look",
+							"level": 36,
+							"order": null
+						},
+						{
+							"name": "Baton Pass",
+							"level": 39,
+							"order": null
+						},
+						{
+							"name": "Slam",
+							"level": 43,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/505",
+						"fetchedAt": "2026-11-03T05:53:37.869Z",
+						"hash": "e664ab84cfdfc720e4bd9c141c863340e6355b2d83126b801175a21f08e84475"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/259/",
+						"fetchedAt": "2026-11-03T05:53:37.851Z",
+						"hash": "2eac0f30f3d748b425b103b11fa1b8d462d13e5066cb2eb13bc6aff1dd0599b5"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/505/",
+						"fetchedAt": "2026-11-03T05:53:37.907Z",
+						"hash": "cdd84526aa7125dad36df0062d66a7470a1c513cac28915cc4dbdbcacfbd1ef0"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/505/encounters",
+						"fetchedAt": "2026-11-03T05:53:37.939Z",
+						"hash": "2fe752a2502161ac9b126fb45de1b8f484485469467ff1d27ff301c299ec9df0"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/505/",
+						"fetchedAt": "2026-11-03T05:53:37.992Z",
+						"hash": "e215a36173b35e3ca5a3598e0ba971c6c93ce7992dbd24479c233acf4b78456e"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"omegaruby-national": "Using luminescent matter, it makes its eyes and body glow and stuns attacking opponents.",
+				"omegaruby": "Using luminescent matter, it makes its eyes and body glow and stuns attacking opponents.",
+				"alphasapphire-national": "When they see an enemy, their tails stand high, and they spit the seeds of berries stored in their cheek pouches.",
+				"alphasapphire": "When they see an enemy, their tails stand high, and they spit the seeds of berries stored in their cheek pouches."
+			},
+			"localizedFlavorByGame": {
+				"omegaruby-national": {
+					"ja-hrkt": "たいないの はっこうぶっしつで めだまや からだを ひからせ おそってきた てきを ひるませる。",
+					"ko": "체내의 발광 물질로 눈이나 몸을 빛나게 하여 습격해 온 상대를 풀이 죽게 만든다.",
+					"fr": "Il intimide l’ennemi en faisant briller son pelage et ses yeux grâce à une substance à l’intérieur de son corps.",
+					"de": "Es kann mit einer körpereigenen Substanz seine Augen und seinen Torso aufleuchten lassen, um Gegner zu erschrecken.",
+					"es": "Los componentes luminiscentes de su interior hacen que sus ojos y su cuerpo brillen, y así intimida a sus rivales.",
+					"it": "Fa tentennare il nemico facendo brillare occhi e pelliccia grazie a una sostanza fluorescente contenuta nel suo corpo.",
+					"en": "Using luminescent matter, it makes its eyes and body glow and stuns attacking opponents.",
+					"ja": "体内の 発光物質で 目玉や 体を 光らせ 襲ってきた 敵を ひるませる。",
+					"es-419": "Los componentes luminiscentes de su interior hacen que sus ojos y su cuerpo brillen, y así intimida a sus rivales."
+				},
+				"omegaruby": {
+					"ja-hrkt": "たいないの はっこうぶっしつで めだまや からだを ひからせ おそってきた てきを ひるませる。",
+					"ko": "체내의 발광 물질로 눈이나 몸을 빛나게 하여 습격해 온 상대를 풀이 죽게 만든다.",
+					"fr": "Il intimide l’ennemi en faisant briller son pelage et ses yeux grâce à une substance à l’intérieur de son corps.",
+					"de": "Es kann mit einer körpereigenen Substanz seine Augen und seinen Torso aufleuchten lassen, um Gegner zu erschrecken.",
+					"es": "Los componentes luminiscentes de su interior hacen que sus ojos y su cuerpo brillen, y así intimida a sus rivales.",
+					"it": "Fa tentennare il nemico facendo brillare occhi e pelliccia grazie a una sostanza fluorescente contenuta nel suo corpo.",
+					"en": "Using luminescent matter, it makes its eyes and body glow and stuns attacking opponents.",
+					"ja": "体内の 発光物質で 目玉や 体を 光らせ 襲ってきた 敵を ひるませる。",
+					"es-419": "Los componentes luminiscentes de su interior hacen que sus ojos y su cuerpo brillen, y así intimida a sus rivales."
+				},
+				"alphasapphire-national": {
+					"ja-hrkt": "ほっぺの ふくろに ためた きのみの タネを とばして こうげき。てきを はっけんすると しっぽを たてる。",
+					"ko": "뺨의 주머니에 모아둔 나무열매의 씨앗을 날려서 공격한다. 적을 발견하면 꼬리를 세운다.",
+					"fr": "Il attaque en crachant les graines des Baies qu’il accumule dans ses bajoues. S’il voit un ennemi, il dresse la queue.",
+					"de": "Bespuckt Gegner mit Kernen von Beeren aus seinen Backentaschen. Erspäht es einen Feind, richtet es den Schweif auf.",
+					"es": "Ataca lanzando las semillas de las bayas que acumula en sus mofletes. Su cola se tensa al avistar a un enemigo.",
+					"it": "Attacca sparando i semi delle bacche che ha accumulato nelle guance. Se avvista il nemico, drizza la coda.",
+					"en": "When they see an enemy, their tails stand high, and they spit the seeds of berries stored in their cheek pouches.",
+					"ja": "ほほ袋に ためた 木の実の タネを 飛ばして 攻撃。 敵を 発見すると 尻尾を 立てる。",
+					"es-419": "Ataca lanzando las semillas de las bayas que acumula en sus mofletes. Su cola se tensa al avistar a un enemigo."
+				},
+				"alphasapphire": {
+					"ja-hrkt": "ほっぺの ふくろに ためた きのみの タネを とばして こうげき。てきを はっけんすると しっぽを たてる。",
+					"ko": "뺨의 주머니에 모아둔 나무열매의 씨앗을 날려서 공격한다. 적을 발견하면 꼬리를 세운다.",
+					"fr": "Il attaque en crachant les graines des Baies qu’il accumule dans ses bajoues. S’il voit un ennemi, il dresse la queue.",
+					"de": "Bespuckt Gegner mit Kernen von Beeren aus seinen Backentaschen. Erspäht es einen Feind, richtet es den Schweif auf.",
+					"es": "Ataca lanzando las semillas de las bayas que acumula en sus mofletes. Su cola se tensa al avistar a un enemigo.",
+					"it": "Attacca sparando i semi delle bacche che ha accumulato nelle guance. Se avvista il nemico, drizza la coda.",
+					"en": "When they see an enemy, their tails stand high, and they spit the seeds of berries stored in their cheek pouches.",
+					"ja": "ほほ袋に ためた 木の実の タネを 飛ばして 攻撃。 敵を 発見すると 尻尾を 立てる。",
+					"es-419": "Ataca lanzando las semillas de las bayas que acumula en sus mofletes. Su cola se tensa al avistar a un enemigo."
+				}
+			}
+		},
+		{
+			"profileKey": "sun-moon",
+			"label": "Sun / Moon",
+			"appGameKeys": [
+				"sun-alola",
+				"sun-melemele",
+				"sun-akala",
+				"sun-ulaula",
+				"sun-poni",
+				"moon-alola",
+				"moon-melemele",
+				"moon-akala",
+				"moon-ulaula",
+				"moon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Watchog",
+				"localizedNames": {
+					"ja-hrkt": "ミルホッグ",
+					"ja-roma": "Miruhog",
+					"ko": "보르그",
+					"zh-hant": "步哨鼠",
+					"fr": "Miradar",
+					"de": "Kukmarda",
+					"es": "Watchog",
+					"it": "Watchog",
+					"ja": "ミルホッグ",
+					"zh-hans": "步哨鼠",
+					"es-419": "Watchog"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 85,
+					"def": 69,
+					"spa": 60,
+					"spd": 69,
+					"spe": 77
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Illuminate",
+					"Keen Eye",
+					"Analytic (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Analytic"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.1 m",
+				"weight": "27.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 147,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Lookout Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けいかいポケモン",
+					"ko": "경계포켓몬",
+					"zh-hant": "警戒寶可夢",
+					"fr": "Pokémon Vigilant",
+					"de": "Wachsamkeit",
+					"es": "Pokémon Alerta",
+					"it": "Pokémon Sentinella",
+					"ja": "けいかいポケモン",
+					"zh-hans": "警戒宝可梦",
+					"es-419": "Pokémon Alerta"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 505
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 11
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 11
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 47
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 28
+					},
+					{
+						"pokedex": "champions",
+						"number": 505
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 504,
+								"natiId": 504,
+								"name": "Patrat"
+							},
+							{
+								"id": 505,
+								"natiId": 505,
+								"name": "Watchog",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flamethrower",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fling",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Focus Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Grass Knot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swords Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Work Up",
+							"level": null,
+							"order": null
+						}
+					],
+					"Level Up": [
+						{
+							"name": "Confuse Ray",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confuse Ray",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Rototiller",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Leer",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Bite",
+							"level": 1,
+							"order": 5
+						},
+						{
+							"name": "Low Kick",
+							"level": 1,
+							"order": 6
+						},
+						{
+							"name": "Leer",
+							"level": 3,
+							"order": null
+						},
+						{
+							"name": "Bite",
+							"level": 6,
+							"order": null
+						},
+						{
+							"name": "Bide",
+							"level": 8,
+							"order": null
+						},
+						{
+							"name": "Detect",
+							"level": 11,
+							"order": null
+						},
+						{
+							"name": "Sand Attack",
+							"level": 13,
+							"order": null
+						},
+						{
+							"name": "Crunch",
+							"level": 16,
+							"order": null
+						},
+						{
+							"name": "Hypnosis",
+							"level": 18,
+							"order": null
+						},
+						{
+							"name": "Super Fang",
+							"level": 22,
+							"order": null
+						},
+						{
+							"name": "After You",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Focus Energy",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": 32,
+							"order": null
+						},
+						{
+							"name": "Hyper Fang",
+							"level": 36,
+							"order": null
+						},
+						{
+							"name": "Nasty Plot",
+							"level": 39,
+							"order": null
+						},
+						{
+							"name": "Mean Look",
+							"level": 43,
+							"order": null
+						},
+						{
+							"name": "Baton Pass",
+							"level": 46,
+							"order": null
+						},
+						{
+							"name": "Slam",
+							"level": 50,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/505",
+						"fetchedAt": "2026-11-03T05:53:37.869Z",
+						"hash": "e664ab84cfdfc720e4bd9c141c863340e6355b2d83126b801175a21f08e84475"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/259/",
+						"fetchedAt": "2026-11-03T05:53:37.851Z",
+						"hash": "2eac0f30f3d748b425b103b11fa1b8d462d13e5066cb2eb13bc6aff1dd0599b5"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/505/",
+						"fetchedAt": "2026-11-03T05:53:37.907Z",
+						"hash": "cdd84526aa7125dad36df0062d66a7470a1c513cac28915cc4dbdbcacfbd1ef0"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/505/encounters",
+						"fetchedAt": "2026-11-03T05:53:37.939Z",
+						"hash": "2fe752a2502161ac9b126fb45de1b8f484485469467ff1d27ff301c299ec9df0"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/505/",
+						"fetchedAt": "2026-11-03T05:53:37.992Z",
+						"hash": "e215a36173b35e3ca5a3598e0ba971c6c93ce7992dbd24479c233acf4b78456e"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sun-alola": "",
+				"sun-melemele": "",
+				"sun-akala": "",
+				"sun-ulaula": "",
+				"sun-poni": "",
+				"moon-alola": "",
+				"moon-melemele": "",
+				"moon-akala": "",
+				"moon-ulaula": "",
+				"moon-poni": ""
+			},
+			"localizedFlavorByGame": {
+				"sun-alola": {},
+				"sun-melemele": {},
+				"sun-akala": {},
+				"sun-ulaula": {},
+				"sun-poni": {},
+				"moon-alola": {},
+				"moon-melemele": {},
+				"moon-akala": {},
+				"moon-ulaula": {},
+				"moon-poni": {}
+			}
+		},
+		{
+			"profileKey": "ultra-sun-ultra-moon",
+			"label": "Ultra Sun / Ultra Moon",
+			"appGameKeys": [
+				"ultrasun-alola",
+				"ultrasun-melemele",
+				"ultrasun-akala",
+				"ultrasun-ulaula",
+				"ultrasun-poni",
+				"ultramoon-alola",
+				"ultramoon-melemele",
+				"ultramoon-akala",
+				"ultramoon-ulaula",
+				"ultramoon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Watchog",
+				"localizedNames": {
+					"ja-hrkt": "ミルホッグ",
+					"ja-roma": "Miruhog",
+					"ko": "보르그",
+					"zh-hant": "步哨鼠",
+					"fr": "Miradar",
+					"de": "Kukmarda",
+					"es": "Watchog",
+					"it": "Watchog",
+					"ja": "ミルホッグ",
+					"zh-hans": "步哨鼠",
+					"es-419": "Watchog"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 85,
+					"def": 69,
+					"spa": 60,
+					"spd": 69,
+					"spe": 77
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Illuminate",
+					"Keen Eye",
+					"Analytic (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Analytic"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.1 m",
+				"weight": "27.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 147,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Lookout Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けいかいポケモン",
+					"ko": "경계포켓몬",
+					"zh-hant": "警戒寶可夢",
+					"fr": "Pokémon Vigilant",
+					"de": "Wachsamkeit",
+					"es": "Pokémon Alerta",
+					"it": "Pokémon Sentinella",
+					"ja": "けいかいポケモン",
+					"zh-hans": "警戒宝可梦",
+					"es-419": "Pokémon Alerta"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 505
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 11
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 11
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 47
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 28
+					},
+					{
+						"pokedex": "champions",
+						"number": 505
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 504,
+								"natiId": 504,
+								"name": "Patrat"
+							},
+							{
+								"id": 505,
+								"natiId": 505,
+								"name": "Watchog",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Tutor": [
+						{
+							"name": "After You",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Aqua Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Covet",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endeavor",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fire Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Focus Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Gunk Shot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Helping Hand",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ice Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Knock Off",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Laser Focus",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Last Resort",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Low Kick",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Seed Bomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shock Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Signal Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Stomping Tantrum",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Super Fang",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Zen Headbutt",
+							"level": null,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flamethrower",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fling",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Focus Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Grass Knot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swords Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Work Up",
+							"level": null,
+							"order": null
+						}
+					],
+					"Level Up": [
+						{
+							"name": "Confuse Ray",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confuse Ray",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Rototiller",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Leer",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Bite",
+							"level": 1,
+							"order": 5
+						},
+						{
+							"name": "Low Kick",
+							"level": 1,
+							"order": 6
+						},
+						{
+							"name": "Leer",
+							"level": 3,
+							"order": null
+						},
+						{
+							"name": "Bite",
+							"level": 6,
+							"order": null
+						},
+						{
+							"name": "Bide",
+							"level": 8,
+							"order": null
+						},
+						{
+							"name": "Detect",
+							"level": 11,
+							"order": null
+						},
+						{
+							"name": "Sand Attack",
+							"level": 13,
+							"order": null
+						},
+						{
+							"name": "Crunch",
+							"level": 16,
+							"order": null
+						},
+						{
+							"name": "Hypnosis",
+							"level": 18,
+							"order": null
+						},
+						{
+							"name": "Super Fang",
+							"level": 22,
+							"order": null
+						},
+						{
+							"name": "After You",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Focus Energy",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": 32,
+							"order": null
+						},
+						{
+							"name": "Hyper Fang",
+							"level": 36,
+							"order": null
+						},
+						{
+							"name": "Nasty Plot",
+							"level": 39,
+							"order": null
+						},
+						{
+							"name": "Mean Look",
+							"level": 43,
+							"order": null
+						},
+						{
+							"name": "Baton Pass",
+							"level": 46,
+							"order": null
+						},
+						{
+							"name": "Slam",
+							"level": 50,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/505",
+						"fetchedAt": "2026-11-03T05:53:37.869Z",
+						"hash": "e664ab84cfdfc720e4bd9c141c863340e6355b2d83126b801175a21f08e84475"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/259/",
+						"fetchedAt": "2026-11-03T05:53:37.851Z",
+						"hash": "2eac0f30f3d748b425b103b11fa1b8d462d13e5066cb2eb13bc6aff1dd0599b5"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/505/",
+						"fetchedAt": "2026-11-03T05:53:37.907Z",
+						"hash": "cdd84526aa7125dad36df0062d66a7470a1c513cac28915cc4dbdbcacfbd1ef0"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/505/encounters",
+						"fetchedAt": "2026-11-03T05:53:37.939Z",
+						"hash": "2fe752a2502161ac9b126fb45de1b8f484485469467ff1d27ff301c299ec9df0"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/505/",
+						"fetchedAt": "2026-11-03T05:53:37.992Z",
+						"hash": "e215a36173b35e3ca5a3598e0ba971c6c93ce7992dbd24479c233acf4b78456e"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"ultrasun-alola": "",
+				"ultrasun-melemele": "",
+				"ultrasun-akala": "",
+				"ultrasun-ulaula": "",
+				"ultrasun-poni": "",
+				"ultramoon-alola": "",
+				"ultramoon-melemele": "",
+				"ultramoon-akala": "",
+				"ultramoon-ulaula": "",
+				"ultramoon-poni": ""
+			},
+			"localizedFlavorByGame": {
+				"ultrasun-alola": {},
+				"ultrasun-melemele": {},
+				"ultrasun-akala": {},
+				"ultrasun-ulaula": {},
+				"ultrasun-poni": {},
+				"ultramoon-alola": {},
+				"ultramoon-melemele": {},
+				"ultramoon-akala": {},
+				"ultramoon-ulaula": {},
+				"ultramoon-poni": {}
+			}
+		},
+		{
+			"profileKey": "lets-go-pikachu-lets-go-eevee",
+			"label": "Let's Go Pikachu / Eevee",
+			"appGameKeys": [
+				"letsgopikachu",
+				"letsgoeevee"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Watchog",
+				"localizedNames": {
+					"ja-hrkt": "ミルホッグ",
+					"ja-roma": "Miruhog",
+					"ko": "보르그",
+					"zh-hant": "步哨鼠",
+					"fr": "Miradar",
+					"de": "Kukmarda",
+					"es": "Watchog",
+					"it": "Watchog",
+					"ja": "ミルホッグ",
+					"zh-hans": "步哨鼠",
+					"es-419": "Watchog"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 85,
+					"def": 69,
+					"spa": 60,
+					"spd": 69,
+					"spe": 77
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Illuminate",
+					"Keen Eye",
+					"Analytic (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Analytic"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.1 m",
+				"weight": "27.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 147,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Lookout Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けいかいポケモン",
+					"ko": "경계포켓몬",
+					"zh-hant": "警戒寶可夢",
+					"fr": "Pokémon Vigilant",
+					"de": "Wachsamkeit",
+					"es": "Pokémon Alerta",
+					"it": "Pokémon Sentinella",
+					"ja": "けいかいポケモン",
+					"zh-hans": "警戒宝可梦",
+					"es-419": "Pokémon Alerta"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 505
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 11
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 11
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 47
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 28
+					},
+					{
+						"pokedex": "champions",
+						"number": 505
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 504,
+								"natiId": 504,
+								"name": "Patrat"
+							},
+							{
+								"id": 505,
+								"natiId": 505,
+								"name": "Watchog",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/505",
+						"fetchedAt": "2026-11-03T05:53:37.869Z",
+						"hash": "e664ab84cfdfc720e4bd9c141c863340e6355b2d83126b801175a21f08e84475"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/259/",
+						"fetchedAt": "2026-11-03T05:53:37.851Z",
+						"hash": "2eac0f30f3d748b425b103b11fa1b8d462d13e5066cb2eb13bc6aff1dd0599b5"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/505/",
+						"fetchedAt": "2026-11-03T05:53:37.907Z",
+						"hash": "cdd84526aa7125dad36df0062d66a7470a1c513cac28915cc4dbdbcacfbd1ef0"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/505/encounters",
+						"fetchedAt": "2026-11-03T05:53:37.939Z",
+						"hash": "2fe752a2502161ac9b126fb45de1b8f484485469467ff1d27ff301c299ec9df0"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/505/",
+						"fetchedAt": "2026-11-03T05:53:37.992Z",
+						"hash": "e215a36173b35e3ca5a3598e0ba971c6c93ce7992dbd24479c233acf4b78456e"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"letsgopikachu": "",
+				"letsgoeevee": ""
+			},
+			"localizedFlavorByGame": {
+				"letsgopikachu": {},
+				"letsgoeevee": {}
+			}
+		},
+		{
+			"profileKey": "sword-shield",
+			"label": "Sword / Shield",
+			"appGameKeys": [
+				"sword",
+				"shield"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Watchog",
+				"localizedNames": {
+					"ja-hrkt": "ミルホッグ",
+					"ja-roma": "Miruhog",
+					"ko": "보르그",
+					"zh-hant": "步哨鼠",
+					"fr": "Miradar",
+					"de": "Kukmarda",
+					"es": "Watchog",
+					"it": "Watchog",
+					"ja": "ミルホッグ",
+					"zh-hans": "步哨鼠",
+					"es-419": "Watchog"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 85,
+					"def": 69,
+					"spa": 60,
+					"spd": 69,
+					"spe": 77
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Illuminate",
+					"Keen Eye",
+					"Analytic (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Analytic"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.1 m",
+				"weight": "27.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 147,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Lookout Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けいかいポケモン",
+					"ko": "경계포켓몬",
+					"zh-hant": "警戒寶可夢",
+					"fr": "Pokémon Vigilant",
+					"de": "Wachsamkeit",
+					"es": "Pokémon Alerta",
+					"it": "Pokémon Sentinella",
+					"ja": "けいかいポケモン",
+					"zh-hans": "警戒宝可梦",
+					"es-419": "Pokémon Alerta"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 505
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 11
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 11
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 47
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 28
+					},
+					{
+						"pokedex": "champions",
+						"number": 505
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 504,
+								"natiId": 504,
+								"name": "Patrat"
+							},
+							{
+								"id": 505,
+								"natiId": 505,
+								"name": "Watchog",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/505",
+						"fetchedAt": "2026-11-03T05:53:37.869Z",
+						"hash": "e664ab84cfdfc720e4bd9c141c863340e6355b2d83126b801175a21f08e84475"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/259/",
+						"fetchedAt": "2026-11-03T05:53:37.851Z",
+						"hash": "2eac0f30f3d748b425b103b11fa1b8d462d13e5066cb2eb13bc6aff1dd0599b5"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/505/",
+						"fetchedAt": "2026-11-03T05:53:37.907Z",
+						"hash": "cdd84526aa7125dad36df0062d66a7470a1c513cac28915cc4dbdbcacfbd1ef0"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/505/encounters",
+						"fetchedAt": "2026-11-03T05:53:37.939Z",
+						"hash": "2fe752a2502161ac9b126fb45de1b8f484485469467ff1d27ff301c299ec9df0"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/505/",
+						"fetchedAt": "2026-11-03T05:53:37.992Z",
+						"hash": "e215a36173b35e3ca5a3598e0ba971c6c93ce7992dbd24479c233acf4b78456e"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sword": "",
+				"shield": ""
+			},
+			"localizedFlavorByGame": {
+				"sword": {},
+				"shield": {}
+			}
+		},
+		{
+			"profileKey": "the-isle-of-armor",
+			"label": "The Isle of Armor",
+			"appGameKeys": [
+				"swordioa",
+				"shieldioa"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Watchog",
+				"localizedNames": {
+					"ja-hrkt": "ミルホッグ",
+					"ja-roma": "Miruhog",
+					"ko": "보르그",
+					"zh-hant": "步哨鼠",
+					"fr": "Miradar",
+					"de": "Kukmarda",
+					"es": "Watchog",
+					"it": "Watchog",
+					"ja": "ミルホッグ",
+					"zh-hans": "步哨鼠",
+					"es-419": "Watchog"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 85,
+					"def": 69,
+					"spa": 60,
+					"spd": 69,
+					"spe": 77
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Illuminate",
+					"Keen Eye",
+					"Analytic (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Analytic"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.1 m",
+				"weight": "27.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 147,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Lookout Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けいかいポケモン",
+					"ko": "경계포켓몬",
+					"zh-hant": "警戒寶可夢",
+					"fr": "Pokémon Vigilant",
+					"de": "Wachsamkeit",
+					"es": "Pokémon Alerta",
+					"it": "Pokémon Sentinella",
+					"ja": "けいかいポケモン",
+					"zh-hans": "警戒宝可梦",
+					"es-419": "Pokémon Alerta"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 505
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 11
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 11
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 47
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 28
+					},
+					{
+						"pokedex": "champions",
+						"number": 505
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 504,
+								"natiId": 504,
+								"name": "Patrat"
+							},
+							{
+								"id": 505,
+								"natiId": 505,
+								"name": "Watchog",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/505",
+						"fetchedAt": "2026-11-03T05:53:37.869Z",
+						"hash": "e664ab84cfdfc720e4bd9c141c863340e6355b2d83126b801175a21f08e84475"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/259/",
+						"fetchedAt": "2026-11-03T05:53:37.851Z",
+						"hash": "2eac0f30f3d748b425b103b11fa1b8d462d13e5066cb2eb13bc6aff1dd0599b5"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/505/",
+						"fetchedAt": "2026-11-03T05:53:37.907Z",
+						"hash": "cdd84526aa7125dad36df0062d66a7470a1c513cac28915cc4dbdbcacfbd1ef0"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/505/encounters",
+						"fetchedAt": "2026-11-03T05:53:37.939Z",
+						"hash": "2fe752a2502161ac9b126fb45de1b8f484485469467ff1d27ff301c299ec9df0"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/505/",
+						"fetchedAt": "2026-11-03T05:53:37.992Z",
+						"hash": "e215a36173b35e3ca5a3598e0ba971c6c93ce7992dbd24479c233acf4b78456e"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordioa": "",
+				"shieldioa": ""
+			},
+			"localizedFlavorByGame": {
+				"swordioa": {},
+				"shieldioa": {}
+			}
+		},
+		{
+			"profileKey": "the-crown-tundra",
+			"label": "The Crown Tundra",
+			"appGameKeys": [
+				"swordct",
+				"shieldct"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Watchog",
+				"localizedNames": {
+					"ja-hrkt": "ミルホッグ",
+					"ja-roma": "Miruhog",
+					"ko": "보르그",
+					"zh-hant": "步哨鼠",
+					"fr": "Miradar",
+					"de": "Kukmarda",
+					"es": "Watchog",
+					"it": "Watchog",
+					"ja": "ミルホッグ",
+					"zh-hans": "步哨鼠",
+					"es-419": "Watchog"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 85,
+					"def": 69,
+					"spa": 60,
+					"spd": 69,
+					"spe": 77
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Illuminate",
+					"Keen Eye",
+					"Analytic (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Analytic"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.1 m",
+				"weight": "27.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 147,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Lookout Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けいかいポケモン",
+					"ko": "경계포켓몬",
+					"zh-hant": "警戒寶可夢",
+					"fr": "Pokémon Vigilant",
+					"de": "Wachsamkeit",
+					"es": "Pokémon Alerta",
+					"it": "Pokémon Sentinella",
+					"ja": "けいかいポケモン",
+					"zh-hans": "警戒宝可梦",
+					"es-419": "Pokémon Alerta"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 505
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 11
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 11
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 47
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 28
+					},
+					{
+						"pokedex": "champions",
+						"number": 505
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 504,
+								"natiId": 504,
+								"name": "Patrat"
+							},
+							{
+								"id": 505,
+								"natiId": 505,
+								"name": "Watchog",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/505",
+						"fetchedAt": "2026-11-03T05:53:37.869Z",
+						"hash": "e664ab84cfdfc720e4bd9c141c863340e6355b2d83126b801175a21f08e84475"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/259/",
+						"fetchedAt": "2026-11-03T05:53:37.851Z",
+						"hash": "2eac0f30f3d748b425b103b11fa1b8d462d13e5066cb2eb13bc6aff1dd0599b5"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/505/",
+						"fetchedAt": "2026-11-03T05:53:37.907Z",
+						"hash": "cdd84526aa7125dad36df0062d66a7470a1c513cac28915cc4dbdbcacfbd1ef0"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/505/encounters",
+						"fetchedAt": "2026-11-03T05:53:37.939Z",
+						"hash": "2fe752a2502161ac9b126fb45de1b8f484485469467ff1d27ff301c299ec9df0"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/505/",
+						"fetchedAt": "2026-11-03T05:53:37.992Z",
+						"hash": "e215a36173b35e3ca5a3598e0ba971c6c93ce7992dbd24479c233acf4b78456e"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordct": "",
+				"shieldct": ""
+			},
+			"localizedFlavorByGame": {
+				"swordct": {},
+				"shieldct": {}
+			}
+		},
+		{
+			"profileKey": "brilliant-diamond-shining-pearl",
+			"label": "Brilliant Diamond / Shining Pearl",
+			"appGameKeys": [
+				"brilliantdiamond-national",
+				"brilliantdiamond",
+				"shiningpearl-national",
+				"shiningpearl"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Watchog",
+				"localizedNames": {
+					"ja-hrkt": "ミルホッグ",
+					"ja-roma": "Miruhog",
+					"ko": "보르그",
+					"zh-hant": "步哨鼠",
+					"fr": "Miradar",
+					"de": "Kukmarda",
+					"es": "Watchog",
+					"it": "Watchog",
+					"ja": "ミルホッグ",
+					"zh-hans": "步哨鼠",
+					"es-419": "Watchog"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 85,
+					"def": 69,
+					"spa": 60,
+					"spd": 69,
+					"spe": 77
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Illuminate",
+					"Keen Eye",
+					"Analytic (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Analytic"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.1 m",
+				"weight": "27.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 147,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Lookout Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けいかいポケモン",
+					"ko": "경계포켓몬",
+					"zh-hant": "警戒寶可夢",
+					"fr": "Pokémon Vigilant",
+					"de": "Wachsamkeit",
+					"es": "Pokémon Alerta",
+					"it": "Pokémon Sentinella",
+					"ja": "けいかいポケモン",
+					"zh-hans": "警戒宝可梦",
+					"es-419": "Pokémon Alerta"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 505
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 11
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 11
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 47
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 28
+					},
+					{
+						"pokedex": "champions",
+						"number": 505
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 504,
+								"natiId": 504,
+								"name": "Patrat"
+							},
+							{
+								"id": 505,
+								"natiId": 505,
+								"name": "Watchog",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/505",
+						"fetchedAt": "2026-11-03T05:53:37.869Z",
+						"hash": "e664ab84cfdfc720e4bd9c141c863340e6355b2d83126b801175a21f08e84475"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/259/",
+						"fetchedAt": "2026-11-03T05:53:37.851Z",
+						"hash": "2eac0f30f3d748b425b103b11fa1b8d462d13e5066cb2eb13bc6aff1dd0599b5"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/505/",
+						"fetchedAt": "2026-11-03T05:53:37.907Z",
+						"hash": "cdd84526aa7125dad36df0062d66a7470a1c513cac28915cc4dbdbcacfbd1ef0"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/505/encounters",
+						"fetchedAt": "2026-11-03T05:53:37.939Z",
+						"hash": "2fe752a2502161ac9b126fb45de1b8f484485469467ff1d27ff301c299ec9df0"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/505/",
+						"fetchedAt": "2026-11-03T05:53:37.992Z",
+						"hash": "e215a36173b35e3ca5a3598e0ba971c6c93ce7992dbd24479c233acf4b78456e"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"brilliantdiamond-national": "",
+				"brilliantdiamond": "",
+				"shiningpearl-national": "",
+				"shiningpearl": ""
+			},
+			"localizedFlavorByGame": {
+				"brilliantdiamond-national": {},
+				"brilliantdiamond": {},
+				"shiningpearl-national": {},
+				"shiningpearl": {}
+			}
+		},
+		{
+			"profileKey": "legends-arceus",
+			"label": "Legends: Arceus",
+			"appGameKeys": [
+				"legendsarceus"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Watchog",
+				"localizedNames": {
+					"ja-hrkt": "ミルホッグ",
+					"ja-roma": "Miruhog",
+					"ko": "보르그",
+					"zh-hant": "步哨鼠",
+					"fr": "Miradar",
+					"de": "Kukmarda",
+					"es": "Watchog",
+					"it": "Watchog",
+					"ja": "ミルホッグ",
+					"zh-hans": "步哨鼠",
+					"es-419": "Watchog"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 85,
+					"def": 69,
+					"spa": 60,
+					"spd": 69,
+					"spe": 77
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Illuminate",
+					"Keen Eye",
+					"Analytic (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Analytic"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.1 m",
+				"weight": "27.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 147,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Lookout Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けいかいポケモン",
+					"ko": "경계포켓몬",
+					"zh-hant": "警戒寶可夢",
+					"fr": "Pokémon Vigilant",
+					"de": "Wachsamkeit",
+					"es": "Pokémon Alerta",
+					"it": "Pokémon Sentinella",
+					"ja": "けいかいポケモン",
+					"zh-hans": "警戒宝可梦",
+					"es-419": "Pokémon Alerta"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 505
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 11
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 11
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 47
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 28
+					},
+					{
+						"pokedex": "champions",
+						"number": 505
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 504,
+								"natiId": 504,
+								"name": "Patrat"
+							},
+							{
+								"id": 505,
+								"natiId": 505,
+								"name": "Watchog",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/505",
+						"fetchedAt": "2026-11-03T05:53:37.869Z",
+						"hash": "e664ab84cfdfc720e4bd9c141c863340e6355b2d83126b801175a21f08e84475"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/259/",
+						"fetchedAt": "2026-11-03T05:53:37.851Z",
+						"hash": "2eac0f30f3d748b425b103b11fa1b8d462d13e5066cb2eb13bc6aff1dd0599b5"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/505/",
+						"fetchedAt": "2026-11-03T05:53:37.907Z",
+						"hash": "cdd84526aa7125dad36df0062d66a7470a1c513cac28915cc4dbdbcacfbd1ef0"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/505/encounters",
+						"fetchedAt": "2026-11-03T05:53:37.939Z",
+						"hash": "2fe752a2502161ac9b126fb45de1b8f484485469467ff1d27ff301c299ec9df0"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/505/",
+						"fetchedAt": "2026-11-03T05:53:37.992Z",
+						"hash": "e215a36173b35e3ca5a3598e0ba971c6c93ce7992dbd24479c233acf4b78456e"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendsarceus": ""
+			},
+			"localizedFlavorByGame": {
+				"legendsarceus": {}
+			}
+		},
+		{
+			"profileKey": "scarlet-violet",
+			"label": "Scarlet / Violet",
+			"appGameKeys": [
+				"scarlet",
+				"violet"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Watchog",
+				"localizedNames": {
+					"ja-hrkt": "ミルホッグ",
+					"ja-roma": "Miruhog",
+					"ko": "보르그",
+					"zh-hant": "步哨鼠",
+					"fr": "Miradar",
+					"de": "Kukmarda",
+					"es": "Watchog",
+					"it": "Watchog",
+					"ja": "ミルホッグ",
+					"zh-hans": "步哨鼠",
+					"es-419": "Watchog"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 85,
+					"def": 69,
+					"spa": 60,
+					"spd": 69,
+					"spe": 77
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Illuminate",
+					"Keen Eye",
+					"Analytic (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Analytic"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.1 m",
+				"weight": "27.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 147,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Lookout Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けいかいポケモン",
+					"ko": "경계포켓몬",
+					"zh-hant": "警戒寶可夢",
+					"fr": "Pokémon Vigilant",
+					"de": "Wachsamkeit",
+					"es": "Pokémon Alerta",
+					"it": "Pokémon Sentinella",
+					"ja": "けいかいポケモン",
+					"zh-hans": "警戒宝可梦",
+					"es-419": "Pokémon Alerta"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 505
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 11
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 11
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 47
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 28
+					},
+					{
+						"pokedex": "champions",
+						"number": 505
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 504,
+								"natiId": 504,
+								"name": "Patrat"
+							},
+							{
+								"id": 505,
+								"natiId": 505,
+								"name": "Watchog",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/505",
+						"fetchedAt": "2026-11-03T05:53:37.869Z",
+						"hash": "e664ab84cfdfc720e4bd9c141c863340e6355b2d83126b801175a21f08e84475"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/259/",
+						"fetchedAt": "2026-11-03T05:53:37.851Z",
+						"hash": "2eac0f30f3d748b425b103b11fa1b8d462d13e5066cb2eb13bc6aff1dd0599b5"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/505/",
+						"fetchedAt": "2026-11-03T05:53:37.907Z",
+						"hash": "cdd84526aa7125dad36df0062d66a7470a1c513cac28915cc4dbdbcacfbd1ef0"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/505/encounters",
+						"fetchedAt": "2026-11-03T05:53:37.939Z",
+						"hash": "2fe752a2502161ac9b126fb45de1b8f484485469467ff1d27ff301c299ec9df0"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/505/",
+						"fetchedAt": "2026-11-03T05:53:37.992Z",
+						"hash": "e215a36173b35e3ca5a3598e0ba971c6c93ce7992dbd24479c233acf4b78456e"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlet": "",
+				"violet": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlet": {},
+				"violet": {}
+			}
+		},
+		{
+			"profileKey": "the-teal-mask",
+			"label": "The Teal Mask",
+			"appGameKeys": [
+				"scarlettm",
+				"violettm"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Watchog",
+				"localizedNames": {
+					"ja-hrkt": "ミルホッグ",
+					"ja-roma": "Miruhog",
+					"ko": "보르그",
+					"zh-hant": "步哨鼠",
+					"fr": "Miradar",
+					"de": "Kukmarda",
+					"es": "Watchog",
+					"it": "Watchog",
+					"ja": "ミルホッグ",
+					"zh-hans": "步哨鼠",
+					"es-419": "Watchog"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 85,
+					"def": 69,
+					"spa": 60,
+					"spd": 69,
+					"spe": 77
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Illuminate",
+					"Keen Eye",
+					"Analytic (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Analytic"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.1 m",
+				"weight": "27.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 147,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Lookout Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けいかいポケモン",
+					"ko": "경계포켓몬",
+					"zh-hant": "警戒寶可夢",
+					"fr": "Pokémon Vigilant",
+					"de": "Wachsamkeit",
+					"es": "Pokémon Alerta",
+					"it": "Pokémon Sentinella",
+					"ja": "けいかいポケモン",
+					"zh-hans": "警戒宝可梦",
+					"es-419": "Pokémon Alerta"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 505
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 11
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 11
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 47
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 28
+					},
+					{
+						"pokedex": "champions",
+						"number": 505
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 504,
+								"natiId": 504,
+								"name": "Patrat"
+							},
+							{
+								"id": 505,
+								"natiId": 505,
+								"name": "Watchog",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/505",
+						"fetchedAt": "2026-11-03T05:53:37.869Z",
+						"hash": "e664ab84cfdfc720e4bd9c141c863340e6355b2d83126b801175a21f08e84475"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/259/",
+						"fetchedAt": "2026-11-03T05:53:37.851Z",
+						"hash": "2eac0f30f3d748b425b103b11fa1b8d462d13e5066cb2eb13bc6aff1dd0599b5"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/505/",
+						"fetchedAt": "2026-11-03T05:53:37.907Z",
+						"hash": "cdd84526aa7125dad36df0062d66a7470a1c513cac28915cc4dbdbcacfbd1ef0"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/505/encounters",
+						"fetchedAt": "2026-11-03T05:53:37.939Z",
+						"hash": "2fe752a2502161ac9b126fb45de1b8f484485469467ff1d27ff301c299ec9df0"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/505/",
+						"fetchedAt": "2026-11-03T05:53:37.992Z",
+						"hash": "e215a36173b35e3ca5a3598e0ba971c6c93ce7992dbd24479c233acf4b78456e"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlettm": "",
+				"violettm": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlettm": {},
+				"violettm": {}
+			}
+		},
+		{
+			"profileKey": "the-indigo-disk",
+			"label": "The Indigo Disk",
+			"appGameKeys": [
+				"scarletid",
+				"violetid"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Watchog",
+				"localizedNames": {
+					"ja-hrkt": "ミルホッグ",
+					"ja-roma": "Miruhog",
+					"ko": "보르그",
+					"zh-hant": "步哨鼠",
+					"fr": "Miradar",
+					"de": "Kukmarda",
+					"es": "Watchog",
+					"it": "Watchog",
+					"ja": "ミルホッグ",
+					"zh-hans": "步哨鼠",
+					"es-419": "Watchog"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 85,
+					"def": 69,
+					"spa": 60,
+					"spd": 69,
+					"spe": 77
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Illuminate",
+					"Keen Eye",
+					"Analytic (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Analytic"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.1 m",
+				"weight": "27.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 147,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Lookout Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けいかいポケモン",
+					"ko": "경계포켓몬",
+					"zh-hant": "警戒寶可夢",
+					"fr": "Pokémon Vigilant",
+					"de": "Wachsamkeit",
+					"es": "Pokémon Alerta",
+					"it": "Pokémon Sentinella",
+					"ja": "けいかいポケモン",
+					"zh-hans": "警戒宝可梦",
+					"es-419": "Pokémon Alerta"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 505
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 11
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 11
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 47
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 28
+					},
+					{
+						"pokedex": "champions",
+						"number": 505
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 504,
+								"natiId": 504,
+								"name": "Patrat"
+							},
+							{
+								"id": 505,
+								"natiId": 505,
+								"name": "Watchog",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/505",
+						"fetchedAt": "2026-11-03T05:53:37.869Z",
+						"hash": "e664ab84cfdfc720e4bd9c141c863340e6355b2d83126b801175a21f08e84475"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/259/",
+						"fetchedAt": "2026-11-03T05:53:37.851Z",
+						"hash": "2eac0f30f3d748b425b103b11fa1b8d462d13e5066cb2eb13bc6aff1dd0599b5"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/505/",
+						"fetchedAt": "2026-11-03T05:53:37.907Z",
+						"hash": "cdd84526aa7125dad36df0062d66a7470a1c513cac28915cc4dbdbcacfbd1ef0"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/505/encounters",
+						"fetchedAt": "2026-11-03T05:53:37.939Z",
+						"hash": "2fe752a2502161ac9b126fb45de1b8f484485469467ff1d27ff301c299ec9df0"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/505/",
+						"fetchedAt": "2026-11-03T05:53:37.992Z",
+						"hash": "e215a36173b35e3ca5a3598e0ba971c6c93ce7992dbd24479c233acf4b78456e"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarletid": "",
+				"violetid": ""
+			},
+			"localizedFlavorByGame": {
+				"scarletid": {},
+				"violetid": {}
+			}
+		},
+		{
+			"profileKey": "legends-za",
+			"label": "Legends: Z-A",
+			"appGameKeys": [
+				"legendsza"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Watchog",
+				"localizedNames": {
+					"ja-hrkt": "ミルホッグ",
+					"ja-roma": "Miruhog",
+					"ko": "보르그",
+					"zh-hant": "步哨鼠",
+					"fr": "Miradar",
+					"de": "Kukmarda",
+					"es": "Watchog",
+					"it": "Watchog",
+					"ja": "ミルホッグ",
+					"zh-hans": "步哨鼠",
+					"es-419": "Watchog"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 85,
+					"def": 69,
+					"spa": 60,
+					"spd": 69,
+					"spe": 77
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Illuminate",
+					"Keen Eye",
+					"Analytic (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Analytic"
+				],
+				"eggGroups": [
+					"Field"
+				],
+				"expGroup": "Medium Fast",
+				"hatchCounter": 20,
+				"height": "1.1 m",
+				"weight": "27 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 250,
+				"baseExperience": 147,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Lookout Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けいかいポケモン",
+					"ko": "경계포켓몬",
+					"zh-hant": "警戒寶可夢",
+					"fr": "Pokémon Vigilant",
+					"de": "Wachsamkeit",
+					"es": "Pokémon Alerta",
+					"it": "Pokémon Sentinella",
+					"ja": "けいかいポケモン",
+					"zh-hans": "警戒宝可梦",
+					"es-419": "Pokémon Alerta"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 505
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 11
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 11
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 47
+					},
+					{
+						"pokedex": "champions",
+						"number": 505
+					},
+					{
+						"pokedex": "lumiose",
+						"number": 28
+					}
+				],
+				"alphaMove": "Gunk Shot",
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 504,
+								"natiId": 504,
+								"name": "Patrat"
+							},
+							{
+								"id": 505,
+								"natiId": 505,
+								"name": "Watchog",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Wild Zone 10",
+						"notes": "",
+						"games": "Legends: Z-A"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Leer",
+							"level": 3,
+							"order": 3
+						},
+						{
+							"name": "Bite",
+							"level": 6,
+							"order": 4
+						},
+						{
+							"name": "Detect",
+							"level": 11,
+							"order": 5
+						},
+						{
+							"name": "Crunch",
+							"level": 16,
+							"order": 6
+						},
+						{
+							"name": "Hypnosis",
+							"level": 18,
+							"order": 7
+						},
+						{
+							"name": "Super Fang",
+							"level": 21,
+							"order": 8
+						},
+						{
+							"name": "Focus Energy",
+							"level": 26,
+							"order": 9
+						},
+						{
+							"name": "Work Up",
+							"level": 28,
+							"order": 10
+						},
+						{
+							"name": "Nasty Plot",
+							"level": 33,
+							"order": 11
+						},
+						{
+							"name": "Iron Tail",
+							"level": 40,
+							"order": 12
+						},
+						{
+							"name": "Take Down",
+							"level": 46,
+							"order": 13
+						},
+						{
+							"name": "Double-Edge",
+							"level": 50,
+							"order": 14
+						}
+					],
+					"Machine": [
+						{
+							"name": "Rock Smash",
+							"machine": "TM004",
+							"order": 1
+						},
+						{
+							"name": "Toxic",
+							"machine": "TM007",
+							"order": 2
+						},
+						{
+							"name": "Thunder Wave",
+							"machine": "TM008",
+							"order": 3
+						},
+						{
+							"name": "Light Screen",
+							"machine": "TM016",
+							"order": 4
+						},
+						{
+							"name": "Protect",
+							"machine": "TM017",
+							"order": 5
+						},
+						{
+							"name": "Power-Up Punch",
+							"machine": "TM018",
+							"order": 6
+						},
+						{
+							"name": "Thunder Punch",
+							"machine": "TM023",
+							"order": 7
+						},
+						{
+							"name": "Ice Punch",
+							"machine": "TM024",
+							"order": 8
+						},
+						{
+							"name": "Crunch",
+							"machine": "TM025",
+							"order": 9
+						},
+						{
+							"name": "Swift",
+							"machine": "TM027",
+							"order": 10
+						},
+						{
+							"name": "Dig",
+							"machine": "TM028",
+							"order": 11
+						},
+						{
+							"name": "Fire Punch",
+							"machine": "TM029",
+							"order": 12
+						},
+						{
+							"name": "Swords Dance",
+							"machine": "TM030",
+							"order": 13
+						},
+						{
+							"name": "Double Team",
+							"machine": "TM032",
+							"order": 14
+						},
+						{
+							"name": "Endure",
+							"machine": "TM035",
+							"order": 15
+						},
+						{
+							"name": "Bullet Seed",
+							"machine": "TM040",
+							"order": 16
+						},
+						{
+							"name": "Hyper Beam",
+							"machine": "TM044",
+							"order": 17
+						},
+						{
+							"name": "Mud Shot",
+							"machine": "TM046",
+							"order": 18
+						},
+						{
+							"name": "Giga Impact",
+							"machine": "TM055",
+							"order": 19
+						},
+						{
+							"name": "Double-Edge",
+							"machine": "TM056",
+							"order": 20
+						},
+						{
+							"name": "Zen Headbutt",
+							"machine": "TM059",
+							"order": 21
+						},
+						{
+							"name": "Flamethrower",
+							"machine": "TM062",
+							"order": 22
+						},
+						{
+							"name": "Thunderbolt",
+							"machine": "TM067",
+							"order": 23
+						},
+						{
+							"name": "Shadow Ball",
+							"machine": "TM074",
+							"order": 24
+						},
+						{
+							"name": "Nasty Plot",
+							"machine": "TM083",
+							"order": 25
+						},
+						{
+							"name": "Substitute",
+							"machine": "TM085",
+							"order": 26
+						},
+						{
+							"name": "Iron Tail",
+							"machine": "TM087",
+							"order": 27
+						},
+						{
+							"name": "Gunk Shot",
+							"machine": "TM100",
+							"order": 28
+						},
+						{
+							"name": "Work Up",
+							"machine": "TM103",
+							"order": 29
+						},
+						{
+							"name": "Facade",
+							"machine": "TM109",
+							"order": 30
+						},
+						{
+							"name": "Seed Bomb",
+							"machine": "TM128",
+							"order": 31
+						},
+						{
+							"name": "Skull Bash",
+							"machine": "TM146",
+							"order": 32
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Project Pokemon's Z-A game-data export assigns this form regional Dex #28."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/505",
+						"fetchedAt": "2026-11-03T05:53:37.869Z",
+						"hash": "e664ab84cfdfc720e4bd9c141c863340e6355b2d83126b801175a21f08e84475"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/259/",
+						"fetchedAt": "2026-11-03T05:53:37.851Z",
+						"hash": "2eac0f30f3d748b425b103b11fa1b8d462d13e5066cb2eb13bc6aff1dd0599b5"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/505/",
+						"fetchedAt": "2026-11-03T05:53:37.907Z",
+						"hash": "cdd84526aa7125dad36df0062d66a7470a1c513cac28915cc4dbdbcacfbd1ef0"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/505/encounters",
+						"fetchedAt": "2026-11-03T05:53:37.939Z",
+						"hash": "2fe752a2502161ac9b126fb45de1b8f484485469467ff1d27ff301c299ec9df0"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/505/",
+						"fetchedAt": "2026-11-03T05:53:37.992Z",
+						"hash": "e215a36173b35e3ca5a3598e0ba971c6c93ce7992dbd24479c233acf4b78456e"
+					},
+					{
+						"type": "legends-za-personal-data",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/personal.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c00215459c764ba65d879d6503a7337ad80b338171ab4713d1c6f52b4517e36f"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "719eff37d8f2f404d163f81d23b2c921ac323a7b00304e502ca37d69a3375b1d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/French/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "1b658102e791558a1bb317563b7a3aaab8cebc1c7517aa7f5d5c0e708e93d626"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/German/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5f1e419ae3b84ab18cb05b972569e629ff0bff96d928468c52c536b02dc6cf9d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Italian/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "e0bd40a2f4b7678afb82f959b7b1f3503590bd13884daf94bd5813fea832067c"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/JPN/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5c2c9784278c5d13f3ba376e4338cef21923d68faec9b8498175c21180825f24"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Korean/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c83545726b0b0b803295f52448510c15adaab3e6ce248adba23b5ad0d0344216"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/LATAM/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "01d046caf7553d97a3c275465bce97ecedae26a67674a40b5c751a56b3b4d52d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Simp_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "09495dacb0d16eb6e91aa1d67eb1ed682d0682303719811eeb1c6877bb9e7ca2"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Spanish/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "b3fafb97fe85165bd65fdd732ce1e4cee880ffe5035632269787ce859735b358"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Trad_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c446ae3e93760fc4af895427508ed852511201723f8cac84121330747e8c3cd0"
+					},
+					{
+						"type": "legends-za-locations",
+						"url": "https://www.serebii.net/pokedex-sv/watchog/",
+						"fetchedAt": "2026-11-04T05:47:08.454Z",
+						"hash": "ef783e35c67ba84f8cafc6ced45ca1aebb0f5dbf29967e85d1343066f41caf27"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendsza": "Using luminescent matter within its body, it makes its eyes and body glow and stuns attacking opponents."
+			},
+			"localizedFlavorByGame": {
+				"legendsza": {
+					"en": "Using luminescent matter within its body, it makes its eyes and body glow and stuns attacking opponents.",
+					"fr": "Il intimide ses assaillants en faisant briller son pelage et ses yeux grâce à une substance luminescente dans son corps.",
+					"de": "Mit einer körpereigenen Leuchtsubstanz lässt es seine Augen und die Markierungen an seinem Körper aufleuchten. Dies schreckt seine Angreifer ab.",
+					"it": "Fa tentennare il nemico facendo brillare gli occhi e i segni sul corpo grazie a una sostanza fluorescente contenuta nel proprio organismo.",
+					"ja": "体内の 発光物質で 目玉や 体を 光らせ 襲ってきた 敵を ひるませる。",
+					"ko": "체내의 발광 물질로 눈이나 몸을 빛나게 하여 습격해 온 상대를 풀이 죽게 만든다.",
+					"es-419": "Los componentes luminiscentes de su interior hacen que le brillen los ojos y las marcas del cuerpo, lo cual intimida a quien intente atacarlo.",
+					"zh-hans": "用体内的发光物质 让眼珠和身体闪闪发光， 使来袭的敌人畏缩。",
+					"es": "Los componentes luminiscentes de su interior hacen que le brillen los ojos y las marcas del cuerpo, y así intimida a quien intente atacarlo.",
+					"zh-hant": "透過體內的發光物質 讓眼珠或身體變得閃閃發亮， 使來襲的敵人畏縮。"
+				}
+			}
+		},
+		{
+			"profileKey": "mega-dimension",
+			"label": "Mega Dimension",
+			"appGameKeys": [
+				"legendszamd"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Watchog",
+				"localizedNames": {
+					"ja-hrkt": "ミルホッグ",
+					"ja-roma": "Miruhog",
+					"ko": "보르그",
+					"zh-hant": "步哨鼠",
+					"fr": "Miradar",
+					"de": "Kukmarda",
+					"es": "Watchog",
+					"it": "Watchog",
+					"ja": "ミルホッグ",
+					"zh-hans": "步哨鼠",
+					"es-419": "Watchog"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 85,
+					"def": 69,
+					"spa": 60,
+					"spd": 69,
+					"spe": 77
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Illuminate",
+					"Keen Eye",
+					"Analytic (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Analytic"
+				],
+				"eggGroups": [
+					"Field"
+				],
+				"expGroup": "Medium Fast",
+				"hatchCounter": 20,
+				"height": "1.1 m",
+				"weight": "27 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 250,
+				"baseExperience": 147,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Lookout Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けいかいポケモン",
+					"ko": "경계포켓몬",
+					"zh-hant": "警戒寶可夢",
+					"fr": "Pokémon Vigilant",
+					"de": "Wachsamkeit",
+					"es": "Pokémon Alerta",
+					"it": "Pokémon Sentinella",
+					"ja": "けいかいポケモン",
+					"zh-hans": "警戒宝可梦",
+					"es-419": "Pokémon Alerta"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 505
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 11
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 11
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 47
+					},
+					{
+						"pokedex": "champions",
+						"number": 505
+					},
+					{
+						"pokedex": "lumiose",
+						"number": 28
+					}
+				],
+				"alphaMove": "Gunk Shot",
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 504,
+								"natiId": 504,
+								"name": "Patrat"
+							},
+							{
+								"id": 505,
+								"natiId": 505,
+								"name": "Watchog",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Wild Zone 10",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Hyperspace Lumiose",
+						"notes": "Normal (2 Star)",
+						"games": "Legends: Z-A Mega Dimension"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Leer",
+							"level": 3,
+							"order": 3
+						},
+						{
+							"name": "Bite",
+							"level": 6,
+							"order": 4
+						},
+						{
+							"name": "Detect",
+							"level": 11,
+							"order": 5
+						},
+						{
+							"name": "Crunch",
+							"level": 16,
+							"order": 6
+						},
+						{
+							"name": "Hypnosis",
+							"level": 18,
+							"order": 7
+						},
+						{
+							"name": "Super Fang",
+							"level": 21,
+							"order": 8
+						},
+						{
+							"name": "Focus Energy",
+							"level": 26,
+							"order": 9
+						},
+						{
+							"name": "Work Up",
+							"level": 28,
+							"order": 10
+						},
+						{
+							"name": "Nasty Plot",
+							"level": 33,
+							"order": 11
+						},
+						{
+							"name": "Iron Tail",
+							"level": 40,
+							"order": 12
+						},
+						{
+							"name": "Take Down",
+							"level": 46,
+							"order": 13
+						},
+						{
+							"name": "Double-Edge",
+							"level": 50,
+							"order": 14
+						}
+					],
+					"Machine": [
+						{
+							"name": "Rock Smash",
+							"machine": "TM004",
+							"order": 1
+						},
+						{
+							"name": "Toxic",
+							"machine": "TM007",
+							"order": 2
+						},
+						{
+							"name": "Thunder Wave",
+							"machine": "TM008",
+							"order": 3
+						},
+						{
+							"name": "Light Screen",
+							"machine": "TM016",
+							"order": 4
+						},
+						{
+							"name": "Protect",
+							"machine": "TM017",
+							"order": 5
+						},
+						{
+							"name": "Power-Up Punch",
+							"machine": "TM018",
+							"order": 6
+						},
+						{
+							"name": "Thunder Punch",
+							"machine": "TM023",
+							"order": 7
+						},
+						{
+							"name": "Ice Punch",
+							"machine": "TM024",
+							"order": 8
+						},
+						{
+							"name": "Crunch",
+							"machine": "TM025",
+							"order": 9
+						},
+						{
+							"name": "Swift",
+							"machine": "TM027",
+							"order": 10
+						},
+						{
+							"name": "Dig",
+							"machine": "TM028",
+							"order": 11
+						},
+						{
+							"name": "Fire Punch",
+							"machine": "TM029",
+							"order": 12
+						},
+						{
+							"name": "Swords Dance",
+							"machine": "TM030",
+							"order": 13
+						},
+						{
+							"name": "Double Team",
+							"machine": "TM032",
+							"order": 14
+						},
+						{
+							"name": "Endure",
+							"machine": "TM035",
+							"order": 15
+						},
+						{
+							"name": "Bullet Seed",
+							"machine": "TM040",
+							"order": 16
+						},
+						{
+							"name": "Hyper Beam",
+							"machine": "TM044",
+							"order": 17
+						},
+						{
+							"name": "Mud Shot",
+							"machine": "TM046",
+							"order": 18
+						},
+						{
+							"name": "Giga Impact",
+							"machine": "TM055",
+							"order": 19
+						},
+						{
+							"name": "Double-Edge",
+							"machine": "TM056",
+							"order": 20
+						},
+						{
+							"name": "Zen Headbutt",
+							"machine": "TM059",
+							"order": 21
+						},
+						{
+							"name": "Flamethrower",
+							"machine": "TM062",
+							"order": 22
+						},
+						{
+							"name": "Thunderbolt",
+							"machine": "TM067",
+							"order": 23
+						},
+						{
+							"name": "Shadow Ball",
+							"machine": "TM074",
+							"order": 24
+						},
+						{
+							"name": "Nasty Plot",
+							"machine": "TM083",
+							"order": 25
+						},
+						{
+							"name": "Substitute",
+							"machine": "TM085",
+							"order": 26
+						},
+						{
+							"name": "Iron Tail",
+							"machine": "TM087",
+							"order": 27
+						},
+						{
+							"name": "Gunk Shot",
+							"machine": "TM100",
+							"order": 28
+						},
+						{
+							"name": "Work Up",
+							"machine": "TM103",
+							"order": 29
+						},
+						{
+							"name": "Facade",
+							"machine": "TM109",
+							"order": 30
+						},
+						{
+							"name": "Seed Bomb",
+							"machine": "TM128",
+							"order": 31
+						},
+						{
+							"name": "Skull Bash",
+							"machine": "TM146",
+							"order": 32
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Project Pokemon's Z-A game-data export assigns this form regional Dex #28."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/505",
+						"fetchedAt": "2026-11-03T05:53:37.869Z",
+						"hash": "e664ab84cfdfc720e4bd9c141c863340e6355b2d83126b801175a21f08e84475"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/259/",
+						"fetchedAt": "2026-11-03T05:53:37.851Z",
+						"hash": "2eac0f30f3d748b425b103b11fa1b8d462d13e5066cb2eb13bc6aff1dd0599b5"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/505/",
+						"fetchedAt": "2026-11-03T05:53:37.907Z",
+						"hash": "cdd84526aa7125dad36df0062d66a7470a1c513cac28915cc4dbdbcacfbd1ef0"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/505/encounters",
+						"fetchedAt": "2026-11-03T05:53:37.939Z",
+						"hash": "2fe752a2502161ac9b126fb45de1b8f484485469467ff1d27ff301c299ec9df0"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/505/",
+						"fetchedAt": "2026-11-03T05:53:37.992Z",
+						"hash": "e215a36173b35e3ca5a3598e0ba971c6c93ce7992dbd24479c233acf4b78456e"
+					},
+					{
+						"type": "legends-za-personal-data",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/personal.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c00215459c764ba65d879d6503a7337ad80b338171ab4713d1c6f52b4517e36f"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "719eff37d8f2f404d163f81d23b2c921ac323a7b00304e502ca37d69a3375b1d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/French/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "1b658102e791558a1bb317563b7a3aaab8cebc1c7517aa7f5d5c0e708e93d626"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/German/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5f1e419ae3b84ab18cb05b972569e629ff0bff96d928468c52c536b02dc6cf9d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Italian/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "e0bd40a2f4b7678afb82f959b7b1f3503590bd13884daf94bd5813fea832067c"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/JPN/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5c2c9784278c5d13f3ba376e4338cef21923d68faec9b8498175c21180825f24"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Korean/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c83545726b0b0b803295f52448510c15adaab3e6ce248adba23b5ad0d0344216"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/LATAM/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "01d046caf7553d97a3c275465bce97ecedae26a67674a40b5c751a56b3b4d52d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Simp_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "09495dacb0d16eb6e91aa1d67eb1ed682d0682303719811eeb1c6877bb9e7ca2"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Spanish/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "b3fafb97fe85165bd65fdd732ce1e4cee880ffe5035632269787ce859735b358"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Trad_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c446ae3e93760fc4af895427508ed852511201723f8cac84121330747e8c3cd0"
+					},
+					{
+						"type": "legends-za-locations",
+						"url": "https://www.serebii.net/pokedex-sv/watchog/",
+						"fetchedAt": "2026-11-04T05:47:08.454Z",
+						"hash": "ef783e35c67ba84f8cafc6ced45ca1aebb0f5dbf29967e85d1343066f41caf27"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendszamd": "Using luminescent matter within its body, it makes its eyes and body glow and stuns attacking opponents."
+			},
+			"localizedFlavorByGame": {
+				"legendszamd": {
+					"en": "Using luminescent matter within its body, it makes its eyes and body glow and stuns attacking opponents.",
+					"fr": "Il intimide ses assaillants en faisant briller son pelage et ses yeux grâce à une substance luminescente dans son corps.",
+					"de": "Mit einer körpereigenen Leuchtsubstanz lässt es seine Augen und die Markierungen an seinem Körper aufleuchten. Dies schreckt seine Angreifer ab.",
+					"it": "Fa tentennare il nemico facendo brillare gli occhi e i segni sul corpo grazie a una sostanza fluorescente contenuta nel proprio organismo.",
+					"ja": "体内の 発光物質で 目玉や 体を 光らせ 襲ってきた 敵を ひるませる。",
+					"ko": "체내의 발광 물질로 눈이나 몸을 빛나게 하여 습격해 온 상대를 풀이 죽게 만든다.",
+					"es-419": "Los componentes luminiscentes de su interior hacen que le brillen los ojos y las marcas del cuerpo, lo cual intimida a quien intente atacarlo.",
+					"zh-hans": "用体内的发光物质 让眼珠和身体闪闪发光， 使来袭的敌人畏缩。",
+					"es": "Los componentes luminiscentes de su interior hacen que le brillen los ojos y las marcas del cuerpo, y así intimida a quien intente atacarlo.",
+					"zh-hant": "透過體內的發光物質 讓眼珠或身體變得閃閃發亮， 使來襲的敵人畏縮。"
+				}
+			}
+		}
+	]
+}

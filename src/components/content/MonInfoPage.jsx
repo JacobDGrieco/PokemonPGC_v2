@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
+import { ensureMonInfoLoaded } from "../../../data/mon-info/_loader.js";
 import { assetPath } from "../../utils/assetPath.js";
 import { navigateToState } from "../../react-bridge/navigation.js";
 import {
@@ -11,6 +12,11 @@ import {
 	pickPreferredGameForMon,
 } from "../../react-bridge/monInfo.js";
 import { MonInfoBody } from "./MonInfoBody.jsx";
+import {
+	advancePokemonSpriteFallback,
+	pokemonSpriteCandidates,
+} from "../../utils/pokemonSprite.js";
+import { resolveMonInfoFormForGame } from "../../utils/monInfoForms.js";
 
 function buildMonForRenderer(natiId, displayName) {
 	return {
@@ -23,11 +29,14 @@ function buildMonForRenderer(natiId, displayName) {
 	};
 }
 
-export function MonInfoPage({ state, refreshKey }) {
+export function MonInfoPage({ state }) {
 	const natiId = Number(state?.monInfoId || 0);
 	const [displayName, setDisplayName] = useState(
 		natiId ? `#${pad4(natiId)}` : "",
 	);
+	const [, setMonInfoDataRevision] = useState(0);
+	const [isMonInfoLoading, setIsMonInfoLoading] = useState(Boolean(natiId));
+	const [monInfoLoadError, setMonInfoLoadError] = useState("");
 
 	const mons = useMemo(() => getHomeDexMons(), []);
 	const currentIndex = useMemo(
@@ -39,14 +48,50 @@ export function MonInfoPage({ state, refreshKey }) {
 		currentIndex >= 0 && currentIndex < mons.length - 1
 			? mons[currentIndex + 1]
 			: null;
-	const gameOptions = useMemo(
-		() => buildMonInfoGameOptions(findGameKeysForMonInfoNati(natiId)),
-		[natiId, refreshKey],
+	const gameOptions = buildMonInfoGameOptions(
+		findGameKeysForMonInfoNati(natiId),
 	);
 	const optionKeys = gameOptions.map((option) => option.key);
 	const selectedGameKey = optionKeys.includes(state?.monInfoGameKey)
 		? state.monInfoGameKey
 		: optionKeys[0] || null;
+	const selectedFormKey = resolveMonInfoFormForGame(
+		natiId,
+		selectedGameKey,
+		state?.monInfoForm || null,
+	);
+	const homeHeaderSpriteCandidates = pokemonSpriteCandidates({
+		nationalDexId: natiId,
+		allGames: true,
+	});
+
+	useEffect(() => {
+		let isCancelled = false;
+		if (!natiId) {
+			setIsMonInfoLoading(false);
+			return undefined;
+		}
+
+		setIsMonInfoLoading(true);
+		setMonInfoLoadError("");
+		ensureMonInfoLoaded(natiId, selectedFormKey)
+			.then(() => {
+				if (isCancelled) return;
+				setMonInfoDataRevision((revision) => revision + 1);
+				setIsMonInfoLoading(false);
+			})
+			.catch((error) => {
+				if (isCancelled) return;
+				setMonInfoLoadError(
+					error?.message || "Unable to load Mon Info data.",
+				);
+				setIsMonInfoLoading(false);
+			});
+
+		return () => {
+			isCancelled = true;
+		};
+	}, [natiId, selectedFormKey]);
 
 	useEffect(() => {
 		let isCancelled = false;
@@ -59,10 +104,19 @@ export function MonInfoPage({ state, refreshKey }) {
 		return () => {
 			isCancelled = true;
 		};
-	}, [natiId, refreshKey]);
+	}, [natiId]);
 
-	const goToMon = (targetId) => {
+	const goToMon = (targetId, requestedFormKey = null) => {
 		if (!targetId) return;
+		const targetGameKey = pickPreferredGameForMon(
+			targetId,
+			selectedGameKey,
+		);
+		const targetFormKey = resolveMonInfoFormForGame(
+			targetId,
+			targetGameKey,
+			requestedFormKey,
+		);
 		navigateToState({
 			level: "moninfo",
 			toolsKey: "info",
@@ -70,8 +124,8 @@ export function MonInfoPage({ state, refreshKey }) {
 			gameKey: null,
 			sectionId: null,
 			monInfoId: targetId,
-			monInfoGameKey: pickPreferredGameForMon(targetId, selectedGameKey),
-			monInfoForm: null,
+			monInfoGameKey: targetGameKey,
+			monInfoForm: targetFormKey,
 		});
 	};
 
@@ -90,18 +144,15 @@ export function MonInfoPage({ state, refreshKey }) {
 				<div className="moninfo-header-left">
 					<img
 						className="moninfo-hero-img"
-						src={assetPath(
-							`sprites/pokemon_home/base-front/${pad4(natiId)}.png`,
-						)}
+						src={homeHeaderSpriteCandidates[0]}
 						alt={`#${natiId}`}
-						onError={(e) => {
-							if (
-								e.target.src !==
-								(window.__PPGC_NO_IMG__ || "/no-image.svg")
+						data-sprite-candidate-index="0"
+						onError={(event) =>
+							advancePokemonSpriteFallback(
+								event,
+								homeHeaderSpriteCandidates,
 							)
-								e.target.src =
-									window.__PPGC_NO_IMG__ || "/no-image.svg";
-						}}
+						}
 					/>
 					<div>
 						<h2 className="page-title">
@@ -184,7 +235,13 @@ export function MonInfoPage({ state, refreshKey }) {
 						<select
 							id="moninfoGameSelect"
 							value={selectedGameKey || ""}
-							onChange={(event) =>
+							onChange={(event) => {
+								const nextGameKey = event.target.value || null;
+								const nextFormKey = resolveMonInfoFormForGame(
+									natiId,
+									nextGameKey,
+									state?.monInfoForm || null,
+								);
 								navigateToState({
 									level: "moninfo",
 									toolsKey: "info",
@@ -192,10 +249,10 @@ export function MonInfoPage({ state, refreshKey }) {
 									gameKey: null,
 									sectionId: null,
 									monInfoId: natiId,
-									monInfoGameKey: event.target.value || null,
-									monInfoForm: null,
-								})
-							}
+									monInfoGameKey: nextGameKey,
+									monInfoForm: nextFormKey,
+								});
+							}}
 						>
 							{gameOptions.map((option) => (
 								<option key={option.key} value={option.key}>
@@ -207,15 +264,21 @@ export function MonInfoPage({ state, refreshKey }) {
 				</div>
 			</div>
 
-			{!gameOptions.length ? (
+			{!gameOptions.length && isMonInfoLoading ? (
+				<div className="moninfo-body" role="status">
+					Loading Mon Info…
+				</div>
+			) : !gameOptions.length ? (
 				<div className="moninfo-debug">
-					No Mon Info game data found for #{natiId}.
+					{monInfoLoadError ||
+						`No Mon Info game data found for #${natiId}.`}
 				</div>
 			) : (
 				<MonInfoBody
 					gameKey={selectedGameKey}
 					mon={buildMonForRenderer(natiId, displayName)}
-					formKey={state?.monInfoForm || null}
+					formKey={selectedFormKey}
+					onEvolutionNavigate={goToMon}
 					onFormChange={(nextFormKey) =>
 						navigateToState({
 							level: "moninfo",

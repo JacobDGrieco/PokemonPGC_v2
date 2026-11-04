@@ -1,0 +1,166 @@
+{
+	"schemaVersion": 1,
+	"id": 778,
+	"slug": "drum-beating",
+	"name": "Drum Beating",
+	"names": {
+		"de": "Trommelschläge",
+		"en": "Drum Beating",
+		"es": "Batería Asalto",
+		"es-419": "Batería Asalto",
+		"fr": "Tambour Battant",
+		"it": "Tamburattacco",
+		"ja": "ドラムアタック",
+		"ja-hrkt": "ドラムアタック",
+		"ko": "드럼어택",
+		"zh-hans": "鼓击",
+		"zh-hant": "鼓擊"
+	},
+	"generation": 8,
+	"type": "Grass",
+	"damageClass": "Physical",
+	"power": 80,
+	"accuracy": 100,
+	"pp": 10,
+	"priority": 0,
+	"effectChance": 100,
+	"target": "Selected Pokemon",
+	"effectEntries": [
+		{
+			"language": "en",
+			"effect": "Inflicts regular damage. Has a chance to lower the target’s Speed by one stage.",
+			"shortEffect": "Has a chance to lower the target’s Speed by one stage."
+		},
+		{
+			"language": "fr",
+			"effect": "Inflige des dégats réguliers. A une chance de diminuer la Vitesse de la cible d'un niveau.",
+			"shortEffect": "A une chance de diminuer la Vitesse de la cible d'un niveau."
+		}
+	],
+	"effectChanges": [],
+	"descriptions": [
+		{
+			"versionGroup": "legends-arceus",
+			"language": "en",
+			"text": "The user plays its drum, controlling the drum's roots to attack the target. This also lowers the target's Speed stat."
+		},
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "en",
+			"text": "The user plays its drum, controlling the drum's roots to attack the target. This also lowers the target's Speed stat."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "de",
+			"text": "Der Anwender kontrolliert durch Trommeln Wurzeln, die das Ziel angreifen und dessen Initiative senken."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "en",
+			"text": "The user plays its drum, controlling the drum’s roots to attack the target. This also lowers the target’s Speed stat."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es",
+			"text": "El usuario controla un tocón mediante la percusión y al atacar reduce la Velocidad del objetivo."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es-419",
+			"text": "El usuario controla un tocón mediante la percusión y al atacar reduce la Velocidad del objetivo."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "fr",
+			"text": "Le lanceur bat son tambour pour en diriger les racines sur la cible, l’attaquer, et baisser sa Vitesse."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "it",
+			"text": "Chi la usa percuote il proprio tamburo per controllarne le radici e attaccare il bersaglio, riducendone la Velocità."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja",
+			"text": "ドラムの 根っこを ドラミングで コントロールして こうげき することで 相手の 素早さを 下げる。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja-hrkt",
+			"text": "ドラムの ねっこを ドラミングで コントロールして こうげき することで あいての すばやさを さげる。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ko",
+			"text": "드럼의 뿌리를 연주로 조종해서 공격하는 것으로 상대의 스피드를 떨어뜨린다."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hans",
+			"text": "用鼓点来控制 鼓的根部进行攻击， 从而降低对手的速度。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hant",
+			"text": "用打鼓來控制 鼓的根部進行攻擊， 進而降低對手的速度。"
+		}
+	],
+	"pastValues": [],
+	"statChanges": [
+		{
+			"stat": "Speed",
+			"change": -1
+		}
+	],
+	"meta": {
+		"ailment": "None",
+		"category": "Damage Lower",
+		"minHits": null,
+		"maxHits": null,
+		"minTurns": null,
+		"maxTurns": null,
+		"drain": 0,
+		"healing": 0,
+		"critRate": 0,
+		"ailmentChance": 0,
+		"flinchChance": 0,
+		"statChance": 100
+	},
+	"machines": [],
+	"learners": [
+		{
+			"nationalDexId": 812,
+			"speciesName": "Rillaboom",
+			"formKey": "normal",
+			"formName": "Normal",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 1
+						}
+					],
+					"isHidden": false
+				}
+			]
+		}
+	],
+	"potentialPokemon": [
+		"rillaboom"
+	],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/move/778/",
+		"fetchedAt": "2026-11-03T06:30:18.320Z",
+		"hash": "80cf3e15b9d8c54e762df0c3a8a583e2769cb1cff16c18290affdf4559bb3432"
+	}
+}

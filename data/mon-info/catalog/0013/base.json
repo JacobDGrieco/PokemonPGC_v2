@@ -1,0 +1,7343 @@
+{
+	"schemaVersion": 2,
+	"nationalDexId": 13,
+	"speciesName": "Weedle",
+	"formKey": "base",
+	"formName": "Base",
+	"formLabelSource": "form-catalog",
+	"profiles": [
+		{
+			"profileKey": "red-blue",
+			"label": "Red / Blue",
+			"appGameKeys": [
+				"red",
+				"blue"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Weedle",
+				"localizedNames": {
+					"ja-hrkt": "ビードル",
+					"ja-roma": "Beedle",
+					"ko": "뿔충이",
+					"zh-hant": "獨角蟲",
+					"fr": "Aspicot",
+					"de": "Hornliu",
+					"es": "Weedle",
+					"it": "Weedle",
+					"ja": "ビードル",
+					"zh-hans": "独角虫",
+					"es-419": "Weedle"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 35,
+					"def": 30,
+					"spe": 50,
+					"spc": 20
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shield Dust",
+					"Run Away (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Run Away"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "3.2 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 39,
+				"habitat": "Forest",
+				"shape": "Armor",
+				"color": "Brown",
+				"genus": "Hairy Bug Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けむしポケモン",
+					"ko": "송충이포켓몬",
+					"zh-hant": "毛毛蟲寶可夢",
+					"fr": "Pokémon Insectopic",
+					"de": "Raupe",
+					"es": "Pokémon Oruga",
+					"it": "Pokémon Millepiedi",
+					"ja": "けむしポケモン",
+					"zh-hans": "毛毛虫宝可梦",
+					"es-419": "Pokémon Oruga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 13
+					},
+					{
+						"pokedex": "kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 26
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 18
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Kanto Route 2 South Towards Viridian City",
+						"notes": "Walk, Lv. 3",
+						"games": "Red",
+						"rate": "10%"
+					},
+					{
+						"area": "Kanto Route 2 South Towards Viridian City",
+						"notes": "Walk, Lv. 4",
+						"games": "Red",
+						"rate": "4%"
+					},
+					{
+						"area": "Kanto Route 2 South Towards Viridian City",
+						"notes": "Walk, Lv. 5",
+						"games": "Red",
+						"rate": "1%"
+					},
+					{
+						"area": "Kanto Route 24 Area",
+						"notes": "Walk, Lv. 7",
+						"games": "Red",
+						"rate": "20%"
+					},
+					{
+						"area": "Kanto Route 25 Area",
+						"notes": "Walk, Lv. 8",
+						"games": "Red",
+						"rate": "20%"
+					},
+					{
+						"area": "Kanto Route 25 Area",
+						"notes": "Walk, Lv. 8",
+						"games": "Blue",
+						"rate": "1%"
+					},
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Walk, Lv. 4",
+						"games": "Red",
+						"rate": "20%"
+					},
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Walk, Lv. 3",
+						"games": "Red",
+						"rate": "15%"
+					},
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Red",
+						"rate": "10%"
+					},
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Walk, Lv. 3",
+						"games": "Blue",
+						"rate": "5%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Poison Sting",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "String Shot",
+							"level": 1,
+							"order": 2
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/13",
+						"fetchedAt": "2026-11-03T05:53:06.787Z",
+						"hash": "3bd98fa0fdd5f271319c1f4d278750f512202ef028b4276dc28d09ed1442633b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/",
+						"fetchedAt": "2026-11-03T05:53:06.913Z",
+						"hash": "e8d9a6c386bdeb424369106cca2ddc5f26b115481614e73393c0ee02c4fe84c7"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.949Z",
+						"hash": "c9e1cff8cce3503c15d2dc6dbe86cd0237999651c013109d0506fbe9bd507f3e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/13/",
+						"fetchedAt": "2026-11-03T05:53:07.004Z",
+						"hash": "f489e419246018d5ce37223253bf70a280584f35b5a77047bd82212ced4386eb"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"red": "Often found in forests, eating leaves. It has a sharp venomous stinger on its head.",
+				"blue": "Often found in forests, eating leaves. It has a sharp venomous stinger on its head."
+			},
+			"localizedFlavorByGame": {
+				"red": {
+					"en": "Often found in forests, eating leaves. It has a sharp venomous stinger on its head."
+				},
+				"blue": {
+					"en": "Often found in forests, eating leaves. It has a sharp venomous stinger on its head."
+				}
+			}
+		},
+		{
+			"profileKey": "red-green-japan",
+			"label": "Green",
+			"appGameKeys": [
+				"green"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Weedle",
+				"localizedNames": {
+					"ja-hrkt": "ビードル",
+					"ja-roma": "Beedle",
+					"ko": "뿔충이",
+					"zh-hant": "獨角蟲",
+					"fr": "Aspicot",
+					"de": "Hornliu",
+					"es": "Weedle",
+					"it": "Weedle",
+					"ja": "ビードル",
+					"zh-hans": "独角虫",
+					"es-419": "Weedle"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 35,
+					"def": 30,
+					"spe": 50,
+					"spc": 20
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shield Dust",
+					"Run Away (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Run Away"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "3.2 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 39,
+				"habitat": "Forest",
+				"shape": "Armor",
+				"color": "Brown",
+				"genus": "Hairy Bug Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けむしポケモン",
+					"ko": "송충이포켓몬",
+					"zh-hant": "毛毛蟲寶可夢",
+					"fr": "Pokémon Insectopic",
+					"de": "Raupe",
+					"es": "Pokémon Oruga",
+					"it": "Pokémon Millepiedi",
+					"ja": "けむしポケモン",
+					"zh-hans": "毛毛虫宝可梦",
+					"es-419": "Pokémon Oruga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 13
+					},
+					{
+						"pokedex": "kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 26
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 18
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Kanto Route 2 South Towards Viridian City",
+						"notes": "Walk, Lv. 3",
+						"games": "Red Japan",
+						"rate": "10%"
+					},
+					{
+						"area": "Kanto Route 2 South Towards Viridian City",
+						"notes": "Walk, Lv. 4",
+						"games": "Red Japan",
+						"rate": "4%"
+					},
+					{
+						"area": "Kanto Route 2 South Towards Viridian City",
+						"notes": "Walk, Lv. 5",
+						"games": "Red Japan",
+						"rate": "1%"
+					},
+					{
+						"area": "Kanto Route 24 Area",
+						"notes": "Walk, Lv. 7",
+						"games": "Red Japan",
+						"rate": "20%"
+					},
+					{
+						"area": "Kanto Route 25 Area",
+						"notes": "Walk, Lv. 8",
+						"games": "Red Japan",
+						"rate": "20%"
+					},
+					{
+						"area": "Kanto Route 25 Area",
+						"notes": "Walk, Lv. 8",
+						"games": "Green Japan",
+						"rate": "1%"
+					},
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Walk, Lv. 4",
+						"games": "Red Japan",
+						"rate": "20%"
+					},
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Walk, Lv. 3",
+						"games": "Red Japan",
+						"rate": "15%"
+					},
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Red Japan",
+						"rate": "10%"
+					},
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Walk, Lv. 3",
+						"games": "Green Japan",
+						"rate": "5%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Poison Sting",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "String Shot",
+							"level": 1,
+							"order": 2
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/13",
+						"fetchedAt": "2026-11-03T05:53:06.787Z",
+						"hash": "3bd98fa0fdd5f271319c1f4d278750f512202ef028b4276dc28d09ed1442633b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/",
+						"fetchedAt": "2026-11-03T05:53:06.913Z",
+						"hash": "e8d9a6c386bdeb424369106cca2ddc5f26b115481614e73393c0ee02c4fe84c7"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.949Z",
+						"hash": "c9e1cff8cce3503c15d2dc6dbe86cd0237999651c013109d0506fbe9bd507f3e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/13/",
+						"fetchedAt": "2026-11-03T05:53:07.004Z",
+						"hash": "f489e419246018d5ce37223253bf70a280584f35b5a77047bd82212ced4386eb"
+					},
+					{
+						"type": "japanese-pokedex-species",
+						"url": "https://raw.githubusercontent.com/towakey/pokedex/master/pokedex/Red_Green_Blue_Pikachu/Red_Green_Blue_Pikachu.json#dex-0013",
+						"fetchedAt": "2026-11-03T05:53:07.004Z",
+						"hash": "ea7c37f57ce2a7eaa6d6796fc08b3d5f30e2c97f24950696be0c4df7708f71c4"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"green": "もりや くさちに おおく せいそく。あたまの さきに 5センチぐらいの ちいさく するどい どくばりをもつ。"
+			},
+			"localizedFlavorByGame": {
+				"green": {
+					"ja": "もりや くさちに おおく せいそく。あたまの さきに 5センチぐらいの ちいさく するどい どくばりをもつ。"
+				}
+			}
+		},
+		{
+			"profileKey": "yellow",
+			"label": "Yellow",
+			"appGameKeys": [
+				"yellow"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Weedle",
+				"localizedNames": {
+					"ja-hrkt": "ビードル",
+					"ja-roma": "Beedle",
+					"ko": "뿔충이",
+					"zh-hant": "獨角蟲",
+					"fr": "Aspicot",
+					"de": "Hornliu",
+					"es": "Weedle",
+					"it": "Weedle",
+					"ja": "ビードル",
+					"zh-hans": "独角虫",
+					"es-419": "Weedle"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 35,
+					"def": 30,
+					"spe": 50,
+					"spc": 20
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shield Dust",
+					"Run Away (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Run Away"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "3.2 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 39,
+				"habitat": "Forest",
+				"shape": "Armor",
+				"color": "Brown",
+				"genus": "Hairy Bug Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けむしポケモン",
+					"ko": "송충이포켓몬",
+					"zh-hant": "毛毛蟲寶可夢",
+					"fr": "Pokémon Insectopic",
+					"de": "Raupe",
+					"es": "Pokémon Oruga",
+					"it": "Pokémon Millepiedi",
+					"ja": "けむしポケモン",
+					"zh-hans": "毛毛虫宝可梦",
+					"es-419": "Pokémon Oruga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 13
+					},
+					{
+						"pokedex": "kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 26
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 18
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Poison Sting",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "String Shot",
+							"level": 1,
+							"order": 2
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/13",
+						"fetchedAt": "2026-11-03T05:53:06.787Z",
+						"hash": "3bd98fa0fdd5f271319c1f4d278750f512202ef028b4276dc28d09ed1442633b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/",
+						"fetchedAt": "2026-11-03T05:53:06.913Z",
+						"hash": "e8d9a6c386bdeb424369106cca2ddc5f26b115481614e73393c0ee02c4fe84c7"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.949Z",
+						"hash": "c9e1cff8cce3503c15d2dc6dbe86cd0237999651c013109d0506fbe9bd507f3e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/13/",
+						"fetchedAt": "2026-11-03T05:53:07.004Z",
+						"hash": "f489e419246018d5ce37223253bf70a280584f35b5a77047bd82212ced4386eb"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"yellow": "Beware of the sharp stinger on its head. It hides in grass and bushes where it eats leaves."
+			},
+			"localizedFlavorByGame": {
+				"yellow": {
+					"en": "Beware of the sharp stinger on its head. It hides in grass and bushes where it eats leaves."
+				}
+			}
+		},
+		{
+			"profileKey": "gold-silver",
+			"label": "Gold / Silver",
+			"appGameKeys": [
+				"gold",
+				"silver"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Weedle",
+				"localizedNames": {
+					"ja-hrkt": "ビードル",
+					"ja-roma": "Beedle",
+					"ko": "뿔충이",
+					"zh-hant": "獨角蟲",
+					"fr": "Aspicot",
+					"de": "Hornliu",
+					"es": "Weedle",
+					"it": "Weedle",
+					"ja": "ビードル",
+					"zh-hans": "独角虫",
+					"es-419": "Weedle"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 35,
+					"def": 30,
+					"spa": 20,
+					"spd": 20,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shield Dust",
+					"Run Away (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Run Away"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "3.2 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 39,
+				"habitat": "Forest",
+				"shape": "Armor",
+				"color": "Brown",
+				"genus": "Hairy Bug Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けむしポケモン",
+					"ko": "송충이포켓몬",
+					"zh-hant": "毛毛蟲寶可夢",
+					"fr": "Pokémon Insectopic",
+					"de": "Raupe",
+					"es": "Pokémon Oruga",
+					"it": "Pokémon Millepiedi",
+					"ja": "けむしポケモン",
+					"zh-hans": "毛毛虫宝可梦",
+					"es-419": "Pokémon Oruga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 13
+					},
+					{
+						"pokedex": "kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 26
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 18
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Johto Route 30 Area",
+						"notes": "Walk, Lv. 3",
+						"games": "Silver",
+						"rate": "30%"
+					},
+					{
+						"area": "Johto Route 30 Area",
+						"notes": "Walk, Lv. 3",
+						"games": "Silver",
+						"rate": "30%"
+					},
+					{
+						"area": "Johto Route 30 Area",
+						"notes": "Walk, Lv. 4",
+						"games": "Silver",
+						"rate": "20%"
+					},
+					{
+						"area": "Johto Route 30 Area",
+						"notes": "Walk, Lv. 4",
+						"games": "Silver",
+						"rate": "5%"
+					},
+					{
+						"area": "Johto Route 31 Area",
+						"notes": "Walk, Lv. 4",
+						"games": "Silver",
+						"rate": "30%"
+					},
+					{
+						"area": "Johto Route 31 Area",
+						"notes": "Walk, Lv. 4",
+						"games": "Silver",
+						"rate": "30%"
+					},
+					{
+						"area": "Johto Route 31 Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Silver",
+						"rate": "5%"
+					},
+					{
+						"area": "Ilex Forest Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Silver",
+						"rate": "30%"
+					},
+					{
+						"area": "Ilex Forest Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Silver",
+						"rate": "30%"
+					},
+					{
+						"area": "Ilex Forest Area",
+						"notes": "Walk, Lv. 6",
+						"games": "Silver",
+						"rate": "30%"
+					},
+					{
+						"area": "Ilex Forest Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Silver",
+						"rate": "20%"
+					},
+					{
+						"area": "Ilex Forest Area",
+						"notes": "Headbutt Low, Lv. 10",
+						"games": "Silver",
+						"rate": "50%"
+					},
+					{
+						"area": "Ilex Forest Area",
+						"notes": "Headbutt Low, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Ilex Forest Area",
+						"notes": "Headbutt Normal, Lv. 10",
+						"games": "Silver",
+						"rate": "50%"
+					},
+					{
+						"area": "Ilex Forest Area",
+						"notes": "Headbutt Normal, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Ilex Forest Area",
+						"notes": "Headbutt High, Lv. 10",
+						"games": "Silver",
+						"rate": "50%"
+					},
+					{
+						"area": "Johto Route 34 Area",
+						"notes": "Headbutt Low, Lv. 10",
+						"games": "Silver",
+						"rate": "50%"
+					},
+					{
+						"area": "Johto Route 34 Area",
+						"notes": "Headbutt Low, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Johto Route 34 Area",
+						"notes": "Headbutt Normal, Lv. 10",
+						"games": "Silver",
+						"rate": "50%"
+					},
+					{
+						"area": "Johto Route 34 Area",
+						"notes": "Headbutt Normal, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Johto Route 34 Area",
+						"notes": "Headbutt High, Lv. 10",
+						"games": "Silver",
+						"rate": "50%"
+					},
+					{
+						"area": "Johto Route 35 Area",
+						"notes": "Headbutt Low, Lv. 10",
+						"games": "Silver",
+						"rate": "50%"
+					},
+					{
+						"area": "Johto Route 35 Area",
+						"notes": "Headbutt Low, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Johto Route 35 Area",
+						"notes": "Headbutt Normal, Lv. 10",
+						"games": "Silver",
+						"rate": "50%"
+					},
+					{
+						"area": "Johto Route 35 Area",
+						"notes": "Headbutt Normal, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Johto Route 35 Area",
+						"notes": "Headbutt High, Lv. 10",
+						"games": "Silver",
+						"rate": "50%"
+					},
+					{
+						"area": "National Park Area",
+						"notes": "Walk, Lv. 10",
+						"games": "Silver",
+						"rate": "30%"
+					},
+					{
+						"area": "National Park Area",
+						"notes": "Walk, Lv. 10",
+						"games": "Silver",
+						"rate": "30%"
+					},
+					{
+						"area": "National Park Area",
+						"notes": "Walk, Lv. 12",
+						"games": "Silver",
+						"rate": "20%"
+					},
+					{
+						"area": "Johto Route 36 Area",
+						"notes": "Headbutt Low, Lv. 10",
+						"games": "Silver",
+						"rate": "50%"
+					},
+					{
+						"area": "Johto Route 36 Area",
+						"notes": "Headbutt Low, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Johto Route 36 Area",
+						"notes": "Headbutt Normal, Lv. 10",
+						"games": "Silver",
+						"rate": "50%"
+					},
+					{
+						"area": "Johto Route 36 Area",
+						"notes": "Headbutt Normal, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Johto Route 36 Area",
+						"notes": "Headbutt High, Lv. 10",
+						"games": "Silver",
+						"rate": "50%"
+					},
+					{
+						"area": "Johto Route 37 Area",
+						"notes": "Headbutt Low, Lv. 10",
+						"games": "Silver",
+						"rate": "50%"
+					},
+					{
+						"area": "Johto Route 37 Area",
+						"notes": "Headbutt Low, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Johto Route 37 Area",
+						"notes": "Headbutt Normal, Lv. 10",
+						"games": "Silver",
+						"rate": "50%"
+					},
+					{
+						"area": "Johto Route 37 Area",
+						"notes": "Headbutt Normal, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Johto Route 37 Area",
+						"notes": "Headbutt High, Lv. 10",
+						"games": "Silver",
+						"rate": "50%"
+					},
+					{
+						"area": "Johto Route 38 Area",
+						"notes": "Headbutt Low, Lv. 10",
+						"games": "Silver",
+						"rate": "50%"
+					},
+					{
+						"area": "Johto Route 38 Area",
+						"notes": "Headbutt Low, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Johto Route 38 Area",
+						"notes": "Headbutt Normal, Lv. 10",
+						"games": "Silver",
+						"rate": "50%"
+					},
+					{
+						"area": "Johto Route 38 Area",
+						"notes": "Headbutt Normal, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Johto Route 38 Area",
+						"notes": "Headbutt High, Lv. 10",
+						"games": "Silver",
+						"rate": "50%"
+					},
+					{
+						"area": "Johto Route 39 Area",
+						"notes": "Headbutt Low, Lv. 10",
+						"games": "Silver",
+						"rate": "50%"
+					},
+					{
+						"area": "Johto Route 39 Area",
+						"notes": "Headbutt Low, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Johto Route 39 Area",
+						"notes": "Headbutt Normal, Lv. 10",
+						"games": "Silver",
+						"rate": "50%"
+					},
+					{
+						"area": "Johto Route 39 Area",
+						"notes": "Headbutt Normal, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Johto Route 39 Area",
+						"notes": "Headbutt High, Lv. 10",
+						"games": "Silver",
+						"rate": "50%"
+					},
+					{
+						"area": "Lake Of Rage Area",
+						"notes": "Headbutt Low, Lv. 10",
+						"games": "Silver",
+						"rate": "50%"
+					},
+					{
+						"area": "Lake Of Rage Area",
+						"notes": "Headbutt Low, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Lake Of Rage Area",
+						"notes": "Headbutt Normal, Lv. 10",
+						"games": "Silver",
+						"rate": "50%"
+					},
+					{
+						"area": "Lake Of Rage Area",
+						"notes": "Headbutt Normal, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Lake Of Rage Area",
+						"notes": "Headbutt High, Lv. 10",
+						"games": "Silver",
+						"rate": "50%"
+					},
+					{
+						"area": "Kanto Route 26 Area",
+						"notes": "Headbutt Low, Lv. 10",
+						"games": "Silver",
+						"rate": "50%"
+					},
+					{
+						"area": "Kanto Route 26 Area",
+						"notes": "Headbutt Low, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Kanto Route 26 Area",
+						"notes": "Headbutt Normal, Lv. 10",
+						"games": "Silver",
+						"rate": "50%"
+					},
+					{
+						"area": "Kanto Route 26 Area",
+						"notes": "Headbutt Normal, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Kanto Route 26 Area",
+						"notes": "Headbutt High, Lv. 10",
+						"games": "Silver",
+						"rate": "50%"
+					},
+					{
+						"area": "Kanto Route 27 Area",
+						"notes": "Headbutt Low, Lv. 10",
+						"games": "Silver",
+						"rate": "50%"
+					},
+					{
+						"area": "Kanto Route 27 Area",
+						"notes": "Headbutt Low, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Kanto Route 27 Area",
+						"notes": "Headbutt Normal, Lv. 10",
+						"games": "Silver",
+						"rate": "50%"
+					},
+					{
+						"area": "Kanto Route 27 Area",
+						"notes": "Headbutt Normal, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Kanto Route 27 Area",
+						"notes": "Headbutt High, Lv. 10",
+						"games": "Silver",
+						"rate": "50%"
+					},
+					{
+						"area": "Kanto Route 2 South Towards Viridian City",
+						"notes": "Walk, Lv. 3",
+						"games": "Silver",
+						"rate": "30%"
+					},
+					{
+						"area": "Kanto Route 2 South Towards Viridian City",
+						"notes": "Walk, Lv. 3",
+						"games": "Silver",
+						"rate": "30%"
+					},
+					{
+						"area": "Azalea Town Area",
+						"notes": "Headbutt Low, Lv. 10",
+						"games": "Silver",
+						"rate": "50%"
+					},
+					{
+						"area": "Azalea Town Area",
+						"notes": "Headbutt Low, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Azalea Town Area",
+						"notes": "Headbutt Normal, Lv. 10",
+						"games": "Silver",
+						"rate": "50%"
+					},
+					{
+						"area": "Azalea Town Area",
+						"notes": "Headbutt Normal, Lv. 10",
+						"games": "Silver",
+						"rate": "15%"
+					},
+					{
+						"area": "Azalea Town Area",
+						"notes": "Headbutt High, Lv. 10",
+						"games": "Silver",
+						"rate": "50%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Poison Sting",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "String Shot",
+							"level": 1,
+							"order": 2
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/13",
+						"fetchedAt": "2026-11-03T05:53:06.787Z",
+						"hash": "3bd98fa0fdd5f271319c1f4d278750f512202ef028b4276dc28d09ed1442633b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/",
+						"fetchedAt": "2026-11-03T05:53:06.913Z",
+						"hash": "e8d9a6c386bdeb424369106cca2ddc5f26b115481614e73393c0ee02c4fe84c7"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.949Z",
+						"hash": "c9e1cff8cce3503c15d2dc6dbe86cd0237999651c013109d0506fbe9bd507f3e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/13/",
+						"fetchedAt": "2026-11-03T05:53:07.004Z",
+						"hash": "f489e419246018d5ce37223253bf70a280584f35b5a77047bd82212ced4386eb"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"gold": "Its poison stinger is very powerful. Its bright-colored body is intended to warn off its enemies.",
+				"silver": "It attacks using a two-inch poison barb on its head. It can usually be found under the leaves it eats."
+			},
+			"localizedFlavorByGame": {
+				"gold": {
+					"en": "Its poison stinger is very powerful. Its bright-colored body is intended to warn off its enemies."
+				},
+				"silver": {
+					"en": "It attacks using a two-inch poison barb on its head. It can usually be found under the leaves it eats."
+				}
+			}
+		},
+		{
+			"profileKey": "crystal",
+			"label": "Crystal",
+			"appGameKeys": [
+				"crystal"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Weedle",
+				"localizedNames": {
+					"ja-hrkt": "ビードル",
+					"ja-roma": "Beedle",
+					"ko": "뿔충이",
+					"zh-hant": "獨角蟲",
+					"fr": "Aspicot",
+					"de": "Hornliu",
+					"es": "Weedle",
+					"it": "Weedle",
+					"ja": "ビードル",
+					"zh-hans": "独角虫",
+					"es-419": "Weedle"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 35,
+					"def": 30,
+					"spa": 20,
+					"spd": 20,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shield Dust",
+					"Run Away (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Run Away"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "3.2 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 39,
+				"habitat": "Forest",
+				"shape": "Armor",
+				"color": "Brown",
+				"genus": "Hairy Bug Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けむしポケモン",
+					"ko": "송충이포켓몬",
+					"zh-hant": "毛毛蟲寶可夢",
+					"fr": "Pokémon Insectopic",
+					"de": "Raupe",
+					"es": "Pokémon Oruga",
+					"it": "Pokémon Millepiedi",
+					"ja": "けむしポケモン",
+					"zh-hans": "毛毛虫宝可梦",
+					"es-419": "Pokémon Oruga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 13
+					},
+					{
+						"pokedex": "kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 26
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 18
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Johto Route 30 Area",
+						"notes": "Walk, Lv. 3",
+						"games": "Crystal",
+						"rate": "5%"
+					},
+					{
+						"area": "Johto Route 30 Area",
+						"notes": "Walk, Lv. 3",
+						"games": "Crystal",
+						"rate": "5%"
+					},
+					{
+						"area": "Johto Route 31 Area",
+						"notes": "Walk, Lv. 4",
+						"games": "Crystal",
+						"rate": "5%"
+					},
+					{
+						"area": "Johto Route 31 Area",
+						"notes": "Walk, Lv. 4",
+						"games": "Crystal",
+						"rate": "5%"
+					},
+					{
+						"area": "Ilex Forest Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Crystal",
+						"rate": "30%"
+					},
+					{
+						"area": "Ilex Forest Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Crystal",
+						"rate": "30%"
+					},
+					{
+						"area": "Ilex Forest Area",
+						"notes": "Headbutt High, Lv. 10",
+						"games": "Crystal",
+						"rate": "15%"
+					},
+					{
+						"area": "National Park Area",
+						"notes": "Walk, Lv. 10",
+						"games": "Crystal",
+						"rate": "4%"
+					},
+					{
+						"area": "National Park Area",
+						"notes": "Walk, Lv. 10",
+						"games": "Crystal",
+						"rate": "4%"
+					},
+					{
+						"area": "National Park Area",
+						"notes": "Walk, Lv. 10",
+						"games": "Crystal",
+						"rate": "1%"
+					},
+					{
+						"area": "National Park Area",
+						"notes": "Walk, Lv. 10",
+						"games": "Crystal",
+						"rate": "1%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Poison Sting",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "String Shot",
+							"level": 1,
+							"order": 2
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/13",
+						"fetchedAt": "2026-11-03T05:53:06.787Z",
+						"hash": "3bd98fa0fdd5f271319c1f4d278750f512202ef028b4276dc28d09ed1442633b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/",
+						"fetchedAt": "2026-11-03T05:53:06.913Z",
+						"hash": "e8d9a6c386bdeb424369106cca2ddc5f26b115481614e73393c0ee02c4fe84c7"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.949Z",
+						"hash": "c9e1cff8cce3503c15d2dc6dbe86cd0237999651c013109d0506fbe9bd507f3e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/13/",
+						"fetchedAt": "2026-11-03T05:53:07.004Z",
+						"hash": "f489e419246018d5ce37223253bf70a280584f35b5a77047bd82212ced4386eb"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"crystal": "The barb on top of its head secretes a strong poison. It uses this toxic barb to protect itself."
+			},
+			"localizedFlavorByGame": {
+				"crystal": {
+					"en": "The barb on top of its head secretes a strong poison. It uses this toxic barb to protect itself."
+				}
+			}
+		},
+		{
+			"profileKey": "ruby-sapphire",
+			"label": "Ruby / Sapphire",
+			"appGameKeys": [
+				"ruby-national",
+				"ruby",
+				"sapphire-national",
+				"sapphire"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Weedle",
+				"localizedNames": {
+					"ja-hrkt": "ビードル",
+					"ja-roma": "Beedle",
+					"ko": "뿔충이",
+					"zh-hant": "獨角蟲",
+					"fr": "Aspicot",
+					"de": "Hornliu",
+					"es": "Weedle",
+					"it": "Weedle",
+					"ja": "ビードル",
+					"zh-hans": "独角虫",
+					"es-419": "Weedle"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 35,
+					"def": 30,
+					"spa": 20,
+					"spd": 20,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shield Dust",
+					"Run Away (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Run Away"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "3.2 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 39,
+				"habitat": "Forest",
+				"shape": "Armor",
+				"color": "Brown",
+				"genus": "Hairy Bug Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けむしポケモン",
+					"ko": "송충이포켓몬",
+					"zh-hant": "毛毛蟲寶可夢",
+					"fr": "Pokémon Insectopic",
+					"de": "Raupe",
+					"es": "Pokémon Oruga",
+					"it": "Pokémon Millepiedi",
+					"ja": "けむしポケモン",
+					"zh-hans": "毛毛虫宝可梦",
+					"es-419": "Pokémon Oruga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 13
+					},
+					{
+						"pokedex": "kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 26
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 18
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Poison Sting",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "String Shot",
+							"level": 1,
+							"order": 2
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/13",
+						"fetchedAt": "2026-11-03T05:53:06.787Z",
+						"hash": "3bd98fa0fdd5f271319c1f4d278750f512202ef028b4276dc28d09ed1442633b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/",
+						"fetchedAt": "2026-11-03T05:53:06.913Z",
+						"hash": "e8d9a6c386bdeb424369106cca2ddc5f26b115481614e73393c0ee02c4fe84c7"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.949Z",
+						"hash": "c9e1cff8cce3503c15d2dc6dbe86cd0237999651c013109d0506fbe9bd507f3e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/13/",
+						"fetchedAt": "2026-11-03T05:53:07.004Z",
+						"hash": "f489e419246018d5ce37223253bf70a280584f35b5a77047bd82212ced4386eb"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"ruby-national": "WEEDLE has an extremely acute sense of smell. It is capable of distinguishing its favorite kinds of leaves from those it dislikes just by sniffing with its big red proboscis (nose).",
+				"ruby": "WEEDLE has an extremely acute sense of smell. It is capable of distinguishing its favorite kinds of leaves from those it dislikes just by sniffing with its big red proboscis (nose).",
+				"sapphire-national": "WEEDLE has an extremely acute sense of smell. It is capable of distinguishing its favorite kinds of leaves from those it dislikes just by sniffing with its big red proboscis (nose).",
+				"sapphire": "WEEDLE has an extremely acute sense of smell. It is capable of distinguishing its favorite kinds of leaves from those it dislikes just by sniffing with its big red proboscis (nose)."
+			},
+			"localizedFlavorByGame": {
+				"ruby-national": {
+					"en": "WEEDLE has an extremely acute sense of smell. It is capable of distinguishing its favorite kinds of leaves from those it dislikes just by sniffing with its big red proboscis (nose)."
+				},
+				"ruby": {
+					"en": "WEEDLE has an extremely acute sense of smell. It is capable of distinguishing its favorite kinds of leaves from those it dislikes just by sniffing with its big red proboscis (nose)."
+				},
+				"sapphire-national": {
+					"en": "WEEDLE has an extremely acute sense of smell. It is capable of distinguishing its favorite kinds of leaves from those it dislikes just by sniffing with its big red proboscis (nose)."
+				},
+				"sapphire": {
+					"en": "WEEDLE has an extremely acute sense of smell. It is capable of distinguishing its favorite kinds of leaves from those it dislikes just by sniffing with its big red proboscis (nose)."
+				}
+			}
+		},
+		{
+			"profileKey": "emerald",
+			"label": "Emerald",
+			"appGameKeys": [
+				"emerald-national",
+				"emerald"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Weedle",
+				"localizedNames": {
+					"ja-hrkt": "ビードル",
+					"ja-roma": "Beedle",
+					"ko": "뿔충이",
+					"zh-hant": "獨角蟲",
+					"fr": "Aspicot",
+					"de": "Hornliu",
+					"es": "Weedle",
+					"it": "Weedle",
+					"ja": "ビードル",
+					"zh-hans": "独角虫",
+					"es-419": "Weedle"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 35,
+					"def": 30,
+					"spa": 20,
+					"spd": 20,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shield Dust",
+					"Run Away (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Run Away"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "3.2 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 39,
+				"habitat": "Forest",
+				"shape": "Armor",
+				"color": "Brown",
+				"genus": "Hairy Bug Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けむしポケモン",
+					"ko": "송충이포켓몬",
+					"zh-hant": "毛毛蟲寶可夢",
+					"fr": "Pokémon Insectopic",
+					"de": "Raupe",
+					"es": "Pokémon Oruga",
+					"it": "Pokémon Millepiedi",
+					"ja": "けむしポケモン",
+					"zh-hans": "毛毛虫宝可梦",
+					"es-419": "Pokémon Oruga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 13
+					},
+					{
+						"pokedex": "kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 26
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 18
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Poison Sting",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "String Shot",
+							"level": 1,
+							"order": 2
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/13",
+						"fetchedAt": "2026-11-03T05:53:06.787Z",
+						"hash": "3bd98fa0fdd5f271319c1f4d278750f512202ef028b4276dc28d09ed1442633b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/",
+						"fetchedAt": "2026-11-03T05:53:06.913Z",
+						"hash": "e8d9a6c386bdeb424369106cca2ddc5f26b115481614e73393c0ee02c4fe84c7"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.949Z",
+						"hash": "c9e1cff8cce3503c15d2dc6dbe86cd0237999651c013109d0506fbe9bd507f3e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/13/",
+						"fetchedAt": "2026-11-03T05:53:07.004Z",
+						"hash": "f489e419246018d5ce37223253bf70a280584f35b5a77047bd82212ced4386eb"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"emerald-national": "A WEEDLE has an extremely acute sense of smell. It distinguishes its favorite kinds of leaves from those it dislikes by sniffing with its big red proboscis (nose).",
+				"emerald": "A WEEDLE has an extremely acute sense of smell. It distinguishes its favorite kinds of leaves from those it dislikes by sniffing with its big red proboscis (nose)."
+			},
+			"localizedFlavorByGame": {
+				"emerald-national": {
+					"en": "A WEEDLE has an extremely acute sense of smell. It distinguishes its favorite kinds of leaves from those it dislikes by sniffing with its big red proboscis (nose)."
+				},
+				"emerald": {
+					"en": "A WEEDLE has an extremely acute sense of smell. It distinguishes its favorite kinds of leaves from those it dislikes by sniffing with its big red proboscis (nose)."
+				}
+			}
+		},
+		{
+			"profileKey": "firered-leafgreen",
+			"label": "FireRed / LeafGreen",
+			"appGameKeys": [
+				"firered-national",
+				"firered",
+				"leafgreen-national",
+				"leafgreen"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Weedle",
+				"localizedNames": {
+					"ja-hrkt": "ビードル",
+					"ja-roma": "Beedle",
+					"ko": "뿔충이",
+					"zh-hant": "獨角蟲",
+					"fr": "Aspicot",
+					"de": "Hornliu",
+					"es": "Weedle",
+					"it": "Weedle",
+					"ja": "ビードル",
+					"zh-hans": "独角虫",
+					"es-419": "Weedle"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 35,
+					"def": 30,
+					"spa": 20,
+					"spd": 20,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shield Dust",
+					"Run Away (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Run Away"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "3.2 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 39,
+				"habitat": "Forest",
+				"shape": "Armor",
+				"color": "Brown",
+				"genus": "Hairy Bug Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けむしポケモン",
+					"ko": "송충이포켓몬",
+					"zh-hant": "毛毛蟲寶可夢",
+					"fr": "Pokémon Insectopic",
+					"de": "Raupe",
+					"es": "Pokémon Oruga",
+					"it": "Pokémon Millepiedi",
+					"ja": "けむしポケモン",
+					"zh-hans": "毛毛虫宝可梦",
+					"es-419": "Pokémon Oruga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 13
+					},
+					{
+						"pokedex": "kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 26
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 18
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Kanto Route 2 South Towards Viridian City",
+						"notes": "Walk, Lv. 4",
+						"games": "Firered",
+						"rate": "4%"
+					},
+					{
+						"area": "Kanto Route 2 South Towards Viridian City",
+						"notes": "Walk, Lv. 5",
+						"games": "Firered",
+						"rate": "1%"
+					},
+					{
+						"area": "Kanto Route 2 South Towards Viridian City",
+						"notes": "Walk, Lv. 4",
+						"games": "Leafgreen",
+						"rate": "4%"
+					},
+					{
+						"area": "Kanto Route 2 South Towards Viridian City",
+						"notes": "Walk, Lv. 5",
+						"games": "Leafgreen",
+						"rate": "1%"
+					},
+					{
+						"area": "Kanto Route 24 Area",
+						"notes": "Walk, Lv. 7",
+						"games": "Firered",
+						"rate": "20%"
+					},
+					{
+						"area": "Kanto Route 24 Area",
+						"notes": "Walk, Lv. 7",
+						"games": "Leafgreen",
+						"rate": "20%"
+					},
+					{
+						"area": "Kanto Route 25 Area",
+						"notes": "Walk, Lv. 8",
+						"games": "Firered",
+						"rate": "20%"
+					},
+					{
+						"area": "Kanto Route 25 Area",
+						"notes": "Walk, Lv. 8",
+						"games": "Leafgreen",
+						"rate": "20%"
+					},
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Walk, Lv. 4",
+						"games": "Firered",
+						"rate": "20%"
+					},
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Firered",
+						"rate": "10%"
+					},
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Walk, Lv. 3",
+						"games": "Firered",
+						"rate": "10%"
+					},
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Walk, Lv. 4",
+						"games": "Leafgreen",
+						"rate": "20%"
+					},
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Leafgreen",
+						"rate": "10%"
+					},
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Walk, Lv. 3",
+						"games": "Leafgreen",
+						"rate": "10%"
+					},
+					{
+						"area": "Pattern Bush Area",
+						"notes": "Walk, Lv. 6",
+						"games": "Firered",
+						"rate": "10%"
+					},
+					{
+						"area": "Pattern Bush Area",
+						"notes": "Walk, Lv. 6",
+						"games": "Leafgreen",
+						"rate": "10%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Poison Sting",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "String Shot",
+							"level": 1,
+							"order": 2
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/13",
+						"fetchedAt": "2026-11-03T05:53:06.787Z",
+						"hash": "3bd98fa0fdd5f271319c1f4d278750f512202ef028b4276dc28d09ed1442633b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/",
+						"fetchedAt": "2026-11-03T05:53:06.913Z",
+						"hash": "e8d9a6c386bdeb424369106cca2ddc5f26b115481614e73393c0ee02c4fe84c7"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.949Z",
+						"hash": "c9e1cff8cce3503c15d2dc6dbe86cd0237999651c013109d0506fbe9bd507f3e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/13/",
+						"fetchedAt": "2026-11-03T05:53:07.004Z",
+						"hash": "f489e419246018d5ce37223253bf70a280584f35b5a77047bd82212ced4386eb"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"firered-national": "Often found in forests and grasslands. It has a sharp, toxic barb of around two inches on top of its head.",
+				"firered": "Often found in forests and grasslands. It has a sharp, toxic barb of around two inches on top of its head.",
+				"leafgreen-national": "Often found in forests, eating leaves. It has a sharp stinger on its head that injects poison.",
+				"leafgreen": "Often found in forests, eating leaves. It has a sharp stinger on its head that injects poison."
+			},
+			"localizedFlavorByGame": {
+				"firered-national": {
+					"en": "Often found in forests and grasslands. It has a sharp, toxic barb of around two inches on top of its head."
+				},
+				"firered": {
+					"en": "Often found in forests and grasslands. It has a sharp, toxic barb of around two inches on top of its head."
+				},
+				"leafgreen-national": {
+					"en": "Often found in forests, eating leaves. It has a sharp stinger on its head that injects poison."
+				},
+				"leafgreen": {
+					"en": "Often found in forests, eating leaves. It has a sharp stinger on its head that injects poison."
+				}
+			}
+		},
+		{
+			"profileKey": "diamond-pearl",
+			"label": "Diamond / Pearl",
+			"appGameKeys": [
+				"diamond-national",
+				"diamond",
+				"pearl-national",
+				"pearl"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Weedle",
+				"localizedNames": {
+					"ja-hrkt": "ビードル",
+					"ja-roma": "Beedle",
+					"ko": "뿔충이",
+					"zh-hant": "獨角蟲",
+					"fr": "Aspicot",
+					"de": "Hornliu",
+					"es": "Weedle",
+					"it": "Weedle",
+					"ja": "ビードル",
+					"zh-hans": "独角虫",
+					"es-419": "Weedle"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 35,
+					"def": 30,
+					"spa": 20,
+					"spd": 20,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "3.2 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 39,
+				"habitat": "Forest",
+				"shape": "Armor",
+				"color": "Brown",
+				"genus": "Hairy Bug Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けむしポケモン",
+					"ko": "송충이포켓몬",
+					"zh-hant": "毛毛蟲寶可夢",
+					"fr": "Pokémon Insectopic",
+					"de": "Raupe",
+					"es": "Pokémon Oruga",
+					"it": "Pokémon Millepiedi",
+					"ja": "けむしポケモン",
+					"zh-hans": "毛毛虫宝可梦",
+					"es-419": "Pokémon Oruga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 13
+					},
+					{
+						"pokedex": "kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 26
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 18
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Sinnoh Route 204 South Towards Jubilife City",
+						"notes": "Walk, Lv. 6",
+						"games": "Diamond",
+						"rate": "4%"
+					},
+					{
+						"area": "Sinnoh Route 204 South Towards Jubilife City",
+						"notes": "Walk, Lv. 6",
+						"games": "Diamond",
+						"rate": "4%"
+					},
+					{
+						"area": "Sinnoh Route 204 South Towards Jubilife City",
+						"notes": "Walk, Lv. 6",
+						"games": "Pearl",
+						"rate": "4%"
+					},
+					{
+						"area": "Sinnoh Route 204 South Towards Jubilife City",
+						"notes": "Walk, Lv. 6",
+						"games": "Pearl",
+						"rate": "4%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Poison Sting",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "String Shot",
+							"level": 1,
+							"order": 2
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/13",
+						"fetchedAt": "2026-11-03T05:53:06.787Z",
+						"hash": "3bd98fa0fdd5f271319c1f4d278750f512202ef028b4276dc28d09ed1442633b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/",
+						"fetchedAt": "2026-11-03T05:53:06.913Z",
+						"hash": "e8d9a6c386bdeb424369106cca2ddc5f26b115481614e73393c0ee02c4fe84c7"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.949Z",
+						"hash": "c9e1cff8cce3503c15d2dc6dbe86cd0237999651c013109d0506fbe9bd507f3e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/13/",
+						"fetchedAt": "2026-11-03T05:53:07.004Z",
+						"hash": "f489e419246018d5ce37223253bf70a280584f35b5a77047bd82212ced4386eb"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"diamond-national": "It eats its weight in leaves every day. It fends off attackers with the needle on its head.",
+				"diamond": "It eats its weight in leaves every day. It fends off attackers with the needle on its head.",
+				"pearl-national": "It eats its weight in leaves every day. It fends off attackers with the needle on its head.",
+				"pearl": "It eats its weight in leaves every day. It fends off attackers with the needle on its head."
+			},
+			"localizedFlavorByGame": {
+				"diamond-national": {
+					"en": "It eats its weight in leaves every day. It fends off attackers with the needle on its head."
+				},
+				"diamond": {
+					"en": "It eats its weight in leaves every day. It fends off attackers with the needle on its head."
+				},
+				"pearl-national": {
+					"en": "It eats its weight in leaves every day. It fends off attackers with the needle on its head."
+				},
+				"pearl": {
+					"en": "It eats its weight in leaves every day. It fends off attackers with the needle on its head."
+				}
+			}
+		},
+		{
+			"profileKey": "platinum",
+			"label": "Platinum",
+			"appGameKeys": [
+				"platinum-national",
+				"platinum"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Weedle",
+				"localizedNames": {
+					"ja-hrkt": "ビードル",
+					"ja-roma": "Beedle",
+					"ko": "뿔충이",
+					"zh-hant": "獨角蟲",
+					"fr": "Aspicot",
+					"de": "Hornliu",
+					"es": "Weedle",
+					"it": "Weedle",
+					"ja": "ビードル",
+					"zh-hans": "独角虫",
+					"es-419": "Weedle"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 35,
+					"def": 30,
+					"spa": 20,
+					"spd": 20,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "3.2 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 39,
+				"habitat": "Forest",
+				"shape": "Armor",
+				"color": "Brown",
+				"genus": "Hairy Bug Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けむしポケモン",
+					"ko": "송충이포켓몬",
+					"zh-hant": "毛毛蟲寶可夢",
+					"fr": "Pokémon Insectopic",
+					"de": "Raupe",
+					"es": "Pokémon Oruga",
+					"it": "Pokémon Millepiedi",
+					"ja": "けむしポケモン",
+					"zh-hans": "毛毛虫宝可梦",
+					"es-419": "Pokémon Oruga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 13
+					},
+					{
+						"pokedex": "kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 26
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 18
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Eterna Forest Area",
+						"notes": "Walk, Lv. 13",
+						"games": "Platinum",
+						"rate": "4%"
+					},
+					{
+						"area": "Sinnoh Route 204 South Towards Jubilife City",
+						"notes": "Walk, Lv. 5",
+						"games": "Platinum",
+						"rate": "4%"
+					},
+					{
+						"area": "Sinnoh Route 204 South Towards Jubilife City",
+						"notes": "Walk, Lv. 5",
+						"games": "Platinum",
+						"rate": "4%"
+					},
+					{
+						"area": "Sinnoh Route 204 North Towards Floaroma Town",
+						"notes": "Walk, Lv. 10",
+						"games": "Platinum",
+						"rate": "4%"
+					},
+					{
+						"area": "Sinnoh Route 204 North Towards Floaroma Town",
+						"notes": "Walk, Lv. 10",
+						"games": "Platinum",
+						"rate": "4%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Poison Sting",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "String Shot",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Bug Bite",
+							"level": 15,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/13",
+						"fetchedAt": "2026-11-03T05:53:06.787Z",
+						"hash": "3bd98fa0fdd5f271319c1f4d278750f512202ef028b4276dc28d09ed1442633b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/",
+						"fetchedAt": "2026-11-03T05:53:06.913Z",
+						"hash": "e8d9a6c386bdeb424369106cca2ddc5f26b115481614e73393c0ee02c4fe84c7"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.949Z",
+						"hash": "c9e1cff8cce3503c15d2dc6dbe86cd0237999651c013109d0506fbe9bd507f3e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/13/",
+						"fetchedAt": "2026-11-03T05:53:07.004Z",
+						"hash": "f489e419246018d5ce37223253bf70a280584f35b5a77047bd82212ced4386eb"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"platinum-national": "It eats its weight in leaves every day. It fends off attackers with the needle on its head.",
+				"platinum": "It eats its weight in leaves every day. It fends off attackers with the needle on its head."
+			},
+			"localizedFlavorByGame": {
+				"platinum-national": {
+					"en": "It eats its weight in leaves every day. It fends off attackers with the needle on its head."
+				},
+				"platinum": {
+					"en": "It eats its weight in leaves every day. It fends off attackers with the needle on its head."
+				}
+			}
+		},
+		{
+			"profileKey": "heartgold-soulsilver",
+			"label": "HeartGold / SoulSilver",
+			"appGameKeys": [
+				"heartgold-national",
+				"heartgold",
+				"soulsilver-national",
+				"soulsilver"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Weedle",
+				"localizedNames": {
+					"ja-hrkt": "ビードル",
+					"ja-roma": "Beedle",
+					"ko": "뿔충이",
+					"zh-hant": "獨角蟲",
+					"fr": "Aspicot",
+					"de": "Hornliu",
+					"es": "Weedle",
+					"it": "Weedle",
+					"ja": "ビードル",
+					"zh-hans": "独角虫",
+					"es-419": "Weedle"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 35,
+					"def": 30,
+					"spa": 20,
+					"spd": 20,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "3.2 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 39,
+				"habitat": "Forest",
+				"shape": "Armor",
+				"color": "Brown",
+				"genus": "Hairy Bug Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けむしポケモン",
+					"ko": "송충이포켓몬",
+					"zh-hant": "毛毛蟲寶可夢",
+					"fr": "Pokémon Insectopic",
+					"de": "Raupe",
+					"es": "Pokémon Oruga",
+					"it": "Pokémon Millepiedi",
+					"ja": "けむしポケモン",
+					"zh-hans": "毛毛虫宝可梦",
+					"es-419": "Pokémon Oruga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 13
+					},
+					{
+						"pokedex": "kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 26
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 18
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Johto Route 30 Area",
+						"notes": "Walk, Lv. 3",
+						"games": "Soulsilver",
+						"rate": "20%"
+					},
+					{
+						"area": "Johto Route 30 Area",
+						"notes": "Walk, Lv. 3",
+						"games": "Soulsilver",
+						"rate": "20%"
+					},
+					{
+						"area": "Johto Route 30 Area",
+						"notes": "Walk, Lv. 3",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Johto Route 30 Area",
+						"notes": "Walk, Lv. 3",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Johto Route 30 Area",
+						"notes": "Walk, Lv. 4",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Johto Route 30 Area",
+						"notes": "Walk, Lv. 4",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Johto Route 30 Area",
+						"notes": "Walk, Lv. 4",
+						"games": "Soulsilver",
+						"rate": "4%"
+					},
+					{
+						"area": "Johto Route 30 Area",
+						"notes": "Walk, Lv. 4",
+						"games": "Soulsilver",
+						"rate": "1%"
+					},
+					{
+						"area": "Johto Route 31 Area",
+						"notes": "Walk, Lv. 4",
+						"games": "Soulsilver",
+						"rate": "20%"
+					},
+					{
+						"area": "Johto Route 31 Area",
+						"notes": "Walk, Lv. 4",
+						"games": "Soulsilver",
+						"rate": "20%"
+					},
+					{
+						"area": "Johto Route 31 Area",
+						"notes": "Walk, Lv. 4",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Johto Route 31 Area",
+						"notes": "Walk, Lv. 4",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Johto Route 31 Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Soulsilver",
+						"rate": "4%"
+					},
+					{
+						"area": "Johto Route 31 Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Soulsilver",
+						"rate": "1%"
+					},
+					{
+						"area": "Ilex Forest Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Soulsilver",
+						"rate": "20%"
+					},
+					{
+						"area": "Ilex Forest Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Soulsilver",
+						"rate": "20%"
+					},
+					{
+						"area": "Ilex Forest Area",
+						"notes": "Walk, Lv. 6",
+						"games": "Soulsilver",
+						"rate": "20%"
+					},
+					{
+						"area": "Ilex Forest Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Ilex Forest Area",
+						"notes": "Walk, Lv. 5",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Ilex Forest Area",
+						"notes": "Walk, Lv. 6",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Ilex Forest Area",
+						"notes": "Walk, Lv. 6",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Ilex Forest Area",
+						"notes": "Walk, Lv. 6",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Ilex Forest Area",
+						"notes": "Headbutt, Lv. 3-5",
+						"games": "Soulsilver",
+						"rate": "15%"
+					},
+					{
+						"area": "Ilex Forest Area",
+						"notes": "Headbutt, Lv. 3-5",
+						"games": "Soulsilver",
+						"rate": "15%"
+					},
+					{
+						"area": "National Park Area",
+						"notes": "Walk, Lv. 7-18",
+						"games": "Heartgold",
+						"rate": "20%"
+					},
+					{
+						"area": "National Park Area",
+						"notes": "Walk, Lv. 24-36",
+						"games": "Heartgold",
+						"rate": "20%"
+					},
+					{
+						"area": "National Park Area",
+						"notes": "Walk, Lv. 10",
+						"games": "Soulsilver",
+						"rate": "20%"
+					},
+					{
+						"area": "National Park Area",
+						"notes": "Walk, Lv. 10",
+						"games": "Soulsilver",
+						"rate": "20%"
+					},
+					{
+						"area": "National Park Area",
+						"notes": "Walk, Lv. 10",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "National Park Area",
+						"notes": "Walk, Lv. 10",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "National Park Area",
+						"notes": "Walk, Lv. 12",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "National Park Area",
+						"notes": "Walk, Lv. 12",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "National Park Area",
+						"notes": "Walk, Lv. 7-18",
+						"games": "Soulsilver",
+						"rate": "20%"
+					},
+					{
+						"area": "National Park Area",
+						"notes": "Walk, Lv. 24-36",
+						"games": "Soulsilver",
+						"rate": "20%"
+					},
+					{
+						"area": "Unknown All Bugs Area",
+						"notes": "Walk, Lv. 10",
+						"games": "Soulsilver",
+						"rate": "20%"
+					},
+					{
+						"area": "Unknown All Bugs Area",
+						"notes": "Walk, Lv. 10",
+						"games": "Soulsilver",
+						"rate": "20%"
+					},
+					{
+						"area": "Unknown All Bugs Area",
+						"notes": "Walk, Lv. 10",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Unknown All Bugs Area",
+						"notes": "Walk, Lv. 10",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Unknown All Bugs Area",
+						"notes": "Walk, Lv. 12",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Unknown All Bugs Area",
+						"notes": "Walk, Lv. 12",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Unknown All Bugs Area",
+						"notes": "Walk, Lv. 12",
+						"games": "Soulsilver",
+						"rate": "5%"
+					},
+					{
+						"area": "Unknown All Bugs Area",
+						"notes": "Walk, Lv. 12",
+						"games": "Soulsilver",
+						"rate": "5%"
+					},
+					{
+						"area": "Unknown All Bugs Area",
+						"notes": "Walk, Lv. 10",
+						"games": "Soulsilver",
+						"rate": "4%"
+					},
+					{
+						"area": "Unknown All Bugs Area",
+						"notes": "Walk, Lv. 14",
+						"games": "Soulsilver",
+						"rate": "4%"
+					},
+					{
+						"area": "Unknown All Bugs Area",
+						"notes": "Walk, Lv. 10",
+						"games": "Soulsilver",
+						"rate": "1%"
+					},
+					{
+						"area": "Unknown All Bugs Area",
+						"notes": "Walk, Lv. 14",
+						"games": "Soulsilver",
+						"rate": "1%"
+					},
+					{
+						"area": "Kanto Route 2 South Towards Viridian City",
+						"notes": "Walk, Lv. 3",
+						"games": "Soulsilver",
+						"rate": "20%"
+					},
+					{
+						"area": "Kanto Route 2 South Towards Viridian City",
+						"notes": "Walk, Lv. 3",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Kanto Route 2 South Towards Viridian City",
+						"notes": "Walk, Lv. 3",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Kanto Route 2 South Towards Viridian City",
+						"notes": "Walk, Lv. 5",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Kanto Route 2 South Towards Viridian City",
+						"notes": "Walk, Lv. 4",
+						"games": "Soulsilver",
+						"rate": "1%"
+					},
+					{
+						"area": "Kanto Route 2 North Towards Pewter City",
+						"notes": "Walk, Lv. 3",
+						"games": "Soulsilver",
+						"rate": "20%"
+					},
+					{
+						"area": "Kanto Route 2 North Towards Pewter City",
+						"notes": "Walk, Lv. 3",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Kanto Route 2 North Towards Pewter City",
+						"notes": "Walk, Lv. 3",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Kanto Route 2 North Towards Pewter City",
+						"notes": "Walk, Lv. 5",
+						"games": "Soulsilver",
+						"rate": "10%"
+					},
+					{
+						"area": "Kanto Route 2 North Towards Pewter City",
+						"notes": "Walk, Lv. 4",
+						"games": "Soulsilver",
+						"rate": "1%"
+					},
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Walk, Lv. 3",
+						"games": "Soulsilver",
+						"rate": "20%"
+					},
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Walk, Lv. 3",
+						"games": "Soulsilver",
+						"rate": "20%"
+					},
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Walk, Lv. 3",
+						"games": "Soulsilver",
+						"rate": "20%"
+					},
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Walk, Lv. 3",
+						"games": "Soulsilver",
+						"rate": "20%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Poison Sting",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "String Shot",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Bug Bite",
+							"level": 15,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Bug Bite",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "String Shot",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/13",
+						"fetchedAt": "2026-11-03T05:53:06.787Z",
+						"hash": "3bd98fa0fdd5f271319c1f4d278750f512202ef028b4276dc28d09ed1442633b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/",
+						"fetchedAt": "2026-11-03T05:53:06.913Z",
+						"hash": "e8d9a6c386bdeb424369106cca2ddc5f26b115481614e73393c0ee02c4fe84c7"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.949Z",
+						"hash": "c9e1cff8cce3503c15d2dc6dbe86cd0237999651c013109d0506fbe9bd507f3e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/13/",
+						"fetchedAt": "2026-11-03T05:53:07.004Z",
+						"hash": "f489e419246018d5ce37223253bf70a280584f35b5a77047bd82212ced4386eb"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"heartgold-national": "Its poison stinger is very powerful. Its bright-colored body is intended to warn off its enemies.",
+				"heartgold": "Its poison stinger is very powerful. Its bright-colored body is intended to warn off its enemies.",
+				"soulsilver-national": "It attacks using a two-inch poison barb on its head. It can usually be found under the leaves it eats.",
+				"soulsilver": "It attacks using a two-inch poison barb on its head. It can usually be found under the leaves it eats."
+			},
+			"localizedFlavorByGame": {
+				"heartgold-national": {
+					"en": "Its poison stinger is very powerful. Its bright-colored body is intended to warn off its enemies."
+				},
+				"heartgold": {
+					"en": "Its poison stinger is very powerful. Its bright-colored body is intended to warn off its enemies."
+				},
+				"soulsilver-national": {
+					"en": "It attacks using a two-inch poison barb on its head. It can usually be found under the leaves it eats."
+				},
+				"soulsilver": {
+					"en": "It attacks using a two-inch poison barb on its head. It can usually be found under the leaves it eats."
+				}
+			}
+		},
+		{
+			"profileKey": "black-white",
+			"label": "Black / White",
+			"appGameKeys": [
+				"black-national",
+				"black",
+				"white-national",
+				"white"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Weedle",
+				"localizedNames": {
+					"ja-hrkt": "ビードル",
+					"ja-roma": "Beedle",
+					"ko": "뿔충이",
+					"zh-hant": "獨角蟲",
+					"fr": "Aspicot",
+					"de": "Hornliu",
+					"es": "Weedle",
+					"it": "Weedle",
+					"ja": "ビードル",
+					"zh-hans": "独角虫",
+					"es-419": "Weedle"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 35,
+					"def": 30,
+					"spa": 20,
+					"spd": 20,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shield Dust",
+					"Run Away (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Run Away"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "3.2 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 39,
+				"habitat": "Forest",
+				"shape": "Armor",
+				"color": "Brown",
+				"genus": "Hairy Bug Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けむしポケモン",
+					"ko": "송충이포켓몬",
+					"zh-hant": "毛毛蟲寶可夢",
+					"fr": "Pokémon Insectopic",
+					"de": "Raupe",
+					"es": "Pokémon Oruga",
+					"it": "Pokémon Millepiedi",
+					"ja": "けむしポケモン",
+					"zh-hans": "毛毛虫宝可梦",
+					"es-419": "Pokémon Oruga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 13
+					},
+					{
+						"pokedex": "kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 26
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 18
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Poison Sting",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "String Shot",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Bug Bite",
+							"level": 15,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/13",
+						"fetchedAt": "2026-11-03T05:53:06.787Z",
+						"hash": "3bd98fa0fdd5f271319c1f4d278750f512202ef028b4276dc28d09ed1442633b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/",
+						"fetchedAt": "2026-11-03T05:53:06.913Z",
+						"hash": "e8d9a6c386bdeb424369106cca2ddc5f26b115481614e73393c0ee02c4fe84c7"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.949Z",
+						"hash": "c9e1cff8cce3503c15d2dc6dbe86cd0237999651c013109d0506fbe9bd507f3e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/13/",
+						"fetchedAt": "2026-11-03T05:53:07.004Z",
+						"hash": "f489e419246018d5ce37223253bf70a280584f35b5a77047bd82212ced4386eb"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"black-national": "It eats its weight in leaves every day. It fends off attackers with the needle on its head.",
+				"black": "It eats its weight in leaves every day. It fends off attackers with the needle on its head.",
+				"white-national": "It eats its weight in leaves every day. It fends off attackers with the needle on its head.",
+				"white": "It eats its weight in leaves every day. It fends off attackers with the needle on its head."
+			},
+			"localizedFlavorByGame": {
+				"black-national": {
+					"fr": "Il mange chaque jour son poids en feuilles. Il utilise l’aiguillon sur sa tête pour repousser l’ennemi.",
+					"en": "It eats its weight in leaves every day. It fends off attackers with the needle on its head."
+				},
+				"black": {
+					"fr": "Il mange chaque jour son poids en feuilles. Il utilise l’aiguillon sur sa tête pour repousser l’ennemi.",
+					"en": "It eats its weight in leaves every day. It fends off attackers with the needle on its head."
+				},
+				"white-national": {
+					"fr": "Il mange chaque jour son poids en feuilles. Il utilise l’aiguillon sur sa tête pour repousser l’ennemi.",
+					"en": "It eats its weight in leaves every day. It fends off attackers with the needle on its head."
+				},
+				"white": {
+					"fr": "Il mange chaque jour son poids en feuilles. Il utilise l’aiguillon sur sa tête pour repousser l’ennemi.",
+					"en": "It eats its weight in leaves every day. It fends off attackers with the needle on its head."
+				}
+			}
+		},
+		{
+			"profileKey": "black-2-white-2",
+			"label": "Black 2 / White 2",
+			"appGameKeys": [
+				"black2-national",
+				"black2",
+				"white2-national",
+				"white2"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Weedle",
+				"localizedNames": {
+					"ja-hrkt": "ビードル",
+					"ja-roma": "Beedle",
+					"ko": "뿔충이",
+					"zh-hant": "獨角蟲",
+					"fr": "Aspicot",
+					"de": "Hornliu",
+					"es": "Weedle",
+					"it": "Weedle",
+					"ja": "ビードル",
+					"zh-hans": "独角虫",
+					"es-419": "Weedle"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 35,
+					"def": 30,
+					"spa": 20,
+					"spd": 20,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shield Dust",
+					"Run Away (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Run Away"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "3.2 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 39,
+				"habitat": "Forest",
+				"shape": "Armor",
+				"color": "Brown",
+				"genus": "Hairy Bug Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けむしポケモン",
+					"ko": "송충이포켓몬",
+					"zh-hant": "毛毛蟲寶可夢",
+					"fr": "Pokémon Insectopic",
+					"de": "Raupe",
+					"es": "Pokémon Oruga",
+					"it": "Pokémon Millepiedi",
+					"ja": "けむしポケモン",
+					"zh-hans": "毛毛虫宝可梦",
+					"es-419": "Pokémon Oruga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 13
+					},
+					{
+						"pokedex": "kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 26
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 18
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Poison Sting",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "String Shot",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Bug Bite",
+							"level": 15,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Bug Bite",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Electroweb",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/13",
+						"fetchedAt": "2026-11-03T05:53:06.787Z",
+						"hash": "3bd98fa0fdd5f271319c1f4d278750f512202ef028b4276dc28d09ed1442633b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/",
+						"fetchedAt": "2026-11-03T05:53:06.913Z",
+						"hash": "e8d9a6c386bdeb424369106cca2ddc5f26b115481614e73393c0ee02c4fe84c7"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.949Z",
+						"hash": "c9e1cff8cce3503c15d2dc6dbe86cd0237999651c013109d0506fbe9bd507f3e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/13/",
+						"fetchedAt": "2026-11-03T05:53:07.004Z",
+						"hash": "f489e419246018d5ce37223253bf70a280584f35b5a77047bd82212ced4386eb"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"black2-national": "It eats its weight in leaves every day. It fends off attackers with the needle on its head.",
+				"black2": "It eats its weight in leaves every day. It fends off attackers with the needle on its head.",
+				"white2-national": "It eats its weight in leaves every day. It fends off attackers with the needle on its head.",
+				"white2": "It eats its weight in leaves every day. It fends off attackers with the needle on its head."
+			},
+			"localizedFlavorByGame": {
+				"black2-national": {
+					"en": "It eats its weight in leaves every day. It fends off attackers with the needle on its head."
+				},
+				"black2": {
+					"en": "It eats its weight in leaves every day. It fends off attackers with the needle on its head."
+				},
+				"white2-national": {
+					"en": "It eats its weight in leaves every day. It fends off attackers with the needle on its head."
+				},
+				"white2": {
+					"en": "It eats its weight in leaves every day. It fends off attackers with the needle on its head."
+				}
+			}
+		},
+		{
+			"profileKey": "x-y",
+			"label": "X / Y",
+			"appGameKeys": [
+				"x-national",
+				"x-central",
+				"x-coastal",
+				"x-mountain",
+				"y-national",
+				"y-central",
+				"y-coastal",
+				"y-mountain"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Weedle",
+				"localizedNames": {
+					"ja-hrkt": "ビードル",
+					"ja-roma": "Beedle",
+					"ko": "뿔충이",
+					"zh-hant": "獨角蟲",
+					"fr": "Aspicot",
+					"de": "Hornliu",
+					"es": "Weedle",
+					"it": "Weedle",
+					"ja": "ビードル",
+					"zh-hans": "独角虫",
+					"es-419": "Weedle"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 35,
+					"def": 30,
+					"spa": 20,
+					"spd": 20,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shield Dust",
+					"Run Away (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Run Away"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "3.2 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 39,
+				"habitat": "Forest",
+				"shape": "Armor",
+				"color": "Brown",
+				"genus": "Hairy Bug Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けむしポケモン",
+					"ko": "송충이포켓몬",
+					"zh-hant": "毛毛蟲寶可夢",
+					"fr": "Pokémon Insectopic",
+					"de": "Raupe",
+					"es": "Pokémon Oruga",
+					"it": "Pokémon Millepiedi",
+					"ja": "けむしポケモン",
+					"zh-hans": "毛毛虫宝可梦",
+					"es-419": "Pokémon Oruga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 13
+					},
+					{
+						"pokedex": "kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 26
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 18
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Kalos Route 2 Area",
+						"notes": "Walk, Lv. 3",
+						"games": "X",
+						"rate": "10%"
+					},
+					{
+						"area": "Kalos Route 2 Area",
+						"notes": "Walk, Lv. 4",
+						"games": "X",
+						"rate": "1%"
+					},
+					{
+						"area": "Santalune Forest Area",
+						"notes": "Walk, Lv. 2",
+						"games": "X",
+						"rate": "10%"
+					},
+					{
+						"area": "Santalune Forest Area",
+						"notes": "Walk, Lv. 3",
+						"games": "X",
+						"rate": "10%"
+					},
+					{
+						"area": "Santalune Forest Area",
+						"notes": "Walk, Lv. 2",
+						"games": "Y",
+						"rate": "10%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Poison Sting",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "String Shot",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Bug Bite",
+							"level": 15,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/13",
+						"fetchedAt": "2026-11-03T05:53:06.787Z",
+						"hash": "3bd98fa0fdd5f271319c1f4d278750f512202ef028b4276dc28d09ed1442633b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/",
+						"fetchedAt": "2026-11-03T05:53:06.913Z",
+						"hash": "e8d9a6c386bdeb424369106cca2ddc5f26b115481614e73393c0ee02c4fe84c7"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.949Z",
+						"hash": "c9e1cff8cce3503c15d2dc6dbe86cd0237999651c013109d0506fbe9bd507f3e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/13/",
+						"fetchedAt": "2026-11-03T05:53:07.004Z",
+						"hash": "f489e419246018d5ce37223253bf70a280584f35b5a77047bd82212ced4386eb"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"x-national": "Often found in forests and grasslands. It has a sharp, toxic barb of around two inches on top of its head.",
+				"x-central": "Often found in forests and grasslands. It has a sharp, toxic barb of around two inches on top of its head.",
+				"x-coastal": "Often found in forests and grasslands. It has a sharp, toxic barb of around two inches on top of its head.",
+				"x-mountain": "Often found in forests and grasslands. It has a sharp, toxic barb of around two inches on top of its head.",
+				"y-national": "Its poison stinger is very powerful. Its bright-colored body is intended to warn off its enemies.",
+				"y-central": "Its poison stinger is very powerful. Its bright-colored body is intended to warn off its enemies.",
+				"y-coastal": "Its poison stinger is very powerful. Its bright-colored body is intended to warn off its enemies.",
+				"y-mountain": "Its poison stinger is very powerful. Its bright-colored body is intended to warn off its enemies."
+			},
+			"localizedFlavorByGame": {
+				"x-national": {
+					"ja-hrkt": "もりや くさちに おおく せいそく。 あたまの さきに ５センチぐらいの ちいさく するどい どくばりをもつ。",
+					"ko": "숲이나 풀밭에 많이 서식한다. 머리끝에 5cm 정도의 작고 날카로운 독침을 지니고 있다.",
+					"fr": "On trouve souvent ce Pokémon dans les forêts et les hautes herbes. L’aiguillon de 5 cm sur sa tête contient un venin très toxique.",
+					"de": "Es lebt bevorzugt in Wäldern und in hohem Gras. Auf dem Kopf trägt es einen circa 5 cm langen, spitzen, giftigen Stachel.",
+					"es": "Suele habitar bosques y praderas. Tiene un afilado y venenoso aguijón de unos 5 cm encima de la cabeza.",
+					"it": "Vive soprattutto nei boschi e nei prati. Sul capo ha un affilato e velenoso pungiglione lungo 5 cm.",
+					"en": "Often found in forests and grasslands. It has a sharp, toxic barb of around two inches on top of its head.",
+					"ja": "森や 草地に 多く 生息。 頭の 先に ５センチぐらいの 小さく 鋭い 毒針を持つ。",
+					"es-419": "Suele habitar bosques y praderas. Tiene un afilado y venenoso aguijón de unos 5 cm encima de la cabeza."
+				},
+				"x-central": {
+					"ja-hrkt": "もりや くさちに おおく せいそく。 あたまの さきに ５センチぐらいの ちいさく するどい どくばりをもつ。",
+					"ko": "숲이나 풀밭에 많이 서식한다. 머리끝에 5cm 정도의 작고 날카로운 독침을 지니고 있다.",
+					"fr": "On trouve souvent ce Pokémon dans les forêts et les hautes herbes. L’aiguillon de 5 cm sur sa tête contient un venin très toxique.",
+					"de": "Es lebt bevorzugt in Wäldern und in hohem Gras. Auf dem Kopf trägt es einen circa 5 cm langen, spitzen, giftigen Stachel.",
+					"es": "Suele habitar bosques y praderas. Tiene un afilado y venenoso aguijón de unos 5 cm encima de la cabeza.",
+					"it": "Vive soprattutto nei boschi e nei prati. Sul capo ha un affilato e velenoso pungiglione lungo 5 cm.",
+					"en": "Often found in forests and grasslands. It has a sharp, toxic barb of around two inches on top of its head.",
+					"ja": "森や 草地に 多く 生息。 頭の 先に ５センチぐらいの 小さく 鋭い 毒針を持つ。",
+					"es-419": "Suele habitar bosques y praderas. Tiene un afilado y venenoso aguijón de unos 5 cm encima de la cabeza."
+				},
+				"x-coastal": {
+					"ja-hrkt": "もりや くさちに おおく せいそく。 あたまの さきに ５センチぐらいの ちいさく するどい どくばりをもつ。",
+					"ko": "숲이나 풀밭에 많이 서식한다. 머리끝에 5cm 정도의 작고 날카로운 독침을 지니고 있다.",
+					"fr": "On trouve souvent ce Pokémon dans les forêts et les hautes herbes. L’aiguillon de 5 cm sur sa tête contient un venin très toxique.",
+					"de": "Es lebt bevorzugt in Wäldern und in hohem Gras. Auf dem Kopf trägt es einen circa 5 cm langen, spitzen, giftigen Stachel.",
+					"es": "Suele habitar bosques y praderas. Tiene un afilado y venenoso aguijón de unos 5 cm encima de la cabeza.",
+					"it": "Vive soprattutto nei boschi e nei prati. Sul capo ha un affilato e velenoso pungiglione lungo 5 cm.",
+					"en": "Often found in forests and grasslands. It has a sharp, toxic barb of around two inches on top of its head.",
+					"ja": "森や 草地に 多く 生息。 頭の 先に ５センチぐらいの 小さく 鋭い 毒針を持つ。",
+					"es-419": "Suele habitar bosques y praderas. Tiene un afilado y venenoso aguijón de unos 5 cm encima de la cabeza."
+				},
+				"x-mountain": {
+					"ja-hrkt": "もりや くさちに おおく せいそく。 あたまの さきに ５センチぐらいの ちいさく するどい どくばりをもつ。",
+					"ko": "숲이나 풀밭에 많이 서식한다. 머리끝에 5cm 정도의 작고 날카로운 독침을 지니고 있다.",
+					"fr": "On trouve souvent ce Pokémon dans les forêts et les hautes herbes. L’aiguillon de 5 cm sur sa tête contient un venin très toxique.",
+					"de": "Es lebt bevorzugt in Wäldern und in hohem Gras. Auf dem Kopf trägt es einen circa 5 cm langen, spitzen, giftigen Stachel.",
+					"es": "Suele habitar bosques y praderas. Tiene un afilado y venenoso aguijón de unos 5 cm encima de la cabeza.",
+					"it": "Vive soprattutto nei boschi e nei prati. Sul capo ha un affilato e velenoso pungiglione lungo 5 cm.",
+					"en": "Often found in forests and grasslands. It has a sharp, toxic barb of around two inches on top of its head.",
+					"ja": "森や 草地に 多く 生息。 頭の 先に ５センチぐらいの 小さく 鋭い 毒針を持つ。",
+					"es-419": "Suele habitar bosques y praderas. Tiene un afilado y venenoso aguijón de unos 5 cm encima de la cabeza."
+				},
+				"y-national": {
+					"ja-hrkt": "どくばりは とても きょうりょく。 めだつ からだの いろは あいてに けいかいを させるためだ。",
+					"ko": "독침이 매우 강력하다. 눈에 띄는 몸의 색깔은 상대방을 경계시키기 위해서다.",
+					"fr": "Son aiguillon empoisonné est très dangereux. Son corps est coloré afin de repousser ses ennemis.",
+					"de": "Sein Giftstachel ist gefährlich. Sein hellleuchtender Körper soll Feinde abschrecken.",
+					"es": "Su venenoso aguijón es muy potente y su colorido cuerpo hace que los enemigos huyan.",
+					"it": "Ha un pungiglione molto velenoso. La vivace colorazione del suo corpo è un avvertimento per i nemici.",
+					"en": "Its poison stinger is very powerful. Its bright-colored body is intended to warn off its enemies.",
+					"ja": "毒針は とても 強力。 目立つ 体の 色は 相手に 警戒を させるためだ。",
+					"es-419": "Su venenoso aguijón es muy potente y su colorido cuerpo hace que los enemigos huyan."
+				},
+				"y-central": {
+					"ja-hrkt": "どくばりは とても きょうりょく。 めだつ からだの いろは あいてに けいかいを させるためだ。",
+					"ko": "독침이 매우 강력하다. 눈에 띄는 몸의 색깔은 상대방을 경계시키기 위해서다.",
+					"fr": "Son aiguillon empoisonné est très dangereux. Son corps est coloré afin de repousser ses ennemis.",
+					"de": "Sein Giftstachel ist gefährlich. Sein hellleuchtender Körper soll Feinde abschrecken.",
+					"es": "Su venenoso aguijón es muy potente y su colorido cuerpo hace que los enemigos huyan.",
+					"it": "Ha un pungiglione molto velenoso. La vivace colorazione del suo corpo è un avvertimento per i nemici.",
+					"en": "Its poison stinger is very powerful. Its bright-colored body is intended to warn off its enemies.",
+					"ja": "毒針は とても 強力。 目立つ 体の 色は 相手に 警戒を させるためだ。",
+					"es-419": "Su venenoso aguijón es muy potente y su colorido cuerpo hace que los enemigos huyan."
+				},
+				"y-coastal": {
+					"ja-hrkt": "どくばりは とても きょうりょく。 めだつ からだの いろは あいてに けいかいを させるためだ。",
+					"ko": "독침이 매우 강력하다. 눈에 띄는 몸의 색깔은 상대방을 경계시키기 위해서다.",
+					"fr": "Son aiguillon empoisonné est très dangereux. Son corps est coloré afin de repousser ses ennemis.",
+					"de": "Sein Giftstachel ist gefährlich. Sein hellleuchtender Körper soll Feinde abschrecken.",
+					"es": "Su venenoso aguijón es muy potente y su colorido cuerpo hace que los enemigos huyan.",
+					"it": "Ha un pungiglione molto velenoso. La vivace colorazione del suo corpo è un avvertimento per i nemici.",
+					"en": "Its poison stinger is very powerful. Its bright-colored body is intended to warn off its enemies.",
+					"ja": "毒針は とても 強力。 目立つ 体の 色は 相手に 警戒を させるためだ。",
+					"es-419": "Su venenoso aguijón es muy potente y su colorido cuerpo hace que los enemigos huyan."
+				},
+				"y-mountain": {
+					"ja-hrkt": "どくばりは とても きょうりょく。 めだつ からだの いろは あいてに けいかいを させるためだ。",
+					"ko": "독침이 매우 강력하다. 눈에 띄는 몸의 색깔은 상대방을 경계시키기 위해서다.",
+					"fr": "Son aiguillon empoisonné est très dangereux. Son corps est coloré afin de repousser ses ennemis.",
+					"de": "Sein Giftstachel ist gefährlich. Sein hellleuchtender Körper soll Feinde abschrecken.",
+					"es": "Su venenoso aguijón es muy potente y su colorido cuerpo hace que los enemigos huyan.",
+					"it": "Ha un pungiglione molto velenoso. La vivace colorazione del suo corpo è un avvertimento per i nemici.",
+					"en": "Its poison stinger is very powerful. Its bright-colored body is intended to warn off its enemies.",
+					"ja": "毒針は とても 強力。 目立つ 体の 色は 相手に 警戒を させるためだ。",
+					"es-419": "Su venenoso aguijón es muy potente y su colorido cuerpo hace que los enemigos huyan."
+				}
+			}
+		},
+		{
+			"profileKey": "omega-ruby-alpha-sapphire",
+			"label": "Omega Ruby / Alpha Sapphire",
+			"appGameKeys": [
+				"omegaruby-national",
+				"omegaruby",
+				"alphasapphire-national",
+				"alphasapphire"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Weedle",
+				"localizedNames": {
+					"ja-hrkt": "ビードル",
+					"ja-roma": "Beedle",
+					"ko": "뿔충이",
+					"zh-hant": "獨角蟲",
+					"fr": "Aspicot",
+					"de": "Hornliu",
+					"es": "Weedle",
+					"it": "Weedle",
+					"ja": "ビードル",
+					"zh-hans": "独角虫",
+					"es-419": "Weedle"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 35,
+					"def": 30,
+					"spa": 20,
+					"spd": 20,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shield Dust",
+					"Run Away (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Run Away"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "3.2 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 39,
+				"habitat": "Forest",
+				"shape": "Armor",
+				"color": "Brown",
+				"genus": "Hairy Bug Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けむしポケモン",
+					"ko": "송충이포켓몬",
+					"zh-hant": "毛毛蟲寶可夢",
+					"fr": "Pokémon Insectopic",
+					"de": "Raupe",
+					"es": "Pokémon Oruga",
+					"it": "Pokémon Millepiedi",
+					"ja": "けむしポケモン",
+					"zh-hans": "毛毛虫宝可梦",
+					"es-419": "Pokémon Oruga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 13
+					},
+					{
+						"pokedex": "kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 26
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 18
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Poison Sting",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "String Shot",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Bug Bite",
+							"level": 15,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Bug Bite",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Electroweb",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/13",
+						"fetchedAt": "2026-11-03T05:53:06.787Z",
+						"hash": "3bd98fa0fdd5f271319c1f4d278750f512202ef028b4276dc28d09ed1442633b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/",
+						"fetchedAt": "2026-11-03T05:53:06.913Z",
+						"hash": "e8d9a6c386bdeb424369106cca2ddc5f26b115481614e73393c0ee02c4fe84c7"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.949Z",
+						"hash": "c9e1cff8cce3503c15d2dc6dbe86cd0237999651c013109d0506fbe9bd507f3e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/13/",
+						"fetchedAt": "2026-11-03T05:53:07.004Z",
+						"hash": "f489e419246018d5ce37223253bf70a280584f35b5a77047bd82212ced4386eb"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"omegaruby-national": "Weedle has an extremely acute sense of smell. It is capable of distinguishing its favorite kinds of leaves from those it dislikes just by sniffing with its big red proboscis (nose).",
+				"omegaruby": "Weedle has an extremely acute sense of smell. It is capable of distinguishing its favorite kinds of leaves from those it dislikes just by sniffing with its big red proboscis (nose).",
+				"alphasapphire-national": "Weedle has an extremely acute sense of smell. It is capable of distinguishing its favorite kinds of leaves from those it dislikes just by sniffing with its big red proboscis (nose).",
+				"alphasapphire": "Weedle has an extremely acute sense of smell. It is capable of distinguishing its favorite kinds of leaves from those it dislikes just by sniffing with its big red proboscis (nose)."
+			},
+			"localizedFlavorByGame": {
+				"omegaruby-national": {
+					"ja-hrkt": "とても するどい きゅうかくを もっている。 こうぶつの はっぱか きらいな はっぱか おおきな あかい はなで かぎわける。",
+					"ko": "굉장히 예민한 후각을 지니고 있다. 좋아하는 잎사귀인지 싫어하는 잎사귀인지 크고 빨간 코로 냄새 맡아 구별한다.",
+					"fr": "L’odorat d’Aspicot est extrêmement développé. Il lui suffit de renifler ses feuilles préférées avec son gros appendice nasal pour les reconnaître entre mille.",
+					"de": "Hornliu verfügt über einen ausgezeichneten Geruchssinn. So kann es seine Lieblingsblätter von denen unterscheiden, die es nicht mag, indem es mit seiner großen roten Nase daran schnuppert.",
+					"es": "Weedle tiene un finísimo sentido del olfato. Es capaz de distinguir las hojas que le gustan de las que no le gustan olisqueando un poco con la gran nariz que tiene.",
+					"it": "Weedle ha un senso dell’olfatto estremamente sviluppato. Riesce a distinguere le sue foglie preferite da quelle che lo disgustano semplicemente annusandole con il grande naso rosso.",
+					"en": "Weedle has an extremely acute sense of smell. It is capable of distinguishing its favorite kinds of leaves from those it dislikes just by sniffing with its big red proboscis (nose).",
+					"ja": "とても 鋭い 嗅覚を 持っている。 好物の 葉っぱか 嫌いな 葉っぱか 大きな 赤い 鼻で 嗅ぎ分ける。",
+					"es-419": "Weedle tiene un finísimo sentido del olfato. Es capaz de distinguir las hojas que le gustan de las que no le gustan olisqueando un poco con la gran nariz que tiene."
+				},
+				"omegaruby": {
+					"ja-hrkt": "とても するどい きゅうかくを もっている。 こうぶつの はっぱか きらいな はっぱか おおきな あかい はなで かぎわける。",
+					"ko": "굉장히 예민한 후각을 지니고 있다. 좋아하는 잎사귀인지 싫어하는 잎사귀인지 크고 빨간 코로 냄새 맡아 구별한다.",
+					"fr": "L’odorat d’Aspicot est extrêmement développé. Il lui suffit de renifler ses feuilles préférées avec son gros appendice nasal pour les reconnaître entre mille.",
+					"de": "Hornliu verfügt über einen ausgezeichneten Geruchssinn. So kann es seine Lieblingsblätter von denen unterscheiden, die es nicht mag, indem es mit seiner großen roten Nase daran schnuppert.",
+					"es": "Weedle tiene un finísimo sentido del olfato. Es capaz de distinguir las hojas que le gustan de las que no le gustan olisqueando un poco con la gran nariz que tiene.",
+					"it": "Weedle ha un senso dell’olfatto estremamente sviluppato. Riesce a distinguere le sue foglie preferite da quelle che lo disgustano semplicemente annusandole con il grande naso rosso.",
+					"en": "Weedle has an extremely acute sense of smell. It is capable of distinguishing its favorite kinds of leaves from those it dislikes just by sniffing with its big red proboscis (nose).",
+					"ja": "とても 鋭い 嗅覚を 持っている。 好物の 葉っぱか 嫌いな 葉っぱか 大きな 赤い 鼻で 嗅ぎ分ける。",
+					"es-419": "Weedle tiene un finísimo sentido del olfato. Es capaz de distinguir las hojas que le gustan de las que no le gustan olisqueando un poco con la gran nariz que tiene."
+				},
+				"alphasapphire-national": {
+					"ja-hrkt": "とても するどい きゅうかくを もっている。 こうぶつの はっぱか きらいな はっぱか おおきな あかい はなで かぎわける。",
+					"ko": "굉장히 예민한 후각을 지니고 있다. 좋아하는 잎사귀인지 싫어하는 잎사귀인지 크고 빨간 코로 냄새 맡아 구별한다.",
+					"fr": "L’odorat d’Aspicot est extrêmement développé. Il lui suffit de renifler ses feuilles préférées avec son gros appendice nasal pour les reconnaître entre mille.",
+					"de": "Hornliu verfügt über einen ausgezeichneten Geruchssinn. Es ist in der Lage, seine Lieblingsblätter von denen zu unterscheiden, die es nicht mag, indem es mit seinem großen roten Rüssel daran schnuppert.",
+					"es": "Weedle tiene un finísimo sentido del olfato. Es capaz de distinguir las hojas que le gustan de las que no le gustan olisqueando un poco con la gran nariz que tiene.",
+					"it": "Weedle ha un senso dell’olfatto estremamente sviluppato. Riesce a distinguere le sue foglie preferite da quelle che lo disgustano semplicemente annusandole con il grande naso rosso.",
+					"en": "Weedle has an extremely acute sense of smell. It is capable of distinguishing its favorite kinds of leaves from those it dislikes just by sniffing with its big red proboscis (nose).",
+					"ja": "とても 鋭い 嗅覚を 持っている。 好物の 葉っぱか 嫌いな 葉っぱか 大きな 赤い 鼻で 嗅ぎ分ける。",
+					"es-419": "Weedle tiene un finísimo sentido del olfato. Es capaz de distinguir las hojas que le gustan de las que no le gustan olisqueando un poco con la gran nariz que tiene."
+				},
+				"alphasapphire": {
+					"ja-hrkt": "とても するどい きゅうかくを もっている。 こうぶつの はっぱか きらいな はっぱか おおきな あかい はなで かぎわける。",
+					"ko": "굉장히 예민한 후각을 지니고 있다. 좋아하는 잎사귀인지 싫어하는 잎사귀인지 크고 빨간 코로 냄새 맡아 구별한다.",
+					"fr": "L’odorat d’Aspicot est extrêmement développé. Il lui suffit de renifler ses feuilles préférées avec son gros appendice nasal pour les reconnaître entre mille.",
+					"de": "Hornliu verfügt über einen ausgezeichneten Geruchssinn. Es ist in der Lage, seine Lieblingsblätter von denen zu unterscheiden, die es nicht mag, indem es mit seinem großen roten Rüssel daran schnuppert.",
+					"es": "Weedle tiene un finísimo sentido del olfato. Es capaz de distinguir las hojas que le gustan de las que no le gustan olisqueando un poco con la gran nariz que tiene.",
+					"it": "Weedle ha un senso dell’olfatto estremamente sviluppato. Riesce a distinguere le sue foglie preferite da quelle che lo disgustano semplicemente annusandole con il grande naso rosso.",
+					"en": "Weedle has an extremely acute sense of smell. It is capable of distinguishing its favorite kinds of leaves from those it dislikes just by sniffing with its big red proboscis (nose).",
+					"ja": "とても 鋭い 嗅覚を 持っている。 好物の 葉っぱか 嫌いな 葉っぱか 大きな 赤い 鼻で 嗅ぎ分ける。",
+					"es-419": "Weedle tiene un finísimo sentido del olfato. Es capaz de distinguir las hojas que le gustan de las que no le gustan olisqueando un poco con la gran nariz que tiene."
+				}
+			}
+		},
+		{
+			"profileKey": "sun-moon",
+			"label": "Sun / Moon",
+			"appGameKeys": [
+				"sun-alola",
+				"sun-melemele",
+				"sun-akala",
+				"sun-ulaula",
+				"sun-poni",
+				"moon-alola",
+				"moon-melemele",
+				"moon-akala",
+				"moon-ulaula",
+				"moon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Weedle",
+				"localizedNames": {
+					"ja-hrkt": "ビードル",
+					"ja-roma": "Beedle",
+					"ko": "뿔충이",
+					"zh-hant": "獨角蟲",
+					"fr": "Aspicot",
+					"de": "Hornliu",
+					"es": "Weedle",
+					"it": "Weedle",
+					"ja": "ビードル",
+					"zh-hans": "独角虫",
+					"es-419": "Weedle"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 35,
+					"def": 30,
+					"spa": 20,
+					"spd": 20,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shield Dust",
+					"Run Away (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Run Away"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "3.2 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 39,
+				"habitat": "Forest",
+				"shape": "Armor",
+				"color": "Brown",
+				"genus": "Hairy Bug Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けむしポケモン",
+					"ko": "송충이포켓몬",
+					"zh-hant": "毛毛蟲寶可夢",
+					"fr": "Pokémon Insectopic",
+					"de": "Raupe",
+					"es": "Pokémon Oruga",
+					"it": "Pokémon Millepiedi",
+					"ja": "けむしポケモン",
+					"zh-hans": "毛毛虫宝可梦",
+					"es-419": "Pokémon Oruga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 13
+					},
+					{
+						"pokedex": "kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 26
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 18
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Poison Sting",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "String Shot",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Bug Bite",
+							"level": 9,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/13",
+						"fetchedAt": "2026-11-03T05:53:06.787Z",
+						"hash": "3bd98fa0fdd5f271319c1f4d278750f512202ef028b4276dc28d09ed1442633b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/",
+						"fetchedAt": "2026-11-03T05:53:06.913Z",
+						"hash": "e8d9a6c386bdeb424369106cca2ddc5f26b115481614e73393c0ee02c4fe84c7"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.949Z",
+						"hash": "c9e1cff8cce3503c15d2dc6dbe86cd0237999651c013109d0506fbe9bd507f3e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/13/",
+						"fetchedAt": "2026-11-03T05:53:07.004Z",
+						"hash": "f489e419246018d5ce37223253bf70a280584f35b5a77047bd82212ced4386eb"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sun-alola": "",
+				"sun-melemele": "",
+				"sun-akala": "",
+				"sun-ulaula": "",
+				"sun-poni": "",
+				"moon-alola": "",
+				"moon-melemele": "",
+				"moon-akala": "",
+				"moon-ulaula": "",
+				"moon-poni": ""
+			},
+			"localizedFlavorByGame": {
+				"sun-alola": {},
+				"sun-melemele": {},
+				"sun-akala": {},
+				"sun-ulaula": {},
+				"sun-poni": {},
+				"moon-alola": {},
+				"moon-melemele": {},
+				"moon-akala": {},
+				"moon-ulaula": {},
+				"moon-poni": {}
+			}
+		},
+		{
+			"profileKey": "ultra-sun-ultra-moon",
+			"label": "Ultra Sun / Ultra Moon",
+			"appGameKeys": [
+				"ultrasun-alola",
+				"ultrasun-melemele",
+				"ultrasun-akala",
+				"ultrasun-ulaula",
+				"ultrasun-poni",
+				"ultramoon-alola",
+				"ultramoon-melemele",
+				"ultramoon-akala",
+				"ultramoon-ulaula",
+				"ultramoon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Weedle",
+				"localizedNames": {
+					"ja-hrkt": "ビードル",
+					"ja-roma": "Beedle",
+					"ko": "뿔충이",
+					"zh-hant": "獨角蟲",
+					"fr": "Aspicot",
+					"de": "Hornliu",
+					"es": "Weedle",
+					"it": "Weedle",
+					"ja": "ビードル",
+					"zh-hans": "独角虫",
+					"es-419": "Weedle"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 35,
+					"def": 30,
+					"spa": 20,
+					"spd": 20,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shield Dust",
+					"Run Away (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Run Away"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "3.2 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 39,
+				"habitat": "Forest",
+				"shape": "Armor",
+				"color": "Brown",
+				"genus": "Hairy Bug Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けむしポケモン",
+					"ko": "송충이포켓몬",
+					"zh-hant": "毛毛蟲寶可夢",
+					"fr": "Pokémon Insectopic",
+					"de": "Raupe",
+					"es": "Pokémon Oruga",
+					"it": "Pokémon Millepiedi",
+					"ja": "けむしポケモン",
+					"zh-hans": "毛毛虫宝可梦",
+					"es-419": "Pokémon Oruga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 13
+					},
+					{
+						"pokedex": "kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 26
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 18
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Poison Sting",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "String Shot",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Bug Bite",
+							"level": 9,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Bug Bite",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Electroweb",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/13",
+						"fetchedAt": "2026-11-03T05:53:06.787Z",
+						"hash": "3bd98fa0fdd5f271319c1f4d278750f512202ef028b4276dc28d09ed1442633b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/",
+						"fetchedAt": "2026-11-03T05:53:06.913Z",
+						"hash": "e8d9a6c386bdeb424369106cca2ddc5f26b115481614e73393c0ee02c4fe84c7"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.949Z",
+						"hash": "c9e1cff8cce3503c15d2dc6dbe86cd0237999651c013109d0506fbe9bd507f3e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/13/",
+						"fetchedAt": "2026-11-03T05:53:07.004Z",
+						"hash": "f489e419246018d5ce37223253bf70a280584f35b5a77047bd82212ced4386eb"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"ultrasun-alola": "",
+				"ultrasun-melemele": "",
+				"ultrasun-akala": "",
+				"ultrasun-ulaula": "",
+				"ultrasun-poni": "",
+				"ultramoon-alola": "",
+				"ultramoon-melemele": "",
+				"ultramoon-akala": "",
+				"ultramoon-ulaula": "",
+				"ultramoon-poni": ""
+			},
+			"localizedFlavorByGame": {
+				"ultrasun-alola": {},
+				"ultrasun-melemele": {},
+				"ultrasun-akala": {},
+				"ultrasun-ulaula": {},
+				"ultrasun-poni": {},
+				"ultramoon-alola": {},
+				"ultramoon-melemele": {},
+				"ultramoon-akala": {},
+				"ultramoon-ulaula": {},
+				"ultramoon-poni": {}
+			}
+		},
+		{
+			"profileKey": "lets-go-pikachu-lets-go-eevee",
+			"label": "Let's Go Pikachu / Eevee",
+			"appGameKeys": [
+				"letsgopikachu",
+				"letsgoeevee"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Weedle",
+				"localizedNames": {
+					"ja-hrkt": "ビードル",
+					"ja-roma": "Beedle",
+					"ko": "뿔충이",
+					"zh-hant": "獨角蟲",
+					"fr": "Aspicot",
+					"de": "Hornliu",
+					"es": "Weedle",
+					"it": "Weedle",
+					"ja": "ビードル",
+					"zh-hans": "独角虫",
+					"es-419": "Weedle"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 35,
+					"def": 30,
+					"spa": 20,
+					"spd": 20,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shield Dust",
+					"Run Away (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Run Away"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "3.2 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 39,
+				"habitat": "Forest",
+				"shape": "Armor",
+				"color": "Brown",
+				"genus": "Hairy Bug Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けむしポケモン",
+					"ko": "송충이포켓몬",
+					"zh-hant": "毛毛蟲寶可夢",
+					"fr": "Pokémon Insectopic",
+					"de": "Raupe",
+					"es": "Pokémon Oruga",
+					"it": "Pokémon Millepiedi",
+					"ja": "けむしポケモン",
+					"zh-hans": "毛毛虫宝可梦",
+					"es-419": "Pokémon Oruga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 13
+					},
+					{
+						"pokedex": "kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 26
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 18
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Kanto Route 2 South Towards Viridian City",
+						"notes": "Overworld, Lv. 3-4",
+						"games": "Lets Go Pikachu",
+						"rate": "100%"
+					},
+					{
+						"area": "Kanto Route 2 South Towards Viridian City",
+						"notes": "Overworld, Lv. 3-4",
+						"games": "Lets Go Eevee",
+						"rate": "100%"
+					},
+					{
+						"area": "Kanto Route 2 North Towards Pewter City",
+						"notes": "Overworld, Lv. 3-8",
+						"games": "Lets Go Pikachu",
+						"rate": "100%"
+					},
+					{
+						"area": "Kanto Route 2 North Towards Pewter City",
+						"notes": "Overworld, Lv. 3-8",
+						"games": "Lets Go Eevee",
+						"rate": "100%"
+					},
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Overworld, Lv. 3-6",
+						"games": "Lets Go Pikachu",
+						"rate": "100%"
+					},
+					{
+						"area": "Viridian Forest Area",
+						"notes": "Overworld, Lv. 3-6",
+						"games": "Lets Go Eevee",
+						"rate": "100%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Poison Sting",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "String Shot",
+							"level": 1,
+							"order": 2
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/13",
+						"fetchedAt": "2026-11-03T05:53:06.787Z",
+						"hash": "3bd98fa0fdd5f271319c1f4d278750f512202ef028b4276dc28d09ed1442633b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/",
+						"fetchedAt": "2026-11-03T05:53:06.913Z",
+						"hash": "e8d9a6c386bdeb424369106cca2ddc5f26b115481614e73393c0ee02c4fe84c7"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.949Z",
+						"hash": "c9e1cff8cce3503c15d2dc6dbe86cd0237999651c013109d0506fbe9bd507f3e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/13/",
+						"fetchedAt": "2026-11-03T05:53:07.004Z",
+						"hash": "f489e419246018d5ce37223253bf70a280584f35b5a77047bd82212ced4386eb"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"letsgopikachu": "Beware of the sharp stinger on its head. It hides in grass and bushes where it eats leaves.",
+				"letsgoeevee": "Beware of the sharp stinger on its head. It hides in grass and bushes where it eats leaves."
+			},
+			"localizedFlavorByGame": {
+				"letsgopikachu": {
+					"ja-hrkt": "あたまに するどい ハリを もつ。 もりや くさちの しげみに かくれ ひたすら ハッパを たべている。",
+					"ko": "머리에 날카로운 침을 지니고 있다. 우거진 숲이나 풀밭에 숨어 끊임없이 풀잎을 먹고 있다.",
+					"zh-hant": "頭上長著尖銳的針。 總是躲在森林或是草叢裡， 不停地吃著葉子。",
+					"fr": "L’aiguillon sur son front est très pointu. Il se cache dans les bois et les hautes herbes, où il se gave de feuilles.",
+					"de": "Auf seinem Kopf befindet sich ein spitzer Stachel. Es versteckt sich im hohen Gras sowie in Wäldern und frisst eifrig Blätter.",
+					"es": "El aguijón de la cabeza es muy puntiagudo. Se alimenta de hojas oculto en la espesura de bosques y praderas.",
+					"it": "Ha un pungiglione acuminato sul capo. Vive tra l’erba alta e nei boschi, dove si nutre di foglie.",
+					"en": "Beware of the sharp stinger on its head. It hides in grass and bushes where it eats leaves.",
+					"ja": "頭に 鋭い ハリを もつ。 森や 草地の 茂みに 隠れ ひたすら ハッパを 食べている。",
+					"zh-hans": "头上长有尖锐的针。 它喜欢藏在森林或 草丛里大量吞食树叶。",
+					"es-419": "El aguijón de la cabeza es muy puntiagudo. Se alimenta de hojas oculto en la espesura de bosques y praderas."
+				},
+				"letsgoeevee": {
+					"ja-hrkt": "あたまに するどい ハリを もつ。 もりや くさちの しげみに かくれ ひたすら ハッパを たべている。",
+					"ko": "머리에 날카로운 침을 지니고 있다. 우거진 숲이나 풀밭에 숨어 끊임없이 풀잎을 먹고 있다.",
+					"zh-hant": "頭上長著尖銳的針。 總是躲在森林或是草叢裡， 不停地吃著葉子。",
+					"fr": "L’aiguillon sur son front est très pointu. Il se cache dans les bois et les hautes herbes, où il se gave de feuilles.",
+					"de": "Auf seinem Kopf befindet sich ein spitzer Stachel. Es versteckt sich im hohen Gras sowie in Wäldern und frisst eifrig Blätter.",
+					"es": "El aguijón de la cabeza es muy puntiagudo. Se alimenta de hojas oculto en la espesura de bosques y praderas.",
+					"it": "Ha un pungiglione acuminato sul capo. Vive tra l’erba alta e nei boschi, dove si nutre di foglie.",
+					"en": "Beware of the sharp stinger on its head. It hides in grass and bushes where it eats leaves.",
+					"ja": "頭に 鋭い ハリを もつ。 森や 草地の 茂みに 隠れ ひたすら ハッパを 食べている。",
+					"zh-hans": "头上长有尖锐的针。 它喜欢藏在森林或 草丛里大量吞食树叶。",
+					"es-419": "El aguijón de la cabeza es muy puntiagudo. Se alimenta de hojas oculto en la espesura de bosques y praderas."
+				}
+			}
+		},
+		{
+			"profileKey": "sword-shield",
+			"label": "Sword / Shield",
+			"appGameKeys": [
+				"sword",
+				"shield"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Weedle",
+				"localizedNames": {
+					"ja-hrkt": "ビードル",
+					"ja-roma": "Beedle",
+					"ko": "뿔충이",
+					"zh-hant": "獨角蟲",
+					"fr": "Aspicot",
+					"de": "Hornliu",
+					"es": "Weedle",
+					"it": "Weedle",
+					"ja": "ビードル",
+					"zh-hans": "独角虫",
+					"es-419": "Weedle"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 35,
+					"def": 30,
+					"spa": 20,
+					"spd": 20,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shield Dust",
+					"Run Away (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Run Away"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "3.2 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 39,
+				"habitat": "Forest",
+				"shape": "Armor",
+				"color": "Brown",
+				"genus": "Hairy Bug Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けむしポケモン",
+					"ko": "송충이포켓몬",
+					"zh-hant": "毛毛蟲寶可夢",
+					"fr": "Pokémon Insectopic",
+					"de": "Raupe",
+					"es": "Pokémon Oruga",
+					"it": "Pokémon Millepiedi",
+					"ja": "けむしポケモン",
+					"zh-hans": "毛毛虫宝可梦",
+					"es-419": "Pokémon Oruga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 13
+					},
+					{
+						"pokedex": "kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 26
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 18
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/13",
+						"fetchedAt": "2026-11-03T05:53:06.787Z",
+						"hash": "3bd98fa0fdd5f271319c1f4d278750f512202ef028b4276dc28d09ed1442633b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/",
+						"fetchedAt": "2026-11-03T05:53:06.913Z",
+						"hash": "e8d9a6c386bdeb424369106cca2ddc5f26b115481614e73393c0ee02c4fe84c7"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.949Z",
+						"hash": "c9e1cff8cce3503c15d2dc6dbe86cd0237999651c013109d0506fbe9bd507f3e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/13/",
+						"fetchedAt": "2026-11-03T05:53:07.004Z",
+						"hash": "f489e419246018d5ce37223253bf70a280584f35b5a77047bd82212ced4386eb"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sword": "",
+				"shield": ""
+			},
+			"localizedFlavorByGame": {
+				"sword": {},
+				"shield": {}
+			}
+		},
+		{
+			"profileKey": "the-isle-of-armor",
+			"label": "The Isle of Armor",
+			"appGameKeys": [
+				"swordioa",
+				"shieldioa"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Weedle",
+				"localizedNames": {
+					"ja-hrkt": "ビードル",
+					"ja-roma": "Beedle",
+					"ko": "뿔충이",
+					"zh-hant": "獨角蟲",
+					"fr": "Aspicot",
+					"de": "Hornliu",
+					"es": "Weedle",
+					"it": "Weedle",
+					"ja": "ビードル",
+					"zh-hans": "独角虫",
+					"es-419": "Weedle"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 35,
+					"def": 30,
+					"spa": 20,
+					"spd": 20,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shield Dust",
+					"Run Away (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Run Away"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "3.2 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 39,
+				"habitat": "Forest",
+				"shape": "Armor",
+				"color": "Brown",
+				"genus": "Hairy Bug Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けむしポケモン",
+					"ko": "송충이포켓몬",
+					"zh-hant": "毛毛蟲寶可夢",
+					"fr": "Pokémon Insectopic",
+					"de": "Raupe",
+					"es": "Pokémon Oruga",
+					"it": "Pokémon Millepiedi",
+					"ja": "けむしポケモン",
+					"zh-hans": "毛毛虫宝可梦",
+					"es-419": "Pokémon Oruga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 13
+					},
+					{
+						"pokedex": "kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 26
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 18
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/13",
+						"fetchedAt": "2026-11-03T05:53:06.787Z",
+						"hash": "3bd98fa0fdd5f271319c1f4d278750f512202ef028b4276dc28d09ed1442633b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/",
+						"fetchedAt": "2026-11-03T05:53:06.913Z",
+						"hash": "e8d9a6c386bdeb424369106cca2ddc5f26b115481614e73393c0ee02c4fe84c7"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.949Z",
+						"hash": "c9e1cff8cce3503c15d2dc6dbe86cd0237999651c013109d0506fbe9bd507f3e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/13/",
+						"fetchedAt": "2026-11-03T05:53:07.004Z",
+						"hash": "f489e419246018d5ce37223253bf70a280584f35b5a77047bd82212ced4386eb"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordioa": "",
+				"shieldioa": ""
+			},
+			"localizedFlavorByGame": {
+				"swordioa": {},
+				"shieldioa": {}
+			}
+		},
+		{
+			"profileKey": "the-crown-tundra",
+			"label": "The Crown Tundra",
+			"appGameKeys": [
+				"swordct",
+				"shieldct"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Weedle",
+				"localizedNames": {
+					"ja-hrkt": "ビードル",
+					"ja-roma": "Beedle",
+					"ko": "뿔충이",
+					"zh-hant": "獨角蟲",
+					"fr": "Aspicot",
+					"de": "Hornliu",
+					"es": "Weedle",
+					"it": "Weedle",
+					"ja": "ビードル",
+					"zh-hans": "独角虫",
+					"es-419": "Weedle"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 35,
+					"def": 30,
+					"spa": 20,
+					"spd": 20,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shield Dust",
+					"Run Away (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Run Away"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "3.2 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 39,
+				"habitat": "Forest",
+				"shape": "Armor",
+				"color": "Brown",
+				"genus": "Hairy Bug Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けむしポケモン",
+					"ko": "송충이포켓몬",
+					"zh-hant": "毛毛蟲寶可夢",
+					"fr": "Pokémon Insectopic",
+					"de": "Raupe",
+					"es": "Pokémon Oruga",
+					"it": "Pokémon Millepiedi",
+					"ja": "けむしポケモン",
+					"zh-hans": "毛毛虫宝可梦",
+					"es-419": "Pokémon Oruga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 13
+					},
+					{
+						"pokedex": "kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 26
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 18
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/13",
+						"fetchedAt": "2026-11-03T05:53:06.787Z",
+						"hash": "3bd98fa0fdd5f271319c1f4d278750f512202ef028b4276dc28d09ed1442633b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/",
+						"fetchedAt": "2026-11-03T05:53:06.913Z",
+						"hash": "e8d9a6c386bdeb424369106cca2ddc5f26b115481614e73393c0ee02c4fe84c7"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.949Z",
+						"hash": "c9e1cff8cce3503c15d2dc6dbe86cd0237999651c013109d0506fbe9bd507f3e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/13/",
+						"fetchedAt": "2026-11-03T05:53:07.004Z",
+						"hash": "f489e419246018d5ce37223253bf70a280584f35b5a77047bd82212ced4386eb"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordct": "",
+				"shieldct": ""
+			},
+			"localizedFlavorByGame": {
+				"swordct": {},
+				"shieldct": {}
+			}
+		},
+		{
+			"profileKey": "brilliant-diamond-shining-pearl",
+			"label": "Brilliant Diamond / Shining Pearl",
+			"appGameKeys": [
+				"brilliantdiamond-national",
+				"brilliantdiamond",
+				"shiningpearl-national",
+				"shiningpearl"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Weedle",
+				"localizedNames": {
+					"ja-hrkt": "ビードル",
+					"ja-roma": "Beedle",
+					"ko": "뿔충이",
+					"zh-hant": "獨角蟲",
+					"fr": "Aspicot",
+					"de": "Hornliu",
+					"es": "Weedle",
+					"it": "Weedle",
+					"ja": "ビードル",
+					"zh-hans": "独角虫",
+					"es-419": "Weedle"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 35,
+					"def": 30,
+					"spa": 20,
+					"spd": 20,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shield Dust",
+					"Run Away (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Run Away"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "3.2 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 39,
+				"habitat": "Forest",
+				"shape": "Armor",
+				"color": "Brown",
+				"genus": "Hairy Bug Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けむしポケモン",
+					"ko": "송충이포켓몬",
+					"zh-hant": "毛毛蟲寶可夢",
+					"fr": "Pokémon Insectopic",
+					"de": "Raupe",
+					"es": "Pokémon Oruga",
+					"it": "Pokémon Millepiedi",
+					"ja": "けむしポケモン",
+					"zh-hans": "毛毛虫宝可梦",
+					"es-419": "Pokémon Oruga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 13
+					},
+					{
+						"pokedex": "kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 26
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 18
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Poison Sting",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "String Shot",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Bug Bite",
+							"level": 9,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/13",
+						"fetchedAt": "2026-11-03T05:53:06.787Z",
+						"hash": "3bd98fa0fdd5f271319c1f4d278750f512202ef028b4276dc28d09ed1442633b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/",
+						"fetchedAt": "2026-11-03T05:53:06.913Z",
+						"hash": "e8d9a6c386bdeb424369106cca2ddc5f26b115481614e73393c0ee02c4fe84c7"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.949Z",
+						"hash": "c9e1cff8cce3503c15d2dc6dbe86cd0237999651c013109d0506fbe9bd507f3e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/13/",
+						"fetchedAt": "2026-11-03T05:53:07.004Z",
+						"hash": "f489e419246018d5ce37223253bf70a280584f35b5a77047bd82212ced4386eb"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"brilliantdiamond-national": "",
+				"brilliantdiamond": "",
+				"shiningpearl-national": "",
+				"shiningpearl": ""
+			},
+			"localizedFlavorByGame": {
+				"brilliantdiamond-national": {},
+				"brilliantdiamond": {},
+				"shiningpearl-national": {},
+				"shiningpearl": {}
+			}
+		},
+		{
+			"profileKey": "legends-arceus",
+			"label": "Legends: Arceus",
+			"appGameKeys": [
+				"legendsarceus"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Weedle",
+				"localizedNames": {
+					"ja-hrkt": "ビードル",
+					"ja-roma": "Beedle",
+					"ko": "뿔충이",
+					"zh-hant": "獨角蟲",
+					"fr": "Aspicot",
+					"de": "Hornliu",
+					"es": "Weedle",
+					"it": "Weedle",
+					"ja": "ビードル",
+					"zh-hans": "独角虫",
+					"es-419": "Weedle"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 35,
+					"def": 30,
+					"spa": 20,
+					"spd": 20,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shield Dust",
+					"Run Away (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Run Away"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "3.2 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 39,
+				"habitat": "Forest",
+				"shape": "Armor",
+				"color": "Brown",
+				"genus": "Hairy Bug Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けむしポケモン",
+					"ko": "송충이포켓몬",
+					"zh-hant": "毛毛蟲寶可夢",
+					"fr": "Pokémon Insectopic",
+					"de": "Raupe",
+					"es": "Pokémon Oruga",
+					"it": "Pokémon Millepiedi",
+					"ja": "けむしポケモン",
+					"zh-hans": "毛毛虫宝可梦",
+					"es-419": "Pokémon Oruga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 13
+					},
+					{
+						"pokedex": "kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 26
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 18
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/13",
+						"fetchedAt": "2026-11-03T05:53:06.787Z",
+						"hash": "3bd98fa0fdd5f271319c1f4d278750f512202ef028b4276dc28d09ed1442633b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/",
+						"fetchedAt": "2026-11-03T05:53:06.913Z",
+						"hash": "e8d9a6c386bdeb424369106cca2ddc5f26b115481614e73393c0ee02c4fe84c7"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.949Z",
+						"hash": "c9e1cff8cce3503c15d2dc6dbe86cd0237999651c013109d0506fbe9bd507f3e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/13/",
+						"fetchedAt": "2026-11-03T05:53:07.004Z",
+						"hash": "f489e419246018d5ce37223253bf70a280584f35b5a77047bd82212ced4386eb"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendsarceus": ""
+			},
+			"localizedFlavorByGame": {
+				"legendsarceus": {}
+			}
+		},
+		{
+			"profileKey": "scarlet-violet",
+			"label": "Scarlet / Violet",
+			"appGameKeys": [
+				"scarlet",
+				"violet"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Weedle",
+				"localizedNames": {
+					"ja-hrkt": "ビードル",
+					"ja-roma": "Beedle",
+					"ko": "뿔충이",
+					"zh-hant": "獨角蟲",
+					"fr": "Aspicot",
+					"de": "Hornliu",
+					"es": "Weedle",
+					"it": "Weedle",
+					"ja": "ビードル",
+					"zh-hans": "独角虫",
+					"es-419": "Weedle"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 35,
+					"def": 30,
+					"spa": 20,
+					"spd": 20,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shield Dust",
+					"Run Away (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Run Away"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "3.2 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 39,
+				"habitat": "Forest",
+				"shape": "Armor",
+				"color": "Brown",
+				"genus": "Hairy Bug Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けむしポケモン",
+					"ko": "송충이포켓몬",
+					"zh-hant": "毛毛蟲寶可夢",
+					"fr": "Pokémon Insectopic",
+					"de": "Raupe",
+					"es": "Pokémon Oruga",
+					"it": "Pokémon Millepiedi",
+					"ja": "けむしポケモン",
+					"zh-hans": "毛毛虫宝可梦",
+					"es-419": "Pokémon Oruga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 13
+					},
+					{
+						"pokedex": "kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 26
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 18
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/13",
+						"fetchedAt": "2026-11-03T05:53:06.787Z",
+						"hash": "3bd98fa0fdd5f271319c1f4d278750f512202ef028b4276dc28d09ed1442633b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/",
+						"fetchedAt": "2026-11-03T05:53:06.913Z",
+						"hash": "e8d9a6c386bdeb424369106cca2ddc5f26b115481614e73393c0ee02c4fe84c7"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.949Z",
+						"hash": "c9e1cff8cce3503c15d2dc6dbe86cd0237999651c013109d0506fbe9bd507f3e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/13/",
+						"fetchedAt": "2026-11-03T05:53:07.004Z",
+						"hash": "f489e419246018d5ce37223253bf70a280584f35b5a77047bd82212ced4386eb"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlet": "",
+				"violet": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlet": {},
+				"violet": {}
+			}
+		},
+		{
+			"profileKey": "the-teal-mask",
+			"label": "The Teal Mask",
+			"appGameKeys": [
+				"scarlettm",
+				"violettm"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Weedle",
+				"localizedNames": {
+					"ja-hrkt": "ビードル",
+					"ja-roma": "Beedle",
+					"ko": "뿔충이",
+					"zh-hant": "獨角蟲",
+					"fr": "Aspicot",
+					"de": "Hornliu",
+					"es": "Weedle",
+					"it": "Weedle",
+					"ja": "ビードル",
+					"zh-hans": "独角虫",
+					"es-419": "Weedle"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 35,
+					"def": 30,
+					"spa": 20,
+					"spd": 20,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shield Dust",
+					"Run Away (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Run Away"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "3.2 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 39,
+				"habitat": "Forest",
+				"shape": "Armor",
+				"color": "Brown",
+				"genus": "Hairy Bug Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けむしポケモン",
+					"ko": "송충이포켓몬",
+					"zh-hant": "毛毛蟲寶可夢",
+					"fr": "Pokémon Insectopic",
+					"de": "Raupe",
+					"es": "Pokémon Oruga",
+					"it": "Pokémon Millepiedi",
+					"ja": "けむしポケモン",
+					"zh-hans": "毛毛虫宝可梦",
+					"es-419": "Pokémon Oruga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 13
+					},
+					{
+						"pokedex": "kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 26
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 18
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/13",
+						"fetchedAt": "2026-11-03T05:53:06.787Z",
+						"hash": "3bd98fa0fdd5f271319c1f4d278750f512202ef028b4276dc28d09ed1442633b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/",
+						"fetchedAt": "2026-11-03T05:53:06.913Z",
+						"hash": "e8d9a6c386bdeb424369106cca2ddc5f26b115481614e73393c0ee02c4fe84c7"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.949Z",
+						"hash": "c9e1cff8cce3503c15d2dc6dbe86cd0237999651c013109d0506fbe9bd507f3e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/13/",
+						"fetchedAt": "2026-11-03T05:53:07.004Z",
+						"hash": "f489e419246018d5ce37223253bf70a280584f35b5a77047bd82212ced4386eb"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlettm": "",
+				"violettm": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlettm": {},
+				"violettm": {}
+			}
+		},
+		{
+			"profileKey": "the-indigo-disk",
+			"label": "The Indigo Disk",
+			"appGameKeys": [
+				"scarletid",
+				"violetid"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Weedle",
+				"localizedNames": {
+					"ja-hrkt": "ビードル",
+					"ja-roma": "Beedle",
+					"ko": "뿔충이",
+					"zh-hant": "獨角蟲",
+					"fr": "Aspicot",
+					"de": "Hornliu",
+					"es": "Weedle",
+					"it": "Weedle",
+					"ja": "ビードル",
+					"zh-hans": "独角虫",
+					"es-419": "Weedle"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 35,
+					"def": 30,
+					"spa": 20,
+					"spd": 20,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shield Dust",
+					"Run Away (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Run Away"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "3.2 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 39,
+				"habitat": "Forest",
+				"shape": "Armor",
+				"color": "Brown",
+				"genus": "Hairy Bug Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けむしポケモン",
+					"ko": "송충이포켓몬",
+					"zh-hant": "毛毛蟲寶可夢",
+					"fr": "Pokémon Insectopic",
+					"de": "Raupe",
+					"es": "Pokémon Oruga",
+					"it": "Pokémon Millepiedi",
+					"ja": "けむしポケモン",
+					"zh-hans": "毛毛虫宝可梦",
+					"es-419": "Pokémon Oruga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 13
+					},
+					{
+						"pokedex": "kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 26
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 18
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Red Green Japan."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/13",
+						"fetchedAt": "2026-11-03T05:53:06.787Z",
+						"hash": "3bd98fa0fdd5f271319c1f4d278750f512202ef028b4276dc28d09ed1442633b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/",
+						"fetchedAt": "2026-11-03T05:53:06.913Z",
+						"hash": "e8d9a6c386bdeb424369106cca2ddc5f26b115481614e73393c0ee02c4fe84c7"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.949Z",
+						"hash": "c9e1cff8cce3503c15d2dc6dbe86cd0237999651c013109d0506fbe9bd507f3e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/13/",
+						"fetchedAt": "2026-11-03T05:53:07.004Z",
+						"hash": "f489e419246018d5ce37223253bf70a280584f35b5a77047bd82212ced4386eb"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarletid": "",
+				"violetid": ""
+			},
+			"localizedFlavorByGame": {
+				"scarletid": {},
+				"violetid": {}
+			}
+		},
+		{
+			"profileKey": "legends-za",
+			"label": "Legends: Z-A",
+			"appGameKeys": [
+				"legendsza"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Weedle",
+				"localizedNames": {
+					"ja-hrkt": "ビードル",
+					"ja-roma": "Beedle",
+					"ko": "뿔충이",
+					"zh-hant": "獨角蟲",
+					"fr": "Aspicot",
+					"de": "Hornliu",
+					"es": "Weedle",
+					"it": "Weedle",
+					"ja": "ビードル",
+					"zh-hans": "独角虫",
+					"es-419": "Weedle"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 35,
+					"def": 30,
+					"spa": 20,
+					"spd": 20,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shield Dust",
+					"Run Away (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Run Away"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium Fast",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "3.2 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 39,
+				"habitat": "Forest",
+				"shape": "Armor",
+				"color": "Brown",
+				"genus": "Hairy Bug Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けむしポケモン",
+					"ko": "송충이포켓몬",
+					"zh-hant": "毛毛蟲寶可夢",
+					"fr": "Pokémon Insectopic",
+					"de": "Raupe",
+					"es": "Pokémon Oruga",
+					"it": "Pokémon Millepiedi",
+					"ja": "けむしポケモン",
+					"zh-hans": "毛毛虫宝可梦",
+					"es-419": "Pokémon Oruga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 13
+					},
+					{
+						"pokedex": "kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 26
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "lumiose",
+						"number": 18
+					}
+				],
+				"alphaMove": "Electroweb",
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Wild Zone 1",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Bleu District",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Jaune District",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Magenta District",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Rouge District",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Vert District",
+						"notes": "",
+						"games": "Legends: Z-A"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Poison Sting",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "String Shot",
+							"level": 1,
+							"order": 2
+						}
+					],
+					"Machine": [
+						{
+							"name": "Electroweb",
+							"machine": "TM101",
+							"order": 1
+						},
+						{
+							"name": "Facade",
+							"machine": "TM109",
+							"order": 2
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Project Pokemon's Z-A game-data export assigns this form regional Dex #18."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/13",
+						"fetchedAt": "2026-11-03T05:53:06.787Z",
+						"hash": "3bd98fa0fdd5f271319c1f4d278750f512202ef028b4276dc28d09ed1442633b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/",
+						"fetchedAt": "2026-11-03T05:53:06.913Z",
+						"hash": "e8d9a6c386bdeb424369106cca2ddc5f26b115481614e73393c0ee02c4fe84c7"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.949Z",
+						"hash": "c9e1cff8cce3503c15d2dc6dbe86cd0237999651c013109d0506fbe9bd507f3e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/13/",
+						"fetchedAt": "2026-11-03T05:53:07.004Z",
+						"hash": "f489e419246018d5ce37223253bf70a280584f35b5a77047bd82212ced4386eb"
+					},
+					{
+						"type": "legends-za-personal-data",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/personal.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c00215459c764ba65d879d6503a7337ad80b338171ab4713d1c6f52b4517e36f"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "719eff37d8f2f404d163f81d23b2c921ac323a7b00304e502ca37d69a3375b1d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/French/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "1b658102e791558a1bb317563b7a3aaab8cebc1c7517aa7f5d5c0e708e93d626"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/German/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5f1e419ae3b84ab18cb05b972569e629ff0bff96d928468c52c536b02dc6cf9d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Italian/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "e0bd40a2f4b7678afb82f959b7b1f3503590bd13884daf94bd5813fea832067c"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/JPN/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5c2c9784278c5d13f3ba376e4338cef21923d68faec9b8498175c21180825f24"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Korean/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c83545726b0b0b803295f52448510c15adaab3e6ce248adba23b5ad0d0344216"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/LATAM/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "01d046caf7553d97a3c275465bce97ecedae26a67674a40b5c751a56b3b4d52d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Simp_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "09495dacb0d16eb6e91aa1d67eb1ed682d0682303719811eeb1c6877bb9e7ca2"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Spanish/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "b3fafb97fe85165bd65fdd732ce1e4cee880ffe5035632269787ce859735b358"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Trad_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c446ae3e93760fc4af895427508ed852511201723f8cac84121330747e8c3cd0"
+					},
+					{
+						"type": "legends-za-locations",
+						"url": "https://www.serebii.net/pokedex-sv/weedle/",
+						"fetchedAt": "2026-11-04T05:47:08.455Z",
+						"hash": "67e37039dfcef843c388b8834efff361f042417fa1a8017a314ae569a9c97bcc"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendsza": "Often found in forests and grasslands. It has a sharp, toxic barb of around two inches on top of its head."
+			},
+			"localizedFlavorByGame": {
+				"legendsza": {
+					"en": "Often found in forests and grasslands. It has a sharp, toxic barb of around two inches on top of its head.",
+					"fr": "On trouve souvent ce Pokémon dans les forêts et les hautes herbes. Le petit aiguillon acéré de 5 cm sur sa tête est empoisonné.",
+					"de": "Es lebt bevorzugt in Wäldern und auf Wiesen. Der spitze, giftige Stachel auf seinem Kopf ist circa 5 cm lang.",
+					"it": "Vive soprattutto nei boschi e nei prati. Sul capo ha un piccolo e appuntito pungiglione velenoso, lungo circa 5 cm.",
+					"ja": "森や 草地に 多く 生息。 頭の 先に ５センチぐらいの 小さく 鋭い 毒針を持つ。",
+					"ko": "숲이나 풀밭에 많이 서식한다. 머리끝에 5cm 정도의 작고 날카로운 독침을 지니고 있다.",
+					"es-419": "Suele habitar bosques y praderas. Tiene un afilado y venenoso aguijón de unos 5 cm encima de la cabeza.",
+					"zh-hans": "大量栖息在森林或草地里。 头顶上长着约５厘米的尖锐小毒针。",
+					"es": "Suele habitar bosques y praderas. Tiene un afilado y venenoso aguijón de unos 5 cm encima de la cabeza.",
+					"zh-hant": "大量棲息在森林或草地裡。 頭頂長著約５公分長的 尖銳小毒針。"
+				}
+			}
+		},
+		{
+			"profileKey": "mega-dimension",
+			"label": "Mega Dimension",
+			"appGameKeys": [
+				"legendszamd"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Weedle",
+				"localizedNames": {
+					"ja-hrkt": "ビードル",
+					"ja-roma": "Beedle",
+					"ko": "뿔충이",
+					"zh-hant": "獨角蟲",
+					"fr": "Aspicot",
+					"de": "Hornliu",
+					"es": "Weedle",
+					"it": "Weedle",
+					"ja": "ビードル",
+					"zh-hans": "独角虫",
+					"es-419": "Weedle"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 35,
+					"def": 30,
+					"spa": 20,
+					"spd": 20,
+					"spe": 50
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shield Dust",
+					"Run Away (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Run Away"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium Fast",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "3.2 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 255,
+				"baseExperience": 39,
+				"habitat": "Forest",
+				"shape": "Armor",
+				"color": "Brown",
+				"genus": "Hairy Bug Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "けむしポケモン",
+					"ko": "송충이포켓몬",
+					"zh-hant": "毛毛蟲寶可夢",
+					"fr": "Pokémon Insectopic",
+					"de": "Raupe",
+					"es": "Pokémon Oruga",
+					"it": "Pokémon Millepiedi",
+					"ja": "けむしポケモン",
+					"zh-hans": "毛毛虫宝可梦",
+					"es-419": "Pokémon Oruga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 13
+					},
+					{
+						"pokedex": "kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 27
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 26
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 13
+					},
+					{
+						"pokedex": "lumiose",
+						"number": 18
+					}
+				],
+				"alphaMove": "Electroweb",
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 13,
+								"natiId": 13,
+								"name": "Weedle"
+							},
+							{
+								"id": 14,
+								"natiId": 14,
+								"name": "Kakuna",
+								"method": "Level",
+								"value": 7
+							},
+							{
+								"id": 15,
+								"natiId": 15,
+								"name": "Beedrill",
+								"method": "Level",
+								"value": 10
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Wild Zone 1",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Bleu District",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Jaune District",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Magenta District",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Rouge District",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Vert District",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Hyperspace Lumiose",
+						"notes": "Bug (1 Star)",
+						"games": "Legends: Z-A Mega Dimension"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Poison Sting",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "String Shot",
+							"level": 1,
+							"order": 2
+						}
+					],
+					"Machine": [
+						{
+							"name": "Electroweb",
+							"machine": "TM101",
+							"order": 1
+						},
+						{
+							"name": "Facade",
+							"machine": "TM109",
+							"order": 2
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Project Pokemon's Z-A game-data export assigns this form regional Dex #18."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/13",
+						"fetchedAt": "2026-11-03T05:53:06.787Z",
+						"hash": "3bd98fa0fdd5f271319c1f4d278750f512202ef028b4276dc28d09ed1442633b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/5/",
+						"fetchedAt": "2026-11-03T05:53:06.819Z",
+						"hash": "c5a0a6bc50d282ed89379b3b9d0ceff766b40eb94c8f1b28435fbcc8f0436566"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/",
+						"fetchedAt": "2026-11-03T05:53:06.913Z",
+						"hash": "e8d9a6c386bdeb424369106cca2ddc5f26b115481614e73393c0ee02c4fe84c7"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/13/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.949Z",
+						"hash": "c9e1cff8cce3503c15d2dc6dbe86cd0237999651c013109d0506fbe9bd507f3e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/13/",
+						"fetchedAt": "2026-11-03T05:53:07.004Z",
+						"hash": "f489e419246018d5ce37223253bf70a280584f35b5a77047bd82212ced4386eb"
+					},
+					{
+						"type": "legends-za-personal-data",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/personal.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c00215459c764ba65d879d6503a7337ad80b338171ab4713d1c6f52b4517e36f"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "719eff37d8f2f404d163f81d23b2c921ac323a7b00304e502ca37d69a3375b1d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/French/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "1b658102e791558a1bb317563b7a3aaab8cebc1c7517aa7f5d5c0e708e93d626"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/German/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5f1e419ae3b84ab18cb05b972569e629ff0bff96d928468c52c536b02dc6cf9d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Italian/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "e0bd40a2f4b7678afb82f959b7b1f3503590bd13884daf94bd5813fea832067c"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/JPN/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5c2c9784278c5d13f3ba376e4338cef21923d68faec9b8498175c21180825f24"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Korean/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c83545726b0b0b803295f52448510c15adaab3e6ce248adba23b5ad0d0344216"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/LATAM/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "01d046caf7553d97a3c275465bce97ecedae26a67674a40b5c751a56b3b4d52d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Simp_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "09495dacb0d16eb6e91aa1d67eb1ed682d0682303719811eeb1c6877bb9e7ca2"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Spanish/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "b3fafb97fe85165bd65fdd732ce1e4cee880ffe5035632269787ce859735b358"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Trad_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c446ae3e93760fc4af895427508ed852511201723f8cac84121330747e8c3cd0"
+					},
+					{
+						"type": "legends-za-locations",
+						"url": "https://www.serebii.net/pokedex-sv/weedle/",
+						"fetchedAt": "2026-11-04T05:47:08.455Z",
+						"hash": "67e37039dfcef843c388b8834efff361f042417fa1a8017a314ae569a9c97bcc"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendszamd": "Often found in forests and grasslands. It has a sharp, toxic barb of around two inches on top of its head."
+			},
+			"localizedFlavorByGame": {
+				"legendszamd": {
+					"en": "Often found in forests and grasslands. It has a sharp, toxic barb of around two inches on top of its head.",
+					"fr": "On trouve souvent ce Pokémon dans les forêts et les hautes herbes. Le petit aiguillon acéré de 5 cm sur sa tête est empoisonné.",
+					"de": "Es lebt bevorzugt in Wäldern und auf Wiesen. Der spitze, giftige Stachel auf seinem Kopf ist circa 5 cm lang.",
+					"it": "Vive soprattutto nei boschi e nei prati. Sul capo ha un piccolo e appuntito pungiglione velenoso, lungo circa 5 cm.",
+					"ja": "森や 草地に 多く 生息。 頭の 先に ５センチぐらいの 小さく 鋭い 毒針を持つ。",
+					"ko": "숲이나 풀밭에 많이 서식한다. 머리끝에 5cm 정도의 작고 날카로운 독침을 지니고 있다.",
+					"es-419": "Suele habitar bosques y praderas. Tiene un afilado y venenoso aguijón de unos 5 cm encima de la cabeza.",
+					"zh-hans": "大量栖息在森林或草地里。 头顶上长着约５厘米的尖锐小毒针。",
+					"es": "Suele habitar bosques y praderas. Tiene un afilado y venenoso aguijón de unos 5 cm encima de la cabeza.",
+					"zh-hant": "大量棲息在森林或草地裡。 頭頂長著約５公分長的 尖銳小毒針。"
+				}
+			}
+		}
+	]
+}

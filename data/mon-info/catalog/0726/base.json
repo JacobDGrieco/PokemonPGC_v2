@@ -1,0 +1,3366 @@
+{
+	"schemaVersion": 2,
+	"nationalDexId": 726,
+	"speciesName": "Torracat",
+	"formKey": "base",
+	"formName": "Base",
+	"formLabelSource": "form-catalog",
+	"profiles": [
+		{
+			"profileKey": "sun-moon",
+			"label": "Sun / Moon",
+			"appGameKeys": [
+				"sun-alola",
+				"sun-melemele",
+				"sun-akala",
+				"sun-ulaula",
+				"sun-poni",
+				"moon-alola",
+				"moon-melemele",
+				"moon-akala",
+				"moon-ulaula",
+				"moon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Torracat",
+				"localizedNames": {
+					"ja-hrkt": "ニャヒート",
+					"ja-roma": "Nyaheat",
+					"ko": "냐오히트",
+					"zh-hant": "炎熱喵",
+					"fr": "Matoufeu",
+					"de": "Miezunder",
+					"es": "Torracat",
+					"it": "Torracat",
+					"ja": "ニャヒート",
+					"zh-hans": "炎热喵",
+					"es-419": "Torracat"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 65,
+					"atk": 85,
+					"def": 50,
+					"spa": 80,
+					"spd": 50,
+					"spe": 90
+				},
+				"evYield": {
+					"spe": 2
+				},
+				"generation": 7,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Blaze",
+					"Intimidate (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Intimidate"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 15,
+				"height": "0.7 m",
+				"weight": "25.0 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 147,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Red",
+				"genus": "Fire Cat Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ひねこポケモン",
+					"ko": "불고양이포켓몬",
+					"zh-hant": "火貓寶可夢",
+					"fr": "Pokémon Chat Feu",
+					"de": "Feuerkatzen-Pokémon",
+					"es": "Pokémon Gato Fuego",
+					"it": "Pokémon Pirofelino",
+					"ja": "ひねこポケモン",
+					"zh-hans": "火猫宝可梦",
+					"es-419": "Pokémon Gato Fuego"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 726
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 5
+					},
+					{
+						"pokedex": "original-melemele",
+						"number": 5
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 5
+					},
+					{
+						"pokedex": "updated-melemele",
+						"number": 5
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 222
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 725,
+								"natiId": 725,
+								"name": "Litten"
+							},
+							{
+								"id": 726,
+								"natiId": 726,
+								"name": "Torracat",
+								"method": "Level",
+								"value": 17
+							},
+							{
+								"id": 727,
+								"natiId": 727,
+								"name": "Incineroar",
+								"method": "Level",
+								"value": 34
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Scratch",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Ember",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Growl",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Lick",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Growl",
+							"level": 4,
+							"order": null
+						},
+						{
+							"name": "Lick",
+							"level": 8,
+							"order": null
+						},
+						{
+							"name": "Leer",
+							"level": 11,
+							"order": null
+						},
+						{
+							"name": "Fire Fang",
+							"level": 15,
+							"order": null
+						},
+						{
+							"name": "Roar",
+							"level": 19,
+							"order": null
+						},
+						{
+							"name": "Bite",
+							"level": 24,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": 28,
+							"order": null
+						},
+						{
+							"name": "Fury Swipes",
+							"level": 33,
+							"order": null
+						},
+						{
+							"name": "Thrash",
+							"level": 37,
+							"order": null
+						},
+						{
+							"name": "Flamethrower",
+							"level": 42,
+							"order": null
+						},
+						{
+							"name": "Scary Face",
+							"level": 46,
+							"order": null
+						},
+						{
+							"name": "Flare Blitz",
+							"level": 51,
+							"order": null
+						},
+						{
+							"name": "Outrage",
+							"level": 55,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Acrobatics",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bulk Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fire Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flame Charge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flamethrower",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Leech Life",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Overheat",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Roar",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Claw",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swords Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Taunt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Torment",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "U Turn",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Work Up",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Fire Pledge",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sun Moon."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/726",
+						"fetchedAt": "2026-11-03T05:53:52.448Z",
+						"hash": "60b0637d9083c376b3ef5ec60076f2ebd90a3e9f611f707e1f5ca60167dc0525"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/375/",
+						"fetchedAt": "2026-11-03T05:53:52.407Z",
+						"hash": "0fb05496507484297a9f83c106089a9edc6903391acabfab09350733cef68a07"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/726/",
+						"fetchedAt": "2026-11-03T05:53:52.476Z",
+						"hash": "af24db6dc0f2b81f8d398af3c6874e9efe2482086006c9e42fb60667d64b7117"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/726/encounters",
+						"fetchedAt": "2026-11-03T05:53:52.503Z",
+						"hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/726/",
+						"fetchedAt": "2026-11-03T05:53:52.569Z",
+						"hash": "78034ebc69e17e731ca64c2f70c79836b3e29cac1c59d18c66a39a3c34c82093"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sun-alola": "At its throat, it bears a bell of fire. The bell rings brightly whenever this Pokémon spits fire.",
+				"sun-melemele": "At its throat, it bears a bell of fire. The bell rings brightly whenever this Pokémon spits fire.",
+				"sun-akala": "At its throat, it bears a bell of fire. The bell rings brightly whenever this Pokémon spits fire.",
+				"sun-ulaula": "At its throat, it bears a bell of fire. The bell rings brightly whenever this Pokémon spits fire.",
+				"sun-poni": "At its throat, it bears a bell of fire. The bell rings brightly whenever this Pokémon spits fire.",
+				"moon-alola": "It boasts powerful front legs. With a single punch, it can bend an iron bar right over.",
+				"moon-melemele": "It boasts powerful front legs. With a single punch, it can bend an iron bar right over.",
+				"moon-akala": "It boasts powerful front legs. With a single punch, it can bend an iron bar right over.",
+				"moon-ulaula": "It boasts powerful front legs. With a single punch, it can bend an iron bar right over.",
+				"moon-poni": "It boasts powerful front legs. With a single punch, it can bend an iron bar right over."
+			},
+			"localizedFlavorByGame": {
+				"sun-alola": {
+					"ja-hrkt": "くびの つけねに ほのおの スズが ある。 ほのおが ふきだすとき リンリンと たかいおとが なる。",
+					"ko": "목 주변에 불꽃의 방울이 있다. 불꽃을 뿜어낼 때 딸랑딸랑 높은 소리가 난다.",
+					"zh-hant": "脖子上掛著火焰鈴鐺。 噴出火焰的時候， 會叮鈴鈴地發出響亮的聲音。",
+					"fr": "Il porte à son cou une cloche de feu. Lorsqu’il crache des flammes, cette dernière se met à tinter bruyamment.",
+					"de": "Es trägt ein feuriges Glöckchen um den Hals. Immer, wenn es Flammen ausstößt, ertönt ein helles Läuten.",
+					"es": "Luce al cuello un cascabel incandescente que tintinea con fuerza cuando desprende llamas.",
+					"it": "Quando si mette a sputare fuoco, il sonaglio infuocato che tiene al collo emette un forte tintinnio.",
+					"en": "At its throat, it bears a bell of fire. The bell rings brightly whenever this Pokémon spits fire.",
+					"ja": "首の 付け根に 炎の 鈴が ある。 炎が 噴きだすとき リンリンと 高い音が 鳴る。",
+					"zh-hans": "脖子上挂有火焰铃铛。 喷出火焰的时候， 会叮铃铃地发出很响的声音。",
+					"es-419": "Luce al cuello un cascabel incandescente que tintinea con fuerza cuando desprende llamas."
+				},
+				"sun-melemele": {
+					"ja-hrkt": "くびの つけねに ほのおの スズが ある。 ほのおが ふきだすとき リンリンと たかいおとが なる。",
+					"ko": "목 주변에 불꽃의 방울이 있다. 불꽃을 뿜어낼 때 딸랑딸랑 높은 소리가 난다.",
+					"zh-hant": "脖子上掛著火焰鈴鐺。 噴出火焰的時候， 會叮鈴鈴地發出響亮的聲音。",
+					"fr": "Il porte à son cou une cloche de feu. Lorsqu’il crache des flammes, cette dernière se met à tinter bruyamment.",
+					"de": "Es trägt ein feuriges Glöckchen um den Hals. Immer, wenn es Flammen ausstößt, ertönt ein helles Läuten.",
+					"es": "Luce al cuello un cascabel incandescente que tintinea con fuerza cuando desprende llamas.",
+					"it": "Quando si mette a sputare fuoco, il sonaglio infuocato che tiene al collo emette un forte tintinnio.",
+					"en": "At its throat, it bears a bell of fire. The bell rings brightly whenever this Pokémon spits fire.",
+					"ja": "首の 付け根に 炎の 鈴が ある。 炎が 噴きだすとき リンリンと 高い音が 鳴る。",
+					"zh-hans": "脖子上挂有火焰铃铛。 喷出火焰的时候， 会叮铃铃地发出很响的声音。",
+					"es-419": "Luce al cuello un cascabel incandescente que tintinea con fuerza cuando desprende llamas."
+				},
+				"sun-akala": {
+					"ja-hrkt": "くびの つけねに ほのおの スズが ある。 ほのおが ふきだすとき リンリンと たかいおとが なる。",
+					"ko": "목 주변에 불꽃의 방울이 있다. 불꽃을 뿜어낼 때 딸랑딸랑 높은 소리가 난다.",
+					"zh-hant": "脖子上掛著火焰鈴鐺。 噴出火焰的時候， 會叮鈴鈴地發出響亮的聲音。",
+					"fr": "Il porte à son cou une cloche de feu. Lorsqu’il crache des flammes, cette dernière se met à tinter bruyamment.",
+					"de": "Es trägt ein feuriges Glöckchen um den Hals. Immer, wenn es Flammen ausstößt, ertönt ein helles Läuten.",
+					"es": "Luce al cuello un cascabel incandescente que tintinea con fuerza cuando desprende llamas.",
+					"it": "Quando si mette a sputare fuoco, il sonaglio infuocato che tiene al collo emette un forte tintinnio.",
+					"en": "At its throat, it bears a bell of fire. The bell rings brightly whenever this Pokémon spits fire.",
+					"ja": "首の 付け根に 炎の 鈴が ある。 炎が 噴きだすとき リンリンと 高い音が 鳴る。",
+					"zh-hans": "脖子上挂有火焰铃铛。 喷出火焰的时候， 会叮铃铃地发出很响的声音。",
+					"es-419": "Luce al cuello un cascabel incandescente que tintinea con fuerza cuando desprende llamas."
+				},
+				"sun-ulaula": {
+					"ja-hrkt": "くびの つけねに ほのおの スズが ある。 ほのおが ふきだすとき リンリンと たかいおとが なる。",
+					"ko": "목 주변에 불꽃의 방울이 있다. 불꽃을 뿜어낼 때 딸랑딸랑 높은 소리가 난다.",
+					"zh-hant": "脖子上掛著火焰鈴鐺。 噴出火焰的時候， 會叮鈴鈴地發出響亮的聲音。",
+					"fr": "Il porte à son cou une cloche de feu. Lorsqu’il crache des flammes, cette dernière se met à tinter bruyamment.",
+					"de": "Es trägt ein feuriges Glöckchen um den Hals. Immer, wenn es Flammen ausstößt, ertönt ein helles Läuten.",
+					"es": "Luce al cuello un cascabel incandescente que tintinea con fuerza cuando desprende llamas.",
+					"it": "Quando si mette a sputare fuoco, il sonaglio infuocato che tiene al collo emette un forte tintinnio.",
+					"en": "At its throat, it bears a bell of fire. The bell rings brightly whenever this Pokémon spits fire.",
+					"ja": "首の 付け根に 炎の 鈴が ある。 炎が 噴きだすとき リンリンと 高い音が 鳴る。",
+					"zh-hans": "脖子上挂有火焰铃铛。 喷出火焰的时候， 会叮铃铃地发出很响的声音。",
+					"es-419": "Luce al cuello un cascabel incandescente que tintinea con fuerza cuando desprende llamas."
+				},
+				"sun-poni": {
+					"ja-hrkt": "くびの つけねに ほのおの スズが ある。 ほのおが ふきだすとき リンリンと たかいおとが なる。",
+					"ko": "목 주변에 불꽃의 방울이 있다. 불꽃을 뿜어낼 때 딸랑딸랑 높은 소리가 난다.",
+					"zh-hant": "脖子上掛著火焰鈴鐺。 噴出火焰的時候， 會叮鈴鈴地發出響亮的聲音。",
+					"fr": "Il porte à son cou une cloche de feu. Lorsqu’il crache des flammes, cette dernière se met à tinter bruyamment.",
+					"de": "Es trägt ein feuriges Glöckchen um den Hals. Immer, wenn es Flammen ausstößt, ertönt ein helles Läuten.",
+					"es": "Luce al cuello un cascabel incandescente que tintinea con fuerza cuando desprende llamas.",
+					"it": "Quando si mette a sputare fuoco, il sonaglio infuocato che tiene al collo emette un forte tintinnio.",
+					"en": "At its throat, it bears a bell of fire. The bell rings brightly whenever this Pokémon spits fire.",
+					"ja": "首の 付け根に 炎の 鈴が ある。 炎が 噴きだすとき リンリンと 高い音が 鳴る。",
+					"zh-hans": "脖子上挂有火焰铃铛。 喷出火焰的时候， 会叮铃铃地发出很响的声音。",
+					"es-419": "Luce al cuello un cascabel incandescente que tintinea con fuerza cuando desprende llamas."
+				},
+				"moon-alola": {
+					"ja-hrkt": "まえあしの ちからが じまん。 パンチの いちげきで てつのぼうも へしまげて しまうのだ。",
+					"ko": "앞발의 힘이 자랑거리다. 펀치 한 방에 철봉도 구부러트려 버린다.",
+					"zh-hant": "以前腳的力量而自豪。 只要一拳就能把鐵棒都打彎。",
+					"fr": "Il est très fier de ses pattes avant musclées, et ne se gêne pas pour le montrer en tordant des barres de fer d’un seul coup de poing.",
+					"de": "Dieses Pokémon ist sehr stolz auf seine starken Vorderbeine. Außerdem kann es mit nur einem Schlag eine Eisenstange verbiegen.",
+					"es": "Se enorgullece de la fuerza de sus patas delanteras, con las que es capaz de doblar barras de acero de un solo golpe.",
+					"it": "Va molto fiero della potenza delle sue zampe anteriori, grazie alle quali è capace di piegare una spranga di ferro con un colpo solo.",
+					"en": "It boasts powerful front legs. With a single punch, it can bend an iron bar right over.",
+					"ja": "前足の 力が 自慢。 パンチの 一撃で 鉄の棒も へし曲げて しまうのだ。",
+					"zh-hans": "以前肢的力量而自豪。 一记拳击，连铁棒都能弯折。",
+					"es-419": "Se enorgullece de la fuerza de sus patas delanteras, con las que es capaz de doblar barras de acero de un solo golpe."
+				},
+				"moon-melemele": {
+					"ja-hrkt": "まえあしの ちからが じまん。 パンチの いちげきで てつのぼうも へしまげて しまうのだ。",
+					"ko": "앞발의 힘이 자랑거리다. 펀치 한 방에 철봉도 구부러트려 버린다.",
+					"zh-hant": "以前腳的力量而自豪。 只要一拳就能把鐵棒都打彎。",
+					"fr": "Il est très fier de ses pattes avant musclées, et ne se gêne pas pour le montrer en tordant des barres de fer d’un seul coup de poing.",
+					"de": "Dieses Pokémon ist sehr stolz auf seine starken Vorderbeine. Außerdem kann es mit nur einem Schlag eine Eisenstange verbiegen.",
+					"es": "Se enorgullece de la fuerza de sus patas delanteras, con las que es capaz de doblar barras de acero de un solo golpe.",
+					"it": "Va molto fiero della potenza delle sue zampe anteriori, grazie alle quali è capace di piegare una spranga di ferro con un colpo solo.",
+					"en": "It boasts powerful front legs. With a single punch, it can bend an iron bar right over.",
+					"ja": "前足の 力が 自慢。 パンチの 一撃で 鉄の棒も へし曲げて しまうのだ。",
+					"zh-hans": "以前肢的力量而自豪。 一记拳击，连铁棒都能弯折。",
+					"es-419": "Se enorgullece de la fuerza de sus patas delanteras, con las que es capaz de doblar barras de acero de un solo golpe."
+				},
+				"moon-akala": {
+					"ja-hrkt": "まえあしの ちからが じまん。 パンチの いちげきで てつのぼうも へしまげて しまうのだ。",
+					"ko": "앞발의 힘이 자랑거리다. 펀치 한 방에 철봉도 구부러트려 버린다.",
+					"zh-hant": "以前腳的力量而自豪。 只要一拳就能把鐵棒都打彎。",
+					"fr": "Il est très fier de ses pattes avant musclées, et ne se gêne pas pour le montrer en tordant des barres de fer d’un seul coup de poing.",
+					"de": "Dieses Pokémon ist sehr stolz auf seine starken Vorderbeine. Außerdem kann es mit nur einem Schlag eine Eisenstange verbiegen.",
+					"es": "Se enorgullece de la fuerza de sus patas delanteras, con las que es capaz de doblar barras de acero de un solo golpe.",
+					"it": "Va molto fiero della potenza delle sue zampe anteriori, grazie alle quali è capace di piegare una spranga di ferro con un colpo solo.",
+					"en": "It boasts powerful front legs. With a single punch, it can bend an iron bar right over.",
+					"ja": "前足の 力が 自慢。 パンチの 一撃で 鉄の棒も へし曲げて しまうのだ。",
+					"zh-hans": "以前肢的力量而自豪。 一记拳击，连铁棒都能弯折。",
+					"es-419": "Se enorgullece de la fuerza de sus patas delanteras, con las que es capaz de doblar barras de acero de un solo golpe."
+				},
+				"moon-ulaula": {
+					"ja-hrkt": "まえあしの ちからが じまん。 パンチの いちげきで てつのぼうも へしまげて しまうのだ。",
+					"ko": "앞발의 힘이 자랑거리다. 펀치 한 방에 철봉도 구부러트려 버린다.",
+					"zh-hant": "以前腳的力量而自豪。 只要一拳就能把鐵棒都打彎。",
+					"fr": "Il est très fier de ses pattes avant musclées, et ne se gêne pas pour le montrer en tordant des barres de fer d’un seul coup de poing.",
+					"de": "Dieses Pokémon ist sehr stolz auf seine starken Vorderbeine. Außerdem kann es mit nur einem Schlag eine Eisenstange verbiegen.",
+					"es": "Se enorgullece de la fuerza de sus patas delanteras, con las que es capaz de doblar barras de acero de un solo golpe.",
+					"it": "Va molto fiero della potenza delle sue zampe anteriori, grazie alle quali è capace di piegare una spranga di ferro con un colpo solo.",
+					"en": "It boasts powerful front legs. With a single punch, it can bend an iron bar right over.",
+					"ja": "前足の 力が 自慢。 パンチの 一撃で 鉄の棒も へし曲げて しまうのだ。",
+					"zh-hans": "以前肢的力量而自豪。 一记拳击，连铁棒都能弯折。",
+					"es-419": "Se enorgullece de la fuerza de sus patas delanteras, con las que es capaz de doblar barras de acero de un solo golpe."
+				},
+				"moon-poni": {
+					"ja-hrkt": "まえあしの ちからが じまん。 パンチの いちげきで てつのぼうも へしまげて しまうのだ。",
+					"ko": "앞발의 힘이 자랑거리다. 펀치 한 방에 철봉도 구부러트려 버린다.",
+					"zh-hant": "以前腳的力量而自豪。 只要一拳就能把鐵棒都打彎。",
+					"fr": "Il est très fier de ses pattes avant musclées, et ne se gêne pas pour le montrer en tordant des barres de fer d’un seul coup de poing.",
+					"de": "Dieses Pokémon ist sehr stolz auf seine starken Vorderbeine. Außerdem kann es mit nur einem Schlag eine Eisenstange verbiegen.",
+					"es": "Se enorgullece de la fuerza de sus patas delanteras, con las que es capaz de doblar barras de acero de un solo golpe.",
+					"it": "Va molto fiero della potenza delle sue zampe anteriori, grazie alle quali è capace di piegare una spranga di ferro con un colpo solo.",
+					"en": "It boasts powerful front legs. With a single punch, it can bend an iron bar right over.",
+					"ja": "前足の 力が 自慢。 パンチの 一撃で 鉄の棒も へし曲げて しまうのだ。",
+					"zh-hans": "以前肢的力量而自豪。 一记拳击，连铁棒都能弯折。",
+					"es-419": "Se enorgullece de la fuerza de sus patas delanteras, con las que es capaz de doblar barras de acero de un solo golpe."
+				}
+			}
+		},
+		{
+			"profileKey": "ultra-sun-ultra-moon",
+			"label": "Ultra Sun / Ultra Moon",
+			"appGameKeys": [
+				"ultrasun-alola",
+				"ultrasun-melemele",
+				"ultrasun-akala",
+				"ultrasun-ulaula",
+				"ultrasun-poni",
+				"ultramoon-alola",
+				"ultramoon-melemele",
+				"ultramoon-akala",
+				"ultramoon-ulaula",
+				"ultramoon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Torracat",
+				"localizedNames": {
+					"ja-hrkt": "ニャヒート",
+					"ja-roma": "Nyaheat",
+					"ko": "냐오히트",
+					"zh-hant": "炎熱喵",
+					"fr": "Matoufeu",
+					"de": "Miezunder",
+					"es": "Torracat",
+					"it": "Torracat",
+					"ja": "ニャヒート",
+					"zh-hans": "炎热喵",
+					"es-419": "Torracat"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 65,
+					"atk": 85,
+					"def": 50,
+					"spa": 80,
+					"spd": 50,
+					"spe": 90
+				},
+				"evYield": {
+					"spe": 2
+				},
+				"generation": 7,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Blaze",
+					"Intimidate (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Intimidate"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 15,
+				"height": "0.7 m",
+				"weight": "25.0 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 147,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Red",
+				"genus": "Fire Cat Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ひねこポケモン",
+					"ko": "불고양이포켓몬",
+					"zh-hant": "火貓寶可夢",
+					"fr": "Pokémon Chat Feu",
+					"de": "Feuerkatzen-Pokémon",
+					"es": "Pokémon Gato Fuego",
+					"it": "Pokémon Pirofelino",
+					"ja": "ひねこポケモン",
+					"zh-hans": "火猫宝可梦",
+					"es-419": "Pokémon Gato Fuego"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 726
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 5
+					},
+					{
+						"pokedex": "original-melemele",
+						"number": 5
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 5
+					},
+					{
+						"pokedex": "updated-melemele",
+						"number": 5
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 222
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 725,
+								"natiId": 725,
+								"name": "Litten"
+							},
+							{
+								"id": 726,
+								"natiId": 726,
+								"name": "Torracat",
+								"method": "Level",
+								"value": 17
+							},
+							{
+								"id": 727,
+								"natiId": 727,
+								"name": "Incineroar",
+								"method": "Level",
+								"value": 34
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Scratch",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Ember",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Growl",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Lick",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Growl",
+							"level": 4,
+							"order": null
+						},
+						{
+							"name": "Lick",
+							"level": 8,
+							"order": null
+						},
+						{
+							"name": "Leer",
+							"level": 11,
+							"order": null
+						},
+						{
+							"name": "Fire Fang",
+							"level": 14,
+							"order": null
+						},
+						{
+							"name": "Double Kick",
+							"level": 16,
+							"order": null
+						},
+						{
+							"name": "Roar",
+							"level": 19,
+							"order": null
+						},
+						{
+							"name": "Bite",
+							"level": 24,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": 28,
+							"order": null
+						},
+						{
+							"name": "Fury Swipes",
+							"level": 33,
+							"order": null
+						},
+						{
+							"name": "Thrash",
+							"level": 37,
+							"order": null
+						},
+						{
+							"name": "Flamethrower",
+							"level": 42,
+							"order": null
+						},
+						{
+							"name": "Scary Face",
+							"level": 46,
+							"order": null
+						},
+						{
+							"name": "Flare Blitz",
+							"level": 51,
+							"order": null
+						},
+						{
+							"name": "Outrage",
+							"level": 55,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Acrobatics",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bulk Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fire Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flame Charge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flamethrower",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Leech Life",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Overheat",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Roar",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Claw",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swords Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Taunt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Torment",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "U Turn",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Work Up",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Covet",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dual Chop",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endeavor",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fire Pledge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Heat Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Outrage",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sun Moon."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/726",
+						"fetchedAt": "2026-11-03T05:53:52.448Z",
+						"hash": "60b0637d9083c376b3ef5ec60076f2ebd90a3e9f611f707e1f5ca60167dc0525"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/375/",
+						"fetchedAt": "2026-11-03T05:53:52.407Z",
+						"hash": "0fb05496507484297a9f83c106089a9edc6903391acabfab09350733cef68a07"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/726/",
+						"fetchedAt": "2026-11-03T05:53:52.476Z",
+						"hash": "af24db6dc0f2b81f8d398af3c6874e9efe2482086006c9e42fb60667d64b7117"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/726/encounters",
+						"fetchedAt": "2026-11-03T05:53:52.503Z",
+						"hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/726/",
+						"fetchedAt": "2026-11-03T05:53:52.569Z",
+						"hash": "78034ebc69e17e731ca64c2f70c79836b3e29cac1c59d18c66a39a3c34c82093"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"ultrasun-alola": "It can act spoiled if it grows close to its Trainer. A powerful Pokémon, its sharp claws can leave its Trainer’s whole body covered in scratches.",
+				"ultrasun-melemele": "It can act spoiled if it grows close to its Trainer. A powerful Pokémon, its sharp claws can leave its Trainer’s whole body covered in scratches.",
+				"ultrasun-akala": "It can act spoiled if it grows close to its Trainer. A powerful Pokémon, its sharp claws can leave its Trainer’s whole body covered in scratches.",
+				"ultrasun-ulaula": "It can act spoiled if it grows close to its Trainer. A powerful Pokémon, its sharp claws can leave its Trainer’s whole body covered in scratches.",
+				"ultrasun-poni": "It can act spoiled if it grows close to its Trainer. A powerful Pokémon, its sharp claws can leave its Trainer’s whole body covered in scratches.",
+				"ultramoon-alola": "When its mane is standing on end, you can tell it’s feeling good. When it isn’t feeling well, its fur will lie down flat.",
+				"ultramoon-melemele": "When its mane is standing on end, you can tell it’s feeling good. When it isn’t feeling well, its fur will lie down flat.",
+				"ultramoon-akala": "When its mane is standing on end, you can tell it’s feeling good. When it isn’t feeling well, its fur will lie down flat.",
+				"ultramoon-ulaula": "When its mane is standing on end, you can tell it’s feeling good. When it isn’t feeling well, its fur will lie down flat.",
+				"ultramoon-poni": "When its mane is standing on end, you can tell it’s feeling good. When it isn’t feeling well, its fur will lie down flat."
+			},
+			"localizedFlavorByGame": {
+				"ultrasun-alola": {
+					"ja-hrkt": "なつくと トレーナーにも あまえるが ちからは つよく ツメも するどい。 ぜんしん きずだらけに されるぞ。",
+					"ko": "친해지면 트레이너에게도 응석 부리지만, 힘은 강하고 발톱도 날카롭다. 온몸을 상처투성이로 만든다.",
+					"zh-hant": "變得親近後也會對訓練家撒嬌。 但因為力氣很大，爪子又很銳利， 訓練家會被弄得全身是傷。",
+					"fr": "Il sait être affectueux avec son Dresseur, mais il ne connaît pas sa force. Câlinez-le, et vous vous retrouverez couvert de griffures.",
+					"de": "Zutrauliche Miezunder schmiegen sich sogar an ihren Trainer an. Sie sind so stark, dass dieser dabei am ganzen Körper Kratzwunden erleidet.",
+					"es": "Si le coge cariño a su Entrenador se muestra afectuoso, pero es tan fuerte y sus garras tan afiladas que lo puede dejar lleno de arañazos.",
+					"it": "Quando si affeziona, il suo Allenatore deve stare attento ai suoi slanci: data la sua forza e i suoi artigli affilati, rischia di ritrovarsi pieno di graffi.",
+					"en": "It can act spoiled if it grows close to its Trainer. A powerful Pokémon, its sharp claws can leave its Trainer’s whole body covered in scratches.",
+					"ja": "なつくと トレーナーにも 甘えるが 力は 強く ツメも 鋭い。 全身 傷だらけに されるぞ。",
+					"zh-hans": "如果亲近了，也会对训练家撒娇， 但是力量很强，爪子也很锋利， 所以会被弄得全身是伤。",
+					"es-419": "Si le coge cariño a su Entrenador se muestra afectuoso, pero es tan fuerte y sus garras tan afiladas que lo puede dejar lleno de arañazos."
+				},
+				"ultrasun-melemele": {
+					"ja-hrkt": "なつくと トレーナーにも あまえるが ちからは つよく ツメも するどい。 ぜんしん きずだらけに されるぞ。",
+					"ko": "친해지면 트레이너에게도 응석 부리지만, 힘은 강하고 발톱도 날카롭다. 온몸을 상처투성이로 만든다.",
+					"zh-hant": "變得親近後也會對訓練家撒嬌。 但因為力氣很大，爪子又很銳利， 訓練家會被弄得全身是傷。",
+					"fr": "Il sait être affectueux avec son Dresseur, mais il ne connaît pas sa force. Câlinez-le, et vous vous retrouverez couvert de griffures.",
+					"de": "Zutrauliche Miezunder schmiegen sich sogar an ihren Trainer an. Sie sind so stark, dass dieser dabei am ganzen Körper Kratzwunden erleidet.",
+					"es": "Si le coge cariño a su Entrenador se muestra afectuoso, pero es tan fuerte y sus garras tan afiladas que lo puede dejar lleno de arañazos.",
+					"it": "Quando si affeziona, il suo Allenatore deve stare attento ai suoi slanci: data la sua forza e i suoi artigli affilati, rischia di ritrovarsi pieno di graffi.",
+					"en": "It can act spoiled if it grows close to its Trainer. A powerful Pokémon, its sharp claws can leave its Trainer’s whole body covered in scratches.",
+					"ja": "なつくと トレーナーにも 甘えるが 力は 強く ツメも 鋭い。 全身 傷だらけに されるぞ。",
+					"zh-hans": "如果亲近了，也会对训练家撒娇， 但是力量很强，爪子也很锋利， 所以会被弄得全身是伤。",
+					"es-419": "Si le coge cariño a su Entrenador se muestra afectuoso, pero es tan fuerte y sus garras tan afiladas que lo puede dejar lleno de arañazos."
+				},
+				"ultrasun-akala": {
+					"ja-hrkt": "なつくと トレーナーにも あまえるが ちからは つよく ツメも するどい。 ぜんしん きずだらけに されるぞ。",
+					"ko": "친해지면 트레이너에게도 응석 부리지만, 힘은 강하고 발톱도 날카롭다. 온몸을 상처투성이로 만든다.",
+					"zh-hant": "變得親近後也會對訓練家撒嬌。 但因為力氣很大，爪子又很銳利， 訓練家會被弄得全身是傷。",
+					"fr": "Il sait être affectueux avec son Dresseur, mais il ne connaît pas sa force. Câlinez-le, et vous vous retrouverez couvert de griffures.",
+					"de": "Zutrauliche Miezunder schmiegen sich sogar an ihren Trainer an. Sie sind so stark, dass dieser dabei am ganzen Körper Kratzwunden erleidet.",
+					"es": "Si le coge cariño a su Entrenador se muestra afectuoso, pero es tan fuerte y sus garras tan afiladas que lo puede dejar lleno de arañazos.",
+					"it": "Quando si affeziona, il suo Allenatore deve stare attento ai suoi slanci: data la sua forza e i suoi artigli affilati, rischia di ritrovarsi pieno di graffi.",
+					"en": "It can act spoiled if it grows close to its Trainer. A powerful Pokémon, its sharp claws can leave its Trainer’s whole body covered in scratches.",
+					"ja": "なつくと トレーナーにも 甘えるが 力は 強く ツメも 鋭い。 全身 傷だらけに されるぞ。",
+					"zh-hans": "如果亲近了，也会对训练家撒娇， 但是力量很强，爪子也很锋利， 所以会被弄得全身是伤。",
+					"es-419": "Si le coge cariño a su Entrenador se muestra afectuoso, pero es tan fuerte y sus garras tan afiladas que lo puede dejar lleno de arañazos."
+				},
+				"ultrasun-ulaula": {
+					"ja-hrkt": "なつくと トレーナーにも あまえるが ちからは つよく ツメも するどい。 ぜんしん きずだらけに されるぞ。",
+					"ko": "친해지면 트레이너에게도 응석 부리지만, 힘은 강하고 발톱도 날카롭다. 온몸을 상처투성이로 만든다.",
+					"zh-hant": "變得親近後也會對訓練家撒嬌。 但因為力氣很大，爪子又很銳利， 訓練家會被弄得全身是傷。",
+					"fr": "Il sait être affectueux avec son Dresseur, mais il ne connaît pas sa force. Câlinez-le, et vous vous retrouverez couvert de griffures.",
+					"de": "Zutrauliche Miezunder schmiegen sich sogar an ihren Trainer an. Sie sind so stark, dass dieser dabei am ganzen Körper Kratzwunden erleidet.",
+					"es": "Si le coge cariño a su Entrenador se muestra afectuoso, pero es tan fuerte y sus garras tan afiladas que lo puede dejar lleno de arañazos.",
+					"it": "Quando si affeziona, il suo Allenatore deve stare attento ai suoi slanci: data la sua forza e i suoi artigli affilati, rischia di ritrovarsi pieno di graffi.",
+					"en": "It can act spoiled if it grows close to its Trainer. A powerful Pokémon, its sharp claws can leave its Trainer’s whole body covered in scratches.",
+					"ja": "なつくと トレーナーにも 甘えるが 力は 強く ツメも 鋭い。 全身 傷だらけに されるぞ。",
+					"zh-hans": "如果亲近了，也会对训练家撒娇， 但是力量很强，爪子也很锋利， 所以会被弄得全身是伤。",
+					"es-419": "Si le coge cariño a su Entrenador se muestra afectuoso, pero es tan fuerte y sus garras tan afiladas que lo puede dejar lleno de arañazos."
+				},
+				"ultrasun-poni": {
+					"ja-hrkt": "なつくと トレーナーにも あまえるが ちからは つよく ツメも するどい。 ぜんしん きずだらけに されるぞ。",
+					"ko": "친해지면 트레이너에게도 응석 부리지만, 힘은 강하고 발톱도 날카롭다. 온몸을 상처투성이로 만든다.",
+					"zh-hant": "變得親近後也會對訓練家撒嬌。 但因為力氣很大，爪子又很銳利， 訓練家會被弄得全身是傷。",
+					"fr": "Il sait être affectueux avec son Dresseur, mais il ne connaît pas sa force. Câlinez-le, et vous vous retrouverez couvert de griffures.",
+					"de": "Zutrauliche Miezunder schmiegen sich sogar an ihren Trainer an. Sie sind so stark, dass dieser dabei am ganzen Körper Kratzwunden erleidet.",
+					"es": "Si le coge cariño a su Entrenador se muestra afectuoso, pero es tan fuerte y sus garras tan afiladas que lo puede dejar lleno de arañazos.",
+					"it": "Quando si affeziona, il suo Allenatore deve stare attento ai suoi slanci: data la sua forza e i suoi artigli affilati, rischia di ritrovarsi pieno di graffi.",
+					"en": "It can act spoiled if it grows close to its Trainer. A powerful Pokémon, its sharp claws can leave its Trainer’s whole body covered in scratches.",
+					"ja": "なつくと トレーナーにも 甘えるが 力は 強く ツメも 鋭い。 全身 傷だらけに されるぞ。",
+					"zh-hans": "如果亲近了，也会对训练家撒娇， 但是力量很强，爪子也很锋利， 所以会被弄得全身是伤。",
+					"es-419": "Si le coge cariño a su Entrenador se muestra afectuoso, pero es tan fuerte y sus garras tan afiladas que lo puede dejar lleno de arañazos."
+				},
+				"ultramoon-alola": {
+					"ja-hrkt": "たてがみが ピンと たっているときは ちょうしがよい しょうこ。 ぐあいが わるいと けがうしろに ねてしまう。",
+					"ko": "갈기가 바짝 서 있으면 컨디션이 좋다는 증거다. 상태가 안 좋으면 털이 뒤로 누워 버린다.",
+					"zh-hant": "如果牠的鬃毛直直豎立， 代表牠的狀態很好。 狀態不好時，毛會向後倒下。",
+					"fr": "Quand la mèche sur sa tête est dressée, c’est qu’il se porte bien. Dans le cas contraire, elle est plate et tombe vers l’arrière.",
+					"de": "Hat es seine Mähne aufgestellt, bedeutet dies, dass es guter Dinge ist. Geht es ihm jedoch schlecht, hängt sie schlaff nach hinten herab.",
+					"es": "Una crin alzada viene a significar que su estado físico es bueno, mientras que una crin lacia hacia atrás indica lo contrario.",
+					"it": "Quando la sua criniera è ritta, vuol dire che è in buona salute. Se sta male, invece, la lascia cadere all’indietro.",
+					"en": "When its mane is standing on end, you can tell it’s feeling good. When it isn’t feeling well, its fur will lie down flat.",
+					"ja": "たてがみが ピンと 立っているときは 調子が良い 証拠。 具合が 悪いと 毛が後ろに 寝てしまう。",
+					"zh-hans": "鬃毛竖得直直的时候， 证明它状态良好。 状态不好时，毛发会向后倒。",
+					"es-419": "Una crin alzada viene a significar que su estado físico es bueno, mientras que una crin lacia hacia atrás indica lo contrario."
+				},
+				"ultramoon-melemele": {
+					"ja-hrkt": "たてがみが ピンと たっているときは ちょうしがよい しょうこ。 ぐあいが わるいと けがうしろに ねてしまう。",
+					"ko": "갈기가 바짝 서 있으면 컨디션이 좋다는 증거다. 상태가 안 좋으면 털이 뒤로 누워 버린다.",
+					"zh-hant": "如果牠的鬃毛直直豎立， 代表牠的狀態很好。 狀態不好時，毛會向後倒下。",
+					"fr": "Quand la mèche sur sa tête est dressée, c’est qu’il se porte bien. Dans le cas contraire, elle est plate et tombe vers l’arrière.",
+					"de": "Hat es seine Mähne aufgestellt, bedeutet dies, dass es guter Dinge ist. Geht es ihm jedoch schlecht, hängt sie schlaff nach hinten herab.",
+					"es": "Una crin alzada viene a significar que su estado físico es bueno, mientras que una crin lacia hacia atrás indica lo contrario.",
+					"it": "Quando la sua criniera è ritta, vuol dire che è in buona salute. Se sta male, invece, la lascia cadere all’indietro.",
+					"en": "When its mane is standing on end, you can tell it’s feeling good. When it isn’t feeling well, its fur will lie down flat.",
+					"ja": "たてがみが ピンと 立っているときは 調子が良い 証拠。 具合が 悪いと 毛が後ろに 寝てしまう。",
+					"zh-hans": "鬃毛竖得直直的时候， 证明它状态良好。 状态不好时，毛发会向后倒。",
+					"es-419": "Una crin alzada viene a significar que su estado físico es bueno, mientras que una crin lacia hacia atrás indica lo contrario."
+				},
+				"ultramoon-akala": {
+					"ja-hrkt": "たてがみが ピンと たっているときは ちょうしがよい しょうこ。 ぐあいが わるいと けがうしろに ねてしまう。",
+					"ko": "갈기가 바짝 서 있으면 컨디션이 좋다는 증거다. 상태가 안 좋으면 털이 뒤로 누워 버린다.",
+					"zh-hant": "如果牠的鬃毛直直豎立， 代表牠的狀態很好。 狀態不好時，毛會向後倒下。",
+					"fr": "Quand la mèche sur sa tête est dressée, c’est qu’il se porte bien. Dans le cas contraire, elle est plate et tombe vers l’arrière.",
+					"de": "Hat es seine Mähne aufgestellt, bedeutet dies, dass es guter Dinge ist. Geht es ihm jedoch schlecht, hängt sie schlaff nach hinten herab.",
+					"es": "Una crin alzada viene a significar que su estado físico es bueno, mientras que una crin lacia hacia atrás indica lo contrario.",
+					"it": "Quando la sua criniera è ritta, vuol dire che è in buona salute. Se sta male, invece, la lascia cadere all’indietro.",
+					"en": "When its mane is standing on end, you can tell it’s feeling good. When it isn’t feeling well, its fur will lie down flat.",
+					"ja": "たてがみが ピンと 立っているときは 調子が良い 証拠。 具合が 悪いと 毛が後ろに 寝てしまう。",
+					"zh-hans": "鬃毛竖得直直的时候， 证明它状态良好。 状态不好时，毛发会向后倒。",
+					"es-419": "Una crin alzada viene a significar que su estado físico es bueno, mientras que una crin lacia hacia atrás indica lo contrario."
+				},
+				"ultramoon-ulaula": {
+					"ja-hrkt": "たてがみが ピンと たっているときは ちょうしがよい しょうこ。 ぐあいが わるいと けがうしろに ねてしまう。",
+					"ko": "갈기가 바짝 서 있으면 컨디션이 좋다는 증거다. 상태가 안 좋으면 털이 뒤로 누워 버린다.",
+					"zh-hant": "如果牠的鬃毛直直豎立， 代表牠的狀態很好。 狀態不好時，毛會向後倒下。",
+					"fr": "Quand la mèche sur sa tête est dressée, c’est qu’il se porte bien. Dans le cas contraire, elle est plate et tombe vers l’arrière.",
+					"de": "Hat es seine Mähne aufgestellt, bedeutet dies, dass es guter Dinge ist. Geht es ihm jedoch schlecht, hängt sie schlaff nach hinten herab.",
+					"es": "Una crin alzada viene a significar que su estado físico es bueno, mientras que una crin lacia hacia atrás indica lo contrario.",
+					"it": "Quando la sua criniera è ritta, vuol dire che è in buona salute. Se sta male, invece, la lascia cadere all’indietro.",
+					"en": "When its mane is standing on end, you can tell it’s feeling good. When it isn’t feeling well, its fur will lie down flat.",
+					"ja": "たてがみが ピンと 立っているときは 調子が良い 証拠。 具合が 悪いと 毛が後ろに 寝てしまう。",
+					"zh-hans": "鬃毛竖得直直的时候， 证明它状态良好。 状态不好时，毛发会向后倒。",
+					"es-419": "Una crin alzada viene a significar que su estado físico es bueno, mientras que una crin lacia hacia atrás indica lo contrario."
+				},
+				"ultramoon-poni": {
+					"ja-hrkt": "たてがみが ピンと たっているときは ちょうしがよい しょうこ。 ぐあいが わるいと けがうしろに ねてしまう。",
+					"ko": "갈기가 바짝 서 있으면 컨디션이 좋다는 증거다. 상태가 안 좋으면 털이 뒤로 누워 버린다.",
+					"zh-hant": "如果牠的鬃毛直直豎立， 代表牠的狀態很好。 狀態不好時，毛會向後倒下。",
+					"fr": "Quand la mèche sur sa tête est dressée, c’est qu’il se porte bien. Dans le cas contraire, elle est plate et tombe vers l’arrière.",
+					"de": "Hat es seine Mähne aufgestellt, bedeutet dies, dass es guter Dinge ist. Geht es ihm jedoch schlecht, hängt sie schlaff nach hinten herab.",
+					"es": "Una crin alzada viene a significar que su estado físico es bueno, mientras que una crin lacia hacia atrás indica lo contrario.",
+					"it": "Quando la sua criniera è ritta, vuol dire che è in buona salute. Se sta male, invece, la lascia cadere all’indietro.",
+					"en": "When its mane is standing on end, you can tell it’s feeling good. When it isn’t feeling well, its fur will lie down flat.",
+					"ja": "たてがみが ピンと 立っているときは 調子が良い 証拠。 具合が 悪いと 毛が後ろに 寝てしまう。",
+					"zh-hans": "鬃毛竖得直直的时候， 证明它状态良好。 状态不好时，毛发会向后倒。",
+					"es-419": "Una crin alzada viene a significar que su estado físico es bueno, mientras que una crin lacia hacia atrás indica lo contrario."
+				}
+			}
+		},
+		{
+			"profileKey": "lets-go-pikachu-lets-go-eevee",
+			"label": "Let's Go Pikachu / Eevee",
+			"appGameKeys": [
+				"letsgopikachu",
+				"letsgoeevee"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Torracat",
+				"localizedNames": {
+					"ja-hrkt": "ニャヒート",
+					"ja-roma": "Nyaheat",
+					"ko": "냐오히트",
+					"zh-hant": "炎熱喵",
+					"fr": "Matoufeu",
+					"de": "Miezunder",
+					"es": "Torracat",
+					"it": "Torracat",
+					"ja": "ニャヒート",
+					"zh-hans": "炎热喵",
+					"es-419": "Torracat"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 65,
+					"atk": 85,
+					"def": 50,
+					"spa": 80,
+					"spd": 50,
+					"spe": 90
+				},
+				"evYield": {
+					"spe": 2
+				},
+				"generation": 7,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Blaze",
+					"Intimidate (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Intimidate"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 15,
+				"height": "0.7 m",
+				"weight": "25.0 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 147,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Red",
+				"genus": "Fire Cat Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ひねこポケモン",
+					"ko": "불고양이포켓몬",
+					"zh-hant": "火貓寶可夢",
+					"fr": "Pokémon Chat Feu",
+					"de": "Feuerkatzen-Pokémon",
+					"es": "Pokémon Gato Fuego",
+					"it": "Pokémon Pirofelino",
+					"ja": "ひねこポケモン",
+					"zh-hans": "火猫宝可梦",
+					"es-419": "Pokémon Gato Fuego"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 726
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 5
+					},
+					{
+						"pokedex": "original-melemele",
+						"number": 5
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 5
+					},
+					{
+						"pokedex": "updated-melemele",
+						"number": 5
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 222
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 725,
+								"natiId": 725,
+								"name": "Litten"
+							},
+							{
+								"id": 726,
+								"natiId": 726,
+								"name": "Torracat",
+								"method": "Level",
+								"value": 17
+							},
+							{
+								"id": 727,
+								"natiId": 727,
+								"name": "Incineroar",
+								"method": "Level",
+								"value": 34
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sun Moon."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/726",
+						"fetchedAt": "2026-11-03T05:53:52.448Z",
+						"hash": "60b0637d9083c376b3ef5ec60076f2ebd90a3e9f611f707e1f5ca60167dc0525"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/375/",
+						"fetchedAt": "2026-11-03T05:53:52.407Z",
+						"hash": "0fb05496507484297a9f83c106089a9edc6903391acabfab09350733cef68a07"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/726/",
+						"fetchedAt": "2026-11-03T05:53:52.476Z",
+						"hash": "af24db6dc0f2b81f8d398af3c6874e9efe2482086006c9e42fb60667d64b7117"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/726/encounters",
+						"fetchedAt": "2026-11-03T05:53:52.503Z",
+						"hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/726/",
+						"fetchedAt": "2026-11-03T05:53:52.569Z",
+						"hash": "78034ebc69e17e731ca64c2f70c79836b3e29cac1c59d18c66a39a3c34c82093"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"letsgopikachu": "",
+				"letsgoeevee": ""
+			},
+			"localizedFlavorByGame": {
+				"letsgopikachu": {},
+				"letsgoeevee": {}
+			}
+		},
+		{
+			"profileKey": "sword-shield",
+			"label": "Sword / Shield",
+			"appGameKeys": [
+				"sword",
+				"shield"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Torracat",
+				"localizedNames": {
+					"ja-hrkt": "ニャヒート",
+					"ja-roma": "Nyaheat",
+					"ko": "냐오히트",
+					"zh-hant": "炎熱喵",
+					"fr": "Matoufeu",
+					"de": "Miezunder",
+					"es": "Torracat",
+					"it": "Torracat",
+					"ja": "ニャヒート",
+					"zh-hans": "炎热喵",
+					"es-419": "Torracat"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 65,
+					"atk": 85,
+					"def": 50,
+					"spa": 80,
+					"spd": 50,
+					"spe": 90
+				},
+				"evYield": {
+					"spe": 2
+				},
+				"generation": 7,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Blaze",
+					"Intimidate (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Intimidate"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 15,
+				"height": "0.7 m",
+				"weight": "25.0 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 147,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Red",
+				"genus": "Fire Cat Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ひねこポケモン",
+					"ko": "불고양이포켓몬",
+					"zh-hant": "火貓寶可夢",
+					"fr": "Pokémon Chat Feu",
+					"de": "Feuerkatzen-Pokémon",
+					"es": "Pokémon Gato Fuego",
+					"it": "Pokémon Pirofelino",
+					"ja": "ひねこポケモン",
+					"zh-hans": "火猫宝可梦",
+					"es-419": "Pokémon Gato Fuego"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 726
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 5
+					},
+					{
+						"pokedex": "original-melemele",
+						"number": 5
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 5
+					},
+					{
+						"pokedex": "updated-melemele",
+						"number": 5
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 222
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 725,
+								"natiId": 725,
+								"name": "Litten"
+							},
+							{
+								"id": 726,
+								"natiId": 726,
+								"name": "Torracat",
+								"method": "Level",
+								"value": 17
+							},
+							{
+								"id": 727,
+								"natiId": 727,
+								"name": "Incineroar",
+								"method": "Level",
+								"value": 34
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Machine": [
+						{
+							"name": "Acrobatics",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Body Slam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bulk Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Crunch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endure",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fire Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fire Fang",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fire Spin",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flamethrower",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flare Blitz",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Heat Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Leech Life",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Nasty Plot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Outrage",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Overheat",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Pay Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Revenge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Scary Face",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Claw",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swords Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Taunt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "U Turn",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Work Up",
+							"level": null,
+							"order": null
+						}
+					],
+					"Level Up": [
+						{
+							"name": "Scratch",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Growl",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Ember",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Lick",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Roar",
+							"level": 9,
+							"order": null
+						},
+						{
+							"name": "Fury Swipes",
+							"level": 12,
+							"order": null
+						},
+						{
+							"name": "Bite",
+							"level": 15,
+							"order": null
+						},
+						{
+							"name": "Double Kick",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Fire Fang",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Scary Face",
+							"level": 30,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": 35,
+							"order": null
+						},
+						{
+							"name": "Flamethrower",
+							"level": 40,
+							"order": null
+						},
+						{
+							"name": "Thrash",
+							"level": 45,
+							"order": null
+						},
+						{
+							"name": "Flare Blitz",
+							"level": 50,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Fire Pledge",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sun Moon."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/726",
+						"fetchedAt": "2026-11-03T05:53:52.448Z",
+						"hash": "60b0637d9083c376b3ef5ec60076f2ebd90a3e9f611f707e1f5ca60167dc0525"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/375/",
+						"fetchedAt": "2026-11-03T05:53:52.407Z",
+						"hash": "0fb05496507484297a9f83c106089a9edc6903391acabfab09350733cef68a07"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/726/",
+						"fetchedAt": "2026-11-03T05:53:52.476Z",
+						"hash": "af24db6dc0f2b81f8d398af3c6874e9efe2482086006c9e42fb60667d64b7117"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/726/encounters",
+						"fetchedAt": "2026-11-03T05:53:52.503Z",
+						"hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/726/",
+						"fetchedAt": "2026-11-03T05:53:52.569Z",
+						"hash": "78034ebc69e17e731ca64c2f70c79836b3e29cac1c59d18c66a39a3c34c82093"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sword": "In the midst of battle, the fire pouch on Torracat’s neck rings like a bell and produces stronger flames than usual.",
+				"shield": "When facing a powerful enemy, Torracat’s fighting spirit gets pumped up, and its fire bell blazes hotter."
+			},
+			"localizedFlavorByGame": {
+				"sword": {
+					"ja-hrkt": "くびの つけねの ほのおぶくろは たたかいに なると かりょくが あがり すずのような おとを だす。",
+					"ko": "목덜미에 있는 불꽃 주머니는 싸움에 들어가면 화력이 올라 방울 소리 같은 소리를 낸다.",
+					"zh-hant": "脖子根部的火囊在進入戰鬥 狀態後火力就會上升， 並發出像鈴鐺般的聲音。",
+					"fr": "La poche à feu située à la base de son cou gagne en température pendant les combats et émet un bruit semblable à un grelot.",
+					"de": "Die Flammendrüse an seinem Hals heizt sich im Kampf immer weiter auf und erzeugt so Töne, die denen eines Glöckchens gleichen.",
+					"es": "La saca de fuego que luce al cuello arde con mayor intensidad durante el combate y emite un tintineo que recuerda al de un cascabel.",
+					"it": "Durante la lotta, la sacca alla base del collo aumenta la produzione di energia termica ed emette un tintinnio simile a un sonaglio.",
+					"en": "In the midst of battle, the fire pouch on Torracat’s neck rings like a bell and produces stronger flames than usual.",
+					"ja": "首の 付け根の 炎袋は 戦いに なると 火力が 上がり 鈴のような 音を 出す。",
+					"zh-hans": "脖子根部的火囊在进入战斗 状态后火力就会上升， 并发出铃铛般的声音。",
+					"es-419": "La saca de fuego que luce al cuello arde con mayor intensidad durante el combate y emite un tintineo que recuerda al de un cascabel."
+				},
+				"shield": {
+					"ja-hrkt": "きょうてきを あいてにすると せんとういよくの たかまりと ともに ほのおのすずの かりょくも あがる。",
+					"ko": "강적을 상대하게 되면 전투 의욕이 높아지고 동시에 불꽃 방울의 화력도 올라간다.",
+					"zh-hant": "如果敵人實力強勁， 牠便會更有戰鬥的欲望， 火焰鈴鐺的火力也會隨之上升。",
+					"fr": "Quand il fait face à un adversaire redoutable, il redouble de combativité et la puissance calorifère de sa clochette augmente.",
+					"de": "Wenn es sich einem starken Gegner stellt, steigt nicht nur sein Kampfeswille, sondern auch die Heizkraft seines feurigen Glöckchens.",
+					"es": "Enfrentarse a un adversario formidable aviva tanto su espíritu combativo como la energía térmica de su cascabel.",
+					"it": "Quando affronta un nemico molto forte il suo spirito combattivo e l’energia termica prodotta dal sonaglio infuocato aumentano.",
+					"en": "When facing a powerful enemy, Torracat’s fighting spirit gets pumped up, and its fire bell blazes hotter.",
+					"ja": "強敵を 相手にすると 戦闘意欲の 高まりと ともに 炎の鈴の 火力も 上がる。",
+					"zh-hans": "如果敌人实力强劲， 它便会更有战斗的欲望， 火焰铃铛的火力也会随之上升。",
+					"es-419": "Enfrentarse a un adversario formidable aviva tanto su espíritu combativo como la energía térmica de su cascabel."
+				}
+			}
+		},
+		{
+			"profileKey": "the-isle-of-armor",
+			"label": "The Isle of Armor",
+			"appGameKeys": [
+				"swordioa",
+				"shieldioa"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Torracat",
+				"localizedNames": {
+					"ja-hrkt": "ニャヒート",
+					"ja-roma": "Nyaheat",
+					"ko": "냐오히트",
+					"zh-hant": "炎熱喵",
+					"fr": "Matoufeu",
+					"de": "Miezunder",
+					"es": "Torracat",
+					"it": "Torracat",
+					"ja": "ニャヒート",
+					"zh-hans": "炎热喵",
+					"es-419": "Torracat"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 65,
+					"atk": 85,
+					"def": 50,
+					"spa": 80,
+					"spd": 50,
+					"spe": 90
+				},
+				"evYield": {
+					"spe": 2
+				},
+				"generation": 7,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Blaze",
+					"Intimidate (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Intimidate"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 15,
+				"height": "0.7 m",
+				"weight": "25.0 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 147,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Red",
+				"genus": "Fire Cat Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ひねこポケモン",
+					"ko": "불고양이포켓몬",
+					"zh-hant": "火貓寶可夢",
+					"fr": "Pokémon Chat Feu",
+					"de": "Feuerkatzen-Pokémon",
+					"es": "Pokémon Gato Fuego",
+					"it": "Pokémon Pirofelino",
+					"ja": "ひねこポケモン",
+					"zh-hans": "火猫宝可梦",
+					"es-419": "Pokémon Gato Fuego"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 726
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 5
+					},
+					{
+						"pokedex": "original-melemele",
+						"number": 5
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 5
+					},
+					{
+						"pokedex": "updated-melemele",
+						"number": 5
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 222
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 725,
+								"natiId": 725,
+								"name": "Litten"
+							},
+							{
+								"id": 726,
+								"natiId": 726,
+								"name": "Torracat",
+								"method": "Level",
+								"value": 17
+							},
+							{
+								"id": 727,
+								"natiId": 727,
+								"name": "Incineroar",
+								"method": "Level",
+								"value": 34
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sun Moon."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/726",
+						"fetchedAt": "2026-11-03T05:53:52.448Z",
+						"hash": "60b0637d9083c376b3ef5ec60076f2ebd90a3e9f611f707e1f5ca60167dc0525"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/375/",
+						"fetchedAt": "2026-11-03T05:53:52.407Z",
+						"hash": "0fb05496507484297a9f83c106089a9edc6903391acabfab09350733cef68a07"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/726/",
+						"fetchedAt": "2026-11-03T05:53:52.476Z",
+						"hash": "af24db6dc0f2b81f8d398af3c6874e9efe2482086006c9e42fb60667d64b7117"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/726/encounters",
+						"fetchedAt": "2026-11-03T05:53:52.503Z",
+						"hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/726/",
+						"fetchedAt": "2026-11-03T05:53:52.569Z",
+						"hash": "78034ebc69e17e731ca64c2f70c79836b3e29cac1c59d18c66a39a3c34c82093"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordioa": "",
+				"shieldioa": ""
+			},
+			"localizedFlavorByGame": {
+				"swordioa": {},
+				"shieldioa": {}
+			}
+		},
+		{
+			"profileKey": "the-crown-tundra",
+			"label": "The Crown Tundra",
+			"appGameKeys": [
+				"swordct",
+				"shieldct"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Torracat",
+				"localizedNames": {
+					"ja-hrkt": "ニャヒート",
+					"ja-roma": "Nyaheat",
+					"ko": "냐오히트",
+					"zh-hant": "炎熱喵",
+					"fr": "Matoufeu",
+					"de": "Miezunder",
+					"es": "Torracat",
+					"it": "Torracat",
+					"ja": "ニャヒート",
+					"zh-hans": "炎热喵",
+					"es-419": "Torracat"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 65,
+					"atk": 85,
+					"def": 50,
+					"spa": 80,
+					"spd": 50,
+					"spe": 90
+				},
+				"evYield": {
+					"spe": 2
+				},
+				"generation": 7,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Blaze",
+					"Intimidate (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Intimidate"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 15,
+				"height": "0.7 m",
+				"weight": "25.0 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 147,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Red",
+				"genus": "Fire Cat Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ひねこポケモン",
+					"ko": "불고양이포켓몬",
+					"zh-hant": "火貓寶可夢",
+					"fr": "Pokémon Chat Feu",
+					"de": "Feuerkatzen-Pokémon",
+					"es": "Pokémon Gato Fuego",
+					"it": "Pokémon Pirofelino",
+					"ja": "ひねこポケモン",
+					"zh-hans": "火猫宝可梦",
+					"es-419": "Pokémon Gato Fuego"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 726
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 5
+					},
+					{
+						"pokedex": "original-melemele",
+						"number": 5
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 5
+					},
+					{
+						"pokedex": "updated-melemele",
+						"number": 5
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 222
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 725,
+								"natiId": 725,
+								"name": "Litten"
+							},
+							{
+								"id": 726,
+								"natiId": 726,
+								"name": "Torracat",
+								"method": "Level",
+								"value": 17
+							},
+							{
+								"id": 727,
+								"natiId": 727,
+								"name": "Incineroar",
+								"method": "Level",
+								"value": 34
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sun Moon."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/726",
+						"fetchedAt": "2026-11-03T05:53:52.448Z",
+						"hash": "60b0637d9083c376b3ef5ec60076f2ebd90a3e9f611f707e1f5ca60167dc0525"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/375/",
+						"fetchedAt": "2026-11-03T05:53:52.407Z",
+						"hash": "0fb05496507484297a9f83c106089a9edc6903391acabfab09350733cef68a07"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/726/",
+						"fetchedAt": "2026-11-03T05:53:52.476Z",
+						"hash": "af24db6dc0f2b81f8d398af3c6874e9efe2482086006c9e42fb60667d64b7117"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/726/encounters",
+						"fetchedAt": "2026-11-03T05:53:52.503Z",
+						"hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/726/",
+						"fetchedAt": "2026-11-03T05:53:52.569Z",
+						"hash": "78034ebc69e17e731ca64c2f70c79836b3e29cac1c59d18c66a39a3c34c82093"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordct": "",
+				"shieldct": ""
+			},
+			"localizedFlavorByGame": {
+				"swordct": {},
+				"shieldct": {}
+			}
+		},
+		{
+			"profileKey": "brilliant-diamond-shining-pearl",
+			"label": "Brilliant Diamond / Shining Pearl",
+			"appGameKeys": [
+				"brilliantdiamond-national",
+				"brilliantdiamond",
+				"shiningpearl-national",
+				"shiningpearl"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Torracat",
+				"localizedNames": {
+					"ja-hrkt": "ニャヒート",
+					"ja-roma": "Nyaheat",
+					"ko": "냐오히트",
+					"zh-hant": "炎熱喵",
+					"fr": "Matoufeu",
+					"de": "Miezunder",
+					"es": "Torracat",
+					"it": "Torracat",
+					"ja": "ニャヒート",
+					"zh-hans": "炎热喵",
+					"es-419": "Torracat"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 65,
+					"atk": 85,
+					"def": 50,
+					"spa": 80,
+					"spd": 50,
+					"spe": 90
+				},
+				"evYield": {
+					"spe": 2
+				},
+				"generation": 7,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Blaze",
+					"Intimidate (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Intimidate"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 15,
+				"height": "0.7 m",
+				"weight": "25.0 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 147,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Red",
+				"genus": "Fire Cat Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ひねこポケモン",
+					"ko": "불고양이포켓몬",
+					"zh-hant": "火貓寶可夢",
+					"fr": "Pokémon Chat Feu",
+					"de": "Feuerkatzen-Pokémon",
+					"es": "Pokémon Gato Fuego",
+					"it": "Pokémon Pirofelino",
+					"ja": "ひねこポケモン",
+					"zh-hans": "火猫宝可梦",
+					"es-419": "Pokémon Gato Fuego"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 726
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 5
+					},
+					{
+						"pokedex": "original-melemele",
+						"number": 5
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 5
+					},
+					{
+						"pokedex": "updated-melemele",
+						"number": 5
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 222
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 725,
+								"natiId": 725,
+								"name": "Litten"
+							},
+							{
+								"id": 726,
+								"natiId": 726,
+								"name": "Torracat",
+								"method": "Level",
+								"value": 17
+							},
+							{
+								"id": 727,
+								"natiId": 727,
+								"name": "Incineroar",
+								"method": "Level",
+								"value": 34
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sun Moon."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/726",
+						"fetchedAt": "2026-11-03T05:53:52.448Z",
+						"hash": "60b0637d9083c376b3ef5ec60076f2ebd90a3e9f611f707e1f5ca60167dc0525"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/375/",
+						"fetchedAt": "2026-11-03T05:53:52.407Z",
+						"hash": "0fb05496507484297a9f83c106089a9edc6903391acabfab09350733cef68a07"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/726/",
+						"fetchedAt": "2026-11-03T05:53:52.476Z",
+						"hash": "af24db6dc0f2b81f8d398af3c6874e9efe2482086006c9e42fb60667d64b7117"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/726/encounters",
+						"fetchedAt": "2026-11-03T05:53:52.503Z",
+						"hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/726/",
+						"fetchedAt": "2026-11-03T05:53:52.569Z",
+						"hash": "78034ebc69e17e731ca64c2f70c79836b3e29cac1c59d18c66a39a3c34c82093"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"brilliantdiamond-national": "",
+				"brilliantdiamond": "",
+				"shiningpearl-national": "",
+				"shiningpearl": ""
+			},
+			"localizedFlavorByGame": {
+				"brilliantdiamond-national": {},
+				"brilliantdiamond": {},
+				"shiningpearl-national": {},
+				"shiningpearl": {}
+			}
+		},
+		{
+			"profileKey": "legends-arceus",
+			"label": "Legends: Arceus",
+			"appGameKeys": [
+				"legendsarceus"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Torracat",
+				"localizedNames": {
+					"ja-hrkt": "ニャヒート",
+					"ja-roma": "Nyaheat",
+					"ko": "냐오히트",
+					"zh-hant": "炎熱喵",
+					"fr": "Matoufeu",
+					"de": "Miezunder",
+					"es": "Torracat",
+					"it": "Torracat",
+					"ja": "ニャヒート",
+					"zh-hans": "炎热喵",
+					"es-419": "Torracat"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 65,
+					"atk": 85,
+					"def": 50,
+					"spa": 80,
+					"spd": 50,
+					"spe": 90
+				},
+				"evYield": {
+					"spe": 2
+				},
+				"generation": 7,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Blaze",
+					"Intimidate (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Intimidate"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 15,
+				"height": "0.7 m",
+				"weight": "25.0 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 147,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Red",
+				"genus": "Fire Cat Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ひねこポケモン",
+					"ko": "불고양이포켓몬",
+					"zh-hant": "火貓寶可夢",
+					"fr": "Pokémon Chat Feu",
+					"de": "Feuerkatzen-Pokémon",
+					"es": "Pokémon Gato Fuego",
+					"it": "Pokémon Pirofelino",
+					"ja": "ひねこポケモン",
+					"zh-hans": "火猫宝可梦",
+					"es-419": "Pokémon Gato Fuego"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 726
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 5
+					},
+					{
+						"pokedex": "original-melemele",
+						"number": 5
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 5
+					},
+					{
+						"pokedex": "updated-melemele",
+						"number": 5
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 222
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 725,
+								"natiId": 725,
+								"name": "Litten"
+							},
+							{
+								"id": 726,
+								"natiId": 726,
+								"name": "Torracat",
+								"method": "Level",
+								"value": 17
+							},
+							{
+								"id": 727,
+								"natiId": 727,
+								"name": "Incineroar",
+								"method": "Level",
+								"value": 34
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sun Moon."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/726",
+						"fetchedAt": "2026-11-03T05:53:52.448Z",
+						"hash": "60b0637d9083c376b3ef5ec60076f2ebd90a3e9f611f707e1f5ca60167dc0525"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/375/",
+						"fetchedAt": "2026-11-03T05:53:52.407Z",
+						"hash": "0fb05496507484297a9f83c106089a9edc6903391acabfab09350733cef68a07"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/726/",
+						"fetchedAt": "2026-11-03T05:53:52.476Z",
+						"hash": "af24db6dc0f2b81f8d398af3c6874e9efe2482086006c9e42fb60667d64b7117"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/726/encounters",
+						"fetchedAt": "2026-11-03T05:53:52.503Z",
+						"hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/726/",
+						"fetchedAt": "2026-11-03T05:53:52.569Z",
+						"hash": "78034ebc69e17e731ca64c2f70c79836b3e29cac1c59d18c66a39a3c34c82093"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendsarceus": ""
+			},
+			"localizedFlavorByGame": {
+				"legendsarceus": {}
+			}
+		},
+		{
+			"profileKey": "scarlet-violet",
+			"label": "Scarlet / Violet",
+			"appGameKeys": [
+				"scarlet",
+				"violet"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Torracat",
+				"localizedNames": {
+					"ja-hrkt": "ニャヒート",
+					"ja-roma": "Nyaheat",
+					"ko": "냐오히트",
+					"zh-hant": "炎熱喵",
+					"fr": "Matoufeu",
+					"de": "Miezunder",
+					"es": "Torracat",
+					"it": "Torracat",
+					"ja": "ニャヒート",
+					"zh-hans": "炎热喵",
+					"es-419": "Torracat"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 65,
+					"atk": 85,
+					"def": 50,
+					"spa": 80,
+					"spd": 50,
+					"spe": 90
+				},
+				"evYield": {
+					"spe": 2
+				},
+				"generation": 7,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Blaze",
+					"Intimidate (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Intimidate"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 15,
+				"height": "0.7 m",
+				"weight": "25.0 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 147,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Red",
+				"genus": "Fire Cat Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ひねこポケモン",
+					"ko": "불고양이포켓몬",
+					"zh-hant": "火貓寶可夢",
+					"fr": "Pokémon Chat Feu",
+					"de": "Feuerkatzen-Pokémon",
+					"es": "Pokémon Gato Fuego",
+					"it": "Pokémon Pirofelino",
+					"ja": "ひねこポケモン",
+					"zh-hans": "火猫宝可梦",
+					"es-419": "Pokémon Gato Fuego"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 726
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 5
+					},
+					{
+						"pokedex": "original-melemele",
+						"number": 5
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 5
+					},
+					{
+						"pokedex": "updated-melemele",
+						"number": 5
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 222
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 725,
+								"natiId": 725,
+								"name": "Litten"
+							},
+							{
+								"id": 726,
+								"natiId": 726,
+								"name": "Torracat",
+								"method": "Level",
+								"value": 17
+							},
+							{
+								"id": 727,
+								"natiId": 727,
+								"name": "Incineroar",
+								"method": "Level",
+								"value": 34
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Scratch",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Growl",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Ember",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Lick",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Roar",
+							"level": 9,
+							"order": null
+						},
+						{
+							"name": "Fury Swipes",
+							"level": 12,
+							"order": null
+						},
+						{
+							"name": "Bite",
+							"level": 15,
+							"order": null
+						},
+						{
+							"name": "Double Kick",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Fire Fang",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Scary Face",
+							"level": 30,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": 35,
+							"order": null
+						},
+						{
+							"name": "Flamethrower",
+							"level": 40,
+							"order": null
+						},
+						{
+							"name": "Thrash",
+							"level": 45,
+							"order": null
+						},
+						{
+							"name": "Flare Blitz",
+							"level": 50,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Acrobatics",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Body Slam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bulk Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Crunch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Edge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endeavor",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endure",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fire Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fire Fang",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fire Pledge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fire Spin",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flame Charge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flamethrower",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flare Blitz",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Heat Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Helping Hand",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Leech Life",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Nasty Plot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Outrage",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Overheat",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Roar",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Scary Face",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Claw",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swords Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Take Down",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Taunt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Temper Flare",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Tera Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Trailblaze",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "U Turn",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": null,
+							"order": null
+						}
+					],
+					"Egg": [
+						{
+							"name": "Fake Out",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Parting Shot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Power Trip",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sun Moon."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/726",
+						"fetchedAt": "2026-11-03T05:53:52.448Z",
+						"hash": "60b0637d9083c376b3ef5ec60076f2ebd90a3e9f611f707e1f5ca60167dc0525"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/375/",
+						"fetchedAt": "2026-11-03T05:53:52.407Z",
+						"hash": "0fb05496507484297a9f83c106089a9edc6903391acabfab09350733cef68a07"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/726/",
+						"fetchedAt": "2026-11-03T05:53:52.476Z",
+						"hash": "af24db6dc0f2b81f8d398af3c6874e9efe2482086006c9e42fb60667d64b7117"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/726/encounters",
+						"fetchedAt": "2026-11-03T05:53:52.503Z",
+						"hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/726/",
+						"fetchedAt": "2026-11-03T05:53:52.569Z",
+						"hash": "78034ebc69e17e731ca64c2f70c79836b3e29cac1c59d18c66a39a3c34c82093"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlet": "",
+				"violet": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlet": {},
+				"violet": {}
+			}
+		},
+		{
+			"profileKey": "the-teal-mask",
+			"label": "The Teal Mask",
+			"appGameKeys": [
+				"scarlettm",
+				"violettm"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Torracat",
+				"localizedNames": {
+					"ja-hrkt": "ニャヒート",
+					"ja-roma": "Nyaheat",
+					"ko": "냐오히트",
+					"zh-hant": "炎熱喵",
+					"fr": "Matoufeu",
+					"de": "Miezunder",
+					"es": "Torracat",
+					"it": "Torracat",
+					"ja": "ニャヒート",
+					"zh-hans": "炎热喵",
+					"es-419": "Torracat"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 65,
+					"atk": 85,
+					"def": 50,
+					"spa": 80,
+					"spd": 50,
+					"spe": 90
+				},
+				"evYield": {
+					"spe": 2
+				},
+				"generation": 7,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Blaze",
+					"Intimidate (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Intimidate"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 15,
+				"height": "0.7 m",
+				"weight": "25.0 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 147,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Red",
+				"genus": "Fire Cat Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ひねこポケモン",
+					"ko": "불고양이포켓몬",
+					"zh-hant": "火貓寶可夢",
+					"fr": "Pokémon Chat Feu",
+					"de": "Feuerkatzen-Pokémon",
+					"es": "Pokémon Gato Fuego",
+					"it": "Pokémon Pirofelino",
+					"ja": "ひねこポケモン",
+					"zh-hans": "火猫宝可梦",
+					"es-419": "Pokémon Gato Fuego"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 726
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 5
+					},
+					{
+						"pokedex": "original-melemele",
+						"number": 5
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 5
+					},
+					{
+						"pokedex": "updated-melemele",
+						"number": 5
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 222
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 725,
+								"natiId": 725,
+								"name": "Litten"
+							},
+							{
+								"id": 726,
+								"natiId": 726,
+								"name": "Torracat",
+								"method": "Level",
+								"value": 17
+							},
+							{
+								"id": 727,
+								"natiId": 727,
+								"name": "Incineroar",
+								"method": "Level",
+								"value": 34
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sun Moon."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/726",
+						"fetchedAt": "2026-11-03T05:53:52.448Z",
+						"hash": "60b0637d9083c376b3ef5ec60076f2ebd90a3e9f611f707e1f5ca60167dc0525"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/375/",
+						"fetchedAt": "2026-11-03T05:53:52.407Z",
+						"hash": "0fb05496507484297a9f83c106089a9edc6903391acabfab09350733cef68a07"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/726/",
+						"fetchedAt": "2026-11-03T05:53:52.476Z",
+						"hash": "af24db6dc0f2b81f8d398af3c6874e9efe2482086006c9e42fb60667d64b7117"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/726/encounters",
+						"fetchedAt": "2026-11-03T05:53:52.503Z",
+						"hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/726/",
+						"fetchedAt": "2026-11-03T05:53:52.569Z",
+						"hash": "78034ebc69e17e731ca64c2f70c79836b3e29cac1c59d18c66a39a3c34c82093"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlettm": "",
+				"violettm": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlettm": {},
+				"violettm": {}
+			}
+		},
+		{
+			"profileKey": "the-indigo-disk",
+			"label": "The Indigo Disk",
+			"appGameKeys": [
+				"scarletid",
+				"violetid"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Torracat",
+				"localizedNames": {
+					"ja-hrkt": "ニャヒート",
+					"ja-roma": "Nyaheat",
+					"ko": "냐오히트",
+					"zh-hant": "炎熱喵",
+					"fr": "Matoufeu",
+					"de": "Miezunder",
+					"es": "Torracat",
+					"it": "Torracat",
+					"ja": "ニャヒート",
+					"zh-hans": "炎热喵",
+					"es-419": "Torracat"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 65,
+					"atk": 85,
+					"def": 50,
+					"spa": 80,
+					"spd": 50,
+					"spe": 90
+				},
+				"evYield": {
+					"spe": 2
+				},
+				"generation": 7,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Blaze",
+					"Intimidate (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Intimidate"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 15,
+				"height": "0.7 m",
+				"weight": "25.0 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 147,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Red",
+				"genus": "Fire Cat Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ひねこポケモン",
+					"ko": "불고양이포켓몬",
+					"zh-hant": "火貓寶可夢",
+					"fr": "Pokémon Chat Feu",
+					"de": "Feuerkatzen-Pokémon",
+					"es": "Pokémon Gato Fuego",
+					"it": "Pokémon Pirofelino",
+					"ja": "ひねこポケモン",
+					"zh-hans": "火猫宝可梦",
+					"es-419": "Pokémon Gato Fuego"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 726
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 5
+					},
+					{
+						"pokedex": "original-melemele",
+						"number": 5
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 5
+					},
+					{
+						"pokedex": "updated-melemele",
+						"number": 5
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 222
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 725,
+								"natiId": 725,
+								"name": "Litten"
+							},
+							{
+								"id": 726,
+								"natiId": 726,
+								"name": "Torracat",
+								"method": "Level",
+								"value": 17
+							},
+							{
+								"id": 727,
+								"natiId": 727,
+								"name": "Incineroar",
+								"method": "Level",
+								"value": 34
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sun Moon."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/726",
+						"fetchedAt": "2026-11-03T05:53:52.448Z",
+						"hash": "60b0637d9083c376b3ef5ec60076f2ebd90a3e9f611f707e1f5ca60167dc0525"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/375/",
+						"fetchedAt": "2026-11-03T05:53:52.407Z",
+						"hash": "0fb05496507484297a9f83c106089a9edc6903391acabfab09350733cef68a07"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/726/",
+						"fetchedAt": "2026-11-03T05:53:52.476Z",
+						"hash": "af24db6dc0f2b81f8d398af3c6874e9efe2482086006c9e42fb60667d64b7117"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/726/encounters",
+						"fetchedAt": "2026-11-03T05:53:52.503Z",
+						"hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/726/",
+						"fetchedAt": "2026-11-03T05:53:52.569Z",
+						"hash": "78034ebc69e17e731ca64c2f70c79836b3e29cac1c59d18c66a39a3c34c82093"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarletid": "",
+				"violetid": ""
+			},
+			"localizedFlavorByGame": {
+				"scarletid": {},
+				"violetid": {}
+			}
+		}
+	]
+}

@@ -44,6 +44,11 @@ const LegalPage = lazy(() =>
 		default: module.LegalPage,
 	})),
 );
+const PokemonInfoRoutePage = lazy(() =>
+	import("./pages/PokemonInfoRoutePage.jsx").then((module) => ({
+		default: module.PokemonInfoRoutePage,
+	})),
+);
 
 function RouteLoading() {
 	return (
@@ -136,7 +141,7 @@ export default function App() {
 
 					<Route
 						path="/pokemon-info"
-						element={<PlaceholderPage feature="pokemon-info" />}
+						element={<PokemonInfoRoutePage />}
 					/>
 					<Route
 						path="/guides"

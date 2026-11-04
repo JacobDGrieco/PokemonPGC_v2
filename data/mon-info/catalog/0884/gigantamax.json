@@ -1,0 +1,638 @@
+{
+	"schemaVersion": 2,
+	"nationalDexId": 884,
+	"speciesName": "Duraludon",
+	"formKey": "gigantamax",
+	"formName": "Gigantamax",
+	"formLabelSource": "form-catalog",
+	"profiles": [
+		{
+			"profileKey": "sword-shield",
+			"label": "Sword / Shield",
+			"appGameKeys": [
+				"sword",
+				"shield"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Duraludon",
+				"localizedNames": {
+					"ja-hrkt": "ジュラルドン",
+					"ja-roma": "Duraludon",
+					"ko": "두랄루돈",
+					"zh-hant": "鋁鋼龍",
+					"fr": "Duralugon",
+					"de": "Duraludon",
+					"es": "Duraludon",
+					"it": "Duraludon",
+					"ja": "ジュラルドン",
+					"zh-hans": "铝钢龙",
+					"es-419": "Duraludon"
+				},
+				"localizedFormNames": {
+					"fr": "Duralugon Gigamax",
+					"de": "Gigadynamax-Duraludon"
+				},
+				"localizedFormLabels": {
+					"ja-hrkt": "キョダイマックスのすがた",
+					"fr": "Forme Gigamax",
+					"de": "Gigadynamax-Form",
+					"ja": "キョダイマックスのすがた"
+				},
+				"types": [
+					"Steel",
+					"Dragon"
+				],
+				"baseStats": {
+					"hp": 70,
+					"atk": 95,
+					"def": 115,
+					"spa": 120,
+					"spd": 50,
+					"spe": 85
+				},
+				"evYield": {
+					"spa": 2
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Light Metal",
+					"Heavy Metal",
+					"Stalwart (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Stalwart"
+				],
+				"eggGroups": [
+					"Mineral",
+					"Dragon"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 30,
+				"height": "43.0 m",
+				"weight": "1000.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 45,
+				"baseExperience": 187,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "White",
+				"genus": "Alloy Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ごうきんポケモン",
+					"ko": "합금포켓몬",
+					"zh-hant": "合金寶可夢",
+					"fr": "Pokémon Alliage",
+					"de": "Legierungs-Pokémon",
+					"es": "Pokémon Aleación",
+					"it": "Pokémon Metallolega",
+					"ja": "ごうきんポケモン",
+					"zh-hans": "合金宝可梦",
+					"es-419": "Pokémon Aleación"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 884
+					},
+					{
+						"pokedex": "galar",
+						"number": 371
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 161
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 884,
+								"natiId": 884,
+								"name": "Duraludon"
+							},
+							{
+								"id": 1018,
+								"natiId": 1018,
+								"name": "Archaludon",
+								"method": "Use item",
+								"value": "Metal Alloy"
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Galar Wild Area Max Dens Area",
+						"notes": "Max Raid, Lv. 60",
+						"games": "Sword",
+						"rate": "5%"
+					},
+					{
+						"area": "Galar Wild Area Max Dens Area",
+						"notes": "Max Raid, Lv. 60",
+						"games": "Shield",
+						"rate": "5%"
+					},
+					{
+						"area": "Giants Seat Max Den E",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Sword",
+						"rate": "5%"
+					},
+					{
+						"area": "Giants Seat Max Den E",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Shield",
+						"rate": "5%"
+					}
+				],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokemonPGC form catalog includes this game profile.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/884",
+						"fetchedAt": "2026-11-03T05:54:03.541Z",
+						"hash": "1a85e257eb8b43a38b11db5804116ccdc2c34f93ab6d884201f7b3f35ce639db"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/465/",
+						"fetchedAt": "2026-11-03T05:54:03.572Z",
+						"hash": "0f39fc11ea88579e7e707353b6bbd8ecc3f2fc00366b4486ebc376f376bea3c1"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/10225/",
+						"fetchedAt": "2026-11-03T05:54:03.735Z",
+						"hash": "77561b9b2dbe3bbdf05dd24d0bda473627ad825dcd216256548fe56d9fd4ffa9"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/10225/encounters",
+						"fetchedAt": "2026-11-03T05:54:03.790Z",
+						"hash": "c53655538ca8c85979974f9a4bb52c53ac8a8ed24566c7311238d69bed35fd4e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/10394/",
+						"fetchedAt": "2026-11-03T05:54:03.846Z",
+						"hash": "808ddd384b82e5c94c8b40cf1738337202b134a2907df44ab925d9650ccf69b6"
+					}
+				],
+				"formName": "Gigantamax"
+			},
+			"flavorByGame": {
+				"sword": "Its body resembles polished metal, and it’s both lightweight and strong. The only drawback is that it rusts easily.",
+				"shield": "The special metal that composes its body is very light, so this Pokémon has considerable agility. It lives in caves because it dislikes the rain."
+			},
+			"localizedFlavorByGame": {
+				"sword": {
+					"ja-hrkt": "みがきあげた きんぞくの ような からだは かるいうえに かたいが さびやすいのが けってんなのだ。",
+					"ko": "윤이 나는 금속과도 같은 몸은 가벼우면서도 튼튼하지만 녹슬기 쉽다는 것이 흠이다.",
+					"zh-hant": "身體猶如打磨過的金屬， 雖然輕而堅硬，卻有著 容易生鏽的弱點。",
+					"fr": "Son corps, semblable à du métal poli, allie légèreté et solidité. Malheureusement, il rouille facilement.",
+					"de": "Sein an aufpoliertes Metall erinnernder Körper ist nicht nur leicht, sondern auch robust. Er hat jedoch den Nachteil, schnell zu rosten.",
+					"es": "Su cuerpo, similar a un metal pulido, es tan ligero como robusto. Sin embargo, tiene el defecto de que se oxida con facilidad.",
+					"it": "Il suo corpo simile a metallo lucidato è leggero e resistente, ma ha il difetto di arrugginire facilmente.",
+					"en": "Its body resembles polished metal, and it’s both lightweight and strong. The only drawback is that it rusts easily.",
+					"ja": "磨きあげた 金属の ような 体は 軽いうえに 硬いが 錆びやすいのが 欠点なのだ。",
+					"zh-hans": "身体犹如打磨过的金属， 虽然轻而坚硬，却有着 容易生锈的弱点。",
+					"es-419": "Su cuerpo, similar a un metal pulido, es tan ligero como robusto. Sin embargo, tiene el defecto de que se oxida con facilidad."
+				},
+				"shield": {
+					"ja-hrkt": "とくしゅな きんぞくの からだは かるく みのこなしは ばつぐん。 あめが にがてで どうくつに すむ。",
+					"ko": "금속으로 된 특수한 몸은 가벼워서 몸놀림이 뛰어나다. 비를 싫어해 동굴에 산다.",
+					"zh-hant": "由特殊金屬構成的身體 十分輕盈，能夠靈活地活動。 不喜歡下雨，所以住在洞窟裡。",
+					"fr": "Son corps, composé d’un métal spécial, est léger et lui offre une excellente mobilité. Il est toutefois sensible à la pluie et vit donc dans les grottes.",
+					"de": "Es ist sehr beweglich, weil sein Körper aus einem speziellen, leichten Metall besteht. Da es Regen nicht mag, lebt es in Höhlen.",
+					"es": "Hace gala de una agilidad extraordinaria, ya que su cuerpo está compuesto de un metal especial. Detesta la lluvia, por lo que habita en cuevas.",
+					"it": "Il suo corpo fatto di un metallo speciale è leggero e gli conferisce un’andatura impeccabile. Vive nelle grotte perché odia la pioggia.",
+					"en": "The special metal that composes its body is very light, so this Pokémon has considerable agility. It lives in caves because it dislikes the rain.",
+					"ja": "特殊な 金属の 体は 軽く 身のこなしは 抜群。 雨が 苦手で 洞窟に 棲む。",
+					"zh-hans": "由特殊金属构成的身体 十分轻盈，能够灵活地活动。 不喜欢下雨，所以住在洞窟里。",
+					"es-419": "Hace gala de una agilidad extraordinaria, ya que su cuerpo está compuesto de un metal especial. Detesta la lluvia, por lo que habita en cuevas."
+				}
+			}
+		},
+		{
+			"profileKey": "the-isle-of-armor",
+			"label": "The Isle of Armor",
+			"appGameKeys": [
+				"swordioa",
+				"shieldioa"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Duraludon",
+				"localizedNames": {
+					"ja-hrkt": "ジュラルドン",
+					"ja-roma": "Duraludon",
+					"ko": "두랄루돈",
+					"zh-hant": "鋁鋼龍",
+					"fr": "Duralugon",
+					"de": "Duraludon",
+					"es": "Duraludon",
+					"it": "Duraludon",
+					"ja": "ジュラルドン",
+					"zh-hans": "铝钢龙",
+					"es-419": "Duraludon"
+				},
+				"localizedFormNames": {
+					"fr": "Duralugon Gigamax",
+					"de": "Gigadynamax-Duraludon"
+				},
+				"localizedFormLabels": {
+					"ja-hrkt": "キョダイマックスのすがた",
+					"fr": "Forme Gigamax",
+					"de": "Gigadynamax-Form",
+					"ja": "キョダイマックスのすがた"
+				},
+				"types": [
+					"Steel",
+					"Dragon"
+				],
+				"baseStats": {
+					"hp": 70,
+					"atk": 95,
+					"def": 115,
+					"spa": 120,
+					"spd": 50,
+					"spe": 85
+				},
+				"evYield": {
+					"spa": 2
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Light Metal",
+					"Heavy Metal",
+					"Stalwart (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Stalwart"
+				],
+				"eggGroups": [
+					"Mineral",
+					"Dragon"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 30,
+				"height": "43.0 m",
+				"weight": "1000.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 45,
+				"baseExperience": 187,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "White",
+				"genus": "Alloy Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ごうきんポケモン",
+					"ko": "합금포켓몬",
+					"zh-hant": "合金寶可夢",
+					"fr": "Pokémon Alliage",
+					"de": "Legierungs-Pokémon",
+					"es": "Pokémon Aleación",
+					"it": "Pokémon Metallolega",
+					"ja": "ごうきんポケモン",
+					"zh-hans": "合金宝可梦",
+					"es-419": "Pokémon Aleación"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 884
+					},
+					{
+						"pokedex": "galar",
+						"number": 371
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 161
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 884,
+								"natiId": 884,
+								"name": "Duraludon"
+							},
+							{
+								"id": 1018,
+								"natiId": 1018,
+								"name": "Archaludon",
+								"method": "Use item",
+								"value": "Metal Alloy"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokemonPGC form catalog includes this game profile.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/884",
+						"fetchedAt": "2026-11-03T05:54:03.541Z",
+						"hash": "1a85e257eb8b43a38b11db5804116ccdc2c34f93ab6d884201f7b3f35ce639db"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/465/",
+						"fetchedAt": "2026-11-03T05:54:03.572Z",
+						"hash": "0f39fc11ea88579e7e707353b6bbd8ecc3f2fc00366b4486ebc376f376bea3c1"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/10225/",
+						"fetchedAt": "2026-11-03T05:54:03.735Z",
+						"hash": "77561b9b2dbe3bbdf05dd24d0bda473627ad825dcd216256548fe56d9fd4ffa9"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/10225/encounters",
+						"fetchedAt": "2026-11-03T05:54:03.790Z",
+						"hash": "c53655538ca8c85979974f9a4bb52c53ac8a8ed24566c7311238d69bed35fd4e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/10394/",
+						"fetchedAt": "2026-11-03T05:54:03.846Z",
+						"hash": "808ddd384b82e5c94c8b40cf1738337202b134a2907df44ab925d9650ccf69b6"
+					}
+				],
+				"formName": "Gigantamax"
+			},
+			"flavorByGame": {
+				"swordioa": "",
+				"shieldioa": ""
+			},
+			"localizedFlavorByGame": {
+				"swordioa": {},
+				"shieldioa": {}
+			}
+		},
+		{
+			"profileKey": "the-crown-tundra",
+			"label": "The Crown Tundra",
+			"appGameKeys": [
+				"swordct",
+				"shieldct"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Duraludon",
+				"localizedNames": {
+					"ja-hrkt": "ジュラルドン",
+					"ja-roma": "Duraludon",
+					"ko": "두랄루돈",
+					"zh-hant": "鋁鋼龍",
+					"fr": "Duralugon",
+					"de": "Duraludon",
+					"es": "Duraludon",
+					"it": "Duraludon",
+					"ja": "ジュラルドン",
+					"zh-hans": "铝钢龙",
+					"es-419": "Duraludon"
+				},
+				"localizedFormNames": {
+					"fr": "Duralugon Gigamax",
+					"de": "Gigadynamax-Duraludon"
+				},
+				"localizedFormLabels": {
+					"ja-hrkt": "キョダイマックスのすがた",
+					"fr": "Forme Gigamax",
+					"de": "Gigadynamax-Form",
+					"ja": "キョダイマックスのすがた"
+				},
+				"types": [
+					"Steel",
+					"Dragon"
+				],
+				"baseStats": {
+					"hp": 70,
+					"atk": 95,
+					"def": 115,
+					"spa": 120,
+					"spd": 50,
+					"spe": 85
+				},
+				"evYield": {
+					"spa": 2
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Light Metal",
+					"Heavy Metal",
+					"Stalwart (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Stalwart"
+				],
+				"eggGroups": [
+					"Mineral",
+					"Dragon"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 30,
+				"height": "43.0 m",
+				"weight": "1000.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 45,
+				"baseExperience": 187,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "White",
+				"genus": "Alloy Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ごうきんポケモン",
+					"ko": "합금포켓몬",
+					"zh-hant": "合金寶可夢",
+					"fr": "Pokémon Alliage",
+					"de": "Legierungs-Pokémon",
+					"es": "Pokémon Aleación",
+					"it": "Pokémon Metallolega",
+					"ja": "ごうきんポケモン",
+					"zh-hans": "合金宝可梦",
+					"es-419": "Pokémon Aleación"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 884
+					},
+					{
+						"pokedex": "galar",
+						"number": 371
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 161
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 884,
+								"natiId": 884,
+								"name": "Duraludon"
+							},
+							{
+								"id": 1018,
+								"natiId": 1018,
+								"name": "Archaludon",
+								"method": "Use item",
+								"value": "Metal Alloy"
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Path To The Peak Max Den B",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Crown Tundra Sword",
+						"rate": "15%"
+					},
+					{
+						"area": "Path To The Peak Max Den B",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Crown Tundra Shield",
+						"rate": "15%"
+					},
+					{
+						"area": "Three Point Pass Max Den A",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Crown Tundra Sword",
+						"rate": "15%"
+					},
+					{
+						"area": "Three Point Pass Max Den A",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Crown Tundra Shield",
+						"rate": "15%"
+					},
+					{
+						"area": "Giants Bed Max Den G",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Crown Tundra Sword",
+						"rate": "15%"
+					},
+					{
+						"area": "Giants Bed Max Den G",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Crown Tundra Shield",
+						"rate": "15%"
+					},
+					{
+						"area": "Frigid Sea Max Den B",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Crown Tundra Sword",
+						"rate": "15%"
+					},
+					{
+						"area": "Frigid Sea Max Den B",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Crown Tundra Shield",
+						"rate": "15%"
+					},
+					{
+						"area": "Ballimere Lake Max Den Q",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Crown Tundra Sword",
+						"rate": "15%"
+					},
+					{
+						"area": "Ballimere Lake Max Den Q",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Crown Tundra Shield",
+						"rate": "15%"
+					}
+				],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokemonPGC form catalog includes this game profile.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/884",
+						"fetchedAt": "2026-11-03T05:54:03.541Z",
+						"hash": "1a85e257eb8b43a38b11db5804116ccdc2c34f93ab6d884201f7b3f35ce639db"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/465/",
+						"fetchedAt": "2026-11-03T05:54:03.572Z",
+						"hash": "0f39fc11ea88579e7e707353b6bbd8ecc3f2fc00366b4486ebc376f376bea3c1"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/10225/",
+						"fetchedAt": "2026-11-03T05:54:03.735Z",
+						"hash": "77561b9b2dbe3bbdf05dd24d0bda473627ad825dcd216256548fe56d9fd4ffa9"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/10225/encounters",
+						"fetchedAt": "2026-11-03T05:54:03.790Z",
+						"hash": "c53655538ca8c85979974f9a4bb52c53ac8a8ed24566c7311238d69bed35fd4e"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/10394/",
+						"fetchedAt": "2026-11-03T05:54:03.846Z",
+						"hash": "808ddd384b82e5c94c8b40cf1738337202b134a2907df44ab925d9650ccf69b6"
+					}
+				],
+				"formName": "Gigantamax"
+			},
+			"flavorByGame": {
+				"swordct": "",
+				"shieldct": ""
+			},
+			"localizedFlavorByGame": {
+				"swordct": {},
+				"shieldct": {}
+			}
+		}
+	]
+}

@@ -1,0 +1,5437 @@
+{
+	"schemaVersion": 2,
+	"nationalDexId": 565,
+	"speciesName": "Carracosta",
+	"formKey": "base",
+	"formName": "Base",
+	"formLabelSource": "form-catalog",
+	"profiles": [
+		{
+			"profileKey": "black-white",
+			"label": "Black / White",
+			"appGameKeys": [
+				"black-national",
+				"black",
+				"white-national",
+				"white"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Carracosta",
+				"localizedNames": {
+					"ja-hrkt": "アバゴーラ",
+					"ja-roma": "Abagoura",
+					"ko": "늑골라",
+					"zh-hant": "肋骨海龜",
+					"fr": "Mégapagos",
+					"de": "Karippas",
+					"es": "Carracosta",
+					"it": "Carracosta",
+					"ja": "アバゴーラ",
+					"zh-hans": "肋骨海龟",
+					"es-419": "Carracosta"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water",
+					"Rock"
+				],
+				"baseStats": {
+					"hp": 74,
+					"atk": 108,
+					"def": 133,
+					"spa": 83,
+					"spd": 65,
+					"spe": 32
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Solid Rock",
+					"Sturdy",
+					"Swift Swim (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Swift Swim"
+				],
+				"eggGroups": [
+					"Water1",
+					"Water3"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 30,
+				"height": "1.2 m",
+				"weight": "81.0 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 173,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Blue",
+				"genus": "Prototurtle Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こだいがめポケモン",
+					"ko": "옛날거북포켓몬",
+					"zh-hant": "古代龜寶可夢",
+					"fr": "Pokémon Tortantique",
+					"de": "Urzeitkröten-Pokémon",
+					"es": "Pokémon Pretortuga",
+					"it": "Pokémon Ancestruga",
+					"ja": "こだいがめポケモン",
+					"zh-hans": "古代龟宝可梦",
+					"es-419": "Pokémon Pretortuga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 565
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 71
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 127
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 195
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 122
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 242
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 143
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 148
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 564,
+								"natiId": 564,
+								"name": "Tirtouga"
+							},
+							{
+								"id": 565,
+								"natiId": 565,
+								"name": "Carracosta",
+								"method": "Level",
+								"value": 37
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Bide",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Withdraw",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Water Gun",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Rollout",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Rollout",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Bite",
+							"level": 8,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": 11,
+							"order": null
+						},
+						{
+							"name": "Aqua Jet",
+							"level": 15,
+							"order": null
+						},
+						{
+							"name": "Ancient Power",
+							"level": 18,
+							"order": null
+						},
+						{
+							"name": "Crunch",
+							"level": 21,
+							"order": null
+						},
+						{
+							"name": "Wide Guard",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Brine",
+							"level": 28,
+							"order": null
+						},
+						{
+							"name": "Smack Down",
+							"level": 31,
+							"order": null
+						},
+						{
+							"name": "Curse",
+							"level": 35,
+							"order": null
+						},
+						{
+							"name": "Shell Smash",
+							"level": 40,
+							"order": null
+						},
+						{
+							"name": "Aqua Tail",
+							"level": 45,
+							"order": null
+						},
+						{
+							"name": "Rock Slide",
+							"level": 51,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": 56,
+							"order": null
+						},
+						{
+							"name": "Hydro Pump",
+							"level": 61,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Blizzard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bulldoze",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dive",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Earthquake",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Focus Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ice Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Polish",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Slide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Smash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Tomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sandstorm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Scald",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Smack Down",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Stone Edge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Strength",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Surf",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Waterfall",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/565",
+						"fetchedAt": "2026-11-03T05:53:41.582Z",
+						"hash": "db240c23507089e1444f20979a014e538416172c34e29f1369573c21649ec830"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/288/",
+						"fetchedAt": "2026-11-03T05:53:41.560Z",
+						"hash": "a2f11069fb654af8f70eb4cabb8c465a74814cb9c380279e4364a0ea3cc010e7"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/565/",
+						"fetchedAt": "2026-11-03T05:53:41.620Z",
+						"hash": "a767cf46ceaf42c357720105729726b7b0d69c950d6e6955f94e0afbf9cd5691"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/565/encounters",
+						"fetchedAt": "2026-11-03T05:53:41.651Z",
+						"hash": "0b54cc5efe5dd98e3c5494174fb65f37cfd7eb5e8a9f1bffd7afbcbbf69718e6"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/565/",
+						"fetchedAt": "2026-11-03T05:53:41.706Z",
+						"hash": "f72eeeb2a80456f45b0cd8c747d86a0cd0e343d618b65e142df6bf78f4db8a8a"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"black-national": "They can live both in the ocean and on land. A slap from one of them is enough to open a hole in the bottom of a tanker.",
+				"black": "They can live both in the ocean and on land. A slap from one of them is enough to open a hole in the bottom of a tanker.",
+				"white-national": "Incredible jaw strength enables them to chew up steel beams and rocks along with their prey.",
+				"white": "Incredible jaw strength enables them to chew up steel beams and rocks along with their prey."
+			},
+			"localizedFlavorByGame": {
+				"black-national": {
+					"fr": "Il vit sur terre et en mer. Ses bras surpuissants peuvent percer des trous dans la coque des paquebots.",
+					"en": "They can live both in the ocean and on land. A slap from one of them is enough to open a hole in the bottom of a tanker."
+				},
+				"black": {
+					"fr": "Il vit sur terre et en mer. Ses bras surpuissants peuvent percer des trous dans la coque des paquebots.",
+					"en": "They can live both in the ocean and on land. A slap from one of them is enough to open a hole in the bottom of a tanker."
+				},
+				"white-national": {
+					"fr": "Ses mâchoires sont très puissantes. Il dévore sans distinction ses proies, l’acier et les rochers.",
+					"en": "Incredible jaw strength enables them to chew up steel beams and rocks along with their prey."
+				},
+				"white": {
+					"fr": "Ses mâchoires sont très puissantes. Il dévore sans distinction ses proies, l’acier et les rochers.",
+					"en": "Incredible jaw strength enables them to chew up steel beams and rocks along with their prey."
+				}
+			}
+		},
+		{
+			"profileKey": "black-2-white-2",
+			"label": "Black 2 / White 2",
+			"appGameKeys": [
+				"black2-national",
+				"black2",
+				"white2-national",
+				"white2"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Carracosta",
+				"localizedNames": {
+					"ja-hrkt": "アバゴーラ",
+					"ja-roma": "Abagoura",
+					"ko": "늑골라",
+					"zh-hant": "肋骨海龜",
+					"fr": "Mégapagos",
+					"de": "Karippas",
+					"es": "Carracosta",
+					"it": "Carracosta",
+					"ja": "アバゴーラ",
+					"zh-hans": "肋骨海龟",
+					"es-419": "Carracosta"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water",
+					"Rock"
+				],
+				"baseStats": {
+					"hp": 74,
+					"atk": 108,
+					"def": 133,
+					"spa": 83,
+					"spd": 65,
+					"spe": 32
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Solid Rock",
+					"Sturdy",
+					"Swift Swim (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Swift Swim"
+				],
+				"eggGroups": [
+					"Water1",
+					"Water3"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 30,
+				"height": "1.2 m",
+				"weight": "81.0 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 173,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Blue",
+				"genus": "Prototurtle Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こだいがめポケモン",
+					"ko": "옛날거북포켓몬",
+					"zh-hant": "古代龜寶可夢",
+					"fr": "Pokémon Tortantique",
+					"de": "Urzeitkröten-Pokémon",
+					"es": "Pokémon Pretortuga",
+					"it": "Pokémon Ancestruga",
+					"ja": "こだいがめポケモン",
+					"zh-hans": "古代龟宝可梦",
+					"es-419": "Pokémon Pretortuga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 565
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 71
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 127
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 195
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 122
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 242
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 143
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 148
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 564,
+								"natiId": 564,
+								"name": "Tirtouga"
+							},
+							{
+								"id": 565,
+								"natiId": 565,
+								"name": "Carracosta",
+								"method": "Level",
+								"value": 37
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Bide",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Withdraw",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Water Gun",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Rollout",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Rollout",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Bite",
+							"level": 8,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": 11,
+							"order": null
+						},
+						{
+							"name": "Aqua Jet",
+							"level": 15,
+							"order": null
+						},
+						{
+							"name": "Ancient Power",
+							"level": 18,
+							"order": null
+						},
+						{
+							"name": "Crunch",
+							"level": 21,
+							"order": null
+						},
+						{
+							"name": "Wide Guard",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Brine",
+							"level": 28,
+							"order": null
+						},
+						{
+							"name": "Smack Down",
+							"level": 31,
+							"order": null
+						},
+						{
+							"name": "Curse",
+							"level": 35,
+							"order": null
+						},
+						{
+							"name": "Shell Smash",
+							"level": 40,
+							"order": null
+						},
+						{
+							"name": "Aqua Tail",
+							"level": 45,
+							"order": null
+						},
+						{
+							"name": "Rock Slide",
+							"level": 51,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": 56,
+							"order": null
+						},
+						{
+							"name": "Hydro Pump",
+							"level": 61,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Blizzard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bulldoze",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dive",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Earthquake",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Focus Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ice Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Polish",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Slide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Smash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Tomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sandstorm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Scald",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Smack Down",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Stone Edge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Strength",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Surf",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Waterfall",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Aqua Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Block",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Earth Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Icy Wind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Defense",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Head",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Low Kick",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Stealth Rock",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Superpower",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/565",
+						"fetchedAt": "2026-11-03T05:53:41.582Z",
+						"hash": "db240c23507089e1444f20979a014e538416172c34e29f1369573c21649ec830"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/288/",
+						"fetchedAt": "2026-11-03T05:53:41.560Z",
+						"hash": "a2f11069fb654af8f70eb4cabb8c465a74814cb9c380279e4364a0ea3cc010e7"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/565/",
+						"fetchedAt": "2026-11-03T05:53:41.620Z",
+						"hash": "a767cf46ceaf42c357720105729726b7b0d69c950d6e6955f94e0afbf9cd5691"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/565/encounters",
+						"fetchedAt": "2026-11-03T05:53:41.651Z",
+						"hash": "0b54cc5efe5dd98e3c5494174fb65f37cfd7eb5e8a9f1bffd7afbcbbf69718e6"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/565/",
+						"fetchedAt": "2026-11-03T05:53:41.706Z",
+						"hash": "f72eeeb2a80456f45b0cd8c747d86a0cd0e343d618b65e142df6bf78f4db8a8a"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"black2-national": "It could knock out a foe with a slap from one of its developed front appendages and chew it up, shell or bones and all.",
+				"black2": "It could knock out a foe with a slap from one of its developed front appendages and chew it up, shell or bones and all.",
+				"white2-national": "It could knock out a foe with a slap from one of its developed front appendages and chew it up, shell or bones and all.",
+				"white2": "It could knock out a foe with a slap from one of its developed front appendages and chew it up, shell or bones and all."
+			},
+			"localizedFlavorByGame": {
+				"black2-national": {
+					"en": "It could knock out a foe with a slap from one of its developed front appendages and chew it up, shell or bones and all."
+				},
+				"black2": {
+					"en": "It could knock out a foe with a slap from one of its developed front appendages and chew it up, shell or bones and all."
+				},
+				"white2-national": {
+					"en": "It could knock out a foe with a slap from one of its developed front appendages and chew it up, shell or bones and all."
+				},
+				"white2": {
+					"en": "It could knock out a foe with a slap from one of its developed front appendages and chew it up, shell or bones and all."
+				}
+			}
+		},
+		{
+			"profileKey": "x-y",
+			"label": "X / Y",
+			"appGameKeys": [
+				"x-national",
+				"x-central",
+				"x-coastal",
+				"x-mountain",
+				"y-national",
+				"y-central",
+				"y-coastal",
+				"y-mountain"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Carracosta",
+				"localizedNames": {
+					"ja-hrkt": "アバゴーラ",
+					"ja-roma": "Abagoura",
+					"ko": "늑골라",
+					"zh-hant": "肋骨海龜",
+					"fr": "Mégapagos",
+					"de": "Karippas",
+					"es": "Carracosta",
+					"it": "Carracosta",
+					"ja": "アバゴーラ",
+					"zh-hans": "肋骨海龟",
+					"es-419": "Carracosta"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water",
+					"Rock"
+				],
+				"baseStats": {
+					"hp": 74,
+					"atk": 108,
+					"def": 133,
+					"spa": 83,
+					"spd": 65,
+					"spe": 32
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Solid Rock",
+					"Sturdy",
+					"Swift Swim (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Swift Swim"
+				],
+				"eggGroups": [
+					"Water1",
+					"Water3"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 30,
+				"height": "1.2 m",
+				"weight": "81.0 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 173,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Blue",
+				"genus": "Prototurtle Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こだいがめポケモン",
+					"ko": "옛날거북포켓몬",
+					"zh-hant": "古代龜寶可夢",
+					"fr": "Pokémon Tortantique",
+					"de": "Urzeitkröten-Pokémon",
+					"es": "Pokémon Pretortuga",
+					"it": "Pokémon Ancestruga",
+					"ja": "こだいがめポケモン",
+					"zh-hans": "古代龟宝可梦",
+					"es-419": "Pokémon Pretortuga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 565
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 71
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 127
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 195
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 122
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 242
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 143
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 148
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 564,
+								"natiId": 564,
+								"name": "Tirtouga"
+							},
+							{
+								"id": 565,
+								"natiId": 565,
+								"name": "Carracosta",
+								"method": "Level",
+								"value": 37
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Bide",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Withdraw",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Water Gun",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Rollout",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Rollout",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Bite",
+							"level": 8,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": 11,
+							"order": null
+						},
+						{
+							"name": "Aqua Jet",
+							"level": 15,
+							"order": null
+						},
+						{
+							"name": "Ancient Power",
+							"level": 18,
+							"order": null
+						},
+						{
+							"name": "Crunch",
+							"level": 21,
+							"order": null
+						},
+						{
+							"name": "Wide Guard",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Brine",
+							"level": 28,
+							"order": null
+						},
+						{
+							"name": "Smack Down",
+							"level": 31,
+							"order": null
+						},
+						{
+							"name": "Curse",
+							"level": 35,
+							"order": null
+						},
+						{
+							"name": "Shell Smash",
+							"level": 40,
+							"order": null
+						},
+						{
+							"name": "Aqua Tail",
+							"level": 45,
+							"order": null
+						},
+						{
+							"name": "Rock Slide",
+							"level": 51,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": 56,
+							"order": null
+						},
+						{
+							"name": "Hydro Pump",
+							"level": 61,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Blizzard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bulldoze",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Earthquake",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Focus Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ice Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Polish",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Slide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Smash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Tomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sandstorm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Scald",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Smack Down",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Stone Edge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Strength",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Surf",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Waterfall",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/565",
+						"fetchedAt": "2026-11-03T05:53:41.582Z",
+						"hash": "db240c23507089e1444f20979a014e538416172c34e29f1369573c21649ec830"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/288/",
+						"fetchedAt": "2026-11-03T05:53:41.560Z",
+						"hash": "a2f11069fb654af8f70eb4cabb8c465a74814cb9c380279e4364a0ea3cc010e7"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/565/",
+						"fetchedAt": "2026-11-03T05:53:41.620Z",
+						"hash": "a767cf46ceaf42c357720105729726b7b0d69c950d6e6955f94e0afbf9cd5691"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/565/encounters",
+						"fetchedAt": "2026-11-03T05:53:41.651Z",
+						"hash": "0b54cc5efe5dd98e3c5494174fb65f37cfd7eb5e8a9f1bffd7afbcbbf69718e6"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/565/",
+						"fetchedAt": "2026-11-03T05:53:41.706Z",
+						"hash": "f72eeeb2a80456f45b0cd8c747d86a0cd0e343d618b65e142df6bf78f4db8a8a"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"x-national": "They can live both in the ocean and on land. A slap from one of them is enough to open a hole in the bottom of a tanker.",
+				"x-central": "They can live both in the ocean and on land. A slap from one of them is enough to open a hole in the bottom of a tanker.",
+				"x-coastal": "They can live both in the ocean and on land. A slap from one of them is enough to open a hole in the bottom of a tanker.",
+				"x-mountain": "They can live both in the ocean and on land. A slap from one of them is enough to open a hole in the bottom of a tanker.",
+				"y-national": "It could knock out a foe with a slap from one of its developed front appendages and chew it up, shell or bones and all.",
+				"y-central": "It could knock out a foe with a slap from one of its developed front appendages and chew it up, shell or bones and all.",
+				"y-coastal": "It could knock out a foe with a slap from one of its developed front appendages and chew it up, shell or bones and all.",
+				"y-mountain": "It could knock out a foe with a slap from one of its developed front appendages and chew it up, shell or bones and all."
+			},
+			"localizedFlavorByGame": {
+				"x-national": {
+					"ja-hrkt": "うみと りくちで せいかつする。 はりてで タンカーの ふなぞこに あなを あける パワーの もちぬし。",
+					"ko": "바다와 육지에서 생활한다. 손바닥으로 쳐서 배 밑바닥에 구멍을 내는 파워의 소유자다.",
+					"fr": "Il vit sur terre et en mer. Ses bras surpuissants peuvent percer des trous dans la coque des paquebots.",
+					"de": "Es lebt im Meer und an Land. Es ist so stark, dass es mit einem einzigen Hieb ein Loch in ein Schiff reißen kann.",
+					"es": "Vive en el mar y en la superficie. Sus garras pueden abrir un agujero en el fondo de un petrolero.",
+					"it": "Vive nel mare e sulla terraferma. Ha una forza tale da sfondare con un solo colpo il fondo di una nave cisterna.",
+					"en": "They can live both in the ocean and on land. A slap from one of them is enough to open a hole in the bottom of a tanker.",
+					"ja": "海と 陸地で 生活する。 張り手で タンカーの 船底に 穴を 開ける パワーの 持ち主。",
+					"es-419": "Vive en el mar y en la superficie. Sus garras pueden abrir un agujero en el fondo de un petrolero."
+				},
+				"x-central": {
+					"ja-hrkt": "うみと りくちで せいかつする。 はりてで タンカーの ふなぞこに あなを あける パワーの もちぬし。",
+					"ko": "바다와 육지에서 생활한다. 손바닥으로 쳐서 배 밑바닥에 구멍을 내는 파워의 소유자다.",
+					"fr": "Il vit sur terre et en mer. Ses bras surpuissants peuvent percer des trous dans la coque des paquebots.",
+					"de": "Es lebt im Meer und an Land. Es ist so stark, dass es mit einem einzigen Hieb ein Loch in ein Schiff reißen kann.",
+					"es": "Vive en el mar y en la superficie. Sus garras pueden abrir un agujero en el fondo de un petrolero.",
+					"it": "Vive nel mare e sulla terraferma. Ha una forza tale da sfondare con un solo colpo il fondo di una nave cisterna.",
+					"en": "They can live both in the ocean and on land. A slap from one of them is enough to open a hole in the bottom of a tanker.",
+					"ja": "海と 陸地で 生活する。 張り手で タンカーの 船底に 穴を 開ける パワーの 持ち主。",
+					"es-419": "Vive en el mar y en la superficie. Sus garras pueden abrir un agujero en el fondo de un petrolero."
+				},
+				"x-coastal": {
+					"ja-hrkt": "うみと りくちで せいかつする。 はりてで タンカーの ふなぞこに あなを あける パワーの もちぬし。",
+					"ko": "바다와 육지에서 생활한다. 손바닥으로 쳐서 배 밑바닥에 구멍을 내는 파워의 소유자다.",
+					"fr": "Il vit sur terre et en mer. Ses bras surpuissants peuvent percer des trous dans la coque des paquebots.",
+					"de": "Es lebt im Meer und an Land. Es ist so stark, dass es mit einem einzigen Hieb ein Loch in ein Schiff reißen kann.",
+					"es": "Vive en el mar y en la superficie. Sus garras pueden abrir un agujero en el fondo de un petrolero.",
+					"it": "Vive nel mare e sulla terraferma. Ha una forza tale da sfondare con un solo colpo il fondo di una nave cisterna.",
+					"en": "They can live both in the ocean and on land. A slap from one of them is enough to open a hole in the bottom of a tanker.",
+					"ja": "海と 陸地で 生活する。 張り手で タンカーの 船底に 穴を 開ける パワーの 持ち主。",
+					"es-419": "Vive en el mar y en la superficie. Sus garras pueden abrir un agujero en el fondo de un petrolero."
+				},
+				"x-mountain": {
+					"ja-hrkt": "うみと りくちで せいかつする。 はりてで タンカーの ふなぞこに あなを あける パワーの もちぬし。",
+					"ko": "바다와 육지에서 생활한다. 손바닥으로 쳐서 배 밑바닥에 구멍을 내는 파워의 소유자다.",
+					"fr": "Il vit sur terre et en mer. Ses bras surpuissants peuvent percer des trous dans la coque des paquebots.",
+					"de": "Es lebt im Meer und an Land. Es ist so stark, dass es mit einem einzigen Hieb ein Loch in ein Schiff reißen kann.",
+					"es": "Vive en el mar y en la superficie. Sus garras pueden abrir un agujero en el fondo de un petrolero.",
+					"it": "Vive nel mare e sulla terraferma. Ha una forza tale da sfondare con un solo colpo il fondo di una nave cisterna.",
+					"en": "They can live both in the ocean and on land. A slap from one of them is enough to open a hole in the bottom of a tanker.",
+					"ja": "海と 陸地で 生活する。 張り手で タンカーの 船底に 穴を 開ける パワーの 持ち主。",
+					"es-419": "Vive en el mar y en la superficie. Sus garras pueden abrir un agujero en el fondo de un petrolero."
+				},
+				"y-national": {
+					"ja-hrkt": "はったつした まえあしで あいてを ひっぱたき きぜつさせると カラや ホネまで まるごと かみくだいた。",
+					"ko": "발달한 앞다리로 상대를 세게 쳐서 기절시켜 껍데기나 뼈까지 통째로 깨물어 부쉈다.",
+					"fr": "Ses bras puissants serrent ses proies jusqu’à l’évanouissement. Il les dévore ensuite, carapace et os compris.",
+					"de": "Ein Schlag mit seinen ausgeprägten Vorderflossen brachte Gegner zu Fall und brach ihre Knochen oder Schale.",
+					"es": "Un golpe con sus desarrolladas aletas delanteras puede hacer perder a un rival el conocimiento o romperle los huesos.",
+					"it": "Un singolo colpo dei suoi arti anteriori può bastare a far perdere i sensi alla preda e romperne ossa e corazza.",
+					"en": "It could knock out a foe with a slap from one of its developed front appendages and chew it up, shell or bones and all.",
+					"ja": "発達した 前足で 相手を ひっぱたき 気絶させると 殻や ホネまで まるごと かみくだいた。",
+					"es-419": "Un golpe con sus desarrolladas aletas delanteras puede hacer perder a un rival el conocimiento o romperle los huesos."
+				},
+				"y-central": {
+					"ja-hrkt": "はったつした まえあしで あいてを ひっぱたき きぜつさせると カラや ホネまで まるごと かみくだいた。",
+					"ko": "발달한 앞다리로 상대를 세게 쳐서 기절시켜 껍데기나 뼈까지 통째로 깨물어 부쉈다.",
+					"fr": "Ses bras puissants serrent ses proies jusqu’à l’évanouissement. Il les dévore ensuite, carapace et os compris.",
+					"de": "Ein Schlag mit seinen ausgeprägten Vorderflossen brachte Gegner zu Fall und brach ihre Knochen oder Schale.",
+					"es": "Un golpe con sus desarrolladas aletas delanteras puede hacer perder a un rival el conocimiento o romperle los huesos.",
+					"it": "Un singolo colpo dei suoi arti anteriori può bastare a far perdere i sensi alla preda e romperne ossa e corazza.",
+					"en": "It could knock out a foe with a slap from one of its developed front appendages and chew it up, shell or bones and all.",
+					"ja": "発達した 前足で 相手を ひっぱたき 気絶させると 殻や ホネまで まるごと かみくだいた。",
+					"es-419": "Un golpe con sus desarrolladas aletas delanteras puede hacer perder a un rival el conocimiento o romperle los huesos."
+				},
+				"y-coastal": {
+					"ja-hrkt": "はったつした まえあしで あいてを ひっぱたき きぜつさせると カラや ホネまで まるごと かみくだいた。",
+					"ko": "발달한 앞다리로 상대를 세게 쳐서 기절시켜 껍데기나 뼈까지 통째로 깨물어 부쉈다.",
+					"fr": "Ses bras puissants serrent ses proies jusqu’à l’évanouissement. Il les dévore ensuite, carapace et os compris.",
+					"de": "Ein Schlag mit seinen ausgeprägten Vorderflossen brachte Gegner zu Fall und brach ihre Knochen oder Schale.",
+					"es": "Un golpe con sus desarrolladas aletas delanteras puede hacer perder a un rival el conocimiento o romperle los huesos.",
+					"it": "Un singolo colpo dei suoi arti anteriori può bastare a far perdere i sensi alla preda e romperne ossa e corazza.",
+					"en": "It could knock out a foe with a slap from one of its developed front appendages and chew it up, shell or bones and all.",
+					"ja": "発達した 前足で 相手を ひっぱたき 気絶させると 殻や ホネまで まるごと かみくだいた。",
+					"es-419": "Un golpe con sus desarrolladas aletas delanteras puede hacer perder a un rival el conocimiento o romperle los huesos."
+				},
+				"y-mountain": {
+					"ja-hrkt": "はったつした まえあしで あいてを ひっぱたき きぜつさせると カラや ホネまで まるごと かみくだいた。",
+					"ko": "발달한 앞다리로 상대를 세게 쳐서 기절시켜 껍데기나 뼈까지 통째로 깨물어 부쉈다.",
+					"fr": "Ses bras puissants serrent ses proies jusqu’à l’évanouissement. Il les dévore ensuite, carapace et os compris.",
+					"de": "Ein Schlag mit seinen ausgeprägten Vorderflossen brachte Gegner zu Fall und brach ihre Knochen oder Schale.",
+					"es": "Un golpe con sus desarrolladas aletas delanteras puede hacer perder a un rival el conocimiento o romperle los huesos.",
+					"it": "Un singolo colpo dei suoi arti anteriori può bastare a far perdere i sensi alla preda e romperne ossa e corazza.",
+					"en": "It could knock out a foe with a slap from one of its developed front appendages and chew it up, shell or bones and all.",
+					"ja": "発達した 前足で 相手を ひっぱたき 気絶させると 殻や ホネまで まるごと かみくだいた。",
+					"es-419": "Un golpe con sus desarrolladas aletas delanteras puede hacer perder a un rival el conocimiento o romperle los huesos."
+				}
+			}
+		},
+		{
+			"profileKey": "omega-ruby-alpha-sapphire",
+			"label": "Omega Ruby / Alpha Sapphire",
+			"appGameKeys": [
+				"omegaruby-national",
+				"omegaruby",
+				"alphasapphire-national",
+				"alphasapphire"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Carracosta",
+				"localizedNames": {
+					"ja-hrkt": "アバゴーラ",
+					"ja-roma": "Abagoura",
+					"ko": "늑골라",
+					"zh-hant": "肋骨海龜",
+					"fr": "Mégapagos",
+					"de": "Karippas",
+					"es": "Carracosta",
+					"it": "Carracosta",
+					"ja": "アバゴーラ",
+					"zh-hans": "肋骨海龟",
+					"es-419": "Carracosta"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water",
+					"Rock"
+				],
+				"baseStats": {
+					"hp": 74,
+					"atk": 108,
+					"def": 133,
+					"spa": 83,
+					"spd": 65,
+					"spe": 32
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Solid Rock",
+					"Sturdy",
+					"Swift Swim (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Swift Swim"
+				],
+				"eggGroups": [
+					"Water1",
+					"Water3"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 30,
+				"height": "1.2 m",
+				"weight": "81.0 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 173,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Blue",
+				"genus": "Prototurtle Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こだいがめポケモン",
+					"ko": "옛날거북포켓몬",
+					"zh-hant": "古代龜寶可夢",
+					"fr": "Pokémon Tortantique",
+					"de": "Urzeitkröten-Pokémon",
+					"es": "Pokémon Pretortuga",
+					"it": "Pokémon Ancestruga",
+					"ja": "こだいがめポケモン",
+					"zh-hans": "古代龟宝可梦",
+					"es-419": "Pokémon Pretortuga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 565
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 71
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 127
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 195
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 122
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 242
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 143
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 148
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 564,
+								"natiId": 564,
+								"name": "Tirtouga"
+							},
+							{
+								"id": 565,
+								"natiId": 565,
+								"name": "Carracosta",
+								"method": "Level",
+								"value": 37
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Bide",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Withdraw",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Water Gun",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Rollout",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Rollout",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Bite",
+							"level": 8,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": 11,
+							"order": null
+						},
+						{
+							"name": "Aqua Jet",
+							"level": 15,
+							"order": null
+						},
+						{
+							"name": "Ancient Power",
+							"level": 18,
+							"order": null
+						},
+						{
+							"name": "Crunch",
+							"level": 21,
+							"order": null
+						},
+						{
+							"name": "Wide Guard",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Brine",
+							"level": 28,
+							"order": null
+						},
+						{
+							"name": "Smack Down",
+							"level": 31,
+							"order": null
+						},
+						{
+							"name": "Curse",
+							"level": 35,
+							"order": null
+						},
+						{
+							"name": "Shell Smash",
+							"level": 40,
+							"order": null
+						},
+						{
+							"name": "Aqua Tail",
+							"level": 45,
+							"order": null
+						},
+						{
+							"name": "Rock Slide",
+							"level": 51,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": 56,
+							"order": null
+						},
+						{
+							"name": "Hydro Pump",
+							"level": 61,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Blizzard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bulldoze",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dive",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Earthquake",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Focus Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ice Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Polish",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Slide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Smash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Tomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sandstorm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Scald",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Secret Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Smack Down",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Stone Edge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Strength",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Surf",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Waterfall",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Aqua Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Block",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Earth Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Icy Wind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Defense",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Head",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Knock Off",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Low Kick",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Stealth Rock",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Superpower",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Water Pulse",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Zen Headbutt",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/565",
+						"fetchedAt": "2026-11-03T05:53:41.582Z",
+						"hash": "db240c23507089e1444f20979a014e538416172c34e29f1369573c21649ec830"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/288/",
+						"fetchedAt": "2026-11-03T05:53:41.560Z",
+						"hash": "a2f11069fb654af8f70eb4cabb8c465a74814cb9c380279e4364a0ea3cc010e7"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/565/",
+						"fetchedAt": "2026-11-03T05:53:41.620Z",
+						"hash": "a767cf46ceaf42c357720105729726b7b0d69c950d6e6955f94e0afbf9cd5691"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/565/encounters",
+						"fetchedAt": "2026-11-03T05:53:41.651Z",
+						"hash": "0b54cc5efe5dd98e3c5494174fb65f37cfd7eb5e8a9f1bffd7afbcbbf69718e6"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/565/",
+						"fetchedAt": "2026-11-03T05:53:41.706Z",
+						"hash": "f72eeeb2a80456f45b0cd8c747d86a0cd0e343d618b65e142df6bf78f4db8a8a"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"omegaruby-national": "They can live both in the ocean and on land. A slap from one of them is enough to open a hole in the bottom of a tanker.",
+				"omegaruby": "They can live both in the ocean and on land. A slap from one of them is enough to open a hole in the bottom of a tanker.",
+				"alphasapphire-national": "It could knock out a foe with a slap from one of its developed front appendages and chew it up, shell or bones and all.",
+				"alphasapphire": "It could knock out a foe with a slap from one of its developed front appendages and chew it up, shell or bones and all."
+			},
+			"localizedFlavorByGame": {
+				"omegaruby-national": {
+					"ja-hrkt": "うみと りくちで せいかつする。 はりてで タンカーの ふなぞこに あなを あける パワーの もちぬし。",
+					"ko": "바다와 육지에서 생활한다. 손바닥으로 쳐서 배 밑바닥에 구멍을 내는 파워의 소유자다.",
+					"fr": "Il vit sur terre et en mer. Ses bras surpuissants peuvent percer des trous dans la coque des paquebots.",
+					"de": "Es lebt im Meer und an Land. Es ist so stark, dass es mit einem einzigen Hieb ein Loch in ein Schiff reißen kann.",
+					"es": "Vive en el mar y en la superficie. Sus garras pueden abrir un agujero en el fondo de un petrolero.",
+					"it": "Vive nel mare e sulla terraferma. Ha una forza tale da sfondare con un solo colpo il fondo di una nave cisterna.",
+					"en": "They can live both in the ocean and on land. A slap from one of them is enough to open a hole in the bottom of a tanker.",
+					"ja": "海と 陸地で 生活する。 張り手で タンカーの 船底に 穴を 開ける パワーの 持ち主。",
+					"es-419": "Vive en el mar y en la superficie. Sus garras pueden abrir un agujero en el fondo de un petrolero."
+				},
+				"omegaruby": {
+					"ja-hrkt": "うみと りくちで せいかつする。 はりてで タンカーの ふなぞこに あなを あける パワーの もちぬし。",
+					"ko": "바다와 육지에서 생활한다. 손바닥으로 쳐서 배 밑바닥에 구멍을 내는 파워의 소유자다.",
+					"fr": "Il vit sur terre et en mer. Ses bras surpuissants peuvent percer des trous dans la coque des paquebots.",
+					"de": "Es lebt im Meer und an Land. Es ist so stark, dass es mit einem einzigen Hieb ein Loch in ein Schiff reißen kann.",
+					"es": "Vive en el mar y en la superficie. Sus garras pueden abrir un agujero en el fondo de un petrolero.",
+					"it": "Vive nel mare e sulla terraferma. Ha una forza tale da sfondare con un solo colpo il fondo di una nave cisterna.",
+					"en": "They can live both in the ocean and on land. A slap from one of them is enough to open a hole in the bottom of a tanker.",
+					"ja": "海と 陸地で 生活する。 張り手で タンカーの 船底に 穴を 開ける パワーの 持ち主。",
+					"es-419": "Vive en el mar y en la superficie. Sus garras pueden abrir un agujero en el fondo de un petrolero."
+				},
+				"alphasapphire-national": {
+					"ja-hrkt": "はったつした まえあしで あいてを ひっぱたき きぜつさせると カラや ホネまで まるごと かみくだいた。",
+					"ko": "발달한 앞다리로 상대를 세게 쳐서 기절시켜 껍데기나 뼈까지 통째로 깨물어 부쉈다.",
+					"fr": "Ses bras puissants serrent ses proies jusqu’à l’évanouissement. Il les dévore ensuite, carapace et os compris.",
+					"de": "Ein Schlag mit seinen ausgeprägten Vorderflossen brachte Gegner zu Fall und brach ihre Knochen oder Schale.",
+					"es": "Un golpe con sus desarrolladas aletas delanteras puede hacer perder a un rival el conocimiento o romperle los huesos.",
+					"it": "Un singolo colpo dei suoi arti anteriori può bastare a far perdere i sensi alla preda e romperne ossa e corazza.",
+					"en": "It could knock out a foe with a slap from one of its developed front appendages and chew it up, shell or bones and all.",
+					"ja": "発達した 前足で 相手を ひっぱたき 気絶させると 殻や ホネまで まるごと かみくだいた。",
+					"es-419": "Un golpe con sus desarrolladas aletas delanteras puede hacer perder a un rival el conocimiento o romperle los huesos."
+				},
+				"alphasapphire": {
+					"ja-hrkt": "はったつした まえあしで あいてを ひっぱたき きぜつさせると カラや ホネまで まるごと かみくだいた。",
+					"ko": "발달한 앞다리로 상대를 세게 쳐서 기절시켜 껍데기나 뼈까지 통째로 깨물어 부쉈다.",
+					"fr": "Ses bras puissants serrent ses proies jusqu’à l’évanouissement. Il les dévore ensuite, carapace et os compris.",
+					"de": "Ein Schlag mit seinen ausgeprägten Vorderflossen brachte Gegner zu Fall und brach ihre Knochen oder Schale.",
+					"es": "Un golpe con sus desarrolladas aletas delanteras puede hacer perder a un rival el conocimiento o romperle los huesos.",
+					"it": "Un singolo colpo dei suoi arti anteriori può bastare a far perdere i sensi alla preda e romperne ossa e corazza.",
+					"en": "It could knock out a foe with a slap from one of its developed front appendages and chew it up, shell or bones and all.",
+					"ja": "発達した 前足で 相手を ひっぱたき 気絶させると 殻や ホネまで まるごと かみくだいた。",
+					"es-419": "Un golpe con sus desarrolladas aletas delanteras puede hacer perder a un rival el conocimiento o romperle los huesos."
+				}
+			}
+		},
+		{
+			"profileKey": "sun-moon",
+			"label": "Sun / Moon",
+			"appGameKeys": [
+				"sun-alola",
+				"sun-melemele",
+				"sun-akala",
+				"sun-ulaula",
+				"sun-poni",
+				"moon-alola",
+				"moon-melemele",
+				"moon-akala",
+				"moon-ulaula",
+				"moon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Carracosta",
+				"localizedNames": {
+					"ja-hrkt": "アバゴーラ",
+					"ja-roma": "Abagoura",
+					"ko": "늑골라",
+					"zh-hant": "肋骨海龜",
+					"fr": "Mégapagos",
+					"de": "Karippas",
+					"es": "Carracosta",
+					"it": "Carracosta",
+					"ja": "アバゴーラ",
+					"zh-hans": "肋骨海龟",
+					"es-419": "Carracosta"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water",
+					"Rock"
+				],
+				"baseStats": {
+					"hp": 74,
+					"atk": 108,
+					"def": 133,
+					"spa": 83,
+					"spd": 65,
+					"spe": 32
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Solid Rock",
+					"Sturdy",
+					"Swift Swim (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Swift Swim"
+				],
+				"eggGroups": [
+					"Water1",
+					"Water3"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 30,
+				"height": "1.2 m",
+				"weight": "81.0 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 173,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Blue",
+				"genus": "Prototurtle Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こだいがめポケモン",
+					"ko": "옛날거북포켓몬",
+					"zh-hant": "古代龜寶可夢",
+					"fr": "Pokémon Tortantique",
+					"de": "Urzeitkröten-Pokémon",
+					"es": "Pokémon Pretortuga",
+					"it": "Pokémon Ancestruga",
+					"ja": "こだいがめポケモン",
+					"zh-hans": "古代龟宝可梦",
+					"es-419": "Pokémon Pretortuga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 565
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 71
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 127
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 195
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 122
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 242
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 143
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 148
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 564,
+								"natiId": 564,
+								"name": "Tirtouga"
+							},
+							{
+								"id": 565,
+								"natiId": 565,
+								"name": "Carracosta",
+								"method": "Level",
+								"value": 37
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Bide",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Withdraw",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Water Gun",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Rollout",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Rollout",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Bite",
+							"level": 8,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": 11,
+							"order": null
+						},
+						{
+							"name": "Aqua Jet",
+							"level": 15,
+							"order": null
+						},
+						{
+							"name": "Ancient Power",
+							"level": 18,
+							"order": null
+						},
+						{
+							"name": "Crunch",
+							"level": 21,
+							"order": null
+						},
+						{
+							"name": "Wide Guard",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Brine",
+							"level": 28,
+							"order": null
+						},
+						{
+							"name": "Smack Down",
+							"level": 31,
+							"order": null
+						},
+						{
+							"name": "Curse",
+							"level": 35,
+							"order": null
+						},
+						{
+							"name": "Shell Smash",
+							"level": 40,
+							"order": null
+						},
+						{
+							"name": "Aqua Tail",
+							"level": 45,
+							"order": null
+						},
+						{
+							"name": "Rock Slide",
+							"level": 51,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": 56,
+							"order": null
+						},
+						{
+							"name": "Hydro Pump",
+							"level": 61,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Blizzard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bulldoze",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Earthquake",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Focus Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ice Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Polish",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Slide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Tomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sandstorm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Scald",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Smack Down",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Stone Edge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Surf",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Waterfall",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/565",
+						"fetchedAt": "2026-11-03T05:53:41.582Z",
+						"hash": "db240c23507089e1444f20979a014e538416172c34e29f1369573c21649ec830"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/288/",
+						"fetchedAt": "2026-11-03T05:53:41.560Z",
+						"hash": "a2f11069fb654af8f70eb4cabb8c465a74814cb9c380279e4364a0ea3cc010e7"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/565/",
+						"fetchedAt": "2026-11-03T05:53:41.620Z",
+						"hash": "a767cf46ceaf42c357720105729726b7b0d69c950d6e6955f94e0afbf9cd5691"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/565/encounters",
+						"fetchedAt": "2026-11-03T05:53:41.651Z",
+						"hash": "0b54cc5efe5dd98e3c5494174fb65f37cfd7eb5e8a9f1bffd7afbcbbf69718e6"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/565/",
+						"fetchedAt": "2026-11-03T05:53:41.706Z",
+						"hash": "f72eeeb2a80456f45b0cd8c747d86a0cd0e343d618b65e142df6bf78f4db8a8a"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sun-alola": "It constructed its sturdy shell by crunching and swallowing the hard shells or bones of its prey.",
+				"sun-melemele": "It constructed its sturdy shell by crunching and swallowing the hard shells or bones of its prey.",
+				"sun-akala": "It constructed its sturdy shell by crunching and swallowing the hard shells or bones of its prey.",
+				"sun-ulaula": "It constructed its sturdy shell by crunching and swallowing the hard shells or bones of its prey.",
+				"sun-poni": "It constructed its sturdy shell by crunching and swallowing the hard shells or bones of its prey.",
+				"moon-alola": "Active both on land and in the sea, this Pokémon drags its land-based prey into the water to finish it off.",
+				"moon-melemele": "Active both on land and in the sea, this Pokémon drags its land-based prey into the water to finish it off.",
+				"moon-akala": "Active both on land and in the sea, this Pokémon drags its land-based prey into the water to finish it off.",
+				"moon-ulaula": "Active both on land and in the sea, this Pokémon drags its land-based prey into the water to finish it off.",
+				"moon-poni": "Active both on land and in the sea, this Pokémon drags its land-based prey into the water to finish it off."
+			},
+			"localizedFlavorByGame": {
+				"sun-alola": {
+					"ja-hrkt": "じょうぶな こうらを つくるため えものの かたいカラや ホネも まるごと かみくだいて くっていた。",
+					"ko": "단단한 등껍질을 만들기 위해 먹이의 딱딱한 껍데기나 뼈도 통째로 깨물어 먹었다.",
+					"zh-hant": "為了形成結實的甲殼， 會把獵物的硬殼和骨頭 整個嚼碎後吃下去。",
+					"fr": "Pour se constituer une carapace solide, il devait réduire en miettes les os et coquilles riches en minéraux de ses proies avant de les avaler.",
+					"de": "Um seinen harten Panzer zu erlangen, fraß es seine Beute im Ganzen und zerkaute deren harte Schale und Knochen.",
+					"es": "Trituraba los huesos y las duras conchas de sus presas para aprovechar bien los nutrientes y reforzar así su propio caparazón.",
+					"it": "Per rafforzare il proprio carapace, mangiava le prede intere, frantumandone corazza e ossa.",
+					"en": "It constructed its sturdy shell by crunching and swallowing the hard shells or bones of its prey.",
+					"ja": "丈夫な 甲羅を つくるため 獲物の 硬い殻や 骨も 丸ごと 噛み砕いて 喰っていた。",
+					"zh-hans": "为了形成结实的甲壳， 会把猎物的硬壳和骨头 都整个嚼碎了吃下去。",
+					"es-419": "Trituraba los huesos y las duras conchas de sus presas para aprovechar bien los nutrientes y reforzar así su propio caparazón."
+				},
+				"sun-melemele": {
+					"ja-hrkt": "じょうぶな こうらを つくるため えものの かたいカラや ホネも まるごと かみくだいて くっていた。",
+					"ko": "단단한 등껍질을 만들기 위해 먹이의 딱딱한 껍데기나 뼈도 통째로 깨물어 먹었다.",
+					"zh-hant": "為了形成結實的甲殼， 會把獵物的硬殼和骨頭 整個嚼碎後吃下去。",
+					"fr": "Pour se constituer une carapace solide, il devait réduire en miettes les os et coquilles riches en minéraux de ses proies avant de les avaler.",
+					"de": "Um seinen harten Panzer zu erlangen, fraß es seine Beute im Ganzen und zerkaute deren harte Schale und Knochen.",
+					"es": "Trituraba los huesos y las duras conchas de sus presas para aprovechar bien los nutrientes y reforzar así su propio caparazón.",
+					"it": "Per rafforzare il proprio carapace, mangiava le prede intere, frantumandone corazza e ossa.",
+					"en": "It constructed its sturdy shell by crunching and swallowing the hard shells or bones of its prey.",
+					"ja": "丈夫な 甲羅を つくるため 獲物の 硬い殻や 骨も 丸ごと 噛み砕いて 喰っていた。",
+					"zh-hans": "为了形成结实的甲壳， 会把猎物的硬壳和骨头 都整个嚼碎了吃下去。",
+					"es-419": "Trituraba los huesos y las duras conchas de sus presas para aprovechar bien los nutrientes y reforzar así su propio caparazón."
+				},
+				"sun-akala": {
+					"ja-hrkt": "じょうぶな こうらを つくるため えものの かたいカラや ホネも まるごと かみくだいて くっていた。",
+					"ko": "단단한 등껍질을 만들기 위해 먹이의 딱딱한 껍데기나 뼈도 통째로 깨물어 먹었다.",
+					"zh-hant": "為了形成結實的甲殼， 會把獵物的硬殼和骨頭 整個嚼碎後吃下去。",
+					"fr": "Pour se constituer une carapace solide, il devait réduire en miettes les os et coquilles riches en minéraux de ses proies avant de les avaler.",
+					"de": "Um seinen harten Panzer zu erlangen, fraß es seine Beute im Ganzen und zerkaute deren harte Schale und Knochen.",
+					"es": "Trituraba los huesos y las duras conchas de sus presas para aprovechar bien los nutrientes y reforzar así su propio caparazón.",
+					"it": "Per rafforzare il proprio carapace, mangiava le prede intere, frantumandone corazza e ossa.",
+					"en": "It constructed its sturdy shell by crunching and swallowing the hard shells or bones of its prey.",
+					"ja": "丈夫な 甲羅を つくるため 獲物の 硬い殻や 骨も 丸ごと 噛み砕いて 喰っていた。",
+					"zh-hans": "为了形成结实的甲壳， 会把猎物的硬壳和骨头 都整个嚼碎了吃下去。",
+					"es-419": "Trituraba los huesos y las duras conchas de sus presas para aprovechar bien los nutrientes y reforzar así su propio caparazón."
+				},
+				"sun-ulaula": {
+					"ja-hrkt": "じょうぶな こうらを つくるため えものの かたいカラや ホネも まるごと かみくだいて くっていた。",
+					"ko": "단단한 등껍질을 만들기 위해 먹이의 딱딱한 껍데기나 뼈도 통째로 깨물어 먹었다.",
+					"zh-hant": "為了形成結實的甲殼， 會把獵物的硬殼和骨頭 整個嚼碎後吃下去。",
+					"fr": "Pour se constituer une carapace solide, il devait réduire en miettes les os et coquilles riches en minéraux de ses proies avant de les avaler.",
+					"de": "Um seinen harten Panzer zu erlangen, fraß es seine Beute im Ganzen und zerkaute deren harte Schale und Knochen.",
+					"es": "Trituraba los huesos y las duras conchas de sus presas para aprovechar bien los nutrientes y reforzar así su propio caparazón.",
+					"it": "Per rafforzare il proprio carapace, mangiava le prede intere, frantumandone corazza e ossa.",
+					"en": "It constructed its sturdy shell by crunching and swallowing the hard shells or bones of its prey.",
+					"ja": "丈夫な 甲羅を つくるため 獲物の 硬い殻や 骨も 丸ごと 噛み砕いて 喰っていた。",
+					"zh-hans": "为了形成结实的甲壳， 会把猎物的硬壳和骨头 都整个嚼碎了吃下去。",
+					"es-419": "Trituraba los huesos y las duras conchas de sus presas para aprovechar bien los nutrientes y reforzar así su propio caparazón."
+				},
+				"sun-poni": {
+					"ja-hrkt": "じょうぶな こうらを つくるため えものの かたいカラや ホネも まるごと かみくだいて くっていた。",
+					"ko": "단단한 등껍질을 만들기 위해 먹이의 딱딱한 껍데기나 뼈도 통째로 깨물어 먹었다.",
+					"zh-hant": "為了形成結實的甲殼， 會把獵物的硬殼和骨頭 整個嚼碎後吃下去。",
+					"fr": "Pour se constituer une carapace solide, il devait réduire en miettes les os et coquilles riches en minéraux de ses proies avant de les avaler.",
+					"de": "Um seinen harten Panzer zu erlangen, fraß es seine Beute im Ganzen und zerkaute deren harte Schale und Knochen.",
+					"es": "Trituraba los huesos y las duras conchas de sus presas para aprovechar bien los nutrientes y reforzar así su propio caparazón.",
+					"it": "Per rafforzare il proprio carapace, mangiava le prede intere, frantumandone corazza e ossa.",
+					"en": "It constructed its sturdy shell by crunching and swallowing the hard shells or bones of its prey.",
+					"ja": "丈夫な 甲羅を つくるため 獲物の 硬い殻や 骨も 丸ごと 噛み砕いて 喰っていた。",
+					"zh-hans": "为了形成结实的甲壳， 会把猎物的硬壳和骨头 都整个嚼碎了吃下去。",
+					"es-419": "Trituraba los huesos y las duras conchas de sus presas para aprovechar bien los nutrientes y reforzar así su propio caparazón."
+				},
+				"moon-alola": {
+					"ja-hrkt": "うみと りくちの りょうほうで かつどうする。 りくの えものは うみに ひきずりこんで しとめる。",
+					"ko": "바다와 육지 양쪽에서 활동한다. 육지의 먹이는 바다로 끌고 들어가 처리한다.",
+					"zh-hant": "在大海和陸地兩個地方活動。 會將陸地的獵物拖入海中後殺死。",
+					"fr": "Aussi à l’aise sur terre que dans l’eau, ce Pokémon chasse ses proies à la surface puis les entraîne sous la mer pour les noyer.",
+					"de": "Es ist sowohl im Meer als auch an Land unterwegs. Landlebende Beute schleift es ins Meer und erlegt sie dort.",
+					"es": "Vive tanto en el mar como en la superficie. En tierra firme, caza a sus presas y las arrastra hacia el mar, donde les da el golpe de gracia.",
+					"it": "Questo Pokémon è a suo agio sia in mare che sulla terraferma. Cattura le prede a terra e le trascina in mare per finirle.",
+					"en": "Active both on land and in the sea, this Pokémon drags its land-based prey into the water to finish it off.",
+					"ja": "海と 陸地の 両方で 活動する。 陸の 獲物は 海に 引きずり込んで 仕留める。",
+					"zh-hans": "在大海和陆地两个地方活动。 将陆地的猎物拖入海中后杀死。",
+					"es-419": "Vive tanto en el mar como en la superficie. En tierra firme, caza a sus presas y las arrastra hacia el mar, donde les da el golpe de gracia."
+				},
+				"moon-melemele": {
+					"ja-hrkt": "うみと りくちの りょうほうで かつどうする。 りくの えものは うみに ひきずりこんで しとめる。",
+					"ko": "바다와 육지 양쪽에서 활동한다. 육지의 먹이는 바다로 끌고 들어가 처리한다.",
+					"zh-hant": "在大海和陸地兩個地方活動。 會將陸地的獵物拖入海中後殺死。",
+					"fr": "Aussi à l’aise sur terre que dans l’eau, ce Pokémon chasse ses proies à la surface puis les entraîne sous la mer pour les noyer.",
+					"de": "Es ist sowohl im Meer als auch an Land unterwegs. Landlebende Beute schleift es ins Meer und erlegt sie dort.",
+					"es": "Vive tanto en el mar como en la superficie. En tierra firme, caza a sus presas y las arrastra hacia el mar, donde les da el golpe de gracia.",
+					"it": "Questo Pokémon è a suo agio sia in mare che sulla terraferma. Cattura le prede a terra e le trascina in mare per finirle.",
+					"en": "Active both on land and in the sea, this Pokémon drags its land-based prey into the water to finish it off.",
+					"ja": "海と 陸地の 両方で 活動する。 陸の 獲物は 海に 引きずり込んで 仕留める。",
+					"zh-hans": "在大海和陆地两个地方活动。 将陆地的猎物拖入海中后杀死。",
+					"es-419": "Vive tanto en el mar como en la superficie. En tierra firme, caza a sus presas y las arrastra hacia el mar, donde les da el golpe de gracia."
+				},
+				"moon-akala": {
+					"ja-hrkt": "うみと りくちの りょうほうで かつどうする。 りくの えものは うみに ひきずりこんで しとめる。",
+					"ko": "바다와 육지 양쪽에서 활동한다. 육지의 먹이는 바다로 끌고 들어가 처리한다.",
+					"zh-hant": "在大海和陸地兩個地方活動。 會將陸地的獵物拖入海中後殺死。",
+					"fr": "Aussi à l’aise sur terre que dans l’eau, ce Pokémon chasse ses proies à la surface puis les entraîne sous la mer pour les noyer.",
+					"de": "Es ist sowohl im Meer als auch an Land unterwegs. Landlebende Beute schleift es ins Meer und erlegt sie dort.",
+					"es": "Vive tanto en el mar como en la superficie. En tierra firme, caza a sus presas y las arrastra hacia el mar, donde les da el golpe de gracia.",
+					"it": "Questo Pokémon è a suo agio sia in mare che sulla terraferma. Cattura le prede a terra e le trascina in mare per finirle.",
+					"en": "Active both on land and in the sea, this Pokémon drags its land-based prey into the water to finish it off.",
+					"ja": "海と 陸地の 両方で 活動する。 陸の 獲物は 海に 引きずり込んで 仕留める。",
+					"zh-hans": "在大海和陆地两个地方活动。 将陆地的猎物拖入海中后杀死。",
+					"es-419": "Vive tanto en el mar como en la superficie. En tierra firme, caza a sus presas y las arrastra hacia el mar, donde les da el golpe de gracia."
+				},
+				"moon-ulaula": {
+					"ja-hrkt": "うみと りくちの りょうほうで かつどうする。 りくの えものは うみに ひきずりこんで しとめる。",
+					"ko": "바다와 육지 양쪽에서 활동한다. 육지의 먹이는 바다로 끌고 들어가 처리한다.",
+					"zh-hant": "在大海和陸地兩個地方活動。 會將陸地的獵物拖入海中後殺死。",
+					"fr": "Aussi à l’aise sur terre que dans l’eau, ce Pokémon chasse ses proies à la surface puis les entraîne sous la mer pour les noyer.",
+					"de": "Es ist sowohl im Meer als auch an Land unterwegs. Landlebende Beute schleift es ins Meer und erlegt sie dort.",
+					"es": "Vive tanto en el mar como en la superficie. En tierra firme, caza a sus presas y las arrastra hacia el mar, donde les da el golpe de gracia.",
+					"it": "Questo Pokémon è a suo agio sia in mare che sulla terraferma. Cattura le prede a terra e le trascina in mare per finirle.",
+					"en": "Active both on land and in the sea, this Pokémon drags its land-based prey into the water to finish it off.",
+					"ja": "海と 陸地の 両方で 活動する。 陸の 獲物は 海に 引きずり込んで 仕留める。",
+					"zh-hans": "在大海和陆地两个地方活动。 将陆地的猎物拖入海中后杀死。",
+					"es-419": "Vive tanto en el mar como en la superficie. En tierra firme, caza a sus presas y las arrastra hacia el mar, donde les da el golpe de gracia."
+				},
+				"moon-poni": {
+					"ja-hrkt": "うみと りくちの りょうほうで かつどうする。 りくの えものは うみに ひきずりこんで しとめる。",
+					"ko": "바다와 육지 양쪽에서 활동한다. 육지의 먹이는 바다로 끌고 들어가 처리한다.",
+					"zh-hant": "在大海和陸地兩個地方活動。 會將陸地的獵物拖入海中後殺死。",
+					"fr": "Aussi à l’aise sur terre que dans l’eau, ce Pokémon chasse ses proies à la surface puis les entraîne sous la mer pour les noyer.",
+					"de": "Es ist sowohl im Meer als auch an Land unterwegs. Landlebende Beute schleift es ins Meer und erlegt sie dort.",
+					"es": "Vive tanto en el mar como en la superficie. En tierra firme, caza a sus presas y las arrastra hacia el mar, donde les da el golpe de gracia.",
+					"it": "Questo Pokémon è a suo agio sia in mare che sulla terraferma. Cattura le prede a terra e le trascina in mare per finirle.",
+					"en": "Active both on land and in the sea, this Pokémon drags its land-based prey into the water to finish it off.",
+					"ja": "海と 陸地の 両方で 活動する。 陸の 獲物は 海に 引きずり込んで 仕留める。",
+					"zh-hans": "在大海和陆地两个地方活动。 将陆地的猎物拖入海中后杀死。",
+					"es-419": "Vive tanto en el mar como en la superficie. En tierra firme, caza a sus presas y las arrastra hacia el mar, donde les da el golpe de gracia."
+				}
+			}
+		},
+		{
+			"profileKey": "ultra-sun-ultra-moon",
+			"label": "Ultra Sun / Ultra Moon",
+			"appGameKeys": [
+				"ultrasun-alola",
+				"ultrasun-melemele",
+				"ultrasun-akala",
+				"ultrasun-ulaula",
+				"ultrasun-poni",
+				"ultramoon-alola",
+				"ultramoon-melemele",
+				"ultramoon-akala",
+				"ultramoon-ulaula",
+				"ultramoon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Carracosta",
+				"localizedNames": {
+					"ja-hrkt": "アバゴーラ",
+					"ja-roma": "Abagoura",
+					"ko": "늑골라",
+					"zh-hant": "肋骨海龜",
+					"fr": "Mégapagos",
+					"de": "Karippas",
+					"es": "Carracosta",
+					"it": "Carracosta",
+					"ja": "アバゴーラ",
+					"zh-hans": "肋骨海龟",
+					"es-419": "Carracosta"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water",
+					"Rock"
+				],
+				"baseStats": {
+					"hp": 74,
+					"atk": 108,
+					"def": 133,
+					"spa": 83,
+					"spd": 65,
+					"spe": 32
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Solid Rock",
+					"Sturdy",
+					"Swift Swim (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Swift Swim"
+				],
+				"eggGroups": [
+					"Water1",
+					"Water3"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 30,
+				"height": "1.2 m",
+				"weight": "81.0 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 173,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Blue",
+				"genus": "Prototurtle Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こだいがめポケモン",
+					"ko": "옛날거북포켓몬",
+					"zh-hant": "古代龜寶可夢",
+					"fr": "Pokémon Tortantique",
+					"de": "Urzeitkröten-Pokémon",
+					"es": "Pokémon Pretortuga",
+					"it": "Pokémon Ancestruga",
+					"ja": "こだいがめポケモン",
+					"zh-hans": "古代龟宝可梦",
+					"es-419": "Pokémon Pretortuga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 565
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 71
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 127
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 195
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 122
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 242
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 143
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 148
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 564,
+								"natiId": 564,
+								"name": "Tirtouga"
+							},
+							{
+								"id": 565,
+								"natiId": 565,
+								"name": "Carracosta",
+								"method": "Level",
+								"value": 37
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Bide",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Withdraw",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Water Gun",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Rollout",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Rollout",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Bite",
+							"level": 8,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": 11,
+							"order": null
+						},
+						{
+							"name": "Aqua Jet",
+							"level": 15,
+							"order": null
+						},
+						{
+							"name": "Ancient Power",
+							"level": 18,
+							"order": null
+						},
+						{
+							"name": "Crunch",
+							"level": 21,
+							"order": null
+						},
+						{
+							"name": "Wide Guard",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Brine",
+							"level": 28,
+							"order": null
+						},
+						{
+							"name": "Smack Down",
+							"level": 31,
+							"order": null
+						},
+						{
+							"name": "Curse",
+							"level": 35,
+							"order": null
+						},
+						{
+							"name": "Shell Smash",
+							"level": 40,
+							"order": null
+						},
+						{
+							"name": "Aqua Tail",
+							"level": 45,
+							"order": null
+						},
+						{
+							"name": "Rock Slide",
+							"level": 51,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": 56,
+							"order": null
+						},
+						{
+							"name": "Hydro Pump",
+							"level": 61,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Blizzard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bulldoze",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Earthquake",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Focus Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ice Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Polish",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Slide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Tomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sandstorm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Scald",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Smack Down",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Stone Edge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Surf",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Waterfall",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Aqua Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Block",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Earth Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Icy Wind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Defense",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Head",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Knock Off",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Liquidation",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Low Kick",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Stealth Rock",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Superpower",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Water Pulse",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Zen Headbutt",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/565",
+						"fetchedAt": "2026-11-03T05:53:41.582Z",
+						"hash": "db240c23507089e1444f20979a014e538416172c34e29f1369573c21649ec830"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/288/",
+						"fetchedAt": "2026-11-03T05:53:41.560Z",
+						"hash": "a2f11069fb654af8f70eb4cabb8c465a74814cb9c380279e4364a0ea3cc010e7"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/565/",
+						"fetchedAt": "2026-11-03T05:53:41.620Z",
+						"hash": "a767cf46ceaf42c357720105729726b7b0d69c950d6e6955f94e0afbf9cd5691"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/565/encounters",
+						"fetchedAt": "2026-11-03T05:53:41.651Z",
+						"hash": "0b54cc5efe5dd98e3c5494174fb65f37cfd7eb5e8a9f1bffd7afbcbbf69718e6"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/565/",
+						"fetchedAt": "2026-11-03T05:53:41.706Z",
+						"hash": "f72eeeb2a80456f45b0cd8c747d86a0cd0e343d618b65e142df6bf78f4db8a8a"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"ultrasun-alola": "Its jaws are terrifyingly powerful. It could eat Omastar and Omanyte whole and not be bothered in the slightest by their shells.",
+				"ultrasun-melemele": "Its jaws are terrifyingly powerful. It could eat Omastar and Omanyte whole and not be bothered in the slightest by their shells.",
+				"ultrasun-akala": "Its jaws are terrifyingly powerful. It could eat Omastar and Omanyte whole and not be bothered in the slightest by their shells.",
+				"ultrasun-ulaula": "Its jaws are terrifyingly powerful. It could eat Omastar and Omanyte whole and not be bothered in the slightest by their shells.",
+				"ultrasun-poni": "Its jaws are terrifyingly powerful. It could eat Omastar and Omanyte whole and not be bothered in the slightest by their shells.",
+				"ultramoon-alola": "Carracosta eats every last bit of the prey it catches, even the shells and bones, to further strengthen its sturdy shell.",
+				"ultramoon-melemele": "Carracosta eats every last bit of the prey it catches, even the shells and bones, to further strengthen its sturdy shell.",
+				"ultramoon-akala": "Carracosta eats every last bit of the prey it catches, even the shells and bones, to further strengthen its sturdy shell.",
+				"ultramoon-ulaula": "Carracosta eats every last bit of the prey it catches, even the shells and bones, to further strengthen its sturdy shell.",
+				"ultramoon-poni": "Carracosta eats every last bit of the prey it catches, even the shells and bones, to further strengthen its sturdy shell."
+			},
+			"localizedFlavorByGame": {
+				"ultrasun-alola": {
+					"ja-hrkt": "アゴの ちからが すさまじい。 オムスターや オムナイトの カラも きにせず まるごと くっていた。",
+					"ko": "턱의 힘이 무시무시하다. 암스타나 암나이트의 껍질도 아무렇지 않게 통째로 먹었다.",
+					"zh-hant": "下巴的力量非常驚人， 連多刺菊石獸和菊石獸的殼 也能輕而易舉地整個吃掉。",
+					"fr": "L’incroyable puissance de sa mâchoire lui permettait de broyer facilement les coquilles d’Amonistar ou d’Amonita pour les manger.",
+					"de": "Sein Kiefer wurde wegen dessen großer Kraft gefürchtet. Sogar Amoroso und Amonitas konnte es trotz ihrer Schalen problemlos verschlingen.",
+					"es": "La brutal presión que ejerce con su mandíbula es tal que las conchas de Omastar y Omanyte no son ninguna molestia cuando los devora.",
+					"it": "Con le sue mascelle terribilmente potenti poteva frantumare le dure corazze degli Omastar e degli Omanyte per mangiarseli senza problemi.",
+					"en": "Its jaws are terrifyingly powerful. It could eat Omastar and Omanyte whole and not be bothered in the slightest by their shells.",
+					"ja": "アゴの 力が 凄まじい。 オムスターや オムナイトの カラも 気にせず 丸ごと 食っていた。",
+					"zh-hans": "颚部的力量非常惊人。 连多刺菊石兽和菊石兽的壳 也能轻轻松松地整个吃掉。",
+					"es-419": "La brutal presión que ejerce con su mandíbula es tal que las conchas de Omastar y Omanyte no son ninguna molestia cuando los devora."
+				},
+				"ultrasun-melemele": {
+					"ja-hrkt": "アゴの ちからが すさまじい。 オムスターや オムナイトの カラも きにせず まるごと くっていた。",
+					"ko": "턱의 힘이 무시무시하다. 암스타나 암나이트의 껍질도 아무렇지 않게 통째로 먹었다.",
+					"zh-hant": "下巴的力量非常驚人， 連多刺菊石獸和菊石獸的殼 也能輕而易舉地整個吃掉。",
+					"fr": "L’incroyable puissance de sa mâchoire lui permettait de broyer facilement les coquilles d’Amonistar ou d’Amonita pour les manger.",
+					"de": "Sein Kiefer wurde wegen dessen großer Kraft gefürchtet. Sogar Amoroso und Amonitas konnte es trotz ihrer Schalen problemlos verschlingen.",
+					"es": "La brutal presión que ejerce con su mandíbula es tal que las conchas de Omastar y Omanyte no son ninguna molestia cuando los devora.",
+					"it": "Con le sue mascelle terribilmente potenti poteva frantumare le dure corazze degli Omastar e degli Omanyte per mangiarseli senza problemi.",
+					"en": "Its jaws are terrifyingly powerful. It could eat Omastar and Omanyte whole and not be bothered in the slightest by their shells.",
+					"ja": "アゴの 力が 凄まじい。 オムスターや オムナイトの カラも 気にせず 丸ごと 食っていた。",
+					"zh-hans": "颚部的力量非常惊人。 连多刺菊石兽和菊石兽的壳 也能轻轻松松地整个吃掉。",
+					"es-419": "La brutal presión que ejerce con su mandíbula es tal que las conchas de Omastar y Omanyte no son ninguna molestia cuando los devora."
+				},
+				"ultrasun-akala": {
+					"ja-hrkt": "アゴの ちからが すさまじい。 オムスターや オムナイトの カラも きにせず まるごと くっていた。",
+					"ko": "턱의 힘이 무시무시하다. 암스타나 암나이트의 껍질도 아무렇지 않게 통째로 먹었다.",
+					"zh-hant": "下巴的力量非常驚人， 連多刺菊石獸和菊石獸的殼 也能輕而易舉地整個吃掉。",
+					"fr": "L’incroyable puissance de sa mâchoire lui permettait de broyer facilement les coquilles d’Amonistar ou d’Amonita pour les manger.",
+					"de": "Sein Kiefer wurde wegen dessen großer Kraft gefürchtet. Sogar Amoroso und Amonitas konnte es trotz ihrer Schalen problemlos verschlingen.",
+					"es": "La brutal presión que ejerce con su mandíbula es tal que las conchas de Omastar y Omanyte no son ninguna molestia cuando los devora.",
+					"it": "Con le sue mascelle terribilmente potenti poteva frantumare le dure corazze degli Omastar e degli Omanyte per mangiarseli senza problemi.",
+					"en": "Its jaws are terrifyingly powerful. It could eat Omastar and Omanyte whole and not be bothered in the slightest by their shells.",
+					"ja": "アゴの 力が 凄まじい。 オムスターや オムナイトの カラも 気にせず 丸ごと 食っていた。",
+					"zh-hans": "颚部的力量非常惊人。 连多刺菊石兽和菊石兽的壳 也能轻轻松松地整个吃掉。",
+					"es-419": "La brutal presión que ejerce con su mandíbula es tal que las conchas de Omastar y Omanyte no son ninguna molestia cuando los devora."
+				},
+				"ultrasun-ulaula": {
+					"ja-hrkt": "アゴの ちからが すさまじい。 オムスターや オムナイトの カラも きにせず まるごと くっていた。",
+					"ko": "턱의 힘이 무시무시하다. 암스타나 암나이트의 껍질도 아무렇지 않게 통째로 먹었다.",
+					"zh-hant": "下巴的力量非常驚人， 連多刺菊石獸和菊石獸的殼 也能輕而易舉地整個吃掉。",
+					"fr": "L’incroyable puissance de sa mâchoire lui permettait de broyer facilement les coquilles d’Amonistar ou d’Amonita pour les manger.",
+					"de": "Sein Kiefer wurde wegen dessen großer Kraft gefürchtet. Sogar Amoroso und Amonitas konnte es trotz ihrer Schalen problemlos verschlingen.",
+					"es": "La brutal presión que ejerce con su mandíbula es tal que las conchas de Omastar y Omanyte no son ninguna molestia cuando los devora.",
+					"it": "Con le sue mascelle terribilmente potenti poteva frantumare le dure corazze degli Omastar e degli Omanyte per mangiarseli senza problemi.",
+					"en": "Its jaws are terrifyingly powerful. It could eat Omastar and Omanyte whole and not be bothered in the slightest by their shells.",
+					"ja": "アゴの 力が 凄まじい。 オムスターや オムナイトの カラも 気にせず 丸ごと 食っていた。",
+					"zh-hans": "颚部的力量非常惊人。 连多刺菊石兽和菊石兽的壳 也能轻轻松松地整个吃掉。",
+					"es-419": "La brutal presión que ejerce con su mandíbula es tal que las conchas de Omastar y Omanyte no son ninguna molestia cuando los devora."
+				},
+				"ultrasun-poni": {
+					"ja-hrkt": "アゴの ちからが すさまじい。 オムスターや オムナイトの カラも きにせず まるごと くっていた。",
+					"ko": "턱의 힘이 무시무시하다. 암스타나 암나이트의 껍질도 아무렇지 않게 통째로 먹었다.",
+					"zh-hant": "下巴的力量非常驚人， 連多刺菊石獸和菊石獸的殼 也能輕而易舉地整個吃掉。",
+					"fr": "L’incroyable puissance de sa mâchoire lui permettait de broyer facilement les coquilles d’Amonistar ou d’Amonita pour les manger.",
+					"de": "Sein Kiefer wurde wegen dessen großer Kraft gefürchtet. Sogar Amoroso und Amonitas konnte es trotz ihrer Schalen problemlos verschlingen.",
+					"es": "La brutal presión que ejerce con su mandíbula es tal que las conchas de Omastar y Omanyte no son ninguna molestia cuando los devora.",
+					"it": "Con le sue mascelle terribilmente potenti poteva frantumare le dure corazze degli Omastar e degli Omanyte per mangiarseli senza problemi.",
+					"en": "Its jaws are terrifyingly powerful. It could eat Omastar and Omanyte whole and not be bothered in the slightest by their shells.",
+					"ja": "アゴの 力が 凄まじい。 オムスターや オムナイトの カラも 気にせず 丸ごと 食っていた。",
+					"zh-hans": "颚部的力量非常惊人。 连多刺菊石兽和菊石兽的壳 也能轻轻松松地整个吃掉。",
+					"es-419": "La brutal presión que ejerce con su mandíbula es tal que las conchas de Omastar y Omanyte no son ninguna molestia cuando los devora."
+				},
+				"ultramoon-alola": {
+					"ja-hrkt": "かたい こうらを さらに じょうぶに するために とらえた えものは カラやホネまで のこさず くうのだ。",
+					"ko": "단단한 등껍질을 더욱 튼튼하게 만들기 위해 잡은 먹이는 껍질이나 뼈까지 남기지 않고 먹는다.",
+					"zh-hant": "為了讓堅硬的甲殼變得 更加結實，會把捉到的獵物 吃到連殼和骨頭都不剩。",
+					"fr": "Afin de renforcer sa carapace, ce Pokémon va même jusqu’à manger la coquille et les os de ses proies.",
+					"de": "Um seinen harten Panzer noch weiter zu verstärken, fraß es seine Beute samt Schale und Knochen restlos auf.",
+					"es": "Para reforzar aún más su robusto caparazón, engulle incluso las conchas y los huesos de las presas que captura.",
+					"it": "Per rafforzare il suo carapace mangiava le prede intere senza scartare nulla, nemmeno le ossa e i gusci.",
+					"en": "Carracosta eats every last bit of the prey it catches, even the shells and bones, to further strengthen its sturdy shell.",
+					"ja": "硬い 甲羅を 更に 丈夫に するために 捕らえた 獲物は カラやホネまで 残さず 食うのだ。",
+					"zh-hans": "为了让坚硬的甲壳更为结实， 会把捕捉到的猎物吃到 连壳和骨头都不剩。",
+					"es-419": "Para reforzar aún más su robusto caparazón, engulle incluso las conchas y los huesos de las presas que captura."
+				},
+				"ultramoon-melemele": {
+					"ja-hrkt": "かたい こうらを さらに じょうぶに するために とらえた えものは カラやホネまで のこさず くうのだ。",
+					"ko": "단단한 등껍질을 더욱 튼튼하게 만들기 위해 잡은 먹이는 껍질이나 뼈까지 남기지 않고 먹는다.",
+					"zh-hant": "為了讓堅硬的甲殼變得 更加結實，會把捉到的獵物 吃到連殼和骨頭都不剩。",
+					"fr": "Afin de renforcer sa carapace, ce Pokémon va même jusqu’à manger la coquille et les os de ses proies.",
+					"de": "Um seinen harten Panzer noch weiter zu verstärken, fraß es seine Beute samt Schale und Knochen restlos auf.",
+					"es": "Para reforzar aún más su robusto caparazón, engulle incluso las conchas y los huesos de las presas que captura.",
+					"it": "Per rafforzare il suo carapace mangiava le prede intere senza scartare nulla, nemmeno le ossa e i gusci.",
+					"en": "Carracosta eats every last bit of the prey it catches, even the shells and bones, to further strengthen its sturdy shell.",
+					"ja": "硬い 甲羅を 更に 丈夫に するために 捕らえた 獲物は カラやホネまで 残さず 食うのだ。",
+					"zh-hans": "为了让坚硬的甲壳更为结实， 会把捕捉到的猎物吃到 连壳和骨头都不剩。",
+					"es-419": "Para reforzar aún más su robusto caparazón, engulle incluso las conchas y los huesos de las presas que captura."
+				},
+				"ultramoon-akala": {
+					"ja-hrkt": "かたい こうらを さらに じょうぶに するために とらえた えものは カラやホネまで のこさず くうのだ。",
+					"ko": "단단한 등껍질을 더욱 튼튼하게 만들기 위해 잡은 먹이는 껍질이나 뼈까지 남기지 않고 먹는다.",
+					"zh-hant": "為了讓堅硬的甲殼變得 更加結實，會把捉到的獵物 吃到連殼和骨頭都不剩。",
+					"fr": "Afin de renforcer sa carapace, ce Pokémon va même jusqu’à manger la coquille et les os de ses proies.",
+					"de": "Um seinen harten Panzer noch weiter zu verstärken, fraß es seine Beute samt Schale und Knochen restlos auf.",
+					"es": "Para reforzar aún más su robusto caparazón, engulle incluso las conchas y los huesos de las presas que captura.",
+					"it": "Per rafforzare il suo carapace mangiava le prede intere senza scartare nulla, nemmeno le ossa e i gusci.",
+					"en": "Carracosta eats every last bit of the prey it catches, even the shells and bones, to further strengthen its sturdy shell.",
+					"ja": "硬い 甲羅を 更に 丈夫に するために 捕らえた 獲物は カラやホネまで 残さず 食うのだ。",
+					"zh-hans": "为了让坚硬的甲壳更为结实， 会把捕捉到的猎物吃到 连壳和骨头都不剩。",
+					"es-419": "Para reforzar aún más su robusto caparazón, engulle incluso las conchas y los huesos de las presas que captura."
+				},
+				"ultramoon-ulaula": {
+					"ja-hrkt": "かたい こうらを さらに じょうぶに するために とらえた えものは カラやホネまで のこさず くうのだ。",
+					"ko": "단단한 등껍질을 더욱 튼튼하게 만들기 위해 잡은 먹이는 껍질이나 뼈까지 남기지 않고 먹는다.",
+					"zh-hant": "為了讓堅硬的甲殼變得 更加結實，會把捉到的獵物 吃到連殼和骨頭都不剩。",
+					"fr": "Afin de renforcer sa carapace, ce Pokémon va même jusqu’à manger la coquille et les os de ses proies.",
+					"de": "Um seinen harten Panzer noch weiter zu verstärken, fraß es seine Beute samt Schale und Knochen restlos auf.",
+					"es": "Para reforzar aún más su robusto caparazón, engulle incluso las conchas y los huesos de las presas que captura.",
+					"it": "Per rafforzare il suo carapace mangiava le prede intere senza scartare nulla, nemmeno le ossa e i gusci.",
+					"en": "Carracosta eats every last bit of the prey it catches, even the shells and bones, to further strengthen its sturdy shell.",
+					"ja": "硬い 甲羅を 更に 丈夫に するために 捕らえた 獲物は カラやホネまで 残さず 食うのだ。",
+					"zh-hans": "为了让坚硬的甲壳更为结实， 会把捕捉到的猎物吃到 连壳和骨头都不剩。",
+					"es-419": "Para reforzar aún más su robusto caparazón, engulle incluso las conchas y los huesos de las presas que captura."
+				},
+				"ultramoon-poni": {
+					"ja-hrkt": "かたい こうらを さらに じょうぶに するために とらえた えものは カラやホネまで のこさず くうのだ。",
+					"ko": "단단한 등껍질을 더욱 튼튼하게 만들기 위해 잡은 먹이는 껍질이나 뼈까지 남기지 않고 먹는다.",
+					"zh-hant": "為了讓堅硬的甲殼變得 更加結實，會把捉到的獵物 吃到連殼和骨頭都不剩。",
+					"fr": "Afin de renforcer sa carapace, ce Pokémon va même jusqu’à manger la coquille et les os de ses proies.",
+					"de": "Um seinen harten Panzer noch weiter zu verstärken, fraß es seine Beute samt Schale und Knochen restlos auf.",
+					"es": "Para reforzar aún más su robusto caparazón, engulle incluso las conchas y los huesos de las presas que captura.",
+					"it": "Per rafforzare il suo carapace mangiava le prede intere senza scartare nulla, nemmeno le ossa e i gusci.",
+					"en": "Carracosta eats every last bit of the prey it catches, even the shells and bones, to further strengthen its sturdy shell.",
+					"ja": "硬い 甲羅を 更に 丈夫に するために 捕らえた 獲物は カラやホネまで 残さず 食うのだ。",
+					"zh-hans": "为了让坚硬的甲壳更为结实， 会把捕捉到的猎物吃到 连壳和骨头都不剩。",
+					"es-419": "Para reforzar aún más su robusto caparazón, engulle incluso las conchas y los huesos de las presas que captura."
+				}
+			}
+		},
+		{
+			"profileKey": "lets-go-pikachu-lets-go-eevee",
+			"label": "Let's Go Pikachu / Eevee",
+			"appGameKeys": [
+				"letsgopikachu",
+				"letsgoeevee"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Carracosta",
+				"localizedNames": {
+					"ja-hrkt": "アバゴーラ",
+					"ja-roma": "Abagoura",
+					"ko": "늑골라",
+					"zh-hant": "肋骨海龜",
+					"fr": "Mégapagos",
+					"de": "Karippas",
+					"es": "Carracosta",
+					"it": "Carracosta",
+					"ja": "アバゴーラ",
+					"zh-hans": "肋骨海龟",
+					"es-419": "Carracosta"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water",
+					"Rock"
+				],
+				"baseStats": {
+					"hp": 74,
+					"atk": 108,
+					"def": 133,
+					"spa": 83,
+					"spd": 65,
+					"spe": 32
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Solid Rock",
+					"Sturdy",
+					"Swift Swim (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Swift Swim"
+				],
+				"eggGroups": [
+					"Water1",
+					"Water3"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 30,
+				"height": "1.2 m",
+				"weight": "81.0 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 173,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Blue",
+				"genus": "Prototurtle Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こだいがめポケモン",
+					"ko": "옛날거북포켓몬",
+					"zh-hant": "古代龜寶可夢",
+					"fr": "Pokémon Tortantique",
+					"de": "Urzeitkröten-Pokémon",
+					"es": "Pokémon Pretortuga",
+					"it": "Pokémon Ancestruga",
+					"ja": "こだいがめポケモン",
+					"zh-hans": "古代龟宝可梦",
+					"es-419": "Pokémon Pretortuga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 565
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 71
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 127
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 195
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 122
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 242
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 143
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 148
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 564,
+								"natiId": 564,
+								"name": "Tirtouga"
+							},
+							{
+								"id": 565,
+								"natiId": 565,
+								"name": "Carracosta",
+								"method": "Level",
+								"value": 37
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/565",
+						"fetchedAt": "2026-11-03T05:53:41.582Z",
+						"hash": "db240c23507089e1444f20979a014e538416172c34e29f1369573c21649ec830"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/288/",
+						"fetchedAt": "2026-11-03T05:53:41.560Z",
+						"hash": "a2f11069fb654af8f70eb4cabb8c465a74814cb9c380279e4364a0ea3cc010e7"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/565/",
+						"fetchedAt": "2026-11-03T05:53:41.620Z",
+						"hash": "a767cf46ceaf42c357720105729726b7b0d69c950d6e6955f94e0afbf9cd5691"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/565/encounters",
+						"fetchedAt": "2026-11-03T05:53:41.651Z",
+						"hash": "0b54cc5efe5dd98e3c5494174fb65f37cfd7eb5e8a9f1bffd7afbcbbf69718e6"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/565/",
+						"fetchedAt": "2026-11-03T05:53:41.706Z",
+						"hash": "f72eeeb2a80456f45b0cd8c747d86a0cd0e343d618b65e142df6bf78f4db8a8a"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"letsgopikachu": "",
+				"letsgoeevee": ""
+			},
+			"localizedFlavorByGame": {
+				"letsgopikachu": {},
+				"letsgoeevee": {}
+			}
+		},
+		{
+			"profileKey": "sword-shield",
+			"label": "Sword / Shield",
+			"appGameKeys": [
+				"sword",
+				"shield"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Carracosta",
+				"localizedNames": {
+					"ja-hrkt": "アバゴーラ",
+					"ja-roma": "Abagoura",
+					"ko": "늑골라",
+					"zh-hant": "肋骨海龜",
+					"fr": "Mégapagos",
+					"de": "Karippas",
+					"es": "Carracosta",
+					"it": "Carracosta",
+					"ja": "アバゴーラ",
+					"zh-hans": "肋骨海龟",
+					"es-419": "Carracosta"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water",
+					"Rock"
+				],
+				"baseStats": {
+					"hp": 74,
+					"atk": 108,
+					"def": 133,
+					"spa": 83,
+					"spd": 65,
+					"spe": 32
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Solid Rock",
+					"Sturdy",
+					"Swift Swim (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Swift Swim"
+				],
+				"eggGroups": [
+					"Water1",
+					"Water3"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 30,
+				"height": "1.2 m",
+				"weight": "81.0 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 173,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Blue",
+				"genus": "Prototurtle Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こだいがめポケモン",
+					"ko": "옛날거북포켓몬",
+					"zh-hant": "古代龜寶可夢",
+					"fr": "Pokémon Tortantique",
+					"de": "Urzeitkröten-Pokémon",
+					"es": "Pokémon Pretortuga",
+					"it": "Pokémon Ancestruga",
+					"ja": "こだいがめポケモン",
+					"zh-hans": "古代龟宝可梦",
+					"es-419": "Pokémon Pretortuga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 565
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 71
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 127
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 195
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 122
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 242
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 143
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 148
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 564,
+								"natiId": 564,
+								"name": "Tirtouga"
+							},
+							{
+								"id": 565,
+								"natiId": 565,
+								"name": "Carracosta",
+								"method": "Level",
+								"value": 37
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Blizzard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Body Slam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Brine",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bulldoze",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Crunch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dive",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Earth Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Earthquake",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endure",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Focus Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Guard Swap",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hydro Pump",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ice Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Icy Wind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Defense",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Head",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Liquidation",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Low Kick",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Mud Shot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Muddy Water",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Razor Shell",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Slide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Tomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sandstorm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Scald",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Stealth Rock",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Stone Edge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Superpower",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Surf",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Waterfall",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Whirlpool",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Zen Headbutt",
+							"level": null,
+							"order": null
+						}
+					],
+					"Level Up": [
+						{
+							"name": "Water Gun",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Withdraw",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Protect",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Aqua Jet",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Smack Down",
+							"level": 9,
+							"order": null
+						},
+						{
+							"name": "Ancient Power",
+							"level": 12,
+							"order": null
+						},
+						{
+							"name": "Bite",
+							"level": 15,
+							"order": null
+						},
+						{
+							"name": "Wide Guard",
+							"level": 18,
+							"order": null
+						},
+						{
+							"name": "Brine",
+							"level": 21,
+							"order": null
+						},
+						{
+							"name": "Rock Slide",
+							"level": 24,
+							"order": null
+						},
+						{
+							"name": "Crunch",
+							"level": 27,
+							"order": null
+						},
+						{
+							"name": "Curse",
+							"level": 30,
+							"order": null
+						},
+						{
+							"name": "Iron Defense",
+							"level": 33,
+							"order": null
+						},
+						{
+							"name": "Aqua Tail",
+							"level": 36,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": 41,
+							"order": null
+						},
+						{
+							"name": "Hydro Pump",
+							"level": 46,
+							"order": null
+						},
+						{
+							"name": "Shell Smash",
+							"level": 51,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Meteor Beam",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/565",
+						"fetchedAt": "2026-11-03T05:53:41.582Z",
+						"hash": "db240c23507089e1444f20979a014e538416172c34e29f1369573c21649ec830"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/288/",
+						"fetchedAt": "2026-11-03T05:53:41.560Z",
+						"hash": "a2f11069fb654af8f70eb4cabb8c465a74814cb9c380279e4364a0ea3cc010e7"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/565/",
+						"fetchedAt": "2026-11-03T05:53:41.620Z",
+						"hash": "a767cf46ceaf42c357720105729726b7b0d69c950d6e6955f94e0afbf9cd5691"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/565/encounters",
+						"fetchedAt": "2026-11-03T05:53:41.651Z",
+						"hash": "0b54cc5efe5dd98e3c5494174fb65f37cfd7eb5e8a9f1bffd7afbcbbf69718e6"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/565/",
+						"fetchedAt": "2026-11-03T05:53:41.706Z",
+						"hash": "f72eeeb2a80456f45b0cd8c747d86a0cd0e343d618b65e142df6bf78f4db8a8a"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sword": "Carracosta completely devours its prey—bones, shells, and all. Because of this, Carracosta’s own shell grows thick and sturdy.",
+				"shield": "This Pokémon emerges from the water in search of prey despite the fact that it moves more slowly on land."
+			},
+			"localizedFlavorByGame": {
+				"sword": {
+					"ja-hrkt": "えものの カラやホネも のこさず きれいに たいらげるので こうらは ぶあつく かたく せいちょうする。",
+					"ko": "먹이의 껍질과 뼈까지 남김없이 깨끗하게 먹어 치워서 등껍질은 두껍고 단단하게 성장한다.",
+					"zh-hant": "由於會將獵物的硬殼和骨頭 也都吃得乾乾淨淨一點不剩， 所以牠的甲殼長得又厚又堅硬。",
+					"fr": "Il dévore les os et la coquille de ses proies, ce qui épaissit et renforce sa propre carapace.",
+					"de": "Karippas verschlingt seine Beute mitsamt Schale und Knochen, wodurch sein Panzer besonders dick und widerstandsfähig wird.",
+					"es": "Devora incluso los huesos y caparazones de sus presas, por lo que el suyo propio se vuelve duro y grueso.",
+					"it": "Consuma le sue prede senza lasciare nemmeno ossa e gusci, favorendo così la formazione di un carapace duro e spesso.",
+					"en": "Carracosta completely devours its prey—bones, shells, and all. Because of this, Carracosta’s own shell grows thick and sturdy.",
+					"ja": "獲物の 殻や骨も 残さず きれいに たいらげるので 甲羅は ぶ厚く 硬く 成長する。",
+					"zh-hans": "连猎物的壳和骨头也都会 干干净净地吃得一丝不剩， 所以甲壳成长得又厚又坚硬。",
+					"es-419": "Devora incluso los huesos y caparazones de sus presas, por lo que el suyo propio se vuelve duro y grueso."
+				},
+				"shield": {
+					"ja-hrkt": "みずのなかと くらべて うごきは にぶいが えものを さがしもとめ りくじょうでも かつどうするぞ。",
+					"ko": "물속과 비교하면 움직임이 둔하지만 먹이를 찾아 육지에서도 활동한다.",
+					"zh-hant": "雖然和水中相比動作會變得 比較遲緩，但為了尋找獵物 牠還是會在陸地上活動。",
+					"fr": "Bien qu’il soit moins à l’aise sur terre que dans l’eau, il s’aventure sur le rivage pour se nourrir.",
+					"de": "Obwohl es sich außerhalb des Wassers langsamer fortbewegt, kommt es an Land, um nach Beute zu suchen.",
+					"es": "Aunque se mueva con mayor lentitud sobre la superficie terrestre que en el agua, emerge a tierra en busca de presas.",
+					"it": "Quando va in cerca di prede sale anche sulla terraferma, nonostante i suoi movimenti siano più impacciati rispetto a quando è in acqua.",
+					"en": "This Pokémon emerges from the water in search of prey despite the fact that it moves more slowly on land.",
+					"ja": "水の中と くらべて 動きは 鈍いが 獲物を 探し求め 陸上でも 活動するぞ。",
+					"zh-hans": "虽然和在水中相比动作 会变得迟缓，但是为了寻找 猎物也会登上陆地活动。",
+					"es-419": "Aunque se mueva con mayor lentitud sobre la superficie terrestre que en el agua, emerge a tierra en busca de presas."
+				}
+			}
+		},
+		{
+			"profileKey": "the-isle-of-armor",
+			"label": "The Isle of Armor",
+			"appGameKeys": [
+				"swordioa",
+				"shieldioa"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Carracosta",
+				"localizedNames": {
+					"ja-hrkt": "アバゴーラ",
+					"ja-roma": "Abagoura",
+					"ko": "늑골라",
+					"zh-hant": "肋骨海龜",
+					"fr": "Mégapagos",
+					"de": "Karippas",
+					"es": "Carracosta",
+					"it": "Carracosta",
+					"ja": "アバゴーラ",
+					"zh-hans": "肋骨海龟",
+					"es-419": "Carracosta"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water",
+					"Rock"
+				],
+				"baseStats": {
+					"hp": 74,
+					"atk": 108,
+					"def": 133,
+					"spa": 83,
+					"spd": 65,
+					"spe": 32
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Solid Rock",
+					"Sturdy",
+					"Swift Swim (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Swift Swim"
+				],
+				"eggGroups": [
+					"Water1",
+					"Water3"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 30,
+				"height": "1.2 m",
+				"weight": "81.0 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 173,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Blue",
+				"genus": "Prototurtle Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こだいがめポケモン",
+					"ko": "옛날거북포켓몬",
+					"zh-hant": "古代龜寶可夢",
+					"fr": "Pokémon Tortantique",
+					"de": "Urzeitkröten-Pokémon",
+					"es": "Pokémon Pretortuga",
+					"it": "Pokémon Ancestruga",
+					"ja": "こだいがめポケモン",
+					"zh-hans": "古代龟宝可梦",
+					"es-419": "Pokémon Pretortuga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 565
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 71
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 127
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 195
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 122
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 242
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 143
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 148
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 564,
+								"natiId": 564,
+								"name": "Tirtouga"
+							},
+							{
+								"id": 565,
+								"natiId": 565,
+								"name": "Carracosta",
+								"method": "Level",
+								"value": 37
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/565",
+						"fetchedAt": "2026-11-03T05:53:41.582Z",
+						"hash": "db240c23507089e1444f20979a014e538416172c34e29f1369573c21649ec830"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/288/",
+						"fetchedAt": "2026-11-03T05:53:41.560Z",
+						"hash": "a2f11069fb654af8f70eb4cabb8c465a74814cb9c380279e4364a0ea3cc010e7"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/565/",
+						"fetchedAt": "2026-11-03T05:53:41.620Z",
+						"hash": "a767cf46ceaf42c357720105729726b7b0d69c950d6e6955f94e0afbf9cd5691"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/565/encounters",
+						"fetchedAt": "2026-11-03T05:53:41.651Z",
+						"hash": "0b54cc5efe5dd98e3c5494174fb65f37cfd7eb5e8a9f1bffd7afbcbbf69718e6"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/565/",
+						"fetchedAt": "2026-11-03T05:53:41.706Z",
+						"hash": "f72eeeb2a80456f45b0cd8c747d86a0cd0e343d618b65e142df6bf78f4db8a8a"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordioa": "",
+				"shieldioa": ""
+			},
+			"localizedFlavorByGame": {
+				"swordioa": {},
+				"shieldioa": {}
+			}
+		},
+		{
+			"profileKey": "the-crown-tundra",
+			"label": "The Crown Tundra",
+			"appGameKeys": [
+				"swordct",
+				"shieldct"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Carracosta",
+				"localizedNames": {
+					"ja-hrkt": "アバゴーラ",
+					"ja-roma": "Abagoura",
+					"ko": "늑골라",
+					"zh-hant": "肋骨海龜",
+					"fr": "Mégapagos",
+					"de": "Karippas",
+					"es": "Carracosta",
+					"it": "Carracosta",
+					"ja": "アバゴーラ",
+					"zh-hans": "肋骨海龟",
+					"es-419": "Carracosta"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water",
+					"Rock"
+				],
+				"baseStats": {
+					"hp": 74,
+					"atk": 108,
+					"def": 133,
+					"spa": 83,
+					"spd": 65,
+					"spe": 32
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Solid Rock",
+					"Sturdy",
+					"Swift Swim (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Swift Swim"
+				],
+				"eggGroups": [
+					"Water1",
+					"Water3"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 30,
+				"height": "1.2 m",
+				"weight": "81.0 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 173,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Blue",
+				"genus": "Prototurtle Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こだいがめポケモン",
+					"ko": "옛날거북포켓몬",
+					"zh-hant": "古代龜寶可夢",
+					"fr": "Pokémon Tortantique",
+					"de": "Urzeitkröten-Pokémon",
+					"es": "Pokémon Pretortuga",
+					"it": "Pokémon Ancestruga",
+					"ja": "こだいがめポケモン",
+					"zh-hans": "古代龟宝可梦",
+					"es-419": "Pokémon Pretortuga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 565
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 71
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 127
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 195
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 122
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 242
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 143
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 148
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 564,
+								"natiId": 564,
+								"name": "Tirtouga"
+							},
+							{
+								"id": 565,
+								"natiId": 565,
+								"name": "Carracosta",
+								"method": "Level",
+								"value": 37
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Frigid Sea Area",
+						"notes": "Wanderer, Lv. 67",
+						"games": "The Crown Tundra Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Frigid Sea Area",
+						"notes": "Wanderer, Lv. 67",
+						"games": "The Crown Tundra Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Frigid Sea Area",
+						"notes": "Wanderer, Lv. 67",
+						"games": "The Crown Tundra Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Frigid Sea Area",
+						"notes": "Wanderer, Lv. 67",
+						"games": "The Crown Tundra Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Frigid Sea Area",
+						"notes": "Wanderer, Lv. 67",
+						"games": "The Crown Tundra Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Frigid Sea Area",
+						"notes": "Wanderer, Lv. 67",
+						"games": "The Crown Tundra Shield",
+						"rate": "100%"
+					}
+				],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/565",
+						"fetchedAt": "2026-11-03T05:53:41.582Z",
+						"hash": "db240c23507089e1444f20979a014e538416172c34e29f1369573c21649ec830"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/288/",
+						"fetchedAt": "2026-11-03T05:53:41.560Z",
+						"hash": "a2f11069fb654af8f70eb4cabb8c465a74814cb9c380279e4364a0ea3cc010e7"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/565/",
+						"fetchedAt": "2026-11-03T05:53:41.620Z",
+						"hash": "a767cf46ceaf42c357720105729726b7b0d69c950d6e6955f94e0afbf9cd5691"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/565/encounters",
+						"fetchedAt": "2026-11-03T05:53:41.651Z",
+						"hash": "0b54cc5efe5dd98e3c5494174fb65f37cfd7eb5e8a9f1bffd7afbcbbf69718e6"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/565/",
+						"fetchedAt": "2026-11-03T05:53:41.706Z",
+						"hash": "f72eeeb2a80456f45b0cd8c747d86a0cd0e343d618b65e142df6bf78f4db8a8a"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordct": "",
+				"shieldct": ""
+			},
+			"localizedFlavorByGame": {
+				"swordct": {},
+				"shieldct": {}
+			}
+		},
+		{
+			"profileKey": "brilliant-diamond-shining-pearl",
+			"label": "Brilliant Diamond / Shining Pearl",
+			"appGameKeys": [
+				"brilliantdiamond-national",
+				"brilliantdiamond",
+				"shiningpearl-national",
+				"shiningpearl"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Carracosta",
+				"localizedNames": {
+					"ja-hrkt": "アバゴーラ",
+					"ja-roma": "Abagoura",
+					"ko": "늑골라",
+					"zh-hant": "肋骨海龜",
+					"fr": "Mégapagos",
+					"de": "Karippas",
+					"es": "Carracosta",
+					"it": "Carracosta",
+					"ja": "アバゴーラ",
+					"zh-hans": "肋骨海龟",
+					"es-419": "Carracosta"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water",
+					"Rock"
+				],
+				"baseStats": {
+					"hp": 74,
+					"atk": 108,
+					"def": 133,
+					"spa": 83,
+					"spd": 65,
+					"spe": 32
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Solid Rock",
+					"Sturdy",
+					"Swift Swim (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Swift Swim"
+				],
+				"eggGroups": [
+					"Water1",
+					"Water3"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 30,
+				"height": "1.2 m",
+				"weight": "81.0 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 173,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Blue",
+				"genus": "Prototurtle Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こだいがめポケモン",
+					"ko": "옛날거북포켓몬",
+					"zh-hant": "古代龜寶可夢",
+					"fr": "Pokémon Tortantique",
+					"de": "Urzeitkröten-Pokémon",
+					"es": "Pokémon Pretortuga",
+					"it": "Pokémon Ancestruga",
+					"ja": "こだいがめポケモン",
+					"zh-hans": "古代龟宝可梦",
+					"es-419": "Pokémon Pretortuga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 565
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 71
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 127
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 195
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 122
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 242
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 143
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 148
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 564,
+								"natiId": 564,
+								"name": "Tirtouga"
+							},
+							{
+								"id": 565,
+								"natiId": 565,
+								"name": "Carracosta",
+								"method": "Level",
+								"value": 37
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/565",
+						"fetchedAt": "2026-11-03T05:53:41.582Z",
+						"hash": "db240c23507089e1444f20979a014e538416172c34e29f1369573c21649ec830"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/288/",
+						"fetchedAt": "2026-11-03T05:53:41.560Z",
+						"hash": "a2f11069fb654af8f70eb4cabb8c465a74814cb9c380279e4364a0ea3cc010e7"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/565/",
+						"fetchedAt": "2026-11-03T05:53:41.620Z",
+						"hash": "a767cf46ceaf42c357720105729726b7b0d69c950d6e6955f94e0afbf9cd5691"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/565/encounters",
+						"fetchedAt": "2026-11-03T05:53:41.651Z",
+						"hash": "0b54cc5efe5dd98e3c5494174fb65f37cfd7eb5e8a9f1bffd7afbcbbf69718e6"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/565/",
+						"fetchedAt": "2026-11-03T05:53:41.706Z",
+						"hash": "f72eeeb2a80456f45b0cd8c747d86a0cd0e343d618b65e142df6bf78f4db8a8a"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"brilliantdiamond-national": "",
+				"brilliantdiamond": "",
+				"shiningpearl-national": "",
+				"shiningpearl": ""
+			},
+			"localizedFlavorByGame": {
+				"brilliantdiamond-national": {},
+				"brilliantdiamond": {},
+				"shiningpearl-national": {},
+				"shiningpearl": {}
+			}
+		},
+		{
+			"profileKey": "legends-arceus",
+			"label": "Legends: Arceus",
+			"appGameKeys": [
+				"legendsarceus"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Carracosta",
+				"localizedNames": {
+					"ja-hrkt": "アバゴーラ",
+					"ja-roma": "Abagoura",
+					"ko": "늑골라",
+					"zh-hant": "肋骨海龜",
+					"fr": "Mégapagos",
+					"de": "Karippas",
+					"es": "Carracosta",
+					"it": "Carracosta",
+					"ja": "アバゴーラ",
+					"zh-hans": "肋骨海龟",
+					"es-419": "Carracosta"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water",
+					"Rock"
+				],
+				"baseStats": {
+					"hp": 74,
+					"atk": 108,
+					"def": 133,
+					"spa": 83,
+					"spd": 65,
+					"spe": 32
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Solid Rock",
+					"Sturdy",
+					"Swift Swim (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Swift Swim"
+				],
+				"eggGroups": [
+					"Water1",
+					"Water3"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 30,
+				"height": "1.2 m",
+				"weight": "81.0 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 173,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Blue",
+				"genus": "Prototurtle Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こだいがめポケモン",
+					"ko": "옛날거북포켓몬",
+					"zh-hant": "古代龜寶可夢",
+					"fr": "Pokémon Tortantique",
+					"de": "Urzeitkröten-Pokémon",
+					"es": "Pokémon Pretortuga",
+					"it": "Pokémon Ancestruga",
+					"ja": "こだいがめポケモン",
+					"zh-hans": "古代龟宝可梦",
+					"es-419": "Pokémon Pretortuga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 565
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 71
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 127
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 195
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 122
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 242
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 143
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 148
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 564,
+								"natiId": 564,
+								"name": "Tirtouga"
+							},
+							{
+								"id": 565,
+								"natiId": 565,
+								"name": "Carracosta",
+								"method": "Level",
+								"value": 37
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/565",
+						"fetchedAt": "2026-11-03T05:53:41.582Z",
+						"hash": "db240c23507089e1444f20979a014e538416172c34e29f1369573c21649ec830"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/288/",
+						"fetchedAt": "2026-11-03T05:53:41.560Z",
+						"hash": "a2f11069fb654af8f70eb4cabb8c465a74814cb9c380279e4364a0ea3cc010e7"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/565/",
+						"fetchedAt": "2026-11-03T05:53:41.620Z",
+						"hash": "a767cf46ceaf42c357720105729726b7b0d69c950d6e6955f94e0afbf9cd5691"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/565/encounters",
+						"fetchedAt": "2026-11-03T05:53:41.651Z",
+						"hash": "0b54cc5efe5dd98e3c5494174fb65f37cfd7eb5e8a9f1bffd7afbcbbf69718e6"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/565/",
+						"fetchedAt": "2026-11-03T05:53:41.706Z",
+						"hash": "f72eeeb2a80456f45b0cd8c747d86a0cd0e343d618b65e142df6bf78f4db8a8a"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendsarceus": ""
+			},
+			"localizedFlavorByGame": {
+				"legendsarceus": {}
+			}
+		},
+		{
+			"profileKey": "scarlet-violet",
+			"label": "Scarlet / Violet",
+			"appGameKeys": [
+				"scarlet",
+				"violet"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Carracosta",
+				"localizedNames": {
+					"ja-hrkt": "アバゴーラ",
+					"ja-roma": "Abagoura",
+					"ko": "늑골라",
+					"zh-hant": "肋骨海龜",
+					"fr": "Mégapagos",
+					"de": "Karippas",
+					"es": "Carracosta",
+					"it": "Carracosta",
+					"ja": "アバゴーラ",
+					"zh-hans": "肋骨海龟",
+					"es-419": "Carracosta"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water",
+					"Rock"
+				],
+				"baseStats": {
+					"hp": 74,
+					"atk": 108,
+					"def": 133,
+					"spa": 83,
+					"spd": 65,
+					"spe": 32
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Solid Rock",
+					"Sturdy",
+					"Swift Swim (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Swift Swim"
+				],
+				"eggGroups": [
+					"Water1",
+					"Water3"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 30,
+				"height": "1.2 m",
+				"weight": "81.0 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 173,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Blue",
+				"genus": "Prototurtle Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こだいがめポケモン",
+					"ko": "옛날거북포켓몬",
+					"zh-hant": "古代龜寶可夢",
+					"fr": "Pokémon Tortantique",
+					"de": "Urzeitkröten-Pokémon",
+					"es": "Pokémon Pretortuga",
+					"it": "Pokémon Ancestruga",
+					"ja": "こだいがめポケモン",
+					"zh-hans": "古代龟宝可梦",
+					"es-419": "Pokémon Pretortuga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 565
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 71
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 127
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 195
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 122
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 242
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 143
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 148
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 564,
+								"natiId": 564,
+								"name": "Tirtouga"
+							},
+							{
+								"id": 565,
+								"natiId": 565,
+								"name": "Carracosta",
+								"method": "Level",
+								"value": 37
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/565",
+						"fetchedAt": "2026-11-03T05:53:41.582Z",
+						"hash": "db240c23507089e1444f20979a014e538416172c34e29f1369573c21649ec830"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/288/",
+						"fetchedAt": "2026-11-03T05:53:41.560Z",
+						"hash": "a2f11069fb654af8f70eb4cabb8c465a74814cb9c380279e4364a0ea3cc010e7"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/565/",
+						"fetchedAt": "2026-11-03T05:53:41.620Z",
+						"hash": "a767cf46ceaf42c357720105729726b7b0d69c950d6e6955f94e0afbf9cd5691"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/565/encounters",
+						"fetchedAt": "2026-11-03T05:53:41.651Z",
+						"hash": "0b54cc5efe5dd98e3c5494174fb65f37cfd7eb5e8a9f1bffd7afbcbbf69718e6"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/565/",
+						"fetchedAt": "2026-11-03T05:53:41.706Z",
+						"hash": "f72eeeb2a80456f45b0cd8c747d86a0cd0e343d618b65e142df6bf78f4db8a8a"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlet": "",
+				"violet": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlet": {},
+				"violet": {}
+			}
+		},
+		{
+			"profileKey": "the-teal-mask",
+			"label": "The Teal Mask",
+			"appGameKeys": [
+				"scarlettm",
+				"violettm"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Carracosta",
+				"localizedNames": {
+					"ja-hrkt": "アバゴーラ",
+					"ja-roma": "Abagoura",
+					"ko": "늑골라",
+					"zh-hant": "肋骨海龜",
+					"fr": "Mégapagos",
+					"de": "Karippas",
+					"es": "Carracosta",
+					"it": "Carracosta",
+					"ja": "アバゴーラ",
+					"zh-hans": "肋骨海龟",
+					"es-419": "Carracosta"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water",
+					"Rock"
+				],
+				"baseStats": {
+					"hp": 74,
+					"atk": 108,
+					"def": 133,
+					"spa": 83,
+					"spd": 65,
+					"spe": 32
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Solid Rock",
+					"Sturdy",
+					"Swift Swim (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Swift Swim"
+				],
+				"eggGroups": [
+					"Water1",
+					"Water3"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 30,
+				"height": "1.2 m",
+				"weight": "81.0 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 173,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Blue",
+				"genus": "Prototurtle Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こだいがめポケモン",
+					"ko": "옛날거북포켓몬",
+					"zh-hant": "古代龜寶可夢",
+					"fr": "Pokémon Tortantique",
+					"de": "Urzeitkröten-Pokémon",
+					"es": "Pokémon Pretortuga",
+					"it": "Pokémon Ancestruga",
+					"ja": "こだいがめポケモン",
+					"zh-hans": "古代龟宝可梦",
+					"es-419": "Pokémon Pretortuga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 565
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 71
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 127
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 195
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 122
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 242
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 143
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 148
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 564,
+								"natiId": 564,
+								"name": "Tirtouga"
+							},
+							{
+								"id": 565,
+								"natiId": 565,
+								"name": "Carracosta",
+								"method": "Level",
+								"value": 37
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/565",
+						"fetchedAt": "2026-11-03T05:53:41.582Z",
+						"hash": "db240c23507089e1444f20979a014e538416172c34e29f1369573c21649ec830"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/288/",
+						"fetchedAt": "2026-11-03T05:53:41.560Z",
+						"hash": "a2f11069fb654af8f70eb4cabb8c465a74814cb9c380279e4364a0ea3cc010e7"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/565/",
+						"fetchedAt": "2026-11-03T05:53:41.620Z",
+						"hash": "a767cf46ceaf42c357720105729726b7b0d69c950d6e6955f94e0afbf9cd5691"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/565/encounters",
+						"fetchedAt": "2026-11-03T05:53:41.651Z",
+						"hash": "0b54cc5efe5dd98e3c5494174fb65f37cfd7eb5e8a9f1bffd7afbcbbf69718e6"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/565/",
+						"fetchedAt": "2026-11-03T05:53:41.706Z",
+						"hash": "f72eeeb2a80456f45b0cd8c747d86a0cd0e343d618b65e142df6bf78f4db8a8a"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlettm": "",
+				"violettm": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlettm": {},
+				"violettm": {}
+			}
+		},
+		{
+			"profileKey": "the-indigo-disk",
+			"label": "The Indigo Disk",
+			"appGameKeys": [
+				"scarletid",
+				"violetid"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Carracosta",
+				"localizedNames": {
+					"ja-hrkt": "アバゴーラ",
+					"ja-roma": "Abagoura",
+					"ko": "늑골라",
+					"zh-hant": "肋骨海龜",
+					"fr": "Mégapagos",
+					"de": "Karippas",
+					"es": "Carracosta",
+					"it": "Carracosta",
+					"ja": "アバゴーラ",
+					"zh-hans": "肋骨海龟",
+					"es-419": "Carracosta"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Water",
+					"Rock"
+				],
+				"baseStats": {
+					"hp": 74,
+					"atk": 108,
+					"def": 133,
+					"spa": 83,
+					"spd": 65,
+					"spe": 32
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Solid Rock",
+					"Sturdy",
+					"Swift Swim (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Swift Swim"
+				],
+				"eggGroups": [
+					"Water1",
+					"Water3"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 30,
+				"height": "1.2 m",
+				"weight": "81.0 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 173,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Blue",
+				"genus": "Prototurtle Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こだいがめポケモン",
+					"ko": "옛날거북포켓몬",
+					"zh-hant": "古代龜寶可夢",
+					"fr": "Pokémon Tortantique",
+					"de": "Urzeitkröten-Pokémon",
+					"es": "Pokémon Pretortuga",
+					"it": "Pokémon Ancestruga",
+					"ja": "こだいがめポケモン",
+					"zh-hans": "古代龟宝可梦",
+					"es-419": "Pokémon Pretortuga"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 565
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 71
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 127
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 195
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 122
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 242
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 143
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 148
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 564,
+								"natiId": 564,
+								"name": "Tirtouga"
+							},
+							{
+								"id": 565,
+								"natiId": 565,
+								"name": "Carracosta",
+								"method": "Level",
+								"value": 37
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/565",
+						"fetchedAt": "2026-11-03T05:53:41.582Z",
+						"hash": "db240c23507089e1444f20979a014e538416172c34e29f1369573c21649ec830"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/288/",
+						"fetchedAt": "2026-11-03T05:53:41.560Z",
+						"hash": "a2f11069fb654af8f70eb4cabb8c465a74814cb9c380279e4364a0ea3cc010e7"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/565/",
+						"fetchedAt": "2026-11-03T05:53:41.620Z",
+						"hash": "a767cf46ceaf42c357720105729726b7b0d69c950d6e6955f94e0afbf9cd5691"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/565/encounters",
+						"fetchedAt": "2026-11-03T05:53:41.651Z",
+						"hash": "0b54cc5efe5dd98e3c5494174fb65f37cfd7eb5e8a9f1bffd7afbcbbf69718e6"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/565/",
+						"fetchedAt": "2026-11-03T05:53:41.706Z",
+						"hash": "f72eeeb2a80456f45b0cd8c747d86a0cd0e343d618b65e142df6bf78f4db8a8a"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarletid": "",
+				"violetid": ""
+			},
+			"localizedFlavorByGame": {
+				"scarletid": {},
+				"violetid": {}
+			}
+		}
+	]
+}

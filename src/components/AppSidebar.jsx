@@ -78,11 +78,43 @@ function makeSidebarItems(state) {
 			{
 				key: "info",
 				label: "Pokémon Info Index",
-				active: level === "tools",
+				active: level === "moninfo" || state.toolsKey === "info",
 				onClick: () =>
 					navigateToState({
 						level: "tools",
 						toolsKey: "info",
+						genKey: null,
+						gameKey: null,
+						sectionId: null,
+						monInfoId: null,
+						monInfoGameKey: null,
+						monInfoForm: null,
+					}),
+			},
+			{
+				key: "moves",
+				label: "Move Index",
+				active: level === "tools" && state.toolsKey === "moves",
+				onClick: () =>
+					navigateToState({
+						level: "tools",
+						toolsKey: "moves",
+						genKey: null,
+						gameKey: null,
+						sectionId: null,
+						monInfoId: null,
+						monInfoGameKey: null,
+						monInfoForm: null,
+					}),
+			},
+			{
+				key: "abilities",
+				label: "Ability Index",
+				active: level === "tools" && state.toolsKey === "abilities",
+				onClick: () =>
+					navigateToState({
+						level: "tools",
+						toolsKey: "abilities",
 						genKey: null,
 						gameKey: null,
 						sectionId: null,

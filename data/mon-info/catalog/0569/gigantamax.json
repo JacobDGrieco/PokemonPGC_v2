@@ -1,0 +1,728 @@
+{
+	"schemaVersion": 2,
+	"nationalDexId": 569,
+	"speciesName": "Garbodor",
+	"formKey": "gigantamax",
+	"formName": "Gigantamax",
+	"formLabelSource": "form-catalog",
+	"profiles": [
+		{
+			"profileKey": "sword-shield",
+			"label": "Sword / Shield",
+			"appGameKeys": [
+				"sword",
+				"shield"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Garbodor",
+				"localizedNames": {
+					"ja-hrkt": "ダストダス",
+					"ja-roma": "Dustdas",
+					"ko": "더스트나",
+					"zh-hant": "灰塵山",
+					"fr": "Miasmax",
+					"de": "Deponitox",
+					"es": "Garbodor",
+					"it": "Garbodor",
+					"ja": "ダストダス",
+					"zh-hans": "灰尘山",
+					"es-419": "Garbodor"
+				},
+				"localizedFormNames": {
+					"fr": "Miasmax Gigamax",
+					"de": "Gigadynamax-Deponitox"
+				},
+				"localizedFormLabels": {
+					"ja-hrkt": "キョダイマックスのすがた",
+					"fr": "Forme Gigamax",
+					"de": "Gigadynamax-Form",
+					"ja": "キョダイマックスのすがた"
+				},
+				"types": [
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 80,
+					"atk": 95,
+					"def": 82,
+					"spa": 60,
+					"spd": 82,
+					"spe": 75
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Stench",
+					"Weak Armor",
+					"Aftermath (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Aftermath"
+				],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "21.0 m",
+				"weight": "1000.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 166,
+				"habitat": "",
+				"shape": "Humanoid",
+				"color": "Green",
+				"genus": "Trash Heap Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ゴミすてばポケモン",
+					"ko": "쓰레기장포켓몬",
+					"zh-hant": "垃圾場寶可夢",
+					"fr": "Pokémon Dépotoir",
+					"de": "Müllhalden-Pokémon",
+					"es": "Pokémon Vertedero",
+					"it": "Pokémon Discarica",
+					"ja": "ゴミすてばポケモン",
+					"zh-hans": "垃圾场宝可梦",
+					"es-419": "Pokémon Vertedero"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 569
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 75
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 106
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 75
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 207
+					},
+					{
+						"pokedex": "original-ulaula",
+						"number": 79
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 265
+					},
+					{
+						"pokedex": "updated-ulaula",
+						"number": 86
+					},
+					{
+						"pokedex": "galar",
+						"number": 158
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 50
+					},
+					{
+						"pokedex": "champions",
+						"number": 569
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 568,
+								"natiId": 568,
+								"name": "Trubbish"
+							},
+							{
+								"id": 569,
+								"natiId": 569,
+								"name": "Garbodor",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Galar Wild Area Max Dens Area",
+						"notes": "Max Raid, Lv. 60",
+						"games": "Sword",
+						"rate": "4%"
+					},
+					{
+						"area": "Galar Wild Area Max Dens Area",
+						"notes": "Max Raid, Lv. 60",
+						"games": "Shield",
+						"rate": "4%"
+					},
+					{
+						"area": "East Lake Axewell Max Den D",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Sword",
+						"rate": "5%"
+					},
+					{
+						"area": "East Lake Axewell Max Den D",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Shield",
+						"rate": "5%"
+					}
+				],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokemonPGC form catalog includes this game profile.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/569",
+						"fetchedAt": "2026-11-03T05:53:41.747Z",
+						"hash": "b34c99e82ec8d34b1d1a1b605cc2316eb4f38d5d243f94cc8c220e260ce40a5b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/290/",
+						"fetchedAt": "2026-11-03T05:53:41.766Z",
+						"hash": "3de8836ba00cc5314dc6339f7c896e2dfa08a8625b79d0645bfbc4dab75ef395"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/10207/",
+						"fetchedAt": "2026-11-03T05:53:41.928Z",
+						"hash": "e00063d98616b2b3eb8e31fc0c9aa311cfd49a1a5533c5974824f6fd8c712d5b"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/10207/encounters",
+						"fetchedAt": "2026-11-03T05:53:41.982Z",
+						"hash": "ee25681254e491d8735d2870cf92f4c5a12202d79eca703db2ca6a8e2c5d866d"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/10376/",
+						"fetchedAt": "2026-11-03T05:53:42.043Z",
+						"hash": "c9bf3a364a6090d75a1c1cf1874ab3e738a9f5bd0139e8f945a5075c4491918a"
+					}
+				],
+				"formName": "Gigantamax"
+			},
+			"flavorByGame": {
+				"sword": "This Pokémon eats trash, which turns into poison inside its body. The main component of the poison depends on what sort of trash was eaten.",
+				"shield": "The toxic liquid it launches from its right arm is so virulent that it can kill a weakened creature instantly."
+			},
+			"localizedFlavorByGame": {
+				"sword": {
+					"ja-hrkt": "くった ゴミが たいないで どくに へんかする。 くう ゴミ しだいで どくの しゅせいぶんも かわる。",
+					"ko": "먹은 쓰레기가 체내에서 독으로 변화한다. 먹은 쓰레기에 따라 독의 주성분도 바뀐다.",
+					"zh-hant": "吃掉的垃圾會在體內 轉化為毒素。毒素的成分 會隨著吃掉的垃圾而不同。",
+					"fr": "Il produit du poison dans son corps à partir des ordures qu’il ingurgite. Selon ce qu’il mange, la composition des toxines diffère.",
+					"de": "Es frisst Müll und verdaut ihn in seinem Inneren zu Gift. Je nach Art des Mülls, den es verzehrt, ändern sich die Hauptbestandteile des Giftes.",
+					"es": "Su cuerpo transforma la inmundicia que engulle en un veneno cuya composición cambia según la basura ingerida.",
+					"it": "Mangia spazzatura e la trasforma in un veleno la cui composizione cambia a seconda di cosa ha ingurgitato.",
+					"en": "This Pokémon eats trash, which turns into poison inside its body. The main component of the poison depends on what sort of trash was eaten.",
+					"ja": "食った ゴミが 体内で 毒に 変化する。 食う ゴミ しだいで 毒の 主成分も 変わる。",
+					"zh-hans": "吃掉的垃圾会在体内 转化为毒素。毒素的成分 会随着吃掉的垃圾而不同。",
+					"es-419": "Su cuerpo transforma la inmundicia que engulle en un veneno cuya composición cambia según la basura ingerida."
+				},
+				"shield": {
+					"ja-hrkt": "みぎうでから だす どくえきは よわった せいぶつが あびれば そくしするほど きけんな シロモノ。",
+					"ko": "오른팔에서 내보내는 독액은 약한 생물이 맞으면 즉사할 정도로 위험하다.",
+					"zh-hant": "從右臂噴出的毒液十分危險， 虛弱的生物只要一沾到， 立刻就會丟掉性命。",
+					"fr": "Le liquide qu’il projette de son bras droit est si toxique que si une créature fragile en est aspergée, elle succombe sur-le-champ.",
+					"de": "Die toxische Flüssigkeit aus seinem rechten Arm ist sehr gefährlich. Angeschlagene Lebewesen kommen bei Kontakt sofort ums Leben.",
+					"es": "El veneno líquido que brota de su brazo derecho es tan nocivo que puede acabar con una criatura ya débil al menor contacto.",
+					"it": "Il veleno che spruzza dall’arto destro è talmente tossico da risultare istantaneamente letale per le creature già debilitate.",
+					"en": "The toxic liquid it launches from its right arm is so virulent that it can kill a weakened creature instantly.",
+					"ja": "右腕から 出す 毒液は 弱った 生物が 浴びれば 即死するほど 危険な シロモノ。",
+					"zh-hans": "从右臂喷出的毒液十分危险， 虚弱的生物只要一沾到， 立刻就会丢掉性命。",
+					"es-419": "El veneno líquido que brota de su brazo derecho es tan nocivo que puede acabar con una criatura ya débil al menor contacto."
+				}
+			}
+		},
+		{
+			"profileKey": "the-isle-of-armor",
+			"label": "The Isle of Armor",
+			"appGameKeys": [
+				"swordioa",
+				"shieldioa"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Garbodor",
+				"localizedNames": {
+					"ja-hrkt": "ダストダス",
+					"ja-roma": "Dustdas",
+					"ko": "더스트나",
+					"zh-hant": "灰塵山",
+					"fr": "Miasmax",
+					"de": "Deponitox",
+					"es": "Garbodor",
+					"it": "Garbodor",
+					"ja": "ダストダス",
+					"zh-hans": "灰尘山",
+					"es-419": "Garbodor"
+				},
+				"localizedFormNames": {
+					"fr": "Miasmax Gigamax",
+					"de": "Gigadynamax-Deponitox"
+				},
+				"localizedFormLabels": {
+					"ja-hrkt": "キョダイマックスのすがた",
+					"fr": "Forme Gigamax",
+					"de": "Gigadynamax-Form",
+					"ja": "キョダイマックスのすがた"
+				},
+				"types": [
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 80,
+					"atk": 95,
+					"def": 82,
+					"spa": 60,
+					"spd": 82,
+					"spe": 75
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Stench",
+					"Weak Armor",
+					"Aftermath (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Aftermath"
+				],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "21.0 m",
+				"weight": "1000.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 166,
+				"habitat": "",
+				"shape": "Humanoid",
+				"color": "Green",
+				"genus": "Trash Heap Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ゴミすてばポケモン",
+					"ko": "쓰레기장포켓몬",
+					"zh-hant": "垃圾場寶可夢",
+					"fr": "Pokémon Dépotoir",
+					"de": "Müllhalden-Pokémon",
+					"es": "Pokémon Vertedero",
+					"it": "Pokémon Discarica",
+					"ja": "ゴミすてばポケモン",
+					"zh-hans": "垃圾场宝可梦",
+					"es-419": "Pokémon Vertedero"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 569
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 75
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 106
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 75
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 207
+					},
+					{
+						"pokedex": "original-ulaula",
+						"number": 79
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 265
+					},
+					{
+						"pokedex": "updated-ulaula",
+						"number": 86
+					},
+					{
+						"pokedex": "galar",
+						"number": 158
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 50
+					},
+					{
+						"pokedex": "champions",
+						"number": 569
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 568,
+								"natiId": 568,
+								"name": "Trubbish"
+							},
+							{
+								"id": 569,
+								"natiId": 569,
+								"name": "Garbodor",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokemonPGC form catalog includes this game profile.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/569",
+						"fetchedAt": "2026-11-03T05:53:41.747Z",
+						"hash": "b34c99e82ec8d34b1d1a1b605cc2316eb4f38d5d243f94cc8c220e260ce40a5b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/290/",
+						"fetchedAt": "2026-11-03T05:53:41.766Z",
+						"hash": "3de8836ba00cc5314dc6339f7c896e2dfa08a8625b79d0645bfbc4dab75ef395"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/10207/",
+						"fetchedAt": "2026-11-03T05:53:41.928Z",
+						"hash": "e00063d98616b2b3eb8e31fc0c9aa311cfd49a1a5533c5974824f6fd8c712d5b"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/10207/encounters",
+						"fetchedAt": "2026-11-03T05:53:41.982Z",
+						"hash": "ee25681254e491d8735d2870cf92f4c5a12202d79eca703db2ca6a8e2c5d866d"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/10376/",
+						"fetchedAt": "2026-11-03T05:53:42.043Z",
+						"hash": "c9bf3a364a6090d75a1c1cf1874ab3e738a9f5bd0139e8f945a5075c4491918a"
+					}
+				],
+				"formName": "Gigantamax"
+			},
+			"flavorByGame": {
+				"swordioa": "",
+				"shieldioa": ""
+			},
+			"localizedFlavorByGame": {
+				"swordioa": {},
+				"shieldioa": {}
+			}
+		},
+		{
+			"profileKey": "the-crown-tundra",
+			"label": "The Crown Tundra",
+			"appGameKeys": [
+				"swordct",
+				"shieldct"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Garbodor",
+				"localizedNames": {
+					"ja-hrkt": "ダストダス",
+					"ja-roma": "Dustdas",
+					"ko": "더스트나",
+					"zh-hant": "灰塵山",
+					"fr": "Miasmax",
+					"de": "Deponitox",
+					"es": "Garbodor",
+					"it": "Garbodor",
+					"ja": "ダストダス",
+					"zh-hans": "灰尘山",
+					"es-419": "Garbodor"
+				},
+				"localizedFormNames": {
+					"fr": "Miasmax Gigamax",
+					"de": "Gigadynamax-Deponitox"
+				},
+				"localizedFormLabels": {
+					"ja-hrkt": "キョダイマックスのすがた",
+					"fr": "Forme Gigamax",
+					"de": "Gigadynamax-Form",
+					"ja": "キョダイマックスのすがた"
+				},
+				"types": [
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 80,
+					"atk": 95,
+					"def": 82,
+					"spa": 60,
+					"spd": 82,
+					"spe": 75
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Stench",
+					"Weak Armor",
+					"Aftermath (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Aftermath"
+				],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "21.0 m",
+				"weight": "1000.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 166,
+				"habitat": "",
+				"shape": "Humanoid",
+				"color": "Green",
+				"genus": "Trash Heap Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ゴミすてばポケモン",
+					"ko": "쓰레기장포켓몬",
+					"zh-hant": "垃圾場寶可夢",
+					"fr": "Pokémon Dépotoir",
+					"de": "Müllhalden-Pokémon",
+					"es": "Pokémon Vertedero",
+					"it": "Pokémon Discarica",
+					"ja": "ゴミすてばポケモン",
+					"zh-hans": "垃圾场宝可梦",
+					"es-419": "Pokémon Vertedero"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 569
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 75
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 106
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 75
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 207
+					},
+					{
+						"pokedex": "original-ulaula",
+						"number": 79
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 265
+					},
+					{
+						"pokedex": "updated-ulaula",
+						"number": 86
+					},
+					{
+						"pokedex": "galar",
+						"number": 158
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 50
+					},
+					{
+						"pokedex": "champions",
+						"number": 569
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 568,
+								"natiId": 568,
+								"name": "Trubbish"
+							},
+							{
+								"id": 569,
+								"natiId": 569,
+								"name": "Garbodor",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Giants Bed Max Den C",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Crown Tundra Sword",
+						"rate": "15%"
+					},
+					{
+						"area": "Giants Bed Max Den C",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Crown Tundra Shield",
+						"rate": "15%"
+					},
+					{
+						"area": "Giants Bed Max Den K",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Crown Tundra Sword",
+						"rate": "15%"
+					},
+					{
+						"area": "Giants Bed Max Den K",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Crown Tundra Shield",
+						"rate": "15%"
+					},
+					{
+						"area": "Frigid Sea Max Den G",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Crown Tundra Sword",
+						"rate": "15%"
+					},
+					{
+						"area": "Frigid Sea Max Den G",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Crown Tundra Shield",
+						"rate": "15%"
+					},
+					{
+						"area": "Ballimere Lake Max Den C",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Crown Tundra Sword",
+						"rate": "15%"
+					},
+					{
+						"area": "Ballimere Lake Max Den C",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Crown Tundra Shield",
+						"rate": "15%"
+					},
+					{
+						"area": "Ballimere Lake Max Den H",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Crown Tundra Sword",
+						"rate": "15%"
+					},
+					{
+						"area": "Ballimere Lake Max Den H",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Crown Tundra Shield",
+						"rate": "15%"
+					}
+				],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokemonPGC form catalog includes this game profile.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/569",
+						"fetchedAt": "2026-11-03T05:53:41.747Z",
+						"hash": "b34c99e82ec8d34b1d1a1b605cc2316eb4f38d5d243f94cc8c220e260ce40a5b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/290/",
+						"fetchedAt": "2026-11-03T05:53:41.766Z",
+						"hash": "3de8836ba00cc5314dc6339f7c896e2dfa08a8625b79d0645bfbc4dab75ef395"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/10207/",
+						"fetchedAt": "2026-11-03T05:53:41.928Z",
+						"hash": "e00063d98616b2b3eb8e31fc0c9aa311cfd49a1a5533c5974824f6fd8c712d5b"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/10207/encounters",
+						"fetchedAt": "2026-11-03T05:53:41.982Z",
+						"hash": "ee25681254e491d8735d2870cf92f4c5a12202d79eca703db2ca6a8e2c5d866d"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/10376/",
+						"fetchedAt": "2026-11-03T05:53:42.043Z",
+						"hash": "c9bf3a364a6090d75a1c1cf1874ab3e738a9f5bd0139e8f945a5075c4491918a"
+					}
+				],
+				"formName": "Gigantamax"
+			},
+			"flavorByGame": {
+				"swordct": "",
+				"shieldct": ""
+			},
+			"localizedFlavorByGame": {
+				"swordct": {},
+				"shieldct": {}
+			}
+		}
+	]
+}

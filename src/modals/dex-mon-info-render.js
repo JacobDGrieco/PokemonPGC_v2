@@ -1,4 +1,30 @@
 import { assetPath } from "../utils/assetPath.js";
+import {
+	buildMonInfoStatSeries,
+	MON_INFO_STAT_LABEL_RADIUS_OFFSET,
+	MON_INFO_STAT_VIEW_BOX,
+} from "../utils/monInfoStats.js";
+import { parseMonInfoGenderRatio } from "../utils/monInfoProfile.js";
+import {
+	moveGroupDisplayLabel,
+	moveMetadataParts,
+	moveTypeIconSource,
+	referenceEntryHref,
+} from "../utils/moveReference.js";
+import {
+	buildEeveeEvolutionWheel,
+	buildEvolutionForest,
+	evolutionRequirementPresentation,
+	evolutionTargetId,
+	resolveEvolutionTargetForm,
+} from "../utils/monInfoEvolution.js";
+import { pokemonSpriteCandidates } from "../utils/pokemonSprite.js";
+
+// This renderer is loaded on demand, so its feature-specific styles should be
+// loaded on demand too instead of increasing the homepage CSS payload.
+if (typeof document !== "undefined") {
+	void import("../../styles/mon-info-evolution.css");
+}
 
 export function renderListRow(label, valueOrArr) {
 	if (valueOrArr == null) return "";
@@ -27,24 +53,23 @@ export function renderListRow(label, valueOrArr) {
 	  </div>`;
 }
 
-const RADAR_ORDER = ["hp", "atk", "def", "spe", "spd", "spa"];
-const RADAR_LABELS = ["HP", "Atk", "Def", "Spe", "SpD", "SpA"];
-
-function renderRadarBlock({ title, statsObj, extraClass = "" } = {}) {
+function renderRadarBlock({ title, statsObj, evObj } = {}) {
 	if (!statsObj) return "";
-	const values = RADAR_ORDER.map((k) => Number(statsObj[k] ?? 0));
+	const statSeries = buildMonInfoStatSeries(statsObj, evObj);
+	const values = statSeries.map((stat) => stat.value);
 	const maxVal = Math.max(...values, 1);
 	const total = values.reduce((sum, v) => sum + v, 0);
 	const center = 50;
 	const radius = 65;
 
-	const points = values.map((v, idx) => {
+	const points = statSeries.map((stat, idx) => {
+		const v = stat.value;
 		const ratio = v / maxVal;
 		const r = radius * ratio;
-		const angle = -Math.PI / 2 + (idx * 2 * Math.PI) / RADAR_ORDER.length;
+		const angle = -Math.PI / 2 + (idx * 2 * Math.PI) / statSeries.length;
 		const x = center + r * Math.cos(angle);
 		const y = center + r * Math.sin(angle);
-		return { x, y, r, angle, value: v, label: RADAR_LABELS[idx] };
+		return { ...stat, x, y, r, angle };
 	});
 
 	const polygonPoints = points
@@ -53,14 +78,16 @@ function renderRadarBlock({ title, statsObj, extraClass = "" } = {}) {
 	const gridLevels = [0.33, 0.66, 1];
 	const gridPolys = gridLevels
 		.map((lvl) => {
-			const pts = RADAR_ORDER.map((_, i) => {
-				const r = radius * lvl;
-				const angle =
-					-Math.PI / 2 + (i * 2 * Math.PI) / RADAR_ORDER.length;
-				const x = center + r * Math.cos(angle);
-				const y = center + r * Math.sin(angle);
-				return `${x.toFixed(1)},${y.toFixed(1)}`;
-			}).join(" ");
+			const pts = statSeries
+				.map((_, i) => {
+					const r = radius * lvl;
+					const angle =
+						-Math.PI / 2 + (i * 2 * Math.PI) / statSeries.length;
+					const x = center + r * Math.cos(angle);
+					const y = center + r * Math.sin(angle);
+					return `${x.toFixed(1)},${y.toFixed(1)}`;
+				})
+				.join(" ");
 			return `<polygon points="${pts}" class="stat-grid-ring" />`;
 		})
 		.join("");
@@ -72,36 +99,26 @@ function renderRadarBlock({ title, statsObj, extraClass = "" } = {}) {
 		)
 		.join("");
 
-	const labelRadius = radius + 12;
+	const labelRadius = radius + MON_INFO_STAT_LABEL_RADIUS_OFFSET;
 	const labelsSvg = points
 		.map((p) => {
 			const lx = center + labelRadius * Math.cos(p.angle);
 			const ly = center + labelRadius * Math.sin(p.angle);
-			return `<text x="${lx.toFixed(1)}" y="${ly.toFixed(1)}" class="stat-label" text-anchor="middle" dominant-baseline="central">${p.label}</text>`;
-		})
-		.join("");
-
-	const numbersSvg = points
-		.map((p) => {
-			const innerR = p.r * 0.7;
-			const nx = center + innerR * Math.cos(p.angle);
-			const ny = center + innerR * Math.sin(p.angle);
-			return `<text x="${nx.toFixed(1)}" y="${ny.toFixed(1)}" class="stat-value" text-anchor="middle" dominant-baseline="central">${p.value}</text>`;
+			return `<text x="${lx.toFixed(1)}" y="${ly.toFixed(1)}" class="stat-label" text-anchor="middle" dominant-baseline="central">${p.label}</text><text x="${lx.toFixed(1)}" y="${(ly + 9).toFixed(1)}" class="stat-value" text-anchor="middle" dominant-baseline="central">${p.displayValue}</text>`;
 		})
 		.join("");
 
 	const totalSvg = `<text x="${center}" y="${center}" class="stat-total" text-anchor="middle" dominant-baseline="central">${total}</text>`;
 
 	return `
-	  <div class="mon-info-block mon-info-stats ${extraClass}">
+	  <div class="mon-info-block mon-info-stats">
 		<h3>${title}</h3>
 		<div class="mon-info-stats-graph">
-		  <svg viewBox="-25 -25 150 150" class="mon-info-stats-radar" aria-hidden="true">
+		  <svg viewBox="${MON_INFO_STAT_VIEW_BOX}" class="mon-info-stats-radar" aria-hidden="true">
 			${gridPolys}
 			<polygon points="${polygonPoints}" class="stat-radar-fill" />
 			${vertexDots}
 			${labelsSvg}
-			${numbersSvg}
 			${totalSvg}
 		  </svg>
 		</div>
@@ -109,14 +126,8 @@ function renderRadarBlock({ title, statsObj, extraClass = "" } = {}) {
 	`;
 }
 
-export const renderStatsRadar = (statsObj) =>
-	renderRadarBlock({ title: "Base Stats", statsObj });
-export const renderEvRadar = (evObj) =>
-	renderRadarBlock({
-		title: "EV Yield",
-		statsObj: evObj,
-		extraClass: "mon-info-ev",
-	});
+export const renderStatsRadar = (statsObj, evObj = null) =>
+	renderRadarBlock({ title: "Base Stats and EV Yield", statsObj, evObj });
 
 const TYPE_CHART = {
 	Normal: { Rock: 0.5, Steel: 0.5, Ghost: 0 },
@@ -380,139 +391,93 @@ export function renderTypeChart(types = []) {
 	return `<div class="mon-info-block mon-info-typechart"><h3>Type Defenses</h3><div class="typechart-matrix">${tablesHtml}</div></div>`;
 }
 
-export function renderEvolutionHtml(evo, dexList = []) {
-	if (!evo) return "";
-	const findDexEntry = (step) =>
-		step
-			? dexList.find((e) => e && String(e.id) === String(step.id)) || null
-			: null;
-	const methodLabel = (step) => {
-		if (!step) return "";
-		const m = step.method != null ? String(step.method) : "";
-		const v = step.value != null ? step.value : null;
-		if (!m && step.level != null) return `Lv. ${step.level}`;
-		if (!m) return step.trigger || "";
-		if (m.toLowerCase() === "level")
-			return v != null ? `Lv. ${v}` : "Level";
-		if (v == null || v === "") return m;
-		return `${m}: ${v}`;
+export function renderEvolutionHtml(
+	evolution,
+	dexList = [],
+	{ gameKey = null, currentNatiId = null, currentFormKey = null } = {},
+) {
+	const forest = buildEvolutionForest(evolution, { gameKey });
+	if (!forest.length) return "";
+	const wheelLayout = buildEeveeEvolutionWheel(forest);
+	const escapeHtml = (value) =>
+		String(value ?? "")
+			.replaceAll("&", "&amp;")
+			.replaceAll('"', "&quot;")
+			.replaceAll("<", "&lt;")
+			.replaceAll(">", "&gt;");
+	const findDexEntry = (step) => {
+		const targetId = evolutionTargetId(step);
+		return (
+			dexList.find(
+				(entry) =>
+					entry &&
+					Number(entry.natiId ?? entry.id) === Number(targetId),
+			) || null
+		);
 	};
-	const linkHtml = (step) =>
-		`<div class="evo-link"><div class="evo-method">${methodLabel(step) || ""}</div><div class="evo-arrow">→</div></div>`;
-	const stepNodeHtml = (step) => {
+	const connectorDirection = (branchIndex, branchCount) => {
+		const midpoint = (branchCount - 1) / 2;
+		if (branchIndex < midpoint) return "up";
+		if (branchIndex > midpoint) return "down";
+		return "straight";
+	};
+	const requirementHtml = (step, direction, style = "") => {
+		const presentation = evolutionRequirementPresentation(step, gameKey);
+		if (!presentation.label && !presentation.item) return "";
+		return `<span class="evolution-requirement is-${direction}${presentation.item ? " has-item" : ""}"${style ? ` style="${style}"` : ""}>${presentation.item ? `<img class="evolution-item-icon" src="${escapeHtml(presentation.item.src)}" alt="" title="${escapeHtml(presentation.item.name)}" loading="lazy" />` : ""}<span class="evolution-requirement-copy"><strong>${escapeHtml(presentation.label)}</strong>${presentation.detail ? `<small>${escapeHtml(presentation.detail)}</small>` : ""}</span></span>`;
+	};
+	const connectorHtml = (step, direction) => {
+		const path =
+			direction === "up"
+				? "M4 64 L104 8"
+				: direction === "down"
+					? "M4 8 L104 64"
+					: "M4 36 L104 36";
+		const arrowhead =
+			direction === "up"
+				? "84,8 104,8 95,26"
+				: direction === "down"
+					? "84,64 104,64 95,46"
+					: "86,24 104,36 86,48";
+		return `<div class="evolution-connector is-${direction}">${requirementHtml(step, direction)}<svg class="evolution-arrow" viewBox="0 0 108 72" preserveAspectRatio="none" aria-hidden="true"><path d="${path}"></path><polyline points="${arrowhead}"></polyline></svg></div>`;
+	};
+	const nodeButtonHtml = (node) => {
+		const step = node.step;
+		const targetId = evolutionTargetId(step);
+		const targetFormKey = resolveEvolutionTargetForm({
+			step,
+			gameKey,
+			currentFormKey,
+		});
 		const entry = findDexEntry(step);
-		const resolve = (v) => {
-			try {
-				return typeof v === "function" ? v() : v;
-			} catch {
-				return v;
-			}
-		};
-		const pad4 = (v) => String(v).padStart(4, "0");
-		const natId =
-			step?.natiId ??
-			step?.natId ??
-			step?.nationalId ??
-			step?.id ??
-			entry?.natiId ??
-			entry?.natId ??
-			entry?.nationalId ??
-			entry?.id ??
-			null;
-		const homeSprite =
-			natId != null
-				? assetPath(
-						`sprites/pokemon_home/base-front/${pad4(natId)}.png`,
-					)
-				: null;
-		const imgSrc =
-			step?.sprite || homeSprite || resolve(entry?.img) || null;
-		return `<div class="evo-node">${imgSrc ? `<img class="evo-img" src="${imgSrc}" alt="${step.name}" loading="lazy" />` : ""}<div class="evo-name">${step.name}</div></div>`;
+		const spriteCandidates = pokemonSpriteCandidates({
+			nationalDexId: targetId,
+			formKey: targetFormKey,
+			gameKey,
+		});
+		const imageSource = step?.sprite || spriteCandidates[0] || entry?.img;
+		const isCurrent =
+			targetId === Number(currentNatiId) &&
+			(!targetFormKey || targetFormKey === currentFormKey);
+		const name = step?.name || `#${targetId || "?"}`;
+		return `<button type="button" class="evolution-node${isCurrent ? " is-current" : ""}" ${isCurrent ? 'aria-current="page"' : ""} ${targetId ? `data-evolution-id="${targetId}" data-evolution-form="${escapeHtml(targetFormKey || "")}"` : "disabled"}>${imageSource ? `<img class="evolution-pokemon-icon" src="${escapeHtml(imageSource)}" alt="" loading="lazy" />` : ""}<span class="evolution-name">${escapeHtml(name)}</span></button>`;
 	};
-	const segHtml = (step) =>
-		`<div class="evo-seg">${linkHtml(step)}${stepNodeHtml(step)}</div>`;
-	const normalizeEvoToPaths = (evoObj) => {
-		if (!evoObj) return [];
-		if (Array.isArray(evoObj.paths) && evoObj.paths.length)
-			return evoObj.paths
-				.map((p) => (Array.isArray(p) ? p.filter(Boolean) : []))
-				.filter((p) => p.length);
-		if (Array.isArray(evoObj.chain) && evoObj.chain.length) {
-			if (!Array.isArray(evoObj.chain[0]))
-				return [evoObj.chain.filter(Boolean)];
-			return evoObj.chain
-				.map((p) => (Array.isArray(p) ? p.filter(Boolean) : []))
-				.filter((p) => p.length);
-		}
-		if (Array.isArray(evoObj.shared) && Array.isArray(evoObj.branches)) {
-			const shared = evoObj.shared.filter(Boolean);
-			return evoObj.branches
-				.map((b) =>
-					Array.isArray(b)
-						? b.filter(Boolean)
-						: b && typeof b === "object"
-							? [b]
-							: [],
-				)
-				.filter((b) => b.length)
-				.map((b) => shared.concat(b));
-		}
-		if (Array.isArray(evoObj.branches) && evoObj.branches.length)
-			return evoObj.branches
-				.map((b) =>
-					Array.isArray(b)
-						? b.filter(Boolean)
-						: b && typeof b === "object"
-							? [b]
-							: [],
-				)
-				.filter((b) => b.length);
-		if (Array.isArray(evoObj) && Array.isArray(evoObj[0]))
-			return evoObj.map((p) => p.filter(Boolean)).filter((p) => p.length);
-		return [];
-	};
-
-	const evoPaths = normalizeEvoToPaths(evo);
-	if (!evoPaths.length) return "";
-	if (evoPaths.length === 1) {
-		const rowHtml = evoPaths[0]
-			.map((step, i) => (i === 0 ? stepNodeHtml(step) : segHtml(step)))
+	const nodeHtml = (node) => {
+		const branches = node.children
+			.map((child, branchIndex) => {
+				const direction = connectorDirection(
+					branchIndex,
+					node.children.length,
+				);
+				return `<div class="evolution-branch">${connectorHtml(child.step, direction)}${nodeHtml(child)}</div>`;
+			})
 			.join("");
-		return `<div class="mon-info-block mon-info-evo-block"><h3>Evolution</h3><div class="evo-linear">${rowHtml}</div></div>`;
-	}
-	const commonPrefix = (() => {
-		let idx = 0;
-		while (true) {
-			const first = evoPaths[0][idx];
-			if (!first) break;
-			const ok = evoPaths.every((p) => {
-				const s = p[idx];
-				if (!s) return false;
-				if (first.id != null && s.id != null)
-					return String(first.id) === String(s.id);
-				return String(first.name || "") === String(s.name || "");
-			});
-			if (!ok) break;
-			idx++;
-		}
-		return evoPaths[0].slice(0, idx);
-	})();
-	const sharedLen = commonPrefix.length;
-	const trunkRowHtml = commonPrefix
-		.map((step, i) => (i === 0 ? stepNodeHtml(step) : segHtml(step)))
-		.join("");
-	const branchesColHtml = evoPaths
-		.map((path) => {
-			const suffix = path.slice(sharedLen);
-			if (!suffix.length) return "";
-			let row = `<div class="evo-branch-row">`;
-			for (const step of suffix) row += segHtml(step);
-			row += `</div>`;
-			return row;
-		})
-		.filter(Boolean)
-		.join("");
-	return `<div class="mon-info-block mon-info-evo-block"><h3>Evolution</h3><div class="evo-split"><div class="evo-trunk-row">${trunkRowHtml}</div><div class="evo-branches-col">${branchesColHtml}</div></div></div>`;
+		return `<div class="evolution-tree-node-wrap">${nodeButtonHtml(node)}${branches ? `<div class="evolution-branches${node.children.length > 1 ? " is-split" : ""}">${branches}</div>` : ""}</div>`;
+	};
+	const wheelHtml = wheelLayout
+		? `<div class="evolution-wheel" style="width:${wheelLayout.size}px;height:${wheelLayout.size}px"><svg class="evolution-wheel-arrows" viewBox="0 0 ${wheelLayout.size} ${wheelLayout.size}" aria-hidden="true">${wheelLayout.branches.map((branch) => `<g><line x1="${branch.startX}" y1="${branch.startY}" x2="${branch.endX}" y2="${branch.endY}"></line><polyline points="${branch.arrowPoints}"></polyline></g>`).join("")}</svg><div class="evolution-wheel-node is-center" style="left:${wheelLayout.center}px;top:${wheelLayout.center}px">${nodeButtonHtml(wheelLayout.root)}</div>${wheelLayout.branches.map((branch) => `${requirementHtml(branch.node.step, "radial", `left:${branch.labelX}px;top:${branch.labelY}px`)}<div class="evolution-wheel-node" style="left:${branch.nodeX}px;top:${branch.nodeY}px">${nodeButtonHtml(branch.node)}</div>`).join("")}</div>`
+		: "";
+	return `<div class="mon-info-block mon-info-evo-block"><h3>Evolution</h3><div class="evolution-tree-scroll${wheelLayout ? " has-wheel" : ""}">${wheelHtml || `<div class="evolution-forest">${forest.map(nodeHtml).join("")}</div>`}</div></div>`;
 }
 
 export function renderLocationsHtml({
@@ -560,31 +525,25 @@ export function renderLocationsHtml({
 	return `<div class="mon-info-block mon-info-locations"><h3>Locations</h3>${metaHtml ? `<div class="mon-info-locations-meta">${metaHtml}</div>` : ""}<ul class="mon-info-locations-list">${items}</ul></div>`;
 }
 
-const TM_GEN_BY_GAME = { legendsza: "gen9_2" };
-function getTmIconSrc(game, move) {
-	const genFolder = TM_GEN_BY_GAME[game] || "gen9_2";
-	let typeKey = "normal";
-	if (move && typeof move === "object" && move.type)
-		typeKey = String(move.type).toLowerCase();
-	return assetPath(`tms/${genFolder}/${typeKey}.png`);
+function renderMoveLine(m) {
+	const text = typeof m === "string" ? m : m.name || m.move || "Unknown move";
+	const type = typeof m === "object" ? m.type : null;
+	const typeIconSrc = moveTypeIconSource(type);
+	const metadata = moveMetadataParts(m).join(" • ");
+	return `<li class="mon-info-move"><a class="react-move-label mon-info-reference-link" href="${referenceEntryHref("moves", text)}">${typeIconSrc ? `<img class="react-move-type-icon" src="${typeIconSrc}" alt="${type} type" title="${type} type" loading="lazy" height="20" />` : ""}<span class="mon-info-move-name">${text}</span></a>${metadata ? `<small>${metadata}</small>` : ""}</li>`;
 }
-function renderMoveLine(gameKey, m) {
-	let text;
-	if (typeof m === "string") text = m;
-	else {
-		const prefix = m.level != null ? `Lv. ${m.level}: ` : "";
-		text = `${prefix}${m.name}`;
-	}
-	const tmIconSrc = getTmIconSrc(gameKey, m);
-	return `<li class="mon-info-move"><span class="mon-info-move-tm-icon">${tmIconSrc ? `<img src="${tmIconSrc}" alt="" loading="lazy" />` : ""}</span><span class="mon-info-move-name">${text}</span></li>`;
-}
-export function renderMovesHtml({ moves = {}, gameKey } = {}) {
+export function renderMovesHtml({ moves = {} } = {}) {
 	const movesSection = (label, arr) =>
 		!arr || !arr.length
 			? ""
-			: `<div class="mon-info-subblock"><h4>${label}</h4><ul>${arr.map((m) => renderMoveLine(gameKey, m)).join("")}</ul></div>`;
-	return moves && (moves.levelUp || moves.tm || moves.egg)
-		? `<div class="mon-info-block"><h3>Move Pool</h3><div class="mon-info-moves-grid">${movesSection("Level-up", moves.levelUp)}${movesSection("TM / TR", moves.tm)}${movesSection("Egg Moves", moves.egg)}</div></div>`
+			: `<div class="mon-info-subblock"><h4>${label}</h4><ul>${arr.map((move) => renderMoveLine(move)).join("")}</ul></div>`;
+	const sections = Object.entries(moves)
+		.map(([learnMethod, entries]) =>
+			movesSection(moveGroupDisplayLabel(learnMethod, entries), entries),
+		)
+		.join("");
+	return sections
+		? `<div class="mon-info-block"><h3>Move Pool</h3><div class="mon-info-moves-grid">${sections}</div></div>`
 		: "";
 }
 
@@ -656,6 +615,13 @@ export function renderNotesHtml(resolvedInfo = {}) {
 		: "";
 }
 
+function renderGenderRatioValue(value) {
+	const ratio = parseMonInfoGenderRatio(value);
+	if (!ratio) return "";
+	if (ratio.text) return `<div class="value">${ratio.text}</div>`;
+	return `<div class="value" aria-label="${ratio.male}% male, ${ratio.female}% female"><span style="color:oklch(72% 0.16 250)"><span aria-hidden="true">♂</span> ${ratio.male}%</span> <span aria-hidden="true">/</span> <span style="color:oklch(76% 0.16 350)"><span aria-hidden="true">♀</span> ${ratio.female}%</span></div>`;
+}
+
 export function renderProfileHtml({
 	resolvedInfo = {},
 	fallbackInfo = {},
@@ -678,40 +644,68 @@ export function renderProfileHtml({
 		resolvedInfo?.baseFriendship ??
 		fallbackInfo?.baseHappiness ??
 		null;
+	const battle = resolvedInfo?.battle || {};
+	const captureRate =
+		battle.captureRate ??
+		resolvedInfo?.captureRate ??
+		fallbackInfo?.captureRate ??
+		null;
+	const baseExperience =
+		battle.baseExperience ??
+		resolvedInfo?.baseExperience ??
+		fallbackInfo?.baseExperience ??
+		null;
 	const renderProfileItem = (label, valueOrArr) => {
 		if (valueOrArr == null) return "";
 		if (Array.isArray(valueOrArr)) {
 			const cleaned = valueOrArr.filter((v) => v != null && v !== "");
 			if (!cleaned.length) return "";
 			const itemsHtml = cleaned
-				.map((v) => `<span class="value-line">${v}</span>`)
+				.map((v) =>
+					label === "Abilities"
+						? `<a class="value-line mon-info-reference-link" href="${referenceEntryHref("abilities", v)}">${v}</a>`
+						: `<span class="value-line">${v}</span>`,
+				)
 				.join("");
 			return `<div class="mon-info-profile-item"><div class="label">${label}</div><div class="value value--stacked">${itemsHtml}</div></div>`;
 		}
 		const v = String(valueOrArr);
 		if (!v) return "";
+		if (label === "Gender Ratio") {
+			return `<div class="mon-info-profile-item"><div class="label">${label}</div>${renderGenderRatioValue(valueOrArr)}</div>`;
+		}
 		const itemHtml =
 			label === "Base Friendship"
 				? `<div class="value">${v} / 255</div>`
 				: `<div class="value">${v}</div>`;
 		return `<div class="mon-info-profile-item"><div class="label">${label}</div>${itemHtml}</div>`;
 	};
-	const profileItems = [
+	const primaryProfileItems = [
 		renderProfileItem("Abilities", abilities),
 		renderProfileItem("Egg Groups", eggGroups),
-		renderProfileItem("Exp Growth", expGroup),
 		renderProfileItem(
 			"Base Egg Steps",
 			baseEggSteps != null ? baseEggSteps : null,
 		),
-		renderProfileItem("Height", height),
-		renderProfileItem("Weight", weight),
-		renderProfileItem("Gender Ratio", genderRatioText),
+		renderProfileItem("Catch Rate", captureRate),
 		renderProfileItem("Base Friendship", baseFriendshipProfile),
+		renderProfileItem("Exp Growth", expGroup),
 	]
 		.filter(Boolean)
 		.join("");
-	return resolvedInfo && profileItems
-		? `<div class="mon-info-block mon-info-profile"><h3>Profile</h3><div class="mon-info-profile-grid">${profileItems}</div></div>`
+	const secondaryProfileItems = [
+		renderProfileItem("Height", height),
+		renderProfileItem("Weight", weight),
+		renderProfileItem("Gender Ratio", genderRatioText),
+		renderProfileItem("Base Experience", baseExperience),
+		renderProfileItem("Habitat", resolvedInfo?.habitat ?? null),
+		renderProfileItem("Shape", resolvedInfo?.shape ?? null),
+		renderProfileItem("Color", resolvedInfo?.color ?? null),
+		renderProfileItem("Species", resolvedInfo?.genus ?? null),
+	]
+		.filter(Boolean)
+		.join("");
+	return resolvedInfo && (primaryProfileItems || secondaryProfileItems)
+		? `<div class="mon-info-block mon-info-profile"><h3>Profile</h3><div class="mon-info-profile-grid"><div class="mon-info-profile-column is-primary">${primaryProfileItems}</div><div class="mon-info-profile-column is-secondary">${secondaryProfileItems}</div></div></div>`
 		: "";
 }

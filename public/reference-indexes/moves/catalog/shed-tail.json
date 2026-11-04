@@ -1,0 +1,102 @@
+{
+	"schemaVersion": 1,
+	"id": 880,
+	"slug": "shed-tail",
+	"name": "Shed Tail",
+	"names": {
+		"de": "Schwanzabwurf",
+		"en": "Shed Tail",
+		"es": "Autotomía",
+		"es-419": "Autotomía",
+		"fr": "Queulonage",
+		"it": "Tagliacoda",
+		"ja": "しっぽきり",
+		"ja-hrkt": "しっぽきり",
+		"ko": "꼬리자르기",
+		"zh-hans": "断尾",
+		"zh-hant": "斷尾"
+	},
+	"generation": 9,
+	"type": "Normal",
+	"damageClass": "Status",
+	"power": 0,
+	"accuracy": null,
+	"pp": 10,
+	"priority": 0,
+	"effectChance": null,
+	"target": "User",
+	"effectEntries": [],
+	"effectChanges": [],
+	"descriptions": [
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "en",
+			"text": "The user creates a substitute for itself using its own HP before switching places with a party Pokémon in waiting."
+		},
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "fr",
+			"text": "Le lanceur crée un clone en sacrifiant des PV, puis il revient et échange sa place avec un Pokémon de l'équipe prêt à combattre."
+		}
+	],
+	"pastValues": [],
+	"statChanges": [],
+	"meta": null,
+	"machines": [],
+	"learners": [
+		{
+			"nationalDexId": 967,
+			"speciesName": "Cyclizar",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 31,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 968,
+			"speciesName": "Orthworm",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 52,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		}
+	],
+	"potentialPokemon": [
+		"sceptile",
+		"heliolisk",
+		"cyclizar",
+		"orthworm",
+		"sceptile-mega"
+	],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/move/880/",
+		"fetchedAt": "2026-11-03T06:30:18.955Z",
+		"hash": "de2e67832173ca36585524f84cebe3c343ba7d9401d01510923d74ce4e82449d"
+	}
+}

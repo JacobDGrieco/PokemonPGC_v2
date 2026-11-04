@@ -1,0 +1,117 @@
+{
+	"schemaVersion": 1,
+	"id": 903,
+	"slug": "syrup-bomb",
+	"name": "Syrup Bomb",
+	"names": {
+		"de": "Sirupbombe",
+		"en": "Syrup Bomb",
+		"es": "Bomba Caramelo",
+		"es-419": "Bomba Caramelo",
+		"fr": "Bombe au Sirop",
+		"it": "Bomba Sciroppata",
+		"ja": "みずあめボム",
+		"ja-hrkt": "みずあめボム",
+		"ko": "시럽봄",
+		"zh-hans": "糖浆炸弹",
+		"zh-hant": "糖漿炸彈"
+	},
+	"generation": 9,
+	"type": "Grass",
+	"damageClass": "Special",
+	"power": 60,
+	"accuracy": 85,
+	"pp": 10,
+	"priority": 0,
+	"effectChance": null,
+	"target": "Selected Pokemon",
+	"effectEntries": [],
+	"effectChanges": [],
+	"descriptions": [
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "en",
+			"text": "The user sets off an explosion of sticky candy syrup, which coats the target and causes the target's Speed stat to drop each turn for three turns."
+		},
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "fr",
+			"text": "Le lanceur jette une bombe qui recouvre la cible de sirop gluant et fait progressivement baisser la Vitesse de la cible pendant trois tours."
+		}
+	],
+	"pastValues": [],
+	"statChanges": [
+		{
+			"stat": "Speed",
+			"change": -1
+		}
+	],
+	"meta": {
+		"ailment": "None",
+		"category": "Unique",
+		"minHits": null,
+		"maxHits": null,
+		"minTurns": 3,
+		"maxTurns": 3,
+		"drain": 0,
+		"healing": 0,
+		"critRate": 0,
+		"ailmentChance": 0,
+		"flinchChance": 0,
+		"statChance": 100
+	},
+	"machines": [],
+	"learners": [
+		{
+			"nationalDexId": 1011,
+			"speciesName": "Dipplin",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 28,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 1019,
+			"speciesName": "Hydrapple",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 28,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		}
+	],
+	"potentialPokemon": [
+		"dipplin",
+		"hydrapple"
+	],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/move/903/",
+		"fetchedAt": "2026-11-03T06:30:19.079Z",
+		"hash": "c85aba0ef1000de0784d0c6dcd6a9f73edcb80effe3728ad571817676ec59167"
+	}
+}

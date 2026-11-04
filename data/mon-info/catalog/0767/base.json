@@ -1,0 +1,3673 @@
+{
+	"schemaVersion": 2,
+	"nationalDexId": 767,
+	"speciesName": "Wimpod",
+	"formKey": "base",
+	"formName": "Base",
+	"formLabelSource": "form-catalog",
+	"profiles": [
+		{
+			"profileKey": "sun-moon",
+			"label": "Sun / Moon",
+			"appGameKeys": [
+				"sun-alola",
+				"sun-melemele",
+				"sun-akala",
+				"sun-ulaula",
+				"sun-poni",
+				"moon-alola",
+				"moon-melemele",
+				"moon-akala",
+				"moon-ulaula",
+				"moon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Wimpod",
+				"localizedNames": {
+					"ja-hrkt": "コソクムシ",
+					"ja-roma": "Kosokumushi",
+					"ko": "꼬시레",
+					"zh-hant": "膽小蟲",
+					"fr": "Sovkipou",
+					"de": "Reißlaus",
+					"es": "Wimpod",
+					"it": "Wimpod",
+					"ja": "コソクムシ",
+					"zh-hans": "胆小虫",
+					"es-419": "Wimpod"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Water"
+				],
+				"baseStats": {
+					"hp": 25,
+					"atk": 35,
+					"def": 40,
+					"spa": 20,
+					"spd": 30,
+					"spe": 80
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 7,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Wimp Out"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug",
+					"Water3"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.5 m",
+				"weight": "12.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 90,
+				"baseExperience": 46,
+				"habitat": "",
+				"shape": "Tentacles",
+				"color": "Gray",
+				"genus": "Turn Tail Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "そうこうポケモン",
+					"ko": "주행포켓몬",
+					"zh-hant": "疾行寶可夢",
+					"fr": "Pokémon Cavaleur",
+					"de": "Laufschritt-Pokémon",
+					"es": "Pokémon Huidizo",
+					"it": "Pokémon Lestopode",
+					"ja": "そうこうポケモン",
+					"zh-hans": "疾行宝可梦",
+					"es-419": "Pokémon Huidizo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 767
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 182
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 109
+					},
+					{
+						"pokedex": "original-poni",
+						"number": 70
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 221
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 122
+					},
+					{
+						"pokedex": "updated-poni",
+						"number": 83
+					},
+					{
+						"pokedex": "galar",
+						"number": 232
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 124
+					},
+					{
+						"pokedex": "hyperspace",
+						"number": 62
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 767,
+								"natiId": 767,
+								"name": "Wimpod"
+							},
+							{
+								"id": 768,
+								"natiId": 768,
+								"name": "Golisopod",
+								"method": "Level",
+								"value": 30
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Alola Route 8 Main",
+						"notes": "Static, Lv. 17-20",
+						"games": "Sun",
+						"rate": "100%"
+					},
+					{
+						"area": "Alola Route 8 Main",
+						"notes": "Static, Lv. 17-20",
+						"games": "Moon",
+						"rate": "100%"
+					},
+					{
+						"area": "Poni Breaker Coast Area",
+						"notes": "Static, Lv. 40-43",
+						"games": "Sun",
+						"rate": "100%"
+					},
+					{
+						"area": "Poni Breaker Coast Area",
+						"notes": "Static, Lv. 40-43",
+						"games": "Moon",
+						"rate": "100%"
+					},
+					{
+						"area": "Poni Wilds Area",
+						"notes": "Static, Lv. 40-43",
+						"games": "Sun",
+						"rate": "100%"
+					},
+					{
+						"area": "Poni Wilds Area",
+						"notes": "Static, Lv. 40-43",
+						"games": "Moon",
+						"rate": "100%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Struggle Bug",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Sand Attack",
+							"level": 1,
+							"order": 2
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Leech Life",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Scald",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Surf",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Taunt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Waterfall",
+							"level": null,
+							"order": null
+						}
+					],
+					"Egg": [
+						{
+							"name": "Aqua Jet",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Harden",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Metal Claw",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Spikes",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wide Guard",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Sun Moon."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/767",
+						"fetchedAt": "2026-11-03T05:53:55.086Z",
+						"hash": "3355bbcc94009410a8965cefc06128d2251cc27afe965f700c4bb3a72a65ea2f"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/396/",
+						"fetchedAt": "2026-11-03T05:53:55.114Z",
+						"hash": "b17f37dd68ff314fcb383d66b72cab86c29158ac265fbda8c74971d5f2ff5a7d"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/767/",
+						"fetchedAt": "2026-11-03T05:53:55.142Z",
+						"hash": "040ed0a9f9fa3dd418fcf3cd4bed28274b0141e95377745971786f5bbb87d14f"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/767/encounters",
+						"fetchedAt": "2026-11-03T05:53:55.170Z",
+						"hash": "b1faa2e2504ecd62751ad419fe6ddce2aaa49284214d9e90f02546e48c9ed4ff"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/767/",
+						"fetchedAt": "2026-11-03T05:53:55.223Z",
+						"hash": "08647029db623a781418025600b8627b84468386561e75b082a0ec28d3093597"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sun-alola": "This Pokémon is a coward. As it desperately dashes off, the flailing of its many legs leaves a sparkling clean path in its wake.",
+				"sun-melemele": "This Pokémon is a coward. As it desperately dashes off, the flailing of its many legs leaves a sparkling clean path in its wake.",
+				"sun-akala": "This Pokémon is a coward. As it desperately dashes off, the flailing of its many legs leaves a sparkling clean path in its wake.",
+				"sun-ulaula": "This Pokémon is a coward. As it desperately dashes off, the flailing of its many legs leaves a sparkling clean path in its wake.",
+				"sun-poni": "This Pokémon is a coward. As it desperately dashes off, the flailing of its many legs leaves a sparkling clean path in its wake.",
+				"moon-alola": "Its habitat varies from beaches to seabeds. A natural scavenger, it will gleefully chow down on anything edible, no matter how rotten.",
+				"moon-melemele": "Its habitat varies from beaches to seabeds. A natural scavenger, it will gleefully chow down on anything edible, no matter how rotten.",
+				"moon-akala": "Its habitat varies from beaches to seabeds. A natural scavenger, it will gleefully chow down on anything edible, no matter how rotten.",
+				"moon-ulaula": "Its habitat varies from beaches to seabeds. A natural scavenger, it will gleefully chow down on anything edible, no matter how rotten.",
+				"moon-poni": "Its habitat varies from beaches to seabeds. A natural scavenger, it will gleefully chow down on anything edible, no matter how rotten."
+			},
+			"localizedFlavorByGame": {
+				"sun-alola": {
+					"ja-hrkt": "おくびょうで たくさんの あしを ばたつかせ ひっしに にげまわる。 にげたあとは ピカピカ きれい。",
+					"ko": "겁이 많아서 많은 다리를 버둥거리며 필사적으로 도망친다. 도망간 자리는 반짝반짝 깨끗하다.",
+					"zh-hant": "性格膽小，會慌慌張張地 揮動著許多腳拼命逃跑。 逃跑後會留下閃閃發亮的美麗痕跡。",
+					"fr": "De nature poltronne, il prend ses nombreuses pattes à son cou au moindre danger et balaie le sol sur son passage.",
+					"de": "Es ist so feige, dass es wild mit seinen vielen Füßen herumschlägt und verzweifelt davonläuft. Nach seiner Flucht glänzt der Boden herrlich.",
+					"es": "Cuando se asusta, huye despavorido moviendo rápidamente sus múltiples patas. Deja el suelo limpio y pulido allí por donde pasa.",
+					"it": "È un gran fifone e fugge agitando rapidamente le sue numerose zampette. Dopo il suo passaggio, tutto è lindo e pulito.",
+					"en": "This Pokémon is a coward. As it desperately dashes off, the flailing of its many legs leaves a sparkling clean path in its wake.",
+					"ja": "臆病で たくさんの 足を ばたつかせ 必死に 逃げまわる。 逃げたあとは ピカピカ 綺麗。",
+					"zh-hans": "因为胆小，慌慌张张地 挥动着许多脚，拼命逃跑。 逃跑的痕迹会闪闪发光很漂亮。",
+					"es-419": "Cuando se asusta, huye despavorido moviendo rápidamente sus múltiples patas. Deja el suelo limpio y pulido allí por donde pasa."
+				},
+				"sun-melemele": {
+					"ja-hrkt": "おくびょうで たくさんの あしを ばたつかせ ひっしに にげまわる。 にげたあとは ピカピカ きれい。",
+					"ko": "겁이 많아서 많은 다리를 버둥거리며 필사적으로 도망친다. 도망간 자리는 반짝반짝 깨끗하다.",
+					"zh-hant": "性格膽小，會慌慌張張地 揮動著許多腳拼命逃跑。 逃跑後會留下閃閃發亮的美麗痕跡。",
+					"fr": "De nature poltronne, il prend ses nombreuses pattes à son cou au moindre danger et balaie le sol sur son passage.",
+					"de": "Es ist so feige, dass es wild mit seinen vielen Füßen herumschlägt und verzweifelt davonläuft. Nach seiner Flucht glänzt der Boden herrlich.",
+					"es": "Cuando se asusta, huye despavorido moviendo rápidamente sus múltiples patas. Deja el suelo limpio y pulido allí por donde pasa.",
+					"it": "È un gran fifone e fugge agitando rapidamente le sue numerose zampette. Dopo il suo passaggio, tutto è lindo e pulito.",
+					"en": "This Pokémon is a coward. As it desperately dashes off, the flailing of its many legs leaves a sparkling clean path in its wake.",
+					"ja": "臆病で たくさんの 足を ばたつかせ 必死に 逃げまわる。 逃げたあとは ピカピカ 綺麗。",
+					"zh-hans": "因为胆小，慌慌张张地 挥动着许多脚，拼命逃跑。 逃跑的痕迹会闪闪发光很漂亮。",
+					"es-419": "Cuando se asusta, huye despavorido moviendo rápidamente sus múltiples patas. Deja el suelo limpio y pulido allí por donde pasa."
+				},
+				"sun-akala": {
+					"ja-hrkt": "おくびょうで たくさんの あしを ばたつかせ ひっしに にげまわる。 にげたあとは ピカピカ きれい。",
+					"ko": "겁이 많아서 많은 다리를 버둥거리며 필사적으로 도망친다. 도망간 자리는 반짝반짝 깨끗하다.",
+					"zh-hant": "性格膽小，會慌慌張張地 揮動著許多腳拼命逃跑。 逃跑後會留下閃閃發亮的美麗痕跡。",
+					"fr": "De nature poltronne, il prend ses nombreuses pattes à son cou au moindre danger et balaie le sol sur son passage.",
+					"de": "Es ist so feige, dass es wild mit seinen vielen Füßen herumschlägt und verzweifelt davonläuft. Nach seiner Flucht glänzt der Boden herrlich.",
+					"es": "Cuando se asusta, huye despavorido moviendo rápidamente sus múltiples patas. Deja el suelo limpio y pulido allí por donde pasa.",
+					"it": "È un gran fifone e fugge agitando rapidamente le sue numerose zampette. Dopo il suo passaggio, tutto è lindo e pulito.",
+					"en": "This Pokémon is a coward. As it desperately dashes off, the flailing of its many legs leaves a sparkling clean path in its wake.",
+					"ja": "臆病で たくさんの 足を ばたつかせ 必死に 逃げまわる。 逃げたあとは ピカピカ 綺麗。",
+					"zh-hans": "因为胆小，慌慌张张地 挥动着许多脚，拼命逃跑。 逃跑的痕迹会闪闪发光很漂亮。",
+					"es-419": "Cuando se asusta, huye despavorido moviendo rápidamente sus múltiples patas. Deja el suelo limpio y pulido allí por donde pasa."
+				},
+				"sun-ulaula": {
+					"ja-hrkt": "おくびょうで たくさんの あしを ばたつかせ ひっしに にげまわる。 にげたあとは ピカピカ きれい。",
+					"ko": "겁이 많아서 많은 다리를 버둥거리며 필사적으로 도망친다. 도망간 자리는 반짝반짝 깨끗하다.",
+					"zh-hant": "性格膽小，會慌慌張張地 揮動著許多腳拼命逃跑。 逃跑後會留下閃閃發亮的美麗痕跡。",
+					"fr": "De nature poltronne, il prend ses nombreuses pattes à son cou au moindre danger et balaie le sol sur son passage.",
+					"de": "Es ist so feige, dass es wild mit seinen vielen Füßen herumschlägt und verzweifelt davonläuft. Nach seiner Flucht glänzt der Boden herrlich.",
+					"es": "Cuando se asusta, huye despavorido moviendo rápidamente sus múltiples patas. Deja el suelo limpio y pulido allí por donde pasa.",
+					"it": "È un gran fifone e fugge agitando rapidamente le sue numerose zampette. Dopo il suo passaggio, tutto è lindo e pulito.",
+					"en": "This Pokémon is a coward. As it desperately dashes off, the flailing of its many legs leaves a sparkling clean path in its wake.",
+					"ja": "臆病で たくさんの 足を ばたつかせ 必死に 逃げまわる。 逃げたあとは ピカピカ 綺麗。",
+					"zh-hans": "因为胆小，慌慌张张地 挥动着许多脚，拼命逃跑。 逃跑的痕迹会闪闪发光很漂亮。",
+					"es-419": "Cuando se asusta, huye despavorido moviendo rápidamente sus múltiples patas. Deja el suelo limpio y pulido allí por donde pasa."
+				},
+				"sun-poni": {
+					"ja-hrkt": "おくびょうで たくさんの あしを ばたつかせ ひっしに にげまわる。 にげたあとは ピカピカ きれい。",
+					"ko": "겁이 많아서 많은 다리를 버둥거리며 필사적으로 도망친다. 도망간 자리는 반짝반짝 깨끗하다.",
+					"zh-hant": "性格膽小，會慌慌張張地 揮動著許多腳拼命逃跑。 逃跑後會留下閃閃發亮的美麗痕跡。",
+					"fr": "De nature poltronne, il prend ses nombreuses pattes à son cou au moindre danger et balaie le sol sur son passage.",
+					"de": "Es ist so feige, dass es wild mit seinen vielen Füßen herumschlägt und verzweifelt davonläuft. Nach seiner Flucht glänzt der Boden herrlich.",
+					"es": "Cuando se asusta, huye despavorido moviendo rápidamente sus múltiples patas. Deja el suelo limpio y pulido allí por donde pasa.",
+					"it": "È un gran fifone e fugge agitando rapidamente le sue numerose zampette. Dopo il suo passaggio, tutto è lindo e pulito.",
+					"en": "This Pokémon is a coward. As it desperately dashes off, the flailing of its many legs leaves a sparkling clean path in its wake.",
+					"ja": "臆病で たくさんの 足を ばたつかせ 必死に 逃げまわる。 逃げたあとは ピカピカ 綺麗。",
+					"zh-hans": "因为胆小，慌慌张张地 挥动着许多脚，拼命逃跑。 逃跑的痕迹会闪闪发光很漂亮。",
+					"es-419": "Cuando se asusta, huye despavorido moviendo rápidamente sus múltiples patas. Deja el suelo limpio y pulido allí por donde pasa."
+				},
+				"moon-alola": {
+					"ja-hrkt": "ビーチから かいていまで いろんな ばしょに すむ。 くさったエサ でも よろこんで たべる しぜんのそうじや。",
+					"ko": "해변부터 해저까지 다양한 장소에 산다. 썩은 먹이라도 기꺼이 먹는 자연의 청소부.",
+					"zh-hant": "從沙灘到海底，會棲息在各式各樣的地方。 即使是腐爛的食物也能吃得很開心， 是大自然的清潔員。",
+					"fr": "Il vit aussi bien en bord de mer que dans les fonds marins. Véritable aspirateur sur pattes, il avale n’importe quelle nourriture, même pourrie.",
+					"de": "Es mag verschiedene Habitate, vom Strand bis hin zum Meeresgrund. Unterwegs frisst es gern Faules und ist eine natürliche Reinigungskraft.",
+					"es": "Su hábitat es muy variado, desde playas hasta el fondo del mar. Hace de barrendero natural al ir engullendo presas podridas por el camino.",
+					"it": "Vive dappertutto, dalle spiagge ai fondali marini. Mangia volentieri anche sostanze putrescenti, perciò viene chiamato lo spazzino della natura.",
+					"en": "Its habitat varies from beaches to seabeds. A natural scavenger, it will gleefully chow down on anything edible, no matter how rotten.",
+					"ja": "ビーチから 海底まで 色んな 場所に 棲む。 腐った餌 でも 喜んで 食べる 自然の掃除屋。",
+					"zh-hans": "从沙滩到海底，栖息在各式各样的地方。 即使是腐烂的食物也能吃得很开心， 是大自然的清洁员。",
+					"es-419": "Su hábitat es muy variado, desde playas hasta el fondo del mar. Hace de barrendero natural al ir engullendo presas podridas por el camino."
+				},
+				"moon-melemele": {
+					"ja-hrkt": "ビーチから かいていまで いろんな ばしょに すむ。 くさったエサ でも よろこんで たべる しぜんのそうじや。",
+					"ko": "해변부터 해저까지 다양한 장소에 산다. 썩은 먹이라도 기꺼이 먹는 자연의 청소부.",
+					"zh-hant": "從沙灘到海底，會棲息在各式各樣的地方。 即使是腐爛的食物也能吃得很開心， 是大自然的清潔員。",
+					"fr": "Il vit aussi bien en bord de mer que dans les fonds marins. Véritable aspirateur sur pattes, il avale n’importe quelle nourriture, même pourrie.",
+					"de": "Es mag verschiedene Habitate, vom Strand bis hin zum Meeresgrund. Unterwegs frisst es gern Faules und ist eine natürliche Reinigungskraft.",
+					"es": "Su hábitat es muy variado, desde playas hasta el fondo del mar. Hace de barrendero natural al ir engullendo presas podridas por el camino.",
+					"it": "Vive dappertutto, dalle spiagge ai fondali marini. Mangia volentieri anche sostanze putrescenti, perciò viene chiamato lo spazzino della natura.",
+					"en": "Its habitat varies from beaches to seabeds. A natural scavenger, it will gleefully chow down on anything edible, no matter how rotten.",
+					"ja": "ビーチから 海底まで 色んな 場所に 棲む。 腐った餌 でも 喜んで 食べる 自然の掃除屋。",
+					"zh-hans": "从沙滩到海底，栖息在各式各样的地方。 即使是腐烂的食物也能吃得很开心， 是大自然的清洁员。",
+					"es-419": "Su hábitat es muy variado, desde playas hasta el fondo del mar. Hace de barrendero natural al ir engullendo presas podridas por el camino."
+				},
+				"moon-akala": {
+					"ja-hrkt": "ビーチから かいていまで いろんな ばしょに すむ。 くさったエサ でも よろこんで たべる しぜんのそうじや。",
+					"ko": "해변부터 해저까지 다양한 장소에 산다. 썩은 먹이라도 기꺼이 먹는 자연의 청소부.",
+					"zh-hant": "從沙灘到海底，會棲息在各式各樣的地方。 即使是腐爛的食物也能吃得很開心， 是大自然的清潔員。",
+					"fr": "Il vit aussi bien en bord de mer que dans les fonds marins. Véritable aspirateur sur pattes, il avale n’importe quelle nourriture, même pourrie.",
+					"de": "Es mag verschiedene Habitate, vom Strand bis hin zum Meeresgrund. Unterwegs frisst es gern Faules und ist eine natürliche Reinigungskraft.",
+					"es": "Su hábitat es muy variado, desde playas hasta el fondo del mar. Hace de barrendero natural al ir engullendo presas podridas por el camino.",
+					"it": "Vive dappertutto, dalle spiagge ai fondali marini. Mangia volentieri anche sostanze putrescenti, perciò viene chiamato lo spazzino della natura.",
+					"en": "Its habitat varies from beaches to seabeds. A natural scavenger, it will gleefully chow down on anything edible, no matter how rotten.",
+					"ja": "ビーチから 海底まで 色んな 場所に 棲む。 腐った餌 でも 喜んで 食べる 自然の掃除屋。",
+					"zh-hans": "从沙滩到海底，栖息在各式各样的地方。 即使是腐烂的食物也能吃得很开心， 是大自然的清洁员。",
+					"es-419": "Su hábitat es muy variado, desde playas hasta el fondo del mar. Hace de barrendero natural al ir engullendo presas podridas por el camino."
+				},
+				"moon-ulaula": {
+					"ja-hrkt": "ビーチから かいていまで いろんな ばしょに すむ。 くさったエサ でも よろこんで たべる しぜんのそうじや。",
+					"ko": "해변부터 해저까지 다양한 장소에 산다. 썩은 먹이라도 기꺼이 먹는 자연의 청소부.",
+					"zh-hant": "從沙灘到海底，會棲息在各式各樣的地方。 即使是腐爛的食物也能吃得很開心， 是大自然的清潔員。",
+					"fr": "Il vit aussi bien en bord de mer que dans les fonds marins. Véritable aspirateur sur pattes, il avale n’importe quelle nourriture, même pourrie.",
+					"de": "Es mag verschiedene Habitate, vom Strand bis hin zum Meeresgrund. Unterwegs frisst es gern Faules und ist eine natürliche Reinigungskraft.",
+					"es": "Su hábitat es muy variado, desde playas hasta el fondo del mar. Hace de barrendero natural al ir engullendo presas podridas por el camino.",
+					"it": "Vive dappertutto, dalle spiagge ai fondali marini. Mangia volentieri anche sostanze putrescenti, perciò viene chiamato lo spazzino della natura.",
+					"en": "Its habitat varies from beaches to seabeds. A natural scavenger, it will gleefully chow down on anything edible, no matter how rotten.",
+					"ja": "ビーチから 海底まで 色んな 場所に 棲む。 腐った餌 でも 喜んで 食べる 自然の掃除屋。",
+					"zh-hans": "从沙滩到海底，栖息在各式各样的地方。 即使是腐烂的食物也能吃得很开心， 是大自然的清洁员。",
+					"es-419": "Su hábitat es muy variado, desde playas hasta el fondo del mar. Hace de barrendero natural al ir engullendo presas podridas por el camino."
+				},
+				"moon-poni": {
+					"ja-hrkt": "ビーチから かいていまで いろんな ばしょに すむ。 くさったエサ でも よろこんで たべる しぜんのそうじや。",
+					"ko": "해변부터 해저까지 다양한 장소에 산다. 썩은 먹이라도 기꺼이 먹는 자연의 청소부.",
+					"zh-hant": "從沙灘到海底，會棲息在各式各樣的地方。 即使是腐爛的食物也能吃得很開心， 是大自然的清潔員。",
+					"fr": "Il vit aussi bien en bord de mer que dans les fonds marins. Véritable aspirateur sur pattes, il avale n’importe quelle nourriture, même pourrie.",
+					"de": "Es mag verschiedene Habitate, vom Strand bis hin zum Meeresgrund. Unterwegs frisst es gern Faules und ist eine natürliche Reinigungskraft.",
+					"es": "Su hábitat es muy variado, desde playas hasta el fondo del mar. Hace de barrendero natural al ir engullendo presas podridas por el camino.",
+					"it": "Vive dappertutto, dalle spiagge ai fondali marini. Mangia volentieri anche sostanze putrescenti, perciò viene chiamato lo spazzino della natura.",
+					"en": "Its habitat varies from beaches to seabeds. A natural scavenger, it will gleefully chow down on anything edible, no matter how rotten.",
+					"ja": "ビーチから 海底まで 色んな 場所に 棲む。 腐った餌 でも 喜んで 食べる 自然の掃除屋。",
+					"zh-hans": "从沙滩到海底，栖息在各式各样的地方。 即使是腐烂的食物也能吃得很开心， 是大自然的清洁员。",
+					"es-419": "Su hábitat es muy variado, desde playas hasta el fondo del mar. Hace de barrendero natural al ir engullendo presas podridas por el camino."
+				}
+			}
+		},
+		{
+			"profileKey": "ultra-sun-ultra-moon",
+			"label": "Ultra Sun / Ultra Moon",
+			"appGameKeys": [
+				"ultrasun-alola",
+				"ultrasun-melemele",
+				"ultrasun-akala",
+				"ultrasun-ulaula",
+				"ultrasun-poni",
+				"ultramoon-alola",
+				"ultramoon-melemele",
+				"ultramoon-akala",
+				"ultramoon-ulaula",
+				"ultramoon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Wimpod",
+				"localizedNames": {
+					"ja-hrkt": "コソクムシ",
+					"ja-roma": "Kosokumushi",
+					"ko": "꼬시레",
+					"zh-hant": "膽小蟲",
+					"fr": "Sovkipou",
+					"de": "Reißlaus",
+					"es": "Wimpod",
+					"it": "Wimpod",
+					"ja": "コソクムシ",
+					"zh-hans": "胆小虫",
+					"es-419": "Wimpod"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Water"
+				],
+				"baseStats": {
+					"hp": 25,
+					"atk": 35,
+					"def": 40,
+					"spa": 20,
+					"spd": 30,
+					"spe": 80
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 7,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Wimp Out"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug",
+					"Water3"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.5 m",
+				"weight": "12.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 90,
+				"baseExperience": 46,
+				"habitat": "",
+				"shape": "Tentacles",
+				"color": "Gray",
+				"genus": "Turn Tail Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "そうこうポケモン",
+					"ko": "주행포켓몬",
+					"zh-hant": "疾行寶可夢",
+					"fr": "Pokémon Cavaleur",
+					"de": "Laufschritt-Pokémon",
+					"es": "Pokémon Huidizo",
+					"it": "Pokémon Lestopode",
+					"ja": "そうこうポケモン",
+					"zh-hans": "疾行宝可梦",
+					"es-419": "Pokémon Huidizo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 767
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 182
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 109
+					},
+					{
+						"pokedex": "original-poni",
+						"number": 70
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 221
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 122
+					},
+					{
+						"pokedex": "updated-poni",
+						"number": 83
+					},
+					{
+						"pokedex": "galar",
+						"number": 232
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 124
+					},
+					{
+						"pokedex": "hyperspace",
+						"number": 62
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 767,
+								"natiId": 767,
+								"name": "Wimpod"
+							},
+							{
+								"id": 768,
+								"natiId": 768,
+								"name": "Golisopod",
+								"method": "Level",
+								"value": 30
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Alola Route 8 Main",
+						"notes": "Static, Lv. 17-20",
+						"games": "Ultra Sun",
+						"rate": "100%"
+					},
+					{
+						"area": "Alola Route 8 Main",
+						"notes": "Static, Lv. 17-20",
+						"games": "Ultra Moon",
+						"rate": "100%"
+					},
+					{
+						"area": "Dividing Peak Tunnel Area",
+						"notes": "Static, Lv. 17-20",
+						"games": "Ultra Sun",
+						"rate": "100%"
+					},
+					{
+						"area": "Dividing Peak Tunnel Area",
+						"notes": "Static, Lv. 17-20",
+						"games": "Ultra Moon",
+						"rate": "100%"
+					},
+					{
+						"area": "Poni Breaker Coast Area",
+						"notes": "Static, Lv. 41-44",
+						"games": "Ultra Sun",
+						"rate": "100%"
+					},
+					{
+						"area": "Poni Breaker Coast Area",
+						"notes": "Static, Lv. 41-44",
+						"games": "Ultra Moon",
+						"rate": "100%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Struggle Bug",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Sand Attack",
+							"level": 1,
+							"order": 2
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Leech Life",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Scald",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Surf",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Taunt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Waterfall",
+							"level": null,
+							"order": null
+						}
+					],
+					"Egg": [
+						{
+							"name": "Aqua Jet",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Harden",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Metal Claw",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Spikes",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wide Guard",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Sun Moon."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/767",
+						"fetchedAt": "2026-11-03T05:53:55.086Z",
+						"hash": "3355bbcc94009410a8965cefc06128d2251cc27afe965f700c4bb3a72a65ea2f"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/396/",
+						"fetchedAt": "2026-11-03T05:53:55.114Z",
+						"hash": "b17f37dd68ff314fcb383d66b72cab86c29158ac265fbda8c74971d5f2ff5a7d"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/767/",
+						"fetchedAt": "2026-11-03T05:53:55.142Z",
+						"hash": "040ed0a9f9fa3dd418fcf3cd4bed28274b0141e95377745971786f5bbb87d14f"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/767/encounters",
+						"fetchedAt": "2026-11-03T05:53:55.170Z",
+						"hash": "b1faa2e2504ecd62751ad419fe6ddce2aaa49284214d9e90f02546e48c9ed4ff"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/767/",
+						"fetchedAt": "2026-11-03T05:53:55.223Z",
+						"hash": "08647029db623a781418025600b8627b84468386561e75b082a0ec28d3093597"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"ultrasun-alola": "It will pick up anything it finds on the ground. Sometimes it finds coins, so Murkrow and Meowth will go after it.",
+				"ultrasun-melemele": "It will pick up anything it finds on the ground. Sometimes it finds coins, so Murkrow and Meowth will go after it.",
+				"ultrasun-akala": "It will pick up anything it finds on the ground. Sometimes it finds coins, so Murkrow and Meowth will go after it.",
+				"ultrasun-ulaula": "It will pick up anything it finds on the ground. Sometimes it finds coins, so Murkrow and Meowth will go after it.",
+				"ultrasun-poni": "It will pick up anything it finds on the ground. Sometimes it finds coins, so Murkrow and Meowth will go after it.",
+				"ultramoon-alola": "An astonishingly cowardly Pokémon, Wimpod will whir its legs at high speeds to run away if anything comes near it.",
+				"ultramoon-melemele": "An astonishingly cowardly Pokémon, Wimpod will whir its legs at high speeds to run away if anything comes near it.",
+				"ultramoon-akala": "An astonishingly cowardly Pokémon, Wimpod will whir its legs at high speeds to run away if anything comes near it.",
+				"ultramoon-ulaula": "An astonishingly cowardly Pokémon, Wimpod will whir its legs at high speeds to run away if anything comes near it.",
+				"ultramoon-poni": "An astonishingly cowardly Pokémon, Wimpod will whir its legs at high speeds to run away if anything comes near it."
+			},
+			"localizedFlavorByGame": {
+				"ultrasun-alola": {
+					"ja-hrkt": "おちてるものは なんでも ひろう。 コインを もっていることも あるので ヤミカラスやニャースに ねらわれる。",
+					"ko": "떨어져 있는 것은 뭐든지 줍는다. 동전을 갖고 있을 때도 있어 니로우나 나옹이 노리고 있다.",
+					"zh-hant": "掉在地上的東西全都會撿起來。 因為有時也會撿到硬幣， 所以會被黑暗鴉和喵喵襲擊。",
+					"fr": "Il ramasse tout ce qu’il trouve par terre, y compris des pièces. Cela lui vaut d’être pris pour cible par les Cornèbre et les Miaouss.",
+					"de": "Es hebt alles auf, was es finden kann. Manchmal befinden sich darunter auch Münzen, weshalb es oft von Kramurx und Mauzi gejagt wird.",
+					"es": "Recoge todo lo que encuentra por el suelo. A veces recoge monedas, lo que atrae la atención de Murkrow y Meowth.",
+					"it": "Raccoglie da terra ogni tipo di oggetto. Quando trova delle monete viene preso di mira da Murkrow e Meowth.",
+					"en": "It will pick up anything it finds on the ground. Sometimes it finds coins, so Murkrow and Meowth will go after it.",
+					"ja": "落ちているものは 何でも 拾う。 コインを 持っていることも あるので ヤミカラスやニャースに 狙われる。",
+					"zh-hans": "无论是什么掉落的东西，都会捡。 因为有时候也会拿着硬币， 所以会被黑暗鸦和喵喵袭击。",
+					"es-419": "Recoge todo lo que encuentra por el suelo. A veces recoge monedas, lo que atrae la atención de Murkrow y Meowth."
+				},
+				"ultrasun-melemele": {
+					"ja-hrkt": "おちてるものは なんでも ひろう。 コインを もっていることも あるので ヤミカラスやニャースに ねらわれる。",
+					"ko": "떨어져 있는 것은 뭐든지 줍는다. 동전을 갖고 있을 때도 있어 니로우나 나옹이 노리고 있다.",
+					"zh-hant": "掉在地上的東西全都會撿起來。 因為有時也會撿到硬幣， 所以會被黑暗鴉和喵喵襲擊。",
+					"fr": "Il ramasse tout ce qu’il trouve par terre, y compris des pièces. Cela lui vaut d’être pris pour cible par les Cornèbre et les Miaouss.",
+					"de": "Es hebt alles auf, was es finden kann. Manchmal befinden sich darunter auch Münzen, weshalb es oft von Kramurx und Mauzi gejagt wird.",
+					"es": "Recoge todo lo que encuentra por el suelo. A veces recoge monedas, lo que atrae la atención de Murkrow y Meowth.",
+					"it": "Raccoglie da terra ogni tipo di oggetto. Quando trova delle monete viene preso di mira da Murkrow e Meowth.",
+					"en": "It will pick up anything it finds on the ground. Sometimes it finds coins, so Murkrow and Meowth will go after it.",
+					"ja": "落ちているものは 何でも 拾う。 コインを 持っていることも あるので ヤミカラスやニャースに 狙われる。",
+					"zh-hans": "无论是什么掉落的东西，都会捡。 因为有时候也会拿着硬币， 所以会被黑暗鸦和喵喵袭击。",
+					"es-419": "Recoge todo lo que encuentra por el suelo. A veces recoge monedas, lo que atrae la atención de Murkrow y Meowth."
+				},
+				"ultrasun-akala": {
+					"ja-hrkt": "おちてるものは なんでも ひろう。 コインを もっていることも あるので ヤミカラスやニャースに ねらわれる。",
+					"ko": "떨어져 있는 것은 뭐든지 줍는다. 동전을 갖고 있을 때도 있어 니로우나 나옹이 노리고 있다.",
+					"zh-hant": "掉在地上的東西全都會撿起來。 因為有時也會撿到硬幣， 所以會被黑暗鴉和喵喵襲擊。",
+					"fr": "Il ramasse tout ce qu’il trouve par terre, y compris des pièces. Cela lui vaut d’être pris pour cible par les Cornèbre et les Miaouss.",
+					"de": "Es hebt alles auf, was es finden kann. Manchmal befinden sich darunter auch Münzen, weshalb es oft von Kramurx und Mauzi gejagt wird.",
+					"es": "Recoge todo lo que encuentra por el suelo. A veces recoge monedas, lo que atrae la atención de Murkrow y Meowth.",
+					"it": "Raccoglie da terra ogni tipo di oggetto. Quando trova delle monete viene preso di mira da Murkrow e Meowth.",
+					"en": "It will pick up anything it finds on the ground. Sometimes it finds coins, so Murkrow and Meowth will go after it.",
+					"ja": "落ちているものは 何でも 拾う。 コインを 持っていることも あるので ヤミカラスやニャースに 狙われる。",
+					"zh-hans": "无论是什么掉落的东西，都会捡。 因为有时候也会拿着硬币， 所以会被黑暗鸦和喵喵袭击。",
+					"es-419": "Recoge todo lo que encuentra por el suelo. A veces recoge monedas, lo que atrae la atención de Murkrow y Meowth."
+				},
+				"ultrasun-ulaula": {
+					"ja-hrkt": "おちてるものは なんでも ひろう。 コインを もっていることも あるので ヤミカラスやニャースに ねらわれる。",
+					"ko": "떨어져 있는 것은 뭐든지 줍는다. 동전을 갖고 있을 때도 있어 니로우나 나옹이 노리고 있다.",
+					"zh-hant": "掉在地上的東西全都會撿起來。 因為有時也會撿到硬幣， 所以會被黑暗鴉和喵喵襲擊。",
+					"fr": "Il ramasse tout ce qu’il trouve par terre, y compris des pièces. Cela lui vaut d’être pris pour cible par les Cornèbre et les Miaouss.",
+					"de": "Es hebt alles auf, was es finden kann. Manchmal befinden sich darunter auch Münzen, weshalb es oft von Kramurx und Mauzi gejagt wird.",
+					"es": "Recoge todo lo que encuentra por el suelo. A veces recoge monedas, lo que atrae la atención de Murkrow y Meowth.",
+					"it": "Raccoglie da terra ogni tipo di oggetto. Quando trova delle monete viene preso di mira da Murkrow e Meowth.",
+					"en": "It will pick up anything it finds on the ground. Sometimes it finds coins, so Murkrow and Meowth will go after it.",
+					"ja": "落ちているものは 何でも 拾う。 コインを 持っていることも あるので ヤミカラスやニャースに 狙われる。",
+					"zh-hans": "无论是什么掉落的东西，都会捡。 因为有时候也会拿着硬币， 所以会被黑暗鸦和喵喵袭击。",
+					"es-419": "Recoge todo lo que encuentra por el suelo. A veces recoge monedas, lo que atrae la atención de Murkrow y Meowth."
+				},
+				"ultrasun-poni": {
+					"ja-hrkt": "おちてるものは なんでも ひろう。 コインを もっていることも あるので ヤミカラスやニャースに ねらわれる。",
+					"ko": "떨어져 있는 것은 뭐든지 줍는다. 동전을 갖고 있을 때도 있어 니로우나 나옹이 노리고 있다.",
+					"zh-hant": "掉在地上的東西全都會撿起來。 因為有時也會撿到硬幣， 所以會被黑暗鴉和喵喵襲擊。",
+					"fr": "Il ramasse tout ce qu’il trouve par terre, y compris des pièces. Cela lui vaut d’être pris pour cible par les Cornèbre et les Miaouss.",
+					"de": "Es hebt alles auf, was es finden kann. Manchmal befinden sich darunter auch Münzen, weshalb es oft von Kramurx und Mauzi gejagt wird.",
+					"es": "Recoge todo lo que encuentra por el suelo. A veces recoge monedas, lo que atrae la atención de Murkrow y Meowth.",
+					"it": "Raccoglie da terra ogni tipo di oggetto. Quando trova delle monete viene preso di mira da Murkrow e Meowth.",
+					"en": "It will pick up anything it finds on the ground. Sometimes it finds coins, so Murkrow and Meowth will go after it.",
+					"ja": "落ちているものは 何でも 拾う。 コインを 持っていることも あるので ヤミカラスやニャースに 狙われる。",
+					"zh-hans": "无论是什么掉落的东西，都会捡。 因为有时候也会拿着硬币， 所以会被黑暗鸦和喵喵袭击。",
+					"es-419": "Recoge todo lo que encuentra por el suelo. A veces recoge monedas, lo que atrae la atención de Murkrow y Meowth."
+				},
+				"ultramoon-alola": {
+					"ja-hrkt": "とても しょうしんものの ポケモン。 なにかが ちかづくだけで こうそくで あしを うごかして にげていくよ。",
+					"ko": "매우 소심한 포켓몬. 무언가가 다가오기만 해도 고속으로 다리를 움직여서 도망친다.",
+					"zh-hant": "非常膽小的寶可夢。 只要有什麼東西靠近， 就會迅速地拔腿就逃。",
+					"fr": "Un Pokémon timoré qui se sauve à toutes pattes dès que l’on s’approche de lui.",
+					"de": "Dieses Pokémon ist ein wahrer Drückeberger. Sobald sich ihm etwas nähert, strampelt es flink mit seinen Beinchen und nimmt Reißaus.",
+					"es": "Es un Pokémon muy cobarde. En cuanto nota que algo se le acerca, sale huyendo a gran velocidad.",
+					"it": "È un Pokémon estremamente timoroso. Non appena qualcosa gli si avvicina, Wimpod se la svigna a gran velocità agitando le zampette.",
+					"en": "An astonishingly cowardly Pokémon, Wimpod will whir its legs at high speeds to run away if anything comes near it.",
+					"ja": "とても 小心者の ポケモン。 何かが 近付くだけで 高速で 足を 動かして 逃げていくよ。",
+					"zh-hans": "是非常胆小的宝可梦。 只要有什么靠近， 就会飞快地拔腿就逃哦。",
+					"es-419": "Es un Pokémon muy cobarde. En cuanto nota que algo se le acerca, sale huyendo a gran velocidad."
+				},
+				"ultramoon-melemele": {
+					"ja-hrkt": "とても しょうしんものの ポケモン。 なにかが ちかづくだけで こうそくで あしを うごかして にげていくよ。",
+					"ko": "매우 소심한 포켓몬. 무언가가 다가오기만 해도 고속으로 다리를 움직여서 도망친다.",
+					"zh-hant": "非常膽小的寶可夢。 只要有什麼東西靠近， 就會迅速地拔腿就逃。",
+					"fr": "Un Pokémon timoré qui se sauve à toutes pattes dès que l’on s’approche de lui.",
+					"de": "Dieses Pokémon ist ein wahrer Drückeberger. Sobald sich ihm etwas nähert, strampelt es flink mit seinen Beinchen und nimmt Reißaus.",
+					"es": "Es un Pokémon muy cobarde. En cuanto nota que algo se le acerca, sale huyendo a gran velocidad.",
+					"it": "È un Pokémon estremamente timoroso. Non appena qualcosa gli si avvicina, Wimpod se la svigna a gran velocità agitando le zampette.",
+					"en": "An astonishingly cowardly Pokémon, Wimpod will whir its legs at high speeds to run away if anything comes near it.",
+					"ja": "とても 小心者の ポケモン。 何かが 近付くだけで 高速で 足を 動かして 逃げていくよ。",
+					"zh-hans": "是非常胆小的宝可梦。 只要有什么靠近， 就会飞快地拔腿就逃哦。",
+					"es-419": "Es un Pokémon muy cobarde. En cuanto nota que algo se le acerca, sale huyendo a gran velocidad."
+				},
+				"ultramoon-akala": {
+					"ja-hrkt": "とても しょうしんものの ポケモン。 なにかが ちかづくだけで こうそくで あしを うごかして にげていくよ。",
+					"ko": "매우 소심한 포켓몬. 무언가가 다가오기만 해도 고속으로 다리를 움직여서 도망친다.",
+					"zh-hant": "非常膽小的寶可夢。 只要有什麼東西靠近， 就會迅速地拔腿就逃。",
+					"fr": "Un Pokémon timoré qui se sauve à toutes pattes dès que l’on s’approche de lui.",
+					"de": "Dieses Pokémon ist ein wahrer Drückeberger. Sobald sich ihm etwas nähert, strampelt es flink mit seinen Beinchen und nimmt Reißaus.",
+					"es": "Es un Pokémon muy cobarde. En cuanto nota que algo se le acerca, sale huyendo a gran velocidad.",
+					"it": "È un Pokémon estremamente timoroso. Non appena qualcosa gli si avvicina, Wimpod se la svigna a gran velocità agitando le zampette.",
+					"en": "An astonishingly cowardly Pokémon, Wimpod will whir its legs at high speeds to run away if anything comes near it.",
+					"ja": "とても 小心者の ポケモン。 何かが 近付くだけで 高速で 足を 動かして 逃げていくよ。",
+					"zh-hans": "是非常胆小的宝可梦。 只要有什么靠近， 就会飞快地拔腿就逃哦。",
+					"es-419": "Es un Pokémon muy cobarde. En cuanto nota que algo se le acerca, sale huyendo a gran velocidad."
+				},
+				"ultramoon-ulaula": {
+					"ja-hrkt": "とても しょうしんものの ポケモン。 なにかが ちかづくだけで こうそくで あしを うごかして にげていくよ。",
+					"ko": "매우 소심한 포켓몬. 무언가가 다가오기만 해도 고속으로 다리를 움직여서 도망친다.",
+					"zh-hant": "非常膽小的寶可夢。 只要有什麼東西靠近， 就會迅速地拔腿就逃。",
+					"fr": "Un Pokémon timoré qui se sauve à toutes pattes dès que l’on s’approche de lui.",
+					"de": "Dieses Pokémon ist ein wahrer Drückeberger. Sobald sich ihm etwas nähert, strampelt es flink mit seinen Beinchen und nimmt Reißaus.",
+					"es": "Es un Pokémon muy cobarde. En cuanto nota que algo se le acerca, sale huyendo a gran velocidad.",
+					"it": "È un Pokémon estremamente timoroso. Non appena qualcosa gli si avvicina, Wimpod se la svigna a gran velocità agitando le zampette.",
+					"en": "An astonishingly cowardly Pokémon, Wimpod will whir its legs at high speeds to run away if anything comes near it.",
+					"ja": "とても 小心者の ポケモン。 何かが 近付くだけで 高速で 足を 動かして 逃げていくよ。",
+					"zh-hans": "是非常胆小的宝可梦。 只要有什么靠近， 就会飞快地拔腿就逃哦。",
+					"es-419": "Es un Pokémon muy cobarde. En cuanto nota que algo se le acerca, sale huyendo a gran velocidad."
+				},
+				"ultramoon-poni": {
+					"ja-hrkt": "とても しょうしんものの ポケモン。 なにかが ちかづくだけで こうそくで あしを うごかして にげていくよ。",
+					"ko": "매우 소심한 포켓몬. 무언가가 다가오기만 해도 고속으로 다리를 움직여서 도망친다.",
+					"zh-hant": "非常膽小的寶可夢。 只要有什麼東西靠近， 就會迅速地拔腿就逃。",
+					"fr": "Un Pokémon timoré qui se sauve à toutes pattes dès que l’on s’approche de lui.",
+					"de": "Dieses Pokémon ist ein wahrer Drückeberger. Sobald sich ihm etwas nähert, strampelt es flink mit seinen Beinchen und nimmt Reißaus.",
+					"es": "Es un Pokémon muy cobarde. En cuanto nota que algo se le acerca, sale huyendo a gran velocidad.",
+					"it": "È un Pokémon estremamente timoroso. Non appena qualcosa gli si avvicina, Wimpod se la svigna a gran velocità agitando le zampette.",
+					"en": "An astonishingly cowardly Pokémon, Wimpod will whir its legs at high speeds to run away if anything comes near it.",
+					"ja": "とても 小心者の ポケモン。 何かが 近付くだけで 高速で 足を 動かして 逃げていくよ。",
+					"zh-hans": "是非常胆小的宝可梦。 只要有什么靠近， 就会飞快地拔腿就逃哦。",
+					"es-419": "Es un Pokémon muy cobarde. En cuanto nota que algo se le acerca, sale huyendo a gran velocidad."
+				}
+			}
+		},
+		{
+			"profileKey": "lets-go-pikachu-lets-go-eevee",
+			"label": "Let's Go Pikachu / Eevee",
+			"appGameKeys": [
+				"letsgopikachu",
+				"letsgoeevee"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Wimpod",
+				"localizedNames": {
+					"ja-hrkt": "コソクムシ",
+					"ja-roma": "Kosokumushi",
+					"ko": "꼬시레",
+					"zh-hant": "膽小蟲",
+					"fr": "Sovkipou",
+					"de": "Reißlaus",
+					"es": "Wimpod",
+					"it": "Wimpod",
+					"ja": "コソクムシ",
+					"zh-hans": "胆小虫",
+					"es-419": "Wimpod"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Water"
+				],
+				"baseStats": {
+					"hp": 25,
+					"atk": 35,
+					"def": 40,
+					"spa": 20,
+					"spd": 30,
+					"spe": 80
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 7,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Wimp Out"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug",
+					"Water3"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.5 m",
+				"weight": "12.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 90,
+				"baseExperience": 46,
+				"habitat": "",
+				"shape": "Tentacles",
+				"color": "Gray",
+				"genus": "Turn Tail Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "そうこうポケモン",
+					"ko": "주행포켓몬",
+					"zh-hant": "疾行寶可夢",
+					"fr": "Pokémon Cavaleur",
+					"de": "Laufschritt-Pokémon",
+					"es": "Pokémon Huidizo",
+					"it": "Pokémon Lestopode",
+					"ja": "そうこうポケモン",
+					"zh-hans": "疾行宝可梦",
+					"es-419": "Pokémon Huidizo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 767
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 182
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 109
+					},
+					{
+						"pokedex": "original-poni",
+						"number": 70
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 221
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 122
+					},
+					{
+						"pokedex": "updated-poni",
+						"number": 83
+					},
+					{
+						"pokedex": "galar",
+						"number": 232
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 124
+					},
+					{
+						"pokedex": "hyperspace",
+						"number": 62
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 767,
+								"natiId": 767,
+								"name": "Wimpod"
+							},
+							{
+								"id": 768,
+								"natiId": 768,
+								"name": "Golisopod",
+								"method": "Level",
+								"value": 30
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sun Moon."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/767",
+						"fetchedAt": "2026-11-03T05:53:55.086Z",
+						"hash": "3355bbcc94009410a8965cefc06128d2251cc27afe965f700c4bb3a72a65ea2f"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/396/",
+						"fetchedAt": "2026-11-03T05:53:55.114Z",
+						"hash": "b17f37dd68ff314fcb383d66b72cab86c29158ac265fbda8c74971d5f2ff5a7d"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/767/",
+						"fetchedAt": "2026-11-03T05:53:55.142Z",
+						"hash": "040ed0a9f9fa3dd418fcf3cd4bed28274b0141e95377745971786f5bbb87d14f"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/767/encounters",
+						"fetchedAt": "2026-11-03T05:53:55.170Z",
+						"hash": "b1faa2e2504ecd62751ad419fe6ddce2aaa49284214d9e90f02546e48c9ed4ff"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/767/",
+						"fetchedAt": "2026-11-03T05:53:55.223Z",
+						"hash": "08647029db623a781418025600b8627b84468386561e75b082a0ec28d3093597"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"letsgopikachu": "",
+				"letsgoeevee": ""
+			},
+			"localizedFlavorByGame": {
+				"letsgopikachu": {},
+				"letsgoeevee": {}
+			}
+		},
+		{
+			"profileKey": "sword-shield",
+			"label": "Sword / Shield",
+			"appGameKeys": [
+				"sword",
+				"shield"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Wimpod",
+				"localizedNames": {
+					"ja-hrkt": "コソクムシ",
+					"ja-roma": "Kosokumushi",
+					"ko": "꼬시레",
+					"zh-hant": "膽小蟲",
+					"fr": "Sovkipou",
+					"de": "Reißlaus",
+					"es": "Wimpod",
+					"it": "Wimpod",
+					"ja": "コソクムシ",
+					"zh-hans": "胆小虫",
+					"es-419": "Wimpod"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Water"
+				],
+				"baseStats": {
+					"hp": 25,
+					"atk": 35,
+					"def": 40,
+					"spa": 20,
+					"spd": 30,
+					"spe": 80
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 7,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Wimp Out"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug",
+					"Water3"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.5 m",
+				"weight": "12.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 90,
+				"baseExperience": 46,
+				"habitat": "",
+				"shape": "Tentacles",
+				"color": "Gray",
+				"genus": "Turn Tail Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "そうこうポケモン",
+					"ko": "주행포켓몬",
+					"zh-hant": "疾行寶可夢",
+					"fr": "Pokémon Cavaleur",
+					"de": "Laufschritt-Pokémon",
+					"es": "Pokémon Huidizo",
+					"it": "Pokémon Lestopode",
+					"ja": "そうこうポケモン",
+					"zh-hans": "疾行宝可梦",
+					"es-419": "Pokémon Huidizo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 767
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 182
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 109
+					},
+					{
+						"pokedex": "original-poni",
+						"number": 70
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 221
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 122
+					},
+					{
+						"pokedex": "updated-poni",
+						"number": 83
+					},
+					{
+						"pokedex": "galar",
+						"number": 232
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 124
+					},
+					{
+						"pokedex": "hyperspace",
+						"number": 62
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 767,
+								"natiId": 767,
+								"name": "Wimpod"
+							},
+							{
+								"id": 768,
+								"natiId": 768,
+								"name": "Golisopod",
+								"method": "Level",
+								"value": 30
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Bridge Field Area",
+						"notes": "Walk, Lv. 26-28",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Walk, Lv. 60",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Walk, Lv. 26-28",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Walk, Lv. 60",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Galar Mine No 2 Area",
+						"notes": "Overworld, Lv. 20-24",
+						"games": "Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Galar Mine No 2 Area",
+						"notes": "Overworld, Lv. 20-24",
+						"games": "Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Giants Mirror Main",
+						"notes": "Overworld, Lv. 28-30",
+						"games": "Sword",
+						"rate": "40%"
+					},
+					{
+						"area": "Giants Mirror Main",
+						"notes": "Overworld, Lv. 60",
+						"games": "Sword",
+						"rate": "40%"
+					},
+					{
+						"area": "Giants Mirror Main",
+						"notes": "Overworld, Lv. 28-30",
+						"games": "Shield",
+						"rate": "40%"
+					},
+					{
+						"area": "Giants Mirror Main",
+						"notes": "Overworld, Lv. 60",
+						"games": "Shield",
+						"rate": "40%"
+					},
+					{
+						"area": "Hammerlocke Hills Area",
+						"notes": "Overworld, Lv. 29-31",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Hammerlocke Hills Area",
+						"notes": "Overworld, Lv. 60",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Hammerlocke Hills Area",
+						"notes": "Overworld, Lv. 29-31",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Hammerlocke Hills Area",
+						"notes": "Overworld, Lv. 60",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Motostoke Riverbank Area",
+						"notes": "Walk, Lv. 26-28",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Motostoke Riverbank Area",
+						"notes": "Walk, Lv. 60",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Motostoke Riverbank Area",
+						"notes": "Overworld, Lv. 26-28",
+						"games": "Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Motostoke Riverbank Area",
+						"notes": "Overworld, Lv. 60",
+						"games": "Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Motostoke Riverbank Area",
+						"notes": "Walk, Lv. 26-28",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Motostoke Riverbank Area",
+						"notes": "Walk, Lv. 60",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Motostoke Riverbank Area",
+						"notes": "Overworld, Lv. 28-30",
+						"games": "Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Motostoke Riverbank Area",
+						"notes": "Overworld, Lv. 60",
+						"games": "Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Rolling Fields Max Den E",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Rolling Fields Max Den E",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Rolling Fields Max Den F",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Rolling Fields Max Den F",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Rolling Fields Max Den G",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Rolling Fields Max Den G",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Dappled Grove Max Den B",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Dappled Grove Max Den B",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "South Lake Miloch Max Den A",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "South Lake Miloch Max Den A",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Bridge Field Max Den H",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Bridge Field Max Den H",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Bridge Field Max Den I",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Bridge Field Max Den I",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "35%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Struggle Bug",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Sand Attack",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Defense Curl",
+							"level": 1,
+							"order": 3
+						}
+					],
+					"Machine": [
+						{
+							"name": "Assurance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bug Buzz",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endure",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Leech Life",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Mud Shot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Scald",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Screech",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Spikes",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Surf",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swift",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Taunt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Waterfall",
+							"level": null,
+							"order": null
+						}
+					],
+					"Egg": [
+						{
+							"name": "Aqua Jet",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Harden",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Metal Claw",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rollout",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wide Guard",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Skitter Smack",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Sun Moon."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/767",
+						"fetchedAt": "2026-11-03T05:53:55.086Z",
+						"hash": "3355bbcc94009410a8965cefc06128d2251cc27afe965f700c4bb3a72a65ea2f"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/396/",
+						"fetchedAt": "2026-11-03T05:53:55.114Z",
+						"hash": "b17f37dd68ff314fcb383d66b72cab86c29158ac265fbda8c74971d5f2ff5a7d"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/767/",
+						"fetchedAt": "2026-11-03T05:53:55.142Z",
+						"hash": "040ed0a9f9fa3dd418fcf3cd4bed28274b0141e95377745971786f5bbb87d14f"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/767/encounters",
+						"fetchedAt": "2026-11-03T05:53:55.170Z",
+						"hash": "b1faa2e2504ecd62751ad419fe6ddce2aaa49284214d9e90f02546e48c9ed4ff"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/767/",
+						"fetchedAt": "2026-11-03T05:53:55.223Z",
+						"hash": "08647029db623a781418025600b8627b84468386561e75b082a0ec28d3093597"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sword": "It’s nature’s cleaner—it eats anything and everything, including garbage and rotten things. The ground near its nest is always clean.",
+				"shield": "Wimpod gather in swarms, constantly on the lookout for danger. They scatter the moment they detect an enemy’s presence."
+			},
+			"localizedFlavorByGame": {
+				"sword": {
+					"ja-hrkt": "くさったものや ゴミでも なんでも たべまわる しぜんの そうじや。 すの まわりは いつも きれい。",
+					"ko": "상한 것이든 쓰레기든 닥치는 대로 먹어 치우는 자연의 청소부. 둥지 주변은 언제나 깨끗하다.",
+					"zh-hant": "無論是腐爛的東西還是垃圾 都能吃光光，是大自然的清道夫。 巢穴附近總是保持乾淨。",
+					"fr": "Ce véritable nettoyeur de la nature mange tout, même la nourriture avariée et les déchets. Les environs de son nid sont toujours impeccables.",
+					"de": "Sie sind natürliche Reinigungskräfte und fressen alles, inklusive vergammeltem Essen und Müll. In der Nähe ihrer Nester ist es immer sauber.",
+					"es": "Hace de barrendero natural al ir devorándolo todo, basura y podredumbre incluidas. Alrededor de su nido reina siempre la mayor pulcritud.",
+					"it": "Poiché mangia di tutto, anche immondizia e sostanze putrescenti, è detto lo spazzino della natura. Attorno alla sua tana regna la pulizia.",
+					"en": "It’s nature’s cleaner—it eats anything and everything, including garbage and rotten things. The ground near its nest is always clean.",
+					"ja": "腐ったものや ゴミでも なんでも 食べまわる 自然の 掃除屋。 巣の まわりは いつも きれい。",
+					"zh-hans": "无论是腐烂的东西还是垃圾 都能吃光光，是大自然的清道夫。 巢穴附近总是保持干净。",
+					"es-419": "Hace de barrendero natural al ir devorándolo todo, basura y podredumbre incluidas. Alrededor de su nido reina siempre la mayor pulcritud."
+				},
+				"shield": {
+					"ja-hrkt": "むれで かたまり つねに まわりを けいかいしている。 てきの けはいを かんじると ちりぢりに にげだす。",
+					"ko": "무리가 모여 다니며 항상 주위를 경계한다. 적의 기척을 느끼면 뿔뿔이 흩어져 도망간다.",
+					"zh-hant": "成群聚集，隨時保持警惕。 只要察覺到有敵人， 就會分散開來四處逃竄。",
+					"fr": "Ils se déplacent en groupe, toujours en alerte. Dès qu’ils détectent une présence ennemie, ils s’enfuient dans toutes les directions.",
+					"de": "Sie schließen sich zu Schwärmen zusammen und halten stets Ausschau nach Gefahr. Sichten sie einen Feind, nehmen sie in alle Winde Reißaus.",
+					"es": "Forman colonias y permanecen siempre alerta. En cuanto perciben a un enemigo, salen huyendo en todas direcciones.",
+					"it": "Si muovono in gruppo e stanno sempre sul chi va là. Non appena percepiscono la presenza del nemico scappano in ogni direzione.",
+					"en": "Wimpod gather in swarms, constantly on the lookout for danger. They scatter the moment they detect an enemy’s presence.",
+					"ja": "群れで かたまり つねに まわりを 警戒している。 敵の 気配を 感じると 散り散りに 逃げ出す。",
+					"zh-hans": "成群聚集，随时提高警惕。 只要察觉到有敌人， 就会分散开来四处逃窜。",
+					"es-419": "Forman colonias y permanecen siempre alerta. En cuanto perciben a un enemigo, salen huyendo en todas direcciones."
+				}
+			}
+		},
+		{
+			"profileKey": "the-isle-of-armor",
+			"label": "The Isle of Armor",
+			"appGameKeys": [
+				"swordioa",
+				"shieldioa"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Wimpod",
+				"localizedNames": {
+					"ja-hrkt": "コソクムシ",
+					"ja-roma": "Kosokumushi",
+					"ko": "꼬시레",
+					"zh-hant": "膽小蟲",
+					"fr": "Sovkipou",
+					"de": "Reißlaus",
+					"es": "Wimpod",
+					"it": "Wimpod",
+					"ja": "コソクムシ",
+					"zh-hans": "胆小虫",
+					"es-419": "Wimpod"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Water"
+				],
+				"baseStats": {
+					"hp": 25,
+					"atk": 35,
+					"def": 40,
+					"spa": 20,
+					"spd": 30,
+					"spe": 80
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 7,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Wimp Out"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug",
+					"Water3"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.5 m",
+				"weight": "12.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 90,
+				"baseExperience": 46,
+				"habitat": "",
+				"shape": "Tentacles",
+				"color": "Gray",
+				"genus": "Turn Tail Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "そうこうポケモン",
+					"ko": "주행포켓몬",
+					"zh-hant": "疾行寶可夢",
+					"fr": "Pokémon Cavaleur",
+					"de": "Laufschritt-Pokémon",
+					"es": "Pokémon Huidizo",
+					"it": "Pokémon Lestopode",
+					"ja": "そうこうポケモン",
+					"zh-hans": "疾行宝可梦",
+					"es-419": "Pokémon Huidizo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 767
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 182
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 109
+					},
+					{
+						"pokedex": "original-poni",
+						"number": 70
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 221
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 122
+					},
+					{
+						"pokedex": "updated-poni",
+						"number": 83
+					},
+					{
+						"pokedex": "galar",
+						"number": 232
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 124
+					},
+					{
+						"pokedex": "hyperspace",
+						"number": 62
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 767,
+								"natiId": 767,
+								"name": "Wimpod"
+							},
+							{
+								"id": 768,
+								"natiId": 768,
+								"name": "Golisopod",
+								"method": "Level",
+								"value": 30
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Courageous Cavern Area",
+						"notes": "Overworld, Lv. 13-18",
+						"games": "The Isle Of Armor Sword",
+						"rate": "16%"
+					},
+					{
+						"area": "Courageous Cavern Area",
+						"notes": "Overworld, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "16%"
+					},
+					{
+						"area": "Courageous Cavern Area",
+						"notes": "Overworld, Lv. 13-18",
+						"games": "The Isle Of Armor Sword",
+						"rate": "16%"
+					},
+					{
+						"area": "Courageous Cavern Area",
+						"notes": "Overworld, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "16%"
+					},
+					{
+						"area": "Courageous Cavern Area",
+						"notes": "Overworld, Lv. 13-18",
+						"games": "The Isle Of Armor Sword",
+						"rate": "16%"
+					},
+					{
+						"area": "Courageous Cavern Area",
+						"notes": "Overworld, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "16%"
+					},
+					{
+						"area": "Courageous Cavern Area",
+						"notes": "Overworld, Lv. 13-18",
+						"games": "The Isle Of Armor Sword",
+						"rate": "16%"
+					},
+					{
+						"area": "Courageous Cavern Area",
+						"notes": "Overworld, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "16%"
+					},
+					{
+						"area": "Courageous Cavern Area",
+						"notes": "Overworld, Lv. 13-18",
+						"games": "The Isle Of Armor Sword",
+						"rate": "16%"
+					},
+					{
+						"area": "Courageous Cavern Area",
+						"notes": "Overworld, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "16%"
+					},
+					{
+						"area": "Courageous Cavern Area",
+						"notes": "Overworld, Lv. 13-18",
+						"games": "The Isle Of Armor Sword",
+						"rate": "16%"
+					},
+					{
+						"area": "Courageous Cavern Area",
+						"notes": "Overworld, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "16%"
+					},
+					{
+						"area": "Courageous Cavern Area",
+						"notes": "Overworld, Lv. 13-18",
+						"games": "The Isle Of Armor Sword",
+						"rate": "16%"
+					},
+					{
+						"area": "Courageous Cavern Area",
+						"notes": "Overworld, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "16%"
+					},
+					{
+						"area": "Courageous Cavern Area",
+						"notes": "Overworld, Lv. 13-18",
+						"games": "The Isle Of Armor Shield",
+						"rate": "16%"
+					},
+					{
+						"area": "Courageous Cavern Area",
+						"notes": "Overworld, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "16%"
+					},
+					{
+						"area": "Courageous Cavern Area",
+						"notes": "Overworld, Lv. 13-18",
+						"games": "The Isle Of Armor Shield",
+						"rate": "16%"
+					},
+					{
+						"area": "Courageous Cavern Area",
+						"notes": "Overworld, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "16%"
+					},
+					{
+						"area": "Courageous Cavern Area",
+						"notes": "Overworld, Lv. 13-18",
+						"games": "The Isle Of Armor Shield",
+						"rate": "16%"
+					},
+					{
+						"area": "Courageous Cavern Area",
+						"notes": "Overworld, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "16%"
+					},
+					{
+						"area": "Courageous Cavern Area",
+						"notes": "Overworld, Lv. 13-18",
+						"games": "The Isle Of Armor Shield",
+						"rate": "16%"
+					},
+					{
+						"area": "Courageous Cavern Area",
+						"notes": "Overworld, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "16%"
+					},
+					{
+						"area": "Courageous Cavern Area",
+						"notes": "Overworld, Lv. 13-18",
+						"games": "The Isle Of Armor Shield",
+						"rate": "16%"
+					},
+					{
+						"area": "Courageous Cavern Area",
+						"notes": "Overworld, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "16%"
+					},
+					{
+						"area": "Courageous Cavern Area",
+						"notes": "Overworld, Lv. 13-18",
+						"games": "The Isle Of Armor Shield",
+						"rate": "16%"
+					},
+					{
+						"area": "Courageous Cavern Area",
+						"notes": "Overworld, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "16%"
+					},
+					{
+						"area": "Courageous Cavern Area",
+						"notes": "Overworld, Lv. 13-18",
+						"games": "The Isle Of Armor Shield",
+						"rate": "16%"
+					},
+					{
+						"area": "Courageous Cavern Area",
+						"notes": "Overworld, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "16%"
+					}
+				],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Sun Moon."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/767",
+						"fetchedAt": "2026-11-03T05:53:55.086Z",
+						"hash": "3355bbcc94009410a8965cefc06128d2251cc27afe965f700c4bb3a72a65ea2f"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/396/",
+						"fetchedAt": "2026-11-03T05:53:55.114Z",
+						"hash": "b17f37dd68ff314fcb383d66b72cab86c29158ac265fbda8c74971d5f2ff5a7d"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/767/",
+						"fetchedAt": "2026-11-03T05:53:55.142Z",
+						"hash": "040ed0a9f9fa3dd418fcf3cd4bed28274b0141e95377745971786f5bbb87d14f"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/767/encounters",
+						"fetchedAt": "2026-11-03T05:53:55.170Z",
+						"hash": "b1faa2e2504ecd62751ad419fe6ddce2aaa49284214d9e90f02546e48c9ed4ff"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/767/",
+						"fetchedAt": "2026-11-03T05:53:55.223Z",
+						"hash": "08647029db623a781418025600b8627b84468386561e75b082a0ec28d3093597"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordioa": "",
+				"shieldioa": ""
+			},
+			"localizedFlavorByGame": {
+				"swordioa": {},
+				"shieldioa": {}
+			}
+		},
+		{
+			"profileKey": "the-crown-tundra",
+			"label": "The Crown Tundra",
+			"appGameKeys": [
+				"swordct",
+				"shieldct"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Wimpod",
+				"localizedNames": {
+					"ja-hrkt": "コソクムシ",
+					"ja-roma": "Kosokumushi",
+					"ko": "꼬시레",
+					"zh-hant": "膽小蟲",
+					"fr": "Sovkipou",
+					"de": "Reißlaus",
+					"es": "Wimpod",
+					"it": "Wimpod",
+					"ja": "コソクムシ",
+					"zh-hans": "胆小虫",
+					"es-419": "Wimpod"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Water"
+				],
+				"baseStats": {
+					"hp": 25,
+					"atk": 35,
+					"def": 40,
+					"spa": 20,
+					"spd": 30,
+					"spe": 80
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 7,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Wimp Out"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug",
+					"Water3"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.5 m",
+				"weight": "12.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 90,
+				"baseExperience": 46,
+				"habitat": "",
+				"shape": "Tentacles",
+				"color": "Gray",
+				"genus": "Turn Tail Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "そうこうポケモン",
+					"ko": "주행포켓몬",
+					"zh-hant": "疾行寶可夢",
+					"fr": "Pokémon Cavaleur",
+					"de": "Laufschritt-Pokémon",
+					"es": "Pokémon Huidizo",
+					"it": "Pokémon Lestopode",
+					"ja": "そうこうポケモン",
+					"zh-hans": "疾行宝可梦",
+					"es-419": "Pokémon Huidizo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 767
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 182
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 109
+					},
+					{
+						"pokedex": "original-poni",
+						"number": 70
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 221
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 122
+					},
+					{
+						"pokedex": "updated-poni",
+						"number": 83
+					},
+					{
+						"pokedex": "galar",
+						"number": 232
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 124
+					},
+					{
+						"pokedex": "hyperspace",
+						"number": 62
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 767,
+								"natiId": 767,
+								"name": "Wimpod"
+							},
+							{
+								"id": 768,
+								"natiId": 768,
+								"name": "Golisopod",
+								"method": "Level",
+								"value": 30
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sun Moon."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/767",
+						"fetchedAt": "2026-11-03T05:53:55.086Z",
+						"hash": "3355bbcc94009410a8965cefc06128d2251cc27afe965f700c4bb3a72a65ea2f"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/396/",
+						"fetchedAt": "2026-11-03T05:53:55.114Z",
+						"hash": "b17f37dd68ff314fcb383d66b72cab86c29158ac265fbda8c74971d5f2ff5a7d"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/767/",
+						"fetchedAt": "2026-11-03T05:53:55.142Z",
+						"hash": "040ed0a9f9fa3dd418fcf3cd4bed28274b0141e95377745971786f5bbb87d14f"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/767/encounters",
+						"fetchedAt": "2026-11-03T05:53:55.170Z",
+						"hash": "b1faa2e2504ecd62751ad419fe6ddce2aaa49284214d9e90f02546e48c9ed4ff"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/767/",
+						"fetchedAt": "2026-11-03T05:53:55.223Z",
+						"hash": "08647029db623a781418025600b8627b84468386561e75b082a0ec28d3093597"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordct": "",
+				"shieldct": ""
+			},
+			"localizedFlavorByGame": {
+				"swordct": {},
+				"shieldct": {}
+			}
+		},
+		{
+			"profileKey": "brilliant-diamond-shining-pearl",
+			"label": "Brilliant Diamond / Shining Pearl",
+			"appGameKeys": [
+				"brilliantdiamond-national",
+				"brilliantdiamond",
+				"shiningpearl-national",
+				"shiningpearl"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Wimpod",
+				"localizedNames": {
+					"ja-hrkt": "コソクムシ",
+					"ja-roma": "Kosokumushi",
+					"ko": "꼬시레",
+					"zh-hant": "膽小蟲",
+					"fr": "Sovkipou",
+					"de": "Reißlaus",
+					"es": "Wimpod",
+					"it": "Wimpod",
+					"ja": "コソクムシ",
+					"zh-hans": "胆小虫",
+					"es-419": "Wimpod"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Water"
+				],
+				"baseStats": {
+					"hp": 25,
+					"atk": 35,
+					"def": 40,
+					"spa": 20,
+					"spd": 30,
+					"spe": 80
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 7,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Wimp Out"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug",
+					"Water3"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.5 m",
+				"weight": "12.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 90,
+				"baseExperience": 46,
+				"habitat": "",
+				"shape": "Tentacles",
+				"color": "Gray",
+				"genus": "Turn Tail Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "そうこうポケモン",
+					"ko": "주행포켓몬",
+					"zh-hant": "疾行寶可夢",
+					"fr": "Pokémon Cavaleur",
+					"de": "Laufschritt-Pokémon",
+					"es": "Pokémon Huidizo",
+					"it": "Pokémon Lestopode",
+					"ja": "そうこうポケモン",
+					"zh-hans": "疾行宝可梦",
+					"es-419": "Pokémon Huidizo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 767
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 182
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 109
+					},
+					{
+						"pokedex": "original-poni",
+						"number": 70
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 221
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 122
+					},
+					{
+						"pokedex": "updated-poni",
+						"number": 83
+					},
+					{
+						"pokedex": "galar",
+						"number": 232
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 124
+					},
+					{
+						"pokedex": "hyperspace",
+						"number": 62
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 767,
+								"natiId": 767,
+								"name": "Wimpod"
+							},
+							{
+								"id": 768,
+								"natiId": 768,
+								"name": "Golisopod",
+								"method": "Level",
+								"value": 30
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sun Moon."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/767",
+						"fetchedAt": "2026-11-03T05:53:55.086Z",
+						"hash": "3355bbcc94009410a8965cefc06128d2251cc27afe965f700c4bb3a72a65ea2f"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/396/",
+						"fetchedAt": "2026-11-03T05:53:55.114Z",
+						"hash": "b17f37dd68ff314fcb383d66b72cab86c29158ac265fbda8c74971d5f2ff5a7d"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/767/",
+						"fetchedAt": "2026-11-03T05:53:55.142Z",
+						"hash": "040ed0a9f9fa3dd418fcf3cd4bed28274b0141e95377745971786f5bbb87d14f"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/767/encounters",
+						"fetchedAt": "2026-11-03T05:53:55.170Z",
+						"hash": "b1faa2e2504ecd62751ad419fe6ddce2aaa49284214d9e90f02546e48c9ed4ff"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/767/",
+						"fetchedAt": "2026-11-03T05:53:55.223Z",
+						"hash": "08647029db623a781418025600b8627b84468386561e75b082a0ec28d3093597"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"brilliantdiamond-national": "",
+				"brilliantdiamond": "",
+				"shiningpearl-national": "",
+				"shiningpearl": ""
+			},
+			"localizedFlavorByGame": {
+				"brilliantdiamond-national": {},
+				"brilliantdiamond": {},
+				"shiningpearl-national": {},
+				"shiningpearl": {}
+			}
+		},
+		{
+			"profileKey": "legends-arceus",
+			"label": "Legends: Arceus",
+			"appGameKeys": [
+				"legendsarceus"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Wimpod",
+				"localizedNames": {
+					"ja-hrkt": "コソクムシ",
+					"ja-roma": "Kosokumushi",
+					"ko": "꼬시레",
+					"zh-hant": "膽小蟲",
+					"fr": "Sovkipou",
+					"de": "Reißlaus",
+					"es": "Wimpod",
+					"it": "Wimpod",
+					"ja": "コソクムシ",
+					"zh-hans": "胆小虫",
+					"es-419": "Wimpod"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Water"
+				],
+				"baseStats": {
+					"hp": 25,
+					"atk": 35,
+					"def": 40,
+					"spa": 20,
+					"spd": 30,
+					"spe": 80
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 7,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Wimp Out"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug",
+					"Water3"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.5 m",
+				"weight": "12.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 90,
+				"baseExperience": 46,
+				"habitat": "",
+				"shape": "Tentacles",
+				"color": "Gray",
+				"genus": "Turn Tail Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "そうこうポケモン",
+					"ko": "주행포켓몬",
+					"zh-hant": "疾行寶可夢",
+					"fr": "Pokémon Cavaleur",
+					"de": "Laufschritt-Pokémon",
+					"es": "Pokémon Huidizo",
+					"it": "Pokémon Lestopode",
+					"ja": "そうこうポケモン",
+					"zh-hans": "疾行宝可梦",
+					"es-419": "Pokémon Huidizo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 767
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 182
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 109
+					},
+					{
+						"pokedex": "original-poni",
+						"number": 70
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 221
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 122
+					},
+					{
+						"pokedex": "updated-poni",
+						"number": 83
+					},
+					{
+						"pokedex": "galar",
+						"number": 232
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 124
+					},
+					{
+						"pokedex": "hyperspace",
+						"number": 62
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 767,
+								"natiId": 767,
+								"name": "Wimpod"
+							},
+							{
+								"id": 768,
+								"natiId": 768,
+								"name": "Golisopod",
+								"method": "Level",
+								"value": 30
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sun Moon."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/767",
+						"fetchedAt": "2026-11-03T05:53:55.086Z",
+						"hash": "3355bbcc94009410a8965cefc06128d2251cc27afe965f700c4bb3a72a65ea2f"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/396/",
+						"fetchedAt": "2026-11-03T05:53:55.114Z",
+						"hash": "b17f37dd68ff314fcb383d66b72cab86c29158ac265fbda8c74971d5f2ff5a7d"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/767/",
+						"fetchedAt": "2026-11-03T05:53:55.142Z",
+						"hash": "040ed0a9f9fa3dd418fcf3cd4bed28274b0141e95377745971786f5bbb87d14f"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/767/encounters",
+						"fetchedAt": "2026-11-03T05:53:55.170Z",
+						"hash": "b1faa2e2504ecd62751ad419fe6ddce2aaa49284214d9e90f02546e48c9ed4ff"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/767/",
+						"fetchedAt": "2026-11-03T05:53:55.223Z",
+						"hash": "08647029db623a781418025600b8627b84468386561e75b082a0ec28d3093597"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendsarceus": ""
+			},
+			"localizedFlavorByGame": {
+				"legendsarceus": {}
+			}
+		},
+		{
+			"profileKey": "scarlet-violet",
+			"label": "Scarlet / Violet",
+			"appGameKeys": [
+				"scarlet",
+				"violet"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Wimpod",
+				"localizedNames": {
+					"ja-hrkt": "コソクムシ",
+					"ja-roma": "Kosokumushi",
+					"ko": "꼬시레",
+					"zh-hant": "膽小蟲",
+					"fr": "Sovkipou",
+					"de": "Reißlaus",
+					"es": "Wimpod",
+					"it": "Wimpod",
+					"ja": "コソクムシ",
+					"zh-hans": "胆小虫",
+					"es-419": "Wimpod"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Water"
+				],
+				"baseStats": {
+					"hp": 25,
+					"atk": 35,
+					"def": 40,
+					"spa": 20,
+					"spd": 30,
+					"spe": 80
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 7,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Wimp Out"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug",
+					"Water3"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.5 m",
+				"weight": "12.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 90,
+				"baseExperience": 46,
+				"habitat": "",
+				"shape": "Tentacles",
+				"color": "Gray",
+				"genus": "Turn Tail Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "そうこうポケモン",
+					"ko": "주행포켓몬",
+					"zh-hant": "疾行寶可夢",
+					"fr": "Pokémon Cavaleur",
+					"de": "Laufschritt-Pokémon",
+					"es": "Pokémon Huidizo",
+					"it": "Pokémon Lestopode",
+					"ja": "そうこうポケモン",
+					"zh-hans": "疾行宝可梦",
+					"es-419": "Pokémon Huidizo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 767
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 182
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 109
+					},
+					{
+						"pokedex": "original-poni",
+						"number": 70
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 221
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 122
+					},
+					{
+						"pokedex": "updated-poni",
+						"number": 83
+					},
+					{
+						"pokedex": "galar",
+						"number": 232
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 124
+					},
+					{
+						"pokedex": "hyperspace",
+						"number": 62
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 767,
+								"natiId": 767,
+								"name": "Wimpod"
+							},
+							{
+								"id": 768,
+								"natiId": 768,
+								"name": "Golisopod",
+								"method": "Level",
+								"value": 30
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Sun Moon."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/767",
+						"fetchedAt": "2026-11-03T05:53:55.086Z",
+						"hash": "3355bbcc94009410a8965cefc06128d2251cc27afe965f700c4bb3a72a65ea2f"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/396/",
+						"fetchedAt": "2026-11-03T05:53:55.114Z",
+						"hash": "b17f37dd68ff314fcb383d66b72cab86c29158ac265fbda8c74971d5f2ff5a7d"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/767/",
+						"fetchedAt": "2026-11-03T05:53:55.142Z",
+						"hash": "040ed0a9f9fa3dd418fcf3cd4bed28274b0141e95377745971786f5bbb87d14f"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/767/encounters",
+						"fetchedAt": "2026-11-03T05:53:55.170Z",
+						"hash": "b1faa2e2504ecd62751ad419fe6ddce2aaa49284214d9e90f02546e48c9ed4ff"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/767/",
+						"fetchedAt": "2026-11-03T05:53:55.223Z",
+						"hash": "08647029db623a781418025600b8627b84468386561e75b082a0ec28d3093597"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlet": "",
+				"violet": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlet": {},
+				"violet": {}
+			}
+		},
+		{
+			"profileKey": "the-teal-mask",
+			"label": "The Teal Mask",
+			"appGameKeys": [
+				"scarlettm",
+				"violettm"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Wimpod",
+				"localizedNames": {
+					"ja-hrkt": "コソクムシ",
+					"ja-roma": "Kosokumushi",
+					"ko": "꼬시레",
+					"zh-hant": "膽小蟲",
+					"fr": "Sovkipou",
+					"de": "Reißlaus",
+					"es": "Wimpod",
+					"it": "Wimpod",
+					"ja": "コソクムシ",
+					"zh-hans": "胆小虫",
+					"es-419": "Wimpod"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Water"
+				],
+				"baseStats": {
+					"hp": 25,
+					"atk": 35,
+					"def": 40,
+					"spa": 20,
+					"spd": 30,
+					"spe": 80
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 7,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Wimp Out"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug",
+					"Water3"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.5 m",
+				"weight": "12.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 90,
+				"baseExperience": 46,
+				"habitat": "",
+				"shape": "Tentacles",
+				"color": "Gray",
+				"genus": "Turn Tail Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "そうこうポケモン",
+					"ko": "주행포켓몬",
+					"zh-hant": "疾行寶可夢",
+					"fr": "Pokémon Cavaleur",
+					"de": "Laufschritt-Pokémon",
+					"es": "Pokémon Huidizo",
+					"it": "Pokémon Lestopode",
+					"ja": "そうこうポケモン",
+					"zh-hans": "疾行宝可梦",
+					"es-419": "Pokémon Huidizo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 767
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 182
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 109
+					},
+					{
+						"pokedex": "original-poni",
+						"number": 70
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 221
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 122
+					},
+					{
+						"pokedex": "updated-poni",
+						"number": 83
+					},
+					{
+						"pokedex": "galar",
+						"number": 232
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 124
+					},
+					{
+						"pokedex": "hyperspace",
+						"number": 62
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 767,
+								"natiId": 767,
+								"name": "Wimpod"
+							},
+							{
+								"id": 768,
+								"natiId": 768,
+								"name": "Golisopod",
+								"method": "Level",
+								"value": 30
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Sun Moon."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/767",
+						"fetchedAt": "2026-11-03T05:53:55.086Z",
+						"hash": "3355bbcc94009410a8965cefc06128d2251cc27afe965f700c4bb3a72a65ea2f"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/396/",
+						"fetchedAt": "2026-11-03T05:53:55.114Z",
+						"hash": "b17f37dd68ff314fcb383d66b72cab86c29158ac265fbda8c74971d5f2ff5a7d"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/767/",
+						"fetchedAt": "2026-11-03T05:53:55.142Z",
+						"hash": "040ed0a9f9fa3dd418fcf3cd4bed28274b0141e95377745971786f5bbb87d14f"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/767/encounters",
+						"fetchedAt": "2026-11-03T05:53:55.170Z",
+						"hash": "b1faa2e2504ecd62751ad419fe6ddce2aaa49284214d9e90f02546e48c9ed4ff"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/767/",
+						"fetchedAt": "2026-11-03T05:53:55.223Z",
+						"hash": "08647029db623a781418025600b8627b84468386561e75b082a0ec28d3093597"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlettm": "",
+				"violettm": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlettm": {},
+				"violettm": {}
+			}
+		},
+		{
+			"profileKey": "the-indigo-disk",
+			"label": "The Indigo Disk",
+			"appGameKeys": [
+				"scarletid",
+				"violetid"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Wimpod",
+				"localizedNames": {
+					"ja-hrkt": "コソクムシ",
+					"ja-roma": "Kosokumushi",
+					"ko": "꼬시레",
+					"zh-hant": "膽小蟲",
+					"fr": "Sovkipou",
+					"de": "Reißlaus",
+					"es": "Wimpod",
+					"it": "Wimpod",
+					"ja": "コソクムシ",
+					"zh-hans": "胆小虫",
+					"es-419": "Wimpod"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Water"
+				],
+				"baseStats": {
+					"hp": 25,
+					"atk": 35,
+					"def": 40,
+					"spa": 20,
+					"spd": 30,
+					"spe": 80
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 7,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Wimp Out"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Bug",
+					"Water3"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.5 m",
+				"weight": "12.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 90,
+				"baseExperience": 46,
+				"habitat": "",
+				"shape": "Tentacles",
+				"color": "Gray",
+				"genus": "Turn Tail Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "そうこうポケモン",
+					"ko": "주행포켓몬",
+					"zh-hant": "疾行寶可夢",
+					"fr": "Pokémon Cavaleur",
+					"de": "Laufschritt-Pokémon",
+					"es": "Pokémon Huidizo",
+					"it": "Pokémon Lestopode",
+					"ja": "そうこうポケモン",
+					"zh-hans": "疾行宝可梦",
+					"es-419": "Pokémon Huidizo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 767
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 182
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 109
+					},
+					{
+						"pokedex": "original-poni",
+						"number": 70
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 221
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 122
+					},
+					{
+						"pokedex": "updated-poni",
+						"number": 83
+					},
+					{
+						"pokedex": "galar",
+						"number": 232
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 124
+					},
+					{
+						"pokedex": "hyperspace",
+						"number": 62
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 767,
+								"natiId": 767,
+								"name": "Wimpod"
+							},
+							{
+								"id": 768,
+								"natiId": 768,
+								"name": "Golisopod",
+								"method": "Level",
+								"value": 30
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Sun Moon."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/767",
+						"fetchedAt": "2026-11-03T05:53:55.086Z",
+						"hash": "3355bbcc94009410a8965cefc06128d2251cc27afe965f700c4bb3a72a65ea2f"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/396/",
+						"fetchedAt": "2026-11-03T05:53:55.114Z",
+						"hash": "b17f37dd68ff314fcb383d66b72cab86c29158ac265fbda8c74971d5f2ff5a7d"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/767/",
+						"fetchedAt": "2026-11-03T05:53:55.142Z",
+						"hash": "040ed0a9f9fa3dd418fcf3cd4bed28274b0141e95377745971786f5bbb87d14f"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/767/encounters",
+						"fetchedAt": "2026-11-03T05:53:55.170Z",
+						"hash": "b1faa2e2504ecd62751ad419fe6ddce2aaa49284214d9e90f02546e48c9ed4ff"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/767/",
+						"fetchedAt": "2026-11-03T05:53:55.223Z",
+						"hash": "08647029db623a781418025600b8627b84468386561e75b082a0ec28d3093597"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarletid": "",
+				"violetid": ""
+			},
+			"localizedFlavorByGame": {
+				"scarletid": {},
+				"violetid": {}
+			}
+		},
+		{
+			"profileKey": "mega-dimension",
+			"label": "Mega Dimension",
+			"appGameKeys": [
+				"legendszamd"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Wimpod",
+				"localizedNames": {
+					"ja-hrkt": "コソクムシ",
+					"ja-roma": "Kosokumushi",
+					"ko": "꼬시레",
+					"zh-hant": "膽小蟲",
+					"fr": "Sovkipou",
+					"de": "Reißlaus",
+					"es": "Wimpod",
+					"it": "Wimpod",
+					"ja": "コソクムシ",
+					"zh-hans": "胆小虫",
+					"es-419": "Wimpod"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Water"
+				],
+				"baseStats": {
+					"hp": 25,
+					"atk": 35,
+					"def": 40,
+					"spa": 20,
+					"spd": 30,
+					"spe": 80
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 7,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Wimp Out",
+					"Wimp Out (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Wimp Out"
+				],
+				"eggGroups": [
+					"Bug",
+					"Water3"
+				],
+				"expGroup": "Medium Fast",
+				"hatchCounter": 20,
+				"height": "0.5 m",
+				"weight": "12 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 90,
+				"baseExperience": 46,
+				"habitat": "",
+				"shape": "Tentacles",
+				"color": "Gray",
+				"genus": "Turn Tail Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "そうこうポケモン",
+					"ko": "주행포켓몬",
+					"zh-hant": "疾行寶可夢",
+					"fr": "Pokémon Cavaleur",
+					"de": "Laufschritt-Pokémon",
+					"es": "Pokémon Huidizo",
+					"it": "Pokémon Lestopode",
+					"ja": "そうこうポケモン",
+					"zh-hans": "疾行宝可梦",
+					"es-419": "Pokémon Huidizo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 767
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 182
+					},
+					{
+						"pokedex": "original-akala",
+						"number": 109
+					},
+					{
+						"pokedex": "original-poni",
+						"number": 70
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 221
+					},
+					{
+						"pokedex": "updated-akala",
+						"number": 122
+					},
+					{
+						"pokedex": "updated-poni",
+						"number": 83
+					},
+					{
+						"pokedex": "galar",
+						"number": 232
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 124
+					},
+					{
+						"pokedex": "hyperspace",
+						"number": 62
+					}
+				],
+				"alphaMove": "Mud Shot",
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 767,
+								"natiId": 767,
+								"name": "Wimpod"
+							},
+							{
+								"id": 768,
+								"natiId": 768,
+								"name": "Golisopod",
+								"method": "Level",
+								"value": 30
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Hyperspace Lumiose",
+						"notes": "Bug (1 Star), Water (3 Star)",
+						"games": "Legends: Z-A Mega Dimension"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Rollout",
+							"level": 1,
+							"order": 2
+						}
+					],
+					"Machine": [
+						{
+							"name": "Protect",
+							"machine": "TM017",
+							"order": 1
+						},
+						{
+							"name": "Swift",
+							"machine": "TM027",
+							"order": 2
+						},
+						{
+							"name": "Endure",
+							"machine": "TM035",
+							"order": 3
+						},
+						{
+							"name": "Mud Shot",
+							"machine": "TM046",
+							"order": 4
+						},
+						{
+							"name": "Surf",
+							"machine": "TM073",
+							"order": 5
+						},
+						{
+							"name": "Substitute",
+							"machine": "TM085",
+							"order": 6
+						},
+						{
+							"name": "Spikes",
+							"machine": "TM088",
+							"order": 7
+						},
+						{
+							"name": "Taunt",
+							"machine": "TM095",
+							"order": 8
+						},
+						{
+							"name": "Waterfall",
+							"machine": "TM098",
+							"order": 9
+						},
+						{
+							"name": "Facade",
+							"machine": "TM109",
+							"order": 10
+						},
+						{
+							"name": "Scald",
+							"machine": "TM148",
+							"order": 11
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Project Pokemon's Z-A game-data export assigns this form regional Dex #294."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/767",
+						"fetchedAt": "2026-11-03T05:53:55.086Z",
+						"hash": "3355bbcc94009410a8965cefc06128d2251cc27afe965f700c4bb3a72a65ea2f"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/396/",
+						"fetchedAt": "2026-11-03T05:53:55.114Z",
+						"hash": "b17f37dd68ff314fcb383d66b72cab86c29158ac265fbda8c74971d5f2ff5a7d"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/767/",
+						"fetchedAt": "2026-11-03T05:53:55.142Z",
+						"hash": "040ed0a9f9fa3dd418fcf3cd4bed28274b0141e95377745971786f5bbb87d14f"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/767/encounters",
+						"fetchedAt": "2026-11-03T05:53:55.170Z",
+						"hash": "b1faa2e2504ecd62751ad419fe6ddce2aaa49284214d9e90f02546e48c9ed4ff"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/767/",
+						"fetchedAt": "2026-11-03T05:53:55.223Z",
+						"hash": "08647029db623a781418025600b8627b84468386561e75b082a0ec28d3093597"
+					},
+					{
+						"type": "legends-za-personal-data",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/personal.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c00215459c764ba65d879d6503a7337ad80b338171ab4713d1c6f52b4517e36f"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "719eff37d8f2f404d163f81d23b2c921ac323a7b00304e502ca37d69a3375b1d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/French/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "1b658102e791558a1bb317563b7a3aaab8cebc1c7517aa7f5d5c0e708e93d626"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/German/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5f1e419ae3b84ab18cb05b972569e629ff0bff96d928468c52c536b02dc6cf9d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Italian/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "e0bd40a2f4b7678afb82f959b7b1f3503590bd13884daf94bd5813fea832067c"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/JPN/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5c2c9784278c5d13f3ba376e4338cef21923d68faec9b8498175c21180825f24"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Korean/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c83545726b0b0b803295f52448510c15adaab3e6ce248adba23b5ad0d0344216"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/LATAM/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "01d046caf7553d97a3c275465bce97ecedae26a67674a40b5c751a56b3b4d52d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Simp_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "09495dacb0d16eb6e91aa1d67eb1ed682d0682303719811eeb1c6877bb9e7ca2"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Spanish/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "b3fafb97fe85165bd65fdd732ce1e4cee880ffe5035632269787ce859735b358"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Trad_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c446ae3e93760fc4af895427508ed852511201723f8cac84121330747e8c3cd0"
+					},
+					{
+						"type": "legends-za-locations",
+						"url": "https://www.serebii.net/pokedex-sv/wimpod/",
+						"fetchedAt": "2026-11-04T05:47:08.458Z",
+						"hash": "52e9a3161a0513eb3b1c990a4deb8052a38d4f7641588dbe1add54224d12574d"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendszamd": "Its habitat includes everything from beaches to seabeds. It is happy to eat up even rotten scraps, providing a sort of natural cleaning service."
+			},
+			"localizedFlavorByGame": {
+				"legendszamd": {
+					"en": "Its habitat includes everything from beaches to seabeds. It is happy to eat up even rotten scraps, providing a sort of natural cleaning service.",
+					"fr": "Il vit aussi bien en bord de mer que dans les fonds marins. Véritable aspirateur sur pattes, il avale n’importe quelle nourriture, même pourrie.",
+					"de": "Es mag verschiedene Habitate, vom Strand bis hin zum Meeresgrund. Unterwegs frisst es gern Faules und ist eine natürliche Reinigungskraft.",
+					"it": "Vive dappertutto, dalle spiagge ai fondali marini. Mangia volentieri anche sostanze putrescenti, perciò viene chiamato \"lo spazzino della natura\".",
+					"ja": "ビーチから 海底まで 色んな 場所に 棲む。 腐った餌でも 喜び 食べる 自然の掃除屋。",
+					"ko": "해변부터 해저까지 다양한 장소에 산다. 썩은 먹이라도 기꺼이 먹는 자연의 청소부와도 같은 존재다.",
+					"es-419": "Su hábitat es muy variado, desde playas hasta el fondo del mar. Hace de barrendero natural al ir engullendo carroña por el camino.",
+					"zh-hans": "从沙滩到海底，栖息在各式各样的地方。 即使是腐烂的食物也能吃得很开心， 是大自然的清洁员。",
+					"es": "Su hábitat es muy variado, desde playas hasta el fondo del mar. Hace de barrendero natural al ir engullendo presas podridas por el camino.",
+					"zh-hant": "從沙灘到海底，會棲息在各式各樣的地方。 即使是腐爛的食物也能吃得很開心， 是大自然的清潔員。"
+				}
+			}
+		}
+	]
+}

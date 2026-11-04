@@ -1,0 +1,163 @@
+{
+	"schemaVersion": 1,
+	"id": 755,
+	"slug": "fishious-rend",
+	"name": "Fishious Rend",
+	"names": {
+		"de": "Kiemenbiss",
+		"en": "Fishious Rend",
+		"es": "Branquibocado",
+		"es-419": "Branquibocado",
+		"fr": "Branchicrok",
+		"it": "Branchiomorso",
+		"ja": "エラがみ",
+		"ja-hrkt": "エラがみ",
+		"ko": "아가미물기",
+		"zh-hans": "鳃咬",
+		"zh-hant": "鰓咬"
+	},
+	"generation": 8,
+	"type": "Water",
+	"damageClass": "Physical",
+	"power": 85,
+	"accuracy": 100,
+	"pp": 10,
+	"priority": 0,
+	"effectChance": 100,
+	"target": "Selected Pokemon",
+	"effectEntries": [
+		{
+			"language": "en",
+			"effect": "Power doubles if the user moves before the target.",
+			"shortEffect": "Power doubles if the user moves before the target."
+		}
+	],
+	"effectChanges": [],
+	"descriptions": [
+		{
+			"versionGroup": "sword-shield",
+			"language": "de",
+			"text": "Der Anwender beißt mit seinen harten Kiemen zu. Kommt er vor dem Ziel zum Zug, verdoppelt sich die Stärke der Attacke."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "en",
+			"text": "The user rends the target with its hard gills. If the user attacks before the target, the power of this move is doubled."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es",
+			"text": "El usuario agarra al objetivo con sus duras branquias. En caso de atacar antes que este último, la potencia del movimiento se duplica."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es-419",
+			"text": "El usuario agarra al objetivo con sus duras branquias. En caso de atacar antes que este último, la potencia del movimiento se duplica."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "fr",
+			"text": "Le lanceur mord sa cible avec ses solides branchies. Si cette capacité est lancée avant que la cible n’attaque, elle infligera deux fois plus de dégâts."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "it",
+			"text": "Chi la usa morde il bersaglio con le dure branchie. Se attacca per primo, la potenza della mossa raddoppia."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja",
+			"text": "かたい エラで かみつく。 相手より 先に 攻撃できると 技の 威力は ２倍に なる。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja-hrkt",
+			"text": "かたい エラで かみつく。 あいてより さきに こうげきできると わざの いりょくは ２ばいに なる。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ko",
+			"text": "단단한 아가미로 문다. 상대보다 먼저 공격하면 기술의 위력은 2배가 된다."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hans",
+			"text": "用坚硬的腮咬住对手。 如果比对手先出手攻击， 招式的威力会变成２倍。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hant",
+			"text": "用堅硬的鰓咬住對手。 若在對手之前進行攻擊， 招式的威力會變成２倍。"
+		}
+	],
+	"pastValues": [],
+	"statChanges": [],
+	"meta": {
+		"ailment": "None",
+		"category": "Damage",
+		"minHits": null,
+		"maxHits": null,
+		"minTurns": null,
+		"maxTurns": null,
+		"drain": 0,
+		"healing": 0,
+		"critRate": 0,
+		"ailmentChance": 0,
+		"flinchChance": 0,
+		"statChance": 0
+	},
+	"machines": [],
+	"learners": [
+		{
+			"nationalDexId": 882,
+			"speciesName": "Dracovish",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 63,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 883,
+			"speciesName": "Arctovish",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 63,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		}
+	],
+	"potentialPokemon": [
+		"dracovish",
+		"arctovish"
+	],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/move/755/",
+		"fetchedAt": "2026-11-03T06:30:18.245Z",
+		"hash": "2f6ebdc0dc29f8c351b731f4a48dadcc9f8a51da6e813c954fe9c2a828e0cefc"
+	}
+}

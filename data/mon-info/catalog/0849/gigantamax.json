@@ -1,0 +1,617 @@
+{
+	"schemaVersion": 2,
+	"nationalDexId": 849,
+	"speciesName": "Toxtricity",
+	"formKey": "gigantamax",
+	"formName": "Gigantamax",
+	"formLabelSource": "form-catalog",
+	"profiles": [
+		{
+			"profileKey": "sword-shield",
+			"label": "Sword / Shield",
+			"appGameKeys": [
+				"sword",
+				"shield"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Toxtricity",
+				"localizedNames": {
+					"ja-hrkt": "ストリンダー",
+					"ja-roma": "Strinder",
+					"ko": "스트린더",
+					"zh-hant": "顫弦蠑螈",
+					"fr": "Salarsen",
+					"de": "Riffex",
+					"es": "Toxtricity",
+					"it": "Toxtricity",
+					"ja": "ストリンダー",
+					"zh-hans": "颤弦蝾螈",
+					"es-419": "Toxtricity"
+				},
+				"localizedFormNames": {
+					"fr": "Salarsen Forme Aigüe Gigamax",
+					"de": "Gigadynamax-Riffex (Hochform)"
+				},
+				"localizedFormLabels": {
+					"ja-hrkt": "ハイなすがた・キョダイマックスのすがた",
+					"fr": "Forme Gigamax",
+					"de": "Gigadynamax-Form",
+					"ja": "ハイなすがた・キョダイマックスのすがた"
+				},
+				"types": [
+					"Electric",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 75,
+					"atk": 98,
+					"def": 70,
+					"spa": 114,
+					"spd": 70,
+					"spe": 75
+				},
+				"evYield": {
+					"spa": 2
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Punk Rock",
+					"Plus",
+					"Technician (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Technician"
+				],
+				"eggGroups": [
+					"Humanshape"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 25,
+				"height": "24.0 m",
+				"weight": "1000.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 45,
+				"baseExperience": 176,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Purple",
+				"genus": "Punk Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "パンクポケモン",
+					"ko": "펑크포켓몬",
+					"zh-hant": "龐克寶可夢",
+					"fr": "Pokémon Punk",
+					"de": "Punk-Pokémon",
+					"es": "Pokémon Punki",
+					"it": "Pokémon Punk",
+					"ja": "パンクポケモン",
+					"zh-hans": "庞克宝可梦",
+					"es-419": "Pokémon Punki"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 849
+					},
+					{
+						"pokedex": "galar",
+						"number": 311
+					},
+					{
+						"pokedex": "paldea",
+						"number": 199
+					},
+					{
+						"pokedex": "hyperspace",
+						"number": 103
+					},
+					{
+						"pokedex": "champions",
+						"number": 849
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 848,
+								"natiId": 848,
+								"name": "Toxel"
+							},
+							{
+								"id": 849,
+								"natiId": 849,
+								"name": "Toxtricity",
+								"method": "Level",
+								"value": 30
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Galar Wild Area Max Dens Area",
+						"notes": "Max Raid, Lv. 60",
+						"games": "Sword",
+						"rate": "4%"
+					},
+					{
+						"area": "Galar Wild Area Max Dens Area",
+						"notes": "Max Raid, Lv. 60",
+						"games": "Shield",
+						"rate": "4%"
+					}
+				],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokemonPGC form catalog includes this game profile.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/849",
+						"fetchedAt": "2026-11-03T05:54:01.015Z",
+						"hash": "e6c3b38c3eff04ff02f7178b5d1d6dda8fd5d0d0b924c0ec59ec08e4741afe4a"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/446/",
+						"fetchedAt": "2026-11-03T05:54:01.047Z",
+						"hash": "c3a218379741b66d230a8c18bcc48f5e3a6ebfe1851bb38aeff45e77029a9105"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/10219/",
+						"fetchedAt": "2026-11-03T05:54:01.351Z",
+						"hash": "ccea5dd827d822358cae1d1a19035bb677b60d86e9c4e75a726bc5c9f4652f2f"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/10219/encounters",
+						"fetchedAt": "2026-11-03T05:54:01.404Z",
+						"hash": "85463c208e811d43dae869aa5c9eb6e79adb870e400b4f4dddf28a460d75e841"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/10388/",
+						"fetchedAt": "2026-11-03T05:54:01.462Z",
+						"hash": "6be27165346b1be819395c7e99a483fff5877e75ab9092d04688e3cbf58cd077"
+					}
+				],
+				"formName": "Gigantamax"
+			},
+			"flavorByGame": {
+				"sword": "When this Pokémon sounds as if it’s strumming a guitar, it’s actually clawing at the protrusions on its chest to generate electricity.",
+				"shield": "This short-tempered and aggressive Pokémon chugs stagnant water to absorb any toxins it might contain."
+			},
+			"localizedFlavorByGame": {
+				"sword": {
+					"ja-hrkt": "むねの とっきを かきむしり でんきを おこすとき あたりに ギターのような おとが ひびく。",
+					"ko": "가슴에 난 돌기를 긁으면 전기가 일어나며 주위에 기타와 비슷한 소리가 울려퍼진다.",
+					"zh-hant": "當牠用力抓撓胸部的突起物 來製造電力時，四周會響起 如同吉他演奏般的聲音。",
+					"fr": "Lorsqu’il gratte l’excroissance sur son ventre pour produire de l’électricité, on peut entendre un son similaire à celui d’une guitare.",
+					"de": "Wenn es am Fortsatz an seiner Brust kratzt und dadurch Strom erzeugt, dann erklingt in der Umgebung ein Ton wie von einer Gitarre.",
+					"es": "Cuando rasga las protuberancias del pecho para generar energía eléctrica, emite un sonido similar al de una guitarra, que reverbera en el entorno.",
+					"it": "Quando produce energia elettrica strofinando le protuberanze che ha sul petto, tutt’intorno riverbera un suono simile a quello di una chitarra.",
+					"en": "When this Pokémon sounds as if it’s strumming a guitar, it’s actually clawing at the protrusions on its chest to generate electricity.",
+					"ja": "胸の 突起を 掻きむしり 電気を 起こすとき あたりに ギターのような 音が 響く。",
+					"zh-hans": "当它用力抓挠胸部的突起物 来制造电力时，四周会响起 如同吉他演奏般的声音。",
+					"es-419": "Cuando rasga las protuberancias del pecho para generar energía eléctrica, emite un sonido similar al de una guitarra, que reverbera en el entorno."
+				},
+				"shield": {
+					"ja-hrkt": "ケンカごしで きが みじかい。 よどんだ みずを ガブのみして すいちゅうの どくそを とりこむ。",
+					"ko": "호전적이며 성미가 급하다. 고인 물을 벌컥벌컥 마셔서 물속의 독소를 흡수한다.",
+					"zh-hant": "氣勢洶洶的急性子。 會大口喝下混濁的水， 吸收其中所含的毒素。",
+					"fr": "Impatient et bagarreur, ce Pokémon avale de grandes gorgées d’eau croupie pour en absorber toute la toxicité.",
+					"de": "Dieses streitsüchtige und leicht reizbare Pokémon kippt abgestandenes Wasser in sich hinein und nimmt die darin enthaltenen Giftstoffe in sich auf.",
+					"es": "Posee un carácter belicoso e irascible. Bebe una gran cantidad de agua estancada para absorber sus toxinas.",
+					"it": "È litigioso e irascibile. Ingurgita acqua stagnante in grandi quantità per assorbire le tossine in essa contenute.",
+					"en": "This short-tempered and aggressive Pokémon chugs stagnant water to absorb any toxins it might contain.",
+					"ja": "ケンカ腰で 気が 短い。 よどんだ 水を がぶ飲みして 水中の 毒素を 取りこむ。",
+					"zh-hans": "气势汹汹的急性子。 会大口喝下浑浊的水， 吸收其中所含的毒素。",
+					"es-419": "Posee un carácter belicoso e irascible. Bebe una gran cantidad de agua estancada para absorber sus toxinas."
+				}
+			}
+		},
+		{
+			"profileKey": "the-isle-of-armor",
+			"label": "The Isle of Armor",
+			"appGameKeys": [
+				"swordioa",
+				"shieldioa"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Toxtricity",
+				"localizedNames": {
+					"ja-hrkt": "ストリンダー",
+					"ja-roma": "Strinder",
+					"ko": "스트린더",
+					"zh-hant": "顫弦蠑螈",
+					"fr": "Salarsen",
+					"de": "Riffex",
+					"es": "Toxtricity",
+					"it": "Toxtricity",
+					"ja": "ストリンダー",
+					"zh-hans": "颤弦蝾螈",
+					"es-419": "Toxtricity"
+				},
+				"localizedFormNames": {
+					"fr": "Salarsen Forme Aigüe Gigamax",
+					"de": "Gigadynamax-Riffex (Hochform)"
+				},
+				"localizedFormLabels": {
+					"ja-hrkt": "ハイなすがた・キョダイマックスのすがた",
+					"fr": "Forme Gigamax",
+					"de": "Gigadynamax-Form",
+					"ja": "ハイなすがた・キョダイマックスのすがた"
+				},
+				"types": [
+					"Electric",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 75,
+					"atk": 98,
+					"def": 70,
+					"spa": 114,
+					"spd": 70,
+					"spe": 75
+				},
+				"evYield": {
+					"spa": 2
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Punk Rock",
+					"Plus",
+					"Technician (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Technician"
+				],
+				"eggGroups": [
+					"Humanshape"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 25,
+				"height": "24.0 m",
+				"weight": "1000.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 45,
+				"baseExperience": 176,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Purple",
+				"genus": "Punk Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "パンクポケモン",
+					"ko": "펑크포켓몬",
+					"zh-hant": "龐克寶可夢",
+					"fr": "Pokémon Punk",
+					"de": "Punk-Pokémon",
+					"es": "Pokémon Punki",
+					"it": "Pokémon Punk",
+					"ja": "パンクポケモン",
+					"zh-hans": "庞克宝可梦",
+					"es-419": "Pokémon Punki"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 849
+					},
+					{
+						"pokedex": "galar",
+						"number": 311
+					},
+					{
+						"pokedex": "paldea",
+						"number": 199
+					},
+					{
+						"pokedex": "hyperspace",
+						"number": 103
+					},
+					{
+						"pokedex": "champions",
+						"number": 849
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 848,
+								"natiId": 848,
+								"name": "Toxel"
+							},
+							{
+								"id": 849,
+								"natiId": 849,
+								"name": "Toxtricity",
+								"method": "Level",
+								"value": 30
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokemonPGC form catalog includes this game profile.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/849",
+						"fetchedAt": "2026-11-03T05:54:01.015Z",
+						"hash": "e6c3b38c3eff04ff02f7178b5d1d6dda8fd5d0d0b924c0ec59ec08e4741afe4a"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/446/",
+						"fetchedAt": "2026-11-03T05:54:01.047Z",
+						"hash": "c3a218379741b66d230a8c18bcc48f5e3a6ebfe1851bb38aeff45e77029a9105"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/10219/",
+						"fetchedAt": "2026-11-03T05:54:01.351Z",
+						"hash": "ccea5dd827d822358cae1d1a19035bb677b60d86e9c4e75a726bc5c9f4652f2f"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/10219/encounters",
+						"fetchedAt": "2026-11-03T05:54:01.404Z",
+						"hash": "85463c208e811d43dae869aa5c9eb6e79adb870e400b4f4dddf28a460d75e841"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/10388/",
+						"fetchedAt": "2026-11-03T05:54:01.462Z",
+						"hash": "6be27165346b1be819395c7e99a483fff5877e75ab9092d04688e3cbf58cd077"
+					}
+				],
+				"formName": "Gigantamax"
+			},
+			"flavorByGame": {
+				"swordioa": "",
+				"shieldioa": ""
+			},
+			"localizedFlavorByGame": {
+				"swordioa": {},
+				"shieldioa": {}
+			}
+		},
+		{
+			"profileKey": "the-crown-tundra",
+			"label": "The Crown Tundra",
+			"appGameKeys": [
+				"swordct",
+				"shieldct"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Toxtricity",
+				"localizedNames": {
+					"ja-hrkt": "ストリンダー",
+					"ja-roma": "Strinder",
+					"ko": "스트린더",
+					"zh-hant": "顫弦蠑螈",
+					"fr": "Salarsen",
+					"de": "Riffex",
+					"es": "Toxtricity",
+					"it": "Toxtricity",
+					"ja": "ストリンダー",
+					"zh-hans": "颤弦蝾螈",
+					"es-419": "Toxtricity"
+				},
+				"localizedFormNames": {
+					"fr": "Salarsen Forme Aigüe Gigamax",
+					"de": "Gigadynamax-Riffex (Hochform)"
+				},
+				"localizedFormLabels": {
+					"ja-hrkt": "ハイなすがた・キョダイマックスのすがた",
+					"fr": "Forme Gigamax",
+					"de": "Gigadynamax-Form",
+					"ja": "ハイなすがた・キョダイマックスのすがた"
+				},
+				"types": [
+					"Electric",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 75,
+					"atk": 98,
+					"def": 70,
+					"spa": 114,
+					"spd": 70,
+					"spe": 75
+				},
+				"evYield": {
+					"spa": 2
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Punk Rock",
+					"Plus",
+					"Technician (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Technician"
+				],
+				"eggGroups": [
+					"Humanshape"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 25,
+				"height": "24.0 m",
+				"weight": "1000.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 45,
+				"baseExperience": 176,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Purple",
+				"genus": "Punk Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "パンクポケモン",
+					"ko": "펑크포켓몬",
+					"zh-hant": "龐克寶可夢",
+					"fr": "Pokémon Punk",
+					"de": "Punk-Pokémon",
+					"es": "Pokémon Punki",
+					"it": "Pokémon Punk",
+					"ja": "パンクポケモン",
+					"zh-hans": "庞克宝可梦",
+					"es-419": "Pokémon Punki"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 849
+					},
+					{
+						"pokedex": "galar",
+						"number": 311
+					},
+					{
+						"pokedex": "paldea",
+						"number": 199
+					},
+					{
+						"pokedex": "hyperspace",
+						"number": 103
+					},
+					{
+						"pokedex": "champions",
+						"number": 849
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 848,
+								"natiId": 848,
+								"name": "Toxel"
+							},
+							{
+								"id": 849,
+								"natiId": 849,
+								"name": "Toxtricity",
+								"method": "Level",
+								"value": 30
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Frostpoint Field Max Den E",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Crown Tundra Sword",
+						"rate": "15%"
+					},
+					{
+						"area": "Three Point Pass Max Den B",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Crown Tundra Sword",
+						"rate": "15%"
+					},
+					{
+						"area": "Giants Bed Max Den S",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Crown Tundra Sword",
+						"rate": "15%"
+					},
+					{
+						"area": "Frigid Sea Max Den L",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Crown Tundra Sword",
+						"rate": "15%"
+					},
+					{
+						"area": "Ballimere Lake Max Den I",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Crown Tundra Sword",
+						"rate": "15%"
+					}
+				],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokemonPGC form catalog includes this game profile.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/849",
+						"fetchedAt": "2026-11-03T05:54:01.015Z",
+						"hash": "e6c3b38c3eff04ff02f7178b5d1d6dda8fd5d0d0b924c0ec59ec08e4741afe4a"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/446/",
+						"fetchedAt": "2026-11-03T05:54:01.047Z",
+						"hash": "c3a218379741b66d230a8c18bcc48f5e3a6ebfe1851bb38aeff45e77029a9105"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/10219/",
+						"fetchedAt": "2026-11-03T05:54:01.351Z",
+						"hash": "ccea5dd827d822358cae1d1a19035bb677b60d86e9c4e75a726bc5c9f4652f2f"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/10219/encounters",
+						"fetchedAt": "2026-11-03T05:54:01.404Z",
+						"hash": "85463c208e811d43dae869aa5c9eb6e79adb870e400b4f4dddf28a460d75e841"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/10388/",
+						"fetchedAt": "2026-11-03T05:54:01.462Z",
+						"hash": "6be27165346b1be819395c7e99a483fff5877e75ab9092d04688e3cbf58cd077"
+					}
+				],
+				"formName": "Gigantamax"
+			},
+			"flavorByGame": {
+				"swordct": "",
+				"shieldct": ""
+			},
+			"localizedFlavorByGame": {
+				"swordct": {},
+				"shieldct": {}
+			}
+		}
+	]
+}

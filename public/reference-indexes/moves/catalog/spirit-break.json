@@ -1,0 +1,188 @@
+{
+	"schemaVersion": 1,
+	"id": 789,
+	"slug": "spirit-break",
+	"name": "Spirit Break",
+	"names": {
+		"de": "Seelenbruch",
+		"en": "Spirit Break",
+		"es": "Choque Anímico",
+		"es-419": "Choque Anímico",
+		"fr": "Choc Émotionnel",
+		"it": "Frantumanima",
+		"ja": "ソウルクラッシュ",
+		"ja-hrkt": "ソウルクラッシュ",
+		"ko": "소울크래시",
+		"zh-hans": "灵魂冲击",
+		"zh-hant": "靈魂衝擊"
+	},
+	"generation": 8,
+	"type": "Fairy",
+	"damageClass": "Physical",
+	"power": 75,
+	"accuracy": 100,
+	"pp": 15,
+	"priority": 0,
+	"effectChance": 100,
+	"target": "Selected Pokemon",
+	"effectEntries": [
+		{
+			"language": "en",
+			"effect": "Inflicts regular damage. Has a chance to lower the target’s Special Attack by one stage.",
+			"shortEffect": "Has a chance to lower the target’s Special Attack by one stage."
+		},
+		{
+			"language": "fr",
+			"effect": "Inflige des dégats réguliers. A une chance de diminuer l'Attaque Spéciale de la cible d'un niveau.",
+			"shortEffect": "A une chance de diminuer l'Attaque Spéciale de la cible d'un niveau."
+		}
+	],
+	"effectChanges": [],
+	"descriptions": [
+		{
+			"versionGroup": "legends-arceus",
+			"language": "en",
+			"text": "The user attacks the target with so much force that it could break the target's spirit. This also lowers the target's Sp. Atk stat."
+		},
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "en",
+			"text": "The user attacks the target with so much force that it could break the target's spirit. This also lowers the target's Sp. Atk stat."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "de",
+			"text": "Die Attacke trifft das Ziel mit so viel Wucht, dass es den Mut verliert. Dabei wird sein Spezial-Angriff gesenkt."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "en",
+			"text": "The user attacks the target with so much force that it could break the target’s spirit. This also lowers the target’s Sp. Atk stat."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es",
+			"text": "El usuario ataca al objetivo con tal ímpetu que acaba minando su moral y, en consecuencia, reduce su Ataque Especial."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es-419",
+			"text": "El usuario ataca al objetivo con tal ímpetu que acaba minando su moral y, en consecuencia, reduce su Ataque Especial."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "fr",
+			"text": "Le lanceur attaque son adversaire avec une telle force que ce dernier peut s’en retrouver profondément troublé. Baisse l’Attaque Spéciale de la cible."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "it",
+			"text": "Chi la usa attacca il bersaglio con un tale impeto da fargli perdere la voglia di lottare e ne riduce l’Attacco Speciale."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja",
+			"text": "食らうと くじけるほどの 勢いで 攻撃。 相手の 特攻を 下げる。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja-hrkt",
+			"text": "くらうと くじけるほどの いきおいで こうげき。 あいての とくこうを さげる。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ko",
+			"text": "맞으면 기가 꺾여버릴 것 같은 기세로 공격한다. 상대의 특수공격을 떨어뜨린다."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hans",
+			"text": "用足以让对手一蹶不振的 气势进行攻击。 会降低对手的特攻。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hant",
+			"text": "用足以讓對手一蹶不振的 氣勢進行攻擊。 可降低對手的特攻。"
+		}
+	],
+	"pastValues": [],
+	"statChanges": [
+		{
+			"stat": "Special Attack",
+			"change": -1
+		}
+	],
+	"meta": {
+		"ailment": "None",
+		"category": "Damage Lower",
+		"minHits": null,
+		"maxHits": null,
+		"minTurns": null,
+		"maxTurns": null,
+		"drain": 0,
+		"healing": 0,
+		"critRate": 0,
+		"ailmentChance": 0,
+		"flinchChance": 0,
+		"statChance": 100
+	},
+	"machines": [],
+	"learners": [
+		{
+			"nationalDexId": 861,
+			"speciesName": "Grimmsnarl",
+			"formKey": "normal",
+			"formName": "Normal",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 1
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 1006,
+			"speciesName": "Iron Valiant",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 91,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		}
+	],
+	"potentialPokemon": [
+		"grimmsnarl",
+		"iron-valiant"
+	],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/move/789/",
+		"fetchedAt": "2026-11-03T06:30:18.435Z",
+		"hash": "204d4036cfba0f0ec881717598f1645fd95394e63d6264d84cb5eb37c902af53"
+	}
+}

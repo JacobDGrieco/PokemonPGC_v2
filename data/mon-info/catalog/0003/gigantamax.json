@@ -1,0 +1,681 @@
+{
+	"schemaVersion": 2,
+	"nationalDexId": 3,
+	"speciesName": "Venusaur",
+	"formKey": "gigantamax",
+	"formName": "Gigantamax",
+	"formLabelSource": "form-catalog",
+	"profiles": [
+		{
+			"profileKey": "sword-shield",
+			"label": "Sword / Shield",
+			"appGameKeys": [
+				"sword",
+				"shield"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Venusaur",
+				"localizedNames": {
+					"ja-hrkt": "フシギバナ",
+					"ja-roma": "Fushigibana",
+					"ko": "이상해꽃",
+					"zh-hant": "妙蛙花",
+					"fr": "Florizarre",
+					"de": "Bisaflor",
+					"es": "Venusaur",
+					"it": "Venusaur",
+					"ja": "フシギバナ",
+					"zh-hans": "妙蛙花",
+					"es-419": "Venusaur"
+				},
+				"localizedFormNames": {
+					"fr": "Florizarre Gigamax",
+					"de": "Gigadynamax-Bisaflor"
+				},
+				"localizedFormLabels": {
+					"ja-hrkt": "キョダイマックスのすがた",
+					"fr": "Forme Gigamax",
+					"de": "Gigadynamax-Form",
+					"ja": "キョダイマックスのすがた"
+				},
+				"types": [
+					"Grass",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 80,
+					"atk": 82,
+					"def": 83,
+					"spa": 100,
+					"spd": 100,
+					"spe": 80
+				},
+				"evYield": {
+					"spa": 2,
+					"spd": 1
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Overgrow",
+					"Chlorophyll (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Chlorophyll"
+				],
+				"eggGroups": [
+					"Monster",
+					"Plant"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "24.0 m",
+				"weight": "1000.0 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 236,
+				"habitat": "Grassland",
+				"shape": "Quadruped",
+				"color": "Green",
+				"genus": "Seed Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "たねポケモン",
+					"ko": "씨앗포켓몬",
+					"zh-hant": "種子寶可夢",
+					"fr": "Pokémon Graine",
+					"de": "Samen-Pokémon",
+					"es": "Pokémon Semilla",
+					"it": "Pokémon Seme",
+					"ja": "たねポケモン",
+					"zh-hans": "种子宝可梦",
+					"es-419": "Pokémon Semilla"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 3
+					},
+					{
+						"pokedex": "kanto",
+						"number": 3
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 228
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 233
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 82
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 3
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 70
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 166
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 150
+					},
+					{
+						"pokedex": "champions",
+						"number": 3
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 1,
+								"natiId": 1,
+								"name": "Bulbasaur"
+							},
+							{
+								"id": 2,
+								"natiId": 2,
+								"name": "Ivysaur",
+								"method": "Level",
+								"value": 16
+							},
+							{
+								"id": 3,
+								"natiId": 3,
+								"name": "Venusaur",
+								"method": "Level",
+								"value": 32
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokemonPGC form catalog includes this game profile.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/3",
+						"fetchedAt": "2026-11-03T05:53:06.097Z",
+						"hash": "1ec7684f0dae5889a4cdb014c1dce2866be60479079004bbc14afff26d7b09e5"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/1/",
+						"fetchedAt": "2026-11-02T17:38:58.265Z",
+						"hash": "05f17c5109d34949b2356c08aa61cd1a5267a539f57d738bb62774806631ad99"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/10195/",
+						"fetchedAt": "2026-11-03T05:53:06.362Z",
+						"hash": "99ea3be3d89f027eb08e15daf0f2cd5fe5b29c150c2bf45f1eedf6369498377c"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/10195/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.399Z",
+						"hash": "1957ddecbcdabd349ff8e9b45e0a2945864b63fcd70bb27280689447a19b84c2"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/10364/",
+						"fetchedAt": "2026-11-03T05:53:06.427Z",
+						"hash": "2ded02e017eae702f97843be3d6e9a752dd8d48e12147eab4edf9dbb74bf3c71"
+					}
+				],
+				"formName": "Gigantamax"
+			},
+			"flavorByGame": {
+				"sword": "Its plant blooms when it is absorbing solar energy. It stays on the move to seek sunlight.",
+				"shield": "A bewitching aroma wafts from its flower. The fragrance becalms those engaged in a battle."
+			},
+			"localizedFlavorByGame": {
+				"sword": {
+					"ja-hrkt": "たいようエネルギーを えいようにして おおきなハナが ひらく。 ひなたに ひきよせられるように いどうする。",
+					"ko": "태양에너지를 양분으로 큰 꽃을 피운다. 양지를 향해 이끌려가듯이 이동한다.",
+					"zh-hant": "把太陽的能源當成養分， 開出碩大的花朵。總是 朝著有陽光的地方移動。",
+					"fr": "Sa plante donne une grosse fleur quand elle absorbe les rayons du soleil. Il est toujours à la recherche des endroits les plus ensoleillés.",
+					"de": "Es nutzt Solarenergie als Nahrung und bringt so seine große Blume zum Blühen. Es geht dorthin, wo die Sonne scheint.",
+					"es": "La planta florece cuando absorbe energía solar, lo cual le obliga a buscar siempre la luz del sol.",
+					"it": "Il fiore sboccia assorbendo energia solare. Si muove continuamente in cerca di luce.",
+					"en": "Its plant blooms when it is absorbing solar energy. It stays on the move to seek sunlight.",
+					"ja": "太陽エネルギーを 栄養にして 大きな花が 開く。 日なたに 引き寄せられるように 移動する。",
+					"zh-hans": "把太阳的能源当成养分， 开出硕大的花朵。总是 朝着有阳光的地方移动。",
+					"es-419": "La planta florece cuando absorbe energía solar, lo cual le obliga a buscar siempre la luz del sol."
+				},
+				"shield": {
+					"ja-hrkt": "はなから うっとりする かおりが ただよい たたかうものの きもちを なだめてしまう。",
+					"ko": "꽃에서 황홀한 향기가 퍼져 나와 싸우는 자의 기분을 달래준다.",
+					"zh-hant": "花朵散發出的迷人香味， 能安撫激動的心情， 甚至消弭鬥爭。",
+					"fr": "Une douce senteur émane de sa plante. Cette fragrance calme tous ceux qui sont engagés dans un combat.",
+					"de": "Die Blume verströmt einen zauberhaften Duft. Er beschwichtigt erhitzte Kämpfer.",
+					"es": "La flor que tiene en el lomo libera un delicado aroma, que tiene un efecto relajante en combate.",
+					"it": "Il suo fiore emana una fragranza inebriante capace di placare l’animo di chi è impegnato nella lotta.",
+					"en": "A bewitching aroma wafts from its flower. The fragrance becalms those engaged in a battle.",
+					"ja": "花から うっとりする 香りが ただよい 戦うものの 気持ちを なだめてしまう。",
+					"zh-hans": "花朵散发出的迷人香味 能安抚激动的心情， 甚至消弭斗争。",
+					"es-419": "La flor que tiene en el lomo libera un delicado aroma, que tiene un efecto relajante en combate."
+				}
+			}
+		},
+		{
+			"profileKey": "the-isle-of-armor",
+			"label": "The Isle of Armor",
+			"appGameKeys": [
+				"swordioa",
+				"shieldioa"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Venusaur",
+				"localizedNames": {
+					"ja-hrkt": "フシギバナ",
+					"ja-roma": "Fushigibana",
+					"ko": "이상해꽃",
+					"zh-hant": "妙蛙花",
+					"fr": "Florizarre",
+					"de": "Bisaflor",
+					"es": "Venusaur",
+					"it": "Venusaur",
+					"ja": "フシギバナ",
+					"zh-hans": "妙蛙花",
+					"es-419": "Venusaur"
+				},
+				"localizedFormNames": {
+					"fr": "Florizarre Gigamax",
+					"de": "Gigadynamax-Bisaflor"
+				},
+				"localizedFormLabels": {
+					"ja-hrkt": "キョダイマックスのすがた",
+					"fr": "Forme Gigamax",
+					"de": "Gigadynamax-Form",
+					"ja": "キョダイマックスのすがた"
+				},
+				"types": [
+					"Grass",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 80,
+					"atk": 82,
+					"def": 83,
+					"spa": 100,
+					"spd": 100,
+					"spe": 80
+				},
+				"evYield": {
+					"spa": 2,
+					"spd": 1
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Overgrow",
+					"Chlorophyll (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Chlorophyll"
+				],
+				"eggGroups": [
+					"Monster",
+					"Plant"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "24.0 m",
+				"weight": "1000.0 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 236,
+				"habitat": "Grassland",
+				"shape": "Quadruped",
+				"color": "Green",
+				"genus": "Seed Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "たねポケモン",
+					"ko": "씨앗포켓몬",
+					"zh-hant": "種子寶可夢",
+					"fr": "Pokémon Graine",
+					"de": "Samen-Pokémon",
+					"es": "Pokémon Semilla",
+					"it": "Pokémon Seme",
+					"ja": "たねポケモン",
+					"zh-hans": "种子宝可梦",
+					"es-419": "Pokémon Semilla"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 3
+					},
+					{
+						"pokedex": "kanto",
+						"number": 3
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 228
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 233
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 82
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 3
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 70
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 166
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 150
+					},
+					{
+						"pokedex": "champions",
+						"number": 3
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 1,
+								"natiId": 1,
+								"name": "Bulbasaur"
+							},
+							{
+								"id": 2,
+								"natiId": 2,
+								"name": "Ivysaur",
+								"method": "Level",
+								"value": 16
+							},
+							{
+								"id": 3,
+								"natiId": 3,
+								"name": "Venusaur",
+								"method": "Level",
+								"value": 32
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Forest Of Focus Max Den A",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "5%"
+					},
+					{
+						"area": "Forest Of Focus Max Den A",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "5%"
+					},
+					{
+						"area": "Training Lowlands Max Den B",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "5%"
+					},
+					{
+						"area": "Training Lowlands Max Den B",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "5%"
+					}
+				],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokemonPGC form catalog includes this game profile.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/3",
+						"fetchedAt": "2026-11-03T05:53:06.097Z",
+						"hash": "1ec7684f0dae5889a4cdb014c1dce2866be60479079004bbc14afff26d7b09e5"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/1/",
+						"fetchedAt": "2026-11-02T17:38:58.265Z",
+						"hash": "05f17c5109d34949b2356c08aa61cd1a5267a539f57d738bb62774806631ad99"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/10195/",
+						"fetchedAt": "2026-11-03T05:53:06.362Z",
+						"hash": "99ea3be3d89f027eb08e15daf0f2cd5fe5b29c150c2bf45f1eedf6369498377c"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/10195/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.399Z",
+						"hash": "1957ddecbcdabd349ff8e9b45e0a2945864b63fcd70bb27280689447a19b84c2"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/10364/",
+						"fetchedAt": "2026-11-03T05:53:06.427Z",
+						"hash": "2ded02e017eae702f97843be3d6e9a752dd8d48e12147eab4edf9dbb74bf3c71"
+					}
+				],
+				"formName": "Gigantamax"
+			},
+			"flavorByGame": {
+				"swordioa": "",
+				"shieldioa": ""
+			},
+			"localizedFlavorByGame": {
+				"swordioa": {},
+				"shieldioa": {}
+			}
+		},
+		{
+			"profileKey": "the-crown-tundra",
+			"label": "The Crown Tundra",
+			"appGameKeys": [
+				"swordct",
+				"shieldct"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Venusaur",
+				"localizedNames": {
+					"ja-hrkt": "フシギバナ",
+					"ja-roma": "Fushigibana",
+					"ko": "이상해꽃",
+					"zh-hant": "妙蛙花",
+					"fr": "Florizarre",
+					"de": "Bisaflor",
+					"es": "Venusaur",
+					"it": "Venusaur",
+					"ja": "フシギバナ",
+					"zh-hans": "妙蛙花",
+					"es-419": "Venusaur"
+				},
+				"localizedFormNames": {
+					"fr": "Florizarre Gigamax",
+					"de": "Gigadynamax-Bisaflor"
+				},
+				"localizedFormLabels": {
+					"ja-hrkt": "キョダイマックスのすがた",
+					"fr": "Forme Gigamax",
+					"de": "Gigadynamax-Form",
+					"ja": "キョダイマックスのすがた"
+				},
+				"types": [
+					"Grass",
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 80,
+					"atk": 82,
+					"def": 83,
+					"spa": 100,
+					"spd": 100,
+					"spe": 80
+				},
+				"evYield": {
+					"spa": 2,
+					"spd": 1
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Overgrow",
+					"Chlorophyll (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Chlorophyll"
+				],
+				"eggGroups": [
+					"Monster",
+					"Plant"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "24.0 m",
+				"weight": "1000.0 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 236,
+				"habitat": "Grassland",
+				"shape": "Quadruped",
+				"color": "Green",
+				"genus": "Seed Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "たねポケモン",
+					"ko": "씨앗포켓몬",
+					"zh-hant": "種子寶可夢",
+					"fr": "Pokémon Graine",
+					"de": "Samen-Pokémon",
+					"es": "Pokémon Semilla",
+					"it": "Pokémon Seme",
+					"ja": "たねポケモン",
+					"zh-hans": "种子宝可梦",
+					"es-419": "Pokémon Semilla"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 3
+					},
+					{
+						"pokedex": "kanto",
+						"number": 3
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 228
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 233
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 82
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 3
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 70
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 166
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 150
+					},
+					{
+						"pokedex": "champions",
+						"number": 3
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 1,
+								"natiId": 1,
+								"name": "Bulbasaur"
+							},
+							{
+								"id": 2,
+								"natiId": 2,
+								"name": "Ivysaur",
+								"method": "Level",
+								"value": 16
+							},
+							{
+								"id": 3,
+								"natiId": 3,
+								"name": "Venusaur",
+								"method": "Level",
+								"value": 32
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokemonPGC form catalog includes this game profile.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/3",
+						"fetchedAt": "2026-11-03T05:53:06.097Z",
+						"hash": "1ec7684f0dae5889a4cdb014c1dce2866be60479079004bbc14afff26d7b09e5"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/1/",
+						"fetchedAt": "2026-11-02T17:38:58.265Z",
+						"hash": "05f17c5109d34949b2356c08aa61cd1a5267a539f57d738bb62774806631ad99"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/10195/",
+						"fetchedAt": "2026-11-03T05:53:06.362Z",
+						"hash": "99ea3be3d89f027eb08e15daf0f2cd5fe5b29c150c2bf45f1eedf6369498377c"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/10195/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.399Z",
+						"hash": "1957ddecbcdabd349ff8e9b45e0a2945864b63fcd70bb27280689447a19b84c2"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/10364/",
+						"fetchedAt": "2026-11-03T05:53:06.427Z",
+						"hash": "2ded02e017eae702f97843be3d6e9a752dd8d48e12147eab4edf9dbb74bf3c71"
+					}
+				],
+				"formName": "Gigantamax"
+			},
+			"flavorByGame": {
+				"swordct": "",
+				"shieldct": ""
+			},
+			"localizedFlavorByGame": {
+				"swordct": {},
+				"shieldct": {}
+			}
+		}
+	]
+}

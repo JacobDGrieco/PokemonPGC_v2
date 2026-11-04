@@ -1,0 +1,104 @@
+{
+	"schemaVersion": 1,
+	"id": 859,
+	"slug": "spin-out",
+	"name": "Spin Out",
+	"names": {
+		"de": "Reifendrehung",
+		"en": "Spin Out",
+		"es": "Quemarrueda",
+		"es-419": "Quemarrueda",
+		"fr": "Dérapage",
+		"it": "Slittaruote",
+		"ja": "ホイールスピン",
+		"ja-hrkt": "ホイールスピン",
+		"ko": "휠스핀",
+		"zh-hans": "疾速转轮",
+		"zh-hant": "疾速轉輪"
+	},
+	"generation": 9,
+	"type": "Steel",
+	"damageClass": "Physical",
+	"power": 100,
+	"accuracy": 100,
+	"pp": 5,
+	"priority": 0,
+	"effectChance": null,
+	"target": "Selected Pokemon",
+	"effectEntries": [],
+	"effectChanges": [],
+	"descriptions": [
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "en",
+			"text": "The user spins furiously by straining its legs, inflicting damage on the target. This also harshly lowers the user's Speed stat."
+		},
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "fr",
+			"text": "Le lanceur met tout son poids sur ses pattes et effectue de violentes rotations, ce qui inflige des dégâts à la cible, mais baisse beaucoup la Vitesse du lanceur."
+		}
+	],
+	"pastValues": [],
+	"statChanges": [
+		{
+			"stat": "Speed",
+			"change": -2
+		}
+	],
+	"meta": null,
+	"machines": [],
+	"learners": [
+		{
+			"nationalDexId": 965,
+			"speciesName": "Varoom",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 46,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 966,
+			"speciesName": "Revavroom",
+			"formKey": "normal",
+			"formName": "Normal",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 52,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		}
+	],
+	"potentialPokemon": [
+		"varoom",
+		"revavroom"
+	],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/move/859/",
+		"fetchedAt": "2026-11-03T06:30:18.859Z",
+		"hash": "a2f263120f2677ea66816ea73b1c088e045eb99923d05ef64da67b55a8da4ac4"
+	}
+}

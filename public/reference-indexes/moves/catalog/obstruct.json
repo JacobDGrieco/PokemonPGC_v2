@@ -1,0 +1,146 @@
+{
+	"schemaVersion": 1,
+	"id": 792,
+	"slug": "obstruct",
+	"name": "Obstruct",
+	"names": {
+		"de": "Abblocker",
+		"en": "Obstruct",
+		"es": "Obstrucción",
+		"es-419": "Obstrucción",
+		"fr": "Blocage",
+		"it": "Sbarramento",
+		"ja": "ブロッキング",
+		"ja-hrkt": "ブロッキング",
+		"ko": "블로킹",
+		"zh-hans": "拦堵",
+		"zh-hant": "攔堵"
+	},
+	"generation": 8,
+	"type": "Dark",
+	"damageClass": "Status",
+	"power": null,
+	"accuracy": 100,
+	"pp": 10,
+	"priority": 4,
+	"effectChance": 100,
+	"target": "User",
+	"effectEntries": [
+		{
+			"language": "en",
+			"effect": "Prevents any moves from hitting the user this turn. If this blocks a contact move, the user has their Defense lowered by 2 stages.",
+			"shortEffect": "Prevents any moves from hitting the user this turn. If this blocks a contact move, the user has their Defense lowered by 2 stages."
+		}
+	],
+	"effectChanges": [],
+	"descriptions": [
+		{
+			"versionGroup": "sword-shield",
+			"language": "de",
+			"text": "Der Anwender wehrt jede Attacke ab. Berührt ihn währenddessen ein Pokémon, sinkt dessen Verteidigung stark. Scheitert eventuell bei Wiederholung."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "en",
+			"text": "This move enables the user to protect itself from all attacks. Its chance of failing rises if it is used in succession. Direct contact harshly lowers the attacker’s Defense stat."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es",
+			"text": "Frena todos los ataques, pero puede fallar si se usa repetidamente. Reduce mucho la Defensa de quien ejecute un movimiento de contacto contra el usuario."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es-419",
+			"text": "Frena todos los ataques, pero puede fallar si se usa repetidamente. Reduce mucho la Defensa de quien ejecute un movimiento de contacto contra el usuario."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "fr",
+			"text": "Le lanceur se protège de toutes les attaques. Peut échouer si utilisée plusieurs fois de suite. Baisse beaucoup la Défense de l’assaillant s’il utilise une attaque directe."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "it",
+			"text": "Permette di eludere tutti gli attacchi. Se usata in successione può fallire. Se un Pokémon tocca chi la usa, la sua Difesa diminuisce di molto."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja",
+			"text": "相手の 攻撃を まったく 受けない。 連続で だすと 失敗しやすい。 触れると 防御が がくっと 下がる。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja-hrkt",
+			"text": "あいての こうげきを まったく うけない。 れんぞくで だすと しっぱい しやすい。 ふれると ぼうぎょが がくっと さがる。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ko",
+			"text": "상대의 공격을 전혀 받지 않는다. 연속으로 쓰면 실패하기 쉽다. 접촉한 상대의 방어를 크게 떨어뜨린다."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hans",
+			"text": "完全抵挡对手的攻击。 连续使出则容易失败。 一旦触碰，防御就会大幅降低。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hant",
+			"text": "完全防住對手的所有攻擊。 連續使用時容易失敗。 一旦觸碰到，防禦會大幅降低。"
+		}
+	],
+	"pastValues": [],
+	"statChanges": [],
+	"meta": {
+		"ailment": "None",
+		"category": "Unique",
+		"minHits": null,
+		"maxHits": null,
+		"minTurns": null,
+		"maxTurns": null,
+		"drain": 0,
+		"healing": 0,
+		"critRate": 0,
+		"ailmentChance": 0,
+		"flinchChance": 0,
+		"statChance": 0
+	},
+	"machines": [],
+	"learners": [
+		{
+			"nationalDexId": 862,
+			"speciesName": "Obstagoon",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 1
+						}
+					],
+					"isHidden": false
+				}
+			]
+		}
+	],
+	"potentialPokemon": [
+		"obstagoon"
+	],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/move/792/",
+		"fetchedAt": "2026-11-03T06:30:18.632Z",
+		"hash": "e998ac24ebf3b2e5f1f988bf891359fbe68d2333f1e0c3214300b1e0bc803d5d"
+	}
+}

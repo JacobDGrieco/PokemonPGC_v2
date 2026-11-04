@@ -1,0 +1,678 @@
+{
+	"schemaVersion": 2,
+	"nationalDexId": 6,
+	"speciesName": "Charizard",
+	"formKey": "gigantamax",
+	"formName": "Gigantamax",
+	"formLabelSource": "form-catalog",
+	"profiles": [
+		{
+			"profileKey": "sword-shield",
+			"label": "Sword / Shield",
+			"appGameKeys": [
+				"sword",
+				"shield"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Charizard",
+				"localizedNames": {
+					"ja-hrkt": "リザードン",
+					"ja-roma": "Lizardon",
+					"ko": "리자몽",
+					"zh-hant": "噴火龍",
+					"fr": "Dracaufeu",
+					"de": "Glurak",
+					"es": "Charizard",
+					"it": "Charizard",
+					"ja": "リザードン",
+					"zh-hans": "喷火龙",
+					"es-419": "Charizard"
+				},
+				"localizedFormNames": {
+					"fr": "Dracaufeu Gigamax",
+					"de": "Gigadynamax-Glurak"
+				},
+				"localizedFormLabels": {
+					"ja-hrkt": "キョダイマックスのすがた",
+					"fr": "Forme Gigamax",
+					"de": "Gigadynamax-Form",
+					"ja": "キョダイマックスのすがた"
+				},
+				"types": [
+					"Fire",
+					"Flying"
+				],
+				"baseStats": {
+					"hp": 78,
+					"atk": 84,
+					"def": 78,
+					"spa": 109,
+					"spd": 85,
+					"spe": 100
+				},
+				"evYield": {
+					"spa": 3
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Blaze",
+					"Solar Power (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Solar Power"
+				],
+				"eggGroups": [
+					"Monster",
+					"Dragon"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "28.0 m",
+				"weight": "1000.0 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 240,
+				"habitat": "Mountain",
+				"shape": "Upright",
+				"color": "Red",
+				"genus": "Flame Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "かえんポケモン",
+					"ko": "화염포켓몬",
+					"zh-hant": "火焰寶可夢",
+					"fr": "Pokémon Flamme",
+					"de": "Flammen-Pokémon",
+					"es": "Pokémon Llama",
+					"it": "Pokémon Fiamma",
+					"ja": "かえんポケモン",
+					"zh-hans": "火焰宝可梦",
+					"es-419": "Pokémon Llama"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 6
+					},
+					{
+						"pokedex": "kanto",
+						"number": 6
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 231
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 236
+					},
+					{
+						"pokedex": "conquest-gallery",
+						"number": 111
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 85
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 6
+					},
+					{
+						"pokedex": "galar",
+						"number": 380
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 169
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 153
+					},
+					{
+						"pokedex": "champions",
+						"number": 6
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 4,
+								"natiId": 4,
+								"name": "Charmander"
+							},
+							{
+								"id": 5,
+								"natiId": 5,
+								"name": "Charmeleon",
+								"method": "Level",
+								"value": 16
+							},
+							{
+								"id": 6,
+								"natiId": 6,
+								"name": "Charizard",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Lake Of Outrage Max Den C",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Sword",
+						"rate": "5%"
+					},
+					{
+						"area": "Lake Of Outrage Max Den C",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Shield",
+						"rate": "5%"
+					}
+				],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokemonPGC form catalog includes this game profile.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/6",
+						"fetchedAt": "2026-11-03T05:53:06.356Z",
+						"hash": "623e24b457cb50ed73df753dc54ba5b8f24ba314220ade8166a878edc44c3b3a"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/2/",
+						"fetchedAt": "2026-11-03T05:53:06.123Z",
+						"hash": "dfba1da8bcaebf123b0b8772404588a94bad712884a5b5d05de039ac8fa23f63"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/10196/",
+						"fetchedAt": "2026-11-03T05:53:06.756Z",
+						"hash": "6ac53bd8dc9e76dd3ae0dcd9eb6e8bfda32c0b874a67932ef6b181ab8e9a8f0e"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/10196/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.796Z",
+						"hash": "209ec3f15af9fe630e295375679a89ead6a648d6b70ebde980f3e25f11ab9028"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/10365/",
+						"fetchedAt": "2026-11-03T05:53:06.827Z",
+						"hash": "344a67a5d45764ca21e1c2a5b82f45c93575bd5262aa2b560c1740366eba86c0"
+					}
+				],
+				"formName": "Gigantamax"
+			},
+			"flavorByGame": {
+				"sword": "It spits fire that is hot enough to melt boulders. It may cause forest fires by blowing flames.",
+				"shield": "Its wings can carry this Pokémon close to an altitude of 4,600 feet. It blows out fire at very high temperatures."
+			},
+			"localizedFlavorByGame": {
+				"sword": {
+					"ja-hrkt": "がんせきも やけるような しゃくねつの ほのおを はいて やまかじを おこすことが ある。",
+					"ko": "암석도 태워버릴 정도로 작열하는 화염을 뿜어 산불을 일으킬 때가 있다.",
+					"zh-hant": "會噴出彷彿連岩石 都能燒焦的灼熱火焰。 有時會引發森林火災。",
+					"fr": "Son souffle brûlant peut faire fondre la roche. Il est parfois la cause d’incendies de forêt.",
+					"de": "Dieses Pokémon kann mit seinem Feueratem Felsen schmelzen. Es verursacht ab und zu Waldbrände.",
+					"es": "Escupe un fuego tan caliente que funde las rocas. Causa incendios forestales sin querer.",
+					"it": "Sputa fiamme incandescenti in grado di fondere le rocce. A volte causa incendi boschivi.",
+					"en": "It spits fire that is hot enough to melt boulders. It may cause forest fires by blowing flames.",
+					"ja": "岩石も 焼けるような 灼熱の 炎を 吐いて 山火事を 起こすことが ある。",
+					"zh-hans": "能够喷出猛烈的火焰， 仿佛连岩石都能烤焦。 有时会引发森林火灾。",
+					"es-419": "Escupe un fuego tan caliente que funde las rocas. Causa incendios forestales sin querer."
+				},
+				"shield": {
+					"ja-hrkt": "ちじょう １４００メートル まで ハネを つかって とぶことができる。 こうねつの ほのおを はく。",
+					"ko": "지상 1400m까지 날개를 사용해 날 수 있다. 고열의 불꽃을 내뿜는다.",
+					"zh-hant": "能用翅膀飛到距離地面 １４００公尺的高度。 會吐出高溫的火焰。",
+					"fr": "Ses ailes lui permettent de voler à plus de 1 400 m d’altitude. Ce Pokémon crache du feu à des températures très élevées.",
+					"de": "Dieses Pokémon kann mit seinen Flügeln eine Höhe von bis zu 1 400 m erreichen. Es spuckt sehr heißes Feuer.",
+					"es": "Sus potentes alas le permiten volar a una altura de 1400 m. Escupe llamaradas que llegan a alcanzar temperaturas elevadísimas.",
+					"it": "Grazie alle possenti ali può volare fino a 1.400 m d’altezza. Le fiamme che sputa possono raggiungere temperature altissime.",
+					"en": "Its wings can carry this Pokémon close to an altitude of 4,600 feet. It blows out fire at very high temperatures.",
+					"ja": "地上 １４００メートル まで 羽を 使って 飛ぶことができる。 高熱の 炎を 吐く。",
+					"zh-hans": "能用翅膀飞到距地面 １４００米的高度。 会吐出高温火焰。",
+					"es-419": "Sus potentes alas le permiten volar a una altura de 1400 m. Escupe llamaradas que llegan a alcanzar temperaturas elevadísimas."
+				}
+			}
+		},
+		{
+			"profileKey": "the-isle-of-armor",
+			"label": "The Isle of Armor",
+			"appGameKeys": [
+				"swordioa",
+				"shieldioa"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Charizard",
+				"localizedNames": {
+					"ja-hrkt": "リザードン",
+					"ja-roma": "Lizardon",
+					"ko": "리자몽",
+					"zh-hant": "噴火龍",
+					"fr": "Dracaufeu",
+					"de": "Glurak",
+					"es": "Charizard",
+					"it": "Charizard",
+					"ja": "リザードン",
+					"zh-hans": "喷火龙",
+					"es-419": "Charizard"
+				},
+				"localizedFormNames": {
+					"fr": "Dracaufeu Gigamax",
+					"de": "Gigadynamax-Glurak"
+				},
+				"localizedFormLabels": {
+					"ja-hrkt": "キョダイマックスのすがた",
+					"fr": "Forme Gigamax",
+					"de": "Gigadynamax-Form",
+					"ja": "キョダイマックスのすがた"
+				},
+				"types": [
+					"Fire",
+					"Flying"
+				],
+				"baseStats": {
+					"hp": 78,
+					"atk": 84,
+					"def": 78,
+					"spa": 109,
+					"spd": 85,
+					"spe": 100
+				},
+				"evYield": {
+					"spa": 3
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Blaze",
+					"Solar Power (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Solar Power"
+				],
+				"eggGroups": [
+					"Monster",
+					"Dragon"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "28.0 m",
+				"weight": "1000.0 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 240,
+				"habitat": "Mountain",
+				"shape": "Upright",
+				"color": "Red",
+				"genus": "Flame Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "かえんポケモン",
+					"ko": "화염포켓몬",
+					"zh-hant": "火焰寶可夢",
+					"fr": "Pokémon Flamme",
+					"de": "Flammen-Pokémon",
+					"es": "Pokémon Llama",
+					"it": "Pokémon Fiamma",
+					"ja": "かえんポケモン",
+					"zh-hans": "火焰宝可梦",
+					"es-419": "Pokémon Llama"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 6
+					},
+					{
+						"pokedex": "kanto",
+						"number": 6
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 231
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 236
+					},
+					{
+						"pokedex": "conquest-gallery",
+						"number": 111
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 85
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 6
+					},
+					{
+						"pokedex": "galar",
+						"number": 380
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 169
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 153
+					},
+					{
+						"pokedex": "champions",
+						"number": 6
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 4,
+								"natiId": 4,
+								"name": "Charmander"
+							},
+							{
+								"id": 5,
+								"natiId": 5,
+								"name": "Charmeleon",
+								"method": "Level",
+								"value": 16
+							},
+							{
+								"id": 6,
+								"natiId": 6,
+								"name": "Charizard",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokemonPGC form catalog includes this game profile.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/6",
+						"fetchedAt": "2026-11-03T05:53:06.356Z",
+						"hash": "623e24b457cb50ed73df753dc54ba5b8f24ba314220ade8166a878edc44c3b3a"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/2/",
+						"fetchedAt": "2026-11-03T05:53:06.123Z",
+						"hash": "dfba1da8bcaebf123b0b8772404588a94bad712884a5b5d05de039ac8fa23f63"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/10196/",
+						"fetchedAt": "2026-11-03T05:53:06.756Z",
+						"hash": "6ac53bd8dc9e76dd3ae0dcd9eb6e8bfda32c0b874a67932ef6b181ab8e9a8f0e"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/10196/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.796Z",
+						"hash": "209ec3f15af9fe630e295375679a89ead6a648d6b70ebde980f3e25f11ab9028"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/10365/",
+						"fetchedAt": "2026-11-03T05:53:06.827Z",
+						"hash": "344a67a5d45764ca21e1c2a5b82f45c93575bd5262aa2b560c1740366eba86c0"
+					}
+				],
+				"formName": "Gigantamax"
+			},
+			"flavorByGame": {
+				"swordioa": "",
+				"shieldioa": ""
+			},
+			"localizedFlavorByGame": {
+				"swordioa": {},
+				"shieldioa": {}
+			}
+		},
+		{
+			"profileKey": "the-crown-tundra",
+			"label": "The Crown Tundra",
+			"appGameKeys": [
+				"swordct",
+				"shieldct"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Charizard",
+				"localizedNames": {
+					"ja-hrkt": "リザードン",
+					"ja-roma": "Lizardon",
+					"ko": "리자몽",
+					"zh-hant": "噴火龍",
+					"fr": "Dracaufeu",
+					"de": "Glurak",
+					"es": "Charizard",
+					"it": "Charizard",
+					"ja": "リザードン",
+					"zh-hans": "喷火龙",
+					"es-419": "Charizard"
+				},
+				"localizedFormNames": {
+					"fr": "Dracaufeu Gigamax",
+					"de": "Gigadynamax-Glurak"
+				},
+				"localizedFormLabels": {
+					"ja-hrkt": "キョダイマックスのすがた",
+					"fr": "Forme Gigamax",
+					"de": "Gigadynamax-Form",
+					"ja": "キョダイマックスのすがた"
+				},
+				"types": [
+					"Fire",
+					"Flying"
+				],
+				"baseStats": {
+					"hp": 78,
+					"atk": 84,
+					"def": 78,
+					"spa": 109,
+					"spd": 85,
+					"spe": 100
+				},
+				"evYield": {
+					"spa": 3
+				},
+				"generation": 1,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Blaze",
+					"Solar Power (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Solar Power"
+				],
+				"eggGroups": [
+					"Monster",
+					"Dragon"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "28.0 m",
+				"weight": "1000.0 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 240,
+				"habitat": "Mountain",
+				"shape": "Upright",
+				"color": "Red",
+				"genus": "Flame Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "かえんポケモン",
+					"ko": "화염포켓몬",
+					"zh-hant": "火焰寶可夢",
+					"fr": "Pokémon Flamme",
+					"de": "Flammen-Pokémon",
+					"es": "Pokémon Llama",
+					"it": "Pokémon Fiamma",
+					"ja": "かえんポケモン",
+					"zh-hans": "火焰宝可梦",
+					"es-419": "Pokémon Llama"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 6
+					},
+					{
+						"pokedex": "kanto",
+						"number": 6
+					},
+					{
+						"pokedex": "original-johto",
+						"number": 231
+					},
+					{
+						"pokedex": "updated-johto",
+						"number": 236
+					},
+					{
+						"pokedex": "conquest-gallery",
+						"number": 111
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 85
+					},
+					{
+						"pokedex": "letsgo-kanto",
+						"number": 6
+					},
+					{
+						"pokedex": "galar",
+						"number": 380
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 169
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 153
+					},
+					{
+						"pokedex": "champions",
+						"number": 6
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 4,
+								"natiId": 4,
+								"name": "Charmander"
+							},
+							{
+								"id": 5,
+								"natiId": 5,
+								"name": "Charmeleon",
+								"method": "Level",
+								"value": 16
+							},
+							{
+								"id": 6,
+								"natiId": 6,
+								"name": "Charizard",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokemonPGC form catalog includes this game profile.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/6",
+						"fetchedAt": "2026-11-03T05:53:06.356Z",
+						"hash": "623e24b457cb50ed73df753dc54ba5b8f24ba314220ade8166a878edc44c3b3a"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/2/",
+						"fetchedAt": "2026-11-03T05:53:06.123Z",
+						"hash": "dfba1da8bcaebf123b0b8772404588a94bad712884a5b5d05de039ac8fa23f63"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/10196/",
+						"fetchedAt": "2026-11-03T05:53:06.756Z",
+						"hash": "6ac53bd8dc9e76dd3ae0dcd9eb6e8bfda32c0b874a67932ef6b181ab8e9a8f0e"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/10196/encounters",
+						"fetchedAt": "2026-11-03T05:53:06.796Z",
+						"hash": "209ec3f15af9fe630e295375679a89ead6a648d6b70ebde980f3e25f11ab9028"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/10365/",
+						"fetchedAt": "2026-11-03T05:53:06.827Z",
+						"hash": "344a67a5d45764ca21e1c2a5b82f45c93575bd5262aa2b560c1740366eba86c0"
+					}
+				],
+				"formName": "Gigantamax"
+			},
+			"flavorByGame": {
+				"swordct": "",
+				"shieldct": ""
+			},
+			"localizedFlavorByGame": {
+				"swordct": {},
+				"shieldct": {}
+			}
+		}
+	]
+}

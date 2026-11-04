@@ -1,0 +1,6880 @@
+{
+	"schemaVersion": 2,
+	"nationalDexId": 608,
+	"speciesName": "Lampent",
+	"formKey": "base",
+	"formName": "Base",
+	"formLabelSource": "form-catalog",
+	"profiles": [
+		{
+			"profileKey": "black-white",
+			"label": "Black / White",
+			"appGameKeys": [
+				"black-national",
+				"black",
+				"white-national",
+				"white"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Lampent",
+				"localizedNames": {
+					"ja-hrkt": "ランプラー",
+					"ja-roma": "Lampler",
+					"ko": "램프라",
+					"zh-hant": "燈火幽靈",
+					"fr": "Mélancolux",
+					"de": "Laternecto",
+					"es": "Lampent",
+					"it": "Lampent",
+					"ja": "ランプラー",
+					"zh-hans": "灯火幽灵",
+					"es-419": "Lampent"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Ghost",
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 40,
+					"def": 60,
+					"spa": 95,
+					"spd": 60,
+					"spe": 55
+				},
+				"evYield": {
+					"spa": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shadow Tag (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Shadow Tag"
+				],
+				"eggGroups": [
+					"Indeterminate"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "13.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 90,
+				"baseExperience": 130,
+				"habitat": "",
+				"shape": "Arms",
+				"color": "Black",
+				"genus": "Lamp Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ランプポケモン",
+					"ko": "램프포켓몬",
+					"zh-hant": "油燈寶可夢",
+					"fr": "Pokémon Lampe",
+					"de": "Lampen-Pokémon",
+					"es": "Pokémon Farolillo",
+					"it": "Pokémon Lanterna",
+					"ja": "ランプポケモン",
+					"zh-hans": "油灯宝可梦",
+					"es-419": "Pokémon Farolillo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 608
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 114
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 191
+					},
+					{
+						"pokedex": "conquest-gallery",
+						"number": 38
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 66
+					},
+					{
+						"pokedex": "galar",
+						"number": 288
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 49
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 147
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 190
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 607,
+								"natiId": 607,
+								"name": "Litwick"
+							},
+							{
+								"id": 608,
+								"natiId": 608,
+								"name": "Lampent",
+								"method": "Level",
+								"value": 41
+							},
+							{
+								"id": 609,
+								"natiId": 609,
+								"name": "Chandelure",
+								"method": "Use item",
+								"value": "Dusk Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Ember",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Astonish",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Minimize",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Smog",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Minimize",
+							"level": 3,
+							"order": null
+						},
+						{
+							"name": "Smog",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Fire Spin",
+							"level": 7,
+							"order": null
+						},
+						{
+							"name": "Confuse Ray",
+							"level": 10,
+							"order": null
+						},
+						{
+							"name": "Night Shade",
+							"level": 13,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": 16,
+							"order": null
+						},
+						{
+							"name": "Flame Burst",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Imprison",
+							"level": 24,
+							"order": null
+						},
+						{
+							"name": "Hex",
+							"level": 28,
+							"order": null
+						},
+						{
+							"name": "Memento",
+							"level": 33,
+							"order": null
+						},
+						{
+							"name": "Inferno",
+							"level": 38,
+							"order": null
+						},
+						{
+							"name": "Curse",
+							"level": 45,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": 53,
+							"order": null
+						},
+						{
+							"name": "Pain Split",
+							"level": 61,
+							"order": null
+						},
+						{
+							"name": "Overheat",
+							"level": 69,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Calm Mind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Embargo",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Energy Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fire Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flame Charge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flamethrower",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Incinerate",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Overheat",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Payback",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psychic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Safeguard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Taunt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Telekinesis",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Trick Room",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/608",
+						"fetchedAt": "2026-11-03T05:53:44.016Z",
+						"hash": "6ed874ae32e1beefb33d1eb9449a73003ea256455a730b017d65e7de5e2c6297"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/308/",
+						"fetchedAt": "2026-11-03T05:53:43.917Z",
+						"hash": "1f3cd3bc4cda5e861f6cba325c25d633b989a029dac8317cf95a942ff8859761"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/608/",
+						"fetchedAt": "2026-11-03T05:53:44.042Z",
+						"hash": "e08d4ea32981f159b47680709e401f9145e1efc7834c425404245d06e48ab561"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/608/encounters",
+						"fetchedAt": "2026-11-03T05:53:44.095Z",
+						"hash": "dd79f5cb3614f9e8c290bfc62e90f9f08e6285c54064011f4028169d66baaca8"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/608/",
+						"fetchedAt": "2026-11-03T05:53:44.149Z",
+						"hash": "507e9daaf3326330eaf64b137089e70f1933a36bdcef7b40ea2139864f248974"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"black-national": "This ominous Pokémon is feared. Through cities it wanders, searching for the spirits of the fallen.",
+				"black": "This ominous Pokémon is feared. Through cities it wanders, searching for the spirits of the fallen.",
+				"white-national": "It arrives near the moment of death and steals spirit from the body.",
+				"white": "It arrives near the moment of death and steals spirit from the body."
+			},
+			"localizedFlavorByGame": {
+				"black-national": {
+					"fr": "Un Pokémon craint pour être de mauvais augure. Il erre dans les villes à la recherche d’âmes de défunts.",
+					"en": "This ominous Pokémon is feared. Through cities it wanders, searching for the spirits of the fallen."
+				},
+				"black": {
+					"fr": "Un Pokémon craint pour être de mauvais augure. Il erre dans les villes à la recherche d’âmes de défunts.",
+					"en": "This ominous Pokémon is feared. Through cities it wanders, searching for the spirits of the fallen."
+				},
+				"white-national": {
+					"fr": "Il apparaît au moment du trépas et aspire l’âme à l’instant même où elle quitte le corps.",
+					"en": "It arrives near the moment of death and steals spirit from the body."
+				},
+				"white": {
+					"fr": "Il apparaît au moment du trépas et aspire l’âme à l’instant même où elle quitte le corps.",
+					"en": "It arrives near the moment of death and steals spirit from the body."
+				}
+			}
+		},
+		{
+			"profileKey": "black-2-white-2",
+			"label": "Black 2 / White 2",
+			"appGameKeys": [
+				"black2-national",
+				"black2",
+				"white2-national",
+				"white2"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Lampent",
+				"localizedNames": {
+					"ja-hrkt": "ランプラー",
+					"ja-roma": "Lampler",
+					"ko": "램프라",
+					"zh-hant": "燈火幽靈",
+					"fr": "Mélancolux",
+					"de": "Laternecto",
+					"es": "Lampent",
+					"it": "Lampent",
+					"ja": "ランプラー",
+					"zh-hans": "灯火幽灵",
+					"es-419": "Lampent"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Ghost",
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 40,
+					"def": 60,
+					"spa": 95,
+					"spd": 60,
+					"spe": 55
+				},
+				"evYield": {
+					"spa": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shadow Tag (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Shadow Tag"
+				],
+				"eggGroups": [
+					"Indeterminate"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "13.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 90,
+				"baseExperience": 130,
+				"habitat": "",
+				"shape": "Arms",
+				"color": "Black",
+				"genus": "Lamp Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ランプポケモン",
+					"ko": "램프포켓몬",
+					"zh-hant": "油燈寶可夢",
+					"fr": "Pokémon Lampe",
+					"de": "Lampen-Pokémon",
+					"es": "Pokémon Farolillo",
+					"it": "Pokémon Lanterna",
+					"ja": "ランプポケモン",
+					"zh-hans": "油灯宝可梦",
+					"es-419": "Pokémon Farolillo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 608
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 114
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 191
+					},
+					{
+						"pokedex": "conquest-gallery",
+						"number": 38
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 66
+					},
+					{
+						"pokedex": "galar",
+						"number": 288
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 49
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 147
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 190
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 607,
+								"natiId": 607,
+								"name": "Litwick"
+							},
+							{
+								"id": 608,
+								"natiId": 608,
+								"name": "Lampent",
+								"method": "Level",
+								"value": 41
+							},
+							{
+								"id": 609,
+								"natiId": 609,
+								"name": "Chandelure",
+								"method": "Use item",
+								"value": "Dusk Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Ember",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Astonish",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Minimize",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Smog",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Minimize",
+							"level": 3,
+							"order": null
+						},
+						{
+							"name": "Smog",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Fire Spin",
+							"level": 7,
+							"order": null
+						},
+						{
+							"name": "Confuse Ray",
+							"level": 10,
+							"order": null
+						},
+						{
+							"name": "Night Shade",
+							"level": 13,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": 16,
+							"order": null
+						},
+						{
+							"name": "Flame Burst",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Imprison",
+							"level": 24,
+							"order": null
+						},
+						{
+							"name": "Hex",
+							"level": 28,
+							"order": null
+						},
+						{
+							"name": "Memento",
+							"level": 33,
+							"order": null
+						},
+						{
+							"name": "Inferno",
+							"level": 38,
+							"order": null
+						},
+						{
+							"name": "Curse",
+							"level": 45,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": 53,
+							"order": null
+						},
+						{
+							"name": "Pain Split",
+							"level": 61,
+							"order": null
+						},
+						{
+							"name": "Overheat",
+							"level": 69,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Calm Mind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Embargo",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Energy Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fire Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flame Charge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flamethrower",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Incinerate",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Overheat",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Payback",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psychic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Safeguard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Taunt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Telekinesis",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Trick Room",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Dark Pulse",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Heat Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Pain Split",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Spite",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Trick",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/608",
+						"fetchedAt": "2026-11-03T05:53:44.016Z",
+						"hash": "6ed874ae32e1beefb33d1eb9449a73003ea256455a730b017d65e7de5e2c6297"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/308/",
+						"fetchedAt": "2026-11-03T05:53:43.917Z",
+						"hash": "1f3cd3bc4cda5e861f6cba325c25d633b989a029dac8317cf95a942ff8859761"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/608/",
+						"fetchedAt": "2026-11-03T05:53:44.042Z",
+						"hash": "e08d4ea32981f159b47680709e401f9145e1efc7834c425404245d06e48ab561"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/608/encounters",
+						"fetchedAt": "2026-11-03T05:53:44.095Z",
+						"hash": "dd79f5cb3614f9e8c290bfc62e90f9f08e6285c54064011f4028169d66baaca8"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/608/",
+						"fetchedAt": "2026-11-03T05:53:44.149Z",
+						"hash": "507e9daaf3326330eaf64b137089e70f1933a36bdcef7b40ea2139864f248974"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"black2-national": "The spirits it absorbs fuel its baleful fire. It hangs around hospitals waiting for people to pass on.",
+				"black2": "The spirits it absorbs fuel its baleful fire. It hangs around hospitals waiting for people to pass on.",
+				"white2-national": "The spirits it absorbs fuel its baleful fire. It hangs around hospitals waiting for people to pass on.",
+				"white2": "The spirits it absorbs fuel its baleful fire. It hangs around hospitals waiting for people to pass on."
+			},
+			"localizedFlavorByGame": {
+				"black2-national": {
+					"en": "The spirits it absorbs fuel its baleful fire. It hangs around hospitals waiting for people to pass on."
+				},
+				"black2": {
+					"en": "The spirits it absorbs fuel its baleful fire. It hangs around hospitals waiting for people to pass on."
+				},
+				"white2-national": {
+					"en": "The spirits it absorbs fuel its baleful fire. It hangs around hospitals waiting for people to pass on."
+				},
+				"white2": {
+					"en": "The spirits it absorbs fuel its baleful fire. It hangs around hospitals waiting for people to pass on."
+				}
+			}
+		},
+		{
+			"profileKey": "x-y",
+			"label": "X / Y",
+			"appGameKeys": [
+				"x-national",
+				"x-central",
+				"x-coastal",
+				"x-mountain",
+				"y-national",
+				"y-central",
+				"y-coastal",
+				"y-mountain"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Lampent",
+				"localizedNames": {
+					"ja-hrkt": "ランプラー",
+					"ja-roma": "Lampler",
+					"ko": "램프라",
+					"zh-hant": "燈火幽靈",
+					"fr": "Mélancolux",
+					"de": "Laternecto",
+					"es": "Lampent",
+					"it": "Lampent",
+					"ja": "ランプラー",
+					"zh-hans": "灯火幽灵",
+					"es-419": "Lampent"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Ghost",
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 40,
+					"def": 60,
+					"spa": 95,
+					"spd": 60,
+					"spe": 55
+				},
+				"evYield": {
+					"spa": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Flash Fire",
+					"Flame Body",
+					"Infiltrator (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Infiltrator"
+				],
+				"eggGroups": [
+					"Indeterminate"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "13.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 90,
+				"baseExperience": 130,
+				"habitat": "",
+				"shape": "Arms",
+				"color": "Black",
+				"genus": "Lamp Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ランプポケモン",
+					"ko": "램프포켓몬",
+					"zh-hant": "油燈寶可夢",
+					"fr": "Pokémon Lampe",
+					"de": "Lampen-Pokémon",
+					"es": "Pokémon Farolillo",
+					"it": "Pokémon Lanterna",
+					"ja": "ランプポケモン",
+					"zh-hans": "油灯宝可梦",
+					"es-419": "Pokémon Farolillo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 608
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 114
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 191
+					},
+					{
+						"pokedex": "conquest-gallery",
+						"number": 38
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 66
+					},
+					{
+						"pokedex": "galar",
+						"number": 288
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 49
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 147
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 190
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 607,
+								"natiId": 607,
+								"name": "Litwick"
+							},
+							{
+								"id": 608,
+								"natiId": 608,
+								"name": "Lampent",
+								"method": "Level",
+								"value": 41
+							},
+							{
+								"id": 609,
+								"natiId": 609,
+								"name": "Chandelure",
+								"method": "Use item",
+								"value": "Dusk Stone"
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Friend Safari Ghost",
+						"notes": "Walk, Lv. 30",
+						"games": "X",
+						"rate": "33%"
+					},
+					{
+						"area": "Friend Safari Ghost",
+						"notes": "Walk, Lv. 30",
+						"games": "Y",
+						"rate": "33%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Ember",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Astonish",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Minimize",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Smog",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Minimize",
+							"level": 3,
+							"order": null
+						},
+						{
+							"name": "Smog",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Fire Spin",
+							"level": 7,
+							"order": null
+						},
+						{
+							"name": "Confuse Ray",
+							"level": 10,
+							"order": null
+						},
+						{
+							"name": "Night Shade",
+							"level": 13,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": 16,
+							"order": null
+						},
+						{
+							"name": "Flame Burst",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Imprison",
+							"level": 24,
+							"order": null
+						},
+						{
+							"name": "Hex",
+							"level": 28,
+							"order": null
+						},
+						{
+							"name": "Memento",
+							"level": 33,
+							"order": null
+						},
+						{
+							"name": "Inferno",
+							"level": 38,
+							"order": null
+						},
+						{
+							"name": "Curse",
+							"level": 45,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": 53,
+							"order": null
+						},
+						{
+							"name": "Pain Split",
+							"level": 61,
+							"order": null
+						},
+						{
+							"name": "Overheat",
+							"level": 69,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Calm Mind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dark Pulse",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Embargo",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Energy Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fire Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flame Charge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flamethrower",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Incinerate",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Overheat",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Payback",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psychic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Safeguard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Taunt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Trick Room",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/608",
+						"fetchedAt": "2026-11-03T05:53:44.016Z",
+						"hash": "6ed874ae32e1beefb33d1eb9449a73003ea256455a730b017d65e7de5e2c6297"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/308/",
+						"fetchedAt": "2026-11-03T05:53:43.917Z",
+						"hash": "1f3cd3bc4cda5e861f6cba325c25d633b989a029dac8317cf95a942ff8859761"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/608/",
+						"fetchedAt": "2026-11-03T05:53:44.042Z",
+						"hash": "e08d4ea32981f159b47680709e401f9145e1efc7834c425404245d06e48ab561"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/608/encounters",
+						"fetchedAt": "2026-11-03T05:53:44.095Z",
+						"hash": "dd79f5cb3614f9e8c290bfc62e90f9f08e6285c54064011f4028169d66baaca8"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/608/",
+						"fetchedAt": "2026-11-03T05:53:44.149Z",
+						"hash": "507e9daaf3326330eaf64b137089e70f1933a36bdcef7b40ea2139864f248974"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"x-national": "The spirits it absorbs fuel its baleful fire. It hangs around hospitals waiting for people to pass on.",
+				"x-central": "The spirits it absorbs fuel its baleful fire. It hangs around hospitals waiting for people to pass on.",
+				"x-coastal": "The spirits it absorbs fuel its baleful fire. It hangs around hospitals waiting for people to pass on.",
+				"x-mountain": "The spirits it absorbs fuel its baleful fire. It hangs around hospitals waiting for people to pass on.",
+				"y-national": "It arrives near the moment of death and steals spirit from the body.",
+				"y-central": "It arrives near the moment of death and steals spirit from the body.",
+				"y-coastal": "It arrives near the moment of death and steals spirit from the body.",
+				"y-mountain": "It arrives near the moment of death and steals spirit from the body."
+			},
+			"localizedFlavorByGame": {
+				"x-national": {
+					"ja-hrkt": "たましいを すいとり ひをともす。 ひとが しぬのを まつため びょういんを うろつくようになった。",
+					"ko": "영혼을 빨아들여 불을 밝힌다. 사람이 죽는 것을 기다리기 위해 병원을 서성거리게 되었다.",
+					"fr": "Il aspire les âmes pour entretenir sa flamme. Il erre dans les hôpitaux dans l’attente d’un trépas.",
+					"de": "Es nährt seine Flamme mit den Seelen seiner Opfer. Heutzutage irrt es auf der Suche nach Seelen durch Krankenhäuser.",
+					"es": "Al absorber almas, su llama se enciende. Espera a que la gente fallezca, así que suele deambular por los hospitales.",
+					"it": "La sua fiamma si accende quando risucchia gli spettri. Si trova spesso nei pressi dei cimiteri, dove questi abbondano.",
+					"en": "The spirits it absorbs fuel its baleful fire. It hangs around hospitals waiting for people to pass on.",
+					"ja": "魂を 吸いとり 火を灯す。 人が 死ぬのを 待つため 病院を うろつくようになった。",
+					"es-419": "Al absorber almas, su llama se enciende. Espera a que la gente fallezca, así que suele deambular por los hospitales."
+				},
+				"x-central": {
+					"ja-hrkt": "たましいを すいとり ひをともす。 ひとが しぬのを まつため びょういんを うろつくようになった。",
+					"ko": "영혼을 빨아들여 불을 밝힌다. 사람이 죽는 것을 기다리기 위해 병원을 서성거리게 되었다.",
+					"fr": "Il aspire les âmes pour entretenir sa flamme. Il erre dans les hôpitaux dans l’attente d’un trépas.",
+					"de": "Es nährt seine Flamme mit den Seelen seiner Opfer. Heutzutage irrt es auf der Suche nach Seelen durch Krankenhäuser.",
+					"es": "Al absorber almas, su llama se enciende. Espera a que la gente fallezca, así que suele deambular por los hospitales.",
+					"it": "La sua fiamma si accende quando risucchia gli spettri. Si trova spesso nei pressi dei cimiteri, dove questi abbondano.",
+					"en": "The spirits it absorbs fuel its baleful fire. It hangs around hospitals waiting for people to pass on.",
+					"ja": "魂を 吸いとり 火を灯す。 人が 死ぬのを 待つため 病院を うろつくようになった。",
+					"es-419": "Al absorber almas, su llama se enciende. Espera a que la gente fallezca, así que suele deambular por los hospitales."
+				},
+				"x-coastal": {
+					"ja-hrkt": "たましいを すいとり ひをともす。 ひとが しぬのを まつため びょういんを うろつくようになった。",
+					"ko": "영혼을 빨아들여 불을 밝힌다. 사람이 죽는 것을 기다리기 위해 병원을 서성거리게 되었다.",
+					"fr": "Il aspire les âmes pour entretenir sa flamme. Il erre dans les hôpitaux dans l’attente d’un trépas.",
+					"de": "Es nährt seine Flamme mit den Seelen seiner Opfer. Heutzutage irrt es auf der Suche nach Seelen durch Krankenhäuser.",
+					"es": "Al absorber almas, su llama se enciende. Espera a que la gente fallezca, así que suele deambular por los hospitales.",
+					"it": "La sua fiamma si accende quando risucchia gli spettri. Si trova spesso nei pressi dei cimiteri, dove questi abbondano.",
+					"en": "The spirits it absorbs fuel its baleful fire. It hangs around hospitals waiting for people to pass on.",
+					"ja": "魂を 吸いとり 火を灯す。 人が 死ぬのを 待つため 病院を うろつくようになった。",
+					"es-419": "Al absorber almas, su llama se enciende. Espera a que la gente fallezca, así que suele deambular por los hospitales."
+				},
+				"x-mountain": {
+					"ja-hrkt": "たましいを すいとり ひをともす。 ひとが しぬのを まつため びょういんを うろつくようになった。",
+					"ko": "영혼을 빨아들여 불을 밝힌다. 사람이 죽는 것을 기다리기 위해 병원을 서성거리게 되었다.",
+					"fr": "Il aspire les âmes pour entretenir sa flamme. Il erre dans les hôpitaux dans l’attente d’un trépas.",
+					"de": "Es nährt seine Flamme mit den Seelen seiner Opfer. Heutzutage irrt es auf der Suche nach Seelen durch Krankenhäuser.",
+					"es": "Al absorber almas, su llama se enciende. Espera a que la gente fallezca, así que suele deambular por los hospitales.",
+					"it": "La sua fiamma si accende quando risucchia gli spettri. Si trova spesso nei pressi dei cimiteri, dove questi abbondano.",
+					"en": "The spirits it absorbs fuel its baleful fire. It hangs around hospitals waiting for people to pass on.",
+					"ja": "魂を 吸いとり 火を灯す。 人が 死ぬのを 待つため 病院を うろつくようになった。",
+					"es-419": "Al absorber almas, su llama se enciende. Espera a que la gente fallezca, así que suele deambular por los hospitales."
+				},
+				"y-national": {
+					"ja-hrkt": "りんじゅうの さいに あらわれて たましいが にくたいを はなれると すかさず すいとってしまうのだ。",
+					"ko": "임종 때 나타나서 영혼이 육체를 떠나면 재빨리 빨아들여 버린다.",
+					"fr": "Il apparaît au moment du trépas et aspire l’âme à l’instant même où elle quitte le corps.",
+					"de": "Es erscheint im Augenblick des Todes und verschlingt die Seele des Verblichenen, sofort nachdem sie den Körper verlassen hat.",
+					"es": "Aparece hacia el final de la vida y absorbe el alma en cuanto esta se separa del cuerpo.",
+					"it": "Appare sul finire della vita per risucchiare l’energia delle anime vagabonde.",
+					"en": "It arrives near the moment of death and steals spirit from the body.",
+					"ja": "臨終の 際に 現れて 魂が 肉体を 離れると すかさず 吸い取ってしまうのだ。",
+					"es-419": "Aparece hacia el final de la vida y absorbe el alma en cuanto esta se separa del cuerpo."
+				},
+				"y-central": {
+					"ja-hrkt": "りんじゅうの さいに あらわれて たましいが にくたいを はなれると すかさず すいとってしまうのだ。",
+					"ko": "임종 때 나타나서 영혼이 육체를 떠나면 재빨리 빨아들여 버린다.",
+					"fr": "Il apparaît au moment du trépas et aspire l’âme à l’instant même où elle quitte le corps.",
+					"de": "Es erscheint im Augenblick des Todes und verschlingt die Seele des Verblichenen, sofort nachdem sie den Körper verlassen hat.",
+					"es": "Aparece hacia el final de la vida y absorbe el alma en cuanto esta se separa del cuerpo.",
+					"it": "Appare sul finire della vita per risucchiare l’energia delle anime vagabonde.",
+					"en": "It arrives near the moment of death and steals spirit from the body.",
+					"ja": "臨終の 際に 現れて 魂が 肉体を 離れると すかさず 吸い取ってしまうのだ。",
+					"es-419": "Aparece hacia el final de la vida y absorbe el alma en cuanto esta se separa del cuerpo."
+				},
+				"y-coastal": {
+					"ja-hrkt": "りんじゅうの さいに あらわれて たましいが にくたいを はなれると すかさず すいとってしまうのだ。",
+					"ko": "임종 때 나타나서 영혼이 육체를 떠나면 재빨리 빨아들여 버린다.",
+					"fr": "Il apparaît au moment du trépas et aspire l’âme à l’instant même où elle quitte le corps.",
+					"de": "Es erscheint im Augenblick des Todes und verschlingt die Seele des Verblichenen, sofort nachdem sie den Körper verlassen hat.",
+					"es": "Aparece hacia el final de la vida y absorbe el alma en cuanto esta se separa del cuerpo.",
+					"it": "Appare sul finire della vita per risucchiare l’energia delle anime vagabonde.",
+					"en": "It arrives near the moment of death and steals spirit from the body.",
+					"ja": "臨終の 際に 現れて 魂が 肉体を 離れると すかさず 吸い取ってしまうのだ。",
+					"es-419": "Aparece hacia el final de la vida y absorbe el alma en cuanto esta se separa del cuerpo."
+				},
+				"y-mountain": {
+					"ja-hrkt": "りんじゅうの さいに あらわれて たましいが にくたいを はなれると すかさず すいとってしまうのだ。",
+					"ko": "임종 때 나타나서 영혼이 육체를 떠나면 재빨리 빨아들여 버린다.",
+					"fr": "Il apparaît au moment du trépas et aspire l’âme à l’instant même où elle quitte le corps.",
+					"de": "Es erscheint im Augenblick des Todes und verschlingt die Seele des Verblichenen, sofort nachdem sie den Körper verlassen hat.",
+					"es": "Aparece hacia el final de la vida y absorbe el alma en cuanto esta se separa del cuerpo.",
+					"it": "Appare sul finire della vita per risucchiare l’energia delle anime vagabonde.",
+					"en": "It arrives near the moment of death and steals spirit from the body.",
+					"ja": "臨終の 際に 現れて 魂が 肉体を 離れると すかさず 吸い取ってしまうのだ。",
+					"es-419": "Aparece hacia el final de la vida y absorbe el alma en cuanto esta se separa del cuerpo."
+				}
+			}
+		},
+		{
+			"profileKey": "omega-ruby-alpha-sapphire",
+			"label": "Omega Ruby / Alpha Sapphire",
+			"appGameKeys": [
+				"omegaruby-national",
+				"omegaruby",
+				"alphasapphire-national",
+				"alphasapphire"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Lampent",
+				"localizedNames": {
+					"ja-hrkt": "ランプラー",
+					"ja-roma": "Lampler",
+					"ko": "램프라",
+					"zh-hant": "燈火幽靈",
+					"fr": "Mélancolux",
+					"de": "Laternecto",
+					"es": "Lampent",
+					"it": "Lampent",
+					"ja": "ランプラー",
+					"zh-hans": "灯火幽灵",
+					"es-419": "Lampent"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Ghost",
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 40,
+					"def": 60,
+					"spa": 95,
+					"spd": 60,
+					"spe": 55
+				},
+				"evYield": {
+					"spa": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Flash Fire",
+					"Flame Body",
+					"Infiltrator (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Infiltrator"
+				],
+				"eggGroups": [
+					"Indeterminate"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "13.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 90,
+				"baseExperience": 130,
+				"habitat": "",
+				"shape": "Arms",
+				"color": "Black",
+				"genus": "Lamp Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ランプポケモン",
+					"ko": "램프포켓몬",
+					"zh-hant": "油燈寶可夢",
+					"fr": "Pokémon Lampe",
+					"de": "Lampen-Pokémon",
+					"es": "Pokémon Farolillo",
+					"it": "Pokémon Lanterna",
+					"ja": "ランプポケモン",
+					"zh-hans": "油灯宝可梦",
+					"es-419": "Pokémon Farolillo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 608
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 114
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 191
+					},
+					{
+						"pokedex": "conquest-gallery",
+						"number": 38
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 66
+					},
+					{
+						"pokedex": "galar",
+						"number": 288
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 49
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 147
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 190
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 607,
+								"natiId": 607,
+								"name": "Litwick"
+							},
+							{
+								"id": 608,
+								"natiId": 608,
+								"name": "Lampent",
+								"method": "Level",
+								"value": 41
+							},
+							{
+								"id": 609,
+								"natiId": 609,
+								"name": "Chandelure",
+								"method": "Use item",
+								"value": "Dusk Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Ember",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Astonish",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Minimize",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Smog",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Minimize",
+							"level": 3,
+							"order": null
+						},
+						{
+							"name": "Smog",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Fire Spin",
+							"level": 7,
+							"order": null
+						},
+						{
+							"name": "Confuse Ray",
+							"level": 10,
+							"order": null
+						},
+						{
+							"name": "Night Shade",
+							"level": 13,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": 16,
+							"order": null
+						},
+						{
+							"name": "Flame Burst",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Imprison",
+							"level": 24,
+							"order": null
+						},
+						{
+							"name": "Hex",
+							"level": 28,
+							"order": null
+						},
+						{
+							"name": "Memento",
+							"level": 33,
+							"order": null
+						},
+						{
+							"name": "Inferno",
+							"level": 38,
+							"order": null
+						},
+						{
+							"name": "Curse",
+							"level": 45,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": 53,
+							"order": null
+						},
+						{
+							"name": "Pain Split",
+							"level": 61,
+							"order": null
+						},
+						{
+							"name": "Overheat",
+							"level": 69,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Calm Mind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dark Pulse",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Embargo",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Energy Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fire Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flame Charge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flamethrower",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Incinerate",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Overheat",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Payback",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psychic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Safeguard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Secret Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Taunt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Trick Room",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Heat Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Pain Split",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shock Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Spite",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Trick",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/608",
+						"fetchedAt": "2026-11-03T05:53:44.016Z",
+						"hash": "6ed874ae32e1beefb33d1eb9449a73003ea256455a730b017d65e7de5e2c6297"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/308/",
+						"fetchedAt": "2026-11-03T05:53:43.917Z",
+						"hash": "1f3cd3bc4cda5e861f6cba325c25d633b989a029dac8317cf95a942ff8859761"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/608/",
+						"fetchedAt": "2026-11-03T05:53:44.042Z",
+						"hash": "e08d4ea32981f159b47680709e401f9145e1efc7834c425404245d06e48ab561"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/608/encounters",
+						"fetchedAt": "2026-11-03T05:53:44.095Z",
+						"hash": "dd79f5cb3614f9e8c290bfc62e90f9f08e6285c54064011f4028169d66baaca8"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/608/",
+						"fetchedAt": "2026-11-03T05:53:44.149Z",
+						"hash": "507e9daaf3326330eaf64b137089e70f1933a36bdcef7b40ea2139864f248974"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"omegaruby-national": "The spirits it absorbs fuel its baleful fire. It hangs around hospitals waiting for people to pass on.",
+				"omegaruby": "The spirits it absorbs fuel its baleful fire. It hangs around hospitals waiting for people to pass on.",
+				"alphasapphire-national": "It arrives near the moment of death and steals spirit from the body.",
+				"alphasapphire": "It arrives near the moment of death and steals spirit from the body."
+			},
+			"localizedFlavorByGame": {
+				"omegaruby-national": {
+					"ja-hrkt": "たましいを すいとり ひをともす。 ひとが しぬのを まつため びょういんを うろつくようになった。",
+					"ko": "영혼을 빨아들여 불을 밝힌다. 사람이 죽는 것을 기다리기 위해 병원을 서성거리게 되었다.",
+					"fr": "Il aspire les âmes pour entretenir sa flamme. Il erre dans les hôpitaux dans l’attente d’un trépas.",
+					"de": "Es nährt seine Flamme mit den Seelen seiner Opfer. Heutzutage irrt es auf der Suche nach Seelen durch Krankenhäuser.",
+					"es": "Al absorber almas, su llama se enciende. Espera a que la gente fallezca, así que suele deambular por los hospitales.",
+					"it": "La sua fiamma si accende quando risucchia gli spettri. Si trova spesso nei pressi dei cimiteri, dove questi abbondano.",
+					"en": "The spirits it absorbs fuel its baleful fire. It hangs around hospitals waiting for people to pass on.",
+					"ja": "魂を 吸いとり 火を灯す。 人が 死ぬのを 待つため 病院を うろつくようになった。",
+					"es-419": "Al absorber almas, su llama se enciende. Espera a que la gente fallezca, así que suele deambular por los hospitales."
+				},
+				"omegaruby": {
+					"ja-hrkt": "たましいを すいとり ひをともす。 ひとが しぬのを まつため びょういんを うろつくようになった。",
+					"ko": "영혼을 빨아들여 불을 밝힌다. 사람이 죽는 것을 기다리기 위해 병원을 서성거리게 되었다.",
+					"fr": "Il aspire les âmes pour entretenir sa flamme. Il erre dans les hôpitaux dans l’attente d’un trépas.",
+					"de": "Es nährt seine Flamme mit den Seelen seiner Opfer. Heutzutage irrt es auf der Suche nach Seelen durch Krankenhäuser.",
+					"es": "Al absorber almas, su llama se enciende. Espera a que la gente fallezca, así que suele deambular por los hospitales.",
+					"it": "La sua fiamma si accende quando risucchia gli spettri. Si trova spesso nei pressi dei cimiteri, dove questi abbondano.",
+					"en": "The spirits it absorbs fuel its baleful fire. It hangs around hospitals waiting for people to pass on.",
+					"ja": "魂を 吸いとり 火を灯す。 人が 死ぬのを 待つため 病院を うろつくようになった。",
+					"es-419": "Al absorber almas, su llama se enciende. Espera a que la gente fallezca, así que suele deambular por los hospitales."
+				},
+				"alphasapphire-national": {
+					"ja-hrkt": "りんじゅうの さいに あらわれて たましいが にくたいを はなれると すかさず すいとってしまうのだ。",
+					"ko": "임종 때 나타나서 영혼이 육체를 떠나면 재빨리 빨아들여 버린다.",
+					"fr": "Il apparaît au moment du trépas et aspire l’âme à l’instant même où elle quitte le corps.",
+					"de": "Es erscheint im Augenblick des Todes und verschlingt die Seele des Verblichenen, sofort nachdem sie den Körper verlassen hat.",
+					"es": "Aparece hacia el final de la vida y absorbe el alma en cuanto esta se separa del cuerpo.",
+					"it": "Appare sul finire della vita per risucchiare l’energia delle anime vagabonde.",
+					"en": "It arrives near the moment of death and steals spirit from the body.",
+					"ja": "臨終の 際に 現れて 魂が 肉体を 離れると すかさず 吸い取ってしまうのだ。",
+					"es-419": "Aparece hacia el final de la vida y absorbe el alma en cuanto esta se separa del cuerpo."
+				},
+				"alphasapphire": {
+					"ja-hrkt": "りんじゅうの さいに あらわれて たましいが にくたいを はなれると すかさず すいとってしまうのだ。",
+					"ko": "임종 때 나타나서 영혼이 육체를 떠나면 재빨리 빨아들여 버린다.",
+					"fr": "Il apparaît au moment du trépas et aspire l’âme à l’instant même où elle quitte le corps.",
+					"de": "Es erscheint im Augenblick des Todes und verschlingt die Seele des Verblichenen, sofort nachdem sie den Körper verlassen hat.",
+					"es": "Aparece hacia el final de la vida y absorbe el alma en cuanto esta se separa del cuerpo.",
+					"it": "Appare sul finire della vita per risucchiare l’energia delle anime vagabonde.",
+					"en": "It arrives near the moment of death and steals spirit from the body.",
+					"ja": "臨終の 際に 現れて 魂が 肉体を 離れると すかさず 吸い取ってしまうのだ。",
+					"es-419": "Aparece hacia el final de la vida y absorbe el alma en cuanto esta se separa del cuerpo."
+				}
+			}
+		},
+		{
+			"profileKey": "sun-moon",
+			"label": "Sun / Moon",
+			"appGameKeys": [
+				"sun-alola",
+				"sun-melemele",
+				"sun-akala",
+				"sun-ulaula",
+				"sun-poni",
+				"moon-alola",
+				"moon-melemele",
+				"moon-akala",
+				"moon-ulaula",
+				"moon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Lampent",
+				"localizedNames": {
+					"ja-hrkt": "ランプラー",
+					"ja-roma": "Lampler",
+					"ko": "램프라",
+					"zh-hant": "燈火幽靈",
+					"fr": "Mélancolux",
+					"de": "Laternecto",
+					"es": "Lampent",
+					"it": "Lampent",
+					"ja": "ランプラー",
+					"zh-hans": "灯火幽灵",
+					"es-419": "Lampent"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Ghost",
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 40,
+					"def": 60,
+					"spa": 95,
+					"spd": 60,
+					"spe": 55
+				},
+				"evYield": {
+					"spa": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Flash Fire",
+					"Flame Body",
+					"Infiltrator (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Infiltrator"
+				],
+				"eggGroups": [
+					"Indeterminate"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "13.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 90,
+				"baseExperience": 130,
+				"habitat": "",
+				"shape": "Arms",
+				"color": "Black",
+				"genus": "Lamp Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ランプポケモン",
+					"ko": "램프포켓몬",
+					"zh-hant": "油燈寶可夢",
+					"fr": "Pokémon Lampe",
+					"de": "Lampen-Pokémon",
+					"es": "Pokémon Farolillo",
+					"it": "Pokémon Lanterna",
+					"ja": "ランプポケモン",
+					"zh-hans": "油灯宝可梦",
+					"es-419": "Pokémon Farolillo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 608
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 114
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 191
+					},
+					{
+						"pokedex": "conquest-gallery",
+						"number": 38
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 66
+					},
+					{
+						"pokedex": "galar",
+						"number": 288
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 49
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 147
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 190
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 607,
+								"natiId": 607,
+								"name": "Litwick"
+							},
+							{
+								"id": 608,
+								"natiId": 608,
+								"name": "Lampent",
+								"method": "Level",
+								"value": 41
+							},
+							{
+								"id": 609,
+								"natiId": 609,
+								"name": "Chandelure",
+								"method": "Use item",
+								"value": "Dusk Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Ember",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Astonish",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Minimize",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Smog",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Minimize",
+							"level": 3,
+							"order": null
+						},
+						{
+							"name": "Smog",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Fire Spin",
+							"level": 7,
+							"order": null
+						},
+						{
+							"name": "Confuse Ray",
+							"level": 10,
+							"order": null
+						},
+						{
+							"name": "Night Shade",
+							"level": 13,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": 16,
+							"order": null
+						},
+						{
+							"name": "Flame Burst",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Imprison",
+							"level": 24,
+							"order": null
+						},
+						{
+							"name": "Hex",
+							"level": 28,
+							"order": null
+						},
+						{
+							"name": "Memento",
+							"level": 33,
+							"order": null
+						},
+						{
+							"name": "Inferno",
+							"level": 38,
+							"order": null
+						},
+						{
+							"name": "Curse",
+							"level": 45,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": 53,
+							"order": null
+						},
+						{
+							"name": "Pain Split",
+							"level": 61,
+							"order": null
+						},
+						{
+							"name": "Overheat",
+							"level": 69,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Calm Mind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dark Pulse",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Embargo",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Energy Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fire Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flame Charge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flamethrower",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Overheat",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Payback",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psychic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Safeguard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Taunt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Trick Room",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/608",
+						"fetchedAt": "2026-11-03T05:53:44.016Z",
+						"hash": "6ed874ae32e1beefb33d1eb9449a73003ea256455a730b017d65e7de5e2c6297"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/308/",
+						"fetchedAt": "2026-11-03T05:53:43.917Z",
+						"hash": "1f3cd3bc4cda5e861f6cba325c25d633b989a029dac8317cf95a942ff8859761"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/608/",
+						"fetchedAt": "2026-11-03T05:53:44.042Z",
+						"hash": "e08d4ea32981f159b47680709e401f9145e1efc7834c425404245d06e48ab561"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/608/encounters",
+						"fetchedAt": "2026-11-03T05:53:44.095Z",
+						"hash": "dd79f5cb3614f9e8c290bfc62e90f9f08e6285c54064011f4028169d66baaca8"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/608/",
+						"fetchedAt": "2026-11-03T05:53:44.149Z",
+						"hash": "507e9daaf3326330eaf64b137089e70f1933a36bdcef7b40ea2139864f248974"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sun-alola": "",
+				"sun-melemele": "",
+				"sun-akala": "",
+				"sun-ulaula": "",
+				"sun-poni": "",
+				"moon-alola": "",
+				"moon-melemele": "",
+				"moon-akala": "",
+				"moon-ulaula": "",
+				"moon-poni": ""
+			},
+			"localizedFlavorByGame": {
+				"sun-alola": {},
+				"sun-melemele": {},
+				"sun-akala": {},
+				"sun-ulaula": {},
+				"sun-poni": {},
+				"moon-alola": {},
+				"moon-melemele": {},
+				"moon-akala": {},
+				"moon-ulaula": {},
+				"moon-poni": {}
+			}
+		},
+		{
+			"profileKey": "ultra-sun-ultra-moon",
+			"label": "Ultra Sun / Ultra Moon",
+			"appGameKeys": [
+				"ultrasun-alola",
+				"ultrasun-melemele",
+				"ultrasun-akala",
+				"ultrasun-ulaula",
+				"ultrasun-poni",
+				"ultramoon-alola",
+				"ultramoon-melemele",
+				"ultramoon-akala",
+				"ultramoon-ulaula",
+				"ultramoon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Lampent",
+				"localizedNames": {
+					"ja-hrkt": "ランプラー",
+					"ja-roma": "Lampler",
+					"ko": "램프라",
+					"zh-hant": "燈火幽靈",
+					"fr": "Mélancolux",
+					"de": "Laternecto",
+					"es": "Lampent",
+					"it": "Lampent",
+					"ja": "ランプラー",
+					"zh-hans": "灯火幽灵",
+					"es-419": "Lampent"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Ghost",
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 40,
+					"def": 60,
+					"spa": 95,
+					"spd": 60,
+					"spe": 55
+				},
+				"evYield": {
+					"spa": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Flash Fire",
+					"Flame Body",
+					"Infiltrator (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Infiltrator"
+				],
+				"eggGroups": [
+					"Indeterminate"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "13.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 90,
+				"baseExperience": 130,
+				"habitat": "",
+				"shape": "Arms",
+				"color": "Black",
+				"genus": "Lamp Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ランプポケモン",
+					"ko": "램프포켓몬",
+					"zh-hant": "油燈寶可夢",
+					"fr": "Pokémon Lampe",
+					"de": "Lampen-Pokémon",
+					"es": "Pokémon Farolillo",
+					"it": "Pokémon Lanterna",
+					"ja": "ランプポケモン",
+					"zh-hans": "油灯宝可梦",
+					"es-419": "Pokémon Farolillo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 608
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 114
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 191
+					},
+					{
+						"pokedex": "conquest-gallery",
+						"number": 38
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 66
+					},
+					{
+						"pokedex": "galar",
+						"number": 288
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 49
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 147
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 190
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 607,
+								"natiId": 607,
+								"name": "Litwick"
+							},
+							{
+								"id": 608,
+								"natiId": 608,
+								"name": "Lampent",
+								"method": "Level",
+								"value": 41
+							},
+							{
+								"id": 609,
+								"natiId": 609,
+								"name": "Chandelure",
+								"method": "Use item",
+								"value": "Dusk Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Ember",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Astonish",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Minimize",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Smog",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Minimize",
+							"level": 3,
+							"order": null
+						},
+						{
+							"name": "Smog",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Fire Spin",
+							"level": 7,
+							"order": null
+						},
+						{
+							"name": "Confuse Ray",
+							"level": 10,
+							"order": null
+						},
+						{
+							"name": "Night Shade",
+							"level": 13,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": 16,
+							"order": null
+						},
+						{
+							"name": "Flame Burst",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Imprison",
+							"level": 24,
+							"order": null
+						},
+						{
+							"name": "Hex",
+							"level": 28,
+							"order": null
+						},
+						{
+							"name": "Memento",
+							"level": 33,
+							"order": null
+						},
+						{
+							"name": "Inferno",
+							"level": 38,
+							"order": null
+						},
+						{
+							"name": "Curse",
+							"level": 45,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": 53,
+							"order": null
+						},
+						{
+							"name": "Pain Split",
+							"level": 61,
+							"order": null
+						},
+						{
+							"name": "Overheat",
+							"level": 69,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Calm Mind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dark Pulse",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Embargo",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Energy Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fire Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flame Charge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flamethrower",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Overheat",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Payback",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psychic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Safeguard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Taunt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Trick Room",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Ally Switch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Heat Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Pain Split",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shock Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Spite",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Telekinesis",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Trick",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/608",
+						"fetchedAt": "2026-11-03T05:53:44.016Z",
+						"hash": "6ed874ae32e1beefb33d1eb9449a73003ea256455a730b017d65e7de5e2c6297"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/308/",
+						"fetchedAt": "2026-11-03T05:53:43.917Z",
+						"hash": "1f3cd3bc4cda5e861f6cba325c25d633b989a029dac8317cf95a942ff8859761"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/608/",
+						"fetchedAt": "2026-11-03T05:53:44.042Z",
+						"hash": "e08d4ea32981f159b47680709e401f9145e1efc7834c425404245d06e48ab561"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/608/encounters",
+						"fetchedAt": "2026-11-03T05:53:44.095Z",
+						"hash": "dd79f5cb3614f9e8c290bfc62e90f9f08e6285c54064011f4028169d66baaca8"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/608/",
+						"fetchedAt": "2026-11-03T05:53:44.149Z",
+						"hash": "507e9daaf3326330eaf64b137089e70f1933a36bdcef7b40ea2139864f248974"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"ultrasun-alola": "",
+				"ultrasun-melemele": "",
+				"ultrasun-akala": "",
+				"ultrasun-ulaula": "",
+				"ultrasun-poni": "",
+				"ultramoon-alola": "",
+				"ultramoon-melemele": "",
+				"ultramoon-akala": "",
+				"ultramoon-ulaula": "",
+				"ultramoon-poni": ""
+			},
+			"localizedFlavorByGame": {
+				"ultrasun-alola": {},
+				"ultrasun-melemele": {},
+				"ultrasun-akala": {},
+				"ultrasun-ulaula": {},
+				"ultrasun-poni": {},
+				"ultramoon-alola": {},
+				"ultramoon-melemele": {},
+				"ultramoon-akala": {},
+				"ultramoon-ulaula": {},
+				"ultramoon-poni": {}
+			}
+		},
+		{
+			"profileKey": "lets-go-pikachu-lets-go-eevee",
+			"label": "Let's Go Pikachu / Eevee",
+			"appGameKeys": [
+				"letsgopikachu",
+				"letsgoeevee"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Lampent",
+				"localizedNames": {
+					"ja-hrkt": "ランプラー",
+					"ja-roma": "Lampler",
+					"ko": "램프라",
+					"zh-hant": "燈火幽靈",
+					"fr": "Mélancolux",
+					"de": "Laternecto",
+					"es": "Lampent",
+					"it": "Lampent",
+					"ja": "ランプラー",
+					"zh-hans": "灯火幽灵",
+					"es-419": "Lampent"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Ghost",
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 40,
+					"def": 60,
+					"spa": 95,
+					"spd": 60,
+					"spe": 55
+				},
+				"evYield": {
+					"spa": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Flash Fire",
+					"Flame Body",
+					"Infiltrator (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Infiltrator"
+				],
+				"eggGroups": [
+					"Indeterminate"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "13.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 90,
+				"baseExperience": 130,
+				"habitat": "",
+				"shape": "Arms",
+				"color": "Black",
+				"genus": "Lamp Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ランプポケモン",
+					"ko": "램프포켓몬",
+					"zh-hant": "油燈寶可夢",
+					"fr": "Pokémon Lampe",
+					"de": "Lampen-Pokémon",
+					"es": "Pokémon Farolillo",
+					"it": "Pokémon Lanterna",
+					"ja": "ランプポケモン",
+					"zh-hans": "油灯宝可梦",
+					"es-419": "Pokémon Farolillo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 608
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 114
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 191
+					},
+					{
+						"pokedex": "conquest-gallery",
+						"number": 38
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 66
+					},
+					{
+						"pokedex": "galar",
+						"number": 288
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 49
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 147
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 190
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 607,
+								"natiId": 607,
+								"name": "Litwick"
+							},
+							{
+								"id": 608,
+								"natiId": 608,
+								"name": "Lampent",
+								"method": "Level",
+								"value": 41
+							},
+							{
+								"id": 609,
+								"natiId": 609,
+								"name": "Chandelure",
+								"method": "Use item",
+								"value": "Dusk Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/608",
+						"fetchedAt": "2026-11-03T05:53:44.016Z",
+						"hash": "6ed874ae32e1beefb33d1eb9449a73003ea256455a730b017d65e7de5e2c6297"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/308/",
+						"fetchedAt": "2026-11-03T05:53:43.917Z",
+						"hash": "1f3cd3bc4cda5e861f6cba325c25d633b989a029dac8317cf95a942ff8859761"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/608/",
+						"fetchedAt": "2026-11-03T05:53:44.042Z",
+						"hash": "e08d4ea32981f159b47680709e401f9145e1efc7834c425404245d06e48ab561"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/608/encounters",
+						"fetchedAt": "2026-11-03T05:53:44.095Z",
+						"hash": "dd79f5cb3614f9e8c290bfc62e90f9f08e6285c54064011f4028169d66baaca8"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/608/",
+						"fetchedAt": "2026-11-03T05:53:44.149Z",
+						"hash": "507e9daaf3326330eaf64b137089e70f1933a36bdcef7b40ea2139864f248974"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"letsgopikachu": "",
+				"letsgoeevee": ""
+			},
+			"localizedFlavorByGame": {
+				"letsgopikachu": {},
+				"letsgoeevee": {}
+			}
+		},
+		{
+			"profileKey": "sword-shield",
+			"label": "Sword / Shield",
+			"appGameKeys": [
+				"sword",
+				"shield"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Lampent",
+				"localizedNames": {
+					"ja-hrkt": "ランプラー",
+					"ja-roma": "Lampler",
+					"ko": "램프라",
+					"zh-hant": "燈火幽靈",
+					"fr": "Mélancolux",
+					"de": "Laternecto",
+					"es": "Lampent",
+					"it": "Lampent",
+					"ja": "ランプラー",
+					"zh-hans": "灯火幽灵",
+					"es-419": "Lampent"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Ghost",
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 40,
+					"def": 60,
+					"spa": 95,
+					"spd": 60,
+					"spe": 55
+				},
+				"evYield": {
+					"spa": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Flash Fire",
+					"Flame Body",
+					"Infiltrator (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Infiltrator"
+				],
+				"eggGroups": [
+					"Indeterminate"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "13.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 90,
+				"baseExperience": 130,
+				"habitat": "",
+				"shape": "Arms",
+				"color": "Black",
+				"genus": "Lamp Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ランプポケモン",
+					"ko": "램프포켓몬",
+					"zh-hant": "油燈寶可夢",
+					"fr": "Pokémon Lampe",
+					"de": "Lampen-Pokémon",
+					"es": "Pokémon Farolillo",
+					"it": "Pokémon Lanterna",
+					"ja": "ランプポケモン",
+					"zh-hans": "油灯宝可梦",
+					"es-419": "Pokémon Farolillo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 608
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 114
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 191
+					},
+					{
+						"pokedex": "conquest-gallery",
+						"number": 38
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 66
+					},
+					{
+						"pokedex": "galar",
+						"number": 288
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 49
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 147
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 190
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 607,
+								"natiId": 607,
+								"name": "Litwick"
+							},
+							{
+								"id": 608,
+								"natiId": 608,
+								"name": "Lampent",
+								"method": "Level",
+								"value": 41
+							},
+							{
+								"id": 609,
+								"natiId": 609,
+								"name": "Chandelure",
+								"method": "Use item",
+								"value": "Dusk Stone"
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Lake Of Outrage Area",
+						"notes": "Overworld, Lv. 55-58",
+						"games": "Sword",
+						"rate": "14%"
+					},
+					{
+						"area": "Lake Of Outrage Area",
+						"notes": "Overworld, Lv. 60",
+						"games": "Sword",
+						"rate": "14%"
+					},
+					{
+						"area": "Lake Of Outrage Area",
+						"notes": "Overworld, Lv. 55-58",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Lake Of Outrage Area",
+						"notes": "Overworld, Lv. 60",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Stony Wilderness Max Den C",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Stony Wilderness Max Den C",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Sword",
+						"rate": "40%"
+					},
+					{
+						"area": "Stony Wilderness Max Den C",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Stony Wilderness Max Den C",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Stony Wilderness Max Den C",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Stony Wilderness Max Den C",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Shield",
+						"rate": "40%"
+					},
+					{
+						"area": "Stony Wilderness Max Den C",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Stony Wilderness Max Den C",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Stony Wilderness Max Den G",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Stony Wilderness Max Den G",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Sword",
+						"rate": "40%"
+					},
+					{
+						"area": "Stony Wilderness Max Den G",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Stony Wilderness Max Den G",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Stony Wilderness Max Den G",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Stony Wilderness Max Den G",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Stony Wilderness Max Den G",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Shield",
+						"rate": "40%"
+					},
+					{
+						"area": "Stony Wilderness Max Den G",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Shield",
+						"rate": "40%"
+					},
+					{
+						"area": "Giants Cap Max Den B",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Giants Cap Max Den B",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Sword",
+						"rate": "40%"
+					},
+					{
+						"area": "Giants Cap Max Den B",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Giants Cap Max Den B",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Giants Cap Max Den B",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Giants Cap Max Den B",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Shield",
+						"rate": "40%"
+					},
+					{
+						"area": "Giants Cap Max Den B",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Giants Cap Max Den B",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Dusty Bowl Max Den G",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Dusty Bowl Max Den G",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Sword",
+						"rate": "40%"
+					},
+					{
+						"area": "Dusty Bowl Max Den G",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Dusty Bowl Max Den G",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Lake Of Outrage Max Den C",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Lake Of Outrage Max Den C",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Lake Of Outrage Max Den C",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Lake Of Outrage Max Den C",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Shield",
+						"rate": "40%"
+					},
+					{
+						"area": "Hammerlocke Hills Max Den D",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Hammerlocke Hills Max Den D",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Hammerlocke Hills Max Den D",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Hammerlocke Hills Max Den D",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Shield",
+						"rate": "40%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Astonish",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Smog",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Ember",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Minimize",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Confuse Ray",
+							"level": 12,
+							"order": null
+						},
+						{
+							"name": "Hex",
+							"level": 16,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Fire Spin",
+							"level": 24,
+							"order": null
+						},
+						{
+							"name": "Night Shade",
+							"level": 28,
+							"order": null
+						},
+						{
+							"name": "Curse",
+							"level": 32,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": 36,
+							"order": null
+						},
+						{
+							"name": "Inferno",
+							"level": 40,
+							"order": null
+						},
+						{
+							"name": "Imprison",
+							"level": 46,
+							"order": null
+						},
+						{
+							"name": "Pain Split",
+							"level": 52,
+							"order": null
+						},
+						{
+							"name": "Overheat",
+							"level": 58,
+							"order": null
+						},
+						{
+							"name": "Memento",
+							"level": 64,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Ally Switch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Calm Mind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dark Pulse",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endure",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Energy Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fire Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fire Spin",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flamethrower",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Heat Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hex",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Imprison",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Mystical Fire",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Overheat",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Payback",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psychic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Safeguard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Taunt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Trick",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Trick Room",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Burning Jealousy",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Poltergeist",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Skitter Smack",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/608",
+						"fetchedAt": "2026-11-03T05:53:44.016Z",
+						"hash": "6ed874ae32e1beefb33d1eb9449a73003ea256455a730b017d65e7de5e2c6297"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/308/",
+						"fetchedAt": "2026-11-03T05:53:43.917Z",
+						"hash": "1f3cd3bc4cda5e861f6cba325c25d633b989a029dac8317cf95a942ff8859761"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/608/",
+						"fetchedAt": "2026-11-03T05:53:44.042Z",
+						"hash": "e08d4ea32981f159b47680709e401f9145e1efc7834c425404245d06e48ab561"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/608/encounters",
+						"fetchedAt": "2026-11-03T05:53:44.095Z",
+						"hash": "dd79f5cb3614f9e8c290bfc62e90f9f08e6285c54064011f4028169d66baaca8"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/608/",
+						"fetchedAt": "2026-11-03T05:53:44.149Z",
+						"hash": "507e9daaf3326330eaf64b137089e70f1933a36bdcef7b40ea2139864f248974"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sword": "This Pokémon appears just before someone passes away, so it’s feared as an emissary of death.",
+				"shield": "It lurks in cities, pretending to be a lamp. Once it finds someone whose death is near, it will trail quietly after them."
+			},
+			"localizedFlavorByGame": {
+				"sword": {
+					"ja-hrkt": "だれかが しぬ ちょくぜんに あらわれる ことから しにがみの つかい として おそれられている。",
+					"ko": "누군가가 죽기 직전에 나타나기 때문에 사신의 사자로 여겨져 두려움의 대상이 되었다.",
+					"zh-hant": "由於牠會在人類臨終時出現， 人們因此認為牠是死神 的使者，對牠畏懼不已。",
+					"fr": "Comme il apparaît dès qu’une personne est sur le point de trépasser, les gens le craignent et le prennent pour un messager de la mort.",
+					"de": "Es wird als Todesbote gefürchtet, da es oft in der Nähe von Menschen auftaucht, deren Ende kurz bevorsteht.",
+					"es": "Es considerado y temido como Pokémon de mal agüero, ya que aparece en los instantes previos al fallecimiento de alguien.",
+					"it": "Appare quando qualcuno sta per morire. Per questo motivo è considerato l’aiutante della divinità della morte ed è molto temuto.",
+					"en": "This Pokémon appears just before someone passes away, so it’s feared as an emissary of death.",
+					"ja": "誰かが 死ぬ 直前に 現れる ことから 死神の使い として 恐れられている。",
+					"zh-hans": "由于它会在人类临终时出现， 人们认为它是死神的 使者，对它畏惧不已。",
+					"es-419": "Es considerado y temido como Pokémon de mal agüero, ya que aparece en los instantes previos al fallecimiento de alguien."
+				},
+				"shield": {
+					"ja-hrkt": "ランプの ふりをして まちなかに ひそむ。 しきが ちかい ひとを みつけると そっと あとを つける。",
+					"ko": "램프인 척 마을 안으로 숨어든다. 죽음이 다가온 사람을 발견하면 조용히 뒤를 쫓는다.",
+					"zh-hant": "偽裝成燈的樣子藏身在城鎮裡。 一旦發現了臨近死期的人， 便會悄悄地跟在後面。",
+					"fr": "Il se cache en ville en se faisant passer pour un lampadaire. Lorsqu’il repère une personne dont l’heure est proche, il la suit en catimini.",
+					"de": "Es gibt sich als Lampe aus und lungert in Städten herum. Entdeckt es einen Menschen, dessen Todesstunde naht, folgt es ihm leise.",
+					"es": "Se oculta en entornos urbanos haciéndose pasar por una lámpara corriente. Si se topa con alguien moribundo, lo sigue en silencio.",
+					"it": "Si mimetizza nel paesaggio cittadino fingendosi una lampada. Quando incontra una persona prossima alla morte, la segue silenzioso.",
+					"en": "It lurks in cities, pretending to be a lamp. Once it finds someone whose death is near, it will trail quietly after them.",
+					"ja": "ランプの ふりをして 町中に 潜む。 死期が 近い 人を 見つけると そっと 後を つける。",
+					"zh-hans": "伪装成灯的样子藏身在城镇里。 一旦发现了临近死期的人， 便会悄悄地跟在后面。",
+					"es-419": "Se oculta en entornos urbanos haciéndose pasar por una lámpara corriente. Si se topa con alguien moribundo, lo sigue en silencio."
+				}
+			}
+		},
+		{
+			"profileKey": "the-isle-of-armor",
+			"label": "The Isle of Armor",
+			"appGameKeys": [
+				"swordioa",
+				"shieldioa"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Lampent",
+				"localizedNames": {
+					"ja-hrkt": "ランプラー",
+					"ja-roma": "Lampler",
+					"ko": "램프라",
+					"zh-hant": "燈火幽靈",
+					"fr": "Mélancolux",
+					"de": "Laternecto",
+					"es": "Lampent",
+					"it": "Lampent",
+					"ja": "ランプラー",
+					"zh-hans": "灯火幽灵",
+					"es-419": "Lampent"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Ghost",
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 40,
+					"def": 60,
+					"spa": 95,
+					"spd": 60,
+					"spe": 55
+				},
+				"evYield": {
+					"spa": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Flash Fire",
+					"Flame Body",
+					"Infiltrator (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Infiltrator"
+				],
+				"eggGroups": [
+					"Indeterminate"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "13.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 90,
+				"baseExperience": 130,
+				"habitat": "",
+				"shape": "Arms",
+				"color": "Black",
+				"genus": "Lamp Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ランプポケモン",
+					"ko": "램프포켓몬",
+					"zh-hant": "油燈寶可夢",
+					"fr": "Pokémon Lampe",
+					"de": "Lampen-Pokémon",
+					"es": "Pokémon Farolillo",
+					"it": "Pokémon Lanterna",
+					"ja": "ランプポケモン",
+					"zh-hans": "油灯宝可梦",
+					"es-419": "Pokémon Farolillo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 608
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 114
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 191
+					},
+					{
+						"pokedex": "conquest-gallery",
+						"number": 38
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 66
+					},
+					{
+						"pokedex": "galar",
+						"number": 288
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 49
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 147
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 190
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 607,
+								"natiId": 607,
+								"name": "Litwick"
+							},
+							{
+								"id": 608,
+								"natiId": 608,
+								"name": "Lampent",
+								"method": "Level",
+								"value": 41
+							},
+							{
+								"id": 609,
+								"natiId": 609,
+								"name": "Chandelure",
+								"method": "Use item",
+								"value": "Dusk Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/608",
+						"fetchedAt": "2026-11-03T05:53:44.016Z",
+						"hash": "6ed874ae32e1beefb33d1eb9449a73003ea256455a730b017d65e7de5e2c6297"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/308/",
+						"fetchedAt": "2026-11-03T05:53:43.917Z",
+						"hash": "1f3cd3bc4cda5e861f6cba325c25d633b989a029dac8317cf95a942ff8859761"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/608/",
+						"fetchedAt": "2026-11-03T05:53:44.042Z",
+						"hash": "e08d4ea32981f159b47680709e401f9145e1efc7834c425404245d06e48ab561"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/608/encounters",
+						"fetchedAt": "2026-11-03T05:53:44.095Z",
+						"hash": "dd79f5cb3614f9e8c290bfc62e90f9f08e6285c54064011f4028169d66baaca8"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/608/",
+						"fetchedAt": "2026-11-03T05:53:44.149Z",
+						"hash": "507e9daaf3326330eaf64b137089e70f1933a36bdcef7b40ea2139864f248974"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordioa": "",
+				"shieldioa": ""
+			},
+			"localizedFlavorByGame": {
+				"swordioa": {},
+				"shieldioa": {}
+			}
+		},
+		{
+			"profileKey": "the-crown-tundra",
+			"label": "The Crown Tundra",
+			"appGameKeys": [
+				"swordct",
+				"shieldct"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Lampent",
+				"localizedNames": {
+					"ja-hrkt": "ランプラー",
+					"ja-roma": "Lampler",
+					"ko": "램프라",
+					"zh-hant": "燈火幽靈",
+					"fr": "Mélancolux",
+					"de": "Laternecto",
+					"es": "Lampent",
+					"it": "Lampent",
+					"ja": "ランプラー",
+					"zh-hans": "灯火幽灵",
+					"es-419": "Lampent"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Ghost",
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 40,
+					"def": 60,
+					"spa": 95,
+					"spd": 60,
+					"spe": 55
+				},
+				"evYield": {
+					"spa": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Flash Fire",
+					"Flame Body",
+					"Infiltrator (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Infiltrator"
+				],
+				"eggGroups": [
+					"Indeterminate"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "13.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 90,
+				"baseExperience": 130,
+				"habitat": "",
+				"shape": "Arms",
+				"color": "Black",
+				"genus": "Lamp Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ランプポケモン",
+					"ko": "램프포켓몬",
+					"zh-hant": "油燈寶可夢",
+					"fr": "Pokémon Lampe",
+					"de": "Lampen-Pokémon",
+					"es": "Pokémon Farolillo",
+					"it": "Pokémon Lanterna",
+					"ja": "ランプポケモン",
+					"zh-hans": "油灯宝可梦",
+					"es-419": "Pokémon Farolillo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 608
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 114
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 191
+					},
+					{
+						"pokedex": "conquest-gallery",
+						"number": 38
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 66
+					},
+					{
+						"pokedex": "galar",
+						"number": 288
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 49
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 147
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 190
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 607,
+								"natiId": 607,
+								"name": "Litwick"
+							},
+							{
+								"id": 608,
+								"natiId": 608,
+								"name": "Lampent",
+								"method": "Level",
+								"value": 41
+							},
+							{
+								"id": 609,
+								"natiId": 609,
+								"name": "Chandelure",
+								"method": "Use item",
+								"value": "Dusk Stone"
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Giants Bed Area",
+						"notes": "Overworld, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "5%"
+					},
+					{
+						"area": "Giants Bed Area",
+						"notes": "Overworld, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Giants Bed Area",
+						"notes": "Overworld, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "5%"
+					},
+					{
+						"area": "Giants Bed Area",
+						"notes": "Overworld, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Max Lair Area",
+						"notes": "Dynamax Adventure, Lv. 65",
+						"games": "The Crown Tundra Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Max Lair Area",
+						"notes": "Dynamax Adventure, Lv. 65",
+						"games": "The Crown Tundra Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Old Cemetery Area",
+						"notes": "Overworld, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "15%"
+					},
+					{
+						"area": "Old Cemetery Area",
+						"notes": "Overworld, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Old Cemetery Area",
+						"notes": "Overworld, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "15%"
+					},
+					{
+						"area": "Old Cemetery Area",
+						"notes": "Overworld, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Snowslide Slope Max Den H",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "The Crown Tundra Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Snowslide Slope Max Den H",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "The Crown Tundra Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Snowslide Slope Max Den H",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "The Crown Tundra Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Snowslide Slope Max Den H",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "The Crown Tundra Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Giants Bed Max Den B",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "The Crown Tundra Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Giants Bed Max Den B",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "The Crown Tundra Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Giants Bed Max Den B",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "The Crown Tundra Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Giants Bed Max Den B",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "The Crown Tundra Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Giants Bed Max Den T",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "The Crown Tundra Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Giants Bed Max Den T",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "The Crown Tundra Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Giants Bed Max Den T",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "The Crown Tundra Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Giants Bed Max Den T",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "The Crown Tundra Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Ballimere Lake Max Den E",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "The Crown Tundra Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Ballimere Lake Max Den E",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "The Crown Tundra Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Ballimere Lake Max Den E",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "The Crown Tundra Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Ballimere Lake Max Den E",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "The Crown Tundra Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Ballimere Lake Max Den F",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "The Crown Tundra Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Ballimere Lake Max Den F",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "The Crown Tundra Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Ballimere Lake Max Den F",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "The Crown Tundra Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Ballimere Lake Max Den F",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "The Crown Tundra Shield",
+						"rate": "25%"
+					}
+				],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/608",
+						"fetchedAt": "2026-11-03T05:53:44.016Z",
+						"hash": "6ed874ae32e1beefb33d1eb9449a73003ea256455a730b017d65e7de5e2c6297"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/308/",
+						"fetchedAt": "2026-11-03T05:53:43.917Z",
+						"hash": "1f3cd3bc4cda5e861f6cba325c25d633b989a029dac8317cf95a942ff8859761"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/608/",
+						"fetchedAt": "2026-11-03T05:53:44.042Z",
+						"hash": "e08d4ea32981f159b47680709e401f9145e1efc7834c425404245d06e48ab561"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/608/encounters",
+						"fetchedAt": "2026-11-03T05:53:44.095Z",
+						"hash": "dd79f5cb3614f9e8c290bfc62e90f9f08e6285c54064011f4028169d66baaca8"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/608/",
+						"fetchedAt": "2026-11-03T05:53:44.149Z",
+						"hash": "507e9daaf3326330eaf64b137089e70f1933a36bdcef7b40ea2139864f248974"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordct": "",
+				"shieldct": ""
+			},
+			"localizedFlavorByGame": {
+				"swordct": {},
+				"shieldct": {}
+			}
+		},
+		{
+			"profileKey": "brilliant-diamond-shining-pearl",
+			"label": "Brilliant Diamond / Shining Pearl",
+			"appGameKeys": [
+				"brilliantdiamond-national",
+				"brilliantdiamond",
+				"shiningpearl-national",
+				"shiningpearl"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Lampent",
+				"localizedNames": {
+					"ja-hrkt": "ランプラー",
+					"ja-roma": "Lampler",
+					"ko": "램프라",
+					"zh-hant": "燈火幽靈",
+					"fr": "Mélancolux",
+					"de": "Laternecto",
+					"es": "Lampent",
+					"it": "Lampent",
+					"ja": "ランプラー",
+					"zh-hans": "灯火幽灵",
+					"es-419": "Lampent"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Ghost",
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 40,
+					"def": 60,
+					"spa": 95,
+					"spd": 60,
+					"spe": 55
+				},
+				"evYield": {
+					"spa": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Flash Fire",
+					"Flame Body",
+					"Infiltrator (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Infiltrator"
+				],
+				"eggGroups": [
+					"Indeterminate"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "13.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 90,
+				"baseExperience": 130,
+				"habitat": "",
+				"shape": "Arms",
+				"color": "Black",
+				"genus": "Lamp Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ランプポケモン",
+					"ko": "램프포켓몬",
+					"zh-hant": "油燈寶可夢",
+					"fr": "Pokémon Lampe",
+					"de": "Lampen-Pokémon",
+					"es": "Pokémon Farolillo",
+					"it": "Pokémon Lanterna",
+					"ja": "ランプポケモン",
+					"zh-hans": "油灯宝可梦",
+					"es-419": "Pokémon Farolillo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 608
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 114
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 191
+					},
+					{
+						"pokedex": "conquest-gallery",
+						"number": 38
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 66
+					},
+					{
+						"pokedex": "galar",
+						"number": 288
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 49
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 147
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 190
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 607,
+								"natiId": 607,
+								"name": "Litwick"
+							},
+							{
+								"id": 608,
+								"natiId": 608,
+								"name": "Lampent",
+								"method": "Level",
+								"value": 41
+							},
+							{
+								"id": 609,
+								"natiId": 609,
+								"name": "Chandelure",
+								"method": "Use item",
+								"value": "Dusk Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/608",
+						"fetchedAt": "2026-11-03T05:53:44.016Z",
+						"hash": "6ed874ae32e1beefb33d1eb9449a73003ea256455a730b017d65e7de5e2c6297"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/308/",
+						"fetchedAt": "2026-11-03T05:53:43.917Z",
+						"hash": "1f3cd3bc4cda5e861f6cba325c25d633b989a029dac8317cf95a942ff8859761"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/608/",
+						"fetchedAt": "2026-11-03T05:53:44.042Z",
+						"hash": "e08d4ea32981f159b47680709e401f9145e1efc7834c425404245d06e48ab561"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/608/encounters",
+						"fetchedAt": "2026-11-03T05:53:44.095Z",
+						"hash": "dd79f5cb3614f9e8c290bfc62e90f9f08e6285c54064011f4028169d66baaca8"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/608/",
+						"fetchedAt": "2026-11-03T05:53:44.149Z",
+						"hash": "507e9daaf3326330eaf64b137089e70f1933a36bdcef7b40ea2139864f248974"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"brilliantdiamond-national": "",
+				"brilliantdiamond": "",
+				"shiningpearl-national": "",
+				"shiningpearl": ""
+			},
+			"localizedFlavorByGame": {
+				"brilliantdiamond-national": {},
+				"brilliantdiamond": {},
+				"shiningpearl-national": {},
+				"shiningpearl": {}
+			}
+		},
+		{
+			"profileKey": "legends-arceus",
+			"label": "Legends: Arceus",
+			"appGameKeys": [
+				"legendsarceus"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Lampent",
+				"localizedNames": {
+					"ja-hrkt": "ランプラー",
+					"ja-roma": "Lampler",
+					"ko": "램프라",
+					"zh-hant": "燈火幽靈",
+					"fr": "Mélancolux",
+					"de": "Laternecto",
+					"es": "Lampent",
+					"it": "Lampent",
+					"ja": "ランプラー",
+					"zh-hans": "灯火幽灵",
+					"es-419": "Lampent"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Ghost",
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 40,
+					"def": 60,
+					"spa": 95,
+					"spd": 60,
+					"spe": 55
+				},
+				"evYield": {
+					"spa": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Flash Fire",
+					"Flame Body",
+					"Infiltrator (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Infiltrator"
+				],
+				"eggGroups": [
+					"Indeterminate"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "13.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 90,
+				"baseExperience": 130,
+				"habitat": "",
+				"shape": "Arms",
+				"color": "Black",
+				"genus": "Lamp Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ランプポケモン",
+					"ko": "램프포켓몬",
+					"zh-hant": "油燈寶可夢",
+					"fr": "Pokémon Lampe",
+					"de": "Lampen-Pokémon",
+					"es": "Pokémon Farolillo",
+					"it": "Pokémon Lanterna",
+					"ja": "ランプポケモン",
+					"zh-hans": "油灯宝可梦",
+					"es-419": "Pokémon Farolillo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 608
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 114
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 191
+					},
+					{
+						"pokedex": "conquest-gallery",
+						"number": 38
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 66
+					},
+					{
+						"pokedex": "galar",
+						"number": 288
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 49
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 147
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 190
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 607,
+								"natiId": 607,
+								"name": "Litwick"
+							},
+							{
+								"id": 608,
+								"natiId": 608,
+								"name": "Lampent",
+								"method": "Level",
+								"value": 41
+							},
+							{
+								"id": 609,
+								"natiId": 609,
+								"name": "Chandelure",
+								"method": "Use item",
+								"value": "Dusk Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/608",
+						"fetchedAt": "2026-11-03T05:53:44.016Z",
+						"hash": "6ed874ae32e1beefb33d1eb9449a73003ea256455a730b017d65e7de5e2c6297"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/308/",
+						"fetchedAt": "2026-11-03T05:53:43.917Z",
+						"hash": "1f3cd3bc4cda5e861f6cba325c25d633b989a029dac8317cf95a942ff8859761"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/608/",
+						"fetchedAt": "2026-11-03T05:53:44.042Z",
+						"hash": "e08d4ea32981f159b47680709e401f9145e1efc7834c425404245d06e48ab561"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/608/encounters",
+						"fetchedAt": "2026-11-03T05:53:44.095Z",
+						"hash": "dd79f5cb3614f9e8c290bfc62e90f9f08e6285c54064011f4028169d66baaca8"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/608/",
+						"fetchedAt": "2026-11-03T05:53:44.149Z",
+						"hash": "507e9daaf3326330eaf64b137089e70f1933a36bdcef7b40ea2139864f248974"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendsarceus": ""
+			},
+			"localizedFlavorByGame": {
+				"legendsarceus": {}
+			}
+		},
+		{
+			"profileKey": "scarlet-violet",
+			"label": "Scarlet / Violet",
+			"appGameKeys": [
+				"scarlet",
+				"violet"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Lampent",
+				"localizedNames": {
+					"ja-hrkt": "ランプラー",
+					"ja-roma": "Lampler",
+					"ko": "램프라",
+					"zh-hant": "燈火幽靈",
+					"fr": "Mélancolux",
+					"de": "Laternecto",
+					"es": "Lampent",
+					"it": "Lampent",
+					"ja": "ランプラー",
+					"zh-hans": "灯火幽灵",
+					"es-419": "Lampent"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Ghost",
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 40,
+					"def": 60,
+					"spa": 95,
+					"spd": 60,
+					"spe": 55
+				},
+				"evYield": {
+					"spa": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Flash Fire",
+					"Flame Body",
+					"Infiltrator (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Infiltrator"
+				],
+				"eggGroups": [
+					"Indeterminate"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "13.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 90,
+				"baseExperience": 130,
+				"habitat": "",
+				"shape": "Arms",
+				"color": "Black",
+				"genus": "Lamp Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ランプポケモン",
+					"ko": "램프포켓몬",
+					"zh-hant": "油燈寶可夢",
+					"fr": "Pokémon Lampe",
+					"de": "Lampen-Pokémon",
+					"es": "Pokémon Farolillo",
+					"it": "Pokémon Lanterna",
+					"ja": "ランプポケモン",
+					"zh-hans": "油灯宝可梦",
+					"es-419": "Pokémon Farolillo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 608
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 114
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 191
+					},
+					{
+						"pokedex": "conquest-gallery",
+						"number": 38
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 66
+					},
+					{
+						"pokedex": "galar",
+						"number": 288
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 49
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 147
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 190
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 607,
+								"natiId": 607,
+								"name": "Litwick"
+							},
+							{
+								"id": 608,
+								"natiId": 608,
+								"name": "Lampent",
+								"method": "Level",
+								"value": 41
+							},
+							{
+								"id": 609,
+								"natiId": 609,
+								"name": "Chandelure",
+								"method": "Use item",
+								"value": "Dusk Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Ember",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Minimize",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Smog",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Astonish",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Confuse Ray",
+							"level": 12,
+							"order": null
+						},
+						{
+							"name": "Hex",
+							"level": 16,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Fire Spin",
+							"level": 24,
+							"order": null
+						},
+						{
+							"name": "Night Shade",
+							"level": 28,
+							"order": null
+						},
+						{
+							"name": "Curse",
+							"level": 32,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": 36,
+							"order": null
+						},
+						{
+							"name": "Inferno",
+							"level": 40,
+							"order": null
+						},
+						{
+							"name": "Imprison",
+							"level": 46,
+							"order": null
+						},
+						{
+							"name": "Pain Split",
+							"level": 52,
+							"order": null
+						},
+						{
+							"name": "Overheat",
+							"level": 58,
+							"order": null
+						},
+						{
+							"name": "Memento",
+							"level": 64,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Burning Jealousy",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Calm Mind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confuse Ray",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Curse",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dark Pulse",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endure",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Energy Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fire Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fire Spin",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flame Charge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flamethrower",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flare Blitz",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Haze",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Heat Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hex",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Imprison",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Lash Out",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Night Shade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Overheat",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Pain Split",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Poltergeist",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psychic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Skitter Smack",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Spite",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Taunt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Temper Flare",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Tera Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Trick",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Trick Room",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": null,
+							"order": null
+						}
+					],
+					"Egg": [
+						{
+							"name": "Acid Armor",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Clear Smog",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Haze",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Power Split",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/608",
+						"fetchedAt": "2026-11-03T05:53:44.016Z",
+						"hash": "6ed874ae32e1beefb33d1eb9449a73003ea256455a730b017d65e7de5e2c6297"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/308/",
+						"fetchedAt": "2026-11-03T05:53:43.917Z",
+						"hash": "1f3cd3bc4cda5e861f6cba325c25d633b989a029dac8317cf95a942ff8859761"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/608/",
+						"fetchedAt": "2026-11-03T05:53:44.042Z",
+						"hash": "e08d4ea32981f159b47680709e401f9145e1efc7834c425404245d06e48ab561"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/608/encounters",
+						"fetchedAt": "2026-11-03T05:53:44.095Z",
+						"hash": "dd79f5cb3614f9e8c290bfc62e90f9f08e6285c54064011f4028169d66baaca8"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/608/",
+						"fetchedAt": "2026-11-03T05:53:44.149Z",
+						"hash": "507e9daaf3326330eaf64b137089e70f1933a36bdcef7b40ea2139864f248974"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlet": "",
+				"violet": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlet": {},
+				"violet": {}
+			}
+		},
+		{
+			"profileKey": "the-teal-mask",
+			"label": "The Teal Mask",
+			"appGameKeys": [
+				"scarlettm",
+				"violettm"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Lampent",
+				"localizedNames": {
+					"ja-hrkt": "ランプラー",
+					"ja-roma": "Lampler",
+					"ko": "램프라",
+					"zh-hant": "燈火幽靈",
+					"fr": "Mélancolux",
+					"de": "Laternecto",
+					"es": "Lampent",
+					"it": "Lampent",
+					"ja": "ランプラー",
+					"zh-hans": "灯火幽灵",
+					"es-419": "Lampent"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Ghost",
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 40,
+					"def": 60,
+					"spa": 95,
+					"spd": 60,
+					"spe": 55
+				},
+				"evYield": {
+					"spa": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Flash Fire",
+					"Flame Body",
+					"Infiltrator (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Infiltrator"
+				],
+				"eggGroups": [
+					"Indeterminate"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "13.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 90,
+				"baseExperience": 130,
+				"habitat": "",
+				"shape": "Arms",
+				"color": "Black",
+				"genus": "Lamp Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ランプポケモン",
+					"ko": "램프포켓몬",
+					"zh-hant": "油燈寶可夢",
+					"fr": "Pokémon Lampe",
+					"de": "Lampen-Pokémon",
+					"es": "Pokémon Farolillo",
+					"it": "Pokémon Lanterna",
+					"ja": "ランプポケモン",
+					"zh-hans": "油灯宝可梦",
+					"es-419": "Pokémon Farolillo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 608
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 114
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 191
+					},
+					{
+						"pokedex": "conquest-gallery",
+						"number": 38
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 66
+					},
+					{
+						"pokedex": "galar",
+						"number": 288
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 49
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 147
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 190
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 607,
+								"natiId": 607,
+								"name": "Litwick"
+							},
+							{
+								"id": 608,
+								"natiId": 608,
+								"name": "Lampent",
+								"method": "Level",
+								"value": 41
+							},
+							{
+								"id": 609,
+								"natiId": 609,
+								"name": "Chandelure",
+								"method": "Use item",
+								"value": "Dusk Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/608",
+						"fetchedAt": "2026-11-03T05:53:44.016Z",
+						"hash": "6ed874ae32e1beefb33d1eb9449a73003ea256455a730b017d65e7de5e2c6297"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/308/",
+						"fetchedAt": "2026-11-03T05:53:43.917Z",
+						"hash": "1f3cd3bc4cda5e861f6cba325c25d633b989a029dac8317cf95a942ff8859761"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/608/",
+						"fetchedAt": "2026-11-03T05:53:44.042Z",
+						"hash": "e08d4ea32981f159b47680709e401f9145e1efc7834c425404245d06e48ab561"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/608/encounters",
+						"fetchedAt": "2026-11-03T05:53:44.095Z",
+						"hash": "dd79f5cb3614f9e8c290bfc62e90f9f08e6285c54064011f4028169d66baaca8"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/608/",
+						"fetchedAt": "2026-11-03T05:53:44.149Z",
+						"hash": "507e9daaf3326330eaf64b137089e70f1933a36bdcef7b40ea2139864f248974"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlettm": "",
+				"violettm": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlettm": {},
+				"violettm": {}
+			}
+		},
+		{
+			"profileKey": "the-indigo-disk",
+			"label": "The Indigo Disk",
+			"appGameKeys": [
+				"scarletid",
+				"violetid"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Lampent",
+				"localizedNames": {
+					"ja-hrkt": "ランプラー",
+					"ja-roma": "Lampler",
+					"ko": "램프라",
+					"zh-hant": "燈火幽靈",
+					"fr": "Mélancolux",
+					"de": "Laternecto",
+					"es": "Lampent",
+					"it": "Lampent",
+					"ja": "ランプラー",
+					"zh-hans": "灯火幽灵",
+					"es-419": "Lampent"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Ghost",
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 40,
+					"def": 60,
+					"spa": 95,
+					"spd": 60,
+					"spe": 55
+				},
+				"evYield": {
+					"spa": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Flash Fire",
+					"Flame Body",
+					"Infiltrator (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Infiltrator"
+				],
+				"eggGroups": [
+					"Indeterminate"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "13.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 90,
+				"baseExperience": 130,
+				"habitat": "",
+				"shape": "Arms",
+				"color": "Black",
+				"genus": "Lamp Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ランプポケモン",
+					"ko": "램프포켓몬",
+					"zh-hant": "油燈寶可夢",
+					"fr": "Pokémon Lampe",
+					"de": "Lampen-Pokémon",
+					"es": "Pokémon Farolillo",
+					"it": "Pokémon Lanterna",
+					"ja": "ランプポケモン",
+					"zh-hans": "油灯宝可梦",
+					"es-419": "Pokémon Farolillo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 608
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 114
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 191
+					},
+					{
+						"pokedex": "conquest-gallery",
+						"number": 38
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 66
+					},
+					{
+						"pokedex": "galar",
+						"number": 288
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 49
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 147
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 190
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 607,
+								"natiId": 607,
+								"name": "Litwick"
+							},
+							{
+								"id": 608,
+								"natiId": 608,
+								"name": "Lampent",
+								"method": "Level",
+								"value": 41
+							},
+							{
+								"id": 609,
+								"natiId": 609,
+								"name": "Chandelure",
+								"method": "Use item",
+								"value": "Dusk Stone"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/608",
+						"fetchedAt": "2026-11-03T05:53:44.016Z",
+						"hash": "6ed874ae32e1beefb33d1eb9449a73003ea256455a730b017d65e7de5e2c6297"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/308/",
+						"fetchedAt": "2026-11-03T05:53:43.917Z",
+						"hash": "1f3cd3bc4cda5e861f6cba325c25d633b989a029dac8317cf95a942ff8859761"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/608/",
+						"fetchedAt": "2026-11-03T05:53:44.042Z",
+						"hash": "e08d4ea32981f159b47680709e401f9145e1efc7834c425404245d06e48ab561"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/608/encounters",
+						"fetchedAt": "2026-11-03T05:53:44.095Z",
+						"hash": "dd79f5cb3614f9e8c290bfc62e90f9f08e6285c54064011f4028169d66baaca8"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/608/",
+						"fetchedAt": "2026-11-03T05:53:44.149Z",
+						"hash": "507e9daaf3326330eaf64b137089e70f1933a36bdcef7b40ea2139864f248974"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarletid": "",
+				"violetid": ""
+			},
+			"localizedFlavorByGame": {
+				"scarletid": {},
+				"violetid": {}
+			}
+		},
+		{
+			"profileKey": "legends-za",
+			"label": "Legends: Z-A",
+			"appGameKeys": [
+				"legendsza"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Lampent",
+				"localizedNames": {
+					"ja-hrkt": "ランプラー",
+					"ja-roma": "Lampler",
+					"ko": "램프라",
+					"zh-hant": "燈火幽靈",
+					"fr": "Mélancolux",
+					"de": "Laternecto",
+					"es": "Lampent",
+					"it": "Lampent",
+					"ja": "ランプラー",
+					"zh-hans": "灯火幽灵",
+					"es-419": "Lampent"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Ghost",
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 40,
+					"def": 60,
+					"spa": 95,
+					"spd": 60,
+					"spe": 55
+				},
+				"evYield": {
+					"spa": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Flash Fire",
+					"Flame Body",
+					"Infiltrator (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Infiltrator"
+				],
+				"eggGroups": [
+					"Amorphous"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "13 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 90,
+				"baseExperience": 130,
+				"habitat": "",
+				"shape": "Arms",
+				"color": "Black",
+				"genus": "Lamp Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ランプポケモン",
+					"ko": "램프포켓몬",
+					"zh-hant": "油燈寶可夢",
+					"fr": "Pokémon Lampe",
+					"de": "Lampen-Pokémon",
+					"es": "Pokémon Farolillo",
+					"it": "Pokémon Lanterna",
+					"ja": "ランプポケモン",
+					"zh-hans": "油灯宝可梦",
+					"es-419": "Pokémon Farolillo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 608
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 114
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 191
+					},
+					{
+						"pokedex": "conquest-gallery",
+						"number": 38
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 66
+					},
+					{
+						"pokedex": "galar",
+						"number": 288
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 49
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 147
+					},
+					{
+						"pokedex": "lumiose",
+						"number": 190
+					}
+				],
+				"alphaMove": "Dark Pulse",
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 607,
+								"natiId": 607,
+								"name": "Litwick"
+							},
+							{
+								"id": 608,
+								"natiId": 608,
+								"name": "Lampent",
+								"method": "Level",
+								"value": 41
+							},
+							{
+								"id": 609,
+								"natiId": 609,
+								"name": "Chandelure",
+								"method": "Use item",
+								"value": "Dusk Stone"
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Wild Zone 17",
+						"notes": "",
+						"games": "Legends: Z-A"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Ember",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Smokescreen",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Haze",
+							"level": 10,
+							"order": 3
+						},
+						{
+							"name": "Confuse Ray",
+							"level": 12,
+							"order": 4
+						},
+						{
+							"name": "Acid Armor",
+							"level": 16,
+							"order": 5
+						},
+						{
+							"name": "Will-O-Wisp",
+							"level": 20,
+							"order": 6
+						},
+						{
+							"name": "Fire Spin",
+							"level": 24,
+							"order": 7
+						},
+						{
+							"name": "Flamethrower",
+							"level": 28,
+							"order": 8
+						},
+						{
+							"name": "Shadow Ball",
+							"level": 32,
+							"order": 9
+						},
+						{
+							"name": "Flame Wheel",
+							"level": 38,
+							"order": 10
+						},
+						{
+							"name": "Curse",
+							"level": 44,
+							"order": 11
+						},
+						{
+							"name": "Heal Block",
+							"level": 48,
+							"order": 12
+						},
+						{
+							"name": "Overheat",
+							"level": 52,
+							"order": 13
+						}
+					],
+					"Machine": [
+						{
+							"name": "Calm Mind",
+							"machine": "TM006",
+							"order": 1
+						},
+						{
+							"name": "Protect",
+							"machine": "TM017",
+							"order": 2
+						},
+						{
+							"name": "Energy Ball",
+							"machine": "TM026",
+							"order": 3
+						},
+						{
+							"name": "Double Team",
+							"machine": "TM032",
+							"order": 4
+						},
+						{
+							"name": "Endure",
+							"machine": "TM035",
+							"order": 5
+						},
+						{
+							"name": "Fire Blast",
+							"machine": "TM038",
+							"order": 6
+						},
+						{
+							"name": "Overheat",
+							"machine": "TM050",
+							"order": 7
+						},
+						{
+							"name": "Safeguard",
+							"machine": "TM051",
+							"order": 8
+						},
+						{
+							"name": "Will-O-Wisp",
+							"machine": "TM057",
+							"order": 9
+						},
+						{
+							"name": "Flamethrower",
+							"machine": "TM062",
+							"order": 10
+						},
+						{
+							"name": "Psychic",
+							"machine": "TM063",
+							"order": 11
+						},
+						{
+							"name": "Solar Beam",
+							"machine": "TM064",
+							"order": 12
+						},
+						{
+							"name": "Heat Wave",
+							"machine": "TM068",
+							"order": 13
+						},
+						{
+							"name": "Fire Spin",
+							"machine": "TM072",
+							"order": 14
+						},
+						{
+							"name": "Shadow Ball",
+							"machine": "TM074",
+							"order": 15
+						},
+						{
+							"name": "Substitute",
+							"machine": "TM085",
+							"order": 16
+						},
+						{
+							"name": "Dark Pulse",
+							"machine": "TM090",
+							"order": 17
+						},
+						{
+							"name": "Curse",
+							"machine": "TM091",
+							"order": 18
+						},
+						{
+							"name": "Taunt",
+							"machine": "TM095",
+							"order": 19
+						},
+						{
+							"name": "Heal Block",
+							"machine": "TM097",
+							"order": 20
+						},
+						{
+							"name": "Facade",
+							"machine": "TM109",
+							"order": 21
+						},
+						{
+							"name": "Flame Charge",
+							"machine": "TM114",
+							"order": 22
+						},
+						{
+							"name": "Ominous Wind",
+							"machine": "TM119",
+							"order": 23
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Project Pokemon's Z-A game-data export assigns this form regional Dex #190."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/608",
+						"fetchedAt": "2026-11-03T05:53:44.016Z",
+						"hash": "6ed874ae32e1beefb33d1eb9449a73003ea256455a730b017d65e7de5e2c6297"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/308/",
+						"fetchedAt": "2026-11-03T05:53:43.917Z",
+						"hash": "1f3cd3bc4cda5e861f6cba325c25d633b989a029dac8317cf95a942ff8859761"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/608/",
+						"fetchedAt": "2026-11-03T05:53:44.042Z",
+						"hash": "e08d4ea32981f159b47680709e401f9145e1efc7834c425404245d06e48ab561"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/608/encounters",
+						"fetchedAt": "2026-11-03T05:53:44.095Z",
+						"hash": "dd79f5cb3614f9e8c290bfc62e90f9f08e6285c54064011f4028169d66baaca8"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/608/",
+						"fetchedAt": "2026-11-03T05:53:44.149Z",
+						"hash": "507e9daaf3326330eaf64b137089e70f1933a36bdcef7b40ea2139864f248974"
+					},
+					{
+						"type": "legends-za-personal-data",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/personal.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c00215459c764ba65d879d6503a7337ad80b338171ab4713d1c6f52b4517e36f"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "719eff37d8f2f404d163f81d23b2c921ac323a7b00304e502ca37d69a3375b1d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/French/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "1b658102e791558a1bb317563b7a3aaab8cebc1c7517aa7f5d5c0e708e93d626"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/German/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5f1e419ae3b84ab18cb05b972569e629ff0bff96d928468c52c536b02dc6cf9d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Italian/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "e0bd40a2f4b7678afb82f959b7b1f3503590bd13884daf94bd5813fea832067c"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/JPN/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5c2c9784278c5d13f3ba376e4338cef21923d68faec9b8498175c21180825f24"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Korean/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c83545726b0b0b803295f52448510c15adaab3e6ce248adba23b5ad0d0344216"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/LATAM/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "01d046caf7553d97a3c275465bce97ecedae26a67674a40b5c751a56b3b4d52d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Simp_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "09495dacb0d16eb6e91aa1d67eb1ed682d0682303719811eeb1c6877bb9e7ca2"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Spanish/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "b3fafb97fe85165bd65fdd732ce1e4cee880ffe5035632269787ce859735b358"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Trad_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c446ae3e93760fc4af895427508ed852511201723f8cac84121330747e8c3cd0"
+					},
+					{
+						"type": "legends-za-locations",
+						"url": "https://www.serebii.net/pokedex-sv/lampent/",
+						"fetchedAt": "2026-11-04T05:47:08.263Z",
+						"hash": "f817f1ff5a8e4c797ccc37a4ff0aa894b14ad2f260249da4f845c1814037ed03"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendsza": "Lampent appears at the moment of death and promptly absorbs the spirit as it leaves the body."
+			},
+			"localizedFlavorByGame": {
+				"legendsza": {
+					"en": "Lampent appears at the moment of death and promptly absorbs the spirit as it leaves the body.",
+					"fr": "Il apparaît au moment du trépas et aspire l’âme à l’instant même où elle quitte le corps.",
+					"de": "Es erscheint im Augenblick des Todes und verschlingt die Seele des Verblichenen, sofort nachdem sie den Körper verlassen hat.",
+					"it": "Appare quando qualcuno è prossimo alla morte per risucchiarne l’anima non appena questa abbandona il corpo.",
+					"ja": "臨終の 際に 現れて 魂が 肉体を 離れると すかさず 吸い取ってしまうのだ。",
+					"ko": "임종 때 나타나서 영혼이 육체를 떠나면 재빨리 빨아들여 버린다.",
+					"es-419": "Aparece hacia el final de la vida de las personas y absorbe el alma en cuanto esta se separa del cuerpo.",
+					"zh-hans": "在人类的临终时刻出现。 当人的魂魄离开肉体的瞬间， 它就会立即吸取。",
+					"es": "Aparece en los instantes previos al fallecimiento de alguien y absorbe el alma en cuanto esta se separa del cuerpo.",
+					"zh-hant": "在人臨死之際現身， 當靈魂離開肉體的瞬間， 就會立刻吸取。"
+				}
+			}
+		},
+		{
+			"profileKey": "mega-dimension",
+			"label": "Mega Dimension",
+			"appGameKeys": [
+				"legendszamd"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Lampent",
+				"localizedNames": {
+					"ja-hrkt": "ランプラー",
+					"ja-roma": "Lampler",
+					"ko": "램프라",
+					"zh-hant": "燈火幽靈",
+					"fr": "Mélancolux",
+					"de": "Laternecto",
+					"es": "Lampent",
+					"it": "Lampent",
+					"ja": "ランプラー",
+					"zh-hans": "灯火幽灵",
+					"es-419": "Lampent"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Ghost",
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 40,
+					"def": 60,
+					"spa": 95,
+					"spd": 60,
+					"spe": 55
+				},
+				"evYield": {
+					"spa": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Flash Fire",
+					"Flame Body",
+					"Infiltrator (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Infiltrator"
+				],
+				"eggGroups": [
+					"Amorphous"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "13 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 90,
+				"baseExperience": 130,
+				"habitat": "",
+				"shape": "Arms",
+				"color": "Black",
+				"genus": "Lamp Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ランプポケモン",
+					"ko": "램프포켓몬",
+					"zh-hant": "油燈寶可夢",
+					"fr": "Pokémon Lampe",
+					"de": "Lampen-Pokémon",
+					"es": "Pokémon Farolillo",
+					"it": "Pokémon Lanterna",
+					"ja": "ランプポケモン",
+					"zh-hans": "油灯宝可梦",
+					"es-419": "Pokémon Farolillo"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 608
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 114
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 191
+					},
+					{
+						"pokedex": "conquest-gallery",
+						"number": 38
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 66
+					},
+					{
+						"pokedex": "galar",
+						"number": 288
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 49
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 147
+					},
+					{
+						"pokedex": "lumiose",
+						"number": 190
+					}
+				],
+				"alphaMove": "Dark Pulse",
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 607,
+								"natiId": 607,
+								"name": "Litwick"
+							},
+							{
+								"id": 608,
+								"natiId": 608,
+								"name": "Lampent",
+								"method": "Level",
+								"value": 41
+							},
+							{
+								"id": 609,
+								"natiId": 609,
+								"name": "Chandelure",
+								"method": "Use item",
+								"value": "Dusk Stone"
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Wild Zone 17",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Hyperspace Lumiose",
+						"notes": "Ghost (3 Star), Ghost (4 Star), Fire (3 Star), Fire (4 Star)",
+						"games": "Legends: Z-A Mega Dimension"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Ember",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Smokescreen",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Haze",
+							"level": 10,
+							"order": 3
+						},
+						{
+							"name": "Confuse Ray",
+							"level": 12,
+							"order": 4
+						},
+						{
+							"name": "Acid Armor",
+							"level": 16,
+							"order": 5
+						},
+						{
+							"name": "Will-O-Wisp",
+							"level": 20,
+							"order": 6
+						},
+						{
+							"name": "Fire Spin",
+							"level": 24,
+							"order": 7
+						},
+						{
+							"name": "Flamethrower",
+							"level": 28,
+							"order": 8
+						},
+						{
+							"name": "Shadow Ball",
+							"level": 32,
+							"order": 9
+						},
+						{
+							"name": "Flame Wheel",
+							"level": 38,
+							"order": 10
+						},
+						{
+							"name": "Curse",
+							"level": 44,
+							"order": 11
+						},
+						{
+							"name": "Heal Block",
+							"level": 48,
+							"order": 12
+						},
+						{
+							"name": "Overheat",
+							"level": 52,
+							"order": 13
+						}
+					],
+					"Machine": [
+						{
+							"name": "Calm Mind",
+							"machine": "TM006",
+							"order": 1
+						},
+						{
+							"name": "Protect",
+							"machine": "TM017",
+							"order": 2
+						},
+						{
+							"name": "Energy Ball",
+							"machine": "TM026",
+							"order": 3
+						},
+						{
+							"name": "Double Team",
+							"machine": "TM032",
+							"order": 4
+						},
+						{
+							"name": "Endure",
+							"machine": "TM035",
+							"order": 5
+						},
+						{
+							"name": "Fire Blast",
+							"machine": "TM038",
+							"order": 6
+						},
+						{
+							"name": "Overheat",
+							"machine": "TM050",
+							"order": 7
+						},
+						{
+							"name": "Safeguard",
+							"machine": "TM051",
+							"order": 8
+						},
+						{
+							"name": "Will-O-Wisp",
+							"machine": "TM057",
+							"order": 9
+						},
+						{
+							"name": "Flamethrower",
+							"machine": "TM062",
+							"order": 10
+						},
+						{
+							"name": "Psychic",
+							"machine": "TM063",
+							"order": 11
+						},
+						{
+							"name": "Solar Beam",
+							"machine": "TM064",
+							"order": 12
+						},
+						{
+							"name": "Heat Wave",
+							"machine": "TM068",
+							"order": 13
+						},
+						{
+							"name": "Fire Spin",
+							"machine": "TM072",
+							"order": 14
+						},
+						{
+							"name": "Shadow Ball",
+							"machine": "TM074",
+							"order": 15
+						},
+						{
+							"name": "Substitute",
+							"machine": "TM085",
+							"order": 16
+						},
+						{
+							"name": "Dark Pulse",
+							"machine": "TM090",
+							"order": 17
+						},
+						{
+							"name": "Curse",
+							"machine": "TM091",
+							"order": 18
+						},
+						{
+							"name": "Taunt",
+							"machine": "TM095",
+							"order": 19
+						},
+						{
+							"name": "Heal Block",
+							"machine": "TM097",
+							"order": 20
+						},
+						{
+							"name": "Facade",
+							"machine": "TM109",
+							"order": 21
+						},
+						{
+							"name": "Flame Charge",
+							"machine": "TM114",
+							"order": 22
+						},
+						{
+							"name": "Ominous Wind",
+							"machine": "TM119",
+							"order": 23
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Project Pokemon's Z-A game-data export assigns this form regional Dex #190."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/608",
+						"fetchedAt": "2026-11-03T05:53:44.016Z",
+						"hash": "6ed874ae32e1beefb33d1eb9449a73003ea256455a730b017d65e7de5e2c6297"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/308/",
+						"fetchedAt": "2026-11-03T05:53:43.917Z",
+						"hash": "1f3cd3bc4cda5e861f6cba325c25d633b989a029dac8317cf95a942ff8859761"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/608/",
+						"fetchedAt": "2026-11-03T05:53:44.042Z",
+						"hash": "e08d4ea32981f159b47680709e401f9145e1efc7834c425404245d06e48ab561"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/608/encounters",
+						"fetchedAt": "2026-11-03T05:53:44.095Z",
+						"hash": "dd79f5cb3614f9e8c290bfc62e90f9f08e6285c54064011f4028169d66baaca8"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/608/",
+						"fetchedAt": "2026-11-03T05:53:44.149Z",
+						"hash": "507e9daaf3326330eaf64b137089e70f1933a36bdcef7b40ea2139864f248974"
+					},
+					{
+						"type": "legends-za-personal-data",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/personal.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c00215459c764ba65d879d6503a7337ad80b338171ab4713d1c6f52b4517e36f"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "719eff37d8f2f404d163f81d23b2c921ac323a7b00304e502ca37d69a3375b1d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/French/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "1b658102e791558a1bb317563b7a3aaab8cebc1c7517aa7f5d5c0e708e93d626"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/German/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5f1e419ae3b84ab18cb05b972569e629ff0bff96d928468c52c536b02dc6cf9d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Italian/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "e0bd40a2f4b7678afb82f959b7b1f3503590bd13884daf94bd5813fea832067c"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/JPN/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5c2c9784278c5d13f3ba376e4338cef21923d68faec9b8498175c21180825f24"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Korean/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c83545726b0b0b803295f52448510c15adaab3e6ce248adba23b5ad0d0344216"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/LATAM/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "01d046caf7553d97a3c275465bce97ecedae26a67674a40b5c751a56b3b4d52d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Simp_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "09495dacb0d16eb6e91aa1d67eb1ed682d0682303719811eeb1c6877bb9e7ca2"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Spanish/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "b3fafb97fe85165bd65fdd732ce1e4cee880ffe5035632269787ce859735b358"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Trad_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c446ae3e93760fc4af895427508ed852511201723f8cac84121330747e8c3cd0"
+					},
+					{
+						"type": "legends-za-locations",
+						"url": "https://www.serebii.net/pokedex-sv/lampent/",
+						"fetchedAt": "2026-11-04T05:47:08.263Z",
+						"hash": "f817f1ff5a8e4c797ccc37a4ff0aa894b14ad2f260249da4f845c1814037ed03"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendszamd": "Lampent appears at the moment of death and promptly absorbs the spirit as it leaves the body."
+			},
+			"localizedFlavorByGame": {
+				"legendszamd": {
+					"en": "Lampent appears at the moment of death and promptly absorbs the spirit as it leaves the body.",
+					"fr": "Il apparaît au moment du trépas et aspire l’âme à l’instant même où elle quitte le corps.",
+					"de": "Es erscheint im Augenblick des Todes und verschlingt die Seele des Verblichenen, sofort nachdem sie den Körper verlassen hat.",
+					"it": "Appare quando qualcuno è prossimo alla morte per risucchiarne l’anima non appena questa abbandona il corpo.",
+					"ja": "臨終の 際に 現れて 魂が 肉体を 離れると すかさず 吸い取ってしまうのだ。",
+					"ko": "임종 때 나타나서 영혼이 육체를 떠나면 재빨리 빨아들여 버린다.",
+					"es-419": "Aparece hacia el final de la vida de las personas y absorbe el alma en cuanto esta se separa del cuerpo.",
+					"zh-hans": "在人类的临终时刻出现。 当人的魂魄离开肉体的瞬间， 它就会立即吸取。",
+					"es": "Aparece en los instantes previos al fallecimiento de alguien y absorbe el alma en cuanto esta se separa del cuerpo.",
+					"zh-hant": "在人臨死之際現身， 當靈魂離開肉體的瞬間， 就會立刻吸取。"
+				}
+			}
+		}
+	]
+}

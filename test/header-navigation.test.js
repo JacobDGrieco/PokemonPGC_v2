@@ -46,6 +46,14 @@ test("centered page navigator keeps Home and entitlement-aware pages available",
 	assert.match(navigatorSource, /role="menuitem"/);
 	assert.match(navigatorSource, /isLocked \? "\/pricing" : page\.path/);
 	assert.match(navigatorSource, /event\.key !== "Escape"/);
+	assert.match(
+		navigatorSource,
+		/if \(restoreFocus\) triggerRef\.current\?\.focus\(\{ preventScroll: true \}\);[\s\S]*setIsOpen\(false\)/,
+	);
+	assert.match(
+		navigatorSource,
+		/closeMenu\(\{ restoreFocus: true \}\);[\s\S]*navigate\(isLocked/,
+	);
 	assert.match(layoutCss, /\.pages-dropdown-menu\.is-open/);
 	assert.match(
 		layoutCss,

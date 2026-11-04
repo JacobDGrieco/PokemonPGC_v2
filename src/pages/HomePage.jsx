@@ -296,9 +296,9 @@ function useVisibleElapsedTime(targetRef) {
 		const observer =
 			typeof IntersectionObserver === "function" && targetRef.current
 				? new IntersectionObserver(([entry]) => {
-					isIntersecting = entry.isIntersecting;
-					syncAnimation();
-				})
+						isIntersecting = entry.isIntersecting;
+						syncAnimation();
+					})
 				: null;
 		if (observer && targetRef.current) observer.observe(targetRef.current);
 		document.addEventListener("visibilitychange", syncAnimation);
@@ -337,7 +337,11 @@ function FlowPicture({ entry, index, isDecorative = false }) {
 				width={entry.width}
 				height={entry.height}
 				loading={index === 1 ? "eager" : "lazy"}
-				fetchPriority={index === 1 ? "high" : "auto"}
+				{...{
+					// React 18.3 warns on the camel-case DOM prop even though newer
+					// React versions support it; lowercase preserves the HTML hint.
+					fetchpriority: index === 1 ? "high" : "auto",
+				}}
 				decoding="async"
 			/>
 		</picture>

@@ -1,0 +1,2341 @@
+{
+	"schemaVersion": 2,
+	"nationalDexId": 900,
+	"speciesName": "Kleavor",
+	"formKey": "base",
+	"formName": "Base",
+	"formLabelSource": "form-catalog",
+	"profiles": [
+		{
+			"profileKey": "sword-shield",
+			"label": "Sword / Shield",
+			"appGameKeys": [
+				"sword",
+				"shield"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Kleavor",
+				"localizedNames": {
+					"ja-hrkt": "バサギリ",
+					"ja-roma": "Basagiri",
+					"ko": "사마자르",
+					"zh-hant": "劈斧螳螂",
+					"fr": "Hachécateur",
+					"de": "Axantor",
+					"es": "Kleavor",
+					"it": "Kleavor",
+					"ja": "バサギリ",
+					"zh-hans": "劈斧螳螂",
+					"es-419": "Kleavor"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Rock"
+				],
+				"baseStats": {
+					"hp": 70,
+					"atk": 135,
+					"def": 95,
+					"spa": 45,
+					"spd": 70,
+					"spe": 85
+				},
+				"evYield": {
+					"atk": 3
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Steadfast (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Steadfast"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.8 m",
+				"weight": "89.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 115,
+				"baseExperience": 175,
+				"habitat": "",
+				"shape": "Bug Wings",
+				"color": "Brown",
+				"genus": "Axe Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "まさかりポケモン",
+					"ko": "큰도끼포켓몬",
+					"zh-hant": "斧鉞寶可夢",
+					"fr": "Pokémon Hache",
+					"de": "Axt-Pokémon",
+					"it": "Pokémon Scure",
+					"ja": "まさかりポケモン",
+					"zh-hans": "斧钺宝可梦"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 900
+					},
+					{
+						"pokedex": "hisui",
+						"number": 73
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 21
+					},
+					{
+						"pokedex": "hyperspace",
+						"number": 69
+					},
+					{
+						"pokedex": "champions",
+						"number": 900
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 123,
+								"natiId": 123,
+								"name": "Scyther"
+							},
+							{
+								"id": 212,
+								"natiId": 212,
+								"name": "Scizor",
+								"method": "Trade",
+								"value": "Metal Coat"
+							}
+						],
+						[
+							{
+								"id": 123,
+								"natiId": 123,
+								"name": "Scyther"
+							},
+							{
+								"id": 900,
+								"natiId": 900,
+								"name": "Kleavor",
+								"method": "Use item",
+								"value": "Black Augurite"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Legends Arceus."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/900",
+						"fetchedAt": "2026-11-03T05:54:05.505Z",
+						"hash": "7e85cd96e4ec22e3858bc17dadcfcb68edd0d08558f054b88dd2437320993a3c"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/58/",
+						"fetchedAt": "2026-11-03T05:53:14.092Z",
+						"hash": "cdf7ee75a910a7f4b18e90e64a462a59165832e7ed0186b34d9515d790e3293e"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/900/",
+						"fetchedAt": "2026-11-03T05:54:05.546Z",
+						"hash": "f294202774fb719598e536608989bfcd7237315ba34a3d6e3714581842a453b9"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/900/encounters",
+						"fetchedAt": "2026-11-03T05:54:05.601Z",
+						"hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/900/",
+						"fetchedAt": "2026-11-03T05:54:05.649Z",
+						"hash": "1b0bbbb6cfaca52963c034a8d06b2be73d6519ab8cc9db0f119e3068c2bb4610"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sword": "",
+				"shield": ""
+			},
+			"localizedFlavorByGame": {
+				"sword": {},
+				"shield": {}
+			}
+		},
+		{
+			"profileKey": "the-isle-of-armor",
+			"label": "The Isle of Armor",
+			"appGameKeys": [
+				"swordioa",
+				"shieldioa"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Kleavor",
+				"localizedNames": {
+					"ja-hrkt": "バサギリ",
+					"ja-roma": "Basagiri",
+					"ko": "사마자르",
+					"zh-hant": "劈斧螳螂",
+					"fr": "Hachécateur",
+					"de": "Axantor",
+					"es": "Kleavor",
+					"it": "Kleavor",
+					"ja": "バサギリ",
+					"zh-hans": "劈斧螳螂",
+					"es-419": "Kleavor"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Rock"
+				],
+				"baseStats": {
+					"hp": 70,
+					"atk": 135,
+					"def": 95,
+					"spa": 45,
+					"spd": 70,
+					"spe": 85
+				},
+				"evYield": {
+					"atk": 3
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Steadfast (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Steadfast"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.8 m",
+				"weight": "89.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 115,
+				"baseExperience": 175,
+				"habitat": "",
+				"shape": "Bug Wings",
+				"color": "Brown",
+				"genus": "Axe Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "まさかりポケモン",
+					"ko": "큰도끼포켓몬",
+					"zh-hant": "斧鉞寶可夢",
+					"fr": "Pokémon Hache",
+					"de": "Axt-Pokémon",
+					"it": "Pokémon Scure",
+					"ja": "まさかりポケモン",
+					"zh-hans": "斧钺宝可梦"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 900
+					},
+					{
+						"pokedex": "hisui",
+						"number": 73
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 21
+					},
+					{
+						"pokedex": "hyperspace",
+						"number": 69
+					},
+					{
+						"pokedex": "champions",
+						"number": 900
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 123,
+								"natiId": 123,
+								"name": "Scyther"
+							},
+							{
+								"id": 212,
+								"natiId": 212,
+								"name": "Scizor",
+								"method": "Trade",
+								"value": "Metal Coat"
+							}
+						],
+						[
+							{
+								"id": 123,
+								"natiId": 123,
+								"name": "Scyther"
+							},
+							{
+								"id": 900,
+								"natiId": 900,
+								"name": "Kleavor",
+								"method": "Use item",
+								"value": "Black Augurite"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Legends Arceus."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/900",
+						"fetchedAt": "2026-11-03T05:54:05.505Z",
+						"hash": "7e85cd96e4ec22e3858bc17dadcfcb68edd0d08558f054b88dd2437320993a3c"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/58/",
+						"fetchedAt": "2026-11-03T05:53:14.092Z",
+						"hash": "cdf7ee75a910a7f4b18e90e64a462a59165832e7ed0186b34d9515d790e3293e"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/900/",
+						"fetchedAt": "2026-11-03T05:54:05.546Z",
+						"hash": "f294202774fb719598e536608989bfcd7237315ba34a3d6e3714581842a453b9"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/900/encounters",
+						"fetchedAt": "2026-11-03T05:54:05.601Z",
+						"hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/900/",
+						"fetchedAt": "2026-11-03T05:54:05.649Z",
+						"hash": "1b0bbbb6cfaca52963c034a8d06b2be73d6519ab8cc9db0f119e3068c2bb4610"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordioa": "",
+				"shieldioa": ""
+			},
+			"localizedFlavorByGame": {
+				"swordioa": {},
+				"shieldioa": {}
+			}
+		},
+		{
+			"profileKey": "the-crown-tundra",
+			"label": "The Crown Tundra",
+			"appGameKeys": [
+				"swordct",
+				"shieldct"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Kleavor",
+				"localizedNames": {
+					"ja-hrkt": "バサギリ",
+					"ja-roma": "Basagiri",
+					"ko": "사마자르",
+					"zh-hant": "劈斧螳螂",
+					"fr": "Hachécateur",
+					"de": "Axantor",
+					"es": "Kleavor",
+					"it": "Kleavor",
+					"ja": "バサギリ",
+					"zh-hans": "劈斧螳螂",
+					"es-419": "Kleavor"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Rock"
+				],
+				"baseStats": {
+					"hp": 70,
+					"atk": 135,
+					"def": 95,
+					"spa": 45,
+					"spd": 70,
+					"spe": 85
+				},
+				"evYield": {
+					"atk": 3
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Steadfast (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Steadfast"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.8 m",
+				"weight": "89.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 115,
+				"baseExperience": 175,
+				"habitat": "",
+				"shape": "Bug Wings",
+				"color": "Brown",
+				"genus": "Axe Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "まさかりポケモン",
+					"ko": "큰도끼포켓몬",
+					"zh-hant": "斧鉞寶可夢",
+					"fr": "Pokémon Hache",
+					"de": "Axt-Pokémon",
+					"it": "Pokémon Scure",
+					"ja": "まさかりポケモン",
+					"zh-hans": "斧钺宝可梦"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 900
+					},
+					{
+						"pokedex": "hisui",
+						"number": 73
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 21
+					},
+					{
+						"pokedex": "hyperspace",
+						"number": 69
+					},
+					{
+						"pokedex": "champions",
+						"number": 900
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 123,
+								"natiId": 123,
+								"name": "Scyther"
+							},
+							{
+								"id": 212,
+								"natiId": 212,
+								"name": "Scizor",
+								"method": "Trade",
+								"value": "Metal Coat"
+							}
+						],
+						[
+							{
+								"id": 123,
+								"natiId": 123,
+								"name": "Scyther"
+							},
+							{
+								"id": 900,
+								"natiId": 900,
+								"name": "Kleavor",
+								"method": "Use item",
+								"value": "Black Augurite"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Legends Arceus."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/900",
+						"fetchedAt": "2026-11-03T05:54:05.505Z",
+						"hash": "7e85cd96e4ec22e3858bc17dadcfcb68edd0d08558f054b88dd2437320993a3c"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/58/",
+						"fetchedAt": "2026-11-03T05:53:14.092Z",
+						"hash": "cdf7ee75a910a7f4b18e90e64a462a59165832e7ed0186b34d9515d790e3293e"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/900/",
+						"fetchedAt": "2026-11-03T05:54:05.546Z",
+						"hash": "f294202774fb719598e536608989bfcd7237315ba34a3d6e3714581842a453b9"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/900/encounters",
+						"fetchedAt": "2026-11-03T05:54:05.601Z",
+						"hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/900/",
+						"fetchedAt": "2026-11-03T05:54:05.649Z",
+						"hash": "1b0bbbb6cfaca52963c034a8d06b2be73d6519ab8cc9db0f119e3068c2bb4610"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordct": "",
+				"shieldct": ""
+			},
+			"localizedFlavorByGame": {
+				"swordct": {},
+				"shieldct": {}
+			}
+		},
+		{
+			"profileKey": "brilliant-diamond-shining-pearl",
+			"label": "Brilliant Diamond / Shining Pearl",
+			"appGameKeys": [
+				"brilliantdiamond-national",
+				"brilliantdiamond",
+				"shiningpearl-national",
+				"shiningpearl"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Kleavor",
+				"localizedNames": {
+					"ja-hrkt": "バサギリ",
+					"ja-roma": "Basagiri",
+					"ko": "사마자르",
+					"zh-hant": "劈斧螳螂",
+					"fr": "Hachécateur",
+					"de": "Axantor",
+					"es": "Kleavor",
+					"it": "Kleavor",
+					"ja": "バサギリ",
+					"zh-hans": "劈斧螳螂",
+					"es-419": "Kleavor"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Rock"
+				],
+				"baseStats": {
+					"hp": 70,
+					"atk": 135,
+					"def": 95,
+					"spa": 45,
+					"spd": 70,
+					"spe": 85
+				},
+				"evYield": {
+					"atk": 3
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Steadfast (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Steadfast"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.8 m",
+				"weight": "89.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 115,
+				"baseExperience": 175,
+				"habitat": "",
+				"shape": "Bug Wings",
+				"color": "Brown",
+				"genus": "Axe Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "まさかりポケモン",
+					"ko": "큰도끼포켓몬",
+					"zh-hant": "斧鉞寶可夢",
+					"fr": "Pokémon Hache",
+					"de": "Axt-Pokémon",
+					"it": "Pokémon Scure",
+					"ja": "まさかりポケモン",
+					"zh-hans": "斧钺宝可梦"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 900
+					},
+					{
+						"pokedex": "hisui",
+						"number": 73
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 21
+					},
+					{
+						"pokedex": "hyperspace",
+						"number": 69
+					},
+					{
+						"pokedex": "champions",
+						"number": 900
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 123,
+								"natiId": 123,
+								"name": "Scyther"
+							},
+							{
+								"id": 212,
+								"natiId": 212,
+								"name": "Scizor",
+								"method": "Trade",
+								"value": "Metal Coat"
+							}
+						],
+						[
+							{
+								"id": 123,
+								"natiId": 123,
+								"name": "Scyther"
+							},
+							{
+								"id": 900,
+								"natiId": 900,
+								"name": "Kleavor",
+								"method": "Use item",
+								"value": "Black Augurite"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Legends Arceus."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/900",
+						"fetchedAt": "2026-11-03T05:54:05.505Z",
+						"hash": "7e85cd96e4ec22e3858bc17dadcfcb68edd0d08558f054b88dd2437320993a3c"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/58/",
+						"fetchedAt": "2026-11-03T05:53:14.092Z",
+						"hash": "cdf7ee75a910a7f4b18e90e64a462a59165832e7ed0186b34d9515d790e3293e"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/900/",
+						"fetchedAt": "2026-11-03T05:54:05.546Z",
+						"hash": "f294202774fb719598e536608989bfcd7237315ba34a3d6e3714581842a453b9"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/900/encounters",
+						"fetchedAt": "2026-11-03T05:54:05.601Z",
+						"hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/900/",
+						"fetchedAt": "2026-11-03T05:54:05.649Z",
+						"hash": "1b0bbbb6cfaca52963c034a8d06b2be73d6519ab8cc9db0f119e3068c2bb4610"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"brilliantdiamond-national": "",
+				"brilliantdiamond": "",
+				"shiningpearl-national": "",
+				"shiningpearl": ""
+			},
+			"localizedFlavorByGame": {
+				"brilliantdiamond-national": {},
+				"brilliantdiamond": {},
+				"shiningpearl-national": {},
+				"shiningpearl": {}
+			}
+		},
+		{
+			"profileKey": "legends-arceus",
+			"label": "Legends: Arceus",
+			"appGameKeys": [
+				"legendsarceus"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Kleavor",
+				"localizedNames": {
+					"ja-hrkt": "バサギリ",
+					"ja-roma": "Basagiri",
+					"ko": "사마자르",
+					"zh-hant": "劈斧螳螂",
+					"fr": "Hachécateur",
+					"de": "Axantor",
+					"es": "Kleavor",
+					"it": "Kleavor",
+					"ja": "バサギリ",
+					"zh-hans": "劈斧螳螂",
+					"es-419": "Kleavor"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Rock"
+				],
+				"baseStats": {
+					"hp": 70,
+					"atk": 135,
+					"def": 95,
+					"spa": 45,
+					"spd": 70,
+					"spe": 85
+				},
+				"evYield": {
+					"atk": 3
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Steadfast (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Steadfast"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.8 m",
+				"weight": "89.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 115,
+				"baseExperience": 175,
+				"habitat": "",
+				"shape": "Bug Wings",
+				"color": "Brown",
+				"genus": "Axe Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "まさかりポケモン",
+					"ko": "큰도끼포켓몬",
+					"zh-hant": "斧鉞寶可夢",
+					"fr": "Pokémon Hache",
+					"de": "Axt-Pokémon",
+					"it": "Pokémon Scure",
+					"ja": "まさかりポケモン",
+					"zh-hans": "斧钺宝可梦"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 900
+					},
+					{
+						"pokedex": "hisui",
+						"number": 73
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 21
+					},
+					{
+						"pokedex": "hyperspace",
+						"number": 69
+					},
+					{
+						"pokedex": "champions",
+						"number": 900
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 123,
+								"natiId": 123,
+								"name": "Scyther"
+							},
+							{
+								"id": 212,
+								"natiId": 212,
+								"name": "Scizor",
+								"method": "Trade",
+								"value": "Metal Coat"
+							}
+						],
+						[
+							{
+								"id": 123,
+								"natiId": 123,
+								"name": "Scyther"
+							},
+							{
+								"id": 900,
+								"natiId": 900,
+								"name": "Kleavor",
+								"method": "Use item",
+								"value": "Black Augurite"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Quick Attack",
+							"level": 1,
+							"order": null
+						},
+						{
+							"name": "Silver Wind",
+							"level": 6,
+							"order": null
+						},
+						{
+							"name": "Aerial Ace",
+							"level": 11,
+							"order": null
+						},
+						{
+							"name": "Double Hit",
+							"level": 14,
+							"order": null
+						},
+						{
+							"name": "Stealth Rock",
+							"level": 14,
+							"order": null
+						},
+						{
+							"name": "Air Slash",
+							"level": 18,
+							"order": null
+						},
+						{
+							"name": "Swords Dance",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Stone Axe",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "X Scissor",
+							"level": 34,
+							"order": null
+						},
+						{
+							"name": "Close Combat",
+							"level": 43,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"Form introduced in Legends Arceus."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/900",
+						"fetchedAt": "2026-11-03T05:54:05.505Z",
+						"hash": "7e85cd96e4ec22e3858bc17dadcfcb68edd0d08558f054b88dd2437320993a3c"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/58/",
+						"fetchedAt": "2026-11-03T05:53:14.092Z",
+						"hash": "cdf7ee75a910a7f4b18e90e64a462a59165832e7ed0186b34d9515d790e3293e"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/900/",
+						"fetchedAt": "2026-11-03T05:54:05.546Z",
+						"hash": "f294202774fb719598e536608989bfcd7237315ba34a3d6e3714581842a453b9"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/900/encounters",
+						"fetchedAt": "2026-11-03T05:54:05.601Z",
+						"hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/900/",
+						"fetchedAt": "2026-11-03T05:54:05.649Z",
+						"hash": "1b0bbbb6cfaca52963c034a8d06b2be73d6519ab8cc9db0f119e3068c2bb4610"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendsarceus": "A violent creature that fells towering trees with its crude axes and shields itself with hard stone. If one should chance upon this Pokémon in the wilds, one's only recourse is to flee."
+			},
+			"localizedFlavorByGame": {
+				"legendsarceus": {
+					"en": "A violent creature that fells towering trees with its crude axes and shields itself with hard stone. If one should chance upon this Pokémon in the wilds, one's only recourse is to flee."
+				}
+			}
+		},
+		{
+			"profileKey": "scarlet-violet",
+			"label": "Scarlet / Violet",
+			"appGameKeys": [
+				"scarlet",
+				"violet"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Kleavor",
+				"localizedNames": {
+					"ja-hrkt": "バサギリ",
+					"ja-roma": "Basagiri",
+					"ko": "사마자르",
+					"zh-hant": "劈斧螳螂",
+					"fr": "Hachécateur",
+					"de": "Axantor",
+					"es": "Kleavor",
+					"it": "Kleavor",
+					"ja": "バサギリ",
+					"zh-hans": "劈斧螳螂",
+					"es-419": "Kleavor"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Rock"
+				],
+				"baseStats": {
+					"hp": 70,
+					"atk": 135,
+					"def": 95,
+					"spa": 45,
+					"spd": 70,
+					"spe": 85
+				},
+				"evYield": {
+					"atk": 3
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Swarm",
+					"Sheer Force",
+					"Sharpness (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Sharpness"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.8 m",
+				"weight": "89.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 115,
+				"baseExperience": 175,
+				"habitat": "",
+				"shape": "Bug Wings",
+				"color": "Brown",
+				"genus": "Axe Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "まさかりポケモン",
+					"ko": "큰도끼포켓몬",
+					"zh-hant": "斧鉞寶可夢",
+					"fr": "Pokémon Hache",
+					"de": "Axt-Pokémon",
+					"it": "Pokémon Scure",
+					"ja": "まさかりポケモン",
+					"zh-hans": "斧钺宝可梦"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 900
+					},
+					{
+						"pokedex": "hisui",
+						"number": 73
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 21
+					},
+					{
+						"pokedex": "hyperspace",
+						"number": 69
+					},
+					{
+						"pokedex": "champions",
+						"number": 900
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 123,
+								"natiId": 123,
+								"name": "Scyther"
+							},
+							{
+								"id": 212,
+								"natiId": 212,
+								"name": "Scizor",
+								"method": "Trade",
+								"value": "Metal Coat"
+							}
+						],
+						[
+							{
+								"id": 123,
+								"natiId": 123,
+								"name": "Scyther"
+							},
+							{
+								"id": 900,
+								"natiId": 900,
+								"name": "Kleavor",
+								"method": "Use item",
+								"value": "Black Augurite"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Stone Axe",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Leer",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Quick Attack",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Fury Cutter",
+							"level": 4,
+							"order": null
+						},
+						{
+							"name": "False Swipe",
+							"level": 8,
+							"order": null
+						},
+						{
+							"name": "Smack Down",
+							"level": 12,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": 16,
+							"order": null
+						},
+						{
+							"name": "Double Hit",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Slash",
+							"level": 24,
+							"order": null
+						},
+						{
+							"name": "Focus Energy",
+							"level": 28,
+							"order": null
+						},
+						{
+							"name": "Agility",
+							"level": 32,
+							"order": null
+						},
+						{
+							"name": "Rock Slide",
+							"level": 36,
+							"order": null
+						},
+						{
+							"name": "X Scissor",
+							"level": 40,
+							"order": null
+						},
+						{
+							"name": "Swords Dance",
+							"level": 44,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Acrobatics",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Aerial Ace",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Agility",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Air Cutter",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Air Slash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Baton Pass",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Brick Break",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bug Bite",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bug Buzz",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Close Combat",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Edge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dual Wingbeat",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endure",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "False Swipe",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Helping Hand",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Lunge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Pounce",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Reversal",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Slide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Tomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sandstorm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Scary Face",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Skitter Smack",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Smack Down",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Stealth Rock",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Stone Edge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Struggle Bug",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swift",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swords Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Tailwind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Take Down",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Tera Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Trailblaze",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "U Turn",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Vacuum Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "X Scissor",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Legends Arceus."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/900",
+						"fetchedAt": "2026-11-03T05:54:05.505Z",
+						"hash": "7e85cd96e4ec22e3858bc17dadcfcb68edd0d08558f054b88dd2437320993a3c"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/58/",
+						"fetchedAt": "2026-11-03T05:53:14.092Z",
+						"hash": "cdf7ee75a910a7f4b18e90e64a462a59165832e7ed0186b34d9515d790e3293e"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/900/",
+						"fetchedAt": "2026-11-03T05:54:05.546Z",
+						"hash": "f294202774fb719598e536608989bfcd7237315ba34a3d6e3714581842a453b9"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/900/encounters",
+						"fetchedAt": "2026-11-03T05:54:05.601Z",
+						"hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/900/",
+						"fetchedAt": "2026-11-03T05:54:05.649Z",
+						"hash": "1b0bbbb6cfaca52963c034a8d06b2be73d6519ab8cc9db0f119e3068c2bb4610"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlet": "",
+				"violet": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlet": {},
+				"violet": {}
+			}
+		},
+		{
+			"profileKey": "the-teal-mask",
+			"label": "The Teal Mask",
+			"appGameKeys": [
+				"scarlettm",
+				"violettm"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Kleavor",
+				"localizedNames": {
+					"ja-hrkt": "バサギリ",
+					"ja-roma": "Basagiri",
+					"ko": "사마자르",
+					"zh-hant": "劈斧螳螂",
+					"fr": "Hachécateur",
+					"de": "Axantor",
+					"es": "Kleavor",
+					"it": "Kleavor",
+					"ja": "バサギリ",
+					"zh-hans": "劈斧螳螂",
+					"es-419": "Kleavor"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Rock"
+				],
+				"baseStats": {
+					"hp": 70,
+					"atk": 135,
+					"def": 95,
+					"spa": 45,
+					"spd": 70,
+					"spe": 85
+				},
+				"evYield": {
+					"atk": 3
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Swarm",
+					"Sheer Force",
+					"Sharpness (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Sharpness"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.8 m",
+				"weight": "89.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 115,
+				"baseExperience": 175,
+				"habitat": "",
+				"shape": "Bug Wings",
+				"color": "Brown",
+				"genus": "Axe Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "まさかりポケモン",
+					"ko": "큰도끼포켓몬",
+					"zh-hant": "斧鉞寶可夢",
+					"fr": "Pokémon Hache",
+					"de": "Axt-Pokémon",
+					"it": "Pokémon Scure",
+					"ja": "まさかりポケモン",
+					"zh-hans": "斧钺宝可梦"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 900
+					},
+					{
+						"pokedex": "hisui",
+						"number": 73
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 21
+					},
+					{
+						"pokedex": "hyperspace",
+						"number": 69
+					},
+					{
+						"pokedex": "champions",
+						"number": 900
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 123,
+								"natiId": 123,
+								"name": "Scyther"
+							},
+							{
+								"id": 212,
+								"natiId": 212,
+								"name": "Scizor",
+								"method": "Trade",
+								"value": "Metal Coat"
+							}
+						],
+						[
+							{
+								"id": 123,
+								"natiId": 123,
+								"name": "Scyther"
+							},
+							{
+								"id": 900,
+								"natiId": 900,
+								"name": "Kleavor",
+								"method": "Use item",
+								"value": "Black Augurite"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Legends Arceus."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/900",
+						"fetchedAt": "2026-11-03T05:54:05.505Z",
+						"hash": "7e85cd96e4ec22e3858bc17dadcfcb68edd0d08558f054b88dd2437320993a3c"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/58/",
+						"fetchedAt": "2026-11-03T05:53:14.092Z",
+						"hash": "cdf7ee75a910a7f4b18e90e64a462a59165832e7ed0186b34d9515d790e3293e"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/900/",
+						"fetchedAt": "2026-11-03T05:54:05.546Z",
+						"hash": "f294202774fb719598e536608989bfcd7237315ba34a3d6e3714581842a453b9"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/900/encounters",
+						"fetchedAt": "2026-11-03T05:54:05.601Z",
+						"hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/900/",
+						"fetchedAt": "2026-11-03T05:54:05.649Z",
+						"hash": "1b0bbbb6cfaca52963c034a8d06b2be73d6519ab8cc9db0f119e3068c2bb4610"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlettm": "",
+				"violettm": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlettm": {},
+				"violettm": {}
+			}
+		},
+		{
+			"profileKey": "the-indigo-disk",
+			"label": "The Indigo Disk",
+			"appGameKeys": [
+				"scarletid",
+				"violetid"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Kleavor",
+				"localizedNames": {
+					"ja-hrkt": "バサギリ",
+					"ja-roma": "Basagiri",
+					"ko": "사마자르",
+					"zh-hant": "劈斧螳螂",
+					"fr": "Hachécateur",
+					"de": "Axantor",
+					"es": "Kleavor",
+					"it": "Kleavor",
+					"ja": "バサギリ",
+					"zh-hans": "劈斧螳螂",
+					"es-419": "Kleavor"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Rock"
+				],
+				"baseStats": {
+					"hp": 70,
+					"atk": 135,
+					"def": 95,
+					"spa": 45,
+					"spd": 70,
+					"spe": 85
+				},
+				"evYield": {
+					"atk": 3
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Swarm",
+					"Sheer Force",
+					"Sharpness (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Sharpness"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.8 m",
+				"weight": "89.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 115,
+				"baseExperience": 175,
+				"habitat": "",
+				"shape": "Bug Wings",
+				"color": "Brown",
+				"genus": "Axe Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "まさかりポケモン",
+					"ko": "큰도끼포켓몬",
+					"zh-hant": "斧鉞寶可夢",
+					"fr": "Pokémon Hache",
+					"de": "Axt-Pokémon",
+					"it": "Pokémon Scure",
+					"ja": "まさかりポケモン",
+					"zh-hans": "斧钺宝可梦"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 900
+					},
+					{
+						"pokedex": "hisui",
+						"number": 73
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 21
+					},
+					{
+						"pokedex": "hyperspace",
+						"number": 69
+					},
+					{
+						"pokedex": "champions",
+						"number": 900
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 123,
+								"natiId": 123,
+								"name": "Scyther"
+							},
+							{
+								"id": 212,
+								"natiId": 212,
+								"name": "Scizor",
+								"method": "Trade",
+								"value": "Metal Coat"
+							}
+						],
+						[
+							{
+								"id": 123,
+								"natiId": 123,
+								"name": "Scyther"
+							},
+							{
+								"id": 900,
+								"natiId": 900,
+								"name": "Kleavor",
+								"method": "Use item",
+								"value": "Black Augurite"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Legends Arceus."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/900",
+						"fetchedAt": "2026-11-03T05:54:05.505Z",
+						"hash": "7e85cd96e4ec22e3858bc17dadcfcb68edd0d08558f054b88dd2437320993a3c"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/58/",
+						"fetchedAt": "2026-11-03T05:53:14.092Z",
+						"hash": "cdf7ee75a910a7f4b18e90e64a462a59165832e7ed0186b34d9515d790e3293e"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/900/",
+						"fetchedAt": "2026-11-03T05:54:05.546Z",
+						"hash": "f294202774fb719598e536608989bfcd7237315ba34a3d6e3714581842a453b9"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/900/encounters",
+						"fetchedAt": "2026-11-03T05:54:05.601Z",
+						"hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/900/",
+						"fetchedAt": "2026-11-03T05:54:05.649Z",
+						"hash": "1b0bbbb6cfaca52963c034a8d06b2be73d6519ab8cc9db0f119e3068c2bb4610"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarletid": "",
+				"violetid": ""
+			},
+			"localizedFlavorByGame": {
+				"scarletid": {},
+				"violetid": {}
+			}
+		},
+		{
+			"profileKey": "mega-dimension",
+			"label": "Mega Dimension",
+			"appGameKeys": [
+				"legendszamd"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Kleavor",
+				"localizedNames": {
+					"ja-hrkt": "バサギリ",
+					"ja-roma": "Basagiri",
+					"ko": "사마자르",
+					"zh-hant": "劈斧螳螂",
+					"fr": "Hachécateur",
+					"de": "Axantor",
+					"es": "Kleavor",
+					"it": "Kleavor",
+					"ja": "バサギリ",
+					"zh-hans": "劈斧螳螂",
+					"es-419": "Kleavor"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Rock"
+				],
+				"baseStats": {
+					"hp": 70,
+					"atk": 135,
+					"def": 95,
+					"spa": 45,
+					"spd": 70,
+					"spe": 85
+				},
+				"evYield": {
+					"atk": 3
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Swarm",
+					"Sheer Force",
+					"Sharpness (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Sharpness"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium Fast",
+				"hatchCounter": 20,
+				"height": "1.8 m",
+				"weight": "89 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 20,
+				"baseExperience": 175,
+				"habitat": "",
+				"shape": "Bug Wings",
+				"color": "Brown",
+				"genus": "Axe Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "まさかりポケモン",
+					"ko": "큰도끼포켓몬",
+					"zh-hant": "斧鉞寶可夢",
+					"fr": "Pokémon Hache",
+					"de": "Axt-Pokémon",
+					"it": "Pokémon Scure",
+					"ja": "まさかりポケモン",
+					"zh-hans": "斧钺宝可梦"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 900
+					},
+					{
+						"pokedex": "hisui",
+						"number": 73
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 21
+					},
+					{
+						"pokedex": "champions",
+						"number": 900
+					},
+					{
+						"pokedex": "hyperspace",
+						"number": 69
+					}
+				],
+				"alphaMove": "Close Combat",
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 123,
+								"natiId": 123,
+								"name": "Scyther"
+							},
+							{
+								"id": 212,
+								"natiId": 212,
+								"name": "Scizor",
+								"method": "Trade",
+								"value": "Metal Coat"
+							}
+						],
+						[
+							{
+								"id": 123,
+								"natiId": 123,
+								"name": "Scyther"
+							},
+							{
+								"id": 900,
+								"natiId": 900,
+								"name": "Kleavor",
+								"method": "Use item",
+								"value": "Black Augurite"
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Hyperspace Lumiose",
+						"notes": "Bug (4 Star)",
+						"games": "Legends: Z-A Mega Dimension"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Leer",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Quick Attack",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Wing Attack",
+							"level": 12,
+							"order": 4
+						},
+						{
+							"name": "Double Team",
+							"level": 16,
+							"order": 5
+						},
+						{
+							"name": "Brutal Swing",
+							"level": 20,
+							"order": 6
+						},
+						{
+							"name": "Slash",
+							"level": 24,
+							"order": 7
+						},
+						{
+							"name": "Focus Energy",
+							"level": 28,
+							"order": 8
+						},
+						{
+							"name": "X-Scissor",
+							"level": 32,
+							"order": 9
+						},
+						{
+							"name": "Bug Buzz",
+							"level": 34,
+							"order": 10
+						},
+						{
+							"name": "Air Slash",
+							"level": 36,
+							"order": 11
+						},
+						{
+							"name": "Swords Dance",
+							"level": 42,
+							"order": 12
+						},
+						{
+							"name": "Lunge",
+							"level": 46,
+							"order": 13
+						},
+						{
+							"name": "Rock Blast",
+							"level": 50,
+							"order": 14
+						}
+					],
+					"Machine": [
+						{
+							"name": "Rock Smash",
+							"machine": "TM004",
+							"order": 1
+						},
+						{
+							"name": "Brick Break",
+							"machine": "TM010",
+							"order": 2
+						},
+						{
+							"name": "Rock Slide",
+							"machine": "TM012",
+							"order": 3
+						},
+						{
+							"name": "Light Screen",
+							"machine": "TM016",
+							"order": 4
+						},
+						{
+							"name": "Protect",
+							"machine": "TM017",
+							"order": 5
+						},
+						{
+							"name": "Aerial Ace",
+							"machine": "TM022",
+							"order": 6
+						},
+						{
+							"name": "Swift",
+							"machine": "TM027",
+							"order": 7
+						},
+						{
+							"name": "Swords Dance",
+							"machine": "TM030",
+							"order": 8
+						},
+						{
+							"name": "Double Team",
+							"machine": "TM032",
+							"order": 9
+						},
+						{
+							"name": "Night Slash",
+							"machine": "TM034",
+							"order": 10
+						},
+						{
+							"name": "Endure",
+							"machine": "TM035",
+							"order": 11
+						},
+						{
+							"name": "Rock Tomb",
+							"machine": "TM036",
+							"order": 12
+						},
+						{
+							"name": "Stealth Rock",
+							"machine": "TM037",
+							"order": 13
+						},
+						{
+							"name": "Hyper Beam",
+							"machine": "TM044",
+							"order": 14
+						},
+						{
+							"name": "Knock Off",
+							"machine": "TM045",
+							"order": 15
+						},
+						{
+							"name": "Agility",
+							"machine": "TM047",
+							"order": 16
+						},
+						{
+							"name": "Giga Impact",
+							"machine": "TM055",
+							"order": 17
+						},
+						{
+							"name": "Double-Edge",
+							"machine": "TM056",
+							"order": 18
+						},
+						{
+							"name": "Stone Edge",
+							"machine": "TM065",
+							"order": 19
+						},
+						{
+							"name": "X-Scissor",
+							"machine": "TM081",
+							"order": 20
+						},
+						{
+							"name": "U-turn",
+							"machine": "TM082",
+							"order": 21
+						},
+						{
+							"name": "Substitute",
+							"machine": "TM085",
+							"order": 22
+						},
+						{
+							"name": "Close Combat",
+							"machine": "TM107",
+							"order": 23
+						},
+						{
+							"name": "Facade",
+							"machine": "TM109",
+							"order": 24
+						},
+						{
+							"name": "Trailblaze",
+							"machine": "TM115",
+							"order": 25
+						},
+						{
+							"name": "Silver Wind",
+							"machine": "TM117",
+							"order": 26
+						},
+						{
+							"name": "Ominous Wind",
+							"machine": "TM119",
+							"order": 27
+						},
+						{
+							"name": "Ancient Power",
+							"machine": "TM120",
+							"order": 28
+						},
+						{
+							"name": "False Swipe",
+							"machine": "TM122",
+							"order": 29
+						},
+						{
+							"name": "Double Hit",
+							"machine": "TM132",
+							"order": 30
+						},
+						{
+							"name": "Dual Wingbeat",
+							"machine": "TM134",
+							"order": 31
+						},
+						{
+							"name": "Dual Chop",
+							"machine": "TM135",
+							"order": 32
+						},
+						{
+							"name": "Razor Wind",
+							"machine": "TM145",
+							"order": 33
+						},
+						{
+							"name": "Vacuum Wave",
+							"machine": "TM150",
+							"order": 34
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Project Pokemon's Z-A game-data export assigns this form regional Dex #301."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/900",
+						"fetchedAt": "2026-11-03T05:54:05.505Z",
+						"hash": "7e85cd96e4ec22e3858bc17dadcfcb68edd0d08558f054b88dd2437320993a3c"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/58/",
+						"fetchedAt": "2026-11-03T05:53:14.092Z",
+						"hash": "cdf7ee75a910a7f4b18e90e64a462a59165832e7ed0186b34d9515d790e3293e"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/900/",
+						"fetchedAt": "2026-11-03T05:54:05.546Z",
+						"hash": "f294202774fb719598e536608989bfcd7237315ba34a3d6e3714581842a453b9"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/900/encounters",
+						"fetchedAt": "2026-11-03T05:54:05.601Z",
+						"hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/900/",
+						"fetchedAt": "2026-11-03T05:54:05.649Z",
+						"hash": "1b0bbbb6cfaca52963c034a8d06b2be73d6519ab8cc9db0f119e3068c2bb4610"
+					},
+					{
+						"type": "legends-za-personal-data",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/personal.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c00215459c764ba65d879d6503a7337ad80b338171ab4713d1c6f52b4517e36f"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "719eff37d8f2f404d163f81d23b2c921ac323a7b00304e502ca37d69a3375b1d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/French/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "1b658102e791558a1bb317563b7a3aaab8cebc1c7517aa7f5d5c0e708e93d626"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/German/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5f1e419ae3b84ab18cb05b972569e629ff0bff96d928468c52c536b02dc6cf9d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Italian/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "e0bd40a2f4b7678afb82f959b7b1f3503590bd13884daf94bd5813fea832067c"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/JPN/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5c2c9784278c5d13f3ba376e4338cef21923d68faec9b8498175c21180825f24"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Korean/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c83545726b0b0b803295f52448510c15adaab3e6ce248adba23b5ad0d0344216"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/LATAM/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "01d046caf7553d97a3c275465bce97ecedae26a67674a40b5c751a56b3b4d52d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Simp_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "09495dacb0d16eb6e91aa1d67eb1ed682d0682303719811eeb1c6877bb9e7ca2"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Spanish/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "b3fafb97fe85165bd65fdd732ce1e4cee880ffe5035632269787ce859735b358"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Trad_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c446ae3e93760fc4af895427508ed852511201723f8cac84121330747e8c3cd0"
+					},
+					{
+						"type": "legends-za-locations",
+						"url": "https://www.serebii.net/pokedex-sv/kleavor/",
+						"fetchedAt": "2026-11-04T05:47:08.258Z",
+						"hash": "3b41e6da8c9709be94e8e6d697027aafb8ff200db88ed175514a39ff28b831ea"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendszamd": "Overqwil’s poisonous spikes—now thicker, longer, and stronger—will automatically strike toward anything that moves."
+			},
+			"localizedFlavorByGame": {
+				"legendszamd": {
+					"en": "Overqwil’s poisonous spikes—now thicker, longer, and stronger—will automatically strike toward anything that moves.",
+					"fr": "Les épines empoisonnées de ce Pokémon se sont allongées et épaissies. Elles attaquent tout ce qui bouge, indépendamment de sa volonté.",
+					"de": "Seine Giftstacheln sind nun dicker, länger und stärker. Sie greifen eigenständig alles an, was sich bewegt.",
+					"it": "I suoi aculei velenosi, sviluppatisi in lunghezza e spessore, sferrano automaticamente attacchi contro tutto ciò che si muove.",
+					"ja": "太く 長く 強化された 毒針は 動くものに 対して 勝手に 攻撃を 仕掛ける。",
+					"ko": "굵고 길게 강화된 독침은 주위에 움직이는 것이 있으면 멋대로 공격을 가한다.",
+					"es-419": "Sus púas tóxicas se han vuelto más gruesas, largas y reforzadas. Atacan por sí solas a todo lo que se mueve.",
+					"zh-hans": "强化得又粗又长的 毒针能够自行针对 会动的东西发起攻击。",
+					"es": "Sus púas venenosas se han vuelto más gruesas, largas y reforzadas. Atacan por sí solas a todo lo que se mueve.",
+					"zh-hant": "強化得又粗又長的 毒針會擅自對會動的 東西發動攻擊。"
+				}
+			}
+		}
+	]
+}

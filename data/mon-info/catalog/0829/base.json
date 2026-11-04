@@ -1,0 +1,1947 @@
+{
+	"schemaVersion": 2,
+	"nationalDexId": 829,
+	"speciesName": "Gossifleur",
+	"formKey": "base",
+	"formName": "Base",
+	"formLabelSource": "form-catalog",
+	"profiles": [
+		{
+			"profileKey": "sword-shield",
+			"label": "Sword / Shield",
+			"appGameKeys": [
+				"sword",
+				"shield"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Gossifleur",
+				"localizedNames": {
+					"ja-hrkt": "ヒメンカ",
+					"ja-roma": "Himenka",
+					"ko": "꼬모카",
+					"zh-hant": "幼棉棉",
+					"fr": "Tournicoton",
+					"de": "Cottini",
+					"es": "Gossifleur",
+					"it": "Gossifleur",
+					"ja": "ヒメンカ",
+					"zh-hans": "幼棉棉",
+					"es-419": "Gossifleur"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Grass"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 40,
+					"def": 60,
+					"spa": 40,
+					"spd": 60,
+					"spe": 10
+				},
+				"evYield": {
+					"spd": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cotton Down",
+					"Regenerator",
+					"Effect Spore (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Effect Spore"
+				],
+				"eggGroups": [
+					"Plant"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.4 m",
+				"weight": "2.2 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 190,
+				"baseExperience": 50,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "Green",
+				"genus": "Flowering Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "はなかざりポケモン",
+					"ko": "꽃장식포켓몬",
+					"zh-hant": "花飾寶可夢",
+					"fr": "Pokémon Chef-Fleur",
+					"de": "Blumenzier-Pokémon",
+					"es": "Pokémon Adornofloral",
+					"it": "Pokémon Fiorfronzolo",
+					"ja": "はなかざりポケモン",
+					"zh-hans": "花饰宝可梦",
+					"es-419": "Pokémon Adornofloral"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 829
+					},
+					{
+						"pokedex": "galar",
+						"number": 126
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 166
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 829,
+								"natiId": 829,
+								"name": "Gossifleur"
+							},
+							{
+								"id": 830,
+								"natiId": 830,
+								"name": "Eldegoss",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Galar Route 3 East",
+						"notes": "Overworld, Lv. 10-14",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Galar Route 3 East",
+						"notes": "Overworld, Lv. 10-14",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Motostoke Riverbank Area",
+						"notes": "Overworld, Lv. 26-28",
+						"games": "Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Motostoke Riverbank Area",
+						"notes": "Overworld, Lv. 60",
+						"games": "Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Motostoke Riverbank Area",
+						"notes": "Overworld, Lv. 28-30",
+						"games": "Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Motostoke Riverbank Area",
+						"notes": "Overworld, Lv. 60",
+						"games": "Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Galar Route 2 Lakeside",
+						"notes": "Walk, Lv. 37-40",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Galar Route 2 Lakeside",
+						"notes": "Walk, Lv. 37-40",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Dappled Grove Max Den A",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Dappled Grove Max Den A",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Dappled Grove Max Den A",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Dappled Grove Max Den A",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Dappled Grove Max Den C",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Dappled Grove Max Den C",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Dappled Grove Max Den C",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Dappled Grove Max Den C",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Dappled Grove Max Den D",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Dappled Grove Max Den D",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Dappled Grove Max Den D",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Dappled Grove Max Den D",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Dappled Grove Max Den E",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Dappled Grove Max Den E",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Dappled Grove Max Den E",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Dappled Grove Max Den E",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Bridge Field Max Den C",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Bridge Field Max Den C",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Bridge Field Max Den C",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Bridge Field Max Den C",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Bridge Field Max Den C",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Bridge Field Max Den C",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Stony Wilderness Max Den J",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Stony Wilderness Max Den J",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Stony Wilderness Max Den J",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Stony Wilderness Max Den J",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Stony Wilderness Max Den J",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Stony Wilderness Max Den J",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Giants Mirror Max Den E",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Giants Mirror Max Den E",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Giants Mirror Max Den E",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Giants Mirror Max Den E",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Giants Mirror Max Den E",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Giants Mirror Max Den E",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "30%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Leafage",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Sing",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Rapid Spin",
+							"level": 4,
+							"order": null
+						},
+						{
+							"name": "Sweet Scent",
+							"level": 8,
+							"order": null
+						},
+						{
+							"name": "Razor Leaf",
+							"level": 12,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": 16,
+							"order": null
+						},
+						{
+							"name": "Leaf Tornado",
+							"level": 21,
+							"order": null
+						},
+						{
+							"name": "Synthesis",
+							"level": 24,
+							"order": null
+						},
+						{
+							"name": "Hyper Voice",
+							"level": 28,
+							"order": null
+						},
+						{
+							"name": "Aromatherapy",
+							"level": 32,
+							"order": null
+						},
+						{
+							"name": "Leaf Storm",
+							"level": 36,
+							"order": null
+						}
+					],
+					"Egg": [
+						{
+							"name": "Growth",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Leech Seed",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Poison Powder",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Powder",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Stun Spore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Worry Seed",
+							"level": null,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bullet Seed",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Charm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endure",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Energy Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Drain",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Grass Knot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Grassy Terrain",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Helping Hand",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Voice",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Leaf Storm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Magical Leaf",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Pollen Puff",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Grassy Glide",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/829",
+						"fetchedAt": "2026-11-03T05:53:59.749Z",
+						"hash": "ed9735b065f25be11ea8d2a09027d45f74fc0b55fc3689933762746cf7885899"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/437/",
+						"fetchedAt": "2026-11-03T05:53:59.778Z",
+						"hash": "c4cba42b55b34d92126410447e9be31109a2192a32790ab05b4def0d1f793c54"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/829/",
+						"fetchedAt": "2026-11-03T05:53:59.816Z",
+						"hash": "7cca1982d190ed6ef6a5cf48adce4fdc99bf82a3ae891ac7425e6a3f503c50e5"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/829/encounters",
+						"fetchedAt": "2026-11-03T05:53:59.866Z",
+						"hash": "4709e8b8e59491cec92402e13b8406eff9b6333d1845f55f699f3291d4f3a0c8"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/829/",
+						"fetchedAt": "2026-11-03T05:53:59.935Z",
+						"hash": "6f2d56d6b40c70393d3308962d5c979137fd21b6f607f9008fe1d61e228810f5"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sword": "It anchors itself in the ground with its single leg, then basks in the sun. After absorbing enough sunlight, its petals spread as it blooms brilliantly.",
+				"shield": "It whirls around in the wind while singing a joyous song. This delightful display has charmed many into raising this Pokémon."
+			},
+			"localizedFlavorByGame": {
+				"sword": {
+					"ja-hrkt": "いっぽんあしを じめんに さして ひのひかりを たっぷり あびると はなびらが あざやかに いろづく。",
+					"ko": "다리 하나를 땅에 꽂은 채 햇빛을 잔뜩 받으면 꽃잎이 선명한 색을 띠게 된다.",
+					"zh-hant": "當牠把單腳紮進地面裡， 並且沐浴充分的陽光， 花瓣就會染上鮮豔的顏色。",
+					"fr": "Quand il plante son unique pied pour absorber la lumière du soleil, ses pétales prennent une couleur éclatante.",
+					"de": "Steckt es sein Beinchen fest in den Boden und badet dann ausgiebig im Sonnenlicht, nimmt seine Blüte eine kräftigere Farbe an.",
+					"es": "Si planta su única extremidad inferior en la tierra y se expone a abundante luz solar, sus pétalos cobran un color vivo.",
+					"it": "Quando conficca il suo piede nel terreno e assorbe luce solare in abbondanza, il colore dei suoi petali diventa più intenso.",
+					"en": "It anchors itself in the ground with its single leg, then basks in the sun. After absorbing enough sunlight, its petals spread as it blooms brilliantly.",
+					"ja": "一本足を 地面に 刺して 陽の光を たっぷり 浴びると 花びらが 鮮やかに 色づく。",
+					"zh-hans": "当它把单脚扎进地面里， 并且沐浴充分的阳光， 花瓣就会染上鲜艳的颜色。",
+					"es-419": "Si planta su única extremidad inferior en la tierra y se expone a abundante luz solar, sus pétalos cobran un color vivo."
+				},
+				"shield": {
+					"ja-hrkt": "そよかぜで くるくる まわりながら たのしそうに うたう あいらしさに みせられ そだてる ひとが おおい。",
+					"ko": "산들바람에 빙글빙글 돌면서 즐겁게 노래하는 귀여운 모습에 반해서 키우는 사람이 많다.",
+					"zh-hant": "會隨著微風一邊轉圈圈一邊 愉快地唱歌。許多人因為喜歡 這可愛的模樣而培育牠。",
+					"fr": "Nombreux sont ceux qui ont décidé d’en élever un après avoir été charmés par sa manière de chanter en virevoltant au gré de la brise.",
+					"de": "Viele Leute werden ihre Trainer, weil sie es niedlich finden, wie diese Pokémon in sanften Brisen herumwirbeln und voller Freude singen.",
+					"es": "Muchos los crían tras quedar prendados de lo adorables que resultan cuando cantan dando vueltas empujados por la brisa.",
+					"it": "Canta felice girando su se stesso mentre si lascia trasportare dal vento. Molti ne allenano uno semplicemente perché lo trovano adorabile.",
+					"en": "It whirls around in the wind while singing a joyous song. This delightful display has charmed many into raising this Pokémon.",
+					"ja": "そよ風で くるくる 回りながら 楽しそうに 歌う 愛らしさに 魅せられ 育てる 人が 多い。",
+					"zh-hans": "会随着微风一边转圈圈一边 愉快地唱歌。许多人因为喜欢 这可爱的模样而培育它。",
+					"es-419": "Muchos los crían tras quedar prendados de lo adorables que resultan cuando cantan dando vueltas empujados por la brisa."
+				}
+			}
+		},
+		{
+			"profileKey": "the-isle-of-armor",
+			"label": "The Isle of Armor",
+			"appGameKeys": [
+				"swordioa",
+				"shieldioa"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Gossifleur",
+				"localizedNames": {
+					"ja-hrkt": "ヒメンカ",
+					"ja-roma": "Himenka",
+					"ko": "꼬모카",
+					"zh-hant": "幼棉棉",
+					"fr": "Tournicoton",
+					"de": "Cottini",
+					"es": "Gossifleur",
+					"it": "Gossifleur",
+					"ja": "ヒメンカ",
+					"zh-hans": "幼棉棉",
+					"es-419": "Gossifleur"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Grass"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 40,
+					"def": 60,
+					"spa": 40,
+					"spd": 60,
+					"spe": 10
+				},
+				"evYield": {
+					"spd": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cotton Down",
+					"Regenerator",
+					"Effect Spore (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Effect Spore"
+				],
+				"eggGroups": [
+					"Plant"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.4 m",
+				"weight": "2.2 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 190,
+				"baseExperience": 50,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "Green",
+				"genus": "Flowering Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "はなかざりポケモン",
+					"ko": "꽃장식포켓몬",
+					"zh-hant": "花飾寶可夢",
+					"fr": "Pokémon Chef-Fleur",
+					"de": "Blumenzier-Pokémon",
+					"es": "Pokémon Adornofloral",
+					"it": "Pokémon Fiorfronzolo",
+					"ja": "はなかざりポケモン",
+					"zh-hans": "花饰宝可梦",
+					"es-419": "Pokémon Adornofloral"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 829
+					},
+					{
+						"pokedex": "galar",
+						"number": 126
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 166
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 829,
+								"natiId": 829,
+								"name": "Gossifleur"
+							},
+							{
+								"id": 830,
+								"natiId": 830,
+								"name": "Eldegoss",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/829",
+						"fetchedAt": "2026-11-03T05:53:59.749Z",
+						"hash": "ed9735b065f25be11ea8d2a09027d45f74fc0b55fc3689933762746cf7885899"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/437/",
+						"fetchedAt": "2026-11-03T05:53:59.778Z",
+						"hash": "c4cba42b55b34d92126410447e9be31109a2192a32790ab05b4def0d1f793c54"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/829/",
+						"fetchedAt": "2026-11-03T05:53:59.816Z",
+						"hash": "7cca1982d190ed6ef6a5cf48adce4fdc99bf82a3ae891ac7425e6a3f503c50e5"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/829/encounters",
+						"fetchedAt": "2026-11-03T05:53:59.866Z",
+						"hash": "4709e8b8e59491cec92402e13b8406eff9b6333d1845f55f699f3291d4f3a0c8"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/829/",
+						"fetchedAt": "2026-11-03T05:53:59.935Z",
+						"hash": "6f2d56d6b40c70393d3308962d5c979137fd21b6f607f9008fe1d61e228810f5"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordioa": "",
+				"shieldioa": ""
+			},
+			"localizedFlavorByGame": {
+				"swordioa": {},
+				"shieldioa": {}
+			}
+		},
+		{
+			"profileKey": "the-crown-tundra",
+			"label": "The Crown Tundra",
+			"appGameKeys": [
+				"swordct",
+				"shieldct"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Gossifleur",
+				"localizedNames": {
+					"ja-hrkt": "ヒメンカ",
+					"ja-roma": "Himenka",
+					"ko": "꼬모카",
+					"zh-hant": "幼棉棉",
+					"fr": "Tournicoton",
+					"de": "Cottini",
+					"es": "Gossifleur",
+					"it": "Gossifleur",
+					"ja": "ヒメンカ",
+					"zh-hans": "幼棉棉",
+					"es-419": "Gossifleur"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Grass"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 40,
+					"def": 60,
+					"spa": 40,
+					"spd": 60,
+					"spe": 10
+				},
+				"evYield": {
+					"spd": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cotton Down",
+					"Regenerator",
+					"Effect Spore (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Effect Spore"
+				],
+				"eggGroups": [
+					"Plant"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.4 m",
+				"weight": "2.2 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 190,
+				"baseExperience": 50,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "Green",
+				"genus": "Flowering Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "はなかざりポケモン",
+					"ko": "꽃장식포켓몬",
+					"zh-hant": "花飾寶可夢",
+					"fr": "Pokémon Chef-Fleur",
+					"de": "Blumenzier-Pokémon",
+					"es": "Pokémon Adornofloral",
+					"it": "Pokémon Fiorfronzolo",
+					"ja": "はなかざりポケモン",
+					"zh-hans": "花饰宝可梦",
+					"es-419": "Pokémon Adornofloral"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 829
+					},
+					{
+						"pokedex": "galar",
+						"number": 126
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 166
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 829,
+								"natiId": 829,
+								"name": "Gossifleur"
+							},
+							{
+								"id": 830,
+								"natiId": 830,
+								"name": "Eldegoss",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Overworld, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "19%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "19%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Overworld, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Overworld, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "19%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "19%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Overworld, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Slippery Slope Max Den A",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "The Crown Tundra Sword",
+						"rate": "60%"
+					},
+					{
+						"area": "Slippery Slope Max Den A",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "The Crown Tundra Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Slippery Slope Max Den A",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "The Crown Tundra Shield",
+						"rate": "60%"
+					},
+					{
+						"area": "Slippery Slope Max Den A",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "The Crown Tundra Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Crown Shrine Max Den A",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "The Crown Tundra Sword",
+						"rate": "60%"
+					},
+					{
+						"area": "Crown Shrine Max Den A",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "The Crown Tundra Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Crown Shrine Max Den A",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "The Crown Tundra Shield",
+						"rate": "60%"
+					},
+					{
+						"area": "Crown Shrine Max Den A",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "The Crown Tundra Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Giants Foot Max Den D",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "The Crown Tundra Sword",
+						"rate": "60%"
+					},
+					{
+						"area": "Giants Foot Max Den D",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "The Crown Tundra Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Giants Foot Max Den D",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "The Crown Tundra Shield",
+						"rate": "60%"
+					},
+					{
+						"area": "Giants Foot Max Den D",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "The Crown Tundra Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Ballimere Lake Max Den G",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "The Crown Tundra Sword",
+						"rate": "60%"
+					},
+					{
+						"area": "Ballimere Lake Max Den G",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "The Crown Tundra Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Ballimere Lake Max Den G",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "The Crown Tundra Shield",
+						"rate": "60%"
+					},
+					{
+						"area": "Ballimere Lake Max Den G",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "The Crown Tundra Shield",
+						"rate": "30%"
+					}
+				],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/829",
+						"fetchedAt": "2026-11-03T05:53:59.749Z",
+						"hash": "ed9735b065f25be11ea8d2a09027d45f74fc0b55fc3689933762746cf7885899"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/437/",
+						"fetchedAt": "2026-11-03T05:53:59.778Z",
+						"hash": "c4cba42b55b34d92126410447e9be31109a2192a32790ab05b4def0d1f793c54"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/829/",
+						"fetchedAt": "2026-11-03T05:53:59.816Z",
+						"hash": "7cca1982d190ed6ef6a5cf48adce4fdc99bf82a3ae891ac7425e6a3f503c50e5"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/829/encounters",
+						"fetchedAt": "2026-11-03T05:53:59.866Z",
+						"hash": "4709e8b8e59491cec92402e13b8406eff9b6333d1845f55f699f3291d4f3a0c8"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/829/",
+						"fetchedAt": "2026-11-03T05:53:59.935Z",
+						"hash": "6f2d56d6b40c70393d3308962d5c979137fd21b6f607f9008fe1d61e228810f5"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordct": "",
+				"shieldct": ""
+			},
+			"localizedFlavorByGame": {
+				"swordct": {},
+				"shieldct": {}
+			}
+		},
+		{
+			"profileKey": "brilliant-diamond-shining-pearl",
+			"label": "Brilliant Diamond / Shining Pearl",
+			"appGameKeys": [
+				"brilliantdiamond-national",
+				"brilliantdiamond",
+				"shiningpearl-national",
+				"shiningpearl"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Gossifleur",
+				"localizedNames": {
+					"ja-hrkt": "ヒメンカ",
+					"ja-roma": "Himenka",
+					"ko": "꼬모카",
+					"zh-hant": "幼棉棉",
+					"fr": "Tournicoton",
+					"de": "Cottini",
+					"es": "Gossifleur",
+					"it": "Gossifleur",
+					"ja": "ヒメンカ",
+					"zh-hans": "幼棉棉",
+					"es-419": "Gossifleur"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Grass"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 40,
+					"def": 60,
+					"spa": 40,
+					"spd": 60,
+					"spe": 10
+				},
+				"evYield": {
+					"spd": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cotton Down",
+					"Regenerator",
+					"Effect Spore (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Effect Spore"
+				],
+				"eggGroups": [
+					"Plant"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.4 m",
+				"weight": "2.2 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 190,
+				"baseExperience": 50,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "Green",
+				"genus": "Flowering Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "はなかざりポケモン",
+					"ko": "꽃장식포켓몬",
+					"zh-hant": "花飾寶可夢",
+					"fr": "Pokémon Chef-Fleur",
+					"de": "Blumenzier-Pokémon",
+					"es": "Pokémon Adornofloral",
+					"it": "Pokémon Fiorfronzolo",
+					"ja": "はなかざりポケモン",
+					"zh-hans": "花饰宝可梦",
+					"es-419": "Pokémon Adornofloral"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 829
+					},
+					{
+						"pokedex": "galar",
+						"number": 126
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 166
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 829,
+								"natiId": 829,
+								"name": "Gossifleur"
+							},
+							{
+								"id": 830,
+								"natiId": 830,
+								"name": "Eldegoss",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/829",
+						"fetchedAt": "2026-11-03T05:53:59.749Z",
+						"hash": "ed9735b065f25be11ea8d2a09027d45f74fc0b55fc3689933762746cf7885899"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/437/",
+						"fetchedAt": "2026-11-03T05:53:59.778Z",
+						"hash": "c4cba42b55b34d92126410447e9be31109a2192a32790ab05b4def0d1f793c54"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/829/",
+						"fetchedAt": "2026-11-03T05:53:59.816Z",
+						"hash": "7cca1982d190ed6ef6a5cf48adce4fdc99bf82a3ae891ac7425e6a3f503c50e5"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/829/encounters",
+						"fetchedAt": "2026-11-03T05:53:59.866Z",
+						"hash": "4709e8b8e59491cec92402e13b8406eff9b6333d1845f55f699f3291d4f3a0c8"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/829/",
+						"fetchedAt": "2026-11-03T05:53:59.935Z",
+						"hash": "6f2d56d6b40c70393d3308962d5c979137fd21b6f607f9008fe1d61e228810f5"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"brilliantdiamond-national": "",
+				"brilliantdiamond": "",
+				"shiningpearl-national": "",
+				"shiningpearl": ""
+			},
+			"localizedFlavorByGame": {
+				"brilliantdiamond-national": {},
+				"brilliantdiamond": {},
+				"shiningpearl-national": {},
+				"shiningpearl": {}
+			}
+		},
+		{
+			"profileKey": "legends-arceus",
+			"label": "Legends: Arceus",
+			"appGameKeys": [
+				"legendsarceus"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Gossifleur",
+				"localizedNames": {
+					"ja-hrkt": "ヒメンカ",
+					"ja-roma": "Himenka",
+					"ko": "꼬모카",
+					"zh-hant": "幼棉棉",
+					"fr": "Tournicoton",
+					"de": "Cottini",
+					"es": "Gossifleur",
+					"it": "Gossifleur",
+					"ja": "ヒメンカ",
+					"zh-hans": "幼棉棉",
+					"es-419": "Gossifleur"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Grass"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 40,
+					"def": 60,
+					"spa": 40,
+					"spd": 60,
+					"spe": 10
+				},
+				"evYield": {
+					"spd": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cotton Down",
+					"Regenerator",
+					"Effect Spore (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Effect Spore"
+				],
+				"eggGroups": [
+					"Plant"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.4 m",
+				"weight": "2.2 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 190,
+				"baseExperience": 50,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "Green",
+				"genus": "Flowering Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "はなかざりポケモン",
+					"ko": "꽃장식포켓몬",
+					"zh-hant": "花飾寶可夢",
+					"fr": "Pokémon Chef-Fleur",
+					"de": "Blumenzier-Pokémon",
+					"es": "Pokémon Adornofloral",
+					"it": "Pokémon Fiorfronzolo",
+					"ja": "はなかざりポケモン",
+					"zh-hans": "花饰宝可梦",
+					"es-419": "Pokémon Adornofloral"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 829
+					},
+					{
+						"pokedex": "galar",
+						"number": 126
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 166
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 829,
+								"natiId": 829,
+								"name": "Gossifleur"
+							},
+							{
+								"id": 830,
+								"natiId": 830,
+								"name": "Eldegoss",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/829",
+						"fetchedAt": "2026-11-03T05:53:59.749Z",
+						"hash": "ed9735b065f25be11ea8d2a09027d45f74fc0b55fc3689933762746cf7885899"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/437/",
+						"fetchedAt": "2026-11-03T05:53:59.778Z",
+						"hash": "c4cba42b55b34d92126410447e9be31109a2192a32790ab05b4def0d1f793c54"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/829/",
+						"fetchedAt": "2026-11-03T05:53:59.816Z",
+						"hash": "7cca1982d190ed6ef6a5cf48adce4fdc99bf82a3ae891ac7425e6a3f503c50e5"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/829/encounters",
+						"fetchedAt": "2026-11-03T05:53:59.866Z",
+						"hash": "4709e8b8e59491cec92402e13b8406eff9b6333d1845f55f699f3291d4f3a0c8"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/829/",
+						"fetchedAt": "2026-11-03T05:53:59.935Z",
+						"hash": "6f2d56d6b40c70393d3308962d5c979137fd21b6f607f9008fe1d61e228810f5"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendsarceus": ""
+			},
+			"localizedFlavorByGame": {
+				"legendsarceus": {}
+			}
+		},
+		{
+			"profileKey": "scarlet-violet",
+			"label": "Scarlet / Violet",
+			"appGameKeys": [
+				"scarlet",
+				"violet"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Gossifleur",
+				"localizedNames": {
+					"ja-hrkt": "ヒメンカ",
+					"ja-roma": "Himenka",
+					"ko": "꼬모카",
+					"zh-hant": "幼棉棉",
+					"fr": "Tournicoton",
+					"de": "Cottini",
+					"es": "Gossifleur",
+					"it": "Gossifleur",
+					"ja": "ヒメンカ",
+					"zh-hans": "幼棉棉",
+					"es-419": "Gossifleur"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Grass"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 40,
+					"def": 60,
+					"spa": 40,
+					"spd": 60,
+					"spe": 10
+				},
+				"evYield": {
+					"spd": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cotton Down",
+					"Regenerator",
+					"Effect Spore (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Effect Spore"
+				],
+				"eggGroups": [
+					"Plant"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.4 m",
+				"weight": "2.2 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 190,
+				"baseExperience": 50,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "Green",
+				"genus": "Flowering Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "はなかざりポケモン",
+					"ko": "꽃장식포켓몬",
+					"zh-hant": "花飾寶可夢",
+					"fr": "Pokémon Chef-Fleur",
+					"de": "Blumenzier-Pokémon",
+					"es": "Pokémon Adornofloral",
+					"it": "Pokémon Fiorfronzolo",
+					"ja": "はなかざりポケモン",
+					"zh-hans": "花饰宝可梦",
+					"es-419": "Pokémon Adornofloral"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 829
+					},
+					{
+						"pokedex": "galar",
+						"number": 126
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 166
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 829,
+								"natiId": 829,
+								"name": "Gossifleur"
+							},
+							{
+								"id": 830,
+								"natiId": 830,
+								"name": "Eldegoss",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/829",
+						"fetchedAt": "2026-11-03T05:53:59.749Z",
+						"hash": "ed9735b065f25be11ea8d2a09027d45f74fc0b55fc3689933762746cf7885899"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/437/",
+						"fetchedAt": "2026-11-03T05:53:59.778Z",
+						"hash": "c4cba42b55b34d92126410447e9be31109a2192a32790ab05b4def0d1f793c54"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/829/",
+						"fetchedAt": "2026-11-03T05:53:59.816Z",
+						"hash": "7cca1982d190ed6ef6a5cf48adce4fdc99bf82a3ae891ac7425e6a3f503c50e5"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/829/encounters",
+						"fetchedAt": "2026-11-03T05:53:59.866Z",
+						"hash": "4709e8b8e59491cec92402e13b8406eff9b6333d1845f55f699f3291d4f3a0c8"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/829/",
+						"fetchedAt": "2026-11-03T05:53:59.935Z",
+						"hash": "6f2d56d6b40c70393d3308962d5c979137fd21b6f607f9008fe1d61e228810f5"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlet": "",
+				"violet": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlet": {},
+				"violet": {}
+			}
+		},
+		{
+			"profileKey": "the-teal-mask",
+			"label": "The Teal Mask",
+			"appGameKeys": [
+				"scarlettm",
+				"violettm"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Gossifleur",
+				"localizedNames": {
+					"ja-hrkt": "ヒメンカ",
+					"ja-roma": "Himenka",
+					"ko": "꼬모카",
+					"zh-hant": "幼棉棉",
+					"fr": "Tournicoton",
+					"de": "Cottini",
+					"es": "Gossifleur",
+					"it": "Gossifleur",
+					"ja": "ヒメンカ",
+					"zh-hans": "幼棉棉",
+					"es-419": "Gossifleur"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Grass"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 40,
+					"def": 60,
+					"spa": 40,
+					"spd": 60,
+					"spe": 10
+				},
+				"evYield": {
+					"spd": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cotton Down",
+					"Regenerator",
+					"Effect Spore (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Effect Spore"
+				],
+				"eggGroups": [
+					"Plant"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.4 m",
+				"weight": "2.2 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 190,
+				"baseExperience": 50,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "Green",
+				"genus": "Flowering Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "はなかざりポケモン",
+					"ko": "꽃장식포켓몬",
+					"zh-hant": "花飾寶可夢",
+					"fr": "Pokémon Chef-Fleur",
+					"de": "Blumenzier-Pokémon",
+					"es": "Pokémon Adornofloral",
+					"it": "Pokémon Fiorfronzolo",
+					"ja": "はなかざりポケモン",
+					"zh-hans": "花饰宝可梦",
+					"es-419": "Pokémon Adornofloral"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 829
+					},
+					{
+						"pokedex": "galar",
+						"number": 126
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 166
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 829,
+								"natiId": 829,
+								"name": "Gossifleur"
+							},
+							{
+								"id": 830,
+								"natiId": 830,
+								"name": "Eldegoss",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/829",
+						"fetchedAt": "2026-11-03T05:53:59.749Z",
+						"hash": "ed9735b065f25be11ea8d2a09027d45f74fc0b55fc3689933762746cf7885899"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/437/",
+						"fetchedAt": "2026-11-03T05:53:59.778Z",
+						"hash": "c4cba42b55b34d92126410447e9be31109a2192a32790ab05b4def0d1f793c54"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/829/",
+						"fetchedAt": "2026-11-03T05:53:59.816Z",
+						"hash": "7cca1982d190ed6ef6a5cf48adce4fdc99bf82a3ae891ac7425e6a3f503c50e5"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/829/encounters",
+						"fetchedAt": "2026-11-03T05:53:59.866Z",
+						"hash": "4709e8b8e59491cec92402e13b8406eff9b6333d1845f55f699f3291d4f3a0c8"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/829/",
+						"fetchedAt": "2026-11-03T05:53:59.935Z",
+						"hash": "6f2d56d6b40c70393d3308962d5c979137fd21b6f607f9008fe1d61e228810f5"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlettm": "",
+				"violettm": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlettm": {},
+				"violettm": {}
+			}
+		},
+		{
+			"profileKey": "the-indigo-disk",
+			"label": "The Indigo Disk",
+			"appGameKeys": [
+				"scarletid",
+				"violetid"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Gossifleur",
+				"localizedNames": {
+					"ja-hrkt": "ヒメンカ",
+					"ja-roma": "Himenka",
+					"ko": "꼬모카",
+					"zh-hant": "幼棉棉",
+					"fr": "Tournicoton",
+					"de": "Cottini",
+					"es": "Gossifleur",
+					"it": "Gossifleur",
+					"ja": "ヒメンカ",
+					"zh-hans": "幼棉棉",
+					"es-419": "Gossifleur"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Grass"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 40,
+					"def": 60,
+					"spa": 40,
+					"spd": 60,
+					"spe": 10
+				},
+				"evYield": {
+					"spd": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cotton Down",
+					"Regenerator",
+					"Effect Spore (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Effect Spore"
+				],
+				"eggGroups": [
+					"Plant"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.4 m",
+				"weight": "2.2 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 190,
+				"baseExperience": 50,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "Green",
+				"genus": "Flowering Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "はなかざりポケモン",
+					"ko": "꽃장식포켓몬",
+					"zh-hant": "花飾寶可夢",
+					"fr": "Pokémon Chef-Fleur",
+					"de": "Blumenzier-Pokémon",
+					"es": "Pokémon Adornofloral",
+					"it": "Pokémon Fiorfronzolo",
+					"ja": "はなかざりポケモン",
+					"zh-hans": "花饰宝可梦",
+					"es-419": "Pokémon Adornofloral"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 829
+					},
+					{
+						"pokedex": "galar",
+						"number": 126
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 166
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 829,
+								"natiId": 829,
+								"name": "Gossifleur"
+							},
+							{
+								"id": 830,
+								"natiId": 830,
+								"name": "Eldegoss",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/829",
+						"fetchedAt": "2026-11-03T05:53:59.749Z",
+						"hash": "ed9735b065f25be11ea8d2a09027d45f74fc0b55fc3689933762746cf7885899"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/437/",
+						"fetchedAt": "2026-11-03T05:53:59.778Z",
+						"hash": "c4cba42b55b34d92126410447e9be31109a2192a32790ab05b4def0d1f793c54"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/829/",
+						"fetchedAt": "2026-11-03T05:53:59.816Z",
+						"hash": "7cca1982d190ed6ef6a5cf48adce4fdc99bf82a3ae891ac7425e6a3f503c50e5"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/829/encounters",
+						"fetchedAt": "2026-11-03T05:53:59.866Z",
+						"hash": "4709e8b8e59491cec92402e13b8406eff9b6333d1845f55f699f3291d4f3a0c8"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/829/",
+						"fetchedAt": "2026-11-03T05:53:59.935Z",
+						"hash": "6f2d56d6b40c70393d3308962d5c979137fd21b6f607f9008fe1d61e228810f5"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarletid": "",
+				"violetid": ""
+			},
+			"localizedFlavorByGame": {
+				"scarletid": {},
+				"violetid": {}
+			}
+		}
+	]
+}

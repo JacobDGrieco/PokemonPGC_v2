@@ -27,6 +27,11 @@ test("homepage keeps the splash hero and exposes the field-guide sections", asyn
 		homePageSource,
 		/home-(?:command-kicker|section-tag|route-kicker|rank-label|scout-marker)/,
 	);
+	assert.match(
+		homePageSource,
+		/fetchpriority: index === 1 \? "high" : "auto"/,
+	);
+	assert.doesNotMatch(homePageSource, /fetchPriority=/);
 });
 
 test("homepage field guide reflows at tablet, phone, and narrow-phone widths", async () => {

@@ -1,0 +1,4824 @@
+{
+	"schemaVersion": 2,
+	"nationalDexId": 600,
+	"speciesName": "Klang",
+	"formKey": "base",
+	"formName": "Base",
+	"formLabelSource": "form-catalog",
+	"profiles": [
+		{
+			"profileKey": "black-white",
+			"label": "Black / White",
+			"appGameKeys": [
+				"black-national",
+				"black",
+				"white-national",
+				"white"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Klang",
+				"localizedNames": {
+					"ja-hrkt": "ギギアル",
+					"ja-roma": "Gigiaru",
+					"ko": "기기어르",
+					"zh-hant": "齒輪組",
+					"fr": "Clic",
+					"de": "Kliklak",
+					"es": "Klang",
+					"it": "Klang",
+					"ja": "ギギアル",
+					"zh-hans": "齿轮组",
+					"es-419": "Klang"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Steel"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 80,
+					"def": 95,
+					"spa": 70,
+					"spd": 85,
+					"spe": 50
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Plus",
+					"Minus",
+					"Clear Body (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Clear Body"
+				],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "51.0 kg",
+				"genderRatio": "Genderless",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 154,
+				"habitat": "",
+				"shape": "Heads",
+				"color": "Gray",
+				"genus": "Gear Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "はぐるまポケモン",
+					"ko": "톱니바퀴포켓몬",
+					"zh-hant": "齒輪寶可夢",
+					"fr": "Pokémon Engrenage",
+					"de": "Getriebe-Pokémon",
+					"es": "Pokémon Engranaje",
+					"it": "Pokémon Ingranaggio",
+					"ja": "はぐるまポケモン",
+					"zh-hans": "齿轮宝可梦",
+					"es-419": "Pokémon Engranaje"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 600
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 106
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 131
+					},
+					{
+						"pokedex": "galar",
+						"number": 114
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 599,
+								"natiId": 599,
+								"name": "Klink"
+							},
+							{
+								"id": 600,
+								"natiId": 600,
+								"name": "Klang",
+								"method": "Level",
+								"value": 38
+							},
+							{
+								"id": 601,
+								"natiId": 601,
+								"name": "Klinklang",
+								"method": "Level",
+								"value": 49
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Vice Grip",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Charge",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Thunder Shock",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Gear Grind",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Charge",
+							"level": 6,
+							"order": null
+						},
+						{
+							"name": "Thunder Shock",
+							"level": 11,
+							"order": null
+						},
+						{
+							"name": "Gear Grind",
+							"level": 16,
+							"order": null
+						},
+						{
+							"name": "Bind",
+							"level": 21,
+							"order": null
+						},
+						{
+							"name": "Charge Beam",
+							"level": 26,
+							"order": null
+						},
+						{
+							"name": "Autotomize",
+							"level": 31,
+							"order": null
+						},
+						{
+							"name": "Mirror Shot",
+							"level": 36,
+							"order": null
+						},
+						{
+							"name": "Screech",
+							"level": 40,
+							"order": null
+						},
+						{
+							"name": "Discharge",
+							"level": 44,
+							"order": null
+						},
+						{
+							"name": "Metal Sound",
+							"level": 48,
+							"order": null
+						},
+						{
+							"name": "Shift Gear",
+							"level": 52,
+							"order": null
+						},
+						{
+							"name": "Lock On",
+							"level": 56,
+							"order": null
+						},
+						{
+							"name": "Zap Cannon",
+							"level": 60,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": 64,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Charge Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash Cannon",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Polish",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Smash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sandstorm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Volt Switch",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/600",
+						"fetchedAt": "2026-11-03T05:53:43.533Z",
+						"hash": "9376163fa6c338817349d8b666ac9c1bc40e8133a68853a9344c6433b3cf12a2"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/305/",
+						"fetchedAt": "2026-11-03T05:53:43.565Z",
+						"hash": "9972a583ae19a89a803f7a22ff747a6a750777f982984beb1c7ec28bae35c557"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/600/",
+						"fetchedAt": "2026-11-03T05:53:43.599Z",
+						"hash": "edf269d04294a0970cc1df9485eaf799cd92b64dfa0f56b237340041dfd3d181"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/600/encounters",
+						"fetchedAt": "2026-11-03T05:53:43.654Z",
+						"hash": "5c3322c8f43d1f0e8582cc1dcb84828b5f27b32a1217669f2f5afd0077c69a7c"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/600/",
+						"fetchedAt": "2026-11-03T05:53:43.704Z",
+						"hash": "112c6dcea79aa614fe744bca08ab2b298005897dc9d7e8ccacbfacaa2626467d"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"black-national": "By changing the direction in which it rotates, it communicates its feelings to others. When angry, it rotates faster.",
+				"black": "By changing the direction in which it rotates, it communicates its feelings to others. When angry, it rotates faster.",
+				"white-national": "Spinning minigears are rotated at high speed and repeatedly fired away. It is dangerous if the gears don’t return.",
+				"white": "Spinning minigears are rotated at high speed and repeatedly fired away. It is dangerous if the gears don’t return."
+			},
+			"localizedFlavorByGame": {
+				"black-national": {
+					"fr": "Ils communiquent entre eux en changeant leur sens de rotation. Plus ils sont en colère, plus ils tournent vite.",
+					"en": "By changing the direction in which it rotates, it communicates its feelings to others. When angry, it rotates faster."
+				},
+				"black": {
+					"fr": "Ils communiquent entre eux en changeant leur sens de rotation. Plus ils sont en colère, plus ils tournent vite.",
+					"en": "By changing the direction in which it rotates, it communicates its feelings to others. When angry, it rotates faster."
+				},
+				"white-national": {
+					"fr": "Il attaque en lançant ses mini-rouages à grande vitesse. Il est en fâcheuse posture s’ils ne reviennent pas.",
+					"en": "Spinning minigears are rotated at high speed and repeatedly fired away. It is dangerous if the gears don’t return."
+				},
+				"white": {
+					"fr": "Il attaque en lançant ses mini-rouages à grande vitesse. Il est en fâcheuse posture s’ils ne reviennent pas.",
+					"en": "Spinning minigears are rotated at high speed and repeatedly fired away. It is dangerous if the gears don’t return."
+				}
+			}
+		},
+		{
+			"profileKey": "black-2-white-2",
+			"label": "Black 2 / White 2",
+			"appGameKeys": [
+				"black2-national",
+				"black2",
+				"white2-national",
+				"white2"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Klang",
+				"localizedNames": {
+					"ja-hrkt": "ギギアル",
+					"ja-roma": "Gigiaru",
+					"ko": "기기어르",
+					"zh-hant": "齒輪組",
+					"fr": "Clic",
+					"de": "Kliklak",
+					"es": "Klang",
+					"it": "Klang",
+					"ja": "ギギアル",
+					"zh-hans": "齿轮组",
+					"es-419": "Klang"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Steel"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 80,
+					"def": 95,
+					"spa": 70,
+					"spd": 85,
+					"spe": 50
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Plus",
+					"Minus",
+					"Clear Body (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Clear Body"
+				],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "51.0 kg",
+				"genderRatio": "Genderless",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 154,
+				"habitat": "",
+				"shape": "Heads",
+				"color": "Gray",
+				"genus": "Gear Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "はぐるまポケモン",
+					"ko": "톱니바퀴포켓몬",
+					"zh-hant": "齒輪寶可夢",
+					"fr": "Pokémon Engrenage",
+					"de": "Getriebe-Pokémon",
+					"es": "Pokémon Engranaje",
+					"it": "Pokémon Ingranaggio",
+					"ja": "はぐるまポケモン",
+					"zh-hans": "齿轮宝可梦",
+					"es-419": "Pokémon Engranaje"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 600
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 106
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 131
+					},
+					{
+						"pokedex": "galar",
+						"number": 114
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 599,
+								"natiId": 599,
+								"name": "Klink"
+							},
+							{
+								"id": 600,
+								"natiId": 600,
+								"name": "Klang",
+								"method": "Level",
+								"value": 38
+							},
+							{
+								"id": 601,
+								"natiId": 601,
+								"name": "Klinklang",
+								"method": "Level",
+								"value": 49
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "P2 Laboratory Area",
+						"notes": "Walk, Lv. 57",
+						"games": "Black 2",
+						"rate": "10%"
+					},
+					{
+						"area": "P2 Laboratory Area",
+						"notes": "Walk, Lv. 59",
+						"games": "Black 2",
+						"rate": "5%"
+					},
+					{
+						"area": "P2 Laboratory Area",
+						"notes": "Walk, Lv. 57",
+						"games": "White 2",
+						"rate": "10%"
+					},
+					{
+						"area": "P2 Laboratory Area",
+						"notes": "Walk, Lv. 59",
+						"games": "White 2",
+						"rate": "5%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Vice Grip",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Charge",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Thunder Shock",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Gear Grind",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Charge",
+							"level": 6,
+							"order": null
+						},
+						{
+							"name": "Thunder Shock",
+							"level": 11,
+							"order": null
+						},
+						{
+							"name": "Gear Grind",
+							"level": 16,
+							"order": null
+						},
+						{
+							"name": "Bind",
+							"level": 21,
+							"order": null
+						},
+						{
+							"name": "Charge Beam",
+							"level": 26,
+							"order": null
+						},
+						{
+							"name": "Autotomize",
+							"level": 31,
+							"order": null
+						},
+						{
+							"name": "Mirror Shot",
+							"level": 36,
+							"order": null
+						},
+						{
+							"name": "Screech",
+							"level": 40,
+							"order": null
+						},
+						{
+							"name": "Discharge",
+							"level": 44,
+							"order": null
+						},
+						{
+							"name": "Metal Sound",
+							"level": 48,
+							"order": null
+						},
+						{
+							"name": "Shift Gear",
+							"level": 52,
+							"order": null
+						},
+						{
+							"name": "Lock On",
+							"level": 56,
+							"order": null
+						},
+						{
+							"name": "Zap Cannon",
+							"level": 60,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": 64,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Bind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Gravity",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Defense",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Magic Coat",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Magnet Rise",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Recycle",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Signal Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Uproar",
+							"level": null,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Charge Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash Cannon",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Polish",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Smash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sandstorm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Volt Switch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/600",
+						"fetchedAt": "2026-11-03T05:53:43.533Z",
+						"hash": "9376163fa6c338817349d8b666ac9c1bc40e8133a68853a9344c6433b3cf12a2"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/305/",
+						"fetchedAt": "2026-11-03T05:53:43.565Z",
+						"hash": "9972a583ae19a89a803f7a22ff747a6a750777f982984beb1c7ec28bae35c557"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/600/",
+						"fetchedAt": "2026-11-03T05:53:43.599Z",
+						"hash": "edf269d04294a0970cc1df9485eaf799cd92b64dfa0f56b237340041dfd3d181"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/600/encounters",
+						"fetchedAt": "2026-11-03T05:53:43.654Z",
+						"hash": "5c3322c8f43d1f0e8582cc1dcb84828b5f27b32a1217669f2f5afd0077c69a7c"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/600/",
+						"fetchedAt": "2026-11-03T05:53:43.704Z",
+						"hash": "112c6dcea79aa614fe744bca08ab2b298005897dc9d7e8ccacbfacaa2626467d"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"black2-national": "A minigear and big gear comprise its body. If the minigear it launches at a foe doesn’t return, it will die.",
+				"black2": "A minigear and big gear comprise its body. If the minigear it launches at a foe doesn’t return, it will die.",
+				"white2-national": "A minigear and big gear comprise its body. If the minigear it launches at a foe doesn’t return, it will die.",
+				"white2": "A minigear and big gear comprise its body. If the minigear it launches at a foe doesn’t return, it will die."
+			},
+			"localizedFlavorByGame": {
+				"black2-national": {
+					"en": "A minigear and big gear comprise its body. If the minigear it launches at a foe doesn’t return, it will die."
+				},
+				"black2": {
+					"en": "A minigear and big gear comprise its body. If the minigear it launches at a foe doesn’t return, it will die."
+				},
+				"white2-national": {
+					"en": "A minigear and big gear comprise its body. If the minigear it launches at a foe doesn’t return, it will die."
+				},
+				"white2": {
+					"en": "A minigear and big gear comprise its body. If the minigear it launches at a foe doesn’t return, it will die."
+				}
+			}
+		},
+		{
+			"profileKey": "x-y",
+			"label": "X / Y",
+			"appGameKeys": [
+				"x-national",
+				"x-central",
+				"x-coastal",
+				"x-mountain",
+				"y-national",
+				"y-central",
+				"y-coastal",
+				"y-mountain"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Klang",
+				"localizedNames": {
+					"ja-hrkt": "ギギアル",
+					"ja-roma": "Gigiaru",
+					"ko": "기기어르",
+					"zh-hant": "齒輪組",
+					"fr": "Clic",
+					"de": "Kliklak",
+					"es": "Klang",
+					"it": "Klang",
+					"ja": "ギギアル",
+					"zh-hans": "齿轮组",
+					"es-419": "Klang"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Steel"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 80,
+					"def": 95,
+					"spa": 70,
+					"spd": 85,
+					"spe": 50
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Plus",
+					"Minus",
+					"Clear Body (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Clear Body"
+				],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "51.0 kg",
+				"genderRatio": "Genderless",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 154,
+				"habitat": "",
+				"shape": "Heads",
+				"color": "Gray",
+				"genus": "Gear Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "はぐるまポケモン",
+					"ko": "톱니바퀴포켓몬",
+					"zh-hant": "齒輪寶可夢",
+					"fr": "Pokémon Engrenage",
+					"de": "Getriebe-Pokémon",
+					"es": "Pokémon Engranaje",
+					"it": "Pokémon Ingranaggio",
+					"ja": "はぐるまポケモン",
+					"zh-hans": "齿轮宝可梦",
+					"es-419": "Pokémon Engranaje"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 600
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 106
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 131
+					},
+					{
+						"pokedex": "galar",
+						"number": 114
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 599,
+								"natiId": 599,
+								"name": "Klink"
+							},
+							{
+								"id": 600,
+								"natiId": 600,
+								"name": "Klang",
+								"method": "Level",
+								"value": 38
+							},
+							{
+								"id": 601,
+								"natiId": 601,
+								"name": "Klinklang",
+								"method": "Level",
+								"value": 49
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Friend Safari Steel",
+						"notes": "Walk, Lv. 30",
+						"games": "X",
+						"rate": "33%"
+					},
+					{
+						"area": "Friend Safari Steel",
+						"notes": "Walk, Lv. 30",
+						"games": "Y",
+						"rate": "33%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Vice Grip",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Charge",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Thunder Shock",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Gear Grind",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Charge",
+							"level": 6,
+							"order": null
+						},
+						{
+							"name": "Thunder Shock",
+							"level": 11,
+							"order": null
+						},
+						{
+							"name": "Gear Grind",
+							"level": 16,
+							"order": null
+						},
+						{
+							"name": "Bind",
+							"level": 21,
+							"order": null
+						},
+						{
+							"name": "Charge Beam",
+							"level": 26,
+							"order": null
+						},
+						{
+							"name": "Autotomize",
+							"level": 31,
+							"order": null
+						},
+						{
+							"name": "Mirror Shot",
+							"level": 36,
+							"order": null
+						},
+						{
+							"name": "Screech",
+							"level": 40,
+							"order": null
+						},
+						{
+							"name": "Discharge",
+							"level": 44,
+							"order": null
+						},
+						{
+							"name": "Metal Sound",
+							"level": 48,
+							"order": null
+						},
+						{
+							"name": "Shift Gear",
+							"level": 52,
+							"order": null
+						},
+						{
+							"name": "Lock On",
+							"level": 56,
+							"order": null
+						},
+						{
+							"name": "Zap Cannon",
+							"level": 60,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": 64,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Charge Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash Cannon",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Polish",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Smash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sandstorm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Volt Switch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/600",
+						"fetchedAt": "2026-11-03T05:53:43.533Z",
+						"hash": "9376163fa6c338817349d8b666ac9c1bc40e8133a68853a9344c6433b3cf12a2"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/305/",
+						"fetchedAt": "2026-11-03T05:53:43.565Z",
+						"hash": "9972a583ae19a89a803f7a22ff747a6a750777f982984beb1c7ec28bae35c557"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/600/",
+						"fetchedAt": "2026-11-03T05:53:43.599Z",
+						"hash": "edf269d04294a0970cc1df9485eaf799cd92b64dfa0f56b237340041dfd3d181"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/600/encounters",
+						"fetchedAt": "2026-11-03T05:53:43.654Z",
+						"hash": "5c3322c8f43d1f0e8582cc1dcb84828b5f27b32a1217669f2f5afd0077c69a7c"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/600/",
+						"fetchedAt": "2026-11-03T05:53:43.704Z",
+						"hash": "112c6dcea79aa614fe744bca08ab2b298005897dc9d7e8ccacbfacaa2626467d"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"x-national": "By changing the direction in which it rotates, it communicates its feelings to others. When angry, it rotates faster.",
+				"x-central": "By changing the direction in which it rotates, it communicates its feelings to others. When angry, it rotates faster.",
+				"x-coastal": "By changing the direction in which it rotates, it communicates its feelings to others. When angry, it rotates faster.",
+				"x-mountain": "By changing the direction in which it rotates, it communicates its feelings to others. When angry, it rotates faster.",
+				"y-national": "A minigear and big gear comprise its body. If the minigear it launches at a foe doesn’t return, it will die.",
+				"y-central": "A minigear and big gear comprise its body. If the minigear it launches at a foe doesn’t return, it will die.",
+				"y-coastal": "A minigear and big gear comprise its body. If the minigear it launches at a foe doesn’t return, it will die.",
+				"y-mountain": "A minigear and big gear comprise its body. If the minigear it launches at a foe doesn’t return, it will die."
+			},
+			"localizedFlavorByGame": {
+				"x-national": {
+					"ja-hrkt": "かいてんほうこうを かえる ことで なかまに きもちを つたえている。 おこるほど かいてんが はやくなる。",
+					"ko": "회전 방향을 바꿔서 동료에게 감정을 전한다. 화가 나면 회전이 빨라진다.",
+					"fr": "Ils communiquent entre eux en changeant leur sens de rotation. Plus ils sont en colère, plus ils tournent vite.",
+					"de": "Teilt Artgenossen seine Gefühlslage mit, indem es die Umlaufrichtung ändert. Wenn es wütend ist, dreht es sich schneller.",
+					"es": "Muestra sus sentimientos cambiando la dirección de su giro. Cuanto más se enfade, más rápido girará.",
+					"it": "Comunicano il loro stato d’animo cambiando senso di rotazione. Più si arrabbiano, più girano velocemente.",
+					"en": "By changing the direction in which it rotates, it communicates its feelings to others. When angry, it rotates faster.",
+					"ja": "回転方向を 変える ことで 仲間に 気持ちを 伝えている。 怒るほど 回転が 速くなる。",
+					"es-419": "Muestra sus sentimientos cambiando la dirección de su giro. Cuanto más se enfade, más rápido girará."
+				},
+				"x-central": {
+					"ja-hrkt": "かいてんほうこうを かえる ことで なかまに きもちを つたえている。 おこるほど かいてんが はやくなる。",
+					"ko": "회전 방향을 바꿔서 동료에게 감정을 전한다. 화가 나면 회전이 빨라진다.",
+					"fr": "Ils communiquent entre eux en changeant leur sens de rotation. Plus ils sont en colère, plus ils tournent vite.",
+					"de": "Teilt Artgenossen seine Gefühlslage mit, indem es die Umlaufrichtung ändert. Wenn es wütend ist, dreht es sich schneller.",
+					"es": "Muestra sus sentimientos cambiando la dirección de su giro. Cuanto más se enfade, más rápido girará.",
+					"it": "Comunicano il loro stato d’animo cambiando senso di rotazione. Più si arrabbiano, più girano velocemente.",
+					"en": "By changing the direction in which it rotates, it communicates its feelings to others. When angry, it rotates faster.",
+					"ja": "回転方向を 変える ことで 仲間に 気持ちを 伝えている。 怒るほど 回転が 速くなる。",
+					"es-419": "Muestra sus sentimientos cambiando la dirección de su giro. Cuanto más se enfade, más rápido girará."
+				},
+				"x-coastal": {
+					"ja-hrkt": "かいてんほうこうを かえる ことで なかまに きもちを つたえている。 おこるほど かいてんが はやくなる。",
+					"ko": "회전 방향을 바꿔서 동료에게 감정을 전한다. 화가 나면 회전이 빨라진다.",
+					"fr": "Ils communiquent entre eux en changeant leur sens de rotation. Plus ils sont en colère, plus ils tournent vite.",
+					"de": "Teilt Artgenossen seine Gefühlslage mit, indem es die Umlaufrichtung ändert. Wenn es wütend ist, dreht es sich schneller.",
+					"es": "Muestra sus sentimientos cambiando la dirección de su giro. Cuanto más se enfade, más rápido girará.",
+					"it": "Comunicano il loro stato d’animo cambiando senso di rotazione. Più si arrabbiano, più girano velocemente.",
+					"en": "By changing the direction in which it rotates, it communicates its feelings to others. When angry, it rotates faster.",
+					"ja": "回転方向を 変える ことで 仲間に 気持ちを 伝えている。 怒るほど 回転が 速くなる。",
+					"es-419": "Muestra sus sentimientos cambiando la dirección de su giro. Cuanto más se enfade, más rápido girará."
+				},
+				"x-mountain": {
+					"ja-hrkt": "かいてんほうこうを かえる ことで なかまに きもちを つたえている。 おこるほど かいてんが はやくなる。",
+					"ko": "회전 방향을 바꿔서 동료에게 감정을 전한다. 화가 나면 회전이 빨라진다.",
+					"fr": "Ils communiquent entre eux en changeant leur sens de rotation. Plus ils sont en colère, plus ils tournent vite.",
+					"de": "Teilt Artgenossen seine Gefühlslage mit, indem es die Umlaufrichtung ändert. Wenn es wütend ist, dreht es sich schneller.",
+					"es": "Muestra sus sentimientos cambiando la dirección de su giro. Cuanto más se enfade, más rápido girará.",
+					"it": "Comunicano il loro stato d’animo cambiando senso di rotazione. Più si arrabbiano, più girano velocemente.",
+					"en": "By changing the direction in which it rotates, it communicates its feelings to others. When angry, it rotates faster.",
+					"ja": "回転方向を 変える ことで 仲間に 気持ちを 伝えている。 怒るほど 回転が 速くなる。",
+					"es-419": "Muestra sus sentimientos cambiando la dirección de su giro. Cuanto más se enfade, más rápido girará."
+				},
+				"y-national": {
+					"ja-hrkt": "ちびギアと でかギアに わかれた。 こうげきのため とばした ちびギアが もどってこないと しんでしまう。",
+					"ko": "꼬마기어와 왕기어로 나뉘었다. 공격을 위해 날린 꼬마기어가 돌아오지 않으면 죽게 된다.",
+					"fr": "Le plus grand des rouages projette le plus petit pour attaquer. Ce dernier risque de dépérir s’il ne revient pas.",
+					"de": "Besteht aus kleinen und großen Rädern. Kehrt ein kleines Rad, das es abgefeuert hat, nicht zurück, wird es brenzlig.",
+					"es": "Se compone de una rueda dentada grande y otra pequeña. Lanza la pequeña para atacar, pero se debilita si no regresa.",
+					"it": "È formato da un ingranaggio grande e uno piccolo. Attacca con quello piccolo ma, se questo non torna indietro, è in seria difficoltà.",
+					"en": "A minigear and big gear comprise its body. If the minigear it launches at a foe doesn’t return, it will die.",
+					"ja": "ちびギアと でかギアに わかれた。 攻撃のため 飛ばした ちびギアが 戻ってこないと 死んでしまう。",
+					"es-419": "Se compone de una rueda dentada grande y otra pequeña. Lanza la pequeña para atacar, pero se debilita si no regresa."
+				},
+				"y-central": {
+					"ja-hrkt": "ちびギアと でかギアに わかれた。 こうげきのため とばした ちびギアが もどってこないと しんでしまう。",
+					"ko": "꼬마기어와 왕기어로 나뉘었다. 공격을 위해 날린 꼬마기어가 돌아오지 않으면 죽게 된다.",
+					"fr": "Le plus grand des rouages projette le plus petit pour attaquer. Ce dernier risque de dépérir s’il ne revient pas.",
+					"de": "Besteht aus kleinen und großen Rädern. Kehrt ein kleines Rad, das es abgefeuert hat, nicht zurück, wird es brenzlig.",
+					"es": "Se compone de una rueda dentada grande y otra pequeña. Lanza la pequeña para atacar, pero se debilita si no regresa.",
+					"it": "È formato da un ingranaggio grande e uno piccolo. Attacca con quello piccolo ma, se questo non torna indietro, è in seria difficoltà.",
+					"en": "A minigear and big gear comprise its body. If the minigear it launches at a foe doesn’t return, it will die.",
+					"ja": "ちびギアと でかギアに わかれた。 攻撃のため 飛ばした ちびギアが 戻ってこないと 死んでしまう。",
+					"es-419": "Se compone de una rueda dentada grande y otra pequeña. Lanza la pequeña para atacar, pero se debilita si no regresa."
+				},
+				"y-coastal": {
+					"ja-hrkt": "ちびギアと でかギアに わかれた。 こうげきのため とばした ちびギアが もどってこないと しんでしまう。",
+					"ko": "꼬마기어와 왕기어로 나뉘었다. 공격을 위해 날린 꼬마기어가 돌아오지 않으면 죽게 된다.",
+					"fr": "Le plus grand des rouages projette le plus petit pour attaquer. Ce dernier risque de dépérir s’il ne revient pas.",
+					"de": "Besteht aus kleinen und großen Rädern. Kehrt ein kleines Rad, das es abgefeuert hat, nicht zurück, wird es brenzlig.",
+					"es": "Se compone de una rueda dentada grande y otra pequeña. Lanza la pequeña para atacar, pero se debilita si no regresa.",
+					"it": "È formato da un ingranaggio grande e uno piccolo. Attacca con quello piccolo ma, se questo non torna indietro, è in seria difficoltà.",
+					"en": "A minigear and big gear comprise its body. If the minigear it launches at a foe doesn’t return, it will die.",
+					"ja": "ちびギアと でかギアに わかれた。 攻撃のため 飛ばした ちびギアが 戻ってこないと 死んでしまう。",
+					"es-419": "Se compone de una rueda dentada grande y otra pequeña. Lanza la pequeña para atacar, pero se debilita si no regresa."
+				},
+				"y-mountain": {
+					"ja-hrkt": "ちびギアと でかギアに わかれた。 こうげきのため とばした ちびギアが もどってこないと しんでしまう。",
+					"ko": "꼬마기어와 왕기어로 나뉘었다. 공격을 위해 날린 꼬마기어가 돌아오지 않으면 죽게 된다.",
+					"fr": "Le plus grand des rouages projette le plus petit pour attaquer. Ce dernier risque de dépérir s’il ne revient pas.",
+					"de": "Besteht aus kleinen und großen Rädern. Kehrt ein kleines Rad, das es abgefeuert hat, nicht zurück, wird es brenzlig.",
+					"es": "Se compone de una rueda dentada grande y otra pequeña. Lanza la pequeña para atacar, pero se debilita si no regresa.",
+					"it": "È formato da un ingranaggio grande e uno piccolo. Attacca con quello piccolo ma, se questo non torna indietro, è in seria difficoltà.",
+					"en": "A minigear and big gear comprise its body. If the minigear it launches at a foe doesn’t return, it will die.",
+					"ja": "ちびギアと でかギアに わかれた。 攻撃のため 飛ばした ちびギアが 戻ってこないと 死んでしまう。",
+					"es-419": "Se compone de una rueda dentada grande y otra pequeña. Lanza la pequeña para atacar, pero se debilita si no regresa."
+				}
+			}
+		},
+		{
+			"profileKey": "omega-ruby-alpha-sapphire",
+			"label": "Omega Ruby / Alpha Sapphire",
+			"appGameKeys": [
+				"omegaruby-national",
+				"omegaruby",
+				"alphasapphire-national",
+				"alphasapphire"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Klang",
+				"localizedNames": {
+					"ja-hrkt": "ギギアル",
+					"ja-roma": "Gigiaru",
+					"ko": "기기어르",
+					"zh-hant": "齒輪組",
+					"fr": "Clic",
+					"de": "Kliklak",
+					"es": "Klang",
+					"it": "Klang",
+					"ja": "ギギアル",
+					"zh-hans": "齿轮组",
+					"es-419": "Klang"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Steel"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 80,
+					"def": 95,
+					"spa": 70,
+					"spd": 85,
+					"spe": 50
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Plus",
+					"Minus",
+					"Clear Body (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Clear Body"
+				],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "51.0 kg",
+				"genderRatio": "Genderless",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 154,
+				"habitat": "",
+				"shape": "Heads",
+				"color": "Gray",
+				"genus": "Gear Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "はぐるまポケモン",
+					"ko": "톱니바퀴포켓몬",
+					"zh-hant": "齒輪寶可夢",
+					"fr": "Pokémon Engrenage",
+					"de": "Getriebe-Pokémon",
+					"es": "Pokémon Engranaje",
+					"it": "Pokémon Ingranaggio",
+					"ja": "はぐるまポケモン",
+					"zh-hans": "齿轮宝可梦",
+					"es-419": "Pokémon Engranaje"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 600
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 106
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 131
+					},
+					{
+						"pokedex": "galar",
+						"number": 114
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 599,
+								"natiId": 599,
+								"name": "Klink"
+							},
+							{
+								"id": 600,
+								"natiId": 600,
+								"name": "Klang",
+								"method": "Level",
+								"value": 38
+							},
+							{
+								"id": 601,
+								"natiId": 601,
+								"name": "Klinklang",
+								"method": "Level",
+								"value": 49
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Vice Grip",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Charge",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Thunder Shock",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Gear Grind",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Charge",
+							"level": 6,
+							"order": null
+						},
+						{
+							"name": "Thunder Shock",
+							"level": 11,
+							"order": null
+						},
+						{
+							"name": "Gear Grind",
+							"level": 16,
+							"order": null
+						},
+						{
+							"name": "Bind",
+							"level": 21,
+							"order": null
+						},
+						{
+							"name": "Charge Beam",
+							"level": 26,
+							"order": null
+						},
+						{
+							"name": "Autotomize",
+							"level": 31,
+							"order": null
+						},
+						{
+							"name": "Mirror Shot",
+							"level": 36,
+							"order": null
+						},
+						{
+							"name": "Screech",
+							"level": 40,
+							"order": null
+						},
+						{
+							"name": "Discharge",
+							"level": 44,
+							"order": null
+						},
+						{
+							"name": "Metal Sound",
+							"level": 48,
+							"order": null
+						},
+						{
+							"name": "Shift Gear",
+							"level": 52,
+							"order": null
+						},
+						{
+							"name": "Lock On",
+							"level": 56,
+							"order": null
+						},
+						{
+							"name": "Zap Cannon",
+							"level": 60,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": 64,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Bind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Gravity",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Defense",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Magic Coat",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Magnet Rise",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Recycle",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shock Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Signal Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Uproar",
+							"level": null,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Charge Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash Cannon",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Polish",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Smash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sandstorm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Secret Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Volt Switch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/600",
+						"fetchedAt": "2026-11-03T05:53:43.533Z",
+						"hash": "9376163fa6c338817349d8b666ac9c1bc40e8133a68853a9344c6433b3cf12a2"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/305/",
+						"fetchedAt": "2026-11-03T05:53:43.565Z",
+						"hash": "9972a583ae19a89a803f7a22ff747a6a750777f982984beb1c7ec28bae35c557"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/600/",
+						"fetchedAt": "2026-11-03T05:53:43.599Z",
+						"hash": "edf269d04294a0970cc1df9485eaf799cd92b64dfa0f56b237340041dfd3d181"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/600/encounters",
+						"fetchedAt": "2026-11-03T05:53:43.654Z",
+						"hash": "5c3322c8f43d1f0e8582cc1dcb84828b5f27b32a1217669f2f5afd0077c69a7c"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/600/",
+						"fetchedAt": "2026-11-03T05:53:43.704Z",
+						"hash": "112c6dcea79aa614fe744bca08ab2b298005897dc9d7e8ccacbfacaa2626467d"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"omegaruby-national": "By changing the direction in which it rotates, it communicates its feelings to others. When angry, it rotates faster.",
+				"omegaruby": "By changing the direction in which it rotates, it communicates its feelings to others. When angry, it rotates faster.",
+				"alphasapphire-national": "A minigear and big gear comprise its body. If the minigear it launches at a foe doesn’t return, it will die.",
+				"alphasapphire": "A minigear and big gear comprise its body. If the minigear it launches at a foe doesn’t return, it will die."
+			},
+			"localizedFlavorByGame": {
+				"omegaruby-national": {
+					"ja-hrkt": "かいてんほうこうを かえる ことで なかまに きもちを つたえている。 おこるほど かいてんが はやくなる。",
+					"ko": "회전 방향을 바꿔서 동료에게 감정을 전한다. 화가 나면 회전이 빨라진다.",
+					"fr": "Ils communiquent entre eux en changeant leur sens de rotation. Plus ils sont en colère, plus ils tournent vite.",
+					"de": "Teilt Artgenossen seine Gefühlslage mit, indem es die Umlaufrichtung ändert. Wenn es wütend ist, dreht es sich schneller.",
+					"es": "Muestra sus sentimientos cambiando la dirección de su giro. Cuanto más se enfade, más rápido girará.",
+					"it": "Comunicano il loro stato d’animo cambiando senso di rotazione. Più si arrabbiano, più girano velocemente.",
+					"en": "By changing the direction in which it rotates, it communicates its feelings to others. When angry, it rotates faster.",
+					"ja": "回転方向を 変える ことで 仲間に 気持ちを 伝えている。 怒るほど 回転が 速くなる。",
+					"es-419": "Muestra sus sentimientos cambiando la dirección de su giro. Cuanto más se enfade, más rápido girará."
+				},
+				"omegaruby": {
+					"ja-hrkt": "かいてんほうこうを かえる ことで なかまに きもちを つたえている。 おこるほど かいてんが はやくなる。",
+					"ko": "회전 방향을 바꿔서 동료에게 감정을 전한다. 화가 나면 회전이 빨라진다.",
+					"fr": "Ils communiquent entre eux en changeant leur sens de rotation. Plus ils sont en colère, plus ils tournent vite.",
+					"de": "Teilt Artgenossen seine Gefühlslage mit, indem es die Umlaufrichtung ändert. Wenn es wütend ist, dreht es sich schneller.",
+					"es": "Muestra sus sentimientos cambiando la dirección de su giro. Cuanto más se enfade, más rápido girará.",
+					"it": "Comunicano il loro stato d’animo cambiando senso di rotazione. Più si arrabbiano, più girano velocemente.",
+					"en": "By changing the direction in which it rotates, it communicates its feelings to others. When angry, it rotates faster.",
+					"ja": "回転方向を 変える ことで 仲間に 気持ちを 伝えている。 怒るほど 回転が 速くなる。",
+					"es-419": "Muestra sus sentimientos cambiando la dirección de su giro. Cuanto más se enfade, más rápido girará."
+				},
+				"alphasapphire-national": {
+					"ja-hrkt": "ちびギアと でかギアに わかれた。 こうげきのため とばした ちびギアが もどってこないと しんでしまう。",
+					"ko": "꼬마기어와 왕기어로 나뉘었다. 공격을 위해 날린 꼬마기어가 돌아오지 않으면 죽게 된다.",
+					"fr": "Le plus grand des rouages projette le plus petit pour attaquer. Ce dernier risque de dépérir s’il ne revient pas.",
+					"de": "Besteht aus kleinen und großen Rädern. Kehrt ein kleines Rad, das es abgefeuert hat, nicht zurück, wird es brenzlig.",
+					"es": "Se compone de una rueda dentada grande y otra pequeña. Lanza la pequeña para atacar, pero se debilita si no regresa.",
+					"it": "È formato da un ingranaggio grande e uno piccolo. Attacca con quello piccolo ma, se questo non torna indietro, è in seria difficoltà.",
+					"en": "A minigear and big gear comprise its body. If the minigear it launches at a foe doesn’t return, it will die.",
+					"ja": "ちびギアと でかギアに わかれた。 攻撃のため 飛ばした ちびギアが 戻ってこないと 死んでしまう。",
+					"es-419": "Se compone de una rueda dentada grande y otra pequeña. Lanza la pequeña para atacar, pero se debilita si no regresa."
+				},
+				"alphasapphire": {
+					"ja-hrkt": "ちびギアと でかギアに わかれた。 こうげきのため とばした ちびギアが もどってこないと しんでしまう。",
+					"ko": "꼬마기어와 왕기어로 나뉘었다. 공격을 위해 날린 꼬마기어가 돌아오지 않으면 죽게 된다.",
+					"fr": "Le plus grand des rouages projette le plus petit pour attaquer. Ce dernier risque de dépérir s’il ne revient pas.",
+					"de": "Besteht aus kleinen und großen Rädern. Kehrt ein kleines Rad, das es abgefeuert hat, nicht zurück, wird es brenzlig.",
+					"es": "Se compone de una rueda dentada grande y otra pequeña. Lanza la pequeña para atacar, pero se debilita si no regresa.",
+					"it": "È formato da un ingranaggio grande e uno piccolo. Attacca con quello piccolo ma, se questo non torna indietro, è in seria difficoltà.",
+					"en": "A minigear and big gear comprise its body. If the minigear it launches at a foe doesn’t return, it will die.",
+					"ja": "ちびギアと でかギアに わかれた。 攻撃のため 飛ばした ちびギアが 戻ってこないと 死んでしまう。",
+					"es-419": "Se compone de una rueda dentada grande y otra pequeña. Lanza la pequeña para atacar, pero se debilita si no regresa."
+				}
+			}
+		},
+		{
+			"profileKey": "sun-moon",
+			"label": "Sun / Moon",
+			"appGameKeys": [
+				"sun-alola",
+				"sun-melemele",
+				"sun-akala",
+				"sun-ulaula",
+				"sun-poni",
+				"moon-alola",
+				"moon-melemele",
+				"moon-akala",
+				"moon-ulaula",
+				"moon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Klang",
+				"localizedNames": {
+					"ja-hrkt": "ギギアル",
+					"ja-roma": "Gigiaru",
+					"ko": "기기어르",
+					"zh-hant": "齒輪組",
+					"fr": "Clic",
+					"de": "Kliklak",
+					"es": "Klang",
+					"it": "Klang",
+					"ja": "ギギアル",
+					"zh-hans": "齿轮组",
+					"es-419": "Klang"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Steel"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 80,
+					"def": 95,
+					"spa": 70,
+					"spd": 85,
+					"spe": 50
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Plus",
+					"Minus",
+					"Clear Body (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Clear Body"
+				],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "51.0 kg",
+				"genderRatio": "Genderless",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 154,
+				"habitat": "",
+				"shape": "Heads",
+				"color": "Gray",
+				"genus": "Gear Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "はぐるまポケモン",
+					"ko": "톱니바퀴포켓몬",
+					"zh-hant": "齒輪寶可夢",
+					"fr": "Pokémon Engrenage",
+					"de": "Getriebe-Pokémon",
+					"es": "Pokémon Engranaje",
+					"it": "Pokémon Ingranaggio",
+					"ja": "はぐるまポケモン",
+					"zh-hans": "齿轮宝可梦",
+					"es-419": "Pokémon Engranaje"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 600
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 106
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 131
+					},
+					{
+						"pokedex": "galar",
+						"number": 114
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 599,
+								"natiId": 599,
+								"name": "Klink"
+							},
+							{
+								"id": 600,
+								"natiId": 600,
+								"name": "Klang",
+								"method": "Level",
+								"value": 38
+							},
+							{
+								"id": 601,
+								"natiId": 601,
+								"name": "Klinklang",
+								"method": "Level",
+								"value": 49
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Vice Grip",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Charge",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Thunder Shock",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Gear Grind",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Charge",
+							"level": 6,
+							"order": null
+						},
+						{
+							"name": "Thunder Shock",
+							"level": 11,
+							"order": null
+						},
+						{
+							"name": "Gear Grind",
+							"level": 16,
+							"order": null
+						},
+						{
+							"name": "Bind",
+							"level": 21,
+							"order": null
+						},
+						{
+							"name": "Charge Beam",
+							"level": 26,
+							"order": null
+						},
+						{
+							"name": "Autotomize",
+							"level": 31,
+							"order": null
+						},
+						{
+							"name": "Mirror Shot",
+							"level": 36,
+							"order": null
+						},
+						{
+							"name": "Screech",
+							"level": 40,
+							"order": null
+						},
+						{
+							"name": "Discharge",
+							"level": 44,
+							"order": null
+						},
+						{
+							"name": "Metal Sound",
+							"level": 48,
+							"order": null
+						},
+						{
+							"name": "Shift Gear",
+							"level": 52,
+							"order": null
+						},
+						{
+							"name": "Lock On",
+							"level": 56,
+							"order": null
+						},
+						{
+							"name": "Zap Cannon",
+							"level": 60,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": 64,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Charge Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash Cannon",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Polish",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sandstorm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Volt Switch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/600",
+						"fetchedAt": "2026-11-03T05:53:43.533Z",
+						"hash": "9376163fa6c338817349d8b666ac9c1bc40e8133a68853a9344c6433b3cf12a2"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/305/",
+						"fetchedAt": "2026-11-03T05:53:43.565Z",
+						"hash": "9972a583ae19a89a803f7a22ff747a6a750777f982984beb1c7ec28bae35c557"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/600/",
+						"fetchedAt": "2026-11-03T05:53:43.599Z",
+						"hash": "edf269d04294a0970cc1df9485eaf799cd92b64dfa0f56b237340041dfd3d181"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/600/encounters",
+						"fetchedAt": "2026-11-03T05:53:43.654Z",
+						"hash": "5c3322c8f43d1f0e8582cc1dcb84828b5f27b32a1217669f2f5afd0077c69a7c"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/600/",
+						"fetchedAt": "2026-11-03T05:53:43.704Z",
+						"hash": "112c6dcea79aa614fe744bca08ab2b298005897dc9d7e8ccacbfacaa2626467d"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sun-alola": "",
+				"sun-melemele": "",
+				"sun-akala": "",
+				"sun-ulaula": "",
+				"sun-poni": "",
+				"moon-alola": "",
+				"moon-melemele": "",
+				"moon-akala": "",
+				"moon-ulaula": "",
+				"moon-poni": ""
+			},
+			"localizedFlavorByGame": {
+				"sun-alola": {},
+				"sun-melemele": {},
+				"sun-akala": {},
+				"sun-ulaula": {},
+				"sun-poni": {},
+				"moon-alola": {},
+				"moon-melemele": {},
+				"moon-akala": {},
+				"moon-ulaula": {},
+				"moon-poni": {}
+			}
+		},
+		{
+			"profileKey": "ultra-sun-ultra-moon",
+			"label": "Ultra Sun / Ultra Moon",
+			"appGameKeys": [
+				"ultrasun-alola",
+				"ultrasun-melemele",
+				"ultrasun-akala",
+				"ultrasun-ulaula",
+				"ultrasun-poni",
+				"ultramoon-alola",
+				"ultramoon-melemele",
+				"ultramoon-akala",
+				"ultramoon-ulaula",
+				"ultramoon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Klang",
+				"localizedNames": {
+					"ja-hrkt": "ギギアル",
+					"ja-roma": "Gigiaru",
+					"ko": "기기어르",
+					"zh-hant": "齒輪組",
+					"fr": "Clic",
+					"de": "Kliklak",
+					"es": "Klang",
+					"it": "Klang",
+					"ja": "ギギアル",
+					"zh-hans": "齿轮组",
+					"es-419": "Klang"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Steel"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 80,
+					"def": 95,
+					"spa": 70,
+					"spd": 85,
+					"spe": 50
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Plus",
+					"Minus",
+					"Clear Body (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Clear Body"
+				],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "51.0 kg",
+				"genderRatio": "Genderless",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 154,
+				"habitat": "",
+				"shape": "Heads",
+				"color": "Gray",
+				"genus": "Gear Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "はぐるまポケモン",
+					"ko": "톱니바퀴포켓몬",
+					"zh-hant": "齒輪寶可夢",
+					"fr": "Pokémon Engrenage",
+					"de": "Getriebe-Pokémon",
+					"es": "Pokémon Engranaje",
+					"it": "Pokémon Ingranaggio",
+					"ja": "はぐるまポケモン",
+					"zh-hans": "齿轮宝可梦",
+					"es-419": "Pokémon Engranaje"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 600
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 106
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 131
+					},
+					{
+						"pokedex": "galar",
+						"number": 114
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 599,
+								"natiId": 599,
+								"name": "Klink"
+							},
+							{
+								"id": 600,
+								"natiId": 600,
+								"name": "Klang",
+								"method": "Level",
+								"value": 38
+							},
+							{
+								"id": 601,
+								"natiId": 601,
+								"name": "Klinklang",
+								"method": "Level",
+								"value": 49
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Vice Grip",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Charge",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Thunder Shock",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Gear Grind",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Charge",
+							"level": 6,
+							"order": null
+						},
+						{
+							"name": "Thunder Shock",
+							"level": 11,
+							"order": null
+						},
+						{
+							"name": "Gear Grind",
+							"level": 16,
+							"order": null
+						},
+						{
+							"name": "Bind",
+							"level": 21,
+							"order": null
+						},
+						{
+							"name": "Charge Beam",
+							"level": 26,
+							"order": null
+						},
+						{
+							"name": "Autotomize",
+							"level": 31,
+							"order": null
+						},
+						{
+							"name": "Mirror Shot",
+							"level": 36,
+							"order": null
+						},
+						{
+							"name": "Screech",
+							"level": 40,
+							"order": null
+						},
+						{
+							"name": "Discharge",
+							"level": 44,
+							"order": null
+						},
+						{
+							"name": "Metal Sound",
+							"level": 48,
+							"order": null
+						},
+						{
+							"name": "Shift Gear",
+							"level": 52,
+							"order": null
+						},
+						{
+							"name": "Lock On",
+							"level": 56,
+							"order": null
+						},
+						{
+							"name": "Zap Cannon",
+							"level": 60,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": 64,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Ally Switch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Gravity",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Defense",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Magic Coat",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Magnet Rise",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Recycle",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shock Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Signal Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Telekinesis",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Uproar",
+							"level": null,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Charge Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash Cannon",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Polish",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sandstorm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Volt Switch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/600",
+						"fetchedAt": "2026-11-03T05:53:43.533Z",
+						"hash": "9376163fa6c338817349d8b666ac9c1bc40e8133a68853a9344c6433b3cf12a2"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/305/",
+						"fetchedAt": "2026-11-03T05:53:43.565Z",
+						"hash": "9972a583ae19a89a803f7a22ff747a6a750777f982984beb1c7ec28bae35c557"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/600/",
+						"fetchedAt": "2026-11-03T05:53:43.599Z",
+						"hash": "edf269d04294a0970cc1df9485eaf799cd92b64dfa0f56b237340041dfd3d181"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/600/encounters",
+						"fetchedAt": "2026-11-03T05:53:43.654Z",
+						"hash": "5c3322c8f43d1f0e8582cc1dcb84828b5f27b32a1217669f2f5afd0077c69a7c"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/600/",
+						"fetchedAt": "2026-11-03T05:53:43.704Z",
+						"hash": "112c6dcea79aa614fe744bca08ab2b298005897dc9d7e8ccacbfacaa2626467d"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"ultrasun-alola": "",
+				"ultrasun-melemele": "",
+				"ultrasun-akala": "",
+				"ultrasun-ulaula": "",
+				"ultrasun-poni": "",
+				"ultramoon-alola": "",
+				"ultramoon-melemele": "",
+				"ultramoon-akala": "",
+				"ultramoon-ulaula": "",
+				"ultramoon-poni": ""
+			},
+			"localizedFlavorByGame": {
+				"ultrasun-alola": {},
+				"ultrasun-melemele": {},
+				"ultrasun-akala": {},
+				"ultrasun-ulaula": {},
+				"ultrasun-poni": {},
+				"ultramoon-alola": {},
+				"ultramoon-melemele": {},
+				"ultramoon-akala": {},
+				"ultramoon-ulaula": {},
+				"ultramoon-poni": {}
+			}
+		},
+		{
+			"profileKey": "lets-go-pikachu-lets-go-eevee",
+			"label": "Let's Go Pikachu / Eevee",
+			"appGameKeys": [
+				"letsgopikachu",
+				"letsgoeevee"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Klang",
+				"localizedNames": {
+					"ja-hrkt": "ギギアル",
+					"ja-roma": "Gigiaru",
+					"ko": "기기어르",
+					"zh-hant": "齒輪組",
+					"fr": "Clic",
+					"de": "Kliklak",
+					"es": "Klang",
+					"it": "Klang",
+					"ja": "ギギアル",
+					"zh-hans": "齿轮组",
+					"es-419": "Klang"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Steel"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 80,
+					"def": 95,
+					"spa": 70,
+					"spd": 85,
+					"spe": 50
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Plus",
+					"Minus",
+					"Clear Body (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Clear Body"
+				],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "51.0 kg",
+				"genderRatio": "Genderless",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 154,
+				"habitat": "",
+				"shape": "Heads",
+				"color": "Gray",
+				"genus": "Gear Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "はぐるまポケモン",
+					"ko": "톱니바퀴포켓몬",
+					"zh-hant": "齒輪寶可夢",
+					"fr": "Pokémon Engrenage",
+					"de": "Getriebe-Pokémon",
+					"es": "Pokémon Engranaje",
+					"it": "Pokémon Ingranaggio",
+					"ja": "はぐるまポケモン",
+					"zh-hans": "齿轮宝可梦",
+					"es-419": "Pokémon Engranaje"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 600
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 106
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 131
+					},
+					{
+						"pokedex": "galar",
+						"number": 114
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 599,
+								"natiId": 599,
+								"name": "Klink"
+							},
+							{
+								"id": 600,
+								"natiId": 600,
+								"name": "Klang",
+								"method": "Level",
+								"value": 38
+							},
+							{
+								"id": 601,
+								"natiId": 601,
+								"name": "Klinklang",
+								"method": "Level",
+								"value": 49
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/600",
+						"fetchedAt": "2026-11-03T05:53:43.533Z",
+						"hash": "9376163fa6c338817349d8b666ac9c1bc40e8133a68853a9344c6433b3cf12a2"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/305/",
+						"fetchedAt": "2026-11-03T05:53:43.565Z",
+						"hash": "9972a583ae19a89a803f7a22ff747a6a750777f982984beb1c7ec28bae35c557"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/600/",
+						"fetchedAt": "2026-11-03T05:53:43.599Z",
+						"hash": "edf269d04294a0970cc1df9485eaf799cd92b64dfa0f56b237340041dfd3d181"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/600/encounters",
+						"fetchedAt": "2026-11-03T05:53:43.654Z",
+						"hash": "5c3322c8f43d1f0e8582cc1dcb84828b5f27b32a1217669f2f5afd0077c69a7c"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/600/",
+						"fetchedAt": "2026-11-03T05:53:43.704Z",
+						"hash": "112c6dcea79aa614fe744bca08ab2b298005897dc9d7e8ccacbfacaa2626467d"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"letsgopikachu": "",
+				"letsgoeevee": ""
+			},
+			"localizedFlavorByGame": {
+				"letsgopikachu": {},
+				"letsgoeevee": {}
+			}
+		},
+		{
+			"profileKey": "sword-shield",
+			"label": "Sword / Shield",
+			"appGameKeys": [
+				"sword",
+				"shield"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Klang",
+				"localizedNames": {
+					"ja-hrkt": "ギギアル",
+					"ja-roma": "Gigiaru",
+					"ko": "기기어르",
+					"zh-hant": "齒輪組",
+					"fr": "Clic",
+					"de": "Kliklak",
+					"es": "Klang",
+					"it": "Klang",
+					"ja": "ギギアル",
+					"zh-hans": "齿轮组",
+					"es-419": "Klang"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Steel"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 80,
+					"def": 95,
+					"spa": 70,
+					"spd": 85,
+					"spe": 50
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Plus",
+					"Minus",
+					"Clear Body (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Clear Body"
+				],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "51.0 kg",
+				"genderRatio": "Genderless",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 154,
+				"habitat": "",
+				"shape": "Heads",
+				"color": "Gray",
+				"genus": "Gear Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "はぐるまポケモン",
+					"ko": "톱니바퀴포켓몬",
+					"zh-hant": "齒輪寶可夢",
+					"fr": "Pokémon Engrenage",
+					"de": "Getriebe-Pokémon",
+					"es": "Pokémon Engranaje",
+					"it": "Pokémon Ingranaggio",
+					"ja": "はぐるまポケモン",
+					"zh-hans": "齿轮宝可梦",
+					"es-419": "Pokémon Engranaje"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 600
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 106
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 131
+					},
+					{
+						"pokedex": "galar",
+						"number": 114
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 599,
+								"natiId": 599,
+								"name": "Klink"
+							},
+							{
+								"id": 600,
+								"natiId": 600,
+								"name": "Klang",
+								"method": "Level",
+								"value": 38
+							},
+							{
+								"id": 601,
+								"natiId": 601,
+								"name": "Klinklang",
+								"method": "Level",
+								"value": 49
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Galar Route 10 Near Station",
+						"notes": "Walk, Lv. 43-46",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Galar Route 10 Near Station",
+						"notes": "Walk, Lv. 44-49",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Dusty Bowl Area",
+						"notes": "Walk, Lv. 40-45",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Dusty Bowl Area",
+						"notes": "Walk, Lv. 60",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Dusty Bowl Area",
+						"notes": "Walk, Lv. 40-45",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Dusty Bowl Area",
+						"notes": "Walk, Lv. 60",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Hammerlocke Hills Area",
+						"notes": "Wanderer, Lv. 46",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Hammerlocke Hills Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Hammerlocke Hills Area",
+						"notes": "Wanderer, Lv. 46",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Hammerlocke Hills Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Hammerlocke Hills Area",
+						"notes": "Wanderer, Lv. 46",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Hammerlocke Hills Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Hammerlocke Hills Area",
+						"notes": "Wanderer, Lv. 46",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Hammerlocke Hills Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Hammerlocke Hills Area",
+						"notes": "Wanderer, Lv. 46",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Hammerlocke Hills Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Hammerlocke Hills Area",
+						"notes": "Wanderer, Lv. 46",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Hammerlocke Hills Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Hammerlocke Hills Area",
+						"notes": "Wanderer, Lv. 46",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Hammerlocke Hills Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Hammerlocke Hills Area",
+						"notes": "Wanderer, Lv. 46",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Hammerlocke Hills Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Giants Seat Max Den C",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Giants Seat Max Den C",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Giants Seat Max Den C",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Giants Seat Max Den C",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Shield",
+						"rate": "40%"
+					},
+					{
+						"area": "Giants Seat Max Den D",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Giants Seat Max Den D",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Giants Seat Max Den D",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Giants Seat Max Den D",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Giants Seat Max Den D",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Giants Seat Max Den D",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Giants Seat Max Den E",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Giants Seat Max Den E",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Giants Seat Max Den E",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Giants Seat Max Den E",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Giants Seat Max Den E",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Giants Seat Max Den E",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Giants Seat Max Den E",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Shield",
+						"rate": "40%"
+					},
+					{
+						"area": "Giants Seat Max Den E",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Giants Seat Max Den E",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Giants Seat Max Den E",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Dusty Bowl Max Den D",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Dusty Bowl Max Den D",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Dusty Bowl Max Den D",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Dusty Bowl Max Den D",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Dusty Bowl Max Den D",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Dusty Bowl Max Den D",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Hammerlocke Hills Max Den B",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Hammerlocke Hills Max Den B",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Hammerlocke Hills Max Den B",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Hammerlocke Hills Max Den B",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Shield",
+						"rate": "40%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Thunder Shock",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Vice Grip",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Bind",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Charge",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Charge Beam",
+							"level": 12,
+							"order": null
+						},
+						{
+							"name": "Metal Sound",
+							"level": 16,
+							"order": null
+						},
+						{
+							"name": "Autotomize",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Discharge",
+							"level": 24,
+							"order": null
+						},
+						{
+							"name": "Screech",
+							"level": 28,
+							"order": null
+						},
+						{
+							"name": "Gear Grind",
+							"level": 32,
+							"order": null
+						},
+						{
+							"name": "Lock On",
+							"level": 36,
+							"order": null
+						},
+						{
+							"name": "Shift Gear",
+							"level": 42,
+							"order": null
+						},
+						{
+							"name": "Zap Cannon",
+							"level": 48,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": 54,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Ally Switch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Assurance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endure",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash Cannon",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Defense",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Power Gem",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sandstorm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Screech",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Uproar",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Volt Switch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Rising Voltage",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Steel Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Steel Roller",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/600",
+						"fetchedAt": "2026-11-03T05:53:43.533Z",
+						"hash": "9376163fa6c338817349d8b666ac9c1bc40e8133a68853a9344c6433b3cf12a2"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/305/",
+						"fetchedAt": "2026-11-03T05:53:43.565Z",
+						"hash": "9972a583ae19a89a803f7a22ff747a6a750777f982984beb1c7ec28bae35c557"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/600/",
+						"fetchedAt": "2026-11-03T05:53:43.599Z",
+						"hash": "edf269d04294a0970cc1df9485eaf799cd92b64dfa0f56b237340041dfd3d181"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/600/encounters",
+						"fetchedAt": "2026-11-03T05:53:43.654Z",
+						"hash": "5c3322c8f43d1f0e8582cc1dcb84828b5f27b32a1217669f2f5afd0077c69a7c"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/600/",
+						"fetchedAt": "2026-11-03T05:53:43.704Z",
+						"hash": "112c6dcea79aa614fe744bca08ab2b298005897dc9d7e8ccacbfacaa2626467d"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sword": "When Klang goes all out, the minigear links up perfectly with the outer part of the big gear, and this Pokémon’s rotation speed increases sharply.",
+				"shield": "Many companies in the Galar region choose Klang as their logo. This Pokémon is considered the symbol of industrial technology."
+			},
+			"localizedFlavorByGame": {
+				"sword": {
+					"ja-hrkt": "ほんきの ときは でかギアの そとの はぐるまと ちびギアが がっち。 かいてんそくどが ひやく するのだ。",
+					"ko": "전력을 다할 때는 왕기어의 바깥쪽 톱니와 꼬마기어가 맞물린다. 회전 속도를 빠르게 하기 위함이다.",
+					"zh-hant": "如果認真起來，大齒輪外圈的 齒輪會和小齒輪完全接合。 此時轉速將會大幅提升。",
+					"fr": "Quand le combat devient sérieux, la partie extérieure du grand rouage s’aligne parfaitement avec le petit pour accélérer leur rotation.",
+					"de": "Macht es Ernst, greift das kleine äußere Rad in das große Rad, was die Drehgeschwindigkeit merklich erhöht.",
+					"es": "Cuando se pone en serio, la parte externa de la rueda dentada grande se acopla a la pequeña y aumenta su velocidad de rotación.",
+					"it": "Quando fa sul serio, la parte esterna dell’ingranaggio grande si unisce a quello piccolo e iniziano a girare all’impazzata.",
+					"en": "When Klang goes all out, the minigear links up perfectly with the outer part of the big gear, and this Pokémon’s rotation speed increases sharply.",
+					"ja": "本気の ときは でかギアの 外の 歯車と ちびギアが 合致。 回転速度が 飛躍 するのだ。",
+					"zh-hans": "如果认真起来，大齿轮外圈的 齿轮会和小齿轮完全接合。 此时转速将会大幅提升。",
+					"es-419": "Cuando se pone en serio, la parte externa de la rueda dentada grande se acopla a la pequeña y aumenta su velocidad de rotación."
+				},
+				"shield": {
+					"ja-hrkt": "こうぎょうぎじゅつの シンボルとして おおくの ガラルの かいしゃで きぎょうロゴに さいよう される。",
+					"ko": "공업 기술의 상징으로 많은 가라르의 회사에서 기업 로고로 채용하고 있다.",
+					"zh-hant": "被認為是工業技術的象徵。 有許多伽勒爾當地的公司 選擇牠作為企業的標誌。",
+					"fr": "Ce Pokémon symbolisant la technologie industrielle est souvent utilisé dans le logo des entreprises de Galar.",
+					"de": "Da es symbolisch für die Industriebranche steht, ist es im Logo unzähliger Firmen Galars abgebildet.",
+					"es": "Muchas empresas de Galar usan su imagen en sus logotipos como símbolo de tecnología industrial.",
+					"it": "Molte imprese di Galar lo usano come logo in quanto simbolo della tecnologia industriale.",
+					"en": "Many companies in the Galar region choose Klang as their logo. This Pokémon is considered the symbol of industrial technology.",
+					"ja": "工業技術の シンボルとして 多くの ガラルの 会社で 企業ロゴに 採用 される。",
+					"zh-hans": "被认为是工业技术的象征。 有许多伽勒尔当地的公司 选择它作为企业的标志。",
+					"es-419": "Muchas empresas de Galar usan su imagen en sus logotipos como símbolo de tecnología industrial."
+				}
+			}
+		},
+		{
+			"profileKey": "the-isle-of-armor",
+			"label": "The Isle of Armor",
+			"appGameKeys": [
+				"swordioa",
+				"shieldioa"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Klang",
+				"localizedNames": {
+					"ja-hrkt": "ギギアル",
+					"ja-roma": "Gigiaru",
+					"ko": "기기어르",
+					"zh-hant": "齒輪組",
+					"fr": "Clic",
+					"de": "Kliklak",
+					"es": "Klang",
+					"it": "Klang",
+					"ja": "ギギアル",
+					"zh-hans": "齿轮组",
+					"es-419": "Klang"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Steel"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 80,
+					"def": 95,
+					"spa": 70,
+					"spd": 85,
+					"spe": 50
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Plus",
+					"Minus",
+					"Clear Body (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Clear Body"
+				],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "51.0 kg",
+				"genderRatio": "Genderless",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 154,
+				"habitat": "",
+				"shape": "Heads",
+				"color": "Gray",
+				"genus": "Gear Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "はぐるまポケモン",
+					"ko": "톱니바퀴포켓몬",
+					"zh-hant": "齒輪寶可夢",
+					"fr": "Pokémon Engrenage",
+					"de": "Getriebe-Pokémon",
+					"es": "Pokémon Engranaje",
+					"it": "Pokémon Ingranaggio",
+					"ja": "はぐるまポケモン",
+					"zh-hans": "齿轮宝可梦",
+					"es-419": "Pokémon Engranaje"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 600
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 106
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 131
+					},
+					{
+						"pokedex": "galar",
+						"number": 114
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 599,
+								"natiId": 599,
+								"name": "Klink"
+							},
+							{
+								"id": 600,
+								"natiId": 600,
+								"name": "Klang",
+								"method": "Level",
+								"value": 38
+							},
+							{
+								"id": 601,
+								"natiId": 601,
+								"name": "Klinklang",
+								"method": "Level",
+								"value": 49
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/600",
+						"fetchedAt": "2026-11-03T05:53:43.533Z",
+						"hash": "9376163fa6c338817349d8b666ac9c1bc40e8133a68853a9344c6433b3cf12a2"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/305/",
+						"fetchedAt": "2026-11-03T05:53:43.565Z",
+						"hash": "9972a583ae19a89a803f7a22ff747a6a750777f982984beb1c7ec28bae35c557"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/600/",
+						"fetchedAt": "2026-11-03T05:53:43.599Z",
+						"hash": "edf269d04294a0970cc1df9485eaf799cd92b64dfa0f56b237340041dfd3d181"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/600/encounters",
+						"fetchedAt": "2026-11-03T05:53:43.654Z",
+						"hash": "5c3322c8f43d1f0e8582cc1dcb84828b5f27b32a1217669f2f5afd0077c69a7c"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/600/",
+						"fetchedAt": "2026-11-03T05:53:43.704Z",
+						"hash": "112c6dcea79aa614fe744bca08ab2b298005897dc9d7e8ccacbfacaa2626467d"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordioa": "",
+				"shieldioa": ""
+			},
+			"localizedFlavorByGame": {
+				"swordioa": {},
+				"shieldioa": {}
+			}
+		},
+		{
+			"profileKey": "the-crown-tundra",
+			"label": "The Crown Tundra",
+			"appGameKeys": [
+				"swordct",
+				"shieldct"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Klang",
+				"localizedNames": {
+					"ja-hrkt": "ギギアル",
+					"ja-roma": "Gigiaru",
+					"ko": "기기어르",
+					"zh-hant": "齒輪組",
+					"fr": "Clic",
+					"de": "Kliklak",
+					"es": "Klang",
+					"it": "Klang",
+					"ja": "ギギアル",
+					"zh-hans": "齿轮组",
+					"es-419": "Klang"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Steel"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 80,
+					"def": 95,
+					"spa": 70,
+					"spd": 85,
+					"spe": 50
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Plus",
+					"Minus",
+					"Clear Body (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Clear Body"
+				],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "51.0 kg",
+				"genderRatio": "Genderless",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 154,
+				"habitat": "",
+				"shape": "Heads",
+				"color": "Gray",
+				"genus": "Gear Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "はぐるまポケモン",
+					"ko": "톱니바퀴포켓몬",
+					"zh-hant": "齒輪寶可夢",
+					"fr": "Pokémon Engrenage",
+					"de": "Getriebe-Pokémon",
+					"es": "Pokémon Engranaje",
+					"it": "Pokémon Ingranaggio",
+					"ja": "はぐるまポケモン",
+					"zh-hans": "齿轮宝可梦",
+					"es-419": "Pokémon Engranaje"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 600
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 106
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 131
+					},
+					{
+						"pokedex": "galar",
+						"number": 114
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 599,
+								"natiId": 599,
+								"name": "Klink"
+							},
+							{
+								"id": 600,
+								"natiId": 600,
+								"name": "Klang",
+								"method": "Level",
+								"value": 38
+							},
+							{
+								"id": 601,
+								"natiId": 601,
+								"name": "Klinklang",
+								"method": "Level",
+								"value": 49
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Max Lair Area",
+						"notes": "Dynamax Adventure, Lv. 65",
+						"games": "The Crown Tundra Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Max Lair Area",
+						"notes": "Dynamax Adventure, Lv. 65",
+						"games": "The Crown Tundra Shield",
+						"rate": "100%"
+					}
+				],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/600",
+						"fetchedAt": "2026-11-03T05:53:43.533Z",
+						"hash": "9376163fa6c338817349d8b666ac9c1bc40e8133a68853a9344c6433b3cf12a2"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/305/",
+						"fetchedAt": "2026-11-03T05:53:43.565Z",
+						"hash": "9972a583ae19a89a803f7a22ff747a6a750777f982984beb1c7ec28bae35c557"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/600/",
+						"fetchedAt": "2026-11-03T05:53:43.599Z",
+						"hash": "edf269d04294a0970cc1df9485eaf799cd92b64dfa0f56b237340041dfd3d181"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/600/encounters",
+						"fetchedAt": "2026-11-03T05:53:43.654Z",
+						"hash": "5c3322c8f43d1f0e8582cc1dcb84828b5f27b32a1217669f2f5afd0077c69a7c"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/600/",
+						"fetchedAt": "2026-11-03T05:53:43.704Z",
+						"hash": "112c6dcea79aa614fe744bca08ab2b298005897dc9d7e8ccacbfacaa2626467d"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordct": "",
+				"shieldct": ""
+			},
+			"localizedFlavorByGame": {
+				"swordct": {},
+				"shieldct": {}
+			}
+		},
+		{
+			"profileKey": "brilliant-diamond-shining-pearl",
+			"label": "Brilliant Diamond / Shining Pearl",
+			"appGameKeys": [
+				"brilliantdiamond-national",
+				"brilliantdiamond",
+				"shiningpearl-national",
+				"shiningpearl"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Klang",
+				"localizedNames": {
+					"ja-hrkt": "ギギアル",
+					"ja-roma": "Gigiaru",
+					"ko": "기기어르",
+					"zh-hant": "齒輪組",
+					"fr": "Clic",
+					"de": "Kliklak",
+					"es": "Klang",
+					"it": "Klang",
+					"ja": "ギギアル",
+					"zh-hans": "齿轮组",
+					"es-419": "Klang"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Steel"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 80,
+					"def": 95,
+					"spa": 70,
+					"spd": 85,
+					"spe": 50
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Plus",
+					"Minus",
+					"Clear Body (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Clear Body"
+				],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "51.0 kg",
+				"genderRatio": "Genderless",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 154,
+				"habitat": "",
+				"shape": "Heads",
+				"color": "Gray",
+				"genus": "Gear Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "はぐるまポケモン",
+					"ko": "톱니바퀴포켓몬",
+					"zh-hant": "齒輪寶可夢",
+					"fr": "Pokémon Engrenage",
+					"de": "Getriebe-Pokémon",
+					"es": "Pokémon Engranaje",
+					"it": "Pokémon Ingranaggio",
+					"ja": "はぐるまポケモン",
+					"zh-hans": "齿轮宝可梦",
+					"es-419": "Pokémon Engranaje"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 600
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 106
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 131
+					},
+					{
+						"pokedex": "galar",
+						"number": 114
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 599,
+								"natiId": 599,
+								"name": "Klink"
+							},
+							{
+								"id": 600,
+								"natiId": 600,
+								"name": "Klang",
+								"method": "Level",
+								"value": 38
+							},
+							{
+								"id": 601,
+								"natiId": 601,
+								"name": "Klinklang",
+								"method": "Level",
+								"value": 49
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/600",
+						"fetchedAt": "2026-11-03T05:53:43.533Z",
+						"hash": "9376163fa6c338817349d8b666ac9c1bc40e8133a68853a9344c6433b3cf12a2"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/305/",
+						"fetchedAt": "2026-11-03T05:53:43.565Z",
+						"hash": "9972a583ae19a89a803f7a22ff747a6a750777f982984beb1c7ec28bae35c557"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/600/",
+						"fetchedAt": "2026-11-03T05:53:43.599Z",
+						"hash": "edf269d04294a0970cc1df9485eaf799cd92b64dfa0f56b237340041dfd3d181"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/600/encounters",
+						"fetchedAt": "2026-11-03T05:53:43.654Z",
+						"hash": "5c3322c8f43d1f0e8582cc1dcb84828b5f27b32a1217669f2f5afd0077c69a7c"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/600/",
+						"fetchedAt": "2026-11-03T05:53:43.704Z",
+						"hash": "112c6dcea79aa614fe744bca08ab2b298005897dc9d7e8ccacbfacaa2626467d"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"brilliantdiamond-national": "",
+				"brilliantdiamond": "",
+				"shiningpearl-national": "",
+				"shiningpearl": ""
+			},
+			"localizedFlavorByGame": {
+				"brilliantdiamond-national": {},
+				"brilliantdiamond": {},
+				"shiningpearl-national": {},
+				"shiningpearl": {}
+			}
+		},
+		{
+			"profileKey": "legends-arceus",
+			"label": "Legends: Arceus",
+			"appGameKeys": [
+				"legendsarceus"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Klang",
+				"localizedNames": {
+					"ja-hrkt": "ギギアル",
+					"ja-roma": "Gigiaru",
+					"ko": "기기어르",
+					"zh-hant": "齒輪組",
+					"fr": "Clic",
+					"de": "Kliklak",
+					"es": "Klang",
+					"it": "Klang",
+					"ja": "ギギアル",
+					"zh-hans": "齿轮组",
+					"es-419": "Klang"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Steel"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 80,
+					"def": 95,
+					"spa": 70,
+					"spd": 85,
+					"spe": 50
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Plus",
+					"Minus",
+					"Clear Body (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Clear Body"
+				],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "51.0 kg",
+				"genderRatio": "Genderless",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 154,
+				"habitat": "",
+				"shape": "Heads",
+				"color": "Gray",
+				"genus": "Gear Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "はぐるまポケモン",
+					"ko": "톱니바퀴포켓몬",
+					"zh-hant": "齒輪寶可夢",
+					"fr": "Pokémon Engrenage",
+					"de": "Getriebe-Pokémon",
+					"es": "Pokémon Engranaje",
+					"it": "Pokémon Ingranaggio",
+					"ja": "はぐるまポケモン",
+					"zh-hans": "齿轮宝可梦",
+					"es-419": "Pokémon Engranaje"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 600
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 106
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 131
+					},
+					{
+						"pokedex": "galar",
+						"number": 114
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 599,
+								"natiId": 599,
+								"name": "Klink"
+							},
+							{
+								"id": 600,
+								"natiId": 600,
+								"name": "Klang",
+								"method": "Level",
+								"value": 38
+							},
+							{
+								"id": 601,
+								"natiId": 601,
+								"name": "Klinklang",
+								"method": "Level",
+								"value": 49
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/600",
+						"fetchedAt": "2026-11-03T05:53:43.533Z",
+						"hash": "9376163fa6c338817349d8b666ac9c1bc40e8133a68853a9344c6433b3cf12a2"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/305/",
+						"fetchedAt": "2026-11-03T05:53:43.565Z",
+						"hash": "9972a583ae19a89a803f7a22ff747a6a750777f982984beb1c7ec28bae35c557"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/600/",
+						"fetchedAt": "2026-11-03T05:53:43.599Z",
+						"hash": "edf269d04294a0970cc1df9485eaf799cd92b64dfa0f56b237340041dfd3d181"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/600/encounters",
+						"fetchedAt": "2026-11-03T05:53:43.654Z",
+						"hash": "5c3322c8f43d1f0e8582cc1dcb84828b5f27b32a1217669f2f5afd0077c69a7c"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/600/",
+						"fetchedAt": "2026-11-03T05:53:43.704Z",
+						"hash": "112c6dcea79aa614fe744bca08ab2b298005897dc9d7e8ccacbfacaa2626467d"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendsarceus": ""
+			},
+			"localizedFlavorByGame": {
+				"legendsarceus": {}
+			}
+		},
+		{
+			"profileKey": "scarlet-violet",
+			"label": "Scarlet / Violet",
+			"appGameKeys": [
+				"scarlet",
+				"violet"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Klang",
+				"localizedNames": {
+					"ja-hrkt": "ギギアル",
+					"ja-roma": "Gigiaru",
+					"ko": "기기어르",
+					"zh-hant": "齒輪組",
+					"fr": "Clic",
+					"de": "Kliklak",
+					"es": "Klang",
+					"it": "Klang",
+					"ja": "ギギアル",
+					"zh-hans": "齿轮组",
+					"es-419": "Klang"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Steel"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 80,
+					"def": 95,
+					"spa": 70,
+					"spd": 85,
+					"spe": 50
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Plus",
+					"Minus",
+					"Clear Body (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Clear Body"
+				],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "51.0 kg",
+				"genderRatio": "Genderless",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 154,
+				"habitat": "",
+				"shape": "Heads",
+				"color": "Gray",
+				"genus": "Gear Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "はぐるまポケモン",
+					"ko": "톱니바퀴포켓몬",
+					"zh-hant": "齒輪寶可夢",
+					"fr": "Pokémon Engrenage",
+					"de": "Getriebe-Pokémon",
+					"es": "Pokémon Engranaje",
+					"it": "Pokémon Ingranaggio",
+					"ja": "はぐるまポケモン",
+					"zh-hans": "齿轮宝可梦",
+					"es-419": "Pokémon Engranaje"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 600
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 106
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 131
+					},
+					{
+						"pokedex": "galar",
+						"number": 114
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 599,
+								"natiId": 599,
+								"name": "Klink"
+							},
+							{
+								"id": 600,
+								"natiId": 600,
+								"name": "Klang",
+								"method": "Level",
+								"value": 38
+							},
+							{
+								"id": 601,
+								"natiId": 601,
+								"name": "Klinklang",
+								"method": "Level",
+								"value": 49
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/600",
+						"fetchedAt": "2026-11-03T05:53:43.533Z",
+						"hash": "9376163fa6c338817349d8b666ac9c1bc40e8133a68853a9344c6433b3cf12a2"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/305/",
+						"fetchedAt": "2026-11-03T05:53:43.565Z",
+						"hash": "9972a583ae19a89a803f7a22ff747a6a750777f982984beb1c7ec28bae35c557"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/600/",
+						"fetchedAt": "2026-11-03T05:53:43.599Z",
+						"hash": "edf269d04294a0970cc1df9485eaf799cd92b64dfa0f56b237340041dfd3d181"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/600/encounters",
+						"fetchedAt": "2026-11-03T05:53:43.654Z",
+						"hash": "5c3322c8f43d1f0e8582cc1dcb84828b5f27b32a1217669f2f5afd0077c69a7c"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/600/",
+						"fetchedAt": "2026-11-03T05:53:43.704Z",
+						"hash": "112c6dcea79aa614fe744bca08ab2b298005897dc9d7e8ccacbfacaa2626467d"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlet": "",
+				"violet": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlet": {},
+				"violet": {}
+			}
+		},
+		{
+			"profileKey": "the-teal-mask",
+			"label": "The Teal Mask",
+			"appGameKeys": [
+				"scarlettm",
+				"violettm"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Klang",
+				"localizedNames": {
+					"ja-hrkt": "ギギアル",
+					"ja-roma": "Gigiaru",
+					"ko": "기기어르",
+					"zh-hant": "齒輪組",
+					"fr": "Clic",
+					"de": "Kliklak",
+					"es": "Klang",
+					"it": "Klang",
+					"ja": "ギギアル",
+					"zh-hans": "齿轮组",
+					"es-419": "Klang"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Steel"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 80,
+					"def": 95,
+					"spa": 70,
+					"spd": 85,
+					"spe": 50
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Plus",
+					"Minus",
+					"Clear Body (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Clear Body"
+				],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "51.0 kg",
+				"genderRatio": "Genderless",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 154,
+				"habitat": "",
+				"shape": "Heads",
+				"color": "Gray",
+				"genus": "Gear Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "はぐるまポケモン",
+					"ko": "톱니바퀴포켓몬",
+					"zh-hant": "齒輪寶可夢",
+					"fr": "Pokémon Engrenage",
+					"de": "Getriebe-Pokémon",
+					"es": "Pokémon Engranaje",
+					"it": "Pokémon Ingranaggio",
+					"ja": "はぐるまポケモン",
+					"zh-hans": "齿轮宝可梦",
+					"es-419": "Pokémon Engranaje"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 600
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 106
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 131
+					},
+					{
+						"pokedex": "galar",
+						"number": 114
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 599,
+								"natiId": 599,
+								"name": "Klink"
+							},
+							{
+								"id": 600,
+								"natiId": 600,
+								"name": "Klang",
+								"method": "Level",
+								"value": 38
+							},
+							{
+								"id": 601,
+								"natiId": 601,
+								"name": "Klinklang",
+								"method": "Level",
+								"value": 49
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/600",
+						"fetchedAt": "2026-11-03T05:53:43.533Z",
+						"hash": "9376163fa6c338817349d8b666ac9c1bc40e8133a68853a9344c6433b3cf12a2"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/305/",
+						"fetchedAt": "2026-11-03T05:53:43.565Z",
+						"hash": "9972a583ae19a89a803f7a22ff747a6a750777f982984beb1c7ec28bae35c557"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/600/",
+						"fetchedAt": "2026-11-03T05:53:43.599Z",
+						"hash": "edf269d04294a0970cc1df9485eaf799cd92b64dfa0f56b237340041dfd3d181"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/600/encounters",
+						"fetchedAt": "2026-11-03T05:53:43.654Z",
+						"hash": "5c3322c8f43d1f0e8582cc1dcb84828b5f27b32a1217669f2f5afd0077c69a7c"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/600/",
+						"fetchedAt": "2026-11-03T05:53:43.704Z",
+						"hash": "112c6dcea79aa614fe744bca08ab2b298005897dc9d7e8ccacbfacaa2626467d"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlettm": "",
+				"violettm": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlettm": {},
+				"violettm": {}
+			}
+		},
+		{
+			"profileKey": "the-indigo-disk",
+			"label": "The Indigo Disk",
+			"appGameKeys": [
+				"scarletid",
+				"violetid"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Klang",
+				"localizedNames": {
+					"ja-hrkt": "ギギアル",
+					"ja-roma": "Gigiaru",
+					"ko": "기기어르",
+					"zh-hant": "齒輪組",
+					"fr": "Clic",
+					"de": "Kliklak",
+					"es": "Klang",
+					"it": "Klang",
+					"ja": "ギギアル",
+					"zh-hans": "齿轮组",
+					"es-419": "Klang"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Steel"
+				],
+				"baseStats": {
+					"hp": 60,
+					"atk": 80,
+					"def": 95,
+					"spa": 70,
+					"spd": 85,
+					"spe": 50
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Plus",
+					"Minus",
+					"Clear Body (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Clear Body"
+				],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.6 m",
+				"weight": "51.0 kg",
+				"genderRatio": "Genderless",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 154,
+				"habitat": "",
+				"shape": "Heads",
+				"color": "Gray",
+				"genus": "Gear Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "はぐるまポケモン",
+					"ko": "톱니바퀴포켓몬",
+					"zh-hant": "齒輪寶可夢",
+					"fr": "Pokémon Engrenage",
+					"de": "Getriebe-Pokémon",
+					"es": "Pokémon Engranaje",
+					"it": "Pokémon Ingranaggio",
+					"ja": "はぐるまポケモン",
+					"zh-hans": "齿轮宝可梦",
+					"es-419": "Pokémon Engranaje"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 600
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 106
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 131
+					},
+					{
+						"pokedex": "galar",
+						"number": 114
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 599,
+								"natiId": 599,
+								"name": "Klink"
+							},
+							{
+								"id": 600,
+								"natiId": 600,
+								"name": "Klang",
+								"method": "Level",
+								"value": 38
+							},
+							{
+								"id": 601,
+								"natiId": 601,
+								"name": "Klinklang",
+								"method": "Level",
+								"value": 49
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/600",
+						"fetchedAt": "2026-11-03T05:53:43.533Z",
+						"hash": "9376163fa6c338817349d8b666ac9c1bc40e8133a68853a9344c6433b3cf12a2"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/305/",
+						"fetchedAt": "2026-11-03T05:53:43.565Z",
+						"hash": "9972a583ae19a89a803f7a22ff747a6a750777f982984beb1c7ec28bae35c557"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/600/",
+						"fetchedAt": "2026-11-03T05:53:43.599Z",
+						"hash": "edf269d04294a0970cc1df9485eaf799cd92b64dfa0f56b237340041dfd3d181"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/600/encounters",
+						"fetchedAt": "2026-11-03T05:53:43.654Z",
+						"hash": "5c3322c8f43d1f0e8582cc1dcb84828b5f27b32a1217669f2f5afd0077c69a7c"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/600/",
+						"fetchedAt": "2026-11-03T05:53:43.704Z",
+						"hash": "112c6dcea79aa614fe744bca08ab2b298005897dc9d7e8ccacbfacaa2626467d"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarletid": "",
+				"violetid": ""
+			},
+			"localizedFlavorByGame": {
+				"scarletid": {},
+				"violetid": {}
+			}
+		}
+	]
+}

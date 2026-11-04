@@ -1,0 +1,169 @@
+{
+	"schemaVersion": 1,
+	"id": 818,
+	"slug": "surging-strikes",
+	"name": "Surging Strikes",
+	"names": {
+		"de": "Trefferschwall",
+		"en": "Surging Strikes",
+		"es": "Azote Torrencial",
+		"es-419": "Golpe Torrencial",
+		"fr": "Torrent de Coups",
+		"it": "Idroraffica",
+		"ja": "すいりゅうれんだ",
+		"ja-hrkt": "すいりゅうれんだ",
+		"ko": "수류연타",
+		"zh-hans": "水流连打",
+		"zh-hant": "水流連打"
+	},
+	"generation": 8,
+	"type": "Water",
+	"damageClass": "Physical",
+	"power": 25,
+	"accuracy": 100,
+	"pp": 5,
+	"priority": 0,
+	"effectChance": 100,
+	"target": "Selected Pokemon",
+	"effectEntries": [
+		{
+			"language": "en",
+			"effect": "Hits three times. Always scores a critical hit.",
+			"shortEffect": "Hits three times. Always scores a critical hit."
+		}
+	],
+	"effectChanges": [],
+	"descriptions": [
+		{
+			"versionGroup": "legends-arceus",
+			"language": "en",
+			"text": "The user, having mastered the Water style, strikes the target with a flowing motion three times in a row. This attack always results in a critical hit."
+		},
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "en",
+			"text": "The user, having mastered the Water style, strikes the target with a flowing motion three times in a row. This move always lands a critical hit."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "de",
+			"text": "Der Anwender hat den Stil des Wassers gemeistert und führt mit fließenden Bewegungen drei Angriffe in Folge mit Volltreffergarantie aus."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "en",
+			"text": "The user, having mastered the Water style, strikes the target with a flowing motion three times in a row. This attack always results in a critical hit."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es",
+			"text": "El usuario, dominador absoluto del líquido elemento, golpea hasta tres veces con movimientos fluidos. Siempre asesta un golpe crítico."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es-419",
+			"text": "El usuario, dominador absoluto del líquido elemento, golpea hasta tres veces con movimientos fluidos. Siempre asesta un golpe crítico."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "fr",
+			"text": "Le lanceur assène trois coups fluides à l’ennemi. Cette technique qui inflige toujours un coup critique est réservée à ceux qui maîtrisent la puissance de l’Eau."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "it",
+			"text": "Il Pokémon sferra una fluida serie di tre attacchi, massima espressione dello stile di tipo Acqua. Brutto colpo assicurato."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja",
+			"text": "みずの型を 極めし 流れるような ３回の 連撃。 必ず 急所に 当たる。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja-hrkt",
+			"text": "みずの かたを きわめし ながれるような ３かいの れんげき。 かならず きゅうしょに あたる。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ko",
+			"text": "물의 태세가 극에 달하여 물 흐르듯 3회의 연격을 날린다. 반드시 급소에 맞는다."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hans",
+			"text": "将水之流派修炼至大成的 仿若行云流水般的３次连击。 必定会击中要害。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hant",
+			"text": "將水之流派鍛鍊到了極致， 猶如行雲流水的３次連擊。 必定會擊中要害。"
+		}
+	],
+	"pastValues": [],
+	"statChanges": [],
+	"meta": {
+		"ailment": "None",
+		"category": "Damage",
+		"minHits": 3,
+		"maxHits": 3,
+		"minTurns": null,
+		"maxTurns": null,
+		"drain": 0,
+		"healing": 0,
+		"critRate": 6,
+		"ailmentChance": 0,
+		"flinchChance": 0,
+		"statChance": 0
+	},
+	"machines": [],
+	"learners": [
+		{
+			"nationalDexId": 892,
+			"speciesName": "Urshifu",
+			"formKey": "rapid-strike-style",
+			"formName": "Rapid Strike Style",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 1
+						}
+					],
+					"isHidden": false
+				}
+			]
+		}
+	],
+	"potentialPokemon": [
+		"urshifu-rapid-strike"
+	],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/move/818/",
+		"fetchedAt": "2026-11-03T06:30:18.654Z",
+		"hash": "5ae68b2b72cde34f714ba815847f3417e7ba7ad5c9515de5ff52973a6b5aefe1"
+	}
+}

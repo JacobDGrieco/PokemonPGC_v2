@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { lazy, Suspense, useMemo } from "react";
 import { Navigate } from "react-router-dom";
 import { assetPath } from "../../utils/assetPath.js";
 import { save, store } from "../../store.js";
@@ -17,6 +17,12 @@ import { MonInfoIndexPage } from "./MonInfoIndexPage.jsx";
 import { MonInfoPage } from "./MonInfoPage.jsx";
 import { getVisibleSections } from "../../utils/sectionVisibility.js";
 import { buildAccountRoute } from "../../utils/accountRoute.js";
+
+const ReferenceIndexPage = lazy(() =>
+	import("./ReferenceIndexPage.jsx").then((module) => ({
+		default: module.ReferenceIndexPage,
+	})),
+);
 
 function handleEnterGame(genKey, gameKey) {
 	return async () => {
@@ -253,7 +259,19 @@ function LoadingState() {
 	return <div className="react-loading-state">Loading game data…</div>;
 }
 
-function ToolsPage() {
+function ToolsPage({ toolsKey, referenceSlug }) {
+	if (toolsKey === "moves" || toolsKey === "abilities") {
+		return (
+			<Suspense fallback={<LoadingState />}>
+				{/* Each catalog owns independent async state; remount to avoid rendering the previous manifest. */}
+				<ReferenceIndexPage
+					key={toolsKey}
+					kind={toolsKey}
+					initialSlug={referenceSlug}
+				/>
+			</Suspense>
+		);
+	}
 	return <MonInfoIndexPage />;
 }
 
@@ -268,9 +286,14 @@ export function ReactContentRouter() {
 	if (level === "game") return <GameOverviewPage state={state} />;
 	if (level === "section")
 		return <SectionPage state={state} refreshKey={renderKey} />;
-	if (level === "tools") return <ToolsPage />;
-	if (level === "moninfo")
-		return <MonInfoPage state={state} refreshKey={renderKey} />;
+	if (level === "tools")
+		return (
+			<ToolsPage
+				toolsKey={state?.toolsKey}
+				referenceSlug={state?.referenceSlug}
+			/>
+		);
+	if (level === "moninfo") return <MonInfoPage state={state} />;
 	if (level === "account")
 		return (
 			<Navigate

@@ -1,0 +1,102 @@
+{
+	"schemaVersion": 1,
+	"id": 879,
+	"slug": "electro-drift",
+	"name": "Electro Drift",
+	"names": {
+		"de": "Blitztour",
+		"en": "Electro Drift",
+		"es": "Electroderrape",
+		"es-419": "Electroderrape",
+		"fr": "Turbo Volt",
+		"it": "Fulmiscatto",
+		"ja": "イナズマドライブ",
+		"ja-hrkt": "イナズマドライブ",
+		"ko": "라이트닝드라이브",
+		"zh-hans": "闪电猛冲",
+		"zh-hant": "閃電猛衝"
+	},
+	"generation": 9,
+	"type": "Electric",
+	"damageClass": "Special",
+	"power": 100,
+	"accuracy": 100,
+	"pp": 5,
+	"priority": 0,
+	"effectChance": null,
+	"target": "Selected Pokemon",
+	"effectEntries": [],
+	"effectChanges": [],
+	"descriptions": [
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "en",
+			"text": "The user races forward at ultrafast speeds, piercing its target with futuristic electricity. This move's power is boosted more than usual if it's a supereffective hit."
+		},
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "fr",
+			"text": "Le lanceur change de forme et fonce sur la cible en la perforant d'électricité futuriste. Si la capacité est super efficace, sa puissance augmente encore plus."
+		}
+	],
+	"pastValues": [],
+	"statChanges": [],
+	"meta": null,
+	"machines": [],
+	"learners": [
+		{
+			"nationalDexId": 1008,
+			"speciesName": "Miraidon",
+			"formKey": "low-power",
+			"formName": "Low-Power",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 56,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 1008,
+			"speciesName": "Miraidon",
+			"formKey": "ultimate",
+			"formName": "Ultimate",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 56,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		}
+	],
+	"potentialPokemon": [
+		"miraidon",
+		"miraidon-low-power-mode",
+		"miraidon-drive-mode",
+		"miraidon-aquatic-mode",
+		"miraidon-glide-mode"
+	],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/move/879/",
+		"fetchedAt": "2026-11-03T06:30:18.975Z",
+		"hash": "ac9fb84255d0512ff64e4b474ba218b5040f0b38f324a66f4e678082532bba97"
+	}
+}

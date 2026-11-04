@@ -1,0 +1,8336 @@
+{
+	"schemaVersion": 1,
+	"id": 197,
+	"slug": "detect",
+	"name": "Detect",
+	"names": {
+		"de": "Scanner",
+		"en": "Detect",
+		"es": "Detección",
+		"es-419": "Detección",
+		"fr": "Détection",
+		"it": "Individua",
+		"ja": "みきり",
+		"ja-hrkt": "みきり",
+		"ko": "판별",
+		"zh-hans": "看穿",
+		"zh-hant": "看穿"
+	},
+	"generation": 2,
+	"type": "Fighting",
+	"damageClass": "Status",
+	"power": null,
+	"accuracy": null,
+	"pp": 5,
+	"priority": 4,
+	"effectChance": null,
+	"target": "User",
+	"effectEntries": [
+		{
+			"language": "en",
+			"effect": "No moves will hit the user for the remainder of this turn. If the user is last to act this turn, this move will fail. If the user successfully used Detect, Endure, Protect, Quick Guard, or Wide Guard on the last turn, this move has a 50% chance to fail. Lock-On, Mind Reader, and No Guard provide a (100 – accuracy)% chance for moves to break through this move. This does not apply to one-hit KO moves (Fissure, Guillotine, Horn Drill, and Sheer Cold); those are always blocked by this move. Thunder during Rain Dance and Blizzard during Hail have a 30% chance to break through this move. The following effects are not prevented by this move: * Acupressure from an ally * Curse’s curse effect * Delayed damage from Doom Desire and Future Sight; however, these moves will be prevented if they are used this turn * Feint, which will also end this move’s protection after it hits * Imprison * Perish Song * Shadow Force * Moves that merely copy the user, such as Transform or Psych Up This move cannot be selected by Assist or Metronome.",
+			"shortEffect": "Prevents any moves from hitting the user this turn."
+		},
+		{
+			"language": "fr",
+			"effect": "Aucune capacité ne frappera le lanceur pour le reste de ce tour. Si le lanceur est le dernier à agir ce tour, cette capacité échouera. Si le lanceur a utilisé avec succès Détection, Ténacité, Abri, Prévention, ou Garde Large le dernier tour, cette capacité a 50% de chances d'échouer. Verrouillage, Lire-Esprit, et Annule Garde fournissent (100 – accuracy)% de chances que les capacités passent à travers cette capacité. Cela ne s'applique pas aux capacités OHKO (Abîme, Guillotine, Empal’Korne, et Glaciation); celles-ci sont toujours bloquées par cette capacité. Fatal-Foudre sous Danse Pluie et Blizzard sous Grêle ont 30% de chances de passer à travers cette capacité. Les effets suivants ne sont pas empêchés par cette capacité: * Acupression d'un allié * Effet maudit de Malédiction * Dégâts retardés de Vœu Destructeur et Prescience; cependant, ces capacités seront empêchées si elles sont utilisées ce tour * Ruse, qui terminera aussi la protection de cette capacité après qu'elle frappe * Possessif * Requiem * Revenant * Capacités qui copient simplement le lanceur, comme Morphing ou Boost Cette capacité ne peut pas être sélectionnée par Assistance ou Métronome.",
+			"shortEffect": "Empêche n'importe quelle capacité de frapper le lanceur ce tour."
+		}
+	],
+	"effectChanges": [],
+	"descriptions": [
+		{
+			"versionGroup": "black-2-white-2",
+			"language": "en",
+			"text": "It enables the user to evade all attacks. Its chance of failing rises if it is used in succession."
+		},
+		{
+			"versionGroup": "black-white",
+			"language": "en",
+			"text": "It enables the user to evade all attacks. Its chance of failing rises if it is used in succession."
+		},
+		{
+			"versionGroup": "black-white",
+			"language": "fr",
+			"text": "Le lanceur esquive toutes les attaques. Plus la capacité est utilisée de fois à la suite, plus elle risque d’échouer."
+		},
+		{
+			"versionGroup": "crystal",
+			"language": "en",
+			"text": "Evades attack that turn. It may fail."
+		},
+		{
+			"versionGroup": "diamond-pearl",
+			"language": "en",
+			"text": "It enables the user to evade all attacks. Its chance of failing rises if it is used in succession."
+		},
+		{
+			"versionGroup": "emerald",
+			"language": "en",
+			"text": "Evades attack, but may fail if used in succession."
+		},
+		{
+			"versionGroup": "firered-leafgreen",
+			"language": "en",
+			"text": "Enables the user to evade all attacks. It may fail if used in succession."
+		},
+		{
+			"versionGroup": "gold-silver",
+			"language": "en",
+			"text": "Evades attack that turn. It may fail."
+		},
+		{
+			"versionGroup": "heartgold-soulsilver",
+			"language": "en",
+			"text": "It enables the user to evade all attacks. Its chance of failing rises if it is used in succession."
+		},
+		{
+			"versionGroup": "legends-arceus",
+			"language": "en",
+			"text": "This move enables the user to protect itself from all attacks. Its chance of failing rises if it is used in succession."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "de",
+			"text": "Anwender wehrt jede Attacke ab. Scheitert eventuell bei Wiederholung."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "en",
+			"text": "Enables the user to evade all attacks. Its chance of failing rises if it is used in succession."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "es",
+			"text": "Frena todos los ataques, pero puede fallar si se usa repetidamente."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "es-419",
+			"text": "Frena todos los ataques, pero puede fallar si se usa repetidamente."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "fr",
+			"text": "Le lanceur esquive toutes les attaques. Le risque d’échec augmente lorsque la capacité est utilisée plusieurs fois de suite."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "it",
+			"text": "Permette di eludere tutti gli attacchi. Se usata in successione può fallire."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "ja",
+			"text": "相手の 攻撃を まったく 受けない。 連続で だすと 失敗しやすい。"
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "ja-hrkt",
+			"text": "あいての こうげきを まったく うけない。 れんぞくで だすと しっぱい しやすい。"
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "ko",
+			"text": "상대의 공격을 전혀 받지 않는다. 연속으로 쓰면 실패하기 쉽다."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "zh-hans",
+			"text": "完全抵挡 对手的攻击。 连续使出则容易失败。"
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "zh-hant",
+			"text": "完全防住對手的所有攻擊。 連續使用時容易失敗。"
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "de",
+			"text": "Anwender weicht jeder Attacke aus. Scheitert eventuell bei Wiederholung."
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "en",
+			"text": "Enables the user to evade all attacks. Its chance of failing rises if it is used in succession."
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "es",
+			"text": "Frena todos los ataques, pero puede fallar si se usa repetidamente."
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "es-419",
+			"text": "Frena todos los ataques, pero puede fallar si se usa repetidamente."
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "fr",
+			"text": "Le lanceur esquive toutes les attaques. Le risque d’échec augmente lorsque la capacité est utilisée plusieurs fois de suite."
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "it",
+			"text": "Permette di eludere tutti gli attacchi. Se usata in successione può fallire."
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "ja",
+			"text": "相手の 攻撃を まったく 受けない。 連続で だすと 失敗しやすい。"
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "ja-hrkt",
+			"text": "あいての こうげきを まったく うけない。 れんぞくで だすと しっぱい しやすい。"
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "ko",
+			"text": "상대의 공격을 전혀 받지 않는다. 연속으로 쓰면 실패하기 쉽다."
+		},
+		{
+			"versionGroup": "platinum",
+			"language": "en",
+			"text": "It enables the user to evade all attacks. Its chance of failing rises if it is used in succession."
+		},
+		{
+			"versionGroup": "ruby-sapphire",
+			"language": "en",
+			"text": "Evades attack, but may fail if used in succession."
+		},
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "en",
+			"text": "This move enables the user to protect itself from all attacks. Its chance of failing rises if it is used in succession."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "de",
+			"text": "Anwender weicht jeder Attacke aus. Scheitert eventuell bei Wiederholung."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "en",
+			"text": "Enables the user to evade all attacks. Its chance of failing rises if it is used in succession."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "es",
+			"text": "Frena todos los ataques, pero puede fallar si se usa repetidamente."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "es-419",
+			"text": "Frena todos los ataques, pero puede fallar si se usa repetidamente."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "fr",
+			"text": "Le lanceur esquive toutes les attaques. Le risque d’échec augmente lorsque la capacité est utilisée plusieurs fois de suite."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "it",
+			"text": "Permette di eludere tutti gli attacchi. Se usata in successione può fallire."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "ja",
+			"text": "相手の 攻撃を まったく 受けない。 連続で だすと 失敗しやすい。"
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "ja-hrkt",
+			"text": "あいての こうげきを まったく うけない。 れんぞくで だすと しっぱい しやすい。"
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "ko",
+			"text": "상대의 공격을 전혀 받지 않는다. 연속으로 쓰면 실패하기 쉽다."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "zh-hans",
+			"text": "完全抵挡 对手的攻击。 连续使出则容易失败。"
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "zh-hant",
+			"text": "完全防住對手的所有攻擊。 連續使用時容易失敗。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "de",
+			"text": "Anwender wehrt jede Attacke ab. Scheitert eventuell bei Wiederholung."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "en",
+			"text": "This move enables the user to protect itself from all attacks. Its chance of failing rises if it is used in succession."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es",
+			"text": "Frena todos los ataques, pero puede fallar si se usa repetidamente."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es-419",
+			"text": "Frena todos los ataques, pero puede fallar si se usa repetidamente."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "fr",
+			"text": "Le lanceur se protège de toutes les attaques. Peut échouer si utilisée plusieurs fois de suite."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "it",
+			"text": "Permette di eludere tutti gli attacchi. Se usata in successione può fallire."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja",
+			"text": "相手の 攻撃を まったく 受けない。 連続で だすと 失敗しやすい。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja-hrkt",
+			"text": "あいての こうげきを まったく うけない。 れんぞくで だすと しっぱい しやすい。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ko",
+			"text": "상대의 공격을 전혀 받지 않는다. 연속으로 쓰면 실패하기 쉽다."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hans",
+			"text": "完全抵挡 对手的攻击。 连续使出则容易失败。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hant",
+			"text": "完全防住對手的所有攻擊。 連續使用時容易失敗。"
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "de",
+			"text": "Anwender weicht jeder Attacke aus. Scheitert eventuell bei Wiederholung."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "en",
+			"text": "Enables the user to evade all attacks. Its chance of failing rises if it is used in succession."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "es",
+			"text": "Frena todos los ataques, pero puede fallar si se usa repetidamente."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "es-419",
+			"text": "Frena todos los ataques, pero puede fallar si se usa repetidamente."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "fr",
+			"text": "Le lanceur esquive toutes les attaques. Le risque d’échec augmente lorsque la capacité est utilisée plusieurs fois de suite."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "it",
+			"text": "Permette di eludere tutti gli attacchi. Se usata in successione può fallire."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "ja",
+			"text": "相手の 攻撃を まったく 受けない。 連続で だすと 失敗しやすい。"
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "ja-hrkt",
+			"text": "あいての こうげきを まったく うけない。 れんぞくで だすと しっぱい しやすい。"
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "ko",
+			"text": "상대의 공격을 전혀 받지 않는다. 연속으로 쓰면 실패하기 쉽다."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "zh-hans",
+			"text": "完全抵挡 对手的攻击。 连续使出则容易失败。"
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "zh-hant",
+			"text": "完全防住對手的所有攻擊。 連續使用時容易失敗。"
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "de",
+			"text": "Anwender weicht jeder Attacke aus. Scheitert eventuell bei Wiederholung."
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "en",
+			"text": "Enables the user to evade all attacks. Its chance of failing rises if it is used in succession."
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "es",
+			"text": "Frena todos los ataques, pero puede fallar si se usa repetidamente."
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "es-419",
+			"text": "Frena todos los ataques, pero puede fallar si se usa repetidamente."
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "fr",
+			"text": "Le lanceur esquive toutes les attaques. Le risque d’échec augmente lorsque la capacité est utilisée plusieurs fois de suite."
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "it",
+			"text": "Permette di eludere tutti gli attacchi. Se usata in successione può fallire."
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "ja",
+			"text": "相手の 攻撃を まったく 受けない。 連続で だすと 失敗しやすい。"
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "ja-hrkt",
+			"text": "あいての こうげきを まったく うけない。 れんぞくで だすと しっぱい しやすい。"
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "ko",
+			"text": "상대의 공격을 전혀 받지 않는다. 연속으로 쓰면 실패하기 쉽다."
+		}
+	],
+	"pastValues": [],
+	"statChanges": [],
+	"meta": {
+		"ailment": "Protect",
+		"category": "Unique",
+		"minHits": null,
+		"maxHits": null,
+		"minTurns": null,
+		"maxTurns": null,
+		"drain": 0,
+		"healing": 0,
+		"critRate": 0,
+		"ailmentChance": 0,
+		"flinchChance": 0,
+		"statChance": 0
+	},
+	"machines": [
+		{
+			"versionGroup": "crystal",
+			"kind": "TM",
+			"number": 43,
+			"item": "tm43"
+		},
+		{
+			"versionGroup": "gold-silver",
+			"kind": "TM",
+			"number": 43,
+			"item": "tm43"
+		}
+	],
+	"learners": [
+		{
+			"nationalDexId": 16,
+			"speciesName": "Pidgey",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 17,
+			"speciesName": "Pidgeotto",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 21,
+			"speciesName": "Spearow",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 22,
+			"speciesName": "Fearow",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 29,
+			"speciesName": "Nidoran♀",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 30,
+			"speciesName": "Nidorina",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 31,
+			"speciesName": "Nidoqueen",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 32,
+			"speciesName": "Nidoran♂",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 33,
+			"speciesName": "Nidorino",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 34,
+			"speciesName": "Nidoking",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 35,
+			"speciesName": "Clefairy",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 39,
+			"speciesName": "Jigglypuff",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 40,
+			"speciesName": "Wigglytuff",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 56,
+			"speciesName": "Mankey",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 57,
+			"speciesName": "Primeape",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 61,
+			"speciesName": "Poliwhirl",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 62,
+			"speciesName": "Poliwrath",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 66,
+			"speciesName": "Machop",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 67,
+			"speciesName": "Machoke",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 83,
+			"speciesName": "Farfetch'd",
+			"formKey": "galarian",
+			"formName": "Galarian",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 25,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 104,
+			"speciesName": "Cubone",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "heartgold-soulsilver",
+					"gameLabel": "HeartGold / SoulSilver",
+					"versionGroup": "heartgold-soulsilver",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 106,
+			"speciesName": "Hitmonlee",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 107,
+			"speciesName": "Hitmonchan",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 51,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 51,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 12,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 44,
+							"order": null
+						},
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "diamond-pearl",
+					"gameLabel": "Diamond / Pearl",
+					"versionGroup": "diamond-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 46,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "emerald",
+					"gameLabel": "Emerald",
+					"versionGroup": "emerald",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 44,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "firered-leafgreen",
+					"gameLabel": "FireRed / LeafGreen",
+					"versionGroup": "firered-leafgreen",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 44,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 44,
+							"order": null
+						},
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "heartgold-soulsilver",
+					"gameLabel": "HeartGold / SoulSilver",
+					"versionGroup": "heartgold-soulsilver",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 46,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 50,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "platinum",
+					"gameLabel": "Platinum",
+					"versionGroup": "platinum",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 46,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ruby-sapphire",
+					"gameLabel": "Ruby / Sapphire",
+					"versionGroup": "ruby-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 44,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 12,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 50,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 12,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 50,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 50,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 125,
+			"speciesName": "Electabuzz",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 126,
+			"speciesName": "Magmar",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 133,
+			"speciesName": "Eevee",
+			"formKey": "female",
+			"formName": "Female",
+			"games": [
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 133,
+			"speciesName": "Eevee",
+			"formKey": "male",
+			"formName": "Male",
+			"games": [
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 134,
+			"speciesName": "Vaporeon",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 135,
+			"speciesName": "Jolteon",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 136,
+			"speciesName": "Flareon",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 145,
+			"speciesName": "Zapdos",
+			"formKey": "galarian",
+			"formName": "Galarian",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 60,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 60,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 145,
+			"speciesName": "Zapdos",
+			"formKey": "kantonian",
+			"formName": "Kantonian",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 60,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 60,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 147,
+			"speciesName": "Dratini",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 148,
+			"speciesName": "Dragonair",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 151,
+			"speciesName": "Mew",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 152,
+			"speciesName": "Chikorita",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 153,
+			"speciesName": "Bayleef",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 155,
+			"speciesName": "Cyndaquil",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 156,
+			"speciesName": "Quilava",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 158,
+			"speciesName": "Totodile",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 159,
+			"speciesName": "Croconaw",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 161,
+			"speciesName": "Sentret",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 162,
+			"speciesName": "Furret",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 163,
+			"speciesName": "Hoothoot",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 164,
+			"speciesName": "Noctowl",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 169,
+			"speciesName": "Crobat",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 173,
+			"speciesName": "Cleffa",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 174,
+			"speciesName": "Igglybuff",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 175,
+			"speciesName": "Togepi",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 176,
+			"speciesName": "Togetic",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 177,
+			"speciesName": "Natu",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 193,
+			"speciesName": "Yanma",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 17,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 17,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 17,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 25,
+							"order": null
+						},
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "diamond-pearl",
+					"gameLabel": "Diamond / Pearl",
+					"versionGroup": "diamond-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 17,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "emerald",
+					"gameLabel": "Emerald",
+					"versionGroup": "emerald",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 25,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "firered-leafgreen",
+					"gameLabel": "FireRed / LeafGreen",
+					"versionGroup": "firered-leafgreen",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 28,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						},
+						{
+							"method": "Level Up",
+							"level": 25,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "heartgold-soulsilver",
+					"gameLabel": "HeartGold / SoulSilver",
+					"versionGroup": "heartgold-soulsilver",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 17,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 17,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "platinum",
+					"gameLabel": "Platinum",
+					"versionGroup": "platinum",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 17,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ruby-sapphire",
+					"gameLabel": "Ruby / Sapphire",
+					"versionGroup": "ruby-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 25,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 17,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 17,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 17,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 17,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 196,
+			"speciesName": "Espeon",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 197,
+			"speciesName": "Umbreon",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 209,
+			"speciesName": "Snubbull",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 210,
+			"speciesName": "Granbull",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 220,
+			"speciesName": "Swinub",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 225,
+			"speciesName": "Delibird",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 228,
+			"speciesName": "Houndour",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 234,
+			"speciesName": "Stantler",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 236,
+			"speciesName": "Tyrogue",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 237,
+			"speciesName": "Hitmontop",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 51,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 51,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 12,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 43,
+							"order": null
+						},
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "diamond-pearl",
+					"gameLabel": "Diamond / Pearl",
+					"versionGroup": "diamond-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 46,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "emerald",
+					"gameLabel": "Emerald",
+					"versionGroup": "emerald",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 43,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "firered-leafgreen",
+					"gameLabel": "FireRed / LeafGreen",
+					"versionGroup": "firered-leafgreen",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 43,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 43,
+							"order": null
+						},
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "heartgold-soulsilver",
+					"gameLabel": "HeartGold / SoulSilver",
+					"versionGroup": "heartgold-soulsilver",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 46,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 50,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "platinum",
+					"gameLabel": "Platinum",
+					"versionGroup": "platinum",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 46,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ruby-sapphire",
+					"gameLabel": "Ruby / Sapphire",
+					"versionGroup": "ruby-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 43,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 12,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"method": "Level Up",
+							"level": 50,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 12,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"method": "Level Up",
+							"level": 50,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 50,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 239,
+			"speciesName": "Elekid",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 240,
+			"speciesName": "Magby",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 243,
+			"speciesName": "Raikou",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 244,
+			"speciesName": "Entei",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 245,
+			"speciesName": "Suicune",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 246,
+			"speciesName": "Larvitar",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 247,
+			"speciesName": "Pupitar",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 249,
+			"speciesName": "Lugia",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 250,
+			"speciesName": "Ho-oh",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 251,
+			"speciesName": "Celebi",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "crystal",
+					"gameLabel": "Crystal",
+					"versionGroup": "crystal",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "gold-silver",
+					"gameLabel": "Gold / Silver",
+					"versionGroup": "gold-silver",
+					"methods": [
+						{
+							"method": "Machine",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 252,
+			"speciesName": "Treecko",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 41,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 41,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 12,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "diamond-pearl",
+					"gameLabel": "Diamond / Pearl",
+					"versionGroup": "diamond-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 41,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "emerald",
+					"gameLabel": "Emerald",
+					"versionGroup": "emerald",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 41,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "firered-leafgreen",
+					"gameLabel": "FireRed / LeafGreen",
+					"versionGroup": "firered-leafgreen",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 41,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "heartgold-soulsilver",
+					"gameLabel": "HeartGold / SoulSilver",
+					"versionGroup": "heartgold-soulsilver",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 41,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 33,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "platinum",
+					"gameLabel": "Platinum",
+					"versionGroup": "platinum",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 41,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ruby-sapphire",
+					"gameLabel": "Ruby / Sapphire",
+					"versionGroup": "ruby-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 41,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 12,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 33,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 12,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 33,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 41,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 253,
+			"speciesName": "Grovyle",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 47,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 47,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 12,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "diamond-pearl",
+					"gameLabel": "Diamond / Pearl",
+					"versionGroup": "diamond-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 47,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "emerald",
+					"gameLabel": "Emerald",
+					"versionGroup": "emerald",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 47,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "firered-leafgreen",
+					"gameLabel": "FireRed / LeafGreen",
+					"versionGroup": "firered-leafgreen",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 47,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "heartgold-soulsilver",
+					"gameLabel": "HeartGold / SoulSilver",
+					"versionGroup": "heartgold-soulsilver",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 47,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 38,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "platinum",
+					"gameLabel": "Platinum",
+					"versionGroup": "platinum",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 47,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ruby-sapphire",
+					"gameLabel": "Ruby / Sapphire",
+					"versionGroup": "ruby-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 47,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 12,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 38,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 12,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 38,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 47,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 254,
+			"speciesName": "Sceptile",
+			"formKey": "mega",
+			"formName": "Mega",
+			"games": [
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 39,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 39,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 39,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 254,
+			"speciesName": "Sceptile",
+			"formKey": "normal",
+			"formName": "Normal",
+			"games": [
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 39,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 39,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 39,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 255,
+			"speciesName": "Torchic",
+			"formKey": "female",
+			"formName": "Female",
+			"games": [
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 12,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 12,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 255,
+			"speciesName": "Torchic",
+			"formKey": "male",
+			"formName": "Male",
+			"games": [
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 12,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 12,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 256,
+			"speciesName": "Combusken",
+			"formKey": "female",
+			"formName": "Female",
+			"games": [
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 12,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 12,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 256,
+			"speciesName": "Combusken",
+			"formKey": "male",
+			"formName": "Male",
+			"games": [
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 12,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 12,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 257,
+			"speciesName": "Blaziken",
+			"formKey": "female",
+			"formName": "Female",
+			"games": [
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 12,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 12,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 257,
+			"speciesName": "Blaziken",
+			"formKey": "male",
+			"formName": "Male",
+			"games": [
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 12,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 12,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 296,
+			"speciesName": "Makuhita",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 28,
+							"order": null
+						},
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "diamond-pearl",
+					"gameLabel": "Diamond / Pearl",
+					"versionGroup": "diamond-pearl",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "emerald",
+					"gameLabel": "Emerald",
+					"versionGroup": "emerald",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "firered-leafgreen",
+					"gameLabel": "FireRed / LeafGreen",
+					"versionGroup": "firered-leafgreen",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "heartgold-soulsilver",
+					"gameLabel": "HeartGold / SoulSilver",
+					"versionGroup": "heartgold-soulsilver",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "platinum",
+					"gameLabel": "Platinum",
+					"versionGroup": "platinum",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ruby-sapphire",
+					"gameLabel": "Ruby / Sapphire",
+					"versionGroup": "ruby-sapphire",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 28,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 297,
+			"speciesName": "Hariyama",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 30,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 30,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 302,
+			"speciesName": "Sableye",
+			"formKey": "mega",
+			"formName": "Mega",
+			"games": [
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 14,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 14,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 14,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 302,
+			"speciesName": "Sableye",
+			"formKey": "normal",
+			"formName": "Normal",
+			"games": [
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 14,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 14,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 14,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 307,
+			"speciesName": "Meditite",
+			"formKey": "female",
+			"formName": "Female",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 11,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 11,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 9,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "diamond-pearl",
+					"gameLabel": "Diamond / Pearl",
+					"versionGroup": "diamond-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 11,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "heartgold-soulsilver",
+					"gameLabel": "HeartGold / SoulSilver",
+					"versionGroup": "heartgold-soulsilver",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 11,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 9,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "platinum",
+					"gameLabel": "Platinum",
+					"versionGroup": "platinum",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 11,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 9,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 9,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 9,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 11,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 307,
+			"speciesName": "Meditite",
+			"formKey": "male",
+			"formName": "Male",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 11,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 11,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 9,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "diamond-pearl",
+					"gameLabel": "Diamond / Pearl",
+					"versionGroup": "diamond-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 11,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "heartgold-soulsilver",
+					"gameLabel": "HeartGold / SoulSilver",
+					"versionGroup": "heartgold-soulsilver",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 11,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 9,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "platinum",
+					"gameLabel": "Platinum",
+					"versionGroup": "platinum",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 11,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 9,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 9,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 9,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 11,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 308,
+			"speciesName": "Medicham",
+			"formKey": "female",
+			"formName": "Female",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 7
+						},
+						{
+							"method": "Level Up",
+							"level": 11,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 7
+						},
+						{
+							"method": "Level Up",
+							"level": 11,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"method": "Level Up",
+							"level": 9,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "diamond-pearl",
+					"gameLabel": "Diamond / Pearl",
+					"versionGroup": "diamond-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 7
+						},
+						{
+							"method": "Level Up",
+							"level": 11,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "heartgold-soulsilver",
+					"gameLabel": "HeartGold / SoulSilver",
+					"versionGroup": "heartgold-soulsilver",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 7
+						},
+						{
+							"method": "Level Up",
+							"level": 11,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 8
+						},
+						{
+							"method": "Level Up",
+							"level": 9,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "platinum",
+					"gameLabel": "Platinum",
+					"versionGroup": "platinum",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 7
+						},
+						{
+							"method": "Level Up",
+							"level": 11,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 5
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 8
+						},
+						{
+							"method": "Level Up",
+							"level": 9,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 8
+						},
+						{
+							"method": "Level Up",
+							"level": 9,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 8
+						},
+						{
+							"method": "Level Up",
+							"level": 11,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 308,
+			"speciesName": "Medicham",
+			"formKey": "male",
+			"formName": "Male",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 7
+						},
+						{
+							"method": "Level Up",
+							"level": 11,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 7
+						},
+						{
+							"method": "Level Up",
+							"level": 11,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"method": "Level Up",
+							"level": 9,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "diamond-pearl",
+					"gameLabel": "Diamond / Pearl",
+					"versionGroup": "diamond-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 7
+						},
+						{
+							"method": "Level Up",
+							"level": 11,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "heartgold-soulsilver",
+					"gameLabel": "HeartGold / SoulSilver",
+					"versionGroup": "heartgold-soulsilver",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 7
+						},
+						{
+							"method": "Level Up",
+							"level": 11,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 8
+						},
+						{
+							"method": "Level Up",
+							"level": 9,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "platinum",
+					"gameLabel": "Platinum",
+					"versionGroup": "platinum",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 7
+						},
+						{
+							"method": "Level Up",
+							"level": 11,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 5
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 8
+						},
+						{
+							"method": "Level Up",
+							"level": 9,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 8
+						},
+						{
+							"method": "Level Up",
+							"level": 9,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 8
+						},
+						{
+							"method": "Level Up",
+							"level": 11,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 308,
+			"speciesName": "Medicham",
+			"formKey": "mega",
+			"formName": "Mega",
+			"games": [
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 8
+						},
+						{
+							"method": "Level Up",
+							"level": 9,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 8
+						},
+						{
+							"method": "Level Up",
+							"level": 9,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 8
+						},
+						{
+							"method": "Level Up",
+							"level": 9,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 8
+						},
+						{
+							"method": "Level Up",
+							"level": 11,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 335,
+			"speciesName": "Zangoose",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 33,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 40,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 36,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "diamond-pearl",
+					"gameLabel": "Diamond / Pearl",
+					"versionGroup": "diamond-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 40,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "emerald",
+					"gameLabel": "Emerald",
+					"versionGroup": "emerald",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 46,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "firered-leafgreen",
+					"gameLabel": "FireRed / LeafGreen",
+					"versionGroup": "firered-leafgreen",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 46,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "heartgold-soulsilver",
+					"gameLabel": "HeartGold / SoulSilver",
+					"versionGroup": "heartgold-soulsilver",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 40,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 36,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "platinum",
+					"gameLabel": "Platinum",
+					"versionGroup": "platinum",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 40,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ruby-sapphire",
+					"gameLabel": "Ruby / Sapphire",
+					"versionGroup": "ruby-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 46,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 36,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 36,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 36,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 33,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 352,
+			"speciesName": "Kecleon",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 30,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 359,
+			"speciesName": "Absol",
+			"formKey": "mega",
+			"formName": "Mega",
+			"games": [
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 33,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 33,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 33,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"method": "Level Up",
+							"level": 44,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 359,
+			"speciesName": "Absol",
+			"formKey": "normal",
+			"formName": "Normal",
+			"games": [
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 33,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 33,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 33,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"method": "Level Up",
+							"level": 44,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 396,
+			"speciesName": "Starly",
+			"formKey": "female",
+			"formName": "Female",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 396,
+			"speciesName": "Starly",
+			"formKey": "male",
+			"formName": "Male",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 447,
+			"speciesName": "Riolu",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "diamond-pearl",
+					"gameLabel": "Diamond / Pearl",
+					"versionGroup": "diamond-pearl",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "heartgold-soulsilver",
+					"gameLabel": "HeartGold / SoulSilver",
+					"versionGroup": "heartgold-soulsilver",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "platinum",
+					"gameLabel": "Platinum",
+					"versionGroup": "platinum",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 448,
+			"speciesName": "Lucario",
+			"formKey": "mega",
+			"formName": "Mega",
+			"games": [
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 7
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 5
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 5
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 7
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 448,
+			"speciesName": "Lucario",
+			"formKey": "normal",
+			"formName": "Normal",
+			"games": [
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 7
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 5
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 5
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 7
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 469,
+			"speciesName": "Yanmega",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 17,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 17,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 17,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "diamond-pearl",
+					"gameLabel": "Diamond / Pearl",
+					"versionGroup": "diamond-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 17,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "heartgold-soulsilver",
+					"gameLabel": "HeartGold / SoulSilver",
+					"versionGroup": "heartgold-soulsilver",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 17,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 17,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "platinum",
+					"gameLabel": "Platinum",
+					"versionGroup": "platinum",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 17,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 17,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 17,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 17,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 17,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 482,
+			"speciesName": "Azelf",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 16,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 16,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 14,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "diamond-pearl",
+					"gameLabel": "Diamond / Pearl",
+					"versionGroup": "diamond-pearl",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 16,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "heartgold-soulsilver",
+					"gameLabel": "HeartGold / SoulSilver",
+					"versionGroup": "heartgold-soulsilver",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 16,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 16,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "platinum",
+					"gameLabel": "Platinum",
+					"versionGroup": "platinum",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 16,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 14,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 16,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 14,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 16,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 16,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 501,
+			"speciesName": "Oshawott",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 502,
+			"speciesName": "Dewott",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 503,
+			"speciesName": "Samurott",
+			"formKey": "unovian",
+			"formName": "Unovian",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 504,
+			"speciesName": "Patrat",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 11,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 11,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 11,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 11,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 11,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 11,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 505,
+			"speciesName": "Watchog",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 11,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 11,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 11,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 11,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 11,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 11,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 519,
+			"speciesName": "Pidove",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 22,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 22,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 22,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 22,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 28,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 22,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 22,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 520,
+			"speciesName": "Tranquill",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 23,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 23,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 23,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 23,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 34,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 23,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 23,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 521,
+			"speciesName": "Unfezant",
+			"formKey": "female",
+			"formName": "Female",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 23,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 23,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 23,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 23,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 36,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 23,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 23,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 521,
+			"speciesName": "Unfezant",
+			"formKey": "male",
+			"formName": "Male",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 23,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 23,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 23,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 23,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 36,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 23,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 23,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 532,
+			"speciesName": "Timburr",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 533,
+			"speciesName": "Gurdurr",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 534,
+			"speciesName": "Conkeldurr",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 559,
+			"speciesName": "Scraggy",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 570,
+			"speciesName": "Zorua",
+			"formKey": "hisuian",
+			"formName": "Hisuian",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 570,
+			"speciesName": "Zorua",
+			"formKey": "unovian",
+			"formName": "Unovian",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 619,
+			"speciesName": "Mienfoo",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 9,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 9,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 9,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 2
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 9,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 2
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 9,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 9,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 620,
+			"speciesName": "Mienshao",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "black-2-white-2",
+					"gameLabel": "Black 2 / White 2",
+					"versionGroup": "black-2-white-2",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"method": "Level Up",
+							"level": 9,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "black-white",
+					"gameLabel": "Black / White",
+					"versionGroup": "black-white",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"method": "Level Up",
+							"level": 9,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 5
+						},
+						{
+							"method": "Level Up",
+							"level": 9,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 3
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 5
+						},
+						{
+							"method": "Level Up",
+							"level": 9,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 3
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 5
+						},
+						{
+							"method": "Level Up",
+							"level": 9,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 5
+						},
+						{
+							"method": "Level Up",
+							"level": 9,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 798,
+			"speciesName": "Kartana",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 53,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 30,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 53,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 852,
+			"speciesName": "Clobbopus",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 15,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 853,
+			"speciesName": "Grapploct",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 15,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 865,
+			"speciesName": "Sirfetch'd",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 25,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 891,
+			"speciesName": "Kubfu",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 28,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 28,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 892,
+			"speciesName": "Urshifu",
+			"formKey": "rapid-strike-style",
+			"formName": "Rapid Strike Style",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 28,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 28,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 892,
+			"speciesName": "Urshifu",
+			"formKey": "single-strike-style",
+			"formName": "Single Strike Style",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 28,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 28,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 912,
+			"speciesName": "Quaxly",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 920,
+			"speciesName": "Lokix",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 4
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 973,
+			"speciesName": "Flamigo",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 9,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 992,
+			"speciesName": "Iron Hands",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 70,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		}
+	],
+	"potentialPokemon": [
+		"pidgey",
+		"pidgeotto",
+		"pidgeot",
+		"spearow",
+		"fearow",
+		"pikachu",
+		"raichu",
+		"sandshrew",
+		"sandslash",
+		"nidoran-f",
+		"nidorina",
+		"nidoqueen",
+		"nidoran-m",
+		"nidorino",
+		"nidoking",
+		"clefairy",
+		"clefable",
+		"jigglypuff",
+		"wigglytuff",
+		"zubat",
+		"golbat",
+		"meowth",
+		"persian",
+		"mankey",
+		"primeape",
+		"poliwhirl",
+		"poliwrath",
+		"machop",
+		"machoke",
+		"machamp",
+		"farfetchd",
+		"cubone",
+		"marowak",
+		"hitmonlee",
+		"hitmonchan",
+		"scyther",
+		"electabuzz",
+		"magmar",
+		"pinsir",
+		"eevee",
+		"vaporeon",
+		"jolteon",
+		"flareon",
+		"aerodactyl",
+		"articuno",
+		"zapdos",
+		"moltres",
+		"dratini",
+		"dragonair",
+		"dragonite",
+		"mewtwo",
+		"mew",
+		"chikorita",
+		"bayleef",
+		"meganium",
+		"cyndaquil",
+		"quilava",
+		"typhlosion",
+		"totodile",
+		"croconaw",
+		"feraligatr",
+		"sentret",
+		"furret",
+		"hoothoot",
+		"noctowl",
+		"crobat",
+		"pichu",
+		"cleffa",
+		"igglybuff",
+		"togepi",
+		"togetic",
+		"natu",
+		"xatu",
+		"politoed",
+		"aipom",
+		"yanma",
+		"espeon",
+		"umbreon",
+		"murkrow",
+		"gligar",
+		"snubbull",
+		"granbull",
+		"scizor",
+		"heracross",
+		"sneasel",
+		"swinub",
+		"piloswine",
+		"delibird",
+		"skarmory",
+		"houndour",
+		"houndoom",
+		"stantler",
+		"tyrogue",
+		"hitmontop",
+		"elekid",
+		"magby",
+		"raikou",
+		"entei",
+		"suicune",
+		"larvitar",
+		"pupitar",
+		"tyranitar",
+		"lugia",
+		"ho-oh",
+		"celebi",
+		"treecko",
+		"grovyle",
+		"sceptile",
+		"torchic",
+		"combusken",
+		"blaziken",
+		"makuhita",
+		"hariyama",
+		"sableye",
+		"meditite",
+		"medicham",
+		"zangoose",
+		"kecleon",
+		"absol",
+		"starly",
+		"riolu",
+		"lucario",
+		"yanmega",
+		"leafeon",
+		"glaceon",
+		"azelf",
+		"oshawott",
+		"dewott",
+		"samurott",
+		"patrat",
+		"watchog",
+		"pidove",
+		"tranquill",
+		"unfezant",
+		"timburr",
+		"gurdurr",
+		"conkeldurr",
+		"scraggy",
+		"scrafty",
+		"zorua",
+		"zoroark",
+		"mienfoo",
+		"mienshao",
+		"pangoro",
+		"sylveon",
+		"hawlucha",
+		"kartana",
+		"clobbopus",
+		"grapploct",
+		"sirfetchd",
+		"kubfu",
+		"urshifu-single-strike",
+		"quaxly",
+		"quaquaval",
+		"lokix",
+		"flamigo",
+		"iron-hands",
+		"pinsir-mega",
+		"heracross-mega",
+		"blaziken-mega",
+		"medicham-mega",
+		"absol-mega",
+		"lucario-mega",
+		"sceptile-mega",
+		"sableye-mega",
+		"farfetchd-galar",
+		"zapdos-galar",
+		"urshifu-rapid-strike",
+		"samurott-hisui",
+		"zorua-hisui",
+		"zoroark-hisui",
+		"scrafty-mega",
+		"hawlucha-mega"
+	],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/move/197/",
+		"fetchedAt": "2026-11-03T06:30:15.303Z",
+		"hash": "d45ce144a36bd1553682a0283c6861245affe4b18f59810587f2ad95605ccb10"
+	}
+}

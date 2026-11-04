@@ -1,0 +1,90 @@
+{
+	"schemaVersion": 1,
+	"id": 868,
+	"slug": "fillet-away",
+	"name": "Fillet Away",
+	"names": {
+		"de": "Abspaltung",
+		"en": "Fillet Away",
+		"es": "Deslome",
+		"es-419": "Fileteo",
+		"fr": "Décharnement",
+		"it": "Alleggerimento",
+		"ja": "みをけずる",
+		"ja-hrkt": "みをけずる",
+		"ko": "제살깎기",
+		"zh-hans": "甩肉",
+		"zh-hant": "甩肉"
+	},
+	"generation": 9,
+	"type": "Normal",
+	"damageClass": "Status",
+	"power": 0,
+	"accuracy": null,
+	"pp": 10,
+	"priority": 0,
+	"effectChance": null,
+	"target": "User",
+	"effectEntries": [],
+	"effectChanges": [],
+	"descriptions": [
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "en",
+			"text": "The user sharply boosts its Attack, Sp. Atk, and Speed stats by using its own HP."
+		},
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "fr",
+			"text": "Le lanceur sacrifie des PV pour beaucoup augmenter son Attaque, son Attaque Spéciale, et sa Vitesse."
+		}
+	],
+	"pastValues": [],
+	"statChanges": [
+		{
+			"stat": "Attack",
+			"change": 2
+		},
+		{
+			"stat": "Special Attack",
+			"change": 2
+		},
+		{
+			"stat": "Speed",
+			"change": 2
+		}
+	],
+	"meta": null,
+	"machines": [],
+	"learners": [
+		{
+			"nationalDexId": 976,
+			"speciesName": "Veluza",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 30,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		}
+	],
+	"potentialPokemon": [
+		"veluza"
+	],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/move/868/",
+		"fetchedAt": "2026-11-03T06:30:18.993Z",
+		"hash": "65b942c7beb39ed2f116e9af9df0db5bd8f24d5c73bc258f0f1299159fa693b9"
+	}
+}

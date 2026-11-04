@@ -1,0 +1,1836 @@
+{
+	"schemaVersion": 2,
+	"nationalDexId": 835,
+	"speciesName": "Yamper",
+	"formKey": "base",
+	"formName": "Base",
+	"formLabelSource": "form-catalog",
+	"profiles": [
+		{
+			"profileKey": "sword-shield",
+			"label": "Sword / Shield",
+			"appGameKeys": [
+				"sword",
+				"shield"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Yamper",
+				"localizedNames": {
+					"ja-hrkt": "ワンパチ",
+					"ja-roma": "Wanpachi",
+					"ko": "멍파치",
+					"zh-hant": "來電汪",
+					"fr": "Voltoutou",
+					"de": "Voldi",
+					"es": "Yamper",
+					"it": "Yamper",
+					"ja": "ワンパチ",
+					"zh-hans": "来电汪",
+					"es-419": "Yamper"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric"
+				],
+				"baseStats": {
+					"hp": 59,
+					"atk": 45,
+					"def": 50,
+					"spa": 40,
+					"spd": 50,
+					"spe": 26
+				},
+				"evYield": {
+					"hp": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Ball Fetch",
+					"Rattled (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Rattled"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Fast",
+				"hatchCounter": 20,
+				"height": "0.3 m",
+				"weight": "13.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 255,
+				"baseExperience": 54,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Yellow",
+				"genus": "Puppy Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こいぬポケモン",
+					"ko": "강아지포켓몬",
+					"zh-hant": "小狗寶可夢",
+					"fr": "Pokémon Chiot",
+					"de": "Welpen-Pokémon",
+					"es": "Pokémon Perrito",
+					"it": "Pokémon Cagnolino",
+					"ja": "こいぬポケモン",
+					"zh-hans": "小狗宝可梦",
+					"es-419": "Pokémon Perrito"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 835
+					},
+					{
+						"pokedex": "galar",
+						"number": 46
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 155
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 835,
+								"natiId": 835,
+								"name": "Yamper"
+							},
+							{
+								"id": 836,
+								"natiId": 836,
+								"name": "Boltund",
+								"method": "Level",
+								"value": 25
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Galar Route 2 Main",
+						"notes": "Static, Lv. 8",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Galar Route 2 Main",
+						"notes": "Overworld, Lv. 5-7",
+						"games": "Sword",
+						"rate": "5%"
+					},
+					{
+						"area": "Galar Route 2 Main",
+						"notes": "Static, Lv. 8",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Galar Route 2 Main",
+						"notes": "Overworld, Lv. 5-7",
+						"games": "Shield",
+						"rate": "5%"
+					},
+					{
+						"area": "Galar Route 4 Area",
+						"notes": "Overworld, Lv. 14-16",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Galar Route 4 Area",
+						"notes": "Overworld, Lv. 14-16",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Giants Mirror Main",
+						"notes": "Overworld, Lv. 28-30",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Giants Mirror Main",
+						"notes": "Overworld, Lv. 60",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Giants Mirror Main",
+						"notes": "Overworld, Lv. 28-30",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Giants Mirror Main",
+						"notes": "Overworld, Lv. 60",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Motostoke Riverbank Area",
+						"notes": "Overworld, Lv. 26-28",
+						"games": "Sword",
+						"rate": "40%"
+					},
+					{
+						"area": "Motostoke Riverbank Area",
+						"notes": "Overworld, Lv. 60",
+						"games": "Sword",
+						"rate": "40%"
+					},
+					{
+						"area": "Motostoke Riverbank Area",
+						"notes": "Overworld, Lv. 28-30",
+						"games": "Shield",
+						"rate": "40%"
+					},
+					{
+						"area": "Motostoke Riverbank Area",
+						"notes": "Overworld, Lv. 60",
+						"games": "Shield",
+						"rate": "40%"
+					},
+					{
+						"area": "Stony Wilderness Main",
+						"notes": "Overworld, Lv. 28-30",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Stony Wilderness Main",
+						"notes": "Overworld, Lv. 60",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Stony Wilderness Main",
+						"notes": "Overworld, Lv. 28-30",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Stony Wilderness Main",
+						"notes": "Overworld, Lv. 60",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Stony Wilderness Area 2",
+						"notes": "Overworld, Lv. 28-30",
+						"games": "Sword",
+						"rate": "45%"
+					},
+					{
+						"area": "Stony Wilderness Area 2",
+						"notes": "Overworld, Lv. 60",
+						"games": "Sword",
+						"rate": "45%"
+					},
+					{
+						"area": "Stony Wilderness Area 2",
+						"notes": "Overworld, Lv. 28-30",
+						"games": "Shield",
+						"rate": "45%"
+					},
+					{
+						"area": "Stony Wilderness Area 2",
+						"notes": "Overworld, Lv. 60",
+						"games": "Shield",
+						"rate": "45%"
+					},
+					{
+						"area": "Galar Route 2 Lakeside",
+						"notes": "Overworld, Lv. 40-43",
+						"games": "Sword",
+						"rate": "5%"
+					},
+					{
+						"area": "Galar Route 2 Lakeside",
+						"notes": "Overworld, Lv. 40-43",
+						"games": "Shield",
+						"rate": "5%"
+					},
+					{
+						"area": "Motostoke Riverbank Max Den B",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Motostoke Riverbank Max Den B",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Giants Mirror Max Den C",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Giants Mirror Max Den C",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Giants Mirror Max Den C",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Giants Mirror Max Den C",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Lake Of Outrage Max Den B",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Lake Of Outrage Max Den B",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Lake Of Outrage Max Den B",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Lake Of Outrage Max Den B",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "35%"
+					}
+				],
+				"moves": {
+					"Egg": [
+						{
+							"name": "Discharge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Edge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flame Charge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Howl",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sand Attack",
+							"level": null,
+							"order": null
+						}
+					],
+					"Level Up": [
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Tail Whip",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Nuzzle",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Bite",
+							"level": 10,
+							"order": null
+						},
+						{
+							"name": "Roar",
+							"level": 15,
+							"order": null
+						},
+						{
+							"name": "Spark",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Charm",
+							"level": 26,
+							"order": null
+						},
+						{
+							"name": "Crunch",
+							"level": 30,
+							"order": null
+						},
+						{
+							"name": "Charge",
+							"level": 35,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": 40,
+							"order": null
+						},
+						{
+							"name": "Play Rough",
+							"level": 45,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Charm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Crunch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Electro Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endure",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fire Fang",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Helping Hand",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Play Rough",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snarl",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swift",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Fang",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Uproar",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Volt Switch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Rising Voltage",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/835",
+						"fetchedAt": "2026-11-03T05:54:00.079Z",
+						"hash": "19fc65bd01d40f9525a7307bdde5a909881068f4392ea30ad15b876bfaea3dab"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/440/",
+						"fetchedAt": "2026-11-03T05:54:00.110Z",
+						"hash": "784de5031afefd34b354d2c867e84da14ef226fc50e307a92073713f271d6f48"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/835/",
+						"fetchedAt": "2026-11-03T05:54:00.143Z",
+						"hash": "83b280cd1f02d39da69918fb26e3ecfb9ec17a63aab33293201c15685cd31659"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/835/encounters",
+						"fetchedAt": "2026-11-03T05:54:00.198Z",
+						"hash": "cba75060a626afac6288e56eb1724068a4155910264d185dc000b5d82710aaf5"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/835/",
+						"fetchedAt": "2026-11-03T05:54:00.285Z",
+						"hash": "6efd811d1e0dc14493f05ea449335ccb4db550c35e9fc9dafe54a45d1cfc630c"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sword": "This Pokémon is very popular as a herding dog in the Galar region. As it runs, it generates electricity from the base of its tail.",
+				"shield": "This gluttonous Pokémon only assists people with their work because it wants treats. As it runs, it crackles with electricity."
+			},
+			"localizedFlavorByGame": {
+				"sword": {
+					"ja-hrkt": "はしる ときに しっぽの ねもとから でんきを うみだす。 ガラルでは ぼくようけん として にんき。",
+					"ko": "달릴 때 꼬리가 시작되는 부분에서 전기를 만들어 낸다. 가라르에서는 양치기로 인기가 많다.",
+					"zh-hant": "奔跑的時候會從尾巴的根部 製造出電能。在伽勒爾 是很受歡迎的牧羊犬。",
+					"fr": "Lorsqu’il court, on peut voir de l’électricité se former à la base de sa queue. Ce Pokémon est très populaire auprès des bergers de Galar.",
+					"de": "Beim Rennen erzeugt es Elektrizität in seinem Schwanzansatz. In der Galar-Region erfreut es sich bei Hirten großer Beliebtheit.",
+					"es": "Al correr, genera electricidad por la base de la cola. Es muy popular entre los pastores de Galar.",
+					"it": "Quando corre produce elettricità dalla base della coda. A Galar è apprezzato soprattutto per l’aiuto che fornisce ai pastori nei pascoli.",
+					"en": "This Pokémon is very popular as a herding dog in the Galar region. As it runs, it generates electricity from the base of its tail.",
+					"ja": "走る ときに しっぽの 根元から 電気を 生み出す。 ガラルでは 牧羊犬として 人気。",
+					"zh-hans": "奔跑的时候会从尾巴的根部 制造出电能。在伽勒尔 是很受欢迎的牧羊犬。",
+					"es-419": "Al correr, genera electricidad por la base de la cola. Es muy popular entre los pastores de Galar."
+				},
+				"shield": {
+					"ja-hrkt": "おやつに つられて ひとの しごとを てつだう くいしんぼう。 パチパチと でんきを まとって ひたはしる。",
+					"ko": "간식에 끌려 사람의 일을 돕는 먹보다. 탁탁 튀는 전기를 두르고 계속 달린다.",
+					"zh-hant": "因為想要得到零食而 幫助人類工作的貪吃鬼。 總是帶著電火花跑來跑去。",
+					"fr": "Ce glouton assiste les humains dans leur travail en échange de friandises. Il court sans arrêt, le corps enveloppé d’électricité.",
+					"de": "Im Austausch gegen Leckerlis hilft dieser kleine Vielfraß Menschen bei der Arbeit. Beim Rennen wird es von knisternder Elektrizität umhüllt.",
+					"es": "Son muy glotones, por lo que ayudan a la gente a cambio de comida. Echan chispas al correr.",
+					"it": "È un golosone e aiuta gli uomini in cambio di ghiottonerie. Corre di qua e di là emettendo scintille da tutto il corpo.",
+					"en": "This gluttonous Pokémon only assists people with their work because it wants treats. As it runs, it crackles with electricity.",
+					"ja": "おやつに 釣られて 人の 仕事を 手伝う 食いしん坊。 パチパチと 電気を まとって ひた走る。",
+					"zh-hans": "因为想要得到零食而 帮助人类工作的贪吃鬼。 总是带着电火花跑来跑去。",
+					"es-419": "Son muy glotones, por lo que ayudan a la gente a cambio de comida. Echan chispas al correr."
+				}
+			}
+		},
+		{
+			"profileKey": "the-isle-of-armor",
+			"label": "The Isle of Armor",
+			"appGameKeys": [
+				"swordioa",
+				"shieldioa"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Yamper",
+				"localizedNames": {
+					"ja-hrkt": "ワンパチ",
+					"ja-roma": "Wanpachi",
+					"ko": "멍파치",
+					"zh-hant": "來電汪",
+					"fr": "Voltoutou",
+					"de": "Voldi",
+					"es": "Yamper",
+					"it": "Yamper",
+					"ja": "ワンパチ",
+					"zh-hans": "来电汪",
+					"es-419": "Yamper"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric"
+				],
+				"baseStats": {
+					"hp": 59,
+					"atk": 45,
+					"def": 50,
+					"spa": 40,
+					"spd": 50,
+					"spe": 26
+				},
+				"evYield": {
+					"hp": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Ball Fetch",
+					"Rattled (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Rattled"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Fast",
+				"hatchCounter": 20,
+				"height": "0.3 m",
+				"weight": "13.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 255,
+				"baseExperience": 54,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Yellow",
+				"genus": "Puppy Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こいぬポケモン",
+					"ko": "강아지포켓몬",
+					"zh-hant": "小狗寶可夢",
+					"fr": "Pokémon Chiot",
+					"de": "Welpen-Pokémon",
+					"es": "Pokémon Perrito",
+					"it": "Pokémon Cagnolino",
+					"ja": "こいぬポケモン",
+					"zh-hans": "小狗宝可梦",
+					"es-419": "Pokémon Perrito"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 835
+					},
+					{
+						"pokedex": "galar",
+						"number": 46
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 155
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 835,
+								"natiId": 835,
+								"name": "Yamper"
+							},
+							{
+								"id": 836,
+								"natiId": 836,
+								"name": "Boltund",
+								"method": "Level",
+								"value": 25
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/835",
+						"fetchedAt": "2026-11-03T05:54:00.079Z",
+						"hash": "19fc65bd01d40f9525a7307bdde5a909881068f4392ea30ad15b876bfaea3dab"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/440/",
+						"fetchedAt": "2026-11-03T05:54:00.110Z",
+						"hash": "784de5031afefd34b354d2c867e84da14ef226fc50e307a92073713f271d6f48"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/835/",
+						"fetchedAt": "2026-11-03T05:54:00.143Z",
+						"hash": "83b280cd1f02d39da69918fb26e3ecfb9ec17a63aab33293201c15685cd31659"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/835/encounters",
+						"fetchedAt": "2026-11-03T05:54:00.198Z",
+						"hash": "cba75060a626afac6288e56eb1724068a4155910264d185dc000b5d82710aaf5"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/835/",
+						"fetchedAt": "2026-11-03T05:54:00.285Z",
+						"hash": "6efd811d1e0dc14493f05ea449335ccb4db550c35e9fc9dafe54a45d1cfc630c"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordioa": "",
+				"shieldioa": ""
+			},
+			"localizedFlavorByGame": {
+				"swordioa": {},
+				"shieldioa": {}
+			}
+		},
+		{
+			"profileKey": "the-crown-tundra",
+			"label": "The Crown Tundra",
+			"appGameKeys": [
+				"swordct",
+				"shieldct"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Yamper",
+				"localizedNames": {
+					"ja-hrkt": "ワンパチ",
+					"ja-roma": "Wanpachi",
+					"ko": "멍파치",
+					"zh-hant": "來電汪",
+					"fr": "Voltoutou",
+					"de": "Voldi",
+					"es": "Yamper",
+					"it": "Yamper",
+					"ja": "ワンパチ",
+					"zh-hans": "来电汪",
+					"es-419": "Yamper"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric"
+				],
+				"baseStats": {
+					"hp": 59,
+					"atk": 45,
+					"def": 50,
+					"spa": 40,
+					"spd": 50,
+					"spe": 26
+				},
+				"evYield": {
+					"hp": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Ball Fetch",
+					"Rattled (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Rattled"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Fast",
+				"hatchCounter": 20,
+				"height": "0.3 m",
+				"weight": "13.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 255,
+				"baseExperience": 54,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Yellow",
+				"genus": "Puppy Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こいぬポケモン",
+					"ko": "강아지포켓몬",
+					"zh-hant": "小狗寶可夢",
+					"fr": "Pokémon Chiot",
+					"de": "Welpen-Pokémon",
+					"es": "Pokémon Perrito",
+					"it": "Pokémon Cagnolino",
+					"ja": "こいぬポケモン",
+					"zh-hans": "小狗宝可梦",
+					"es-419": "Pokémon Perrito"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 835
+					},
+					{
+						"pokedex": "galar",
+						"number": 46
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 155
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 835,
+								"natiId": 835,
+								"name": "Yamper"
+							},
+							{
+								"id": 836,
+								"natiId": 836,
+								"name": "Boltund",
+								"method": "Level",
+								"value": 25
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "19%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "19%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "19%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "19%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "32%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "24%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "24%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "19%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "19%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "19%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "19%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "32%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "24%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "24%"
+					}
+				],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/835",
+						"fetchedAt": "2026-11-03T05:54:00.079Z",
+						"hash": "19fc65bd01d40f9525a7307bdde5a909881068f4392ea30ad15b876bfaea3dab"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/440/",
+						"fetchedAt": "2026-11-03T05:54:00.110Z",
+						"hash": "784de5031afefd34b354d2c867e84da14ef226fc50e307a92073713f271d6f48"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/835/",
+						"fetchedAt": "2026-11-03T05:54:00.143Z",
+						"hash": "83b280cd1f02d39da69918fb26e3ecfb9ec17a63aab33293201c15685cd31659"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/835/encounters",
+						"fetchedAt": "2026-11-03T05:54:00.198Z",
+						"hash": "cba75060a626afac6288e56eb1724068a4155910264d185dc000b5d82710aaf5"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/835/",
+						"fetchedAt": "2026-11-03T05:54:00.285Z",
+						"hash": "6efd811d1e0dc14493f05ea449335ccb4db550c35e9fc9dafe54a45d1cfc630c"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordct": "",
+				"shieldct": ""
+			},
+			"localizedFlavorByGame": {
+				"swordct": {},
+				"shieldct": {}
+			}
+		},
+		{
+			"profileKey": "brilliant-diamond-shining-pearl",
+			"label": "Brilliant Diamond / Shining Pearl",
+			"appGameKeys": [
+				"brilliantdiamond-national",
+				"brilliantdiamond",
+				"shiningpearl-national",
+				"shiningpearl"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Yamper",
+				"localizedNames": {
+					"ja-hrkt": "ワンパチ",
+					"ja-roma": "Wanpachi",
+					"ko": "멍파치",
+					"zh-hant": "來電汪",
+					"fr": "Voltoutou",
+					"de": "Voldi",
+					"es": "Yamper",
+					"it": "Yamper",
+					"ja": "ワンパチ",
+					"zh-hans": "来电汪",
+					"es-419": "Yamper"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric"
+				],
+				"baseStats": {
+					"hp": 59,
+					"atk": 45,
+					"def": 50,
+					"spa": 40,
+					"spd": 50,
+					"spe": 26
+				},
+				"evYield": {
+					"hp": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Ball Fetch",
+					"Rattled (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Rattled"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Fast",
+				"hatchCounter": 20,
+				"height": "0.3 m",
+				"weight": "13.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 255,
+				"baseExperience": 54,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Yellow",
+				"genus": "Puppy Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こいぬポケモン",
+					"ko": "강아지포켓몬",
+					"zh-hant": "小狗寶可夢",
+					"fr": "Pokémon Chiot",
+					"de": "Welpen-Pokémon",
+					"es": "Pokémon Perrito",
+					"it": "Pokémon Cagnolino",
+					"ja": "こいぬポケモン",
+					"zh-hans": "小狗宝可梦",
+					"es-419": "Pokémon Perrito"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 835
+					},
+					{
+						"pokedex": "galar",
+						"number": 46
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 155
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 835,
+								"natiId": 835,
+								"name": "Yamper"
+							},
+							{
+								"id": 836,
+								"natiId": 836,
+								"name": "Boltund",
+								"method": "Level",
+								"value": 25
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/835",
+						"fetchedAt": "2026-11-03T05:54:00.079Z",
+						"hash": "19fc65bd01d40f9525a7307bdde5a909881068f4392ea30ad15b876bfaea3dab"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/440/",
+						"fetchedAt": "2026-11-03T05:54:00.110Z",
+						"hash": "784de5031afefd34b354d2c867e84da14ef226fc50e307a92073713f271d6f48"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/835/",
+						"fetchedAt": "2026-11-03T05:54:00.143Z",
+						"hash": "83b280cd1f02d39da69918fb26e3ecfb9ec17a63aab33293201c15685cd31659"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/835/encounters",
+						"fetchedAt": "2026-11-03T05:54:00.198Z",
+						"hash": "cba75060a626afac6288e56eb1724068a4155910264d185dc000b5d82710aaf5"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/835/",
+						"fetchedAt": "2026-11-03T05:54:00.285Z",
+						"hash": "6efd811d1e0dc14493f05ea449335ccb4db550c35e9fc9dafe54a45d1cfc630c"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"brilliantdiamond-national": "",
+				"brilliantdiamond": "",
+				"shiningpearl-national": "",
+				"shiningpearl": ""
+			},
+			"localizedFlavorByGame": {
+				"brilliantdiamond-national": {},
+				"brilliantdiamond": {},
+				"shiningpearl-national": {},
+				"shiningpearl": {}
+			}
+		},
+		{
+			"profileKey": "legends-arceus",
+			"label": "Legends: Arceus",
+			"appGameKeys": [
+				"legendsarceus"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Yamper",
+				"localizedNames": {
+					"ja-hrkt": "ワンパチ",
+					"ja-roma": "Wanpachi",
+					"ko": "멍파치",
+					"zh-hant": "來電汪",
+					"fr": "Voltoutou",
+					"de": "Voldi",
+					"es": "Yamper",
+					"it": "Yamper",
+					"ja": "ワンパチ",
+					"zh-hans": "来电汪",
+					"es-419": "Yamper"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric"
+				],
+				"baseStats": {
+					"hp": 59,
+					"atk": 45,
+					"def": 50,
+					"spa": 40,
+					"spd": 50,
+					"spe": 26
+				},
+				"evYield": {
+					"hp": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Ball Fetch",
+					"Rattled (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Rattled"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Fast",
+				"hatchCounter": 20,
+				"height": "0.3 m",
+				"weight": "13.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 255,
+				"baseExperience": 54,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Yellow",
+				"genus": "Puppy Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こいぬポケモン",
+					"ko": "강아지포켓몬",
+					"zh-hant": "小狗寶可夢",
+					"fr": "Pokémon Chiot",
+					"de": "Welpen-Pokémon",
+					"es": "Pokémon Perrito",
+					"it": "Pokémon Cagnolino",
+					"ja": "こいぬポケモン",
+					"zh-hans": "小狗宝可梦",
+					"es-419": "Pokémon Perrito"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 835
+					},
+					{
+						"pokedex": "galar",
+						"number": 46
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 155
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 835,
+								"natiId": 835,
+								"name": "Yamper"
+							},
+							{
+								"id": 836,
+								"natiId": 836,
+								"name": "Boltund",
+								"method": "Level",
+								"value": 25
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/835",
+						"fetchedAt": "2026-11-03T05:54:00.079Z",
+						"hash": "19fc65bd01d40f9525a7307bdde5a909881068f4392ea30ad15b876bfaea3dab"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/440/",
+						"fetchedAt": "2026-11-03T05:54:00.110Z",
+						"hash": "784de5031afefd34b354d2c867e84da14ef226fc50e307a92073713f271d6f48"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/835/",
+						"fetchedAt": "2026-11-03T05:54:00.143Z",
+						"hash": "83b280cd1f02d39da69918fb26e3ecfb9ec17a63aab33293201c15685cd31659"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/835/encounters",
+						"fetchedAt": "2026-11-03T05:54:00.198Z",
+						"hash": "cba75060a626afac6288e56eb1724068a4155910264d185dc000b5d82710aaf5"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/835/",
+						"fetchedAt": "2026-11-03T05:54:00.285Z",
+						"hash": "6efd811d1e0dc14493f05ea449335ccb4db550c35e9fc9dafe54a45d1cfc630c"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendsarceus": ""
+			},
+			"localizedFlavorByGame": {
+				"legendsarceus": {}
+			}
+		},
+		{
+			"profileKey": "scarlet-violet",
+			"label": "Scarlet / Violet",
+			"appGameKeys": [
+				"scarlet",
+				"violet"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Yamper",
+				"localizedNames": {
+					"ja-hrkt": "ワンパチ",
+					"ja-roma": "Wanpachi",
+					"ko": "멍파치",
+					"zh-hant": "來電汪",
+					"fr": "Voltoutou",
+					"de": "Voldi",
+					"es": "Yamper",
+					"it": "Yamper",
+					"ja": "ワンパチ",
+					"zh-hans": "来电汪",
+					"es-419": "Yamper"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric"
+				],
+				"baseStats": {
+					"hp": 59,
+					"atk": 45,
+					"def": 50,
+					"spa": 40,
+					"spd": 50,
+					"spe": 26
+				},
+				"evYield": {
+					"hp": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Ball Fetch",
+					"Rattled (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Rattled"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Fast",
+				"hatchCounter": 20,
+				"height": "0.3 m",
+				"weight": "13.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 255,
+				"baseExperience": 54,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Yellow",
+				"genus": "Puppy Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こいぬポケモン",
+					"ko": "강아지포켓몬",
+					"zh-hant": "小狗寶可夢",
+					"fr": "Pokémon Chiot",
+					"de": "Welpen-Pokémon",
+					"es": "Pokémon Perrito",
+					"it": "Pokémon Cagnolino",
+					"ja": "こいぬポケモン",
+					"zh-hans": "小狗宝可梦",
+					"es-419": "Pokémon Perrito"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 835
+					},
+					{
+						"pokedex": "galar",
+						"number": 46
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 155
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 835,
+								"natiId": 835,
+								"name": "Yamper"
+							},
+							{
+								"id": 836,
+								"natiId": 836,
+								"name": "Boltund",
+								"method": "Level",
+								"value": 25
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/835",
+						"fetchedAt": "2026-11-03T05:54:00.079Z",
+						"hash": "19fc65bd01d40f9525a7307bdde5a909881068f4392ea30ad15b876bfaea3dab"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/440/",
+						"fetchedAt": "2026-11-03T05:54:00.110Z",
+						"hash": "784de5031afefd34b354d2c867e84da14ef226fc50e307a92073713f271d6f48"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/835/",
+						"fetchedAt": "2026-11-03T05:54:00.143Z",
+						"hash": "83b280cd1f02d39da69918fb26e3ecfb9ec17a63aab33293201c15685cd31659"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/835/encounters",
+						"fetchedAt": "2026-11-03T05:54:00.198Z",
+						"hash": "cba75060a626afac6288e56eb1724068a4155910264d185dc000b5d82710aaf5"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/835/",
+						"fetchedAt": "2026-11-03T05:54:00.285Z",
+						"hash": "6efd811d1e0dc14493f05ea449335ccb4db550c35e9fc9dafe54a45d1cfc630c"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlet": "",
+				"violet": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlet": {},
+				"violet": {}
+			}
+		},
+		{
+			"profileKey": "the-teal-mask",
+			"label": "The Teal Mask",
+			"appGameKeys": [
+				"scarlettm",
+				"violettm"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Yamper",
+				"localizedNames": {
+					"ja-hrkt": "ワンパチ",
+					"ja-roma": "Wanpachi",
+					"ko": "멍파치",
+					"zh-hant": "來電汪",
+					"fr": "Voltoutou",
+					"de": "Voldi",
+					"es": "Yamper",
+					"it": "Yamper",
+					"ja": "ワンパチ",
+					"zh-hans": "来电汪",
+					"es-419": "Yamper"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric"
+				],
+				"baseStats": {
+					"hp": 59,
+					"atk": 45,
+					"def": 50,
+					"spa": 40,
+					"spd": 50,
+					"spe": 26
+				},
+				"evYield": {
+					"hp": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Ball Fetch",
+					"Rattled (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Rattled"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Fast",
+				"hatchCounter": 20,
+				"height": "0.3 m",
+				"weight": "13.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 255,
+				"baseExperience": 54,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Yellow",
+				"genus": "Puppy Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こいぬポケモン",
+					"ko": "강아지포켓몬",
+					"zh-hant": "小狗寶可夢",
+					"fr": "Pokémon Chiot",
+					"de": "Welpen-Pokémon",
+					"es": "Pokémon Perrito",
+					"it": "Pokémon Cagnolino",
+					"ja": "こいぬポケモン",
+					"zh-hans": "小狗宝可梦",
+					"es-419": "Pokémon Perrito"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 835
+					},
+					{
+						"pokedex": "galar",
+						"number": 46
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 155
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 835,
+								"natiId": 835,
+								"name": "Yamper"
+							},
+							{
+								"id": 836,
+								"natiId": 836,
+								"name": "Boltund",
+								"method": "Level",
+								"value": 25
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/835",
+						"fetchedAt": "2026-11-03T05:54:00.079Z",
+						"hash": "19fc65bd01d40f9525a7307bdde5a909881068f4392ea30ad15b876bfaea3dab"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/440/",
+						"fetchedAt": "2026-11-03T05:54:00.110Z",
+						"hash": "784de5031afefd34b354d2c867e84da14ef226fc50e307a92073713f271d6f48"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/835/",
+						"fetchedAt": "2026-11-03T05:54:00.143Z",
+						"hash": "83b280cd1f02d39da69918fb26e3ecfb9ec17a63aab33293201c15685cd31659"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/835/encounters",
+						"fetchedAt": "2026-11-03T05:54:00.198Z",
+						"hash": "cba75060a626afac6288e56eb1724068a4155910264d185dc000b5d82710aaf5"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/835/",
+						"fetchedAt": "2026-11-03T05:54:00.285Z",
+						"hash": "6efd811d1e0dc14493f05ea449335ccb4db550c35e9fc9dafe54a45d1cfc630c"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlettm": "",
+				"violettm": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlettm": {},
+				"violettm": {}
+			}
+		},
+		{
+			"profileKey": "the-indigo-disk",
+			"label": "The Indigo Disk",
+			"appGameKeys": [
+				"scarletid",
+				"violetid"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Yamper",
+				"localizedNames": {
+					"ja-hrkt": "ワンパチ",
+					"ja-roma": "Wanpachi",
+					"ko": "멍파치",
+					"zh-hant": "來電汪",
+					"fr": "Voltoutou",
+					"de": "Voldi",
+					"es": "Yamper",
+					"it": "Yamper",
+					"ja": "ワンパチ",
+					"zh-hans": "来电汪",
+					"es-419": "Yamper"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric"
+				],
+				"baseStats": {
+					"hp": 59,
+					"atk": 45,
+					"def": 50,
+					"spa": 40,
+					"spd": 50,
+					"spe": 26
+				},
+				"evYield": {
+					"hp": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Ball Fetch",
+					"Rattled (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Rattled"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Fast",
+				"hatchCounter": 20,
+				"height": "0.3 m",
+				"weight": "13.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 255,
+				"baseExperience": 54,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Yellow",
+				"genus": "Puppy Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こいぬポケモン",
+					"ko": "강아지포켓몬",
+					"zh-hant": "小狗寶可夢",
+					"fr": "Pokémon Chiot",
+					"de": "Welpen-Pokémon",
+					"es": "Pokémon Perrito",
+					"it": "Pokémon Cagnolino",
+					"ja": "こいぬポケモン",
+					"zh-hans": "小狗宝可梦",
+					"es-419": "Pokémon Perrito"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 835
+					},
+					{
+						"pokedex": "galar",
+						"number": 46
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 155
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 835,
+								"natiId": 835,
+								"name": "Yamper"
+							},
+							{
+								"id": 836,
+								"natiId": 836,
+								"name": "Boltund",
+								"method": "Level",
+								"value": 25
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/835",
+						"fetchedAt": "2026-11-03T05:54:00.079Z",
+						"hash": "19fc65bd01d40f9525a7307bdde5a909881068f4392ea30ad15b876bfaea3dab"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/440/",
+						"fetchedAt": "2026-11-03T05:54:00.110Z",
+						"hash": "784de5031afefd34b354d2c867e84da14ef226fc50e307a92073713f271d6f48"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/835/",
+						"fetchedAt": "2026-11-03T05:54:00.143Z",
+						"hash": "83b280cd1f02d39da69918fb26e3ecfb9ec17a63aab33293201c15685cd31659"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/835/encounters",
+						"fetchedAt": "2026-11-03T05:54:00.198Z",
+						"hash": "cba75060a626afac6288e56eb1724068a4155910264d185dc000b5d82710aaf5"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/835/",
+						"fetchedAt": "2026-11-03T05:54:00.285Z",
+						"hash": "6efd811d1e0dc14493f05ea449335ccb4db550c35e9fc9dafe54a45d1cfc630c"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarletid": "",
+				"violetid": ""
+			},
+			"localizedFlavorByGame": {
+				"scarletid": {},
+				"violetid": {}
+			}
+		}
+	]
+}

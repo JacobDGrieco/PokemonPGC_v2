@@ -1,0 +1,773 @@
+{
+	"schemaVersion": 2,
+	"nationalDexId": 921,
+	"speciesName": "Pawmi",
+	"formKey": "base",
+	"formName": "Base",
+	"formLabelSource": "form-catalog",
+	"profiles": [
+		{
+			"profileKey": "scarlet-violet",
+			"label": "Scarlet / Violet",
+			"appGameKeys": [
+				"scarlet",
+				"violet"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Pawmi",
+				"localizedNames": {
+					"ja-hrkt": "パモ",
+					"ja-roma": "Pamo",
+					"ko": "빠모",
+					"zh-hant": "布撥",
+					"fr": "Pohm",
+					"de": "Pamo",
+					"es": "Pawmi",
+					"it": "Pawmi",
+					"ja": "パモ",
+					"zh-hans": "布拨",
+					"es-419": "Pawmi"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 50,
+					"def": 20,
+					"spa": 40,
+					"spd": 25,
+					"spe": 60
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 9,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Static",
+					"Natural Cure",
+					"Iron Fist (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Iron Fist"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "2.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 190,
+				"baseExperience": 48,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Yellow",
+				"genus": "Mouse Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ねずみポケモン",
+					"ko": "쥐포켓몬",
+					"zh-hant": "鼠寶可夢",
+					"fr": "Souris",
+					"de": "Maus",
+					"zh-hans": "鼠宝可梦"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 921
+					},
+					{
+						"pokedex": "paldea",
+						"number": 22
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 921,
+								"natiId": 921,
+								"name": "Pawmi"
+							},
+							{
+								"id": 922,
+								"natiId": 922,
+								"name": "Pawmo",
+								"method": "Level",
+								"value": 18
+							},
+							{
+								"id": 923,
+								"natiId": 923,
+								"name": "Pawmot",
+								"method": "Level Up"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Scratch",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Growl",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Thunder Shock",
+							"level": 3,
+							"order": null
+						},
+						{
+							"name": "Quick Attack",
+							"level": 6,
+							"order": null
+						},
+						{
+							"name": "Charge",
+							"level": 8,
+							"order": null
+						},
+						{
+							"name": "Nuzzle",
+							"level": 12,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": 15,
+							"order": null
+						},
+						{
+							"name": "Bite",
+							"level": 19,
+							"order": null
+						},
+						{
+							"name": "Spark",
+							"level": 23,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": 27,
+							"order": null
+						},
+						{
+							"name": "Entrainment",
+							"level": 31,
+							"order": null
+						},
+						{
+							"name": "Slam",
+							"level": 35,
+							"order": null
+						},
+						{
+							"name": "Discharge",
+							"level": 38,
+							"order": null
+						},
+						{
+							"name": "Agility",
+							"level": 40,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": 44,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Agility",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Baton Pass",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Charge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Charge Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Charm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Crunch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Eerie Impulse",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Electric Terrain",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Electro Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Electroweb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Encore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endure",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fling",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Helping Hand",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Metal Claw",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Play Rough",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Super Fang",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swift",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Take Down",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Tera Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Fang",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Volt Switch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": null,
+							"order": null
+						}
+					],
+					"Egg": [
+						{
+							"name": "Fake Out",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Mach Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sweet Kiss",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wish",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Scarlet Violet."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/921",
+						"fetchedAt": "2026-11-03T05:54:06.760Z",
+						"hash": "8c84bc4f0f38afe19b3e723cb9ed52723427de34ec88125d46bc5415ab3363c7"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/484/",
+						"fetchedAt": "2026-11-03T05:54:06.790Z",
+						"hash": "ddc16aa1ac25ffe37c9152c924aeefbecee2ecaf5befb7f5db47fe1586fca0d2"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/921/",
+						"fetchedAt": "2026-11-03T05:54:06.824Z",
+						"hash": "c0b98b46b75483adacc6e57dc89a73e7b433b58c8af3182afcc6db34195e7959"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/921/encounters",
+						"fetchedAt": "2026-11-03T05:54:06.889Z",
+						"hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/921/",
+						"fetchedAt": "2026-11-03T05:54:06.946Z",
+						"hash": "270a291a3b83dec60fbbd0093b451db5105ad47321301461383a3d682f6acd50"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlet": "It has underdeveloped electric sacs on its cheeks. These sacs can produce electricity only if Pawmi rubs them furiously with the pads on its forepaws.",
+				"violet": "The pads of its paws are electricity-discharging organs. Pawmi fires electricity from its forepaws while standing unsteadily on its hind legs."
+			},
+			"localizedFlavorByGame": {
+				"scarlet": {
+					"en": "It has underdeveloped electric sacs on its cheeks. These sacs can produce electricity only if Pawmi rubs them furiously with the pads on its forepaws."
+				},
+				"violet": {
+					"en": "The pads of its paws are electricity-discharging organs. Pawmi fires electricity from its forepaws while standing unsteadily on its hind legs."
+				}
+			}
+		},
+		{
+			"profileKey": "the-teal-mask",
+			"label": "The Teal Mask",
+			"appGameKeys": [
+				"scarlettm",
+				"violettm"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Pawmi",
+				"localizedNames": {
+					"ja-hrkt": "パモ",
+					"ja-roma": "Pamo",
+					"ko": "빠모",
+					"zh-hant": "布撥",
+					"fr": "Pohm",
+					"de": "Pamo",
+					"es": "Pawmi",
+					"it": "Pawmi",
+					"ja": "パモ",
+					"zh-hans": "布拨",
+					"es-419": "Pawmi"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 50,
+					"def": 20,
+					"spa": 40,
+					"spd": 25,
+					"spe": 60
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 9,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Static",
+					"Natural Cure",
+					"Iron Fist (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Iron Fist"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "2.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 190,
+				"baseExperience": 48,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Yellow",
+				"genus": "Mouse Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ねずみポケモン",
+					"ko": "쥐포켓몬",
+					"zh-hant": "鼠寶可夢",
+					"fr": "Souris",
+					"de": "Maus",
+					"zh-hans": "鼠宝可梦"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 921
+					},
+					{
+						"pokedex": "paldea",
+						"number": 22
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 921,
+								"natiId": 921,
+								"name": "Pawmi"
+							},
+							{
+								"id": 922,
+								"natiId": 922,
+								"name": "Pawmo",
+								"method": "Level",
+								"value": 18
+							},
+							{
+								"id": 923,
+								"natiId": 923,
+								"name": "Pawmot",
+								"method": "Level Up"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Scarlet Violet."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/921",
+						"fetchedAt": "2026-11-03T05:54:06.760Z",
+						"hash": "8c84bc4f0f38afe19b3e723cb9ed52723427de34ec88125d46bc5415ab3363c7"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/484/",
+						"fetchedAt": "2026-11-03T05:54:06.790Z",
+						"hash": "ddc16aa1ac25ffe37c9152c924aeefbecee2ecaf5befb7f5db47fe1586fca0d2"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/921/",
+						"fetchedAt": "2026-11-03T05:54:06.824Z",
+						"hash": "c0b98b46b75483adacc6e57dc89a73e7b433b58c8af3182afcc6db34195e7959"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/921/encounters",
+						"fetchedAt": "2026-11-03T05:54:06.889Z",
+						"hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/921/",
+						"fetchedAt": "2026-11-03T05:54:06.946Z",
+						"hash": "270a291a3b83dec60fbbd0093b451db5105ad47321301461383a3d682f6acd50"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlettm": "",
+				"violettm": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlettm": {},
+				"violettm": {}
+			}
+		},
+		{
+			"profileKey": "the-indigo-disk",
+			"label": "The Indigo Disk",
+			"appGameKeys": [
+				"scarletid",
+				"violetid"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Pawmi",
+				"localizedNames": {
+					"ja-hrkt": "パモ",
+					"ja-roma": "Pamo",
+					"ko": "빠모",
+					"zh-hant": "布撥",
+					"fr": "Pohm",
+					"de": "Pamo",
+					"es": "Pawmi",
+					"it": "Pawmi",
+					"ja": "パモ",
+					"zh-hans": "布拨",
+					"es-419": "Pawmi"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Electric"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 50,
+					"def": 20,
+					"spa": 40,
+					"spd": 25,
+					"spe": 60
+				},
+				"evYield": {
+					"spe": 1
+				},
+				"generation": 9,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Static",
+					"Natural Cure",
+					"Iron Fist (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Iron Fist"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "2.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 190,
+				"baseExperience": 48,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Yellow",
+				"genus": "Mouse Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ねずみポケモン",
+					"ko": "쥐포켓몬",
+					"zh-hant": "鼠寶可夢",
+					"fr": "Souris",
+					"de": "Maus",
+					"zh-hans": "鼠宝可梦"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 921
+					},
+					{
+						"pokedex": "paldea",
+						"number": 22
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 921,
+								"natiId": 921,
+								"name": "Pawmi"
+							},
+							{
+								"id": 922,
+								"natiId": 922,
+								"name": "Pawmo",
+								"method": "Level",
+								"value": 18
+							},
+							{
+								"id": 923,
+								"natiId": 923,
+								"name": "Pawmot",
+								"method": "Level Up"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Scarlet Violet."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/921",
+						"fetchedAt": "2026-11-03T05:54:06.760Z",
+						"hash": "8c84bc4f0f38afe19b3e723cb9ed52723427de34ec88125d46bc5415ab3363c7"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/484/",
+						"fetchedAt": "2026-11-03T05:54:06.790Z",
+						"hash": "ddc16aa1ac25ffe37c9152c924aeefbecee2ecaf5befb7f5db47fe1586fca0d2"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/921/",
+						"fetchedAt": "2026-11-03T05:54:06.824Z",
+						"hash": "c0b98b46b75483adacc6e57dc89a73e7b433b58c8af3182afcc6db34195e7959"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/921/encounters",
+						"fetchedAt": "2026-11-03T05:54:06.889Z",
+						"hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/921/",
+						"fetchedAt": "2026-11-03T05:54:06.946Z",
+						"hash": "270a291a3b83dec60fbbd0093b451db5105ad47321301461383a3d682f6acd50"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarletid": "",
+				"violetid": ""
+			},
+			"localizedFlavorByGame": {
+				"scarletid": {},
+				"violetid": {}
+			}
+		}
+	]
+}

@@ -1,0 +1,86 @@
+{
+	"schemaVersion": 1,
+	"id": 890,
+	"slug": "armor-cannon",
+	"name": "Armor Cannon",
+	"names": {
+		"de": "Rüstungskanone",
+		"en": "Armor Cannon",
+		"es": "Cañón Armadura",
+		"es-419": "Cañón Armadura",
+		"fr": "Canon Blindé",
+		"it": "Corazza Cannone",
+		"ja": "アーマーキャノン",
+		"ja-hrkt": "アーマーキャノン",
+		"ko": "아머캐논",
+		"zh-hans": "铠农炮",
+		"zh-hant": "鎧農炮"
+	},
+	"generation": 9,
+	"type": "Fire",
+	"damageClass": "Special",
+	"power": 120,
+	"accuracy": 100,
+	"pp": 5,
+	"priority": 0,
+	"effectChance": null,
+	"target": "Selected Pokemon",
+	"effectEntries": [],
+	"effectChanges": [],
+	"descriptions": [
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "en",
+			"text": "The user shoots its own armor out as blazing projectiles. This also lowers the user’s Defense and Sp. Def stats."
+		},
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "fr",
+			"text": "Le lanceur tire un boulet de canon ardent provenant de sa propre armure sur la cible. Cela baisse la Défense et la Défense Spéciale du lanceur."
+		}
+	],
+	"pastValues": [],
+	"statChanges": [
+		{
+			"stat": "Defense",
+			"change": -1
+		},
+		{
+			"stat": "Special Defense",
+			"change": -1
+		}
+	],
+	"meta": null,
+	"machines": [],
+	"learners": [
+		{
+			"nationalDexId": 936,
+			"speciesName": "Armarouge",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 62,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		}
+	],
+	"potentialPokemon": [
+		"armarouge"
+	],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/move/890/",
+		"fetchedAt": "2026-11-03T06:30:19.010Z",
+		"hash": "2a9bfd851f94f313f5fa731d0f8fea62ac3120162398a5cd5207ceeccd85bfed"
+	}
+}

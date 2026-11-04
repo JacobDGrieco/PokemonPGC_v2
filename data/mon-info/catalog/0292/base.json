@@ -1,0 +1,7305 @@
+{
+	"schemaVersion": 2,
+	"nationalDexId": 292,
+	"speciesName": "Shedinja",
+	"formKey": "base",
+	"formName": "Base",
+	"formLabelSource": "form-catalog",
+	"profiles": [
+		{
+			"profileKey": "ruby-sapphire",
+			"label": "Ruby / Sapphire",
+			"appGameKeys": [
+				"ruby-national",
+				"ruby",
+				"sapphire-national",
+				"sapphire"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Shedinja",
+				"localizedNames": {
+					"ja-hrkt": "ヌケニン",
+					"ja-roma": "Nukenin",
+					"ko": "껍질몬",
+					"zh-hant": "脫殼忍者",
+					"fr": "Munja",
+					"de": "Ninjatom",
+					"es": "Shedinja",
+					"it": "Shedinja",
+					"ja": "ヌケニン",
+					"zh-hans": "脱壳忍者",
+					"es-419": "Shedinja"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Ghost"
+				],
+				"baseStats": {
+					"hp": 1,
+					"atk": 90,
+					"def": 45,
+					"spa": 30,
+					"spd": 30,
+					"spe": 40
+				},
+				"evYield": {
+					"hp": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Wonder Guard"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Slow Then Very Fast",
+				"hatchCounter": 15,
+				"height": "0.8 m",
+				"weight": "1.2 kg",
+				"genderRatio": "Genderless",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 83,
+				"habitat": "Forest",
+				"shape": "Blob",
+				"color": "Brown",
+				"genus": "Shed Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ぬけがらポケモン",
+					"ko": "허물포켓몬",
+					"zh-hant": "空殼寶可夢",
+					"fr": "Pokémon Exuvie",
+					"de": "Häutungs-Pokémon",
+					"es": "Pokémon Muda",
+					"it": "Pokémon Cambiapelle",
+					"ja": "ぬけがらポケモン",
+					"zh-hans": "空壳宝可梦",
+					"es-419": "Pokémon Muda"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 292
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 44
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 113
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 45
+					},
+					{
+						"pokedex": "galar",
+						"number": 106
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 291,
+								"natiId": 291,
+								"name": "Ninjask",
+								"method": "Level",
+								"value": 20
+							}
+						],
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 292,
+								"natiId": 292,
+								"name": "Shedinja",
+								"method": "Shed"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Scratch",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Leech Life",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Sand Attack",
+							"level": 9,
+							"order": null
+						},
+						{
+							"name": "Fury Swipes",
+							"level": 14,
+							"order": null
+						},
+						{
+							"name": "Mind Reader",
+							"level": 19,
+							"order": null
+						},
+						{
+							"name": "Spite",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Confuse Ray",
+							"level": 31,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": 38,
+							"order": null
+						},
+						{
+							"name": "Grudge",
+							"level": 45,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Aerial Ace",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Cut",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Drain",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sandstorm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Secret Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/292",
+						"fetchedAt": "2026-11-03T05:53:24.910Z",
+						"hash": "97719e7c4ece0b1b48fb73aeffdace6a03889e203c56d53cac8b2754e915c97b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/144/",
+						"fetchedAt": "2026-11-03T05:53:24.880Z",
+						"hash": "956d4af4008033114ea2756750c31be0af7220643fea333484c72015ccdef5c6"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/",
+						"fetchedAt": "2026-11-03T05:53:24.938Z",
+						"hash": "dd8f536ae7dbe216937c2ad72cc6bc4aaa4d25b63d867f95bf25bffb290fbeaf"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/encounters",
+						"fetchedAt": "2026-11-03T05:53:24.993Z",
+						"hash": "ccf0bc8bca70736823372ffd1829aef65d03847816da92b187b0594c2c3f3dc3"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/292/",
+						"fetchedAt": "2026-11-03T05:53:25.093Z",
+						"hash": "a16320469a4a3085482fd4fbdc9e47092510aa80bb17009abdc4ba325bf6e923"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"ruby-national": "SHEDINJA’s hard body doesn’t move - not even a twitch. In fact, its body appears to be merely a hollow shell. It is believed that this POKéMON will steal the spirit of anyone peering into its hollow body from its back.",
+				"ruby": "SHEDINJA’s hard body doesn’t move - not even a twitch. In fact, its body appears to be merely a hollow shell. It is believed that this POKéMON will steal the spirit of anyone peering into its hollow body from its back.",
+				"sapphire-national": "SHEDINJA is a peculiar POKéMON. It seems to appear unsought in a POKé BALL after a NINCADA evolves. This bizarre POKéMON is entirely immobile - it doesn’t even breathe.",
+				"sapphire": "SHEDINJA is a peculiar POKéMON. It seems to appear unsought in a POKé BALL after a NINCADA evolves. This bizarre POKéMON is entirely immobile - it doesn’t even breathe."
+			},
+			"localizedFlavorByGame": {
+				"ruby-national": {
+					"en": "SHEDINJA’s hard body doesn’t move - not even a twitch. In fact, its body appears to be merely a hollow shell. It is believed that this POKéMON will steal the spirit of anyone peering into its hollow body from its back."
+				},
+				"ruby": {
+					"en": "SHEDINJA’s hard body doesn’t move - not even a twitch. In fact, its body appears to be merely a hollow shell. It is believed that this POKéMON will steal the spirit of anyone peering into its hollow body from its back."
+				},
+				"sapphire-national": {
+					"en": "SHEDINJA is a peculiar POKéMON. It seems to appear unsought in a POKé BALL after a NINCADA evolves. This bizarre POKéMON is entirely immobile - it doesn’t even breathe."
+				},
+				"sapphire": {
+					"en": "SHEDINJA is a peculiar POKéMON. It seems to appear unsought in a POKé BALL after a NINCADA evolves. This bizarre POKéMON is entirely immobile - it doesn’t even breathe."
+				}
+			}
+		},
+		{
+			"profileKey": "emerald",
+			"label": "Emerald",
+			"appGameKeys": [
+				"emerald-national",
+				"emerald"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Shedinja",
+				"localizedNames": {
+					"ja-hrkt": "ヌケニン",
+					"ja-roma": "Nukenin",
+					"ko": "껍질몬",
+					"zh-hant": "脫殼忍者",
+					"fr": "Munja",
+					"de": "Ninjatom",
+					"es": "Shedinja",
+					"it": "Shedinja",
+					"ja": "ヌケニン",
+					"zh-hans": "脱壳忍者",
+					"es-419": "Shedinja"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Ghost"
+				],
+				"baseStats": {
+					"hp": 1,
+					"atk": 90,
+					"def": 45,
+					"spa": 30,
+					"spd": 30,
+					"spe": 40
+				},
+				"evYield": {
+					"hp": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Wonder Guard"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Slow Then Very Fast",
+				"hatchCounter": 15,
+				"height": "0.8 m",
+				"weight": "1.2 kg",
+				"genderRatio": "Genderless",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 83,
+				"habitat": "Forest",
+				"shape": "Blob",
+				"color": "Brown",
+				"genus": "Shed Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ぬけがらポケモン",
+					"ko": "허물포켓몬",
+					"zh-hant": "空殼寶可夢",
+					"fr": "Pokémon Exuvie",
+					"de": "Häutungs-Pokémon",
+					"es": "Pokémon Muda",
+					"it": "Pokémon Cambiapelle",
+					"ja": "ぬけがらポケモン",
+					"zh-hans": "空壳宝可梦",
+					"es-419": "Pokémon Muda"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 292
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 44
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 113
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 45
+					},
+					{
+						"pokedex": "galar",
+						"number": 106
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 291,
+								"natiId": 291,
+								"name": "Ninjask",
+								"method": "Level",
+								"value": 20
+							}
+						],
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 292,
+								"natiId": 292,
+								"name": "Shedinja",
+								"method": "Shed"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Scratch",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Leech Life",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Sand Attack",
+							"level": 9,
+							"order": null
+						},
+						{
+							"name": "Fury Swipes",
+							"level": 14,
+							"order": null
+						},
+						{
+							"name": "Mind Reader",
+							"level": 19,
+							"order": null
+						},
+						{
+							"name": "Spite",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Confuse Ray",
+							"level": 31,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": 38,
+							"order": null
+						},
+						{
+							"name": "Grudge",
+							"level": 45,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Aerial Ace",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Cut",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Drain",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sandstorm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Secret Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Double Edge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endure",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fury Cutter",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Mimic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Mud Slap",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/292",
+						"fetchedAt": "2026-11-03T05:53:24.910Z",
+						"hash": "97719e7c4ece0b1b48fb73aeffdace6a03889e203c56d53cac8b2754e915c97b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/144/",
+						"fetchedAt": "2026-11-03T05:53:24.880Z",
+						"hash": "956d4af4008033114ea2756750c31be0af7220643fea333484c72015ccdef5c6"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/",
+						"fetchedAt": "2026-11-03T05:53:24.938Z",
+						"hash": "dd8f536ae7dbe216937c2ad72cc6bc4aaa4d25b63d867f95bf25bffb290fbeaf"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/encounters",
+						"fetchedAt": "2026-11-03T05:53:24.993Z",
+						"hash": "ccf0bc8bca70736823372ffd1829aef65d03847816da92b187b0594c2c3f3dc3"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/292/",
+						"fetchedAt": "2026-11-03T05:53:25.093Z",
+						"hash": "a16320469a4a3085482fd4fbdc9e47092510aa80bb17009abdc4ba325bf6e923"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"emerald-national": "A peculiar POKéMON that floats in air even though its wings remain completely still. The inside of its body is hollow and utterly dark.",
+				"emerald": "A peculiar POKéMON that floats in air even though its wings remain completely still. The inside of its body is hollow and utterly dark."
+			},
+			"localizedFlavorByGame": {
+				"emerald-national": {
+					"en": "A peculiar POKéMON that floats in air even though its wings remain completely still. The inside of its body is hollow and utterly dark."
+				},
+				"emerald": {
+					"en": "A peculiar POKéMON that floats in air even though its wings remain completely still. The inside of its body is hollow and utterly dark."
+				}
+			}
+		},
+		{
+			"profileKey": "firered-leafgreen",
+			"label": "FireRed / LeafGreen",
+			"appGameKeys": [
+				"firered-national",
+				"firered",
+				"leafgreen-national",
+				"leafgreen"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Shedinja",
+				"localizedNames": {
+					"ja-hrkt": "ヌケニン",
+					"ja-roma": "Nukenin",
+					"ko": "껍질몬",
+					"zh-hant": "脫殼忍者",
+					"fr": "Munja",
+					"de": "Ninjatom",
+					"es": "Shedinja",
+					"it": "Shedinja",
+					"ja": "ヌケニン",
+					"zh-hans": "脱壳忍者",
+					"es-419": "Shedinja"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Ghost"
+				],
+				"baseStats": {
+					"hp": 1,
+					"atk": 90,
+					"def": 45,
+					"spa": 30,
+					"spd": 30,
+					"spe": 40
+				},
+				"evYield": {
+					"hp": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Wonder Guard"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Slow Then Very Fast",
+				"hatchCounter": 15,
+				"height": "0.8 m",
+				"weight": "1.2 kg",
+				"genderRatio": "Genderless",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 83,
+				"habitat": "Forest",
+				"shape": "Blob",
+				"color": "Brown",
+				"genus": "Shed Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ぬけがらポケモン",
+					"ko": "허물포켓몬",
+					"zh-hant": "空殼寶可夢",
+					"fr": "Pokémon Exuvie",
+					"de": "Häutungs-Pokémon",
+					"es": "Pokémon Muda",
+					"it": "Pokémon Cambiapelle",
+					"ja": "ぬけがらポケモン",
+					"zh-hans": "空壳宝可梦",
+					"es-419": "Pokémon Muda"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 292
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 44
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 113
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 45
+					},
+					{
+						"pokedex": "galar",
+						"number": 106
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 291,
+								"natiId": 291,
+								"name": "Ninjask",
+								"method": "Level",
+								"value": 20
+							}
+						],
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 292,
+								"natiId": 292,
+								"name": "Shedinja",
+								"method": "Shed"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Scratch",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Leech Life",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Sand Attack",
+							"level": 9,
+							"order": null
+						},
+						{
+							"name": "Fury Swipes",
+							"level": 14,
+							"order": null
+						},
+						{
+							"name": "Mind Reader",
+							"level": 19,
+							"order": null
+						},
+						{
+							"name": "Spite",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Confuse Ray",
+							"level": 31,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": 38,
+							"order": null
+						},
+						{
+							"name": "Grudge",
+							"level": 45,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Aerial Ace",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Cut",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Drain",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sandstorm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Secret Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Double Edge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Mimic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/292",
+						"fetchedAt": "2026-11-03T05:53:24.910Z",
+						"hash": "97719e7c4ece0b1b48fb73aeffdace6a03889e203c56d53cac8b2754e915c97b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/144/",
+						"fetchedAt": "2026-11-03T05:53:24.880Z",
+						"hash": "956d4af4008033114ea2756750c31be0af7220643fea333484c72015ccdef5c6"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/",
+						"fetchedAt": "2026-11-03T05:53:24.938Z",
+						"hash": "dd8f536ae7dbe216937c2ad72cc6bc4aaa4d25b63d867f95bf25bffb290fbeaf"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/encounters",
+						"fetchedAt": "2026-11-03T05:53:24.993Z",
+						"hash": "ccf0bc8bca70736823372ffd1829aef65d03847816da92b187b0594c2c3f3dc3"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/292/",
+						"fetchedAt": "2026-11-03T05:53:25.093Z",
+						"hash": "a16320469a4a3085482fd4fbdc9e47092510aa80bb17009abdc4ba325bf6e923"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"firered-national": "A most peculiar POKéMON that somehow appears in a POKé BALL when a NINCADA evolves.",
+				"firered": "A most peculiar POKéMON that somehow appears in a POKé BALL when a NINCADA evolves.",
+				"leafgreen-national": "A most peculiar POKéMON that somehow appears in a POKé BALL when a NINCADA evolves.",
+				"leafgreen": "A most peculiar POKéMON that somehow appears in a POKé BALL when a NINCADA evolves."
+			},
+			"localizedFlavorByGame": {
+				"firered-national": {
+					"en": "A most peculiar POKéMON that somehow appears in a POKé BALL when a NINCADA evolves."
+				},
+				"firered": {
+					"en": "A most peculiar POKéMON that somehow appears in a POKé BALL when a NINCADA evolves."
+				},
+				"leafgreen-national": {
+					"en": "A most peculiar POKéMON that somehow appears in a POKé BALL when a NINCADA evolves."
+				},
+				"leafgreen": {
+					"en": "A most peculiar POKéMON that somehow appears in a POKé BALL when a NINCADA evolves."
+				}
+			}
+		},
+		{
+			"profileKey": "diamond-pearl",
+			"label": "Diamond / Pearl",
+			"appGameKeys": [
+				"diamond-national",
+				"diamond",
+				"pearl-national",
+				"pearl"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Shedinja",
+				"localizedNames": {
+					"ja-hrkt": "ヌケニン",
+					"ja-roma": "Nukenin",
+					"ko": "껍질몬",
+					"zh-hant": "脫殼忍者",
+					"fr": "Munja",
+					"de": "Ninjatom",
+					"es": "Shedinja",
+					"it": "Shedinja",
+					"ja": "ヌケニン",
+					"zh-hans": "脱壳忍者",
+					"es-419": "Shedinja"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Ghost"
+				],
+				"baseStats": {
+					"hp": 1,
+					"atk": 90,
+					"def": 45,
+					"spa": 30,
+					"spd": 30,
+					"spe": 40
+				},
+				"evYield": {
+					"hp": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Wonder Guard"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Slow Then Very Fast",
+				"hatchCounter": 15,
+				"height": "0.8 m",
+				"weight": "1.2 kg",
+				"genderRatio": "Genderless",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 83,
+				"habitat": "Forest",
+				"shape": "Blob",
+				"color": "Brown",
+				"genus": "Shed Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ぬけがらポケモン",
+					"ko": "허물포켓몬",
+					"zh-hant": "空殼寶可夢",
+					"fr": "Pokémon Exuvie",
+					"de": "Häutungs-Pokémon",
+					"es": "Pokémon Muda",
+					"it": "Pokémon Cambiapelle",
+					"ja": "ぬけがらポケモン",
+					"zh-hans": "空壳宝可梦",
+					"es-419": "Pokémon Muda"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 292
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 44
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 113
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 45
+					},
+					{
+						"pokedex": "galar",
+						"number": 106
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 291,
+								"natiId": 291,
+								"name": "Ninjask",
+								"method": "Level",
+								"value": 20
+							}
+						],
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 292,
+								"natiId": 292,
+								"name": "Shedinja",
+								"method": "Shed"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Scratch",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Leech Life",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Sand Attack",
+							"level": 9,
+							"order": null
+						},
+						{
+							"name": "Fury Swipes",
+							"level": 14,
+							"order": null
+						},
+						{
+							"name": "Mind Reader",
+							"level": 19,
+							"order": null
+						},
+						{
+							"name": "Spite",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Confuse Ray",
+							"level": 31,
+							"order": null
+						},
+						{
+							"name": "Shadow Sneak",
+							"level": 38,
+							"order": null
+						},
+						{
+							"name": "Grudge",
+							"level": 45,
+							"order": null
+						},
+						{
+							"name": "Heal Block",
+							"level": 52,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": 59,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Aerial Ace",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Cut",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endure",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "False Swipe",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Drain",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Natural Gift",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sandstorm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Secret Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Claw",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "X Scissor",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/292",
+						"fetchedAt": "2026-11-03T05:53:24.910Z",
+						"hash": "97719e7c4ece0b1b48fb73aeffdace6a03889e203c56d53cac8b2754e915c97b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/144/",
+						"fetchedAt": "2026-11-03T05:53:24.880Z",
+						"hash": "956d4af4008033114ea2756750c31be0af7220643fea333484c72015ccdef5c6"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/",
+						"fetchedAt": "2026-11-03T05:53:24.938Z",
+						"hash": "dd8f536ae7dbe216937c2ad72cc6bc4aaa4d25b63d867f95bf25bffb290fbeaf"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/encounters",
+						"fetchedAt": "2026-11-03T05:53:24.993Z",
+						"hash": "ccf0bc8bca70736823372ffd1829aef65d03847816da92b187b0594c2c3f3dc3"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/292/",
+						"fetchedAt": "2026-11-03T05:53:25.093Z",
+						"hash": "a16320469a4a3085482fd4fbdc9e47092510aa80bb17009abdc4ba325bf6e923"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"diamond-national": "A discarded bug shell that came to life. Peering into the crack on its back is said to steal one’s spirit.",
+				"diamond": "A discarded bug shell that came to life. Peering into the crack on its back is said to steal one’s spirit.",
+				"pearl-national": "A discarded bug shell that came to life. Peering into the crack on its back is said to steal one’s spirit.",
+				"pearl": "A discarded bug shell that came to life. Peering into the crack on its back is said to steal one’s spirit."
+			},
+			"localizedFlavorByGame": {
+				"diamond-national": {
+					"en": "A discarded bug shell that came to life. Peering into the crack on its back is said to steal one’s spirit."
+				},
+				"diamond": {
+					"en": "A discarded bug shell that came to life. Peering into the crack on its back is said to steal one’s spirit."
+				},
+				"pearl-national": {
+					"en": "A discarded bug shell that came to life. Peering into the crack on its back is said to steal one’s spirit."
+				},
+				"pearl": {
+					"en": "A discarded bug shell that came to life. Peering into the crack on its back is said to steal one’s spirit."
+				}
+			}
+		},
+		{
+			"profileKey": "platinum",
+			"label": "Platinum",
+			"appGameKeys": [
+				"platinum-national",
+				"platinum"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Shedinja",
+				"localizedNames": {
+					"ja-hrkt": "ヌケニン",
+					"ja-roma": "Nukenin",
+					"ko": "껍질몬",
+					"zh-hant": "脫殼忍者",
+					"fr": "Munja",
+					"de": "Ninjatom",
+					"es": "Shedinja",
+					"it": "Shedinja",
+					"ja": "ヌケニン",
+					"zh-hans": "脱壳忍者",
+					"es-419": "Shedinja"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Ghost"
+				],
+				"baseStats": {
+					"hp": 1,
+					"atk": 90,
+					"def": 45,
+					"spa": 30,
+					"spd": 30,
+					"spe": 40
+				},
+				"evYield": {
+					"hp": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Wonder Guard"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Slow Then Very Fast",
+				"hatchCounter": 15,
+				"height": "0.8 m",
+				"weight": "1.2 kg",
+				"genderRatio": "Genderless",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 83,
+				"habitat": "Forest",
+				"shape": "Blob",
+				"color": "Brown",
+				"genus": "Shed Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ぬけがらポケモン",
+					"ko": "허물포켓몬",
+					"zh-hant": "空殼寶可夢",
+					"fr": "Pokémon Exuvie",
+					"de": "Häutungs-Pokémon",
+					"es": "Pokémon Muda",
+					"it": "Pokémon Cambiapelle",
+					"ja": "ぬけがらポケモン",
+					"zh-hans": "空壳宝可梦",
+					"es-419": "Pokémon Muda"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 292
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 44
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 113
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 45
+					},
+					{
+						"pokedex": "galar",
+						"number": 106
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 291,
+								"natiId": 291,
+								"name": "Ninjask",
+								"method": "Level",
+								"value": 20
+							}
+						],
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 292,
+								"natiId": 292,
+								"name": "Shedinja",
+								"method": "Shed"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Scratch",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Leech Life",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Sand Attack",
+							"level": 9,
+							"order": null
+						},
+						{
+							"name": "Fury Swipes",
+							"level": 14,
+							"order": null
+						},
+						{
+							"name": "Mind Reader",
+							"level": 19,
+							"order": null
+						},
+						{
+							"name": "Spite",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Confuse Ray",
+							"level": 31,
+							"order": null
+						},
+						{
+							"name": "Shadow Sneak",
+							"level": 38,
+							"order": null
+						},
+						{
+							"name": "Grudge",
+							"level": 45,
+							"order": null
+						},
+						{
+							"name": "Heal Block",
+							"level": 52,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": 59,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Aerial Ace",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Cut",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endure",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "False Swipe",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Drain",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Natural Gift",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sandstorm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Secret Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Claw",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "X Scissor",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Fury Cutter",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Mud Slap",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Spite",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sucker Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Trick",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/292",
+						"fetchedAt": "2026-11-03T05:53:24.910Z",
+						"hash": "97719e7c4ece0b1b48fb73aeffdace6a03889e203c56d53cac8b2754e915c97b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/144/",
+						"fetchedAt": "2026-11-03T05:53:24.880Z",
+						"hash": "956d4af4008033114ea2756750c31be0af7220643fea333484c72015ccdef5c6"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/",
+						"fetchedAt": "2026-11-03T05:53:24.938Z",
+						"hash": "dd8f536ae7dbe216937c2ad72cc6bc4aaa4d25b63d867f95bf25bffb290fbeaf"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/encounters",
+						"fetchedAt": "2026-11-03T05:53:24.993Z",
+						"hash": "ccf0bc8bca70736823372ffd1829aef65d03847816da92b187b0594c2c3f3dc3"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/292/",
+						"fetchedAt": "2026-11-03T05:53:25.093Z",
+						"hash": "a16320469a4a3085482fd4fbdc9e47092510aa80bb17009abdc4ba325bf6e923"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"platinum-national": "A discarded bug shell that came to life. Peering into the crack on its back is said to steal one’s spirit.",
+				"platinum": "A discarded bug shell that came to life. Peering into the crack on its back is said to steal one’s spirit."
+			},
+			"localizedFlavorByGame": {
+				"platinum-national": {
+					"en": "A discarded bug shell that came to life. Peering into the crack on its back is said to steal one’s spirit."
+				},
+				"platinum": {
+					"en": "A discarded bug shell that came to life. Peering into the crack on its back is said to steal one’s spirit."
+				}
+			}
+		},
+		{
+			"profileKey": "heartgold-soulsilver",
+			"label": "HeartGold / SoulSilver",
+			"appGameKeys": [
+				"heartgold-national",
+				"heartgold",
+				"soulsilver-national",
+				"soulsilver"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Shedinja",
+				"localizedNames": {
+					"ja-hrkt": "ヌケニン",
+					"ja-roma": "Nukenin",
+					"ko": "껍질몬",
+					"zh-hant": "脫殼忍者",
+					"fr": "Munja",
+					"de": "Ninjatom",
+					"es": "Shedinja",
+					"it": "Shedinja",
+					"ja": "ヌケニン",
+					"zh-hans": "脱壳忍者",
+					"es-419": "Shedinja"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Ghost"
+				],
+				"baseStats": {
+					"hp": 1,
+					"atk": 90,
+					"def": 45,
+					"spa": 30,
+					"spd": 30,
+					"spe": 40
+				},
+				"evYield": {
+					"hp": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Wonder Guard"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Slow Then Very Fast",
+				"hatchCounter": 15,
+				"height": "0.8 m",
+				"weight": "1.2 kg",
+				"genderRatio": "Genderless",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 83,
+				"habitat": "Forest",
+				"shape": "Blob",
+				"color": "Brown",
+				"genus": "Shed Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ぬけがらポケモン",
+					"ko": "허물포켓몬",
+					"zh-hant": "空殼寶可夢",
+					"fr": "Pokémon Exuvie",
+					"de": "Häutungs-Pokémon",
+					"es": "Pokémon Muda",
+					"it": "Pokémon Cambiapelle",
+					"ja": "ぬけがらポケモン",
+					"zh-hans": "空壳宝可梦",
+					"es-419": "Pokémon Muda"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 292
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 44
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 113
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 45
+					},
+					{
+						"pokedex": "galar",
+						"number": 106
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 291,
+								"natiId": 291,
+								"name": "Ninjask",
+								"method": "Level",
+								"value": 20
+							}
+						],
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 292,
+								"natiId": 292,
+								"name": "Shedinja",
+								"method": "Shed"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Scratch",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Leech Life",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Sand Attack",
+							"level": 9,
+							"order": null
+						},
+						{
+							"name": "Fury Swipes",
+							"level": 14,
+							"order": null
+						},
+						{
+							"name": "Mind Reader",
+							"level": 19,
+							"order": null
+						},
+						{
+							"name": "Spite",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Confuse Ray",
+							"level": 31,
+							"order": null
+						},
+						{
+							"name": "Shadow Sneak",
+							"level": 38,
+							"order": null
+						},
+						{
+							"name": "Grudge",
+							"level": 45,
+							"order": null
+						},
+						{
+							"name": "Heal Block",
+							"level": 52,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": 59,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Aerial Ace",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Cut",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endure",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "False Swipe",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Drain",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Natural Gift",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sandstorm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Secret Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Claw",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "X Scissor",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Bug Bite",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fury Cutter",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Mud Slap",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Spite",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "String Shot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sucker Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Trick",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/292",
+						"fetchedAt": "2026-11-03T05:53:24.910Z",
+						"hash": "97719e7c4ece0b1b48fb73aeffdace6a03889e203c56d53cac8b2754e915c97b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/144/",
+						"fetchedAt": "2026-11-03T05:53:24.880Z",
+						"hash": "956d4af4008033114ea2756750c31be0af7220643fea333484c72015ccdef5c6"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/",
+						"fetchedAt": "2026-11-03T05:53:24.938Z",
+						"hash": "dd8f536ae7dbe216937c2ad72cc6bc4aaa4d25b63d867f95bf25bffb290fbeaf"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/encounters",
+						"fetchedAt": "2026-11-03T05:53:24.993Z",
+						"hash": "ccf0bc8bca70736823372ffd1829aef65d03847816da92b187b0594c2c3f3dc3"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/292/",
+						"fetchedAt": "2026-11-03T05:53:25.093Z",
+						"hash": "a16320469a4a3085482fd4fbdc9e47092510aa80bb17009abdc4ba325bf6e923"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"heartgold-national": "A strange Pokémon--it flies without moving its wings, has a hollow shell for a body, and does not breathe.",
+				"heartgold": "A strange Pokémon--it flies without moving its wings, has a hollow shell for a body, and does not breathe.",
+				"soulsilver-national": "A strange Pokémon--it flies without moving its wings, has a hollow shell for a body, and does not breathe.",
+				"soulsilver": "A strange Pokémon--it flies without moving its wings, has a hollow shell for a body, and does not breathe."
+			},
+			"localizedFlavorByGame": {
+				"heartgold-national": {
+					"en": "A strange Pokémon--it flies without moving its wings, has a hollow shell for a body, and does not breathe."
+				},
+				"heartgold": {
+					"en": "A strange Pokémon--it flies without moving its wings, has a hollow shell for a body, and does not breathe."
+				},
+				"soulsilver-national": {
+					"en": "A strange Pokémon--it flies without moving its wings, has a hollow shell for a body, and does not breathe."
+				},
+				"soulsilver": {
+					"en": "A strange Pokémon--it flies without moving its wings, has a hollow shell for a body, and does not breathe."
+				}
+			}
+		},
+		{
+			"profileKey": "black-white",
+			"label": "Black / White",
+			"appGameKeys": [
+				"black-national",
+				"black",
+				"white-national",
+				"white"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Shedinja",
+				"localizedNames": {
+					"ja-hrkt": "ヌケニン",
+					"ja-roma": "Nukenin",
+					"ko": "껍질몬",
+					"zh-hant": "脫殼忍者",
+					"fr": "Munja",
+					"de": "Ninjatom",
+					"es": "Shedinja",
+					"it": "Shedinja",
+					"ja": "ヌケニン",
+					"zh-hans": "脱壳忍者",
+					"es-419": "Shedinja"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Ghost"
+				],
+				"baseStats": {
+					"hp": 1,
+					"atk": 90,
+					"def": 45,
+					"spa": 30,
+					"spd": 30,
+					"spe": 40
+				},
+				"evYield": {
+					"hp": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Wonder Guard"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Slow Then Very Fast",
+				"hatchCounter": 15,
+				"height": "0.8 m",
+				"weight": "1.2 kg",
+				"genderRatio": "Genderless",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 83,
+				"habitat": "Forest",
+				"shape": "Blob",
+				"color": "Brown",
+				"genus": "Shed Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ぬけがらポケモン",
+					"ko": "허물포켓몬",
+					"zh-hant": "空殼寶可夢",
+					"fr": "Pokémon Exuvie",
+					"de": "Häutungs-Pokémon",
+					"es": "Pokémon Muda",
+					"it": "Pokémon Cambiapelle",
+					"ja": "ぬけがらポケモン",
+					"zh-hans": "空壳宝可梦",
+					"es-419": "Pokémon Muda"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 292
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 44
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 113
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 45
+					},
+					{
+						"pokedex": "galar",
+						"number": 106
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 291,
+								"natiId": 291,
+								"name": "Ninjask",
+								"method": "Level",
+								"value": 20
+							}
+						],
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 292,
+								"natiId": 292,
+								"name": "Shedinja",
+								"method": "Shed"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Scratch",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Leech Life",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Sand Attack",
+							"level": 9,
+							"order": null
+						},
+						{
+							"name": "Fury Swipes",
+							"level": 14,
+							"order": null
+						},
+						{
+							"name": "Mind Reader",
+							"level": 19,
+							"order": null
+						},
+						{
+							"name": "Spite",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Confuse Ray",
+							"level": 31,
+							"order": null
+						},
+						{
+							"name": "Shadow Sneak",
+							"level": 38,
+							"order": null
+						},
+						{
+							"name": "Grudge",
+							"level": 45,
+							"order": null
+						},
+						{
+							"name": "Heal Block",
+							"level": 52,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": 59,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Aerial Ace",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Cut",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "False Swipe",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hone Claws",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sandstorm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Claw",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Struggle Bug",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Telekinesis",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "X Scissor",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/292",
+						"fetchedAt": "2026-11-03T05:53:24.910Z",
+						"hash": "97719e7c4ece0b1b48fb73aeffdace6a03889e203c56d53cac8b2754e915c97b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/144/",
+						"fetchedAt": "2026-11-03T05:53:24.880Z",
+						"hash": "956d4af4008033114ea2756750c31be0af7220643fea333484c72015ccdef5c6"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/",
+						"fetchedAt": "2026-11-03T05:53:24.938Z",
+						"hash": "dd8f536ae7dbe216937c2ad72cc6bc4aaa4d25b63d867f95bf25bffb290fbeaf"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/encounters",
+						"fetchedAt": "2026-11-03T05:53:24.993Z",
+						"hash": "ccf0bc8bca70736823372ffd1829aef65d03847816da92b187b0594c2c3f3dc3"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/292/",
+						"fetchedAt": "2026-11-03T05:53:25.093Z",
+						"hash": "a16320469a4a3085482fd4fbdc9e47092510aa80bb17009abdc4ba325bf6e923"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"black-national": "A discarded bug shell that came to life. Peering into the crack on its back is said to steal one’s spirit.",
+				"black": "A discarded bug shell that came to life. Peering into the crack on its back is said to steal one’s spirit.",
+				"white-national": "A discarded bug shell that came to life. Peering into the crack on its back is said to steal one’s spirit.",
+				"white": "A discarded bug shell that came to life. Peering into the crack on its back is said to steal one’s spirit."
+			},
+			"localizedFlavorByGame": {
+				"black-national": {
+					"fr": "Une carapace d’insecte laissée à l’abandon. On dit qu’il vole l’âme de celui qui regarde à l’intérieur.",
+					"en": "A discarded bug shell that came to life. Peering into the crack on its back is said to steal one’s spirit."
+				},
+				"black": {
+					"fr": "Une carapace d’insecte laissée à l’abandon. On dit qu’il vole l’âme de celui qui regarde à l’intérieur.",
+					"en": "A discarded bug shell that came to life. Peering into the crack on its back is said to steal one’s spirit."
+				},
+				"white-national": {
+					"fr": "Une carapace d’insecte laissée à l’abandon. On dit qu’il vole l’âme de celui qui regarde à l’intérieur.",
+					"en": "A discarded bug shell that came to life. Peering into the crack on its back is said to steal one’s spirit."
+				},
+				"white": {
+					"fr": "Une carapace d’insecte laissée à l’abandon. On dit qu’il vole l’âme de celui qui regarde à l’intérieur.",
+					"en": "A discarded bug shell that came to life. Peering into the crack on its back is said to steal one’s spirit."
+				}
+			}
+		},
+		{
+			"profileKey": "black-2-white-2",
+			"label": "Black 2 / White 2",
+			"appGameKeys": [
+				"black2-national",
+				"black2",
+				"white2-national",
+				"white2"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Shedinja",
+				"localizedNames": {
+					"ja-hrkt": "ヌケニン",
+					"ja-roma": "Nukenin",
+					"ko": "껍질몬",
+					"zh-hant": "脫殼忍者",
+					"fr": "Munja",
+					"de": "Ninjatom",
+					"es": "Shedinja",
+					"it": "Shedinja",
+					"ja": "ヌケニン",
+					"zh-hans": "脱壳忍者",
+					"es-419": "Shedinja"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Ghost"
+				],
+				"baseStats": {
+					"hp": 1,
+					"atk": 90,
+					"def": 45,
+					"spa": 30,
+					"spd": 30,
+					"spe": 40
+				},
+				"evYield": {
+					"hp": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Wonder Guard"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Slow Then Very Fast",
+				"hatchCounter": 15,
+				"height": "0.8 m",
+				"weight": "1.2 kg",
+				"genderRatio": "Genderless",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 83,
+				"habitat": "Forest",
+				"shape": "Blob",
+				"color": "Brown",
+				"genus": "Shed Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ぬけがらポケモン",
+					"ko": "허물포켓몬",
+					"zh-hant": "空殼寶可夢",
+					"fr": "Pokémon Exuvie",
+					"de": "Häutungs-Pokémon",
+					"es": "Pokémon Muda",
+					"it": "Pokémon Cambiapelle",
+					"ja": "ぬけがらポケモン",
+					"zh-hans": "空壳宝可梦",
+					"es-419": "Pokémon Muda"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 292
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 44
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 113
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 45
+					},
+					{
+						"pokedex": "galar",
+						"number": 106
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 291,
+								"natiId": 291,
+								"name": "Ninjask",
+								"method": "Level",
+								"value": 20
+							}
+						],
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 292,
+								"natiId": 292,
+								"name": "Shedinja",
+								"method": "Shed"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Scratch",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Leech Life",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Sand Attack",
+							"level": 9,
+							"order": null
+						},
+						{
+							"name": "Fury Swipes",
+							"level": 14,
+							"order": null
+						},
+						{
+							"name": "Mind Reader",
+							"level": 19,
+							"order": null
+						},
+						{
+							"name": "Spite",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Confuse Ray",
+							"level": 31,
+							"order": null
+						},
+						{
+							"name": "Shadow Sneak",
+							"level": 38,
+							"order": null
+						},
+						{
+							"name": "Grudge",
+							"level": 45,
+							"order": null
+						},
+						{
+							"name": "Heal Block",
+							"level": 52,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": 59,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Aerial Ace",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Cut",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "False Swipe",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hone Claws",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sandstorm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Claw",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Struggle Bug",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Telekinesis",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "X Scissor",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Bug Bite",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Drain",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Spite",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Trick",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/292",
+						"fetchedAt": "2026-11-03T05:53:24.910Z",
+						"hash": "97719e7c4ece0b1b48fb73aeffdace6a03889e203c56d53cac8b2754e915c97b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/144/",
+						"fetchedAt": "2026-11-03T05:53:24.880Z",
+						"hash": "956d4af4008033114ea2756750c31be0af7220643fea333484c72015ccdef5c6"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/",
+						"fetchedAt": "2026-11-03T05:53:24.938Z",
+						"hash": "dd8f536ae7dbe216937c2ad72cc6bc4aaa4d25b63d867f95bf25bffb290fbeaf"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/encounters",
+						"fetchedAt": "2026-11-03T05:53:24.993Z",
+						"hash": "ccf0bc8bca70736823372ffd1829aef65d03847816da92b187b0594c2c3f3dc3"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/292/",
+						"fetchedAt": "2026-11-03T05:53:25.093Z",
+						"hash": "a16320469a4a3085482fd4fbdc9e47092510aa80bb17009abdc4ba325bf6e923"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"black2-national": "A discarded bug shell that came to life. Peering into the crack on its back is said to steal one’s spirit.",
+				"black2": "A discarded bug shell that came to life. Peering into the crack on its back is said to steal one’s spirit.",
+				"white2-national": "A discarded bug shell that came to life. Peering into the crack on its back is said to steal one’s spirit.",
+				"white2": "A discarded bug shell that came to life. Peering into the crack on its back is said to steal one’s spirit."
+			},
+			"localizedFlavorByGame": {
+				"black2-national": {
+					"en": "A discarded bug shell that came to life. Peering into the crack on its back is said to steal one’s spirit."
+				},
+				"black2": {
+					"en": "A discarded bug shell that came to life. Peering into the crack on its back is said to steal one’s spirit."
+				},
+				"white2-national": {
+					"en": "A discarded bug shell that came to life. Peering into the crack on its back is said to steal one’s spirit."
+				},
+				"white2": {
+					"en": "A discarded bug shell that came to life. Peering into the crack on its back is said to steal one’s spirit."
+				}
+			}
+		},
+		{
+			"profileKey": "x-y",
+			"label": "X / Y",
+			"appGameKeys": [
+				"x-national",
+				"x-central",
+				"x-coastal",
+				"x-mountain",
+				"y-national",
+				"y-central",
+				"y-coastal",
+				"y-mountain"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Shedinja",
+				"localizedNames": {
+					"ja-hrkt": "ヌケニン",
+					"ja-roma": "Nukenin",
+					"ko": "껍질몬",
+					"zh-hant": "脫殼忍者",
+					"fr": "Munja",
+					"de": "Ninjatom",
+					"es": "Shedinja",
+					"it": "Shedinja",
+					"ja": "ヌケニン",
+					"zh-hans": "脱壳忍者",
+					"es-419": "Shedinja"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Ghost"
+				],
+				"baseStats": {
+					"hp": 1,
+					"atk": 90,
+					"def": 45,
+					"spa": 30,
+					"spd": 30,
+					"spe": 40
+				},
+				"evYield": {
+					"hp": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Wonder Guard"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Slow Then Very Fast",
+				"hatchCounter": 15,
+				"height": "0.8 m",
+				"weight": "1.2 kg",
+				"genderRatio": "Genderless",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 83,
+				"habitat": "Forest",
+				"shape": "Blob",
+				"color": "Brown",
+				"genus": "Shed Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ぬけがらポケモン",
+					"ko": "허물포켓몬",
+					"zh-hant": "空殼寶可夢",
+					"fr": "Pokémon Exuvie",
+					"de": "Häutungs-Pokémon",
+					"es": "Pokémon Muda",
+					"it": "Pokémon Cambiapelle",
+					"ja": "ぬけがらポケモン",
+					"zh-hans": "空壳宝可梦",
+					"es-419": "Pokémon Muda"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 292
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 44
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 113
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 45
+					},
+					{
+						"pokedex": "galar",
+						"number": 106
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 291,
+								"natiId": 291,
+								"name": "Ninjask",
+								"method": "Level",
+								"value": 20
+							}
+						],
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 292,
+								"natiId": 292,
+								"name": "Shedinja",
+								"method": "Shed"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Scratch",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Leech Life",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Sand Attack",
+							"level": 9,
+							"order": null
+						},
+						{
+							"name": "Fury Swipes",
+							"level": 14,
+							"order": null
+						},
+						{
+							"name": "Mind Reader",
+							"level": 19,
+							"order": null
+						},
+						{
+							"name": "Spite",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Confuse Ray",
+							"level": 31,
+							"order": null
+						},
+						{
+							"name": "Shadow Sneak",
+							"level": 38,
+							"order": null
+						},
+						{
+							"name": "Grudge",
+							"level": 43,
+							"order": null
+						},
+						{
+							"name": "Phantom Force",
+							"level": 47,
+							"order": null
+						},
+						{
+							"name": "Heal Block",
+							"level": 50,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": 59,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Aerial Ace",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Cut",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "False Swipe",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hone Claws",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sandstorm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Claw",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Struggle Bug",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "X Scissor",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/292",
+						"fetchedAt": "2026-11-03T05:53:24.910Z",
+						"hash": "97719e7c4ece0b1b48fb73aeffdace6a03889e203c56d53cac8b2754e915c97b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/144/",
+						"fetchedAt": "2026-11-03T05:53:24.880Z",
+						"hash": "956d4af4008033114ea2756750c31be0af7220643fea333484c72015ccdef5c6"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/",
+						"fetchedAt": "2026-11-03T05:53:24.938Z",
+						"hash": "dd8f536ae7dbe216937c2ad72cc6bc4aaa4d25b63d867f95bf25bffb290fbeaf"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/encounters",
+						"fetchedAt": "2026-11-03T05:53:24.993Z",
+						"hash": "ccf0bc8bca70736823372ffd1829aef65d03847816da92b187b0594c2c3f3dc3"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/292/",
+						"fetchedAt": "2026-11-03T05:53:25.093Z",
+						"hash": "a16320469a4a3085482fd4fbdc9e47092510aa80bb17009abdc4ba325bf6e923"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"x-national": "A discarded bug shell that came to life. Peering into the crack on its back is said to steal one’s spirit.",
+				"x-central": "A discarded bug shell that came to life. Peering into the crack on its back is said to steal one’s spirit.",
+				"x-coastal": "A discarded bug shell that came to life. Peering into the crack on its back is said to steal one’s spirit.",
+				"x-mountain": "A discarded bug shell that came to life. Peering into the crack on its back is said to steal one’s spirit.",
+				"y-national": "A most peculiar Pokémon that somehow appears in a Poké Ball when a Nincada evolves.",
+				"y-central": "A most peculiar Pokémon that somehow appears in a Poké Ball when a Nincada evolves.",
+				"y-coastal": "A most peculiar Pokémon that somehow appears in a Poké Ball when a Nincada evolves.",
+				"y-mountain": "A most peculiar Pokémon that somehow appears in a Poké Ball when a Nincada evolves."
+			},
+			"localizedFlavorByGame": {
+				"x-national": {
+					"ja-hrkt": "ぬけがらが たましいを やどした。 せなかの すきまから のぞきこむと たましいを すわれてしまうらしい。",
+					"ko": "허물 속으로 영혼이 들어갔다. 등에 난 틈새로 들여다보면 영혼을 빼앗겨버린다고 한다.",
+					"fr": "Une carapace d’insecte laissée à l’abandon. On dit qu’il vole l’âme de celui qui regarde à l’intérieur.",
+					"de": "Ein weggeworfener Käferpanzer, der zum Leben erwachte. Schaut man hinein, stiehlt es einem die Seele.",
+					"es": "Es el caparazón de un bicho que cobró vida. Si alguien lo mira por la espalda, le robará el alma.",
+					"it": "È nato dal guscio vuoto di un insetto. Pare che chi spia nella fessura sul suo dorso perda l’anima.",
+					"en": "A discarded bug shell that came to life. Peering into the crack on its back is said to steal one’s spirit.",
+					"ja": "抜け殻が 魂を 宿した。 背中の すきまから のぞきこむと 魂を 吸われてしまうらしい。",
+					"es-419": "Es el caparazón de un bicho que cobró vida. Si alguien lo mira por la espalda, le robará el alma."
+				},
+				"x-central": {
+					"ja-hrkt": "ぬけがらが たましいを やどした。 せなかの すきまから のぞきこむと たましいを すわれてしまうらしい。",
+					"ko": "허물 속으로 영혼이 들어갔다. 등에 난 틈새로 들여다보면 영혼을 빼앗겨버린다고 한다.",
+					"fr": "Une carapace d’insecte laissée à l’abandon. On dit qu’il vole l’âme de celui qui regarde à l’intérieur.",
+					"de": "Ein weggeworfener Käferpanzer, der zum Leben erwachte. Schaut man hinein, stiehlt es einem die Seele.",
+					"es": "Es el caparazón de un bicho que cobró vida. Si alguien lo mira por la espalda, le robará el alma.",
+					"it": "È nato dal guscio vuoto di un insetto. Pare che chi spia nella fessura sul suo dorso perda l’anima.",
+					"en": "A discarded bug shell that came to life. Peering into the crack on its back is said to steal one’s spirit.",
+					"ja": "抜け殻が 魂を 宿した。 背中の すきまから のぞきこむと 魂を 吸われてしまうらしい。",
+					"es-419": "Es el caparazón de un bicho que cobró vida. Si alguien lo mira por la espalda, le robará el alma."
+				},
+				"x-coastal": {
+					"ja-hrkt": "ぬけがらが たましいを やどした。 せなかの すきまから のぞきこむと たましいを すわれてしまうらしい。",
+					"ko": "허물 속으로 영혼이 들어갔다. 등에 난 틈새로 들여다보면 영혼을 빼앗겨버린다고 한다.",
+					"fr": "Une carapace d’insecte laissée à l’abandon. On dit qu’il vole l’âme de celui qui regarde à l’intérieur.",
+					"de": "Ein weggeworfener Käferpanzer, der zum Leben erwachte. Schaut man hinein, stiehlt es einem die Seele.",
+					"es": "Es el caparazón de un bicho que cobró vida. Si alguien lo mira por la espalda, le robará el alma.",
+					"it": "È nato dal guscio vuoto di un insetto. Pare che chi spia nella fessura sul suo dorso perda l’anima.",
+					"en": "A discarded bug shell that came to life. Peering into the crack on its back is said to steal one’s spirit.",
+					"ja": "抜け殻が 魂を 宿した。 背中の すきまから のぞきこむと 魂を 吸われてしまうらしい。",
+					"es-419": "Es el caparazón de un bicho que cobró vida. Si alguien lo mira por la espalda, le robará el alma."
+				},
+				"x-mountain": {
+					"ja-hrkt": "ぬけがらが たましいを やどした。 せなかの すきまから のぞきこむと たましいを すわれてしまうらしい。",
+					"ko": "허물 속으로 영혼이 들어갔다. 등에 난 틈새로 들여다보면 영혼을 빼앗겨버린다고 한다.",
+					"fr": "Une carapace d’insecte laissée à l’abandon. On dit qu’il vole l’âme de celui qui regarde à l’intérieur.",
+					"de": "Ein weggeworfener Käferpanzer, der zum Leben erwachte. Schaut man hinein, stiehlt es einem die Seele.",
+					"es": "Es el caparazón de un bicho que cobró vida. Si alguien lo mira por la espalda, le robará el alma.",
+					"it": "È nato dal guscio vuoto di un insetto. Pare che chi spia nella fessura sul suo dorso perda l’anima.",
+					"en": "A discarded bug shell that came to life. Peering into the crack on its back is said to steal one’s spirit.",
+					"ja": "抜け殻が 魂を 宿した。 背中の すきまから のぞきこむと 魂を 吸われてしまうらしい。",
+					"es-419": "Es el caparazón de un bicho que cobró vida. Si alguien lo mira por la espalda, le robará el alma."
+				},
+				"y-national": {
+					"ja-hrkt": "ツチニンが しんかする ときに いつの まにか モンスターボールに はいっている ふしぎな ポケモンだ。",
+					"ko": "토중몬이 진화할 때 어느샌가 몬스터볼에 들어와 있는 신기한 포켓몬이다.",
+					"fr": "Un Pokémon étrange que l’on trouve dans les Poké Balls après l’évolution d’un Ningale.",
+					"de": "Ein sehr spezielles Pokémon, das irgendwie in einem Pokéball auftaucht, wenn Nincada sich entwickelt.",
+					"es": "Es un Pokémon muy peculiar; aparece de repente en una Poké Ball cuando Nincada evoluciona.",
+					"it": "Pokémon particolare, che appare misteriosamente in una Poké Ball dopo l’evoluzione di un Nincada.",
+					"en": "A most peculiar Pokémon that somehow appears in a Poké Ball when a Nincada evolves.",
+					"ja": "ツチニンが 進化する ときに いつの間にか モンスターボールに 入っている 不思議な ポケモンだ。",
+					"es-419": "Es un Pokémon muy peculiar; aparece de repente en una Poké Ball cuando Nincada evoluciona."
+				},
+				"y-central": {
+					"ja-hrkt": "ツチニンが しんかする ときに いつの まにか モンスターボールに はいっている ふしぎな ポケモンだ。",
+					"ko": "토중몬이 진화할 때 어느샌가 몬스터볼에 들어와 있는 신기한 포켓몬이다.",
+					"fr": "Un Pokémon étrange que l’on trouve dans les Poké Balls après l’évolution d’un Ningale.",
+					"de": "Ein sehr spezielles Pokémon, das irgendwie in einem Pokéball auftaucht, wenn Nincada sich entwickelt.",
+					"es": "Es un Pokémon muy peculiar; aparece de repente en una Poké Ball cuando Nincada evoluciona.",
+					"it": "Pokémon particolare, che appare misteriosamente in una Poké Ball dopo l’evoluzione di un Nincada.",
+					"en": "A most peculiar Pokémon that somehow appears in a Poké Ball when a Nincada evolves.",
+					"ja": "ツチニンが 進化する ときに いつの間にか モンスターボールに 入っている 不思議な ポケモンだ。",
+					"es-419": "Es un Pokémon muy peculiar; aparece de repente en una Poké Ball cuando Nincada evoluciona."
+				},
+				"y-coastal": {
+					"ja-hrkt": "ツチニンが しんかする ときに いつの まにか モンスターボールに はいっている ふしぎな ポケモンだ。",
+					"ko": "토중몬이 진화할 때 어느샌가 몬스터볼에 들어와 있는 신기한 포켓몬이다.",
+					"fr": "Un Pokémon étrange que l’on trouve dans les Poké Balls après l’évolution d’un Ningale.",
+					"de": "Ein sehr spezielles Pokémon, das irgendwie in einem Pokéball auftaucht, wenn Nincada sich entwickelt.",
+					"es": "Es un Pokémon muy peculiar; aparece de repente en una Poké Ball cuando Nincada evoluciona.",
+					"it": "Pokémon particolare, che appare misteriosamente in una Poké Ball dopo l’evoluzione di un Nincada.",
+					"en": "A most peculiar Pokémon that somehow appears in a Poké Ball when a Nincada evolves.",
+					"ja": "ツチニンが 進化する ときに いつの間にか モンスターボールに 入っている 不思議な ポケモンだ。",
+					"es-419": "Es un Pokémon muy peculiar; aparece de repente en una Poké Ball cuando Nincada evoluciona."
+				},
+				"y-mountain": {
+					"ja-hrkt": "ツチニンが しんかする ときに いつの まにか モンスターボールに はいっている ふしぎな ポケモンだ。",
+					"ko": "토중몬이 진화할 때 어느샌가 몬스터볼에 들어와 있는 신기한 포켓몬이다.",
+					"fr": "Un Pokémon étrange que l’on trouve dans les Poké Balls après l’évolution d’un Ningale.",
+					"de": "Ein sehr spezielles Pokémon, das irgendwie in einem Pokéball auftaucht, wenn Nincada sich entwickelt.",
+					"es": "Es un Pokémon muy peculiar; aparece de repente en una Poké Ball cuando Nincada evoluciona.",
+					"it": "Pokémon particolare, che appare misteriosamente in una Poké Ball dopo l’evoluzione di un Nincada.",
+					"en": "A most peculiar Pokémon that somehow appears in a Poké Ball when a Nincada evolves.",
+					"ja": "ツチニンが 進化する ときに いつの間にか モンスターボールに 入っている 不思議な ポケモンだ。",
+					"es-419": "Es un Pokémon muy peculiar; aparece de repente en una Poké Ball cuando Nincada evoluciona."
+				}
+			}
+		},
+		{
+			"profileKey": "omega-ruby-alpha-sapphire",
+			"label": "Omega Ruby / Alpha Sapphire",
+			"appGameKeys": [
+				"omegaruby-national",
+				"omegaruby",
+				"alphasapphire-national",
+				"alphasapphire"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Shedinja",
+				"localizedNames": {
+					"ja-hrkt": "ヌケニン",
+					"ja-roma": "Nukenin",
+					"ko": "껍질몬",
+					"zh-hant": "脫殼忍者",
+					"fr": "Munja",
+					"de": "Ninjatom",
+					"es": "Shedinja",
+					"it": "Shedinja",
+					"ja": "ヌケニン",
+					"zh-hans": "脱壳忍者",
+					"es-419": "Shedinja"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Ghost"
+				],
+				"baseStats": {
+					"hp": 1,
+					"atk": 90,
+					"def": 45,
+					"spa": 30,
+					"spd": 30,
+					"spe": 40
+				},
+				"evYield": {
+					"hp": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Wonder Guard"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Slow Then Very Fast",
+				"hatchCounter": 15,
+				"height": "0.8 m",
+				"weight": "1.2 kg",
+				"genderRatio": "Genderless",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 83,
+				"habitat": "Forest",
+				"shape": "Blob",
+				"color": "Brown",
+				"genus": "Shed Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ぬけがらポケモン",
+					"ko": "허물포켓몬",
+					"zh-hant": "空殼寶可夢",
+					"fr": "Pokémon Exuvie",
+					"de": "Häutungs-Pokémon",
+					"es": "Pokémon Muda",
+					"it": "Pokémon Cambiapelle",
+					"ja": "ぬけがらポケモン",
+					"zh-hans": "空壳宝可梦",
+					"es-419": "Pokémon Muda"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 292
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 44
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 113
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 45
+					},
+					{
+						"pokedex": "galar",
+						"number": 106
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 291,
+								"natiId": 291,
+								"name": "Ninjask",
+								"method": "Level",
+								"value": 20
+							}
+						],
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 292,
+								"natiId": 292,
+								"name": "Shedinja",
+								"method": "Shed"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Scratch",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Leech Life",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Sand Attack",
+							"level": 9,
+							"order": null
+						},
+						{
+							"name": "Fury Swipes",
+							"level": 13,
+							"order": null
+						},
+						{
+							"name": "Spite",
+							"level": 17,
+							"order": null
+						},
+						{
+							"name": "Shadow Sneak",
+							"level": 21,
+							"order": null
+						},
+						{
+							"name": "Mind Reader",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Confuse Ray",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": 33,
+							"order": null
+						},
+						{
+							"name": "Grudge",
+							"level": 37,
+							"order": null
+						},
+						{
+							"name": "Heal Block",
+							"level": 41,
+							"order": null
+						},
+						{
+							"name": "Phantom Force",
+							"level": 45,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Aerial Ace",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Cut",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "False Swipe",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hone Claws",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sandstorm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Secret Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Claw",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Struggle Bug",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "X Scissor",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Bug Bite",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Drain",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Spite",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Trick",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/292",
+						"fetchedAt": "2026-11-03T05:53:24.910Z",
+						"hash": "97719e7c4ece0b1b48fb73aeffdace6a03889e203c56d53cac8b2754e915c97b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/144/",
+						"fetchedAt": "2026-11-03T05:53:24.880Z",
+						"hash": "956d4af4008033114ea2756750c31be0af7220643fea333484c72015ccdef5c6"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/",
+						"fetchedAt": "2026-11-03T05:53:24.938Z",
+						"hash": "dd8f536ae7dbe216937c2ad72cc6bc4aaa4d25b63d867f95bf25bffb290fbeaf"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/encounters",
+						"fetchedAt": "2026-11-03T05:53:24.993Z",
+						"hash": "ccf0bc8bca70736823372ffd1829aef65d03847816da92b187b0594c2c3f3dc3"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/292/",
+						"fetchedAt": "2026-11-03T05:53:25.093Z",
+						"hash": "a16320469a4a3085482fd4fbdc9e47092510aa80bb17009abdc4ba325bf6e923"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"omegaruby-national": "Shedinja’s hard body doesn’t move—not even a twitch. In fact, its body appears to be merely a hollow shell. It is believed that this Pokémon will steal the spirit of anyone peering into its hollow body from its back.",
+				"omegaruby": "Shedinja’s hard body doesn’t move—not even a twitch. In fact, its body appears to be merely a hollow shell. It is believed that this Pokémon will steal the spirit of anyone peering into its hollow body from its back.",
+				"alphasapphire-national": "Shedinja is a peculiar Pokémon. It seems to appear unsought in a Poké Ball after a Nincada evolves. This bizarre Pokémon is entirely immobile—it doesn’t even breathe.",
+				"alphasapphire": "Shedinja is a peculiar Pokémon. It seems to appear unsought in a Poké Ball after a Nincada evolves. This bizarre Pokémon is entirely immobile—it doesn’t even breathe."
+			},
+			"localizedFlavorByGame": {
+				"omegaruby-national": {
+					"ja-hrkt": "かたい からだは ぴくりとも うごかない。 せなかから からだの くうどうを のぞくと たましいを すいとられると しんじられている。",
+					"ko": "단단한 몸은 꿈쩍도 하지 않는다. 등을 통해 몸의 구멍을 들여다보면 혼이 빨려 들어간다고 믿어지고 있다.",
+					"fr": "Le corps robuste de Munja ne bouge pas d’un pouce. En fait, son corps semble être une coquille vide. Certains croient que ce Pokémon peut voler l’âme de quiconque regarderait à l’intérieur de son corps creux.",
+					"de": "Ninjatoms harter Körper bewegt sich überhaupt nicht. Er scheint bloß eine hohle Schale zu sein. Dieses Pokémon soll angeblich die Seele eines jeden stehlen, der hinterrücks einen Blick in seinen hohlen Körper riskiert.",
+					"es": "Shedinja tiene un cuerpo robusto que no mueve en absoluto. De hecho, parece una especie de caparazón hueco. Se cree que, si alguien se atreviera a mirarle por la espalda lo que tiene en su interior, Shedinja le robaría el alma.",
+					"it": "Il corpo coriaceo di Shedinja non si muove neanche di un millimetro. In realtà sembra quasi un guscio vuoto. Si dice che questo Pokémon rubi lo spirito di chiunque osi spiare dentro il suo guscio.",
+					"en": "Shedinja’s hard body doesn’t move—not even a twitch. In fact, its body appears to be merely a hollow shell. It is believed that this Pokémon will steal the spirit of anyone peering into its hollow body from its back.",
+					"ja": "硬い 体は ぴくりとも 動かない。 背中から 体の 空洞を のぞくと 魂を 吸い取られると 信じられている。",
+					"es-419": "Shedinja tiene un cuerpo robusto que no mueve en absoluto. De hecho, parece una especie de caparazón hueco. Se cree que, si alguien se atreviera a mirarle por la espalda lo que tiene en su interior, Shedinja le robaría el alma."
+				},
+				"omegaruby": {
+					"ja-hrkt": "かたい からだは ぴくりとも うごかない。 せなかから からだの くうどうを のぞくと たましいを すいとられると しんじられている。",
+					"ko": "단단한 몸은 꿈쩍도 하지 않는다. 등을 통해 몸의 구멍을 들여다보면 혼이 빨려 들어간다고 믿어지고 있다.",
+					"fr": "Le corps robuste de Munja ne bouge pas d’un pouce. En fait, son corps semble être une coquille vide. Certains croient que ce Pokémon peut voler l’âme de quiconque regarderait à l’intérieur de son corps creux.",
+					"de": "Ninjatoms harter Körper bewegt sich überhaupt nicht. Er scheint bloß eine hohle Schale zu sein. Dieses Pokémon soll angeblich die Seele eines jeden stehlen, der hinterrücks einen Blick in seinen hohlen Körper riskiert.",
+					"es": "Shedinja tiene un cuerpo robusto que no mueve en absoluto. De hecho, parece una especie de caparazón hueco. Se cree que, si alguien se atreviera a mirarle por la espalda lo que tiene en su interior, Shedinja le robaría el alma.",
+					"it": "Il corpo coriaceo di Shedinja non si muove neanche di un millimetro. In realtà sembra quasi un guscio vuoto. Si dice che questo Pokémon rubi lo spirito di chiunque osi spiare dentro il suo guscio.",
+					"en": "Shedinja’s hard body doesn’t move—not even a twitch. In fact, its body appears to be merely a hollow shell. It is believed that this Pokémon will steal the spirit of anyone peering into its hollow body from its back.",
+					"ja": "硬い 体は ぴくりとも 動かない。 背中から 体の 空洞を のぞくと 魂を 吸い取られると 信じられている。",
+					"es-419": "Shedinja tiene un cuerpo robusto que no mueve en absoluto. De hecho, parece una especie de caparazón hueco. Se cree que, si alguien se atreviera a mirarle por la espalda lo que tiene en su interior, Shedinja le robaría el alma."
+				},
+				"alphasapphire-national": {
+					"ja-hrkt": "ツチニンが しんかしたとき なぜか かってに モンスターボールに はいっている ポケモンだ。 からだは まったく うごかず いきも しない。",
+					"ko": "토중몬이 진화했을 때 어찌 된 영문인지 제멋대로 몬스터볼에 들어 있는 포켓몬이다. 몸을 전혀 움직이지 않으며 숨도 쉬지 않는다.",
+					"fr": "Munja est un étrange Pokémon. Il semble apparaître sans raison dans une Poké Ball après l’évolution d’un Ningale. Ce Pokémon bizarre est totalement immobile. Il ne respire même pas.",
+					"de": "Ninjatom ist ein ganz besonderes Pokémon. Es taucht plötzlich in einem Pokéball auf, nachdem sich ein Nincada entwickelt hat. Dieses Pokémon ist absolut bewegungsunfähig und atmet nicht einmal.",
+					"es": "Shedinja es un Pokémon peculiar. Según parece, surge por las buenas en una Poké Ball cuando Nincada evoluciona. Este raro Pokémon no se mueve nada; ni siquiera respira.",
+					"it": "Shedinja è molto particolare. Pare comparire all’improvviso in una Poké Ball dopo l’evoluzione di Nincada. Questo strano Pokémon è completamente immobile. Non è nemmeno in grado di respirare.",
+					"en": "Shedinja is a peculiar Pokémon. It seems to appear unsought in a Poké Ball after a Nincada evolves. This bizarre Pokémon is entirely immobile—it doesn’t even breathe.",
+					"ja": "ツチニンが 進化したとき なぜか 勝手に モンスターボールに 入っている ポケモンだ。 体は まったく 動かず 息も しない。",
+					"es-419": "Shedinja es un Pokémon peculiar. Según parece, surge por las buenas en una Poké Ball cuando Nincada evoluciona. Este raro Pokémon no se mueve nada; ni siquiera respira."
+				},
+				"alphasapphire": {
+					"ja-hrkt": "ツチニンが しんかしたとき なぜか かってに モンスターボールに はいっている ポケモンだ。 からだは まったく うごかず いきも しない。",
+					"ko": "토중몬이 진화했을 때 어찌 된 영문인지 제멋대로 몬스터볼에 들어 있는 포켓몬이다. 몸을 전혀 움직이지 않으며 숨도 쉬지 않는다.",
+					"fr": "Munja est un étrange Pokémon. Il semble apparaître sans raison dans une Poké Ball après l’évolution d’un Ningale. Ce Pokémon bizarre est totalement immobile. Il ne respire même pas.",
+					"de": "Ninjatom ist ein ganz besonderes Pokémon. Es taucht plötzlich in einem Pokéball auf, nachdem sich ein Nincada entwickelt hat. Dieses Pokémon ist absolut bewegungsunfähig und atmet nicht einmal.",
+					"es": "Shedinja es un Pokémon peculiar. Según parece, surge por las buenas en una Poké Ball cuando Nincada evoluciona. Este raro Pokémon no se mueve nada; ni siquiera respira.",
+					"it": "Shedinja è molto particolare. Pare comparire all’improvviso in una Poké Ball dopo l’evoluzione di Nincada. Questo strano Pokémon è completamente immobile. Non è nemmeno in grado di respirare.",
+					"en": "Shedinja is a peculiar Pokémon. It seems to appear unsought in a Poké Ball after a Nincada evolves. This bizarre Pokémon is entirely immobile—it doesn’t even breathe.",
+					"ja": "ツチニンが 進化したとき なぜか 勝手に モンスターボールに 入っている ポケモンだ。 体は まったく 動かず 息も しない。",
+					"es-419": "Shedinja es un Pokémon peculiar. Según parece, surge por las buenas en una Poké Ball cuando Nincada evoluciona. Este raro Pokémon no se mueve nada; ni siquiera respira."
+				}
+			}
+		},
+		{
+			"profileKey": "sun-moon",
+			"label": "Sun / Moon",
+			"appGameKeys": [
+				"sun-alola",
+				"sun-melemele",
+				"sun-akala",
+				"sun-ulaula",
+				"sun-poni",
+				"moon-alola",
+				"moon-melemele",
+				"moon-akala",
+				"moon-ulaula",
+				"moon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Shedinja",
+				"localizedNames": {
+					"ja-hrkt": "ヌケニン",
+					"ja-roma": "Nukenin",
+					"ko": "껍질몬",
+					"zh-hant": "脫殼忍者",
+					"fr": "Munja",
+					"de": "Ninjatom",
+					"es": "Shedinja",
+					"it": "Shedinja",
+					"ja": "ヌケニン",
+					"zh-hans": "脱壳忍者",
+					"es-419": "Shedinja"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Ghost"
+				],
+				"baseStats": {
+					"hp": 1,
+					"atk": 90,
+					"def": 45,
+					"spa": 30,
+					"spd": 30,
+					"spe": 40
+				},
+				"evYield": {
+					"hp": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Wonder Guard"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Slow Then Very Fast",
+				"hatchCounter": 15,
+				"height": "0.8 m",
+				"weight": "1.2 kg",
+				"genderRatio": "Genderless",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 83,
+				"habitat": "Forest",
+				"shape": "Blob",
+				"color": "Brown",
+				"genus": "Shed Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ぬけがらポケモン",
+					"ko": "허물포켓몬",
+					"zh-hant": "空殼寶可夢",
+					"fr": "Pokémon Exuvie",
+					"de": "Häutungs-Pokémon",
+					"es": "Pokémon Muda",
+					"it": "Pokémon Cambiapelle",
+					"ja": "ぬけがらポケモン",
+					"zh-hans": "空壳宝可梦",
+					"es-419": "Pokémon Muda"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 292
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 44
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 113
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 45
+					},
+					{
+						"pokedex": "galar",
+						"number": 106
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 291,
+								"natiId": 291,
+								"name": "Ninjask",
+								"method": "Level",
+								"value": 20
+							}
+						],
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 292,
+								"natiId": 292,
+								"name": "Shedinja",
+								"method": "Shed"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Scratch",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Absorb",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Sand Attack",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Absorb",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Sand Attack",
+							"level": 9,
+							"order": null
+						},
+						{
+							"name": "Fury Swipes",
+							"level": 13,
+							"order": null
+						},
+						{
+							"name": "Spite",
+							"level": 17,
+							"order": null
+						},
+						{
+							"name": "Shadow Sneak",
+							"level": 21,
+							"order": null
+						},
+						{
+							"name": "Mind Reader",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Confuse Ray",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": 33,
+							"order": null
+						},
+						{
+							"name": "Grudge",
+							"level": 37,
+							"order": null
+						},
+						{
+							"name": "Heal Block",
+							"level": 41,
+							"order": null
+						},
+						{
+							"name": "Phantom Force",
+							"level": 45,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Aerial Ace",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "False Swipe",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Leech Life",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sandstorm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Claw",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "X Scissor",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/292",
+						"fetchedAt": "2026-11-03T05:53:24.910Z",
+						"hash": "97719e7c4ece0b1b48fb73aeffdace6a03889e203c56d53cac8b2754e915c97b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/144/",
+						"fetchedAt": "2026-11-03T05:53:24.880Z",
+						"hash": "956d4af4008033114ea2756750c31be0af7220643fea333484c72015ccdef5c6"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/",
+						"fetchedAt": "2026-11-03T05:53:24.938Z",
+						"hash": "dd8f536ae7dbe216937c2ad72cc6bc4aaa4d25b63d867f95bf25bffb290fbeaf"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/encounters",
+						"fetchedAt": "2026-11-03T05:53:24.993Z",
+						"hash": "ccf0bc8bca70736823372ffd1829aef65d03847816da92b187b0594c2c3f3dc3"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/292/",
+						"fetchedAt": "2026-11-03T05:53:25.093Z",
+						"hash": "a16320469a4a3085482fd4fbdc9e47092510aa80bb17009abdc4ba325bf6e923"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sun-alola": "",
+				"sun-melemele": "",
+				"sun-akala": "",
+				"sun-ulaula": "",
+				"sun-poni": "",
+				"moon-alola": "",
+				"moon-melemele": "",
+				"moon-akala": "",
+				"moon-ulaula": "",
+				"moon-poni": ""
+			},
+			"localizedFlavorByGame": {
+				"sun-alola": {},
+				"sun-melemele": {},
+				"sun-akala": {},
+				"sun-ulaula": {},
+				"sun-poni": {},
+				"moon-alola": {},
+				"moon-melemele": {},
+				"moon-akala": {},
+				"moon-ulaula": {},
+				"moon-poni": {}
+			}
+		},
+		{
+			"profileKey": "ultra-sun-ultra-moon",
+			"label": "Ultra Sun / Ultra Moon",
+			"appGameKeys": [
+				"ultrasun-alola",
+				"ultrasun-melemele",
+				"ultrasun-akala",
+				"ultrasun-ulaula",
+				"ultrasun-poni",
+				"ultramoon-alola",
+				"ultramoon-melemele",
+				"ultramoon-akala",
+				"ultramoon-ulaula",
+				"ultramoon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Shedinja",
+				"localizedNames": {
+					"ja-hrkt": "ヌケニン",
+					"ja-roma": "Nukenin",
+					"ko": "껍질몬",
+					"zh-hant": "脫殼忍者",
+					"fr": "Munja",
+					"de": "Ninjatom",
+					"es": "Shedinja",
+					"it": "Shedinja",
+					"ja": "ヌケニン",
+					"zh-hans": "脱壳忍者",
+					"es-419": "Shedinja"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Ghost"
+				],
+				"baseStats": {
+					"hp": 1,
+					"atk": 90,
+					"def": 45,
+					"spa": 30,
+					"spd": 30,
+					"spe": 40
+				},
+				"evYield": {
+					"hp": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Wonder Guard"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Slow Then Very Fast",
+				"hatchCounter": 15,
+				"height": "0.8 m",
+				"weight": "1.2 kg",
+				"genderRatio": "Genderless",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 83,
+				"habitat": "Forest",
+				"shape": "Blob",
+				"color": "Brown",
+				"genus": "Shed Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ぬけがらポケモン",
+					"ko": "허물포켓몬",
+					"zh-hant": "空殼寶可夢",
+					"fr": "Pokémon Exuvie",
+					"de": "Häutungs-Pokémon",
+					"es": "Pokémon Muda",
+					"it": "Pokémon Cambiapelle",
+					"ja": "ぬけがらポケモン",
+					"zh-hans": "空壳宝可梦",
+					"es-419": "Pokémon Muda"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 292
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 44
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 113
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 45
+					},
+					{
+						"pokedex": "galar",
+						"number": 106
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 291,
+								"natiId": 291,
+								"name": "Ninjask",
+								"method": "Level",
+								"value": 20
+							}
+						],
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 292,
+								"natiId": 292,
+								"name": "Shedinja",
+								"method": "Shed"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Scratch",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Absorb",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Sand Attack",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Absorb",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Sand Attack",
+							"level": 9,
+							"order": null
+						},
+						{
+							"name": "Fury Swipes",
+							"level": 13,
+							"order": null
+						},
+						{
+							"name": "Spite",
+							"level": 17,
+							"order": null
+						},
+						{
+							"name": "Shadow Sneak",
+							"level": 21,
+							"order": null
+						},
+						{
+							"name": "Mind Reader",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Confuse Ray",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": 33,
+							"order": null
+						},
+						{
+							"name": "Grudge",
+							"level": 37,
+							"order": null
+						},
+						{
+							"name": "Heal Block",
+							"level": 41,
+							"order": null
+						},
+						{
+							"name": "Phantom Force",
+							"level": 45,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Aerial Ace",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "False Swipe",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Leech Life",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sandstorm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Claw",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "X Scissor",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Ally Switch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bug Bite",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Drain",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Spite",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Telekinesis",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Trick",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/292",
+						"fetchedAt": "2026-11-03T05:53:24.910Z",
+						"hash": "97719e7c4ece0b1b48fb73aeffdace6a03889e203c56d53cac8b2754e915c97b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/144/",
+						"fetchedAt": "2026-11-03T05:53:24.880Z",
+						"hash": "956d4af4008033114ea2756750c31be0af7220643fea333484c72015ccdef5c6"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/",
+						"fetchedAt": "2026-11-03T05:53:24.938Z",
+						"hash": "dd8f536ae7dbe216937c2ad72cc6bc4aaa4d25b63d867f95bf25bffb290fbeaf"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/encounters",
+						"fetchedAt": "2026-11-03T05:53:24.993Z",
+						"hash": "ccf0bc8bca70736823372ffd1829aef65d03847816da92b187b0594c2c3f3dc3"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/292/",
+						"fetchedAt": "2026-11-03T05:53:25.093Z",
+						"hash": "a16320469a4a3085482fd4fbdc9e47092510aa80bb17009abdc4ba325bf6e923"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"ultrasun-alola": "",
+				"ultrasun-melemele": "",
+				"ultrasun-akala": "",
+				"ultrasun-ulaula": "",
+				"ultrasun-poni": "",
+				"ultramoon-alola": "",
+				"ultramoon-melemele": "",
+				"ultramoon-akala": "",
+				"ultramoon-ulaula": "",
+				"ultramoon-poni": ""
+			},
+			"localizedFlavorByGame": {
+				"ultrasun-alola": {},
+				"ultrasun-melemele": {},
+				"ultrasun-akala": {},
+				"ultrasun-ulaula": {},
+				"ultrasun-poni": {},
+				"ultramoon-alola": {},
+				"ultramoon-melemele": {},
+				"ultramoon-akala": {},
+				"ultramoon-ulaula": {},
+				"ultramoon-poni": {}
+			}
+		},
+		{
+			"profileKey": "lets-go-pikachu-lets-go-eevee",
+			"label": "Let's Go Pikachu / Eevee",
+			"appGameKeys": [
+				"letsgopikachu",
+				"letsgoeevee"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Shedinja",
+				"localizedNames": {
+					"ja-hrkt": "ヌケニン",
+					"ja-roma": "Nukenin",
+					"ko": "껍질몬",
+					"zh-hant": "脫殼忍者",
+					"fr": "Munja",
+					"de": "Ninjatom",
+					"es": "Shedinja",
+					"it": "Shedinja",
+					"ja": "ヌケニン",
+					"zh-hans": "脱壳忍者",
+					"es-419": "Shedinja"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Ghost"
+				],
+				"baseStats": {
+					"hp": 1,
+					"atk": 90,
+					"def": 45,
+					"spa": 30,
+					"spd": 30,
+					"spe": 40
+				},
+				"evYield": {
+					"hp": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Wonder Guard"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Slow Then Very Fast",
+				"hatchCounter": 15,
+				"height": "0.8 m",
+				"weight": "1.2 kg",
+				"genderRatio": "Genderless",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 83,
+				"habitat": "Forest",
+				"shape": "Blob",
+				"color": "Brown",
+				"genus": "Shed Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ぬけがらポケモン",
+					"ko": "허물포켓몬",
+					"zh-hant": "空殼寶可夢",
+					"fr": "Pokémon Exuvie",
+					"de": "Häutungs-Pokémon",
+					"es": "Pokémon Muda",
+					"it": "Pokémon Cambiapelle",
+					"ja": "ぬけがらポケモン",
+					"zh-hans": "空壳宝可梦",
+					"es-419": "Pokémon Muda"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 292
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 44
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 113
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 45
+					},
+					{
+						"pokedex": "galar",
+						"number": 106
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 291,
+								"natiId": 291,
+								"name": "Ninjask",
+								"method": "Level",
+								"value": 20
+							}
+						],
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 292,
+								"natiId": 292,
+								"name": "Shedinja",
+								"method": "Shed"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/292",
+						"fetchedAt": "2026-11-03T05:53:24.910Z",
+						"hash": "97719e7c4ece0b1b48fb73aeffdace6a03889e203c56d53cac8b2754e915c97b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/144/",
+						"fetchedAt": "2026-11-03T05:53:24.880Z",
+						"hash": "956d4af4008033114ea2756750c31be0af7220643fea333484c72015ccdef5c6"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/",
+						"fetchedAt": "2026-11-03T05:53:24.938Z",
+						"hash": "dd8f536ae7dbe216937c2ad72cc6bc4aaa4d25b63d867f95bf25bffb290fbeaf"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/encounters",
+						"fetchedAt": "2026-11-03T05:53:24.993Z",
+						"hash": "ccf0bc8bca70736823372ffd1829aef65d03847816da92b187b0594c2c3f3dc3"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/292/",
+						"fetchedAt": "2026-11-03T05:53:25.093Z",
+						"hash": "a16320469a4a3085482fd4fbdc9e47092510aa80bb17009abdc4ba325bf6e923"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"letsgopikachu": "",
+				"letsgoeevee": ""
+			},
+			"localizedFlavorByGame": {
+				"letsgopikachu": {},
+				"letsgoeevee": {}
+			}
+		},
+		{
+			"profileKey": "sword-shield",
+			"label": "Sword / Shield",
+			"appGameKeys": [
+				"sword",
+				"shield"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Shedinja",
+				"localizedNames": {
+					"ja-hrkt": "ヌケニン",
+					"ja-roma": "Nukenin",
+					"ko": "껍질몬",
+					"zh-hant": "脫殼忍者",
+					"fr": "Munja",
+					"de": "Ninjatom",
+					"es": "Shedinja",
+					"it": "Shedinja",
+					"ja": "ヌケニン",
+					"zh-hans": "脱壳忍者",
+					"es-419": "Shedinja"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Ghost"
+				],
+				"baseStats": {
+					"hp": 1,
+					"atk": 90,
+					"def": 45,
+					"spa": 30,
+					"spd": 30,
+					"spe": 40
+				},
+				"evYield": {
+					"hp": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Wonder Guard"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Slow Then Very Fast",
+				"hatchCounter": 15,
+				"height": "0.8 m",
+				"weight": "1.2 kg",
+				"genderRatio": "Genderless",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 83,
+				"habitat": "Forest",
+				"shape": "Blob",
+				"color": "Brown",
+				"genus": "Shed Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ぬけがらポケモン",
+					"ko": "허물포켓몬",
+					"zh-hant": "空殼寶可夢",
+					"fr": "Pokémon Exuvie",
+					"de": "Häutungs-Pokémon",
+					"es": "Pokémon Muda",
+					"it": "Pokémon Cambiapelle",
+					"ja": "ぬけがらポケモン",
+					"zh-hans": "空壳宝可梦",
+					"es-419": "Pokémon Muda"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 292
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 44
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 113
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 45
+					},
+					{
+						"pokedex": "galar",
+						"number": 106
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 291,
+								"natiId": 291,
+								"name": "Ninjask",
+								"method": "Level",
+								"value": 20
+							}
+						],
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 292,
+								"natiId": 292,
+								"name": "Shedinja",
+								"method": "Shed"
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Rolling Fields Max Den F",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Sword",
+						"rate": "5%"
+					},
+					{
+						"area": "Rolling Fields Max Den F",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Shield",
+						"rate": "5%"
+					},
+					{
+						"area": "South Lake Miloch Max Den A",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Sword",
+						"rate": "5%"
+					},
+					{
+						"area": "South Lake Miloch Max Den A",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Shield",
+						"rate": "5%"
+					},
+					{
+						"area": "Bridge Field Max Den I",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Sword",
+						"rate": "5%"
+					},
+					{
+						"area": "Bridge Field Max Den I",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Shield",
+						"rate": "5%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Shadow Claw",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Grudge",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Mud Slap",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Metal Claw",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Dig",
+							"level": 1,
+							"order": 5
+						},
+						{
+							"name": "Scratch",
+							"level": 1,
+							"order": 6
+						},
+						{
+							"name": "Sand Attack",
+							"level": 1,
+							"order": 7
+						},
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": 8
+						},
+						{
+							"name": "False Swipe",
+							"level": 1,
+							"order": 9
+						},
+						{
+							"name": "Confuse Ray",
+							"level": 15,
+							"order": null
+						},
+						{
+							"name": "Absorb",
+							"level": 23,
+							"order": null
+						},
+						{
+							"name": "Shadow Sneak",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Fury Swipes",
+							"level": 36,
+							"order": null
+						},
+						{
+							"name": "Mind Reader",
+							"level": 43,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": 50,
+							"order": null
+						},
+						{
+							"name": "Spite",
+							"level": 57,
+							"order": null
+						},
+						{
+							"name": "Phantom Force",
+							"level": 64,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Agility",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ally Switch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bug Buzz",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endure",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "False Swipe",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Drain",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hex",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Leech Life",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Phantom Force",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sandstorm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Claw",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Trick",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "X Scissor",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Poltergeist",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Skitter Smack",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/292",
+						"fetchedAt": "2026-11-03T05:53:24.910Z",
+						"hash": "97719e7c4ece0b1b48fb73aeffdace6a03889e203c56d53cac8b2754e915c97b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/144/",
+						"fetchedAt": "2026-11-03T05:53:24.880Z",
+						"hash": "956d4af4008033114ea2756750c31be0af7220643fea333484c72015ccdef5c6"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/",
+						"fetchedAt": "2026-11-03T05:53:24.938Z",
+						"hash": "dd8f536ae7dbe216937c2ad72cc6bc4aaa4d25b63d867f95bf25bffb290fbeaf"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/encounters",
+						"fetchedAt": "2026-11-03T05:53:24.993Z",
+						"hash": "ccf0bc8bca70736823372ffd1829aef65d03847816da92b187b0594c2c3f3dc3"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/292/",
+						"fetchedAt": "2026-11-03T05:53:25.093Z",
+						"hash": "a16320469a4a3085482fd4fbdc9e47092510aa80bb17009abdc4ba325bf6e923"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sword": "A most peculiar Pokémon that somehow appears in a Poké Ball when a Nincada evolves.",
+				"shield": "A strange Pokémon—it flies without moving its wings, has a hollow shell for a body, and does not breathe."
+			},
+			"localizedFlavorByGame": {
+				"sword": {
+					"ja-hrkt": "ツチニンが しんかする ときに いつの まにか モンスターボールに はいっている ふしぎな ポケモンだ。",
+					"ko": "토중몬이 진화할 때 어느샌가 몬스터볼에 들어와 있는 신기한 포켓몬이다.",
+					"zh-hant": "牠是一種在土居忍士進化時， 會神不知鬼不覺地出現在 精靈球裡的神奇寶可夢。",
+					"fr": "Un Pokémon étrange que l’on trouve dans une Poké Ball après l’évolution d’un Ningale.",
+					"de": "Ein äußerst sonderbares Pokémon, das plötzlich auf rätselhafte Weise in einem Pokéball auftaucht, wenn Nincada sich entwickelt.",
+					"es": "Es un Pokémon muy peculiar; aparece de repente en una Poké Ball cuando Nincada evoluciona.",
+					"it": "È un Pokémon molto particolare. Appare misteriosamente in una Poké Ball dopo l’evoluzione di un Nincada.",
+					"en": "A most peculiar Pokémon that somehow appears in a Poké Ball when a Nincada evolves.",
+					"ja": "ツチニンが 進化する ときに いつの間にか モンスターボールに 入っている 不思議な ポケモンだ。",
+					"zh-hans": "它是一种在土居忍士进化时， 会神不知鬼不觉地出现在 精灵球里的神奇宝可梦。",
+					"es-419": "Es un Pokémon muy peculiar; aparece de repente en una Poké Ball cuando Nincada evoluciona."
+				},
+				"shield": {
+					"ja-hrkt": "ハネを うごかさずに とびまわる。 からだの なかは からっぽで いきを しない ふしぎな ポケモン。",
+					"ko": "날개를 움직이지 않고 날아다닌다. 몸속이 텅 비어 있고 숨을 쉬지 않는 이상한 포켓몬이다.",
+					"zh-hant": "不拍動翅膀也能四處飛行。 身體裡面空空的，是一種 不呼吸的奇妙寶可夢。",
+					"fr": "Cet étrange Pokémon, dont le corps est comme une coquille vide, ne respire pas et peut voler sans battre des ailes.",
+					"de": "Ninjatom ist ein äußerst sonderbares Pokémon. Es fliegt umher, ohne seine Flügel zu bewegen, sein Körper ist hohl und es atmet nicht.",
+					"es": "Es un Pokémon muy peculiar: revolotea sin batir las alas, no respira y su cuerpo está hueco por dentro.",
+					"it": "Svolazza in giro senza muovere le ali. È un Pokémon strano: è vuoto all’interno e non respira.",
+					"en": "A strange Pokémon—it flies without moving its wings, has a hollow shell for a body, and does not breathe.",
+					"ja": "ハネを 動かさずに 飛びまわる。 体の 中は 空っぽで 息を しない 不思議な ポケモン。",
+					"zh-hans": "不拍动翅膀也能四处飞行。 身体里面空空的，是一种 不呼吸的奇妙宝可梦。",
+					"es-419": "Es un Pokémon muy peculiar: revolotea sin batir las alas, no respira y su cuerpo está hueco por dentro."
+				}
+			}
+		},
+		{
+			"profileKey": "the-isle-of-armor",
+			"label": "The Isle of Armor",
+			"appGameKeys": [
+				"swordioa",
+				"shieldioa"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Shedinja",
+				"localizedNames": {
+					"ja-hrkt": "ヌケニン",
+					"ja-roma": "Nukenin",
+					"ko": "껍질몬",
+					"zh-hant": "脫殼忍者",
+					"fr": "Munja",
+					"de": "Ninjatom",
+					"es": "Shedinja",
+					"it": "Shedinja",
+					"ja": "ヌケニン",
+					"zh-hans": "脱壳忍者",
+					"es-419": "Shedinja"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Ghost"
+				],
+				"baseStats": {
+					"hp": 1,
+					"atk": 90,
+					"def": 45,
+					"spa": 30,
+					"spd": 30,
+					"spe": 40
+				},
+				"evYield": {
+					"hp": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Wonder Guard"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Slow Then Very Fast",
+				"hatchCounter": 15,
+				"height": "0.8 m",
+				"weight": "1.2 kg",
+				"genderRatio": "Genderless",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 83,
+				"habitat": "Forest",
+				"shape": "Blob",
+				"color": "Brown",
+				"genus": "Shed Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ぬけがらポケモン",
+					"ko": "허물포켓몬",
+					"zh-hant": "空殼寶可夢",
+					"fr": "Pokémon Exuvie",
+					"de": "Häutungs-Pokémon",
+					"es": "Pokémon Muda",
+					"it": "Pokémon Cambiapelle",
+					"ja": "ぬけがらポケモン",
+					"zh-hans": "空壳宝可梦",
+					"es-419": "Pokémon Muda"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 292
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 44
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 113
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 45
+					},
+					{
+						"pokedex": "galar",
+						"number": 106
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 291,
+								"natiId": 291,
+								"name": "Ninjask",
+								"method": "Level",
+								"value": 20
+							}
+						],
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 292,
+								"natiId": 292,
+								"name": "Shedinja",
+								"method": "Shed"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/292",
+						"fetchedAt": "2026-11-03T05:53:24.910Z",
+						"hash": "97719e7c4ece0b1b48fb73aeffdace6a03889e203c56d53cac8b2754e915c97b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/144/",
+						"fetchedAt": "2026-11-03T05:53:24.880Z",
+						"hash": "956d4af4008033114ea2756750c31be0af7220643fea333484c72015ccdef5c6"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/",
+						"fetchedAt": "2026-11-03T05:53:24.938Z",
+						"hash": "dd8f536ae7dbe216937c2ad72cc6bc4aaa4d25b63d867f95bf25bffb290fbeaf"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/encounters",
+						"fetchedAt": "2026-11-03T05:53:24.993Z",
+						"hash": "ccf0bc8bca70736823372ffd1829aef65d03847816da92b187b0594c2c3f3dc3"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/292/",
+						"fetchedAt": "2026-11-03T05:53:25.093Z",
+						"hash": "a16320469a4a3085482fd4fbdc9e47092510aa80bb17009abdc4ba325bf6e923"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordioa": "",
+				"shieldioa": ""
+			},
+			"localizedFlavorByGame": {
+				"swordioa": {},
+				"shieldioa": {}
+			}
+		},
+		{
+			"profileKey": "the-crown-tundra",
+			"label": "The Crown Tundra",
+			"appGameKeys": [
+				"swordct",
+				"shieldct"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Shedinja",
+				"localizedNames": {
+					"ja-hrkt": "ヌケニン",
+					"ja-roma": "Nukenin",
+					"ko": "껍질몬",
+					"zh-hant": "脫殼忍者",
+					"fr": "Munja",
+					"de": "Ninjatom",
+					"es": "Shedinja",
+					"it": "Shedinja",
+					"ja": "ヌケニン",
+					"zh-hans": "脱壳忍者",
+					"es-419": "Shedinja"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Ghost"
+				],
+				"baseStats": {
+					"hp": 1,
+					"atk": 90,
+					"def": 45,
+					"spa": 30,
+					"spd": 30,
+					"spe": 40
+				},
+				"evYield": {
+					"hp": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Wonder Guard"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Slow Then Very Fast",
+				"hatchCounter": 15,
+				"height": "0.8 m",
+				"weight": "1.2 kg",
+				"genderRatio": "Genderless",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 83,
+				"habitat": "Forest",
+				"shape": "Blob",
+				"color": "Brown",
+				"genus": "Shed Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ぬけがらポケモン",
+					"ko": "허물포켓몬",
+					"zh-hant": "空殼寶可夢",
+					"fr": "Pokémon Exuvie",
+					"de": "Häutungs-Pokémon",
+					"es": "Pokémon Muda",
+					"it": "Pokémon Cambiapelle",
+					"ja": "ぬけがらポケモン",
+					"zh-hans": "空壳宝可梦",
+					"es-419": "Pokémon Muda"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 292
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 44
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 113
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 45
+					},
+					{
+						"pokedex": "galar",
+						"number": 106
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 291,
+								"natiId": 291,
+								"name": "Ninjask",
+								"method": "Level",
+								"value": 20
+							}
+						],
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 292,
+								"natiId": 292,
+								"name": "Shedinja",
+								"method": "Shed"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/292",
+						"fetchedAt": "2026-11-03T05:53:24.910Z",
+						"hash": "97719e7c4ece0b1b48fb73aeffdace6a03889e203c56d53cac8b2754e915c97b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/144/",
+						"fetchedAt": "2026-11-03T05:53:24.880Z",
+						"hash": "956d4af4008033114ea2756750c31be0af7220643fea333484c72015ccdef5c6"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/",
+						"fetchedAt": "2026-11-03T05:53:24.938Z",
+						"hash": "dd8f536ae7dbe216937c2ad72cc6bc4aaa4d25b63d867f95bf25bffb290fbeaf"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/encounters",
+						"fetchedAt": "2026-11-03T05:53:24.993Z",
+						"hash": "ccf0bc8bca70736823372ffd1829aef65d03847816da92b187b0594c2c3f3dc3"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/292/",
+						"fetchedAt": "2026-11-03T05:53:25.093Z",
+						"hash": "a16320469a4a3085482fd4fbdc9e47092510aa80bb17009abdc4ba325bf6e923"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordct": "",
+				"shieldct": ""
+			},
+			"localizedFlavorByGame": {
+				"swordct": {},
+				"shieldct": {}
+			}
+		},
+		{
+			"profileKey": "brilliant-diamond-shining-pearl",
+			"label": "Brilliant Diamond / Shining Pearl",
+			"appGameKeys": [
+				"brilliantdiamond-national",
+				"brilliantdiamond",
+				"shiningpearl-national",
+				"shiningpearl"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Shedinja",
+				"localizedNames": {
+					"ja-hrkt": "ヌケニン",
+					"ja-roma": "Nukenin",
+					"ko": "껍질몬",
+					"zh-hant": "脫殼忍者",
+					"fr": "Munja",
+					"de": "Ninjatom",
+					"es": "Shedinja",
+					"it": "Shedinja",
+					"ja": "ヌケニン",
+					"zh-hans": "脱壳忍者",
+					"es-419": "Shedinja"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Ghost"
+				],
+				"baseStats": {
+					"hp": 1,
+					"atk": 90,
+					"def": 45,
+					"spa": 30,
+					"spd": 30,
+					"spe": 40
+				},
+				"evYield": {
+					"hp": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Wonder Guard"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Slow Then Very Fast",
+				"hatchCounter": 15,
+				"height": "0.8 m",
+				"weight": "1.2 kg",
+				"genderRatio": "Genderless",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 83,
+				"habitat": "Forest",
+				"shape": "Blob",
+				"color": "Brown",
+				"genus": "Shed Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ぬけがらポケモン",
+					"ko": "허물포켓몬",
+					"zh-hant": "空殼寶可夢",
+					"fr": "Pokémon Exuvie",
+					"de": "Häutungs-Pokémon",
+					"es": "Pokémon Muda",
+					"it": "Pokémon Cambiapelle",
+					"ja": "ぬけがらポケモン",
+					"zh-hans": "空壳宝可梦",
+					"es-419": "Pokémon Muda"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 292
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 44
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 113
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 45
+					},
+					{
+						"pokedex": "galar",
+						"number": 106
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 291,
+								"natiId": 291,
+								"name": "Ninjask",
+								"method": "Level",
+								"value": 20
+							}
+						],
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 292,
+								"natiId": 292,
+								"name": "Shedinja",
+								"method": "Shed"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Dig",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "False Swipe",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Grudge",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Metal Claw",
+							"level": 1,
+							"order": 5
+						},
+						{
+							"name": "Mud Slap",
+							"level": 1,
+							"order": 6
+						},
+						{
+							"name": "Sand Attack",
+							"level": 1,
+							"order": 7
+						},
+						{
+							"name": "Scratch",
+							"level": 1,
+							"order": 8
+						},
+						{
+							"name": "Shadow Claw",
+							"level": 1,
+							"order": 9
+						},
+						{
+							"name": "Confuse Ray",
+							"level": 15,
+							"order": null
+						},
+						{
+							"name": "Absorb",
+							"level": 23,
+							"order": null
+						},
+						{
+							"name": "Shadow Sneak",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Fury Swipes",
+							"level": 36,
+							"order": null
+						},
+						{
+							"name": "Mind Reader",
+							"level": 43,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": 50,
+							"order": null
+						},
+						{
+							"name": "Spite",
+							"level": 57,
+							"order": null
+						},
+						{
+							"name": "Phantom Force",
+							"level": 64,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Aerial Ace",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bug Buzz",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Cut",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endure",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "False Swipe",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Drain",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sandstorm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Shadow Claw",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "X Scissor",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/292",
+						"fetchedAt": "2026-11-03T05:53:24.910Z",
+						"hash": "97719e7c4ece0b1b48fb73aeffdace6a03889e203c56d53cac8b2754e915c97b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/144/",
+						"fetchedAt": "2026-11-03T05:53:24.880Z",
+						"hash": "956d4af4008033114ea2756750c31be0af7220643fea333484c72015ccdef5c6"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/",
+						"fetchedAt": "2026-11-03T05:53:24.938Z",
+						"hash": "dd8f536ae7dbe216937c2ad72cc6bc4aaa4d25b63d867f95bf25bffb290fbeaf"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/encounters",
+						"fetchedAt": "2026-11-03T05:53:24.993Z",
+						"hash": "ccf0bc8bca70736823372ffd1829aef65d03847816da92b187b0594c2c3f3dc3"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/292/",
+						"fetchedAt": "2026-11-03T05:53:25.093Z",
+						"hash": "a16320469a4a3085482fd4fbdc9e47092510aa80bb17009abdc4ba325bf6e923"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"brilliantdiamond-national": "",
+				"brilliantdiamond": "",
+				"shiningpearl-national": "",
+				"shiningpearl": ""
+			},
+			"localizedFlavorByGame": {
+				"brilliantdiamond-national": {},
+				"brilliantdiamond": {},
+				"shiningpearl-national": {},
+				"shiningpearl": {}
+			}
+		},
+		{
+			"profileKey": "legends-arceus",
+			"label": "Legends: Arceus",
+			"appGameKeys": [
+				"legendsarceus"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Shedinja",
+				"localizedNames": {
+					"ja-hrkt": "ヌケニン",
+					"ja-roma": "Nukenin",
+					"ko": "껍질몬",
+					"zh-hant": "脫殼忍者",
+					"fr": "Munja",
+					"de": "Ninjatom",
+					"es": "Shedinja",
+					"it": "Shedinja",
+					"ja": "ヌケニン",
+					"zh-hans": "脱壳忍者",
+					"es-419": "Shedinja"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Ghost"
+				],
+				"baseStats": {
+					"hp": 1,
+					"atk": 90,
+					"def": 45,
+					"spa": 30,
+					"spd": 30,
+					"spe": 40
+				},
+				"evYield": {
+					"hp": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Wonder Guard"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Slow Then Very Fast",
+				"hatchCounter": 15,
+				"height": "0.8 m",
+				"weight": "1.2 kg",
+				"genderRatio": "Genderless",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 83,
+				"habitat": "Forest",
+				"shape": "Blob",
+				"color": "Brown",
+				"genus": "Shed Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ぬけがらポケモン",
+					"ko": "허물포켓몬",
+					"zh-hant": "空殼寶可夢",
+					"fr": "Pokémon Exuvie",
+					"de": "Häutungs-Pokémon",
+					"es": "Pokémon Muda",
+					"it": "Pokémon Cambiapelle",
+					"ja": "ぬけがらポケモン",
+					"zh-hans": "空壳宝可梦",
+					"es-419": "Pokémon Muda"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 292
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 44
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 113
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 45
+					},
+					{
+						"pokedex": "galar",
+						"number": 106
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 291,
+								"natiId": 291,
+								"name": "Ninjask",
+								"method": "Level",
+								"value": 20
+							}
+						],
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 292,
+								"natiId": 292,
+								"name": "Shedinja",
+								"method": "Shed"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/292",
+						"fetchedAt": "2026-11-03T05:53:24.910Z",
+						"hash": "97719e7c4ece0b1b48fb73aeffdace6a03889e203c56d53cac8b2754e915c97b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/144/",
+						"fetchedAt": "2026-11-03T05:53:24.880Z",
+						"hash": "956d4af4008033114ea2756750c31be0af7220643fea333484c72015ccdef5c6"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/",
+						"fetchedAt": "2026-11-03T05:53:24.938Z",
+						"hash": "dd8f536ae7dbe216937c2ad72cc6bc4aaa4d25b63d867f95bf25bffb290fbeaf"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/encounters",
+						"fetchedAt": "2026-11-03T05:53:24.993Z",
+						"hash": "ccf0bc8bca70736823372ffd1829aef65d03847816da92b187b0594c2c3f3dc3"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/292/",
+						"fetchedAt": "2026-11-03T05:53:25.093Z",
+						"hash": "a16320469a4a3085482fd4fbdc9e47092510aa80bb17009abdc4ba325bf6e923"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendsarceus": ""
+			},
+			"localizedFlavorByGame": {
+				"legendsarceus": {}
+			}
+		},
+		{
+			"profileKey": "scarlet-violet",
+			"label": "Scarlet / Violet",
+			"appGameKeys": [
+				"scarlet",
+				"violet"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Shedinja",
+				"localizedNames": {
+					"ja-hrkt": "ヌケニン",
+					"ja-roma": "Nukenin",
+					"ko": "껍질몬",
+					"zh-hant": "脫殼忍者",
+					"fr": "Munja",
+					"de": "Ninjatom",
+					"es": "Shedinja",
+					"it": "Shedinja",
+					"ja": "ヌケニン",
+					"zh-hans": "脱壳忍者",
+					"es-419": "Shedinja"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Ghost"
+				],
+				"baseStats": {
+					"hp": 1,
+					"atk": 90,
+					"def": 45,
+					"spa": 30,
+					"spd": 30,
+					"spe": 40
+				},
+				"evYield": {
+					"hp": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Wonder Guard"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Slow Then Very Fast",
+				"hatchCounter": 15,
+				"height": "0.8 m",
+				"weight": "1.2 kg",
+				"genderRatio": "Genderless",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 83,
+				"habitat": "Forest",
+				"shape": "Blob",
+				"color": "Brown",
+				"genus": "Shed Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ぬけがらポケモン",
+					"ko": "허물포켓몬",
+					"zh-hant": "空殼寶可夢",
+					"fr": "Pokémon Exuvie",
+					"de": "Häutungs-Pokémon",
+					"es": "Pokémon Muda",
+					"it": "Pokémon Cambiapelle",
+					"ja": "ぬけがらポケモン",
+					"zh-hans": "空壳宝可梦",
+					"es-419": "Pokémon Muda"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 292
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 44
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 113
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 45
+					},
+					{
+						"pokedex": "galar",
+						"number": 106
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 291,
+								"natiId": 291,
+								"name": "Ninjask",
+								"method": "Level",
+								"value": 20
+							}
+						],
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 292,
+								"natiId": 292,
+								"name": "Shedinja",
+								"method": "Shed"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/292",
+						"fetchedAt": "2026-11-03T05:53:24.910Z",
+						"hash": "97719e7c4ece0b1b48fb73aeffdace6a03889e203c56d53cac8b2754e915c97b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/144/",
+						"fetchedAt": "2026-11-03T05:53:24.880Z",
+						"hash": "956d4af4008033114ea2756750c31be0af7220643fea333484c72015ccdef5c6"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/",
+						"fetchedAt": "2026-11-03T05:53:24.938Z",
+						"hash": "dd8f536ae7dbe216937c2ad72cc6bc4aaa4d25b63d867f95bf25bffb290fbeaf"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/encounters",
+						"fetchedAt": "2026-11-03T05:53:24.993Z",
+						"hash": "ccf0bc8bca70736823372ffd1829aef65d03847816da92b187b0594c2c3f3dc3"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/292/",
+						"fetchedAt": "2026-11-03T05:53:25.093Z",
+						"hash": "a16320469a4a3085482fd4fbdc9e47092510aa80bb17009abdc4ba325bf6e923"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlet": "",
+				"violet": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlet": {},
+				"violet": {}
+			}
+		},
+		{
+			"profileKey": "the-teal-mask",
+			"label": "The Teal Mask",
+			"appGameKeys": [
+				"scarlettm",
+				"violettm"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Shedinja",
+				"localizedNames": {
+					"ja-hrkt": "ヌケニン",
+					"ja-roma": "Nukenin",
+					"ko": "껍질몬",
+					"zh-hant": "脫殼忍者",
+					"fr": "Munja",
+					"de": "Ninjatom",
+					"es": "Shedinja",
+					"it": "Shedinja",
+					"ja": "ヌケニン",
+					"zh-hans": "脱壳忍者",
+					"es-419": "Shedinja"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Ghost"
+				],
+				"baseStats": {
+					"hp": 1,
+					"atk": 90,
+					"def": 45,
+					"spa": 30,
+					"spd": 30,
+					"spe": 40
+				},
+				"evYield": {
+					"hp": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Wonder Guard"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Slow Then Very Fast",
+				"hatchCounter": 15,
+				"height": "0.8 m",
+				"weight": "1.2 kg",
+				"genderRatio": "Genderless",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 83,
+				"habitat": "Forest",
+				"shape": "Blob",
+				"color": "Brown",
+				"genus": "Shed Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ぬけがらポケモン",
+					"ko": "허물포켓몬",
+					"zh-hant": "空殼寶可夢",
+					"fr": "Pokémon Exuvie",
+					"de": "Häutungs-Pokémon",
+					"es": "Pokémon Muda",
+					"it": "Pokémon Cambiapelle",
+					"ja": "ぬけがらポケモン",
+					"zh-hans": "空壳宝可梦",
+					"es-419": "Pokémon Muda"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 292
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 44
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 113
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 45
+					},
+					{
+						"pokedex": "galar",
+						"number": 106
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 291,
+								"natiId": 291,
+								"name": "Ninjask",
+								"method": "Level",
+								"value": 20
+							}
+						],
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 292,
+								"natiId": 292,
+								"name": "Shedinja",
+								"method": "Shed"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/292",
+						"fetchedAt": "2026-11-03T05:53:24.910Z",
+						"hash": "97719e7c4ece0b1b48fb73aeffdace6a03889e203c56d53cac8b2754e915c97b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/144/",
+						"fetchedAt": "2026-11-03T05:53:24.880Z",
+						"hash": "956d4af4008033114ea2756750c31be0af7220643fea333484c72015ccdef5c6"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/",
+						"fetchedAt": "2026-11-03T05:53:24.938Z",
+						"hash": "dd8f536ae7dbe216937c2ad72cc6bc4aaa4d25b63d867f95bf25bffb290fbeaf"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/encounters",
+						"fetchedAt": "2026-11-03T05:53:24.993Z",
+						"hash": "ccf0bc8bca70736823372ffd1829aef65d03847816da92b187b0594c2c3f3dc3"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/292/",
+						"fetchedAt": "2026-11-03T05:53:25.093Z",
+						"hash": "a16320469a4a3085482fd4fbdc9e47092510aa80bb17009abdc4ba325bf6e923"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlettm": "",
+				"violettm": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlettm": {},
+				"violettm": {}
+			}
+		},
+		{
+			"profileKey": "the-indigo-disk",
+			"label": "The Indigo Disk",
+			"appGameKeys": [
+				"scarletid",
+				"violetid"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Shedinja",
+				"localizedNames": {
+					"ja-hrkt": "ヌケニン",
+					"ja-roma": "Nukenin",
+					"ko": "껍질몬",
+					"zh-hant": "脫殼忍者",
+					"fr": "Munja",
+					"de": "Ninjatom",
+					"es": "Shedinja",
+					"it": "Shedinja",
+					"ja": "ヌケニン",
+					"zh-hans": "脱壳忍者",
+					"es-419": "Shedinja"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug",
+					"Ghost"
+				],
+				"baseStats": {
+					"hp": 1,
+					"atk": 90,
+					"def": 45,
+					"spa": 30,
+					"spd": 30,
+					"spe": 40
+				},
+				"evYield": {
+					"hp": 2
+				},
+				"generation": 3,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Wonder Guard"
+				],
+				"hiddenAbilities": [],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Slow Then Very Fast",
+				"hatchCounter": 15,
+				"height": "0.8 m",
+				"weight": "1.2 kg",
+				"genderRatio": "Genderless",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 83,
+				"habitat": "Forest",
+				"shape": "Blob",
+				"color": "Brown",
+				"genus": "Shed Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ぬけがらポケモン",
+					"ko": "허물포켓몬",
+					"zh-hant": "空殼寶可夢",
+					"fr": "Pokémon Exuvie",
+					"de": "Häutungs-Pokémon",
+					"es": "Pokémon Muda",
+					"it": "Pokémon Cambiapelle",
+					"ja": "ぬけがらポケモン",
+					"zh-hans": "空壳宝可梦",
+					"es-419": "Pokémon Muda"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 292
+					},
+					{
+						"pokedex": "hoenn",
+						"number": 44
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 113
+					},
+					{
+						"pokedex": "updated-hoenn",
+						"number": 45
+					},
+					{
+						"pokedex": "galar",
+						"number": 106
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 291,
+								"natiId": 291,
+								"name": "Ninjask",
+								"method": "Level",
+								"value": 20
+							}
+						],
+						[
+							{
+								"id": 290,
+								"natiId": 290,
+								"name": "Nincada"
+							},
+							{
+								"id": 292,
+								"natiId": 292,
+								"name": "Shedinja",
+								"method": "Shed"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Ruby Sapphire."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/292",
+						"fetchedAt": "2026-11-03T05:53:24.910Z",
+						"hash": "97719e7c4ece0b1b48fb73aeffdace6a03889e203c56d53cac8b2754e915c97b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/144/",
+						"fetchedAt": "2026-11-03T05:53:24.880Z",
+						"hash": "956d4af4008033114ea2756750c31be0af7220643fea333484c72015ccdef5c6"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/",
+						"fetchedAt": "2026-11-03T05:53:24.938Z",
+						"hash": "dd8f536ae7dbe216937c2ad72cc6bc4aaa4d25b63d867f95bf25bffb290fbeaf"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/292/encounters",
+						"fetchedAt": "2026-11-03T05:53:24.993Z",
+						"hash": "ccf0bc8bca70736823372ffd1829aef65d03847816da92b187b0594c2c3f3dc3"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/292/",
+						"fetchedAt": "2026-11-03T05:53:25.093Z",
+						"hash": "a16320469a4a3085482fd4fbdc9e47092510aa80bb17009abdc4ba325bf6e923"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarletid": "",
+				"violetid": ""
+			},
+			"localizedFlavorByGame": {
+				"scarletid": {},
+				"violetid": {}
+			}
+		}
+	]
+}

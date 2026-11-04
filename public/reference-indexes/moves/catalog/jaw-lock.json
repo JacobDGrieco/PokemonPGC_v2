@@ -1,0 +1,252 @@
+{
+	"schemaVersion": 1,
+	"id": 746,
+	"slug": "jaw-lock",
+	"name": "Jaw Lock",
+	"names": {
+		"de": "Fesselbiss",
+		"en": "Jaw Lock",
+		"es": "Presa Maxilar",
+		"es-419": "Presa Maxilar",
+		"fr": "Croque Fort",
+		"it": "Morsostretto",
+		"ja": "くらいつく",
+		"ja-hrkt": "くらいつく",
+		"ko": "물고버티기",
+		"zh-hans": "紧咬不放",
+		"zh-hant": "緊咬不放"
+	},
+	"generation": 8,
+	"type": "Dark",
+	"damageClass": "Physical",
+	"power": 80,
+	"accuracy": 100,
+	"pp": 10,
+	"priority": 0,
+	"effectChance": 100,
+	"target": "Selected Pokemon",
+	"effectEntries": [
+		{
+			"language": "en",
+			"effect": "Inflicts damage, then prevents you and the target from switching out. The user or target may switch out using a Shed shell, Baton Pass, Flip turn, Parting Shot, Teleport, U-Turn, or Volt Switch. If they do, the effect ends.",
+			"shortEffect": "Prevents you and the target from switching out."
+		}
+	],
+	"effectChanges": [],
+	"descriptions": [
+		{
+			"versionGroup": "legends-arceus",
+			"language": "en",
+			"text": "This move prevents the user and the target from switching out until either of them faints. The effect goes away if either of the Pokémon leaves the field."
+		},
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "en",
+			"text": "This move prevents the user and the target from switching out until either of them faints. The effect goes away if either of the Pokémon leaves the field."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "de",
+			"text": "Anwender und Ziel können nicht ausgetauscht werden, bis einer von ihnen kampfunfähig wird. Der Effekt endet, wenn eines der Pokémon das Kampffeld verlässt."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "en",
+			"text": "This move prevents the user and the target from switching out until either of them faints. The effect goes away if either of the Pokémon leaves the field."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es",
+			"text": "Impide que tanto el atacante como el defensor puedan ser intercambiados hasta que uno de ellos se debilite o abandone el terreno de combate."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es-419",
+			"text": "Impide que tanto el atacante como el defensor puedan ser intercambiados hasta que uno de ellos se debilite o abandone el terreno de combate."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "fr",
+			"text": "Le lanceur et sa cible ne peuvent plus quitter le terrain jusqu’à ce que l’un d’entre eux tombe K.O. L’effet est annulé si l’un des deux Pokémon disparaît."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "it",
+			"text": "Impedisce a chi la usa e al bersaglio di essere sostituiti finché non vanno KO. L’effetto svanisce se uno dei due lascia il campo."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja",
+			"text": "お互い ひんしに なるまで 交代が できなくなる。 どちらかの ポケモンが いなくなると 効果は消える。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja-hrkt",
+			"text": "おたがい ひんしに なるまで こうたいが できなくなる。 どちらかの ポケモンが いなくなると こうかはきえる。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ko",
+			"text": "어느 한쪽이 기절할 때까지 교체할 수 없게 된다. 한쪽의 포켓몬이 없어지면 효과가 사라진다."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hans",
+			"text": "使双方直到一方濒死为止 无法替换宝可梦。 其中一方退场则可以解除效果。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hant",
+			"text": "使攻擊對象及自己在陷入瀕死前 都無法進行替換。當兩隻寶可夢 其中一方退場時，效果就會消失。"
+		}
+	],
+	"pastValues": [],
+	"statChanges": [],
+	"meta": {
+		"ailment": "None",
+		"category": "Damage",
+		"minHits": null,
+		"maxHits": null,
+		"minTurns": null,
+		"maxTurns": null,
+		"drain": 0,
+		"healing": 0,
+		"critRate": 0,
+		"ailmentChance": 0,
+		"flinchChance": 0,
+		"statChance": 0
+	},
+	"machines": [],
+	"learners": [
+		{
+			"nationalDexId": 833,
+			"speciesName": "Chewtle",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 35,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 35,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 834,
+			"speciesName": "Drednaw",
+			"formKey": "normal",
+			"formName": "Normal",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 39,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 942,
+			"speciesName": "Maschiff",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 43,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 943,
+			"speciesName": "Mabosstiff",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 48,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		},
+		{
+			"nationalDexId": 1005,
+			"speciesName": "Roaring Moon",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Egg",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		}
+	],
+	"potentialPokemon": [
+		"chewtle",
+		"drednaw",
+		"maschiff",
+		"mabosstiff",
+		"roaring-moon"
+	],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/move/746/",
+		"fetchedAt": "2026-11-03T06:30:18.110Z",
+		"hash": "026edf211f3c61326d986b3dca04d7c32a81c4d2c16feecccfd1c657448bda5c"
+	}
+}

@@ -1,0 +1,2989 @@
+{
+	"schemaVersion": 2,
+	"nationalDexId": 819,
+	"speciesName": "Skwovet",
+	"formKey": "base",
+	"formName": "Base",
+	"formLabelSource": "form-catalog",
+	"profiles": [
+		{
+			"profileKey": "sword-shield",
+			"label": "Sword / Shield",
+			"appGameKeys": [
+				"sword",
+				"shield"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Skwovet",
+				"localizedNames": {
+					"ja-hrkt": "ホシガリス",
+					"ja-roma": "Hoshigarisu",
+					"ko": "탐리스",
+					"zh-hant": "貪心栗鼠",
+					"fr": "Rongourmand",
+					"de": "Raffel",
+					"es": "Skwovet",
+					"it": "Skwovet",
+					"ja": "ホシガリス",
+					"zh-hans": "贪心栗鼠",
+					"es-419": "Skwovet"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 70,
+					"atk": 55,
+					"def": 55,
+					"spa": 35,
+					"spd": 35,
+					"spe": 25
+				},
+				"evYield": {
+					"hp": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cheek Pouch",
+					"Gluttony (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Gluttony"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.3 m",
+				"weight": "2.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 255,
+				"baseExperience": 55,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Cheeky Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ほおばりポケモン",
+					"ko": "볼가득포켓몬",
+					"zh-hant": "貪吃寶可夢",
+					"fr": "Pokémon Joufflu",
+					"de": "Raffbacken-Pokémon",
+					"es": "Pokémon Abazón",
+					"it": "Pokémon Guancepiene",
+					"ja": "ほおばりポケモン",
+					"zh-hans": "贪吃宝可梦",
+					"es-419": "Pokémon Abazón"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 819
+					},
+					{
+						"pokedex": "galar",
+						"number": 24
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 9
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 5
+					},
+					{
+						"pokedex": "paldea",
+						"number": 29
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 72
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 819,
+								"natiId": 819,
+								"name": "Skwovet"
+							},
+							{
+								"id": 820,
+								"natiId": 820,
+								"name": "Greedent",
+								"method": "Level",
+								"value": 24
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Galar Route 1 Area",
+						"notes": "Overworld, Lv. 3-6",
+						"games": "Sword",
+						"rate": "50%"
+					},
+					{
+						"area": "Galar Route 1 Area",
+						"notes": "Walk, Lv. 2-5",
+						"games": "Sword",
+						"rate": "40%"
+					},
+					{
+						"area": "Galar Route 1 Area",
+						"notes": "Overworld, Lv. 3-6",
+						"games": "Shield",
+						"rate": "50%"
+					},
+					{
+						"area": "Galar Route 1 Area",
+						"notes": "Walk, Lv. 2-5",
+						"games": "Shield",
+						"rate": "40%"
+					},
+					{
+						"area": "Galar Route 2 Main",
+						"notes": "Overworld, Lv. 5-7",
+						"games": "Sword",
+						"rate": "38%"
+					},
+					{
+						"area": "Galar Route 2 Main",
+						"notes": "Overworld, Lv. 5-7",
+						"games": "Shield",
+						"rate": "38%"
+					},
+					{
+						"area": "Galar Route 3 East",
+						"notes": "Berry Trees, Lv. 8-13",
+						"games": "Sword",
+						"rate": "80%"
+					},
+					{
+						"area": "Galar Route 3 East",
+						"notes": "Berry Trees, Lv. 8-13",
+						"games": "Shield",
+						"rate": "80%"
+					},
+					{
+						"area": "Galar Route 4 Area",
+						"notes": "Berry Trees, Lv. 13-15",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Galar Route 4 Area",
+						"notes": "Berry Trees, Lv. 13-15",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Galar Route 5 Area",
+						"notes": "Berry Trees, Lv. 16-18",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Galar Route 5 Area",
+						"notes": "Berry Trees, Lv. 16-18",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Dappled Grove Area",
+						"notes": "Berry Trees, Lv. 11-15",
+						"games": "Sword",
+						"rate": "70%"
+					},
+					{
+						"area": "Dappled Grove Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "Sword",
+						"rate": "70%"
+					},
+					{
+						"area": "Dappled Grove Area",
+						"notes": "Berry Trees, Lv. 11-15",
+						"games": "Shield",
+						"rate": "70%"
+					},
+					{
+						"area": "Dappled Grove Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "Shield",
+						"rate": "70%"
+					},
+					{
+						"area": "Motostoke Riverbank Area",
+						"notes": "Berry Trees, Lv. 26-28",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Motostoke Riverbank Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Motostoke Riverbank Area",
+						"notes": "Berry Trees, Lv. 26-28",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Motostoke Riverbank Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "North Lake Miloch Area",
+						"notes": "Berry Trees, Lv. 14-16",
+						"games": "Sword",
+						"rate": "50%"
+					},
+					{
+						"area": "North Lake Miloch Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "Sword",
+						"rate": "50%"
+					},
+					{
+						"area": "North Lake Miloch Area",
+						"notes": "Berry Trees, Lv. 14-16",
+						"games": "Shield",
+						"rate": "50%"
+					},
+					{
+						"area": "North Lake Miloch Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "Shield",
+						"rate": "50%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Berry Trees, Lv. 7-10",
+						"games": "Sword",
+						"rate": "80%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "Sword",
+						"rate": "80%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Berry Trees, Lv. 7-10",
+						"games": "Shield",
+						"rate": "80%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "Shield",
+						"rate": "80%"
+					},
+					{
+						"area": "Slumbering Weald Main",
+						"notes": "Overworld, Lv. 2-3",
+						"games": "Sword",
+						"rate": "40%"
+					},
+					{
+						"area": "Slumbering Weald Main",
+						"notes": "Walk, Lv. 2-3",
+						"games": "Sword",
+						"rate": "50%"
+					},
+					{
+						"area": "Slumbering Weald Main",
+						"notes": "Overworld, Lv. 2-3",
+						"games": "Shield",
+						"rate": "40%"
+					},
+					{
+						"area": "Slumbering Weald Main",
+						"notes": "Walk, Lv. 2-3",
+						"games": "Shield",
+						"rate": "50%"
+					},
+					{
+						"area": "Watchtower Ruins Area",
+						"notes": "Berry Trees, Lv. 11-14",
+						"games": "Sword",
+						"rate": "50%"
+					},
+					{
+						"area": "Watchtower Ruins Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "Sword",
+						"rate": "50%"
+					},
+					{
+						"area": "Watchtower Ruins Area",
+						"notes": "Berry Trees, Lv. 11-14",
+						"games": "Shield",
+						"rate": "50%"
+					},
+					{
+						"area": "Watchtower Ruins Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "Shield",
+						"rate": "50%"
+					},
+					{
+						"area": "Motostoke Pokemon Center",
+						"notes": "Npc Trade, Lv. 10",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Motostoke Pokemon Center",
+						"notes": "Npc Trade, Lv. 10",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Rolling Fields Max Den A",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Rolling Fields Max Den A",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Sword",
+						"rate": "40%"
+					},
+					{
+						"area": "Rolling Fields Max Den A",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Rolling Fields Max Den A",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "40%"
+					},
+					{
+						"area": "East Lake Axewell Max Den C",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "East Lake Axewell Max Den C",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Sword",
+						"rate": "40%"
+					},
+					{
+						"area": "East Lake Axewell Max Den C",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "East Lake Axewell Max Den C",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "40%"
+					},
+					{
+						"area": "Motostoke Riverbank Max Den A",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Motostoke Riverbank Max Den A",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Motostoke Riverbank Max Den A",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Sword",
+						"rate": "40%"
+					},
+					{
+						"area": "Motostoke Riverbank Max Den A",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Motostoke Riverbank Max Den A",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Motostoke Riverbank Max Den A",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "40%"
+					},
+					{
+						"area": "Bridge Field Max Den E",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Bridge Field Max Den E",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Bridge Field Max Den E",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Sword",
+						"rate": "40%"
+					},
+					{
+						"area": "Bridge Field Max Den E",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Bridge Field Max Den E",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Bridge Field Max Den E",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "40%"
+					},
+					{
+						"area": "Stony Wilderness Max Den A",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Stony Wilderness Max Den A",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "35%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Tail Whip",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Bite",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Stuff Cheeks",
+							"level": 10,
+							"order": null
+						},
+						{
+							"name": "Stockpile",
+							"level": 15,
+							"order": 1
+						},
+						{
+							"name": "Swallow",
+							"level": 15,
+							"order": 2
+						},
+						{
+							"name": "Spit Up",
+							"level": 15,
+							"order": 3
+						},
+						{
+							"name": "Body Slam",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Counter",
+							"level": 30,
+							"order": null
+						},
+						{
+							"name": "Bullet Seed",
+							"level": 35,
+							"order": null
+						},
+						{
+							"name": "Super Fang",
+							"level": 40,
+							"order": null
+						},
+						{
+							"name": "Belch",
+							"level": 45,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Amnesia",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Assurance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Body Slam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Brutal Swing",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bullet Seed",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Crunch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endure",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fling",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Gyro Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Voice",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Mud Shot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Payback",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Seed Bomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Tail Slap",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Uproar",
+							"level": null,
+							"order": null
+						}
+					],
+					"Egg": [
+						{
+							"name": "Belly Drum",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Defense Curl",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Last Resort",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rollout",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/819",
+						"fetchedAt": "2026-11-03T05:53:59.085Z",
+						"hash": "fba778921d83d458a4e6a45ec89064b0d41c0185178f930ea208c6c969a31d3a"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/433/",
+						"fetchedAt": "2026-11-03T05:53:59.120Z",
+						"hash": "8be6406c9dda5adc80ea8bbe642962f3b0584a1181dff96522c986798d3fde73"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/819/",
+						"fetchedAt": "2026-11-03T05:53:59.151Z",
+						"hash": "db1555c7b798c3a0026e55092c32a6ea68f445fba327a0cc46fce4e294d4a768"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/819/encounters",
+						"fetchedAt": "2026-11-03T05:53:59.218Z",
+						"hash": "20865c9f25df426da8adf9582e8b27760d975e79688976d38cda23f91e1bf36f"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/819/",
+						"fetchedAt": "2026-11-03T05:53:59.277Z",
+						"hash": "74b8ea0fe096bc6fc358b0d79f9e191bd8ca28930626aa138b9c904affe981cb"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sword": "Found throughout the Galar region, this Pokémon becomes uneasy if its cheeks are ever completely empty of berries.",
+				"shield": "It eats berries nonstop—a habit that has made it more resilient than it looks. It’ll show up on farms, searching for yet more berries."
+			},
+			"localizedFlavorByGame": {
+				"sword": {
+					"ja-hrkt": "ガラルの いたるところに いる。 さゆうの ほっぺに きのみを たくわえていないと ふあん。",
+					"ko": "가라르의 여기저기에 있다. 양쪽 볼에 나무열매를 비축해두지 않으면 불안해한다.",
+					"zh-hant": "在伽勒爾隨處可見。 如果不往兩邊的頰囊裡 塞滿樹果，就會感到不安。",
+					"fr": "On le trouve partout à Galar. S’il n’a pas de Baies en réserve dans ses deux joues, il devient anxieux.",
+					"de": "Es ist überall in der Galar-Region anzutreffen. Hat es keine Beeren, die es in seinen beiden Backen horten kann, wird es unruhig.",
+					"es": "Este Pokémon se encuentra por todo Galar. No se queda tranquilo hasta que tiene ambos carrillos atiborrados de bayas.",
+					"it": "Si trova ovunque a Galar. Se non ha una scorta di bacche dentro le guance, si fa prendere dall’ansia.",
+					"en": "Found throughout the Galar region, this Pokémon becomes uneasy if its cheeks are ever completely empty of berries.",
+					"ja": "ガラルの いたるところに いる。 左右の ほっぺに 木の実を 蓄えていないと 不安。",
+					"zh-hans": "在伽勒尔随处可见。 如果不往两边的颊囊里 塞满树果，就会感到不安。",
+					"es-419": "Este Pokémon se encuentra por todo Galar. No se queda tranquilo hasta que tiene ambos carrillos atiborrados de bayas."
+				},
+				"shield": {
+					"ja-hrkt": "つねに きのみを くっているので みかけいじょうに タフ。 きのみを ねらって はたけに あらわれる。",
+					"ko": "항상 나무열매를 먹고 있어 보기보다 튼튼하다. 나무열매를 노리고 밭에 출몰한다.",
+					"zh-hant": "由於牠無論何時都在吃樹果， 使得牠比外表看起來還要頑強。 會出現在田地裡尋找樹果。",
+					"fr": "Comme il mange tout le temps des Baies, il est plus costaud qu’il n’en a l’air. Il parcourt les champs à la recherche de sa précieuse denrée.",
+					"de": "Da es unentwegt Beeren futtert, ist es zäher als es aussieht. Man sieht es oft auf Feldern, wo es nach Beeren sucht.",
+					"es": "Siempre están comiendo bayas, por lo que son más robustos de lo que aparentan. Frecuentan los huertos en busca de su preciado manjar.",
+					"it": "Per via dell’abitudine di mangiare senza sosta, è più forte di quanto possa sembrare. Fa incetta di bacche nei campi coltivati.",
+					"en": "It eats berries nonstop—a habit that has made it more resilient than it looks. It’ll show up on farms, searching for yet more berries.",
+					"ja": "つねに 木の実を 食っているので 見かけ以上に タフ。 木の実を 狙って 畑に 現れる。",
+					"zh-hans": "由于它无论何时都在吃树果， 使得它比外表看起来还要顽强。 会出现在田地里寻找树果。",
+					"es-419": "Siempre están comiendo bayas, por lo que son más robustos de lo que aparentan. Frecuentan los huertos en busca de su preciado manjar."
+				}
+			}
+		},
+		{
+			"profileKey": "the-isle-of-armor",
+			"label": "The Isle of Armor",
+			"appGameKeys": [
+				"swordioa",
+				"shieldioa"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Skwovet",
+				"localizedNames": {
+					"ja-hrkt": "ホシガリス",
+					"ja-roma": "Hoshigarisu",
+					"ko": "탐리스",
+					"zh-hant": "貪心栗鼠",
+					"fr": "Rongourmand",
+					"de": "Raffel",
+					"es": "Skwovet",
+					"it": "Skwovet",
+					"ja": "ホシガリス",
+					"zh-hans": "贪心栗鼠",
+					"es-419": "Skwovet"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 70,
+					"atk": 55,
+					"def": 55,
+					"spa": 35,
+					"spd": 35,
+					"spe": 25
+				},
+				"evYield": {
+					"hp": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cheek Pouch",
+					"Gluttony (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Gluttony"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.3 m",
+				"weight": "2.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 255,
+				"baseExperience": 55,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Cheeky Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ほおばりポケモン",
+					"ko": "볼가득포켓몬",
+					"zh-hant": "貪吃寶可夢",
+					"fr": "Pokémon Joufflu",
+					"de": "Raffbacken-Pokémon",
+					"es": "Pokémon Abazón",
+					"it": "Pokémon Guancepiene",
+					"ja": "ほおばりポケモン",
+					"zh-hans": "贪吃宝可梦",
+					"es-419": "Pokémon Abazón"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 819
+					},
+					{
+						"pokedex": "galar",
+						"number": 24
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 9
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 5
+					},
+					{
+						"pokedex": "paldea",
+						"number": 29
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 72
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 819,
+								"natiId": 819,
+								"name": "Skwovet"
+							},
+							{
+								"id": 820,
+								"natiId": 820,
+								"name": "Greedent",
+								"method": "Level",
+								"value": 24
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Challenge Beach Area",
+						"notes": "Berry Trees, Lv. 13-18",
+						"games": "The Isle Of Armor Sword",
+						"rate": "70%"
+					},
+					{
+						"area": "Challenge Beach Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "70%"
+					},
+					{
+						"area": "Challenge Beach Area",
+						"notes": "Berry Trees, Lv. 13-18",
+						"games": "The Isle Of Armor Shield",
+						"rate": "70%"
+					},
+					{
+						"area": "Challenge Beach Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "70%"
+					},
+					{
+						"area": "Fields Of Honor Area",
+						"notes": "Berry Trees, Lv. 13-18",
+						"games": "The Isle Of Armor Sword",
+						"rate": "70%"
+					},
+					{
+						"area": "Fields Of Honor Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "70%"
+					},
+					{
+						"area": "Fields Of Honor Area",
+						"notes": "Berry Trees, Lv. 13-18",
+						"games": "The Isle Of Armor Shield",
+						"rate": "70%"
+					},
+					{
+						"area": "Fields Of Honor Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "70%"
+					},
+					{
+						"area": "Forest Of Focus Area",
+						"notes": "Berry Trees, Lv. 13-18",
+						"games": "The Isle Of Armor Sword",
+						"rate": "60%"
+					},
+					{
+						"area": "Forest Of Focus Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "60%"
+					},
+					{
+						"area": "Forest Of Focus Area",
+						"notes": "Berry Trees, Lv. 13-18",
+						"games": "The Isle Of Armor Shield",
+						"rate": "60%"
+					},
+					{
+						"area": "Forest Of Focus Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "60%"
+					},
+					{
+						"area": "Insular Sea Area",
+						"notes": "Berry Trees, Lv. 43-48",
+						"games": "The Isle Of Armor Sword",
+						"rate": "60%"
+					},
+					{
+						"area": "Insular Sea Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "60%"
+					},
+					{
+						"area": "Insular Sea Area",
+						"notes": "Berry Trees, Lv. 43-48",
+						"games": "The Isle Of Armor Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Insular Sea Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Insular Sea Area",
+						"notes": "Berry Trees, Lv. 43-48",
+						"games": "The Isle Of Armor Shield",
+						"rate": "60%"
+					},
+					{
+						"area": "Insular Sea Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "60%"
+					},
+					{
+						"area": "Insular Sea Area",
+						"notes": "Berry Trees, Lv. 43-48",
+						"games": "The Isle Of Armor Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Insular Sea Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Loop Lagoon Area",
+						"notes": "Berry Trees, Lv. 19-24",
+						"games": "The Isle Of Armor Sword",
+						"rate": "70%"
+					},
+					{
+						"area": "Loop Lagoon Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "70%"
+					},
+					{
+						"area": "Loop Lagoon Area",
+						"notes": "Berry Trees, Lv. 19-24",
+						"games": "The Isle Of Armor Shield",
+						"rate": "70%"
+					},
+					{
+						"area": "Loop Lagoon Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "70%"
+					},
+					{
+						"area": "Soothing Wetlands Area",
+						"notes": "Berry Trees, Lv. 13-18",
+						"games": "The Isle Of Armor Sword",
+						"rate": "70%"
+					},
+					{
+						"area": "Soothing Wetlands Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "70%"
+					},
+					{
+						"area": "Soothing Wetlands Area",
+						"notes": "Berry Trees, Lv. 13-18",
+						"games": "The Isle Of Armor Shield",
+						"rate": "70%"
+					},
+					{
+						"area": "Soothing Wetlands Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "70%"
+					},
+					{
+						"area": "Stepping Stone Sea Main",
+						"notes": "Walk, Lv. 43-48",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Stepping Stone Sea Main",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Stepping Stone Sea Main",
+						"notes": "Berry Trees, Lv. 43-48",
+						"games": "The Isle Of Armor Sword",
+						"rate": "60%"
+					},
+					{
+						"area": "Stepping Stone Sea Main",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "60%"
+					},
+					{
+						"area": "Stepping Stone Sea Main",
+						"notes": "Walk, Lv. 43-48",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Stepping Stone Sea Main",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Stepping Stone Sea Main",
+						"notes": "Berry Trees, Lv. 43-48",
+						"games": "The Isle Of Armor Shield",
+						"rate": "60%"
+					},
+					{
+						"area": "Stepping Stone Sea Main",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "60%"
+					},
+					{
+						"area": "Stepping Stone Sea Area 2",
+						"notes": "Overworld, Lv. 40-45",
+						"games": "The Isle Of Armor Sword",
+						"rate": "82%"
+					},
+					{
+						"area": "Stepping Stone Sea Area 2",
+						"notes": "Overworld, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "82%"
+					},
+					{
+						"area": "Stepping Stone Sea Area 2",
+						"notes": "Overworld, Lv. 40-45",
+						"games": "The Isle Of Armor Sword",
+						"rate": "82%"
+					},
+					{
+						"area": "Stepping Stone Sea Area 2",
+						"notes": "Overworld, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "82%"
+					},
+					{
+						"area": "Stepping Stone Sea Area 2",
+						"notes": "Overworld, Lv. 40-45",
+						"games": "The Isle Of Armor Sword",
+						"rate": "82%"
+					},
+					{
+						"area": "Stepping Stone Sea Area 2",
+						"notes": "Overworld, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "82%"
+					},
+					{
+						"area": "Stepping Stone Sea Area 2",
+						"notes": "Overworld, Lv. 40-45",
+						"games": "The Isle Of Armor Sword",
+						"rate": "82%"
+					},
+					{
+						"area": "Stepping Stone Sea Area 2",
+						"notes": "Overworld, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "82%"
+					},
+					{
+						"area": "Stepping Stone Sea Area 2",
+						"notes": "Overworld, Lv. 40-45",
+						"games": "The Isle Of Armor Sword",
+						"rate": "82%"
+					},
+					{
+						"area": "Stepping Stone Sea Area 2",
+						"notes": "Overworld, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "82%"
+					},
+					{
+						"area": "Stepping Stone Sea Area 2",
+						"notes": "Overworld, Lv. 40-45",
+						"games": "The Isle Of Armor Sword",
+						"rate": "82%"
+					},
+					{
+						"area": "Stepping Stone Sea Area 2",
+						"notes": "Overworld, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "82%"
+					},
+					{
+						"area": "Stepping Stone Sea Area 2",
+						"notes": "Overworld, Lv. 40-45",
+						"games": "The Isle Of Armor Sword",
+						"rate": "82%"
+					},
+					{
+						"area": "Stepping Stone Sea Area 2",
+						"notes": "Overworld, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "82%"
+					},
+					{
+						"area": "Stepping Stone Sea Area 2",
+						"notes": "Overworld, Lv. 40-45",
+						"games": "The Isle Of Armor Shield",
+						"rate": "82%"
+					},
+					{
+						"area": "Stepping Stone Sea Area 2",
+						"notes": "Overworld, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "82%"
+					},
+					{
+						"area": "Stepping Stone Sea Area 2",
+						"notes": "Overworld, Lv. 40-45",
+						"games": "The Isle Of Armor Shield",
+						"rate": "82%"
+					},
+					{
+						"area": "Stepping Stone Sea Area 2",
+						"notes": "Overworld, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "82%"
+					},
+					{
+						"area": "Stepping Stone Sea Area 2",
+						"notes": "Overworld, Lv. 40-45",
+						"games": "The Isle Of Armor Shield",
+						"rate": "82%"
+					},
+					{
+						"area": "Stepping Stone Sea Area 2",
+						"notes": "Overworld, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "82%"
+					},
+					{
+						"area": "Stepping Stone Sea Area 2",
+						"notes": "Overworld, Lv. 40-45",
+						"games": "The Isle Of Armor Shield",
+						"rate": "82%"
+					},
+					{
+						"area": "Stepping Stone Sea Area 2",
+						"notes": "Overworld, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "82%"
+					},
+					{
+						"area": "Stepping Stone Sea Area 2",
+						"notes": "Overworld, Lv. 40-45",
+						"games": "The Isle Of Armor Shield",
+						"rate": "82%"
+					},
+					{
+						"area": "Stepping Stone Sea Area 2",
+						"notes": "Overworld, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "82%"
+					},
+					{
+						"area": "Stepping Stone Sea Area 2",
+						"notes": "Overworld, Lv. 40-45",
+						"games": "The Isle Of Armor Shield",
+						"rate": "82%"
+					},
+					{
+						"area": "Stepping Stone Sea Area 2",
+						"notes": "Overworld, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "82%"
+					},
+					{
+						"area": "Stepping Stone Sea Area 2",
+						"notes": "Overworld, Lv. 40-45",
+						"games": "The Isle Of Armor Shield",
+						"rate": "82%"
+					},
+					{
+						"area": "Stepping Stone Sea Area 2",
+						"notes": "Overworld, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "82%"
+					},
+					{
+						"area": "Training Lowlands Area",
+						"notes": "Berry Trees, Lv. 16-21",
+						"games": "The Isle Of Armor Sword",
+						"rate": "70%"
+					},
+					{
+						"area": "Training Lowlands Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "70%"
+					},
+					{
+						"area": "Training Lowlands Area",
+						"notes": "Berry Trees, Lv. 16-21",
+						"games": "The Isle Of Armor Shield",
+						"rate": "70%"
+					},
+					{
+						"area": "Training Lowlands Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "70%"
+					},
+					{
+						"area": "Workout Sea Area",
+						"notes": "Berry Trees, Lv. 43-48",
+						"games": "The Isle Of Armor Sword",
+						"rate": "70%"
+					},
+					{
+						"area": "Workout Sea Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "70%"
+					},
+					{
+						"area": "Workout Sea Area",
+						"notes": "Berry Trees, Lv. 43-48",
+						"games": "The Isle Of Armor Shield",
+						"rate": "70%"
+					},
+					{
+						"area": "Workout Sea Area",
+						"notes": "Berry Trees, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "70%"
+					}
+				],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/819",
+						"fetchedAt": "2026-11-03T05:53:59.085Z",
+						"hash": "fba778921d83d458a4e6a45ec89064b0d41c0185178f930ea208c6c969a31d3a"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/433/",
+						"fetchedAt": "2026-11-03T05:53:59.120Z",
+						"hash": "8be6406c9dda5adc80ea8bbe642962f3b0584a1181dff96522c986798d3fde73"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/819/",
+						"fetchedAt": "2026-11-03T05:53:59.151Z",
+						"hash": "db1555c7b798c3a0026e55092c32a6ea68f445fba327a0cc46fce4e294d4a768"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/819/encounters",
+						"fetchedAt": "2026-11-03T05:53:59.218Z",
+						"hash": "20865c9f25df426da8adf9582e8b27760d975e79688976d38cda23f91e1bf36f"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/819/",
+						"fetchedAt": "2026-11-03T05:53:59.277Z",
+						"hash": "74b8ea0fe096bc6fc358b0d79f9e191bd8ca28930626aa138b9c904affe981cb"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordioa": "",
+				"shieldioa": ""
+			},
+			"localizedFlavorByGame": {
+				"swordioa": {},
+				"shieldioa": {}
+			}
+		},
+		{
+			"profileKey": "the-crown-tundra",
+			"label": "The Crown Tundra",
+			"appGameKeys": [
+				"swordct",
+				"shieldct"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Skwovet",
+				"localizedNames": {
+					"ja-hrkt": "ホシガリス",
+					"ja-roma": "Hoshigarisu",
+					"ko": "탐리스",
+					"zh-hant": "貪心栗鼠",
+					"fr": "Rongourmand",
+					"de": "Raffel",
+					"es": "Skwovet",
+					"it": "Skwovet",
+					"ja": "ホシガリス",
+					"zh-hans": "贪心栗鼠",
+					"es-419": "Skwovet"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 70,
+					"atk": 55,
+					"def": 55,
+					"spa": 35,
+					"spd": 35,
+					"spe": 25
+				},
+				"evYield": {
+					"hp": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cheek Pouch",
+					"Gluttony (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Gluttony"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.3 m",
+				"weight": "2.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 255,
+				"baseExperience": 55,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Cheeky Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ほおばりポケモン",
+					"ko": "볼가득포켓몬",
+					"zh-hant": "貪吃寶可夢",
+					"fr": "Pokémon Joufflu",
+					"de": "Raffbacken-Pokémon",
+					"es": "Pokémon Abazón",
+					"it": "Pokémon Guancepiene",
+					"ja": "ほおばりポケモン",
+					"zh-hans": "贪吃宝可梦",
+					"es-419": "Pokémon Abazón"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 819
+					},
+					{
+						"pokedex": "galar",
+						"number": 24
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 9
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 5
+					},
+					{
+						"pokedex": "paldea",
+						"number": 29
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 72
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 819,
+								"natiId": 819,
+								"name": "Skwovet"
+							},
+							{
+								"id": 820,
+								"natiId": 820,
+								"name": "Greedent",
+								"method": "Level",
+								"value": 24
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Overworld, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Overworld, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Berry Trees, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "60%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Overworld, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "19%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "19%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "19%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "19%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Overworld, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Overworld, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "32%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "24%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "24%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Overworld, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Overworld, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Overworld, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Overworld, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Berry Trees, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "60%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Overworld, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "19%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "19%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "19%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "19%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Overworld, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Overworld, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "32%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "24%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Walk, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "24%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Overworld, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Ballimere Lake Area",
+						"notes": "Overworld, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Frostpoint Field Area",
+						"notes": "Berry Trees, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "70%"
+					},
+					{
+						"area": "Frostpoint Field Area",
+						"notes": "Berry Trees, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "70%"
+					},
+					{
+						"area": "Giants Bed Area",
+						"notes": "Berry Trees, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "80%"
+					},
+					{
+						"area": "Giants Bed Area",
+						"notes": "Berry Trees, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "80%"
+					},
+					{
+						"area": "Giants Foot Area",
+						"notes": "Berry Trees, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "80%"
+					},
+					{
+						"area": "Giants Foot Area",
+						"notes": "Berry Trees, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "80%"
+					},
+					{
+						"area": "Slippery Slope Area",
+						"notes": "Berry Trees, Lv. 60-65",
+						"games": "The Crown Tundra Sword",
+						"rate": "70%"
+					},
+					{
+						"area": "Slippery Slope Area",
+						"notes": "Berry Trees, Lv. 60-65",
+						"games": "The Crown Tundra Shield",
+						"rate": "70%"
+					},
+					{
+						"area": "Slippery Slope Max Den D",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "The Crown Tundra Sword",
+						"rate": "40%"
+					},
+					{
+						"area": "Slippery Slope Max Den D",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "The Crown Tundra Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Slippery Slope Max Den D",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "The Crown Tundra Shield",
+						"rate": "40%"
+					},
+					{
+						"area": "Slippery Slope Max Den D",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "The Crown Tundra Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Giants Bed Max Den E",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "The Crown Tundra Sword",
+						"rate": "40%"
+					},
+					{
+						"area": "Giants Bed Max Den E",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "The Crown Tundra Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Giants Bed Max Den E",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "The Crown Tundra Shield",
+						"rate": "40%"
+					},
+					{
+						"area": "Giants Bed Max Den E",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "The Crown Tundra Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Giants Foot Max Den A",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "The Crown Tundra Sword",
+						"rate": "40%"
+					},
+					{
+						"area": "Giants Foot Max Den A",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "The Crown Tundra Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Giants Foot Max Den A",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "The Crown Tundra Shield",
+						"rate": "40%"
+					},
+					{
+						"area": "Giants Foot Max Den A",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "The Crown Tundra Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Ballimere Lake Max Den A",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "The Crown Tundra Sword",
+						"rate": "40%"
+					},
+					{
+						"area": "Ballimere Lake Max Den A",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "The Crown Tundra Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Ballimere Lake Max Den A",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "The Crown Tundra Shield",
+						"rate": "40%"
+					},
+					{
+						"area": "Ballimere Lake Max Den A",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "The Crown Tundra Shield",
+						"rate": "25%"
+					}
+				],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/819",
+						"fetchedAt": "2026-11-03T05:53:59.085Z",
+						"hash": "fba778921d83d458a4e6a45ec89064b0d41c0185178f930ea208c6c969a31d3a"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/433/",
+						"fetchedAt": "2026-11-03T05:53:59.120Z",
+						"hash": "8be6406c9dda5adc80ea8bbe642962f3b0584a1181dff96522c986798d3fde73"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/819/",
+						"fetchedAt": "2026-11-03T05:53:59.151Z",
+						"hash": "db1555c7b798c3a0026e55092c32a6ea68f445fba327a0cc46fce4e294d4a768"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/819/encounters",
+						"fetchedAt": "2026-11-03T05:53:59.218Z",
+						"hash": "20865c9f25df426da8adf9582e8b27760d975e79688976d38cda23f91e1bf36f"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/819/",
+						"fetchedAt": "2026-11-03T05:53:59.277Z",
+						"hash": "74b8ea0fe096bc6fc358b0d79f9e191bd8ca28930626aa138b9c904affe981cb"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordct": "",
+				"shieldct": ""
+			},
+			"localizedFlavorByGame": {
+				"swordct": {},
+				"shieldct": {}
+			}
+		},
+		{
+			"profileKey": "brilliant-diamond-shining-pearl",
+			"label": "Brilliant Diamond / Shining Pearl",
+			"appGameKeys": [
+				"brilliantdiamond-national",
+				"brilliantdiamond",
+				"shiningpearl-national",
+				"shiningpearl"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Skwovet",
+				"localizedNames": {
+					"ja-hrkt": "ホシガリス",
+					"ja-roma": "Hoshigarisu",
+					"ko": "탐리스",
+					"zh-hant": "貪心栗鼠",
+					"fr": "Rongourmand",
+					"de": "Raffel",
+					"es": "Skwovet",
+					"it": "Skwovet",
+					"ja": "ホシガリス",
+					"zh-hans": "贪心栗鼠",
+					"es-419": "Skwovet"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 70,
+					"atk": 55,
+					"def": 55,
+					"spa": 35,
+					"spd": 35,
+					"spe": 25
+				},
+				"evYield": {
+					"hp": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cheek Pouch",
+					"Gluttony (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Gluttony"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.3 m",
+				"weight": "2.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 255,
+				"baseExperience": 55,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Cheeky Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ほおばりポケモン",
+					"ko": "볼가득포켓몬",
+					"zh-hant": "貪吃寶可夢",
+					"fr": "Pokémon Joufflu",
+					"de": "Raffbacken-Pokémon",
+					"es": "Pokémon Abazón",
+					"it": "Pokémon Guancepiene",
+					"ja": "ほおばりポケモン",
+					"zh-hans": "贪吃宝可梦",
+					"es-419": "Pokémon Abazón"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 819
+					},
+					{
+						"pokedex": "galar",
+						"number": 24
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 9
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 5
+					},
+					{
+						"pokedex": "paldea",
+						"number": 29
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 72
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 819,
+								"natiId": 819,
+								"name": "Skwovet"
+							},
+							{
+								"id": 820,
+								"natiId": 820,
+								"name": "Greedent",
+								"method": "Level",
+								"value": 24
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/819",
+						"fetchedAt": "2026-11-03T05:53:59.085Z",
+						"hash": "fba778921d83d458a4e6a45ec89064b0d41c0185178f930ea208c6c969a31d3a"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/433/",
+						"fetchedAt": "2026-11-03T05:53:59.120Z",
+						"hash": "8be6406c9dda5adc80ea8bbe642962f3b0584a1181dff96522c986798d3fde73"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/819/",
+						"fetchedAt": "2026-11-03T05:53:59.151Z",
+						"hash": "db1555c7b798c3a0026e55092c32a6ea68f445fba327a0cc46fce4e294d4a768"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/819/encounters",
+						"fetchedAt": "2026-11-03T05:53:59.218Z",
+						"hash": "20865c9f25df426da8adf9582e8b27760d975e79688976d38cda23f91e1bf36f"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/819/",
+						"fetchedAt": "2026-11-03T05:53:59.277Z",
+						"hash": "74b8ea0fe096bc6fc358b0d79f9e191bd8ca28930626aa138b9c904affe981cb"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"brilliantdiamond-national": "",
+				"brilliantdiamond": "",
+				"shiningpearl-national": "",
+				"shiningpearl": ""
+			},
+			"localizedFlavorByGame": {
+				"brilliantdiamond-national": {},
+				"brilliantdiamond": {},
+				"shiningpearl-national": {},
+				"shiningpearl": {}
+			}
+		},
+		{
+			"profileKey": "legends-arceus",
+			"label": "Legends: Arceus",
+			"appGameKeys": [
+				"legendsarceus"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Skwovet",
+				"localizedNames": {
+					"ja-hrkt": "ホシガリス",
+					"ja-roma": "Hoshigarisu",
+					"ko": "탐리스",
+					"zh-hant": "貪心栗鼠",
+					"fr": "Rongourmand",
+					"de": "Raffel",
+					"es": "Skwovet",
+					"it": "Skwovet",
+					"ja": "ホシガリス",
+					"zh-hans": "贪心栗鼠",
+					"es-419": "Skwovet"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 70,
+					"atk": 55,
+					"def": 55,
+					"spa": 35,
+					"spd": 35,
+					"spe": 25
+				},
+				"evYield": {
+					"hp": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cheek Pouch",
+					"Gluttony (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Gluttony"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.3 m",
+				"weight": "2.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 255,
+				"baseExperience": 55,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Cheeky Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ほおばりポケモン",
+					"ko": "볼가득포켓몬",
+					"zh-hant": "貪吃寶可夢",
+					"fr": "Pokémon Joufflu",
+					"de": "Raffbacken-Pokémon",
+					"es": "Pokémon Abazón",
+					"it": "Pokémon Guancepiene",
+					"ja": "ほおばりポケモン",
+					"zh-hans": "贪吃宝可梦",
+					"es-419": "Pokémon Abazón"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 819
+					},
+					{
+						"pokedex": "galar",
+						"number": 24
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 9
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 5
+					},
+					{
+						"pokedex": "paldea",
+						"number": 29
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 72
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 819,
+								"natiId": 819,
+								"name": "Skwovet"
+							},
+							{
+								"id": 820,
+								"natiId": 820,
+								"name": "Greedent",
+								"method": "Level",
+								"value": 24
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/819",
+						"fetchedAt": "2026-11-03T05:53:59.085Z",
+						"hash": "fba778921d83d458a4e6a45ec89064b0d41c0185178f930ea208c6c969a31d3a"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/433/",
+						"fetchedAt": "2026-11-03T05:53:59.120Z",
+						"hash": "8be6406c9dda5adc80ea8bbe642962f3b0584a1181dff96522c986798d3fde73"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/819/",
+						"fetchedAt": "2026-11-03T05:53:59.151Z",
+						"hash": "db1555c7b798c3a0026e55092c32a6ea68f445fba327a0cc46fce4e294d4a768"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/819/encounters",
+						"fetchedAt": "2026-11-03T05:53:59.218Z",
+						"hash": "20865c9f25df426da8adf9582e8b27760d975e79688976d38cda23f91e1bf36f"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/819/",
+						"fetchedAt": "2026-11-03T05:53:59.277Z",
+						"hash": "74b8ea0fe096bc6fc358b0d79f9e191bd8ca28930626aa138b9c904affe981cb"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendsarceus": ""
+			},
+			"localizedFlavorByGame": {
+				"legendsarceus": {}
+			}
+		},
+		{
+			"profileKey": "scarlet-violet",
+			"label": "Scarlet / Violet",
+			"appGameKeys": [
+				"scarlet",
+				"violet"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Skwovet",
+				"localizedNames": {
+					"ja-hrkt": "ホシガリス",
+					"ja-roma": "Hoshigarisu",
+					"ko": "탐리스",
+					"zh-hant": "貪心栗鼠",
+					"fr": "Rongourmand",
+					"de": "Raffel",
+					"es": "Skwovet",
+					"it": "Skwovet",
+					"ja": "ホシガリス",
+					"zh-hans": "贪心栗鼠",
+					"es-419": "Skwovet"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 70,
+					"atk": 55,
+					"def": 55,
+					"spa": 35,
+					"spd": 35,
+					"spe": 25
+				},
+				"evYield": {
+					"hp": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cheek Pouch",
+					"Gluttony (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Gluttony"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.3 m",
+				"weight": "2.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 255,
+				"baseExperience": 55,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Cheeky Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ほおばりポケモン",
+					"ko": "볼가득포켓몬",
+					"zh-hant": "貪吃寶可夢",
+					"fr": "Pokémon Joufflu",
+					"de": "Raffbacken-Pokémon",
+					"es": "Pokémon Abazón",
+					"it": "Pokémon Guancepiene",
+					"ja": "ほおばりポケモン",
+					"zh-hans": "贪吃宝可梦",
+					"es-419": "Pokémon Abazón"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 819
+					},
+					{
+						"pokedex": "galar",
+						"number": 24
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 9
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 5
+					},
+					{
+						"pokedex": "paldea",
+						"number": 29
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 72
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 819,
+								"natiId": 819,
+								"name": "Skwovet"
+							},
+							{
+								"id": 820,
+								"natiId": 820,
+								"name": "Greedent",
+								"method": "Level",
+								"value": 24
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Tail Whip",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Bite",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Stuff Cheeks",
+							"level": 10,
+							"order": null
+						},
+						{
+							"name": "Spit Up",
+							"level": 15,
+							"order": null
+						},
+						{
+							"name": "Stockpile",
+							"level": 15,
+							"order": null
+						},
+						{
+							"name": "Swallow",
+							"level": 15,
+							"order": null
+						},
+						{
+							"name": "Body Slam",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Counter",
+							"level": 30,
+							"order": null
+						},
+						{
+							"name": "Bullet Seed",
+							"level": 35,
+							"order": null
+						},
+						{
+							"name": "Super Fang",
+							"level": 40,
+							"order": null
+						},
+						{
+							"name": "Belch",
+							"level": 45,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Amnesia",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Body Slam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bullet Seed",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Crunch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Curse",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Edge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endeavor",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endure",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fling",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Gyro Ball",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Voice",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Mud Shot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Mud Slap",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Seed Bomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Super Fang",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Take Down",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Tera Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Trailblaze",
+							"level": null,
+							"order": null
+						}
+					],
+					"Egg": [
+						{
+							"name": "Belly Drum",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Defense Curl",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Last Resort",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rollout",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/819",
+						"fetchedAt": "2026-11-03T05:53:59.085Z",
+						"hash": "fba778921d83d458a4e6a45ec89064b0d41c0185178f930ea208c6c969a31d3a"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/433/",
+						"fetchedAt": "2026-11-03T05:53:59.120Z",
+						"hash": "8be6406c9dda5adc80ea8bbe642962f3b0584a1181dff96522c986798d3fde73"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/819/",
+						"fetchedAt": "2026-11-03T05:53:59.151Z",
+						"hash": "db1555c7b798c3a0026e55092c32a6ea68f445fba327a0cc46fce4e294d4a768"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/819/encounters",
+						"fetchedAt": "2026-11-03T05:53:59.218Z",
+						"hash": "20865c9f25df426da8adf9582e8b27760d975e79688976d38cda23f91e1bf36f"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/819/",
+						"fetchedAt": "2026-11-03T05:53:59.277Z",
+						"hash": "74b8ea0fe096bc6fc358b0d79f9e191bd8ca28930626aa138b9c904affe981cb"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlet": "",
+				"violet": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlet": {},
+				"violet": {}
+			}
+		},
+		{
+			"profileKey": "the-teal-mask",
+			"label": "The Teal Mask",
+			"appGameKeys": [
+				"scarlettm",
+				"violettm"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Skwovet",
+				"localizedNames": {
+					"ja-hrkt": "ホシガリス",
+					"ja-roma": "Hoshigarisu",
+					"ko": "탐리스",
+					"zh-hant": "貪心栗鼠",
+					"fr": "Rongourmand",
+					"de": "Raffel",
+					"es": "Skwovet",
+					"it": "Skwovet",
+					"ja": "ホシガリス",
+					"zh-hans": "贪心栗鼠",
+					"es-419": "Skwovet"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 70,
+					"atk": 55,
+					"def": 55,
+					"spa": 35,
+					"spd": 35,
+					"spe": 25
+				},
+				"evYield": {
+					"hp": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cheek Pouch",
+					"Gluttony (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Gluttony"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.3 m",
+				"weight": "2.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 255,
+				"baseExperience": 55,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Cheeky Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ほおばりポケモン",
+					"ko": "볼가득포켓몬",
+					"zh-hant": "貪吃寶可夢",
+					"fr": "Pokémon Joufflu",
+					"de": "Raffbacken-Pokémon",
+					"es": "Pokémon Abazón",
+					"it": "Pokémon Guancepiene",
+					"ja": "ほおばりポケモン",
+					"zh-hans": "贪吃宝可梦",
+					"es-419": "Pokémon Abazón"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 819
+					},
+					{
+						"pokedex": "galar",
+						"number": 24
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 9
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 5
+					},
+					{
+						"pokedex": "paldea",
+						"number": 29
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 72
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 819,
+								"natiId": 819,
+								"name": "Skwovet"
+							},
+							{
+								"id": 820,
+								"natiId": 820,
+								"name": "Greedent",
+								"method": "Level",
+								"value": 24
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/819",
+						"fetchedAt": "2026-11-03T05:53:59.085Z",
+						"hash": "fba778921d83d458a4e6a45ec89064b0d41c0185178f930ea208c6c969a31d3a"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/433/",
+						"fetchedAt": "2026-11-03T05:53:59.120Z",
+						"hash": "8be6406c9dda5adc80ea8bbe642962f3b0584a1181dff96522c986798d3fde73"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/819/",
+						"fetchedAt": "2026-11-03T05:53:59.151Z",
+						"hash": "db1555c7b798c3a0026e55092c32a6ea68f445fba327a0cc46fce4e294d4a768"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/819/encounters",
+						"fetchedAt": "2026-11-03T05:53:59.218Z",
+						"hash": "20865c9f25df426da8adf9582e8b27760d975e79688976d38cda23f91e1bf36f"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/819/",
+						"fetchedAt": "2026-11-03T05:53:59.277Z",
+						"hash": "74b8ea0fe096bc6fc358b0d79f9e191bd8ca28930626aa138b9c904affe981cb"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlettm": "",
+				"violettm": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlettm": {},
+				"violettm": {}
+			}
+		},
+		{
+			"profileKey": "the-indigo-disk",
+			"label": "The Indigo Disk",
+			"appGameKeys": [
+				"scarletid",
+				"violetid"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Skwovet",
+				"localizedNames": {
+					"ja-hrkt": "ホシガリス",
+					"ja-roma": "Hoshigarisu",
+					"ko": "탐리스",
+					"zh-hant": "貪心栗鼠",
+					"fr": "Rongourmand",
+					"de": "Raffel",
+					"es": "Skwovet",
+					"it": "Skwovet",
+					"ja": "ホシガリス",
+					"zh-hans": "贪心栗鼠",
+					"es-419": "Skwovet"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal"
+				],
+				"baseStats": {
+					"hp": 70,
+					"atk": 55,
+					"def": 55,
+					"spa": 35,
+					"spd": 35,
+					"spe": 25
+				},
+				"evYield": {
+					"hp": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Cheek Pouch",
+					"Gluttony (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Gluttony"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "0.3 m",
+				"weight": "2.5 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 255,
+				"baseExperience": 55,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Cheeky Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ほおばりポケモン",
+					"ko": "볼가득포켓몬",
+					"zh-hant": "貪吃寶可夢",
+					"fr": "Pokémon Joufflu",
+					"de": "Raffbacken-Pokémon",
+					"es": "Pokémon Abazón",
+					"it": "Pokémon Guancepiene",
+					"ja": "ほおばりポケモン",
+					"zh-hans": "贪吃宝可梦",
+					"es-419": "Pokémon Abazón"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 819
+					},
+					{
+						"pokedex": "galar",
+						"number": 24
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 9
+					},
+					{
+						"pokedex": "crown-tundra",
+						"number": 5
+					},
+					{
+						"pokedex": "paldea",
+						"number": 29
+					},
+					{
+						"pokedex": "kitakami",
+						"number": 72
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 819,
+								"natiId": 819,
+								"name": "Skwovet"
+							},
+							{
+								"id": 820,
+								"natiId": 820,
+								"name": "Greedent",
+								"method": "Level",
+								"value": 24
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/819",
+						"fetchedAt": "2026-11-03T05:53:59.085Z",
+						"hash": "fba778921d83d458a4e6a45ec89064b0d41c0185178f930ea208c6c969a31d3a"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/433/",
+						"fetchedAt": "2026-11-03T05:53:59.120Z",
+						"hash": "8be6406c9dda5adc80ea8bbe642962f3b0584a1181dff96522c986798d3fde73"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/819/",
+						"fetchedAt": "2026-11-03T05:53:59.151Z",
+						"hash": "db1555c7b798c3a0026e55092c32a6ea68f445fba327a0cc46fce4e294d4a768"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/819/encounters",
+						"fetchedAt": "2026-11-03T05:53:59.218Z",
+						"hash": "20865c9f25df426da8adf9582e8b27760d975e79688976d38cda23f91e1bf36f"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/819/",
+						"fetchedAt": "2026-11-03T05:53:59.277Z",
+						"hash": "74b8ea0fe096bc6fc358b0d79f9e191bd8ca28930626aa138b9c904affe981cb"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarletid": "",
+				"violetid": ""
+			},
+			"localizedFlavorByGame": {
+				"scarletid": {},
+				"violetid": {}
+			}
+		}
+	]
+}

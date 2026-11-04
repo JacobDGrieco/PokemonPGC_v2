@@ -1,0 +1,620 @@
+{
+	"schemaVersion": 2,
+	"nationalDexId": 869,
+	"speciesName": "Alcremie",
+	"formKey": "gigantamax",
+	"formName": "Gigantamax",
+	"formLabelSource": "form-catalog",
+	"profiles": [
+		{
+			"profileKey": "sword-shield",
+			"label": "Sword / Shield",
+			"appGameKeys": [
+				"sword",
+				"shield"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Alcremie",
+				"localizedNames": {
+					"ja-hrkt": "マホイップ",
+					"ja-roma": "Mawhip",
+					"ko": "마휘핑",
+					"zh-hant": "霜奶仙",
+					"fr": "Charmilly",
+					"de": "Pokusan",
+					"es": "Alcremie",
+					"it": "Alcremie",
+					"ja": "マホイップ",
+					"zh-hans": "霜奶仙",
+					"es-419": "Alcremie"
+				},
+				"localizedFormNames": {
+					"fr": "Charmilly Gigamax",
+					"de": "Gigadynamax-Pokusan"
+				},
+				"localizedFormLabels": {
+					"ja-hrkt": "キョダイマックスのすがた",
+					"fr": "Forme Gigamax",
+					"de": "Gigadynamax-Form",
+					"ja": "キョダイマックスのすがた"
+				},
+				"types": [
+					"Fairy"
+				],
+				"baseStats": {
+					"hp": 65,
+					"atk": 60,
+					"def": 75,
+					"spa": 110,
+					"spd": 121,
+					"spe": 64
+				},
+				"evYield": {
+					"spd": 2
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Sweet Veil",
+					"Aroma Veil (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Aroma Veil"
+				],
+				"eggGroups": [
+					"Fairy",
+					"Indeterminate"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "30.0 m",
+				"weight": "1000.0 kg",
+				"genderRatio": "0% male / 100% female",
+				"baseFriendship": 50,
+				"captureRate": 100,
+				"baseExperience": 173,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "White",
+				"genus": "Cream Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "クリームポケモン",
+					"ko": "크림포켓몬",
+					"zh-hant": "鮮奶油寶可夢",
+					"fr": "Pokémon Crème",
+					"de": "Sahne-Pokémon",
+					"es": "Pokémon Nata",
+					"it": "Pokémon Pannafresca",
+					"ja": "クリームポケモン",
+					"zh-hans": "鲜奶油宝可梦",
+					"es-419": "Pokémon Nata"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 869
+					},
+					{
+						"pokedex": "galar",
+						"number": 186
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 43
+					},
+					{
+						"pokedex": "champions",
+						"number": 869
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 868,
+								"natiId": 868,
+								"name": "Milcery"
+							},
+							{
+								"id": 869,
+								"natiId": 869,
+								"name": "Alcremie",
+								"method": "Spin",
+								"value": "Strawberry Sweet"
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Galar Wild Area Max Dens Area",
+						"notes": "Max Raid, Lv. 60",
+						"games": "Sword",
+						"rate": "5%"
+					},
+					{
+						"area": "Galar Wild Area Max Dens Area",
+						"notes": "Max Raid, Lv. 60",
+						"games": "Shield",
+						"rate": "5%"
+					},
+					{
+						"area": "Bridge Field Max Den D",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Sword",
+						"rate": "5%"
+					},
+					{
+						"area": "Bridge Field Max Den D",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Shield",
+						"rate": "5%"
+					}
+				],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokemonPGC form catalog includes this game profile.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/869",
+						"fetchedAt": "2026-11-03T05:54:02.406Z",
+						"hash": "20d76cc29d15aed9419a1dc20fdc33e939a8edf3f3883996f4a62f82f3d07311"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/452/",
+						"fetchedAt": "2026-11-03T05:54:02.315Z",
+						"hash": "091f71c6dcb32f0ce03c2a60056cf33f5c7b4317a7ffb5adeb76abcbdfd4b426"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/10223/",
+						"fetchedAt": "2026-11-03T05:54:04.427Z",
+						"hash": "420b2fe72478df7699e2f4927135c98ed3c37333a2de6f9da2361b2dd4308975"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/10223/encounters",
+						"fetchedAt": "2026-11-03T05:54:04.471Z",
+						"hash": "0554a34472572596bf1005716e8e940cee1d55743cb6669120d8e5667370c205"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/10392/",
+						"fetchedAt": "2026-11-03T05:54:04.501Z",
+						"hash": "ef7255b21ab70578364317c30008d12dd3ee126992395723829f6833d761b0a6"
+					}
+				],
+				"formName": "Gigantamax"
+			},
+			"flavorByGame": {
+				"sword": "When it trusts a Trainer, it will treat them to berries it’s decorated with cream.",
+				"shield": "When Alcremie is content, the cream it secretes from its hands becomes sweeter and richer."
+			},
+			"localizedFlavorByGame": {
+				"sword": {
+					"ja-hrkt": "しんらいする トレーナーには クリームで デコレーションした きのみを ふるまって くれるのだ。",
+					"ko": "믿을 수 있는 트레이너에게는 크림으로 데코레이션한 나무열매를 대접한다.",
+					"zh-hant": "牠會把自己用鮮奶油 裝飾過的樹果送給 自己信任的訓練家。",
+					"fr": "Il offre aux Dresseurs auxquels il accorde toute sa confiance des Baies décorées avec de la crème.",
+					"de": "Es macht einem Trainer, dem es vertraut, mit Beeren samt Sahnedekoration eine Freude.",
+					"es": "Obsequia bayas decoradas con nata a aquellos Entrenadores en los que confía.",
+					"it": "Agli Allenatori di cui si fida regala bacche decorate con la panna.",
+					"en": "When it trusts a Trainer, it will treat them to berries it’s decorated with cream.",
+					"ja": "信頼する トレーナーには クリームで デコレーションした 木の実を ふるまって くれるのだ。",
+					"zh-hans": "它会把自己用鲜奶油 装饰过的树果送给 自己信任的训练家。",
+					"es-419": "Obsequia bayas decoradas con nata a aquellos Entrenadores en los que confía."
+				},
+				"shield": {
+					"ja-hrkt": "てから うみだす クリームは マホイップが しあわせなとき あまみと コクが ふかまる。",
+					"ko": "손에서 나오는 크림은 마휘핑이 행복할 때 단맛과 감칠맛이 깊어진다.",
+					"zh-hant": "當牠感到幸福的時候， 手中產生出的鮮奶油 會變得更加香濃甜美。",
+					"fr": "Quand il est heureux, la crème qu’il produit avec ses mains devient plus sucrée et plus onctueuse.",
+					"de": "Die Sahne, die Pokusan aus seinen Händen hervorbringt, wird noch süßer und intensiver im Geschmack, wenn es glücklich ist.",
+					"es": "La nata que le brota de las manos es más dulce y sustanciosa cuando está feliz.",
+					"it": "La panna che Alcremie produce dalle mani è più dolce e gustosa quando è felice.",
+					"en": "When Alcremie is content, the cream it secretes from its hands becomes sweeter and richer.",
+					"ja": "手から 生みだす クリームは マホイップが 幸せなとき 甘味と コクが 深まる。",
+					"zh-hans": "当它感到幸福的时候， 手中产生出的鲜奶油 会变得更加香浓甜美。",
+					"es-419": "La nata que le brota de las manos es más dulce y sustanciosa cuando está feliz."
+				}
+			}
+		},
+		{
+			"profileKey": "the-isle-of-armor",
+			"label": "The Isle of Armor",
+			"appGameKeys": [
+				"swordioa",
+				"shieldioa"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Alcremie",
+				"localizedNames": {
+					"ja-hrkt": "マホイップ",
+					"ja-roma": "Mawhip",
+					"ko": "마휘핑",
+					"zh-hant": "霜奶仙",
+					"fr": "Charmilly",
+					"de": "Pokusan",
+					"es": "Alcremie",
+					"it": "Alcremie",
+					"ja": "マホイップ",
+					"zh-hans": "霜奶仙",
+					"es-419": "Alcremie"
+				},
+				"localizedFormNames": {
+					"fr": "Charmilly Gigamax",
+					"de": "Gigadynamax-Pokusan"
+				},
+				"localizedFormLabels": {
+					"ja-hrkt": "キョダイマックスのすがた",
+					"fr": "Forme Gigamax",
+					"de": "Gigadynamax-Form",
+					"ja": "キョダイマックスのすがた"
+				},
+				"types": [
+					"Fairy"
+				],
+				"baseStats": {
+					"hp": 65,
+					"atk": 60,
+					"def": 75,
+					"spa": 110,
+					"spd": 121,
+					"spe": 64
+				},
+				"evYield": {
+					"spd": 2
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Sweet Veil",
+					"Aroma Veil (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Aroma Veil"
+				],
+				"eggGroups": [
+					"Fairy",
+					"Indeterminate"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "30.0 m",
+				"weight": "1000.0 kg",
+				"genderRatio": "0% male / 100% female",
+				"baseFriendship": 50,
+				"captureRate": 100,
+				"baseExperience": 173,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "White",
+				"genus": "Cream Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "クリームポケモン",
+					"ko": "크림포켓몬",
+					"zh-hant": "鮮奶油寶可夢",
+					"fr": "Pokémon Crème",
+					"de": "Sahne-Pokémon",
+					"es": "Pokémon Nata",
+					"it": "Pokémon Pannafresca",
+					"ja": "クリームポケモン",
+					"zh-hans": "鲜奶油宝可梦",
+					"es-419": "Pokémon Nata"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 869
+					},
+					{
+						"pokedex": "galar",
+						"number": 186
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 43
+					},
+					{
+						"pokedex": "champions",
+						"number": 869
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 868,
+								"natiId": 868,
+								"name": "Milcery"
+							},
+							{
+								"id": 869,
+								"natiId": 869,
+								"name": "Alcremie",
+								"method": "Spin",
+								"value": "Strawberry Sweet"
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokemonPGC form catalog includes this game profile.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/869",
+						"fetchedAt": "2026-11-03T05:54:02.406Z",
+						"hash": "20d76cc29d15aed9419a1dc20fdc33e939a8edf3f3883996f4a62f82f3d07311"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/452/",
+						"fetchedAt": "2026-11-03T05:54:02.315Z",
+						"hash": "091f71c6dcb32f0ce03c2a60056cf33f5c7b4317a7ffb5adeb76abcbdfd4b426"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/10223/",
+						"fetchedAt": "2026-11-03T05:54:04.427Z",
+						"hash": "420b2fe72478df7699e2f4927135c98ed3c37333a2de6f9da2361b2dd4308975"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/10223/encounters",
+						"fetchedAt": "2026-11-03T05:54:04.471Z",
+						"hash": "0554a34472572596bf1005716e8e940cee1d55743cb6669120d8e5667370c205"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/10392/",
+						"fetchedAt": "2026-11-03T05:54:04.501Z",
+						"hash": "ef7255b21ab70578364317c30008d12dd3ee126992395723829f6833d761b0a6"
+					}
+				],
+				"formName": "Gigantamax"
+			},
+			"flavorByGame": {
+				"swordioa": "",
+				"shieldioa": ""
+			},
+			"localizedFlavorByGame": {
+				"swordioa": {},
+				"shieldioa": {}
+			}
+		},
+		{
+			"profileKey": "the-crown-tundra",
+			"label": "The Crown Tundra",
+			"appGameKeys": [
+				"swordct",
+				"shieldct"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Alcremie",
+				"localizedNames": {
+					"ja-hrkt": "マホイップ",
+					"ja-roma": "Mawhip",
+					"ko": "마휘핑",
+					"zh-hant": "霜奶仙",
+					"fr": "Charmilly",
+					"de": "Pokusan",
+					"es": "Alcremie",
+					"it": "Alcremie",
+					"ja": "マホイップ",
+					"zh-hans": "霜奶仙",
+					"es-419": "Alcremie"
+				},
+				"localizedFormNames": {
+					"fr": "Charmilly Gigamax",
+					"de": "Gigadynamax-Pokusan"
+				},
+				"localizedFormLabels": {
+					"ja-hrkt": "キョダイマックスのすがた",
+					"fr": "Forme Gigamax",
+					"de": "Gigadynamax-Form",
+					"ja": "キョダイマックスのすがた"
+				},
+				"types": [
+					"Fairy"
+				],
+				"baseStats": {
+					"hp": 65,
+					"atk": 60,
+					"def": 75,
+					"spa": 110,
+					"spd": 121,
+					"spe": 64
+				},
+				"evYield": {
+					"spd": 2
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Sweet Veil",
+					"Aroma Veil (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Aroma Veil"
+				],
+				"eggGroups": [
+					"Fairy",
+					"Indeterminate"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "30.0 m",
+				"weight": "1000.0 kg",
+				"genderRatio": "0% male / 100% female",
+				"baseFriendship": 50,
+				"captureRate": 100,
+				"baseExperience": 173,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "White",
+				"genus": "Cream Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "クリームポケモン",
+					"ko": "크림포켓몬",
+					"zh-hant": "鮮奶油寶可夢",
+					"fr": "Pokémon Crème",
+					"de": "Sahne-Pokémon",
+					"es": "Pokémon Nata",
+					"it": "Pokémon Pannafresca",
+					"ja": "クリームポケモン",
+					"zh-hans": "鲜奶油宝可梦",
+					"es-419": "Pokémon Nata"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 869
+					},
+					{
+						"pokedex": "galar",
+						"number": 186
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 43
+					},
+					{
+						"pokedex": "champions",
+						"number": 869
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 868,
+								"natiId": 868,
+								"name": "Milcery"
+							},
+							{
+								"id": 869,
+								"natiId": 869,
+								"name": "Alcremie",
+								"method": "Spin",
+								"value": "Strawberry Sweet"
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Old Cemetery Max Den B",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Crown Tundra Sword",
+						"rate": "15%"
+					},
+					{
+						"area": "Old Cemetery Max Den B",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Crown Tundra Shield",
+						"rate": "15%"
+					},
+					{
+						"area": "Giants Bed Max Den D",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Crown Tundra Sword",
+						"rate": "15%"
+					},
+					{
+						"area": "Giants Bed Max Den D",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Crown Tundra Shield",
+						"rate": "15%"
+					},
+					{
+						"area": "Ballimere Lake Max Den L",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Crown Tundra Sword",
+						"rate": "15%"
+					},
+					{
+						"area": "Ballimere Lake Max Den L",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "The Crown Tundra Shield",
+						"rate": "15%"
+					}
+				],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokemonPGC form catalog includes this game profile.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/869",
+						"fetchedAt": "2026-11-03T05:54:02.406Z",
+						"hash": "20d76cc29d15aed9419a1dc20fdc33e939a8edf3f3883996f4a62f82f3d07311"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/452/",
+						"fetchedAt": "2026-11-03T05:54:02.315Z",
+						"hash": "091f71c6dcb32f0ce03c2a60056cf33f5c7b4317a7ffb5adeb76abcbdfd4b426"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/10223/",
+						"fetchedAt": "2026-11-03T05:54:04.427Z",
+						"hash": "420b2fe72478df7699e2f4927135c98ed3c37333a2de6f9da2361b2dd4308975"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/10223/encounters",
+						"fetchedAt": "2026-11-03T05:54:04.471Z",
+						"hash": "0554a34472572596bf1005716e8e940cee1d55743cb6669120d8e5667370c205"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/10392/",
+						"fetchedAt": "2026-11-03T05:54:04.501Z",
+						"hash": "ef7255b21ab70578364317c30008d12dd3ee126992395723829f6833d761b0a6"
+					}
+				],
+				"formName": "Gigantamax"
+			},
+			"flavorByGame": {
+				"swordct": "",
+				"shieldct": ""
+			},
+			"localizedFlavorByGame": {
+				"swordct": {},
+				"shieldct": {}
+			}
+		}
+	]
+}

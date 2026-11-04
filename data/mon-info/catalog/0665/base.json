@@ -1,0 +1,3307 @@
+{
+	"schemaVersion": 2,
+	"nationalDexId": 665,
+	"speciesName": "Spewpa",
+	"formKey": "base",
+	"formName": "Base",
+	"formLabelSource": "form-catalog",
+	"profiles": [
+		{
+			"profileKey": "x-y",
+			"label": "X / Y",
+			"appGameKeys": [
+				"x-national",
+				"x-central",
+				"x-coastal",
+				"x-mountain",
+				"y-national",
+				"y-central",
+				"y-coastal",
+				"y-mountain"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Spewpa",
+				"localizedNames": {
+					"ja-hrkt": "コフーライ",
+					"ja-roma": "Kofuurai",
+					"ko": "분떠도리",
+					"zh-hant": "粉蝶蛹",
+					"fr": "Pérégrain",
+					"de": "Puponcho",
+					"es": "Spewpa",
+					"it": "Spewpa",
+					"ja": "コフーライ",
+					"zh-hans": "粉蝶蛹",
+					"es-419": "Spewpa"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 22,
+					"def": 60,
+					"spa": 27,
+					"spd": 30,
+					"spe": 29
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin",
+					"Friend Guard (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Friend Guard"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "8.4 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 75,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "Black",
+				"genus": "Scatterdust Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こなふきポケモン",
+					"ko": "가루뿜기포켓몬",
+					"zh-hant": "噴粉寶可夢",
+					"fr": "Pokémon Exhalécaille",
+					"de": "Puderinsekt",
+					"es": "Pokémon Tiraescamas",
+					"it": "Pokémon Tirascaglie",
+					"ja": "こなふきポケモン",
+					"zh-hans": "喷粉宝可梦",
+					"es-419": "Pokémon Tiraescamas"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 665
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 21
+					},
+					{
+						"pokedex": "paldea",
+						"number": 36
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 16
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 664,
+								"natiId": 664,
+								"name": "Scatterbug"
+							},
+							{
+								"id": 665,
+								"natiId": 665,
+								"name": "Spewpa",
+								"method": "Level",
+								"value": 9
+							},
+							{
+								"id": 666,
+								"natiId": 666,
+								"name": "Vivillon",
+								"method": "Level",
+								"value": 12
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Kalos Berry Fields Area",
+						"notes": "Berry Trees, Lv. 14-15",
+						"games": "X",
+						"rate": "100%"
+					},
+					{
+						"area": "Kalos Berry Fields Area",
+						"notes": "Berry Trees, Lv. 14-15",
+						"games": "Y",
+						"rate": "100%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": 9,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/665",
+						"fetchedAt": "2026-11-03T05:53:47.563Z",
+						"hash": "112387897b3253454d8582e5a2c838bffe2a4a291e230d96b6f8c4305105ee1b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/342/",
+						"fetchedAt": "2026-11-03T05:53:47.447Z",
+						"hash": "e4c566be22730fd9681bf9fff4a031f239a5ad5a90ca63954c9afddca5adddb3"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/665/",
+						"fetchedAt": "2026-11-03T05:53:47.618Z",
+						"hash": "c6361bc5dfc0569c1d1252af41f4c60cd488dd804a52f1f40322729e4cc11fb4"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/665/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.665Z",
+						"hash": "4423d4ee7c870e6abbb85672b51ea975ca2b2224d530b2d56baa5b7ad527a219"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/665/",
+						"fetchedAt": "2026-11-03T05:53:47.716Z",
+						"hash": "73ffeec9caed7b749a1cb23253aa2969a656641d7eb5b41705086bc9355bbe50"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"x-national": "It lives hidden within thicket shadows. When predators attack, it quickly bristles the fur covering its body in an effort to threaten them.",
+				"x-central": "It lives hidden within thicket shadows. When predators attack, it quickly bristles the fur covering its body in an effort to threaten them.",
+				"x-coastal": "It lives hidden within thicket shadows. When predators attack, it quickly bristles the fur covering its body in an effort to threaten them.",
+				"x-mountain": "It lives hidden within thicket shadows. When predators attack, it quickly bristles the fur covering its body in an effort to threaten them.",
+				"y-national": "The beaks of bird Pokémon can’t begin to scratch its stalwart body. To defend itself, it spews powder.",
+				"y-central": "The beaks of bird Pokémon can’t begin to scratch its stalwart body. To defend itself, it spews powder.",
+				"y-coastal": "The beaks of bird Pokémon can’t begin to scratch its stalwart body. To defend itself, it spews powder.",
+				"y-mountain": "The beaks of bird Pokémon can’t begin to scratch its stalwart body. To defend itself, it spews powder."
+			},
+			"localizedFlavorByGame": {
+				"x-national": {
+					"ja-hrkt": "しげみの かげに かくれて くらす。 てきに おそわれると からだの けを するどく さかだてて いかくする。",
+					"ko": "수풀의 그늘에 숨어 산다. 적에게 공격당하면 몸의 털을 뾰족하게 곤두세우며 위협한다.",
+					"fr": "Vit caché sous le couvert des buissons. Poursuivi par un ennemi, il tente de l’intimider en hérissant les poils qui lui couvrent le corps.",
+					"de": "Es lebt versteckt im schattigen Dickicht. Wird es von einem Feind angegriffen, stellt es sein Fell zur Abschreckung zu scharfen Spitzen auf.",
+					"es": "Habita en la sombra de la espesura. Si percibe alguna amenaza, su pelaje se eriza y se vuelve muy afilado para así intimidar al enemigo.",
+					"it": "Vive nascosto nella boscaglia. Se attaccato, minaccia i nemici rizzando il pelo.",
+					"en": "It lives hidden within thicket shadows. When predators attack, it quickly bristles the fur covering its body in an effort to threaten them.",
+					"ja": "しげみの 陰に 隠れて 暮らす。 敵に 襲われると 体の 毛を 鋭く 逆立てて 威嚇する。",
+					"es-419": "Habita en la sombra de la espesura. Si percibe alguna amenaza, su pelaje se eriza y se vuelve muy afilado para así intimidar al enemigo."
+				},
+				"x-central": {
+					"ja-hrkt": "しげみの かげに かくれて くらす。 てきに おそわれると からだの けを するどく さかだてて いかくする。",
+					"ko": "수풀의 그늘에 숨어 산다. 적에게 공격당하면 몸의 털을 뾰족하게 곤두세우며 위협한다.",
+					"fr": "Vit caché sous le couvert des buissons. Poursuivi par un ennemi, il tente de l’intimider en hérissant les poils qui lui couvrent le corps.",
+					"de": "Es lebt versteckt im schattigen Dickicht. Wird es von einem Feind angegriffen, stellt es sein Fell zur Abschreckung zu scharfen Spitzen auf.",
+					"es": "Habita en la sombra de la espesura. Si percibe alguna amenaza, su pelaje se eriza y se vuelve muy afilado para así intimidar al enemigo.",
+					"it": "Vive nascosto nella boscaglia. Se attaccato, minaccia i nemici rizzando il pelo.",
+					"en": "It lives hidden within thicket shadows. When predators attack, it quickly bristles the fur covering its body in an effort to threaten them.",
+					"ja": "しげみの 陰に 隠れて 暮らす。 敵に 襲われると 体の 毛を 鋭く 逆立てて 威嚇する。",
+					"es-419": "Habita en la sombra de la espesura. Si percibe alguna amenaza, su pelaje se eriza y se vuelve muy afilado para así intimidar al enemigo."
+				},
+				"x-coastal": {
+					"ja-hrkt": "しげみの かげに かくれて くらす。 てきに おそわれると からだの けを するどく さかだてて いかくする。",
+					"ko": "수풀의 그늘에 숨어 산다. 적에게 공격당하면 몸의 털을 뾰족하게 곤두세우며 위협한다.",
+					"fr": "Vit caché sous le couvert des buissons. Poursuivi par un ennemi, il tente de l’intimider en hérissant les poils qui lui couvrent le corps.",
+					"de": "Es lebt versteckt im schattigen Dickicht. Wird es von einem Feind angegriffen, stellt es sein Fell zur Abschreckung zu scharfen Spitzen auf.",
+					"es": "Habita en la sombra de la espesura. Si percibe alguna amenaza, su pelaje se eriza y se vuelve muy afilado para así intimidar al enemigo.",
+					"it": "Vive nascosto nella boscaglia. Se attaccato, minaccia i nemici rizzando il pelo.",
+					"en": "It lives hidden within thicket shadows. When predators attack, it quickly bristles the fur covering its body in an effort to threaten them.",
+					"ja": "しげみの 陰に 隠れて 暮らす。 敵に 襲われると 体の 毛を 鋭く 逆立てて 威嚇する。",
+					"es-419": "Habita en la sombra de la espesura. Si percibe alguna amenaza, su pelaje se eriza y se vuelve muy afilado para así intimidar al enemigo."
+				},
+				"x-mountain": {
+					"ja-hrkt": "しげみの かげに かくれて くらす。 てきに おそわれると からだの けを するどく さかだてて いかくする。",
+					"ko": "수풀의 그늘에 숨어 산다. 적에게 공격당하면 몸의 털을 뾰족하게 곤두세우며 위협한다.",
+					"fr": "Vit caché sous le couvert des buissons. Poursuivi par un ennemi, il tente de l’intimider en hérissant les poils qui lui couvrent le corps.",
+					"de": "Es lebt versteckt im schattigen Dickicht. Wird es von einem Feind angegriffen, stellt es sein Fell zur Abschreckung zu scharfen Spitzen auf.",
+					"es": "Habita en la sombra de la espesura. Si percibe alguna amenaza, su pelaje se eriza y se vuelve muy afilado para así intimidar al enemigo.",
+					"it": "Vive nascosto nella boscaglia. Se attaccato, minaccia i nemici rizzando il pelo.",
+					"en": "It lives hidden within thicket shadows. When predators attack, it quickly bristles the fur covering its body in an effort to threaten them.",
+					"ja": "しげみの 陰に 隠れて 暮らす。 敵に 襲われると 体の 毛を 鋭く 逆立てて 威嚇する。",
+					"es-419": "Habita en la sombra de la espesura. Si percibe alguna amenaza, su pelaje se eriza y se vuelve muy afilado para así intimidar al enemigo."
+				},
+				"y-national": {
+					"ja-hrkt": "かたい からだは とりポケモンの クチバシでも キズひとつ つかない。 コナを まきちらして ぼうせんする。",
+					"ko": "단단한 몸은 새포켓몬의 부리로도 상처 하나 입지 않는다. 가루를 뿌려서 방어한다.",
+					"fr": "Même les becs acérés des Pokémon Oiseaux ne parviennent pas à meurtrir son corps très dur. Il se défend en crachant de la poudre.",
+					"de": "Der Schnabel eines Vogel-Pokémon kann seinem harten Körper keinen Kratzer zufügen. Es verteidigt sich, indem es Puder spuckt.",
+					"es": "Su cuerpo es tan duro que ni siquiera los Pokémon pájaro pueden hacerle el menor rasguño con sus picos. Esparce polvo de escamas para defenderse.",
+					"it": "Il becco dei Pokémon uccello non può neppure scalfire il suo durissimo corpo. Si difende spargendo scaglie.",
+					"en": "The beaks of bird Pokémon can’t begin to scratch its stalwart body. To defend itself, it spews powder.",
+					"ja": "硬い 体は とりポケモンの クチバシでも 傷ひとつ つかない。 粉を まき散らして 防戦する。",
+					"es-419": "Su cuerpo es tan duro que ni siquiera los Pokémon pájaro pueden hacerle el menor rasguño con sus picos. Esparce polvo de escamas para defenderse."
+				},
+				"y-central": {
+					"ja-hrkt": "かたい からだは とりポケモンの クチバシでも キズひとつ つかない。 コナを まきちらして ぼうせんする。",
+					"ko": "단단한 몸은 새포켓몬의 부리로도 상처 하나 입지 않는다. 가루를 뿌려서 방어한다.",
+					"fr": "Même les becs acérés des Pokémon Oiseaux ne parviennent pas à meurtrir son corps très dur. Il se défend en crachant de la poudre.",
+					"de": "Der Schnabel eines Vogel-Pokémon kann seinem harten Körper keinen Kratzer zufügen. Es verteidigt sich, indem es Puder spuckt.",
+					"es": "Su cuerpo es tan duro que ni siquiera los Pokémon pájaro pueden hacerle el menor rasguño con sus picos. Esparce polvo de escamas para defenderse.",
+					"it": "Il becco dei Pokémon uccello non può neppure scalfire il suo durissimo corpo. Si difende spargendo scaglie.",
+					"en": "The beaks of bird Pokémon can’t begin to scratch its stalwart body. To defend itself, it spews powder.",
+					"ja": "硬い 体は とりポケモンの クチバシでも 傷ひとつ つかない。 粉を まき散らして 防戦する。",
+					"es-419": "Su cuerpo es tan duro que ni siquiera los Pokémon pájaro pueden hacerle el menor rasguño con sus picos. Esparce polvo de escamas para defenderse."
+				},
+				"y-coastal": {
+					"ja-hrkt": "かたい からだは とりポケモンの クチバシでも キズひとつ つかない。 コナを まきちらして ぼうせんする。",
+					"ko": "단단한 몸은 새포켓몬의 부리로도 상처 하나 입지 않는다. 가루를 뿌려서 방어한다.",
+					"fr": "Même les becs acérés des Pokémon Oiseaux ne parviennent pas à meurtrir son corps très dur. Il se défend en crachant de la poudre.",
+					"de": "Der Schnabel eines Vogel-Pokémon kann seinem harten Körper keinen Kratzer zufügen. Es verteidigt sich, indem es Puder spuckt.",
+					"es": "Su cuerpo es tan duro que ni siquiera los Pokémon pájaro pueden hacerle el menor rasguño con sus picos. Esparce polvo de escamas para defenderse.",
+					"it": "Il becco dei Pokémon uccello non può neppure scalfire il suo durissimo corpo. Si difende spargendo scaglie.",
+					"en": "The beaks of bird Pokémon can’t begin to scratch its stalwart body. To defend itself, it spews powder.",
+					"ja": "硬い 体は とりポケモンの クチバシでも 傷ひとつ つかない。 粉を まき散らして 防戦する。",
+					"es-419": "Su cuerpo es tan duro que ni siquiera los Pokémon pájaro pueden hacerle el menor rasguño con sus picos. Esparce polvo de escamas para defenderse."
+				},
+				"y-mountain": {
+					"ja-hrkt": "かたい からだは とりポケモンの クチバシでも キズひとつ つかない。 コナを まきちらして ぼうせんする。",
+					"ko": "단단한 몸은 새포켓몬의 부리로도 상처 하나 입지 않는다. 가루를 뿌려서 방어한다.",
+					"fr": "Même les becs acérés des Pokémon Oiseaux ne parviennent pas à meurtrir son corps très dur. Il se défend en crachant de la poudre.",
+					"de": "Der Schnabel eines Vogel-Pokémon kann seinem harten Körper keinen Kratzer zufügen. Es verteidigt sich, indem es Puder spuckt.",
+					"es": "Su cuerpo es tan duro que ni siquiera los Pokémon pájaro pueden hacerle el menor rasguño con sus picos. Esparce polvo de escamas para defenderse.",
+					"it": "Il becco dei Pokémon uccello non può neppure scalfire il suo durissimo corpo. Si difende spargendo scaglie.",
+					"en": "The beaks of bird Pokémon can’t begin to scratch its stalwart body. To defend itself, it spews powder.",
+					"ja": "硬い 体は とりポケモンの クチバシでも 傷ひとつ つかない。 粉を まき散らして 防戦する。",
+					"es-419": "Su cuerpo es tan duro que ni siquiera los Pokémon pájaro pueden hacerle el menor rasguño con sus picos. Esparce polvo de escamas para defenderse."
+				}
+			}
+		},
+		{
+			"profileKey": "omega-ruby-alpha-sapphire",
+			"label": "Omega Ruby / Alpha Sapphire",
+			"appGameKeys": [
+				"omegaruby-national",
+				"omegaruby",
+				"alphasapphire-national",
+				"alphasapphire"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Spewpa",
+				"localizedNames": {
+					"ja-hrkt": "コフーライ",
+					"ja-roma": "Kofuurai",
+					"ko": "분떠도리",
+					"zh-hant": "粉蝶蛹",
+					"fr": "Pérégrain",
+					"de": "Puponcho",
+					"es": "Spewpa",
+					"it": "Spewpa",
+					"ja": "コフーライ",
+					"zh-hans": "粉蝶蛹",
+					"es-419": "Spewpa"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 22,
+					"def": 60,
+					"spa": 27,
+					"spd": 30,
+					"spe": 29
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin",
+					"Friend Guard (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Friend Guard"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "8.4 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 75,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "Black",
+				"genus": "Scatterdust Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こなふきポケモン",
+					"ko": "가루뿜기포켓몬",
+					"zh-hant": "噴粉寶可夢",
+					"fr": "Pokémon Exhalécaille",
+					"de": "Puderinsekt",
+					"es": "Pokémon Tiraescamas",
+					"it": "Pokémon Tirascaglie",
+					"ja": "こなふきポケモン",
+					"zh-hans": "喷粉宝可梦",
+					"es-419": "Pokémon Tiraescamas"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 665
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 21
+					},
+					{
+						"pokedex": "paldea",
+						"number": 36
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 16
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 664,
+								"natiId": 664,
+								"name": "Scatterbug"
+							},
+							{
+								"id": 665,
+								"natiId": 665,
+								"name": "Spewpa",
+								"method": "Level",
+								"value": 9
+							},
+							{
+								"id": 666,
+								"natiId": 666,
+								"name": "Vivillon",
+								"method": "Level",
+								"value": 12
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": 9,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Bug Bite",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Electroweb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Defense",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/665",
+						"fetchedAt": "2026-11-03T05:53:47.563Z",
+						"hash": "112387897b3253454d8582e5a2c838bffe2a4a291e230d96b6f8c4305105ee1b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/342/",
+						"fetchedAt": "2026-11-03T05:53:47.447Z",
+						"hash": "e4c566be22730fd9681bf9fff4a031f239a5ad5a90ca63954c9afddca5adddb3"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/665/",
+						"fetchedAt": "2026-11-03T05:53:47.618Z",
+						"hash": "c6361bc5dfc0569c1d1252af41f4c60cd488dd804a52f1f40322729e4cc11fb4"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/665/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.665Z",
+						"hash": "4423d4ee7c870e6abbb85672b51ea975ca2b2224d530b2d56baa5b7ad527a219"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/665/",
+						"fetchedAt": "2026-11-03T05:53:47.716Z",
+						"hash": "73ffeec9caed7b749a1cb23253aa2969a656641d7eb5b41705086bc9355bbe50"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"omegaruby-national": "It lives hidden within thicket shadows. When predators attack, it quickly bristles the fur covering its body in an effort to threaten them.",
+				"omegaruby": "It lives hidden within thicket shadows. When predators attack, it quickly bristles the fur covering its body in an effort to threaten them.",
+				"alphasapphire-national": "The beaks of bird Pokémon can’t begin to scratch its stalwart body. To defend itself, it spews powder.",
+				"alphasapphire": "The beaks of bird Pokémon can’t begin to scratch its stalwart body. To defend itself, it spews powder."
+			},
+			"localizedFlavorByGame": {
+				"omegaruby-national": {
+					"ja-hrkt": "しげみの かげに かくれて くらす。 てきに おそわれると からだの けを するどく さかだてて いかくする。",
+					"ko": "수풀의 그늘에 숨어 산다. 적에게 공격당하면 몸의 털을 뾰족하게 곤두세우며 위협한다.",
+					"fr": "Vit caché sous le couvert des buissons. Poursuivi par un ennemi, il tente de l’intimider en hérissant les poils qui lui couvrent le corps.",
+					"de": "Es lebt versteckt im schattigen Dickicht. Wird es von einem Feind angegriffen, stellt es sein Fell zur Abschreckung zu scharfen Spitzen auf.",
+					"es": "Habita en la sombra de la espesura. Si percibe alguna amenaza, su pelaje se eriza y se vuelve muy afilado para así intimidar al enemigo.",
+					"it": "Vive nascosto nella boscaglia. Se attaccato, minaccia i nemici rizzando il pelo.",
+					"en": "It lives hidden within thicket shadows. When predators attack, it quickly bristles the fur covering its body in an effort to threaten them.",
+					"ja": "しげみの 陰に 隠れて 暮らす。 敵に 襲われると 体の 毛を 鋭く 逆立てて 威嚇する。",
+					"es-419": "Habita en la sombra de la espesura. Si percibe alguna amenaza, su pelaje se eriza y se vuelve muy afilado para así intimidar al enemigo."
+				},
+				"omegaruby": {
+					"ja-hrkt": "しげみの かげに かくれて くらす。 てきに おそわれると からだの けを するどく さかだてて いかくする。",
+					"ko": "수풀의 그늘에 숨어 산다. 적에게 공격당하면 몸의 털을 뾰족하게 곤두세우며 위협한다.",
+					"fr": "Vit caché sous le couvert des buissons. Poursuivi par un ennemi, il tente de l’intimider en hérissant les poils qui lui couvrent le corps.",
+					"de": "Es lebt versteckt im schattigen Dickicht. Wird es von einem Feind angegriffen, stellt es sein Fell zur Abschreckung zu scharfen Spitzen auf.",
+					"es": "Habita en la sombra de la espesura. Si percibe alguna amenaza, su pelaje se eriza y se vuelve muy afilado para así intimidar al enemigo.",
+					"it": "Vive nascosto nella boscaglia. Se attaccato, minaccia i nemici rizzando il pelo.",
+					"en": "It lives hidden within thicket shadows. When predators attack, it quickly bristles the fur covering its body in an effort to threaten them.",
+					"ja": "しげみの 陰に 隠れて 暮らす。 敵に 襲われると 体の 毛を 鋭く 逆立てて 威嚇する。",
+					"es-419": "Habita en la sombra de la espesura. Si percibe alguna amenaza, su pelaje se eriza y se vuelve muy afilado para así intimidar al enemigo."
+				},
+				"alphasapphire-national": {
+					"ja-hrkt": "かたい からだは とりポケモンの クチバシでも キズひとつ つかない。 コナを まきちらして ぼうせんする。",
+					"ko": "단단한 몸은 새포켓몬의 부리로도 상처 하나 입지 않는다. 가루를 뿌려서 방어한다.",
+					"fr": "Même les becs acérés des Pokémon Oiseaux ne parviennent pas à meurtrir son corps très dur. Il se défend en crachant de la poudre.",
+					"de": "Der Schnabel eines Vogel-Pokémon kann seinem harten Körper keinen Kratzer zufügen. Es verteidigt sich, indem es Puder spuckt.",
+					"es": "Su cuerpo es tan duro que ni siquiera los Pokémon pájaro pueden hacerle el menor rasguño con sus picos. Esparce polvo de escamas para defenderse.",
+					"it": "Il becco dei Pokémon uccello non può neppure scalfire il suo durissimo corpo. Si difende spargendo scaglie.",
+					"en": "The beaks of bird Pokémon can’t begin to scratch its stalwart body. To defend itself, it spews powder.",
+					"ja": "硬い 体は とりポケモンの クチバシでも 傷ひとつ つかない。 粉を まき散らして 防戦する。",
+					"es-419": "Su cuerpo es tan duro que ni siquiera los Pokémon pájaro pueden hacerle el menor rasguño con sus picos. Esparce polvo de escamas para defenderse."
+				},
+				"alphasapphire": {
+					"ja-hrkt": "かたい からだは とりポケモンの クチバシでも キズひとつ つかない。 コナを まきちらして ぼうせんする。",
+					"ko": "단단한 몸은 새포켓몬의 부리로도 상처 하나 입지 않는다. 가루를 뿌려서 방어한다.",
+					"fr": "Même les becs acérés des Pokémon Oiseaux ne parviennent pas à meurtrir son corps très dur. Il se défend en crachant de la poudre.",
+					"de": "Der Schnabel eines Vogel-Pokémon kann seinem harten Körper keinen Kratzer zufügen. Es verteidigt sich, indem es Puder spuckt.",
+					"es": "Su cuerpo es tan duro que ni siquiera los Pokémon pájaro pueden hacerle el menor rasguño con sus picos. Esparce polvo de escamas para defenderse.",
+					"it": "Il becco dei Pokémon uccello non può neppure scalfire il suo durissimo corpo. Si difende spargendo scaglie.",
+					"en": "The beaks of bird Pokémon can’t begin to scratch its stalwart body. To defend itself, it spews powder.",
+					"ja": "硬い 体は とりポケモンの クチバシでも 傷ひとつ つかない。 粉を まき散らして 防戦する。",
+					"es-419": "Su cuerpo es tan duro que ni siquiera los Pokémon pájaro pueden hacerle el menor rasguño con sus picos. Esparce polvo de escamas para defenderse."
+				}
+			}
+		},
+		{
+			"profileKey": "sun-moon",
+			"label": "Sun / Moon",
+			"appGameKeys": [
+				"sun-alola",
+				"sun-melemele",
+				"sun-akala",
+				"sun-ulaula",
+				"sun-poni",
+				"moon-alola",
+				"moon-melemele",
+				"moon-akala",
+				"moon-ulaula",
+				"moon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Spewpa",
+				"localizedNames": {
+					"ja-hrkt": "コフーライ",
+					"ja-roma": "Kofuurai",
+					"ko": "분떠도리",
+					"zh-hant": "粉蝶蛹",
+					"fr": "Pérégrain",
+					"de": "Puponcho",
+					"es": "Spewpa",
+					"it": "Spewpa",
+					"ja": "コフーライ",
+					"zh-hans": "粉蝶蛹",
+					"es-419": "Spewpa"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 22,
+					"def": 60,
+					"spa": 27,
+					"spd": 30,
+					"spe": 29
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin",
+					"Friend Guard (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Friend Guard"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "8.4 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 75,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "Black",
+				"genus": "Scatterdust Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こなふきポケモン",
+					"ko": "가루뿜기포켓몬",
+					"zh-hant": "噴粉寶可夢",
+					"fr": "Pokémon Exhalécaille",
+					"de": "Puderinsekt",
+					"es": "Pokémon Tiraescamas",
+					"it": "Pokémon Tirascaglie",
+					"ja": "こなふきポケモン",
+					"zh-hans": "喷粉宝可梦",
+					"es-419": "Pokémon Tiraescamas"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 665
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 21
+					},
+					{
+						"pokedex": "paldea",
+						"number": 36
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 16
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 664,
+								"natiId": 664,
+								"name": "Scatterbug"
+							},
+							{
+								"id": 665,
+								"natiId": 665,
+								"name": "Spewpa",
+								"method": "Level",
+								"value": 9
+							},
+							{
+								"id": 666,
+								"natiId": 666,
+								"name": "Vivillon",
+								"method": "Level",
+								"value": 12
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": 2
+						}
+					],
+					"Machine": [
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/665",
+						"fetchedAt": "2026-11-03T05:53:47.563Z",
+						"hash": "112387897b3253454d8582e5a2c838bffe2a4a291e230d96b6f8c4305105ee1b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/342/",
+						"fetchedAt": "2026-11-03T05:53:47.447Z",
+						"hash": "e4c566be22730fd9681bf9fff4a031f239a5ad5a90ca63954c9afddca5adddb3"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/665/",
+						"fetchedAt": "2026-11-03T05:53:47.618Z",
+						"hash": "c6361bc5dfc0569c1d1252af41f4c60cd488dd804a52f1f40322729e4cc11fb4"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/665/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.665Z",
+						"hash": "4423d4ee7c870e6abbb85672b51ea975ca2b2224d530b2d56baa5b7ad527a219"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/665/",
+						"fetchedAt": "2026-11-03T05:53:47.716Z",
+						"hash": "73ffeec9caed7b749a1cb23253aa2969a656641d7eb5b41705086bc9355bbe50"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sun-alola": "",
+				"sun-melemele": "",
+				"sun-akala": "",
+				"sun-ulaula": "",
+				"sun-poni": "",
+				"moon-alola": "",
+				"moon-melemele": "",
+				"moon-akala": "",
+				"moon-ulaula": "",
+				"moon-poni": ""
+			},
+			"localizedFlavorByGame": {
+				"sun-alola": {},
+				"sun-melemele": {},
+				"sun-akala": {},
+				"sun-ulaula": {},
+				"sun-poni": {},
+				"moon-alola": {},
+				"moon-melemele": {},
+				"moon-akala": {},
+				"moon-ulaula": {},
+				"moon-poni": {}
+			}
+		},
+		{
+			"profileKey": "ultra-sun-ultra-moon",
+			"label": "Ultra Sun / Ultra Moon",
+			"appGameKeys": [
+				"ultrasun-alola",
+				"ultrasun-melemele",
+				"ultrasun-akala",
+				"ultrasun-ulaula",
+				"ultrasun-poni",
+				"ultramoon-alola",
+				"ultramoon-melemele",
+				"ultramoon-akala",
+				"ultramoon-ulaula",
+				"ultramoon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Spewpa",
+				"localizedNames": {
+					"ja-hrkt": "コフーライ",
+					"ja-roma": "Kofuurai",
+					"ko": "분떠도리",
+					"zh-hant": "粉蝶蛹",
+					"fr": "Pérégrain",
+					"de": "Puponcho",
+					"es": "Spewpa",
+					"it": "Spewpa",
+					"ja": "コフーライ",
+					"zh-hans": "粉蝶蛹",
+					"es-419": "Spewpa"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 22,
+					"def": 60,
+					"spa": 27,
+					"spd": 30,
+					"spe": 29
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin",
+					"Friend Guard (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Friend Guard"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "8.4 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 75,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "Black",
+				"genus": "Scatterdust Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こなふきポケモン",
+					"ko": "가루뿜기포켓몬",
+					"zh-hant": "噴粉寶可夢",
+					"fr": "Pokémon Exhalécaille",
+					"de": "Puderinsekt",
+					"es": "Pokémon Tiraescamas",
+					"it": "Pokémon Tirascaglie",
+					"ja": "こなふきポケモン",
+					"zh-hans": "喷粉宝可梦",
+					"es-419": "Pokémon Tiraescamas"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 665
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 21
+					},
+					{
+						"pokedex": "paldea",
+						"number": 36
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 16
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 664,
+								"natiId": 664,
+								"name": "Scatterbug"
+							},
+							{
+								"id": 665,
+								"natiId": 665,
+								"name": "Spewpa",
+								"method": "Level",
+								"value": 9
+							},
+							{
+								"id": 666,
+								"natiId": 666,
+								"name": "Vivillon",
+								"method": "Level",
+								"value": 12
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": 2
+						}
+					],
+					"Machine": [
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Bug Bite",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Electroweb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Defense",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/665",
+						"fetchedAt": "2026-11-03T05:53:47.563Z",
+						"hash": "112387897b3253454d8582e5a2c838bffe2a4a291e230d96b6f8c4305105ee1b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/342/",
+						"fetchedAt": "2026-11-03T05:53:47.447Z",
+						"hash": "e4c566be22730fd9681bf9fff4a031f239a5ad5a90ca63954c9afddca5adddb3"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/665/",
+						"fetchedAt": "2026-11-03T05:53:47.618Z",
+						"hash": "c6361bc5dfc0569c1d1252af41f4c60cd488dd804a52f1f40322729e4cc11fb4"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/665/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.665Z",
+						"hash": "4423d4ee7c870e6abbb85672b51ea975ca2b2224d530b2d56baa5b7ad527a219"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/665/",
+						"fetchedAt": "2026-11-03T05:53:47.716Z",
+						"hash": "73ffeec9caed7b749a1cb23253aa2969a656641d7eb5b41705086bc9355bbe50"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"ultrasun-alola": "",
+				"ultrasun-melemele": "",
+				"ultrasun-akala": "",
+				"ultrasun-ulaula": "",
+				"ultrasun-poni": "",
+				"ultramoon-alola": "",
+				"ultramoon-melemele": "",
+				"ultramoon-akala": "",
+				"ultramoon-ulaula": "",
+				"ultramoon-poni": ""
+			},
+			"localizedFlavorByGame": {
+				"ultrasun-alola": {},
+				"ultrasun-melemele": {},
+				"ultrasun-akala": {},
+				"ultrasun-ulaula": {},
+				"ultrasun-poni": {},
+				"ultramoon-alola": {},
+				"ultramoon-melemele": {},
+				"ultramoon-akala": {},
+				"ultramoon-ulaula": {},
+				"ultramoon-poni": {}
+			}
+		},
+		{
+			"profileKey": "lets-go-pikachu-lets-go-eevee",
+			"label": "Let's Go Pikachu / Eevee",
+			"appGameKeys": [
+				"letsgopikachu",
+				"letsgoeevee"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Spewpa",
+				"localizedNames": {
+					"ja-hrkt": "コフーライ",
+					"ja-roma": "Kofuurai",
+					"ko": "분떠도리",
+					"zh-hant": "粉蝶蛹",
+					"fr": "Pérégrain",
+					"de": "Puponcho",
+					"es": "Spewpa",
+					"it": "Spewpa",
+					"ja": "コフーライ",
+					"zh-hans": "粉蝶蛹",
+					"es-419": "Spewpa"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 22,
+					"def": 60,
+					"spa": 27,
+					"spd": 30,
+					"spe": 29
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin",
+					"Friend Guard (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Friend Guard"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "8.4 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 75,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "Black",
+				"genus": "Scatterdust Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こなふきポケモン",
+					"ko": "가루뿜기포켓몬",
+					"zh-hant": "噴粉寶可夢",
+					"fr": "Pokémon Exhalécaille",
+					"de": "Puderinsekt",
+					"es": "Pokémon Tiraescamas",
+					"it": "Pokémon Tirascaglie",
+					"ja": "こなふきポケモン",
+					"zh-hans": "喷粉宝可梦",
+					"es-419": "Pokémon Tiraescamas"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 665
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 21
+					},
+					{
+						"pokedex": "paldea",
+						"number": 36
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 16
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 664,
+								"natiId": 664,
+								"name": "Scatterbug"
+							},
+							{
+								"id": 665,
+								"natiId": 665,
+								"name": "Spewpa",
+								"method": "Level",
+								"value": 9
+							},
+							{
+								"id": 666,
+								"natiId": 666,
+								"name": "Vivillon",
+								"method": "Level",
+								"value": 12
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/665",
+						"fetchedAt": "2026-11-03T05:53:47.563Z",
+						"hash": "112387897b3253454d8582e5a2c838bffe2a4a291e230d96b6f8c4305105ee1b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/342/",
+						"fetchedAt": "2026-11-03T05:53:47.447Z",
+						"hash": "e4c566be22730fd9681bf9fff4a031f239a5ad5a90ca63954c9afddca5adddb3"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/665/",
+						"fetchedAt": "2026-11-03T05:53:47.618Z",
+						"hash": "c6361bc5dfc0569c1d1252af41f4c60cd488dd804a52f1f40322729e4cc11fb4"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/665/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.665Z",
+						"hash": "4423d4ee7c870e6abbb85672b51ea975ca2b2224d530b2d56baa5b7ad527a219"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/665/",
+						"fetchedAt": "2026-11-03T05:53:47.716Z",
+						"hash": "73ffeec9caed7b749a1cb23253aa2969a656641d7eb5b41705086bc9355bbe50"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"letsgopikachu": "",
+				"letsgoeevee": ""
+			},
+			"localizedFlavorByGame": {
+				"letsgopikachu": {},
+				"letsgoeevee": {}
+			}
+		},
+		{
+			"profileKey": "sword-shield",
+			"label": "Sword / Shield",
+			"appGameKeys": [
+				"sword",
+				"shield"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Spewpa",
+				"localizedNames": {
+					"ja-hrkt": "コフーライ",
+					"ja-roma": "Kofuurai",
+					"ko": "분떠도리",
+					"zh-hant": "粉蝶蛹",
+					"fr": "Pérégrain",
+					"de": "Puponcho",
+					"es": "Spewpa",
+					"it": "Spewpa",
+					"ja": "コフーライ",
+					"zh-hans": "粉蝶蛹",
+					"es-419": "Spewpa"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 22,
+					"def": 60,
+					"spa": 27,
+					"spd": 30,
+					"spe": 29
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin",
+					"Friend Guard (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Friend Guard"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "8.4 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 75,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "Black",
+				"genus": "Scatterdust Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こなふきポケモン",
+					"ko": "가루뿜기포켓몬",
+					"zh-hant": "噴粉寶可夢",
+					"fr": "Pokémon Exhalécaille",
+					"de": "Puderinsekt",
+					"es": "Pokémon Tiraescamas",
+					"it": "Pokémon Tirascaglie",
+					"ja": "こなふきポケモン",
+					"zh-hans": "喷粉宝可梦",
+					"es-419": "Pokémon Tiraescamas"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 665
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 21
+					},
+					{
+						"pokedex": "paldea",
+						"number": 36
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 16
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 664,
+								"natiId": 664,
+								"name": "Scatterbug"
+							},
+							{
+								"id": 665,
+								"natiId": 665,
+								"name": "Spewpa",
+								"method": "Level",
+								"value": 9
+							},
+							{
+								"id": 666,
+								"natiId": 666,
+								"name": "Vivillon",
+								"method": "Level",
+								"value": 12
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/665",
+						"fetchedAt": "2026-11-03T05:53:47.563Z",
+						"hash": "112387897b3253454d8582e5a2c838bffe2a4a291e230d96b6f8c4305105ee1b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/342/",
+						"fetchedAt": "2026-11-03T05:53:47.447Z",
+						"hash": "e4c566be22730fd9681bf9fff4a031f239a5ad5a90ca63954c9afddca5adddb3"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/665/",
+						"fetchedAt": "2026-11-03T05:53:47.618Z",
+						"hash": "c6361bc5dfc0569c1d1252af41f4c60cd488dd804a52f1f40322729e4cc11fb4"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/665/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.665Z",
+						"hash": "4423d4ee7c870e6abbb85672b51ea975ca2b2224d530b2d56baa5b7ad527a219"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/665/",
+						"fetchedAt": "2026-11-03T05:53:47.716Z",
+						"hash": "73ffeec9caed7b749a1cb23253aa2969a656641d7eb5b41705086bc9355bbe50"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sword": "",
+				"shield": ""
+			},
+			"localizedFlavorByGame": {
+				"sword": {},
+				"shield": {}
+			}
+		},
+		{
+			"profileKey": "the-isle-of-armor",
+			"label": "The Isle of Armor",
+			"appGameKeys": [
+				"swordioa",
+				"shieldioa"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Spewpa",
+				"localizedNames": {
+					"ja-hrkt": "コフーライ",
+					"ja-roma": "Kofuurai",
+					"ko": "분떠도리",
+					"zh-hant": "粉蝶蛹",
+					"fr": "Pérégrain",
+					"de": "Puponcho",
+					"es": "Spewpa",
+					"it": "Spewpa",
+					"ja": "コフーライ",
+					"zh-hans": "粉蝶蛹",
+					"es-419": "Spewpa"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 22,
+					"def": 60,
+					"spa": 27,
+					"spd": 30,
+					"spe": 29
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin",
+					"Friend Guard (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Friend Guard"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "8.4 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 75,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "Black",
+				"genus": "Scatterdust Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こなふきポケモン",
+					"ko": "가루뿜기포켓몬",
+					"zh-hant": "噴粉寶可夢",
+					"fr": "Pokémon Exhalécaille",
+					"de": "Puderinsekt",
+					"es": "Pokémon Tiraescamas",
+					"it": "Pokémon Tirascaglie",
+					"ja": "こなふきポケモン",
+					"zh-hans": "喷粉宝可梦",
+					"es-419": "Pokémon Tiraescamas"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 665
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 21
+					},
+					{
+						"pokedex": "paldea",
+						"number": 36
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 16
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 664,
+								"natiId": 664,
+								"name": "Scatterbug"
+							},
+							{
+								"id": 665,
+								"natiId": 665,
+								"name": "Spewpa",
+								"method": "Level",
+								"value": 9
+							},
+							{
+								"id": 666,
+								"natiId": 666,
+								"name": "Vivillon",
+								"method": "Level",
+								"value": 12
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/665",
+						"fetchedAt": "2026-11-03T05:53:47.563Z",
+						"hash": "112387897b3253454d8582e5a2c838bffe2a4a291e230d96b6f8c4305105ee1b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/342/",
+						"fetchedAt": "2026-11-03T05:53:47.447Z",
+						"hash": "e4c566be22730fd9681bf9fff4a031f239a5ad5a90ca63954c9afddca5adddb3"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/665/",
+						"fetchedAt": "2026-11-03T05:53:47.618Z",
+						"hash": "c6361bc5dfc0569c1d1252af41f4c60cd488dd804a52f1f40322729e4cc11fb4"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/665/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.665Z",
+						"hash": "4423d4ee7c870e6abbb85672b51ea975ca2b2224d530b2d56baa5b7ad527a219"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/665/",
+						"fetchedAt": "2026-11-03T05:53:47.716Z",
+						"hash": "73ffeec9caed7b749a1cb23253aa2969a656641d7eb5b41705086bc9355bbe50"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordioa": "",
+				"shieldioa": ""
+			},
+			"localizedFlavorByGame": {
+				"swordioa": {},
+				"shieldioa": {}
+			}
+		},
+		{
+			"profileKey": "the-crown-tundra",
+			"label": "The Crown Tundra",
+			"appGameKeys": [
+				"swordct",
+				"shieldct"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Spewpa",
+				"localizedNames": {
+					"ja-hrkt": "コフーライ",
+					"ja-roma": "Kofuurai",
+					"ko": "분떠도리",
+					"zh-hant": "粉蝶蛹",
+					"fr": "Pérégrain",
+					"de": "Puponcho",
+					"es": "Spewpa",
+					"it": "Spewpa",
+					"ja": "コフーライ",
+					"zh-hans": "粉蝶蛹",
+					"es-419": "Spewpa"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 22,
+					"def": 60,
+					"spa": 27,
+					"spd": 30,
+					"spe": 29
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin",
+					"Friend Guard (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Friend Guard"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "8.4 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 75,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "Black",
+				"genus": "Scatterdust Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こなふきポケモン",
+					"ko": "가루뿜기포켓몬",
+					"zh-hant": "噴粉寶可夢",
+					"fr": "Pokémon Exhalécaille",
+					"de": "Puderinsekt",
+					"es": "Pokémon Tiraescamas",
+					"it": "Pokémon Tirascaglie",
+					"ja": "こなふきポケモン",
+					"zh-hans": "喷粉宝可梦",
+					"es-419": "Pokémon Tiraescamas"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 665
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 21
+					},
+					{
+						"pokedex": "paldea",
+						"number": 36
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 16
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 664,
+								"natiId": 664,
+								"name": "Scatterbug"
+							},
+							{
+								"id": 665,
+								"natiId": 665,
+								"name": "Spewpa",
+								"method": "Level",
+								"value": 9
+							},
+							{
+								"id": 666,
+								"natiId": 666,
+								"name": "Vivillon",
+								"method": "Level",
+								"value": 12
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/665",
+						"fetchedAt": "2026-11-03T05:53:47.563Z",
+						"hash": "112387897b3253454d8582e5a2c838bffe2a4a291e230d96b6f8c4305105ee1b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/342/",
+						"fetchedAt": "2026-11-03T05:53:47.447Z",
+						"hash": "e4c566be22730fd9681bf9fff4a031f239a5ad5a90ca63954c9afddca5adddb3"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/665/",
+						"fetchedAt": "2026-11-03T05:53:47.618Z",
+						"hash": "c6361bc5dfc0569c1d1252af41f4c60cd488dd804a52f1f40322729e4cc11fb4"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/665/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.665Z",
+						"hash": "4423d4ee7c870e6abbb85672b51ea975ca2b2224d530b2d56baa5b7ad527a219"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/665/",
+						"fetchedAt": "2026-11-03T05:53:47.716Z",
+						"hash": "73ffeec9caed7b749a1cb23253aa2969a656641d7eb5b41705086bc9355bbe50"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordct": "",
+				"shieldct": ""
+			},
+			"localizedFlavorByGame": {
+				"swordct": {},
+				"shieldct": {}
+			}
+		},
+		{
+			"profileKey": "brilliant-diamond-shining-pearl",
+			"label": "Brilliant Diamond / Shining Pearl",
+			"appGameKeys": [
+				"brilliantdiamond-national",
+				"brilliantdiamond",
+				"shiningpearl-national",
+				"shiningpearl"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Spewpa",
+				"localizedNames": {
+					"ja-hrkt": "コフーライ",
+					"ja-roma": "Kofuurai",
+					"ko": "분떠도리",
+					"zh-hant": "粉蝶蛹",
+					"fr": "Pérégrain",
+					"de": "Puponcho",
+					"es": "Spewpa",
+					"it": "Spewpa",
+					"ja": "コフーライ",
+					"zh-hans": "粉蝶蛹",
+					"es-419": "Spewpa"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 22,
+					"def": 60,
+					"spa": 27,
+					"spd": 30,
+					"spe": 29
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin",
+					"Friend Guard (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Friend Guard"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "8.4 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 75,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "Black",
+				"genus": "Scatterdust Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こなふきポケモン",
+					"ko": "가루뿜기포켓몬",
+					"zh-hant": "噴粉寶可夢",
+					"fr": "Pokémon Exhalécaille",
+					"de": "Puderinsekt",
+					"es": "Pokémon Tiraescamas",
+					"it": "Pokémon Tirascaglie",
+					"ja": "こなふきポケモン",
+					"zh-hans": "喷粉宝可梦",
+					"es-419": "Pokémon Tiraescamas"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 665
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 21
+					},
+					{
+						"pokedex": "paldea",
+						"number": 36
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 16
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 664,
+								"natiId": 664,
+								"name": "Scatterbug"
+							},
+							{
+								"id": 665,
+								"natiId": 665,
+								"name": "Spewpa",
+								"method": "Level",
+								"value": 9
+							},
+							{
+								"id": 666,
+								"natiId": 666,
+								"name": "Vivillon",
+								"method": "Level",
+								"value": 12
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/665",
+						"fetchedAt": "2026-11-03T05:53:47.563Z",
+						"hash": "112387897b3253454d8582e5a2c838bffe2a4a291e230d96b6f8c4305105ee1b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/342/",
+						"fetchedAt": "2026-11-03T05:53:47.447Z",
+						"hash": "e4c566be22730fd9681bf9fff4a031f239a5ad5a90ca63954c9afddca5adddb3"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/665/",
+						"fetchedAt": "2026-11-03T05:53:47.618Z",
+						"hash": "c6361bc5dfc0569c1d1252af41f4c60cd488dd804a52f1f40322729e4cc11fb4"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/665/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.665Z",
+						"hash": "4423d4ee7c870e6abbb85672b51ea975ca2b2224d530b2d56baa5b7ad527a219"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/665/",
+						"fetchedAt": "2026-11-03T05:53:47.716Z",
+						"hash": "73ffeec9caed7b749a1cb23253aa2969a656641d7eb5b41705086bc9355bbe50"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"brilliantdiamond-national": "",
+				"brilliantdiamond": "",
+				"shiningpearl-national": "",
+				"shiningpearl": ""
+			},
+			"localizedFlavorByGame": {
+				"brilliantdiamond-national": {},
+				"brilliantdiamond": {},
+				"shiningpearl-national": {},
+				"shiningpearl": {}
+			}
+		},
+		{
+			"profileKey": "legends-arceus",
+			"label": "Legends: Arceus",
+			"appGameKeys": [
+				"legendsarceus"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Spewpa",
+				"localizedNames": {
+					"ja-hrkt": "コフーライ",
+					"ja-roma": "Kofuurai",
+					"ko": "분떠도리",
+					"zh-hant": "粉蝶蛹",
+					"fr": "Pérégrain",
+					"de": "Puponcho",
+					"es": "Spewpa",
+					"it": "Spewpa",
+					"ja": "コフーライ",
+					"zh-hans": "粉蝶蛹",
+					"es-419": "Spewpa"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 22,
+					"def": 60,
+					"spa": 27,
+					"spd": 30,
+					"spe": 29
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin",
+					"Friend Guard (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Friend Guard"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "8.4 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 75,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "Black",
+				"genus": "Scatterdust Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こなふきポケモン",
+					"ko": "가루뿜기포켓몬",
+					"zh-hant": "噴粉寶可夢",
+					"fr": "Pokémon Exhalécaille",
+					"de": "Puderinsekt",
+					"es": "Pokémon Tiraescamas",
+					"it": "Pokémon Tirascaglie",
+					"ja": "こなふきポケモン",
+					"zh-hans": "喷粉宝可梦",
+					"es-419": "Pokémon Tiraescamas"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 665
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 21
+					},
+					{
+						"pokedex": "paldea",
+						"number": 36
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 16
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 664,
+								"natiId": 664,
+								"name": "Scatterbug"
+							},
+							{
+								"id": 665,
+								"natiId": 665,
+								"name": "Spewpa",
+								"method": "Level",
+								"value": 9
+							},
+							{
+								"id": 666,
+								"natiId": 666,
+								"name": "Vivillon",
+								"method": "Level",
+								"value": 12
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/665",
+						"fetchedAt": "2026-11-03T05:53:47.563Z",
+						"hash": "112387897b3253454d8582e5a2c838bffe2a4a291e230d96b6f8c4305105ee1b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/342/",
+						"fetchedAt": "2026-11-03T05:53:47.447Z",
+						"hash": "e4c566be22730fd9681bf9fff4a031f239a5ad5a90ca63954c9afddca5adddb3"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/665/",
+						"fetchedAt": "2026-11-03T05:53:47.618Z",
+						"hash": "c6361bc5dfc0569c1d1252af41f4c60cd488dd804a52f1f40322729e4cc11fb4"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/665/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.665Z",
+						"hash": "4423d4ee7c870e6abbb85672b51ea975ca2b2224d530b2d56baa5b7ad527a219"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/665/",
+						"fetchedAt": "2026-11-03T05:53:47.716Z",
+						"hash": "73ffeec9caed7b749a1cb23253aa2969a656641d7eb5b41705086bc9355bbe50"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendsarceus": ""
+			},
+			"localizedFlavorByGame": {
+				"legendsarceus": {}
+			}
+		},
+		{
+			"profileKey": "scarlet-violet",
+			"label": "Scarlet / Violet",
+			"appGameKeys": [
+				"scarlet",
+				"violet"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Spewpa",
+				"localizedNames": {
+					"ja-hrkt": "コフーライ",
+					"ja-roma": "Kofuurai",
+					"ko": "분떠도리",
+					"zh-hant": "粉蝶蛹",
+					"fr": "Pérégrain",
+					"de": "Puponcho",
+					"es": "Spewpa",
+					"it": "Spewpa",
+					"ja": "コフーライ",
+					"zh-hans": "粉蝶蛹",
+					"es-419": "Spewpa"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 22,
+					"def": 60,
+					"spa": 27,
+					"spd": 30,
+					"spe": 29
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin",
+					"Friend Guard (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Friend Guard"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "8.4 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 75,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "Black",
+				"genus": "Scatterdust Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こなふきポケモン",
+					"ko": "가루뿜기포켓몬",
+					"zh-hant": "噴粉寶可夢",
+					"fr": "Pokémon Exhalécaille",
+					"de": "Puderinsekt",
+					"es": "Pokémon Tiraescamas",
+					"it": "Pokémon Tirascaglie",
+					"ja": "こなふきポケモン",
+					"zh-hans": "喷粉宝可梦",
+					"es-419": "Pokémon Tiraescamas"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 665
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 21
+					},
+					{
+						"pokedex": "paldea",
+						"number": 36
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 16
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 664,
+								"natiId": 664,
+								"name": "Scatterbug"
+							},
+							{
+								"id": 665,
+								"natiId": 665,
+								"name": "Spewpa",
+								"method": "Level",
+								"value": 9
+							},
+							{
+								"id": 666,
+								"natiId": 666,
+								"name": "Vivillon",
+								"method": "Level",
+								"value": 12
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Bug Bite",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Defense",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Pounce",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Struggle Bug",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Tera Blast",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/665",
+						"fetchedAt": "2026-11-03T05:53:47.563Z",
+						"hash": "112387897b3253454d8582e5a2c838bffe2a4a291e230d96b6f8c4305105ee1b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/342/",
+						"fetchedAt": "2026-11-03T05:53:47.447Z",
+						"hash": "e4c566be22730fd9681bf9fff4a031f239a5ad5a90ca63954c9afddca5adddb3"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/665/",
+						"fetchedAt": "2026-11-03T05:53:47.618Z",
+						"hash": "c6361bc5dfc0569c1d1252af41f4c60cd488dd804a52f1f40322729e4cc11fb4"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/665/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.665Z",
+						"hash": "4423d4ee7c870e6abbb85672b51ea975ca2b2224d530b2d56baa5b7ad527a219"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/665/",
+						"fetchedAt": "2026-11-03T05:53:47.716Z",
+						"hash": "73ffeec9caed7b749a1cb23253aa2969a656641d7eb5b41705086bc9355bbe50"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlet": "",
+				"violet": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlet": {},
+				"violet": {}
+			}
+		},
+		{
+			"profileKey": "the-teal-mask",
+			"label": "The Teal Mask",
+			"appGameKeys": [
+				"scarlettm",
+				"violettm"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Spewpa",
+				"localizedNames": {
+					"ja-hrkt": "コフーライ",
+					"ja-roma": "Kofuurai",
+					"ko": "분떠도리",
+					"zh-hant": "粉蝶蛹",
+					"fr": "Pérégrain",
+					"de": "Puponcho",
+					"es": "Spewpa",
+					"it": "Spewpa",
+					"ja": "コフーライ",
+					"zh-hans": "粉蝶蛹",
+					"es-419": "Spewpa"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 22,
+					"def": 60,
+					"spa": 27,
+					"spd": 30,
+					"spe": 29
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin",
+					"Friend Guard (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Friend Guard"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "8.4 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 75,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "Black",
+				"genus": "Scatterdust Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こなふきポケモン",
+					"ko": "가루뿜기포켓몬",
+					"zh-hant": "噴粉寶可夢",
+					"fr": "Pokémon Exhalécaille",
+					"de": "Puderinsekt",
+					"es": "Pokémon Tiraescamas",
+					"it": "Pokémon Tirascaglie",
+					"ja": "こなふきポケモン",
+					"zh-hans": "喷粉宝可梦",
+					"es-419": "Pokémon Tiraescamas"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 665
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 21
+					},
+					{
+						"pokedex": "paldea",
+						"number": 36
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 16
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 664,
+								"natiId": 664,
+								"name": "Scatterbug"
+							},
+							{
+								"id": 665,
+								"natiId": 665,
+								"name": "Spewpa",
+								"method": "Level",
+								"value": 9
+							},
+							{
+								"id": 666,
+								"natiId": 666,
+								"name": "Vivillon",
+								"method": "Level",
+								"value": 12
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/665",
+						"fetchedAt": "2026-11-03T05:53:47.563Z",
+						"hash": "112387897b3253454d8582e5a2c838bffe2a4a291e230d96b6f8c4305105ee1b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/342/",
+						"fetchedAt": "2026-11-03T05:53:47.447Z",
+						"hash": "e4c566be22730fd9681bf9fff4a031f239a5ad5a90ca63954c9afddca5adddb3"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/665/",
+						"fetchedAt": "2026-11-03T05:53:47.618Z",
+						"hash": "c6361bc5dfc0569c1d1252af41f4c60cd488dd804a52f1f40322729e4cc11fb4"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/665/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.665Z",
+						"hash": "4423d4ee7c870e6abbb85672b51ea975ca2b2224d530b2d56baa5b7ad527a219"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/665/",
+						"fetchedAt": "2026-11-03T05:53:47.716Z",
+						"hash": "73ffeec9caed7b749a1cb23253aa2969a656641d7eb5b41705086bc9355bbe50"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlettm": "",
+				"violettm": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlettm": {},
+				"violettm": {}
+			}
+		},
+		{
+			"profileKey": "the-indigo-disk",
+			"label": "The Indigo Disk",
+			"appGameKeys": [
+				"scarletid",
+				"violetid"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Spewpa",
+				"localizedNames": {
+					"ja-hrkt": "コフーライ",
+					"ja-roma": "Kofuurai",
+					"ko": "분떠도리",
+					"zh-hant": "粉蝶蛹",
+					"fr": "Pérégrain",
+					"de": "Puponcho",
+					"es": "Spewpa",
+					"it": "Spewpa",
+					"ja": "コフーライ",
+					"zh-hans": "粉蝶蛹",
+					"es-419": "Spewpa"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 22,
+					"def": 60,
+					"spa": 27,
+					"spd": 30,
+					"spe": 29
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin",
+					"Friend Guard (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Friend Guard"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "8.4 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 75,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "Black",
+				"genus": "Scatterdust Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こなふきポケモン",
+					"ko": "가루뿜기포켓몬",
+					"zh-hant": "噴粉寶可夢",
+					"fr": "Pokémon Exhalécaille",
+					"de": "Puderinsekt",
+					"es": "Pokémon Tiraescamas",
+					"it": "Pokémon Tirascaglie",
+					"ja": "こなふきポケモン",
+					"zh-hans": "喷粉宝可梦",
+					"es-419": "Pokémon Tiraescamas"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 665
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 21
+					},
+					{
+						"pokedex": "paldea",
+						"number": 36
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 16
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 664,
+								"natiId": 664,
+								"name": "Scatterbug"
+							},
+							{
+								"id": 665,
+								"natiId": 665,
+								"name": "Spewpa",
+								"method": "Level",
+								"value": 9
+							},
+							{
+								"id": 666,
+								"natiId": 666,
+								"name": "Vivillon",
+								"method": "Level",
+								"value": 12
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/665",
+						"fetchedAt": "2026-11-03T05:53:47.563Z",
+						"hash": "112387897b3253454d8582e5a2c838bffe2a4a291e230d96b6f8c4305105ee1b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/342/",
+						"fetchedAt": "2026-11-03T05:53:47.447Z",
+						"hash": "e4c566be22730fd9681bf9fff4a031f239a5ad5a90ca63954c9afddca5adddb3"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/665/",
+						"fetchedAt": "2026-11-03T05:53:47.618Z",
+						"hash": "c6361bc5dfc0569c1d1252af41f4c60cd488dd804a52f1f40322729e4cc11fb4"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/665/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.665Z",
+						"hash": "4423d4ee7c870e6abbb85672b51ea975ca2b2224d530b2d56baa5b7ad527a219"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/665/",
+						"fetchedAt": "2026-11-03T05:53:47.716Z",
+						"hash": "73ffeec9caed7b749a1cb23253aa2969a656641d7eb5b41705086bc9355bbe50"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarletid": "",
+				"violetid": ""
+			},
+			"localizedFlavorByGame": {
+				"scarletid": {},
+				"violetid": {}
+			}
+		},
+		{
+			"profileKey": "legends-za",
+			"label": "Legends: Z-A",
+			"appGameKeys": [
+				"legendsza"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Spewpa",
+				"localizedNames": {
+					"ja-hrkt": "コフーライ",
+					"ja-roma": "Kofuurai",
+					"ko": "분떠도리",
+					"zh-hant": "粉蝶蛹",
+					"fr": "Pérégrain",
+					"de": "Puponcho",
+					"es": "Spewpa",
+					"it": "Spewpa",
+					"ja": "コフーライ",
+					"zh-hans": "粉蝶蛹",
+					"es-419": "Spewpa"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 22,
+					"def": 60,
+					"spa": 27,
+					"spd": 30,
+					"spe": 29
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin",
+					"Friend Guard (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Friend Guard"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium Fast",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "8.4 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 75,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "Black",
+				"genus": "Scatterdust Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こなふきポケモン",
+					"ko": "가루뿜기포켓몬",
+					"zh-hant": "噴粉寶可夢",
+					"fr": "Pokémon Exhalécaille",
+					"de": "Puderinsekt",
+					"es": "Pokémon Tiraescamas",
+					"it": "Pokémon Tirascaglie",
+					"ja": "こなふきポケモン",
+					"zh-hans": "喷粉宝可梦",
+					"es-419": "Pokémon Tiraescamas"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 665
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 21
+					},
+					{
+						"pokedex": "paldea",
+						"number": 36
+					},
+					{
+						"pokedex": "lumiose",
+						"number": 16
+					}
+				],
+				"alphaMove": "Iron Defense",
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 664,
+								"natiId": 664,
+								"name": "Scatterbug"
+							},
+							{
+								"id": 665,
+								"natiId": 665,
+								"name": "Spewpa",
+								"method": "Level",
+								"value": 9
+							},
+							{
+								"id": 666,
+								"natiId": 666,
+								"name": "Vivillon",
+								"method": "Level",
+								"value": 12
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Wild Zone 4",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Bleu District",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Jaune District",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Magenta District",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Rouge District",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Vert District",
+						"notes": "",
+						"games": "Legends: Z-A"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Poison Powder",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "String Shot",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": 5
+						},
+						{
+							"name": "Stun Spore",
+							"level": 7,
+							"order": 6
+						},
+						{
+							"name": "Infestation",
+							"level": 10,
+							"order": 7
+						}
+					],
+					"Machine": [
+						{
+							"name": "Protect",
+							"machine": "TM017",
+							"order": 1
+						},
+						{
+							"name": "Endure",
+							"machine": "TM035",
+							"order": 2
+						},
+						{
+							"name": "Iron Defense",
+							"machine": "TM080",
+							"order": 3
+						},
+						{
+							"name": "Facade",
+							"machine": "TM109",
+							"order": 4
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Project Pokemon's Z-A game-data export assigns this form regional Dex #16."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/665",
+						"fetchedAt": "2026-11-03T05:53:47.563Z",
+						"hash": "112387897b3253454d8582e5a2c838bffe2a4a291e230d96b6f8c4305105ee1b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/342/",
+						"fetchedAt": "2026-11-03T05:53:47.447Z",
+						"hash": "e4c566be22730fd9681bf9fff4a031f239a5ad5a90ca63954c9afddca5adddb3"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/665/",
+						"fetchedAt": "2026-11-03T05:53:47.618Z",
+						"hash": "c6361bc5dfc0569c1d1252af41f4c60cd488dd804a52f1f40322729e4cc11fb4"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/665/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.665Z",
+						"hash": "4423d4ee7c870e6abbb85672b51ea975ca2b2224d530b2d56baa5b7ad527a219"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/665/",
+						"fetchedAt": "2026-11-03T05:53:47.716Z",
+						"hash": "73ffeec9caed7b749a1cb23253aa2969a656641d7eb5b41705086bc9355bbe50"
+					},
+					{
+						"type": "legends-za-personal-data",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/personal.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c00215459c764ba65d879d6503a7337ad80b338171ab4713d1c6f52b4517e36f"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "719eff37d8f2f404d163f81d23b2c921ac323a7b00304e502ca37d69a3375b1d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/French/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "1b658102e791558a1bb317563b7a3aaab8cebc1c7517aa7f5d5c0e708e93d626"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/German/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5f1e419ae3b84ab18cb05b972569e629ff0bff96d928468c52c536b02dc6cf9d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Italian/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "e0bd40a2f4b7678afb82f959b7b1f3503590bd13884daf94bd5813fea832067c"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/JPN/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5c2c9784278c5d13f3ba376e4338cef21923d68faec9b8498175c21180825f24"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Korean/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c83545726b0b0b803295f52448510c15adaab3e6ce248adba23b5ad0d0344216"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/LATAM/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "01d046caf7553d97a3c275465bce97ecedae26a67674a40b5c751a56b3b4d52d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Simp_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "09495dacb0d16eb6e91aa1d67eb1ed682d0682303719811eeb1c6877bb9e7ca2"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Spanish/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "b3fafb97fe85165bd65fdd732ce1e4cee880ffe5035632269787ce859735b358"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Trad_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c446ae3e93760fc4af895427508ed852511201723f8cac84121330747e8c3cd0"
+					},
+					{
+						"type": "legends-za-locations",
+						"url": "https://www.serebii.net/pokedex-sv/spewpa/",
+						"fetchedAt": "2026-11-04T05:47:08.392Z",
+						"hash": "896a34183749e257b338420d81419d085bbeaafc90acaad8524293633f38e9ee"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendsza": "It lives hidden within thicket shadows. When predators attack, it bristles the fur covering its body in an effort to threaten them."
+			},
+			"localizedFlavorByGame": {
+				"legendsza": {
+					"en": "It lives hidden within thicket shadows. When predators attack, it bristles the fur covering its body in an effort to threaten them.",
+					"fr": "Il vit caché sous le couvert des buissons. Quand un ennemi l’attaque, il tente de l’intimider en hérissant les poils acérés qui couvrent son corps.",
+					"de": "Es lebt versteckt im schattigen Dickicht. Wird es von einem Feind angegriffen, stellt es sein Fell zur Abschreckung zu scharfen Spitzen auf.",
+					"it": "Vive nascosto nella penombra della boscaglia. Se attaccato, minaccia i nemici rizzando il pelo a mo’ di punte.",
+					"ja": "しげみの 陰に 隠れて 暮らす。 敵に 襲われると 体の 毛を 鋭く 逆立てて 威嚇する。",
+					"ko": "수풀의 그늘에 숨어 산다. 적에게 공격당하면 몸의 털을 뾰족하게 곤두세우며 위협한다.",
+					"es-419": "Habita en la sombra de los arbustos. Si percibe alguna amenaza, su pelaje se eriza y se vuelve muy afilado para así intimidar al enemigo.",
+					"zh-hans": "隐藏在繁茂的树荫中生活。 一旦被敌人袭击，就会尖尖地 竖起体毛威吓对方。",
+					"es": "Habita en la sombra de la espesura. Si percibe alguna amenaza, su pelaje se eriza y se vuelve muy afilado para así intimidar al enemigo.",
+					"zh-hant": "躲在繁茂草木的陰影下生活。 受到襲擊時，就會將體毛 尖尖豎起威嚇敵人。"
+				}
+			}
+		},
+		{
+			"profileKey": "mega-dimension",
+			"label": "Mega Dimension",
+			"appGameKeys": [
+				"legendszamd"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Spewpa",
+				"localizedNames": {
+					"ja-hrkt": "コフーライ",
+					"ja-roma": "Kofuurai",
+					"ko": "분떠도리",
+					"zh-hant": "粉蝶蛹",
+					"fr": "Pérégrain",
+					"de": "Puponcho",
+					"es": "Spewpa",
+					"it": "Spewpa",
+					"ja": "コフーライ",
+					"zh-hans": "粉蝶蛹",
+					"es-419": "Spewpa"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 45,
+					"atk": 22,
+					"def": 60,
+					"spa": 27,
+					"spd": 30,
+					"spe": 29
+				},
+				"evYield": {
+					"def": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Shed Skin",
+					"Friend Guard (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Friend Guard"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium Fast",
+				"hatchCounter": 15,
+				"height": "0.3 m",
+				"weight": "8.4 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 120,
+				"baseExperience": 75,
+				"habitat": "",
+				"shape": "Blob",
+				"color": "Black",
+				"genus": "Scatterdust Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "こなふきポケモン",
+					"ko": "가루뿜기포켓몬",
+					"zh-hant": "噴粉寶可夢",
+					"fr": "Pokémon Exhalécaille",
+					"de": "Puderinsekt",
+					"es": "Pokémon Tiraescamas",
+					"it": "Pokémon Tirascaglie",
+					"ja": "こなふきポケモン",
+					"zh-hans": "喷粉宝可梦",
+					"es-419": "Pokémon Tiraescamas"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 665
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 21
+					},
+					{
+						"pokedex": "paldea",
+						"number": 36
+					},
+					{
+						"pokedex": "lumiose",
+						"number": 16
+					}
+				],
+				"alphaMove": "Iron Defense",
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 664,
+								"natiId": 664,
+								"name": "Scatterbug"
+							},
+							{
+								"id": 665,
+								"natiId": 665,
+								"name": "Spewpa",
+								"method": "Level",
+								"value": 9
+							},
+							{
+								"id": 666,
+								"natiId": 666,
+								"name": "Vivillon",
+								"method": "Level",
+								"value": 12
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Wild Zone 4",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Bleu District",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Jaune District",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Magenta District",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Rouge District",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Vert District",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Hyperspace Lumiose",
+						"notes": "Flying (1 Star), Bug (1 Star)",
+						"games": "Legends: Z-A Mega Dimension"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Poison Powder",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "String Shot",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Harden",
+							"level": 1,
+							"order": 5
+						},
+						{
+							"name": "Stun Spore",
+							"level": 7,
+							"order": 6
+						},
+						{
+							"name": "Infestation",
+							"level": 10,
+							"order": 7
+						}
+					],
+					"Machine": [
+						{
+							"name": "Protect",
+							"machine": "TM017",
+							"order": 1
+						},
+						{
+							"name": "Endure",
+							"machine": "TM035",
+							"order": 2
+						},
+						{
+							"name": "Iron Defense",
+							"machine": "TM080",
+							"order": 3
+						},
+						{
+							"name": "Facade",
+							"machine": "TM109",
+							"order": 4
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Project Pokemon's Z-A game-data export assigns this form regional Dex #16."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/665",
+						"fetchedAt": "2026-11-03T05:53:47.563Z",
+						"hash": "112387897b3253454d8582e5a2c838bffe2a4a291e230d96b6f8c4305105ee1b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/342/",
+						"fetchedAt": "2026-11-03T05:53:47.447Z",
+						"hash": "e4c566be22730fd9681bf9fff4a031f239a5ad5a90ca63954c9afddca5adddb3"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/665/",
+						"fetchedAt": "2026-11-03T05:53:47.618Z",
+						"hash": "c6361bc5dfc0569c1d1252af41f4c60cd488dd804a52f1f40322729e4cc11fb4"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/665/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.665Z",
+						"hash": "4423d4ee7c870e6abbb85672b51ea975ca2b2224d530b2d56baa5b7ad527a219"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/665/",
+						"fetchedAt": "2026-11-03T05:53:47.716Z",
+						"hash": "73ffeec9caed7b749a1cb23253aa2969a656641d7eb5b41705086bc9355bbe50"
+					},
+					{
+						"type": "legends-za-personal-data",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/personal.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c00215459c764ba65d879d6503a7337ad80b338171ab4713d1c6f52b4517e36f"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "719eff37d8f2f404d163f81d23b2c921ac323a7b00304e502ca37d69a3375b1d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/French/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "1b658102e791558a1bb317563b7a3aaab8cebc1c7517aa7f5d5c0e708e93d626"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/German/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5f1e419ae3b84ab18cb05b972569e629ff0bff96d928468c52c536b02dc6cf9d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Italian/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "e0bd40a2f4b7678afb82f959b7b1f3503590bd13884daf94bd5813fea832067c"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/JPN/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5c2c9784278c5d13f3ba376e4338cef21923d68faec9b8498175c21180825f24"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Korean/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c83545726b0b0b803295f52448510c15adaab3e6ce248adba23b5ad0d0344216"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/LATAM/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "01d046caf7553d97a3c275465bce97ecedae26a67674a40b5c751a56b3b4d52d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Simp_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "09495dacb0d16eb6e91aa1d67eb1ed682d0682303719811eeb1c6877bb9e7ca2"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Spanish/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "b3fafb97fe85165bd65fdd732ce1e4cee880ffe5035632269787ce859735b358"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Trad_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c446ae3e93760fc4af895427508ed852511201723f8cac84121330747e8c3cd0"
+					},
+					{
+						"type": "legends-za-locations",
+						"url": "https://www.serebii.net/pokedex-sv/spewpa/",
+						"fetchedAt": "2026-11-04T05:47:08.392Z",
+						"hash": "896a34183749e257b338420d81419d085bbeaafc90acaad8524293633f38e9ee"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendszamd": "It lives hidden within thicket shadows. When predators attack, it bristles the fur covering its body in an effort to threaten them."
+			},
+			"localizedFlavorByGame": {
+				"legendszamd": {
+					"en": "It lives hidden within thicket shadows. When predators attack, it bristles the fur covering its body in an effort to threaten them.",
+					"fr": "Il vit caché sous le couvert des buissons. Quand un ennemi l’attaque, il tente de l’intimider en hérissant les poils acérés qui couvrent son corps.",
+					"de": "Es lebt versteckt im schattigen Dickicht. Wird es von einem Feind angegriffen, stellt es sein Fell zur Abschreckung zu scharfen Spitzen auf.",
+					"it": "Vive nascosto nella penombra della boscaglia. Se attaccato, minaccia i nemici rizzando il pelo a mo’ di punte.",
+					"ja": "しげみの 陰に 隠れて 暮らす。 敵に 襲われると 体の 毛を 鋭く 逆立てて 威嚇する。",
+					"ko": "수풀의 그늘에 숨어 산다. 적에게 공격당하면 몸의 털을 뾰족하게 곤두세우며 위협한다.",
+					"es-419": "Habita en la sombra de los arbustos. Si percibe alguna amenaza, su pelaje se eriza y se vuelve muy afilado para así intimidar al enemigo.",
+					"zh-hans": "隐藏在繁茂的树荫中生活。 一旦被敌人袭击，就会尖尖地 竖起体毛威吓对方。",
+					"es": "Habita en la sombra de la espesura. Si percibe alguna amenaza, su pelaje se eriza y se vuelve muy afilado para así intimidar al enemigo.",
+					"zh-hant": "躲在繁茂草木的陰影下生活。 受到襲擊時，就會將體毛 尖尖豎起威嚇敵人。"
+				}
+			}
+		}
+	]
+}

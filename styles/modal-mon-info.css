@@ -258,28 +258,6 @@
 	margin-bottom: 2px;
 }
 
-/* Move list rows with a TM icon */
-.mon-info-move {
-	display: flex;
-	align-items: center;
-	gap: 6px;
-}
-
-.mon-info-move-tm-icon {
-	flex: 0 0 auto;
-	width: 24px;
-	height: 24px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.mon-info-move-tm-icon img {
-	max-width: 100%;
-	max-height: 100%;
-	display: block;
-}
-
 .mon-info-move-name {
 	flex: 1 1 auto;
 }
@@ -433,7 +411,7 @@
 	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
 }
 
-/* stat numbers inside the diamond */
+/* stat numbers sit directly below their outer labels */
 .stat-value {
 	fill: #ffffff;
 	font-size: 8px;
@@ -629,19 +607,25 @@
 }
 
 /* ========================================================================== */
-/*  PROFILE GRID (2 rows x 4 cols)                                            */
+/*  PROFILE GRID                                                              */
 /* ========================================================================== */
 
 .mon-info-profile-grid {
 	display: grid;
-	grid-template-columns: repeat(4, minmax(0, 1fr));
-	gap: 10px 14px;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 16px;
 	margin-top: 6px;
 }
 
-@media (max-width: 900px) {
+.mon-info-profile-column {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 10px 14px;
+}
+
+@media (max-width: 760px) {
 	.mon-info-profile-grid {
-		grid-template-columns: repeat(2, minmax(0, 1fr));
+		grid-template-columns: 1fr;
 	}
 }
 
@@ -677,59 +661,6 @@
 .mon-info-profile-item .value.value--stacked .value-line {
 	display: block;
 	font-weight: 700;
-}
-
-/* ========================================================================== */
-/*  EVOLUTION (new renderer: linear + split)                                   */
-/* ========================================================================== */
-
-.evo-node {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	min-width: 90px;
-	text-align: center;
-}
-
-.evo-img {
-	width: 96px;
-	height: 96px;
-	object-fit: contain;
-	display: block;
-}
-
-.evo-name {
-	font-size: 12px;
-	margin-top: 2px;
-}
-
-.evo-link {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 2px;
-	min-width: 40px;
-}
-
-.evo-arrow {
-	font-size: 50px;
-	line-height: 0.25;
-	font-weight: 700;
-}
-
-.evo-method {
-	font-size: 11px;
-	opacity: 0.85;
-	text-align: center;
-}
-
-/* Split connector (optional) */
-.evo-branch-connector {
-	font-size: 18px;
-	opacity: 0.85;
-	line-height: 1;
-	min-width: 24px;
-	text-align: center;
 }
 
 /* ========================================================================== */
@@ -880,99 +811,4 @@
 .mon-info-assets .asset-tile img {
 	height: 125px;
 	/* was 90px */
-}
-
-/* =======================================================
-   EVOLUTION: left trunk + stacked branches (split layout)
-   ======================================================= */
-
-.evo-linear {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: center;
-	gap: 10px;
-}
-
-.evo-split {
-	display: grid;
-	grid-template-columns: auto 1fr;
-	gap: 14px;
-	align-items: center;
-}
-
-.evo-trunk-row {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: flex-start;
-	/* keep the base chain on the left */
-	gap: 10px;
-}
-
-.evo-branches-col {
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
-	align-items: flex-start;
-}
-
-.evo-branches-col .evo-branch-row {
-	justify-content: flex-start;
-}
-
-/* Small screens: stack trunk above branches */
-@media (max-width: 700px) {
-	.evo-split {
-		grid-template-columns: 1fr;
-	}
-
-	.evo-branches-col {
-		align-items: center;
-	}
-
-	.evo-branches-col .evo-branch-row {
-		justify-content: center;
-	}
-}
-
-/* ==============================
-   Evolution: center the whole block
-   ============================== */
-
-/* Single-path line: take full width and center contents */
-.evo-linear {
-	width: 100%;
-	justify-content: center;
-	/* you already have this, keep it as the winner */
-}
-
-/* Branch layout: center the whole split (trunk + branches) as a unit */
-.evo-split {
-	width: 100%;
-	justify-content: center;
-	/* centers the grid tracks */
-	grid-template-columns: max-content max-content;
-	/* make the split only as wide as it needs */
-}
-
-/* Keep “trunk on the left” behavior, but center the trunk content within its column */
-.evo-trunk-row {
-	justify-content: center;
-}
-
-/* Optional: if you want each branch row’s content centered within the branches column */
-.evo-branches-col .evo-branch-row {
-	justify-content: center;
-}
-
-.evo-seg {
-	display: flex;
-	align-items: center;
-	gap: 10px;
-}
-
-/* Optional: keep link tighter */
-.evo-link {
-	min-width: 0;
 }

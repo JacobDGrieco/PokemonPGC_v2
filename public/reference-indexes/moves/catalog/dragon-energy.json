@@ -1,0 +1,169 @@
+{
+	"schemaVersion": 1,
+	"id": 820,
+	"slug": "dragon-energy",
+	"name": "Dragon Energy",
+	"names": {
+		"de": "Drachenkräfte",
+		"en": "Dragon Energy",
+		"es": "Dracoenergía",
+		"es-419": "Dracoenergía",
+		"fr": "Draco-Énergie",
+		"it": "Dragoenergia",
+		"ja": "ドラゴンエナジー",
+		"ja-hrkt": "ドラゴンエナジー",
+		"ko": "드래곤에너지",
+		"zh-hans": "巨龙威能",
+		"zh-hant": "巨龍威能"
+	},
+	"generation": 8,
+	"type": "Dragon",
+	"damageClass": "Special",
+	"power": 150,
+	"accuracy": 100,
+	"pp": 5,
+	"priority": 0,
+	"effectChance": null,
+	"target": "All Opponents",
+	"effectEntries": [
+		{
+			"language": "en",
+			"effect": "Inflicts regular damage. Power increases with the user’s remaining HP and is given by `150 * HP / max HP`, to a maximum of 150 when the user has full HP.",
+			"shortEffect": "Inflicts more damage when the user has more HP remaining, with a maximum of 150 power."
+		},
+		{
+			"language": "fr",
+			"effect": "Inflige des dégâts réguliers. La puissance augmente avec les PV restants du lanceur et est donnée par `150 * PV / max PV`, jusqu'à un maximum de 150 quand le lanceur a tous ses PV.",
+			"shortEffect": "Inflige plus de dégâts quand le lanceur a plus de PV restants, avec un maximum de 150 de puissance."
+		}
+	],
+	"effectChanges": [],
+	"descriptions": [
+		{
+			"versionGroup": "legends-arceus",
+			"language": "en",
+			"text": "Converting its life-force into power, the user attacks opposing Pokémon. The lower the user's HP, the lower the move's power."
+		},
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "en",
+			"text": "Converting its life-force into power, the user attacks opposing Pokémon. The lower the user's HP, the lower the move's power."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "de",
+			"text": "Der Anwender wandelt seine Lebenskraft in Energie um und greift gegnerische Pokémon an. Je höher seine KP sind, desto mehr Schaden wird angerichtet."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "en",
+			"text": "Converting its life-force into power, the user attacks opposing Pokémon. The lower the user’s HP, the lower the move’s power."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es",
+			"text": "El usuario convierte su fuerza vital en una energía con la que ataca al objetivo. Cuantos menos PS tenga el usuario, menor será la potencia del movimiento."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es-419",
+			"text": "El usuario convierte su fuerza vital en una energía con la que ataca al objetivo. Cuantos menos PS tenga el usuario, menor será la potencia del movimiento."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "fr",
+			"text": "Le lanceur utilise son énergie vitale pour attaquer l’ennemi. Moins il a de PV, moins l’attaque est puissante."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "it",
+			"text": "Il Pokémon attacca i nemici convertendo la propria forza vitale in energia. La potenza della mossa cala man mano che i PS diminuiscono."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja",
+			"text": "生命力を パワーに 変え 相手を 攻撃する。 自分の ＨＰが 少ないほど 技の 威力は さがる。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja-hrkt",
+			"text": "せいめいりょくを パワーに かえ あいてを こうげきする。 じぶんの ＨＰが すくないほど わざの いりょくは さがる。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ko",
+			"text": "생명력을 파워로 바꿔서 상대를 공격한다. 자신의 HP가 적을수록 기술의 위력이 떨어진다."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hans",
+			"text": "把生命力转换为力量攻击对手。 自己的ＨＰ越少，招式的威力越小。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hant",
+			"text": "將生命力化為力量攻擊對手。 自己的ＨＰ越少，招式的威力越小。"
+		}
+	],
+	"pastValues": [],
+	"statChanges": [],
+	"meta": {
+		"ailment": "None",
+		"category": "Damage",
+		"minHits": null,
+		"maxHits": null,
+		"minTurns": null,
+		"maxTurns": null,
+		"drain": 0,
+		"healing": 0,
+		"critRate": 0,
+		"ailmentChance": 0,
+		"flinchChance": 0,
+		"statChance": 0
+	},
+	"machines": [],
+	"learners": [
+		{
+			"nationalDexId": 895,
+			"speciesName": "Regidrago",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 66,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 66,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		}
+	],
+	"potentialPokemon": [
+		"regidrago"
+	],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/move/820/",
+		"fetchedAt": "2026-11-03T06:30:18.635Z",
+		"hash": "134a390a1721d1f083963c688cd7af9835ac16bc340975b384059cdc2e32c753"
+	}
+}

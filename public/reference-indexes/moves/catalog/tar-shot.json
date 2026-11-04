@@ -1,0 +1,161 @@
+{
+	"schemaVersion": 1,
+	"id": 749,
+	"slug": "tar-shot",
+	"name": "Tar Shot",
+	"names": {
+		"de": "Teerschuss",
+		"en": "Tar Shot",
+		"es": "Alquitranazo",
+		"es-419": "Alquitranazo",
+		"fr": "Goudronnage",
+		"it": "Colpocatrame",
+		"ja": "タールショット",
+		"ja-hrkt": "タールショット",
+		"ko": "타르샷",
+		"zh-hans": "沥青射击",
+		"zh-hant": "瀝青射擊"
+	},
+	"generation": 8,
+	"type": "Rock",
+	"damageClass": "Status",
+	"power": null,
+	"accuracy": 100,
+	"pp": 15,
+	"priority": 0,
+	"effectChance": 100,
+	"target": "Selected Pokemon",
+	"effectEntries": [
+		{
+			"language": "en",
+			"effect": "Lowers the target's Speed by 1 stage. Until the target switches out, the effectiveness of Fire-type moves is doubled against it.",
+			"shortEffect": "Lowers the target's Speed by 1 stage. Until the target switches out, the effectiveness of Fire-type moves is doubled against it."
+		}
+	],
+	"effectChanges": [],
+	"descriptions": [
+		{
+			"versionGroup": "legends-arceus",
+			"language": "en",
+			"text": "The user pours sticky tar over the target, lowering the target's Speed stat. The target becomes weaker to Fire-type moves."
+		},
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "en",
+			"text": "The user pours sticky tar over the target, lowering the target's Speed stat. The target becomes weaker to Fire-type moves."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "de",
+			"text": "Der Anwender übergießt das Ziel mit klebrigem Teer und senkt so dessen Initiative. Dadurch wird es schwach gegenüber Feuer-Attacken."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "en",
+			"text": "The user pours sticky tar over the target, lowering the target’s Speed stat. The target becomes weaker to Fire-type moves."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es",
+			"text": "Cubre al objetivo de un alquitrán pegajoso que reduce su Velocidad y lo vuelve débil contra el fuego."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es-419",
+			"text": "Cubre al objetivo de un alquitrán pegajoso que reduce su Velocidad y lo vuelve débil contra el fuego."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "fr",
+			"text": "Le lanceur recouvre sa cible de goudron liquide pour baisser sa Vitesse et la rendre vulnérable au feu."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "it",
+			"text": "Chi la usa getta catrame appiccicoso sul bersaglio abbassandone la Velocità e rendendolo vulnerabile al tipo Fuoco."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja",
+			"text": "ねばねばの タールを 浴びせて 相手の 素早さを 下げる。 相手は ほのおが 弱点に なる。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja-hrkt",
+			"text": "ねばねばの タールを あびせて あいての すばやさを さげる。 あいては ほのおが じゃくてんに なる。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ko",
+			"text": "끈적끈적한 타르를 날려서 상대의 스피드를 떨어뜨린다. 상대는 불꽃이 약점이 된다."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hans",
+			"text": "泼洒黏糊糊的沥青， 降低对手的速度， 并且使对手的弱点变为火。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hant",
+			"text": "射出黏黏的瀝青， 降低對手的速度。 對手的弱點將變為火。"
+		}
+	],
+	"pastValues": [],
+	"statChanges": [
+		{
+			"stat": "Speed",
+			"change": -1
+		}
+	],
+	"meta": {
+		"ailment": "Tar Shot",
+		"category": "Swagger",
+		"minHits": null,
+		"maxHits": null,
+		"minTurns": null,
+		"maxTurns": null,
+		"drain": 0,
+		"healing": 0,
+		"critRate": 0,
+		"ailmentChance": 100,
+		"flinchChance": 0,
+		"statChance": 100
+	},
+	"machines": [],
+	"learners": [
+		{
+			"nationalDexId": 839,
+			"speciesName": "Coalossal",
+			"formKey": "normal",
+			"formName": "Normal",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 1
+						}
+					],
+					"isHidden": false
+				}
+			]
+		}
+	],
+	"potentialPokemon": [
+		"coalossal"
+	],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/move/749/",
+		"fetchedAt": "2026-11-03T06:30:18.131Z",
+		"hash": "1dc448b1de84ef3a5657d5d73d413917b433be7971f1c36da8cee68205ee4b03"
+	}
+}

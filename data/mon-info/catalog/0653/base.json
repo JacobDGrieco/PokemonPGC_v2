@@ -1,0 +1,4817 @@
+{
+	"schemaVersion": 2,
+	"nationalDexId": 653,
+	"speciesName": "Fennekin",
+	"formKey": "base",
+	"formName": "Base",
+	"formLabelSource": "form-catalog",
+	"profiles": [
+		{
+			"profileKey": "x-y",
+			"label": "X / Y",
+			"appGameKeys": [
+				"x-national",
+				"x-central",
+				"x-coastal",
+				"x-mountain",
+				"y-national",
+				"y-central",
+				"y-coastal",
+				"y-mountain"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Fennekin",
+				"localizedNames": {
+					"ja-hrkt": "フォッコ",
+					"ja-roma": "Fokko",
+					"ko": "푸호꼬",
+					"zh-hant": "火狐狸",
+					"fr": "Feunnec",
+					"de": "Fynx",
+					"es": "Fennekin",
+					"it": "Fennekin",
+					"ja": "フォッコ",
+					"zh-hans": "火狐狸",
+					"es-419": "Fennekin"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 45,
+					"def": 40,
+					"spa": 62,
+					"spd": 60,
+					"spe": 60
+				},
+				"evYield": {
+					"spa": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Blaze",
+					"Magician (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Magician"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.4 m",
+				"weight": "9.4 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 61,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Red",
+				"genus": "Fox Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "キツネポケモン",
+					"ko": "여우포켓몬",
+					"zh-hant": "狐狸寶可夢",
+					"fr": "Pokémon Renard",
+					"de": "Fuchs",
+					"es": "Pokémon Zorro",
+					"it": "Pokémon Volpe",
+					"ja": "キツネポケモン",
+					"zh-hans": "狐狸宝可梦",
+					"es-419": "Pokémon Zorro"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 653
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 4
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 212
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 217
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 653,
+								"natiId": 653,
+								"name": "Fennekin"
+							},
+							{
+								"id": 654,
+								"natiId": 654,
+								"name": "Braixen",
+								"method": "Level",
+								"value": 16
+							},
+							{
+								"id": 655,
+								"natiId": 655,
+								"name": "Delphox",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Aquacorde Town Area",
+						"notes": "Gift, Lv. 5",
+						"games": "X",
+						"rate": "100%"
+					},
+					{
+						"area": "Aquacorde Town Area",
+						"notes": "Gift, Lv. 5",
+						"games": "Y",
+						"rate": "100%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Scratch",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Tail Whip",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Ember",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Howl",
+							"level": 11,
+							"order": null
+						},
+						{
+							"name": "Flame Charge",
+							"level": 14,
+							"order": null
+						},
+						{
+							"name": "Psybeam",
+							"level": 17,
+							"order": null
+						},
+						{
+							"name": "Fire Spin",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Lucky Chant",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": 27,
+							"order": null
+						},
+						{
+							"name": "Psyshock",
+							"level": 31,
+							"order": null
+						},
+						{
+							"name": "Flamethrower",
+							"level": 35,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": 38,
+							"order": null
+						},
+						{
+							"name": "Psychic",
+							"level": 41,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": 43,
+							"order": null
+						},
+						{
+							"name": "Magic Room",
+							"level": 46,
+							"order": null
+						},
+						{
+							"name": "Fire Blast",
+							"level": 48,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Cut",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Echoed Voice",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Embargo",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fire Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flame Charge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flamethrower",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Grass Knot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Incinerate",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Overheat",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Power Up Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psychic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psyshock",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Safeguard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": null,
+							"order": null
+						}
+					],
+					"Egg": [
+						{
+							"name": "Heat Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hypnosis",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Magic Coat",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wish",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Fire Pledge",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/653",
+						"fetchedAt": "2026-11-03T05:53:46.794Z",
+						"hash": "41c66d7bb7c02eef088e5d57fcf617db316498b91be17231fbc9cc6619955d95"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/338/",
+						"fetchedAt": "2026-11-03T05:53:46.824Z",
+						"hash": "4306d211808cea3730402fdf5bfd3467af667b842d474ce209c7dbae73698352"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/653/",
+						"fetchedAt": "2026-11-03T05:53:46.858Z",
+						"hash": "013b79cb4ef78eb5904f31091fca641356b3cd647bc0a3f2798a169021801530"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/653/encounters",
+						"fetchedAt": "2026-11-03T05:53:46.912Z",
+						"hash": "a9dda4c18877d21ae5e6e30480b5e646aa4f9cb623228a44c44f15d5f99d0989"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/653/",
+						"fetchedAt": "2026-11-03T05:53:46.963Z",
+						"hash": "e3e909182af1d3e4212f3cee65a7d63db79aa297b15825b0e5ca645ba0ed0578"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"x-national": "Eating a twig fills it with energy, and its roomy ears give vent to air hotter than 390 degrees Fahrenheit.",
+				"x-central": "Eating a twig fills it with energy, and its roomy ears give vent to air hotter than 390 degrees Fahrenheit.",
+				"x-coastal": "Eating a twig fills it with energy, and its roomy ears give vent to air hotter than 390 degrees Fahrenheit.",
+				"x-mountain": "Eating a twig fills it with energy, and its roomy ears give vent to air hotter than 390 degrees Fahrenheit.",
+				"y-national": "As it walks, it munches on a twig in place of a snack. It intimidates opponents by puffing hot air out of its ears.",
+				"y-central": "As it walks, it munches on a twig in place of a snack. It intimidates opponents by puffing hot air out of its ears.",
+				"y-coastal": "As it walks, it munches on a twig in place of a snack. It intimidates opponents by puffing hot air out of its ears.",
+				"y-mountain": "As it walks, it munches on a twig in place of a snack. It intimidates opponents by puffing hot air out of its ears."
+			},
+			"localizedFlavorByGame": {
+				"x-national": {
+					"ja-hrkt": "こえだを たべると げんきになって せっし２００どを こえる ねっきを おおきな みみから ふきだす。",
+					"ko": "잔가지를 먹으면 힘이 나서 섭씨 200도가 넘는 열기를 커다란 귀에서 내뿜는다.",
+					"fr": "En cas de coup de fatigue, il grignote des rameaux pour recharger ses batteries. Ses oreilles dégagent une chaleur qui dépasse les 200 °C.",
+					"de": "Wenn es Zweige frisst, fasst es neue Kraft und stößt über seine Ohren über 200 °C heiße Luft aus.",
+					"es": "Tras masticar e ingerir pequeñas ramas se siente pletórico y expulsa aire caliente por sus grandes orejas a temperaturas superiores a los 200 ºC.",
+					"it": "Fa il pieno di energia mangiando ramoscelli ed emette aria calda dalle grandi orecchie a una temperatura di oltre 200 °C.",
+					"en": "Eating a twig fills it with energy, and its roomy ears give vent to air hotter than 390 degrees Fahrenheit.",
+					"ja": "小枝を 食べると 元気になって 摂氏２００度を 超える 熱気を 大きな 耳から 噴き出す。",
+					"es-419": "Tras masticar e ingerir pequeñas ramas se siente pletórico y expulsa aire caliente por sus grandes orejas a temperaturas superiores a los 200 ºC."
+				},
+				"x-central": {
+					"ja-hrkt": "こえだを たべると げんきになって せっし２００どを こえる ねっきを おおきな みみから ふきだす。",
+					"ko": "잔가지를 먹으면 힘이 나서 섭씨 200도가 넘는 열기를 커다란 귀에서 내뿜는다.",
+					"fr": "En cas de coup de fatigue, il grignote des rameaux pour recharger ses batteries. Ses oreilles dégagent une chaleur qui dépasse les 200 °C.",
+					"de": "Wenn es Zweige frisst, fasst es neue Kraft und stößt über seine Ohren über 200 °C heiße Luft aus.",
+					"es": "Tras masticar e ingerir pequeñas ramas se siente pletórico y expulsa aire caliente por sus grandes orejas a temperaturas superiores a los 200 ºC.",
+					"it": "Fa il pieno di energia mangiando ramoscelli ed emette aria calda dalle grandi orecchie a una temperatura di oltre 200 °C.",
+					"en": "Eating a twig fills it with energy, and its roomy ears give vent to air hotter than 390 degrees Fahrenheit.",
+					"ja": "小枝を 食べると 元気になって 摂氏２００度を 超える 熱気を 大きな 耳から 噴き出す。",
+					"es-419": "Tras masticar e ingerir pequeñas ramas se siente pletórico y expulsa aire caliente por sus grandes orejas a temperaturas superiores a los 200 ºC."
+				},
+				"x-coastal": {
+					"ja-hrkt": "こえだを たべると げんきになって せっし２００どを こえる ねっきを おおきな みみから ふきだす。",
+					"ko": "잔가지를 먹으면 힘이 나서 섭씨 200도가 넘는 열기를 커다란 귀에서 내뿜는다.",
+					"fr": "En cas de coup de fatigue, il grignote des rameaux pour recharger ses batteries. Ses oreilles dégagent une chaleur qui dépasse les 200 °C.",
+					"de": "Wenn es Zweige frisst, fasst es neue Kraft und stößt über seine Ohren über 200 °C heiße Luft aus.",
+					"es": "Tras masticar e ingerir pequeñas ramas se siente pletórico y expulsa aire caliente por sus grandes orejas a temperaturas superiores a los 200 ºC.",
+					"it": "Fa il pieno di energia mangiando ramoscelli ed emette aria calda dalle grandi orecchie a una temperatura di oltre 200 °C.",
+					"en": "Eating a twig fills it with energy, and its roomy ears give vent to air hotter than 390 degrees Fahrenheit.",
+					"ja": "小枝を 食べると 元気になって 摂氏２００度を 超える 熱気を 大きな 耳から 噴き出す。",
+					"es-419": "Tras masticar e ingerir pequeñas ramas se siente pletórico y expulsa aire caliente por sus grandes orejas a temperaturas superiores a los 200 ºC."
+				},
+				"x-mountain": {
+					"ja-hrkt": "こえだを たべると げんきになって せっし２００どを こえる ねっきを おおきな みみから ふきだす。",
+					"ko": "잔가지를 먹으면 힘이 나서 섭씨 200도가 넘는 열기를 커다란 귀에서 내뿜는다.",
+					"fr": "En cas de coup de fatigue, il grignote des rameaux pour recharger ses batteries. Ses oreilles dégagent une chaleur qui dépasse les 200 °C.",
+					"de": "Wenn es Zweige frisst, fasst es neue Kraft und stößt über seine Ohren über 200 °C heiße Luft aus.",
+					"es": "Tras masticar e ingerir pequeñas ramas se siente pletórico y expulsa aire caliente por sus grandes orejas a temperaturas superiores a los 200 ºC.",
+					"it": "Fa il pieno di energia mangiando ramoscelli ed emette aria calda dalle grandi orecchie a una temperatura di oltre 200 °C.",
+					"en": "Eating a twig fills it with energy, and its roomy ears give vent to air hotter than 390 degrees Fahrenheit.",
+					"ja": "小枝を 食べると 元気になって 摂氏２００度を 超える 熱気を 大きな 耳から 噴き出す。",
+					"es-419": "Tras masticar e ingerir pequeñas ramas se siente pletórico y expulsa aire caliente por sus grandes orejas a temperaturas superiores a los 200 ºC."
+				},
+				"y-national": {
+					"ja-hrkt": "こえだを もちあるき おやつがわりに ポリポリ たべる。みみから ねっきを ふきだして あいてを いかくする。",
+					"ko": "작은 나뭇가지를 들고 다니며 간식 대신 아작아작 먹는다. 귀에서 열기를 뿜어내어 상대를 위협한다.",
+					"fr": "Il a toujours une brindille avec lui en cas de petit creux. Il projette de l’air chaud par ses oreilles pour intimider ses ennemis.",
+					"de": "Anstelle eines Snacks kaut es unterwegs auf einem Zweig herum. Es schreckt Gegner ab, indem es über seine Ohren heiße Luft ausstößt.",
+					"es": "Mordisquea una ramita mientras camina, como si de un aperitivo se tratase. Intimida a su enemigo expulsando aire caliente por las orejas.",
+					"it": "Se ne va in giro sgranocchiando un rametto. Intimidisce i nemici emettendo aria calda dalle orecchie.",
+					"en": "As it walks, it munches on a twig in place of a snack. It intimidates opponents by puffing hot air out of its ears.",
+					"ja": "小枝を 持ち歩き おやつがわりに ポリポリ 食べる。耳から 熱気を 噴き出して 相手を 威嚇する。",
+					"es-419": "Mordisquea una ramita mientras camina, como si de un aperitivo se tratase. Intimida a su enemigo expulsando aire caliente por las orejas."
+				},
+				"y-central": {
+					"ja-hrkt": "こえだを もちあるき おやつがわりに ポリポリ たべる。みみから ねっきを ふきだして あいてを いかくする。",
+					"ko": "작은 나뭇가지를 들고 다니며 간식 대신 아작아작 먹는다. 귀에서 열기를 뿜어내어 상대를 위협한다.",
+					"fr": "Il a toujours une brindille avec lui en cas de petit creux. Il projette de l’air chaud par ses oreilles pour intimider ses ennemis.",
+					"de": "Anstelle eines Snacks kaut es unterwegs auf einem Zweig herum. Es schreckt Gegner ab, indem es über seine Ohren heiße Luft ausstößt.",
+					"es": "Mordisquea una ramita mientras camina, como si de un aperitivo se tratase. Intimida a su enemigo expulsando aire caliente por las orejas.",
+					"it": "Se ne va in giro sgranocchiando un rametto. Intimidisce i nemici emettendo aria calda dalle orecchie.",
+					"en": "As it walks, it munches on a twig in place of a snack. It intimidates opponents by puffing hot air out of its ears.",
+					"ja": "小枝を 持ち歩き おやつがわりに ポリポリ 食べる。耳から 熱気を 噴き出して 相手を 威嚇する。",
+					"es-419": "Mordisquea una ramita mientras camina, como si de un aperitivo se tratase. Intimida a su enemigo expulsando aire caliente por las orejas."
+				},
+				"y-coastal": {
+					"ja-hrkt": "こえだを もちあるき おやつがわりに ポリポリ たべる。みみから ねっきを ふきだして あいてを いかくする。",
+					"ko": "작은 나뭇가지를 들고 다니며 간식 대신 아작아작 먹는다. 귀에서 열기를 뿜어내어 상대를 위협한다.",
+					"fr": "Il a toujours une brindille avec lui en cas de petit creux. Il projette de l’air chaud par ses oreilles pour intimider ses ennemis.",
+					"de": "Anstelle eines Snacks kaut es unterwegs auf einem Zweig herum. Es schreckt Gegner ab, indem es über seine Ohren heiße Luft ausstößt.",
+					"es": "Mordisquea una ramita mientras camina, como si de un aperitivo se tratase. Intimida a su enemigo expulsando aire caliente por las orejas.",
+					"it": "Se ne va in giro sgranocchiando un rametto. Intimidisce i nemici emettendo aria calda dalle orecchie.",
+					"en": "As it walks, it munches on a twig in place of a snack. It intimidates opponents by puffing hot air out of its ears.",
+					"ja": "小枝を 持ち歩き おやつがわりに ポリポリ 食べる。耳から 熱気を 噴き出して 相手を 威嚇する。",
+					"es-419": "Mordisquea una ramita mientras camina, como si de un aperitivo se tratase. Intimida a su enemigo expulsando aire caliente por las orejas."
+				},
+				"y-mountain": {
+					"ja-hrkt": "こえだを もちあるき おやつがわりに ポリポリ たべる。みみから ねっきを ふきだして あいてを いかくする。",
+					"ko": "작은 나뭇가지를 들고 다니며 간식 대신 아작아작 먹는다. 귀에서 열기를 뿜어내어 상대를 위협한다.",
+					"fr": "Il a toujours une brindille avec lui en cas de petit creux. Il projette de l’air chaud par ses oreilles pour intimider ses ennemis.",
+					"de": "Anstelle eines Snacks kaut es unterwegs auf einem Zweig herum. Es schreckt Gegner ab, indem es über seine Ohren heiße Luft ausstößt.",
+					"es": "Mordisquea una ramita mientras camina, como si de un aperitivo se tratase. Intimida a su enemigo expulsando aire caliente por las orejas.",
+					"it": "Se ne va in giro sgranocchiando un rametto. Intimidisce i nemici emettendo aria calda dalle orecchie.",
+					"en": "As it walks, it munches on a twig in place of a snack. It intimidates opponents by puffing hot air out of its ears.",
+					"ja": "小枝を 持ち歩き おやつがわりに ポリポリ 食べる。耳から 熱気を 噴き出して 相手を 威嚇する。",
+					"es-419": "Mordisquea una ramita mientras camina, como si de un aperitivo se tratase. Intimida a su enemigo expulsando aire caliente por las orejas."
+				}
+			}
+		},
+		{
+			"profileKey": "omega-ruby-alpha-sapphire",
+			"label": "Omega Ruby / Alpha Sapphire",
+			"appGameKeys": [
+				"omegaruby-national",
+				"omegaruby",
+				"alphasapphire-national",
+				"alphasapphire"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Fennekin",
+				"localizedNames": {
+					"ja-hrkt": "フォッコ",
+					"ja-roma": "Fokko",
+					"ko": "푸호꼬",
+					"zh-hant": "火狐狸",
+					"fr": "Feunnec",
+					"de": "Fynx",
+					"es": "Fennekin",
+					"it": "Fennekin",
+					"ja": "フォッコ",
+					"zh-hans": "火狐狸",
+					"es-419": "Fennekin"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 45,
+					"def": 40,
+					"spa": 62,
+					"spd": 60,
+					"spe": 60
+				},
+				"evYield": {
+					"spa": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Blaze",
+					"Magician (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Magician"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.4 m",
+				"weight": "9.4 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 61,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Red",
+				"genus": "Fox Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "キツネポケモン",
+					"ko": "여우포켓몬",
+					"zh-hant": "狐狸寶可夢",
+					"fr": "Pokémon Renard",
+					"de": "Fuchs",
+					"es": "Pokémon Zorro",
+					"it": "Pokémon Volpe",
+					"ja": "キツネポケモン",
+					"zh-hans": "狐狸宝可梦",
+					"es-419": "Pokémon Zorro"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 653
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 4
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 212
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 217
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 653,
+								"natiId": 653,
+								"name": "Fennekin"
+							},
+							{
+								"id": 654,
+								"natiId": 654,
+								"name": "Braixen",
+								"method": "Level",
+								"value": 16
+							},
+							{
+								"id": 655,
+								"natiId": 655,
+								"name": "Delphox",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Scratch",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Tail Whip",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Ember",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Howl",
+							"level": 11,
+							"order": null
+						},
+						{
+							"name": "Flame Charge",
+							"level": 14,
+							"order": null
+						},
+						{
+							"name": "Psybeam",
+							"level": 17,
+							"order": null
+						},
+						{
+							"name": "Fire Spin",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Lucky Chant",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": 27,
+							"order": null
+						},
+						{
+							"name": "Psyshock",
+							"level": 31,
+							"order": null
+						},
+						{
+							"name": "Flamethrower",
+							"level": 35,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": 38,
+							"order": null
+						},
+						{
+							"name": "Psychic",
+							"level": 41,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": 43,
+							"order": null
+						},
+						{
+							"name": "Magic Room",
+							"level": 46,
+							"order": null
+						},
+						{
+							"name": "Fire Blast",
+							"level": 48,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Cut",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Echoed Voice",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Embargo",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fire Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flame Charge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flamethrower",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Grass Knot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Incinerate",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Overheat",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Power Up Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psychic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psyshock",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Safeguard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Secret Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": null,
+							"order": null
+						}
+					],
+					"Egg": [
+						{
+							"name": "Heat Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hypnosis",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Magic Coat",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wish",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Covet",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fire Pledge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Foul Play",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Heat Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Magic Coat",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Magic Room",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/653",
+						"fetchedAt": "2026-11-03T05:53:46.794Z",
+						"hash": "41c66d7bb7c02eef088e5d57fcf617db316498b91be17231fbc9cc6619955d95"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/338/",
+						"fetchedAt": "2026-11-03T05:53:46.824Z",
+						"hash": "4306d211808cea3730402fdf5bfd3467af667b842d474ce209c7dbae73698352"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/653/",
+						"fetchedAt": "2026-11-03T05:53:46.858Z",
+						"hash": "013b79cb4ef78eb5904f31091fca641356b3cd647bc0a3f2798a169021801530"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/653/encounters",
+						"fetchedAt": "2026-11-03T05:53:46.912Z",
+						"hash": "a9dda4c18877d21ae5e6e30480b5e646aa4f9cb623228a44c44f15d5f99d0989"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/653/",
+						"fetchedAt": "2026-11-03T05:53:46.963Z",
+						"hash": "e3e909182af1d3e4212f3cee65a7d63db79aa297b15825b0e5ca645ba0ed0578"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"omegaruby-national": "Eating a twig fills it with energy, and its roomy ears give vent to air hotter than 390 degrees Fahrenheit.",
+				"omegaruby": "Eating a twig fills it with energy, and its roomy ears give vent to air hotter than 390 degrees Fahrenheit.",
+				"alphasapphire-national": "As it walks, it munches on a twig in place of a snack. It intimidates opponents by puffing hot air out of its ears.",
+				"alphasapphire": "As it walks, it munches on a twig in place of a snack. It intimidates opponents by puffing hot air out of its ears."
+			},
+			"localizedFlavorByGame": {
+				"omegaruby-national": {
+					"ja-hrkt": "こえだを たべると げんきになって せっし２００どを こえる ねっきを おおきな みみから ふきだす。",
+					"ko": "잔가지를 먹으면 힘이 나서 섭씨 200도가 넘는 열기를 커다란 귀에서 내뿜는다.",
+					"fr": "En cas de coup de fatigue, il grignote des rameaux pour recharger ses batteries. Ses oreilles dégagent une chaleur qui dépasse les 200 °C.",
+					"de": "Wenn es Zweige frisst, fasst es neue Kraft und stößt über seine Ohren über 200 °C heiße Luft aus.",
+					"es": "Tras masticar e ingerir pequeñas ramas se siente pletórico y expulsa aire caliente por sus grandes orejas a temperaturas superiores a los 200 °C.",
+					"it": "Fa il pieno di energia mangiando ramoscelli ed emette aria calda dalle grandi orecchie a una temperatura di oltre 200 °C.",
+					"en": "Eating a twig fills it with energy, and its roomy ears give vent to air hotter than 390 degrees Fahrenheit.",
+					"ja": "小枝を 食べると 元気になって 摂氏２００度を 超える 熱気を 大きな 耳から 噴き出す。",
+					"es-419": "Tras masticar e ingerir pequeñas ramas se siente pletórico y expulsa aire caliente por sus grandes orejas a temperaturas superiores a los 200 °C."
+				},
+				"omegaruby": {
+					"ja-hrkt": "こえだを たべると げんきになって せっし２００どを こえる ねっきを おおきな みみから ふきだす。",
+					"ko": "잔가지를 먹으면 힘이 나서 섭씨 200도가 넘는 열기를 커다란 귀에서 내뿜는다.",
+					"fr": "En cas de coup de fatigue, il grignote des rameaux pour recharger ses batteries. Ses oreilles dégagent une chaleur qui dépasse les 200 °C.",
+					"de": "Wenn es Zweige frisst, fasst es neue Kraft und stößt über seine Ohren über 200 °C heiße Luft aus.",
+					"es": "Tras masticar e ingerir pequeñas ramas se siente pletórico y expulsa aire caliente por sus grandes orejas a temperaturas superiores a los 200 °C.",
+					"it": "Fa il pieno di energia mangiando ramoscelli ed emette aria calda dalle grandi orecchie a una temperatura di oltre 200 °C.",
+					"en": "Eating a twig fills it with energy, and its roomy ears give vent to air hotter than 390 degrees Fahrenheit.",
+					"ja": "小枝を 食べると 元気になって 摂氏２００度を 超える 熱気を 大きな 耳から 噴き出す。",
+					"es-419": "Tras masticar e ingerir pequeñas ramas se siente pletórico y expulsa aire caliente por sus grandes orejas a temperaturas superiores a los 200 °C."
+				},
+				"alphasapphire-national": {
+					"ja-hrkt": "こえだを もちあるき おやつがわりに ポリポリ たべる。みみから ねっきを ふきだして あいてを いかくする。",
+					"ko": "작은 나뭇가지를 들고 다니며 간식 대신 아작아작 먹는다. 귀에서 열기를 뿜어내어 상대를 위협한다.",
+					"fr": "Il a toujours une brindille avec lui en cas de petit creux. Il projette de l’air chaud par ses oreilles pour intimider ses ennemis.",
+					"de": "Anstelle eines Snacks kaut es unterwegs auf einem Zweig herum. Es schreckt Gegner ab, indem es über seine Ohren heiße Luft ausstößt.",
+					"es": "Mordisquea una ramita mientras camina, como si de un aperitivo se tratase. Intimida a su enemigo expulsando aire caliente por las orejas.",
+					"it": "Se ne va in giro sgranocchiando un rametto. Intimidisce i nemici emettendo aria calda dalle orecchie.",
+					"en": "As it walks, it munches on a twig in place of a snack. It intimidates opponents by puffing hot air out of its ears.",
+					"ja": "小枝を 持ち歩き おやつがわりに ポリポリ 食べる。耳から 熱気を 噴き出して 相手を 威嚇する。",
+					"es-419": "Mordisquea una ramita mientras camina, como si de un aperitivo se tratase. Intimida a su enemigo expulsando aire caliente por las orejas."
+				},
+				"alphasapphire": {
+					"ja-hrkt": "こえだを もちあるき おやつがわりに ポリポリ たべる。みみから ねっきを ふきだして あいてを いかくする。",
+					"ko": "작은 나뭇가지를 들고 다니며 간식 대신 아작아작 먹는다. 귀에서 열기를 뿜어내어 상대를 위협한다.",
+					"fr": "Il a toujours une brindille avec lui en cas de petit creux. Il projette de l’air chaud par ses oreilles pour intimider ses ennemis.",
+					"de": "Anstelle eines Snacks kaut es unterwegs auf einem Zweig herum. Es schreckt Gegner ab, indem es über seine Ohren heiße Luft ausstößt.",
+					"es": "Mordisquea una ramita mientras camina, como si de un aperitivo se tratase. Intimida a su enemigo expulsando aire caliente por las orejas.",
+					"it": "Se ne va in giro sgranocchiando un rametto. Intimidisce i nemici emettendo aria calda dalle orecchie.",
+					"en": "As it walks, it munches on a twig in place of a snack. It intimidates opponents by puffing hot air out of its ears.",
+					"ja": "小枝を 持ち歩き おやつがわりに ポリポリ 食べる。耳から 熱気を 噴き出して 相手を 威嚇する。",
+					"es-419": "Mordisquea una ramita mientras camina, como si de un aperitivo se tratase. Intimida a su enemigo expulsando aire caliente por las orejas."
+				}
+			}
+		},
+		{
+			"profileKey": "sun-moon",
+			"label": "Sun / Moon",
+			"appGameKeys": [
+				"sun-alola",
+				"sun-melemele",
+				"sun-akala",
+				"sun-ulaula",
+				"sun-poni",
+				"moon-alola",
+				"moon-melemele",
+				"moon-akala",
+				"moon-ulaula",
+				"moon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Fennekin",
+				"localizedNames": {
+					"ja-hrkt": "フォッコ",
+					"ja-roma": "Fokko",
+					"ko": "푸호꼬",
+					"zh-hant": "火狐狸",
+					"fr": "Feunnec",
+					"de": "Fynx",
+					"es": "Fennekin",
+					"it": "Fennekin",
+					"ja": "フォッコ",
+					"zh-hans": "火狐狸",
+					"es-419": "Fennekin"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 45,
+					"def": 40,
+					"spa": 62,
+					"spd": 60,
+					"spe": 60
+				},
+				"evYield": {
+					"spa": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Blaze",
+					"Magician (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Magician"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.4 m",
+				"weight": "9.4 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 61,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Red",
+				"genus": "Fox Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "キツネポケモン",
+					"ko": "여우포켓몬",
+					"zh-hant": "狐狸寶可夢",
+					"fr": "Pokémon Renard",
+					"de": "Fuchs",
+					"es": "Pokémon Zorro",
+					"it": "Pokémon Volpe",
+					"ja": "キツネポケモン",
+					"zh-hans": "狐狸宝可梦",
+					"es-419": "Pokémon Zorro"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 653
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 4
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 212
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 217
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 653,
+								"natiId": 653,
+								"name": "Fennekin"
+							},
+							{
+								"id": 654,
+								"natiId": 654,
+								"name": "Braixen",
+								"method": "Level",
+								"value": 16
+							},
+							{
+								"id": 655,
+								"natiId": 655,
+								"name": "Delphox",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Scratch",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Tail Whip",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Ember",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Howl",
+							"level": 11,
+							"order": null
+						},
+						{
+							"name": "Flame Charge",
+							"level": 14,
+							"order": null
+						},
+						{
+							"name": "Psybeam",
+							"level": 17,
+							"order": null
+						},
+						{
+							"name": "Fire Spin",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Lucky Chant",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": 27,
+							"order": null
+						},
+						{
+							"name": "Psyshock",
+							"level": 31,
+							"order": null
+						},
+						{
+							"name": "Flamethrower",
+							"level": 35,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": 38,
+							"order": null
+						},
+						{
+							"name": "Psychic",
+							"level": 41,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": 43,
+							"order": null
+						},
+						{
+							"name": "Magic Room",
+							"level": 46,
+							"order": null
+						},
+						{
+							"name": "Fire Blast",
+							"level": 48,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Echoed Voice",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Embargo",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fire Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flame Charge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flamethrower",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Grass Knot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Overheat",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psychic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psyshock",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Safeguard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Work Up",
+							"level": null,
+							"order": null
+						}
+					],
+					"Egg": [
+						{
+							"name": "Heat Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hypnosis",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Magic Coat",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wish",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Fire Pledge",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/653",
+						"fetchedAt": "2026-11-03T05:53:46.794Z",
+						"hash": "41c66d7bb7c02eef088e5d57fcf617db316498b91be17231fbc9cc6619955d95"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/338/",
+						"fetchedAt": "2026-11-03T05:53:46.824Z",
+						"hash": "4306d211808cea3730402fdf5bfd3467af667b842d474ce209c7dbae73698352"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/653/",
+						"fetchedAt": "2026-11-03T05:53:46.858Z",
+						"hash": "013b79cb4ef78eb5904f31091fca641356b3cd647bc0a3f2798a169021801530"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/653/encounters",
+						"fetchedAt": "2026-11-03T05:53:46.912Z",
+						"hash": "a9dda4c18877d21ae5e6e30480b5e646aa4f9cb623228a44c44f15d5f99d0989"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/653/",
+						"fetchedAt": "2026-11-03T05:53:46.963Z",
+						"hash": "e3e909182af1d3e4212f3cee65a7d63db79aa297b15825b0e5ca645ba0ed0578"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sun-alola": "",
+				"sun-melemele": "",
+				"sun-akala": "",
+				"sun-ulaula": "",
+				"sun-poni": "",
+				"moon-alola": "",
+				"moon-melemele": "",
+				"moon-akala": "",
+				"moon-ulaula": "",
+				"moon-poni": ""
+			},
+			"localizedFlavorByGame": {
+				"sun-alola": {},
+				"sun-melemele": {},
+				"sun-akala": {},
+				"sun-ulaula": {},
+				"sun-poni": {},
+				"moon-alola": {},
+				"moon-melemele": {},
+				"moon-akala": {},
+				"moon-ulaula": {},
+				"moon-poni": {}
+			}
+		},
+		{
+			"profileKey": "ultra-sun-ultra-moon",
+			"label": "Ultra Sun / Ultra Moon",
+			"appGameKeys": [
+				"ultrasun-alola",
+				"ultrasun-melemele",
+				"ultrasun-akala",
+				"ultrasun-ulaula",
+				"ultrasun-poni",
+				"ultramoon-alola",
+				"ultramoon-melemele",
+				"ultramoon-akala",
+				"ultramoon-ulaula",
+				"ultramoon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Fennekin",
+				"localizedNames": {
+					"ja-hrkt": "フォッコ",
+					"ja-roma": "Fokko",
+					"ko": "푸호꼬",
+					"zh-hant": "火狐狸",
+					"fr": "Feunnec",
+					"de": "Fynx",
+					"es": "Fennekin",
+					"it": "Fennekin",
+					"ja": "フォッコ",
+					"zh-hans": "火狐狸",
+					"es-419": "Fennekin"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 45,
+					"def": 40,
+					"spa": 62,
+					"spd": 60,
+					"spe": 60
+				},
+				"evYield": {
+					"spa": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Blaze",
+					"Magician (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Magician"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.4 m",
+				"weight": "9.4 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 61,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Red",
+				"genus": "Fox Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "キツネポケモン",
+					"ko": "여우포켓몬",
+					"zh-hant": "狐狸寶可夢",
+					"fr": "Pokémon Renard",
+					"de": "Fuchs",
+					"es": "Pokémon Zorro",
+					"it": "Pokémon Volpe",
+					"ja": "キツネポケモン",
+					"zh-hans": "狐狸宝可梦",
+					"es-419": "Pokémon Zorro"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 653
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 4
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 212
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 217
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 653,
+								"natiId": 653,
+								"name": "Fennekin"
+							},
+							{
+								"id": 654,
+								"natiId": 654,
+								"name": "Braixen",
+								"method": "Level",
+								"value": 16
+							},
+							{
+								"id": 655,
+								"natiId": 655,
+								"name": "Delphox",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Scratch",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Tail Whip",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Ember",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Howl",
+							"level": 11,
+							"order": null
+						},
+						{
+							"name": "Flame Charge",
+							"level": 14,
+							"order": null
+						},
+						{
+							"name": "Psybeam",
+							"level": 17,
+							"order": null
+						},
+						{
+							"name": "Fire Spin",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Lucky Chant",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": 27,
+							"order": null
+						},
+						{
+							"name": "Psyshock",
+							"level": 31,
+							"order": null
+						},
+						{
+							"name": "Flamethrower",
+							"level": 35,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": 38,
+							"order": null
+						},
+						{
+							"name": "Psychic",
+							"level": 41,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": 43,
+							"order": null
+						},
+						{
+							"name": "Magic Room",
+							"level": 46,
+							"order": null
+						},
+						{
+							"name": "Fire Blast",
+							"level": 48,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dream Eater",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Echoed Voice",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Embargo",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fire Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flame Charge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flamethrower",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Grass Knot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Overheat",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psych Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psychic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psyshock",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Safeguard",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Work Up",
+							"level": null,
+							"order": null
+						}
+					],
+					"Egg": [
+						{
+							"name": "Heat Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hypnosis",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Magic Coat",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psychic Terrain",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wish",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Covet",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fire Pledge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Foul Play",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Heat Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Magic Coat",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Magic Room",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/653",
+						"fetchedAt": "2026-11-03T05:53:46.794Z",
+						"hash": "41c66d7bb7c02eef088e5d57fcf617db316498b91be17231fbc9cc6619955d95"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/338/",
+						"fetchedAt": "2026-11-03T05:53:46.824Z",
+						"hash": "4306d211808cea3730402fdf5bfd3467af667b842d474ce209c7dbae73698352"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/653/",
+						"fetchedAt": "2026-11-03T05:53:46.858Z",
+						"hash": "013b79cb4ef78eb5904f31091fca641356b3cd647bc0a3f2798a169021801530"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/653/encounters",
+						"fetchedAt": "2026-11-03T05:53:46.912Z",
+						"hash": "a9dda4c18877d21ae5e6e30480b5e646aa4f9cb623228a44c44f15d5f99d0989"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/653/",
+						"fetchedAt": "2026-11-03T05:53:46.963Z",
+						"hash": "e3e909182af1d3e4212f3cee65a7d63db79aa297b15825b0e5ca645ba0ed0578"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"ultrasun-alola": "",
+				"ultrasun-melemele": "",
+				"ultrasun-akala": "",
+				"ultrasun-ulaula": "",
+				"ultrasun-poni": "",
+				"ultramoon-alola": "",
+				"ultramoon-melemele": "",
+				"ultramoon-akala": "",
+				"ultramoon-ulaula": "",
+				"ultramoon-poni": ""
+			},
+			"localizedFlavorByGame": {
+				"ultrasun-alola": {},
+				"ultrasun-melemele": {},
+				"ultrasun-akala": {},
+				"ultrasun-ulaula": {},
+				"ultrasun-poni": {},
+				"ultramoon-alola": {},
+				"ultramoon-melemele": {},
+				"ultramoon-akala": {},
+				"ultramoon-ulaula": {},
+				"ultramoon-poni": {}
+			}
+		},
+		{
+			"profileKey": "lets-go-pikachu-lets-go-eevee",
+			"label": "Let's Go Pikachu / Eevee",
+			"appGameKeys": [
+				"letsgopikachu",
+				"letsgoeevee"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Fennekin",
+				"localizedNames": {
+					"ja-hrkt": "フォッコ",
+					"ja-roma": "Fokko",
+					"ko": "푸호꼬",
+					"zh-hant": "火狐狸",
+					"fr": "Feunnec",
+					"de": "Fynx",
+					"es": "Fennekin",
+					"it": "Fennekin",
+					"ja": "フォッコ",
+					"zh-hans": "火狐狸",
+					"es-419": "Fennekin"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 45,
+					"def": 40,
+					"spa": 62,
+					"spd": 60,
+					"spe": 60
+				},
+				"evYield": {
+					"spa": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Blaze",
+					"Magician (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Magician"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.4 m",
+				"weight": "9.4 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 61,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Red",
+				"genus": "Fox Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "キツネポケモン",
+					"ko": "여우포켓몬",
+					"zh-hant": "狐狸寶可夢",
+					"fr": "Pokémon Renard",
+					"de": "Fuchs",
+					"es": "Pokémon Zorro",
+					"it": "Pokémon Volpe",
+					"ja": "キツネポケモン",
+					"zh-hans": "狐狸宝可梦",
+					"es-419": "Pokémon Zorro"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 653
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 4
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 212
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 217
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 653,
+								"natiId": 653,
+								"name": "Fennekin"
+							},
+							{
+								"id": 654,
+								"natiId": 654,
+								"name": "Braixen",
+								"method": "Level",
+								"value": 16
+							},
+							{
+								"id": 655,
+								"natiId": 655,
+								"name": "Delphox",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/653",
+						"fetchedAt": "2026-11-03T05:53:46.794Z",
+						"hash": "41c66d7bb7c02eef088e5d57fcf617db316498b91be17231fbc9cc6619955d95"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/338/",
+						"fetchedAt": "2026-11-03T05:53:46.824Z",
+						"hash": "4306d211808cea3730402fdf5bfd3467af667b842d474ce209c7dbae73698352"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/653/",
+						"fetchedAt": "2026-11-03T05:53:46.858Z",
+						"hash": "013b79cb4ef78eb5904f31091fca641356b3cd647bc0a3f2798a169021801530"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/653/encounters",
+						"fetchedAt": "2026-11-03T05:53:46.912Z",
+						"hash": "a9dda4c18877d21ae5e6e30480b5e646aa4f9cb623228a44c44f15d5f99d0989"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/653/",
+						"fetchedAt": "2026-11-03T05:53:46.963Z",
+						"hash": "e3e909182af1d3e4212f3cee65a7d63db79aa297b15825b0e5ca645ba0ed0578"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"letsgopikachu": "",
+				"letsgoeevee": ""
+			},
+			"localizedFlavorByGame": {
+				"letsgopikachu": {},
+				"letsgoeevee": {}
+			}
+		},
+		{
+			"profileKey": "sword-shield",
+			"label": "Sword / Shield",
+			"appGameKeys": [
+				"sword",
+				"shield"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Fennekin",
+				"localizedNames": {
+					"ja-hrkt": "フォッコ",
+					"ja-roma": "Fokko",
+					"ko": "푸호꼬",
+					"zh-hant": "火狐狸",
+					"fr": "Feunnec",
+					"de": "Fynx",
+					"es": "Fennekin",
+					"it": "Fennekin",
+					"ja": "フォッコ",
+					"zh-hans": "火狐狸",
+					"es-419": "Fennekin"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 45,
+					"def": 40,
+					"spa": 62,
+					"spd": 60,
+					"spe": 60
+				},
+				"evYield": {
+					"spa": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Blaze",
+					"Magician (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Magician"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.4 m",
+				"weight": "9.4 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 61,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Red",
+				"genus": "Fox Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "キツネポケモン",
+					"ko": "여우포켓몬",
+					"zh-hant": "狐狸寶可夢",
+					"fr": "Pokémon Renard",
+					"de": "Fuchs",
+					"es": "Pokémon Zorro",
+					"it": "Pokémon Volpe",
+					"ja": "キツネポケモン",
+					"zh-hans": "狐狸宝可梦",
+					"es-419": "Pokémon Zorro"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 653
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 4
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 212
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 217
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 653,
+								"natiId": 653,
+								"name": "Fennekin"
+							},
+							{
+								"id": 654,
+								"natiId": 654,
+								"name": "Braixen",
+								"method": "Level",
+								"value": 16
+							},
+							{
+								"id": 655,
+								"natiId": 655,
+								"name": "Delphox",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/653",
+						"fetchedAt": "2026-11-03T05:53:46.794Z",
+						"hash": "41c66d7bb7c02eef088e5d57fcf617db316498b91be17231fbc9cc6619955d95"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/338/",
+						"fetchedAt": "2026-11-03T05:53:46.824Z",
+						"hash": "4306d211808cea3730402fdf5bfd3467af667b842d474ce209c7dbae73698352"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/653/",
+						"fetchedAt": "2026-11-03T05:53:46.858Z",
+						"hash": "013b79cb4ef78eb5904f31091fca641356b3cd647bc0a3f2798a169021801530"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/653/encounters",
+						"fetchedAt": "2026-11-03T05:53:46.912Z",
+						"hash": "a9dda4c18877d21ae5e6e30480b5e646aa4f9cb623228a44c44f15d5f99d0989"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/653/",
+						"fetchedAt": "2026-11-03T05:53:46.963Z",
+						"hash": "e3e909182af1d3e4212f3cee65a7d63db79aa297b15825b0e5ca645ba0ed0578"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sword": "",
+				"shield": ""
+			},
+			"localizedFlavorByGame": {
+				"sword": {},
+				"shield": {}
+			}
+		},
+		{
+			"profileKey": "the-isle-of-armor",
+			"label": "The Isle of Armor",
+			"appGameKeys": [
+				"swordioa",
+				"shieldioa"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Fennekin",
+				"localizedNames": {
+					"ja-hrkt": "フォッコ",
+					"ja-roma": "Fokko",
+					"ko": "푸호꼬",
+					"zh-hant": "火狐狸",
+					"fr": "Feunnec",
+					"de": "Fynx",
+					"es": "Fennekin",
+					"it": "Fennekin",
+					"ja": "フォッコ",
+					"zh-hans": "火狐狸",
+					"es-419": "Fennekin"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 45,
+					"def": 40,
+					"spa": 62,
+					"spd": 60,
+					"spe": 60
+				},
+				"evYield": {
+					"spa": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Blaze",
+					"Magician (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Magician"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.4 m",
+				"weight": "9.4 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 61,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Red",
+				"genus": "Fox Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "キツネポケモン",
+					"ko": "여우포켓몬",
+					"zh-hant": "狐狸寶可夢",
+					"fr": "Pokémon Renard",
+					"de": "Fuchs",
+					"es": "Pokémon Zorro",
+					"it": "Pokémon Volpe",
+					"ja": "キツネポケモン",
+					"zh-hans": "狐狸宝可梦",
+					"es-419": "Pokémon Zorro"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 653
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 4
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 212
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 217
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 653,
+								"natiId": 653,
+								"name": "Fennekin"
+							},
+							{
+								"id": 654,
+								"natiId": 654,
+								"name": "Braixen",
+								"method": "Level",
+								"value": 16
+							},
+							{
+								"id": 655,
+								"natiId": 655,
+								"name": "Delphox",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/653",
+						"fetchedAt": "2026-11-03T05:53:46.794Z",
+						"hash": "41c66d7bb7c02eef088e5d57fcf617db316498b91be17231fbc9cc6619955d95"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/338/",
+						"fetchedAt": "2026-11-03T05:53:46.824Z",
+						"hash": "4306d211808cea3730402fdf5bfd3467af667b842d474ce209c7dbae73698352"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/653/",
+						"fetchedAt": "2026-11-03T05:53:46.858Z",
+						"hash": "013b79cb4ef78eb5904f31091fca641356b3cd647bc0a3f2798a169021801530"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/653/encounters",
+						"fetchedAt": "2026-11-03T05:53:46.912Z",
+						"hash": "a9dda4c18877d21ae5e6e30480b5e646aa4f9cb623228a44c44f15d5f99d0989"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/653/",
+						"fetchedAt": "2026-11-03T05:53:46.963Z",
+						"hash": "e3e909182af1d3e4212f3cee65a7d63db79aa297b15825b0e5ca645ba0ed0578"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordioa": "",
+				"shieldioa": ""
+			},
+			"localizedFlavorByGame": {
+				"swordioa": {},
+				"shieldioa": {}
+			}
+		},
+		{
+			"profileKey": "the-crown-tundra",
+			"label": "The Crown Tundra",
+			"appGameKeys": [
+				"swordct",
+				"shieldct"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Fennekin",
+				"localizedNames": {
+					"ja-hrkt": "フォッコ",
+					"ja-roma": "Fokko",
+					"ko": "푸호꼬",
+					"zh-hant": "火狐狸",
+					"fr": "Feunnec",
+					"de": "Fynx",
+					"es": "Fennekin",
+					"it": "Fennekin",
+					"ja": "フォッコ",
+					"zh-hans": "火狐狸",
+					"es-419": "Fennekin"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 45,
+					"def": 40,
+					"spa": 62,
+					"spd": 60,
+					"spe": 60
+				},
+				"evYield": {
+					"spa": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Blaze",
+					"Magician (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Magician"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.4 m",
+				"weight": "9.4 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 61,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Red",
+				"genus": "Fox Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "キツネポケモン",
+					"ko": "여우포켓몬",
+					"zh-hant": "狐狸寶可夢",
+					"fr": "Pokémon Renard",
+					"de": "Fuchs",
+					"es": "Pokémon Zorro",
+					"it": "Pokémon Volpe",
+					"ja": "キツネポケモン",
+					"zh-hans": "狐狸宝可梦",
+					"es-419": "Pokémon Zorro"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 653
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 4
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 212
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 217
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 653,
+								"natiId": 653,
+								"name": "Fennekin"
+							},
+							{
+								"id": 654,
+								"natiId": 654,
+								"name": "Braixen",
+								"method": "Level",
+								"value": 16
+							},
+							{
+								"id": 655,
+								"natiId": 655,
+								"name": "Delphox",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/653",
+						"fetchedAt": "2026-11-03T05:53:46.794Z",
+						"hash": "41c66d7bb7c02eef088e5d57fcf617db316498b91be17231fbc9cc6619955d95"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/338/",
+						"fetchedAt": "2026-11-03T05:53:46.824Z",
+						"hash": "4306d211808cea3730402fdf5bfd3467af667b842d474ce209c7dbae73698352"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/653/",
+						"fetchedAt": "2026-11-03T05:53:46.858Z",
+						"hash": "013b79cb4ef78eb5904f31091fca641356b3cd647bc0a3f2798a169021801530"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/653/encounters",
+						"fetchedAt": "2026-11-03T05:53:46.912Z",
+						"hash": "a9dda4c18877d21ae5e6e30480b5e646aa4f9cb623228a44c44f15d5f99d0989"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/653/",
+						"fetchedAt": "2026-11-03T05:53:46.963Z",
+						"hash": "e3e909182af1d3e4212f3cee65a7d63db79aa297b15825b0e5ca645ba0ed0578"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordct": "",
+				"shieldct": ""
+			},
+			"localizedFlavorByGame": {
+				"swordct": {},
+				"shieldct": {}
+			}
+		},
+		{
+			"profileKey": "brilliant-diamond-shining-pearl",
+			"label": "Brilliant Diamond / Shining Pearl",
+			"appGameKeys": [
+				"brilliantdiamond-national",
+				"brilliantdiamond",
+				"shiningpearl-national",
+				"shiningpearl"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Fennekin",
+				"localizedNames": {
+					"ja-hrkt": "フォッコ",
+					"ja-roma": "Fokko",
+					"ko": "푸호꼬",
+					"zh-hant": "火狐狸",
+					"fr": "Feunnec",
+					"de": "Fynx",
+					"es": "Fennekin",
+					"it": "Fennekin",
+					"ja": "フォッコ",
+					"zh-hans": "火狐狸",
+					"es-419": "Fennekin"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 45,
+					"def": 40,
+					"spa": 62,
+					"spd": 60,
+					"spe": 60
+				},
+				"evYield": {
+					"spa": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Blaze",
+					"Magician (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Magician"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.4 m",
+				"weight": "9.4 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 61,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Red",
+				"genus": "Fox Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "キツネポケモン",
+					"ko": "여우포켓몬",
+					"zh-hant": "狐狸寶可夢",
+					"fr": "Pokémon Renard",
+					"de": "Fuchs",
+					"es": "Pokémon Zorro",
+					"it": "Pokémon Volpe",
+					"ja": "キツネポケモン",
+					"zh-hans": "狐狸宝可梦",
+					"es-419": "Pokémon Zorro"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 653
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 4
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 212
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 217
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 653,
+								"natiId": 653,
+								"name": "Fennekin"
+							},
+							{
+								"id": 654,
+								"natiId": 654,
+								"name": "Braixen",
+								"method": "Level",
+								"value": 16
+							},
+							{
+								"id": 655,
+								"natiId": 655,
+								"name": "Delphox",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/653",
+						"fetchedAt": "2026-11-03T05:53:46.794Z",
+						"hash": "41c66d7bb7c02eef088e5d57fcf617db316498b91be17231fbc9cc6619955d95"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/338/",
+						"fetchedAt": "2026-11-03T05:53:46.824Z",
+						"hash": "4306d211808cea3730402fdf5bfd3467af667b842d474ce209c7dbae73698352"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/653/",
+						"fetchedAt": "2026-11-03T05:53:46.858Z",
+						"hash": "013b79cb4ef78eb5904f31091fca641356b3cd647bc0a3f2798a169021801530"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/653/encounters",
+						"fetchedAt": "2026-11-03T05:53:46.912Z",
+						"hash": "a9dda4c18877d21ae5e6e30480b5e646aa4f9cb623228a44c44f15d5f99d0989"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/653/",
+						"fetchedAt": "2026-11-03T05:53:46.963Z",
+						"hash": "e3e909182af1d3e4212f3cee65a7d63db79aa297b15825b0e5ca645ba0ed0578"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"brilliantdiamond-national": "",
+				"brilliantdiamond": "",
+				"shiningpearl-national": "",
+				"shiningpearl": ""
+			},
+			"localizedFlavorByGame": {
+				"brilliantdiamond-national": {},
+				"brilliantdiamond": {},
+				"shiningpearl-national": {},
+				"shiningpearl": {}
+			}
+		},
+		{
+			"profileKey": "legends-arceus",
+			"label": "Legends: Arceus",
+			"appGameKeys": [
+				"legendsarceus"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Fennekin",
+				"localizedNames": {
+					"ja-hrkt": "フォッコ",
+					"ja-roma": "Fokko",
+					"ko": "푸호꼬",
+					"zh-hant": "火狐狸",
+					"fr": "Feunnec",
+					"de": "Fynx",
+					"es": "Fennekin",
+					"it": "Fennekin",
+					"ja": "フォッコ",
+					"zh-hans": "火狐狸",
+					"es-419": "Fennekin"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 45,
+					"def": 40,
+					"spa": 62,
+					"spd": 60,
+					"spe": 60
+				},
+				"evYield": {
+					"spa": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Blaze",
+					"Magician (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Magician"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.4 m",
+				"weight": "9.4 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 61,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Red",
+				"genus": "Fox Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "キツネポケモン",
+					"ko": "여우포켓몬",
+					"zh-hant": "狐狸寶可夢",
+					"fr": "Pokémon Renard",
+					"de": "Fuchs",
+					"es": "Pokémon Zorro",
+					"it": "Pokémon Volpe",
+					"ja": "キツネポケモン",
+					"zh-hans": "狐狸宝可梦",
+					"es-419": "Pokémon Zorro"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 653
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 4
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 212
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 217
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 653,
+								"natiId": 653,
+								"name": "Fennekin"
+							},
+							{
+								"id": 654,
+								"natiId": 654,
+								"name": "Braixen",
+								"method": "Level",
+								"value": 16
+							},
+							{
+								"id": 655,
+								"natiId": 655,
+								"name": "Delphox",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/653",
+						"fetchedAt": "2026-11-03T05:53:46.794Z",
+						"hash": "41c66d7bb7c02eef088e5d57fcf617db316498b91be17231fbc9cc6619955d95"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/338/",
+						"fetchedAt": "2026-11-03T05:53:46.824Z",
+						"hash": "4306d211808cea3730402fdf5bfd3467af667b842d474ce209c7dbae73698352"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/653/",
+						"fetchedAt": "2026-11-03T05:53:46.858Z",
+						"hash": "013b79cb4ef78eb5904f31091fca641356b3cd647bc0a3f2798a169021801530"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/653/encounters",
+						"fetchedAt": "2026-11-03T05:53:46.912Z",
+						"hash": "a9dda4c18877d21ae5e6e30480b5e646aa4f9cb623228a44c44f15d5f99d0989"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/653/",
+						"fetchedAt": "2026-11-03T05:53:46.963Z",
+						"hash": "e3e909182af1d3e4212f3cee65a7d63db79aa297b15825b0e5ca645ba0ed0578"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendsarceus": ""
+			},
+			"localizedFlavorByGame": {
+				"legendsarceus": {}
+			}
+		},
+		{
+			"profileKey": "scarlet-violet",
+			"label": "Scarlet / Violet",
+			"appGameKeys": [
+				"scarlet",
+				"violet"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Fennekin",
+				"localizedNames": {
+					"ja-hrkt": "フォッコ",
+					"ja-roma": "Fokko",
+					"ko": "푸호꼬",
+					"zh-hant": "火狐狸",
+					"fr": "Feunnec",
+					"de": "Fynx",
+					"es": "Fennekin",
+					"it": "Fennekin",
+					"ja": "フォッコ",
+					"zh-hans": "火狐狸",
+					"es-419": "Fennekin"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 45,
+					"def": 40,
+					"spa": 62,
+					"spd": 60,
+					"spe": 60
+				},
+				"evYield": {
+					"spa": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Blaze",
+					"Magician (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Magician"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.4 m",
+				"weight": "9.4 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 61,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Red",
+				"genus": "Fox Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "キツネポケモン",
+					"ko": "여우포켓몬",
+					"zh-hant": "狐狸寶可夢",
+					"fr": "Pokémon Renard",
+					"de": "Fuchs",
+					"es": "Pokémon Zorro",
+					"it": "Pokémon Volpe",
+					"ja": "キツネポケモン",
+					"zh-hans": "狐狸宝可梦",
+					"es-419": "Pokémon Zorro"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 653
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 4
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 212
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 217
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 653,
+								"natiId": 653,
+								"name": "Fennekin"
+							},
+							{
+								"id": 654,
+								"natiId": 654,
+								"name": "Braixen",
+								"method": "Level",
+								"value": 16
+							},
+							{
+								"id": 655,
+								"natiId": 655,
+								"name": "Delphox",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Scratch",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Tail Whip",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Ember",
+							"level": 5,
+							"order": null
+						},
+						{
+							"name": "Howl",
+							"level": 11,
+							"order": null
+						},
+						{
+							"name": "Flame Charge",
+							"level": 14,
+							"order": null
+						},
+						{
+							"name": "Psybeam",
+							"level": 17,
+							"order": null
+						},
+						{
+							"name": "Fire Spin",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Psyshock",
+							"level": 31,
+							"order": null
+						},
+						{
+							"name": "Flamethrower",
+							"level": 35,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": 38,
+							"order": null
+						},
+						{
+							"name": "Psychic",
+							"level": 41,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": 43,
+							"order": null
+						},
+						{
+							"name": "Fire Blast",
+							"level": 48,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Agility",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Burning Jealousy",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Calm Mind",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Charm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Encore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endure",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fire Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fire Pledge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fire Spin",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flame Charge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flamethrower",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Flare Blitz",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Foul Play",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Grass Knot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Heat Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Helping Hand",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Imprison",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Light Screen",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Mud Shot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Mud Slap",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Overheat",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psybeam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psychic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psychic Terrain",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psyshock",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Skill Swap",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Stored Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swift",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Take Down",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Tera Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Trick",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Trick Room",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Will O Wisp",
+							"level": null,
+							"order": null
+						}
+					],
+					"Egg": [
+						{
+							"name": "Copycat",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Heat Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hypnosis",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Magic Room",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wish",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/653",
+						"fetchedAt": "2026-11-03T05:53:46.794Z",
+						"hash": "41c66d7bb7c02eef088e5d57fcf617db316498b91be17231fbc9cc6619955d95"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/338/",
+						"fetchedAt": "2026-11-03T05:53:46.824Z",
+						"hash": "4306d211808cea3730402fdf5bfd3467af667b842d474ce209c7dbae73698352"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/653/",
+						"fetchedAt": "2026-11-03T05:53:46.858Z",
+						"hash": "013b79cb4ef78eb5904f31091fca641356b3cd647bc0a3f2798a169021801530"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/653/encounters",
+						"fetchedAt": "2026-11-03T05:53:46.912Z",
+						"hash": "a9dda4c18877d21ae5e6e30480b5e646aa4f9cb623228a44c44f15d5f99d0989"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/653/",
+						"fetchedAt": "2026-11-03T05:53:46.963Z",
+						"hash": "e3e909182af1d3e4212f3cee65a7d63db79aa297b15825b0e5ca645ba0ed0578"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlet": "",
+				"violet": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlet": {},
+				"violet": {}
+			}
+		},
+		{
+			"profileKey": "the-teal-mask",
+			"label": "The Teal Mask",
+			"appGameKeys": [
+				"scarlettm",
+				"violettm"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Fennekin",
+				"localizedNames": {
+					"ja-hrkt": "フォッコ",
+					"ja-roma": "Fokko",
+					"ko": "푸호꼬",
+					"zh-hant": "火狐狸",
+					"fr": "Feunnec",
+					"de": "Fynx",
+					"es": "Fennekin",
+					"it": "Fennekin",
+					"ja": "フォッコ",
+					"zh-hans": "火狐狸",
+					"es-419": "Fennekin"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 45,
+					"def": 40,
+					"spa": 62,
+					"spd": 60,
+					"spe": 60
+				},
+				"evYield": {
+					"spa": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Blaze",
+					"Magician (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Magician"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.4 m",
+				"weight": "9.4 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 61,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Red",
+				"genus": "Fox Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "キツネポケモン",
+					"ko": "여우포켓몬",
+					"zh-hant": "狐狸寶可夢",
+					"fr": "Pokémon Renard",
+					"de": "Fuchs",
+					"es": "Pokémon Zorro",
+					"it": "Pokémon Volpe",
+					"ja": "キツネポケモン",
+					"zh-hans": "狐狸宝可梦",
+					"es-419": "Pokémon Zorro"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 653
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 4
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 212
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 217
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 653,
+								"natiId": 653,
+								"name": "Fennekin"
+							},
+							{
+								"id": 654,
+								"natiId": 654,
+								"name": "Braixen",
+								"method": "Level",
+								"value": 16
+							},
+							{
+								"id": 655,
+								"natiId": 655,
+								"name": "Delphox",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/653",
+						"fetchedAt": "2026-11-03T05:53:46.794Z",
+						"hash": "41c66d7bb7c02eef088e5d57fcf617db316498b91be17231fbc9cc6619955d95"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/338/",
+						"fetchedAt": "2026-11-03T05:53:46.824Z",
+						"hash": "4306d211808cea3730402fdf5bfd3467af667b842d474ce209c7dbae73698352"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/653/",
+						"fetchedAt": "2026-11-03T05:53:46.858Z",
+						"hash": "013b79cb4ef78eb5904f31091fca641356b3cd647bc0a3f2798a169021801530"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/653/encounters",
+						"fetchedAt": "2026-11-03T05:53:46.912Z",
+						"hash": "a9dda4c18877d21ae5e6e30480b5e646aa4f9cb623228a44c44f15d5f99d0989"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/653/",
+						"fetchedAt": "2026-11-03T05:53:46.963Z",
+						"hash": "e3e909182af1d3e4212f3cee65a7d63db79aa297b15825b0e5ca645ba0ed0578"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlettm": "",
+				"violettm": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlettm": {},
+				"violettm": {}
+			}
+		},
+		{
+			"profileKey": "the-indigo-disk",
+			"label": "The Indigo Disk",
+			"appGameKeys": [
+				"scarletid",
+				"violetid"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Fennekin",
+				"localizedNames": {
+					"ja-hrkt": "フォッコ",
+					"ja-roma": "Fokko",
+					"ko": "푸호꼬",
+					"zh-hant": "火狐狸",
+					"fr": "Feunnec",
+					"de": "Fynx",
+					"es": "Fennekin",
+					"it": "Fennekin",
+					"ja": "フォッコ",
+					"zh-hans": "火狐狸",
+					"es-419": "Fennekin"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 45,
+					"def": 40,
+					"spa": 62,
+					"spd": 60,
+					"spe": 60
+				},
+				"evYield": {
+					"spa": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Blaze",
+					"Magician (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Magician"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.4 m",
+				"weight": "9.4 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 61,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Red",
+				"genus": "Fox Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "キツネポケモン",
+					"ko": "여우포켓몬",
+					"zh-hant": "狐狸寶可夢",
+					"fr": "Pokémon Renard",
+					"de": "Fuchs",
+					"es": "Pokémon Zorro",
+					"it": "Pokémon Volpe",
+					"ja": "キツネポケモン",
+					"zh-hans": "狐狸宝可梦",
+					"es-419": "Pokémon Zorro"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 653
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 4
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 212
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 217
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 653,
+								"natiId": 653,
+								"name": "Fennekin"
+							},
+							{
+								"id": 654,
+								"natiId": 654,
+								"name": "Braixen",
+								"method": "Level",
+								"value": 16
+							},
+							{
+								"id": 655,
+								"natiId": 655,
+								"name": "Delphox",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/653",
+						"fetchedAt": "2026-11-03T05:53:46.794Z",
+						"hash": "41c66d7bb7c02eef088e5d57fcf617db316498b91be17231fbc9cc6619955d95"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/338/",
+						"fetchedAt": "2026-11-03T05:53:46.824Z",
+						"hash": "4306d211808cea3730402fdf5bfd3467af667b842d474ce209c7dbae73698352"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/653/",
+						"fetchedAt": "2026-11-03T05:53:46.858Z",
+						"hash": "013b79cb4ef78eb5904f31091fca641356b3cd647bc0a3f2798a169021801530"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/653/encounters",
+						"fetchedAt": "2026-11-03T05:53:46.912Z",
+						"hash": "a9dda4c18877d21ae5e6e30480b5e646aa4f9cb623228a44c44f15d5f99d0989"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/653/",
+						"fetchedAt": "2026-11-03T05:53:46.963Z",
+						"hash": "e3e909182af1d3e4212f3cee65a7d63db79aa297b15825b0e5ca645ba0ed0578"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarletid": "",
+				"violetid": ""
+			},
+			"localizedFlavorByGame": {
+				"scarletid": {},
+				"violetid": {}
+			}
+		},
+		{
+			"profileKey": "legends-za",
+			"label": "Legends: Z-A",
+			"appGameKeys": [
+				"legendsza"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Fennekin",
+				"localizedNames": {
+					"ja-hrkt": "フォッコ",
+					"ja-roma": "Fokko",
+					"ko": "푸호꼬",
+					"zh-hant": "火狐狸",
+					"fr": "Feunnec",
+					"de": "Fynx",
+					"es": "Fennekin",
+					"it": "Fennekin",
+					"ja": "フォッコ",
+					"zh-hans": "火狐狸",
+					"es-419": "Fennekin"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 45,
+					"def": 40,
+					"spa": 62,
+					"spd": 60,
+					"spe": 60
+				},
+				"evYield": {
+					"spa": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Blaze",
+					"Magician (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Magician"
+				],
+				"eggGroups": [
+					"Field"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.4 m",
+				"weight": "9.4 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 61,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Red",
+				"genus": "Fox Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "キツネポケモン",
+					"ko": "여우포켓몬",
+					"zh-hant": "狐狸寶可夢",
+					"fr": "Pokémon Renard",
+					"de": "Fuchs",
+					"es": "Pokémon Zorro",
+					"it": "Pokémon Volpe",
+					"ja": "キツネポケモン",
+					"zh-hans": "狐狸宝可梦",
+					"es-419": "Pokémon Zorro"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 653
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 4
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 212
+					},
+					{
+						"pokedex": "lumiose",
+						"number": 217
+					}
+				],
+				"alphaMove": "Swift",
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 653,
+								"natiId": 653,
+								"name": "Fennekin"
+							},
+							{
+								"id": 654,
+								"natiId": 654,
+								"name": "Braixen",
+								"method": "Level",
+								"value": 16
+							},
+							{
+								"id": 655,
+								"natiId": 655,
+								"name": "Delphox",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Wild Zone 18",
+						"notes": "",
+						"games": "Legends: Z-A"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Tail Whip",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Ember",
+							"level": 5,
+							"order": 3
+						},
+						{
+							"name": "Charm",
+							"level": 14,
+							"order": 4
+						},
+						{
+							"name": "Psybeam",
+							"level": 17,
+							"order": 5
+						},
+						{
+							"name": "Fire Spin",
+							"level": 20,
+							"order": 6
+						},
+						{
+							"name": "Light Screen",
+							"level": 25,
+							"order": 7
+						},
+						{
+							"name": "Psyshock",
+							"level": 31,
+							"order": 8
+						},
+						{
+							"name": "Flamethrower",
+							"level": 35,
+							"order": 9
+						},
+						{
+							"name": "Will-O-Wisp",
+							"level": 38,
+							"order": 10
+						},
+						{
+							"name": "Psychic",
+							"level": 41,
+							"order": 11
+						},
+						{
+							"name": "Fire Blast",
+							"level": 54,
+							"order": 12
+						}
+					],
+					"Machine": [
+						{
+							"name": "Psyshock",
+							"machine": "TM003",
+							"order": 1
+						},
+						{
+							"name": "Calm Mind",
+							"machine": "TM006",
+							"order": 2
+						},
+						{
+							"name": "Light Screen",
+							"machine": "TM016",
+							"order": 3
+						},
+						{
+							"name": "Protect",
+							"machine": "TM017",
+							"order": 4
+						},
+						{
+							"name": "Swift",
+							"machine": "TM027",
+							"order": 5
+						},
+						{
+							"name": "Endure",
+							"machine": "TM035",
+							"order": 6
+						},
+						{
+							"name": "Fire Blast",
+							"machine": "TM038",
+							"order": 7
+						},
+						{
+							"name": "Agility",
+							"machine": "TM047",
+							"order": 8
+						},
+						{
+							"name": "Overheat",
+							"machine": "TM050",
+							"order": 9
+						},
+						{
+							"name": "Will-O-Wisp",
+							"machine": "TM057",
+							"order": 10
+						},
+						{
+							"name": "Flamethrower",
+							"machine": "TM062",
+							"order": 11
+						},
+						{
+							"name": "Psychic",
+							"machine": "TM063",
+							"order": 12
+						},
+						{
+							"name": "Solar Beam",
+							"machine": "TM064",
+							"order": 13
+						},
+						{
+							"name": "Fire Spin",
+							"machine": "TM072",
+							"order": 14
+						},
+						{
+							"name": "Substitute",
+							"machine": "TM085",
+							"order": 15
+						},
+						{
+							"name": "Flare Blitz",
+							"machine": "TM104",
+							"order": 16
+						},
+						{
+							"name": "Facade",
+							"machine": "TM109",
+							"order": 17
+						},
+						{
+							"name": "Flame Charge",
+							"machine": "TM114",
+							"order": 18
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Project Pokemon's Z-A game-data export assigns this form regional Dex #217."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/653",
+						"fetchedAt": "2026-11-03T05:53:46.794Z",
+						"hash": "41c66d7bb7c02eef088e5d57fcf617db316498b91be17231fbc9cc6619955d95"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/338/",
+						"fetchedAt": "2026-11-03T05:53:46.824Z",
+						"hash": "4306d211808cea3730402fdf5bfd3467af667b842d474ce209c7dbae73698352"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/653/",
+						"fetchedAt": "2026-11-03T05:53:46.858Z",
+						"hash": "013b79cb4ef78eb5904f31091fca641356b3cd647bc0a3f2798a169021801530"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/653/encounters",
+						"fetchedAt": "2026-11-03T05:53:46.912Z",
+						"hash": "a9dda4c18877d21ae5e6e30480b5e646aa4f9cb623228a44c44f15d5f99d0989"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/653/",
+						"fetchedAt": "2026-11-03T05:53:46.963Z",
+						"hash": "e3e909182af1d3e4212f3cee65a7d63db79aa297b15825b0e5ca645ba0ed0578"
+					},
+					{
+						"type": "legends-za-personal-data",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/personal.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c00215459c764ba65d879d6503a7337ad80b338171ab4713d1c6f52b4517e36f"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "719eff37d8f2f404d163f81d23b2c921ac323a7b00304e502ca37d69a3375b1d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/French/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "1b658102e791558a1bb317563b7a3aaab8cebc1c7517aa7f5d5c0e708e93d626"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/German/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5f1e419ae3b84ab18cb05b972569e629ff0bff96d928468c52c536b02dc6cf9d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Italian/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "e0bd40a2f4b7678afb82f959b7b1f3503590bd13884daf94bd5813fea832067c"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/JPN/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5c2c9784278c5d13f3ba376e4338cef21923d68faec9b8498175c21180825f24"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Korean/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c83545726b0b0b803295f52448510c15adaab3e6ce248adba23b5ad0d0344216"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/LATAM/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "01d046caf7553d97a3c275465bce97ecedae26a67674a40b5c751a56b3b4d52d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Simp_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "09495dacb0d16eb6e91aa1d67eb1ed682d0682303719811eeb1c6877bb9e7ca2"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Spanish/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "b3fafb97fe85165bd65fdd732ce1e4cee880ffe5035632269787ce859735b358"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Trad_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c446ae3e93760fc4af895427508ed852511201723f8cac84121330747e8c3cd0"
+					},
+					{
+						"type": "legends-za-locations",
+						"url": "https://www.serebii.net/pokedex-sv/fennekin/",
+						"fetchedAt": "2026-11-04T05:47:08.165Z",
+						"hash": "3f7367f1e14946fb3344948c4ea53867065f816614daa06db409090b4cc04a60"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendsza": "Eating a twig fills it with energy, and its roomy ears give vent to air hotter than 390 degrees Fahrenheit."
+			},
+			"localizedFlavorByGame": {
+				"legendsza": {
+					"en": "Eating a twig fills it with energy, and its roomy ears give vent to air hotter than 390 degrees Fahrenheit.",
+					"fr": "Quand il grignote des rameaux, il reprend des forces et ses grandes oreilles dégagent une chaleur qui dépasse les 200 °C.",
+					"de": "Wenn es Zweige frisst, schöpft es neue Kraft und stößt aus seinen großen Ohren über 200 °C heiße Luft aus.",
+					"it": "Fa il pieno di energia mangiando ramoscelli per poi emettere aria calda dalle grandi orecchie a una temperatura di oltre 200 ºC.",
+					"ja": "小枝を 食べると 元気になって 摂氏２００度を 超える 熱気を 大きな 耳から 噴き出す。",
+					"ko": "잔가지를 먹으면 힘이 나서 섭씨 200도가 넘는 열기를 커다란 귀에서 내뿜는다.",
+					"es-419": "Tras masticar e ingerir pequeñas ramas, se siente pletórico y expulsa aire caliente por sus grandes orejas a temperaturas superiores a los 200 ºC.",
+					"zh-hans": "吃小树枝后就会变得充满活力， 会从大大的耳朵里喷出超过 摄氏２００度的热气。",
+					"es": "Tras masticar e ingerir pequeñas ramas se siente pletórico y expulsa aire caliente por sus grandes orejas a temperaturas superiores a los 200 ºC.",
+					"zh-hant": "吃了小樹枝就會變得有精神， 從大大的耳朵中噴出超過 攝氏２００度的熱氣。"
+				}
+			}
+		},
+		{
+			"profileKey": "mega-dimension",
+			"label": "Mega Dimension",
+			"appGameKeys": [
+				"legendszamd"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Fennekin",
+				"localizedNames": {
+					"ja-hrkt": "フォッコ",
+					"ja-roma": "Fokko",
+					"ko": "푸호꼬",
+					"zh-hant": "火狐狸",
+					"fr": "Feunnec",
+					"de": "Fynx",
+					"es": "Fennekin",
+					"it": "Fennekin",
+					"ja": "フォッコ",
+					"zh-hans": "火狐狸",
+					"es-419": "Fennekin"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Fire"
+				],
+				"baseStats": {
+					"hp": 40,
+					"atk": 45,
+					"def": 40,
+					"spa": 62,
+					"spd": 60,
+					"spe": 60
+				},
+				"evYield": {
+					"spa": 1
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Blaze",
+					"Magician (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Magician"
+				],
+				"eggGroups": [
+					"Field"
+				],
+				"expGroup": "Medium Slow",
+				"hatchCounter": 20,
+				"height": "0.4 m",
+				"weight": "9.4 kg",
+				"genderRatio": "87.5% male / 12.5% female",
+				"baseFriendship": 70,
+				"captureRate": 45,
+				"baseExperience": 61,
+				"habitat": "",
+				"shape": "Quadruped",
+				"color": "Red",
+				"genus": "Fox Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "キツネポケモン",
+					"ko": "여우포켓몬",
+					"zh-hant": "狐狸寶可夢",
+					"fr": "Pokémon Renard",
+					"de": "Fuchs",
+					"es": "Pokémon Zorro",
+					"it": "Pokémon Volpe",
+					"ja": "キツネポケモン",
+					"zh-hans": "狐狸宝可梦",
+					"es-419": "Pokémon Zorro"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 653
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 4
+					},
+					{
+						"pokedex": "blueberry",
+						"number": 212
+					},
+					{
+						"pokedex": "lumiose",
+						"number": 217
+					}
+				],
+				"alphaMove": "Swift",
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 653,
+								"natiId": 653,
+								"name": "Fennekin"
+							},
+							{
+								"id": 654,
+								"natiId": 654,
+								"name": "Braixen",
+								"method": "Level",
+								"value": 16
+							},
+							{
+								"id": 655,
+								"natiId": 655,
+								"name": "Delphox",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Wild Zone 18",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Hyperspace Lumiose",
+						"notes": "Fire (2 Star), Fire (3 Star), Fire (5 Star)",
+						"games": "Legends: Z-A Mega Dimension"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Tail Whip",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Ember",
+							"level": 5,
+							"order": 3
+						},
+						{
+							"name": "Charm",
+							"level": 14,
+							"order": 4
+						},
+						{
+							"name": "Psybeam",
+							"level": 17,
+							"order": 5
+						},
+						{
+							"name": "Fire Spin",
+							"level": 20,
+							"order": 6
+						},
+						{
+							"name": "Light Screen",
+							"level": 25,
+							"order": 7
+						},
+						{
+							"name": "Psyshock",
+							"level": 31,
+							"order": 8
+						},
+						{
+							"name": "Flamethrower",
+							"level": 35,
+							"order": 9
+						},
+						{
+							"name": "Will-O-Wisp",
+							"level": 38,
+							"order": 10
+						},
+						{
+							"name": "Psychic",
+							"level": 41,
+							"order": 11
+						},
+						{
+							"name": "Fire Blast",
+							"level": 54,
+							"order": 12
+						}
+					],
+					"Machine": [
+						{
+							"name": "Psyshock",
+							"machine": "TM003",
+							"order": 1
+						},
+						{
+							"name": "Calm Mind",
+							"machine": "TM006",
+							"order": 2
+						},
+						{
+							"name": "Light Screen",
+							"machine": "TM016",
+							"order": 3
+						},
+						{
+							"name": "Protect",
+							"machine": "TM017",
+							"order": 4
+						},
+						{
+							"name": "Swift",
+							"machine": "TM027",
+							"order": 5
+						},
+						{
+							"name": "Endure",
+							"machine": "TM035",
+							"order": 6
+						},
+						{
+							"name": "Fire Blast",
+							"machine": "TM038",
+							"order": 7
+						},
+						{
+							"name": "Agility",
+							"machine": "TM047",
+							"order": 8
+						},
+						{
+							"name": "Overheat",
+							"machine": "TM050",
+							"order": 9
+						},
+						{
+							"name": "Will-O-Wisp",
+							"machine": "TM057",
+							"order": 10
+						},
+						{
+							"name": "Flamethrower",
+							"machine": "TM062",
+							"order": 11
+						},
+						{
+							"name": "Psychic",
+							"machine": "TM063",
+							"order": 12
+						},
+						{
+							"name": "Solar Beam",
+							"machine": "TM064",
+							"order": 13
+						},
+						{
+							"name": "Fire Spin",
+							"machine": "TM072",
+							"order": 14
+						},
+						{
+							"name": "Substitute",
+							"machine": "TM085",
+							"order": 15
+						},
+						{
+							"name": "Flare Blitz",
+							"machine": "TM104",
+							"order": 16
+						},
+						{
+							"name": "Facade",
+							"machine": "TM109",
+							"order": 17
+						},
+						{
+							"name": "Flame Charge",
+							"machine": "TM114",
+							"order": 18
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Project Pokemon's Z-A game-data export assigns this form regional Dex #217."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/653",
+						"fetchedAt": "2026-11-03T05:53:46.794Z",
+						"hash": "41c66d7bb7c02eef088e5d57fcf617db316498b91be17231fbc9cc6619955d95"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/338/",
+						"fetchedAt": "2026-11-03T05:53:46.824Z",
+						"hash": "4306d211808cea3730402fdf5bfd3467af667b842d474ce209c7dbae73698352"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/653/",
+						"fetchedAt": "2026-11-03T05:53:46.858Z",
+						"hash": "013b79cb4ef78eb5904f31091fca641356b3cd647bc0a3f2798a169021801530"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/653/encounters",
+						"fetchedAt": "2026-11-03T05:53:46.912Z",
+						"hash": "a9dda4c18877d21ae5e6e30480b5e646aa4f9cb623228a44c44f15d5f99d0989"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/653/",
+						"fetchedAt": "2026-11-03T05:53:46.963Z",
+						"hash": "e3e909182af1d3e4212f3cee65a7d63db79aa297b15825b0e5ca645ba0ed0578"
+					},
+					{
+						"type": "legends-za-personal-data",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/personal.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c00215459c764ba65d879d6503a7337ad80b338171ab4713d1c6f52b4517e36f"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "719eff37d8f2f404d163f81d23b2c921ac323a7b00304e502ca37d69a3375b1d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/French/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "1b658102e791558a1bb317563b7a3aaab8cebc1c7517aa7f5d5c0e708e93d626"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/German/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5f1e419ae3b84ab18cb05b972569e629ff0bff96d928468c52c536b02dc6cf9d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Italian/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "e0bd40a2f4b7678afb82f959b7b1f3503590bd13884daf94bd5813fea832067c"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/JPN/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5c2c9784278c5d13f3ba376e4338cef21923d68faec9b8498175c21180825f24"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Korean/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c83545726b0b0b803295f52448510c15adaab3e6ce248adba23b5ad0d0344216"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/LATAM/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "01d046caf7553d97a3c275465bce97ecedae26a67674a40b5c751a56b3b4d52d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Simp_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "09495dacb0d16eb6e91aa1d67eb1ed682d0682303719811eeb1c6877bb9e7ca2"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Spanish/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "b3fafb97fe85165bd65fdd732ce1e4cee880ffe5035632269787ce859735b358"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Trad_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c446ae3e93760fc4af895427508ed852511201723f8cac84121330747e8c3cd0"
+					},
+					{
+						"type": "legends-za-locations",
+						"url": "https://www.serebii.net/pokedex-sv/fennekin/",
+						"fetchedAt": "2026-11-04T05:47:08.165Z",
+						"hash": "3f7367f1e14946fb3344948c4ea53867065f816614daa06db409090b4cc04a60"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendszamd": "Eating a twig fills it with energy, and its roomy ears give vent to air hotter than 390 degrees Fahrenheit."
+			},
+			"localizedFlavorByGame": {
+				"legendszamd": {
+					"en": "Eating a twig fills it with energy, and its roomy ears give vent to air hotter than 390 degrees Fahrenheit.",
+					"fr": "Quand il grignote des rameaux, il reprend des forces et ses grandes oreilles dégagent une chaleur qui dépasse les 200 °C.",
+					"de": "Wenn es Zweige frisst, schöpft es neue Kraft und stößt aus seinen großen Ohren über 200 °C heiße Luft aus.",
+					"it": "Fa il pieno di energia mangiando ramoscelli per poi emettere aria calda dalle grandi orecchie a una temperatura di oltre 200 ºC.",
+					"ja": "小枝を 食べると 元気になって 摂氏２００度を 超える 熱気を 大きな 耳から 噴き出す。",
+					"ko": "잔가지를 먹으면 힘이 나서 섭씨 200도가 넘는 열기를 커다란 귀에서 내뿜는다.",
+					"es-419": "Tras masticar e ingerir pequeñas ramas, se siente pletórico y expulsa aire caliente por sus grandes orejas a temperaturas superiores a los 200 ºC.",
+					"zh-hans": "吃小树枝后就会变得充满活力， 会从大大的耳朵里喷出超过 摄氏２００度的热气。",
+					"es": "Tras masticar e ingerir pequeñas ramas se siente pletórico y expulsa aire caliente por sus grandes orejas a temperaturas superiores a los 200 ºC.",
+					"zh-hant": "吃了小樹枝就會變得有精神， 從大大的耳朵中噴出超過 攝氏２００度的熱氣。"
+				}
+			}
+		}
+	]
+}

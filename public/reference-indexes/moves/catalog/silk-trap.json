@@ -1,0 +1,82 @@
+{
+	"schemaVersion": 1,
+	"id": 852,
+	"slug": "silk-trap",
+	"name": "Silk Trap",
+	"names": {
+		"de": "Fadenfalle",
+		"en": "Silk Trap",
+		"es": "Telatrampa",
+		"es-419": "Telatrampa",
+		"fr": "Piège de Fil",
+		"it": "Telatrappola",
+		"ja": "スレッドトラップ",
+		"ja-hrkt": "スレッドトラップ",
+		"ko": "스레드트랩",
+		"zh-hans": "线阱",
+		"zh-hant": "線阱"
+	},
+	"generation": 9,
+	"type": "Bug",
+	"damageClass": "Status",
+	"power": 0,
+	"accuracy": null,
+	"pp": 10,
+	"priority": 4,
+	"effectChance": null,
+	"target": "User",
+	"effectEntries": [],
+	"effectChanges": [],
+	"descriptions": [
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "en",
+			"text": "The user spins a silken trap, protecting itself from damage while lowering the Speed stat of any attacker that makes direct contact."
+		},
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "fr",
+			"text": "Le lanceur déploie un piège de fil pour se protéger contre les attaques, et si un assaillant utilise une attaque directe contre lui, la Vitesse de l'assaillant baisse."
+		}
+	],
+	"pastValues": [],
+	"statChanges": [
+		{
+			"stat": "Speed",
+			"change": -1
+		}
+	],
+	"meta": null,
+	"machines": [],
+	"learners": [
+		{
+			"nationalDexId": 918,
+			"speciesName": "Spidops",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		}
+	],
+	"potentialPokemon": [
+		"spidops"
+	],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/move/852/",
+		"fetchedAt": "2026-11-03T06:30:18.850Z",
+		"hash": "51954a7b4d181d99a3be220e6b3a04b73616c71b69d5d4cd14c5de7560818a76"
+	}
+}

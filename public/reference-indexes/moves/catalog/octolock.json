@@ -1,0 +1,146 @@
+{
+	"schemaVersion": 1,
+	"id": 753,
+	"slug": "octolock",
+	"name": "Octolock",
+	"names": {
+		"de": "Octoklammer",
+		"en": "Octolock",
+		"es": "Octopresa",
+		"es-419": "Octopresa",
+		"fr": "Octoprise",
+		"it": "Tentacolock",
+		"ja": "たこがため",
+		"ja-hrkt": "たこがため",
+		"ko": "문어굳히기",
+		"zh-hans": "蛸固",
+		"zh-hant": "蛸固"
+	},
+	"generation": 8,
+	"type": "Fighting",
+	"damageClass": "Status",
+	"power": null,
+	"accuracy": 100,
+	"pp": 15,
+	"priority": 0,
+	"effectChance": 100,
+	"target": "Selected Pokemon",
+	"effectEntries": [
+		{
+			"language": "en",
+			"effect": "Prevents the target from switching out. At the end of each turn, the targets Defense and Special Defense are lowered by 1 stage. The target may switch out using a Shed shell, Baton Pass, Flip turn, Parting Shot, Teleport, U-Turn, or Volt Switch. This effect ends if either Pokemon leave the field.",
+			"shortEffect": "Prevents the target from switching out. At the end of each turn, the targets Defense and Special Defense are lowered by 1 stage."
+		}
+	],
+	"effectChanges": [],
+	"descriptions": [
+		{
+			"versionGroup": "sword-shield",
+			"language": "de",
+			"text": "Das Ziel wird an der Flucht gehindert und seine Verteidigung und Spezial-Verteidigung sinken jede Runde."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "en",
+			"text": "The user locks the target in and prevents it from fleeing. This move also lowers the target’s Defense and Sp. Def every turn."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es",
+			"text": "Retiene al objetivo para impedir su huida, a la vez que reduce su Defensa y Defensa Especial cada turno."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es-419",
+			"text": "Retiene al objetivo para impedir su huida, a la vez que reduce su Defensa y Defensa Especial cada turno."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "fr",
+			"text": "Le lanceur empêche l’adversaire de fuir. À chaque tour qui passe, cette capacité baisse la Défense et la Défense Spéciale de la cible."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "it",
+			"text": "Chi la usa immobilizza il bersaglio impedendogli di fuggire e ne diminuisce la Difesa e la Difesa Speciale a ogni turno."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja",
+			"text": "相手を 逃げられなくする。 かためられた 相手は 毎ターン 防御と 特防が 下がる。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja-hrkt",
+			"text": "あいてを にげられなくする。 かためられた あいては まいターン ぼうぎょと とくぼうが さがる。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ko",
+			"text": "상대를 도망칠 수 없게 한다. 굳히기에 당한 상대는 매 턴 방어와 특수방어가 떨어진다."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hans",
+			"text": "让对手无法逃走。 对手被固定后， 每回合都会降低防御和特防。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hant",
+			"text": "讓對手無法逃走。 對手被纏住後， 防禦和特防每回合都會降低。"
+		}
+	],
+	"pastValues": [],
+	"statChanges": [],
+	"meta": {
+		"ailment": "None",
+		"category": "Unique",
+		"minHits": null,
+		"maxHits": null,
+		"minTurns": null,
+		"maxTurns": null,
+		"drain": 0,
+		"healing": 0,
+		"critRate": 0,
+		"ailmentChance": 0,
+		"flinchChance": 0,
+		"statChance": 0
+	},
+	"machines": [],
+	"learners": [
+		{
+			"nationalDexId": 853,
+			"speciesName": "Grapploct",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 1
+						}
+					],
+					"isHidden": false
+				}
+			]
+		}
+	],
+	"potentialPokemon": [
+		"grapploct"
+	],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/move/753/",
+		"fetchedAt": "2026-11-03T06:30:18.157Z",
+		"hash": "9b3261b04ed10d75962b45d35f86cbbd5140e9466c6f3093bd1cc14219bed101"
+	}
+}

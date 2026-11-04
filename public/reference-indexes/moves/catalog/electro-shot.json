@@ -1,0 +1,82 @@
+{
+	"schemaVersion": 1,
+	"id": 905,
+	"slug": "electro-shot",
+	"name": "Electro Shot",
+	"names": {
+		"de": "Stromstrahl",
+		"en": "Electro Shot",
+		"es": "Electrorrayo",
+		"es-419": "Electrorrayo",
+		"fr": "Fulgurayon",
+		"it": "Elettroraggio",
+		"ja": "エレクトロビーム",
+		"ja-hrkt": "エレクトロビーム",
+		"ko": "일렉트로빔",
+		"zh-hans": "电光束",
+		"zh-hant": "電光束"
+	},
+	"generation": 9,
+	"type": "Electric",
+	"damageClass": "Special",
+	"power": 130,
+	"accuracy": 100,
+	"pp": 10,
+	"priority": 0,
+	"effectChance": null,
+	"target": "Selected Pokemon",
+	"effectEntries": [],
+	"effectChanges": [],
+	"descriptions": [
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "en",
+			"text": "The user gathers electricity on the first turn, boosting its Sp. Atk stat, then fires a high-voltage shot on the next turn. The shot will be fired immediately in rain."
+		},
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "fr",
+			"text": "Le lanceur absorbe de l'électricité au premier tour, ce qui augmente son Attaque Spéciale, et envoie une puissante décharge au second. S'il pleut, il l'envoie au premier tour."
+		}
+	],
+	"pastValues": [],
+	"statChanges": [
+		{
+			"stat": "Special Attack",
+			"change": 1
+		}
+	],
+	"meta": null,
+	"machines": [],
+	"learners": [
+		{
+			"nationalDexId": 1018,
+			"speciesName": "Archaludon",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		}
+	],
+	"potentialPokemon": [
+		"archaludon"
+	],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/move/905/",
+		"fetchedAt": "2026-11-03T06:30:19.094Z",
+		"hash": "57232b3710f02cf514ab329a0f1e0b3ab166f91dc6de529620e3649f74b75b58"
+	}
+}

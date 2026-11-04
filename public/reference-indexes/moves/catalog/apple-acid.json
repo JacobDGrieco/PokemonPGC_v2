@@ -1,0 +1,156 @@
+{
+	"schemaVersion": 1,
+	"id": 787,
+	"slug": "apple-acid",
+	"name": "Apple Acid",
+	"names": {
+		"de": "Apfelsäure",
+		"en": "Apple Acid",
+		"es": "Ácido Málico",
+		"es-419": "Ácido Málico",
+		"fr": "Acide Malique",
+		"it": "Acido Malico",
+		"ja": "りんごさん",
+		"ja-hrkt": "りんごさん",
+		"ko": "사과산",
+		"zh-hans": "苹果酸",
+		"zh-hant": "蘋果酸"
+	},
+	"generation": 8,
+	"type": "Grass",
+	"damageClass": "Special",
+	"power": 80,
+	"accuracy": 100,
+	"pp": 10,
+	"priority": 0,
+	"effectChance": 100,
+	"target": "Selected Pokemon",
+	"effectEntries": [
+		{
+			"language": "en",
+			"effect": "Lower the targets Special Defense by 1 stage.",
+			"shortEffect": "Lower the targets Special Defense by 1 stage."
+		}
+	],
+	"effectChanges": [],
+	"descriptions": [
+		{
+			"versionGroup": "legends-arceus",
+			"language": "en",
+			"text": "The user attacks the target with an acidic liquid created from tart apples. This also lowers the target's Sp. Def stat."
+		},
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "en",
+			"text": "The user attacks the target with an acidic liquid created from tart apples. This also lowers the target's Sp. Def stat."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "de",
+			"text": "Der Anwender greift mit einer aus einem sauren Apfel hergestellten säurehaltigen Flüssigkeit an. Dabei wird die Spezial-Verteidigung des Zieles gesenkt."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "en",
+			"text": "The user attacks the target with an acidic liquid created from tart apples. This also lowers the target’s Sp. Def stat."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es",
+			"text": "Ataca al objetivo con el fluido corrosivo que desprende una manzana ácida, lo que también disminuye la Defensa Especial de este."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es-419",
+			"text": "Ataca al objetivo con el fluido corrosivo que desprende una manzana ácida, lo que también disminuye la Defensa Especial de este."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "fr",
+			"text": "Le lanceur attaque son adversaire avec un liquide corrosif créé à partir d’une pomme acide. Baisse la Défense Spéciale de la cible."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "it",
+			"text": "Chi la usa attacca il bersaglio con un liquido acido ricavato da mele aspre riducendone la Difesa Speciale."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja",
+			"text": "すっぱい りんごから つくりだした 酸性の 液体で 攻撃。 相手の 特防を 下げる。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja-hrkt",
+			"text": "すっぱい りんごから つくりだした さんせいの えきたいで こうげき。 あいての とくぼうを さげる。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ko",
+			"text": "새콤한 사과에서 만들어 낸 산성 액체로 공격한다. 상대의 특수방어를 떨어뜨린다."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hans",
+			"text": "使用从酸苹果中提取出来的 酸性液体进行攻击。 降低对手的特防。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hant",
+			"text": "使用從酸蘋果提煉出的 酸性液體進行攻擊。 可降低對手的特防。"
+		}
+	],
+	"pastValues": [],
+	"statChanges": [
+		{
+			"stat": "Special Defense",
+			"change": -1
+		}
+	],
+	"meta": {
+		"ailment": "None",
+		"category": "Damage Lower",
+		"minHits": null,
+		"maxHits": null,
+		"minTurns": null,
+		"maxTurns": null,
+		"drain": 0,
+		"healing": 0,
+		"critRate": 0,
+		"ailmentChance": 0,
+		"flinchChance": 0,
+		"statChance": 100
+	},
+	"machines": [],
+	"learners": [
+		{
+			"nationalDexId": 842,
+			"speciesName": "Appletun",
+			"formKey": "normal",
+			"formName": "Normal",
+			"games": [
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 28,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		}
+	],
+	"potentialPokemon": [
+		"appletun"
+	],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/move/787/",
+		"fetchedAt": "2026-11-03T06:30:18.417Z",
+		"hash": "076d34c4f118c7384d535a4ca03b520164768fb6095d5b05456efba24f89eb0b"
+	}
+}

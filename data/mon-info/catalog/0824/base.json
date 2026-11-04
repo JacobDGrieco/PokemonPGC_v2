@@ -1,0 +1,2659 @@
+{
+	"schemaVersion": 2,
+	"nationalDexId": 824,
+	"speciesName": "Blipbug",
+	"formKey": "base",
+	"formName": "Base",
+	"formLabelSource": "form-catalog",
+	"profiles": [
+		{
+			"profileKey": "sword-shield",
+			"label": "Sword / Shield",
+			"appGameKeys": [
+				"sword",
+				"shield"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Blipbug",
+				"localizedNames": {
+					"ja-hrkt": "サッチムシ",
+					"ja-roma": "Sacchimushi",
+					"ko": "두루지벌레",
+					"zh-hant": "索偵蟲",
+					"fr": "Larvadar",
+					"de": "Sensect",
+					"es": "Blipbug",
+					"it": "Blipbug",
+					"ja": "サッチムシ",
+					"zh-hans": "索侦虫",
+					"es-419": "Blipbug"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 25,
+					"atk": 20,
+					"def": 20,
+					"spa": 25,
+					"spd": 45,
+					"spe": 45
+				},
+				"evYield": {
+					"spd": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Swarm",
+					"Compound Eyes",
+					"Telepathy (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Telepathy"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.4 m",
+				"weight": "8.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 255,
+				"baseExperience": 36,
+				"habitat": "",
+				"shape": "Armor",
+				"color": "Blue",
+				"genus": "Larva Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ようちゅうポケモン",
+					"ko": "유충포켓몬",
+					"zh-hant": "幼蟲寶可夢",
+					"fr": "Pokémon Larve",
+					"de": "Larven-Pokémon",
+					"es": "Pokémon Pupa",
+					"it": "Pokémon Coleolarva",
+					"ja": "ようちゅうポケモン",
+					"zh-hans": "幼虫宝可梦",
+					"es-419": "Pokémon Pupa"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 824
+					},
+					{
+						"pokedex": "galar",
+						"number": 10
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 14
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 824,
+								"natiId": 824,
+								"name": "Blipbug"
+							},
+							{
+								"id": 825,
+								"natiId": 825,
+								"name": "Dottler",
+								"method": "Level",
+								"value": 10
+							},
+							{
+								"id": 826,
+								"natiId": 826,
+								"name": "Orbeetle",
+								"method": "Level",
+								"value": 30
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Galar Route 1 Area",
+						"notes": "Walk, Lv. 2-5",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Galar Route 1 Area",
+						"notes": "Walk, Lv. 2-5",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Galar Route 2 Main",
+						"notes": "Walk, Lv. 4-6",
+						"games": "Sword",
+						"rate": "40%"
+					},
+					{
+						"area": "Galar Route 2 Main",
+						"notes": "Walk, Lv. 4-6",
+						"games": "Shield",
+						"rate": "40%"
+					},
+					{
+						"area": "Giants Cap Area 2",
+						"notes": "Overworld, Lv. 28-30",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Giants Cap Area 2",
+						"notes": "Overworld, Lv. 60",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Giants Cap Area 2",
+						"notes": "Overworld, Lv. 28-30",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Giants Cap Area 2",
+						"notes": "Overworld, Lv. 60",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Giants Cap Area 3",
+						"notes": "Overworld, Lv. 29-32",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Giants Cap Area 3",
+						"notes": "Overworld, Lv. 60",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Giants Cap Area 3",
+						"notes": "Overworld, Lv. 29-32",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Giants Cap Area 3",
+						"notes": "Overworld, Lv. 60",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Slumbering Weald Main",
+						"notes": "Overworld, Lv. 2-3",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Slumbering Weald Main",
+						"notes": "Walk, Lv. 2-3",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Slumbering Weald Main",
+						"notes": "Overworld, Lv. 2-3",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Slumbering Weald Main",
+						"notes": "Walk, Lv. 2-3",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Galar Route 2 Lakeside",
+						"notes": "Overworld, Lv. 40-43",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Galar Route 2 Lakeside",
+						"notes": "Walk, Lv. 37-40",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Galar Route 2 Lakeside",
+						"notes": "Overworld, Lv. 40-43",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Galar Route 2 Lakeside",
+						"notes": "Walk, Lv. 37-40",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Galar Wild Area Max Dens Area",
+						"notes": "Max Raid, Lv. 17",
+						"games": "Sword",
+						"rate": "50%"
+					},
+					{
+						"area": "Galar Wild Area Max Dens Area",
+						"notes": "Max Raid, Lv. 17",
+						"games": "Shield",
+						"rate": "50%"
+					},
+					{
+						"area": "Rolling Fields Max Den E",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Rolling Fields Max Den E",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Rolling Fields Max Den F",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Rolling Fields Max Den F",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Rolling Fields Max Den G",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Rolling Fields Max Den G",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Dappled Grove Max Den B",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Dappled Grove Max Den B",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "South Lake Miloch Max Den A",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "South Lake Miloch Max Den A",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "South Lake Miloch Max Den A",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "South Lake Miloch Max Den A",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "South Lake Miloch Max Den A",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "South Lake Miloch Max Den A",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Bridge Field Max Den B",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Bridge Field Max Den B",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Bridge Field Max Den H",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Bridge Field Max Den H",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Bridge Field Max Den I",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Bridge Field Max Den I",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Bridge Field Max Den I",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Bridge Field Max Den I",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Bridge Field Max Den I",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Bridge Field Max Den I",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "Shield",
+						"rate": "30%"
+					}
+				],
+				"moves": {
+					"Egg": [
+						{
+							"name": "Infestation",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Recover",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sticky Web",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Supersonic",
+							"level": null,
+							"order": null
+						}
+					],
+					"Level Up": [
+						{
+							"name": "Struggle Bug",
+							"level": 1,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/824",
+						"fetchedAt": "2026-11-03T05:53:59.335Z",
+						"hash": "e6e990c1a051b8b60935b1680c9fef626b6d0b1b224f57c067fff0fecff251d2"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/435/",
+						"fetchedAt": "2026-11-03T05:53:59.366Z",
+						"hash": "a4b929cf1228ebf9c6cf20279c56a7ccf1eeaedb7dec4982b5ef1c9e7968d5ee"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/824/",
+						"fetchedAt": "2026-11-03T05:53:59.408Z",
+						"hash": "74d36138d2d4f65314c676609c66cc25d7aabe233161d40898e9ef1458370a4f"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/824/encounters",
+						"fetchedAt": "2026-11-03T05:53:59.439Z",
+						"hash": "7fc2bf820d0d5883e10a683c9d6a0b35c557538c4c9ceec5a1d063268888e520"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/824/",
+						"fetchedAt": "2026-11-03T05:53:59.498Z",
+						"hash": "75daf49f16c0feeba3fa27e48fe383338354adbaa44c7a4054a97daa2d75d290"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sword": "A constant collector of information, this Pokémon is very smart. Very strong is what it isn’t.",
+				"shield": "Often found in gardens, this Pokémon has hairs on its body that it uses to assess its surroundings."
+			},
+			"localizedFlavorByGame": {
+				"sword": {
+					"ja-hrkt": "いつも せっせと じょうほうを あつめているので かしこい。 ただし ちからは いまいちだ。",
+					"ko": "언제나 부지런히 정보를 모으기 때문에 똑똑하다. 단, 힘은 그저 그렇다.",
+					"zh-hant": "總是孜孜不倦地收集情報， 所以頭腦相當地聰明， 但是力量方面就差了一些。",
+					"fr": "Comme il passe tout son temps à recueillir des informations, son intelligence est très développée, mais sa force physique laisse à désirer.",
+					"de": "Sensect ist ein schlaues Pokémon, da es immer fleißig Informationen sammelt. Seine Stärke lässt jedoch zu wünschen übrig.",
+					"es": "Siempre está recopilando información, por lo que es muy inteligente, aunque su fuerza deja bastante que desear.",
+					"it": "Sempre impegnato a raccogliere informazioni, ha sviluppato molto la sua intelligenza, ma non ha una grande forza.",
+					"en": "A constant collector of information, this Pokémon is very smart. Very strong is what it isn’t.",
+					"ja": "いつも せっせと 情報を 集めているので 賢い。 ただし 力は いまいちだ。",
+					"zh-hans": "总是孜孜不倦地收集情报， 所以头脑相当地聪明， 但力量方面就差了一些。",
+					"es-419": "Siempre está recopilando información, por lo que es muy inteligente, aunque su fuerza deja bastante que desear."
+				},
+				"shield": {
+					"ja-hrkt": "はたけで よくみかける ポケモン。 からだに はえた けで まわりで おきていることを かんじとる。",
+					"ko": "밭에서 자주 보이는 포켓몬이다. 몸에 난 털로 주위에서 일어나는 일을 감지한다.",
+					"zh-hant": "經常出現在田地裡的寶可夢。 會透過長在身體上的毛 來感應周圍發生的事。",
+					"fr": "On le voit souvent dans les champs. Les poils de son corps lui servent à capter ce qu’il se passe autour de lui.",
+					"de": "Dieses Pokémon trifft man oft auf Feldern an. Mit den Haaren, die an seinem Körper wachsen, spürt es, was in der Umgebung vor sich geht.",
+					"es": "Es habitual verlo en el campo. Los pelos que tiene son sensores con los que percibe lo que ocurre a su alrededor.",
+					"it": "Si incontra spesso nei campi. Le setole che crescono sul suo corpo gli permettono di percepire ciò che accade attorno a lui.",
+					"en": "Often found in gardens, this Pokémon has hairs on its body that it uses to assess its surroundings.",
+					"ja": "畑で よく見かける ポケモン。 体に 生えた 毛で まわりで 起きていることを 感じとる。",
+					"zh-hans": "经常出现在田地里的宝可梦。 会通过长在身体上的毛 来感应周围发生的事。",
+					"es-419": "Es habitual verlo en el campo. Los pelos que tiene son sensores con los que percibe lo que ocurre a su alrededor."
+				}
+			}
+		},
+		{
+			"profileKey": "the-isle-of-armor",
+			"label": "The Isle of Armor",
+			"appGameKeys": [
+				"swordioa",
+				"shieldioa"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Blipbug",
+				"localizedNames": {
+					"ja-hrkt": "サッチムシ",
+					"ja-roma": "Sacchimushi",
+					"ko": "두루지벌레",
+					"zh-hant": "索偵蟲",
+					"fr": "Larvadar",
+					"de": "Sensect",
+					"es": "Blipbug",
+					"it": "Blipbug",
+					"ja": "サッチムシ",
+					"zh-hans": "索侦虫",
+					"es-419": "Blipbug"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 25,
+					"atk": 20,
+					"def": 20,
+					"spa": 25,
+					"spd": 45,
+					"spe": 45
+				},
+				"evYield": {
+					"spd": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Swarm",
+					"Compound Eyes",
+					"Telepathy (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Telepathy"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.4 m",
+				"weight": "8.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 255,
+				"baseExperience": 36,
+				"habitat": "",
+				"shape": "Armor",
+				"color": "Blue",
+				"genus": "Larva Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ようちゅうポケモン",
+					"ko": "유충포켓몬",
+					"zh-hant": "幼蟲寶可夢",
+					"fr": "Pokémon Larve",
+					"de": "Larven-Pokémon",
+					"es": "Pokémon Pupa",
+					"it": "Pokémon Coleolarva",
+					"ja": "ようちゅうポケモン",
+					"zh-hans": "幼虫宝可梦",
+					"es-419": "Pokémon Pupa"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 824
+					},
+					{
+						"pokedex": "galar",
+						"number": 10
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 14
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 824,
+								"natiId": 824,
+								"name": "Blipbug"
+							},
+							{
+								"id": 825,
+								"natiId": 825,
+								"name": "Dottler",
+								"method": "Level",
+								"value": 10
+							},
+							{
+								"id": 826,
+								"natiId": 826,
+								"name": "Orbeetle",
+								"method": "Level",
+								"value": 30
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Challenge Beach Area",
+						"notes": "Walk, Lv. 13-18",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Beach Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Beach Area",
+						"notes": "Walk, Lv. 13-18",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Beach Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Beach Area",
+						"notes": "Walk, Lv. 13-18",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Beach Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Beach Area",
+						"notes": "Walk, Lv. 13-18",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Beach Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Beach Area",
+						"notes": "Walk, Lv. 13-18",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Beach Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Beach Area",
+						"notes": "Walk, Lv. 13-18",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Beach Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Beach Area",
+						"notes": "Walk, Lv. 13-18",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Beach Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Beach Area",
+						"notes": "Walk, Lv. 13-18",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Beach Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Beach Area",
+						"notes": "Walk, Lv. 13-18",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Beach Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Beach Area",
+						"notes": "Walk, Lv. 13-18",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Beach Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Beach Area",
+						"notes": "Walk, Lv. 13-18",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Beach Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Beach Area",
+						"notes": "Walk, Lv. 13-18",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Beach Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Beach Area",
+						"notes": "Walk, Lv. 13-18",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Beach Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Beach Area",
+						"notes": "Walk, Lv. 13-18",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Beach Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Road Area",
+						"notes": "Walk, Lv. 19-24",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Road Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Road Area",
+						"notes": "Walk, Lv. 19-24",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Road Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Road Area",
+						"notes": "Walk, Lv. 19-24",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Road Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Road Area",
+						"notes": "Walk, Lv. 19-24",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Road Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Road Area",
+						"notes": "Walk, Lv. 19-24",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Road Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Road Area",
+						"notes": "Walk, Lv. 19-24",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Road Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Road Area",
+						"notes": "Walk, Lv. 19-24",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Road Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Road Area",
+						"notes": "Walk, Lv. 19-24",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Road Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Road Area",
+						"notes": "Walk, Lv. 19-24",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Road Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Road Area",
+						"notes": "Walk, Lv. 19-24",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Road Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Road Area",
+						"notes": "Walk, Lv. 19-24",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Road Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Road Area",
+						"notes": "Walk, Lv. 19-24",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Road Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Road Area",
+						"notes": "Walk, Lv. 19-24",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Road Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Road Area",
+						"notes": "Walk, Lv. 19-24",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Challenge Road Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Fields Of Honor Area",
+						"notes": "Walk, Lv. 13-18",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Fields Of Honor Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Fields Of Honor Area",
+						"notes": "Walk, Lv. 13-18",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Fields Of Honor Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Fields Of Honor Area",
+						"notes": "Walk, Lv. 13-18",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Fields Of Honor Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Fields Of Honor Area",
+						"notes": "Walk, Lv. 13-18",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Fields Of Honor Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Fields Of Honor Area",
+						"notes": "Walk, Lv. 13-18",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Fields Of Honor Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Fields Of Honor Area",
+						"notes": "Walk, Lv. 13-18",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Fields Of Honor Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Fields Of Honor Area",
+						"notes": "Walk, Lv. 13-18",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Fields Of Honor Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Fields Of Honor Area",
+						"notes": "Walk, Lv. 13-18",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Fields Of Honor Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Fields Of Honor Area",
+						"notes": "Walk, Lv. 13-18",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Fields Of Honor Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Fields Of Honor Area",
+						"notes": "Walk, Lv. 13-18",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Fields Of Honor Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Fields Of Honor Area",
+						"notes": "Walk, Lv. 13-18",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Fields Of Honor Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Fields Of Honor Area",
+						"notes": "Walk, Lv. 13-18",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Fields Of Honor Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Fields Of Honor Area",
+						"notes": "Walk, Lv. 13-18",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Fields Of Honor Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Fields Of Honor Area",
+						"notes": "Walk, Lv. 13-18",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Fields Of Honor Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Honeycalm Island Area",
+						"notes": "Walk, Lv. 43-48",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Honeycalm Island Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Honeycalm Island Area",
+						"notes": "Walk, Lv. 43-48",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Honeycalm Island Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Insular Sea Area",
+						"notes": "Walk, Lv. 43-48",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Insular Sea Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Insular Sea Area",
+						"notes": "Walk, Lv. 43-48",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Insular Sea Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Loop Lagoon Area",
+						"notes": "Walk, Lv. 19-24",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Loop Lagoon Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Loop Lagoon Area",
+						"notes": "Walk, Lv. 19-24",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Loop Lagoon Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Loop Lagoon Area",
+						"notes": "Walk, Lv. 19-24",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Loop Lagoon Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Loop Lagoon Area",
+						"notes": "Walk, Lv. 19-24",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Loop Lagoon Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Loop Lagoon Area",
+						"notes": "Walk, Lv. 19-24",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Loop Lagoon Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Loop Lagoon Area",
+						"notes": "Walk, Lv. 19-24",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Loop Lagoon Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Loop Lagoon Area",
+						"notes": "Walk, Lv. 19-24",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Loop Lagoon Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Loop Lagoon Area",
+						"notes": "Walk, Lv. 19-24",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Loop Lagoon Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Loop Lagoon Area",
+						"notes": "Walk, Lv. 19-24",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Loop Lagoon Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Loop Lagoon Area",
+						"notes": "Walk, Lv. 19-24",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Loop Lagoon Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Loop Lagoon Area",
+						"notes": "Walk, Lv. 19-24",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Loop Lagoon Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Loop Lagoon Area",
+						"notes": "Walk, Lv. 19-24",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Loop Lagoon Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Loop Lagoon Area",
+						"notes": "Walk, Lv. 19-24",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Loop Lagoon Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Loop Lagoon Area",
+						"notes": "Walk, Lv. 19-24",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Loop Lagoon Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Stepping Stone Sea Main",
+						"notes": "Walk, Lv. 43-48",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Stepping Stone Sea Main",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Stepping Stone Sea Main",
+						"notes": "Walk, Lv. 43-48",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Stepping Stone Sea Main",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Training Lowlands Area",
+						"notes": "Walk, Lv. 16-21",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Training Lowlands Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Training Lowlands Area",
+						"notes": "Walk, Lv. 16-21",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Training Lowlands Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Training Lowlands Area",
+						"notes": "Walk, Lv. 16-21",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Training Lowlands Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Training Lowlands Area",
+						"notes": "Walk, Lv. 16-21",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Training Lowlands Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Training Lowlands Area",
+						"notes": "Walk, Lv. 16-21",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Training Lowlands Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Training Lowlands Area",
+						"notes": "Walk, Lv. 16-21",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Training Lowlands Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Training Lowlands Area",
+						"notes": "Walk, Lv. 16-21",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Training Lowlands Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Training Lowlands Area",
+						"notes": "Walk, Lv. 16-21",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Training Lowlands Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Training Lowlands Area",
+						"notes": "Walk, Lv. 16-21",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Training Lowlands Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Training Lowlands Area",
+						"notes": "Walk, Lv. 16-21",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Training Lowlands Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Training Lowlands Area",
+						"notes": "Walk, Lv. 16-21",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Training Lowlands Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Training Lowlands Area",
+						"notes": "Walk, Lv. 16-21",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Training Lowlands Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Training Lowlands Area",
+						"notes": "Walk, Lv. 16-21",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Training Lowlands Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Training Lowlands Area",
+						"notes": "Walk, Lv. 16-21",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Training Lowlands Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Workout Sea Area",
+						"notes": "Walk, Lv. 43-48",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Workout Sea Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Workout Sea Area",
+						"notes": "Walk, Lv. 43-48",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Workout Sea Area",
+						"notes": "Walk, Lv. 60",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Training Lowlands Max Den C",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "The Isle Of Armor Sword",
+						"rate": "60%"
+					},
+					{
+						"area": "Training Lowlands Max Den C",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "The Isle Of Armor Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Training Lowlands Max Den C",
+						"notes": "Max Raid, Lv. 15-20",
+						"games": "The Isle Of Armor Shield",
+						"rate": "60%"
+					},
+					{
+						"area": "Training Lowlands Max Den C",
+						"notes": "Max Raid, Lv. 25-30",
+						"games": "The Isle Of Armor Shield",
+						"rate": "30%"
+					}
+				],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/824",
+						"fetchedAt": "2026-11-03T05:53:59.335Z",
+						"hash": "e6e990c1a051b8b60935b1680c9fef626b6d0b1b224f57c067fff0fecff251d2"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/435/",
+						"fetchedAt": "2026-11-03T05:53:59.366Z",
+						"hash": "a4b929cf1228ebf9c6cf20279c56a7ccf1eeaedb7dec4982b5ef1c9e7968d5ee"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/824/",
+						"fetchedAt": "2026-11-03T05:53:59.408Z",
+						"hash": "74d36138d2d4f65314c676609c66cc25d7aabe233161d40898e9ef1458370a4f"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/824/encounters",
+						"fetchedAt": "2026-11-03T05:53:59.439Z",
+						"hash": "7fc2bf820d0d5883e10a683c9d6a0b35c557538c4c9ceec5a1d063268888e520"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/824/",
+						"fetchedAt": "2026-11-03T05:53:59.498Z",
+						"hash": "75daf49f16c0feeba3fa27e48fe383338354adbaa44c7a4054a97daa2d75d290"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordioa": "",
+				"shieldioa": ""
+			},
+			"localizedFlavorByGame": {
+				"swordioa": {},
+				"shieldioa": {}
+			}
+		},
+		{
+			"profileKey": "the-crown-tundra",
+			"label": "The Crown Tundra",
+			"appGameKeys": [
+				"swordct",
+				"shieldct"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Blipbug",
+				"localizedNames": {
+					"ja-hrkt": "サッチムシ",
+					"ja-roma": "Sacchimushi",
+					"ko": "두루지벌레",
+					"zh-hant": "索偵蟲",
+					"fr": "Larvadar",
+					"de": "Sensect",
+					"es": "Blipbug",
+					"it": "Blipbug",
+					"ja": "サッチムシ",
+					"zh-hans": "索侦虫",
+					"es-419": "Blipbug"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 25,
+					"atk": 20,
+					"def": 20,
+					"spa": 25,
+					"spd": 45,
+					"spe": 45
+				},
+				"evYield": {
+					"spd": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Swarm",
+					"Compound Eyes",
+					"Telepathy (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Telepathy"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.4 m",
+				"weight": "8.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 255,
+				"baseExperience": 36,
+				"habitat": "",
+				"shape": "Armor",
+				"color": "Blue",
+				"genus": "Larva Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ようちゅうポケモン",
+					"ko": "유충포켓몬",
+					"zh-hant": "幼蟲寶可夢",
+					"fr": "Pokémon Larve",
+					"de": "Larven-Pokémon",
+					"es": "Pokémon Pupa",
+					"it": "Pokémon Coleolarva",
+					"ja": "ようちゅうポケモン",
+					"zh-hans": "幼虫宝可梦",
+					"es-419": "Pokémon Pupa"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 824
+					},
+					{
+						"pokedex": "galar",
+						"number": 10
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 14
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 824,
+								"natiId": 824,
+								"name": "Blipbug"
+							},
+							{
+								"id": 825,
+								"natiId": 825,
+								"name": "Dottler",
+								"method": "Level",
+								"value": 10
+							},
+							{
+								"id": 826,
+								"natiId": 826,
+								"name": "Orbeetle",
+								"method": "Level",
+								"value": 30
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/824",
+						"fetchedAt": "2026-11-03T05:53:59.335Z",
+						"hash": "e6e990c1a051b8b60935b1680c9fef626b6d0b1b224f57c067fff0fecff251d2"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/435/",
+						"fetchedAt": "2026-11-03T05:53:59.366Z",
+						"hash": "a4b929cf1228ebf9c6cf20279c56a7ccf1eeaedb7dec4982b5ef1c9e7968d5ee"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/824/",
+						"fetchedAt": "2026-11-03T05:53:59.408Z",
+						"hash": "74d36138d2d4f65314c676609c66cc25d7aabe233161d40898e9ef1458370a4f"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/824/encounters",
+						"fetchedAt": "2026-11-03T05:53:59.439Z",
+						"hash": "7fc2bf820d0d5883e10a683c9d6a0b35c557538c4c9ceec5a1d063268888e520"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/824/",
+						"fetchedAt": "2026-11-03T05:53:59.498Z",
+						"hash": "75daf49f16c0feeba3fa27e48fe383338354adbaa44c7a4054a97daa2d75d290"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordct": "",
+				"shieldct": ""
+			},
+			"localizedFlavorByGame": {
+				"swordct": {},
+				"shieldct": {}
+			}
+		},
+		{
+			"profileKey": "brilliant-diamond-shining-pearl",
+			"label": "Brilliant Diamond / Shining Pearl",
+			"appGameKeys": [
+				"brilliantdiamond-national",
+				"brilliantdiamond",
+				"shiningpearl-national",
+				"shiningpearl"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Blipbug",
+				"localizedNames": {
+					"ja-hrkt": "サッチムシ",
+					"ja-roma": "Sacchimushi",
+					"ko": "두루지벌레",
+					"zh-hant": "索偵蟲",
+					"fr": "Larvadar",
+					"de": "Sensect",
+					"es": "Blipbug",
+					"it": "Blipbug",
+					"ja": "サッチムシ",
+					"zh-hans": "索侦虫",
+					"es-419": "Blipbug"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 25,
+					"atk": 20,
+					"def": 20,
+					"spa": 25,
+					"spd": 45,
+					"spe": 45
+				},
+				"evYield": {
+					"spd": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Swarm",
+					"Compound Eyes",
+					"Telepathy (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Telepathy"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.4 m",
+				"weight": "8.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 255,
+				"baseExperience": 36,
+				"habitat": "",
+				"shape": "Armor",
+				"color": "Blue",
+				"genus": "Larva Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ようちゅうポケモン",
+					"ko": "유충포켓몬",
+					"zh-hant": "幼蟲寶可夢",
+					"fr": "Pokémon Larve",
+					"de": "Larven-Pokémon",
+					"es": "Pokémon Pupa",
+					"it": "Pokémon Coleolarva",
+					"ja": "ようちゅうポケモン",
+					"zh-hans": "幼虫宝可梦",
+					"es-419": "Pokémon Pupa"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 824
+					},
+					{
+						"pokedex": "galar",
+						"number": 10
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 14
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 824,
+								"natiId": 824,
+								"name": "Blipbug"
+							},
+							{
+								"id": 825,
+								"natiId": 825,
+								"name": "Dottler",
+								"method": "Level",
+								"value": 10
+							},
+							{
+								"id": 826,
+								"natiId": 826,
+								"name": "Orbeetle",
+								"method": "Level",
+								"value": 30
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/824",
+						"fetchedAt": "2026-11-03T05:53:59.335Z",
+						"hash": "e6e990c1a051b8b60935b1680c9fef626b6d0b1b224f57c067fff0fecff251d2"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/435/",
+						"fetchedAt": "2026-11-03T05:53:59.366Z",
+						"hash": "a4b929cf1228ebf9c6cf20279c56a7ccf1eeaedb7dec4982b5ef1c9e7968d5ee"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/824/",
+						"fetchedAt": "2026-11-03T05:53:59.408Z",
+						"hash": "74d36138d2d4f65314c676609c66cc25d7aabe233161d40898e9ef1458370a4f"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/824/encounters",
+						"fetchedAt": "2026-11-03T05:53:59.439Z",
+						"hash": "7fc2bf820d0d5883e10a683c9d6a0b35c557538c4c9ceec5a1d063268888e520"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/824/",
+						"fetchedAt": "2026-11-03T05:53:59.498Z",
+						"hash": "75daf49f16c0feeba3fa27e48fe383338354adbaa44c7a4054a97daa2d75d290"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"brilliantdiamond-national": "",
+				"brilliantdiamond": "",
+				"shiningpearl-national": "",
+				"shiningpearl": ""
+			},
+			"localizedFlavorByGame": {
+				"brilliantdiamond-national": {},
+				"brilliantdiamond": {},
+				"shiningpearl-national": {},
+				"shiningpearl": {}
+			}
+		},
+		{
+			"profileKey": "legends-arceus",
+			"label": "Legends: Arceus",
+			"appGameKeys": [
+				"legendsarceus"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Blipbug",
+				"localizedNames": {
+					"ja-hrkt": "サッチムシ",
+					"ja-roma": "Sacchimushi",
+					"ko": "두루지벌레",
+					"zh-hant": "索偵蟲",
+					"fr": "Larvadar",
+					"de": "Sensect",
+					"es": "Blipbug",
+					"it": "Blipbug",
+					"ja": "サッチムシ",
+					"zh-hans": "索侦虫",
+					"es-419": "Blipbug"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 25,
+					"atk": 20,
+					"def": 20,
+					"spa": 25,
+					"spd": 45,
+					"spe": 45
+				},
+				"evYield": {
+					"spd": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Swarm",
+					"Compound Eyes",
+					"Telepathy (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Telepathy"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.4 m",
+				"weight": "8.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 255,
+				"baseExperience": 36,
+				"habitat": "",
+				"shape": "Armor",
+				"color": "Blue",
+				"genus": "Larva Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ようちゅうポケモン",
+					"ko": "유충포켓몬",
+					"zh-hant": "幼蟲寶可夢",
+					"fr": "Pokémon Larve",
+					"de": "Larven-Pokémon",
+					"es": "Pokémon Pupa",
+					"it": "Pokémon Coleolarva",
+					"ja": "ようちゅうポケモン",
+					"zh-hans": "幼虫宝可梦",
+					"es-419": "Pokémon Pupa"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 824
+					},
+					{
+						"pokedex": "galar",
+						"number": 10
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 14
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 824,
+								"natiId": 824,
+								"name": "Blipbug"
+							},
+							{
+								"id": 825,
+								"natiId": 825,
+								"name": "Dottler",
+								"method": "Level",
+								"value": 10
+							},
+							{
+								"id": 826,
+								"natiId": 826,
+								"name": "Orbeetle",
+								"method": "Level",
+								"value": 30
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/824",
+						"fetchedAt": "2026-11-03T05:53:59.335Z",
+						"hash": "e6e990c1a051b8b60935b1680c9fef626b6d0b1b224f57c067fff0fecff251d2"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/435/",
+						"fetchedAt": "2026-11-03T05:53:59.366Z",
+						"hash": "a4b929cf1228ebf9c6cf20279c56a7ccf1eeaedb7dec4982b5ef1c9e7968d5ee"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/824/",
+						"fetchedAt": "2026-11-03T05:53:59.408Z",
+						"hash": "74d36138d2d4f65314c676609c66cc25d7aabe233161d40898e9ef1458370a4f"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/824/encounters",
+						"fetchedAt": "2026-11-03T05:53:59.439Z",
+						"hash": "7fc2bf820d0d5883e10a683c9d6a0b35c557538c4c9ceec5a1d063268888e520"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/824/",
+						"fetchedAt": "2026-11-03T05:53:59.498Z",
+						"hash": "75daf49f16c0feeba3fa27e48fe383338354adbaa44c7a4054a97daa2d75d290"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendsarceus": ""
+			},
+			"localizedFlavorByGame": {
+				"legendsarceus": {}
+			}
+		},
+		{
+			"profileKey": "scarlet-violet",
+			"label": "Scarlet / Violet",
+			"appGameKeys": [
+				"scarlet",
+				"violet"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Blipbug",
+				"localizedNames": {
+					"ja-hrkt": "サッチムシ",
+					"ja-roma": "Sacchimushi",
+					"ko": "두루지벌레",
+					"zh-hant": "索偵蟲",
+					"fr": "Larvadar",
+					"de": "Sensect",
+					"es": "Blipbug",
+					"it": "Blipbug",
+					"ja": "サッチムシ",
+					"zh-hans": "索侦虫",
+					"es-419": "Blipbug"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 25,
+					"atk": 20,
+					"def": 20,
+					"spa": 25,
+					"spd": 45,
+					"spe": 45
+				},
+				"evYield": {
+					"spd": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Swarm",
+					"Compound Eyes",
+					"Telepathy (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Telepathy"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.4 m",
+				"weight": "8.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 255,
+				"baseExperience": 36,
+				"habitat": "",
+				"shape": "Armor",
+				"color": "Blue",
+				"genus": "Larva Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ようちゅうポケモン",
+					"ko": "유충포켓몬",
+					"zh-hant": "幼蟲寶可夢",
+					"fr": "Pokémon Larve",
+					"de": "Larven-Pokémon",
+					"es": "Pokémon Pupa",
+					"it": "Pokémon Coleolarva",
+					"ja": "ようちゅうポケモン",
+					"zh-hans": "幼虫宝可梦",
+					"es-419": "Pokémon Pupa"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 824
+					},
+					{
+						"pokedex": "galar",
+						"number": 10
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 14
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 824,
+								"natiId": 824,
+								"name": "Blipbug"
+							},
+							{
+								"id": 825,
+								"natiId": 825,
+								"name": "Dottler",
+								"method": "Level",
+								"value": 10
+							},
+							{
+								"id": 826,
+								"natiId": 826,
+								"name": "Orbeetle",
+								"method": "Level",
+								"value": 30
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/824",
+						"fetchedAt": "2026-11-03T05:53:59.335Z",
+						"hash": "e6e990c1a051b8b60935b1680c9fef626b6d0b1b224f57c067fff0fecff251d2"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/435/",
+						"fetchedAt": "2026-11-03T05:53:59.366Z",
+						"hash": "a4b929cf1228ebf9c6cf20279c56a7ccf1eeaedb7dec4982b5ef1c9e7968d5ee"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/824/",
+						"fetchedAt": "2026-11-03T05:53:59.408Z",
+						"hash": "74d36138d2d4f65314c676609c66cc25d7aabe233161d40898e9ef1458370a4f"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/824/encounters",
+						"fetchedAt": "2026-11-03T05:53:59.439Z",
+						"hash": "7fc2bf820d0d5883e10a683c9d6a0b35c557538c4c9ceec5a1d063268888e520"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/824/",
+						"fetchedAt": "2026-11-03T05:53:59.498Z",
+						"hash": "75daf49f16c0feeba3fa27e48fe383338354adbaa44c7a4054a97daa2d75d290"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlet": "",
+				"violet": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlet": {},
+				"violet": {}
+			}
+		},
+		{
+			"profileKey": "the-teal-mask",
+			"label": "The Teal Mask",
+			"appGameKeys": [
+				"scarlettm",
+				"violettm"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Blipbug",
+				"localizedNames": {
+					"ja-hrkt": "サッチムシ",
+					"ja-roma": "Sacchimushi",
+					"ko": "두루지벌레",
+					"zh-hant": "索偵蟲",
+					"fr": "Larvadar",
+					"de": "Sensect",
+					"es": "Blipbug",
+					"it": "Blipbug",
+					"ja": "サッチムシ",
+					"zh-hans": "索侦虫",
+					"es-419": "Blipbug"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 25,
+					"atk": 20,
+					"def": 20,
+					"spa": 25,
+					"spd": 45,
+					"spe": 45
+				},
+				"evYield": {
+					"spd": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Swarm",
+					"Compound Eyes",
+					"Telepathy (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Telepathy"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.4 m",
+				"weight": "8.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 255,
+				"baseExperience": 36,
+				"habitat": "",
+				"shape": "Armor",
+				"color": "Blue",
+				"genus": "Larva Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ようちゅうポケモン",
+					"ko": "유충포켓몬",
+					"zh-hant": "幼蟲寶可夢",
+					"fr": "Pokémon Larve",
+					"de": "Larven-Pokémon",
+					"es": "Pokémon Pupa",
+					"it": "Pokémon Coleolarva",
+					"ja": "ようちゅうポケモン",
+					"zh-hans": "幼虫宝可梦",
+					"es-419": "Pokémon Pupa"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 824
+					},
+					{
+						"pokedex": "galar",
+						"number": 10
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 14
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 824,
+								"natiId": 824,
+								"name": "Blipbug"
+							},
+							{
+								"id": 825,
+								"natiId": 825,
+								"name": "Dottler",
+								"method": "Level",
+								"value": 10
+							},
+							{
+								"id": 826,
+								"natiId": 826,
+								"name": "Orbeetle",
+								"method": "Level",
+								"value": 30
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/824",
+						"fetchedAt": "2026-11-03T05:53:59.335Z",
+						"hash": "e6e990c1a051b8b60935b1680c9fef626b6d0b1b224f57c067fff0fecff251d2"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/435/",
+						"fetchedAt": "2026-11-03T05:53:59.366Z",
+						"hash": "a4b929cf1228ebf9c6cf20279c56a7ccf1eeaedb7dec4982b5ef1c9e7968d5ee"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/824/",
+						"fetchedAt": "2026-11-03T05:53:59.408Z",
+						"hash": "74d36138d2d4f65314c676609c66cc25d7aabe233161d40898e9ef1458370a4f"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/824/encounters",
+						"fetchedAt": "2026-11-03T05:53:59.439Z",
+						"hash": "7fc2bf820d0d5883e10a683c9d6a0b35c557538c4c9ceec5a1d063268888e520"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/824/",
+						"fetchedAt": "2026-11-03T05:53:59.498Z",
+						"hash": "75daf49f16c0feeba3fa27e48fe383338354adbaa44c7a4054a97daa2d75d290"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlettm": "",
+				"violettm": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlettm": {},
+				"violettm": {}
+			}
+		},
+		{
+			"profileKey": "the-indigo-disk",
+			"label": "The Indigo Disk",
+			"appGameKeys": [
+				"scarletid",
+				"violetid"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Blipbug",
+				"localizedNames": {
+					"ja-hrkt": "サッチムシ",
+					"ja-roma": "Sacchimushi",
+					"ko": "두루지벌레",
+					"zh-hant": "索偵蟲",
+					"fr": "Larvadar",
+					"de": "Sensect",
+					"es": "Blipbug",
+					"it": "Blipbug",
+					"ja": "サッチムシ",
+					"zh-hans": "索侦虫",
+					"es-419": "Blipbug"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Bug"
+				],
+				"baseStats": {
+					"hp": 25,
+					"atk": 20,
+					"def": 20,
+					"spa": 25,
+					"spd": 45,
+					"spe": 45
+				},
+				"evYield": {
+					"spd": 1
+				},
+				"generation": 8,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Swarm",
+					"Compound Eyes",
+					"Telepathy (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Telepathy"
+				],
+				"eggGroups": [
+					"Bug"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "0.4 m",
+				"weight": "8.0 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 50,
+				"captureRate": 255,
+				"baseExperience": 36,
+				"habitat": "",
+				"shape": "Armor",
+				"color": "Blue",
+				"genus": "Larva Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ようちゅうポケモン",
+					"ko": "유충포켓몬",
+					"zh-hant": "幼蟲寶可夢",
+					"fr": "Pokémon Larve",
+					"de": "Larven-Pokémon",
+					"es": "Pokémon Pupa",
+					"it": "Pokémon Coleolarva",
+					"ja": "ようちゅうポケモン",
+					"zh-hans": "幼虫宝可梦",
+					"es-419": "Pokémon Pupa"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 824
+					},
+					{
+						"pokedex": "galar",
+						"number": 10
+					},
+					{
+						"pokedex": "isle-of-armor",
+						"number": 14
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 824,
+								"natiId": 824,
+								"name": "Blipbug"
+							},
+							{
+								"id": 825,
+								"natiId": 825,
+								"name": "Dottler",
+								"method": "Level",
+								"value": 10
+							},
+							{
+								"id": 826,
+								"natiId": 826,
+								"name": "Orbeetle",
+								"method": "Level",
+								"value": 30
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in Sword Shield."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/824",
+						"fetchedAt": "2026-11-03T05:53:59.335Z",
+						"hash": "e6e990c1a051b8b60935b1680c9fef626b6d0b1b224f57c067fff0fecff251d2"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/435/",
+						"fetchedAt": "2026-11-03T05:53:59.366Z",
+						"hash": "a4b929cf1228ebf9c6cf20279c56a7ccf1eeaedb7dec4982b5ef1c9e7968d5ee"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/824/",
+						"fetchedAt": "2026-11-03T05:53:59.408Z",
+						"hash": "74d36138d2d4f65314c676609c66cc25d7aabe233161d40898e9ef1458370a4f"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/824/encounters",
+						"fetchedAt": "2026-11-03T05:53:59.439Z",
+						"hash": "7fc2bf820d0d5883e10a683c9d6a0b35c557538c4c9ceec5a1d063268888e520"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/824/",
+						"fetchedAt": "2026-11-03T05:53:59.498Z",
+						"hash": "75daf49f16c0feeba3fa27e48fe383338354adbaa44c7a4054a97daa2d75d290"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarletid": "",
+				"violetid": ""
+			},
+			"localizedFlavorByGame": {
+				"scarletid": {},
+				"violetid": {}
+			}
+		}
+	]
+}

@@ -92,10 +92,10 @@ export function PagesDropdown() {
 
 	const closeMenu = useCallback(({ restoreFocus = false } = {}) => {
 		pendingFocusIndexRef.current = null;
+		// Move focus before the menu becomes inert/aria-hidden so assistive
+		// technology never observes focus inside a hidden subtree.
+		if (restoreFocus) triggerRef.current?.focus({ preventScroll: true });
 		setIsOpen(false);
-		if (restoreFocus) {
-			window.requestAnimationFrame(() => triggerRef.current?.focus());
-		}
 	}, []);
 
 	useEffect(() => {
@@ -236,7 +236,7 @@ export function PagesDropdown() {
 					}
 					data-label="Home"
 					title="Home"
-					onClick={() => closeMenu()}
+					onClick={() => closeMenu({ restoreFocus: true })}
 				>
 					<svg viewBox="0 0 24 24" aria-hidden="true">
 						<path d="M3.5 11.2 12 4l8.5 7.2" />
@@ -265,7 +265,7 @@ export function PagesDropdown() {
 										: page.label
 								}
 								onClick={() => {
-									closeMenu();
+									closeMenu({ restoreFocus: true });
 									navigate(isLocked ? "/pricing" : page.path);
 								}}
 							>

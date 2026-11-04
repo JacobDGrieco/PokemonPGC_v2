@@ -1,0 +1,6167 @@
+{
+	"schemaVersion": 2,
+	"nationalDexId": 660,
+	"speciesName": "Diggersby",
+	"formKey": "base",
+	"formName": "Base",
+	"formLabelSource": "form-catalog",
+	"profiles": [
+		{
+			"profileKey": "x-y",
+			"label": "X / Y",
+			"appGameKeys": [
+				"x-national",
+				"x-central",
+				"x-coastal",
+				"x-mountain",
+				"y-national",
+				"y-central",
+				"y-coastal",
+				"y-mountain"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Diggersby",
+				"localizedNames": {
+					"ja-hrkt": "ホルード",
+					"ja-roma": "Horudo",
+					"ko": "파르토",
+					"zh-hant": "掘地兔",
+					"fr": "Excavarenne",
+					"de": "Grebbit",
+					"es": "Diggersby",
+					"it": "Diggersby",
+					"ja": "ホルード",
+					"zh-hans": "掘地兔",
+					"es-419": "Diggersby"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal",
+					"Ground"
+				],
+				"baseStats": {
+					"hp": 85,
+					"atk": 56,
+					"def": 77,
+					"spa": 50,
+					"spd": 77,
+					"spe": 78
+				},
+				"evYield": {
+					"hp": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Pickup",
+					"Cheek Pouch",
+					"Huge Power (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Huge Power"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "1.0 m",
+				"weight": "42.4 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 127,
+				"baseExperience": 148,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Digging Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "あなほりポケモン",
+					"ko": "땅구멍파기포켓몬",
+					"zh-hant": "挖洞寶可夢",
+					"fr": "Pokémon Fouisseur",
+					"de": "Baugräber-Pokémon",
+					"es": "Pokémon Excavador",
+					"it": "Pokémon Scavabuche",
+					"ja": "あなほりポケモン",
+					"zh-hans": "挖洞宝可梦",
+					"es-419": "Pokémon Excavador"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 660
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 11
+					},
+					{
+						"pokedex": "galar",
+						"number": 49
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 14
+					},
+					{
+						"pokedex": "champions",
+						"number": 660
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 659,
+								"natiId": 659,
+								"name": "Bunnelby"
+							},
+							{
+								"id": 660,
+								"natiId": 660,
+								"name": "Diggersby",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Kalos Route 22 Area",
+						"notes": "Yellow Flowers, Lv. 27",
+						"games": "X",
+						"rate": "10%"
+					},
+					{
+						"area": "Kalos Route 22 Area",
+						"notes": "Yellow Flowers, Lv. 27",
+						"games": "Y",
+						"rate": "10%"
+					},
+					{
+						"area": "Friend Safari Ground",
+						"notes": "Walk, Lv. 30",
+						"games": "X",
+						"rate": "33%"
+					},
+					{
+						"area": "Friend Safari Ground",
+						"notes": "Walk, Lv. 30",
+						"games": "Y",
+						"rate": "33%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Hammer Arm",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Rototiller",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Bulldoze",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Swords Dance",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 5
+						},
+						{
+							"name": "Agility",
+							"level": 1,
+							"order": 6
+						},
+						{
+							"name": "Leer",
+							"level": 1,
+							"order": 7
+						},
+						{
+							"name": "Quick Attack",
+							"level": 7,
+							"order": null
+						},
+						{
+							"name": "Mud Slap",
+							"level": 13,
+							"order": null
+						},
+						{
+							"name": "Take Down",
+							"level": 15,
+							"order": null
+						},
+						{
+							"name": "Mud Shot",
+							"level": 18,
+							"order": null
+						},
+						{
+							"name": "Double Kick",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Odor Sleuth",
+							"level": 26,
+							"order": null
+						},
+						{
+							"name": "Flail",
+							"level": 31,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": 37,
+							"order": null
+						},
+						{
+							"name": "Bounce",
+							"level": 42,
+							"order": null
+						},
+						{
+							"name": "Super Fang",
+							"level": 48,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": 53,
+							"order": null
+						},
+						{
+							"name": "Earthquake",
+							"level": 57,
+							"order": null
+						},
+						{
+							"name": "Hammer Arm",
+							"level": 60,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Brick Break",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bulk Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bulldoze",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Cut",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Earthquake",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fling",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Grass Knot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Nature Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Payback",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Power Up Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Slide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Smash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Tomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sandstorm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sludge Bomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Smack Down",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Stone Edge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Strength",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Surf",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swords Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Torment",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "U Turn",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/660",
+						"fetchedAt": "2026-11-03T05:53:47.202Z",
+						"hash": "437bbcadebf4772375af6c0a233c4abbfed7c713e2a1e00e3a5f8e397a6eb899"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/340/",
+						"fetchedAt": "2026-11-03T05:53:47.226Z",
+						"hash": "adfd3367e52a9a7b462725dcf72a38bf2677c02ba2a9332537edf3926991df2a"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/660/",
+						"fetchedAt": "2026-11-03T05:53:47.258Z",
+						"hash": "46c84c3f2aba0a1f99ce23bb60acd68630a9e8d97f6d716671d194e237d81fde"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/660/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.318Z",
+						"hash": "ab76497e1ce905d2dc0994f8c36fbfd1bf49ec6c5be8f7d05d7237e61a08c9ed"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/660/",
+						"fetchedAt": "2026-11-03T05:53:47.371Z",
+						"hash": "7ba27311bc3d9e601cf913820ee0d830aae2a60d265d091a29321d911e31ee96"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"x-national": "With their powerful ears, they can heft boulders of a ton or more with ease. They can be a big help at construction sites.",
+				"x-central": "With their powerful ears, they can heft boulders of a ton or more with ease. They can be a big help at construction sites.",
+				"x-coastal": "With their powerful ears, they can heft boulders of a ton or more with ease. They can be a big help at construction sites.",
+				"x-mountain": "With their powerful ears, they can heft boulders of a ton or more with ease. They can be a big help at construction sites.",
+				"y-national": "As powerful as an excavator, its ears can reduce dense bedrock to rubble. When it’s finished digging, it lounges lazily.",
+				"y-central": "As powerful as an excavator, its ears can reduce dense bedrock to rubble. When it’s finished digging, it lounges lazily.",
+				"y-coastal": "As powerful as an excavator, its ears can reduce dense bedrock to rubble. When it’s finished digging, it lounges lazily.",
+				"y-mountain": "As powerful as an excavator, its ears can reduce dense bedrock to rubble. When it’s finished digging, it lounges lazily."
+			},
+			"localizedFlavorByGame": {
+				"x-national": {
+					"ja-hrkt": "おおきな みみは １トンを こえる いわを らくに もちあげる パワー。 こうじげんばで だいかつやくする。",
+					"ko": "커다란 귀에는 무게가 1톤을 넘는 바위를 가뿐히 들어 올릴 만한 파워가 있다. 공사 현장에서 대활약한다.",
+					"fr": "Ses grandes oreilles sont si musclées qu’il peut soulever un rocher d’une tonne sans broncher. Ce Pokémon est souvent utilisé sur les chantiers.",
+					"de": "Seine großen Ohren besitzen die Kraft, selbst Felsen, die 1 t schwer sind, mühelos hochzuheben. Es wird daher oft auf Baustellen eingesetzt.",
+					"es": "Sus grandes orejas tienen tal fuerza que con ellas puede levantar con facilidad rocas de más de una tonelada. Es de una ayuda inestimable en las obras.",
+					"it": "Con le sue grandi orecchie può sollevare facilmente massi da più di una tonnellata. Può essere di grande aiuto nei cantieri edili.",
+					"en": "With their powerful ears, they can heft boulders of a ton or more with ease. They can be a big help at construction sites.",
+					"ja": "大きな 耳は １トンを 超える 岩を 楽に 持ち上げる パワー。 工事現場で 大活躍する。",
+					"es-419": "Sus grandes orejas tienen tal fuerza que con ellas puede levantar con facilidad rocas de más de una tonelada. Es de una ayuda inestimable en las obras."
+				},
+				"x-central": {
+					"ja-hrkt": "おおきな みみは １トンを こえる いわを らくに もちあげる パワー。 こうじげんばで だいかつやくする。",
+					"ko": "커다란 귀에는 무게가 1톤을 넘는 바위를 가뿐히 들어 올릴 만한 파워가 있다. 공사 현장에서 대활약한다.",
+					"fr": "Ses grandes oreilles sont si musclées qu’il peut soulever un rocher d’une tonne sans broncher. Ce Pokémon est souvent utilisé sur les chantiers.",
+					"de": "Seine großen Ohren besitzen die Kraft, selbst Felsen, die 1 t schwer sind, mühelos hochzuheben. Es wird daher oft auf Baustellen eingesetzt.",
+					"es": "Sus grandes orejas tienen tal fuerza que con ellas puede levantar con facilidad rocas de más de una tonelada. Es de una ayuda inestimable en las obras.",
+					"it": "Con le sue grandi orecchie può sollevare facilmente massi da più di una tonnellata. Può essere di grande aiuto nei cantieri edili.",
+					"en": "With their powerful ears, they can heft boulders of a ton or more with ease. They can be a big help at construction sites.",
+					"ja": "大きな 耳は １トンを 超える 岩を 楽に 持ち上げる パワー。 工事現場で 大活躍する。",
+					"es-419": "Sus grandes orejas tienen tal fuerza que con ellas puede levantar con facilidad rocas de más de una tonelada. Es de una ayuda inestimable en las obras."
+				},
+				"x-coastal": {
+					"ja-hrkt": "おおきな みみは １トンを こえる いわを らくに もちあげる パワー。 こうじげんばで だいかつやくする。",
+					"ko": "커다란 귀에는 무게가 1톤을 넘는 바위를 가뿐히 들어 올릴 만한 파워가 있다. 공사 현장에서 대활약한다.",
+					"fr": "Ses grandes oreilles sont si musclées qu’il peut soulever un rocher d’une tonne sans broncher. Ce Pokémon est souvent utilisé sur les chantiers.",
+					"de": "Seine großen Ohren besitzen die Kraft, selbst Felsen, die 1 t schwer sind, mühelos hochzuheben. Es wird daher oft auf Baustellen eingesetzt.",
+					"es": "Sus grandes orejas tienen tal fuerza que con ellas puede levantar con facilidad rocas de más de una tonelada. Es de una ayuda inestimable en las obras.",
+					"it": "Con le sue grandi orecchie può sollevare facilmente massi da più di una tonnellata. Può essere di grande aiuto nei cantieri edili.",
+					"en": "With their powerful ears, they can heft boulders of a ton or more with ease. They can be a big help at construction sites.",
+					"ja": "大きな 耳は １トンを 超える 岩を 楽に 持ち上げる パワー。 工事現場で 大活躍する。",
+					"es-419": "Sus grandes orejas tienen tal fuerza que con ellas puede levantar con facilidad rocas de más de una tonelada. Es de una ayuda inestimable en las obras."
+				},
+				"x-mountain": {
+					"ja-hrkt": "おおきな みみは １トンを こえる いわを らくに もちあげる パワー。 こうじげんばで だいかつやくする。",
+					"ko": "커다란 귀에는 무게가 1톤을 넘는 바위를 가뿐히 들어 올릴 만한 파워가 있다. 공사 현장에서 대활약한다.",
+					"fr": "Ses grandes oreilles sont si musclées qu’il peut soulever un rocher d’une tonne sans broncher. Ce Pokémon est souvent utilisé sur les chantiers.",
+					"de": "Seine großen Ohren besitzen die Kraft, selbst Felsen, die 1 t schwer sind, mühelos hochzuheben. Es wird daher oft auf Baustellen eingesetzt.",
+					"es": "Sus grandes orejas tienen tal fuerza que con ellas puede levantar con facilidad rocas de más de una tonelada. Es de una ayuda inestimable en las obras.",
+					"it": "Con le sue grandi orecchie può sollevare facilmente massi da più di una tonnellata. Può essere di grande aiuto nei cantieri edili.",
+					"en": "With their powerful ears, they can heft boulders of a ton or more with ease. They can be a big help at construction sites.",
+					"ja": "大きな 耳は １トンを 超える 岩を 楽に 持ち上げる パワー。 工事現場で 大活躍する。",
+					"es-419": "Sus grandes orejas tienen tal fuerza que con ellas puede levantar con facilidad rocas de más de una tonelada. Es de una ayuda inestimable en las obras."
+				},
+				"y-national": {
+					"ja-hrkt": "ショベルカーなみの パワーの みみで かたい がんばんも コナゴナ。あなを ほりおえると ダラダラと すごす。",
+					"ko": "굴착기에 버금가는 파워의 귀로 단단한 암반도 산산조각 낸다. 구멍을 다 파면 빈둥빈둥 지낸다.",
+					"fr": "Ses oreilles sont de véritables excavateurs, venant à bout des blocs de pierre les plus durs. Après l’effort, il se repose en paressant.",
+					"de": "Mit Ohren so mächtig wie ein Bagger kann es selbst das härteste Gestein zertrümmern. Ist es fertig mit Graben, lümmelt es herum.",
+					"es": "Sus orejas, tan poderosas como una excavadora, pueden hacer añicos hasta la roca más sólida. Cuando termina de cavar, se toma un respiro.",
+					"it": "Le orecchie potenti quanto una scavatrice gli permettono di sbriciolare anche rocce durissime. Quando ha finito di scavare, si rilassa beatamente.",
+					"en": "As powerful as an excavator, its ears can reduce dense bedrock to rubble. When it’s finished digging, it lounges lazily.",
+					"ja": "ショベルカー並みの パワーの 耳で 硬い 岩盤も コナゴナ。穴を 掘り終えると ダラダラと 過ごす。",
+					"es-419": "Sus orejas, tan poderosas como una excavadora, pueden hacer añicos hasta la roca más sólida. Cuando termina de cavar, se toma un respiro."
+				},
+				"y-central": {
+					"ja-hrkt": "ショベルカーなみの パワーの みみで かたい がんばんも コナゴナ。あなを ほりおえると ダラダラと すごす。",
+					"ko": "굴착기에 버금가는 파워의 귀로 단단한 암반도 산산조각 낸다. 구멍을 다 파면 빈둥빈둥 지낸다.",
+					"fr": "Ses oreilles sont de véritables excavateurs, venant à bout des blocs de pierre les plus durs. Après l’effort, il se repose en paressant.",
+					"de": "Mit Ohren so mächtig wie ein Bagger kann es selbst das härteste Gestein zertrümmern. Ist es fertig mit Graben, lümmelt es herum.",
+					"es": "Sus orejas, tan poderosas como una excavadora, pueden hacer añicos hasta la roca más sólida. Cuando termina de cavar, se toma un respiro.",
+					"it": "Le orecchie potenti quanto una scavatrice gli permettono di sbriciolare anche rocce durissime. Quando ha finito di scavare, si rilassa beatamente.",
+					"en": "As powerful as an excavator, its ears can reduce dense bedrock to rubble. When it’s finished digging, it lounges lazily.",
+					"ja": "ショベルカー並みの パワーの 耳で 硬い 岩盤も コナゴナ。穴を 掘り終えると ダラダラと 過ごす。",
+					"es-419": "Sus orejas, tan poderosas como una excavadora, pueden hacer añicos hasta la roca más sólida. Cuando termina de cavar, se toma un respiro."
+				},
+				"y-coastal": {
+					"ja-hrkt": "ショベルカーなみの パワーの みみで かたい がんばんも コナゴナ。あなを ほりおえると ダラダラと すごす。",
+					"ko": "굴착기에 버금가는 파워의 귀로 단단한 암반도 산산조각 낸다. 구멍을 다 파면 빈둥빈둥 지낸다.",
+					"fr": "Ses oreilles sont de véritables excavateurs, venant à bout des blocs de pierre les plus durs. Après l’effort, il se repose en paressant.",
+					"de": "Mit Ohren so mächtig wie ein Bagger kann es selbst das härteste Gestein zertrümmern. Ist es fertig mit Graben, lümmelt es herum.",
+					"es": "Sus orejas, tan poderosas como una excavadora, pueden hacer añicos hasta la roca más sólida. Cuando termina de cavar, se toma un respiro.",
+					"it": "Le orecchie potenti quanto una scavatrice gli permettono di sbriciolare anche rocce durissime. Quando ha finito di scavare, si rilassa beatamente.",
+					"en": "As powerful as an excavator, its ears can reduce dense bedrock to rubble. When it’s finished digging, it lounges lazily.",
+					"ja": "ショベルカー並みの パワーの 耳で 硬い 岩盤も コナゴナ。穴を 掘り終えると ダラダラと 過ごす。",
+					"es-419": "Sus orejas, tan poderosas como una excavadora, pueden hacer añicos hasta la roca más sólida. Cuando termina de cavar, se toma un respiro."
+				},
+				"y-mountain": {
+					"ja-hrkt": "ショベルカーなみの パワーの みみで かたい がんばんも コナゴナ。あなを ほりおえると ダラダラと すごす。",
+					"ko": "굴착기에 버금가는 파워의 귀로 단단한 암반도 산산조각 낸다. 구멍을 다 파면 빈둥빈둥 지낸다.",
+					"fr": "Ses oreilles sont de véritables excavateurs, venant à bout des blocs de pierre les plus durs. Après l’effort, il se repose en paressant.",
+					"de": "Mit Ohren so mächtig wie ein Bagger kann es selbst das härteste Gestein zertrümmern. Ist es fertig mit Graben, lümmelt es herum.",
+					"es": "Sus orejas, tan poderosas como una excavadora, pueden hacer añicos hasta la roca más sólida. Cuando termina de cavar, se toma un respiro.",
+					"it": "Le orecchie potenti quanto una scavatrice gli permettono di sbriciolare anche rocce durissime. Quando ha finito di scavare, si rilassa beatamente.",
+					"en": "As powerful as an excavator, its ears can reduce dense bedrock to rubble. When it’s finished digging, it lounges lazily.",
+					"ja": "ショベルカー並みの パワーの 耳で 硬い 岩盤も コナゴナ。穴を 掘り終えると ダラダラと 過ごす。",
+					"es-419": "Sus orejas, tan poderosas como una excavadora, pueden hacer añicos hasta la roca más sólida. Cuando termina de cavar, se toma un respiro."
+				}
+			}
+		},
+		{
+			"profileKey": "omega-ruby-alpha-sapphire",
+			"label": "Omega Ruby / Alpha Sapphire",
+			"appGameKeys": [
+				"omegaruby-national",
+				"omegaruby",
+				"alphasapphire-national",
+				"alphasapphire"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Diggersby",
+				"localizedNames": {
+					"ja-hrkt": "ホルード",
+					"ja-roma": "Horudo",
+					"ko": "파르토",
+					"zh-hant": "掘地兔",
+					"fr": "Excavarenne",
+					"de": "Grebbit",
+					"es": "Diggersby",
+					"it": "Diggersby",
+					"ja": "ホルード",
+					"zh-hans": "掘地兔",
+					"es-419": "Diggersby"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal",
+					"Ground"
+				],
+				"baseStats": {
+					"hp": 85,
+					"atk": 56,
+					"def": 77,
+					"spa": 50,
+					"spd": 77,
+					"spe": 78
+				},
+				"evYield": {
+					"hp": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Pickup",
+					"Cheek Pouch",
+					"Huge Power (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Huge Power"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "1.0 m",
+				"weight": "42.4 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 127,
+				"baseExperience": 148,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Digging Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "あなほりポケモン",
+					"ko": "땅구멍파기포켓몬",
+					"zh-hant": "挖洞寶可夢",
+					"fr": "Pokémon Fouisseur",
+					"de": "Baugräber-Pokémon",
+					"es": "Pokémon Excavador",
+					"it": "Pokémon Scavabuche",
+					"ja": "あなほりポケモン",
+					"zh-hans": "挖洞宝可梦",
+					"es-419": "Pokémon Excavador"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 660
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 11
+					},
+					{
+						"pokedex": "galar",
+						"number": 49
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 14
+					},
+					{
+						"pokedex": "champions",
+						"number": 660
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 659,
+								"natiId": 659,
+								"name": "Bunnelby"
+							},
+							{
+								"id": 660,
+								"natiId": 660,
+								"name": "Diggersby",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Tutor": [
+						{
+							"name": "Bounce",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Earth Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endeavor",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fire Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Focus Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Foul Play",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Gastro Acid",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Gunk Shot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ice Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Head",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Knock Off",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Last Resort",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Low Kick",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Recycle",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snatch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Super Fang",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Superpower",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Uproar",
+							"level": null,
+							"order": null
+						}
+					],
+					"Level Up": [
+						{
+							"name": "Hammer Arm",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Rototiller",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Bulldoze",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Swords Dance",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 5
+						},
+						{
+							"name": "Agility",
+							"level": 1,
+							"order": 6
+						},
+						{
+							"name": "Leer",
+							"level": 1,
+							"order": 7
+						},
+						{
+							"name": "Quick Attack",
+							"level": 7,
+							"order": null
+						},
+						{
+							"name": "Mud Slap",
+							"level": 13,
+							"order": null
+						},
+						{
+							"name": "Take Down",
+							"level": 15,
+							"order": null
+						},
+						{
+							"name": "Mud Shot",
+							"level": 18,
+							"order": null
+						},
+						{
+							"name": "Double Kick",
+							"level": 20,
+							"order": null
+						},
+						{
+							"name": "Odor Sleuth",
+							"level": 26,
+							"order": null
+						},
+						{
+							"name": "Flail",
+							"level": 31,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": 37,
+							"order": null
+						},
+						{
+							"name": "Bounce",
+							"level": 42,
+							"order": null
+						},
+						{
+							"name": "Super Fang",
+							"level": 48,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": 53,
+							"order": null
+						},
+						{
+							"name": "Earthquake",
+							"level": 57,
+							"order": null
+						},
+						{
+							"name": "Hammer Arm",
+							"level": 60,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Brick Break",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bulk Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bulldoze",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Cut",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Earthquake",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fling",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Grass Knot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Nature Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Payback",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Power Up Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Slide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Smash",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Tomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sandstorm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Secret Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sludge Bomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Smack Down",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Stone Edge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Strength",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Surf",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swords Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Torment",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "U Turn",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/660",
+						"fetchedAt": "2026-11-03T05:53:47.202Z",
+						"hash": "437bbcadebf4772375af6c0a233c4abbfed7c713e2a1e00e3a5f8e397a6eb899"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/340/",
+						"fetchedAt": "2026-11-03T05:53:47.226Z",
+						"hash": "adfd3367e52a9a7b462725dcf72a38bf2677c02ba2a9332537edf3926991df2a"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/660/",
+						"fetchedAt": "2026-11-03T05:53:47.258Z",
+						"hash": "46c84c3f2aba0a1f99ce23bb60acd68630a9e8d97f6d716671d194e237d81fde"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/660/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.318Z",
+						"hash": "ab76497e1ce905d2dc0994f8c36fbfd1bf49ec6c5be8f7d05d7237e61a08c9ed"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/660/",
+						"fetchedAt": "2026-11-03T05:53:47.371Z",
+						"hash": "7ba27311bc3d9e601cf913820ee0d830aae2a60d265d091a29321d911e31ee96"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"omegaruby-national": "With their powerful ears, they can heft boulders of a ton or more with ease. They can be a big help at construction sites.",
+				"omegaruby": "With their powerful ears, they can heft boulders of a ton or more with ease. They can be a big help at construction sites.",
+				"alphasapphire-national": "As powerful as an excavator, its ears can reduce dense bedrock to rubble. When it’s finished digging, it lounges lazily.",
+				"alphasapphire": "As powerful as an excavator, its ears can reduce dense bedrock to rubble. When it’s finished digging, it lounges lazily."
+			},
+			"localizedFlavorByGame": {
+				"omegaruby-national": {
+					"ja-hrkt": "おおきな みみは １トンを こえる いわを らくに もちあげる パワー。 こうじげんばで だいかつやくする。",
+					"ko": "커다란 귀에는 무게가 1톤을 넘는 바위를 가뿐히 들어 올릴 만한 파워가 있다. 공사 현장에서 대활약한다.",
+					"fr": "Ses grandes oreilles sont si musclées qu’il peut soulever un rocher d’une tonne sans broncher. Ce Pokémon est souvent utilisé sur les chantiers.",
+					"de": "Seine großen Ohren besitzen die Kraft, selbst Felsen, die 1 t schwer sind, mühelos hochzuheben. Es wird daher oft auf Baustellen eingesetzt.",
+					"es": "Sus grandes orejas tienen tal fuerza que con ellas puede levantar con facilidad rocas de más de una tonelada. Es de una ayuda inestimable en las obras.",
+					"it": "Con le sue grandi orecchie può sollevare facilmente massi da più di una tonnellata. Può essere di grande aiuto nei cantieri edili.",
+					"en": "With their powerful ears, they can heft boulders of a ton or more with ease. They can be a big help at construction sites.",
+					"ja": "大きな 耳は １トンを 超える 岩を 楽に 持ち上げる パワー。 工事現場で 大活躍する。",
+					"es-419": "Sus grandes orejas tienen tal fuerza que con ellas puede levantar con facilidad rocas de más de una tonelada. Es de una ayuda inestimable en las obras."
+				},
+				"omegaruby": {
+					"ja-hrkt": "おおきな みみは １トンを こえる いわを らくに もちあげる パワー。 こうじげんばで だいかつやくする。",
+					"ko": "커다란 귀에는 무게가 1톤을 넘는 바위를 가뿐히 들어 올릴 만한 파워가 있다. 공사 현장에서 대활약한다.",
+					"fr": "Ses grandes oreilles sont si musclées qu’il peut soulever un rocher d’une tonne sans broncher. Ce Pokémon est souvent utilisé sur les chantiers.",
+					"de": "Seine großen Ohren besitzen die Kraft, selbst Felsen, die 1 t schwer sind, mühelos hochzuheben. Es wird daher oft auf Baustellen eingesetzt.",
+					"es": "Sus grandes orejas tienen tal fuerza que con ellas puede levantar con facilidad rocas de más de una tonelada. Es de una ayuda inestimable en las obras.",
+					"it": "Con le sue grandi orecchie può sollevare facilmente massi da più di una tonnellata. Può essere di grande aiuto nei cantieri edili.",
+					"en": "With their powerful ears, they can heft boulders of a ton or more with ease. They can be a big help at construction sites.",
+					"ja": "大きな 耳は １トンを 超える 岩を 楽に 持ち上げる パワー。 工事現場で 大活躍する。",
+					"es-419": "Sus grandes orejas tienen tal fuerza que con ellas puede levantar con facilidad rocas de más de una tonelada. Es de una ayuda inestimable en las obras."
+				},
+				"alphasapphire-national": {
+					"ja-hrkt": "ショベルカーなみの パワーの みみで かたい がんばんも コナゴナ。あなを ほりおえると ダラダラと すごす。",
+					"ko": "굴착기에 버금가는 파워의 귀로 단단한 암반도 산산조각 낸다. 구멍을 다 파면 빈둥빈둥 지낸다.",
+					"fr": "Ses oreilles sont de véritables excavateurs, venant à bout des blocs de pierre les plus durs. Après l’effort, il se repose en paressant.",
+					"de": "Mit Ohren so mächtig wie ein Bagger kann es selbst das härteste Gestein zertrümmern. Ist es fertig mit Graben, lümmelt es herum.",
+					"es": "Sus orejas, tan poderosas como una excavadora, pueden hacer añicos hasta la roca más sólida. Cuando termina de cavar, se toma un respiro.",
+					"it": "Le orecchie potenti quanto una scavatrice gli permettono di sbriciolare anche rocce durissime. Quando ha finito di scavare, si rilassa beatamente.",
+					"en": "As powerful as an excavator, its ears can reduce dense bedrock to rubble. When it’s finished digging, it lounges lazily.",
+					"ja": "ショベルカー並みの パワーの 耳で 硬い 岩盤も コナゴナ。穴を 掘り終えると ダラダラと 過ごす。",
+					"es-419": "Sus orejas, tan poderosas como una excavadora, pueden hacer añicos hasta la roca más sólida. Cuando termina de cavar, se toma un respiro."
+				},
+				"alphasapphire": {
+					"ja-hrkt": "ショベルカーなみの パワーの みみで かたい がんばんも コナゴナ。あなを ほりおえると ダラダラと すごす。",
+					"ko": "굴착기에 버금가는 파워의 귀로 단단한 암반도 산산조각 낸다. 구멍을 다 파면 빈둥빈둥 지낸다.",
+					"fr": "Ses oreilles sont de véritables excavateurs, venant à bout des blocs de pierre les plus durs. Après l’effort, il se repose en paressant.",
+					"de": "Mit Ohren so mächtig wie ein Bagger kann es selbst das härteste Gestein zertrümmern. Ist es fertig mit Graben, lümmelt es herum.",
+					"es": "Sus orejas, tan poderosas como una excavadora, pueden hacer añicos hasta la roca más sólida. Cuando termina de cavar, se toma un respiro.",
+					"it": "Le orecchie potenti quanto una scavatrice gli permettono di sbriciolare anche rocce durissime. Quando ha finito di scavare, si rilassa beatamente.",
+					"en": "As powerful as an excavator, its ears can reduce dense bedrock to rubble. When it’s finished digging, it lounges lazily.",
+					"ja": "ショベルカー並みの パワーの 耳で 硬い 岩盤も コナゴナ。穴を 掘り終えると ダラダラと 過ごす。",
+					"es-419": "Sus orejas, tan poderosas como una excavadora, pueden hacer añicos hasta la roca más sólida. Cuando termina de cavar, se toma un respiro."
+				}
+			}
+		},
+		{
+			"profileKey": "sun-moon",
+			"label": "Sun / Moon",
+			"appGameKeys": [
+				"sun-alola",
+				"sun-melemele",
+				"sun-akala",
+				"sun-ulaula",
+				"sun-poni",
+				"moon-alola",
+				"moon-melemele",
+				"moon-akala",
+				"moon-ulaula",
+				"moon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Diggersby",
+				"localizedNames": {
+					"ja-hrkt": "ホルード",
+					"ja-roma": "Horudo",
+					"ko": "파르토",
+					"zh-hant": "掘地兔",
+					"fr": "Excavarenne",
+					"de": "Grebbit",
+					"es": "Diggersby",
+					"it": "Diggersby",
+					"ja": "ホルード",
+					"zh-hans": "掘地兔",
+					"es-419": "Diggersby"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal",
+					"Ground"
+				],
+				"baseStats": {
+					"hp": 85,
+					"atk": 56,
+					"def": 77,
+					"spa": 50,
+					"spd": 77,
+					"spe": 78
+				},
+				"evYield": {
+					"hp": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Pickup",
+					"Cheek Pouch",
+					"Huge Power (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Huge Power"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "1.0 m",
+				"weight": "42.4 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 127,
+				"baseExperience": 148,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Digging Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "あなほりポケモン",
+					"ko": "땅구멍파기포켓몬",
+					"zh-hant": "挖洞寶可夢",
+					"fr": "Pokémon Fouisseur",
+					"de": "Baugräber-Pokémon",
+					"es": "Pokémon Excavador",
+					"it": "Pokémon Scavabuche",
+					"ja": "あなほりポケモン",
+					"zh-hans": "挖洞宝可梦",
+					"es-419": "Pokémon Excavador"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 660
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 11
+					},
+					{
+						"pokedex": "galar",
+						"number": 49
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 14
+					},
+					{
+						"pokedex": "champions",
+						"number": 660
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 659,
+								"natiId": 659,
+								"name": "Bunnelby"
+							},
+							{
+								"id": 660,
+								"natiId": 660,
+								"name": "Diggersby",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Hammer Arm",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Rototiller",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Bulldoze",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Swords Dance",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 5
+						},
+						{
+							"name": "Agility",
+							"level": 1,
+							"order": 6
+						},
+						{
+							"name": "Leer",
+							"level": 1,
+							"order": 7
+						},
+						{
+							"name": "Quick Attack",
+							"level": 7,
+							"order": null
+						},
+						{
+							"name": "Double Slap",
+							"level": 13,
+							"order": 1
+						},
+						{
+							"name": "Mud Slap",
+							"level": 13,
+							"order": 2
+						},
+						{
+							"name": "Take Down",
+							"level": 15,
+							"order": null
+						},
+						{
+							"name": "Mud Shot",
+							"level": 18,
+							"order": null
+						},
+						{
+							"name": "Double Kick",
+							"level": 21,
+							"order": null
+						},
+						{
+							"name": "Odor Sleuth",
+							"level": 27,
+							"order": null
+						},
+						{
+							"name": "Flail",
+							"level": 32,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": 37,
+							"order": null
+						},
+						{
+							"name": "Bounce",
+							"level": 43,
+							"order": null
+						},
+						{
+							"name": "Super Fang",
+							"level": 48,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": 54,
+							"order": null
+						},
+						{
+							"name": "Earthquake",
+							"level": 57,
+							"order": null
+						},
+						{
+							"name": "Hammer Arm",
+							"level": 60,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Brick Break",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Brutal Swing",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bulk Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bulldoze",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Earthquake",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fling",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Grass Knot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Nature Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Payback",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Slide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Tomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sandstorm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sludge Bomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Smack Down",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Stone Edge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Surf",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swords Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Torment",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "U Turn",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Work Up",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/660",
+						"fetchedAt": "2026-11-03T05:53:47.202Z",
+						"hash": "437bbcadebf4772375af6c0a233c4abbfed7c713e2a1e00e3a5f8e397a6eb899"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/340/",
+						"fetchedAt": "2026-11-03T05:53:47.226Z",
+						"hash": "adfd3367e52a9a7b462725dcf72a38bf2677c02ba2a9332537edf3926991df2a"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/660/",
+						"fetchedAt": "2026-11-03T05:53:47.258Z",
+						"hash": "46c84c3f2aba0a1f99ce23bb60acd68630a9e8d97f6d716671d194e237d81fde"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/660/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.318Z",
+						"hash": "ab76497e1ce905d2dc0994f8c36fbfd1bf49ec6c5be8f7d05d7237e61a08c9ed"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/660/",
+						"fetchedAt": "2026-11-03T05:53:47.371Z",
+						"hash": "7ba27311bc3d9e601cf913820ee0d830aae2a60d265d091a29321d911e31ee96"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sun-alola": "",
+				"sun-melemele": "",
+				"sun-akala": "",
+				"sun-ulaula": "",
+				"sun-poni": "",
+				"moon-alola": "",
+				"moon-melemele": "",
+				"moon-akala": "",
+				"moon-ulaula": "",
+				"moon-poni": ""
+			},
+			"localizedFlavorByGame": {
+				"sun-alola": {},
+				"sun-melemele": {},
+				"sun-akala": {},
+				"sun-ulaula": {},
+				"sun-poni": {},
+				"moon-alola": {},
+				"moon-melemele": {},
+				"moon-akala": {},
+				"moon-ulaula": {},
+				"moon-poni": {}
+			}
+		},
+		{
+			"profileKey": "ultra-sun-ultra-moon",
+			"label": "Ultra Sun / Ultra Moon",
+			"appGameKeys": [
+				"ultrasun-alola",
+				"ultrasun-melemele",
+				"ultrasun-akala",
+				"ultrasun-ulaula",
+				"ultrasun-poni",
+				"ultramoon-alola",
+				"ultramoon-melemele",
+				"ultramoon-akala",
+				"ultramoon-ulaula",
+				"ultramoon-poni"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Diggersby",
+				"localizedNames": {
+					"ja-hrkt": "ホルード",
+					"ja-roma": "Horudo",
+					"ko": "파르토",
+					"zh-hant": "掘地兔",
+					"fr": "Excavarenne",
+					"de": "Grebbit",
+					"es": "Diggersby",
+					"it": "Diggersby",
+					"ja": "ホルード",
+					"zh-hans": "掘地兔",
+					"es-419": "Diggersby"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal",
+					"Ground"
+				],
+				"baseStats": {
+					"hp": 85,
+					"atk": 56,
+					"def": 77,
+					"spa": 50,
+					"spd": 77,
+					"spe": 78
+				},
+				"evYield": {
+					"hp": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Pickup",
+					"Cheek Pouch",
+					"Huge Power (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Huge Power"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "1.0 m",
+				"weight": "42.4 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 127,
+				"baseExperience": 148,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Digging Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "あなほりポケモン",
+					"ko": "땅구멍파기포켓몬",
+					"zh-hant": "挖洞寶可夢",
+					"fr": "Pokémon Fouisseur",
+					"de": "Baugräber-Pokémon",
+					"es": "Pokémon Excavador",
+					"it": "Pokémon Scavabuche",
+					"ja": "あなほりポケモン",
+					"zh-hans": "挖洞宝可梦",
+					"es-419": "Pokémon Excavador"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 660
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 11
+					},
+					{
+						"pokedex": "galar",
+						"number": 49
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 14
+					},
+					{
+						"pokedex": "champions",
+						"number": 660
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 659,
+								"natiId": 659,
+								"name": "Bunnelby"
+							},
+							{
+								"id": 660,
+								"natiId": 660,
+								"name": "Diggersby",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Hammer Arm",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Rototiller",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Bulldoze",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Swords Dance",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 5
+						},
+						{
+							"name": "Agility",
+							"level": 1,
+							"order": 6
+						},
+						{
+							"name": "Leer",
+							"level": 1,
+							"order": 7
+						},
+						{
+							"name": "Quick Attack",
+							"level": 7,
+							"order": null
+						},
+						{
+							"name": "Double Slap",
+							"level": 13,
+							"order": 1
+						},
+						{
+							"name": "Mud Slap",
+							"level": 13,
+							"order": 2
+						},
+						{
+							"name": "Take Down",
+							"level": 15,
+							"order": null
+						},
+						{
+							"name": "Mud Shot",
+							"level": 18,
+							"order": null
+						},
+						{
+							"name": "Double Kick",
+							"level": 21,
+							"order": null
+						},
+						{
+							"name": "Odor Sleuth",
+							"level": 27,
+							"order": null
+						},
+						{
+							"name": "Flail",
+							"level": 32,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": 37,
+							"order": null
+						},
+						{
+							"name": "Bounce",
+							"level": 43,
+							"order": null
+						},
+						{
+							"name": "Super Fang",
+							"level": 48,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": 54,
+							"order": null
+						},
+						{
+							"name": "Earthquake",
+							"level": 57,
+							"order": null
+						},
+						{
+							"name": "Hammer Arm",
+							"level": 60,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Bounce",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Earth Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endeavor",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fire Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Focus Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Foul Play",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Gastro Acid",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Gunk Shot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ice Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Head",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Knock Off",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Last Resort",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Low Kick",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Recycle",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snatch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Stomping Tantrum",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Super Fang",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Superpower",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Uproar",
+							"level": null,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Brick Break",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Brutal Swing",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bulk Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bulldoze",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Earthquake",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fling",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Grass Knot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Nature Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Payback",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Slide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Tomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sandstorm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sludge Bomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Smack Down",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Stone Edge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Surf",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swords Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Torment",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "U Turn",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Work Up",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/660",
+						"fetchedAt": "2026-11-03T05:53:47.202Z",
+						"hash": "437bbcadebf4772375af6c0a233c4abbfed7c713e2a1e00e3a5f8e397a6eb899"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/340/",
+						"fetchedAt": "2026-11-03T05:53:47.226Z",
+						"hash": "adfd3367e52a9a7b462725dcf72a38bf2677c02ba2a9332537edf3926991df2a"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/660/",
+						"fetchedAt": "2026-11-03T05:53:47.258Z",
+						"hash": "46c84c3f2aba0a1f99ce23bb60acd68630a9e8d97f6d716671d194e237d81fde"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/660/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.318Z",
+						"hash": "ab76497e1ce905d2dc0994f8c36fbfd1bf49ec6c5be8f7d05d7237e61a08c9ed"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/660/",
+						"fetchedAt": "2026-11-03T05:53:47.371Z",
+						"hash": "7ba27311bc3d9e601cf913820ee0d830aae2a60d265d091a29321d911e31ee96"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"ultrasun-alola": "",
+				"ultrasun-melemele": "",
+				"ultrasun-akala": "",
+				"ultrasun-ulaula": "",
+				"ultrasun-poni": "",
+				"ultramoon-alola": "",
+				"ultramoon-melemele": "",
+				"ultramoon-akala": "",
+				"ultramoon-ulaula": "",
+				"ultramoon-poni": ""
+			},
+			"localizedFlavorByGame": {
+				"ultrasun-alola": {},
+				"ultrasun-melemele": {},
+				"ultrasun-akala": {},
+				"ultrasun-ulaula": {},
+				"ultrasun-poni": {},
+				"ultramoon-alola": {},
+				"ultramoon-melemele": {},
+				"ultramoon-akala": {},
+				"ultramoon-ulaula": {},
+				"ultramoon-poni": {}
+			}
+		},
+		{
+			"profileKey": "lets-go-pikachu-lets-go-eevee",
+			"label": "Let's Go Pikachu / Eevee",
+			"appGameKeys": [
+				"letsgopikachu",
+				"letsgoeevee"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Diggersby",
+				"localizedNames": {
+					"ja-hrkt": "ホルード",
+					"ja-roma": "Horudo",
+					"ko": "파르토",
+					"zh-hant": "掘地兔",
+					"fr": "Excavarenne",
+					"de": "Grebbit",
+					"es": "Diggersby",
+					"it": "Diggersby",
+					"ja": "ホルード",
+					"zh-hans": "掘地兔",
+					"es-419": "Diggersby"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal",
+					"Ground"
+				],
+				"baseStats": {
+					"hp": 85,
+					"atk": 56,
+					"def": 77,
+					"spa": 50,
+					"spd": 77,
+					"spe": 78
+				},
+				"evYield": {
+					"hp": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Pickup",
+					"Cheek Pouch",
+					"Huge Power (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Huge Power"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "1.0 m",
+				"weight": "42.4 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 127,
+				"baseExperience": 148,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Digging Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "あなほりポケモン",
+					"ko": "땅구멍파기포켓몬",
+					"zh-hant": "挖洞寶可夢",
+					"fr": "Pokémon Fouisseur",
+					"de": "Baugräber-Pokémon",
+					"es": "Pokémon Excavador",
+					"it": "Pokémon Scavabuche",
+					"ja": "あなほりポケモン",
+					"zh-hans": "挖洞宝可梦",
+					"es-419": "Pokémon Excavador"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 660
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 11
+					},
+					{
+						"pokedex": "galar",
+						"number": 49
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 14
+					},
+					{
+						"pokedex": "champions",
+						"number": 660
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 659,
+								"natiId": 659,
+								"name": "Bunnelby"
+							},
+							{
+								"id": 660,
+								"natiId": 660,
+								"name": "Diggersby",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/660",
+						"fetchedAt": "2026-11-03T05:53:47.202Z",
+						"hash": "437bbcadebf4772375af6c0a233c4abbfed7c713e2a1e00e3a5f8e397a6eb899"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/340/",
+						"fetchedAt": "2026-11-03T05:53:47.226Z",
+						"hash": "adfd3367e52a9a7b462725dcf72a38bf2677c02ba2a9332537edf3926991df2a"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/660/",
+						"fetchedAt": "2026-11-03T05:53:47.258Z",
+						"hash": "46c84c3f2aba0a1f99ce23bb60acd68630a9e8d97f6d716671d194e237d81fde"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/660/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.318Z",
+						"hash": "ab76497e1ce905d2dc0994f8c36fbfd1bf49ec6c5be8f7d05d7237e61a08c9ed"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/660/",
+						"fetchedAt": "2026-11-03T05:53:47.371Z",
+						"hash": "7ba27311bc3d9e601cf913820ee0d830aae2a60d265d091a29321d911e31ee96"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"letsgopikachu": "",
+				"letsgoeevee": ""
+			},
+			"localizedFlavorByGame": {
+				"letsgopikachu": {},
+				"letsgoeevee": {}
+			}
+		},
+		{
+			"profileKey": "sword-shield",
+			"label": "Sword / Shield",
+			"appGameKeys": [
+				"sword",
+				"shield"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Diggersby",
+				"localizedNames": {
+					"ja-hrkt": "ホルード",
+					"ja-roma": "Horudo",
+					"ko": "파르토",
+					"zh-hant": "掘地兔",
+					"fr": "Excavarenne",
+					"de": "Grebbit",
+					"es": "Diggersby",
+					"it": "Diggersby",
+					"ja": "ホルード",
+					"zh-hans": "掘地兔",
+					"es-419": "Diggersby"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal",
+					"Ground"
+				],
+				"baseStats": {
+					"hp": 85,
+					"atk": 56,
+					"def": 77,
+					"spa": 50,
+					"spd": 77,
+					"spe": 78
+				},
+				"evYield": {
+					"hp": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Pickup",
+					"Cheek Pouch",
+					"Huge Power (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Huge Power"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "1.0 m",
+				"weight": "42.4 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 127,
+				"baseExperience": 148,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Digging Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "あなほりポケモン",
+					"ko": "땅구멍파기포켓몬",
+					"zh-hant": "挖洞寶可夢",
+					"fr": "Pokémon Fouisseur",
+					"de": "Baugräber-Pokémon",
+					"es": "Pokémon Excavador",
+					"it": "Pokémon Scavabuche",
+					"ja": "あなほりポケモン",
+					"zh-hans": "挖洞宝可梦",
+					"es-419": "Pokémon Excavador"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 660
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 11
+					},
+					{
+						"pokedex": "galar",
+						"number": 49
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 14
+					},
+					{
+						"pokedex": "champions",
+						"number": 660
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 659,
+								"natiId": 659,
+								"name": "Bunnelby"
+							},
+							{
+								"id": 660,
+								"natiId": 660,
+								"name": "Diggersby",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Axews Eye Area",
+						"notes": "Walk, Lv. 35-40",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Axews Eye Area",
+						"notes": "Walk, Lv. 60",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Axews Eye Area",
+						"notes": "Walk, Lv. 35-40",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Axews Eye Area",
+						"notes": "Walk, Lv. 60",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Axews Eye Area",
+						"notes": "Walk, Lv. 35-40",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Axews Eye Area",
+						"notes": "Walk, Lv. 60",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Axews Eye Area",
+						"notes": "Walk, Lv. 35-40",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Axews Eye Area",
+						"notes": "Walk, Lv. 60",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Axews Eye Area",
+						"notes": "Walk, Lv. 35-40",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Axews Eye Area",
+						"notes": "Walk, Lv. 60",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Axews Eye Area",
+						"notes": "Walk, Lv. 35-40",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Axews Eye Area",
+						"notes": "Walk, Lv. 60",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Axews Eye Area",
+						"notes": "Walk, Lv. 35-40",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Axews Eye Area",
+						"notes": "Walk, Lv. 60",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Axews Eye Area",
+						"notes": "Walk, Lv. 35-40",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Axews Eye Area",
+						"notes": "Walk, Lv. 60",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Axews Eye Area",
+						"notes": "Walk, Lv. 35-40",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Axews Eye Area",
+						"notes": "Walk, Lv. 60",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Axews Eye Area",
+						"notes": "Walk, Lv. 35-40",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Axews Eye Area",
+						"notes": "Walk, Lv. 60",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Axews Eye Area",
+						"notes": "Walk, Lv. 35-40",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Axews Eye Area",
+						"notes": "Walk, Lv. 60",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Axews Eye Area",
+						"notes": "Walk, Lv. 35-40",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Axews Eye Area",
+						"notes": "Walk, Lv. 60",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Axews Eye Area",
+						"notes": "Walk, Lv. 35-40",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Axews Eye Area",
+						"notes": "Walk, Lv. 60",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Axews Eye Area",
+						"notes": "Walk, Lv. 35-40",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Axews Eye Area",
+						"notes": "Walk, Lv. 60",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Axews Eye Area",
+						"notes": "Walk, Lv. 35-40",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Axews Eye Area",
+						"notes": "Walk, Lv. 60",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Axews Eye Area",
+						"notes": "Walk, Lv. 35-40",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Axews Eye Area",
+						"notes": "Walk, Lv. 60",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Axews Eye Area",
+						"notes": "Walk, Lv. 35-40",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Axews Eye Area",
+						"notes": "Walk, Lv. 60",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Axews Eye Area",
+						"notes": "Walk, Lv. 35-40",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Axews Eye Area",
+						"notes": "Walk, Lv. 60",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Walk, Lv. 26-28",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Walk, Lv. 60",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Walk, Lv. 26-28",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Walk, Lv. 60",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Giants Cap Main",
+						"notes": "Overworld, Lv. 28-30",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Giants Cap Main",
+						"notes": "Overworld, Lv. 60",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Giants Cap Main",
+						"notes": "Overworld, Lv. 28-30",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Giants Cap Main",
+						"notes": "Overworld, Lv. 60",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Giants Cap Main",
+						"notes": "Overworld, Lv. 28-30",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Giants Cap Main",
+						"notes": "Overworld, Lv. 60",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Giants Cap Main",
+						"notes": "Overworld, Lv. 28-30",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Giants Cap Main",
+						"notes": "Overworld, Lv. 60",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Giants Mirror Main",
+						"notes": "Walk, Lv. 26-28",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Giants Mirror Main",
+						"notes": "Walk, Lv. 60",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Giants Mirror Main",
+						"notes": "Walk, Lv. 26-28",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Giants Mirror Main",
+						"notes": "Walk, Lv. 60",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Giants Seat Area",
+						"notes": "Walk, Lv. 30-35",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Giants Seat Area",
+						"notes": "Walk, Lv. 60",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Giants Seat Area",
+						"notes": "Walk, Lv. 30-35",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Giants Seat Area",
+						"notes": "Walk, Lv. 60",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "North Lake Miloch Area",
+						"notes": "Walk, Lv. 14-16",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "North Lake Miloch Area",
+						"notes": "Walk, Lv. 60",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "North Lake Miloch Area",
+						"notes": "Walk, Lv. 14-16",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "North Lake Miloch Area",
+						"notes": "Walk, Lv. 60",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Wanderer, Lv. 15",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Wanderer, Lv. 15",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Wanderer, Lv. 15",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Wanderer, Lv. 26",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Wanderer, Lv. 26",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Wanderer, Lv. 26",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Wanderer, Lv. 26",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Wanderer, Lv. 15",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Wanderer, Lv. 15",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Wanderer, Lv. 15",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Wanderer, Lv. 15",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Wanderer, Lv. 15",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Wanderer, Lv. 26",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Wanderer, Lv. 26",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Wanderer, Lv. 26",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Wanderer, Lv. 26",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Wanderer, Lv. 15",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Wanderer, Lv. 15",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Rolling Fields Main",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "West Lake Axewell Area",
+						"notes": "Wanderer, Lv. 15",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "West Lake Axewell Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "West Lake Axewell Area",
+						"notes": "Wanderer, Lv. 15",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "West Lake Axewell Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "West Lake Axewell Area",
+						"notes": "Wanderer, Lv. 15",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "West Lake Axewell Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "West Lake Axewell Area",
+						"notes": "Wanderer, Lv. 15",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "West Lake Axewell Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "West Lake Axewell Area",
+						"notes": "Wanderer, Lv. 15",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "West Lake Axewell Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "West Lake Axewell Area",
+						"notes": "Wanderer, Lv. 15",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "West Lake Axewell Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "West Lake Axewell Area",
+						"notes": "Wanderer, Lv. 15",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "West Lake Axewell Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "West Lake Axewell Area",
+						"notes": "Wanderer, Lv. 15",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "West Lake Axewell Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Rolling Fields Max Den A",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Rolling Fields Max Den A",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "Rolling Fields Max Den A",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Rolling Fields Max Den A",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Rolling Fields Max Den B",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Rolling Fields Max Den B",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Rolling Fields Max Den B",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Rolling Fields Max Den B",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Rolling Fields Max Den B",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Rolling Fields Max Den B",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "East Lake Axewell Max Den C",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "East Lake Axewell Max Den C",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Sword",
+						"rate": "35%"
+					},
+					{
+						"area": "East Lake Axewell Max Den C",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "East Lake Axewell Max Den C",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Shield",
+						"rate": "35%"
+					},
+					{
+						"area": "Motostoke Riverbank Max Den A",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Sword",
+						"rate": "15%"
+					},
+					{
+						"area": "Motostoke Riverbank Max Den A",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Motostoke Riverbank Max Den A",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Shield",
+						"rate": "15%"
+					},
+					{
+						"area": "Motostoke Riverbank Max Den A",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Bridge Field Max Den A",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Bridge Field Max Den A",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Bridge Field Max Den A",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Bridge Field Max Den A",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Bridge Field Max Den A",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Bridge Field Max Den A",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Bridge Field Max Den E",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Sword",
+						"rate": "15%"
+					},
+					{
+						"area": "Bridge Field Max Den E",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Bridge Field Max Den E",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Shield",
+						"rate": "15%"
+					},
+					{
+						"area": "Bridge Field Max Den E",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Stony Wilderness Max Den A",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Sword",
+						"rate": "15%"
+					},
+					{
+						"area": "Stony Wilderness Max Den A",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Stony Wilderness Max Den A",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Shield",
+						"rate": "15%"
+					},
+					{
+						"area": "Stony Wilderness Max Den A",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Shield",
+						"rate": "20%"
+					}
+				],
+				"moves": {
+					"Machine": [
+						{
+							"name": "Agility",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Body Slam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bounce",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Brick Break",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Brutal Swing",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bulk Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Bulldoze",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Earth Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Earthquake",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endure",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fire Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fling",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Foul Play",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Grass Knot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Gunk Shot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "High Horsepower",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Ice Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Head",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Iron Tail",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Low Kick",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Mega Kick",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Mega Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Mud Shot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Payback",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Slide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Tomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sand Tomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sandstorm",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sludge Bomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Spikes",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Stomping Tantrum",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Stone Edge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Superpower",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Surf",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swords Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunder Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "U Turn",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Uproar",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Wild Charge",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Work Up",
+							"level": null,
+							"order": null
+						}
+					],
+					"Level Up": [
+						{
+							"name": "Mud Slap",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Leer",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Laser Focus",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Quick Attack",
+							"level": 9,
+							"order": null
+						},
+						{
+							"name": "Mud Shot",
+							"level": 12,
+							"order": null
+						},
+						{
+							"name": "Flail",
+							"level": 15,
+							"order": null
+						},
+						{
+							"name": "Double Kick",
+							"level": 18,
+							"order": null
+						},
+						{
+							"name": "Bulldoze",
+							"level": 23,
+							"order": null
+						},
+						{
+							"name": "Dig",
+							"level": 28,
+							"order": null
+						},
+						{
+							"name": "Bounce",
+							"level": 33,
+							"order": null
+						},
+						{
+							"name": "Take Down",
+							"level": 38,
+							"order": null
+						},
+						{
+							"name": "Swords Dance",
+							"level": 43,
+							"order": null
+						},
+						{
+							"name": "Earthquake",
+							"level": 48,
+							"order": null
+						},
+						{
+							"name": "Super Fang",
+							"level": 53,
+							"order": null
+						},
+						{
+							"name": "Hammer Arm",
+							"level": 58,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Scorching Sands",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/660",
+						"fetchedAt": "2026-11-03T05:53:47.202Z",
+						"hash": "437bbcadebf4772375af6c0a233c4abbfed7c713e2a1e00e3a5f8e397a6eb899"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/340/",
+						"fetchedAt": "2026-11-03T05:53:47.226Z",
+						"hash": "adfd3367e52a9a7b462725dcf72a38bf2677c02ba2a9332537edf3926991df2a"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/660/",
+						"fetchedAt": "2026-11-03T05:53:47.258Z",
+						"hash": "46c84c3f2aba0a1f99ce23bb60acd68630a9e8d97f6d716671d194e237d81fde"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/660/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.318Z",
+						"hash": "ab76497e1ce905d2dc0994f8c36fbfd1bf49ec6c5be8f7d05d7237e61a08c9ed"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/660/",
+						"fetchedAt": "2026-11-03T05:53:47.371Z",
+						"hash": "7ba27311bc3d9e601cf913820ee0d830aae2a60d265d091a29321d911e31ee96"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"sword": "With power equal to an excavator, it can dig through dense bedrock. It’s a huge help during tunnel construction.",
+				"shield": "The fur on its belly retains heat exceptionally well. People used to make heavy winter clothing from fur shed by this Pokémon."
+			},
+			"localizedFlavorByGame": {
+				"sword": {
+					"ja-hrkt": "ショベルカーに まけない パワーで かたい がんばんも ほりすすむ。 トンネルこうじで だいかつやく。",
+					"ko": "굴착기에 뒤지지 않는 파워로 단단한 암반도 파고 들어간다. 터널 공사에서 크게 활약한다.",
+					"zh-hant": "力量不亞於挖掘機， 連堅硬的岩盤也能挖掘。 在隧道建設工程中十分活躍。",
+					"fr": "Aussi puissant qu’une pelleteuse, il peut venir à bout de la roche la plus dure. On fait souvent appel à lui pour forer des tunnels.",
+					"de": "Seine Stärke gleicht der eines Baggers, sodass es sich durch harte Gesteinsschichten graben kann. Es leistet großartige Arbeit beim Tunnelbau.",
+					"es": "Puede horadar incluso el duro sustrato rocoso con la fuerza de una excavadora, por lo que su ayuda resulta inestimable para construir túneles.",
+					"it": "Riesce a scavare strati rocciosi durissimi grazie alla sua forza pari a quella di una scavatrice. È di grande aiuto nei lavori di scavo dei tunnel.",
+					"en": "With power equal to an excavator, it can dig through dense bedrock. It’s a huge help during tunnel construction.",
+					"ja": "ショベルカーに 負けない パワーで 硬い 岩盤も 掘り進む。 トンネル工事で 大活躍。",
+					"zh-hans": "力量不亚于挖掘机， 连坚硬的岩盘也能挖掘。 在隧道建设工程中十分活跃。",
+					"es-419": "Puede horadar incluso el duro sustrato rocoso con la fuerza de una excavadora, por lo que su ayuda resulta inestimable para construir túneles."
+				},
+				"shield": {
+					"ja-hrkt": "おなかの たいもうは ほおんせいに すぐれる。 むかしの ひとは ぬけた たいもうで ぼうかんぎを つくった。",
+					"ko": "배의 털은 보온성이 뛰어나다. 옛날 사람들은 파르토의 몸에서 빠진 털로 방한복을 만들었다.",
+					"zh-hant": "肚子上的體毛保溫性能優秀。 在過去，人們會用牠掉落的毛 來製作保暖服裝。",
+					"fr": "La fourrure de son ventre est un excellent isolant thermique. Jadis, on fabriquait des vêtements chauds en se servant de sa mue.",
+					"de": "Das Fell an seinem Bauch hält es schön warm. Früher haben die Menschen daraus Kleidung gefertigt, die sie vor Kälte schützte.",
+					"es": "El pelaje de su abdomen es un aislante térmico excelente, tanto que antaño se usaba el que mudaba para confeccionar prendas de abrigo.",
+					"it": "La pelliccia sul suo addome lo mantiene caldo. Gli antichi confezionavano abiti termici resistenti al freddo con il pelo raccolto dopo la sua muta.",
+					"en": "The fur on its belly retains heat exceptionally well. People used to make heavy winter clothing from fur shed by this Pokémon.",
+					"ja": "お腹の 体毛は 保温性に 優れる。 昔の 人は 抜けた 体毛で 防寒着を つくった。",
+					"zh-hans": "肚子上的体毛保温性能优秀。 在过去，人们会用它的落毛 来制作保暖服装。",
+					"es-419": "El pelaje de su abdomen es un aislante térmico excelente, tanto que antaño se usaba el que mudaba para confeccionar prendas de abrigo."
+				}
+			}
+		},
+		{
+			"profileKey": "the-isle-of-armor",
+			"label": "The Isle of Armor",
+			"appGameKeys": [
+				"swordioa",
+				"shieldioa"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Diggersby",
+				"localizedNames": {
+					"ja-hrkt": "ホルード",
+					"ja-roma": "Horudo",
+					"ko": "파르토",
+					"zh-hant": "掘地兔",
+					"fr": "Excavarenne",
+					"de": "Grebbit",
+					"es": "Diggersby",
+					"it": "Diggersby",
+					"ja": "ホルード",
+					"zh-hans": "掘地兔",
+					"es-419": "Diggersby"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal",
+					"Ground"
+				],
+				"baseStats": {
+					"hp": 85,
+					"atk": 56,
+					"def": 77,
+					"spa": 50,
+					"spd": 77,
+					"spe": 78
+				},
+				"evYield": {
+					"hp": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Pickup",
+					"Cheek Pouch",
+					"Huge Power (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Huge Power"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "1.0 m",
+				"weight": "42.4 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 127,
+				"baseExperience": 148,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Digging Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "あなほりポケモン",
+					"ko": "땅구멍파기포켓몬",
+					"zh-hant": "挖洞寶可夢",
+					"fr": "Pokémon Fouisseur",
+					"de": "Baugräber-Pokémon",
+					"es": "Pokémon Excavador",
+					"it": "Pokémon Scavabuche",
+					"ja": "あなほりポケモン",
+					"zh-hans": "挖洞宝可梦",
+					"es-419": "Pokémon Excavador"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 660
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 11
+					},
+					{
+						"pokedex": "galar",
+						"number": 49
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 14
+					},
+					{
+						"pokedex": "champions",
+						"number": 660
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 659,
+								"natiId": 659,
+								"name": "Bunnelby"
+							},
+							{
+								"id": 660,
+								"natiId": 660,
+								"name": "Diggersby",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/660",
+						"fetchedAt": "2026-11-03T05:53:47.202Z",
+						"hash": "437bbcadebf4772375af6c0a233c4abbfed7c713e2a1e00e3a5f8e397a6eb899"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/340/",
+						"fetchedAt": "2026-11-03T05:53:47.226Z",
+						"hash": "adfd3367e52a9a7b462725dcf72a38bf2677c02ba2a9332537edf3926991df2a"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/660/",
+						"fetchedAt": "2026-11-03T05:53:47.258Z",
+						"hash": "46c84c3f2aba0a1f99ce23bb60acd68630a9e8d97f6d716671d194e237d81fde"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/660/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.318Z",
+						"hash": "ab76497e1ce905d2dc0994f8c36fbfd1bf49ec6c5be8f7d05d7237e61a08c9ed"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/660/",
+						"fetchedAt": "2026-11-03T05:53:47.371Z",
+						"hash": "7ba27311bc3d9e601cf913820ee0d830aae2a60d265d091a29321d911e31ee96"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordioa": "",
+				"shieldioa": ""
+			},
+			"localizedFlavorByGame": {
+				"swordioa": {},
+				"shieldioa": {}
+			}
+		},
+		{
+			"profileKey": "the-crown-tundra",
+			"label": "The Crown Tundra",
+			"appGameKeys": [
+				"swordct",
+				"shieldct"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Diggersby",
+				"localizedNames": {
+					"ja-hrkt": "ホルード",
+					"ja-roma": "Horudo",
+					"ko": "파르토",
+					"zh-hant": "掘地兔",
+					"fr": "Excavarenne",
+					"de": "Grebbit",
+					"es": "Diggersby",
+					"it": "Diggersby",
+					"ja": "ホルード",
+					"zh-hans": "掘地兔",
+					"es-419": "Diggersby"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal",
+					"Ground"
+				],
+				"baseStats": {
+					"hp": 85,
+					"atk": 56,
+					"def": 77,
+					"spa": 50,
+					"spd": 77,
+					"spe": 78
+				},
+				"evYield": {
+					"hp": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Pickup",
+					"Cheek Pouch",
+					"Huge Power (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Huge Power"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "1.0 m",
+				"weight": "42.4 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 127,
+				"baseExperience": 148,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Digging Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "あなほりポケモン",
+					"ko": "땅구멍파기포켓몬",
+					"zh-hant": "挖洞寶可夢",
+					"fr": "Pokémon Fouisseur",
+					"de": "Baugräber-Pokémon",
+					"es": "Pokémon Excavador",
+					"it": "Pokémon Scavabuche",
+					"ja": "あなほりポケモン",
+					"zh-hans": "挖洞宝可梦",
+					"es-419": "Pokémon Excavador"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 660
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 11
+					},
+					{
+						"pokedex": "galar",
+						"number": 49
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 14
+					},
+					{
+						"pokedex": "champions",
+						"number": 660
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 659,
+								"natiId": 659,
+								"name": "Bunnelby"
+							},
+							{
+								"id": 660,
+								"natiId": 660,
+								"name": "Diggersby",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Max Lair Area",
+						"notes": "Dynamax Adventure, Lv. 65",
+						"games": "The Crown Tundra Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Max Lair Area",
+						"notes": "Dynamax Adventure, Lv. 65",
+						"games": "The Crown Tundra Shield",
+						"rate": "100%"
+					}
+				],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/660",
+						"fetchedAt": "2026-11-03T05:53:47.202Z",
+						"hash": "437bbcadebf4772375af6c0a233c4abbfed7c713e2a1e00e3a5f8e397a6eb899"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/340/",
+						"fetchedAt": "2026-11-03T05:53:47.226Z",
+						"hash": "adfd3367e52a9a7b462725dcf72a38bf2677c02ba2a9332537edf3926991df2a"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/660/",
+						"fetchedAt": "2026-11-03T05:53:47.258Z",
+						"hash": "46c84c3f2aba0a1f99ce23bb60acd68630a9e8d97f6d716671d194e237d81fde"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/660/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.318Z",
+						"hash": "ab76497e1ce905d2dc0994f8c36fbfd1bf49ec6c5be8f7d05d7237e61a08c9ed"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/660/",
+						"fetchedAt": "2026-11-03T05:53:47.371Z",
+						"hash": "7ba27311bc3d9e601cf913820ee0d830aae2a60d265d091a29321d911e31ee96"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"swordct": "",
+				"shieldct": ""
+			},
+			"localizedFlavorByGame": {
+				"swordct": {},
+				"shieldct": {}
+			}
+		},
+		{
+			"profileKey": "brilliant-diamond-shining-pearl",
+			"label": "Brilliant Diamond / Shining Pearl",
+			"appGameKeys": [
+				"brilliantdiamond-national",
+				"brilliantdiamond",
+				"shiningpearl-national",
+				"shiningpearl"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Diggersby",
+				"localizedNames": {
+					"ja-hrkt": "ホルード",
+					"ja-roma": "Horudo",
+					"ko": "파르토",
+					"zh-hant": "掘地兔",
+					"fr": "Excavarenne",
+					"de": "Grebbit",
+					"es": "Diggersby",
+					"it": "Diggersby",
+					"ja": "ホルード",
+					"zh-hans": "掘地兔",
+					"es-419": "Diggersby"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal",
+					"Ground"
+				],
+				"baseStats": {
+					"hp": 85,
+					"atk": 56,
+					"def": 77,
+					"spa": 50,
+					"spd": 77,
+					"spe": 78
+				},
+				"evYield": {
+					"hp": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Pickup",
+					"Cheek Pouch",
+					"Huge Power (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Huge Power"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "1.0 m",
+				"weight": "42.4 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 127,
+				"baseExperience": 148,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Digging Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "あなほりポケモン",
+					"ko": "땅구멍파기포켓몬",
+					"zh-hant": "挖洞寶可夢",
+					"fr": "Pokémon Fouisseur",
+					"de": "Baugräber-Pokémon",
+					"es": "Pokémon Excavador",
+					"it": "Pokémon Scavabuche",
+					"ja": "あなほりポケモン",
+					"zh-hans": "挖洞宝可梦",
+					"es-419": "Pokémon Excavador"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 660
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 11
+					},
+					{
+						"pokedex": "galar",
+						"number": 49
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 14
+					},
+					{
+						"pokedex": "champions",
+						"number": 660
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 659,
+								"natiId": 659,
+								"name": "Bunnelby"
+							},
+							{
+								"id": 660,
+								"natiId": 660,
+								"name": "Diggersby",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/660",
+						"fetchedAt": "2026-11-03T05:53:47.202Z",
+						"hash": "437bbcadebf4772375af6c0a233c4abbfed7c713e2a1e00e3a5f8e397a6eb899"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/340/",
+						"fetchedAt": "2026-11-03T05:53:47.226Z",
+						"hash": "adfd3367e52a9a7b462725dcf72a38bf2677c02ba2a9332537edf3926991df2a"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/660/",
+						"fetchedAt": "2026-11-03T05:53:47.258Z",
+						"hash": "46c84c3f2aba0a1f99ce23bb60acd68630a9e8d97f6d716671d194e237d81fde"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/660/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.318Z",
+						"hash": "ab76497e1ce905d2dc0994f8c36fbfd1bf49ec6c5be8f7d05d7237e61a08c9ed"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/660/",
+						"fetchedAt": "2026-11-03T05:53:47.371Z",
+						"hash": "7ba27311bc3d9e601cf913820ee0d830aae2a60d265d091a29321d911e31ee96"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"brilliantdiamond-national": "",
+				"brilliantdiamond": "",
+				"shiningpearl-national": "",
+				"shiningpearl": ""
+			},
+			"localizedFlavorByGame": {
+				"brilliantdiamond-national": {},
+				"brilliantdiamond": {},
+				"shiningpearl-national": {},
+				"shiningpearl": {}
+			}
+		},
+		{
+			"profileKey": "legends-arceus",
+			"label": "Legends: Arceus",
+			"appGameKeys": [
+				"legendsarceus"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Diggersby",
+				"localizedNames": {
+					"ja-hrkt": "ホルード",
+					"ja-roma": "Horudo",
+					"ko": "파르토",
+					"zh-hant": "掘地兔",
+					"fr": "Excavarenne",
+					"de": "Grebbit",
+					"es": "Diggersby",
+					"it": "Diggersby",
+					"ja": "ホルード",
+					"zh-hans": "掘地兔",
+					"es-419": "Diggersby"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal",
+					"Ground"
+				],
+				"baseStats": {
+					"hp": 85,
+					"atk": 56,
+					"def": 77,
+					"spa": 50,
+					"spd": 77,
+					"spe": 78
+				},
+				"evYield": {
+					"hp": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Pickup",
+					"Cheek Pouch",
+					"Huge Power (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Huge Power"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "1.0 m",
+				"weight": "42.4 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 127,
+				"baseExperience": 148,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Digging Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "あなほりポケモン",
+					"ko": "땅구멍파기포켓몬",
+					"zh-hant": "挖洞寶可夢",
+					"fr": "Pokémon Fouisseur",
+					"de": "Baugräber-Pokémon",
+					"es": "Pokémon Excavador",
+					"it": "Pokémon Scavabuche",
+					"ja": "あなほりポケモン",
+					"zh-hans": "挖洞宝可梦",
+					"es-419": "Pokémon Excavador"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 660
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 11
+					},
+					{
+						"pokedex": "galar",
+						"number": 49
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 14
+					},
+					{
+						"pokedex": "champions",
+						"number": 660
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 659,
+								"natiId": 659,
+								"name": "Bunnelby"
+							},
+							{
+								"id": 660,
+								"natiId": 660,
+								"name": "Diggersby",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/660",
+						"fetchedAt": "2026-11-03T05:53:47.202Z",
+						"hash": "437bbcadebf4772375af6c0a233c4abbfed7c713e2a1e00e3a5f8e397a6eb899"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/340/",
+						"fetchedAt": "2026-11-03T05:53:47.226Z",
+						"hash": "adfd3367e52a9a7b462725dcf72a38bf2677c02ba2a9332537edf3926991df2a"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/660/",
+						"fetchedAt": "2026-11-03T05:53:47.258Z",
+						"hash": "46c84c3f2aba0a1f99ce23bb60acd68630a9e8d97f6d716671d194e237d81fde"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/660/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.318Z",
+						"hash": "ab76497e1ce905d2dc0994f8c36fbfd1bf49ec6c5be8f7d05d7237e61a08c9ed"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/660/",
+						"fetchedAt": "2026-11-03T05:53:47.371Z",
+						"hash": "7ba27311bc3d9e601cf913820ee0d830aae2a60d265d091a29321d911e31ee96"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendsarceus": ""
+			},
+			"localizedFlavorByGame": {
+				"legendsarceus": {}
+			}
+		},
+		{
+			"profileKey": "scarlet-violet",
+			"label": "Scarlet / Violet",
+			"appGameKeys": [
+				"scarlet",
+				"violet"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Diggersby",
+				"localizedNames": {
+					"ja-hrkt": "ホルード",
+					"ja-roma": "Horudo",
+					"ko": "파르토",
+					"zh-hant": "掘地兔",
+					"fr": "Excavarenne",
+					"de": "Grebbit",
+					"es": "Diggersby",
+					"it": "Diggersby",
+					"ja": "ホルード",
+					"zh-hans": "掘地兔",
+					"es-419": "Diggersby"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal",
+					"Ground"
+				],
+				"baseStats": {
+					"hp": 85,
+					"atk": 56,
+					"def": 77,
+					"spa": 50,
+					"spd": 77,
+					"spe": 78
+				},
+				"evYield": {
+					"hp": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Pickup",
+					"Cheek Pouch",
+					"Huge Power (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Huge Power"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "1.0 m",
+				"weight": "42.4 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 127,
+				"baseExperience": 148,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Digging Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "あなほりポケモン",
+					"ko": "땅구멍파기포켓몬",
+					"zh-hant": "挖洞寶可夢",
+					"fr": "Pokémon Fouisseur",
+					"de": "Baugräber-Pokémon",
+					"es": "Pokémon Excavador",
+					"it": "Pokémon Scavabuche",
+					"ja": "あなほりポケモン",
+					"zh-hans": "挖洞宝可梦",
+					"es-419": "Pokémon Excavador"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 660
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 11
+					},
+					{
+						"pokedex": "galar",
+						"number": 49
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 14
+					},
+					{
+						"pokedex": "champions",
+						"number": 660
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 659,
+								"natiId": 659,
+								"name": "Bunnelby"
+							},
+							{
+								"id": 660,
+								"natiId": 660,
+								"name": "Diggersby",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/660",
+						"fetchedAt": "2026-11-03T05:53:47.202Z",
+						"hash": "437bbcadebf4772375af6c0a233c4abbfed7c713e2a1e00e3a5f8e397a6eb899"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/340/",
+						"fetchedAt": "2026-11-03T05:53:47.226Z",
+						"hash": "adfd3367e52a9a7b462725dcf72a38bf2677c02ba2a9332537edf3926991df2a"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/660/",
+						"fetchedAt": "2026-11-03T05:53:47.258Z",
+						"hash": "46c84c3f2aba0a1f99ce23bb60acd68630a9e8d97f6d716671d194e237d81fde"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/660/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.318Z",
+						"hash": "ab76497e1ce905d2dc0994f8c36fbfd1bf49ec6c5be8f7d05d7237e61a08c9ed"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/660/",
+						"fetchedAt": "2026-11-03T05:53:47.371Z",
+						"hash": "7ba27311bc3d9e601cf913820ee0d830aae2a60d265d091a29321d911e31ee96"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlet": "",
+				"violet": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlet": {},
+				"violet": {}
+			}
+		},
+		{
+			"profileKey": "the-teal-mask",
+			"label": "The Teal Mask",
+			"appGameKeys": [
+				"scarlettm",
+				"violettm"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Diggersby",
+				"localizedNames": {
+					"ja-hrkt": "ホルード",
+					"ja-roma": "Horudo",
+					"ko": "파르토",
+					"zh-hant": "掘地兔",
+					"fr": "Excavarenne",
+					"de": "Grebbit",
+					"es": "Diggersby",
+					"it": "Diggersby",
+					"ja": "ホルード",
+					"zh-hans": "掘地兔",
+					"es-419": "Diggersby"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal",
+					"Ground"
+				],
+				"baseStats": {
+					"hp": 85,
+					"atk": 56,
+					"def": 77,
+					"spa": 50,
+					"spd": 77,
+					"spe": 78
+				},
+				"evYield": {
+					"hp": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Pickup",
+					"Cheek Pouch",
+					"Huge Power (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Huge Power"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "1.0 m",
+				"weight": "42.4 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 127,
+				"baseExperience": 148,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Digging Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "あなほりポケモン",
+					"ko": "땅구멍파기포켓몬",
+					"zh-hant": "挖洞寶可夢",
+					"fr": "Pokémon Fouisseur",
+					"de": "Baugräber-Pokémon",
+					"es": "Pokémon Excavador",
+					"it": "Pokémon Scavabuche",
+					"ja": "あなほりポケモン",
+					"zh-hans": "挖洞宝可梦",
+					"es-419": "Pokémon Excavador"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 660
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 11
+					},
+					{
+						"pokedex": "galar",
+						"number": 49
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 14
+					},
+					{
+						"pokedex": "champions",
+						"number": 660
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 659,
+								"natiId": 659,
+								"name": "Bunnelby"
+							},
+							{
+								"id": 660,
+								"natiId": 660,
+								"name": "Diggersby",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/660",
+						"fetchedAt": "2026-11-03T05:53:47.202Z",
+						"hash": "437bbcadebf4772375af6c0a233c4abbfed7c713e2a1e00e3a5f8e397a6eb899"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/340/",
+						"fetchedAt": "2026-11-03T05:53:47.226Z",
+						"hash": "adfd3367e52a9a7b462725dcf72a38bf2677c02ba2a9332537edf3926991df2a"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/660/",
+						"fetchedAt": "2026-11-03T05:53:47.258Z",
+						"hash": "46c84c3f2aba0a1f99ce23bb60acd68630a9e8d97f6d716671d194e237d81fde"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/660/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.318Z",
+						"hash": "ab76497e1ce905d2dc0994f8c36fbfd1bf49ec6c5be8f7d05d7237e61a08c9ed"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/660/",
+						"fetchedAt": "2026-11-03T05:53:47.371Z",
+						"hash": "7ba27311bc3d9e601cf913820ee0d830aae2a60d265d091a29321d911e31ee96"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarlettm": "",
+				"violettm": ""
+			},
+			"localizedFlavorByGame": {
+				"scarlettm": {},
+				"violettm": {}
+			}
+		},
+		{
+			"profileKey": "the-indigo-disk",
+			"label": "The Indigo Disk",
+			"appGameKeys": [
+				"scarletid",
+				"violetid"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Diggersby",
+				"localizedNames": {
+					"ja-hrkt": "ホルード",
+					"ja-roma": "Horudo",
+					"ko": "파르토",
+					"zh-hant": "掘地兔",
+					"fr": "Excavarenne",
+					"de": "Grebbit",
+					"es": "Diggersby",
+					"it": "Diggersby",
+					"ja": "ホルード",
+					"zh-hans": "掘地兔",
+					"es-419": "Diggersby"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal",
+					"Ground"
+				],
+				"baseStats": {
+					"hp": 85,
+					"atk": 56,
+					"def": 77,
+					"spa": 50,
+					"spd": 77,
+					"spe": 78
+				},
+				"evYield": {
+					"hp": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Pickup",
+					"Cheek Pouch",
+					"Huge Power (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Huge Power"
+				],
+				"eggGroups": [
+					"Ground"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 15,
+				"height": "1.0 m",
+				"weight": "42.4 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 127,
+				"baseExperience": 148,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Digging Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "あなほりポケモン",
+					"ko": "땅구멍파기포켓몬",
+					"zh-hant": "挖洞寶可夢",
+					"fr": "Pokémon Fouisseur",
+					"de": "Baugräber-Pokémon",
+					"es": "Pokémon Excavador",
+					"it": "Pokémon Scavabuche",
+					"ja": "あなほりポケモン",
+					"zh-hans": "挖洞宝可梦",
+					"es-419": "Pokémon Excavador"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 660
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 11
+					},
+					{
+						"pokedex": "galar",
+						"number": 49
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 14
+					},
+					{
+						"pokedex": "champions",
+						"number": 660
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 659,
+								"natiId": 659,
+								"name": "Bunnelby"
+							},
+							{
+								"id": 660,
+								"natiId": 660,
+								"name": "Diggersby",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Form introduced in X Y."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/660",
+						"fetchedAt": "2026-11-03T05:53:47.202Z",
+						"hash": "437bbcadebf4772375af6c0a233c4abbfed7c713e2a1e00e3a5f8e397a6eb899"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/340/",
+						"fetchedAt": "2026-11-03T05:53:47.226Z",
+						"hash": "adfd3367e52a9a7b462725dcf72a38bf2677c02ba2a9332537edf3926991df2a"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/660/",
+						"fetchedAt": "2026-11-03T05:53:47.258Z",
+						"hash": "46c84c3f2aba0a1f99ce23bb60acd68630a9e8d97f6d716671d194e237d81fde"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/660/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.318Z",
+						"hash": "ab76497e1ce905d2dc0994f8c36fbfd1bf49ec6c5be8f7d05d7237e61a08c9ed"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/660/",
+						"fetchedAt": "2026-11-03T05:53:47.371Z",
+						"hash": "7ba27311bc3d9e601cf913820ee0d830aae2a60d265d091a29321d911e31ee96"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"scarletid": "",
+				"violetid": ""
+			},
+			"localizedFlavorByGame": {
+				"scarletid": {},
+				"violetid": {}
+			}
+		},
+		{
+			"profileKey": "legends-za",
+			"label": "Legends: Z-A",
+			"appGameKeys": [
+				"legendsza"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Diggersby",
+				"localizedNames": {
+					"ja-hrkt": "ホルード",
+					"ja-roma": "Horudo",
+					"ko": "파르토",
+					"zh-hant": "掘地兔",
+					"fr": "Excavarenne",
+					"de": "Grebbit",
+					"es": "Diggersby",
+					"it": "Diggersby",
+					"ja": "ホルード",
+					"zh-hans": "掘地兔",
+					"es-419": "Diggersby"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal",
+					"Ground"
+				],
+				"baseStats": {
+					"hp": 85,
+					"atk": 56,
+					"def": 77,
+					"spa": 50,
+					"spd": 77,
+					"spe": 78
+				},
+				"evYield": {
+					"hp": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Pickup",
+					"Cheek Pouch",
+					"Huge Power (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Huge Power"
+				],
+				"eggGroups": [
+					"Field"
+				],
+				"expGroup": "Medium Fast",
+				"hatchCounter": 15,
+				"height": "1 m",
+				"weight": "42.4 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 127,
+				"baseExperience": 148,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Digging Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "あなほりポケモン",
+					"ko": "땅구멍파기포켓몬",
+					"zh-hant": "挖洞寶可夢",
+					"fr": "Pokémon Fouisseur",
+					"de": "Baugräber-Pokémon",
+					"es": "Pokémon Excavador",
+					"it": "Pokémon Scavabuche",
+					"ja": "あなほりポケモン",
+					"zh-hans": "挖洞宝可梦",
+					"es-419": "Pokémon Excavador"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 660
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 11
+					},
+					{
+						"pokedex": "galar",
+						"number": 49
+					},
+					{
+						"pokedex": "champions",
+						"number": 660
+					},
+					{
+						"pokedex": "lumiose",
+						"number": 14
+					}
+				],
+				"alphaMove": "Gunk Shot",
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 659,
+								"natiId": 659,
+								"name": "Bunnelby"
+							},
+							{
+								"id": 660,
+								"natiId": 660,
+								"name": "Diggersby",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Wild Zone 17",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Wild Zone 20",
+						"notes": "",
+						"games": "Legends: Z-A"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Leer",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Mud Shot",
+							"level": 7,
+							"order": 4
+						},
+						{
+							"name": "Quick Attack",
+							"level": 14,
+							"order": 5
+						},
+						{
+							"name": "Brutal Swing",
+							"level": 24,
+							"order": 6
+						},
+						{
+							"name": "Dig",
+							"level": 28,
+							"order": 7
+						},
+						{
+							"name": "Bounce",
+							"level": 32,
+							"order": 8
+						},
+						{
+							"name": "Take Down",
+							"level": 36,
+							"order": 9
+						},
+						{
+							"name": "Super Fang",
+							"level": 40,
+							"order": 10
+						},
+						{
+							"name": "Earthquake",
+							"level": 44,
+							"order": 11
+						}
+					],
+					"Machine": [
+						{
+							"name": "Headbutt",
+							"machine": "TM001",
+							"order": 1
+						},
+						{
+							"name": "Rock Smash",
+							"machine": "TM004",
+							"order": 2
+						},
+						{
+							"name": "Brick Break",
+							"machine": "TM010",
+							"order": 3
+						},
+						{
+							"name": "Bulk Up",
+							"machine": "TM011",
+							"order": 4
+						},
+						{
+							"name": "Rock Slide",
+							"machine": "TM012",
+							"order": 5
+						},
+						{
+							"name": "Protect",
+							"machine": "TM017",
+							"order": 6
+						},
+						{
+							"name": "Thunder Punch",
+							"machine": "TM023",
+							"order": 7
+						},
+						{
+							"name": "Ice Punch",
+							"machine": "TM024",
+							"order": 8
+						},
+						{
+							"name": "Dig",
+							"machine": "TM028",
+							"order": 9
+						},
+						{
+							"name": "Fire Punch",
+							"machine": "TM029",
+							"order": 10
+						},
+						{
+							"name": "Swords Dance",
+							"machine": "TM030",
+							"order": 11
+						},
+						{
+							"name": "Body Slam",
+							"machine": "TM033",
+							"order": 12
+						},
+						{
+							"name": "Endure",
+							"machine": "TM035",
+							"order": 13
+						},
+						{
+							"name": "Rock Tomb",
+							"machine": "TM036",
+							"order": 14
+						},
+						{
+							"name": "Hyper Beam",
+							"machine": "TM044",
+							"order": 15
+						},
+						{
+							"name": "Mud Shot",
+							"machine": "TM046",
+							"order": 16
+						},
+						{
+							"name": "Agility",
+							"machine": "TM047",
+							"order": 17
+						},
+						{
+							"name": "Earth Power",
+							"machine": "TM052",
+							"order": 18
+						},
+						{
+							"name": "Sludge Bomb",
+							"machine": "TM053",
+							"order": 19
+						},
+						{
+							"name": "Giga Impact",
+							"machine": "TM055",
+							"order": 20
+						},
+						{
+							"name": "Iron Head",
+							"machine": "TM058",
+							"order": 21
+						},
+						{
+							"name": "Stone Edge",
+							"machine": "TM065",
+							"order": 22
+						},
+						{
+							"name": "Earthquake",
+							"machine": "TM069",
+							"order": 23
+						},
+						{
+							"name": "Surf",
+							"machine": "TM073",
+							"order": 24
+						},
+						{
+							"name": "Bulldoze",
+							"machine": "TM078",
+							"order": 25
+						},
+						{
+							"name": "U-turn",
+							"machine": "TM082",
+							"order": 26
+						},
+						{
+							"name": "Substitute",
+							"machine": "TM085",
+							"order": 27
+						},
+						{
+							"name": "Wild Charge",
+							"machine": "TM086",
+							"order": 28
+						},
+						{
+							"name": "Spikes",
+							"machine": "TM088",
+							"order": 29
+						},
+						{
+							"name": "Gunk Shot",
+							"machine": "TM100",
+							"order": 30
+						},
+						{
+							"name": "Comet Punch",
+							"machine": "TM108",
+							"order": 31
+						},
+						{
+							"name": "Facade",
+							"machine": "TM109",
+							"order": 32
+						},
+						{
+							"name": "Circle Throw",
+							"machine": "TM129",
+							"order": 33
+						},
+						{
+							"name": "Drain Punch",
+							"machine": "TM131",
+							"order": 34
+						},
+						{
+							"name": "Scorching Sands",
+							"machine": "TM136",
+							"order": 35
+						},
+						{
+							"name": "Skull Bash",
+							"machine": "TM146",
+							"order": 36
+						},
+						{
+							"name": "Fissure",
+							"machine": "TM154",
+							"order": 37
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Project Pokemon's Z-A game-data export assigns this form regional Dex #14."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/660",
+						"fetchedAt": "2026-11-03T05:53:47.202Z",
+						"hash": "437bbcadebf4772375af6c0a233c4abbfed7c713e2a1e00e3a5f8e397a6eb899"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/340/",
+						"fetchedAt": "2026-11-03T05:53:47.226Z",
+						"hash": "adfd3367e52a9a7b462725dcf72a38bf2677c02ba2a9332537edf3926991df2a"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/660/",
+						"fetchedAt": "2026-11-03T05:53:47.258Z",
+						"hash": "46c84c3f2aba0a1f99ce23bb60acd68630a9e8d97f6d716671d194e237d81fde"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/660/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.318Z",
+						"hash": "ab76497e1ce905d2dc0994f8c36fbfd1bf49ec6c5be8f7d05d7237e61a08c9ed"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/660/",
+						"fetchedAt": "2026-11-03T05:53:47.371Z",
+						"hash": "7ba27311bc3d9e601cf913820ee0d830aae2a60d265d091a29321d911e31ee96"
+					},
+					{
+						"type": "legends-za-personal-data",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/personal.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c00215459c764ba65d879d6503a7337ad80b338171ab4713d1c6f52b4517e36f"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "719eff37d8f2f404d163f81d23b2c921ac323a7b00304e502ca37d69a3375b1d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/French/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "1b658102e791558a1bb317563b7a3aaab8cebc1c7517aa7f5d5c0e708e93d626"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/German/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5f1e419ae3b84ab18cb05b972569e629ff0bff96d928468c52c536b02dc6cf9d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Italian/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "e0bd40a2f4b7678afb82f959b7b1f3503590bd13884daf94bd5813fea832067c"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/JPN/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5c2c9784278c5d13f3ba376e4338cef21923d68faec9b8498175c21180825f24"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Korean/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c83545726b0b0b803295f52448510c15adaab3e6ce248adba23b5ad0d0344216"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/LATAM/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "01d046caf7553d97a3c275465bce97ecedae26a67674a40b5c751a56b3b4d52d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Simp_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "09495dacb0d16eb6e91aa1d67eb1ed682d0682303719811eeb1c6877bb9e7ca2"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Spanish/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "b3fafb97fe85165bd65fdd732ce1e4cee880ffe5035632269787ce859735b358"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Trad_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c446ae3e93760fc4af895427508ed852511201723f8cac84121330747e8c3cd0"
+					},
+					{
+						"type": "legends-za-locations",
+						"url": "https://www.serebii.net/pokedex-sv/diggersby/",
+						"fetchedAt": "2026-11-04T05:47:08.143Z",
+						"hash": "15a00a36159d1fb7abbead124a3c263d2cbb3f86be95db15b488620efbecc8aa"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendsza": "With their powerful ears, they can heft boulders of a ton or more with ease. They can be a big help at construction sites."
+			},
+			"localizedFlavorByGame": {
+				"legendsza": {
+					"en": "With their powerful ears, they can heft boulders of a ton or more with ease. They can be a big help at construction sites.",
+					"fr": "Ses grandes oreilles sont si puissantes qu’il peut aisément soulever un rocher de plus d’une tonne. Ce Pokémon est très apprécié sur les chantiers.",
+					"de": "Seine großen Ohren besitzen die Kraft, über eine Tonne schwere Felsen mühelos hochzuheben. Auf Baustellen ist es deshalb eine große Hilfe.",
+					"it": "Con le sue grandi orecchie può sollevare facilmente massi da più di una tonnellata. Può essere di grande aiuto nei cantieri edili.",
+					"ja": "大きな 耳は １トンを 超える 岩を 楽に 持ち上げる パワー。 工事現場で 大活躍する。",
+					"ko": "커다란 귀에는 1톤이 넘는 무게의 바위를 가뿐히 들어 올릴 만한 파워가 있다. 공사 현장에서 대활약한다.",
+					"es-419": "Sus grandes orejas son tan poderosas que pueden levantar con facilidad rocas de más de una tonelada. Su ayuda en las obras es incalculable.",
+					"zh-hans": "大大的耳朵拥有轻松举起 超过１吨重的岩石的力量。 在施工现场非常活跃。",
+					"es": "Sus grandes orejas tienen tal fuerza que con ellas puede levantar con facilidad rocas de más de una tonelada. Es de una ayuda inestimable en las obras.",
+					"zh-hant": "大大的耳朵有著能輕易舉起 超過１噸重的岩石的力量。 在工地能幫上大忙。"
+				}
+			}
+		},
+		{
+			"profileKey": "mega-dimension",
+			"label": "Mega Dimension",
+			"appGameKeys": [
+				"legendszamd"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Diggersby",
+				"localizedNames": {
+					"ja-hrkt": "ホルード",
+					"ja-roma": "Horudo",
+					"ko": "파르토",
+					"zh-hant": "掘地兔",
+					"fr": "Excavarenne",
+					"de": "Grebbit",
+					"es": "Diggersby",
+					"it": "Diggersby",
+					"ja": "ホルード",
+					"zh-hans": "掘地兔",
+					"es-419": "Diggersby"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Normal",
+					"Ground"
+				],
+				"baseStats": {
+					"hp": 85,
+					"atk": 56,
+					"def": 77,
+					"spa": 50,
+					"spd": 77,
+					"spe": 78
+				},
+				"evYield": {
+					"hp": 2
+				},
+				"generation": 6,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Pickup",
+					"Cheek Pouch",
+					"Huge Power (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Huge Power"
+				],
+				"eggGroups": [
+					"Field"
+				],
+				"expGroup": "Medium Fast",
+				"hatchCounter": 15,
+				"height": "1 m",
+				"weight": "42.4 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 127,
+				"baseExperience": 148,
+				"habitat": "",
+				"shape": "Upright",
+				"color": "Brown",
+				"genus": "Digging Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "あなほりポケモン",
+					"ko": "땅구멍파기포켓몬",
+					"zh-hant": "挖洞寶可夢",
+					"fr": "Pokémon Fouisseur",
+					"de": "Baugräber-Pokémon",
+					"es": "Pokémon Excavador",
+					"it": "Pokémon Scavabuche",
+					"ja": "あなほりポケモン",
+					"zh-hans": "挖洞宝可梦",
+					"es-419": "Pokémon Excavador"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 660
+					},
+					{
+						"pokedex": "kalos-central",
+						"number": 11
+					},
+					{
+						"pokedex": "galar",
+						"number": 49
+					},
+					{
+						"pokedex": "champions",
+						"number": 660
+					},
+					{
+						"pokedex": "lumiose",
+						"number": 14
+					}
+				],
+				"alphaMove": "Gunk Shot",
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 659,
+								"natiId": 659,
+								"name": "Bunnelby"
+							},
+							{
+								"id": 660,
+								"natiId": 660,
+								"name": "Diggersby",
+								"method": "Level",
+								"value": 20
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Wild Zone 17",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Wild Zone 20",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Hyperspace Lumiose",
+						"notes": "Normal (3 Star), Ground (3 Star)",
+						"games": "Legends: Z-A Mega Dimension"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Tackle",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Leer",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Mud Shot",
+							"level": 7,
+							"order": 4
+						},
+						{
+							"name": "Quick Attack",
+							"level": 14,
+							"order": 5
+						},
+						{
+							"name": "Brutal Swing",
+							"level": 24,
+							"order": 6
+						},
+						{
+							"name": "Dig",
+							"level": 28,
+							"order": 7
+						},
+						{
+							"name": "Bounce",
+							"level": 32,
+							"order": 8
+						},
+						{
+							"name": "Take Down",
+							"level": 36,
+							"order": 9
+						},
+						{
+							"name": "Super Fang",
+							"level": 40,
+							"order": 10
+						},
+						{
+							"name": "Earthquake",
+							"level": 44,
+							"order": 11
+						}
+					],
+					"Machine": [
+						{
+							"name": "Headbutt",
+							"machine": "TM001",
+							"order": 1
+						},
+						{
+							"name": "Rock Smash",
+							"machine": "TM004",
+							"order": 2
+						},
+						{
+							"name": "Brick Break",
+							"machine": "TM010",
+							"order": 3
+						},
+						{
+							"name": "Bulk Up",
+							"machine": "TM011",
+							"order": 4
+						},
+						{
+							"name": "Rock Slide",
+							"machine": "TM012",
+							"order": 5
+						},
+						{
+							"name": "Protect",
+							"machine": "TM017",
+							"order": 6
+						},
+						{
+							"name": "Thunder Punch",
+							"machine": "TM023",
+							"order": 7
+						},
+						{
+							"name": "Ice Punch",
+							"machine": "TM024",
+							"order": 8
+						},
+						{
+							"name": "Dig",
+							"machine": "TM028",
+							"order": 9
+						},
+						{
+							"name": "Fire Punch",
+							"machine": "TM029",
+							"order": 10
+						},
+						{
+							"name": "Swords Dance",
+							"machine": "TM030",
+							"order": 11
+						},
+						{
+							"name": "Body Slam",
+							"machine": "TM033",
+							"order": 12
+						},
+						{
+							"name": "Endure",
+							"machine": "TM035",
+							"order": 13
+						},
+						{
+							"name": "Rock Tomb",
+							"machine": "TM036",
+							"order": 14
+						},
+						{
+							"name": "Hyper Beam",
+							"machine": "TM044",
+							"order": 15
+						},
+						{
+							"name": "Mud Shot",
+							"machine": "TM046",
+							"order": 16
+						},
+						{
+							"name": "Agility",
+							"machine": "TM047",
+							"order": 17
+						},
+						{
+							"name": "Earth Power",
+							"machine": "TM052",
+							"order": 18
+						},
+						{
+							"name": "Sludge Bomb",
+							"machine": "TM053",
+							"order": 19
+						},
+						{
+							"name": "Giga Impact",
+							"machine": "TM055",
+							"order": 20
+						},
+						{
+							"name": "Iron Head",
+							"machine": "TM058",
+							"order": 21
+						},
+						{
+							"name": "Stone Edge",
+							"machine": "TM065",
+							"order": 22
+						},
+						{
+							"name": "Earthquake",
+							"machine": "TM069",
+							"order": 23
+						},
+						{
+							"name": "Surf",
+							"machine": "TM073",
+							"order": 24
+						},
+						{
+							"name": "Bulldoze",
+							"machine": "TM078",
+							"order": 25
+						},
+						{
+							"name": "U-turn",
+							"machine": "TM082",
+							"order": 26
+						},
+						{
+							"name": "Substitute",
+							"machine": "TM085",
+							"order": 27
+						},
+						{
+							"name": "Wild Charge",
+							"machine": "TM086",
+							"order": 28
+						},
+						{
+							"name": "Spikes",
+							"machine": "TM088",
+							"order": 29
+						},
+						{
+							"name": "Gunk Shot",
+							"machine": "TM100",
+							"order": 30
+						},
+						{
+							"name": "Comet Punch",
+							"machine": "TM108",
+							"order": 31
+						},
+						{
+							"name": "Facade",
+							"machine": "TM109",
+							"order": 32
+						},
+						{
+							"name": "Circle Throw",
+							"machine": "TM129",
+							"order": 33
+						},
+						{
+							"name": "Drain Punch",
+							"machine": "TM131",
+							"order": 34
+						},
+						{
+							"name": "Scorching Sands",
+							"machine": "TM136",
+							"order": 35
+						},
+						{
+							"name": "Skull Bash",
+							"machine": "TM146",
+							"order": 36
+						},
+						{
+							"name": "Fissure",
+							"machine": "TM154",
+							"order": 37
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Project Pokemon's Z-A game-data export assigns this form regional Dex #14."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/660",
+						"fetchedAt": "2026-11-03T05:53:47.202Z",
+						"hash": "437bbcadebf4772375af6c0a233c4abbfed7c713e2a1e00e3a5f8e397a6eb899"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/340/",
+						"fetchedAt": "2026-11-03T05:53:47.226Z",
+						"hash": "adfd3367e52a9a7b462725dcf72a38bf2677c02ba2a9332537edf3926991df2a"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/660/",
+						"fetchedAt": "2026-11-03T05:53:47.258Z",
+						"hash": "46c84c3f2aba0a1f99ce23bb60acd68630a9e8d97f6d716671d194e237d81fde"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/660/encounters",
+						"fetchedAt": "2026-11-03T05:53:47.318Z",
+						"hash": "ab76497e1ce905d2dc0994f8c36fbfd1bf49ec6c5be8f7d05d7237e61a08c9ed"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/660/",
+						"fetchedAt": "2026-11-03T05:53:47.371Z",
+						"hash": "7ba27311bc3d9e601cf913820ee0d830aae2a60d265d091a29321d911e31ee96"
+					},
+					{
+						"type": "legends-za-personal-data",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/personal.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c00215459c764ba65d879d6503a7337ad80b338171ab4713d1c6f52b4517e36f"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "719eff37d8f2f404d163f81d23b2c921ac323a7b00304e502ca37d69a3375b1d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/French/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "1b658102e791558a1bb317563b7a3aaab8cebc1c7517aa7f5d5c0e708e93d626"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/German/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5f1e419ae3b84ab18cb05b972569e629ff0bff96d928468c52c536b02dc6cf9d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Italian/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "e0bd40a2f4b7678afb82f959b7b1f3503590bd13884daf94bd5813fea832067c"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/JPN/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5c2c9784278c5d13f3ba376e4338cef21923d68faec9b8498175c21180825f24"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Korean/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c83545726b0b0b803295f52448510c15adaab3e6ce248adba23b5ad0d0344216"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/LATAM/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "01d046caf7553d97a3c275465bce97ecedae26a67674a40b5c751a56b3b4d52d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Simp_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "09495dacb0d16eb6e91aa1d67eb1ed682d0682303719811eeb1c6877bb9e7ca2"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Spanish/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "b3fafb97fe85165bd65fdd732ce1e4cee880ffe5035632269787ce859735b358"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Trad_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c446ae3e93760fc4af895427508ed852511201723f8cac84121330747e8c3cd0"
+					},
+					{
+						"type": "legends-za-locations",
+						"url": "https://www.serebii.net/pokedex-sv/diggersby/",
+						"fetchedAt": "2026-11-04T05:47:08.143Z",
+						"hash": "15a00a36159d1fb7abbead124a3c263d2cbb3f86be95db15b488620efbecc8aa"
+					}
+				],
+				"formName": "Base"
+			},
+			"flavorByGame": {
+				"legendszamd": "With their powerful ears, they can heft boulders of a ton or more with ease. They can be a big help at construction sites."
+			},
+			"localizedFlavorByGame": {
+				"legendszamd": {
+					"en": "With their powerful ears, they can heft boulders of a ton or more with ease. They can be a big help at construction sites.",
+					"fr": "Ses grandes oreilles sont si puissantes qu’il peut aisément soulever un rocher de plus d’une tonne. Ce Pokémon est très apprécié sur les chantiers.",
+					"de": "Seine großen Ohren besitzen die Kraft, über eine Tonne schwere Felsen mühelos hochzuheben. Auf Baustellen ist es deshalb eine große Hilfe.",
+					"it": "Con le sue grandi orecchie può sollevare facilmente massi da più di una tonnellata. Può essere di grande aiuto nei cantieri edili.",
+					"ja": "大きな 耳は １トンを 超える 岩を 楽に 持ち上げる パワー。 工事現場で 大活躍する。",
+					"ko": "커다란 귀에는 1톤이 넘는 무게의 바위를 가뿐히 들어 올릴 만한 파워가 있다. 공사 현장에서 대활약한다.",
+					"es-419": "Sus grandes orejas son tan poderosas que pueden levantar con facilidad rocas de más de una tonelada. Su ayuda en las obras es incalculable.",
+					"zh-hans": "大大的耳朵拥有轻松举起 超过１吨重的岩石的力量。 在施工现场非常活跃。",
+					"es": "Sus grandes orejas tienen tal fuerza que con ellas puede levantar con facilidad rocas de más de una tonelada. Es de una ayuda inestimable en las obras.",
+					"zh-hant": "大大的耳朵有著能輕易舉起 超過１噸重的岩石的力量。 在工地能幫上大忙。"
+				}
+			}
+		}
+	]
+}

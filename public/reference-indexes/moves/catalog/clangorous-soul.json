@@ -1,0 +1,185 @@
+{
+	"schemaVersion": 1,
+	"id": 775,
+	"slug": "clangorous-soul",
+	"name": "Clangorous Soul",
+	"names": {
+		"de": "Seelentanz",
+		"en": "Clangorous Soul",
+		"es": "Estruendo Escama",
+		"es-419": "Estruendo Escama",
+		"fr": "Dracacophonie",
+		"it": "Dracofonia",
+		"ja": "ソウルビート",
+		"ja-hrkt": "ソウルビート",
+		"ko": "소울비트",
+		"zh-hans": "魂舞烈音爆",
+		"zh-hant": "魂舞烈音爆"
+	},
+	"generation": 8,
+	"type": "Dragon",
+	"damageClass": "Status",
+	"power": null,
+	"accuracy": 100,
+	"pp": 5,
+	"priority": 0,
+	"effectChance": 100,
+	"target": "User",
+	"effectEntries": [
+		{
+			"language": "en",
+			"effect": "User loses 33% of its Max HP. Raises all of the user’s stats by one stage. Fails if the user would faint, or if its Attack, Defense, Special Attack, Special Defense, or Speed stat cannot go any higher.",
+			"shortEffect": "User loses 33% of its Max HP. Raises all of the user’s stats by one stage."
+		}
+	],
+	"effectChanges": [],
+	"descriptions": [
+		{
+			"versionGroup": "legends-arceus",
+			"language": "en",
+			"text": "The user raises all its stats by using some of its HP."
+		},
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "en",
+			"text": "The user boosts all its stats by using some of its own HP."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "de",
+			"text": "Der Anwender setzt eine kleine Menge an KP ein, um alle seine Statuswerte zu erhöhen."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "en",
+			"text": "The user raises all its stats by using some of its HP."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es",
+			"text": "Utiliza parte de los PS propios para subir sus características."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es-419",
+			"text": "Utiliza parte de los PS propios para subir sus características."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "fr",
+			"text": "Le lanceur sacrifie une partie de ses PV pour augmenter toutes ses stats."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "it",
+			"text": "Chi la usa sacrifica un po’ dei suoi PS per aumentare tutte le sue statistiche."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja",
+			"text": "自分の ＨＰを 少し 削って すべての 能力を 上げる。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja-hrkt",
+			"text": "じぶんの ＨＰを すこし けずって すべての のうりょくを あげる。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ko",
+			"text": "자신의 HP를 조금 깎아서 모든 능력을 올린다."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hans",
+			"text": "削减少许自己的ＨＰ， 使所有能力都提高。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hant",
+			"text": "消耗一些自己的ＨＰ， 提高自己的所有能力。"
+		}
+	],
+	"pastValues": [],
+	"statChanges": [
+		{
+			"stat": "Attack",
+			"change": 1
+		},
+		{
+			"stat": "Defense",
+			"change": 1
+		},
+		{
+			"stat": "Special Attack",
+			"change": 1
+		},
+		{
+			"stat": "Special Defense",
+			"change": 1
+		},
+		{
+			"stat": "Speed",
+			"change": 1
+		}
+	],
+	"meta": {
+		"ailment": "None",
+		"category": "Net Good Stats",
+		"minHits": null,
+		"maxHits": null,
+		"minTurns": null,
+		"maxTurns": null,
+		"drain": 0,
+		"healing": -33,
+		"critRate": 0,
+		"ailmentChance": 0,
+		"flinchChance": 0,
+		"statChance": 100
+	},
+	"machines": [],
+	"learners": [
+		{
+			"nationalDexId": 784,
+			"speciesName": "Kommo-o",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 68,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 68,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		}
+	],
+	"potentialPokemon": [
+		"kommo-o"
+	],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/move/775/",
+		"fetchedAt": "2026-11-03T06:30:18.274Z",
+		"hash": "4038089336e805d96665f78d08212dee76e56ecf499850556fcf2a6cc4b977b8"
+	}
+}

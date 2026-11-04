@@ -70,7 +70,7 @@ export const FEATURE_STATUS = {
 	checklists: "done",
 	tooltips: "wip",
 	"battle-cards": "planned",
-	"pokemon-info": "wip",
+	"pokemon-info": "done",
 	guides: "planned",
 	tools: "planned",
 	"global-stats": "planned",

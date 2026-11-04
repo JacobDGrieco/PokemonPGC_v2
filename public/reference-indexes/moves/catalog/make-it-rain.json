@@ -1,0 +1,82 @@
+{
+	"schemaVersion": 1,
+	"id": 874,
+	"slug": "make-it-rain",
+	"name": "Make It Rain",
+	"names": {
+		"de": "Goldrausch",
+		"en": "Make It Rain",
+		"es": "Fiebre Dorada",
+		"es-419": "Fiebre Dorada",
+		"fr": "Ruée d'Or",
+		"it": "Corsa all’Oro",
+		"ja": "ゴールドラッシュ",
+		"ja-hrkt": "ゴールドラッシュ",
+		"ko": "골드러시",
+		"zh-hans": "淘金潮",
+		"zh-hant": "淘金潮"
+	},
+	"generation": 9,
+	"type": "Steel",
+	"damageClass": "Special",
+	"power": 120,
+	"accuracy": 100,
+	"pp": 5,
+	"priority": 0,
+	"effectChance": null,
+	"target": "All Opponents",
+	"effectEntries": [],
+	"effectChanges": [],
+	"descriptions": [
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "en",
+			"text": "The user attacks by throwing out a mass of coins. This also lowers the user's Sp. Atk stat. Money is earned after the battle."
+		},
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "fr",
+			"text": "Le lanceur attaque en lançant de nombreuses pièces, ce qui baisse son Attaque Spéciale. Permet d'obtenir plus d'argent à la fin du combat."
+		}
+	],
+	"pastValues": [],
+	"statChanges": [
+		{
+			"stat": "Special Attack",
+			"change": -1
+		}
+	],
+	"meta": null,
+	"machines": [],
+	"learners": [
+		{
+			"nationalDexId": 1000,
+			"speciesName": "Gholdengo",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 56,
+							"order": null
+						}
+					],
+					"isHidden": false
+				}
+			]
+		}
+	],
+	"potentialPokemon": [
+		"gholdengo"
+	],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/move/874/",
+		"fetchedAt": "2026-11-03T06:30:18.955Z",
+		"hash": "a0c4d3ff1f4e916c4801a9d4f67cc79b18fd3c91ba990f3702124a0a04a4b4ef"
+	}
+}

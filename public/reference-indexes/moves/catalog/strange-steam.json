@@ -1,0 +1,169 @@
+{
+	"schemaVersion": 1,
+	"id": 790,
+	"slug": "strange-steam",
+	"name": "Strange Steam",
+	"names": {
+		"de": "Wunderdampf",
+		"en": "Strange Steam",
+		"es": "Cautivapor",
+		"es-419": "Cautivapor",
+		"fr": "Vapeur Féérique",
+		"it": "Vapore Incantato",
+		"ja": "ワンダースチーム",
+		"ja-hrkt": "ワンダースチーム",
+		"ko": "원더스팀",
+		"zh-hans": "神奇蒸汽",
+		"zh-hant": "神奇蒸汽"
+	},
+	"generation": 8,
+	"type": "Fairy",
+	"damageClass": "Special",
+	"power": 90,
+	"accuracy": 95,
+	"pp": 10,
+	"priority": 0,
+	"effectChance": 20,
+	"target": "Selected Pokemon",
+	"effectEntries": [
+		{
+			"language": "en",
+			"effect": "Inflicts regular damage. Has a chance to confuse the target.",
+			"shortEffect": "Has a chance to confuse the target."
+		},
+		{
+			"language": "fr",
+			"effect": "Inflige des dégats réguliers. A une chance de rendre la cible confuse.",
+			"shortEffect": "A une chance de rendre la cible confuse."
+		}
+	],
+	"effectChanges": [],
+	"descriptions": [
+		{
+			"versionGroup": "legends-arceus",
+			"language": "en",
+			"text": "The user attacks the target by emitting steam. This may also confuse the target."
+		},
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "en",
+			"text": "The user attacks the target by emitting steam. This may also confuse the target."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "de",
+			"text": "Der Anwender stößt Dampf aus, mit dem er das Ziel angreift. Dieses wird eventuell verwirrt."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "en",
+			"text": "The user attacks the target by emitting steam. This may also confuse the target."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es",
+			"text": "Desprende un humo con el que ataca al objetivo, que puede acabar confundido."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es-419",
+			"text": "Desprende un humo con el que ataca al objetivo, que puede acabar confundido."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "fr",
+			"text": "Le lanceur émet de la vapeur pour attaquer sa cible. Peut aussi la rendre confuse."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "it",
+			"text": "Chi la usa attacca il bersaglio con getti di vapore che possono anche confonderlo."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja",
+			"text": "煙を 噴出して 相手を 攻撃。 混乱 させることが ある。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja-hrkt",
+			"text": "けむりを ふんしゅつして あいてを こうげき。 こんらん させることが ある。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ko",
+			"text": "연기를 분출해서 상대를 공격한다. 혼란시킬 때가 있다."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hans",
+			"text": "喷出烟雾攻击对手。 有时会使对手混乱。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hant",
+			"text": "噴出煙霧攻擊對手。 有時會使對手混亂。"
+		}
+	],
+	"pastValues": [],
+	"statChanges": [],
+	"meta": {
+		"ailment": "Confusion",
+		"category": "Damage Ailment",
+		"minHits": null,
+		"maxHits": null,
+		"minTurns": 2,
+		"maxTurns": 5,
+		"drain": 0,
+		"healing": 0,
+		"critRate": 0,
+		"ailmentChance": 20,
+		"flinchChance": 0,
+		"statChance": 0
+	},
+	"machines": [],
+	"learners": [
+		{
+			"nationalDexId": 110,
+			"speciesName": "Weezing",
+			"formKey": "galarian",
+			"formName": "Galarian",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 1
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 2
+						}
+					],
+					"isHidden": false
+				}
+			]
+		}
+	],
+	"potentialPokemon": [
+		"weezing-galar"
+	],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/move/790/",
+		"fetchedAt": "2026-11-03T06:30:18.456Z",
+		"hash": "b335ab0a942bf9fbea3bf3b3ef429501105bf161a979d1af70890160a882b3c5"
+	}
+}

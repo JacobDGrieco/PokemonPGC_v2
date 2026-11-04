@@ -1,0 +1,591 @@
+{
+	"schemaVersion": 1,
+	"id": 16,
+	"slug": "color-change",
+	"name": "Color Change",
+	"names": {
+		"de": "Farbwechsel",
+		"en": "Color Change",
+		"es": "Cambio Color",
+		"es-419": "Cambio Color",
+		"fr": "Homochromie",
+		"it": "Cambiacolore",
+		"ja": "へんしょく",
+		"ja-hrkt": "へんしょく",
+		"ko": "변색",
+		"zh-hans": "变色",
+		"zh-hant": "變色"
+	},
+	"generation": 3,
+	"isMainSeries": true,
+	"effectEntries": [
+		{
+			"language": "de",
+			"effect": "Wenn ein Pokémon mit dieser Fähigkeit von einer Attacke getroffen wird die Schaden verursacht, ändert sich der Typ des Pokémons in den der Attacke. Wenn das Pokémon 2 Typen hat, werden beide überschrieben. Das Pokémon muss direkten Schaden erleiden, Attacken die vom Delegator geblockt werden, lösen den Effekt nicht aus, ebenso wie Attacken mit indirektem Schaden wie Stachler. Bei Attacken mit mehreren Treffern löst nur der Letzte den Effekt aus. Diese Fähigkeit hat keinen Einfluss auf Crypto Attacken in Pokémon Colosseum und XD: Der dunkle Sturm.",
+			"shortEffect": "Ändert den Typ des Pokémons in den der Attacke von der es getroffen wird."
+		},
+		{
+			"language": "en",
+			"effect": "Whenever this Pokémon takes damage from a move, the Pokémon's type changes to match the move. If the Pokémon has two types, both are overridden. The Pokémon must directly take damage; for example, moves blocked by a Substitute will not trigger this ability, nor will moves that deal damage indirectly, such as Spikes. This ability takes effect on only the last hit of a multiple-hit attack. In Pokémon Colosseum and XD: Gale of Darkness, this ability does not take effect on Shadow-type moves.",
+			"shortEffect": "Changes type to match when hit by a damaging move."
+		},
+		{
+			"language": "fr",
+			"effect": "Lorsque ce Pokémon subit des dommages d'une capacité, le type du Pokémon devient celui de la capacité. Si le Pokémon a deux types, les deux sont écrasés. Le Pokémon doit subit des dommages directs ; par exemple, les capacités bloquées par Clonage ne déclenchent pas ce talent, ni les capacités qui infligent des dommages indirects, comme Picots. Ce talent s'active seulement sur le dernier coup d'une capacité multi-coups. Dans Pokémon Colosseum et XD: Le Souffle des ténèbres, ce talent n'affecte pas les capacités Spectre.",
+			"shortEffect": "Change le type en accord avec celui de la capacité offensive qui vient de le toucher."
+		}
+	],
+	"effectChanges": [
+		{
+			"versionGroup": "black-white",
+			"effectEntries": [
+				{
+					"language": "de",
+					"effect": "Löst bei Attacken die mehrmals Treffen bei jedem Treffer aus.",
+					"shortEffect": ""
+				},
+				{
+					"language": "en",
+					"effect": "Whenever this Pokémon takes damage from a move, the Pokémon's type changes to match the move. If the Pokémon has two types, both are overridden. The Pokémon must directly take damage; for example, moves blocked by a Substitute will not trigger this ability, nor will moves that deal damage indirectly, such as Spikes. In Pokémon Colosseum and XD: Gale of Darkness, this ability does not take effect on Shadow-type moves.",
+					"shortEffect": ""
+				},
+				{
+					"language": "fr",
+					"effect": "Se déclenche à chaque coup d'une capacité multi-coups.",
+					"shortEffect": ""
+				}
+			]
+		}
+	],
+	"descriptions": [
+		{
+			"versionGroup": "black-2-white-2",
+			"language": "en",
+			"text": "Changes the Pokémon’s type to the foe’s move."
+		},
+		{
+			"versionGroup": "black-white",
+			"language": "en",
+			"text": "Changes the Pokémon’s type to the foe’s move."
+		},
+		{
+			"versionGroup": "black-white",
+			"language": "fr",
+			"text": "Le Pokémon adopte le type de la capacité ennemie."
+		},
+		{
+			"versionGroup": "diamond-pearl",
+			"language": "en",
+			"text": "Changes the Pokémon’s type to the foe’s move."
+		},
+		{
+			"versionGroup": "emerald",
+			"language": "en",
+			"text": "Changes type to foe’s move."
+		},
+		{
+			"versionGroup": "firered-leafgreen",
+			"language": "en",
+			"text": "Changes type to foe’s move."
+		},
+		{
+			"versionGroup": "heartgold-soulsilver",
+			"language": "en",
+			"text": "Changes the Pokémon’s type to the foe’s move."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "de",
+			"text": "Ändert seinen Typ zu dem der Attacke des Angreifers."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "en",
+			"text": "The Pokémon’s type becomes the type of the move used on it."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "es",
+			"text": "Adopta el tipo del último movimiento del que se es blanco."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "es-419",
+			"text": "Adopta el tipo del último movimiento del que se es blanco."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "fr",
+			"text": "Lorsque le Pokémon est touché par une capacité, il prend le type de celle-ci."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "it",
+			"text": "Il Pokémon acquisisce il tipo della mossa subita."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "ja",
+			"text": "相手から 受けた 技の タイプに 自分の タイプが 変化 する。"
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "ja-hrkt",
+			"text": "あいてから うけた わざの タイプに じぶんの タイプが へんか する。"
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "ko",
+			"text": "상대에게 받은 기술의 타입으로 자신의 타입이 변화한다."
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "zh-hans",
+			"text": "自己的属性会变为 从对手处所受招式的属性。"
+		},
+		{
+			"versionGroup": "lets-go-pikachu-lets-go-eevee",
+			"language": "zh-hant",
+			"text": "自己的屬性會變為 從對手所受招式的屬性。"
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "de",
+			"text": "Ändert seinen Typ zu dem der Attacke des Angreifers."
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "en",
+			"text": "The Pokémon’s type becomes the type of the move used on it."
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "es",
+			"text": "Adopta el tipo del último movimiento del que se es blanco."
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "es-419",
+			"text": "Adopta el tipo del último movimiento del que se es blanco."
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "fr",
+			"text": "Le Pokémon adopte le type de la capacité ennemie."
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "it",
+			"text": "Il Pokémon acquisisce il tipo della mossa subita."
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "ja",
+			"text": "受けた 技の タイプに 変化する。"
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "ja-hrkt",
+			"text": "うけた わざの タイプに へんかする。"
+		},
+		{
+			"versionGroup": "omega-ruby-alpha-sapphire",
+			"language": "ko",
+			"text": "받은 기술의 타입으로 변화한다."
+		},
+		{
+			"versionGroup": "platinum",
+			"language": "en",
+			"text": "Changes the Pokémon’s type to the foe’s move."
+		},
+		{
+			"versionGroup": "ruby-sapphire",
+			"language": "en",
+			"text": "Changes type to foe’s move."
+		},
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "fr",
+			"text": "Lorsque le Pokémon est touché par une capacité,\\nil prend le type de celle-ci."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "de",
+			"text": "Ändert seinen Typ zu dem der Attacke des Angreifers."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "en",
+			"text": "The Pokémon’s type becomes the type of the move used on it."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "es",
+			"text": "Adopta el tipo del último movimiento del que se es blanco."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "es-419",
+			"text": "Adopta el tipo del último movimiento del que se es blanco."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "fr",
+			"text": "Lorsque le Pokémon est touché par une capacité, il prend le type de celle-ci."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "it",
+			"text": "Il Pokémon acquisisce il tipo della mossa subita."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "ja",
+			"text": "相手から 受けた 技の タイプに 自分の タイプが 変化 する。"
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "ja-hrkt",
+			"text": "あいてから うけた わざの タイプに じぶんの タイプが へんか する。"
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "ko",
+			"text": "상대에게 받은 기술의 타입으로 자신의 타입이 변화한다."
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "zh-hans",
+			"text": "自己的属性会变为 从对手处所受招式的属性。"
+		},
+		{
+			"versionGroup": "sun-moon",
+			"language": "zh-hant",
+			"text": "自己的屬性會變為 從對手所受招式的屬性。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "de",
+			"text": "Ändert seinen Typ zu dem der Attacke des Angreifers."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "en",
+			"text": "The Pokémon’s type becomes the type of the move used on it."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es",
+			"text": "Adopta el tipo del último movimiento del que es blanco."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es-419",
+			"text": "Adopta el tipo del último movimiento del que es blanco."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "fr",
+			"text": "Lorsque le Pokémon est touché par une capacité, il prend le type de celle-ci."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "it",
+			"text": "Il Pokémon acquisisce il tipo della mossa subita."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja",
+			"text": "相手から 受けた 技の タイプに 自分の タイプが 変化 する。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja-hrkt",
+			"text": "あいてから うけた わざの タイプに じぶんの タイプが へんか する。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ko",
+			"text": "상대에게 받은 기술의 타입으로 자신의 타입이 변화한다."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hans",
+			"text": "自己的属性会变为 从对手处所受招式的属性。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hant",
+			"text": "自己的屬性會變為 擊中自己的對手招式的屬性。"
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "de",
+			"text": "Ändert seinen Typ zu dem der Attacke des Angreifers."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "en",
+			"text": "The Pokémon’s type becomes the type of the move used on it."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "es",
+			"text": "Adopta el tipo del último movimiento del que se es blanco."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "es-419",
+			"text": "Adopta el tipo del último movimiento del que se es blanco."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "fr",
+			"text": "Lorsque le Pokémon est touché par une capacité, il prend le type de celle-ci."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "it",
+			"text": "Il Pokémon acquisisce il tipo della mossa subita."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "ja",
+			"text": "相手から 受けた 技の タイプに 自分の タイプが 変化 する。"
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "ja-hrkt",
+			"text": "あいてから うけた わざの タイプに じぶんの タイプが へんか する。"
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "ko",
+			"text": "상대에게 받은 기술의 타입으로 자신의 타입이 변화한다."
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "zh-hans",
+			"text": "自己的属性会变为 从对手处所受招式的属性。"
+		},
+		{
+			"versionGroup": "ultra-sun-ultra-moon",
+			"language": "zh-hant",
+			"text": "自己的屬性會變為 從對手所受招式的屬性。"
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "de",
+			"text": "Ändert seinen Typ zu dem der Attacke des Angreifers."
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "en",
+			"text": "The Pokémon’s type becomes the type of the move used on it."
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "es",
+			"text": "Adopta el tipo del último movimiento del que sea blanco."
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "es-419",
+			"text": "Adopta el tipo del último movimiento del que sea blanco."
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "fr",
+			"text": "Le Pokémon adopte le type de la capacité ennemie."
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "it",
+			"text": "Il Pokémon acquisisce il tipo della mossa subita."
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "ja",
+			"text": "受けた 技の タイプに 変化する。"
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "ja-hrkt",
+			"text": "うけた わざの タイプに へんかする。"
+		},
+		{
+			"versionGroup": "x-y",
+			"language": "ko",
+			"text": "받은 기술의 타입으로 변화한다."
+		}
+	],
+	"pokemon": [
+		{
+			"nationalDexId": 352,
+			"speciesName": "Kecleon",
+			"formKey": "base",
+			"formName": "Base",
+			"games": [
+				{
+					"profileKey": "brilliant-diamond-shining-pearl",
+					"gameLabel": "Brilliant Diamond / Shining Pearl",
+					"versionGroup": "brilliant-diamond-shining-pearl",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "diamond-pearl",
+					"gameLabel": "Diamond / Pearl",
+					"versionGroup": "diamond-pearl",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "emerald",
+					"gameLabel": "Emerald",
+					"versionGroup": "emerald",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "firered-leafgreen",
+					"gameLabel": "FireRed / LeafGreen",
+					"versionGroup": "firered-leafgreen",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "heartgold-soulsilver",
+					"gameLabel": "HeartGold / SoulSilver",
+					"versionGroup": "heartgold-soulsilver",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "legends-arceus",
+					"gameLabel": "Legends: Arceus",
+					"versionGroup": "legends-arceus",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "legends-za",
+					"gameLabel": "Legends: Z-A",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "lets-go-pikachu-lets-go-eevee",
+					"gameLabel": "Let's Go Pikachu / Eevee",
+					"versionGroup": "lets-go-pikachu-lets-go-eevee",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "mega-dimension",
+					"gameLabel": "Mega Dimension",
+					"versionGroup": "legends-z-a",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "omega-ruby-alpha-sapphire",
+					"gameLabel": "Omega Ruby / Alpha Sapphire",
+					"versionGroup": "omega-ruby-alpha-sapphire",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "platinum",
+					"gameLabel": "Platinum",
+					"versionGroup": "platinum",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ruby-sapphire",
+					"gameLabel": "Ruby / Sapphire",
+					"versionGroup": "ruby-sapphire",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sun-moon",
+					"gameLabel": "Sun / Moon",
+					"versionGroup": "sun-moon",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-crown-tundra",
+					"gameLabel": "The Crown Tundra",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-indigo-disk",
+					"gameLabel": "The Indigo Disk",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-isle-of-armor",
+					"gameLabel": "The Isle of Armor",
+					"versionGroup": "sword-shield",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "the-teal-mask",
+					"gameLabel": "The Teal Mask",
+					"versionGroup": "scarlet-violet",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "ultra-sun-ultra-moon",
+					"gameLabel": "Ultra Sun / Ultra Moon",
+					"versionGroup": "ultra-sun-ultra-moon",
+					"methods": [],
+					"isHidden": false
+				},
+				{
+					"profileKey": "x-y",
+					"gameLabel": "X / Y",
+					"versionGroup": "x-y",
+					"methods": [],
+					"isHidden": false
+				}
+			]
+		}
+	],
+	"potentialPokemon": [
+		{
+			"name": "kecleon",
+			"isHidden": false,
+			"slot": 1
+		}
+	],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/ability/16/",
+		"fetchedAt": "2026-11-03T06:30:19.291Z",
+		"hash": "9ac040d6eff5f657b17889dce876ddca9e75bd347265ea2c6b96547edc8622d8"
+	}
+}

@@ -15,6 +15,11 @@ export function formKeyToSuffix(natiId, formKey) {
   if (!formKey) return null;
   const k = String(formKey).trim().toLowerCase().replace(/\s+/g, '_');
 
+	// Ordinary form labels point at the unsuffixed species sprite. In
+	// particular, "male" must not collapse to "m", which is reserved for Mega.
+	if (k === 'base' || k === 'normal' || k === 'male') return null;
+	if (k === 'female') return 'f';
+	if (k === 'mega') return 'm';
   if (k === 'gigantamax') return 'gi';
   if (k === 'mega-x') return 'mx';
   if (k === 'mega-y') return 'my';

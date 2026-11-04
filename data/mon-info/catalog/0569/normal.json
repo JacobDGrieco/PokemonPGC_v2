@@ -1,0 +1,6092 @@
+{
+	"schemaVersion": 2,
+	"nationalDexId": 569,
+	"speciesName": "Garbodor",
+	"formKey": "normal",
+	"formName": "Normal",
+	"formLabelSource": "form-catalog",
+	"profiles": [
+		{
+			"profileKey": "black-white",
+			"label": "Black / White",
+			"appGameKeys": [
+				"black-national",
+				"black",
+				"white-national",
+				"white"
+			],
+			"sourceState": "default-form-fallback",
+			"payload": {
+				"displayName": "Garbodor",
+				"localizedNames": {
+					"ja-hrkt": "ダストダス",
+					"ja-roma": "Dustdas",
+					"ko": "더스트나",
+					"zh-hant": "灰塵山",
+					"fr": "Miasmax",
+					"de": "Deponitox",
+					"es": "Garbodor",
+					"it": "Garbodor",
+					"ja": "ダストダス",
+					"zh-hans": "灰尘山",
+					"es-419": "Garbodor"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 80,
+					"atk": 95,
+					"def": 82,
+					"spa": 60,
+					"spd": 82,
+					"spe": 75
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Stench",
+					"Weak Armor",
+					"Aftermath (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Aftermath"
+				],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.9 m",
+				"weight": "107.3 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 166,
+				"habitat": "",
+				"shape": "Humanoid",
+				"color": "Green",
+				"genus": "Trash Heap Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ゴミすてばポケモン",
+					"ko": "쓰레기장포켓몬",
+					"zh-hant": "垃圾場寶可夢",
+					"fr": "Pokémon Dépotoir",
+					"de": "Müllhalden-Pokémon",
+					"es": "Pokémon Vertedero",
+					"it": "Pokémon Discarica",
+					"ja": "ゴミすてばポケモン",
+					"zh-hans": "垃圾场宝可梦",
+					"es-419": "Pokémon Vertedero"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 569
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 75
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 106
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 75
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 207
+					},
+					{
+						"pokedex": "original-ulaula",
+						"number": 79
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 265
+					},
+					{
+						"pokedex": "updated-ulaula",
+						"number": 86
+					},
+					{
+						"pokedex": "galar",
+						"number": 158
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 50
+					},
+					{
+						"pokedex": "champions",
+						"number": 569
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 568,
+								"natiId": 568,
+								"name": "Trubbish"
+							},
+							{
+								"id": 569,
+								"natiId": 569,
+								"name": "Garbodor",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Unova Route 9 Area",
+						"notes": "Walk, Lv. 31",
+						"games": "Black",
+						"rate": "10%"
+					},
+					{
+						"area": "Unova Route 9 Area",
+						"notes": "Walk, Lv. 33",
+						"games": "Black",
+						"rate": "10%"
+					},
+					{
+						"area": "Unova Route 9 Area",
+						"notes": "Dark Grass, Lv. 36",
+						"games": "Black",
+						"rate": "10%"
+					},
+					{
+						"area": "Unova Route 9 Area",
+						"notes": "Dark Grass, Lv. 38",
+						"games": "Black",
+						"rate": "10%"
+					},
+					{
+						"area": "Unova Route 9 Area",
+						"notes": "Walk, Lv. 31",
+						"games": "White",
+						"rate": "10%"
+					},
+					{
+						"area": "Unova Route 9 Area",
+						"notes": "Walk, Lv. 33",
+						"games": "White",
+						"rate": "10%"
+					},
+					{
+						"area": "Unova Route 9 Area",
+						"notes": "Dark Grass, Lv. 36",
+						"games": "White",
+						"rate": "10%"
+					},
+					{
+						"area": "Unova Route 9 Area",
+						"notes": "Dark Grass, Lv. 38",
+						"games": "White",
+						"rate": "10%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Pound",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Poison Gas",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Recycle",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Toxic Spikes",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Recycle",
+							"level": 3,
+							"order": null
+						},
+						{
+							"name": "Toxic Spikes",
+							"level": 7,
+							"order": null
+						},
+						{
+							"name": "Acid Spray",
+							"level": 12,
+							"order": null
+						},
+						{
+							"name": "Double Slap",
+							"level": 14,
+							"order": null
+						},
+						{
+							"name": "Sludge",
+							"level": 18,
+							"order": null
+						},
+						{
+							"name": "Stockpile",
+							"level": 23,
+							"order": 1
+						},
+						{
+							"name": "Swallow",
+							"level": 23,
+							"order": 2
+						},
+						{
+							"name": "Body Slam",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Sludge Bomb",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Clear Smog",
+							"level": 34,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": 39,
+							"order": null
+						},
+						{
+							"name": "Amnesia",
+							"level": 46,
+							"order": null
+						},
+						{
+							"name": "Gunk Shot",
+							"level": 54,
+							"order": null
+						},
+						{
+							"name": "Explosion",
+							"level": 59,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Explosion",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fling",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Focus Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Payback",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psychic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Polish",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sludge Bomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sludge Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Smack Down",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Venoshock",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "no",
+					"evidence": [
+						"PokemonPGC's form catalog excludes this game profile."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/569",
+						"fetchedAt": "2026-11-03T05:53:41.747Z",
+						"hash": "b34c99e82ec8d34b1d1a1b605cc2316eb4f38d5d243f94cc8c220e260ce40a5b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/290/",
+						"fetchedAt": "2026-11-03T05:53:41.766Z",
+						"hash": "3de8836ba00cc5314dc6339f7c896e2dfa08a8625b79d0645bfbc4dab75ef395"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/569/",
+						"fetchedAt": "2026-11-03T05:53:41.798Z",
+						"hash": "eab5b5596264ebce809d12a23ec0d851c59a3ead544e5546ea44e0ccf70d7c2c"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/569/encounters",
+						"fetchedAt": "2026-11-03T05:53:41.854Z",
+						"hash": "6b2f69a2e34011e29799051c6d98f5d849fcd966e8de78305016be9e59167378"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/569/",
+						"fetchedAt": "2026-11-03T05:53:41.903Z",
+						"hash": "e9f6a81afc01683c6b027f8129f816ebb1eacff3c8c276aa2ae9492f896db8ee"
+					}
+				],
+				"formName": "Normal"
+			},
+			"flavorByGame": {
+				"black-national": "It clenches opponents with its left arm and finishes them off with foul-smelling poison gas belched from its mouth.",
+				"black": "It clenches opponents with its left arm and finishes them off with foul-smelling poison gas belched from its mouth.",
+				"white-national": "They absorb garbage and make it part of their bodies. They shoot a poisonous liquid from their right-hand fingertips.",
+				"white": "They absorb garbage and make it part of their bodies. They shoot a poisonous liquid from their right-hand fingertips."
+			},
+			"localizedFlavorByGame": {
+				"black-national": {
+					"fr": "Il étrangle ses ennemis avec son bras droit et les achève avec le gaz puant et empoisonné qu’il exhale par la bouche.",
+					"en": "It clenches opponents with its left arm and finishes them off with foul-smelling poison gas belched from its mouth."
+				},
+				"black": {
+					"fr": "Il étrangle ses ennemis avec son bras droit et les achève avec le gaz puant et empoisonné qu’il exhale par la bouche.",
+					"en": "It clenches opponents with its left arm and finishes them off with foul-smelling poison gas belched from its mouth."
+				},
+				"white-national": {
+					"fr": "Il aspire les déchets et les intègre à son corps. Les doigts de sa main droite exsudent un fluide empoisonné.",
+					"en": "They absorb garbage and make it part of their bodies. They shoot a poisonous liquid from their right-hand fingertips."
+				},
+				"white": {
+					"fr": "Il aspire les déchets et les intègre à son corps. Les doigts de sa main droite exsudent un fluide empoisonné.",
+					"en": "They absorb garbage and make it part of their bodies. They shoot a poisonous liquid from their right-hand fingertips."
+				}
+			}
+		},
+		{
+			"profileKey": "black-2-white-2",
+			"label": "Black 2 / White 2",
+			"appGameKeys": [
+				"black2-national",
+				"black2",
+				"white2-national",
+				"white2"
+			],
+			"sourceState": "default-form-fallback",
+			"payload": {
+				"displayName": "Garbodor",
+				"localizedNames": {
+					"ja-hrkt": "ダストダス",
+					"ja-roma": "Dustdas",
+					"ko": "더스트나",
+					"zh-hant": "灰塵山",
+					"fr": "Miasmax",
+					"de": "Deponitox",
+					"es": "Garbodor",
+					"it": "Garbodor",
+					"ja": "ダストダス",
+					"zh-hans": "灰尘山",
+					"es-419": "Garbodor"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 80,
+					"atk": 95,
+					"def": 82,
+					"spa": 60,
+					"spd": 82,
+					"spe": 75
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Stench",
+					"Weak Armor",
+					"Aftermath (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Aftermath"
+				],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.9 m",
+				"weight": "107.3 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 166,
+				"habitat": "",
+				"shape": "Humanoid",
+				"color": "Green",
+				"genus": "Trash Heap Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ゴミすてばポケモン",
+					"ko": "쓰레기장포켓몬",
+					"zh-hant": "垃圾場寶可夢",
+					"fr": "Pokémon Dépotoir",
+					"de": "Müllhalden-Pokémon",
+					"es": "Pokémon Vertedero",
+					"it": "Pokémon Discarica",
+					"ja": "ゴミすてばポケモン",
+					"zh-hans": "垃圾场宝可梦",
+					"es-419": "Pokémon Vertedero"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 569
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 75
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 106
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 75
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 207
+					},
+					{
+						"pokedex": "original-ulaula",
+						"number": 79
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 265
+					},
+					{
+						"pokedex": "updated-ulaula",
+						"number": 86
+					},
+					{
+						"pokedex": "galar",
+						"number": 158
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 50
+					},
+					{
+						"pokedex": "champions",
+						"number": 569
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 568,
+								"natiId": 568,
+								"name": "Trubbish"
+							},
+							{
+								"id": 569,
+								"natiId": 569,
+								"name": "Garbodor",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Unova Route 9 Area",
+						"notes": "Dark Grass, Lv. 42",
+						"games": "Black 2",
+						"rate": "10%"
+					},
+					{
+						"area": "Unova Route 9 Area",
+						"notes": "Dark Grass, Lv. 44",
+						"games": "Black 2",
+						"rate": "4%"
+					},
+					{
+						"area": "Unova Route 9 Area",
+						"notes": "Dark Grass, Lv. 44",
+						"games": "Black 2",
+						"rate": "1%"
+					},
+					{
+						"area": "Unova Route 9 Area",
+						"notes": "Walk, Lv. 38",
+						"games": "Black 2",
+						"rate": "10%"
+					},
+					{
+						"area": "Unova Route 9 Area",
+						"notes": "Walk, Lv. 40",
+						"games": "Black 2",
+						"rate": "4%"
+					},
+					{
+						"area": "Unova Route 9 Area",
+						"notes": "Walk, Lv. 40",
+						"games": "Black 2",
+						"rate": "1%"
+					},
+					{
+						"area": "Unova Route 9 Area",
+						"notes": "Dark Grass, Lv. 42",
+						"games": "White 2",
+						"rate": "10%"
+					},
+					{
+						"area": "Unova Route 9 Area",
+						"notes": "Dark Grass, Lv. 44",
+						"games": "White 2",
+						"rate": "4%"
+					},
+					{
+						"area": "Unova Route 9 Area",
+						"notes": "Dark Grass, Lv. 44",
+						"games": "White 2",
+						"rate": "1%"
+					},
+					{
+						"area": "Unova Route 9 Area",
+						"notes": "Walk, Lv. 38",
+						"games": "White 2",
+						"rate": "10%"
+					},
+					{
+						"area": "Unova Route 9 Area",
+						"notes": "Walk, Lv. 40",
+						"games": "White 2",
+						"rate": "4%"
+					},
+					{
+						"area": "Unova Route 9 Area",
+						"notes": "Walk, Lv. 40",
+						"games": "White 2",
+						"rate": "1%"
+					},
+					{
+						"area": "Unova Route 9 Hidden Grotto",
+						"notes": "Hidden Grotto, Lv. 35-39",
+						"games": "Black 2",
+						"rate": "10%"
+					},
+					{
+						"area": "Unova Route 9 Hidden Grotto",
+						"notes": "Hidden Grotto, Lv. 35-39",
+						"games": "White 2",
+						"rate": "10%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Pound",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Poison Gas",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Recycle",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Toxic Spikes",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Recycle",
+							"level": 3,
+							"order": null
+						},
+						{
+							"name": "Toxic Spikes",
+							"level": 7,
+							"order": null
+						},
+						{
+							"name": "Acid Spray",
+							"level": 12,
+							"order": null
+						},
+						{
+							"name": "Double Slap",
+							"level": 14,
+							"order": null
+						},
+						{
+							"name": "Sludge",
+							"level": 18,
+							"order": null
+						},
+						{
+							"name": "Stockpile",
+							"level": 23,
+							"order": 1
+						},
+						{
+							"name": "Swallow",
+							"level": 23,
+							"order": 2
+						},
+						{
+							"name": "Body Slam",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Sludge Bomb",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Clear Smog",
+							"level": 34,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": 39,
+							"order": null
+						},
+						{
+							"name": "Amnesia",
+							"level": 46,
+							"order": null
+						},
+						{
+							"name": "Gunk Shot",
+							"level": 54,
+							"order": null
+						},
+						{
+							"name": "Explosion",
+							"level": 59,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Explosion",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fling",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Focus Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Payback",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psychic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Polish",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sludge Bomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sludge Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Smack Down",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Venoshock",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Dark Pulse",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Drain Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Drain",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Gunk Shot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Pain Split",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Recycle",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Seed Bomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Spite",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "no",
+					"evidence": [
+						"PokemonPGC's form catalog excludes this game profile."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/569",
+						"fetchedAt": "2026-11-03T05:53:41.747Z",
+						"hash": "b34c99e82ec8d34b1d1a1b605cc2316eb4f38d5d243f94cc8c220e260ce40a5b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/290/",
+						"fetchedAt": "2026-11-03T05:53:41.766Z",
+						"hash": "3de8836ba00cc5314dc6339f7c896e2dfa08a8625b79d0645bfbc4dab75ef395"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/569/",
+						"fetchedAt": "2026-11-03T05:53:41.798Z",
+						"hash": "eab5b5596264ebce809d12a23ec0d851c59a3ead544e5546ea44e0ccf70d7c2c"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/569/encounters",
+						"fetchedAt": "2026-11-03T05:53:41.854Z",
+						"hash": "6b2f69a2e34011e29799051c6d98f5d849fcd966e8de78305016be9e59167378"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/569/",
+						"fetchedAt": "2026-11-03T05:53:41.903Z",
+						"hash": "e9f6a81afc01683c6b027f8129f816ebb1eacff3c8c276aa2ae9492f896db8ee"
+					}
+				],
+				"formName": "Normal"
+			},
+			"flavorByGame": {
+				"black2-national": "Consuming garbage makes new kinds of poison gases and liquids inside their bodies.",
+				"black2": "Consuming garbage makes new kinds of poison gases and liquids inside their bodies.",
+				"white2-national": "Consuming garbage makes new kinds of poison gases and liquids inside their bodies.",
+				"white2": "Consuming garbage makes new kinds of poison gases and liquids inside their bodies."
+			},
+			"localizedFlavorByGame": {
+				"black2-national": {
+					"en": "Consuming garbage makes new kinds of poison gases and liquids inside their bodies."
+				},
+				"black2": {
+					"en": "Consuming garbage makes new kinds of poison gases and liquids inside their bodies."
+				},
+				"white2-national": {
+					"en": "Consuming garbage makes new kinds of poison gases and liquids inside their bodies."
+				},
+				"white2": {
+					"en": "Consuming garbage makes new kinds of poison gases and liquids inside their bodies."
+				}
+			}
+		},
+		{
+			"profileKey": "x-y",
+			"label": "X / Y",
+			"appGameKeys": [
+				"x-national",
+				"x-central",
+				"x-coastal",
+				"x-mountain",
+				"y-national",
+				"y-central",
+				"y-coastal",
+				"y-mountain"
+			],
+			"sourceState": "default-form-fallback",
+			"payload": {
+				"displayName": "Garbodor",
+				"localizedNames": {
+					"ja-hrkt": "ダストダス",
+					"ja-roma": "Dustdas",
+					"ko": "더스트나",
+					"zh-hant": "灰塵山",
+					"fr": "Miasmax",
+					"de": "Deponitox",
+					"es": "Garbodor",
+					"it": "Garbodor",
+					"ja": "ダストダス",
+					"zh-hans": "灰尘山",
+					"es-419": "Garbodor"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 80,
+					"atk": 95,
+					"def": 82,
+					"spa": 60,
+					"spd": 82,
+					"spe": 75
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Stench",
+					"Weak Armor",
+					"Aftermath (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Aftermath"
+				],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.9 m",
+				"weight": "107.3 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 166,
+				"habitat": "",
+				"shape": "Humanoid",
+				"color": "Green",
+				"genus": "Trash Heap Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ゴミすてばポケモン",
+					"ko": "쓰레기장포켓몬",
+					"zh-hant": "垃圾場寶可夢",
+					"fr": "Pokémon Dépotoir",
+					"de": "Müllhalden-Pokémon",
+					"es": "Pokémon Vertedero",
+					"it": "Pokémon Discarica",
+					"ja": "ゴミすてばポケモン",
+					"zh-hans": "垃圾场宝可梦",
+					"es-419": "Pokémon Vertedero"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 569
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 75
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 106
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 75
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 207
+					},
+					{
+						"pokedex": "original-ulaula",
+						"number": 79
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 265
+					},
+					{
+						"pokedex": "updated-ulaula",
+						"number": 86
+					},
+					{
+						"pokedex": "galar",
+						"number": 158
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 50
+					},
+					{
+						"pokedex": "champions",
+						"number": 569
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 568,
+								"natiId": 568,
+								"name": "Trubbish"
+							},
+							{
+								"id": 569,
+								"natiId": 569,
+								"name": "Garbodor",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Pokemon Village Area",
+						"notes": "Trash Can Ambush, Lv. 46-50",
+						"games": "X",
+						"rate": "100%"
+					},
+					{
+						"area": "Pokemon Village Area",
+						"notes": "Trash Can Ambush, Lv. 46-50",
+						"games": "Y",
+						"rate": "100%"
+					},
+					{
+						"area": "Lost Hotel Area",
+						"notes": "Trash Can Ambush, Lv. 36-38",
+						"games": "X",
+						"rate": "20%"
+					},
+					{
+						"area": "Lost Hotel Area",
+						"notes": "Trash Can Ambush, Lv. 36-38",
+						"games": "Y",
+						"rate": "20%"
+					},
+					{
+						"area": "Friend Safari Poison",
+						"notes": "Walk, Lv. 30",
+						"games": "X",
+						"rate": "33%"
+					},
+					{
+						"area": "Friend Safari Poison",
+						"notes": "Walk, Lv. 30",
+						"games": "Y",
+						"rate": "33%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Pound",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Poison Gas",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Recycle",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Toxic Spikes",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Recycle",
+							"level": 3,
+							"order": null
+						},
+						{
+							"name": "Toxic Spikes",
+							"level": 7,
+							"order": null
+						},
+						{
+							"name": "Acid Spray",
+							"level": 12,
+							"order": null
+						},
+						{
+							"name": "Double Slap",
+							"level": 14,
+							"order": null
+						},
+						{
+							"name": "Sludge",
+							"level": 18,
+							"order": null
+						},
+						{
+							"name": "Stockpile",
+							"level": 23,
+							"order": 1
+						},
+						{
+							"name": "Swallow",
+							"level": 23,
+							"order": 2
+						},
+						{
+							"name": "Body Slam",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Sludge Bomb",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Clear Smog",
+							"level": 34,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": 39,
+							"order": null
+						},
+						{
+							"name": "Amnesia",
+							"level": 46,
+							"order": null
+						},
+						{
+							"name": "Belch",
+							"level": 49,
+							"order": null
+						},
+						{
+							"name": "Gunk Shot",
+							"level": 54,
+							"order": null
+						},
+						{
+							"name": "Explosion",
+							"level": 59,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dark Pulse",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Explosion",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fling",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Focus Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Infestation",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Payback",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psychic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Polish",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sludge Bomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sludge Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Smack Down",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Venoshock",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "no",
+					"evidence": [
+						"PokemonPGC's form catalog excludes this game profile."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/569",
+						"fetchedAt": "2026-11-03T05:53:41.747Z",
+						"hash": "b34c99e82ec8d34b1d1a1b605cc2316eb4f38d5d243f94cc8c220e260ce40a5b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/290/",
+						"fetchedAt": "2026-11-03T05:53:41.766Z",
+						"hash": "3de8836ba00cc5314dc6339f7c896e2dfa08a8625b79d0645bfbc4dab75ef395"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/569/",
+						"fetchedAt": "2026-11-03T05:53:41.798Z",
+						"hash": "eab5b5596264ebce809d12a23ec0d851c59a3ead544e5546ea44e0ccf70d7c2c"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/569/encounters",
+						"fetchedAt": "2026-11-03T05:53:41.854Z",
+						"hash": "6b2f69a2e34011e29799051c6d98f5d849fcd966e8de78305016be9e59167378"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/569/",
+						"fetchedAt": "2026-11-03T05:53:41.903Z",
+						"hash": "e9f6a81afc01683c6b027f8129f816ebb1eacff3c8c276aa2ae9492f896db8ee"
+					}
+				],
+				"formName": "Normal"
+			},
+			"flavorByGame": {
+				"x-national": "It clenches opponents with its left arm and finishes them off with foul-smelling poison gas belched from its mouth.",
+				"x-central": "It clenches opponents with its left arm and finishes them off with foul-smelling poison gas belched from its mouth.",
+				"x-coastal": "It clenches opponents with its left arm and finishes them off with foul-smelling poison gas belched from its mouth.",
+				"x-mountain": "It clenches opponents with its left arm and finishes them off with foul-smelling poison gas belched from its mouth.",
+				"y-national": "Consuming garbage makes new kinds of poison gases and liquids inside their bodies.",
+				"y-central": "Consuming garbage makes new kinds of poison gases and liquids inside their bodies.",
+				"y-coastal": "Consuming garbage makes new kinds of poison gases and liquids inside their bodies.",
+				"y-mountain": "Consuming garbage makes new kinds of poison gases and liquids inside their bodies."
+			},
+			"localizedFlavorByGame": {
+				"x-national": {
+					"ja-hrkt": "ひだりうでで あいてを しめつけて くちから はきだす あくしゅうの どくガスで とどめを さすのだ。",
+					"ko": "왼팔로 상대를 꼭 붙들고 입에서 악취가 나는 독가스를 토해내서 마무리한다.",
+					"fr": "Il étrangle ses ennemis avec son bras gauche et les achève avec le gaz puant et empoisonné qu’il exhale par la bouche.",
+					"de": "Es nimmt mit dem rechten Arm Gegner in die Mangel und gibt ihnen mit dem giftigen Gas aus seinem Maul den Rest.",
+					"es": "Apresa a su rival con el brazo izquierdo y le da el golpe de gracia exhalando por la boca un apestoso gas venenoso.",
+					"it": "Serra l’avversario con l’arto sinistro e gli dà il colpo di grazia esalando dalla bocca un fetido gas velenoso.",
+					"en": "It clenches opponents with its left arm and finishes them off with foul-smelling poison gas belched from its mouth.",
+					"ja": "左腕で 相手を 絞めつけて 口から 吐き出す 悪臭の 毒ガスで とどめを 刺すのだ。",
+					"es-419": "Apresa a su rival con el brazo izquierdo y le da el golpe de gracia exhalando por la boca un apestoso gas venenoso."
+				},
+				"x-central": {
+					"ja-hrkt": "ひだりうでで あいてを しめつけて くちから はきだす あくしゅうの どくガスで とどめを さすのだ。",
+					"ko": "왼팔로 상대를 꼭 붙들고 입에서 악취가 나는 독가스를 토해내서 마무리한다.",
+					"fr": "Il étrangle ses ennemis avec son bras gauche et les achève avec le gaz puant et empoisonné qu’il exhale par la bouche.",
+					"de": "Es nimmt mit dem rechten Arm Gegner in die Mangel und gibt ihnen mit dem giftigen Gas aus seinem Maul den Rest.",
+					"es": "Apresa a su rival con el brazo izquierdo y le da el golpe de gracia exhalando por la boca un apestoso gas venenoso.",
+					"it": "Serra l’avversario con l’arto sinistro e gli dà il colpo di grazia esalando dalla bocca un fetido gas velenoso.",
+					"en": "It clenches opponents with its left arm and finishes them off with foul-smelling poison gas belched from its mouth.",
+					"ja": "左腕で 相手を 絞めつけて 口から 吐き出す 悪臭の 毒ガスで とどめを 刺すのだ。",
+					"es-419": "Apresa a su rival con el brazo izquierdo y le da el golpe de gracia exhalando por la boca un apestoso gas venenoso."
+				},
+				"x-coastal": {
+					"ja-hrkt": "ひだりうでで あいてを しめつけて くちから はきだす あくしゅうの どくガスで とどめを さすのだ。",
+					"ko": "왼팔로 상대를 꼭 붙들고 입에서 악취가 나는 독가스를 토해내서 마무리한다.",
+					"fr": "Il étrangle ses ennemis avec son bras gauche et les achève avec le gaz puant et empoisonné qu’il exhale par la bouche.",
+					"de": "Es nimmt mit dem rechten Arm Gegner in die Mangel und gibt ihnen mit dem giftigen Gas aus seinem Maul den Rest.",
+					"es": "Apresa a su rival con el brazo izquierdo y le da el golpe de gracia exhalando por la boca un apestoso gas venenoso.",
+					"it": "Serra l’avversario con l’arto sinistro e gli dà il colpo di grazia esalando dalla bocca un fetido gas velenoso.",
+					"en": "It clenches opponents with its left arm and finishes them off with foul-smelling poison gas belched from its mouth.",
+					"ja": "左腕で 相手を 絞めつけて 口から 吐き出す 悪臭の 毒ガスで とどめを 刺すのだ。",
+					"es-419": "Apresa a su rival con el brazo izquierdo y le da el golpe de gracia exhalando por la boca un apestoso gas venenoso."
+				},
+				"x-mountain": {
+					"ja-hrkt": "ひだりうでで あいてを しめつけて くちから はきだす あくしゅうの どくガスで とどめを さすのだ。",
+					"ko": "왼팔로 상대를 꼭 붙들고 입에서 악취가 나는 독가스를 토해내서 마무리한다.",
+					"fr": "Il étrangle ses ennemis avec son bras gauche et les achève avec le gaz puant et empoisonné qu’il exhale par la bouche.",
+					"de": "Es nimmt mit dem rechten Arm Gegner in die Mangel und gibt ihnen mit dem giftigen Gas aus seinem Maul den Rest.",
+					"es": "Apresa a su rival con el brazo izquierdo y le da el golpe de gracia exhalando por la boca un apestoso gas venenoso.",
+					"it": "Serra l’avversario con l’arto sinistro e gli dà il colpo di grazia esalando dalla bocca un fetido gas velenoso.",
+					"en": "It clenches opponents with its left arm and finishes them off with foul-smelling poison gas belched from its mouth.",
+					"ja": "左腕で 相手を 絞めつけて 口から 吐き出す 悪臭の 毒ガスで とどめを 刺すのだ。",
+					"es-419": "Apresa a su rival con el brazo izquierdo y le da el golpe de gracia exhalando por la boca un apestoso gas venenoso."
+				},
+				"y-national": {
+					"ja-hrkt": "ゴミを すいとっては たいないで あたらしい しゅるいの どくガスや どくの えきたいを うみだしている。",
+					"ko": "쓰레기를 흡수해서 체내에서 새로운 종류의 독가스나 독의 액체를 만들어낸다.",
+					"fr": "Il aspire les déchets et les intègre à son corps pour produire des gaz et des fluides toxiques.",
+					"de": "Jedes Mal, wenn es frischen Müll in sich aufsaugt, erzeugt es völlig neue Formen von Giftgasen und Toxinen.",
+					"es": "Absorbe y procesa en su interior basura para generar nuevos gases nocivos y líquidos venenosos de alta virulencia.",
+					"it": "Assorbe la spazzatura nel suo corpo per creare dei liquidi velenosi e dei gas tossici sempre nuovi.",
+					"en": "Consuming garbage makes new kinds of poison gases and liquids inside their bodies.",
+					"ja": "ゴミを 吸いとっては 体内で 新しい 種類の 毒ガスや 毒の 液体を 生みだしている。",
+					"es-419": "Absorbe y procesa en su interior basura para generar nuevos gases nocivos y líquidos venenosos de alta virulencia."
+				},
+				"y-central": {
+					"ja-hrkt": "ゴミを すいとっては たいないで あたらしい しゅるいの どくガスや どくの えきたいを うみだしている。",
+					"ko": "쓰레기를 흡수해서 체내에서 새로운 종류의 독가스나 독의 액체를 만들어낸다.",
+					"fr": "Il aspire les déchets et les intègre à son corps pour produire des gaz et des fluides toxiques.",
+					"de": "Jedes Mal, wenn es frischen Müll in sich aufsaugt, erzeugt es völlig neue Formen von Giftgasen und Toxinen.",
+					"es": "Absorbe y procesa en su interior basura para generar nuevos gases nocivos y líquidos venenosos de alta virulencia.",
+					"it": "Assorbe la spazzatura nel suo corpo per creare dei liquidi velenosi e dei gas tossici sempre nuovi.",
+					"en": "Consuming garbage makes new kinds of poison gases and liquids inside their bodies.",
+					"ja": "ゴミを 吸いとっては 体内で 新しい 種類の 毒ガスや 毒の 液体を 生みだしている。",
+					"es-419": "Absorbe y procesa en su interior basura para generar nuevos gases nocivos y líquidos venenosos de alta virulencia."
+				},
+				"y-coastal": {
+					"ja-hrkt": "ゴミを すいとっては たいないで あたらしい しゅるいの どくガスや どくの えきたいを うみだしている。",
+					"ko": "쓰레기를 흡수해서 체내에서 새로운 종류의 독가스나 독의 액체를 만들어낸다.",
+					"fr": "Il aspire les déchets et les intègre à son corps pour produire des gaz et des fluides toxiques.",
+					"de": "Jedes Mal, wenn es frischen Müll in sich aufsaugt, erzeugt es völlig neue Formen von Giftgasen und Toxinen.",
+					"es": "Absorbe y procesa en su interior basura para generar nuevos gases nocivos y líquidos venenosos de alta virulencia.",
+					"it": "Assorbe la spazzatura nel suo corpo per creare dei liquidi velenosi e dei gas tossici sempre nuovi.",
+					"en": "Consuming garbage makes new kinds of poison gases and liquids inside their bodies.",
+					"ja": "ゴミを 吸いとっては 体内で 新しい 種類の 毒ガスや 毒の 液体を 生みだしている。",
+					"es-419": "Absorbe y procesa en su interior basura para generar nuevos gases nocivos y líquidos venenosos de alta virulencia."
+				},
+				"y-mountain": {
+					"ja-hrkt": "ゴミを すいとっては たいないで あたらしい しゅるいの どくガスや どくの えきたいを うみだしている。",
+					"ko": "쓰레기를 흡수해서 체내에서 새로운 종류의 독가스나 독의 액체를 만들어낸다.",
+					"fr": "Il aspire les déchets et les intègre à son corps pour produire des gaz et des fluides toxiques.",
+					"de": "Jedes Mal, wenn es frischen Müll in sich aufsaugt, erzeugt es völlig neue Formen von Giftgasen und Toxinen.",
+					"es": "Absorbe y procesa en su interior basura para generar nuevos gases nocivos y líquidos venenosos de alta virulencia.",
+					"it": "Assorbe la spazzatura nel suo corpo per creare dei liquidi velenosi e dei gas tossici sempre nuovi.",
+					"en": "Consuming garbage makes new kinds of poison gases and liquids inside their bodies.",
+					"ja": "ゴミを 吸いとっては 体内で 新しい 種類の 毒ガスや 毒の 液体を 生みだしている。",
+					"es-419": "Absorbe y procesa en su interior basura para generar nuevos gases nocivos y líquidos venenosos de alta virulencia."
+				}
+			}
+		},
+		{
+			"profileKey": "omega-ruby-alpha-sapphire",
+			"label": "Omega Ruby / Alpha Sapphire",
+			"appGameKeys": [
+				"omegaruby-national",
+				"omegaruby",
+				"alphasapphire-national",
+				"alphasapphire"
+			],
+			"sourceState": "default-form-fallback",
+			"payload": {
+				"displayName": "Garbodor",
+				"localizedNames": {
+					"ja-hrkt": "ダストダス",
+					"ja-roma": "Dustdas",
+					"ko": "더스트나",
+					"zh-hant": "灰塵山",
+					"fr": "Miasmax",
+					"de": "Deponitox",
+					"es": "Garbodor",
+					"it": "Garbodor",
+					"ja": "ダストダス",
+					"zh-hans": "灰尘山",
+					"es-419": "Garbodor"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 80,
+					"atk": 95,
+					"def": 82,
+					"spa": 60,
+					"spd": 82,
+					"spe": 75
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Stench",
+					"Weak Armor",
+					"Aftermath (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Aftermath"
+				],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.9 m",
+				"weight": "107.3 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 166,
+				"habitat": "",
+				"shape": "Humanoid",
+				"color": "Green",
+				"genus": "Trash Heap Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ゴミすてばポケモン",
+					"ko": "쓰레기장포켓몬",
+					"zh-hant": "垃圾場寶可夢",
+					"fr": "Pokémon Dépotoir",
+					"de": "Müllhalden-Pokémon",
+					"es": "Pokémon Vertedero",
+					"it": "Pokémon Discarica",
+					"ja": "ゴミすてばポケモン",
+					"zh-hans": "垃圾场宝可梦",
+					"es-419": "Pokémon Vertedero"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 569
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 75
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 106
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 75
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 207
+					},
+					{
+						"pokedex": "original-ulaula",
+						"number": 79
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 265
+					},
+					{
+						"pokedex": "updated-ulaula",
+						"number": 86
+					},
+					{
+						"pokedex": "galar",
+						"number": 158
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 50
+					},
+					{
+						"pokedex": "champions",
+						"number": 569
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 568,
+								"natiId": 568,
+								"name": "Trubbish"
+							},
+							{
+								"id": 569,
+								"natiId": 569,
+								"name": "Garbodor",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Pound",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Poison Gas",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Recycle",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Toxic Spikes",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Recycle",
+							"level": 3,
+							"order": null
+						},
+						{
+							"name": "Toxic Spikes",
+							"level": 7,
+							"order": null
+						},
+						{
+							"name": "Acid Spray",
+							"level": 12,
+							"order": null
+						},
+						{
+							"name": "Double Slap",
+							"level": 14,
+							"order": null
+						},
+						{
+							"name": "Sludge",
+							"level": 18,
+							"order": null
+						},
+						{
+							"name": "Stockpile",
+							"level": 23,
+							"order": 1
+						},
+						{
+							"name": "Swallow",
+							"level": 23,
+							"order": 2
+						},
+						{
+							"name": "Body Slam",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Sludge Bomb",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Clear Smog",
+							"level": 34,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": 39,
+							"order": null
+						},
+						{
+							"name": "Amnesia",
+							"level": 46,
+							"order": null
+						},
+						{
+							"name": "Belch",
+							"level": 49,
+							"order": null
+						},
+						{
+							"name": "Gunk Shot",
+							"level": 54,
+							"order": null
+						},
+						{
+							"name": "Explosion",
+							"level": 59,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dark Pulse",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Explosion",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fling",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Focus Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Infestation",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Payback",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psychic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Polish",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Secret Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sludge Bomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sludge Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Smack Down",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Venoshock",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Drain Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Drain",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Gunk Shot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Pain Split",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Recycle",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Seed Bomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Spite",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "no",
+					"evidence": [
+						"PokemonPGC's form catalog excludes this game profile."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/569",
+						"fetchedAt": "2026-11-03T05:53:41.747Z",
+						"hash": "b34c99e82ec8d34b1d1a1b605cc2316eb4f38d5d243f94cc8c220e260ce40a5b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/290/",
+						"fetchedAt": "2026-11-03T05:53:41.766Z",
+						"hash": "3de8836ba00cc5314dc6339f7c896e2dfa08a8625b79d0645bfbc4dab75ef395"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/569/",
+						"fetchedAt": "2026-11-03T05:53:41.798Z",
+						"hash": "eab5b5596264ebce809d12a23ec0d851c59a3ead544e5546ea44e0ccf70d7c2c"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/569/encounters",
+						"fetchedAt": "2026-11-03T05:53:41.854Z",
+						"hash": "6b2f69a2e34011e29799051c6d98f5d849fcd966e8de78305016be9e59167378"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/569/",
+						"fetchedAt": "2026-11-03T05:53:41.903Z",
+						"hash": "e9f6a81afc01683c6b027f8129f816ebb1eacff3c8c276aa2ae9492f896db8ee"
+					}
+				],
+				"formName": "Normal"
+			},
+			"flavorByGame": {
+				"omegaruby-national": "It clenches opponents with its left arm and finishes them off with foul-smelling poison gas belched from its mouth.",
+				"omegaruby": "It clenches opponents with its left arm and finishes them off with foul-smelling poison gas belched from its mouth.",
+				"alphasapphire-national": "Consuming garbage makes new kinds of poison gases and liquids inside their bodies.",
+				"alphasapphire": "Consuming garbage makes new kinds of poison gases and liquids inside their bodies."
+			},
+			"localizedFlavorByGame": {
+				"omegaruby-national": {
+					"ja-hrkt": "ひだりうでで あいてを しめつけて くちから はきだす あくしゅうの どくガスで とどめを さすのだ。",
+					"ko": "왼팔로 상대를 꼭 붙들고 입에서 악취가 나는 독가스를 토해내서 마무리한다.",
+					"fr": "Il étrangle ses ennemis avec son bras gauche et les achève avec le gaz puant et empoisonné qu’il exhale par la bouche.",
+					"de": "Es nimmt mit dem rechten Arm Gegner in die Mangel und gibt ihnen mit dem giftigen Gas aus seinem Maul den Rest.",
+					"es": "Apresa a su rival con el brazo izquierdo y le da el golpe de gracia exhalando por la boca un apestoso gas venenoso.",
+					"it": "Serra l’avversario con l’arto sinistro e gli dà il colpo di grazia esalando dalla bocca un fetido gas velenoso.",
+					"en": "It clenches opponents with its left arm and finishes them off with foul-smelling poison gas belched from its mouth.",
+					"ja": "左腕で 相手を 絞めつけて 口から 吐き出す 悪臭の 毒ガスで とどめを 刺すのだ。",
+					"es-419": "Apresa a su rival con el brazo izquierdo y le da el golpe de gracia exhalando por la boca un apestoso gas venenoso."
+				},
+				"omegaruby": {
+					"ja-hrkt": "ひだりうでで あいてを しめつけて くちから はきだす あくしゅうの どくガスで とどめを さすのだ。",
+					"ko": "왼팔로 상대를 꼭 붙들고 입에서 악취가 나는 독가스를 토해내서 마무리한다.",
+					"fr": "Il étrangle ses ennemis avec son bras gauche et les achève avec le gaz puant et empoisonné qu’il exhale par la bouche.",
+					"de": "Es nimmt mit dem rechten Arm Gegner in die Mangel und gibt ihnen mit dem giftigen Gas aus seinem Maul den Rest.",
+					"es": "Apresa a su rival con el brazo izquierdo y le da el golpe de gracia exhalando por la boca un apestoso gas venenoso.",
+					"it": "Serra l’avversario con l’arto sinistro e gli dà il colpo di grazia esalando dalla bocca un fetido gas velenoso.",
+					"en": "It clenches opponents with its left arm and finishes them off with foul-smelling poison gas belched from its mouth.",
+					"ja": "左腕で 相手を 絞めつけて 口から 吐き出す 悪臭の 毒ガスで とどめを 刺すのだ。",
+					"es-419": "Apresa a su rival con el brazo izquierdo y le da el golpe de gracia exhalando por la boca un apestoso gas venenoso."
+				},
+				"alphasapphire-national": {
+					"ja-hrkt": "ゴミを すいとっては たいないで あたらしい しゅるいの どくガスや どくの えきたいを うみだしている。",
+					"ko": "쓰레기를 흡수해서 체내에서 새로운 종류의 독가스나 독의 액체를 만들어낸다.",
+					"fr": "Il aspire les déchets et les intègre à son corps pour produire des gaz et des fluides toxiques.",
+					"de": "Jedes Mal, wenn es frischen Müll in sich aufsaugt, erzeugt es völlig neue Formen von Giftgasen und Toxinen.",
+					"es": "Absorbe y procesa en su interior basura para generar nuevos gases nocivos y líquidos venenosos de alta virulencia.",
+					"it": "Assorbe la spazzatura nel suo corpo per creare dei liquidi velenosi e dei gas tossici sempre nuovi.",
+					"en": "Consuming garbage makes new kinds of poison gases and liquids inside their bodies.",
+					"ja": "ゴミを 吸いとっては 体内で 新しい 種類の 毒ガスや 毒の 液体を 生みだしている。",
+					"es-419": "Absorbe y procesa en su interior basura para generar nuevos gases nocivos y líquidos venenosos de alta virulencia."
+				},
+				"alphasapphire": {
+					"ja-hrkt": "ゴミを すいとっては たいないで あたらしい しゅるいの どくガスや どくの えきたいを うみだしている。",
+					"ko": "쓰레기를 흡수해서 체내에서 새로운 종류의 독가스나 독의 액체를 만들어낸다.",
+					"fr": "Il aspire les déchets et les intègre à son corps pour produire des gaz et des fluides toxiques.",
+					"de": "Jedes Mal, wenn es frischen Müll in sich aufsaugt, erzeugt es völlig neue Formen von Giftgasen und Toxinen.",
+					"es": "Absorbe y procesa en su interior basura para generar nuevos gases nocivos y líquidos venenosos de alta virulencia.",
+					"it": "Assorbe la spazzatura nel suo corpo per creare dei liquidi velenosi e dei gas tossici sempre nuovi.",
+					"en": "Consuming garbage makes new kinds of poison gases and liquids inside their bodies.",
+					"ja": "ゴミを 吸いとっては 体内で 新しい 種類の 毒ガスや 毒の 液体を 生みだしている。",
+					"es-419": "Absorbe y procesa en su interior basura para generar nuevos gases nocivos y líquidos venenosos de alta virulencia."
+				}
+			}
+		},
+		{
+			"profileKey": "sun-moon",
+			"label": "Sun / Moon",
+			"appGameKeys": [
+				"sun-alola",
+				"sun-melemele",
+				"sun-akala",
+				"sun-ulaula",
+				"sun-poni",
+				"moon-alola",
+				"moon-melemele",
+				"moon-akala",
+				"moon-ulaula",
+				"moon-poni"
+			],
+			"sourceState": "default-form-fallback",
+			"payload": {
+				"displayName": "Garbodor",
+				"localizedNames": {
+					"ja-hrkt": "ダストダス",
+					"ja-roma": "Dustdas",
+					"ko": "더스트나",
+					"zh-hant": "灰塵山",
+					"fr": "Miasmax",
+					"de": "Deponitox",
+					"es": "Garbodor",
+					"it": "Garbodor",
+					"ja": "ダストダス",
+					"zh-hans": "灰尘山",
+					"es-419": "Garbodor"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 80,
+					"atk": 95,
+					"def": 82,
+					"spa": 60,
+					"spd": 82,
+					"spe": 75
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Stench",
+					"Weak Armor",
+					"Aftermath (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Aftermath"
+				],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.9 m",
+				"weight": "107.3 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 166,
+				"habitat": "",
+				"shape": "Humanoid",
+				"color": "Green",
+				"genus": "Trash Heap Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ゴミすてばポケモン",
+					"ko": "쓰레기장포켓몬",
+					"zh-hant": "垃圾場寶可夢",
+					"fr": "Pokémon Dépotoir",
+					"de": "Müllhalden-Pokémon",
+					"es": "Pokémon Vertedero",
+					"it": "Pokémon Discarica",
+					"ja": "ゴミすてばポケモン",
+					"zh-hans": "垃圾场宝可梦",
+					"es-419": "Pokémon Vertedero"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 569
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 75
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 106
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 75
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 207
+					},
+					{
+						"pokedex": "original-ulaula",
+						"number": 79
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 265
+					},
+					{
+						"pokedex": "updated-ulaula",
+						"number": 86
+					},
+					{
+						"pokedex": "galar",
+						"number": 158
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 50
+					},
+					{
+						"pokedex": "champions",
+						"number": 569
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 568,
+								"natiId": 568,
+								"name": "Trubbish"
+							},
+							{
+								"id": 569,
+								"natiId": 569,
+								"name": "Garbodor",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Malie City Outer Cape",
+						"notes": "Sos, Lv. 24-27",
+						"games": "Sun",
+						"rate": "15%"
+					},
+					{
+						"area": "Malie City Outer Cape",
+						"notes": "Sos, Lv. 24-27",
+						"games": "Moon",
+						"rate": "15%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Pound",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Poison Gas",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Recycle",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Toxic Spikes",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Recycle",
+							"level": 3,
+							"order": null
+						},
+						{
+							"name": "Toxic Spikes",
+							"level": 7,
+							"order": null
+						},
+						{
+							"name": "Acid Spray",
+							"level": 12,
+							"order": null
+						},
+						{
+							"name": "Double Slap",
+							"level": 14,
+							"order": null
+						},
+						{
+							"name": "Sludge",
+							"level": 18,
+							"order": null
+						},
+						{
+							"name": "Stockpile",
+							"level": 23,
+							"order": 1
+						},
+						{
+							"name": "Swallow",
+							"level": 23,
+							"order": 2
+						},
+						{
+							"name": "Body Slam",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Sludge Bomb",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Clear Smog",
+							"level": 34,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": 39,
+							"order": null
+						},
+						{
+							"name": "Amnesia",
+							"level": 46,
+							"order": null
+						},
+						{
+							"name": "Belch",
+							"level": 49,
+							"order": null
+						},
+						{
+							"name": "Gunk Shot",
+							"level": 54,
+							"order": null
+						},
+						{
+							"name": "Explosion",
+							"level": 59,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dark Pulse",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Explosion",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fling",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Focus Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Infestation",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Payback",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psychic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Polish",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sludge Bomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sludge Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Smack Down",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Venoshock",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "no",
+					"evidence": [
+						"PokemonPGC's form catalog excludes this game profile."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/569",
+						"fetchedAt": "2026-11-03T05:53:41.747Z",
+						"hash": "b34c99e82ec8d34b1d1a1b605cc2316eb4f38d5d243f94cc8c220e260ce40a5b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/290/",
+						"fetchedAt": "2026-11-03T05:53:41.766Z",
+						"hash": "3de8836ba00cc5314dc6339f7c896e2dfa08a8625b79d0645bfbc4dab75ef395"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/569/",
+						"fetchedAt": "2026-11-03T05:53:41.798Z",
+						"hash": "eab5b5596264ebce809d12a23ec0d851c59a3ead544e5546ea44e0ccf70d7c2c"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/569/encounters",
+						"fetchedAt": "2026-11-03T05:53:41.854Z",
+						"hash": "6b2f69a2e34011e29799051c6d98f5d849fcd966e8de78305016be9e59167378"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/569/",
+						"fetchedAt": "2026-11-03T05:53:41.903Z",
+						"hash": "e9f6a81afc01683c6b027f8129f816ebb1eacff3c8c276aa2ae9492f896db8ee"
+					}
+				],
+				"formName": "Normal"
+			},
+			"flavorByGame": {
+				"sun-alola": "Beware the poisonous liquid it shoots from its right arm. If even a little of it gets on you, you’ll experience the effects of the unidentified toxin.",
+				"sun-melemele": "Beware the poisonous liquid it shoots from its right arm. If even a little of it gets on you, you’ll experience the effects of the unidentified toxin.",
+				"sun-akala": "Beware the poisonous liquid it shoots from its right arm. If even a little of it gets on you, you’ll experience the effects of the unidentified toxin.",
+				"sun-ulaula": "Beware the poisonous liquid it shoots from its right arm. If even a little of it gets on you, you’ll experience the effects of the unidentified toxin.",
+				"sun-poni": "Beware the poisonous liquid it shoots from its right arm. If even a little of it gets on you, you’ll experience the effects of the unidentified toxin.",
+				"moon-alola": "For a time, their numbers increased explosively in Alola. Since the arrival of Grimer, their population has decreased dramatically.",
+				"moon-melemele": "For a time, their numbers increased explosively in Alola. Since the arrival of Grimer, their population has decreased dramatically.",
+				"moon-akala": "For a time, their numbers increased explosively in Alola. Since the arrival of Grimer, their population has decreased dramatically.",
+				"moon-ulaula": "For a time, their numbers increased explosively in Alola. Since the arrival of Grimer, their population has decreased dramatically.",
+				"moon-poni": "For a time, their numbers increased explosively in Alola. Since the arrival of Grimer, their population has decreased dramatically."
+			},
+			"localizedFlavorByGame": {
+				"sun-alola": {
+					"ja-hrkt": "みぎうでから とびだす どくえきに ちゅうい。 ちょっと かかるだけで みちの どくそに おかされる。",
+					"ko": "오른쪽 팔에서 날리는 독액에 주의. 살짝 닿기만 해도 미지의 독소가 침범한다.",
+					"zh-hant": "要注意從右臂噴出的毒液。 只要沾到一點點， 就會被未知的毒素侵襲。",
+					"fr": "Méfiez-vous du poison qu’il projette de son bras droit, sans quoi ses toxines non identifiées vous feront passer un sale quart d’heure.",
+					"de": "Vorsicht vor dem Gift, das es aus seinem rechten Arm sprüht! Kleinste Mengen genügen, um einen unbekannten Giftstoff zu übertragen.",
+					"es": "El veneno líquido que brota de su brazo derecho es muy nocivo. La mera exposición puede llevar a inhalar accidentalmente toxinas desconocidas.",
+					"it": "Dall’arto destro spruzza un veleno altamente nocivo. Basta toccarlo per essere contaminati da tossine sconosciute.",
+					"en": "Beware the poisonous liquid it shoots from its right arm. If even a little of it gets on you, you’ll experience the effects of the unidentified toxin.",
+					"ja": "右腕から 飛びだす 毒液に 注意。 ちょっと かかるだけで 未知の 毒素に 冒される。",
+					"zh-hans": "要注意从右臂喷出的毒液。 只要沾到一点点， 就会被未知的毒素侵袭。",
+					"es-419": "El veneno líquido que brota de su brazo derecho es muy nocivo. La mera exposición puede llevar a inhalar accidentalmente toxinas desconocidas."
+				},
+				"sun-melemele": {
+					"ja-hrkt": "みぎうでから とびだす どくえきに ちゅうい。 ちょっと かかるだけで みちの どくそに おかされる。",
+					"ko": "오른쪽 팔에서 날리는 독액에 주의. 살짝 닿기만 해도 미지의 독소가 침범한다.",
+					"zh-hant": "要注意從右臂噴出的毒液。 只要沾到一點點， 就會被未知的毒素侵襲。",
+					"fr": "Méfiez-vous du poison qu’il projette de son bras droit, sans quoi ses toxines non identifiées vous feront passer un sale quart d’heure.",
+					"de": "Vorsicht vor dem Gift, das es aus seinem rechten Arm sprüht! Kleinste Mengen genügen, um einen unbekannten Giftstoff zu übertragen.",
+					"es": "El veneno líquido que brota de su brazo derecho es muy nocivo. La mera exposición puede llevar a inhalar accidentalmente toxinas desconocidas.",
+					"it": "Dall’arto destro spruzza un veleno altamente nocivo. Basta toccarlo per essere contaminati da tossine sconosciute.",
+					"en": "Beware the poisonous liquid it shoots from its right arm. If even a little of it gets on you, you’ll experience the effects of the unidentified toxin.",
+					"ja": "右腕から 飛びだす 毒液に 注意。 ちょっと かかるだけで 未知の 毒素に 冒される。",
+					"zh-hans": "要注意从右臂喷出的毒液。 只要沾到一点点， 就会被未知的毒素侵袭。",
+					"es-419": "El veneno líquido que brota de su brazo derecho es muy nocivo. La mera exposición puede llevar a inhalar accidentalmente toxinas desconocidas."
+				},
+				"sun-akala": {
+					"ja-hrkt": "みぎうでから とびだす どくえきに ちゅうい。 ちょっと かかるだけで みちの どくそに おかされる。",
+					"ko": "오른쪽 팔에서 날리는 독액에 주의. 살짝 닿기만 해도 미지의 독소가 침범한다.",
+					"zh-hant": "要注意從右臂噴出的毒液。 只要沾到一點點， 就會被未知的毒素侵襲。",
+					"fr": "Méfiez-vous du poison qu’il projette de son bras droit, sans quoi ses toxines non identifiées vous feront passer un sale quart d’heure.",
+					"de": "Vorsicht vor dem Gift, das es aus seinem rechten Arm sprüht! Kleinste Mengen genügen, um einen unbekannten Giftstoff zu übertragen.",
+					"es": "El veneno líquido que brota de su brazo derecho es muy nocivo. La mera exposición puede llevar a inhalar accidentalmente toxinas desconocidas.",
+					"it": "Dall’arto destro spruzza un veleno altamente nocivo. Basta toccarlo per essere contaminati da tossine sconosciute.",
+					"en": "Beware the poisonous liquid it shoots from its right arm. If even a little of it gets on you, you’ll experience the effects of the unidentified toxin.",
+					"ja": "右腕から 飛びだす 毒液に 注意。 ちょっと かかるだけで 未知の 毒素に 冒される。",
+					"zh-hans": "要注意从右臂喷出的毒液。 只要沾到一点点， 就会被未知的毒素侵袭。",
+					"es-419": "El veneno líquido que brota de su brazo derecho es muy nocivo. La mera exposición puede llevar a inhalar accidentalmente toxinas desconocidas."
+				},
+				"sun-ulaula": {
+					"ja-hrkt": "みぎうでから とびだす どくえきに ちゅうい。 ちょっと かかるだけで みちの どくそに おかされる。",
+					"ko": "오른쪽 팔에서 날리는 독액에 주의. 살짝 닿기만 해도 미지의 독소가 침범한다.",
+					"zh-hant": "要注意從右臂噴出的毒液。 只要沾到一點點， 就會被未知的毒素侵襲。",
+					"fr": "Méfiez-vous du poison qu’il projette de son bras droit, sans quoi ses toxines non identifiées vous feront passer un sale quart d’heure.",
+					"de": "Vorsicht vor dem Gift, das es aus seinem rechten Arm sprüht! Kleinste Mengen genügen, um einen unbekannten Giftstoff zu übertragen.",
+					"es": "El veneno líquido que brota de su brazo derecho es muy nocivo. La mera exposición puede llevar a inhalar accidentalmente toxinas desconocidas.",
+					"it": "Dall’arto destro spruzza un veleno altamente nocivo. Basta toccarlo per essere contaminati da tossine sconosciute.",
+					"en": "Beware the poisonous liquid it shoots from its right arm. If even a little of it gets on you, you’ll experience the effects of the unidentified toxin.",
+					"ja": "右腕から 飛びだす 毒液に 注意。 ちょっと かかるだけで 未知の 毒素に 冒される。",
+					"zh-hans": "要注意从右臂喷出的毒液。 只要沾到一点点， 就会被未知的毒素侵袭。",
+					"es-419": "El veneno líquido que brota de su brazo derecho es muy nocivo. La mera exposición puede llevar a inhalar accidentalmente toxinas desconocidas."
+				},
+				"sun-poni": {
+					"ja-hrkt": "みぎうでから とびだす どくえきに ちゅうい。 ちょっと かかるだけで みちの どくそに おかされる。",
+					"ko": "오른쪽 팔에서 날리는 독액에 주의. 살짝 닿기만 해도 미지의 독소가 침범한다.",
+					"zh-hant": "要注意從右臂噴出的毒液。 只要沾到一點點， 就會被未知的毒素侵襲。",
+					"fr": "Méfiez-vous du poison qu’il projette de son bras droit, sans quoi ses toxines non identifiées vous feront passer un sale quart d’heure.",
+					"de": "Vorsicht vor dem Gift, das es aus seinem rechten Arm sprüht! Kleinste Mengen genügen, um einen unbekannten Giftstoff zu übertragen.",
+					"es": "El veneno líquido que brota de su brazo derecho es muy nocivo. La mera exposición puede llevar a inhalar accidentalmente toxinas desconocidas.",
+					"it": "Dall’arto destro spruzza un veleno altamente nocivo. Basta toccarlo per essere contaminati da tossine sconosciute.",
+					"en": "Beware the poisonous liquid it shoots from its right arm. If even a little of it gets on you, you’ll experience the effects of the unidentified toxin.",
+					"ja": "右腕から 飛びだす 毒液に 注意。 ちょっと かかるだけで 未知の 毒素に 冒される。",
+					"zh-hans": "要注意从右臂喷出的毒液。 只要沾到一点点， 就会被未知的毒素侵袭。",
+					"es-419": "El veneno líquido que brota de su brazo derecho es muy nocivo. La mera exposición puede llevar a inhalar accidentalmente toxinas desconocidas."
+				},
+				"moon-alola": {
+					"ja-hrkt": "あるじき アローラで ばくはつてきに ふえたが ベトベターが きてからは そのかずは ガクンと へった。",
+					"ko": "한때 알로라에서 폭발적으로 늘었지만 질퍽이가 오고 난 뒤로 개체 수가 크게 줄었다.",
+					"zh-hant": "在阿羅拉的數量從某個時期開始 爆炸性增加，但是自從臭泥來了之後， 數量一下子便減少了。",
+					"fr": "Il fut un temps où les Miasmax étaient LE fléau d’Alola. Heureusement, leur population a vite diminué après l’arrivée des Tadmorv.",
+					"de": "Einst haben sie sich explosionsartig in Alola ausgebreitet. Mit der Ankunft von Sleima hat ihr Bestand jedoch sehr rasch abgenommen.",
+					"es": "Hubo un tiempo en el que la población de Garbodor en Alola era espectacular, pero su número se desplomó cuando llegaron los Grimer.",
+					"it": "Un tempo questi Pokémon erano molto diffusi ad Alola, ma il loro numero è notevolmente diminuito con l’arrivo dei Grimer.",
+					"en": "For a time, their numbers increased explosively in Alola. Since the arrival of Grimer, their population has decreased dramatically.",
+					"ja": "ある時期 アローラで 爆発的に 増えたが ベトベターが 来てからは その数は ガクンと 減った。",
+					"zh-hans": "某个时期在阿罗拉呈爆发式增长， 但是臭泥来了之后， 数量一下子减少了。",
+					"es-419": "Hubo un tiempo en el que la población de Garbodor en Alola era espectacular, pero su número se desplomó cuando llegaron los Grimer."
+				},
+				"moon-melemele": {
+					"ja-hrkt": "あるじき アローラで ばくはつてきに ふえたが ベトベターが きてからは そのかずは ガクンと へった。",
+					"ko": "한때 알로라에서 폭발적으로 늘었지만 질퍽이가 오고 난 뒤로 개체 수가 크게 줄었다.",
+					"zh-hant": "在阿羅拉的數量從某個時期開始 爆炸性增加，但是自從臭泥來了之後， 數量一下子便減少了。",
+					"fr": "Il fut un temps où les Miasmax étaient LE fléau d’Alola. Heureusement, leur population a vite diminué après l’arrivée des Tadmorv.",
+					"de": "Einst haben sie sich explosionsartig in Alola ausgebreitet. Mit der Ankunft von Sleima hat ihr Bestand jedoch sehr rasch abgenommen.",
+					"es": "Hubo un tiempo en el que la población de Garbodor en Alola era espectacular, pero su número se desplomó cuando llegaron los Grimer.",
+					"it": "Un tempo questi Pokémon erano molto diffusi ad Alola, ma il loro numero è notevolmente diminuito con l’arrivo dei Grimer.",
+					"en": "For a time, their numbers increased explosively in Alola. Since the arrival of Grimer, their population has decreased dramatically.",
+					"ja": "ある時期 アローラで 爆発的に 増えたが ベトベターが 来てからは その数は ガクンと 減った。",
+					"zh-hans": "某个时期在阿罗拉呈爆发式增长， 但是臭泥来了之后， 数量一下子减少了。",
+					"es-419": "Hubo un tiempo en el que la población de Garbodor en Alola era espectacular, pero su número se desplomó cuando llegaron los Grimer."
+				},
+				"moon-akala": {
+					"ja-hrkt": "あるじき アローラで ばくはつてきに ふえたが ベトベターが きてからは そのかずは ガクンと へった。",
+					"ko": "한때 알로라에서 폭발적으로 늘었지만 질퍽이가 오고 난 뒤로 개체 수가 크게 줄었다.",
+					"zh-hant": "在阿羅拉的數量從某個時期開始 爆炸性增加，但是自從臭泥來了之後， 數量一下子便減少了。",
+					"fr": "Il fut un temps où les Miasmax étaient LE fléau d’Alola. Heureusement, leur population a vite diminué après l’arrivée des Tadmorv.",
+					"de": "Einst haben sie sich explosionsartig in Alola ausgebreitet. Mit der Ankunft von Sleima hat ihr Bestand jedoch sehr rasch abgenommen.",
+					"es": "Hubo un tiempo en el que la población de Garbodor en Alola era espectacular, pero su número se desplomó cuando llegaron los Grimer.",
+					"it": "Un tempo questi Pokémon erano molto diffusi ad Alola, ma il loro numero è notevolmente diminuito con l’arrivo dei Grimer.",
+					"en": "For a time, their numbers increased explosively in Alola. Since the arrival of Grimer, their population has decreased dramatically.",
+					"ja": "ある時期 アローラで 爆発的に 増えたが ベトベターが 来てからは その数は ガクンと 減った。",
+					"zh-hans": "某个时期在阿罗拉呈爆发式增长， 但是臭泥来了之后， 数量一下子减少了。",
+					"es-419": "Hubo un tiempo en el que la población de Garbodor en Alola era espectacular, pero su número se desplomó cuando llegaron los Grimer."
+				},
+				"moon-ulaula": {
+					"ja-hrkt": "あるじき アローラで ばくはつてきに ふえたが ベトベターが きてからは そのかずは ガクンと へった。",
+					"ko": "한때 알로라에서 폭발적으로 늘었지만 질퍽이가 오고 난 뒤로 개체 수가 크게 줄었다.",
+					"zh-hant": "在阿羅拉的數量從某個時期開始 爆炸性增加，但是自從臭泥來了之後， 數量一下子便減少了。",
+					"fr": "Il fut un temps où les Miasmax étaient LE fléau d’Alola. Heureusement, leur population a vite diminué après l’arrivée des Tadmorv.",
+					"de": "Einst haben sie sich explosionsartig in Alola ausgebreitet. Mit der Ankunft von Sleima hat ihr Bestand jedoch sehr rasch abgenommen.",
+					"es": "Hubo un tiempo en el que la población de Garbodor en Alola era espectacular, pero su número se desplomó cuando llegaron los Grimer.",
+					"it": "Un tempo questi Pokémon erano molto diffusi ad Alola, ma il loro numero è notevolmente diminuito con l’arrivo dei Grimer.",
+					"en": "For a time, their numbers increased explosively in Alola. Since the arrival of Grimer, their population has decreased dramatically.",
+					"ja": "ある時期 アローラで 爆発的に 増えたが ベトベターが 来てからは その数は ガクンと 減った。",
+					"zh-hans": "某个时期在阿罗拉呈爆发式增长， 但是臭泥来了之后， 数量一下子减少了。",
+					"es-419": "Hubo un tiempo en el que la población de Garbodor en Alola era espectacular, pero su número se desplomó cuando llegaron los Grimer."
+				},
+				"moon-poni": {
+					"ja-hrkt": "あるじき アローラで ばくはつてきに ふえたが ベトベターが きてからは そのかずは ガクンと へった。",
+					"ko": "한때 알로라에서 폭발적으로 늘었지만 질퍽이가 오고 난 뒤로 개체 수가 크게 줄었다.",
+					"zh-hant": "在阿羅拉的數量從某個時期開始 爆炸性增加，但是自從臭泥來了之後， 數量一下子便減少了。",
+					"fr": "Il fut un temps où les Miasmax étaient LE fléau d’Alola. Heureusement, leur population a vite diminué après l’arrivée des Tadmorv.",
+					"de": "Einst haben sie sich explosionsartig in Alola ausgebreitet. Mit der Ankunft von Sleima hat ihr Bestand jedoch sehr rasch abgenommen.",
+					"es": "Hubo un tiempo en el que la población de Garbodor en Alola era espectacular, pero su número se desplomó cuando llegaron los Grimer.",
+					"it": "Un tempo questi Pokémon erano molto diffusi ad Alola, ma il loro numero è notevolmente diminuito con l’arrivo dei Grimer.",
+					"en": "For a time, their numbers increased explosively in Alola. Since the arrival of Grimer, their population has decreased dramatically.",
+					"ja": "ある時期 アローラで 爆発的に 増えたが ベトベターが 来てからは その数は ガクンと 減った。",
+					"zh-hans": "某个时期在阿罗拉呈爆发式增长， 但是臭泥来了之后， 数量一下子减少了。",
+					"es-419": "Hubo un tiempo en el que la población de Garbodor en Alola era espectacular, pero su número se desplomó cuando llegaron los Grimer."
+				}
+			}
+		},
+		{
+			"profileKey": "ultra-sun-ultra-moon",
+			"label": "Ultra Sun / Ultra Moon",
+			"appGameKeys": [
+				"ultrasun-alola",
+				"ultrasun-melemele",
+				"ultrasun-akala",
+				"ultrasun-ulaula",
+				"ultrasun-poni",
+				"ultramoon-alola",
+				"ultramoon-melemele",
+				"ultramoon-akala",
+				"ultramoon-ulaula",
+				"ultramoon-poni"
+			],
+			"sourceState": "default-form-fallback",
+			"payload": {
+				"displayName": "Garbodor",
+				"localizedNames": {
+					"ja-hrkt": "ダストダス",
+					"ja-roma": "Dustdas",
+					"ko": "더스트나",
+					"zh-hant": "灰塵山",
+					"fr": "Miasmax",
+					"de": "Deponitox",
+					"es": "Garbodor",
+					"it": "Garbodor",
+					"ja": "ダストダス",
+					"zh-hans": "灰尘山",
+					"es-419": "Garbodor"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 80,
+					"atk": 95,
+					"def": 82,
+					"spa": 60,
+					"spd": 82,
+					"spe": 75
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Stench",
+					"Weak Armor",
+					"Aftermath (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Aftermath"
+				],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.9 m",
+				"weight": "107.3 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 166,
+				"habitat": "",
+				"shape": "Humanoid",
+				"color": "Green",
+				"genus": "Trash Heap Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ゴミすてばポケモン",
+					"ko": "쓰레기장포켓몬",
+					"zh-hant": "垃圾場寶可夢",
+					"fr": "Pokémon Dépotoir",
+					"de": "Müllhalden-Pokémon",
+					"es": "Pokémon Vertedero",
+					"it": "Pokémon Discarica",
+					"ja": "ゴミすてばポケモン",
+					"zh-hans": "垃圾场宝可梦",
+					"es-419": "Pokémon Vertedero"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 569
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 75
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 106
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 75
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 207
+					},
+					{
+						"pokedex": "original-ulaula",
+						"number": 79
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 265
+					},
+					{
+						"pokedex": "updated-ulaula",
+						"number": 86
+					},
+					{
+						"pokedex": "galar",
+						"number": 158
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 50
+					},
+					{
+						"pokedex": "champions",
+						"number": 569
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 568,
+								"natiId": 568,
+								"name": "Trubbish"
+							},
+							{
+								"id": 569,
+								"natiId": 569,
+								"name": "Garbodor",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Pound",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Poison Gas",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Recycle",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Toxic Spikes",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Recycle",
+							"level": 3,
+							"order": null
+						},
+						{
+							"name": "Toxic Spikes",
+							"level": 7,
+							"order": null
+						},
+						{
+							"name": "Acid Spray",
+							"level": 12,
+							"order": null
+						},
+						{
+							"name": "Double Slap",
+							"level": 14,
+							"order": null
+						},
+						{
+							"name": "Sludge",
+							"level": 18,
+							"order": null
+						},
+						{
+							"name": "Stockpile",
+							"level": 23,
+							"order": 1
+						},
+						{
+							"name": "Swallow",
+							"level": 23,
+							"order": 2
+						},
+						{
+							"name": "Body Slam",
+							"level": 25,
+							"order": null
+						},
+						{
+							"name": "Sludge Bomb",
+							"level": 29,
+							"order": null
+						},
+						{
+							"name": "Clear Smog",
+							"level": 34,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": 39,
+							"order": null
+						},
+						{
+							"name": "Amnesia",
+							"level": 46,
+							"order": null
+						},
+						{
+							"name": "Belch",
+							"level": 49,
+							"order": null
+						},
+						{
+							"name": "Gunk Shot",
+							"level": 54,
+							"order": null
+						},
+						{
+							"name": "Explosion",
+							"level": 59,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Confide",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dark Pulse",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Double Team",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Explosion",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fling",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Focus Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Frustration",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hidden Power",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Infestation",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Payback",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psychic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Return",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Polish",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sludge Bomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sludge Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Smack Down",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Swagger",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Venoshock",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Drain Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Drain",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Gunk Shot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Pain Split",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Recycle",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Seed Bomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Spite",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Stomping Tantrum",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "no",
+					"evidence": [
+						"PokemonPGC's form catalog excludes this game profile."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/569",
+						"fetchedAt": "2026-11-03T05:53:41.747Z",
+						"hash": "b34c99e82ec8d34b1d1a1b605cc2316eb4f38d5d243f94cc8c220e260ce40a5b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/290/",
+						"fetchedAt": "2026-11-03T05:53:41.766Z",
+						"hash": "3de8836ba00cc5314dc6339f7c896e2dfa08a8625b79d0645bfbc4dab75ef395"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/569/",
+						"fetchedAt": "2026-11-03T05:53:41.798Z",
+						"hash": "eab5b5596264ebce809d12a23ec0d851c59a3ead544e5546ea44e0ccf70d7c2c"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/569/encounters",
+						"fetchedAt": "2026-11-03T05:53:41.854Z",
+						"hash": "6b2f69a2e34011e29799051c6d98f5d849fcd966e8de78305016be9e59167378"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/569/",
+						"fetchedAt": "2026-11-03T05:53:41.903Z",
+						"hash": "e9f6a81afc01683c6b027f8129f816ebb1eacff3c8c276aa2ae9492f896db8ee"
+					}
+				],
+				"formName": "Normal"
+			},
+			"flavorByGame": {
+				"ultrasun-alola": "It locks opponents in place with its left hand, immobilizing them by entirely dousing their bodies with poisonous liquid.",
+				"ultrasun-melemele": "It locks opponents in place with its left hand, immobilizing them by entirely dousing their bodies with poisonous liquid.",
+				"ultrasun-akala": "It locks opponents in place with its left hand, immobilizing them by entirely dousing their bodies with poisonous liquid.",
+				"ultrasun-ulaula": "It locks opponents in place with its left hand, immobilizing them by entirely dousing their bodies with poisonous liquid.",
+				"ultrasun-poni": "It locks opponents in place with its left hand, immobilizing them by entirely dousing their bodies with poisonous liquid.",
+				"ultramoon-alola": "Some say the reason Garbodor in Alola are a little stronger than their counterparts elsewhere is the presence of Muk, their natural enemy.",
+				"ultramoon-melemele": "Some say the reason Garbodor in Alola are a little stronger than their counterparts elsewhere is the presence of Muk, their natural enemy.",
+				"ultramoon-akala": "Some say the reason Garbodor in Alola are a little stronger than their counterparts elsewhere is the presence of Muk, their natural enemy.",
+				"ultramoon-ulaula": "Some say the reason Garbodor in Alola are a little stronger than their counterparts elsewhere is the presence of Muk, their natural enemy.",
+				"ultramoon-poni": "Some say the reason Garbodor in Alola are a little stronger than their counterparts elsewhere is the presence of Muk, their natural enemy."
+			},
+			"localizedFlavorByGame": {
+				"ultrasun-alola": {
+					"ja-hrkt": "ひだりうでで てきを ロックすると どくの えきたいを からだじゅうに あびせかけ みうごきを ふうじる。",
+					"ko": "왼쪽 팔로 적을 꼭 붙들고 독액을 온몸에 퍼부어 움직임을 막는다.",
+					"zh-hant": "用左臂鎖住敵人後， 會將毒液灑向敵人全身， 使對方無法動彈。",
+					"fr": "Il maîtrise son adversaire de son bras gauche, puis l’arrose d’un liquide toxique paralysant.",
+					"de": "Mit dem linken Arm nagelt es seinen Gegner fest, um ihn dann mit einer toxischen Flüssigkeit zu besprühen und ihn so zu lähmen.",
+					"es": "Atrapa a su presa con el brazo izquierdo y luego rocía su cuerpo con un líquido venenoso para inmovilizarla.",
+					"it": "Blocca il nemico con l’arto sinistro e ne cosparge il corpo con un liquido velenoso per immobilizzarlo.",
+					"en": "It locks opponents in place with its left hand, immobilizing them by entirely dousing their bodies with poisonous liquid.",
+					"ja": "左腕で 敵を ロックすると 毒の 液体を 体中に 浴びせかけ 身動きを 封じる。",
+					"zh-hans": "用左臂锁住敌人后， 会将有毒的液体泼向对方全身， 封住其行动。",
+					"es-419": "Atrapa a su presa con el brazo izquierdo y luego rocía su cuerpo con un líquido venenoso para inmovilizarla."
+				},
+				"ultrasun-melemele": {
+					"ja-hrkt": "ひだりうでで てきを ロックすると どくの えきたいを からだじゅうに あびせかけ みうごきを ふうじる。",
+					"ko": "왼쪽 팔로 적을 꼭 붙들고 독액을 온몸에 퍼부어 움직임을 막는다.",
+					"zh-hant": "用左臂鎖住敵人後， 會將毒液灑向敵人全身， 使對方無法動彈。",
+					"fr": "Il maîtrise son adversaire de son bras gauche, puis l’arrose d’un liquide toxique paralysant.",
+					"de": "Mit dem linken Arm nagelt es seinen Gegner fest, um ihn dann mit einer toxischen Flüssigkeit zu besprühen und ihn so zu lähmen.",
+					"es": "Atrapa a su presa con el brazo izquierdo y luego rocía su cuerpo con un líquido venenoso para inmovilizarla.",
+					"it": "Blocca il nemico con l’arto sinistro e ne cosparge il corpo con un liquido velenoso per immobilizzarlo.",
+					"en": "It locks opponents in place with its left hand, immobilizing them by entirely dousing their bodies with poisonous liquid.",
+					"ja": "左腕で 敵を ロックすると 毒の 液体を 体中に 浴びせかけ 身動きを 封じる。",
+					"zh-hans": "用左臂锁住敌人后， 会将有毒的液体泼向对方全身， 封住其行动。",
+					"es-419": "Atrapa a su presa con el brazo izquierdo y luego rocía su cuerpo con un líquido venenoso para inmovilizarla."
+				},
+				"ultrasun-akala": {
+					"ja-hrkt": "ひだりうでで てきを ロックすると どくの えきたいを からだじゅうに あびせかけ みうごきを ふうじる。",
+					"ko": "왼쪽 팔로 적을 꼭 붙들고 독액을 온몸에 퍼부어 움직임을 막는다.",
+					"zh-hant": "用左臂鎖住敵人後， 會將毒液灑向敵人全身， 使對方無法動彈。",
+					"fr": "Il maîtrise son adversaire de son bras gauche, puis l’arrose d’un liquide toxique paralysant.",
+					"de": "Mit dem linken Arm nagelt es seinen Gegner fest, um ihn dann mit einer toxischen Flüssigkeit zu besprühen und ihn so zu lähmen.",
+					"es": "Atrapa a su presa con el brazo izquierdo y luego rocía su cuerpo con un líquido venenoso para inmovilizarla.",
+					"it": "Blocca il nemico con l’arto sinistro e ne cosparge il corpo con un liquido velenoso per immobilizzarlo.",
+					"en": "It locks opponents in place with its left hand, immobilizing them by entirely dousing their bodies with poisonous liquid.",
+					"ja": "左腕で 敵を ロックすると 毒の 液体を 体中に 浴びせかけ 身動きを 封じる。",
+					"zh-hans": "用左臂锁住敌人后， 会将有毒的液体泼向对方全身， 封住其行动。",
+					"es-419": "Atrapa a su presa con el brazo izquierdo y luego rocía su cuerpo con un líquido venenoso para inmovilizarla."
+				},
+				"ultrasun-ulaula": {
+					"ja-hrkt": "ひだりうでで てきを ロックすると どくの えきたいを からだじゅうに あびせかけ みうごきを ふうじる。",
+					"ko": "왼쪽 팔로 적을 꼭 붙들고 독액을 온몸에 퍼부어 움직임을 막는다.",
+					"zh-hant": "用左臂鎖住敵人後， 會將毒液灑向敵人全身， 使對方無法動彈。",
+					"fr": "Il maîtrise son adversaire de son bras gauche, puis l’arrose d’un liquide toxique paralysant.",
+					"de": "Mit dem linken Arm nagelt es seinen Gegner fest, um ihn dann mit einer toxischen Flüssigkeit zu besprühen und ihn so zu lähmen.",
+					"es": "Atrapa a su presa con el brazo izquierdo y luego rocía su cuerpo con un líquido venenoso para inmovilizarla.",
+					"it": "Blocca il nemico con l’arto sinistro e ne cosparge il corpo con un liquido velenoso per immobilizzarlo.",
+					"en": "It locks opponents in place with its left hand, immobilizing them by entirely dousing their bodies with poisonous liquid.",
+					"ja": "左腕で 敵を ロックすると 毒の 液体を 体中に 浴びせかけ 身動きを 封じる。",
+					"zh-hans": "用左臂锁住敌人后， 会将有毒的液体泼向对方全身， 封住其行动。",
+					"es-419": "Atrapa a su presa con el brazo izquierdo y luego rocía su cuerpo con un líquido venenoso para inmovilizarla."
+				},
+				"ultrasun-poni": {
+					"ja-hrkt": "ひだりうでで てきを ロックすると どくの えきたいを からだじゅうに あびせかけ みうごきを ふうじる。",
+					"ko": "왼쪽 팔로 적을 꼭 붙들고 독액을 온몸에 퍼부어 움직임을 막는다.",
+					"zh-hant": "用左臂鎖住敵人後， 會將毒液灑向敵人全身， 使對方無法動彈。",
+					"fr": "Il maîtrise son adversaire de son bras gauche, puis l’arrose d’un liquide toxique paralysant.",
+					"de": "Mit dem linken Arm nagelt es seinen Gegner fest, um ihn dann mit einer toxischen Flüssigkeit zu besprühen und ihn so zu lähmen.",
+					"es": "Atrapa a su presa con el brazo izquierdo y luego rocía su cuerpo con un líquido venenoso para inmovilizarla.",
+					"it": "Blocca il nemico con l’arto sinistro e ne cosparge il corpo con un liquido velenoso per immobilizzarlo.",
+					"en": "It locks opponents in place with its left hand, immobilizing them by entirely dousing their bodies with poisonous liquid.",
+					"ja": "左腕で 敵を ロックすると 毒の 液体を 体中に 浴びせかけ 身動きを 封じる。",
+					"zh-hans": "用左臂锁住敌人后， 会将有毒的液体泼向对方全身， 封住其行动。",
+					"es-419": "Atrapa a su presa con el brazo izquierdo y luego rocía su cuerpo con un líquido venenoso para inmovilizarla."
+				},
+				"ultramoon-alola": {
+					"ja-hrkt": "アローラの ダストダスが すこし たくましいのは ベトベトンという てんてきが いるせいだと いわれる。",
+					"ko": "알로라의 더스트나가 좀 더 강인한 것은 질뻐기라는 천적이 있기 때문이라고 전해진다.",
+					"zh-hant": "阿羅拉的灰塵山之所以 比較強壯一點，據說是因為 有臭臭泥這個天敵在的緣故。",
+					"fr": "Ce serait pour pouvoir faire face à Grotadmorv, son ennemi juré, que le Miasmax d’Alola est légèrement plus robuste que les autres.",
+					"de": "Man vermutet, dass die Deponitox in Alola wegen ihres Fressfeindes Sleimok kräftiger wurden als Artgenossen in anderen Regionen.",
+					"es": "La razón de la mayor fortaleza de los Garbodor que viven en la región de Alola se atribuye a la presencia de Muk, su enemigo natural.",
+					"it": "I Garbodor che vivono ad Alola sono più robusti del normale per difendersi dai Muk, i loro nemici naturali.",
+					"en": "Some say the reason Garbodor in Alola are a little stronger than their counterparts elsewhere is the presence of Muk, their natural enemy.",
+					"ja": "アローラの ダストダスが 少し たくましいのは ベトベトンという 天敵が いるせいだと いわれる。",
+					"zh-hans": "阿罗拉的灰尘山有点儿魁梧， 据说是因为有臭臭泥这个天敌的缘故。",
+					"es-419": "La razón de la mayor fortaleza de los Garbodor que viven en la región de Alola se atribuye a la presencia de Muk, su enemigo natural."
+				},
+				"ultramoon-melemele": {
+					"ja-hrkt": "アローラの ダストダスが すこし たくましいのは ベトベトンという てんてきが いるせいだと いわれる。",
+					"ko": "알로라의 더스트나가 좀 더 강인한 것은 질뻐기라는 천적이 있기 때문이라고 전해진다.",
+					"zh-hant": "阿羅拉的灰塵山之所以 比較強壯一點，據說是因為 有臭臭泥這個天敵在的緣故。",
+					"fr": "Ce serait pour pouvoir faire face à Grotadmorv, son ennemi juré, que le Miasmax d’Alola est légèrement plus robuste que les autres.",
+					"de": "Man vermutet, dass die Deponitox in Alola wegen ihres Fressfeindes Sleimok kräftiger wurden als Artgenossen in anderen Regionen.",
+					"es": "La razón de la mayor fortaleza de los Garbodor que viven en la región de Alola se atribuye a la presencia de Muk, su enemigo natural.",
+					"it": "I Garbodor che vivono ad Alola sono più robusti del normale per difendersi dai Muk, i loro nemici naturali.",
+					"en": "Some say the reason Garbodor in Alola are a little stronger than their counterparts elsewhere is the presence of Muk, their natural enemy.",
+					"ja": "アローラの ダストダスが 少し たくましいのは ベトベトンという 天敵が いるせいだと いわれる。",
+					"zh-hans": "阿罗拉的灰尘山有点儿魁梧， 据说是因为有臭臭泥这个天敌的缘故。",
+					"es-419": "La razón de la mayor fortaleza de los Garbodor que viven en la región de Alola se atribuye a la presencia de Muk, su enemigo natural."
+				},
+				"ultramoon-akala": {
+					"ja-hrkt": "アローラの ダストダスが すこし たくましいのは ベトベトンという てんてきが いるせいだと いわれる。",
+					"ko": "알로라의 더스트나가 좀 더 강인한 것은 질뻐기라는 천적이 있기 때문이라고 전해진다.",
+					"zh-hant": "阿羅拉的灰塵山之所以 比較強壯一點，據說是因為 有臭臭泥這個天敵在的緣故。",
+					"fr": "Ce serait pour pouvoir faire face à Grotadmorv, son ennemi juré, que le Miasmax d’Alola est légèrement plus robuste que les autres.",
+					"de": "Man vermutet, dass die Deponitox in Alola wegen ihres Fressfeindes Sleimok kräftiger wurden als Artgenossen in anderen Regionen.",
+					"es": "La razón de la mayor fortaleza de los Garbodor que viven en la región de Alola se atribuye a la presencia de Muk, su enemigo natural.",
+					"it": "I Garbodor che vivono ad Alola sono più robusti del normale per difendersi dai Muk, i loro nemici naturali.",
+					"en": "Some say the reason Garbodor in Alola are a little stronger than their counterparts elsewhere is the presence of Muk, their natural enemy.",
+					"ja": "アローラの ダストダスが 少し たくましいのは ベトベトンという 天敵が いるせいだと いわれる。",
+					"zh-hans": "阿罗拉的灰尘山有点儿魁梧， 据说是因为有臭臭泥这个天敌的缘故。",
+					"es-419": "La razón de la mayor fortaleza de los Garbodor que viven en la región de Alola se atribuye a la presencia de Muk, su enemigo natural."
+				},
+				"ultramoon-ulaula": {
+					"ja-hrkt": "アローラの ダストダスが すこし たくましいのは ベトベトンという てんてきが いるせいだと いわれる。",
+					"ko": "알로라의 더스트나가 좀 더 강인한 것은 질뻐기라는 천적이 있기 때문이라고 전해진다.",
+					"zh-hant": "阿羅拉的灰塵山之所以 比較強壯一點，據說是因為 有臭臭泥這個天敵在的緣故。",
+					"fr": "Ce serait pour pouvoir faire face à Grotadmorv, son ennemi juré, que le Miasmax d’Alola est légèrement plus robuste que les autres.",
+					"de": "Man vermutet, dass die Deponitox in Alola wegen ihres Fressfeindes Sleimok kräftiger wurden als Artgenossen in anderen Regionen.",
+					"es": "La razón de la mayor fortaleza de los Garbodor que viven en la región de Alola se atribuye a la presencia de Muk, su enemigo natural.",
+					"it": "I Garbodor che vivono ad Alola sono più robusti del normale per difendersi dai Muk, i loro nemici naturali.",
+					"en": "Some say the reason Garbodor in Alola are a little stronger than their counterparts elsewhere is the presence of Muk, their natural enemy.",
+					"ja": "アローラの ダストダスが 少し たくましいのは ベトベトンという 天敵が いるせいだと いわれる。",
+					"zh-hans": "阿罗拉的灰尘山有点儿魁梧， 据说是因为有臭臭泥这个天敌的缘故。",
+					"es-419": "La razón de la mayor fortaleza de los Garbodor que viven en la región de Alola se atribuye a la presencia de Muk, su enemigo natural."
+				},
+				"ultramoon-poni": {
+					"ja-hrkt": "アローラの ダストダスが すこし たくましいのは ベトベトンという てんてきが いるせいだと いわれる。",
+					"ko": "알로라의 더스트나가 좀 더 강인한 것은 질뻐기라는 천적이 있기 때문이라고 전해진다.",
+					"zh-hant": "阿羅拉的灰塵山之所以 比較強壯一點，據說是因為 有臭臭泥這個天敵在的緣故。",
+					"fr": "Ce serait pour pouvoir faire face à Grotadmorv, son ennemi juré, que le Miasmax d’Alola est légèrement plus robuste que les autres.",
+					"de": "Man vermutet, dass die Deponitox in Alola wegen ihres Fressfeindes Sleimok kräftiger wurden als Artgenossen in anderen Regionen.",
+					"es": "La razón de la mayor fortaleza de los Garbodor que viven en la región de Alola se atribuye a la presencia de Muk, su enemigo natural.",
+					"it": "I Garbodor che vivono ad Alola sono più robusti del normale per difendersi dai Muk, i loro nemici naturali.",
+					"en": "Some say the reason Garbodor in Alola are a little stronger than their counterparts elsewhere is the presence of Muk, their natural enemy.",
+					"ja": "アローラの ダストダスが 少し たくましいのは ベトベトンという 天敵が いるせいだと いわれる。",
+					"zh-hans": "阿罗拉的灰尘山有点儿魁梧， 据说是因为有臭臭泥这个天敌的缘故。",
+					"es-419": "La razón de la mayor fortaleza de los Garbodor que viven en la región de Alola se atribuye a la presencia de Muk, su enemigo natural."
+				}
+			}
+		},
+		{
+			"profileKey": "sword-shield",
+			"label": "Sword / Shield",
+			"appGameKeys": [
+				"sword",
+				"shield"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Garbodor",
+				"localizedNames": {
+					"ja-hrkt": "ダストダス",
+					"ja-roma": "Dustdas",
+					"ko": "더스트나",
+					"zh-hant": "灰塵山",
+					"fr": "Miasmax",
+					"de": "Deponitox",
+					"es": "Garbodor",
+					"it": "Garbodor",
+					"ja": "ダストダス",
+					"zh-hans": "灰尘山",
+					"es-419": "Garbodor"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 80,
+					"atk": 95,
+					"def": 82,
+					"spa": 60,
+					"spd": 82,
+					"spe": 75
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Stench",
+					"Weak Armor",
+					"Aftermath (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Aftermath"
+				],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.9 m",
+				"weight": "107.3 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 166,
+				"habitat": "",
+				"shape": "Humanoid",
+				"color": "Green",
+				"genus": "Trash Heap Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ゴミすてばポケモン",
+					"ko": "쓰레기장포켓몬",
+					"zh-hant": "垃圾場寶可夢",
+					"fr": "Pokémon Dépotoir",
+					"de": "Müllhalden-Pokémon",
+					"es": "Pokémon Vertedero",
+					"it": "Pokémon Discarica",
+					"ja": "ゴミすてばポケモン",
+					"zh-hans": "垃圾场宝可梦",
+					"es-419": "Pokémon Vertedero"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 569
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 75
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 106
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 75
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 207
+					},
+					{
+						"pokedex": "original-ulaula",
+						"number": 79
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 265
+					},
+					{
+						"pokedex": "updated-ulaula",
+						"number": 86
+					},
+					{
+						"pokedex": "galar",
+						"number": 158
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 50
+					},
+					{
+						"pokedex": "champions",
+						"number": 569
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 568,
+								"natiId": 568,
+								"name": "Trubbish"
+							},
+							{
+								"id": 569,
+								"natiId": 569,
+								"name": "Garbodor",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Bridge Field Area",
+						"notes": "Wanderer, Lv. 40",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Wanderer, Lv. 40",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Wanderer, Lv. 40",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Wanderer, Lv. 40",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Wanderer, Lv. 40",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Wanderer, Lv. 40",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Wanderer, Lv. 40",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Wanderer, Lv. 40",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Wanderer, Lv. 40",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Wanderer, Lv. 40",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Wanderer, Lv. 40",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Wanderer, Lv. 40",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Wanderer, Lv. 40",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Wanderer, Lv. 40",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Wanderer, Lv. 40",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Wanderer, Lv. 40",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Wanderer, Lv. 40",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Wanderer, Lv. 40",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Bridge Field Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "East Lake Axewell Area",
+						"notes": "Wanderer, Lv. 36",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "East Lake Axewell Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "East Lake Axewell Area",
+						"notes": "Wanderer, Lv. 36",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "East Lake Axewell Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "East Lake Axewell Area",
+						"notes": "Wanderer, Lv. 36",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "East Lake Axewell Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "East Lake Axewell Area",
+						"notes": "Wanderer, Lv. 36",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "East Lake Axewell Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "East Lake Axewell Area",
+						"notes": "Wanderer, Lv. 36",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "East Lake Axewell Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "East Lake Axewell Area",
+						"notes": "Wanderer, Lv. 36",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "East Lake Axewell Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "East Lake Axewell Area",
+						"notes": "Wanderer, Lv. 36",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "East Lake Axewell Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "East Lake Axewell Area",
+						"notes": "Wanderer, Lv. 36",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "East Lake Axewell Area",
+						"notes": "Wanderer, Lv. 60",
+						"games": "Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Lake Of Outrage Area",
+						"notes": "Overworld, Lv. 55-58",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Lake Of Outrage Area",
+						"notes": "Overworld, Lv. 60",
+						"games": "Sword",
+						"rate": "30%"
+					},
+					{
+						"area": "Lake Of Outrage Area",
+						"notes": "Overworld, Lv. 55-58",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "Lake Of Outrage Area",
+						"notes": "Overworld, Lv. 60",
+						"games": "Shield",
+						"rate": "30%"
+					},
+					{
+						"area": "East Lake Axewell Max Den D",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Sword",
+						"rate": "15%"
+					},
+					{
+						"area": "East Lake Axewell Max Den D",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Shield",
+						"rate": "15%"
+					},
+					{
+						"area": "North Lake Miloch Max Den C",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "North Lake Miloch Max Den C",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "North Lake Miloch Max Den C",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Sword",
+						"rate": "15%"
+					},
+					{
+						"area": "North Lake Miloch Max Den C",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "North Lake Miloch Max Den C",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "North Lake Miloch Max Den C",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "North Lake Miloch Max Den C",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Shield",
+						"rate": "15%"
+					},
+					{
+						"area": "North Lake Miloch Max Den C",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "North Lake Miloch Max Den D",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "North Lake Miloch Max Den D",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "North Lake Miloch Max Den D",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Sword",
+						"rate": "15%"
+					},
+					{
+						"area": "North Lake Miloch Max Den D",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "North Lake Miloch Max Den D",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "North Lake Miloch Max Den D",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "North Lake Miloch Max Den D",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Shield",
+						"rate": "15%"
+					},
+					{
+						"area": "North Lake Miloch Max Den D",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Motostoke Riverbank Max Den D",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Motostoke Riverbank Max Den D",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Motostoke Riverbank Max Den D",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Motostoke Riverbank Max Den D",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Motostoke Riverbank Max Den D",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Motostoke Riverbank Max Den D",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Shield",
+						"rate": "10%"
+					},
+					{
+						"area": "Giants Cap Max Den A",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Giants Cap Max Den A",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Sword",
+						"rate": "20%"
+					},
+					{
+						"area": "Giants Cap Max Den A",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Sword",
+						"rate": "10%"
+					},
+					{
+						"area": "Giants Cap Max Den A",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Giants Cap Max Den A",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "Shield",
+						"rate": "20%"
+					},
+					{
+						"area": "Giants Cap Max Den A",
+						"notes": "Max Raid, Lv. 55-60",
+						"games": "Shield",
+						"rate": "10%"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Pound",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Take Down",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Metal Claw",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Poison Gas",
+							"level": 1,
+							"order": 4
+						},
+						{
+							"name": "Recycle",
+							"level": 1,
+							"order": 5
+						},
+						{
+							"name": "Acid Spray",
+							"level": 1,
+							"order": 6
+						},
+						{
+							"name": "Amnesia",
+							"level": 9,
+							"order": null
+						},
+						{
+							"name": "Clear Smog",
+							"level": 12,
+							"order": null
+						},
+						{
+							"name": "Toxic Spikes",
+							"level": 15,
+							"order": null
+						},
+						{
+							"name": "Sludge",
+							"level": 18,
+							"order": null
+						},
+						{
+							"name": "Stockpile",
+							"level": 21,
+							"order": 1
+						},
+						{
+							"name": "Swallow",
+							"level": 21,
+							"order": 2
+						},
+						{
+							"name": "Body Slam",
+							"level": 24,
+							"order": null
+						},
+						{
+							"name": "Sludge Bomb",
+							"level": 27,
+							"order": null
+						},
+						{
+							"name": "Toxic",
+							"level": 30,
+							"order": null
+						},
+						{
+							"name": "Belch",
+							"level": 33,
+							"order": null
+						},
+						{
+							"name": "Pain Split",
+							"level": 39,
+							"order": null
+						},
+						{
+							"name": "Gunk Shot",
+							"level": 43,
+							"order": null
+						},
+						{
+							"name": "Explosion",
+							"level": 48,
+							"order": null
+						}
+					],
+					"Machine": [
+						{
+							"name": "Amnesia",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Attract",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Body Press",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Body Slam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Cross Poison",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Dark Pulse",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Drain Punch",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Endure",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Facade",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Fling",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Focus Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Drain",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Giga Impact",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Gunk Shot",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Hyper Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Payback",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Protect",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Psychic",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rain Dance",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rest",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Rock Blast",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Round",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Screech",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Seed Bomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Self Destruct",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sleep Talk",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sludge Bomb",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sludge Wave",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Snore",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Solar Beam",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Spikes",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Stomping Tantrum",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Substitute",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Sunny Day",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thief",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Thunderbolt",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Toxic Spikes",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Venom Drench",
+							"level": null,
+							"order": null
+						},
+						{
+							"name": "Venoshock",
+							"level": null,
+							"order": null
+						}
+					],
+					"Tutor": [
+						{
+							"name": "Corrosive Gas",
+							"level": null,
+							"order": null
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokemonPGC form catalog includes this game profile.",
+						"PokeAPI lists the species in a Pokédex for this game profile.",
+						"PokeAPI provides a move set for this version group.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/569",
+						"fetchedAt": "2026-11-03T05:53:41.747Z",
+						"hash": "b34c99e82ec8d34b1d1a1b605cc2316eb4f38d5d243f94cc8c220e260ce40a5b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/290/",
+						"fetchedAt": "2026-11-03T05:53:41.766Z",
+						"hash": "3de8836ba00cc5314dc6339f7c896e2dfa08a8625b79d0645bfbc4dab75ef395"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/569/",
+						"fetchedAt": "2026-11-03T05:53:41.798Z",
+						"hash": "eab5b5596264ebce809d12a23ec0d851c59a3ead544e5546ea44e0ccf70d7c2c"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/569/encounters",
+						"fetchedAt": "2026-11-03T05:53:41.854Z",
+						"hash": "6b2f69a2e34011e29799051c6d98f5d849fcd966e8de78305016be9e59167378"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/569/",
+						"fetchedAt": "2026-11-03T05:53:41.903Z",
+						"hash": "e9f6a81afc01683c6b027f8129f816ebb1eacff3c8c276aa2ae9492f896db8ee"
+					}
+				],
+				"formName": "Normal"
+			},
+			"flavorByGame": {
+				"sword": "This Pokémon eats trash, which turns into poison inside its body. The main component of the poison depends on what sort of trash was eaten.",
+				"shield": "The toxic liquid it launches from its right arm is so virulent that it can kill a weakened creature instantly."
+			},
+			"localizedFlavorByGame": {
+				"sword": {
+					"ja-hrkt": "くった ゴミが たいないで どくに へんかする。 くう ゴミ しだいで どくの しゅせいぶんも かわる。",
+					"ko": "먹은 쓰레기가 체내에서 독으로 변화한다. 먹은 쓰레기에 따라 독의 주성분도 바뀐다.",
+					"zh-hant": "吃掉的垃圾會在體內 轉化為毒素。毒素的成分 會隨著吃掉的垃圾而不同。",
+					"fr": "Il produit du poison dans son corps à partir des ordures qu’il ingurgite. Selon ce qu’il mange, la composition des toxines diffère.",
+					"de": "Es frisst Müll und verdaut ihn in seinem Inneren zu Gift. Je nach Art des Mülls, den es verzehrt, ändern sich die Hauptbestandteile des Giftes.",
+					"es": "Su cuerpo transforma la inmundicia que engulle en un veneno cuya composición cambia según la basura ingerida.",
+					"it": "Mangia spazzatura e la trasforma in un veleno la cui composizione cambia a seconda di cosa ha ingurgitato.",
+					"en": "This Pokémon eats trash, which turns into poison inside its body. The main component of the poison depends on what sort of trash was eaten.",
+					"ja": "食った ゴミが 体内で 毒に 変化する。 食う ゴミ しだいで 毒の 主成分も 変わる。",
+					"zh-hans": "吃掉的垃圾会在体内 转化为毒素。毒素的成分 会随着吃掉的垃圾而不同。",
+					"es-419": "Su cuerpo transforma la inmundicia que engulle en un veneno cuya composición cambia según la basura ingerida."
+				},
+				"shield": {
+					"ja-hrkt": "みぎうでから だす どくえきは よわった せいぶつが あびれば そくしするほど きけんな シロモノ。",
+					"ko": "오른팔에서 내보내는 독액은 약한 생물이 맞으면 즉사할 정도로 위험하다.",
+					"zh-hant": "從右臂噴出的毒液十分危險， 虛弱的生物只要一沾到， 立刻就會丟掉性命。",
+					"fr": "Le liquide qu’il projette de son bras droit est si toxique que si une créature fragile en est aspergée, elle succombe sur-le-champ.",
+					"de": "Die toxische Flüssigkeit aus seinem rechten Arm ist sehr gefährlich. Angeschlagene Lebewesen kommen bei Kontakt sofort ums Leben.",
+					"es": "El veneno líquido que brota de su brazo derecho es tan nocivo que puede acabar con una criatura ya débil al menor contacto.",
+					"it": "Il veleno che spruzza dall’arto destro è talmente tossico da risultare istantaneamente letale per le creature già debilitate.",
+					"en": "The toxic liquid it launches from its right arm is so virulent that it can kill a weakened creature instantly.",
+					"ja": "右腕から 出す 毒液は 弱った 生物が 浴びれば 即死するほど 危険な シロモノ。",
+					"zh-hans": "从右臂喷出的毒液十分危险， 虚弱的生物只要一沾到， 立刻就会丢掉性命。",
+					"es-419": "El veneno líquido que brota de su brazo derecho es tan nocivo que puede acabar con una criatura ya débil al menor contacto."
+				}
+			}
+		},
+		{
+			"profileKey": "the-isle-of-armor",
+			"label": "The Isle of Armor",
+			"appGameKeys": [
+				"swordioa",
+				"shieldioa"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Garbodor",
+				"localizedNames": {
+					"ja-hrkt": "ダストダス",
+					"ja-roma": "Dustdas",
+					"ko": "더스트나",
+					"zh-hant": "灰塵山",
+					"fr": "Miasmax",
+					"de": "Deponitox",
+					"es": "Garbodor",
+					"it": "Garbodor",
+					"ja": "ダストダス",
+					"zh-hans": "灰尘山",
+					"es-419": "Garbodor"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 80,
+					"atk": 95,
+					"def": 82,
+					"spa": 60,
+					"spd": 82,
+					"spe": 75
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Stench",
+					"Weak Armor",
+					"Aftermath (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Aftermath"
+				],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.9 m",
+				"weight": "107.3 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 166,
+				"habitat": "",
+				"shape": "Humanoid",
+				"color": "Green",
+				"genus": "Trash Heap Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ゴミすてばポケモン",
+					"ko": "쓰레기장포켓몬",
+					"zh-hant": "垃圾場寶可夢",
+					"fr": "Pokémon Dépotoir",
+					"de": "Müllhalden-Pokémon",
+					"es": "Pokémon Vertedero",
+					"it": "Pokémon Discarica",
+					"ja": "ゴミすてばポケモン",
+					"zh-hans": "垃圾场宝可梦",
+					"es-419": "Pokémon Vertedero"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 569
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 75
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 106
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 75
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 207
+					},
+					{
+						"pokedex": "original-ulaula",
+						"number": 79
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 265
+					},
+					{
+						"pokedex": "updated-ulaula",
+						"number": 86
+					},
+					{
+						"pokedex": "galar",
+						"number": 158
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 50
+					},
+					{
+						"pokedex": "champions",
+						"number": 569
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 568,
+								"natiId": 568,
+								"name": "Trubbish"
+							},
+							{
+								"id": 569,
+								"natiId": 569,
+								"name": "Garbodor",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokemonPGC form catalog includes this game profile.",
+						"PokeAPI provides a game index for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/569",
+						"fetchedAt": "2026-11-03T05:53:41.747Z",
+						"hash": "b34c99e82ec8d34b1d1a1b605cc2316eb4f38d5d243f94cc8c220e260ce40a5b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/290/",
+						"fetchedAt": "2026-11-03T05:53:41.766Z",
+						"hash": "3de8836ba00cc5314dc6339f7c896e2dfa08a8625b79d0645bfbc4dab75ef395"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/569/",
+						"fetchedAt": "2026-11-03T05:53:41.798Z",
+						"hash": "eab5b5596264ebce809d12a23ec0d851c59a3ead544e5546ea44e0ccf70d7c2c"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/569/encounters",
+						"fetchedAt": "2026-11-03T05:53:41.854Z",
+						"hash": "6b2f69a2e34011e29799051c6d98f5d849fcd966e8de78305016be9e59167378"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/569/",
+						"fetchedAt": "2026-11-03T05:53:41.903Z",
+						"hash": "e9f6a81afc01683c6b027f8129f816ebb1eacff3c8c276aa2ae9492f896db8ee"
+					}
+				],
+				"formName": "Normal"
+			},
+			"flavorByGame": {
+				"swordioa": "",
+				"shieldioa": ""
+			},
+			"localizedFlavorByGame": {
+				"swordioa": {},
+				"shieldioa": {}
+			}
+		},
+		{
+			"profileKey": "the-crown-tundra",
+			"label": "The Crown Tundra",
+			"appGameKeys": [
+				"swordct",
+				"shieldct"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Garbodor",
+				"localizedNames": {
+					"ja-hrkt": "ダストダス",
+					"ja-roma": "Dustdas",
+					"ko": "더스트나",
+					"zh-hant": "灰塵山",
+					"fr": "Miasmax",
+					"de": "Deponitox",
+					"es": "Garbodor",
+					"it": "Garbodor",
+					"ja": "ダストダス",
+					"zh-hans": "灰尘山",
+					"es-419": "Garbodor"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 80,
+					"atk": 95,
+					"def": 82,
+					"spa": 60,
+					"spd": 82,
+					"spe": 75
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Stench",
+					"Weak Armor",
+					"Aftermath (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Aftermath"
+				],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium",
+				"hatchCounter": 20,
+				"height": "1.9 m",
+				"weight": "107.3 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 166,
+				"habitat": "",
+				"shape": "Humanoid",
+				"color": "Green",
+				"genus": "Trash Heap Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ゴミすてばポケモン",
+					"ko": "쓰레기장포켓몬",
+					"zh-hant": "垃圾場寶可夢",
+					"fr": "Pokémon Dépotoir",
+					"de": "Müllhalden-Pokémon",
+					"es": "Pokémon Vertedero",
+					"it": "Pokémon Discarica",
+					"ja": "ゴミすてばポケモン",
+					"zh-hans": "垃圾场宝可梦",
+					"es-419": "Pokémon Vertedero"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 569
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 75
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 106
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 75
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 207
+					},
+					{
+						"pokedex": "original-ulaula",
+						"number": 79
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 265
+					},
+					{
+						"pokedex": "updated-ulaula",
+						"number": 86
+					},
+					{
+						"pokedex": "galar",
+						"number": 158
+					},
+					{
+						"pokedex": "lumiose-city",
+						"number": 50
+					},
+					{
+						"pokedex": "champions",
+						"number": 569
+					}
+				],
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 568,
+								"natiId": 568,
+								"name": "Trubbish"
+							},
+							{
+								"id": 569,
+								"natiId": 569,
+								"name": "Garbodor",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Max Lair Area",
+						"notes": "Dynamax Adventure, Lv. 65",
+						"games": "The Crown Tundra Sword",
+						"rate": "100%"
+					},
+					{
+						"area": "Max Lair Area",
+						"notes": "Dynamax Adventure, Lv. 65",
+						"games": "The Crown Tundra Shield",
+						"rate": "100%"
+					},
+					{
+						"area": "Giants Bed Max Den C",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "The Crown Tundra Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Giants Bed Max Den C",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "The Crown Tundra Sword",
+						"rate": "15%"
+					},
+					{
+						"area": "Giants Bed Max Den C",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "The Crown Tundra Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Giants Bed Max Den C",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "The Crown Tundra Shield",
+						"rate": "15%"
+					},
+					{
+						"area": "Giants Bed Max Den K",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "The Crown Tundra Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Giants Bed Max Den K",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "The Crown Tundra Sword",
+						"rate": "15%"
+					},
+					{
+						"area": "Giants Bed Max Den K",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "The Crown Tundra Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Giants Bed Max Den K",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "The Crown Tundra Shield",
+						"rate": "15%"
+					},
+					{
+						"area": "Frigid Sea Max Den G",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "The Crown Tundra Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Frigid Sea Max Den G",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "The Crown Tundra Sword",
+						"rate": "15%"
+					},
+					{
+						"area": "Frigid Sea Max Den G",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "The Crown Tundra Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Frigid Sea Max Den G",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "The Crown Tundra Shield",
+						"rate": "15%"
+					},
+					{
+						"area": "Ballimere Lake Max Den C",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "The Crown Tundra Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Ballimere Lake Max Den C",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "The Crown Tundra Sword",
+						"rate": "15%"
+					},
+					{
+						"area": "Ballimere Lake Max Den C",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "The Crown Tundra Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Ballimere Lake Max Den C",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "The Crown Tundra Shield",
+						"rate": "15%"
+					},
+					{
+						"area": "Ballimere Lake Max Den H",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "The Crown Tundra Sword",
+						"rate": "25%"
+					},
+					{
+						"area": "Ballimere Lake Max Den H",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "The Crown Tundra Sword",
+						"rate": "15%"
+					},
+					{
+						"area": "Ballimere Lake Max Den H",
+						"notes": "Max Raid, Lv. 45-50",
+						"games": "The Crown Tundra Shield",
+						"rate": "25%"
+					},
+					{
+						"area": "Ballimere Lake Max Den H",
+						"notes": "Max Raid, Lv. 35-40",
+						"games": "The Crown Tundra Shield",
+						"rate": "15%"
+					}
+				],
+				"moves": {},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"PokemonPGC form catalog includes this game profile.",
+						"PokeAPI provides a game index for this version.",
+						"PokeAPI provides an encounter for this version.",
+						"Form introduced in Black White."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/569",
+						"fetchedAt": "2026-11-03T05:53:41.747Z",
+						"hash": "b34c99e82ec8d34b1d1a1b605cc2316eb4f38d5d243f94cc8c220e260ce40a5b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/290/",
+						"fetchedAt": "2026-11-03T05:53:41.766Z",
+						"hash": "3de8836ba00cc5314dc6339f7c896e2dfa08a8625b79d0645bfbc4dab75ef395"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/569/",
+						"fetchedAt": "2026-11-03T05:53:41.798Z",
+						"hash": "eab5b5596264ebce809d12a23ec0d851c59a3ead544e5546ea44e0ccf70d7c2c"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/569/encounters",
+						"fetchedAt": "2026-11-03T05:53:41.854Z",
+						"hash": "6b2f69a2e34011e29799051c6d98f5d849fcd966e8de78305016be9e59167378"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/569/",
+						"fetchedAt": "2026-11-03T05:53:41.903Z",
+						"hash": "e9f6a81afc01683c6b027f8129f816ebb1eacff3c8c276aa2ae9492f896db8ee"
+					}
+				],
+				"formName": "Normal"
+			},
+			"flavorByGame": {
+				"swordct": "",
+				"shieldct": ""
+			},
+			"localizedFlavorByGame": {
+				"swordct": {},
+				"shieldct": {}
+			}
+		},
+		{
+			"profileKey": "legends-za",
+			"label": "Legends: Z-A",
+			"appGameKeys": [
+				"legendsza"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Garbodor",
+				"localizedNames": {
+					"ja-hrkt": "ダストダス",
+					"ja-roma": "Dustdas",
+					"ko": "더스트나",
+					"zh-hant": "灰塵山",
+					"fr": "Miasmax",
+					"de": "Deponitox",
+					"es": "Garbodor",
+					"it": "Garbodor",
+					"ja": "ダストダス",
+					"zh-hans": "灰尘山",
+					"es-419": "Garbodor"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 80,
+					"atk": 95,
+					"def": 82,
+					"spa": 60,
+					"spd": 82,
+					"spe": 75
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Stench",
+					"Weak Armor",
+					"Aftermath (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Aftermath"
+				],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium Fast",
+				"hatchCounter": 20,
+				"height": "1.9 m",
+				"weight": "107.3 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 166,
+				"habitat": "",
+				"shape": "Humanoid",
+				"color": "Green",
+				"genus": "Trash Heap Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ゴミすてばポケモン",
+					"ko": "쓰레기장포켓몬",
+					"zh-hant": "垃圾場寶可夢",
+					"fr": "Pokémon Dépotoir",
+					"de": "Müllhalden-Pokémon",
+					"es": "Pokémon Vertedero",
+					"it": "Pokémon Discarica",
+					"ja": "ゴミすてばポケモン",
+					"zh-hans": "垃圾场宝可梦",
+					"es-419": "Pokémon Vertedero"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 569
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 75
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 106
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 75
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 207
+					},
+					{
+						"pokedex": "original-ulaula",
+						"number": 79
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 265
+					},
+					{
+						"pokedex": "updated-ulaula",
+						"number": 86
+					},
+					{
+						"pokedex": "galar",
+						"number": 158
+					},
+					{
+						"pokedex": "champions",
+						"number": 569
+					},
+					{
+						"pokedex": "lumiose",
+						"number": 50
+					}
+				],
+				"alphaMove": "Focus Blast",
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 568,
+								"natiId": 568,
+								"name": "Trubbish"
+							},
+							{
+								"id": 569,
+								"natiId": 569,
+								"name": "Garbodor",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Wild Zone 20",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Jaune District",
+						"notes": "",
+						"games": "Legends: Z-A"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Headbutt",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Smokescreen",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Metal Claw",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Amnesia",
+							"level": 9,
+							"order": 4
+						},
+						{
+							"name": "Rollout",
+							"level": 12,
+							"order": 5
+						},
+						{
+							"name": "Toxic Spikes",
+							"level": 15,
+							"order": 6
+						},
+						{
+							"name": "Brutal Swing",
+							"level": 18,
+							"order": 7
+						},
+						{
+							"name": "Take Down",
+							"level": 20,
+							"order": 8
+						},
+						{
+							"name": "Poison Jab",
+							"level": 24,
+							"order": 9
+						},
+						{
+							"name": "Sludge Bomb",
+							"level": 27,
+							"order": 10
+						},
+						{
+							"name": "Toxic",
+							"level": 30,
+							"order": 11
+						},
+						{
+							"name": "Self-Destruct",
+							"level": 34,
+							"order": 12
+						},
+						{
+							"name": "Sludge Wave",
+							"level": 39,
+							"order": 13
+						},
+						{
+							"name": "Gunk Shot",
+							"level": 44,
+							"order": 14
+						},
+						{
+							"name": "Explosion",
+							"level": 53,
+							"order": 15
+						}
+					],
+					"Machine": [
+						{
+							"name": "Headbutt",
+							"machine": "TM001",
+							"order": 1
+						},
+						{
+							"name": "Toxic",
+							"machine": "TM007",
+							"order": 2
+						},
+						{
+							"name": "Protect",
+							"machine": "TM017",
+							"order": 3
+						},
+						{
+							"name": "Body Slam",
+							"machine": "TM033",
+							"order": 4
+						},
+						{
+							"name": "Endure",
+							"machine": "TM035",
+							"order": 5
+						},
+						{
+							"name": "Bullet Seed",
+							"machine": "TM040",
+							"order": 6
+						},
+						{
+							"name": "Giga Drain",
+							"machine": "TM042",
+							"order": 7
+						},
+						{
+							"name": "Hyper Beam",
+							"machine": "TM044",
+							"order": 8
+						},
+						{
+							"name": "Mud Shot",
+							"machine": "TM046",
+							"order": 9
+						},
+						{
+							"name": "Self-Destruct",
+							"machine": "TM048",
+							"order": 10
+						},
+						{
+							"name": "Sludge Bomb",
+							"machine": "TM053",
+							"order": 11
+						},
+						{
+							"name": "Giga Impact",
+							"machine": "TM055",
+							"order": 12
+						},
+						{
+							"name": "Psychic",
+							"machine": "TM063",
+							"order": 13
+						},
+						{
+							"name": "Solar Beam",
+							"machine": "TM064",
+							"order": 14
+						},
+						{
+							"name": "Thunderbolt",
+							"machine": "TM067",
+							"order": 15
+						},
+						{
+							"name": "Poison Jab",
+							"machine": "TM077",
+							"order": 16
+						},
+						{
+							"name": "Substitute",
+							"machine": "TM085",
+							"order": 17
+						},
+						{
+							"name": "Spikes",
+							"machine": "TM088",
+							"order": 18
+						},
+						{
+							"name": "Toxic Spikes",
+							"machine": "TM089",
+							"order": 19
+						},
+						{
+							"name": "Dark Pulse",
+							"machine": "TM090",
+							"order": 20
+						},
+						{
+							"name": "Heal Block",
+							"machine": "TM097",
+							"order": 21
+						},
+						{
+							"name": "Gunk Shot",
+							"machine": "TM100",
+							"order": 22
+						},
+						{
+							"name": "Focus Blast",
+							"machine": "TM102",
+							"order": 23
+						},
+						{
+							"name": "Facade",
+							"machine": "TM109",
+							"order": 24
+						},
+						{
+							"name": "Acid Spray",
+							"machine": "TM112",
+							"order": 25
+						},
+						{
+							"name": "Ancient Power",
+							"machine": "TM120",
+							"order": 26
+						},
+						{
+							"name": "Magnet Bomb",
+							"machine": "TM126",
+							"order": 27
+						},
+						{
+							"name": "Seed Bomb",
+							"machine": "TM128",
+							"order": 28
+						},
+						{
+							"name": "Drain Punch",
+							"machine": "TM131",
+							"order": 29
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Project Pokemon's Z-A game-data export assigns this form regional Dex #50."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/569",
+						"fetchedAt": "2026-11-03T05:53:41.747Z",
+						"hash": "b34c99e82ec8d34b1d1a1b605cc2316eb4f38d5d243f94cc8c220e260ce40a5b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/290/",
+						"fetchedAt": "2026-11-03T05:53:41.766Z",
+						"hash": "3de8836ba00cc5314dc6339f7c896e2dfa08a8625b79d0645bfbc4dab75ef395"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/569/",
+						"fetchedAt": "2026-11-03T05:53:41.798Z",
+						"hash": "eab5b5596264ebce809d12a23ec0d851c59a3ead544e5546ea44e0ccf70d7c2c"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/569/encounters",
+						"fetchedAt": "2026-11-03T05:53:41.854Z",
+						"hash": "6b2f69a2e34011e29799051c6d98f5d849fcd966e8de78305016be9e59167378"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/569/",
+						"fetchedAt": "2026-11-03T05:53:41.903Z",
+						"hash": "e9f6a81afc01683c6b027f8129f816ebb1eacff3c8c276aa2ae9492f896db8ee"
+					},
+					{
+						"type": "legends-za-personal-data",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/personal.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c00215459c764ba65d879d6503a7337ad80b338171ab4713d1c6f52b4517e36f"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "719eff37d8f2f404d163f81d23b2c921ac323a7b00304e502ca37d69a3375b1d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/French/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "1b658102e791558a1bb317563b7a3aaab8cebc1c7517aa7f5d5c0e708e93d626"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/German/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5f1e419ae3b84ab18cb05b972569e629ff0bff96d928468c52c536b02dc6cf9d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Italian/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "e0bd40a2f4b7678afb82f959b7b1f3503590bd13884daf94bd5813fea832067c"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/JPN/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5c2c9784278c5d13f3ba376e4338cef21923d68faec9b8498175c21180825f24"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Korean/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c83545726b0b0b803295f52448510c15adaab3e6ce248adba23b5ad0d0344216"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/LATAM/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "01d046caf7553d97a3c275465bce97ecedae26a67674a40b5c751a56b3b4d52d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Simp_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "09495dacb0d16eb6e91aa1d67eb1ed682d0682303719811eeb1c6877bb9e7ca2"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Spanish/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "b3fafb97fe85165bd65fdd732ce1e4cee880ffe5035632269787ce859735b358"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Trad_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c446ae3e93760fc4af895427508ed852511201723f8cac84121330747e8c3cd0"
+					},
+					{
+						"type": "legends-za-locations",
+						"url": "https://www.serebii.net/pokedex-sv/garbodor/",
+						"fetchedAt": "2026-11-04T05:47:08.203Z",
+						"hash": "b7c01c8d7476cc95b2b01589b96fb36093009424c59ca21db8f243fcfb8b65a9"
+					}
+				],
+				"formName": "Normal"
+			},
+			"flavorByGame": {
+				"legendsza": "Consuming garbage makes new kinds of poison gases and liquids inside their bodies."
+			},
+			"localizedFlavorByGame": {
+				"legendsza": {
+					"en": "Consuming garbage makes new kinds of poison gases and liquids inside their bodies.",
+					"fr": "En aspirant des déchets, il produit de nouveaux types de gaz et de fluides toxiques dans son corps.",
+					"de": "Durch das Aufsaugen von Abfall erzeugt es in seinem Inneren völlig neue Formen von Giftgasen und Toxinen.",
+					"it": "Assorbe la spazzatura nel suo corpo per creare dei liquidi velenosi e dei gas tossici sempre nuovi.",
+					"ja": "ゴミを 吸いとっては 体内で 新しい 種類の 毒ガスや 毒の 液体を 生みだしている。",
+					"ko": "쓰레기를 흡수하여 체내에서 새로운 종류의 독가스나 독성 액체를 만들어 낸다.",
+					"es-419": "Absorbe y procesa basura en su interior para generar nuevos gases nocivos y líquidos venenosos altamente virulentos.",
+					"zh-hans": "不断吸入垃圾， 在体内产生出 新种类的毒瓦斯和毒液。",
+					"es": "Absorbe y procesa en su interior basura para generar nuevos gases nocivos y líquidos venenosos de alta virulencia.",
+					"zh-hant": "不斷吸入垃圾， 在體內製造 新種類的毒氣與毒液。"
+				}
+			}
+		},
+		{
+			"profileKey": "mega-dimension",
+			"label": "Mega Dimension",
+			"appGameKeys": [
+				"legendszamd"
+			],
+			"sourceState": "imported",
+			"payload": {
+				"displayName": "Garbodor",
+				"localizedNames": {
+					"ja-hrkt": "ダストダス",
+					"ja-roma": "Dustdas",
+					"ko": "더스트나",
+					"zh-hant": "灰塵山",
+					"fr": "Miasmax",
+					"de": "Deponitox",
+					"es": "Garbodor",
+					"it": "Garbodor",
+					"ja": "ダストダス",
+					"zh-hans": "灰尘山",
+					"es-419": "Garbodor"
+				},
+				"localizedFormNames": {},
+				"localizedFormLabels": {},
+				"types": [
+					"Poison"
+				],
+				"baseStats": {
+					"hp": 80,
+					"atk": 95,
+					"def": 82,
+					"spa": 60,
+					"spd": 82,
+					"spe": 75
+				},
+				"evYield": {
+					"atk": 2
+				},
+				"generation": 5,
+				"isBaby": false,
+				"isLegendary": false,
+				"isMythical": false,
+				"abilities": [
+					"Stench",
+					"Weak Armor",
+					"Aftermath (Hidden)"
+				],
+				"hiddenAbilities": [
+					"Aftermath"
+				],
+				"eggGroups": [
+					"Mineral"
+				],
+				"expGroup": "Medium Fast",
+				"hatchCounter": 20,
+				"height": "1.9 m",
+				"weight": "107.3 kg",
+				"genderRatio": "50% male / 50% female",
+				"baseFriendship": 70,
+				"captureRate": 60,
+				"baseExperience": 166,
+				"habitat": "",
+				"shape": "Humanoid",
+				"color": "Green",
+				"genus": "Trash Heap Pokémon",
+				"localizedGenera": {
+					"ja-hrkt": "ゴミすてばポケモン",
+					"ko": "쓰레기장포켓몬",
+					"zh-hant": "垃圾場寶可夢",
+					"fr": "Pokémon Dépotoir",
+					"de": "Müllhalden-Pokémon",
+					"es": "Pokémon Vertedero",
+					"it": "Pokémon Discarica",
+					"ja": "ゴミすてばポケモン",
+					"zh-hans": "垃圾场宝可梦",
+					"es-419": "Pokémon Vertedero"
+				},
+				"pokedexNumbers": [
+					{
+						"pokedex": "national",
+						"number": 569
+					},
+					{
+						"pokedex": "original-unova",
+						"number": 75
+					},
+					{
+						"pokedex": "updated-unova",
+						"number": 106
+					},
+					{
+						"pokedex": "kalos-mountain",
+						"number": 75
+					},
+					{
+						"pokedex": "original-alola",
+						"number": 207
+					},
+					{
+						"pokedex": "original-ulaula",
+						"number": 79
+					},
+					{
+						"pokedex": "updated-alola",
+						"number": 265
+					},
+					{
+						"pokedex": "updated-ulaula",
+						"number": 86
+					},
+					{
+						"pokedex": "galar",
+						"number": 158
+					},
+					{
+						"pokedex": "champions",
+						"number": 569
+					},
+					{
+						"pokedex": "lumiose",
+						"number": 50
+					}
+				],
+				"alphaMove": "Focus Blast",
+				"evolution": {
+					"paths": [
+						[
+							{
+								"id": 568,
+								"natiId": 568,
+								"name": "Trubbish"
+							},
+							{
+								"id": 569,
+								"natiId": 569,
+								"name": "Garbodor",
+								"method": "Level",
+								"value": 36
+							}
+						]
+					]
+				},
+				"locations": [
+					{
+						"area": "Wild Zone 20",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Jaune District",
+						"notes": "",
+						"games": "Legends: Z-A"
+					},
+					{
+						"area": "Hyperspace Lumiose",
+						"notes": "Poison (4 Star)",
+						"games": "Legends: Z-A Mega Dimension"
+					}
+				],
+				"moves": {
+					"Level Up": [
+						{
+							"name": "Headbutt",
+							"level": 1,
+							"order": 1
+						},
+						{
+							"name": "Smokescreen",
+							"level": 1,
+							"order": 2
+						},
+						{
+							"name": "Metal Claw",
+							"level": 1,
+							"order": 3
+						},
+						{
+							"name": "Amnesia",
+							"level": 9,
+							"order": 4
+						},
+						{
+							"name": "Rollout",
+							"level": 12,
+							"order": 5
+						},
+						{
+							"name": "Toxic Spikes",
+							"level": 15,
+							"order": 6
+						},
+						{
+							"name": "Brutal Swing",
+							"level": 18,
+							"order": 7
+						},
+						{
+							"name": "Take Down",
+							"level": 20,
+							"order": 8
+						},
+						{
+							"name": "Poison Jab",
+							"level": 24,
+							"order": 9
+						},
+						{
+							"name": "Sludge Bomb",
+							"level": 27,
+							"order": 10
+						},
+						{
+							"name": "Toxic",
+							"level": 30,
+							"order": 11
+						},
+						{
+							"name": "Self-Destruct",
+							"level": 34,
+							"order": 12
+						},
+						{
+							"name": "Sludge Wave",
+							"level": 39,
+							"order": 13
+						},
+						{
+							"name": "Gunk Shot",
+							"level": 44,
+							"order": 14
+						},
+						{
+							"name": "Explosion",
+							"level": 53,
+							"order": 15
+						}
+					],
+					"Machine": [
+						{
+							"name": "Headbutt",
+							"machine": "TM001",
+							"order": 1
+						},
+						{
+							"name": "Toxic",
+							"machine": "TM007",
+							"order": 2
+						},
+						{
+							"name": "Protect",
+							"machine": "TM017",
+							"order": 3
+						},
+						{
+							"name": "Body Slam",
+							"machine": "TM033",
+							"order": 4
+						},
+						{
+							"name": "Endure",
+							"machine": "TM035",
+							"order": 5
+						},
+						{
+							"name": "Bullet Seed",
+							"machine": "TM040",
+							"order": 6
+						},
+						{
+							"name": "Giga Drain",
+							"machine": "TM042",
+							"order": 7
+						},
+						{
+							"name": "Hyper Beam",
+							"machine": "TM044",
+							"order": 8
+						},
+						{
+							"name": "Mud Shot",
+							"machine": "TM046",
+							"order": 9
+						},
+						{
+							"name": "Self-Destruct",
+							"machine": "TM048",
+							"order": 10
+						},
+						{
+							"name": "Sludge Bomb",
+							"machine": "TM053",
+							"order": 11
+						},
+						{
+							"name": "Giga Impact",
+							"machine": "TM055",
+							"order": 12
+						},
+						{
+							"name": "Psychic",
+							"machine": "TM063",
+							"order": 13
+						},
+						{
+							"name": "Solar Beam",
+							"machine": "TM064",
+							"order": 14
+						},
+						{
+							"name": "Thunderbolt",
+							"machine": "TM067",
+							"order": 15
+						},
+						{
+							"name": "Poison Jab",
+							"machine": "TM077",
+							"order": 16
+						},
+						{
+							"name": "Substitute",
+							"machine": "TM085",
+							"order": 17
+						},
+						{
+							"name": "Spikes",
+							"machine": "TM088",
+							"order": 18
+						},
+						{
+							"name": "Toxic Spikes",
+							"machine": "TM089",
+							"order": 19
+						},
+						{
+							"name": "Dark Pulse",
+							"machine": "TM090",
+							"order": 20
+						},
+						{
+							"name": "Heal Block",
+							"machine": "TM097",
+							"order": 21
+						},
+						{
+							"name": "Gunk Shot",
+							"machine": "TM100",
+							"order": 22
+						},
+						{
+							"name": "Focus Blast",
+							"machine": "TM102",
+							"order": 23
+						},
+						{
+							"name": "Facade",
+							"machine": "TM109",
+							"order": 24
+						},
+						{
+							"name": "Acid Spray",
+							"machine": "TM112",
+							"order": 25
+						},
+						{
+							"name": "Ancient Power",
+							"machine": "TM120",
+							"order": 26
+						},
+						{
+							"name": "Magnet Bomb",
+							"machine": "TM126",
+							"order": 27
+						},
+						{
+							"name": "Seed Bomb",
+							"machine": "TM128",
+							"order": 28
+						},
+						{
+							"name": "Drain Punch",
+							"machine": "TM131",
+							"order": 29
+						}
+					]
+				},
+				"availability": {
+					"status": "yes",
+					"evidence": [
+						"Project Pokemon's Z-A game-data export assigns this form regional Dex #50."
+					]
+				},
+				"provenance": [
+					{
+						"type": "pokemon-species",
+						"url": "https://pokeapi.co/api/v2/pokemon-species/569",
+						"fetchedAt": "2026-11-03T05:53:41.747Z",
+						"hash": "b34c99e82ec8d34b1d1a1b605cc2316eb4f38d5d243f94cc8c220e260ce40a5b"
+					},
+					{
+						"type": "evolution-chain",
+						"url": "https://pokeapi.co/api/v2/evolution-chain/290/",
+						"fetchedAt": "2026-11-03T05:53:41.766Z",
+						"hash": "3de8836ba00cc5314dc6339f7c896e2dfa08a8625b79d0645bfbc4dab75ef395"
+					},
+					{
+						"type": "pokemon",
+						"url": "https://pokeapi.co/api/v2/pokemon/569/",
+						"fetchedAt": "2026-11-03T05:53:41.798Z",
+						"hash": "eab5b5596264ebce809d12a23ec0d851c59a3ead544e5546ea44e0ccf70d7c2c"
+					},
+					{
+						"type": "pokemon-encounters",
+						"url": "https://pokeapi.co/api/v2/pokemon/569/encounters",
+						"fetchedAt": "2026-11-03T05:53:41.854Z",
+						"hash": "6b2f69a2e34011e29799051c6d98f5d849fcd966e8de78305016be9e59167378"
+					},
+					{
+						"type": "pokemon-form",
+						"url": "https://pokeapi.co/api/v2/pokemon-form/569/",
+						"fetchedAt": "2026-11-03T05:53:41.903Z",
+						"hash": "e9f6a81afc01683c6b027f8129f816ebb1eacff3c8c276aa2ae9492f896db8ee"
+					},
+					{
+						"type": "legends-za-personal-data",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/personal.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c00215459c764ba65d879d6503a7337ad80b338171ab4713d1c6f52b4517e36f"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/English/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "719eff37d8f2f404d163f81d23b2c921ac323a7b00304e502ca37d69a3375b1d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/French/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "1b658102e791558a1bb317563b7a3aaab8cebc1c7517aa7f5d5c0e708e93d626"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/German/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5f1e419ae3b84ab18cb05b972569e629ff0bff96d928468c52c536b02dc6cf9d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Italian/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "e0bd40a2f4b7678afb82f959b7b1f3503590bd13884daf94bd5813fea832067c"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/JPN/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "5c2c9784278c5d13f3ba376e4338cef21923d68faec9b8498175c21180825f24"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Korean/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c83545726b0b0b803295f52448510c15adaab3e6ce248adba23b5ad0d0344216"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/LATAM/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "01d046caf7553d97a3c275465bce97ecedae26a67674a40b5c751a56b3b4d52d"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Simp_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "09495dacb0d16eb6e91aa1d67eb1ed682d0682303719811eeb1c6877bb9e7ca2"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Spanish/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "b3fafb97fe85165bd65fdd732ce1e4cee880ffe5035632269787ce859735b358"
+					},
+					{
+						"type": "legends-za-pokedex-text",
+						"url": "https://github.com/projectpokemon/za-textport/blob/main/Trad_Chinese/ZukanA.txt",
+						"fetchedAt": "2026-11-04T05:20:29.129Z",
+						"hash": "c446ae3e93760fc4af895427508ed852511201723f8cac84121330747e8c3cd0"
+					},
+					{
+						"type": "legends-za-locations",
+						"url": "https://www.serebii.net/pokedex-sv/garbodor/",
+						"fetchedAt": "2026-11-04T05:47:08.203Z",
+						"hash": "b7c01c8d7476cc95b2b01589b96fb36093009424c59ca21db8f243fcfb8b65a9"
+					}
+				],
+				"formName": "Normal"
+			},
+			"flavorByGame": {
+				"legendszamd": "Consuming garbage makes new kinds of poison gases and liquids inside their bodies."
+			},
+			"localizedFlavorByGame": {
+				"legendszamd": {
+					"en": "Consuming garbage makes new kinds of poison gases and liquids inside their bodies.",
+					"fr": "En aspirant des déchets, il produit de nouveaux types de gaz et de fluides toxiques dans son corps.",
+					"de": "Durch das Aufsaugen von Abfall erzeugt es in seinem Inneren völlig neue Formen von Giftgasen und Toxinen.",
+					"it": "Assorbe la spazzatura nel suo corpo per creare dei liquidi velenosi e dei gas tossici sempre nuovi.",
+					"ja": "ゴミを 吸いとっては 体内で 新しい 種類の 毒ガスや 毒の 液体を 生みだしている。",
+					"ko": "쓰레기를 흡수하여 체내에서 새로운 종류의 독가스나 독성 액체를 만들어 낸다.",
+					"es-419": "Absorbe y procesa basura en su interior para generar nuevos gases nocivos y líquidos venenosos altamente virulentos.",
+					"zh-hans": "不断吸入垃圾， 在体内产生出 新种类的毒瓦斯和毒液。",
+					"es": "Absorbe y procesa en su interior basura para generar nuevos gases nocivos y líquidos venenosos de alta virulencia.",
+					"zh-hant": "不斷吸入垃圾， 在體內製造 新種類的毒氣與毒液。"
+				}
+			}
+		}
+	]
+}

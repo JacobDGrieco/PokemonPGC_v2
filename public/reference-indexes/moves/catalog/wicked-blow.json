@@ -1,0 +1,174 @@
+{
+	"schemaVersion": 1,
+	"id": 817,
+	"slug": "wicked-blow",
+	"name": "Wicked Blow",
+	"names": {
+		"de": "Finstertreffer",
+		"en": "Wicked Blow",
+		"es": "Golpe Oscuro",
+		"es-419": "Golpe Oscuro",
+		"fr": "Poing Obscur",
+		"it": "Pugnotenebra",
+		"ja": "あんこくきょうだ",
+		"ja-hrkt": "あんこくきょうだ",
+		"ko": "암흑강타",
+		"zh-hans": "暗冥强击",
+		"zh-hant": "暗冥強擊"
+	},
+	"generation": 8,
+	"type": "Dark",
+	"damageClass": "Physical",
+	"power": 75,
+	"accuracy": 100,
+	"pp": 5,
+	"priority": 0,
+	"effectChance": 100,
+	"target": "Selected Pokemon",
+	"effectEntries": [
+		{
+			"language": "en",
+			"effect": "Inflicts regular damage. Always scores a critical hit.",
+			"shortEffect": "Always scores a critical hit."
+		},
+		{
+			"language": "fr",
+			"effect": "Inflige des dégâts réguliers. Réalise toujours un coup critique.",
+			"shortEffect": "Réalise toujours un coup critique."
+		}
+	],
+	"effectChanges": [],
+	"descriptions": [
+		{
+			"versionGroup": "legends-arceus",
+			"language": "en",
+			"text": "The user, having mastered the Dark style, strikes the target with a fierce blow. This attack always results in a critical hit."
+		},
+		{
+			"versionGroup": "scarlet-violet",
+			"language": "en",
+			"text": "The user, having mastered the Dark style, strikes the target with a fierce blow. This move always lands a critical hit."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "de",
+			"text": "Der Anwender hat den Stil des Unlichts gemeistert und führt einen fokussierten, harten Schlag mit Volltreffergarantie aus."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "en",
+			"text": "The user, having mastered the Dark style, strikes the target with a fierce blow. This attack always results in a critical hit."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es",
+			"text": "Golpe devastador que requiere un absoluto dominio de las artes siniestras. Siempre asesta un golpe crítico."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "es-419",
+			"text": "Golpe devastador que requiere un absoluto dominio de las artes siniestras. Siempre asesta un golpe crítico."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "fr",
+			"text": "Le lanceur assène un coup puissant à l’ennemi. Cette technique qui inflige toujours un coup critique est réservée à ceux qui maîtrisent la puissance des Ténèbres."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "it",
+			"text": "Il Pokémon sferra un singolo colpo potentissimo, massima espressione dello stile di tipo Buio. Brutto colpo assicurato."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja",
+			"text": "あくの型を 極めし 強烈な 一撃。 必ず 急所に 当たる。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ja-hrkt",
+			"text": "あくの かたを きわめし きょうれつな いちげき。 かならず きゅうしょに あたる。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "ko",
+			"text": "악의 태세가 극에 달하여 강렬한 일격을 날린다. 반드시 급소에 맞는다."
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hans",
+			"text": "将恶之流派修炼至大成的 猛烈一击。 必定会击中要害。"
+		},
+		{
+			"versionGroup": "sword-shield",
+			"language": "zh-hant",
+			"text": "將惡之流派鍛鍊到了 極致的強烈一擊。 必定會擊中要害。"
+		}
+	],
+	"pastValues": [],
+	"statChanges": [],
+	"meta": {
+		"ailment": "None",
+		"category": "Damage",
+		"minHits": null,
+		"maxHits": null,
+		"minTurns": null,
+		"maxTurns": null,
+		"drain": 0,
+		"healing": 0,
+		"critRate": 6,
+		"ailmentChance": 0,
+		"flinchChance": 0,
+		"statChance": 0
+	},
+	"machines": [],
+	"learners": [
+		{
+			"nationalDexId": 892,
+			"speciesName": "Urshifu",
+			"formKey": "single-strike-style",
+			"formName": "Single Strike Style",
+			"games": [
+				{
+					"profileKey": "scarlet-violet",
+					"gameLabel": "Scarlet / Violet",
+					"versionGroup": "scarlet-violet",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": null,
+							"order": null
+						}
+					],
+					"isHidden": false
+				},
+				{
+					"profileKey": "sword-shield",
+					"gameLabel": "Sword / Shield",
+					"versionGroup": "sword-shield",
+					"methods": [
+						{
+							"method": "Level Up",
+							"level": null,
+							"order": null
+						},
+						{
+							"method": "Level Up",
+							"level": 1,
+							"order": 1
+						}
+					],
+					"isHidden": false
+				}
+			]
+		}
+	],
+	"potentialPokemon": [
+		"urshifu-single-strike"
+	],
+	"source": {
+		"url": "https://pokeapi.co/api/v2/move/817/",
+		"fetchedAt": "2026-11-03T06:30:18.654Z",
+		"hash": "4b90ec756337d88f47017640ed21a3233fee547d6a75118c100cddbcccd1f795"
+	}
+}
