@@ -206,45 +206,8 @@ export function initHistory({ store, renderAll }) {
 		const gk = String(gameKey || "")
 			.trim()
 			.toLowerCase();
-		if (!gk) return "";
-
-		if (gk.startsWith("legendsza")) return "legendsza";
-		if (gk.startsWith("scarlet") || gk.startsWith("violet"))
-			return "scarlet-violet";
-		if (gk.startsWith("legendsarceus")) return "legendsarceus";
-		if (gk.startsWith("brilliantdiamond") || gk.startsWith("shiningpearl"))
-			return "brilliantdiamond-shiningpearl";
-		if (gk.startsWith("sword") || gk.startsWith("shield"))
-			return "sword-shield";
-		if (gk.startsWith("letsgopikachu") || gk.startsWith("letsgoeevee"))
-			return "letsgopikachu-letsgoeevee";
-		if (gk.startsWith("ultrasun") || gk.startsWith("ultramoon"))
-			return "ultrasun-ultramoon";
-		if (gk.startsWith("sun") || gk.startsWith("moon")) return "sun-moon";
-		if (gk.startsWith("omegaruby") || gk.startsWith("alphasapphire"))
-			return "omegaruby-alphasapphire";
-		if (gk.startsWith("black2") || gk.startsWith("white2"))
-			return "black2-white2";
-		if (gk.startsWith("black") || gk.startsWith("white"))
-			return "black-white";
-		if (gk.startsWith("heartgold") || gk.startsWith("soulsilver"))
-			return "heartgold-soulsilver";
-		if (gk.startsWith("platinum")) return "platinum";
-		if (gk.startsWith("diamond") || gk.startsWith("pearl"))
-			return "diamond-pearl";
-		if (gk.startsWith("firered") || gk.startsWith("leafgreen"))
-			return "firered-leafgreen";
-		if (gk.startsWith("emerald")) return "emerald";
-		if (gk.startsWith("ruby") || gk.startsWith("sapphire"))
-			return "ruby-sapphire";
-		if (gk.startsWith("crystal")) return "crystal";
-		if (gk.startsWith("silver")) return "silver";
-		if (gk.startsWith("gold")) return "gold";
-		if (gk.startsWith("yellow")) return "yellow";
-		if (gk.startsWith("green")) return "green";
-		if (gk.startsWith("red") || gk.startsWith("blue")) return "red-blue";
-		if (gk.startsWith("x") || gk.startsWith("y")) return "x-y";
-
+		// The exact release is part of the Mon Info data key. Collapsing paired
+		// games here silently changes flavor text and DLC-specific availability.
 		return gk;
 	}
 

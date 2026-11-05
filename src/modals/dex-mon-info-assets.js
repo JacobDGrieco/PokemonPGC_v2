@@ -1,4 +1,5 @@
 import { _baseModel, _shinyModel } from "../../data/helpers/sprite-models.js";
+import { escapeHtml } from "../utils/escapeHtml.js";
 
 function inferGenNumber(genKey, gameKey) {
 	if (genKey != null) {
@@ -71,12 +72,16 @@ function renderAssetTile({ label, src, modelUrl, variant }) {
 	const m = modelUrl ? String(modelUrl) : null;
 	const isModelFile = /\.(glb|gltf)$/i.test(s);
 	const hasViewer = !!m;
+	const safeSource = escapeHtml(s);
+	const safeModel = escapeHtml(m);
+	const safeLabel = escapeHtml(label);
+	const safeVariant = escapeHtml(variant || "base");
 
 	if (isModelFile) {
-		return `<div class="asset-tile asset-tile--file"><div class="asset-label">${label}</div><div style="display:flex; gap:8px; flex-wrap:wrap; justify-content:center;"><button type="button" class="asset-file" data-open-modelviewer="1" data-model-url="${s.replace(/"/g, "&quot;")}" data-model-variant="${variant || "base"}" data-model-label="${label.replace(/"/g, "&quot;")}">Open Viewer</button><a class="asset-file" href="${s}" target="_blank" rel="noopener">Open model file</a></div><div class="asset-filepath">${s}</div></div>`;
+		return `<div class="asset-tile asset-tile--file"><div class="asset-label">${safeLabel}</div><div style="display:flex; gap:8px; flex-wrap:wrap; justify-content:center;"><button type="button" class="asset-file" data-open-modelviewer="1" data-model-url="${safeSource}" data-model-variant="${safeVariant}" data-model-label="${safeLabel}">Open Viewer</button><a class="asset-file" href="${safeSource}" target="_blank" rel="noopener">Open model file</a></div><div class="asset-filepath">${safeSource}</div></div>`;
 	}
 
-	return `<div class="asset-tile ${hasViewer ? "asset-tile--hasviewer" : ""}">${hasViewer ? `<button type="button" class="asset-openviewer" data-open-modelviewer="1" data-model-url="${m.replace(/"/g, "&quot;")}" data-model-variant="${variant || "base"}" data-model-label="${label.replace(/"/g, "&quot;")}">Open Viewer</button>` : ""}<img src="${s}" alt="${label}" loading="lazy" onerror="window.PPGC?.reportMissingAsset?.('sprites', this.currentSrc || this.src); this.closest('.asset-tile')?.classList?.add('is-missing'); this.remove();" /><div class="asset-label">${label}</div></div>`;
+	return `<div class="asset-tile ${hasViewer ? "asset-tile--hasviewer" : ""}">${hasViewer ? `<button type="button" class="asset-openviewer" data-open-modelviewer="1" data-model-url="${safeModel}" data-model-variant="${safeVariant}" data-model-label="${safeLabel}">Open Viewer</button>` : ""}<img src="${safeSource}" alt="${safeLabel}" loading="lazy" onerror="window.PPGC?.reportMissingAsset?.('sprites', this.currentSrc || this.src); this.closest('.asset-tile')?.classList?.add('is-missing'); this.remove();" /><div class="asset-label">${safeLabel}</div></div>`;
 }
 
 export function renderSpritesModels({

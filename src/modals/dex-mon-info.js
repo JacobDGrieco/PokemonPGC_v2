@@ -24,12 +24,24 @@ import {
 	loadMoveReferenceManifest,
 } from "../utils/moveReference.js";
 import { pokemonSpriteCandidates } from "../utils/pokemonSprite.js";
+import { escapeHtml } from "../utils/escapeHtml.js";
+import {
+	monInfoAbilitiesForGame,
+	monInfoEggStepsForGame,
+	monInfoMechanicsForGame,
+} from "../utils/monInfoProfile.js";
+import {
+	defaultMonInfoLanguage,
+	monInfoLanguageOptions,
+	resolveLocalizedMonInfo,
+} from "../utils/monInfoLocalization.js";
 
 export async function renderMonInfoInto({
 	gameKey,
 	genKey,
 	mon,
 	formKey = null,
+	languageCode = null,
 	titleEl = null,
 	bodyEl = null,
 	sourceCard = null,
@@ -68,8 +80,23 @@ export async function renderMonInfoInto({
 
 	const baseStats = resolvedInfo?.baseStats || mon.baseStats || null;
 	const expGroup = effectiveInfo?.expGroup || mon.expGroup || null;
-	const baseEggSteps =
-		effectiveInfo?.baseEggSteps || mon.baseEggSteps || null;
+	const mechanics = monInfoMechanicsForGame(gameKey);
+	const eggGroups = mechanics.hasBreeding
+		? resolvedInfo?.eggGroups || []
+		: [];
+	const baseEggSteps = monInfoEggStepsForGame({
+		gameKey,
+		hatchCounter: resolvedInfo?.hatchCounter,
+		eggGroups,
+		authoredSteps: effectiveInfo?.baseEggSteps ?? mon.baseEggSteps ?? null,
+	});
+	const selectedLanguage =
+		languageCode || defaultMonInfoLanguage(resolvedInfo);
+	const languageOptions = monInfoLanguageOptions(resolvedInfo);
+	const localizedInfo = resolveLocalizedMonInfo(
+		resolvedInfo,
+		selectedLanguage,
+	);
 	if (monInfoTitle) {
 		const homeDex = window.DATA?.dex?.home || [];
 		const homeEntry =
@@ -80,15 +107,14 @@ export async function renderMonInfoInto({
 			null;
 
 		monInfoTitle.textContent =
-			resolvedInfo?.displayName ||
+			localizedInfo.displayName ||
 			mon?.name ||
 			homeEntry?.name ||
 			(natId != null ? `#${natId}` : `#${mon?.id ?? "??"}`);
 	}
 
 	const types = resolvedInfo?.types || mon.types || [];
-	const abilities = resolvedInfo?.abilities || [];
-	const eggGroups = resolvedInfo?.eggGroups || [];
+	const abilities = monInfoAbilitiesForGame(resolvedInfo?.abilities, gameKey);
 	const evo = resolvedInfo?.evolution || null;
 	const moveManifest = resolvedInfo?.moves
 		? await loadMoveReferenceManifest()
@@ -136,7 +162,7 @@ export async function renderMonInfoInto({
 		statsHtml = renderStatsRadar(baseStats, evObj);
 	}
 
-	const chartHtml = renderTypeChart(types);
+	const chartHtml = renderTypeChart(types, gameKey);
 	const evoHtml = renderEvolutionHtml(evo, dexList, {
 		gameKey,
 		currentNatiId: natId,
@@ -291,7 +317,11 @@ export async function renderMonInfoInto({
 		? renderSpritesModels({ genKey, gameKey, mon, resolvedInfo })
 		: "";
 	const profileHtml = renderProfileHtml({
-		resolvedInfo,
+		gameKey,
+		resolvedInfo: {
+			...resolvedInfo,
+			genus: localizedInfo.genus || resolvedInfo?.genus,
+		},
 		fallbackInfo,
 		abilities,
 		eggGroups,
@@ -306,7 +336,7 @@ export async function renderMonInfoInto({
 	  ${
 			spriteSrc
 				? `<div class="mon-info-sprite">
-		  <img src="${spriteSrc}" alt="${mon.name}" loading="lazy" />
+		  <img src="${escapeHtml(spriteSrc)}" alt="${escapeHtml(localizedInfo.displayName || mon.name)}" loading="lazy" />
 		</div>`
 				: ""
 		}
@@ -314,7 +344,7 @@ export async function renderMonInfoInto({
 		<div class="mon-info-topline">
 		  <div class="mon-info-basic">
 			<div class="mon-info-name">
-			  #${String(natId != null ? natId : (_dexIdNumber(mon.id, mon.localId) ?? "")).padStart(4, "0")} — ${mon.name}
+			  #${String(natId != null ? natId : (_dexIdNumber(mon.id, mon.localId) ?? "")).padStart(4, "0")} — ${escapeHtml(localizedInfo.displayName || mon.name)}
 			</div>
 			<div class="mon-info-types">
 			  ${(types || [])
@@ -322,23 +352,24 @@ export async function renderMonInfoInto({
 						(t) =>
 							`<span class="type-pill type-${String(
 								t,
-							).toLowerCase()}">${t}</span>`,
+							).toLowerCase()}">${escapeHtml(t)}</span>`,
 					)
 					.join("")}
 			</div>
 			${
 				hasForms
 					? `
-			<div class="mon-info-form">
+			<label class="mon-info-form">
+			  <span class="visually-hidden">Form</span>
 			  <select id="monInfoFormSelect" class="mon-info-form-select">
 				${formOpts
 					.map(
 						(o) =>
-							`<option value="${o.key}" ${effectiveFormKey === o.key ? "selected" : ""}>${o.label}</option>`,
+							`<option value="${escapeHtml(o.key)}" ${effectiveFormKey === o.key ? "selected" : ""}>${escapeHtml(o.label)}</option>`,
 					)
 					.join("")}
 			  </select>
-			</div>
+			</label>
 			`
 					: ""
 			}
@@ -352,11 +383,15 @@ export async function renderMonInfoInto({
 	  </div>
 	</div>
 
-	${
-		resolvedInfo?.flavor
-			? `<div class="mon-info-block mon-info-flavor">${resolvedInfo.flavor}</div>`
-			: ""
-	}
+	<div class="mon-info-flavor-region">
+	  ${
+			languageOptions.length > 1
+				? `<label class="mon-info-language-field"><span>Language</span><select id="monInfoLanguageSelect" class="mon-info-language-select">${languageOptions.map((language) => `<option value="${escapeHtml(language.code)}" ${selectedLanguage === language.code ? "selected" : ""}>${escapeHtml(language.label)}</option>`).join("")}</select></label>`
+				: ""
+		}
+	  ${localizedInfo.flavor ? `<div class="mon-info-block mon-info-flavor" lang="${escapeHtml(localizedInfo.flavorLanguage)}">${escapeHtml(localizedInfo.flavor)}</div>` : ""}
+	  ${!localizedInfo.hasLocalizedFlavor && localizedInfo.flavor ? `<div class="mon-info-language-note" role="note">No description is available in the selected language; showing the source entry.</div>` : ""}
+	</div>
 
 	<div class="mon-info-layout">
 	  <aside class="mon-info-col mon-info-col--summary">
@@ -384,7 +419,7 @@ export async function renderMonInfoInto({
 	${
 		!hasInfo
 			? `<div class="mon-info-empty">
-		  No local <code>monInfo</code> entry is configured yet for this Pokémon in <strong>${gameKey}</strong>. Showing PokéAPI fallback data when available.
+		  No local <code>monInfo</code> entry is configured yet for this Pokémon in <strong>${escapeHtml(gameKey)}</strong>. Showing PokéAPI fallback data when available.
 		</div>`
 			: ""
 	}
@@ -401,11 +436,28 @@ export async function renderMonInfoInto({
 				genKey,
 				mon,
 				formKey: chosen,
+				languageCode: selectedLanguage,
 				titleEl,
 				bodyEl,
 				sourceCard,
 			});
 			scrollElementToTop(monInfoBody);
+		};
+	}
+
+	const languageSelect = monInfoBody.querySelector("#monInfoLanguageSelect");
+	if (languageSelect) {
+		languageSelect.onchange = async () => {
+			await renderMonInfoInto({
+				gameKey,
+				genKey,
+				mon,
+				formKey: effectiveFormKey,
+				languageCode: languageSelect.value,
+				titleEl,
+				bodyEl,
+				sourceCard,
+			});
 		};
 	}
 

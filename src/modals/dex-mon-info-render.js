@@ -4,7 +4,10 @@ import {
 	MON_INFO_STAT_LABEL_RADIUS_OFFSET,
 	MON_INFO_STAT_VIEW_BOX,
 } from "../utils/monInfoStats.js";
-import { parseMonInfoGenderRatio } from "../utils/monInfoProfile.js";
+import {
+	monInfoMechanicsForGame,
+	parseMonInfoGenderRatio,
+} from "../utils/monInfoProfile.js";
 import {
 	moveGroupDisplayLabel,
 	moveMetadataParts,
@@ -19,6 +22,11 @@ import {
 	resolveEvolutionTargetForm,
 } from "../utils/monInfoEvolution.js";
 import { pokemonSpriteCandidates } from "../utils/pokemonSprite.js";
+import { escapeHtml } from "../utils/escapeHtml.js";
+import {
+	monInfoGenerationForGame,
+	monInfoTypesForGame,
+} from "../utils/monInfoTypes.js";
 
 // This renderer is loaded on demand, so its feature-specific styles should be
 // loaded on demand too instead of increasing the homepage CSS payload.
@@ -33,11 +41,11 @@ export function renderListRow(label, valueOrArr) {
 		const cleaned = valueOrArr.filter((v) => v != null && v !== "");
 		if (!cleaned.length) return "";
 		const itemsHtml = cleaned
-			.map((v) => `<span class="value-line">${v}</span>`)
+			.map((v) => `<span class="value-line">${escapeHtml(v)}</span>`)
 			.join("");
 		return `
 		<div class="mon-info-row">
-		  <span class="label">${label}</span>
+		  <span class="label">${escapeHtml(label)}</span>
 		  <span class="value value--stacked">
 			${itemsHtml}
 		  </span>
@@ -48,8 +56,8 @@ export function renderListRow(label, valueOrArr) {
 	if (v === "") return "";
 	return `
 	  <div class="mon-info-row">
-		<span class="label">${label}</span>
-		<span class="value">${v}</span>
+		<span class="label">${escapeHtml(label)}</span>
+		<span class="value">${escapeHtml(v)}</span>
 	  </div>`;
 }
 
@@ -104,7 +112,7 @@ function renderRadarBlock({ title, statsObj, evObj } = {}) {
 		.map((p) => {
 			const lx = center + labelRadius * Math.cos(p.angle);
 			const ly = center + labelRadius * Math.sin(p.angle);
-			return `<text x="${lx.toFixed(1)}" y="${ly.toFixed(1)}" class="stat-label" text-anchor="middle" dominant-baseline="central">${p.label}</text><text x="${lx.toFixed(1)}" y="${(ly + 9).toFixed(1)}" class="stat-value" text-anchor="middle" dominant-baseline="central">${p.displayValue}</text>`;
+			return `<text x="${lx.toFixed(1)}" y="${ly.toFixed(1)}" class="stat-label" text-anchor="middle" dominant-baseline="central">${escapeHtml(p.label)}</text><text x="${lx.toFixed(1)}" y="${(ly + 9).toFixed(1)}" class="stat-value" text-anchor="middle" dominant-baseline="central">${escapeHtml(p.displayValue)}</text>`;
 		})
 		.join("");
 
@@ -112,7 +120,8 @@ function renderRadarBlock({ title, statsObj, evObj } = {}) {
 
 	return `
 	  <div class="mon-info-block mon-info-stats">
-		<h3>${title}</h3>
+		<h3>${escapeHtml(title)}</h3>
+		<dl class="visually-hidden">${statSeries.map((stat) => `<dt>${escapeHtml(stat.label)}</dt><dd>${escapeHtml(stat.displayValue)}</dd>`).join("")}<dt>Total</dt><dd>${total}</dd></dl>
 		<div class="mon-info-stats-graph">
 		  <svg viewBox="${MON_INFO_STAT_VIEW_BOX}" class="mon-info-stats-radar" aria-hidden="true">
 			${gridPolys}
@@ -255,26 +264,6 @@ const TYPE_CHART = {
 		Steel: 0.5,
 	},
 };
-const ALL_TYPES = [
-	"Normal",
-	"Fire",
-	"Water",
-	"Electric",
-	"Grass",
-	"Ice",
-	"Fighting",
-	"Poison",
-	"Ground",
-	"Flying",
-	"Psychic",
-	"Bug",
-	"Rock",
-	"Ghost",
-	"Dragon",
-	"Dark",
-	"Steel",
-	"Fairy",
-];
 const ABBR = {
 	Normal: "Nor",
 	Fire: "Fir",
@@ -302,9 +291,11 @@ function normalizeTypeName(t) {
 	return s.charAt(0).toUpperCase() + s.slice(1);
 }
 
-export function renderTypeChart(types = []) {
+export function renderTypeChart(types = [], gameKey = null) {
 	const defTypes = (types || []).map(normalizeTypeName).filter(Boolean);
 	if (!defTypes.length) return "";
+	const generation = monInfoGenerationForGame(gameKey);
+	const attackingTypes = monInfoTypesForGame(gameKey);
 
 	const dmg = {
 		"4x": [],
@@ -315,11 +306,24 @@ export function renderTypeChart(types = []) {
 		"0.25x": [],
 		"0x": [],
 	};
-	for (const atk of ALL_TYPES) {
+	for (const atk of attackingTypes) {
 		let mult = 1;
 		for (const def of defTypes) {
 			const row = TYPE_CHART[atk] || {};
-			const m = row[def] != null ? row[def] : 1;
+			let m = row[def] != null ? row[def] : 1;
+			if (generation <= 1) {
+				if (atk === "Ghost" && def === "Psychic") m = 0;
+				if (atk === "Bug" && def === "Poison") m = 2;
+				if (atk === "Poison" && def === "Bug") m = 2;
+				if (atk === "Ice" && def === "Fire") m = 1;
+			}
+			if (
+				generation <= 5 &&
+				def === "Steel" &&
+				(atk === "Ghost" || atk === "Dark")
+			) {
+				m = 0.5;
+			}
 			mult *= m;
 		}
 		let bucket = "1x";
@@ -332,11 +336,10 @@ export function renderTypeChart(types = []) {
 		dmg[bucket].push(atk);
 	}
 
-	const groups = [
-		ALL_TYPES.slice(0, 6),
-		ALL_TYPES.slice(6, 12),
-		ALL_TYPES.slice(12, 18),
-	];
+	const groups = [];
+	for (let index = 0; index < attackingTypes.length; index += 6) {
+		groups.push(attackingTypes.slice(index, index + 6));
+	}
 	const tablesHtml = groups
 		.map((group) => {
 			const head = group
@@ -399,12 +402,6 @@ export function renderEvolutionHtml(
 	const forest = buildEvolutionForest(evolution, { gameKey });
 	if (!forest.length) return "";
 	const wheelLayout = buildEeveeEvolutionWheel(forest);
-	const escapeHtml = (value) =>
-		String(value ?? "")
-			.replaceAll("&", "&amp;")
-			.replaceAll('"', "&quot;")
-			.replaceAll("<", "&lt;")
-			.replaceAll(">", "&gt;");
 	const findDexEntry = (step) => {
 		const targetId = evolutionTargetId(step);
 		return (
@@ -499,7 +496,7 @@ export function renderLocationsHtml({
 	const renderMetaItem = (label, value) =>
 		value == null || value === ""
 			? ""
-			: `<div class="mon-info-profile-item"><div class="label">${label}</div><div class="value">${value}</div></div>`;
+			: `<div class="mon-info-profile-item"><div class="label">${escapeHtml(label)}</div><div class="value">${escapeHtml(value)}</div></div>`;
 	const metaHtml = [
 		renderMetaItem("Encounter Rarity", locEncounterRarity),
 		renderMetaItem("Catch Rate", formatCatchRate(locCatchRate)),
@@ -508,18 +505,18 @@ export function renderLocationsHtml({
 		.join("");
 	const items = locations
 		.map((loc) => {
-			if (typeof loc === "string") return `<li>${loc}</li>`;
+			if (typeof loc === "string") return `<li>${escapeHtml(loc)}</li>`;
 			const area = loc.area || "";
 			const notes = loc.notes || "";
 			const extra = [];
-			if (loc.rarity) extra.push(`Rarity: ${loc.rarity}`);
-			if (loc.rate != null) extra.push(`Rate: ${loc.rate}`);
+			if (loc.rarity) extra.push(`Rarity: ${escapeHtml(loc.rarity)}`);
+			if (loc.rate != null) extra.push(`Rate: ${escapeHtml(loc.rate)}`);
 			const extraText = extra.length
 				? ` <span class="mon-info-locations-extra">(${extra.join(", ")})</span>`
 				: "";
 			if (area && notes)
-				return `<li><strong>${area}</strong> — ${notes}${extraText}</li>`;
-			return `<li>${area || notes}${extraText}</li>`;
+				return `<li><strong>${escapeHtml(area)}</strong> — ${escapeHtml(notes)}${extraText}</li>`;
+			return `<li>${escapeHtml(area || notes)}${extraText}</li>`;
 		})
 		.join("");
 	return `<div class="mon-info-block mon-info-locations"><h3>Locations</h3>${metaHtml ? `<div class="mon-info-locations-meta">${metaHtml}</div>` : ""}<ul class="mon-info-locations-list">${items}</ul></div>`;
@@ -530,13 +527,13 @@ function renderMoveLine(m) {
 	const type = typeof m === "object" ? m.type : null;
 	const typeIconSrc = moveTypeIconSource(type);
 	const metadata = moveMetadataParts(m).join(" • ");
-	return `<li class="mon-info-move"><a class="react-move-label mon-info-reference-link" href="${referenceEntryHref("moves", text)}">${typeIconSrc ? `<img class="react-move-type-icon" src="${typeIconSrc}" alt="${type} type" title="${type} type" loading="lazy" height="20" />` : ""}<span class="mon-info-move-name">${text}</span></a>${metadata ? `<small>${metadata}</small>` : ""}</li>`;
+	return `<li class="mon-info-move"><a class="react-move-label mon-info-reference-link" href="${escapeHtml(referenceEntryHref("moves", text))}">${typeIconSrc ? `<img class="react-move-type-icon" src="${escapeHtml(typeIconSrc)}" alt="${escapeHtml(type)} type" title="${escapeHtml(type)} type" loading="lazy" height="20" />` : ""}<span class="mon-info-move-name">${escapeHtml(text)}</span></a>${metadata ? `<small>${escapeHtml(metadata)}</small>` : ""}</li>`;
 }
 export function renderMovesHtml({ moves = {} } = {}) {
 	const movesSection = (label, arr) =>
 		!arr || !arr.length
 			? ""
-			: `<div class="mon-info-subblock"><h4>${label}</h4><ul>${arr.map((move) => renderMoveLine(move)).join("")}</ul></div>`;
+			: `<div class="mon-info-subblock"><h4>${escapeHtml(label)}</h4><ul>${arr.map((move) => renderMoveLine(move)).join("")}</ul></div>`;
 	const sections = Object.entries(moves)
 		.map(([learnMethod, entries]) =>
 			movesSection(moveGroupDisplayLabel(learnMethod, entries), entries),
@@ -610,7 +607,7 @@ export function renderNotesHtml(resolvedInfo = {}) {
 		resolvedInfo.notes.filter(Boolean).length
 		? `<div class="mon-info-block"><h3>Notes</h3><ul class="mon-info-notes">${resolvedInfo.notes
 				.filter((n) => n != null && n !== "")
-				.map((n) => `<li>${n}</li>`)
+				.map((n) => `<li>${escapeHtml(n)}</li>`)
 				.join("")}</ul></div>`
 		: "";
 }
@@ -618,11 +615,12 @@ export function renderNotesHtml(resolvedInfo = {}) {
 function renderGenderRatioValue(value) {
 	const ratio = parseMonInfoGenderRatio(value);
 	if (!ratio) return "";
-	if (ratio.text) return `<div class="value">${ratio.text}</div>`;
-	return `<div class="value" aria-label="${ratio.male}% male, ${ratio.female}% female"><span style="color:oklch(72% 0.16 250)"><span aria-hidden="true">♂</span> ${ratio.male}%</span> <span aria-hidden="true">/</span> <span style="color:oklch(76% 0.16 350)"><span aria-hidden="true">♀</span> ${ratio.female}%</span></div>`;
+	if (ratio.text) return `<div class="value">${escapeHtml(ratio.text)}</div>`;
+	return `<div class="value" aria-label="${escapeHtml(ratio.male)}% male, ${escapeHtml(ratio.female)}% female"><span style="color:oklch(72% 0.16 250)"><span aria-hidden="true">♂</span> ${escapeHtml(ratio.male)}%</span> <span aria-hidden="true">/</span> <span style="color:oklch(76% 0.16 350)"><span aria-hidden="true">♀</span> ${escapeHtml(ratio.female)}%</span></div>`;
 }
 
 export function renderProfileHtml({
+	gameKey = null,
 	resolvedInfo = {},
 	fallbackInfo = {},
 	abilities = [],
@@ -630,20 +628,23 @@ export function renderProfileHtml({
 	expGroup = null,
 	baseEggSteps = null,
 } = {}) {
+	const mechanics = monInfoMechanicsForGame(gameKey);
 	const sizeObj = resolvedInfo?.size || {};
 	const height = sizeObj.height ?? resolvedInfo?.height ?? null;
 	const weight = sizeObj.weight ?? resolvedInfo?.weight ?? null;
 	const genderObj = resolvedInfo?.gender || null;
-	const genderRatioText =
-		genderObj &&
-		(genderObj.maleRatio != null || genderObj.femaleRatio != null)
+	const genderRatioText = mechanics.hasGender
+		? genderObj &&
+			(genderObj.maleRatio != null || genderObj.femaleRatio != null)
 			? `${genderObj.maleRatio ?? "?"}% ♂ / ${genderObj.femaleRatio ?? "?"}% ♀`
-			: (resolvedInfo?.genderRatio ?? null);
-	const baseFriendshipProfile =
-		resolvedInfo?.battle?.baseFriendship ??
-		resolvedInfo?.baseFriendship ??
-		fallbackInfo?.baseHappiness ??
-		null;
+			: (resolvedInfo?.genderRatio ?? null)
+		: null;
+	const baseFriendshipProfile = mechanics.hasFriendship
+		? (resolvedInfo?.battle?.baseFriendship ??
+			resolvedInfo?.baseFriendship ??
+			fallbackInfo?.baseHappiness ??
+			null)
+		: null;
 	const battle = resolvedInfo?.battle || {};
 	const captureRate =
 		battle.captureRate ??
@@ -663,22 +664,22 @@ export function renderProfileHtml({
 			const itemsHtml = cleaned
 				.map((v) =>
 					label === "Abilities"
-						? `<a class="value-line mon-info-reference-link" href="${referenceEntryHref("abilities", v)}">${v}</a>`
-						: `<span class="value-line">${v}</span>`,
+						? `<a class="value-line mon-info-reference-link" href="${escapeHtml(referenceEntryHref("abilities", v))}">${escapeHtml(v)}</a>`
+						: `<span class="value-line">${escapeHtml(v)}</span>`,
 				)
 				.join("");
-			return `<div class="mon-info-profile-item"><div class="label">${label}</div><div class="value value--stacked">${itemsHtml}</div></div>`;
+			return `<div class="mon-info-profile-item"><div class="label">${escapeHtml(label)}</div><div class="value value--stacked">${itemsHtml}</div></div>`;
 		}
 		const v = String(valueOrArr);
 		if (!v) return "";
 		if (label === "Gender Ratio") {
-			return `<div class="mon-info-profile-item"><div class="label">${label}</div>${renderGenderRatioValue(valueOrArr)}</div>`;
+			return `<div class="mon-info-profile-item"><div class="label">${escapeHtml(label)}</div>${renderGenderRatioValue(valueOrArr)}</div>`;
 		}
 		const itemHtml =
 			label === "Base Friendship"
-				? `<div class="value">${v} / 255</div>`
-				: `<div class="value">${v}</div>`;
-		return `<div class="mon-info-profile-item"><div class="label">${label}</div>${itemHtml}</div>`;
+				? `<div class="value">${escapeHtml(v)} / 255</div>`
+				: `<div class="value">${escapeHtml(v)}</div>`;
+		return `<div class="mon-info-profile-item"><div class="label">${escapeHtml(label)}</div>${itemHtml}</div>`;
 	};
 	const primaryProfileItems = [
 		renderProfileItem("Abilities", abilities),

@@ -143,6 +143,37 @@
 	opacity: 0.9;
 }
 
+.mon-info-flavor-region {
+	display: grid;
+	gap: 6px;
+}
+
+.mon-info-language-field {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 8px;
+	font-size: 12px;
+	font-weight: 700;
+}
+
+.mon-info-language-note {
+	color: rgba(255, 255, 255, 0.66);
+	font-size: 12px;
+	text-align: right;
+}
+
+@media (max-width: 520px) {
+	.mon-info-language-field {
+		align-items: stretch;
+		flex-direction: column;
+	}
+
+	.mon-info-language-select {
+		width: 100%;
+	}
+}
+
 /* Two-column layout: left (type chart + stats) and right (details) */
 .mon-info-layout {
 	display: grid;

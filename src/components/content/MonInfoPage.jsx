@@ -64,6 +64,10 @@ export function MonInfoPage({ state }) {
 		nationalDexId: natiId,
 		allGames: true,
 	});
+	const monForRenderer = useMemo(
+		() => buildMonForRenderer(natiId, displayName),
+		[natiId, displayName],
+	);
 
 	useEffect(() => {
 		let isCancelled = false;
@@ -276,7 +280,7 @@ export function MonInfoPage({ state }) {
 			) : (
 				<MonInfoBody
 					gameKey={selectedGameKey}
-					mon={buildMonForRenderer(natiId, displayName)}
+					mon={monForRenderer}
 					formKey={selectedFormKey}
 					onEvolutionNavigate={goToMon}
 					onFormChange={(nextFormKey) =>

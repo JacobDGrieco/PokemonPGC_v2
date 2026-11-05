@@ -12,6 +12,7 @@
 		"dev:api": "node ./scripts/api-dev-server.mjs",
 		"build": "vite build && node ./scripts/write-dist-env.mjs && node ./scripts/check-performance-budgets.mjs",
 		"performance:check": "node ./scripts/check-performance-budgets.mjs",
+		"mon-info:manifest": "node ./scripts/build-mon-info-runtime-manifest.mjs",
 		"docs:check": "node ./scripts/check-documentation.mjs",
 		"preview": "vite preview",
 		"test": "node --test",

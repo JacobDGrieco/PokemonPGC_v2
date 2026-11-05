@@ -4,7 +4,24 @@ import fs from "node:fs";
 import path from "node:path";
 import { test } from "node:test";
 
-import { resolveMonInfoFormForGame } from "../src/utils/monInfoForms.js";
+import {
+	getMonInfoFormOptions,
+	resolveMonInfoFormForGame,
+} from "../src/utils/monInfoForms.js";
+import { getMonInfoManifestSpecies } from "../data/mon-info/manifest.js";
+import {
+	computeTypeDefenseBuckets,
+	monInfoTypesForGame,
+} from "../src/utils/monInfoTypes.js";
+import {
+	monInfoAbilitiesForGame,
+	monInfoEggStepsForGame,
+	monInfoMechanicsForGame,
+} from "../src/utils/monInfoProfile.js";
+import {
+	defaultMonInfoLanguage,
+	resolveLocalizedMonInfo,
+} from "../src/utils/monInfoLocalization.js";
 
 test("game changes retain supported forms and otherwise use the species default", () => {
 	const originalWindow = globalThis.window;
@@ -44,6 +61,156 @@ test("game changes retain supported forms and otherwise use the species default"
 	} finally {
 		globalThis.window = originalWindow;
 	}
+});
+
+test("the generated form manifest exposes every default and omits dangling catalog forms", () => {
+	const fullManifest = readJson(
+		"data",
+		"mon-info",
+		"catalog",
+		"manifest.json",
+	);
+	for (const [nationalDexId, species] of Object.entries(
+		fullManifest.species,
+	)) {
+		assert.ok(
+			species.forms[species.defaultFormKey],
+			`#${nationalDexId} has an invalid default form`,
+		);
+		assert.ok(getMonInfoManifestSpecies(nationalDexId));
+	}
+
+	const ogerpon = getMonInfoManifestSpecies(1017);
+	assert.equal(ogerpon.defaultFormKey, "teal-mask");
+	assert.ok(ogerpon.forms["teal-mask"]);
+	assert.deepEqual(
+		getMonInfoFormOptions(1017, "scarlet").map((form) => form.key),
+		[
+			"teal-mask",
+			"cornerstone-mask",
+			"hearthflame-mask",
+			"wellspring-mask",
+		],
+	);
+	assert.equal(resolveMonInfoFormForGame(1017, "scarlet", null), "teal-mask");
+});
+
+test("every catalog form shard matches the manifest and has unique game assignments", () => {
+	const fullManifest = readJson(
+		"data",
+		"mon-info",
+		"catalog",
+		"manifest.json",
+	);
+	let formCount = 0;
+	let profileCount = 0;
+	for (const [nationalDexId, species] of Object.entries(
+		fullManifest.species,
+	)) {
+		for (const [formKey, form] of Object.entries(species.forms)) {
+			formCount += 1;
+			const shard = readJson(
+				"data",
+				"mon-info",
+				"catalog",
+				...form.path.split("/"),
+			);
+			assert.equal(String(shard.nationalDexId), nationalDexId);
+			assert.equal(shard.formKey, formKey);
+			profileCount += shard.profiles.length;
+			const assignedGames = new Set();
+			for (const profile of shard.profiles) {
+				for (const gameKey of profile.appGameKeys || []) {
+					assert.equal(
+						assignedGames.has(gameKey),
+						false,
+						`Duplicate ${gameKey} assignment in ${form.path}`,
+					);
+					assignedGames.add(gameKey);
+					assert.ok(form.gameKeys.includes(gameKey));
+				}
+			}
+		}
+	}
+	assert.equal(formCount, fullManifest.formCount);
+	assert.equal(profileCount, fullManifest.entryCount);
+});
+
+test("historical type rules and profile mechanics follow the selected game", () => {
+	assert.equal(monInfoTypesForGame("red").length, 15);
+	assert.equal(
+		monInfoTypesForGame("black-national").includes("Fairy"),
+		false,
+	);
+	assert.equal(monInfoTypesForGame("x-national").length, 18);
+	assert.equal(
+		computeTypeDefenseBuckets(["Psychic"], "red").find(
+			(row) => row.type === "Ghost",
+		).mult,
+		0,
+	);
+	assert.equal(
+		computeTypeDefenseBuckets(["Steel"], "black-national").find(
+			(row) => row.type === "Dark",
+		).mult,
+		0.5,
+	);
+
+	assert.equal(monInfoMechanicsForGame("red").hasAbilities, false);
+	assert.deepEqual(
+		monInfoAbilitiesForGame(["Overgrow", "Chlorophyll (Hidden)"], "ruby"),
+		["Overgrow"],
+	);
+	assert.equal(
+		monInfoEggStepsForGame({ gameKey: "gold", hatchCounter: 20 }),
+		5120,
+	);
+	assert.equal(
+		monInfoEggStepsForGame({ gameKey: "sword", hatchCounter: 20 }),
+		2560,
+	);
+	assert.equal(
+		monInfoEggStepsForGame({ gameKey: "legendsarceus", hatchCounter: 20 }),
+		null,
+	);
+});
+
+test("localized Mon Info preserves a Japanese source entry and explicit translations", () => {
+	const info = {
+		displayName: "Bulbasaur",
+		flavor: "Japanese source text",
+		localizedNames: { ja: "フシギダネ", fr: "Bulbizarre" },
+		localizedFlavor: {
+			ja: "Japanese source text",
+			fr: "French description",
+		},
+	};
+	assert.equal(defaultMonInfoLanguage(info), "ja");
+	assert.deepEqual(resolveLocalizedMonInfo(info, "fr"), {
+		languageCode: "fr",
+		sourceLanguage: "ja",
+		displayName: "Bulbizarre",
+		formName: "",
+		genus: "",
+		flavor: "French description",
+		flavorLanguage: "fr",
+		hasLocalizedFlavor: true,
+	});
+});
+
+test("the compact routing manifest stays small and rehydrates catalog paths", () => {
+	const compactPath = path.join(
+		process.cwd(),
+		"data",
+		"mon-info",
+		"catalog",
+		"runtime-manifest.json",
+	);
+	assert.ok(fs.statSync(compactPath).size < 400_000);
+	assert.equal(
+		getMonInfoManifestSpecies(3).forms.male.path,
+		"0003/male.json",
+	);
 });
 
 test("the public Pokemon Info route uses the checked-in lazy catalog", () => {
@@ -116,12 +283,14 @@ test("the public Pokemon Info route uses the checked-in lazy catalog", () => {
 	);
 	assert.match(tierSource, /"pokemon-info": "done"/);
 	assert.match(loaderSource, /\.\/catalog\/\*\*\/\*\.json/);
+	assert.match(loaderSource, /!\.\/catalog\/runtime-manifest\.json/);
 	assert.match(loaderSource, /await importRuntimeShard\(num, formKey\)/);
 	assert.match(
 		loaderSource,
 		/export \{\s*getMonInfoManifestSpecies,\s*resolveRuntimeFormKey,\s*\} from "\.\/manifest\.js"/,
 	);
 	assert.match(manifestSource, /export function getMonInfoManifestSpecies/);
+	assert.match(manifestSource, /runtime-manifest\.json/);
 	assert.match(
 		monInfoBridgeSource,
 		/import \{ getMonInfoManifestSpecies \} from "\.\.\/\.\.\/data\/mon-info\/manifest\.js"/,
@@ -140,6 +309,13 @@ test("the public Pokemon Info route uses the checked-in lazy catalog", () => {
 	assert.doesNotMatch(monInfoBodySource, /<option value=""><\/option>/);
 	assert.match(legacyMonInfoSource, /effectiveFormKey === o\.key/);
 	assert.doesNotMatch(legacyMonInfoSource, /<option value=""/);
+	assert.match(monInfoBodySource, /monInfoLanguageOptions/);
+	assert.match(monInfoBodySource, /className="visually-hidden"/);
+	assert.match(legacyMonInfoSource, /escapeHtml\(localizedInfo\.flavor\)/);
+	assert.doesNotMatch(
+		readSource("src", "history.js"),
+		/if \(gk\.startsWith\("red"\).*return "red-blue"/,
+	);
 	assert.equal(runtimeManifest.species[1].name, "Bulbasaur");
 	assert.equal(runtimeManifest.species[1].forms.base.path, "0001/base.json");
 	assert.equal(runtimeManifest.species[2].name, "Ivysaur");

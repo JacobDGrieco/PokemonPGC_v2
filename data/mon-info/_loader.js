@@ -22,7 +22,11 @@ const monInfoModules = import.meta.glob([
 	"!./runtime-paths.js",
 ]);
 const runtimeCatalogModules = import.meta.glob(
-	["./catalog/**/*.json", "!./catalog/manifest.json"],
+	[
+		"./catalog/**/*.json",
+		"!./catalog/manifest.json",
+		"!./catalog/runtime-manifest.json",
+	],
 	{
 		import: "default",
 	},

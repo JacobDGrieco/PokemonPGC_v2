@@ -197,7 +197,10 @@ test("legacy evolution rendering shares clickable branch and current-node behavi
 	assert.equal((html.match(/>Slowpoke</g) || []).length, 1);
 	assert.match(html, /evolution-connector is-up/);
 	assert.match(html, /evolution-connector is-down/);
-	assert.match(html, /<strong>Trade<\/strong><small>King's Rock<\/small>/);
+	assert.match(
+		html,
+		/<strong>Trade<\/strong><small>King&#39;s Rock<\/small>/,
+	);
 	assert.match(html, /items\/held-items\/gen1-3\/kings-rock\.png/);
 	assert.match(
 		html,

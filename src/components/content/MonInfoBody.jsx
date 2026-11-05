@@ -24,6 +24,11 @@ import {
 	evolutionTargetId,
 	resolveEvolutionTargetForm,
 } from "../../utils/monInfoEvolution.js";
+import {
+	defaultMonInfoLanguage,
+	monInfoLanguageOptions,
+	resolveLocalizedMonInfo,
+} from "../../utils/monInfoLocalization.js";
 
 // Keep the evolution tree off the homepage bundle; Vite deduplicates this
 // stylesheet with the legacy modal's matching lazy import.
@@ -174,6 +179,16 @@ function StatsRadar({ stats, evYield }) {
 	return (
 		<div className="mon-info-block mon-info-stats">
 			<h3>Base Stats and EV Yield</h3>
+			<dl className="visually-hidden">
+				{statSeries.map((stat) => (
+					<React.Fragment key={`accessible-${stat.key}`}>
+						<dt>{stat.label}</dt>
+						<dd>{stat.displayValue}</dd>
+					</React.Fragment>
+				))}
+				<dt>Total</dt>
+				<dd>{total}</dd>
+			</dl>
 			<div className="mon-info-stats-graph">
 				<svg
 					viewBox={MON_INFO_STAT_VIEW_BOX}
@@ -724,10 +739,13 @@ export function MonInfoBody({
 }) {
 	const [data, setData] = useState(null);
 	const [loading, setLoading] = useState(true);
+	const [loadError, setLoadError] = useState("");
+	const [selectedLanguage, setSelectedLanguage] = useState("en");
 
 	useEffect(() => {
 		let cancelled = false;
 		setLoading(true);
+		setLoadError("");
 		resolveMonInfoData({ gameKey, mon, formKey })
 			.then((next) => {
 				if (!cancelled) {
@@ -735,29 +753,53 @@ export function MonInfoBody({
 					setLoading(false);
 				}
 			})
-			.catch(() => {
+			.catch((error) => {
 				if (!cancelled) {
 					setData(null);
+					setLoadError(error?.message || "Unable to load Mon Info.");
 					setLoading(false);
 				}
 			});
 		return () => {
 			cancelled = true;
 		};
-	}, [gameKey, mon?.id, mon?.natiId, formKey]);
+	}, [gameKey, mon, formKey]);
 
-	const flavor = data?.resolvedInfo?.flavor || "";
+	const languageOptions = useMemo(
+		() => monInfoLanguageOptions(data?.resolvedInfo),
+		[data?.resolvedInfo],
+	);
+	useEffect(() => {
+		setSelectedLanguage(defaultMonInfoLanguage(data?.resolvedInfo));
+	}, [data?.resolvedInfo]);
+	const localizedInfo = useMemo(
+		() => resolveLocalizedMonInfo(data?.resolvedInfo, selectedLanguage),
+		[data?.resolvedInfo, selectedLanguage],
+	);
+	const flavor = localizedInfo.flavor;
 	const displayName =
-		data?.resolvedInfo?.displayName ||
+		localizedInfo.displayName ||
 		mon?.name ||
 		`#${pad4(data?.natId || mon?.id || 0)}`;
 	const infoNotice = data && !data.hasLocalInfo;
 
-	if (loading) return <div className="moninfo-body">Loading…</div>;
+	if (loading)
+		return (
+			<div
+				className="moninfo-body"
+				role="status"
+				aria-live="polite"
+				aria-busy="true"
+			>
+				Loading…
+			</div>
+		);
 	if (!data)
 		return (
 			<div className="moninfo-body">
-				<div className="mon-info-empty">Unable to load Mon Info.</div>
+				<div className="mon-info-empty" role="alert">
+					{loadError || "Unable to load Mon Info."}
+				</div>
 			</div>
 		);
 
@@ -793,7 +835,10 @@ export function MonInfoBody({
 								))}
 							</div>
 							{data.formOptions?.length ? (
-								<div className="mon-info-form">
+								<label className="mon-info-form">
+									<span className="visually-hidden">
+										Form
+									</span>
 									<select
 										className="mon-info-form-select"
 										value={
@@ -813,15 +858,51 @@ export function MonInfoBody({
 											</option>
 										))}
 									</select>
-								</div>
+								</label>
 							) : null}
 						</div>
 					</div>
 				</div>
 			</div>
 
-			{flavor ? (
-				<div className="mon-info-block mon-info-flavor">{flavor}</div>
+			{flavor || languageOptions.length > 1 ? (
+				<div className="mon-info-flavor-region">
+					{languageOptions.length > 1 ? (
+						<label className="mon-info-language-field">
+							<span>Language</span>
+							<select
+								className="mon-info-language-select"
+								value={selectedLanguage}
+								onChange={(event) =>
+									setSelectedLanguage(event.target.value)
+								}
+							>
+								{languageOptions.map((language) => (
+									<option
+										key={language.code}
+										value={language.code}
+									>
+										{language.label}
+									</option>
+								))}
+							</select>
+						</label>
+					) : null}
+					{flavor ? (
+						<div
+							className="mon-info-block mon-info-flavor"
+							lang={localizedInfo.flavorLanguage}
+						>
+							{flavor}
+						</div>
+					) : null}
+					{!localizedInfo.hasLocalizedFlavor && flavor ? (
+						<div className="mon-info-language-note" role="note">
+							No description is available in the selected
+							language; showing the source entry.
+						</div>
+					) : null}
+				</div>
 			) : null}
 
 			<div className="mon-info-layout">

@@ -2,46 +2,84 @@ import { ensureMonInfoLoaded } from "../../data/mon-info/_loader.js";
 import { getMonInfoManifestSpecies } from "../../data/mon-info/manifest.js";
 
 export const MONINFO_GAME_PRIORITY = [
-	"legendsza",
-	"scarlet",
-	"violet",
-	"legendsarceus",
-	"brilliantdiamond-national",
-	"shiningpearl-national",
-	"sword",
-	"shield",
-	"letsgopikachu",
-	"letsgoeevee",
-	"ultrasun-alola",
-	"ultramoon-alola",
-	"sun-alola",
-	"moon-alola",
-	"omegaruby",
-	"alphasapphire",
-	"x-national",
-	"y-national",
-	"black2-national",
-	"white2-national",
-	"black-national",
-	"white-national",
-	"heartgold-national",
-	"soulsilver-national",
-	"platinum-national",
-	"diamond-national",
-	"pearl-national",
-	"firered-national",
-	"leafgreen-national",
-	"emerald-national",
-	"ruby-national",
-	"sapphire-national",
-	"crystal",
-	"gold",
-	"silver",
-	"yellow",
 	"red",
 	"blue",
 	"green",
+	"yellow",
+	"gold",
+	"silver",
+	"crystal",
+	"ruby-national",
+	"sapphire-national",
+	"emerald-national",
+	"firered-national",
+	"leafgreen-national",
+	"diamond-national",
+	"pearl-national",
+	"platinum-national",
+	"heartgold-national",
+	"soulsilver-national",
+	"black-national",
+	"white-national",
+	"black2-national",
+	"white2-national",
+	"x-national",
+	"y-national",
+	"omegaruby-national",
+	"alphasapphire-national",
+	"sun-alola",
+	"moon-alola",
+	"ultrasun-alola",
+	"ultramoon-alola",
+	"letsgopikachu",
+	"letsgoeevee",
+	"sword",
+	"shield",
+	"swordioa",
+	"shieldioa",
+	"swordct",
+	"shieldct",
+	"brilliantdiamond-national",
+	"shiningpearl-national",
+	"legendsarceus",
+	"scarlet",
+	"violet",
+	"scarlettm",
+	"violettm",
+	"scarletid",
+	"violetid",
+	"legendsza",
+	"legendszamd",
 ];
+
+/** Collapse regional-Dex aliases while preserving releases and DLC identities. */
+export function canonicalMonInfoGameKey(gameKey) {
+	const key = String(gameKey || "").toLowerCase();
+	if (/^(ruby|sapphire|emerald)(?:-national)?$/.test(key))
+		return `${key.split("-")[0]}-national`;
+	if (/^(firered|leafgreen)(?:-national)?$/.test(key))
+		return `${key.split("-")[0]}-national`;
+	if (/^(diamond|pearl|platinum)(?:-national)?$/.test(key))
+		return `${key.split("-")[0]}-national`;
+	if (/^(heartgold|soulsilver)(?:-national)?$/.test(key))
+		return `${key.split("-")[0]}-national`;
+	if (/^(black2?|white2?)(?:-national)?$/.test(key))
+		return `${key.split("-")[0]}-national`;
+	if (/^[xy](?:-|$)/.test(key)) return `${key.charAt(0)}-national`;
+	if (/^(omegaruby|alphasapphire)(?:-national)?$/.test(key))
+		return `${key.split("-")[0]}-national`;
+	if (/^sun-(?:alola|melemele|akala|ulaula|poni)$/.test(key))
+		return "sun-alola";
+	if (/^moon-(?:alola|melemele|akala|ulaula|poni)$/.test(key))
+		return "moon-alola";
+	if (/^ultrasun-(?:alola|melemele|akala|ulaula|poni)$/.test(key))
+		return "ultrasun-alola";
+	if (/^ultramoon-(?:alola|melemele|akala|ulaula|poni)$/.test(key))
+		return "ultramoon-alola";
+	if (/^(brilliantdiamond|shiningpearl)(?:-national)?$/.test(key))
+		return `${key.split("-")[0]}-national`;
+	return key;
+}
 
 export function pad4(value) {
 	return String(Number(value) || 0).padStart(4, "0");
@@ -69,44 +107,59 @@ export function normalizeMonInfoComboKeys() {
 }
 
 export function monInfoLabelForGameKey(gameKey) {
-	const gk = String(gameKey || "").toLowerCase();
+	const gk = canonicalMonInfoGameKey(gameKey);
 	if (!gk) return "Unknown";
-	if (gk.startsWith("legendsza")) return "Legends: Z-A";
-	if (gk.startsWith("scarlet") || gk.startsWith("violet"))
-		return "Scarlet / Violet";
-	if (gk.startsWith("legendsarceus")) return "Legends: Arceus";
-	if (gk.startsWith("brilliantdiamond") || gk.startsWith("shiningpearl"))
-		return "Brilliant Diamond / Shining Pearl";
-	if (gk.startsWith("sword") || gk.startsWith("shield"))
-		return "Sword / Shield";
-	if (gk.startsWith("letsgopikachu") || gk.startsWith("letsgoeevee"))
-		return `Let's Go Pikachu / Eevee`;
-	if (gk.startsWith("ultrasun") || gk.startsWith("ultramoon"))
-		return "Ultra Sun / Ultra Moon";
-	if (gk.startsWith("sun") || gk.startsWith("moon")) return "Sun / Moon";
-	if (gk.startsWith("omegaruby") || gk.startsWith("alphasapphire"))
-		return "Omega Ruby / Alpha Sapphire";
-	if (gk.startsWith("x-") || gk.startsWith("y-")) return "X / Y";
-	if (gk.startsWith("black2") || gk.startsWith("white2"))
-		return "Black 2 / White 2";
-	if (gk.startsWith("black") || gk.startsWith("white"))
-		return "Black / White";
-	if (gk.startsWith("heartgold") || gk.startsWith("soulsilver"))
-		return "HeartGold / SoulSilver";
-	if (gk.startsWith("platinum")) return "Platinum";
-	if (gk.startsWith("diamond") || gk.startsWith("pearl"))
-		return "Diamond / Pearl";
-	if (gk.startsWith("firered") || gk.startsWith("leafgreen"))
-		return "FireRed / LeafGreen";
-	if (gk.startsWith("emerald")) return "Emerald";
-	if (gk.startsWith("ruby") || gk.startsWith("sapphire"))
-		return "Ruby / Sapphire";
-	if (gk.startsWith("crystal")) return "Crystal";
-	if (gk.startsWith("silver")) return "Silver";
-	if (gk.startsWith("gold")) return "Gold";
-	if (gk.startsWith("yellow")) return "Yellow";
-	if (gk.startsWith("red") || gk.startsWith("blue")) return "Red / Blue";
-	if (gk.startsWith("green")) return "Green";
+	const labels = {
+		red: "Red",
+		blue: "Blue",
+		green: "Green (Japan)",
+		yellow: "Yellow",
+		gold: "Gold",
+		silver: "Silver",
+		crystal: "Crystal",
+		"ruby-national": "Ruby",
+		"sapphire-national": "Sapphire",
+		"emerald-national": "Emerald",
+		"firered-national": "FireRed",
+		"leafgreen-national": "LeafGreen",
+		"diamond-national": "Diamond",
+		"pearl-national": "Pearl",
+		"platinum-national": "Platinum",
+		"heartgold-national": "HeartGold",
+		"soulsilver-national": "SoulSilver",
+		"black-national": "Black",
+		"white-national": "White",
+		"black2-national": "Black 2",
+		"white2-national": "White 2",
+		"x-national": "X",
+		"y-national": "Y",
+		"omegaruby-national": "Omega Ruby",
+		"alphasapphire-national": "Alpha Sapphire",
+		"sun-alola": "Sun",
+		"moon-alola": "Moon",
+		"ultrasun-alola": "Ultra Sun",
+		"ultramoon-alola": "Ultra Moon",
+		letsgopikachu: "Let's Go, Pikachu!",
+		letsgoeevee: "Let's Go, Eevee!",
+		sword: "Sword",
+		shield: "Shield",
+		swordioa: "Sword: The Isle of Armor",
+		shieldioa: "Shield: The Isle of Armor",
+		swordct: "Sword: The Crown Tundra",
+		shieldct: "Shield: The Crown Tundra",
+		"brilliantdiamond-national": "Brilliant Diamond",
+		"shiningpearl-national": "Shining Pearl",
+		legendsarceus: "Legends: Arceus",
+		scarlet: "Scarlet",
+		violet: "Violet",
+		scarlettm: "Scarlet: The Teal Mask",
+		violettm: "Violet: The Teal Mask",
+		scarletid: "Scarlet: The Indigo Disk",
+		violetid: "Violet: The Indigo Disk",
+		legendsza: "Legends: Z-A",
+		legendszamd: "Legends: Z-A, Mega Dimension",
+	};
+	if (labels[gk]) return labels[gk];
 	return gk
 		.split(/[-_]/g)
 		.filter(Boolean)
@@ -127,14 +180,16 @@ export function sortGameKeysForMonInfo(keys) {
 }
 
 export function buildMonInfoGameOptions(gameKeys) {
-	const ordered = sortGameKeysForMonInfo(gameKeys);
-	const seenLabels = new Set();
+	const ordered = sortGameKeysForMonInfo(
+		gameKeys.map(canonicalMonInfoGameKey),
+	);
+	const seenKeys = new Set();
 	const options = [];
 
 	for (const key of ordered) {
+		if (!key || seenKeys.has(key)) continue;
 		const label = monInfoLabelForGameKey(key);
-		if (seenLabels.has(label)) continue;
-		seenLabels.add(label);
+		seenKeys.add(key);
 		options.push({ key, label });
 	}
 

@@ -1,6 +1,8 @@
-/** Read-only accessors for the generated Mon Info routing manifest. */
-import runtimeManifest from "./catalog/manifest.json" with { type: "json" };
-import { runtimeFormSlug } from "./runtime-paths.js";
+/** Read-only accessors for the compact generated Mon Info routing manifest. */
+import compactManifest from "./catalog/runtime-manifest.json" with { type: "json" };
+import { runtimeFormSlug, runtimeShardKey } from "./runtime-paths.js";
+
+const speciesCache = new Map();
 
 function baseNum(natiId) {
 	const num = parseInt(String(natiId).split("-")[0], 10);
@@ -10,7 +12,34 @@ function baseNum(natiId) {
 /** Return the generated catalog identity without loading a data shard. */
 export function getMonInfoManifestSpecies(natiId) {
 	const num = baseNum(natiId);
-	return num == null ? null : runtimeManifest.species?.[num] || null;
+	if (num == null) return null;
+	if (speciesCache.has(num)) return speciesCache.get(num);
+	const compactSpecies = compactManifest.s?.[num];
+	if (!compactSpecies) return null;
+	const [name, defaultFormKey, compactForms = {}] = compactSpecies;
+	const forms = Object.fromEntries(
+		Object.entries(compactForms).map(([formKey, compactForm]) => {
+			const [label, gameKeyIndexes = []] = compactForm;
+			return [
+				formKey,
+				{
+					label,
+					path: runtimeShardKey(num, formKey),
+					gameKeys: gameKeyIndexes
+						.map((index) => compactManifest.g?.[index])
+						.filter(Boolean),
+				},
+			];
+		}),
+	);
+	const species = {
+		name,
+		defaultFormKey,
+		forms,
+		gameKeys: [...new Set(Object.values(forms).flatMap((form) => form.gameKeys))],
+	};
+	speciesCache.set(num, species);
+	return species;
 }
 
 /** Match exact authored form keys first, then their stable URL-safe slug. */

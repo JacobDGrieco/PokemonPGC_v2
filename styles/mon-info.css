@@ -245,7 +245,8 @@
 
 /* Shared dropdown look */
 #moninfoGameSelect,
-.mon-info-form-select {
+.mon-info-form-select,
+.mon-info-language-select {
 	font: inherit;
 	font-size: 14px;
 	line-height: 2;
@@ -261,14 +262,16 @@
 
 /* Slight hover pop */
 #moninfoGameSelect:hover,
-.mon-info-form-select:hover {
+.mon-info-form-select:hover,
+.mon-info-language-select:hover {
 	background: rgba(0, 0, 0, 0.24);
 	border-color: rgba(255, 255, 255, 0.22);
 }
 
 /* Focus ring */
 #moninfoGameSelect:focus,
-.mon-info-form-select:focus {
+.mon-info-form-select:focus,
+.mon-info-language-select:focus {
 	outline: none;
 	border-color: rgba(255, 255, 255, 0.32);
 	box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
@@ -276,7 +279,8 @@
 
 /* Disabled */
 #moninfoGameSelect:disabled,
-.mon-info-form-select:disabled {
+.mon-info-form-select:disabled,
+.mon-info-language-select:disabled {
 	opacity: 0.55;
 	cursor: not-allowed;
 }
@@ -291,8 +295,13 @@
 	min-width: 160px;
 }
 
+.mon-info-language-select {
+	min-width: 180px;
+}
+
 #moninfoGameSelect option,
-.mon-info-form-select option {
+.mon-info-form-select option,
+.mon-info-language-select option {
 	color: rgb(179, 176, 176);
 	background: rgba(0, 0, 0, 0.75);
 }

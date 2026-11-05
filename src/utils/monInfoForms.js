@@ -1,4 +1,8 @@
 /** Shared Mon Info form availability and game-transition rules. */
+import {
+	getMonInfoManifestSpecies,
+	resolveRuntimeFormKey,
+} from "../../data/mon-info/manifest.js";
 
 /** Match form catalog game keys, including DLC suffix variants. */
 export function gameMatchesMonInfoForm(metaGames, gameKey) {
@@ -13,12 +17,18 @@ export function gameMatchesMonInfoForm(metaGames, gameKey) {
 
 /** Return only the forms that exist in the selected game. */
 export function getMonInfoFormOptions(nationalDexId, gameKey) {
+	const manifestSpecies = getMonInfoManifestSpecies(nationalDexId);
 	const catalogForms =
 		(nationalDexId != null &&
 			globalThis.window?.DATA?.formsCatalog?.[nationalDexId]) ||
 		{};
 	const formOptions = [];
-	for (const [formKey, metadata] of Object.entries(catalogForms)) {
+	for (const [formKey, manifestMetadata] of Object.entries(
+		manifestSpecies?.forms || {},
+	)) {
+		const metadata = catalogForms[formKey];
+		if (!gameMatchesMonInfoForm(manifestMetadata?.gameKeys, gameKey))
+			continue;
 		if (
 			metadata &&
 			Array.isArray(metadata.games) &&
@@ -29,7 +39,9 @@ export function getMonInfoFormOptions(nationalDexId, gameKey) {
 		}
 		formOptions.push({
 			key: String(formKey),
-			label: metadata?.label ? String(metadata.label) : String(formKey),
+			label: metadata?.label
+				? String(metadata.label)
+				: String(manifestMetadata?.label || formKey),
 		});
 	}
 	return formOptions;
@@ -54,12 +66,15 @@ export function resolveMonInfoFormForGame(
 	}
 	if (formOptions.length) return preferredMonInfoFormKey(formOptions);
 
-	const catalogForms =
-		(nationalDexId != null &&
-			globalThis.window?.DATA?.formsCatalog?.[nationalDexId]) ||
-		{};
-	return preferredMonInfoFormKey(
-		Object.keys(catalogForms).map((key) => ({ key })),
+	const manifestSpecies = getMonInfoManifestSpecies(nationalDexId);
+	const gameForms = Object.entries(manifestSpecies?.forms || {})
+		.filter(([, metadata]) =>
+			gameMatchesMonInfoForm(metadata?.gameKeys, gameKey),
+		)
+		.map(([key]) => ({ key }));
+	return (
+		preferredMonInfoFormKey(gameForms) ||
+		resolveRuntimeFormKey(nationalDexId, requestedFormKey)
 	);
 }
 
