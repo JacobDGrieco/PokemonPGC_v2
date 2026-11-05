@@ -27,11 +27,13 @@ import {
 	monInfoGenerationForGame,
 	monInfoTypesForGame,
 } from "../utils/monInfoTypes.js";
+import { parseHyperspaceLumioseRatings } from "../utils/monInfoLocations.js";
 
 // This renderer is loaded on demand, so its feature-specific styles should be
 // loaded on demand too instead of increasing the homepage CSS payload.
 if (typeof document !== "undefined") {
 	void import("../../styles/mon-info-evolution.css");
+	void import("../../styles/mon-info-locations.css");
 }
 
 export function renderListRow(label, valueOrArr) {
@@ -506,6 +508,27 @@ export function renderLocationsHtml({
 	const items = locations
 		.map((loc) => {
 			if (typeof loc === "string") return `<li>${escapeHtml(loc)}</li>`;
+			const hyperspaceRatings = parseHyperspaceLumioseRatings(loc);
+			if (hyperspaceRatings.length) {
+				const gameLabel = loc.extra || loc.games || "";
+				const ratingRows = hyperspaceRatings
+					.map(({ type, starCounts }) => {
+						const ratings = starCounts
+							.map((starCount) => {
+								const label = `${starCount} ${starCount === 1 ? "star" : "stars"}`;
+								const stars = Array.from(
+									{ length: starCount },
+									() =>
+										`<img src="${escapeHtml(assetPath("icons/gen9/donut-star.png"))}" alt="" aria-hidden="true" loading="lazy" width="14" height="14" />`,
+								).join("");
+								return `<span class="mon-info-hyperspace-rating" aria-label="${escapeHtml(label)}">${stars}</span>`;
+							})
+							.join('<span aria-hidden="true">/</span>');
+						return `<li><span class="mon-info-hyperspace-type">${escapeHtml(type)}</span><span class="mon-info-hyperspace-ratings">${ratings}</span></li>`;
+					})
+					.join("");
+				return `<li class="mon-info-hyperspace-location"><div class="mon-info-location-heading"><strong>${escapeHtml(loc.area)}</strong>${gameLabel ? ` <span class="small">(${escapeHtml(gameLabel)})</span>` : ""}</div><ul class="mon-info-hyperspace-types">${ratingRows}</ul></li>`;
+			}
 			const area = loc.area || "";
 			const notes = loc.notes || "";
 			const extra = [];

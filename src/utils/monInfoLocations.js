@@ -58,6 +58,43 @@ function formatLevelNotes(label, levelRanges) {
 }
 
 /**
+ * Turn Mega Dimension's compact star note into grouped type encounters.
+ * Keeping this as presentation parsing preserves the checked-in source text
+ * while giving both Mon Info renderers the same structured output.
+ */
+export function parseHyperspaceLumioseRatings(location) {
+	if (
+		String(location?.area || "")
+			.trim()
+			.toLowerCase() !== "hyperspace lumiose"
+	) {
+		return [];
+	}
+
+	const noteSegments = String(location?.notes || "")
+		.split(",")
+		.map((segment) => segment.trim())
+		.filter(Boolean);
+	if (!noteSegments.length) return [];
+
+	const ratingsByType = new Map();
+	for (const segment of noteSegments) {
+		const match = segment.match(/^([^,()]+?)\s*\((\d+)\s+stars?\)$/i);
+		if (!match) return [];
+		const type = match[1].trim();
+		const starCount = Number(match[2]);
+		if (!type || !Number.isInteger(starCount) || starCount < 1) return [];
+		if (!ratingsByType.has(type)) ratingsByType.set(type, []);
+		ratingsByType.get(type).push(starCount);
+	}
+
+	return [...ratingsByType].map(([type, starCounts]) => ({
+		type,
+		starCounts,
+	}));
+}
+
+/**
  * Merge adjacent encounter levels within each game before combining versions
  * whose final ranges match. Encounter rates stay in the source payload; they
  * are intentionally excluded because this UI describes where and how a
@@ -164,5 +201,14 @@ export function normalizeMonInfoLocations(locations) {
 			notes,
 			extra: gameLabels.length ? gameLabels.join("/") : method || rate,
 		}),
+	);
+}
+
+/** Merge base-game and DLC encounter lists before applying normal deduplication. */
+export function mergeMonInfoReleaseLocations(infos = []) {
+	return normalizeMonInfoLocations(
+		infos.flatMap((info) =>
+			Array.isArray(info?.locations) ? info.locations : [],
+		),
 	);
 }

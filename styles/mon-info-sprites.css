@@ -1,0 +1,67 @@
+/* Dedicated Mon Info sprite-gallery controls, loaded with the feature route. */
+.moninfo-subtitle {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 6px;
+}
+
+.moninfo-dlc-badge {
+	font-size: 10px;
+	opacity: 0.72;
+}
+
+.mon-info-assets {
+	margin-top: 16px;
+}
+
+.mon-info-assets-heading {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+}
+
+.mon-info-assets-heading h3 {
+	margin: 0;
+}
+
+.mon-info-model-viewer-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	min-height: 44px;
+	border: 1px solid #34343d;
+	border-radius: 999px;
+	background: #17171d;
+	color: rgba(255, 255, 255, 0.72);
+	padding: 7px 12px;
+	font-size: 12px;
+	font-weight: 800;
+}
+
+.mon-info-model-viewer-btn:disabled {
+	cursor: not-allowed;
+	opacity: 0.66;
+}
+
+.mon-info-model-viewer-btn small {
+	border-radius: 999px;
+	background: #24242c;
+	padding: 3px 7px;
+	font-size: 9px;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+}
+
+@media (max-width: 520px) {
+	.mon-info-assets-heading {
+		align-items: stretch;
+		flex-direction: column;
+	}
+
+	.mon-info-model-viewer-btn {
+		width: 100%;
+	}
+}

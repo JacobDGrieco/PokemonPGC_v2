@@ -39,12 +39,33 @@ export function getMonInfoFormOptions(nationalDexId, gameKey) {
 		}
 		formOptions.push({
 			key: String(formKey),
-			label: metadata?.label
-				? String(metadata.label)
-				: String(manifestMetadata?.label || formKey),
+			label: monInfoFormDisplayLabel(
+				formKey,
+				metadata?.label || manifestMetadata?.label,
+			),
 		});
 	}
 	return formOptions;
+}
+
+/** Return the union of forms available across one base release and its DLC. */
+export function getMonInfoFormOptionsForGames(nationalDexId, gameKeys = []) {
+	const optionsByKey = new Map();
+	for (const gameKey of gameKeys) {
+		for (const option of getMonInfoFormOptions(nationalDexId, gameKey)) {
+			if (!optionsByKey.has(option.key))
+				optionsByKey.set(option.key, option);
+		}
+	}
+	return [...optionsByKey.values()];
+}
+
+/** Keep internal storage keys such as `base` out of user-facing controls. */
+function monInfoFormDisplayLabel(formKey, authoredLabel) {
+	const label = String(authoredLabel || formKey);
+	return String(formKey).toLowerCase() === "base" && /^base$/i.test(label)
+		? "Normal"
+		: label;
 }
 
 /**
@@ -75,6 +96,28 @@ export function resolveMonInfoFormForGame(
 	return (
 		preferredMonInfoFormKey(gameForms) ||
 		resolveRuntimeFormKey(nationalDexId, requestedFormKey)
+	);
+}
+
+/** Preserve DLC-only forms while the combined base-release option is active. */
+export function resolveMonInfoFormForGames(
+	nationalDexId,
+	gameKeys = [],
+	requestedFormKey = null,
+) {
+	const formOptions = getMonInfoFormOptionsForGames(nationalDexId, gameKeys);
+	const normalizedRequestedFormKey =
+		requestedFormKey != null ? String(requestedFormKey) : null;
+	if (
+		formOptions.some((option) => option.key === normalizedRequestedFormKey)
+	) {
+		return normalizedRequestedFormKey;
+	}
+	if (formOptions.length) return preferredMonInfoFormKey(formOptions);
+	return resolveMonInfoFormForGame(
+		nationalDexId,
+		gameKeys[0] || null,
+		requestedFormKey,
 	);
 }
 

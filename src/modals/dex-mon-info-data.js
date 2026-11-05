@@ -43,7 +43,7 @@ export async function resolveMonInfoData({ gameKey, mon, formKey = null }) {
 	const natId = mon?.natiId ?? mon?.natId ?? mon?.nationalId ?? null;
 	const key = natId ?? mon?.id;
 	const formOpts = collectCatalogFormOptions(natId, gameKey);
-	const hasForms = formOpts.length > 0;
+	const hasFormChoices = formOpts.length > 1;
 	const effectiveFormKey = resolveMonInfoFormForGame(natId, gameKey, formKey);
 
 	await ensureMonInfoLoaded(key, effectiveFormKey);
@@ -67,7 +67,7 @@ export async function resolveMonInfoData({ gameKey, mon, formKey = null }) {
 		natId,
 		key,
 		formOpts,
-		hasForms,
+		hasFormChoices,
 		effectiveFormKey,
 		info,
 		formOverride,

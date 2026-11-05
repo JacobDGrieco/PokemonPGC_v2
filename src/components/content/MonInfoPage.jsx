@@ -5,9 +5,9 @@ import { navigateToState } from "../../react-bridge/navigation.js";
 import {
 	buildMonInfoGameOptions,
 	findGameKeysForMonInfoNati,
+	findMonInfoGameOption,
 	getHomeDexMons,
 	getMonInfoDisplayName,
-	monInfoLabelForGameKey,
 	pad4,
 	pickPreferredGameForMon,
 } from "../../react-bridge/monInfo.js";
@@ -16,7 +16,7 @@ import {
 	advancePokemonSpriteFallback,
 	pokemonSpriteCandidates,
 } from "../../utils/pokemonSprite.js";
-import { resolveMonInfoFormForGame } from "../../utils/monInfoForms.js";
+import { resolveMonInfoFormForGames } from "../../utils/monInfoForms.js";
 
 function buildMonForRenderer(natiId, displayName) {
 	return {
@@ -51,13 +51,14 @@ export function MonInfoPage({ state }) {
 	const gameOptions = buildMonInfoGameOptions(
 		findGameKeysForMonInfoNati(natiId),
 	);
-	const optionKeys = gameOptions.map((option) => option.key);
-	const selectedGameKey = optionKeys.includes(state?.monInfoGameKey)
-		? state.monInfoGameKey
-		: optionKeys[0] || null;
-	const selectedFormKey = resolveMonInfoFormForGame(
+	const selectedGameOption = findMonInfoGameOption(
+		gameOptions,
+		state?.monInfoGameKey,
+	);
+	const selectedGameKey = selectedGameOption?.key || null;
+	const selectedFormKey = resolveMonInfoFormForGames(
 		natiId,
-		selectedGameKey,
+		selectedGameOption?.gameKeys || [selectedGameKey],
 		state?.monInfoForm || null,
 	);
 	const homeHeaderSpriteCandidates = pokemonSpriteCandidates({
@@ -112,13 +113,19 @@ export function MonInfoPage({ state }) {
 
 	const goToMon = (targetId, requestedFormKey = null) => {
 		if (!targetId) return;
-		const targetGameKey = pickPreferredGameForMon(
-			targetId,
+		const targetGameOptions = buildMonInfoGameOptions(
+			findGameKeysForMonInfoNati(targetId),
+		);
+		const targetGameOption = findMonInfoGameOption(
+			targetGameOptions,
 			selectedGameKey,
 		);
-		const targetFormKey = resolveMonInfoFormForGame(
+		const targetGameKey =
+			targetGameOption?.key ||
+			pickPreferredGameForMon(targetId, selectedGameKey);
+		const targetFormKey = resolveMonInfoFormForGames(
 			targetId,
-			targetGameKey,
+			targetGameOption?.gameKeys || [targetGameKey],
 			requestedFormKey,
 		);
 		navigateToState({
@@ -163,9 +170,17 @@ export function MonInfoPage({ state }) {
 							#{pad4(natiId)} — {displayName}
 						</h2>
 						<div className="moninfo-subtitle small">
-							{selectedGameKey
-								? monInfoLabelForGameKey(selectedGameKey)
-								: ""}
+							<span>{selectedGameOption?.label || ""}</span>
+							{selectedGameOption?.expansions?.map(
+								(expansion) => (
+									<span
+										key={expansion.key}
+										className="pill moninfo-dlc-badge"
+									>
+										DLC · {expansion.label}
+									</span>
+								),
+							)}
 						</div>
 					</div>
 				</div>
@@ -241,9 +256,13 @@ export function MonInfoPage({ state }) {
 							value={selectedGameKey || ""}
 							onChange={(event) => {
 								const nextGameKey = event.target.value || null;
-								const nextFormKey = resolveMonInfoFormForGame(
-									natiId,
+								const nextGameOption = findMonInfoGameOption(
+									gameOptions,
 									nextGameKey,
+								);
+								const nextFormKey = resolveMonInfoFormForGames(
+									natiId,
+									nextGameOption?.gameKeys || [nextGameKey],
 									state?.monInfoForm || null,
 								);
 								navigateToState({
@@ -280,6 +299,7 @@ export function MonInfoPage({ state }) {
 			) : (
 				<MonInfoBody
 					gameKey={selectedGameKey}
+					gameKeys={selectedGameOption?.gameKeys || []}
 					mon={monForRenderer}
 					formKey={selectedFormKey}
 					onEvolutionNavigate={goToMon}

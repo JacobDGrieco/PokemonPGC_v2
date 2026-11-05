@@ -20,17 +20,19 @@ export function monInfoLanguageLabel(languageCode) {
 	return LANGUAGE_LABELS[languageCode] || String(languageCode || "Unknown");
 }
 
-export function monInfoLanguageOptions(info = {}) {
+export function monInfoLanguageOptionsForInfos(infos = []) {
 	const languages = new Set(["en"]);
-	for (const source of [
-		info.localizedNames,
-		info.localizedFormNames,
-		info.localizedFormLabels,
-		info.localizedGenera,
-		info.localizedFlavor,
-	]) {
-		for (const languageCode of Object.keys(source || {})) {
-			languages.add(languageCode);
+	for (const info of infos) {
+		for (const source of [
+			info?.localizedNames,
+			info?.localizedFormNames,
+			info?.localizedFormLabels,
+			info?.localizedGenera,
+			info?.localizedFlavor,
+		]) {
+			for (const languageCode of Object.keys(source || {})) {
+				languages.add(languageCode);
+			}
 		}
 	}
 	return [...languages]
@@ -47,6 +49,10 @@ export function monInfoLanguageOptions(info = {}) {
 			code: languageCode,
 			label: monInfoLanguageLabel(languageCode),
 		}));
+}
+
+export function monInfoLanguageOptions(info = {}) {
+	return monInfoLanguageOptionsForInfos([info]);
 }
 
 /** Infer the language of the stored source entry instead of labelling Japanese Green text as English. */

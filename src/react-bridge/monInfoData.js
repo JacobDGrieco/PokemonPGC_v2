@@ -6,11 +6,17 @@ import {
 } from "../utils/moveReference.js";
 import {
 	getMonInfoFormOptions,
+	getMonInfoFormOptionsForGames,
 	resolveMonInfoFormForGame,
+	resolveMonInfoFormForGames,
 } from "../utils/monInfoForms.js";
+import { monInfoLabelForGameKey } from "../utils/monInfoGames.js";
 import { pokemonSpriteCandidates } from "../utils/pokemonSprite.js";
 import { normalizeEvolutionPaths as normalizeSharedEvolutionPaths } from "../utils/monInfoEvolution.js";
-import { normalizeMonInfoLocations } from "../utils/monInfoLocations.js";
+import {
+	mergeMonInfoReleaseLocations,
+	normalizeMonInfoLocations,
+} from "../utils/monInfoLocations.js";
 import {
 	monInfoAbilitiesForGame,
 	monInfoEggStepsForGame,
@@ -50,6 +56,34 @@ function mergeInfo(base, patch) {
 	return out;
 }
 
+/** Resolve one exact version after the species shard has registered all profiles. */
+function resolveRegisteredGameInfo(gameKey, natId, mon, requestedFormKey) {
+	const bucket = resolveMonInfoBucket(gameKey);
+	const info =
+		(natId != null && bucket?.[natId]) || bucket?.[mon?.id] || null;
+	const effectiveFormKey = resolveMonInfoFormForGame(
+		natId,
+		gameKey,
+		requestedFormKey,
+	);
+	const formOverride =
+		effectiveFormKey && natId != null
+			? window.DATA?.monInfoForms?.[gameKey]?.[natId]?.[
+					effectiveFormKey
+				] || null
+			: null;
+
+	return {
+		gameKey,
+		label: monInfoLabelForGameKey(gameKey),
+		info,
+		formOverride,
+		effectiveFormKey,
+		effectiveInfo: mergeInfo(info, formOverride),
+		hasLocalInfo: Boolean(info || formOverride),
+	};
+}
+
 export function normalizeMovesForRender(moves) {
 	if (!moves || typeof moves !== "object") return [];
 	return Object.entries(moves)
@@ -68,31 +102,59 @@ export const normalizeEvolutionPaths = normalizeSharedEvolutionPaths;
 
 export async function resolveMonInfoData({
 	gameKey,
+	gameKeys = [gameKey],
 	mon,
 	formKey = null,
 } = {}) {
 	const natId = mon?.natiId ?? mon?.natId ?? mon?.nationalId ?? null;
 	const key = natId ?? mon?.id;
-	const formOptions = getMonInfoFormOptions(natId, gameKey);
-	const effectiveFormKey = resolveMonInfoFormForGame(natId, gameKey, formKey);
+	const formOptions = getMonInfoFormOptionsForGames(natId, gameKeys);
+	const effectiveFormKey = resolveMonInfoFormForGames(
+		natId,
+		gameKeys,
+		formKey,
+	);
 
 	await ensureMonInfoLoaded(key, effectiveFormKey);
 
-	const bucket = resolveMonInfoBucket(gameKey);
-	const info =
-		(natId != null && bucket?.[natId]) || bucket?.[mon?.id] || null;
-	const formOverride =
-		effectiveFormKey && natId != null
-			? window.DATA?.monInfoForms?.[gameKey]?.[natId]?.[
-					effectiveFormKey
-				] || null
-			: null;
-	const effectiveInfo = mergeInfo(info, formOverride);
+	const candidateGameKeys = [
+		...new Set([gameKey, ...gameKeys].filter(Boolean)),
+	];
+	const formGameKeys = candidateGameKeys.filter((exactGameKey) =>
+		getMonInfoFormOptions(natId, exactGameKey).some(
+			(option) => option.key === effectiveFormKey,
+		),
+	);
+	const exactGameKeys = formGameKeys.length
+		? formGameKeys
+		: candidateGameKeys;
+	const registeredGameEntries = exactGameKeys.map((exactGameKey) =>
+		resolveRegisteredGameInfo(exactGameKey, natId, mon, effectiveFormKey),
+	);
+	const primaryGameEntry =
+		registeredGameEntries.find((entry) => entry.gameKey === gameKey) ||
+		registeredGameEntries[0];
+	const info = primaryGameEntry?.info || null;
+	const formOverride = primaryGameEntry?.formOverride || null;
+	const effectiveInfo = primaryGameEntry?.effectiveInfo || null;
 	const fallbackInfo =
 		!effectiveInfo && natId != null
 			? await fetchPokeApiMonInfo(natId)
 			: null;
 	const resolvedInfo = mergeInfo(fallbackInfo, effectiveInfo);
+	const gameEntries = registeredGameEntries
+		.filter((entry) => entry.hasLocalInfo || entry.gameKey === gameKey)
+		.map((entry) => ({
+			gameKey: entry.gameKey,
+			label: entry.label,
+			resolvedInfo:
+				entry.gameKey === gameKey
+					? mergeInfo(fallbackInfo, entry.effectiveInfo)
+					: entry.effectiveInfo,
+		}));
+	const releaseLocations = mergeMonInfoReleaseLocations(
+		gameEntries.map((entry) => entry.resolvedInfo),
+	);
 	const moveManifest = resolvedInfo?.moves
 		? await loadMoveReferenceManifest()
 		: null;
@@ -168,6 +230,7 @@ export async function resolveMonInfoData({
 		fallbackInfo,
 		effectiveInfo,
 		hasLocalInfo: Boolean(info || formOverride),
+		gameEntries,
 		formOptions,
 		effectiveFormKey,
 		spriteSrc,
@@ -179,7 +242,9 @@ export async function resolveMonInfoData({
 		mechanics,
 		evolutionPaths: normalizeEvolutionPaths(resolvedInfo?.evolution),
 		moves: normalizeMovesForRender(enrichedMoves),
-		locations: normalizeLocationsForRender(resolvedInfo?.locations),
+		locations: releaseLocations.length
+			? releaseLocations
+			: normalizeLocationsForRender(resolvedInfo?.locations),
 		typeDefenses: computeTypeDefenseBuckets(types, gameKey),
 	};
 }

@@ -7,6 +7,7 @@ import { test } from "node:test";
 import {
 	getMonInfoFormOptions,
 	resolveMonInfoFormForGame,
+	resolveMonInfoFormForGames,
 } from "../src/utils/monInfoForms.js";
 import { getMonInfoManifestSpecies } from "../data/mon-info/manifest.js";
 import {
@@ -22,6 +23,217 @@ import {
 	defaultMonInfoLanguage,
 	resolveLocalizedMonInfo,
 } from "../src/utils/monInfoLocalization.js";
+import {
+	buildMonInfoGameOptions,
+	findMonInfoGameOption,
+} from "../src/utils/monInfoGames.js";
+import { presentMonInfoFlavorEntries } from "../src/utils/monInfoFlavor.js";
+import { buildMonInfoSpriteGallery } from "../src/utils/monInfoSprites.js";
+import {
+	mergeMonInfoReleaseLocations,
+	parseHyperspaceLumioseRatings,
+} from "../src/utils/monInfoLocations.js";
+
+test("paired releases share newest-first game options without losing exact keys", () => {
+	const options = buildMonInfoGameOptions([
+		"red",
+		"blue",
+		"black-national",
+		"white-national",
+		"scarlet",
+		"violet",
+		"legendsza",
+	]);
+
+	assert.deepEqual(
+		options.map((option) => option.label),
+		["Legends: Z-A", "Scarlet / Violet", "Black / White", "Red / Blue"],
+	);
+	assert.deepEqual(options.at(-1).gameKeys, ["red", "blue"]);
+	assert.equal(findMonInfoGameOption(options, "blue"), options.at(-1));
+	assert.equal(findMonInfoGameOption(options, null), options[0]);
+	assert.deepEqual(buildMonInfoGameOptions(["blue"])[0], {
+		key: "blue",
+		label: "Blue",
+		gameKeys: ["blue"],
+		baseGameKeys: ["blue"],
+		expansions: [],
+	});
+});
+
+test("DLC keys collapse into their base release and retain expansion metadata", () => {
+	const options = buildMonInfoGameOptions([
+		"legendsza",
+		"legendszamd",
+		"scarlet",
+		"violet",
+		"scarlettm",
+		"violettm",
+		"scarletid",
+		"violetid",
+		"sword",
+		"shield",
+		"swordioa",
+		"shieldioa",
+		"swordct",
+		"shieldct",
+	]);
+
+	assert.deepEqual(
+		options.map((option) => option.label),
+		["Legends: Z-A", "Scarlet / Violet", "Sword / Shield"],
+	);
+	assert.equal(options[0].key, "legendsza");
+	assert.deepEqual(
+		options[0].expansions.map((expansion) => expansion.label),
+		["Mega Dimension"],
+	);
+	assert.equal(findMonInfoGameOption(options, "legendszamd"), options[0]);
+	assert.deepEqual(
+		options[1].expansions.map((expansion) => expansion.label),
+		["The Teal Mask", "The Indigo Disk"],
+	);
+	assert.deepEqual(
+		options[2].expansions.map((expansion) => expansion.label),
+		["The Isle of Armor", "The Crown Tundra"],
+	);
+});
+
+test("base releases merge DLC locations without duplicating shared encounters", () => {
+	const locations = mergeMonInfoReleaseLocations([
+		{
+			locations: [
+				{
+					area: "Evolve Ivysaur",
+					notes: "",
+					games: "Legends: Z-A",
+				},
+			],
+		},
+		{
+			locations: [
+				{
+					area: "Evolve Ivysaur",
+					notes: "",
+					games: "Legends: Z-A",
+				},
+				{
+					area: "Hyperspace Lumiose",
+					notes: "Grass (4 Star)",
+					games: "Legends: Z-A Mega Dimension",
+				},
+			],
+		},
+	]);
+
+	assert.deepEqual(
+		locations.map(({ area, extra }) => ({ area, extra })),
+		[
+			{ area: "Evolve Ivysaur", extra: "Legends: Z-A" },
+			{
+				area: "Hyperspace Lumiose",
+				extra: "Legends: Z-A Mega Dimension",
+			},
+		],
+	);
+});
+
+test("Hyperspace Lumiose ratings group star tiers by encounter type", () => {
+	assert.deepEqual(
+		parseHyperspaceLumioseRatings({
+			area: "Hyperspace Lumiose",
+			notes: "Poison (1 Star), Poison (3 Star), Grass (2 Star), Grass (3 Star), Grass (5 Star)",
+		}),
+		[
+			{ type: "Poison", starCounts: [1, 3] },
+			{ type: "Grass", starCounts: [2, 3, 5] },
+		],
+	);
+	assert.deepEqual(
+		parseHyperspaceLumioseRatings({
+			area: "Wild Zone 20",
+			notes: "Grass (3 Star)",
+		}),
+		[],
+	);
+});
+
+test("paired descriptions collapse when identical and retain version differences", () => {
+	const sharedEntries = [
+		{ gameKey: "red", flavor: "A shared entry." },
+		{ gameKey: "blue", flavor: "A shared entry." },
+	];
+	assert.deepEqual(presentMonInfoFlavorEntries(sharedEntries), {
+		hasVersionDifferences: false,
+		entries: [sharedEntries[0]],
+	});
+
+	const distinctEntries = [
+		{ gameKey: "red", flavor: "Red entry." },
+		{ gameKey: "blue", flavor: "Blue entry." },
+	];
+	assert.deepEqual(presentMonInfoFlavorEntries(distinctEntries), {
+		hasVersionDifferences: true,
+		entries: distinctEntries,
+	});
+});
+
+test("Mon Info reconstructs each generation's complete sprite gallery", () => {
+	const redGallery = buildMonInfoSpriteGallery({
+		gameKey: "red",
+		nationalDexId: 1,
+		formKey: "base",
+	});
+	assert.equal(redGallery.canShowModelViewer, false);
+	assert.deepEqual(
+		redGallery.groups.map((group) => group.label),
+		["Base", "Color"],
+	);
+	assert.match(
+		redGallery.groups[0].assets[0].source,
+		/\/sprites\/gen1\/red-blue\/bw-front\/0001\.png$/,
+	);
+	assert.equal(
+		redGallery.groups[0].assets.some((asset) => asset.key === "menu"),
+		false,
+	);
+
+	const blackGallery = buildMonInfoSpriteGallery({
+		gameKey: "black-national",
+		nationalDexId: 1,
+	});
+	assert.match(
+		blackGallery.groups[0].assets.find(
+			(asset) => asset.key === "front-animated",
+		).source,
+		/\.gif$/,
+	);
+	assert.ok(
+		blackGallery.groups[0].assets.some((asset) => asset.key === "menu"),
+	);
+
+	const xGallery = buildMonInfoSpriteGallery({
+		gameKey: "x-national",
+		nationalDexId: 3,
+		formKey: "male",
+	});
+	assert.equal(xGallery.canShowModelViewer, true);
+	assert.match(xGallery.groups[0].assets[0].source, /\/0003\.png$/);
+	assert.doesNotMatch(xGallery.groups[0].assets[0].source, /0003-m\.png$/);
+	assert.match(
+		xGallery.groups[0].assets.find(
+			(asset) => asset.key === "front-animated",
+		).source,
+		/\.webm$/,
+	);
+
+	const megaGallery = buildMonInfoSpriteGallery({
+		gameKey: "x-national",
+		nationalDexId: 3,
+		formKey: "mega",
+	});
+	assert.match(megaGallery.groups[0].assets[0].source, /\/0003-m\.png$/);
+});
 
 test("game changes retain supported forms and otherwise use the species default", () => {
 	const originalWindow = globalThis.window;
@@ -40,7 +252,7 @@ test("game changes retain supported forms and otherwise use the species default"
 					},
 					gigantamax: {
 						label: "Gigantamax",
-						games: ["sword"],
+						games: ["swordioa"],
 					},
 				},
 			},
@@ -51,6 +263,10 @@ test("game changes retain supported forms and otherwise use the species default"
 		assert.equal(resolveMonInfoFormForGame(3, "diamond", null), "male");
 		assert.equal(
 			resolveMonInfoFormForGame(3, "sword", "gigantamax"),
+			"male",
+		);
+		assert.equal(
+			resolveMonInfoFormForGames(3, ["sword", "swordioa"], "gigantamax"),
 			"gigantamax",
 		);
 		assert.equal(
@@ -61,6 +277,30 @@ test("game changes retain supported forms and otherwise use the species default"
 	} finally {
 		globalThis.window = originalWindow;
 	}
+});
+
+test("single-form species do not expose an unnecessary Base selector", () => {
+	assert.deepEqual(getMonInfoFormOptions(1, "red"), [
+		{ key: "base", label: "Normal" },
+	]);
+	assert.deepEqual(getMonInfoFormOptions(3, "red"), [
+		{ key: "male", label: "Male" },
+	]);
+	assert.ok(getMonInfoFormOptions(3, "diamond-national").length > 1);
+
+	const reactSource = readSource(
+		"src",
+		"components",
+		"content",
+		"MonInfoBody.jsx",
+	);
+	const legacyDataSource = readSource(
+		"src",
+		"modals",
+		"dex-mon-info-data.js",
+	);
+	assert.match(reactSource, /data\.formOptions\?\.length > 1/);
+	assert.match(legacyDataSource, /formOpts\.length > 1/);
 });
 
 test("the generated form manifest exposes every default and omits dangling catalog forms", () => {
@@ -301,6 +541,8 @@ test("the public Pokemon Info route uses the checked-in lazy catalog", () => {
 	);
 	assert.match(monInfoIndexSource, /\[homeDex\]/);
 	assert.match(monInfoPageSource, /ensureMonInfoLoaded\(natiId,/);
+	assert.match(monInfoPageSource, /findMonInfoGameOption/);
+	assert.match(monInfoPageSource, /gameKeys=\{selectedGameOption/);
 	assert.match(
 		monInfoPageSource,
 		/homeHeaderSpriteCandidates = pokemonSpriteCandidates\(\{[\s\S]*?allGames: true/,
@@ -310,6 +552,17 @@ test("the public Pokemon Info route uses the checked-in lazy catalog", () => {
 	assert.match(legacyMonInfoSource, /effectiveFormKey === o\.key/);
 	assert.doesNotMatch(legacyMonInfoSource, /<option value=""/);
 	assert.match(monInfoBodySource, /monInfoLanguageOptions/);
+	assert.match(monInfoBodySource, /mon-info-version-eyebrow/);
+	assert.match(monInfoBodySource, /<MonInfoSprites/);
+	const spriteGallerySource = readSource(
+		"src",
+		"components",
+		"content",
+		"MonInfoSprites.jsx",
+	);
+	assert.match(spriteGallerySource, /<h3[^>]*>Sprites<\/h3>/);
+	assert.match(spriteGallerySource, /Model Viewer/);
+	assert.match(spriteGallerySource, /disabled/);
 	assert.match(monInfoBodySource, /className="visually-hidden"/);
 	assert.match(legacyMonInfoSource, /escapeHtml\(localizedInfo\.flavor\)/);
 	assert.doesNotMatch(

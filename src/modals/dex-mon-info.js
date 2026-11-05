@@ -71,7 +71,7 @@ export async function renderMonInfoInto({
 	const {
 		natId,
 		formOpts,
-		hasForms,
+		hasFormChoices,
 		effectiveFormKey,
 		effectiveInfo,
 		fallbackInfo,
@@ -357,7 +357,7 @@ export async function renderMonInfoInto({
 					.join("")}
 			</div>
 			${
-				hasForms
+				hasFormChoices
 					? `
 			<label class="mon-info-form">
 			  <span class="visually-hidden">Form</span>

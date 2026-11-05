@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { pad4 } from "../../react-bridge/monInfo.js";
 import { resolveMonInfoData } from "../../react-bridge/monInfoData.js";
+import { assetPath } from "../../utils/assetPath.js";
 import {
 	advancePokemonSpriteFallback,
 	pokemonSpriteCandidates,
@@ -26,14 +27,18 @@ import {
 } from "../../utils/monInfoEvolution.js";
 import {
 	defaultMonInfoLanguage,
-	monInfoLanguageOptions,
+	monInfoLanguageOptionsForInfos,
 	resolveLocalizedMonInfo,
 } from "../../utils/monInfoLocalization.js";
+import { presentMonInfoFlavorEntries } from "../../utils/monInfoFlavor.js";
+import { parseHyperspaceLumioseRatings } from "../../utils/monInfoLocations.js";
+import { MonInfoSprites } from "./MonInfoSprites.jsx";
 
 // Keep the evolution tree off the homepage bundle; Vite deduplicates this
 // stylesheet with the legacy modal's matching lazy import.
 if (typeof document !== "undefined") {
 	void import("../../../styles/mon-info-evolution.css");
+	void import("../../../styles/mon-info-locations.css");
 }
 
 function TypePill({ type }) {
@@ -648,22 +653,96 @@ function EvolutionCard({
 	);
 }
 
+function HyperspaceStarRating({ starCount }) {
+	return (
+		<span
+			className="mon-info-hyperspace-rating"
+			aria-label={`${starCount} ${starCount === 1 ? "star" : "stars"}`}
+		>
+			{Array.from({ length: starCount }, (_, starIndex) => (
+				<img
+					key={starIndex}
+					src={assetPath("icons/gen9/donut-star.png")}
+					alt=""
+					aria-hidden="true"
+					loading="lazy"
+					width="14"
+					height="14"
+				/>
+			))}
+		</span>
+	);
+}
+
+function HyperspaceLocation({ location, ratings }) {
+	return (
+		<li className="mon-info-hyperspace-location">
+			<div className="mon-info-location-heading">
+				<strong>{location.area}</strong>
+				{location.extra ? (
+					<>
+						{" "}
+						<span className="small">({location.extra})</span>
+					</>
+				) : null}
+			</div>
+			<ul className="mon-info-hyperspace-types">
+				{ratings.map((rating) => (
+					<li key={rating.type}>
+						<span className="mon-info-hyperspace-type">
+							{rating.type}
+						</span>
+						<span className="mon-info-hyperspace-ratings">
+							{rating.starCounts.map((starCount, ratingIndex) => (
+								<React.Fragment
+									key={`${starCount}-${ratingIndex}`}
+								>
+									{ratingIndex ? (
+										<span aria-hidden="true">/</span>
+									) : null}
+									<HyperspaceStarRating
+										starCount={starCount}
+									/>
+								</React.Fragment>
+							))}
+						</span>
+					</li>
+				))}
+			</ul>
+		</li>
+	);
+}
+
 function LocationsCard({ locations }) {
 	if (!locations?.length) return null;
 	return (
 		<div className="mon-info-block mon-info-locations">
 			<h3>Locations</h3>
 			<ul className="react-moninfo-list">
-				{locations.map((loc) => (
-					<li key={loc.key}>
-						{loc.area ? <strong>{loc.area}</strong> : null}
-						{loc.area && loc.notes ? " — " : ""}
-						{loc.notes}
-						{loc.extra ? (
-							<span className="small"> ({loc.extra})</span>
-						) : null}
-					</li>
-				))}
+				{locations.map((loc) => {
+					const hyperspaceRatings =
+						parseHyperspaceLumioseRatings(loc);
+					if (hyperspaceRatings.length) {
+						return (
+							<HyperspaceLocation
+								key={loc.key}
+								location={loc}
+								ratings={hyperspaceRatings}
+							/>
+						);
+					}
+
+					return (
+						<li key={loc.key}>
+							{loc.area ? <strong>{loc.area}</strong> : null}
+							{loc.area && loc.notes ? " — " : ""}
+							{loc.notes}
+							{loc.extra ? (
+								<span className="small"> ({loc.extra})</span>
+							) : null}
+						</li>
+					);
+				})}
 			</ul>
 		</div>
 	);
@@ -732,6 +811,7 @@ function MovesCard({ moves }) {
 
 export function MonInfoBody({
 	gameKey,
+	gameKeys = [],
 	mon,
 	formKey,
 	onFormChange,
@@ -741,12 +821,20 @@ export function MonInfoBody({
 	const [loading, setLoading] = useState(true);
 	const [loadError, setLoadError] = useState("");
 	const [selectedLanguage, setSelectedLanguage] = useState("en");
+	const gameKeySignature = (gameKeys.length ? gameKeys : [gameKey])
+		.filter(Boolean)
+		.join(",");
 
 	useEffect(() => {
 		let cancelled = false;
 		setLoading(true);
 		setLoadError("");
-		resolveMonInfoData({ gameKey, mon, formKey })
+		resolveMonInfoData({
+			gameKey,
+			gameKeys: gameKeySignature.split(",").filter(Boolean),
+			mon,
+			formKey,
+		})
 			.then((next) => {
 				if (!cancelled) {
 					setData(next);
@@ -763,11 +851,16 @@ export function MonInfoBody({
 		return () => {
 			cancelled = true;
 		};
-	}, [gameKey, mon, formKey]);
+	}, [gameKey, gameKeySignature, mon, formKey]);
 
 	const languageOptions = useMemo(
-		() => monInfoLanguageOptions(data?.resolvedInfo),
-		[data?.resolvedInfo],
+		() =>
+			monInfoLanguageOptionsForInfos(
+				data?.gameEntries?.length
+					? data.gameEntries.map((entry) => entry.resolvedInfo)
+					: [data?.resolvedInfo],
+			),
+		[data?.gameEntries, data?.resolvedInfo],
 	);
 	useEffect(() => {
 		setSelectedLanguage(defaultMonInfoLanguage(data?.resolvedInfo));
@@ -776,7 +869,28 @@ export function MonInfoBody({
 		() => resolveLocalizedMonInfo(data?.resolvedInfo, selectedLanguage),
 		[data?.resolvedInfo, selectedLanguage],
 	);
-	const flavor = localizedInfo.flavor;
+	const localizedGameEntries = useMemo(() => {
+		const entries = data?.gameEntries?.length
+			? data.gameEntries
+			: [
+					{
+						gameKey,
+						label: "",
+						resolvedInfo: data?.resolvedInfo,
+					},
+				];
+		return entries.map((entry) => ({
+			...entry,
+			...resolveLocalizedMonInfo(entry.resolvedInfo, selectedLanguage),
+		}));
+	}, [data?.gameEntries, data?.resolvedInfo, gameKey, selectedLanguage]);
+	const presentedFlavorEntries = useMemo(
+		() => presentMonInfoFlavorEntries(localizedGameEntries),
+		[localizedGameEntries],
+	);
+	const hasFlavorFallback = presentedFlavorEntries.entries.some(
+		(entry) => !entry.hasLocalizedFlavor,
+	);
 	const displayName =
 		localizedInfo.displayName ||
 		mon?.name ||
@@ -834,7 +948,7 @@ export function MonInfoBody({
 									<TypePill key={type} type={type} />
 								))}
 							</div>
-							{data.formOptions?.length ? (
+							{data.formOptions?.length > 1 ? (
 								<label className="mon-info-form">
 									<span className="visually-hidden">
 										Form
@@ -865,7 +979,8 @@ export function MonInfoBody({
 				</div>
 			</div>
 
-			{flavor || languageOptions.length > 1 ? (
+			{presentedFlavorEntries.entries.length ||
+			languageOptions.length > 1 ? (
 				<div className="mon-info-flavor-region">
 					{languageOptions.length > 1 ? (
 						<label className="mon-info-language-field">
@@ -888,15 +1003,35 @@ export function MonInfoBody({
 							</select>
 						</label>
 					) : null}
-					{flavor ? (
+					{presentedFlavorEntries.entries.length ? (
 						<div
-							className="mon-info-block mon-info-flavor"
-							lang={localizedInfo.flavorLanguage}
+							className={`mon-info-flavor-grid${
+								presentedFlavorEntries.hasVersionDifferences
+									? " is-versioned"
+									: ""
+							}`}
 						>
-							{flavor}
+							{presentedFlavorEntries.entries.map((entry) => (
+								<div
+									key={entry.gameKey}
+									className={`mon-info-block mon-info-flavor${
+										presentedFlavorEntries.hasVersionDifferences
+											? " has-version-eyebrow"
+											: ""
+									}`}
+									lang={entry.flavorLanguage}
+								>
+									{presentedFlavorEntries.hasVersionDifferences ? (
+										<span className="mon-info-version-eyebrow">
+											{entry.label}
+										</span>
+									) : null}
+									{entry.flavor}
+								</div>
+							))}
 						</div>
 					) : null}
-					{!localizedInfo.hasLocalizedFlavor && flavor ? (
+					{hasFlavorFallback ? (
 						<div className="mon-info-language-note" role="note">
 							No description is available in the selected
 							language; showing the source entry.
@@ -932,6 +1067,14 @@ export function MonInfoBody({
 					fallback data when available.
 				</div>
 			) : null}
+
+			<MonInfoSprites
+				gameKey={gameKey}
+				nationalDexId={data.natId}
+				pokemonName={displayName}
+				formKey={data.effectiveFormKey}
+				resolvedInfo={data.resolvedInfo}
+			/>
 		</div>
 	);
 }

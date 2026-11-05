@@ -1,0 +1,44 @@
+/** Route-lazy presentation for structured Mon Info encounter locations. */
+
+.mon-info-location-heading {
+	line-height: 1.45;
+}
+
+.mon-info-hyperspace-types {
+	margin: 6px 0 2px;
+	padding-left: 22px;
+}
+
+.mon-info-hyperspace-types li {
+	margin-top: 4px;
+}
+
+.mon-info-hyperspace-type {
+	display: inline-block;
+	min-width: 4.5rem;
+	font-weight: 650;
+}
+
+.mon-info-hyperspace-ratings,
+.mon-info-hyperspace-rating {
+	display: inline-flex;
+	align-items: center;
+}
+
+.mon-info-hyperspace-ratings {
+	flex-wrap: wrap;
+	gap: 5px;
+}
+
+.mon-info-hyperspace-rating {
+	gap: 1px;
+	white-space: nowrap;
+}
+
+.mon-info-hyperspace-rating img {
+	display: block;
+	width: 14px;
+	height: 14px;
+	object-fit: contain;
+	filter: drop-shadow(0 1px 2px oklch(0.35 0.08 75deg / 0.45));
+}
